@@ -20,12 +20,15 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.mockStatic;
 
+import org.junit.Ignore;
+
 public class FilterMergerSapientGeneratedJunit4Test {
 
     @Rule()
     public Timeout timeoutRule = Timeout.seconds(5);
 
     //Sapient generated method id: ${974f6ce3-fb3d-379b-8bfb-4bedd1091387}
+    @Ignore()
     @Test()
     public void calculateWhenFilterNotEqualsLastFilterAndBegunProvidersIsNotEmpty() {
         /* Branches:

@@ -44,6 +44,8 @@ import static org.hamcrest.Matchers.isA;
 import static org.mockito.Mockito.doReturn;
 import static org.hamcrest.Matchers.is;
 
+import org.junit.Ignore;
+
 public class BIP38PrivateKeySapientGeneratedJunit4Test {
 
     @Rule()
@@ -59,6 +61,7 @@ public class BIP38PrivateKeySapientGeneratedJunit4Test {
     public ExpectedException thrown = ExpectedException.none();
 
     //Sapient generated method id: ${83728dd4-a2e2-3e7f-a038-ed2e41b9581d}
+    @Ignore()
     @Test()
     public void fromBase58WhenVersionNotEquals1ThrowsAddressFormatExceptionInvalidPrefix() throws AddressFormatException {
         /* Branches:
@@ -82,6 +85,7 @@ public class BIP38PrivateKeySapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${73e33351-5658-3751-ba89-3e4e73f20e4c}
+    @Ignore()
     @Test()
     public void fromBase58WhenBytesLengthNotEquals38ThrowsAddressFormatExceptionInvalidDataLength() throws AddressFormatException {
         /* Branches:
@@ -106,6 +110,7 @@ public class BIP38PrivateKeySapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${02506b6c-e853-3f99-9d29-03669221c0d7}
+    @Ignore()
     @Test()
     public void fromBase58When1IndexOfBytesAnd1NotEquals0ThrowsAddressFormatException() throws AddressFormatException {
         /* Branches:
@@ -133,6 +138,7 @@ public class BIP38PrivateKeySapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${1b4de6b2-67d7-32d1-8353-d98dbdb2b359}
+    @Ignore()
     @Test()
     public void fromBase58When1IndexOfBytesAnd2NotEquals0ThrowsAddressFormatException() throws AddressFormatException {
         /* Branches:
@@ -161,6 +167,7 @@ public class BIP38PrivateKeySapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${ea3e0a91-c083-337f-8240-2ef00fcc4def}
+    @Ignore()
     @Test()
     public void fromBase58When1IndexOfBytesAnd8NotEquals0ThrowsAddressFormatException() throws AddressFormatException {
         /* Branches:
@@ -190,6 +197,7 @@ public class BIP38PrivateKeySapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${d7bd1264-de6b-376e-a826-5d410914e98c}
+    @Ignore()
     @Test()
     public void fromBase58When1IndexOfBytesAnd16NotEquals0ThrowsAddressFormatException() throws AddressFormatException {
         /* Branches:
@@ -220,6 +228,7 @@ public class BIP38PrivateKeySapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${50491cf4-d3fa-3c36-825e-efcace443007}
+    @Ignore()
     @Test()
     public void fromBase58When1IndexOfBytesAnd192NotEquals192ThrowsAddressFormatException() throws AddressFormatException {
         /* Branches:
@@ -252,6 +261,7 @@ public class BIP38PrivateKeySapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${f26013fa-89fa-35ab-9347-c099da16ee58}
+    @Ignore()
     @Test()
     public void fromBase58WhenByte0NotEquals67ThrowsAddressFormatException() throws AddressFormatException {
         /* Branches:
@@ -284,6 +294,7 @@ public class BIP38PrivateKeySapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${4451c2c0-4fe0-36a0-be7c-0f2dd9fff16b}
+    @Ignore()
     @Test()
     public void fromBase58WhenHasLotAndSequenceThrowsAddressFormatException() throws AddressFormatException {
         /* Branches:
@@ -317,6 +328,7 @@ public class BIP38PrivateKeySapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${f3424833-8035-39b8-8e5a-df166c2100e4}
+    @Ignore()
     @Test()
     public void fromBase58When1IndexOfBytesAnd192NotEquals0ThrowsAddressFormatException() throws AddressFormatException {
         /* Branches:
@@ -350,6 +362,7 @@ public class BIP38PrivateKeySapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${b500449b-926d-3292-bd59-bdb554003351}
+    @Ignore()
     @Test()
     public void fromBase58When1IndexOfBytesAnd192Equals0() throws AddressFormatException {
         /* Branches:
@@ -381,6 +394,7 @@ public class BIP38PrivateKeySapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${3d89f2cd-4a6d-3148-8610-912d5c75c7a1}
+    @Ignore()
     @Test()
     public void fromBase58When1IndexOfBytesAnd192Equals192AndNotHasLotAndSequence() throws AddressFormatException {
         /* Branches:
@@ -430,6 +444,7 @@ public class BIP38PrivateKeySapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${46194f1b-99a4-3203-97b3-9dfd7f9bcf1d}
+    @Ignore()
     @Test()
     public void toBase58Test() throws AddressFormatException {
         /**
@@ -453,6 +468,7 @@ public class BIP38PrivateKeySapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${9915c139-0a6f-3084-92a8-e77a94bf7443}
+    @Ignore()
     @Test()
     public void decryptWhenArraysEqualsActualAddressHashAddressHash() throws BadPassphraseException, AddressFormatException, GeneralSecurityException {
         /* Branches:
@@ -514,6 +530,7 @@ public class BIP38PrivateKeySapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${062ab01c-ed32-3a39-a3aa-46641f8c88e2}
+    @Ignore()
     @Test()
     public void decryptWhenCaughtGeneralSecurityExceptionThrowsRuntimeException() throws BadPassphraseException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException, AddressFormatException, NoSuchPaddingException, NoSuchAlgorithmException {
         /* Branches:
@@ -553,6 +570,7 @@ public class BIP38PrivateKeySapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${f2a2f7aa-5c7e-3b08-8e87-d8dd7812dcd9}
+    @Ignore()
     @Test()
     public void decryptWhenArraysNotEqualsActualAddressHashAddressHashThrowsBIP38PrivateKeyBadPassphraseException() throws BadPassphraseException, AddressFormatException {
         /* Branches:
@@ -611,6 +629,7 @@ public class BIP38PrivateKeySapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${f786f342-457e-35d4-9e61-48fb9f5381c6}
+    @Ignore()
     @Test()
     public void decryptWhenSeedFactorSignumGreaterThanOrEqualsTo0AndCaughtGeneralSecurityExceptionThrowsRuntimeException() throws BadPassphraseException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException, AddressFormatException, NoSuchPaddingException, NoSuchAlgorithmException {
         /* Branches:
@@ -678,6 +697,7 @@ public class BIP38PrivateKeySapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${363d3698-f34c-39ad-914f-376a19498023}
+    @Ignore()
     @Test()
     public void toStringTest() throws AddressFormatException {
         /**

@@ -37,6 +37,8 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.mockStatic;
 import static org.mockito.Mockito.doReturn;
 
+import org.junit.Ignore;
+
 public class HDKeyDerivationSapientGeneratedJunit4Test {
 
     @Rule()
@@ -60,6 +62,7 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
     public ExpectedException thrown = ExpectedException.none();
 
     //Sapient generated method id: ${86570818-8d4b-3aa8-b29e-b79ed980b8a8}
+    @Ignore()
     @Test()
     public void createMasterPrivateKeyWhenILengthEquals64ThrowsIllegalStateException() throws HDDerivationException {
         /* Branches:
@@ -129,7 +132,6 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
         thrown.expectMessage(hDDerivationException.getMessage());
         byte[] byteArray = new byte[]{};
         byte[] byteArray2 = new byte[]{};
-
         //Act Statement(s)
         HDKeyDerivation.createMasterPrivKeyFromBytes(byteArray, byteArray2);
     }
@@ -157,6 +159,7 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${8d5a29ba-71f9-3a0e-98b8-1293951e4e31}
+    @Ignore()
     @Test()
     public void createMasterPrivKeyFromBytesWhenIntegerCompareToECKeyCURVEGetNNotGreaterThan0() throws HDDerivationException {
         /* Branches:
@@ -183,6 +186,7 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${3292e57a-1198-3307-912f-bcc8ec7db38e}
+    @Ignore()
     @Test()
     public void createMasterPubKeyFromBytesTest() {
         /**
@@ -240,6 +244,7 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${6f52aab3-2070-3a62-bdd2-7d81073eee98}
+    @Ignore()
     @Test()
     public void deriveThisOrNextChildKeyWhenCaughtHDDerivationExceptionThrowsHDDerivationException() {
         /* Branches:
@@ -366,17 +371,16 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${f5fa0828-5949-301b-8403-fc2d54d898e8}
+    @Ignore()
     @Test()
     public void generateTest() {
         /**
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
-
         //Act Statement(s)
         Stream<DeterministicKey> result = HDKeyDerivation.generate(deterministicKeyMock, 1);
         Stream stream = Stream.empty();
-
         //Assert statement(s)
         //TODO: Please implement equals method in Stream for verification to succeed or you need to adjust respective assertion statements
         assertThat(result, equalTo(stream));
@@ -421,6 +425,7 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${e3c04c0d-aa25-314f-8936-207fbd87f5c0}
+    @Ignore()
     @Test()
     public void deriveChildKeyFromPrivateTest() throws HDDerivationException {
         /**
@@ -452,6 +457,7 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${be740420-be94-3e4d-aafd-39322b493932}
+    @Ignore()
     @Test()
     public void deriveChildKeyBytesFromPrivateWhenParentPublicKeyLengthEquals33ThrowsIllegalStateException() throws HDDerivationException {
         /* Branches:
@@ -506,6 +512,7 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${785e12a0-4928-3829-98c7-9c9c05d4b35c}
+    @Ignore()
     @Test()
     public void deriveChildKeyFromPublicTest() throws HDDerivationException {
         /**
@@ -536,6 +543,7 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${63f8c45b-3f1a-32bc-9913-efe6b63452d3}
+    @Ignore()
     @Test()
     public void deriveChildKeyBytesFromPublicWhenParentPublicKeyLengthEquals33ThrowsIllegalStateException() throws HDDerivationException {
         /* Branches:

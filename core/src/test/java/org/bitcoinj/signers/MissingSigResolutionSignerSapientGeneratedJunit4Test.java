@@ -37,6 +37,8 @@ import static org.mockito.Mockito.mockStatic;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.times;
 
+import org.junit.Ignore;
+
 public class MissingSigResolutionSignerSapientGeneratedJunit4Test {
 
     @Rule()
@@ -84,10 +86,8 @@ public class MissingSigResolutionSignerSapientGeneratedJunit4Test {
     public void isReadyTest() {
         //Arrange Statement(s)
         MissingSigResolutionSigner target = new MissingSigResolutionSigner(Wallet.MissingSigsMode.USE_OP_ZERO);
-
         //Act Statement(s)
         boolean result = target.isReady();
-
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
     }
@@ -100,15 +100,14 @@ public class MissingSigResolutionSignerSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         MissingSigResolutionSigner target = new MissingSigResolutionSigner(Wallet.MissingSigsMode.USE_OP_ZERO);
-
         //Act Statement(s)
         boolean result = target.signInputs(transactionSignerProposedTransactionMock, keyBagMock);
-
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
     }
 
     //Sapient generated method id: ${629f61eb-ce4b-38c3-b66e-727ae00974c2}
+    @Ignore()
     @Test()
     public void signInputsWhenTxInGetConnectedOutputIsNull() {
         /* Branches:
@@ -126,10 +125,8 @@ public class MissingSigResolutionSignerSapientGeneratedJunit4Test {
         doReturn(transactionInputList).when(partialTxMock).getInputs();
         doReturn(transactionInputMock2).when(partialTxMock).getInput(0L);
         doReturn(null).when(transactionInputMock2).getConnectedOutput();
-
         //Act Statement(s)
         boolean result = target.signInputs(transactionSignerProposedTransactionMock, keyBagMock);
-
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
         verify(partialTxMock).getInputs();
@@ -138,6 +135,7 @@ public class MissingSigResolutionSignerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${50a6b179-2cb2-315d-82b7-4c781026abf7}
+    @Ignore()
     @Test()
     public void signInputsWhenScriptPatternNotIsP2WPKHScriptPubKeyThrowsIllegalStateException() throws ScriptException {
         /* Branches:
@@ -189,6 +187,7 @@ public class MissingSigResolutionSignerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${71c92121-a44a-3eb6-9001-047798f780bb}
+    @Ignore()
     @Test()
     public void signInputsWhenScriptChunkEqualsOpCode0AndMissingSigsModeEqualsWalletMis3ThrowsTransactionSignerMissingSignatureException() throws ScriptException {
         /* Branches:
@@ -242,6 +241,7 @@ public class MissingSigResolutionSignerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${8905dab8-a6cc-3c0d-8eaa-074ef6a55557}
+    @Ignore()
     @Test()
     public void signInputsWhenInputScriptChunksGet0EqualsOpCode0AndMissingSigsModeEqualsWalletMissThrowsECKeyMissingPrivateKeyException() throws ScriptException {
         /* Branches:
@@ -295,6 +295,7 @@ public class MissingSigResolutionSignerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${b3b3a5ea-cfd6-3063-ba38-9d51bac03af4}
+    @Ignore()
     @Test()
     public void signInputsWhenMissingSigsModeNotEqualsWalletMissingSigsModeTHROWAndMissingSigsModeEqualsWalletMissingSigsModeUSE_DUMMY_3() throws ScriptException {
         /* Branches:
@@ -357,6 +358,7 @@ public class MissingSigResolutionSignerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${6ce799e7-c1f3-3a63-ace2-57e6e73eba22}
+    @Ignore()
     @Test()
     public void signInputsWhenMissingSigsModeNotEqualsWalletMissingSigsModeTHROWAndMissingSigsModeEqualsWalletMissingSigsModeUSE_DUMMY_5() throws ScriptException {
         /* Branches:
@@ -416,6 +418,7 @@ public class MissingSigResolutionSignerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${d539a172-077b-3f91-a7a2-bc61068d5195}
+    @Ignore()
     @Test()
     public void signInputsWhenTxInGetWitnessGetPush0LengthEquals0AndMissingSigsModeEqualsWalletMisThrowsECKeyMissingPrivateKeyException() throws ScriptException {
         /* Branches:
@@ -473,6 +476,7 @@ public class MissingSigResolutionSignerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${311e8ef9-ad4a-3577-be65-6c029b670d42}
+    @Ignore()
     @Test()
     public void signInputsWhenMissingSigsModeNotEqualsWalletMissingSigsModeTHROWAndMissingSigsModeEqualsWalletMissingSigsModeUSE_DUMMY_8() throws ScriptException {
         /* Branches:

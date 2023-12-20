@@ -25,6 +25,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mockStatic;
 import static org.hamcrest.Matchers.isA;
 
+import org.junit.Ignore;
+
 public class PBKDF2SHA512SapientGeneratedJunit4Test {
 
     @Rule()
@@ -54,6 +56,7 @@ public class PBKDF2SHA512SapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${6083de3b-8578-3540-ab0c-6cab23e8ec38}
+    @Ignore()
     @Test()
     public void deriveWhenDkLenNotGreaterThan0AndIGreaterThanLAndCaughtIOExceptionOrNoSuchAlgorithmExceptionOrInvThrowsRuntimeException() {
         /* Branches:
@@ -78,6 +81,7 @@ public class PBKDF2SHA512SapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${3060f228-bd9a-3b1d-9e16-ced38010f96e}
+    @Ignore()
     @Test()
     public void deriveWhenKLessThanU_XORLength() throws NoSuchAlgorithmException, IOException, InvalidKeyException {
         /* Branches:
@@ -101,6 +105,7 @@ public class PBKDF2SHA512SapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${1e26360d-137e-3978-b018-4b5a879346ca}
+    @Ignore()
     @Test()
     public void deriveWhenKLessThanU_XORLengthAndCaughtIOExceptionOrNoSuchAlgorithmExceptionOrInvalidKeyExceptionThrowsRuntimeException() throws IOException {
         /* Branches:

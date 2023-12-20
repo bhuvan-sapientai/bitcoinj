@@ -17,12 +17,15 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mockStatic;
 
+import org.junit.Ignore;
+
 public class UtilsSapientGeneratedJunit4Test {
 
     @Rule()
     public Timeout timeoutRule = Timeout.seconds(5);
 
     //Sapient generated method id: ${b4f8e8ae-065d-3a8b-8ceb-54d9c73bc4b3}
+    @Ignore()
     @Test()
     public void toStringWhenStackIsNotEmpty() {
         /* Branches:

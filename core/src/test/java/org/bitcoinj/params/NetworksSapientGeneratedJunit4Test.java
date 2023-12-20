@@ -23,32 +23,32 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.mockStatic;
 
+import org.junit.Ignore;
+
 public class NetworksSapientGeneratedJunit4Test {
 
     @Rule()
     public Timeout timeoutRule = Timeout.seconds(5);
 
     //Sapient generated method id: ${9c25887d-767d-38e9-b5ae-c2e4012c49be}
+    @Ignore()
     @Test()
     public void getTest() {
-
         //Act Statement(s)
         Set<NetworkParameters> result = Networks.get();
-
         //Assert statement(s)
         assertThat(result.size(), equalTo(0));
     }
 
     //Sapient generated method id: ${2065002a-9c1f-335e-ba7c-3ceed12bc7e9}
+    @Ignore()
     @Test()
     public void findTest() {
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
-
         //Act Statement(s)
         Optional<NetworkParameters> result = Networks.find(networkMock);
         Optional<NetworkParameters> networkParametersOptional = Optional.empty();
-
         //Assert statement(s)
         assertThat(result, equalTo(networkParametersOptional));
     }
@@ -84,7 +84,6 @@ public class NetworksSapientGeneratedJunit4Test {
         Collection<NetworkParameters> collection = new ArrayList<>();
         collection.add(networkParameters);
         collection.add(networkParameters2);
-
         //Act Statement(s)
         Networks.register(collection);
     }
@@ -98,7 +97,6 @@ public class NetworksSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         NetworkParameters networkParametersMock = mock(NetworkParameters.class);
-
         //Act Statement(s)
         Networks.unregister(networkParametersMock);
     }

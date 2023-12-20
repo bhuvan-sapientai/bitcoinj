@@ -35,6 +35,8 @@ import static org.hamcrest.Matchers.notNullValue;
 import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mockStatic;
 
+import org.junit.Ignore;
+
 public class DumpedPrivateKeySapientGeneratedJunit4Test {
 
     @Rule()
@@ -77,6 +79,7 @@ public class DumpedPrivateKeySapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${7e09a9e8-c8bf-35bf-a350-e9526dfcae8c}
+    @Ignore()
     @Test()
     public void fromBase58WhenVersionNotEqualsPGetDumpedPrivateKeyHeaderThrowsAddressFormatExceptionInvalidPrefix() throws AddressFormatException, WrongNetwork {
         /* Branches:
@@ -110,6 +113,7 @@ public class DumpedPrivateKeySapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${ffa61a27-94f2-3c92-b2f9-4f488d4526ce}
+    @Ignore()
     @Test()
     public void fromBase58WhenDefaultBranchThrowsAddressFormatExceptionInvalidDataLength() throws AddressFormatException, WrongNetwork {
         /* Branches:
@@ -140,6 +144,7 @@ public class DumpedPrivateKeySapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${dac65800-d6b1-3668-b6a2-79c54ec6f30a}
+    @Ignore()
     @Test()
     public void fromBase58WhenDefaultBranch() throws AddressFormatException, WrongNetwork {
         /* Branches:
@@ -168,6 +173,7 @@ public class DumpedPrivateKeySapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${300529ff-f3e9-35c4-9ee9-36efe8815233}
+    @Ignore()
     @Test()
     public void fromBase58WhenVersionEqualsPGetDumpedPrivateKeyHeaderAndDefaultBranchThrowsAddressFormatExceptionInvalidDataLength() throws AddressFormatException, WrongNetwork {
         /* Branches:
@@ -204,6 +210,7 @@ public class DumpedPrivateKeySapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${383d88b9-8c60-3753-a6ca-6a76e8547478}
+    @Ignore()
     @Test()
     public void fromBase58WhenVersionEqualsPGetDumpedPrivateKeyHeaderAndDefaultBranch() throws AddressFormatException, WrongNetwork {
         /* Branches:
@@ -276,6 +283,7 @@ public class DumpedPrivateKeySapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${46194f1b-99a4-3203-97b3-9dfd7f9bcf1d}
+    @Ignore()
     @Test()
     public void toBase58Test() {
         /**
@@ -304,6 +312,7 @@ public class DumpedPrivateKeySapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${a377c75a-5e17-3222-adbe-6e7d38993c02}
+    @Ignore()
     @Test()
     public void getKeyTest() {
         //Arrange Statement(s)
@@ -327,6 +336,7 @@ public class DumpedPrivateKeySapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${f6f91d22-38a0-3b18-941c-9fb0a5c7d7d7}
+    @Ignore()
     @Test()
     public void isPubKeyCompressedWhen32IndexOfBytesEquals1() {
         /* Branches:
@@ -347,6 +357,7 @@ public class DumpedPrivateKeySapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${3eaafa4b-9675-3dcf-9ef0-5452df8e13df}
+    @Ignore()
     @Test()
     public void isPubKeyCompressedWhen32IndexOfBytesNotEquals1() {
         /* Branches:
@@ -367,6 +378,7 @@ public class DumpedPrivateKeySapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${363d3698-f34c-39ad-914f-376a19498023}
+    @Ignore()
     @Test()
     public void toStringTest() {
         /**

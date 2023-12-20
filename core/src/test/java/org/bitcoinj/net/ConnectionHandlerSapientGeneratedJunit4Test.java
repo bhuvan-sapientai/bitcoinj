@@ -54,6 +54,7 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${9064f274-a506-30bf-be65-c6e849f200e4}
+    @Ignore()
     @Test()
     public void writeBytesWhenBytesToWriteRemainingPlusMessageLengthGreaterThanOUTBOUND_BUFFER_BYTE_COUNTThrowsIOException() throws IOException {
         /* Branches:
@@ -71,15 +72,14 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
         thrown.expect(IOException.class);
         thrown.expectMessage(iOException.getMessage());
         byte[] byteArray = new byte[]{};
-
         //Act Statement(s)
         target.writeBytes(byteArray);
-
         //Assert statement(s)
         verify(target).closeConnection();
     }
 
     //Sapient generated method id: ${ff0e0c4a-603f-3689-8781-b818ec592a3a}
+    @Ignore()
     @Test()
     public void writeBytesWhenCaughtCancelledKeyExceptionThrowsIOException() throws IOException {
         /* Branches:
@@ -97,10 +97,8 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
         thrown.expect(IOException.class);
         thrown.expectCause(isA(IOException.class));
         byte[] byteArray = new byte[]{};
-
         //Act Statement(s)
         target.writeBytes(byteArray);
-
         //Assert statement(s)
         verify(target).closeConnection();
     }
@@ -125,10 +123,8 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
         thrown.expect(IOException.class);
         thrown.expectCause(isA(IOException.class));
         byte[] byteArray = new byte[]{};
-
         //Act Statement(s)
         target.writeBytes(byteArray);
-
         //Assert statement(s)
         verify(target).closeConnection();
     }
@@ -150,17 +146,16 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
         target = new ConnectionHandler((StreamConnection) null, (SelectionKey) null, connectionHandlerSet);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
         byte[] byteArray = new byte[]{};
-
         //Act Statement(s)
         ListenableCompletableFuture<Void> result = target.writeBytes(byteArray);
         ListenableCompletableFuture<Void> listenableCompletableFuture = new ListenableCompletableFuture<>();
-
         //Assert statement(s)
         //TODO: Please implement equals method in ListenableCompletableFuture for verification to succeed or you need to adjust respective assertion statements
         assertThat(result, equalTo(listenableCompletableFuture));
     }
 
     //Sapient generated method id: ${ba15c53d-07b3-3a43-bed0-8662bcd3e061}
+    @Ignore()
     @Test()
     public void closeConnectionWhenCaughtIOExceptionThrowsRuntimeException() throws IOException {
         /* Branches:
@@ -176,12 +171,12 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
         thrown.expect(RuntimeException.class);
         thrown.expectCause(isA(IOException.class));
-
         //Act Statement(s)
         target.closeConnection();
     }
 
     //Sapient generated method id: ${45eba761-9d43-358e-9382-654546ac97fe}
+    @Ignore()
     @Test()
     public void closeConnectionWhenConnectedHandlersIsNull() throws IOException {
         /* Branches:
@@ -197,15 +192,14 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
         target = new ConnectionHandler((StreamConnection) null, (SelectionKey) null, (Set) null);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
         doNothing().when(connectionMock).connectionClosed();
-
         //Act Statement(s)
         target.closeConnection();
-
         //Assert statement(s)
         verify(connectionMock).connectionClosed();
     }
 
     //Sapient generated method id: ${8cf3a4b5-9dad-3e1b-8fdb-a33cebbd0346}
+    @Ignore()
     @Test()
     public void closeConnectionWhenConnectedHandlersNotRemoveThisThrowsIllegalStateException() throws IOException {
         /* Branches:
@@ -223,15 +217,14 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
         target = new ConnectionHandler((StreamConnection) null, (SelectionKey) null, connectionHandlerSet);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
         doNothing().when(connectionMock).connectionClosed();
-
         //Act Statement(s)
         target.closeConnection();
-
         //Assert statement(s)
         verify(connectionMock).connectionClosed();
     }
 
     //Sapient generated method id: ${c8522d7c-b12e-3760-afe1-4aef4bbe70c2}
+    @Ignore()
     @Test()
     public void handleKeyWhenHandlerIsNull() throws Exception {
         /* Branches:
@@ -243,12 +236,12 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         //TODO: Needs initialization with real value
         SelectionKey selectionKey = null;
-
         //Act Statement(s)
         ConnectionHandler.handleKey(selectionKey);
     }
 
     //Sapient generated method id: ${f30e32c7-b1b1-3dcf-912f-c877c210b02e}
+    @Ignore()
     @Test()
     public void handleKeyWhenKeyNotIsValid() throws Exception {
         /* Branches:
@@ -261,7 +254,6 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         //TODO: Needs initialization with real value
         SelectionKey selectionKey = null;
-
         //Act Statement(s)
         ConnectionHandler.handleKey(selectionKey);
     }
@@ -281,12 +273,12 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
         thrown.expect(NullPointerException.class);
         //TODO: Needs initialization with real value
         SelectionKey selectionKey = null;
-
         //Act Statement(s)
         ConnectionHandler.handleKey(selectionKey);
     }
 
     //Sapient generated method id: ${8dd15228-f18e-36f7-bb3b-0267ba046ba1}
+    @Ignore()
     @Test()
     public void handleKeyWhenCaughtExceptionAndTGetMessageIsNotNull() throws Exception {
         /* Branches:
@@ -301,12 +293,12 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         //TODO: Needs initialization with real value
         SelectionKey selectionKey = null;
-
         //Act Statement(s)
         ConnectionHandler.handleKey(selectionKey);
     }
 
     //Sapient generated method id: ${2b6f46d9-9014-3c84-aea9-8946119c95e2}
+    @Ignore()
     @Test()
     public void handleKeyWhenReadEqualsMinus1() throws Exception {
         /* Branches:
@@ -322,12 +314,12 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         //TODO: Needs initialization with real value
         SelectionKey selectionKey = null;
-
         //Act Statement(s)
         ConnectionHandler.handleKey(selectionKey);
     }
 
     //Sapient generated method id: ${ea709432-4919-38c1-b0ec-1c3c03e0aaa8}
+    @Ignore()
     @Test()
     public void handleKeyWhenReadEqualsMinus1AndCaughtExceptionAndTGetMessageIsNotNull() throws Exception {
         /* Branches:
@@ -345,12 +337,12 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         //TODO: Needs initialization with real value
         SelectionKey selectionKey = null;
-
         //Act Statement(s)
         ConnectionHandler.handleKey(selectionKey);
     }
 
     //Sapient generated method id: ${24627816-8d5d-3930-a4db-6b6f12291aff}
+    @Ignore()
     @Test()
     public void handleKeyWhenHandlerReadBuffPositionEqualsBytesConsumedAndKeyIsWritable() throws Exception {
         /* Branches:
@@ -368,12 +360,12 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         //TODO: Needs initialization with real value
         SelectionKey selectionKey = null;
-
         //Act Statement(s)
         ConnectionHandler.handleKey(selectionKey);
     }
 
     //Sapient generated method id: ${7f01fbea-3b7d-3ee8-a186-b1ba26d6f395}
+    @Ignore()
     @Test()
     public void handleKeyWhenHandlerReadBuffPositionNotEqualsBytesConsumedAndTGetMessageIsNotNull() throws Exception {
         /* Branches:

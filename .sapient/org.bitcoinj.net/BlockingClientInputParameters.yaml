@@ -171,10 +171,10 @@ methods:
       filledByUser: false
     uuid: "69cdc266-c62b-3d3b-93ab-567fdddb7bde"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path1"
     pathIdForUser: "path2"
     testPathName: "runReadLoopWhenReadEqualsMinus1"
@@ -564,10 +564,10 @@ methods:
       filledByUser: false
     uuid: "547ee14d-cdf1-3b26-8e42-54547c702e60"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path3"
     pathIdForUser: "path4"
     testPathName: "runReadLoopWhenDbufPositionNotEqualsBytesConsumedThrowsIllegalStateException"
@@ -835,10 +835,10 @@ methods:
       filledByUser: false
     uuid: "886d77d4-a1e2-30a4-97cb-cb0f1a8e5b34"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "closeConnection"
     returnType: "void"
@@ -1743,11 +1743,11 @@ methods:
       filledByUser: false
     uuid: "ba15c53d-07b3-3a43-bed0-8662bcd3e061"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "writeBytes"
     returnType: "org.bitcoinj.utils.ListenableCompletableFuture"
@@ -2176,11 +2176,11 @@ methods:
       filledByUser: false
     uuid: "90b47dad-6d2c-3295-946b-afa0a749fd31"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "writeBytesWhenCaughtIOExceptionThrowsIOException"

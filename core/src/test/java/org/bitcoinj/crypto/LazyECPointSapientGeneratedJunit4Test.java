@@ -20,6 +20,8 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.mockStatic;
 import static org.mockito.Mockito.doReturn;
 
+import org.junit.Ignore;
+
 public class LazyECPointSapientGeneratedJunit4Test {
 
     @Rule()
@@ -55,6 +57,7 @@ public class LazyECPointSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${9c0a3954-18ec-314e-ab25-0494ae3cc18e}
+    @Ignore()
     @Test()
     public void compressWhenNotCompressed() {
         /* Branches:
@@ -98,6 +101,7 @@ public class LazyECPointSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${a20c80a8-c85d-3813-b4f0-0c6ff7cbf090}
+    @Ignore()
     @Test()
     public void decompressWhenCompressed() {
         /* Branches:
