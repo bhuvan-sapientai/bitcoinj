@@ -1,0 +1,1975 @@
+---
+modelFingerprint: "1FBE0C73B17BD776390E472FF372FB9F"
+methods:
+- method:
+    name: "getConfidence"
+    returnType: "org.bitcoinj.core.TransactionConfidence"
+    signature: "getConfidence(org.bitcoinj.core.Transaction) : org.bitcoinj.core.TransactionConfidence"
+    instructionFingerprint: "EFF6974758B9BF184555F06B896793E6"
+    parametersTypes:
+    - "org.bitcoinj.core.Transaction"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "getConfidenceTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(int,org.bitcoinj.core.TransactionConfidence$Factory)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "D9E98223EBCBD5637ABC72B5A7AB2740"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "A52486AFF6476539515C1E7414949B5F"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.TxConfidenceTable"
+          parameters:
+          - name: "size"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "<init>_int1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "confidenceFactory"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
+              uuid: "<init>_transactionConfidence.Factory1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.TxConfidenceTable"
+          parameters:
+          - name: "size"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "<init>_int1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "confidenceFactory"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
+              uuid: "<init>_transactionConfidence.Factory1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.TxConfidenceTable"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "tx"
+      modelFingerprint: "1C61876916E8418690CE8C8C65DDF0B8"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.Transaction"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.Transaction"
+        uuid: "getConfidence_transaction1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Threading"
+      modelFingerprint: "1EADE58514ABAA7B893D554D2D4DD735"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "org.bitcoinj.utils.Threading"
+        uuid: "org.bitcoinj.utils.Threading"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.utils.Threading"
+        name: "lock"
+        parameters:
+        - name: "clazz"
+          value:
+            sapientType: "CLASS"
+            content: !<regular>
+              value: "org.bitcoinj.core.TxConfidenceTable"
+            valueType: "java.lang.Class"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "lock(Class): ReentrantLock"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.utils.Threading"
+            method: "lock"
+            methodParameters:
+            - value:
+                sapientType: "CLASS"
+                content: !<regular>
+                  value: "org.bitcoinj.core.TxConfidenceTable"
+                valueType: "java.lang.Class"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.utils.Threading"
+            method: "lock"
+            methodParameters:
+            - value:
+                sapientType: "CLASS"
+                content: !<regular>
+                  value: "org.bitcoinj.core.TxConfidenceTable"
+                valueType: "java.lang.Class"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "java.util.concurrent.locks.ReentrantLock"
+          uuid: "<init>_reentrantLock1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "tx"
+      modelFingerprint: "403173F5474E8D126C0E46B38AC2AD44"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.Transaction"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.Transaction"
+        uuid: "getConfidence_transaction1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "tx"
+        name: "getConfidence"
+        parameters:
+        - name: "table"
+          value:
+            sapientType: "THIS"
+            content: !<new>
+              target: "org.bitcoinj.core.TxConfidenceTable"
+              parameters:
+              - name: "size"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  suggestedContent: !<regular>
+                    value: 0
+                  valueType: "int"
+                  uuid: "<init>_int1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "confidenceFactory"
+                value:
+                  sapientType: "UNKNOWN"
+                  valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
+                  uuid: "<init>_transactionConfidence.Factory1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "org.bitcoinj.core.TxConfidenceTable"
+            uuid: "targetClassObject"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "getConfidence(TxConfidenceTable): TransactionConfidence"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.core.TransactionConfidence"
+          uuid: "getConfidence_transactionConfidence1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 0
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "AE3D07253E851641137DC926F04FF075"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.core.TransactionConfidence"
+        uuid: "getConfidence_transactionConfidence1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "e0f628a0-f995-3333-a61a-03a5a2a7ee43"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "numBroadcastPeers"
+    returnType: "int"
+    signature: "numBroadcastPeers(org.bitcoinj.base.Sha256Hash) : int"
+    instructionFingerprint: "BA1BB079FB0D54A8513B34105B81144D"
+    parametersTypes:
+    - "org.bitcoinj.base.Sha256Hash"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "numBroadcastPeersWhenEntryIsNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(int,org.bitcoinj.core.TransactionConfidence$Factory)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "BF3F890873F7B075839098570162CE08"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "EBDCBFC1B3FCC6A50DC442B0892CC03A"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.TxConfidenceTable"
+          parameters:
+          - name: "size"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "<init>_int1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "confidenceFactory"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
+              uuid: "<init>_transactionConfidence.Factory1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.TxConfidenceTable"
+          parameters:
+          - name: "size"
+            value:
+              sapientType: "BASIC"
+              valueType: "int"
+              uuid: "<init>_int1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "confidenceFactory"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
+              uuid: "<init>_transactionConfidence.Factory1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.TxConfidenceTable"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "txHash"
+      modelFingerprint: "704EC5470B4285375EF601533020EF47"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.Sha256Hash"
+        uuid: "numBroadcastPeers_sha256Hash1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Threading"
+      modelFingerprint: "1EADE58514ABAA7B893D554D2D4DD735"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "org.bitcoinj.utils.Threading"
+        uuid: "org.bitcoinj.utils.Threading"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.utils.Threading"
+        name: "lock"
+        parameters:
+        - name: "clazz"
+          value:
+            sapientType: "CLASS"
+            content: !<regular>
+              value: "org.bitcoinj.core.TxConfidenceTable"
+            valueType: "java.lang.Class"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "lock(Class): ReentrantLock"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.utils.Threading"
+            method: "lock"
+            methodParameters:
+            - value:
+                sapientType: "CLASS"
+                content: !<regular>
+                  value: "org.bitcoinj.core.TxConfidenceTable"
+                valueType: "java.lang.Class"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.utils.Threading"
+            method: "lock"
+            methodParameters:
+            - value:
+                sapientType: "CLASS"
+                content: !<regular>
+                  value: "org.bitcoinj.core.TxConfidenceTable"
+                valueType: "java.lang.Class"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "java.util.concurrent.locks.ReentrantLock"
+          uuid: "<init>_reentrantLock1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "158A76FAE4C1E5741587C22A6148B6F0"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: 0
+        valueType: "int"
+        uuid: "numBroadcastPeers_int1"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "33ee1772-af9b-332a-8aaf-1e44b29f63ea"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "numBroadcastPeersWhenConfidenceIsNotNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(int,org.bitcoinj.core.TransactionConfidence$Factory)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "E35A6E1C7EEE83B8861D20ABCC577E97"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "EBDCBFC1B3FCC6A50DC442B0892CC03A"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.TxConfidenceTable"
+          parameters:
+          - name: "size"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "<init>_int1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "confidenceFactory"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
+              uuid: "<init>_transactionConfidence.Factory1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.TxConfidenceTable"
+          parameters:
+          - name: "size"
+            value:
+              sapientType: "BASIC"
+              valueType: "int"
+              uuid: "<init>_int1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "confidenceFactory"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
+              uuid: "<init>_transactionConfidence.Factory1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.TxConfidenceTable"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "txHash"
+      modelFingerprint: "704EC5470B4285375EF601533020EF47"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.Sha256Hash"
+        uuid: "numBroadcastPeers_sha256Hash1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Threading"
+      modelFingerprint: "1EADE58514ABAA7B893D554D2D4DD735"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "org.bitcoinj.utils.Threading"
+        uuid: "org.bitcoinj.utils.Threading"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.utils.Threading"
+        name: "lock"
+        parameters:
+        - name: "clazz"
+          value:
+            sapientType: "CLASS"
+            content: !<regular>
+              value: "org.bitcoinj.core.TxConfidenceTable"
+            valueType: "java.lang.Class"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "lock(Class): ReentrantLock"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.utils.Threading"
+            method: "lock"
+            methodParameters:
+            - value:
+                sapientType: "CLASS"
+                content: !<regular>
+                  value: "org.bitcoinj.core.TxConfidenceTable"
+                valueType: "java.lang.Class"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.utils.Threading"
+            method: "lock"
+            methodParameters:
+            - value:
+                sapientType: "CLASS"
+                content: !<regular>
+                  value: "org.bitcoinj.core.TxConfidenceTable"
+                valueType: "java.lang.Class"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "java.util.concurrent.locks.ReentrantLock"
+          uuid: "<init>_reentrantLock1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "confidence"
+      modelFingerprint: "31D2C15BC37D73C1EEE5F086D6883708"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionConfidence"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionConfidence"
+        uuid: "numBroadcastPeers_object2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: true
+      methodExercised:
+        target: "confidence"
+        name: "numBroadcastPeers"
+        parameters: []
+        signature: "numBroadcastPeers(): int"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: 0
+          valueType: "int"
+          uuid: "numBroadcastPeers_int1"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "ACBCF6744C1A4F89BFBA83521C7CE3BD"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: 0
+        valueType: "int"
+        uuid: "numBroadcastPeers_int1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "401ce33d-7342-39b9-b94b-3552b1f4cad8"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "seen"
+    returnType: "org.bitcoinj.core.TransactionConfidence"
+    signature: "seen(org.bitcoinj.base.Sha256Hash,org.bitcoinj.core.PeerAddress) :\
+      \ org.bitcoinj.core.TransactionConfidence"
+    instructionFingerprint: "6014898CC42257491D395354B8726AE1"
+    parametersTypes:
+    - "org.bitcoinj.base.Sha256Hash"
+    - "org.bitcoinj.core.PeerAddress"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "seenWhenFresh"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(int,org.bitcoinj.core.TransactionConfidence$Factory)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "329F5787D38718D3E4F676F171B3CE8F"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "A52486AFF6476539515C1E7414949B5F"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.TxConfidenceTable"
+          parameters:
+          - name: "size"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "<init>_int1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "confidenceFactory"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
+              uuid: "<init>_transactionConfidence.Factory1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.TxConfidenceTable"
+          parameters:
+          - name: "size"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "<init>_int1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "confidenceFactory"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
+              uuid: "<init>_transactionConfidence.Factory1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.TxConfidenceTable"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "hash"
+      modelFingerprint: "5013FA43D41C42D0C9BB2BBEE9A02D24"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.Sha256Hash"
+        uuid: "seen_sha256Hash1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "byPeer"
+      modelFingerprint: "ED4F954ED0882291D1A49B54C5C8F212"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.core.PeerAddress"
+        uuid: "seen_peerAddress1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Threading"
+      modelFingerprint: "1EADE58514ABAA7B893D554D2D4DD735"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "org.bitcoinj.utils.Threading"
+        uuid: "org.bitcoinj.utils.Threading"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.utils.Threading"
+        name: "lock"
+        parameters:
+        - name: "clazz"
+          value:
+            sapientType: "CLASS"
+            content: !<regular>
+              value: "org.bitcoinj.core.TxConfidenceTable"
+            valueType: "java.lang.Class"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "lock(Class): ReentrantLock"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.utils.Threading"
+            method: "lock"
+            methodParameters:
+            - value:
+                sapientType: "CLASS"
+                content: !<regular>
+                  value: "org.bitcoinj.core.TxConfidenceTable"
+                valueType: "java.lang.Class"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.utils.Threading"
+            method: "lock"
+            methodParameters:
+            - value:
+                sapientType: "CLASS"
+                content: !<regular>
+                  value: "org.bitcoinj.core.TxConfidenceTable"
+                valueType: "java.lang.Class"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "java.util.concurrent.locks.ReentrantLock"
+          uuid: "<init>_reentrantLock1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "3B8898953B5C75ED370C11D6AE37E81F"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      methodExercised:
+        target: "target"
+        name: "getOrCreate"
+        parameters:
+        - name: "hash"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Sha256Hash"
+            uuid: "seen_sha256Hash1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "getOrCreate(Sha256Hash): TransactionConfidence"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.core.TransactionConfidence"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.core.TransactionConfidence"
+          uuid: "seen_transactionConfidence1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "confidence"
+      modelFingerprint: "97053BF6CBAC352F624F2BD25550ACA1"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionConfidence"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionConfidence"
+        uuid: "seen_transactionConfidence1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "confidence"
+        name: "markBroadcastBy"
+        parameters:
+        - name: "address"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.PeerAddress"
+            uuid: "seen_peerAddress1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "markBroadcastBy(PeerAddress): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: true
+          suggestedContent: !<regular>
+            value: true
+          valueType: "boolean"
+          uuid: "seen_boolean1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "confidence"
+      modelFingerprint: "AD2E2A42A8EE0AC1AD1530453FE20D09"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionConfidence"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionConfidence"
+        uuid: "seen_transactionConfidence1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "confidence"
+        name: "queueListeners"
+        parameters:
+        - name: "reason"
+          value:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "SEEN_PEERS"
+            valueType: "org.bitcoinj.core.TransactionConfidence$Listener$ChangeReason"
+            uuid: "Enum-org.bitcoinj.core.TransactionConfidence$Listener$ChangeReason-SEEN_PEERS"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "queueListeners(TransactionConfidence$Listener$ChangeReason): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "seen_void3"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "CDF45871F9E26D992E98F5B869735AB7"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionConfidence"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionConfidence"
+        uuid: "seen_transactionConfidence1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "92ee855c-fac6-32c2-b81f-6bdb36bb975d"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "seenWhenNotFresh"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(int,org.bitcoinj.core.TransactionConfidence$Factory)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "793FD38AB8B5E384A4F41AF25B7A1281"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "b56be170-c8d9-3dd9-979f-3b84cec0727d"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "getOrCreate"
+    returnType: "org.bitcoinj.core.TransactionConfidence"
+    signature: "getOrCreate(org.bitcoinj.base.Sha256Hash) : org.bitcoinj.core.TransactionConfidence"
+    instructionFingerprint: "071413E972A32972B6275085494D6751"
+    parametersTypes:
+    - "org.bitcoinj.base.Sha256Hash"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "getOrCreateWhenConfidenceIsNotNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(int,org.bitcoinj.core.TransactionConfidence$Factory)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "2B4D55A763D2B4B1307F32CC2447C85A"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "EBDCBFC1B3FCC6A50DC442B0892CC03A"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.TxConfidenceTable"
+          parameters:
+          - name: "size"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "<init>_int1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "confidenceFactory"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
+              uuid: "<init>_transactionConfidence.Factory1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.TxConfidenceTable"
+          parameters:
+          - name: "size"
+            value:
+              sapientType: "BASIC"
+              valueType: "int"
+              uuid: "<init>_int1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "confidenceFactory"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
+              uuid: "<init>_transactionConfidence.Factory1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.TxConfidenceTable"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "hash"
+      modelFingerprint: "5013FA43D41C42D0C9BB2BBEE9A02D24"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.Sha256Hash"
+        uuid: "getOrCreate_sha256Hash1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Threading"
+      modelFingerprint: "1EADE58514ABAA7B893D554D2D4DD735"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "org.bitcoinj.utils.Threading"
+        uuid: "org.bitcoinj.utils.Threading"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.utils.Threading"
+        name: "lock"
+        parameters:
+        - name: "clazz"
+          value:
+            sapientType: "CLASS"
+            content: !<regular>
+              value: "org.bitcoinj.core.TxConfidenceTable"
+            valueType: "java.lang.Class"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "lock(Class): ReentrantLock"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.utils.Threading"
+            method: "lock"
+            methodParameters:
+            - value:
+                sapientType: "CLASS"
+                content: !<regular>
+                  value: "org.bitcoinj.core.TxConfidenceTable"
+                valueType: "java.lang.Class"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.utils.Threading"
+            method: "lock"
+            methodParameters:
+            - value:
+                sapientType: "CLASS"
+                content: !<regular>
+                  value: "org.bitcoinj.core.TxConfidenceTable"
+                valueType: "java.lang.Class"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "java.util.concurrent.locks.ReentrantLock"
+          uuid: "<init>_reentrantLock1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "AE3D07253E851641137DC926F04FF075"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.core.TransactionConfidence"
+        uuid: "getConfidence_object2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: true
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "0ba63ce3-ce65-32f7-9aca-49e3508eaeb2"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "getOrCreateWhenConfidenceIsNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(int,org.bitcoinj.core.TransactionConfidence$Factory)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "D00DEED81E37FDF783F5AE91950211AD"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "7445DBA83B1213F7A683CAC9A1C97BA7"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.TxConfidenceTable"
+          parameters:
+          - name: "size"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "<init>_int1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "confidenceFactory"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.TransactionConfidence$Factory"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
+              uuid: "<init>_transactionConfidence.Factory1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.TxConfidenceTable"
+          parameters:
+          - name: "size"
+            value:
+              sapientType: "BASIC"
+              valueType: "int"
+              uuid: "<init>_int1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "confidenceFactory"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.TransactionConfidence$Factory"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
+              uuid: "<init>_transactionConfidence.Factory1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.TxConfidenceTable"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "hash"
+      modelFingerprint: "5013FA43D41C42D0C9BB2BBEE9A02D24"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.Sha256Hash"
+        uuid: "getOrCreate_sha256Hash1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Threading"
+      modelFingerprint: "1EADE58514ABAA7B893D554D2D4DD735"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "org.bitcoinj.utils.Threading"
+        uuid: "org.bitcoinj.utils.Threading"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.utils.Threading"
+        name: "lock"
+        parameters:
+        - name: "clazz"
+          value:
+            sapientType: "CLASS"
+            content: !<regular>
+              value: "org.bitcoinj.core.TxConfidenceTable"
+            valueType: "java.lang.Class"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "lock(Class): ReentrantLock"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.utils.Threading"
+            method: "lock"
+            methodParameters:
+            - value:
+                sapientType: "CLASS"
+                content: !<regular>
+                  value: "org.bitcoinj.core.TxConfidenceTable"
+                valueType: "java.lang.Class"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.utils.Threading"
+            method: "lock"
+            methodParameters:
+            - value:
+                sapientType: "CLASS"
+                content: !<regular>
+                  value: "org.bitcoinj.core.TxConfidenceTable"
+                valueType: "java.lang.Class"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "java.util.concurrent.locks.ReentrantLock"
+          uuid: "<init>_reentrantLock1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "confidenceFactory"
+      modelFingerprint: "19FFCFC2FC1E79CF645F8429858B19F8"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionConfidence$Factory"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
+        uuid: "<init>_transactionConfidence.Factory1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.confidenceFactory"
+        name: "createConfidence"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Sha256Hash"
+            uuid: "getOrCreate_sha256Hash1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "createConfidence(Sha256Hash): TransactionConfidence"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.core.TransactionConfidence"
+          uuid: "newConfidence_transactionConfidence1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "AE3D07253E851641137DC926F04FF075"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.core.TransactionConfidence"
+        uuid: "newConfidence_transactionConfidence1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "0612b96e-688d-399d-89cc-93535a129726"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path3"
+    pathIdForUser: "path3"
+    testPathName: "getOrCreateWhenRefIsNullAndConfidenceIsNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(int,org.bitcoinj.core.TransactionConfidence$Factory)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "2B440701A77A4CD82D345E4C85E10889"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "7445DBA83B1213F7A683CAC9A1C97BA7"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.TxConfidenceTable"
+          parameters:
+          - name: "size"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "<init>_int1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "confidenceFactory"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.TransactionConfidence$Factory"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
+              uuid: "<init>_transactionConfidence.Factory1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.TxConfidenceTable"
+          parameters:
+          - name: "size"
+            value:
+              sapientType: "BASIC"
+              valueType: "int"
+              uuid: "<init>_int1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "confidenceFactory"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.TransactionConfidence$Factory"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
+              uuid: "<init>_transactionConfidence.Factory1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.TxConfidenceTable"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "hash"
+      modelFingerprint: "5013FA43D41C42D0C9BB2BBEE9A02D24"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.Sha256Hash"
+        uuid: "getOrCreate_sha256Hash1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Threading"
+      modelFingerprint: "1EADE58514ABAA7B893D554D2D4DD735"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "org.bitcoinj.utils.Threading"
+        uuid: "org.bitcoinj.utils.Threading"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.utils.Threading"
+        name: "lock"
+        parameters:
+        - name: "clazz"
+          value:
+            sapientType: "CLASS"
+            content: !<regular>
+              value: "org.bitcoinj.core.TxConfidenceTable"
+            valueType: "java.lang.Class"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "lock(Class): ReentrantLock"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.utils.Threading"
+            method: "lock"
+            methodParameters:
+            - value:
+                sapientType: "CLASS"
+                content: !<regular>
+                  value: "org.bitcoinj.core.TxConfidenceTable"
+                valueType: "java.lang.Class"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.utils.Threading"
+            method: "lock"
+            methodParameters:
+            - value:
+                sapientType: "CLASS"
+                content: !<regular>
+                  value: "org.bitcoinj.core.TxConfidenceTable"
+                valueType: "java.lang.Class"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "java.util.concurrent.locks.ReentrantLock"
+          uuid: "<init>_reentrantLock1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "confidenceFactory"
+      modelFingerprint: "19FFCFC2FC1E79CF645F8429858B19F8"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionConfidence$Factory"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
+        uuid: "<init>_transactionConfidence.Factory1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.confidenceFactory"
+        name: "createConfidence"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Sha256Hash"
+            uuid: "getOrCreate_sha256Hash1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "createConfidence(Sha256Hash): TransactionConfidence"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.core.TransactionConfidence"
+          uuid: "newConfidence_transactionConfidence1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "AE3D07253E851641137DC926F04FF075"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.core.TransactionConfidence"
+        uuid: "newConfidence_transactionConfidence1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "4d479f5c-8930-32ad-a59c-7acb1d6b6030"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "get"
+    returnType: "org.bitcoinj.core.TransactionConfidence"
+    signature: "get(org.bitcoinj.base.Sha256Hash) : org.bitcoinj.core.TransactionConfidence"
+    instructionFingerprint: "917808FD5246C4E4B9A4C814ECF19CBD"
+    parametersTypes:
+    - "org.bitcoinj.base.Sha256Hash"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "getWhenRefIsNotNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(int,org.bitcoinj.core.TransactionConfidence$Factory)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "1D7EBD4BC4E86FEC4EC974BB2809F86C"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "EBDCBFC1B3FCC6A50DC442B0892CC03A"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.TxConfidenceTable"
+          parameters:
+          - name: "size"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "<init>_int1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "confidenceFactory"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
+              uuid: "<init>_transactionConfidence.Factory1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.TxConfidenceTable"
+          parameters:
+          - name: "size"
+            value:
+              sapientType: "BASIC"
+              valueType: "int"
+              uuid: "<init>_int1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "confidenceFactory"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
+              uuid: "<init>_transactionConfidence.Factory1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.TxConfidenceTable"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "hash"
+      modelFingerprint: "5013FA43D41C42D0C9BB2BBEE9A02D24"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.Sha256Hash"
+        uuid: "get_sha256Hash1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Threading"
+      modelFingerprint: "1EADE58514ABAA7B893D554D2D4DD735"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "org.bitcoinj.utils.Threading"
+        uuid: "org.bitcoinj.utils.Threading"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.utils.Threading"
+        name: "lock"
+        parameters:
+        - name: "clazz"
+          value:
+            sapientType: "CLASS"
+            content: !<regular>
+              value: "org.bitcoinj.core.TxConfidenceTable"
+            valueType: "java.lang.Class"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "lock(Class): ReentrantLock"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.utils.Threading"
+            method: "lock"
+            methodParameters:
+            - value:
+                sapientType: "CLASS"
+                content: !<regular>
+                  value: "org.bitcoinj.core.TxConfidenceTable"
+                valueType: "java.lang.Class"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.utils.Threading"
+            method: "lock"
+            methodParameters:
+            - value:
+                sapientType: "CLASS"
+                content: !<regular>
+                  value: "org.bitcoinj.core.TxConfidenceTable"
+                valueType: "java.lang.Class"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "java.util.concurrent.locks.ReentrantLock"
+          uuid: "<init>_reentrantLock1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "AE3D07253E851641137DC926F04FF075"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.core.TransactionConfidence"
+        uuid: "getConfidence_object2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: true
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "b41355bd-04ce-314d-96dc-4fc8c8a6b5a4"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "getWhenRefIsNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(int,org.bitcoinj.core.TransactionConfidence$Factory)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "D97EA0A7D06CDA06F414742BE0F1515A"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "EBDCBFC1B3FCC6A50DC442B0892CC03A"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.TxConfidenceTable"
+          parameters:
+          - name: "size"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "<init>_int1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "confidenceFactory"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
+              uuid: "<init>_transactionConfidence.Factory1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.TxConfidenceTable"
+          parameters:
+          - name: "size"
+            value:
+              sapientType: "BASIC"
+              valueType: "int"
+              uuid: "<init>_int1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "confidenceFactory"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
+              uuid: "<init>_transactionConfidence.Factory1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.TxConfidenceTable"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "hash"
+      modelFingerprint: "5013FA43D41C42D0C9BB2BBEE9A02D24"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.Sha256Hash"
+        uuid: "get_sha256Hash1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Threading"
+      modelFingerprint: "1EADE58514ABAA7B893D554D2D4DD735"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "org.bitcoinj.utils.Threading"
+        uuid: "org.bitcoinj.utils.Threading"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.utils.Threading"
+        name: "lock"
+        parameters:
+        - name: "clazz"
+          value:
+            sapientType: "CLASS"
+            content: !<regular>
+              value: "org.bitcoinj.core.TxConfidenceTable"
+            valueType: "java.lang.Class"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "lock(Class): ReentrantLock"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.utils.Threading"
+            method: "lock"
+            methodParameters:
+            - value:
+                sapientType: "CLASS"
+                content: !<regular>
+                  value: "org.bitcoinj.core.TxConfidenceTable"
+                valueType: "java.lang.Class"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.utils.Threading"
+            method: "lock"
+            methodParameters:
+            - value:
+                sapientType: "CLASS"
+                content: !<regular>
+                  value: "org.bitcoinj.core.TxConfidenceTable"
+                valueType: "java.lang.Class"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "java.util.concurrent.locks.ReentrantLock"
+          uuid: "<init>_reentrantLock1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "15D88047D8DDF2B00E0F6588B4BB9543"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        valueType: "org.bitcoinj.core.TransactionConfidence"
+        uuid: "getConfidence_transactionConfidence1"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "9f0bc527-6f06-32ef-9c0f-30f4d74475bb"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false

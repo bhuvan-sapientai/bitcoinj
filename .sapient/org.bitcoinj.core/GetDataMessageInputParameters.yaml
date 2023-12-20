@@ -1,0 +1,3678 @@
+---
+modelFingerprint: "BF5E8E40283EDB9E8618802E46F42B26"
+methods:
+- method:
+    name: "read"
+    returnType: "org.bitcoinj.core.GetDataMessage"
+    signature: "read(java.nio.ByteBuffer) : org.bitcoinj.core.GetDataMessage"
+    throwsExceptions:
+    - "java.nio.BufferUnderflowException"
+    - "org.bitcoinj.core.ProtocolException"
+    instructionFingerprint: "89D295A73579AEC7E2983EA88293F61E"
+    parametersTypes:
+    - "java.nio.ByteBuffer"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "readTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "D9BB76C3AE73520F9E497B7B3BC1083A"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "payload"
+      modelFingerprint: "335B7D7442C1E51D6EECFEAEF136D4CA"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.nio.ByteBuffer"
+          method: "allocateDirect"
+          methodParameters:
+          - name: "capacity"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "read_byteBuffer1-capacity"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "java.nio.ByteBuffer"
+          method: "allocateDirect"
+          methodParameters:
+          - name: "capacity"
+            value:
+              sapientType: "BASIC"
+              valueType: "int"
+              uuid: "read_byteBuffer1-capacity"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "java.nio.ByteBuffer"
+        uuid: "read_byteBuffer1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "ListMessage"
+      modelFingerprint: "96F657D973F32F381AF7639FCDB374B3"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.core.ListMessage"
+        uuid: "org.bitcoinj.core.ListMessage"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.core.ListMessage"
+        name: "readItems"
+        parameters:
+        - name: "payload"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "java.nio.ByteBuffer"
+              method: "allocateDirect"
+              methodParameters:
+              - name: "capacity"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "int"
+                  uuid: "read_byteBuffer1-capacity"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<static_method_return>
+              target: "java.nio.ByteBuffer"
+              method: "allocateDirect"
+              methodParameters:
+              - name: "capacity"
+                value:
+                  sapientType: "BASIC"
+                  valueType: "int"
+                  uuid: "read_byteBuffer1-capacity"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "java.nio.ByteBuffer"
+            uuid: "read_byteBuffer1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        - "org.bitcoinj.core.ProtocolException"
+        signature: "readItems(ByteBuffer): List throws java.nio.BufferUnderflowException,org.bitcoinj.core.ProtocolException"
+        returnValue:
+          sapientType: "COLLECTION"
+          content: !<collection>
+            parameters: []
+            values: []
+          suggestedContent: !<collection>
+            parameters: []
+            values: []
+          valueType: "java.util.List"
+          genericValueType: "org.bitcoinj.core.InventoryItem"
+          uuid: "read_list1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 12
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "EFBAEC16DCCFD7C3B2CF43DDD3078245"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.GetDataMessage"
+          parameters:
+          - name: "items"
+            value:
+              sapientType: "COLLECTION"
+              content: !<collection>
+                parameters: []
+                values: []
+              suggestedContent: !<collection>
+                parameters: []
+                values: []
+              valueType: "java.util.List"
+              genericValueType: "org.bitcoinj.core.InventoryItem"
+              uuid: "read_list1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.GetDataMessage"
+          parameters:
+          - name: "items"
+            value:
+              sapientType: "COLLECTION"
+              valueType: "java.util.List"
+              genericValueType: "org.bitcoinj.core.InventoryItem"
+              uuid: "read_list1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.core.GetDataMessage"
+        uuid: "read_getDataMessage1"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "db344e3b-696d-3b02-8e35-1aaa5300bde6"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "ofBlock"
+    returnType: "org.bitcoinj.core.GetDataMessage"
+    signature: "ofBlock(org.bitcoinj.base.Sha256Hash,boolean) : org.bitcoinj.core.GetDataMessage"
+    instructionFingerprint: "F44279120449000B5F4E7A87FBC6AA7F"
+    parametersTypes:
+    - "org.bitcoinj.base.Sha256Hash"
+    - "boolean"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "ofBlockWhenIncludeWitness"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "B38F3F2C67439A0D96CB641266A5B2F9"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "blockHash"
+      modelFingerprint: "C5B72799B25F056832A0CCA1957D48C3"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.Sha256Hash"
+          method: "read"
+          methodParameters:
+          - name: "buf"
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "int"
+                    uuid: "ofBlock_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "int"
+                    uuid: "ofBlock_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.nio.ByteBuffer"
+              uuid: "ofBlock_sha256Hash1-buf"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.Sha256Hash"
+          method: "read"
+          methodParameters:
+          - name: "buf"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "int"
+                    uuid: "ofBlock_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.nio.ByteBuffer"
+              uuid: "ofBlock_sha256Hash1-buf"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "org.bitcoinj.base.Sha256Hash"
+        uuid: "ofBlock_sha256Hash1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "includeWitness"
+      modelFingerprint: "A53A998EA701B13BE98A82E1B8C97DE4"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: true
+        suggestedContent: !<regular>
+          value: true
+        valueType: "boolean"
+        uuid: "ofBlock_boolean1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "EFBAEC16DCCFD7C3B2CF43DDD3078245"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.GetDataMessage"
+          parameters:
+          - name: "items"
+            value:
+              sapientType: "COLLECTION"
+              content: !<collection>
+                parameters: []
+                values: []
+              suggestedContent: !<collection>
+                parameters: []
+                values: []
+              valueType: "java.util.List"
+              genericValueType: "org.bitcoinj.core.InventoryItem"
+              uuid: "ofBlock_list1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.GetDataMessage"
+          parameters:
+          - name: "items"
+            value:
+              sapientType: "COLLECTION"
+              valueType: "java.util.List"
+              genericValueType: "org.bitcoinj.core.InventoryItem"
+              uuid: "ofBlock_list1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.core.GetDataMessage"
+        uuid: "ofBlock_getDataMessage1"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "96db79a1-bd81-3a07-883c-face0f2082fc"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "ofBlockWhenNotIncludeWitness"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "CEAB99105E44D5E58BB7EB12ADB42C24"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "blockHash"
+      modelFingerprint: "C5B72799B25F056832A0CCA1957D48C3"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.Sha256Hash"
+          method: "read"
+          methodParameters:
+          - name: "buf"
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "int"
+                    uuid: "ofBlock_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "int"
+                    uuid: "ofBlock_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.nio.ByteBuffer"
+              uuid: "ofBlock_sha256Hash1-buf"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.Sha256Hash"
+          method: "read"
+          methodParameters:
+          - name: "buf"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "int"
+                    uuid: "ofBlock_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.nio.ByteBuffer"
+              uuid: "ofBlock_sha256Hash1-buf"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "org.bitcoinj.base.Sha256Hash"
+        uuid: "ofBlock_sha256Hash1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "includeWitness"
+      modelFingerprint: "1F07F708D95D08DE23FD9A842ADB724D"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: false
+        suggestedContent: !<regular>
+          value: false
+        valueType: "boolean"
+        uuid: "ofBlock_boolean1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "EFBAEC16DCCFD7C3B2CF43DDD3078245"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.GetDataMessage"
+          parameters:
+          - name: "items"
+            value:
+              sapientType: "COLLECTION"
+              content: !<collection>
+                parameters: []
+                values: []
+              suggestedContent: !<collection>
+                parameters: []
+                values: []
+              valueType: "java.util.List"
+              genericValueType: "org.bitcoinj.core.InventoryItem"
+              uuid: "ofBlock_list1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.GetDataMessage"
+          parameters:
+          - name: "items"
+            value:
+              sapientType: "COLLECTION"
+              valueType: "java.util.List"
+              genericValueType: "org.bitcoinj.core.InventoryItem"
+              uuid: "ofBlock_list1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.core.GetDataMessage"
+        uuid: "ofBlock_getDataMessage1"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "f0b3b1a2-5515-3aec-9c71-414b46e5274d"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+- method:
+    name: "ofTransaction"
+    returnType: "org.bitcoinj.core.GetDataMessage"
+    signature: "ofTransaction(org.bitcoinj.base.Sha256Hash,boolean) : org.bitcoinj.core.GetDataMessage"
+    instructionFingerprint: "EA9A86E3964DF5FEAFE08E9AC4DD35F4"
+    parametersTypes:
+    - "org.bitcoinj.base.Sha256Hash"
+    - "boolean"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "ofTransactionWhenIncludeWitness"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "F1990057AEE45A6FAC601E33B281D265"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "txId"
+      modelFingerprint: "E43DE5E31CBD1948DBECA7A1E25A04CF"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.Sha256Hash"
+          method: "read"
+          methodParameters:
+          - name: "buf"
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "int"
+                    uuid: "ofTransaction_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "int"
+                    uuid: "ofTransaction_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.nio.ByteBuffer"
+              uuid: "ofTransaction_sha256Hash1-buf"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.Sha256Hash"
+          method: "read"
+          methodParameters:
+          - name: "buf"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "int"
+                    uuid: "ofTransaction_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.nio.ByteBuffer"
+              uuid: "ofTransaction_sha256Hash1-buf"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "org.bitcoinj.base.Sha256Hash"
+        uuid: "ofTransaction_sha256Hash1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "includeWitness"
+      modelFingerprint: "A53A998EA701B13BE98A82E1B8C97DE4"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: true
+        suggestedContent: !<regular>
+          value: true
+        valueType: "boolean"
+        uuid: "ofTransaction_boolean1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "EFBAEC16DCCFD7C3B2CF43DDD3078245"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.GetDataMessage"
+          parameters:
+          - name: "items"
+            value:
+              sapientType: "COLLECTION"
+              content: !<collection>
+                parameters: []
+                values: []
+              suggestedContent: !<collection>
+                parameters: []
+                values: []
+              valueType: "java.util.List"
+              genericValueType: "org.bitcoinj.core.InventoryItem"
+              uuid: "ofTransaction_list1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.GetDataMessage"
+          parameters:
+          - name: "items"
+            value:
+              sapientType: "COLLECTION"
+              valueType: "java.util.List"
+              genericValueType: "org.bitcoinj.core.InventoryItem"
+              uuid: "ofTransaction_list1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.core.GetDataMessage"
+        uuid: "ofTransaction_getDataMessage1"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "12dc8b9a-b8c4-312d-a3ab-935cdccfc337"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "ofTransactionWhenNotIncludeWitness"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "39A811AA4DE79DC9C8291AF681122A55"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "txId"
+      modelFingerprint: "E43DE5E31CBD1948DBECA7A1E25A04CF"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.Sha256Hash"
+          method: "read"
+          methodParameters:
+          - name: "buf"
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "int"
+                    uuid: "ofTransaction_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "int"
+                    uuid: "ofTransaction_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.nio.ByteBuffer"
+              uuid: "ofTransaction_sha256Hash1-buf"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.Sha256Hash"
+          method: "read"
+          methodParameters:
+          - name: "buf"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "int"
+                    uuid: "ofTransaction_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.nio.ByteBuffer"
+              uuid: "ofTransaction_sha256Hash1-buf"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "org.bitcoinj.base.Sha256Hash"
+        uuid: "ofTransaction_sha256Hash1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "includeWitness"
+      modelFingerprint: "1F07F708D95D08DE23FD9A842ADB724D"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: false
+        suggestedContent: !<regular>
+          value: false
+        valueType: "boolean"
+        uuid: "ofTransaction_boolean1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "EFBAEC16DCCFD7C3B2CF43DDD3078245"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.GetDataMessage"
+          parameters:
+          - name: "items"
+            value:
+              sapientType: "COLLECTION"
+              content: !<collection>
+                parameters: []
+                values: []
+              suggestedContent: !<collection>
+                parameters: []
+                values: []
+              valueType: "java.util.List"
+              genericValueType: "org.bitcoinj.core.InventoryItem"
+              uuid: "ofTransaction_list1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.GetDataMessage"
+          parameters:
+          - name: "items"
+            value:
+              sapientType: "COLLECTION"
+              valueType: "java.util.List"
+              genericValueType: "org.bitcoinj.core.InventoryItem"
+              uuid: "ofTransaction_list1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.core.GetDataMessage"
+        uuid: "ofTransaction_getDataMessage1"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "eb9b7c03-bee0-3759-84bd-b7339040fea4"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+- method:
+    name: "addTransaction"
+    returnType: "void"
+    signature: "addTransaction(org.bitcoinj.base.Sha256Hash,boolean) : void"
+    instructionFingerprint: "2B810C193559407EA6DED96D1E14A182"
+    parametersTypes:
+    - "org.bitcoinj.base.Sha256Hash"
+    - "boolean"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "addTransactionWhenIncludeWitness"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(java.util.List<org.bitcoinj.core.InventoryItem>)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "5F87B005F72D8A6B33FFB5A0479D7CC0"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "743F0D04D82CA16B08BAA9550828640B"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.GetDataMessage"
+          parameters:
+          - name: "items"
+            value:
+              sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        content: !<regular>
+                          value: "ERROR"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "addTransaction_inventoryItem.Type1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "MOCK"
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "addTransaction_sha256Hash1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "addTransaction_inventoryItem.Type1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "UNKNOWN"
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "addTransaction_sha256Hash1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.core.InventoryItem"
+                  uuid: "addTransaction_inventoryItem1"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        content: !<regular>
+                          value: "ERROR"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "addTransaction_inventoryItem.Type1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "MOCK"
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "addTransaction_sha256Hash1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "addTransaction_inventoryItem.Type1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "UNKNOWN"
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "addTransaction_sha256Hash1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.core.InventoryItem"
+                  uuid: "addTransaction_inventoryItem1"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              valueType: "java.util.List"
+              genericValueType: "org.bitcoinj.core.InventoryItem"
+              uuid: "<init>_list1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.GetDataMessage"
+          parameters:
+          - name: "items"
+            value:
+              sapientType: "COLLECTION"
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "OBJECT"
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "addTransaction_inventoryItem.Type1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "UNKNOWN"
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "addTransaction_sha256Hash1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.core.InventoryItem"
+                  uuid: "addTransaction_inventoryItem1"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              valueType: "java.util.List"
+              genericValueType: "org.bitcoinj.core.InventoryItem"
+              uuid: "<init>_list1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.GetDataMessage"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "hash"
+      modelFingerprint: "5013FA43D41C42D0C9BB2BBEE9A02D24"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.Sha256Hash"
+        uuid: "addTransaction_sha256Hash1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "includeWitness"
+      modelFingerprint: "E35FFE747DBFC81343CFF05E14365DAB"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: true
+        suggestedContent: !<regular>
+          value: true
+        valueType: "boolean"
+        uuid: "addTransaction_boolean1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "VOID"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "52c7a0c2-0855-3fe3-9ac3-cd00f998d24c"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "addTransactionWhenNotIncludeWitness"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(java.util.List<org.bitcoinj.core.InventoryItem>)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "412CEA53306E86F31BCBD91A9D605D5A"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "08702016CCA2F0C76CE0964F23F24607"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.GetDataMessage"
+          parameters:
+          - name: "items"
+            value:
+              sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        content: !<regular>
+                          value: "TRANSACTION"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "Enum-org.bitcoinj.core.InventoryItem$Type-TRANSACTION"
+                        fixed: true
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "MOCK"
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "addTransaction_sha256Hash1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        content: !<regular>
+                          value: "TRANSACTION"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "Enum-org.bitcoinj.core.InventoryItem$Type-TRANSACTION"
+                        fixed: true
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "UNKNOWN"
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "addTransaction_sha256Hash1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.core.InventoryItem"
+                  uuid: "addTransaction_inventoryItem1"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        content: !<regular>
+                          value: "TRANSACTION"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "Enum-org.bitcoinj.core.InventoryItem$Type-TRANSACTION"
+                        fixed: true
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "MOCK"
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "addTransaction_sha256Hash1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        content: !<regular>
+                          value: "TRANSACTION"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "Enum-org.bitcoinj.core.InventoryItem$Type-TRANSACTION"
+                        fixed: true
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "UNKNOWN"
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "addTransaction_sha256Hash1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.core.InventoryItem"
+                  uuid: "addTransaction_inventoryItem1"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              valueType: "java.util.List"
+              genericValueType: "org.bitcoinj.core.InventoryItem"
+              uuid: "<init>_list1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.GetDataMessage"
+          parameters:
+          - name: "items"
+            value:
+              sapientType: "COLLECTION"
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "OBJECT"
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        content: !<regular>
+                          value: "TRANSACTION"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "Enum-org.bitcoinj.core.InventoryItem$Type-TRANSACTION"
+                        fixed: true
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "UNKNOWN"
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "addTransaction_sha256Hash1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.core.InventoryItem"
+                  uuid: "addTransaction_inventoryItem1"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              valueType: "java.util.List"
+              genericValueType: "org.bitcoinj.core.InventoryItem"
+              uuid: "<init>_list1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.GetDataMessage"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "hash"
+      modelFingerprint: "5013FA43D41C42D0C9BB2BBEE9A02D24"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.Sha256Hash"
+        uuid: "addTransaction_sha256Hash1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "includeWitness"
+      modelFingerprint: "9082016B982F080F49A9B4BFE1EB4E6A"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: false
+        suggestedContent: !<regular>
+          value: false
+        valueType: "boolean"
+        uuid: "addTransaction_boolean1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "VOID"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "b35789c3-87aa-36a7-9dea-e94d9f46cc20"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "addBlock"
+    returnType: "void"
+    signature: "addBlock(org.bitcoinj.base.Sha256Hash,boolean) : void"
+    instructionFingerprint: "6449A4AC941509F4C8B742AD1A799084"
+    parametersTypes:
+    - "org.bitcoinj.base.Sha256Hash"
+    - "boolean"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "addBlockWhenIncludeWitness"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(java.util.List<org.bitcoinj.core.InventoryItem>)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "5F87B005F72D8A6B33FFB5A0479D7CC0"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "743F0D04D82CA16B08BAA9550828640B"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.GetDataMessage"
+          parameters:
+          - name: "items"
+            value:
+              sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        content: !<regular>
+                          value: "ERROR"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "addBlock_inventoryItem.Type1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "MOCK"
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "addBlock_sha256Hash1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "addBlock_inventoryItem.Type1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "UNKNOWN"
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "addBlock_sha256Hash1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.core.InventoryItem"
+                  uuid: "addBlock_inventoryItem1"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        content: !<regular>
+                          value: "ERROR"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "addBlock_inventoryItem.Type1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "MOCK"
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "addBlock_sha256Hash1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "addBlock_inventoryItem.Type1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "UNKNOWN"
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "addBlock_sha256Hash1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.core.InventoryItem"
+                  uuid: "addBlock_inventoryItem1"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              valueType: "java.util.List"
+              genericValueType: "org.bitcoinj.core.InventoryItem"
+              uuid: "<init>_list1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.GetDataMessage"
+          parameters:
+          - name: "items"
+            value:
+              sapientType: "COLLECTION"
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "OBJECT"
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "addBlock_inventoryItem.Type1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "UNKNOWN"
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "addBlock_sha256Hash1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.core.InventoryItem"
+                  uuid: "addBlock_inventoryItem1"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              valueType: "java.util.List"
+              genericValueType: "org.bitcoinj.core.InventoryItem"
+              uuid: "<init>_list1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.GetDataMessage"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "hash"
+      modelFingerprint: "5013FA43D41C42D0C9BB2BBEE9A02D24"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.Sha256Hash"
+        uuid: "addBlock_sha256Hash1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "includeWitness"
+      modelFingerprint: "E35FFE747DBFC81343CFF05E14365DAB"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: true
+        suggestedContent: !<regular>
+          value: true
+        valueType: "boolean"
+        uuid: "addBlock_boolean1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "VOID"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "95ed973f-49a4-3282-ad9a-d786d1eb528f"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "addBlockWhenNotIncludeWitness"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(java.util.List<org.bitcoinj.core.InventoryItem>)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "9B349F7D7E65C838F114D1BD28E53236"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "18F12184257506AC6240DA975FEAB5E7"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.GetDataMessage"
+          parameters:
+          - name: "items"
+            value:
+              sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        content: !<regular>
+                          value: "BLOCK"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "Enum-org.bitcoinj.core.InventoryItem$Type-BLOCK"
+                        fixed: true
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "MOCK"
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "addBlock_sha256Hash1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        content: !<regular>
+                          value: "BLOCK"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "Enum-org.bitcoinj.core.InventoryItem$Type-BLOCK"
+                        fixed: true
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "UNKNOWN"
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "addBlock_sha256Hash1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.core.InventoryItem"
+                  uuid: "addBlock_inventoryItem1"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        content: !<regular>
+                          value: "BLOCK"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "Enum-org.bitcoinj.core.InventoryItem$Type-BLOCK"
+                        fixed: true
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "MOCK"
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "addBlock_sha256Hash1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        content: !<regular>
+                          value: "BLOCK"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "Enum-org.bitcoinj.core.InventoryItem$Type-BLOCK"
+                        fixed: true
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "UNKNOWN"
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "addBlock_sha256Hash1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.core.InventoryItem"
+                  uuid: "addBlock_inventoryItem1"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              valueType: "java.util.List"
+              genericValueType: "org.bitcoinj.core.InventoryItem"
+              uuid: "<init>_list1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.GetDataMessage"
+          parameters:
+          - name: "items"
+            value:
+              sapientType: "COLLECTION"
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "OBJECT"
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        content: !<regular>
+                          value: "BLOCK"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "Enum-org.bitcoinj.core.InventoryItem$Type-BLOCK"
+                        fixed: true
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "UNKNOWN"
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "addBlock_sha256Hash1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.core.InventoryItem"
+                  uuid: "addBlock_inventoryItem1"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              valueType: "java.util.List"
+              genericValueType: "org.bitcoinj.core.InventoryItem"
+              uuid: "<init>_list1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.GetDataMessage"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "hash"
+      modelFingerprint: "5013FA43D41C42D0C9BB2BBEE9A02D24"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.Sha256Hash"
+        uuid: "addBlock_sha256Hash1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "includeWitness"
+      modelFingerprint: "9082016B982F080F49A9B4BFE1EB4E6A"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: false
+        suggestedContent: !<regular>
+          value: false
+        valueType: "boolean"
+        uuid: "addBlock_boolean1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "VOID"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "766d3443-3aa7-3e6e-8f53-a27b29c0f9a2"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "addFilteredBlock"
+    returnType: "void"
+    signature: "addFilteredBlock(org.bitcoinj.base.Sha256Hash) : void"
+    instructionFingerprint: "F1571D237230582C05C276194C2D8935"
+    parametersTypes:
+    - "org.bitcoinj.base.Sha256Hash"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "addFilteredBlockTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(java.util.List<org.bitcoinj.core.InventoryItem>)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "98435F50CF76EF5D606FCC6055910517"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "37B2C15805B98D3B4E46A9AFCC4D4583"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.GetDataMessage"
+          parameters:
+          - name: "items"
+            value:
+              sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        content: !<regular>
+                          value: "FILTERED_BLOCK"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "Enum-org.bitcoinj.core.InventoryItem$Type-FILTERED_BLOCK"
+                        fixed: true
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "MOCK"
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "addFilteredBlock_sha256Hash1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        content: !<regular>
+                          value: "FILTERED_BLOCK"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "Enum-org.bitcoinj.core.InventoryItem$Type-FILTERED_BLOCK"
+                        fixed: true
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "UNKNOWN"
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "addFilteredBlock_sha256Hash1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.core.InventoryItem"
+                  uuid: "addFilteredBlock_inventoryItem1"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        content: !<regular>
+                          value: "FILTERED_BLOCK"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "Enum-org.bitcoinj.core.InventoryItem$Type-FILTERED_BLOCK"
+                        fixed: true
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "MOCK"
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "addFilteredBlock_sha256Hash1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        content: !<regular>
+                          value: "FILTERED_BLOCK"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "Enum-org.bitcoinj.core.InventoryItem$Type-FILTERED_BLOCK"
+                        fixed: true
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "UNKNOWN"
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "addFilteredBlock_sha256Hash1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.core.InventoryItem"
+                  uuid: "addFilteredBlock_inventoryItem1"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              valueType: "java.util.List"
+              genericValueType: "org.bitcoinj.core.InventoryItem"
+              uuid: "<init>_list1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.GetDataMessage"
+          parameters:
+          - name: "items"
+            value:
+              sapientType: "COLLECTION"
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "OBJECT"
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        content: !<regular>
+                          value: "FILTERED_BLOCK"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "Enum-org.bitcoinj.core.InventoryItem$Type-FILTERED_BLOCK"
+                        fixed: true
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "UNKNOWN"
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "addFilteredBlock_sha256Hash1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.core.InventoryItem"
+                  uuid: "addFilteredBlock_inventoryItem1"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              valueType: "java.util.List"
+              genericValueType: "org.bitcoinj.core.InventoryItem"
+              uuid: "<init>_list1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.GetDataMessage"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "hash"
+      modelFingerprint: "5013FA43D41C42D0C9BB2BBEE9A02D24"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.Sha256Hash"
+        uuid: "addFilteredBlock_sha256Hash1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "VOID"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "4fcf2a34-347c-315e-85cb-619d2e61fdb7"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "getHashOf"
+    returnType: "org.bitcoinj.base.Sha256Hash"
+    signature: "getHashOf(int) : org.bitcoinj.base.Sha256Hash"
+    instructionFingerprint: "D1C1B3BE15BDE4C1794CBB45BEC388EA"
+    parametersTypes:
+    - "int"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "getHashOfTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(java.util.List<org.bitcoinj.core.InventoryItem>)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "04C2372D58BBA455CAD05B047CF31C44"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "B24F17BF240A091357931031686494EA"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.GetDataMessage"
+          parameters:
+          - name: "items"
+            value:
+              sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        content: !<regular>
+                          value: "ERROR"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "<init>_list1-0-type"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "OBJECT"
+                        content: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "OBJECT"
+                              content: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    content: !<regular>
+                                      value: 0
+                                    valueType: "int"
+                                    uuid: "<init>_list1-0-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-0-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-0-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        suggestedContent: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "UNKNOWN"
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-0-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-0-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "<init>_list1-0-hash"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "<init>_list1-0-type"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "OBJECT"
+                        content: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "OBJECT"
+                              content: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    content: !<regular>
+                                      value: 0
+                                    valueType: "int"
+                                    uuid: "<init>_list1-0-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-0-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-0-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        suggestedContent: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "UNKNOWN"
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-0-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-0-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "<init>_list1-0-hash"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "org.bitcoinj.core.InventoryItem"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        content: !<regular>
+                          value: "ERROR"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "<init>_list1-1-type"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "OBJECT"
+                        content: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "OBJECT"
+                              content: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    content: !<regular>
+                                      value: 0
+                                    valueType: "int"
+                                    uuid: "<init>_list1-1-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-1-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-1-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        suggestedContent: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "UNKNOWN"
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-1-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-1-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "<init>_list1-1-hash"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "<init>_list1-1-type"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "OBJECT"
+                        content: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "OBJECT"
+                              content: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    content: !<regular>
+                                      value: 0
+                                    valueType: "int"
+                                    uuid: "<init>_list1-1-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-1-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-1-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        suggestedContent: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "UNKNOWN"
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-1-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-1-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "<init>_list1-1-hash"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "org.bitcoinj.core.InventoryItem"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        content: !<regular>
+                          value: "ERROR"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "<init>_list1-0-type"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "OBJECT"
+                        content: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "OBJECT"
+                              content: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    content: !<regular>
+                                      value: 0
+                                    valueType: "int"
+                                    uuid: "<init>_list1-0-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-0-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-0-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        suggestedContent: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "UNKNOWN"
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-0-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-0-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "<init>_list1-0-hash"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "<init>_list1-0-type"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "OBJECT"
+                        content: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "OBJECT"
+                              content: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    content: !<regular>
+                                      value: 0
+                                    valueType: "int"
+                                    uuid: "<init>_list1-0-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-0-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-0-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        suggestedContent: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "UNKNOWN"
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-0-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-0-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "<init>_list1-0-hash"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "org.bitcoinj.core.InventoryItem"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        content: !<regular>
+                          value: "ERROR"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "<init>_list1-1-type"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "OBJECT"
+                        content: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "OBJECT"
+                              content: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    content: !<regular>
+                                      value: 0
+                                    valueType: "int"
+                                    uuid: "<init>_list1-1-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-1-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-1-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        suggestedContent: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "UNKNOWN"
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-1-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-1-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "<init>_list1-1-hash"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "<init>_list1-1-type"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "OBJECT"
+                        content: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "OBJECT"
+                              content: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    content: !<regular>
+                                      value: 0
+                                    valueType: "int"
+                                    uuid: "<init>_list1-1-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-1-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-1-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        suggestedContent: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "UNKNOWN"
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-1-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-1-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "<init>_list1-1-hash"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "org.bitcoinj.core.InventoryItem"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              valueType: "java.util.List"
+              genericValueType: "org.bitcoinj.core.InventoryItem"
+              uuid: "<init>_list1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.GetDataMessage"
+          parameters:
+          - name: "items"
+            value:
+              sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "<init>_list1-0-type"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "OBJECT"
+                        content: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "OBJECT"
+                              content: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    content: !<regular>
+                                      value: 0
+                                    valueType: "int"
+                                    uuid: "<init>_list1-0-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-0-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-0-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        suggestedContent: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "UNKNOWN"
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-0-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-0-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "<init>_list1-0-hash"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "<init>_list1-0-type"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "OBJECT"
+                        content: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "OBJECT"
+                              content: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    content: !<regular>
+                                      value: 0
+                                    valueType: "int"
+                                    uuid: "<init>_list1-0-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-0-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-0-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        suggestedContent: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "UNKNOWN"
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-0-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-0-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "<init>_list1-0-hash"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "org.bitcoinj.core.InventoryItem"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "<init>_list1-1-type"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "OBJECT"
+                        content: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "OBJECT"
+                              content: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    content: !<regular>
+                                      value: 0
+                                    valueType: "int"
+                                    uuid: "<init>_list1-1-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-1-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-1-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        suggestedContent: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "UNKNOWN"
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-1-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-1-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "<init>_list1-1-hash"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "<init>_list1-1-type"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "OBJECT"
+                        content: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "OBJECT"
+                              content: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    content: !<regular>
+                                      value: 0
+                                    valueType: "int"
+                                    uuid: "<init>_list1-1-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-1-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-1-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        suggestedContent: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "UNKNOWN"
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-1-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-1-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "<init>_list1-1-hash"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "org.bitcoinj.core.InventoryItem"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "<init>_list1-0-type"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "OBJECT"
+                        content: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "OBJECT"
+                              content: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    content: !<regular>
+                                      value: 0
+                                    valueType: "int"
+                                    uuid: "<init>_list1-0-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-0-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-0-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        suggestedContent: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "UNKNOWN"
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-0-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-0-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "<init>_list1-0-hash"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "<init>_list1-0-type"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "OBJECT"
+                        content: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "OBJECT"
+                              content: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    content: !<regular>
+                                      value: 0
+                                    valueType: "int"
+                                    uuid: "<init>_list1-0-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-0-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-0-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        suggestedContent: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "UNKNOWN"
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-0-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-0-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "<init>_list1-0-hash"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "org.bitcoinj.core.InventoryItem"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "<init>_list1-1-type"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "OBJECT"
+                        content: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "OBJECT"
+                              content: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    content: !<regular>
+                                      value: 0
+                                    valueType: "int"
+                                    uuid: "<init>_list1-1-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-1-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-1-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        suggestedContent: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "UNKNOWN"
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-1-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-1-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "<init>_list1-1-hash"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.core.InventoryItem"
+                    parameters:
+                    - name: "type"
+                      value:
+                        sapientType: "ENUM"
+                        valueType: "org.bitcoinj.core.InventoryItem$Type"
+                        uuid: "<init>_list1-1-type"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hash"
+                      value:
+                        sapientType: "OBJECT"
+                        content: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "OBJECT"
+                              content: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    content: !<regular>
+                                      value: 0
+                                    valueType: "int"
+                                    uuid: "<init>_list1-1-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-1-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-1-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        suggestedContent: !<static_method_return>
+                          target: "org.bitcoinj.base.Sha256Hash"
+                          method: "read"
+                          methodParameters:
+                          - name: "buf"
+                            value:
+                              sapientType: "UNKNOWN"
+                              suggestedContent: !<static_method_return>
+                                target: "java.nio.ByteBuffer"
+                                method: "allocateDirect"
+                                methodParameters:
+                                - name: "capacity"
+                                  value:
+                                    sapientType: "BASIC"
+                                    valueType: "int"
+                                    uuid: "<init>_list1-1-hash-buf-capacity"
+                                    fixed: false
+                                    equalsMethodPresent: false
+                                    explicitCastNeeded: false
+                              valueType: "java.nio.ByteBuffer"
+                              uuid: "<init>_list1-1-hash-buf"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        valueType: "org.bitcoinj.base.Sha256Hash"
+                        uuid: "<init>_list1-1-hash"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "org.bitcoinj.core.InventoryItem"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              valueType: "java.util.List"
+              genericValueType: "org.bitcoinj.core.InventoryItem"
+              uuid: "<init>_list1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.GetDataMessage"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "i"
+      modelFingerprint: "C83B97901624537E58096A537726ADA0"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: 1
+        suggestedContent: !<regular>
+          value: 1
+        valueType: "int"
+        uuid: "getHashOf_int1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D5F995FF16038F8C8CEB6ED663606C67"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.Sha256Hash"
+        uuid: "getHashOf_sha256Hash1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "bc6b0301-4361-3b72-a541-5d984562aa59"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true

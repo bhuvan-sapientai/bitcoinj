@@ -1,0 +1,157 @@
+---
+modelFingerprint: "2E4D47244328F31EDCBD3FED5D6780F6"
+methods:
+- method:
+    name: "fromMnemonic"
+    returnType: "org.bitcoinj.script.ScriptError"
+    signature: "fromMnemonic(java.lang.String) : org.bitcoinj.script.ScriptError"
+    instructionFingerprint: "B6FF8C6E03FD921282C6B822C0708445"
+    parametersTypes:
+    - "java.lang.String"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "fromMnemonicWhenErrIsNullThrowsIllegalArgumentException"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "BEF5EBCA2CB21CBBA89303E25EED9F36"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "name"
+      modelFingerprint: "7ACB4C7EBF6D36049913B220FC88F117"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "J"
+        suggestedContent: !<regular>
+          value: "J"
+        valueType: "java.lang.String"
+        uuid: "fromMnemonic_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "6B9D3C6328E35A62BE46837C1246B79B"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.IllegalArgumentException"
+          parameters:
+          - name: "s"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "J is not a valid name"
+              suggestedContent: !<regular>
+                value: "J is not a valid name"
+              valueType: "java.lang.String"
+              uuid: "fromMnemonic_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "java.lang.IllegalArgumentException"
+          parameters:
+          - name: "s"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "J is not a valid name"
+              suggestedContent: !<regular>
+                value: "J is not a valid name"
+              valueType: "java.lang.String"
+              uuid: "fromMnemonic_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "java.lang.IllegalArgumentException"
+        uuid: "fromMnemonic_illegalArgumentException1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "02f68c12-5a0e-3dca-af97-5694b8b4e8da"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "fromMnemonicWhenErrIsNotNull"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "E775A44C5F755BB73872BC7EC5FDEACB"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "name"
+      modelFingerprint: "6EA07A17E3D3E21407332E2E522586C1"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "J"
+        suggestedContent: !<regular>
+          value: "J"
+        valueType: "java.lang.String"
+        uuid: "fromMnemonic_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "33B6BE2DD587778575E36BE82D6908A5"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ENUM"
+        content: !<regular>
+          value: "SCRIPT_ERR_ERROR_COUNT"
+        suggestedContent: !<regular>
+          value: "SCRIPT_ERR_ERROR_COUNT"
+        valueType: "org.bitcoinj.script.ScriptError"
+        uuid: "fromMnemonic_scriptError1"
+        fixed: false
+        collectionUuid: "<clinit>_hashMap1"
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "1917e9f8-0714-38f6-afb9-d52c8973b4ef"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
