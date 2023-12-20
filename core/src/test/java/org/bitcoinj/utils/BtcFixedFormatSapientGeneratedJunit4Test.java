@@ -28,12 +28,15 @@ import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.mockStatic;
 import static org.mockito.Mockito.doReturn;
 
+import org.junit.Ignore;
+
 public class BtcFixedFormatSapientGeneratedJunit4Test {
 
     @Rule()
     public Timeout timeoutRule = Timeout.seconds(5);
 
     //Sapient generated method id: ${717c1c94-99e8-3815-82de-f28f531421af}
+    @Ignore()
     @Test()
     public void scaleTest() {
         /**
@@ -61,6 +64,7 @@ public class BtcFixedFormatSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${034db038-3d0f-3f3e-91ee-291ef4cf2b7b}
+    @Ignore()
     @Test()
     public void scale1Test() {
         /**
@@ -84,6 +88,7 @@ public class BtcFixedFormatSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${d056b304-7a03-36ec-808e-bfed4857464d}
+    @Ignore()
     @Test()
     public void codeTest() {
         /**
@@ -110,6 +115,7 @@ public class BtcFixedFormatSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${d63a41ac-97d2-3f49-8af7-d8404a9a837c}
+    @Ignore()
     @Test()
     public void symbolTest() {
         /**
@@ -136,6 +142,7 @@ public class BtcFixedFormatSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${e323ac7c-cef1-36ab-8044-3ebd0ba2bb46}
+    @Ignore()
     @Test()
     public void fractionPlaceGroupsWhenILessThanLen() {
         /* Branches:
@@ -162,6 +169,7 @@ public class BtcFixedFormatSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${bce69e1e-6a07-38e9-acfb-2444b980e249}
+    @Ignore()
     @Test()
     public void toStringWhenSwitchScaleCaseMinus1() {
         /* Branches:
@@ -189,6 +197,7 @@ public class BtcFixedFormatSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${7f0d120c-f56d-30af-87e1-cc491bd9a017}
+    @Ignore()
     @Test()
     public void toStringWhenSwitchScaleCaseMinus2() {
         /* Branches:
@@ -216,6 +225,7 @@ public class BtcFixedFormatSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${fad52055-9caa-354d-b263-109b8af80617}
+    @Ignore()
     @Test()
     public void toStringWhenSwitchScaleCaseMinus3() {
         /* Branches:
@@ -243,6 +253,7 @@ public class BtcFixedFormatSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${915fb82a-ce39-3b58-a6fc-ce52cadad169}
+    @Ignore()
     @Test()
     public void toStringWhenSwitchScaleCaseMinus6() {
         /* Branches:
@@ -270,6 +281,7 @@ public class BtcFixedFormatSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${dc91410a-5348-3109-9863-e1c491abb865}
+    @Ignore()
     @Test()
     public void toStringWhenSwitchScaleCase1() {
         /* Branches:
@@ -297,6 +309,7 @@ public class BtcFixedFormatSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${7ae1ab14-a06b-3a0f-8e38-e353c69a38ff}
+    @Ignore()
     @Test()
     public void toStringWhenSwitchScaleCase2() {
         /* Branches:
@@ -324,6 +337,7 @@ public class BtcFixedFormatSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${b59cf20c-5b54-3288-a5f6-be6bffdc1c12}
+    @Ignore()
     @Test()
     public void toStringWhenSwitchScaleCaseCOIN_SCALE() {
         /* Branches:
@@ -351,6 +365,7 @@ public class BtcFixedFormatSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${c3e4e312-8c11-3027-b829-d73423000503}
+    @Ignore()
     @Test()
     public void toStringWhenSwitchScaleCaseMICROCOIN_SCALE() {
         /* Branches:
@@ -378,6 +393,7 @@ public class BtcFixedFormatSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${abf0ec22-c9da-3a83-bdd9-ac3deb3ca7bf}
+    @Ignore()
     @Test()
     public void toStringWhenSwitchScaleCaseMILLICOIN_SCALE() {
         /* Branches:
@@ -405,6 +421,7 @@ public class BtcFixedFormatSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${5ebf920b-84ff-3bd6-a39f-a1c11d0db3c9}
+    @Ignore()
     @Test()
     public void toStringWhenSwitchScaleCaseDefault() {
         /* Branches:

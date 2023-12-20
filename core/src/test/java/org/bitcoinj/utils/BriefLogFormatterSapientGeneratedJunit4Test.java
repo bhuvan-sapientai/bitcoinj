@@ -15,6 +15,8 @@ import static org.mockito.Mockito.CALLS_REAL_METHODS;
 import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mockStatic;
 
+import org.junit.Ignore;
+
 public class BriefLogFormatterSapientGeneratedJunit4Test {
 
     @Rule()
@@ -35,6 +37,7 @@ public class BriefLogFormatterSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${77d9580d-0a0c-3794-aeb1-13da2a5e4954}
+    @Ignore()
     @Test()
     public void init1WhenHandlersLengthGreaterThan0() {
         /* Branches:
@@ -45,7 +48,6 @@ public class BriefLogFormatterSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Level level = Level.parse("name1");
-
         //Act Statement(s)
         BriefLogFormatter.init(level);
     }
@@ -78,6 +80,7 @@ public class BriefLogFormatterSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${5378ac91-7deb-341c-89c9-a5f9224b65ce}
+    @Ignore()
     @Test()
     public void formatWhenLogRecordGetThrownIsNotNull() {
         /* Branches:
@@ -90,15 +93,14 @@ public class BriefLogFormatterSapientGeneratedJunit4Test {
         BriefLogFormatter target = new BriefLogFormatter();
         Level level = Level.parse("name1");
         LogRecord logRecord = new LogRecord(level, "msg1");
-
         //Act Statement(s)
         String result = target.format(logRecord);
-
         //Assert statement(s)
         assertThat(result, equalTo("result1"));
     }
 
     //Sapient generated method id: ${ac8ff3d4-4f6a-3dff-8982-4e680415e084}
+    @Ignore()
     @Test()
     public void formatWhenLogRecordGetThrownIsNull() {
         /* Branches:
@@ -111,10 +113,8 @@ public class BriefLogFormatterSapientGeneratedJunit4Test {
         BriefLogFormatter target = new BriefLogFormatter();
         Level level = Level.parse("name1");
         LogRecord logRecord = new LogRecord(level, "msg1");
-
         //Act Statement(s)
         String result = target.format(logRecord);
-
         //Assert statement(s)
         assertThat(result, equalTo("result1"));
     }

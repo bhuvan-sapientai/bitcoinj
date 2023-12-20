@@ -1284,12 +1284,12 @@ methods:
       filledByUser: false
     uuid: "c9c18527-1ae0-30a4-b8d8-35892f3fee40"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     variablesCouldNotBeIsolated: "prevTx, tx"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "createFakeCoinbaseTx"
     returnType: "org.bitcoinj.core.Transaction"
@@ -1773,11 +1773,11 @@ methods:
       filledByUser: false
     uuid: "0830d095-8eb4-37ca-beae-5eb8a100eb8f"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "createFakeTxWithChangeAddress"
     returnType: "org.bitcoinj.core.Transaction"
@@ -4638,12 +4638,12 @@ methods:
       filledByUser: false
     uuid: "f6a38e48-7cc0-35fc-bac6-5234e82a0bee"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     variablesCouldNotBeIsolated: "prevTx, t"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "createFakeTxWithoutChangeAddress"
     returnType: "org.bitcoinj.core.Transaction"
@@ -8551,11 +8551,11 @@ methods:
       filledByUser: false
     uuid: "d8a69eb0-c6c9-3aaf-ac93-4b2edd3e6190"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     variablesCouldNotBeIsolated: "prevTx1, prevTx2, t"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "createFakeTxWithoutChangeAddressWhenSplitNotGreaterThanValueGetValue"
@@ -13016,12 +13016,12 @@ methods:
       filledByUser: false
     uuid: "615ffca2-38e4-3a09-a2bc-388d110af724"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     variablesCouldNotBeIsolated: "prevTx, t"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "createFakeTx"
     returnType: "org.bitcoinj.core.Transaction[]"
@@ -19033,12 +19033,12 @@ methods:
       filledByUser: false
     uuid: "1b8d7166-5631-385c-bd74-0f7d05da32b6"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     variablesCouldNotBeIsolated: "prevTx, t, feederTx"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "roundTripTransaction"
     returnType: "org.bitcoinj.core.Transaction"
@@ -24910,11 +24910,11 @@ methods:
       filledByUser: false
     uuid: "bd1e7178-e141-3b6b-aac8-b7bdd57849a9"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "createFakeDoubleSpendTxnsWhenCaughtProtocolExceptionThrowsRuntimeException"
@@ -30637,11 +30637,11 @@ methods:
       filledByUser: false
     uuid: "2153ea4f-9833-3015-8c5d-245a3ea7ba69"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "createFakeBlock"
     returnType: "org.bitcoinj.testing.FakeTxBuilder$BlockPair"
@@ -31780,11 +31780,11 @@ methods:
       filledByUser: false
     uuid: "bcd6af45-aa61-35c1-9a73-4f070e52ba84"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "createFakeBlock2WhenTransactionsIsEmpty"

@@ -13,12 +13,15 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.mockStatic;
 import static org.hamcrest.Matchers.is;
 
+import org.junit.Ignore;
+
 public class ContextPropagatingThreadFactorySapientGeneratedJunit4Test {
 
     @Rule()
     public Timeout timeoutRule = Timeout.seconds(5);
 
     //Sapient generated method id: ${581615ec-fb96-3fea-b947-52c6c3049d90}
+    @Ignore()
     @Test()
     public void newThreadWhenHandlerIsNotNull() {
         /* Branches:

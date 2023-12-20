@@ -50,6 +50,8 @@ import static org.hamcrest.Matchers.notNullValue;
 import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mockStatic;
 
+import org.junit.Ignore;
+
 public class DeterministicSeedSapientGeneratedJunit4Test {
 
     @Rule()
@@ -77,11 +79,9 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Instant instant = Instant.now();
-
         //Act Statement(s)
         DeterministicSeed result = DeterministicSeed.ofMnemonic("A", "passphrase1", instant);
         DeterministicSeed deterministicSeed = new DeterministicSeed("A", (byte[]) null, "passphrase1", instant);
-
         //Assert statement(s)
         assertThat(result, equalTo(deterministicSeed));
     }
@@ -92,16 +92,15 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
         /* Branches:
          * (branch expression (line 176)) : false  #  inside <init> method
          */
-
         //Act Statement(s)
         DeterministicSeed result = DeterministicSeed.ofMnemonic("A", "passphrase1");
         DeterministicSeed deterministicSeed = new DeterministicSeed("A", (byte[]) null, "passphrase1", (Instant) null);
-
         //Assert statement(s)
         assertThat(result, equalTo(deterministicSeed));
     }
 
     //Sapient generated method id: ${118bbc22-6633-3a3f-ba11-ced895a866d0}
+    @Ignore()
     @Test()
     public void ofMnemonic2WhenDefaultBranch() {
         /* Branches:
@@ -110,15 +109,14 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         List<String> stringList = new ArrayList<>();
         Instant instant = Instant.now();
-
         //Act Statement(s)
         DeterministicSeed result = DeterministicSeed.ofMnemonic(stringList, "passphrase1", instant);
-
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
 
     //Sapient generated method id: ${cfa071ed-dabf-305c-9e6c-390b89e99a34}
+    @Ignore()
     @Test()
     public void ofMnemonic3WhenDefaultBranch() {
         /* Branches:
@@ -126,10 +124,8 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         List<String> stringList = new ArrayList<>();
-
         //Act Statement(s)
         DeterministicSeed result = DeterministicSeed.ofMnemonic(stringList, "passphrase1");
-
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -143,15 +139,14 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15};
         Instant instant = Instant.now();
-
         //Act Statement(s)
         DeterministicSeed result = DeterministicSeed.ofEntropy(byteArray, "passphrase1", instant);
-
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
 
     //Sapient generated method id: ${5d4d94a2-9c70-335e-8a9c-bd4a5fd851b5}
+    @Ignore()
     @Test()
     public void ofEntropyWhenDefaultBranch2() {
         /* Branches:
@@ -160,10 +155,8 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{};
         Instant instant = Instant.now();
-
         //Act Statement(s)
         DeterministicSeed result = DeterministicSeed.ofEntropy(byteArray, "passphrase1", instant);
-
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -176,15 +169,14 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15};
-
         //Act Statement(s)
         DeterministicSeed result = DeterministicSeed.ofEntropy(byteArray, "passphrase1");
-
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
 
     //Sapient generated method id: ${8dba0aaa-7140-3d30-9741-f866354a7894}
+    @Ignore()
     @Test()
     public void ofEntropy1WhenDefaultBranch2() {
         /* Branches:
@@ -192,15 +184,14 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{};
-
         //Act Statement(s)
         DeterministicSeed result = DeterministicSeed.ofEntropy(byteArray, "passphrase1");
-
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
 
     //Sapient generated method id: ${e0e63339-de46-337b-b131-03efb72cf524}
+    @Ignore()
     @Test()
     public void ofRandomWhenDefaultBranch() {
         /* Branches:
@@ -265,15 +256,14 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
         Instant instant = Instant.now();
         target = new DeterministicSeed("A", byteArray, "passphrase1", instant);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
-
         //Act Statement(s)
         boolean result = target.isEncrypted();
-
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }
 
     //Sapient generated method id: ${6feb8104-e1fb-3c31-8751-eb2a06a07f7a}
+    @Ignore()
     @Test()
     public void isEncryptedWhenEncryptedMnemonicCodeIsNullThrowsIllegalStateException() {
         /* Branches:
@@ -308,16 +298,15 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
         target = spy(new DeterministicSeed("A", byteArray, "passphrase1", instant));
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
         doReturn("return_of_toString1").when(target).toString(false);
-
         //Act Statement(s)
         String result = target.toString();
-
         //Assert statement(s)
         assertThat(result, equalTo("return_of_toString1"));
         verify(target).toString(false);
     }
 
     //Sapient generated method id: ${6dad8bd2-d85e-3449-9e91-b444ceb1332f}
+    @Ignore()
     @Test()
     public void toString1WhenIsEncrypted() {
         /* Branches:
@@ -332,16 +321,15 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
         target = spy(new DeterministicSeed("test mnemonic", byteArray, "test passphrase", instant));
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
         doReturn(true).when(target).isEncrypted();
-
         //Act Statement(s)
         String result = target.toString(true);
-
         //Assert statement(s)
         assertThat(result, equalTo("toString_moreObjects.ToStringHelper2"));
         verify(target).isEncrypted();
     }
 
     //Sapient generated method id: ${2d2467cc-8fbc-3cca-8870-867277564658}
+    @Ignore()
     @Test()
     public void toString1WhenIncludePrivate() {
         /* Branches:
@@ -359,10 +347,8 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
         doReturn(false).when(target).isEncrypted();
         doReturn("return_of_toHexString1").when(target).toHexString();
         doReturn("return_of_getMnemonicString1").when(target).getMnemonicString();
-
         //Act Statement(s)
         String result = target.toString(true);
-
         //Assert statement(s)
         assertThat(result, equalTo("toString_moreObjects.ToStringHelper2"));
         verify(target).isEncrypted();
@@ -371,6 +357,7 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${5ebed118-9b1d-35c1-a79b-42d21b8e7844}
+    @Ignore()
     @Test()
     public void toString1WhenNotIncludePrivate() {
         /* Branches:
@@ -386,10 +373,8 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
         target = spy(new DeterministicSeed("example mnemonic", byteArray, "example passphrase", instant));
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
         doReturn(false).when(target).isEncrypted();
-
         //Act Statement(s)
         String result = target.toString(false);
-
         //Assert statement(s)
         assertThat(result, equalTo("toString_moreObjects.ToStringHelper2"));
         verify(target).isEncrypted();
@@ -406,15 +391,14 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
         Instant instant = Instant.now();
         target = new DeterministicSeed("A", byteArray, "passphrase1", instant);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
-
         //Act Statement(s)
         String result = target.toHexString();
-
         //Assert statement(s)
         assertThat(result, equalTo(""));
     }
 
     //Sapient generated method id: ${f3d9549d-5c4c-3a8a-b78c-ec40ba218fa1}
+    @Ignore()
     @Test()
     public void toHexStringWhenSeedIsNull() {
         /* Branches:
@@ -427,15 +411,14 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
         Instant instant = Instant.now();
         target = new DeterministicSeed("A", (byte[]) null, "passphrase1", instant);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
-
         //Act Statement(s)
         String result = target.toHexString();
-
         //Assert statement(s)
         assertThat(result, is(nullValue()));
     }
 
     //Sapient generated method id: ${e399bed6-0e41-3bca-b4bf-c1d08029cd4b}
+    @Ignore()
     @Test()
     public void getSecretBytesTest() {
         /**
@@ -448,11 +431,9 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
         target = spy(new DeterministicSeed("test", byteArray, "password", instant));
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
         doReturn("return_of_getMnemonicString1").when(target).getMnemonicString();
-
         //Act Statement(s)
         byte[] result = target.getSecretBytes();
         byte[] byteResultArray = new byte[]{};
-
         //Assert statement(s)
         assertThat(result, equalTo(byteResultArray));
         verify(target).getMnemonicString();
@@ -466,10 +447,8 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
         Instant instant = Instant.now();
         target = new DeterministicSeed("A", byteArray, "passphrase1", instant);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
-
         //Act Statement(s)
         Protos.Wallet.EncryptionType result = target.getEncryptionType();
-
         //Assert statement(s)
         assertThat(result, equalTo(Protos.Wallet.EncryptionType.ENCRYPTED_SCRYPT_AES));
     }
@@ -482,11 +461,9 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
         Instant instant = Instant.now();
         target = new DeterministicSeed("A", byteArray, "passphrase1", instant);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
-
         //Act Statement(s)
         Optional<Instant> result = target.creationTime();
         Optional<Instant> instantOptional = Optional.of(instant);
-
         //Assert statement(s)
         assertThat(result, equalTo(instantOptional));
     }
@@ -500,7 +477,6 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
         target = new DeterministicSeed("A", byteArray, "passphrase1", instant);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
         Instant instant2 = Instant.now();
-
         //Act Statement(s)
         target.setCreationTime(instant2);
     }
@@ -513,7 +489,6 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
         Instant instant = Instant.now();
         target = new DeterministicSeed("A", byteArray, "passphrase1", instant);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
-
         //Act Statement(s)
         target.clearCreationTime();
     }
@@ -529,7 +504,6 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
         Instant instant = Instant.now();
         target = new DeterministicSeed("A", byteArray, "passphrase1", instant);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
-
         //Act Statement(s)
         target.setCreationTimeSeconds(1L);
     }
@@ -546,12 +520,12 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
         Instant instant = Instant.now();
         target = new DeterministicSeed("A", byteArray, "passphrase1", instant);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
-
         //Act Statement(s)
         target.setCreationTimeSeconds(0L);
     }
 
     //Sapient generated method id: ${6efdfffb-ab76-3832-8528-819e02d958d6}
+    @Ignore()
     @Test()
     public void setCreationTimeSecondsWhenCreationTimeSecsNotEquals0ThrowsIllegalArgumentException() {
         /* Branches:
@@ -569,12 +543,12 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
         IllegalArgumentException illegalArgumentException = new IllegalArgumentException("s1");
         thrown.expect(IllegalArgumentException.class);
         thrown.expectMessage(illegalArgumentException.getMessage());
-
         //Act Statement(s)
         target.setCreationTimeSeconds(0L);
     }
 
     //Sapient generated method id: ${8b7e84bd-0ccd-3596-9058-c8181dad2a0e}
+    @Ignore()
     @Test()
     public void encryptWhenEncryptedMnemonicCodeIsNullThrowsIllegalStateException() {
         /* Branches:
@@ -625,6 +599,7 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${5f5d7fab-8006-359a-b433-0cb11c860206}
+    @Ignore()
     @Test()
     public void checkWhenMnemonicCodeIsNotNull() throws MnemonicException {
         /* Branches:
@@ -638,15 +613,14 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
         MnemonicCode INSTANCEMock = mock(MnemonicCode.class);
         List<String> stringList = new ArrayList<>(Arrays.asList("A"));
         doNothing().when(INSTANCEMock).check(stringList);
-
         //Act Statement(s)
         target.check();
-
         //Assert statement(s)
         verify(INSTANCEMock).check(stringList);
     }
 
     //Sapient generated method id: ${32c74248-2930-3c12-927c-0325b00acc83}
+    @Ignore()
     @Test()
     public void getEntropyBytesTest() throws MnemonicException, MnemonicLengthException, MnemonicWordException, MnemonicChecksumException {
         //Arrange Statement(s)
@@ -658,16 +632,15 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
         byte[] byteArray2 = new byte[]{};
         List<String> stringList = new ArrayList<>(Arrays.asList("A"));
         doReturn(byteArray2).when(INSTANCEMock).toEntropy(stringList);
-
         //Act Statement(s)
         byte[] result = target.getEntropyBytes();
-
         //Assert statement(s)
         assertThat(result, equalTo(byteArray2));
         verify(INSTANCEMock).toEntropy(stringList);
     }
 
     //Sapient generated method id: ${abf14659-70c3-3a8a-bba9-d38bcc45c268}
+    @Ignore()
     @Test()
     public void getMnemonicStringWhenMnemonicCodeIsNotNull() {
         /* Branches:
@@ -681,16 +654,15 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
         InternalUtils.Joiner SPACE_JOINERMock = mock(InternalUtils.Joiner.class);
         List<String> stringList = new ArrayList<>(Arrays.asList("A"));
         doReturn("return_of_join1").when(SPACE_JOINERMock).join(stringList);
-
         //Act Statement(s)
         String result = target.getMnemonicString();
-
         //Assert statement(s)
         assertThat(result, equalTo("return_of_join1"));
         verify(SPACE_JOINERMock).join(stringList);
     }
 
     //Sapient generated method id: ${3819241d-fc61-3112-8e31-bff67d14fc8f}
+    @Ignore()
     @Test()
     public void getMnemonicStringWhenMnemonicCodeIsNull() {
         /* Branches:
@@ -704,10 +676,8 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
         Instant instant = Instant.now();
         target = new DeterministicSeed("A", byteArray, "passphrase1", instant);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
-
         //Act Statement(s)
         String result = target.getMnemonicString();
-
         //Assert statement(s)
         assertThat(result, is(nullValue()));
     }

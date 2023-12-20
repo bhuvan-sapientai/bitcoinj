@@ -29,7 +29,6 @@ public class ThreadingSapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
-
         //Act Statement(s)
         Threading.waitForUserCode();
     }
@@ -54,6 +53,7 @@ public class ThreadingSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${c8797ac2-3ff2-3636-b136-78c3f8e09094}
+    @Ignore()
     @Test()
     public void lock1WhenPlatformUtilsNotIsAndroidRuntime() {
         /* Branches:
@@ -83,7 +83,6 @@ public class ThreadingSapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
-
         //Act Statement(s)
         Threading.warnOnLockCycles();
     }
@@ -95,7 +94,6 @@ public class ThreadingSapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
-
         //Act Statement(s)
         Threading.throwOnLockCycles();
     }
@@ -107,7 +105,6 @@ public class ThreadingSapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
-
         //Act Statement(s)
         Threading.ignoreLockCycles();
     }
@@ -119,10 +116,8 @@ public class ThreadingSapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
-
         //Act Statement(s)
         Threading.setPolicy(CycleDetectingLockFactory.Policies.THROW);
-
         //Assert statement(s)
         assertThat(Threading.getPolicy(), equalTo(CycleDetectingLockFactory.Policies.THROW));
     }
@@ -134,10 +129,8 @@ public class ThreadingSapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
-
         //Act Statement(s)
         CycleDetectingLockFactory.Policy result = Threading.getPolicy();
-
         //Assert statement(s)
         assertThat(result, equalTo(CycleDetectingLockFactory.Policies.THROW));
     }

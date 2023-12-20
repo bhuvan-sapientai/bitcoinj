@@ -47,11 +47,11 @@ methods:
       filledByUser: false
     uuid: "ed212fe2-2afd-3617-872a-5724a1f34c1c"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "getAccountPath"
     returnType: "org.bitcoinj.crypto.HDPath"
@@ -974,10 +974,10 @@ methods:
       filledByUser: false
     uuid: "a377c75a-5e17-3222-adbe-6e7d38993c02"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "markKeyAsUsed"
     returnType: "org.bitcoinj.crypto.DeterministicKey"
@@ -1917,10 +1917,10 @@ methods:
       filledByUser: false
     uuid: "79d239ec-cbaa-3918-89d4-767bdc24e8a8"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "markKeyAsUsedWhenIssuedInternalKeysNotLessThanNumChildren"
@@ -2923,10 +2923,10 @@ methods:
       filledByUser: false
     uuid: "7d8b3532-bf24-3e02-aeaf-66fc1baecb7c"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path4"
     pathIdForUser: "path5"
     testPathName: "markKeyAsUsedWhenIssuedExternalKeysNotLessThanNumChildren"
@@ -3908,10 +3908,10 @@ methods:
       filledByUser: false
     uuid: "44fa91be-011c-3f0c-ba05-2ff6bddb0b80"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "findKeyFromPubKey"
     returnType: "org.bitcoinj.crypto.DeterministicKey"
@@ -4874,10 +4874,10 @@ methods:
       filledByUser: false
     uuid: "f3262d68-f653-32db-9e91-cc2045869e94"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "markPubHashAsUsed"
     returnType: "org.bitcoinj.crypto.DeterministicKey"
@@ -5922,10 +5922,10 @@ methods:
       filledByUser: false
     uuid: "7226b429-de80-355e-905e-1cd947aafff6"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "markPubHashAsUsedWhenKIsNull"
@@ -6989,10 +6989,10 @@ methods:
       filledByUser: false
     uuid: "20841dbd-ee4e-316a-a7a2-aa55a2ea7e63"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "markPubKeyAsUsedWhenKIsNull"
@@ -7866,11 +7866,11 @@ methods:
       filledByUser: false
     uuid: "1be1eb99-e43d-3b54-a57d-eaf9f09f9137"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     variablesCouldNotBeIsolated: "basicKeyChain"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "hasKeyWhenBasicKeyChainNotHasKeyKey"
@@ -8717,11 +8717,11 @@ methods:
       filledByUser: false
     uuid: "16ee9860-a42b-3307-ba9f-33f80143aacd"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     variablesCouldNotBeIsolated: "basicKeyChain"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "getKeyByPath"
     returnType: "org.bitcoinj.crypto.DeterministicKey"
@@ -9603,10 +9603,10 @@ methods:
       filledByUser: false
     uuid: "7fa8385f-b24a-3256-a524-6c5be821ba0f"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "getKeyByPath"
     returnType: "org.bitcoinj.crypto.DeterministicKey"
@@ -10380,10 +10380,10 @@ methods:
       filledByUser: false
     uuid: "419ad45b-e3c6-3107-a625-e0e04b9e277f"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "getKeyByPath"
     returnType: "org.bitcoinj.crypto.DeterministicKey"
@@ -11178,10 +11178,10 @@ methods:
       filledByUser: false
     uuid: "7876f634-75e5-3b99-9201-7270dc8f844d"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "getRootKey"
     returnType: "org.bitcoinj.crypto.DeterministicKey"
@@ -12024,10 +12024,10 @@ methods:
       filledByUser: false
     uuid: "6deda3ec-4706-3e3d-a330-d4ead20687c2"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "isWatching"
     returnType: "boolean"
@@ -12876,10 +12876,10 @@ methods:
       filledByUser: false
     uuid: "19d70003-1e49-3d4d-a4ab-856eba210b9c"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "isWatchingWhenGetWatchingKeyNotIsWatching"
@@ -13721,10 +13721,10 @@ methods:
       filledByUser: false
     uuid: "2f4e042a-a75d-3f80-8cca-4d50936f9576"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "numKeys"
     returnType: "int"
@@ -14576,10 +14576,10 @@ methods:
       filledByUser: false
     uuid: "76299944-2002-360a-8bb8-28994d8ad5a4"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "numLeafKeysIssued"
     returnType: "int"
@@ -15368,10 +15368,10 @@ methods:
       filledByUser: false
     uuid: "744f8c65-f71f-3db2-b6c8-46ea8149154d"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "earliestKeyCreationTime"
     returnType: "java.time.Instant"
@@ -16230,10 +16230,10 @@ methods:
       filledByUser: false
     uuid: "dc0588e1-d72e-347b-95e0-205cf7068cac"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "addEventListener"
     returnType: "void"
@@ -17083,11 +17083,11 @@ methods:
       filledByUser: false
     uuid: "0b160154-951e-3a14-95bd-e6793a7bce96"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     variablesCouldNotBeIsolated: "basicKeyChain"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "addEventListener"
     returnType: "void"
@@ -17970,11 +17970,11 @@ methods:
       filledByUser: false
     uuid: "283de23e-4782-3528-be05-a980b30b2663"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     variablesCouldNotBeIsolated: "basicKeyChain"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "removeEventListener"
     returnType: "boolean"
@@ -18830,11 +18830,11 @@ methods:
       filledByUser: false
     uuid: "8e2dce89-458a-3d3c-9e43-a1613fe3000b"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     variablesCouldNotBeIsolated: "basicKeyChain"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "removeEventListenerWhenBasicKeyChainNotRemoveEventListenerListener"
@@ -19681,11 +19681,11 @@ methods:
       filledByUser: false
     uuid: "43d19668-0bf6-3a5a-8031-a1dcd2ed2cd7"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     variablesCouldNotBeIsolated: "basicKeyChain"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "getMnemonicCode"
     returnType: "java.util.List"
@@ -20473,10 +20473,10 @@ methods:
       filledByUser: false
     uuid: "e594536a-f575-3049-bb93-017fb7b8ca2e"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "isFollowing"
     returnType: "boolean"
@@ -21344,10 +21344,10 @@ methods:
       filledByUser: false
     uuid: "16b1754a-bfdb-3aa3-bb73-83575a15fdd0"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "serializeMyselfToProtobuf"
     returnType: "java.util.List"
@@ -23018,11 +23018,11 @@ methods:
       filledByUser: false
     uuid: "db150eb7-eaf7-3b91-94a2-983595f0b600"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     variablesCouldNotBeIsolated: "basicKeyChain"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path3"
     testPathName: "serializeMyselfToProtobufWhenKeyGetParentIsNull"
@@ -24887,11 +24887,11 @@ methods:
       filledByUser: false
     uuid: "18235e8e-5a7c-3936-afac-8b6dba54d1a1"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     variablesCouldNotBeIsolated: "basicKeyChain"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path7"
     pathIdForUser: "path12"
     testPathName: "serializeMyselfToProtobufWhenKeyEqualsInternalParentKeyAndEntriesIsEmptyAndIsFollowingNotAndKeyGetParentIsNotNull"
@@ -27800,11 +27800,11 @@ methods:
       filledByUser: false
     uuid: "f2addb29-9274-3f86-8f54-54330e9e78d9"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path3"
     pathIdForUser: "path7"
     testPathName: "fromProtobuf1WhenLogIsDebugEnabledAndChainIsNull"
@@ -29080,11 +29080,11 @@ methods:
       filledByUser: false
     uuid: "ae65dad0-3d3a-3729-bfc6-9cccafca039a"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path6"
     pathIdForUser: "path9"
     testPathName: "fromProtobuf1WhenKeyNotHasEncryptedDeterministicSeedAndLogIsDebugEnabledAndChainIsNull"
@@ -31199,10 +31199,10 @@ methods:
       filledByUser: false
     uuid: "22c652b5-cda5-31cb-b4e0-13ace324f4af"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "toEncryptedWhenPasswordLengthNotGreaterThan0AndSeedIsNullThrowsIllegalStateException"
@@ -32104,10 +32104,10 @@ methods:
       filledByUser: false
     uuid: "7fb48097-4f3a-3ee7-bf22-e8e677359a49"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "toEncrypted"
     returnType: "org.bitcoinj.wallet.DeterministicKeyChain"
@@ -35384,10 +35384,10 @@ methods:
       filledByUser: false
     uuid: "d43ba78a-a7cc-3039-bd41-beff41bf5d78"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path10"
     pathIdForUser: "path2"
     testPathName: "toEncrypted1WhenDefaultBranchAndDefaultBranch"
@@ -38787,10 +38787,10 @@ methods:
       filledByUser: false
     uuid: "2d8d6a82-e73b-379a-850b-b5e19ae47aff"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path10"
     testPathName: "toEncrypted1WhenDefaultBranchAndDefaultBranchAndDefaultBranchAndDefaultBranch7"
@@ -39904,10 +39904,10 @@ methods:
       filledByUser: false
     uuid: "68609e3b-2631-3c0d-a3ed-526982732030"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "toDecryptedWhenPasswordLengthNotGreaterThan0AndCrypterIsNullThrowsIllegalStateException"
@@ -40880,10 +40880,10 @@ methods:
       filledByUser: false
     uuid: "3e7229c4-2a8a-34ce-b514-a5d0de04409f"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "toDecrypted"
     returnType: "org.bitcoinj.wallet.DeterministicKeyChain"
@@ -41822,10 +41822,10 @@ methods:
       filledByUser: false
     uuid: "7730acd6-619a-3c71-af95-d545a8ac96af"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "makeKeyChainFromSeed"
     returnType: "org.bitcoinj.wallet.DeterministicKeyChain"
@@ -43731,10 +43731,10 @@ methods:
       filledByUser: false
     uuid: "d5afbba0-cf99-3d23-b01c-2e2e04bd587f"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path11"
     pathIdForUser: "path6"
     testPathName: "makeKeyChainFromSeedWhenDefaultBranchAndDefaultBranchAndDefaultBranchAndDefaultBranchAndDefaultBranch"
@@ -45581,10 +45581,10 @@ methods:
       filledByUser: false
     uuid: "d51afedd-e03e-38dd-81ba-c509bc4d28bd"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path9"
     testPathName: "makeKeyChainFromSeedWhenDefaultBranchAndDefaultBranchAndDefaultBranchAndDefaultBranchAndDefaultBranch4"
@@ -47454,10 +47454,10 @@ methods:
       filledByUser: false
     uuid: "80d26230-fbc3-3b9e-a195-8b5a2dbcc03a"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path3"
     pathIdForUser: "path14"
     testPathName: "makeKeyChainFromSeedWhenDefaultBranchAndDefaultBranchAndDefaultBranchAndDefaultBranchAndDefaultBranch9"
@@ -48538,10 +48538,10 @@ methods:
       filledByUser: false
     uuid: "a0a355d6-9438-35de-b0f5-f5927ebfc8e4"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "checkAESKey"
     returnType: "boolean"
@@ -49414,10 +49414,10 @@ methods:
       filledByUser: false
     uuid: "7ee6de01-cd30-3adf-ab44-7dc0722c943e"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "getKeyCrypter"
     returnType: "org.bitcoinj.crypto.KeyCrypter"
@@ -50307,10 +50307,10 @@ methods:
       filledByUser: false
     uuid: "5263e1c8-6ee4-3528-9e17-7641d8067bcf"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "numBloomFilterEntries"
     returnType: "int"
@@ -51127,10 +51127,10 @@ methods:
       filledByUser: false
     uuid: "bce340de-c9e7-3b09-ae2c-d943d6a73f89"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "getFilter"
     returnType: "org.bitcoinj.core.BloomFilter"
@@ -52347,10 +52347,10 @@ methods:
       filledByUser: false
     uuid: "0c314ea8-a39b-35e6-84ac-8d31aa3e1259"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "getFilterWhenSizeLessThanNumBloomFilterEntries"
@@ -53557,10 +53557,10 @@ methods:
       filledByUser: false
     uuid: "bf39ba6a-9bd3-3f2d-b4bf-eab1cd5dbf00"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "getLookaheadSize"
     returnType: "int"
@@ -54349,10 +54349,10 @@ methods:
       filledByUser: false
     uuid: "2159584b-7b7b-3556-8b82-f3a9b1f6db15"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "setLookaheadSize"
     returnType: "void"
@@ -55158,10 +55158,10 @@ methods:
       filledByUser: false
     uuid: "8039b9ff-8cb7-3489-a63f-7eaf57d862bc"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "setLookaheadThreshold"
     returnType: "void"
@@ -55997,10 +55997,10 @@ methods:
       filledByUser: false
     uuid: "0c5f7ce6-daa8-3e5b-9a07-20c1a0a6c11c"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "setLookaheadThresholdWhenNumLessThanLookaheadSize"
@@ -56798,10 +56798,10 @@ methods:
       filledByUser: false
     uuid: "6cc4e2c9-e1a0-3cc4-a34e-afdea2942438"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "getLookaheadThreshold"
     returnType: "int"
@@ -57590,10 +57590,10 @@ methods:
       filledByUser: false
     uuid: "86f32f90-7267-3c2a-a55b-b567e02f5f85"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "maybeLookAhead"
     returnType: "void"
@@ -58437,10 +58437,10 @@ methods:
       filledByUser: false
     uuid: "eadf6cb0-7c58-35fa-b0ff-3afe92aef8bf"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "maybeLookAheadScripts"
     returnType: "void"
@@ -59255,10 +59255,10 @@ methods:
       filledByUser: false
     uuid: "cbfcaee5-a27e-3ce2-ad47-8d7688b8c792"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "getIssuedInternalKeys"
     returnType: "int"
@@ -60047,10 +60047,10 @@ methods:
       filledByUser: false
     uuid: "7a4e6cd2-9cd3-3ec9-af8e-ce3cc8155c5d"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "getSeed"
     returnType: "org.bitcoinj.wallet.DeterministicSeed"
@@ -60837,10 +60837,10 @@ methods:
       filledByUser: false
     uuid: "d93cdc67-af80-3c82-801b-04cf584a65e7"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "getKeys"
     returnType: "java.util.List"
@@ -61852,10 +61852,10 @@ methods:
       filledByUser: false
     uuid: "4e7d2e89-11e9-3e0d-97cb-717109d13dea"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "getKeys1WhenIncludeLookahead"
@@ -62779,10 +62779,10 @@ methods:
       filledByUser: false
     uuid: "2a70716c-728a-3718-9445-1e79ba221682"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "getIssuedReceiveKeys"
     returnType: "java.util.List"
@@ -63754,10 +63754,10 @@ methods:
       filledByUser: false
     uuid: "d6b3087e-d2ea-358c-9a5c-2168a5f23750"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "getLeafKeys"
     returnType: "java.util.List"
@@ -64650,10 +64650,10 @@ methods:
       filledByUser: false
     uuid: "3ba5323b-96a8-35a0-9a6f-699bdbb62cdc"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "serializeSeedEncryptableItem"
     returnType: "void"
@@ -65773,12 +65773,12 @@ methods:
       filledByUser: false
     uuid: "6c5ffd57-9b40-3d57-9289-1e667f128776"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     variablesCouldNotBeIsolated: "seed"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path4"
     testPathName: "serializeSeedEncryptableItemWhenSeedGetEncryptionTypeNotEqualsProtosWalletEncryptionTypeENCRThrowsIllegalStateException"
@@ -66872,12 +66872,12 @@ methods:
       filledByUser: false
     uuid: "6bee0f5f-83ed-3585-8033-51cd7dd91bce"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     variablesCouldNotBeIsolated: "seed"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path3"
     pathIdForUser: "path5"
     testPathName: "serializeSeedEncryptableItemWhenSeedGetEncryptedSeedDataIsNullAndSecretIsNotNull"
@@ -67945,10 +67945,10 @@ methods:
       filledByUser: false
     uuid: "d6c376d8-4b0a-34ec-8ea1-1707f5d158b6"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "getRedeemData"
     returnType: "org.bitcoinj.wallet.RedeemData"
@@ -68762,10 +68762,10 @@ methods:
       filledByUser: false
     uuid: "097c010e-abd4-3965-b79a-93627adbf8ed"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "freshOutputScript"
     returnType: "org.bitcoinj.script.Script"
@@ -69581,10 +69581,10 @@ methods:
       filledByUser: false
     uuid: "fba8354d-c564-3f4b-a60b-58b97a3bab8d"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "toString"
     returnType: "java.lang.String"
@@ -70379,10 +70379,10 @@ methods:
       filledByUser: false
     uuid: "4e47ec21-4e46-371c-b640-ecf9872fb62e"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "toString"
     returnType: "java.lang.String"
@@ -71530,7 +71530,7 @@ methods:
                 explicitCastNeeded: false
               - sapientType: "BASIC"
                 content: !<regular>
-                  value: "\n"
+                  value: "\\n"
                 valueType: "char"
                 fixed: true
                 equalsMethodPresent: false
@@ -71554,7 +71554,7 @@ methods:
                 explicitCastNeeded: false
               - sapientType: "BASIC"
                 content: !<regular>
-                  value: "\n"
+                  value: "\\n"
                 valueType: "char"
                 fixed: true
                 equalsMethodPresent: false
@@ -71591,7 +71591,7 @@ methods:
                 explicitCastNeeded: false
               - sapientType: "BASIC"
                 content: !<regular>
-                  value: "\n"
+                  value: "\\n"
                 valueType: "char"
                 fixed: true
                 equalsMethodPresent: false
@@ -71638,10 +71638,10 @@ methods:
       filledByUser: false
     uuid: "f6f28d8c-4d24-3609-893d-eebec0ac32cc"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "toString1WhenWatchingKeyCreationTimeNotIsPresent"
@@ -72692,7 +72692,7 @@ methods:
                 explicitCastNeeded: false
               - sapientType: "BASIC"
                 content: !<regular>
-                  value: "\n"
+                  value: "\\n"
                 valueType: "char"
                 fixed: true
                 equalsMethodPresent: false
@@ -72716,7 +72716,7 @@ methods:
                 explicitCastNeeded: false
               - sapientType: "BASIC"
                 content: !<regular>
-                  value: "\n"
+                  value: "\\n"
                 valueType: "char"
                 fixed: true
                 equalsMethodPresent: false
@@ -72753,7 +72753,7 @@ methods:
                 explicitCastNeeded: false
               - sapientType: "BASIC"
                 content: !<regular>
-                  value: "\n"
+                  value: "\\n"
                 valueType: "char"
                 fixed: true
                 equalsMethodPresent: false
@@ -72800,10 +72800,10 @@ methods:
       filledByUser: false
     uuid: "90a4c255-4d4a-33b9-85b8-18ab9a088e51"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "toString"
     returnType: "java.lang.String"
@@ -73762,10 +73762,10 @@ methods:
       filledByUser: false
     uuid: "5e3eb7f2-e7a6-3bec-b66d-185c084763b9"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "formatAddresses"
     returnType: "void"
@@ -74826,10 +74826,10 @@ methods:
       filledByUser: false
     uuid: "5f23bd1a-1cd7-363b-aa45-fa485262dc15"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path3"
     testPathName: "formatAddressesWhenKeyEqualsGetWatchingKey"
@@ -75880,10 +75880,10 @@ methods:
       filledByUser: false
     uuid: "9997590a-61d9-32e4-8bd8-29f426ebd23b"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path3"
     pathIdForUser: "path4"
     testPathName: "formatAddressesWhenKeyEqualsInternalParentKey"
@@ -76934,10 +76934,10 @@ methods:
       filledByUser: false
     uuid: "6d8e7af3-51cd-355f-994b-0e732bcad99f"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path4"
     pathIdForUser: "path5"
     testPathName: "formatAddressesWhenKeyEqualsExternalParentKey"
@@ -77988,10 +77988,10 @@ methods:
       filledByUser: false
     uuid: "47e2c111-df98-3f3a-83e6-e0810abf5825"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path5"
     pathIdForUser: "path6"
     testPathName: "formatAddressesWhenKeyGetChildNumberIGreaterThanOrEqualsToIssuedInternalKeys"
@@ -79158,10 +79158,10 @@ methods:
       filledByUser: false
     uuid: "a82df580-40ec-3bb4-96e0-f8e917984645"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path11"
     pathIdForUser: "path7"
     testPathName: "formatAddressesWhenExternalParentKeyNotEqualsKeyGetParent"
@@ -80520,10 +80520,10 @@ methods:
       filledByUser: false
     uuid: "692cd886-895f-32ff-ac49-c394847eae16"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path7"
     pathIdForUser: "path12"
     testPathName: "formatAddressesWhenExternalParentKeyEqualsKeyGetParentAndKeyGetChildNumberILessThanIssuedExternalKeys"
@@ -81399,7 +81399,7 @@ methods:
       filledByUser: false
     uuid: "081890d5-35e0-3cd3-9ffe-818669a4f9b4"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true

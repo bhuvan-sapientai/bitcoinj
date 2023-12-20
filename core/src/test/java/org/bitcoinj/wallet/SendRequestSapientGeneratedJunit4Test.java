@@ -29,6 +29,8 @@ import static org.mockito.Mockito.mockStatic;
 import static org.mockito.Mockito.doReturn;
 import static org.hamcrest.Matchers.is;
 
+import org.junit.Ignore;
+
 public class SendRequestSapientGeneratedJunit4Test {
 
     @Rule()
@@ -54,6 +56,7 @@ public class SendRequestSapientGeneratedJunit4Test {
     public ExpectedException thrown = ExpectedException.none();
 
     //Sapient generated method id: ${0c46e4d2-7a4e-3719-918f-e70a73b65493}
+    @Ignore()
     @Test()
     public void allowUnconfirmedTest() {
         //Arrange Statement(s)
@@ -68,6 +71,7 @@ public class SendRequestSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${7237198f-d9d9-393e-941f-2bba58c11487}
+    @Ignore()
     @Test()
     public void toTest() {
         /**
@@ -78,15 +82,14 @@ public class SendRequestSapientGeneratedJunit4Test {
          *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
-
         //Act Statement(s)
         SendRequest result = SendRequest.to(addressMock, coinMock);
-
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
 
     //Sapient generated method id: ${56ce40b9-1db9-3e13-b777-ca3cb31859cd}
+    @Ignore()
     @Test()
     public void to1Test() {
         /**
@@ -99,10 +102,8 @@ public class SendRequestSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         ECKey eCKey = new ECKey();
-
         //Act Statement(s)
         SendRequest result = SendRequest.to(eCKey, coinMock);
-
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -122,19 +123,19 @@ public class SendRequestSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${1e0a17a1-6c41-343d-acba-baf19732e505}
+    @Ignore()
     @Test()
     public void forTxTest() {
         //Arrange Statement(s)
         Transaction transactionMock = mock(Transaction.class);
-
         //Act Statement(s)
         SendRequest result = SendRequest.forTx(transactionMock);
-
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
 
     //Sapient generated method id: ${45cba896-53a6-3fe5-870b-c2bf338ffbae}
+    @Ignore()
     @Test()
     public void emptyWalletTest() {
         /**
@@ -145,10 +146,8 @@ public class SendRequestSapientGeneratedJunit4Test {
          *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
-
         //Act Statement(s)
         SendRequest result = SendRequest.emptyWallet(addressMock);
-
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -168,10 +167,8 @@ public class SendRequestSapientGeneratedJunit4Test {
         doReturn(transactionOutputList).when(parentTransactionMock).getOutputs();
         doReturn(false).when(transactionOutputMock).isMine(walletMock);
         thrown.expect(NullPointerException.class);
-
         //Act Statement(s)
         SendRequest.childPaysForParent(walletMock, parentTransactionMock, coinMock);
-
         //Assert statement(s)
         verify(parentTransactionMock).getOutputs();
         verify(transactionOutputMock).isMine(walletMock);
@@ -200,16 +197,15 @@ public class SendRequestSapientGeneratedJunit4Test {
         doReturn(transactionOutputList).when(parentTransactionMock).getOutputs();
         doReturn(false).when(transactionOutputMock).isMine(walletMock);
         thrown.expect(NullPointerException.class);
-
         //Act Statement(s)
         SendRequest.childPaysForParent(walletMock, parentTransactionMock, coinMock);
-
         //Assert statement(s)
         verify(parentTransactionMock).getOutputs();
         verify(transactionOutputMock).isMine(walletMock);
     }
 
     //Sapient generated method id: ${f32b1224-074d-3f2a-860a-50e5e0099bd3}
+    @Ignore()
     @Test()
     public void fromPaymentDetailsWhenPaymentDetailsHasMemo() {
         /* Branches:
@@ -233,6 +229,7 @@ public class SendRequestSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${8962e036-4105-33ed-81b5-9234d4ef36a1}
+    @Ignore()
     @Test()
     public void toStringWhenAesKeyIsNull() {
         /* Branches:

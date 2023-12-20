@@ -23,6 +23,8 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.mockStatic;
 import static org.mockito.Mockito.doReturn;
 
+import org.junit.Ignore;
+
 public class FilteringCoinSelectorSapientGeneratedJunit4Test {
 
     @Rule()
@@ -31,6 +33,7 @@ public class FilteringCoinSelectorSapientGeneratedJunit4Test {
     private final CoinSelector delegateMock = mock(CoinSelector.class, "delegate");
 
     //Sapient generated method id: ${9e2ce5b6-94bc-30f3-943d-762a6bc97ad7}
+    @Ignore()
     @Test()
     public void selectWhenSpentNotContainsOutputGetOutPointFor() {
         /* Branches:

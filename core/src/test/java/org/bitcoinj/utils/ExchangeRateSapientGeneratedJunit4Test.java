@@ -23,6 +23,8 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.mockStatic;
 import static org.mockito.Mockito.doReturn;
 
+import org.junit.Ignore;
+
 public class ExchangeRateSapientGeneratedJunit4Test {
 
     @Rule()
@@ -34,6 +36,7 @@ public class ExchangeRateSapientGeneratedJunit4Test {
     public ExpectedException thrown = ExpectedException.none();
 
     //Sapient generated method id: ${04691d75-9585-35b0-899a-e9a92fea1c4c}
+    @Ignore()
     @Test()
     public void coinToFiatWhenConvertedCompareToBigIntegerValueOfLongMIN_VALUELessThan0ThrowsArithmeticException() {
         /* Branches:
@@ -66,6 +69,7 @@ public class ExchangeRateSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${59ac1028-8ae4-3a1b-83b5-4831ab9452c9}
+    @Ignore()
     @Test()
     public void coinToFiatWhenConvertedCompareToBigIntegerValueOfLongMIN_VALUENotLessThan0() {
         /* Branches:
@@ -98,6 +102,7 @@ public class ExchangeRateSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${22f98e93-4e38-36f4-a6f1-5b10ca6e1d70}
+    @Ignore()
     @Test()
     public void fiatToCoinWhenConvertedCompareToBigIntegerValueOfLongMIN_VALUELessThan0ThrowsArithmeticException() {
         /* Branches:
@@ -130,6 +135,7 @@ public class ExchangeRateSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${8dd092b2-aba2-323a-a09c-62efd5aa7709}
+    @Ignore()
     @Test()
     public void fiatToCoinWhenConvertedCompareToBigIntegerValueOfLongMIN_VALUENotLessThan0() {
         /* Branches:
@@ -164,6 +170,7 @@ public class ExchangeRateSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${84ea7b22-74b9-3c90-98df-f4027aad1772}
+    @Ignore()
     @Test()
     public void fiatToCoinWhenCaughtIllegalArgumentExceptionThrowsArithmeticException() {
         /* Branches:

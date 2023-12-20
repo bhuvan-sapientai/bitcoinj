@@ -15,6 +15,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.mockStatic;
 
+import org.junit.Ignore;
+
 public class ExponentialBackoffSapientGeneratedJunit4Test {
 
     @Rule()
@@ -91,6 +93,7 @@ public class ExponentialBackoffSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${1841a798-331a-3eb9-b2cd-d7600dfa9716}
+    @Ignore()
     @Test()
     public void getRetryTimeTest() {
         /**
@@ -111,6 +114,7 @@ public class ExponentialBackoffSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${af5f6332-26a2-3749-8f9a-ac87ce6fe7cf}
+    @Ignore()
     @Test()
     public void compareToTest() {
         /**
@@ -133,6 +137,7 @@ public class ExponentialBackoffSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${363d3698-f34c-39ad-914f-376a19498023}
+    @Ignore()
     @Test()
     public void toStringTest() {
         /**

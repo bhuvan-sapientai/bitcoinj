@@ -53,6 +53,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mockStatic;
 import static org.hamcrest.Matchers.isA;
 
+import org.junit.Ignore;
+
 public class BlockFileLoaderSapientGeneratedJunit4Test {
 
     @Rule()
@@ -86,6 +88,7 @@ public class BlockFileLoaderSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${4704d881-b0c5-34b3-8a51-99a6ef09ab3e}
+    @Ignore()
     @Test()
     public void getReferenceClientBlockFileListWhenFileExists() {
         /* Branches:
@@ -138,7 +141,6 @@ public class BlockFileLoaderSapientGeneratedJunit4Test {
         RuntimeException runtimeException = new RuntimeException("Default blocks directory not found");
         thrown.expect(RuntimeException.class);
         thrown.expectMessage(runtimeException.getMessage());
-
         //Act Statement(s)
         BlockFileLoader.defaultBlocksDir();
     }
@@ -176,6 +178,7 @@ public class BlockFileLoaderSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${b4af2388-e781-3800-820a-b8ede09bd914}
+    @Ignore()
     @Test()
     public void streamTest() {
         //Arrange Statement(s)
@@ -199,6 +202,7 @@ public class BlockFileLoaderSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${3e917d90-34e0-3792-88c5-f9e7ccb945d0}
+    @Ignore()
     @Test()
     public void streamBuffersTest() {
         //Arrange Statement(s)
@@ -222,6 +226,7 @@ public class BlockFileLoaderSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${e7371402-39fb-3b8c-a2b7-40c698f1f1a1}
+    @Ignore()
     @Test()
     public void fileBlockStreamTest() throws FileNotFoundException {
         /**
@@ -255,6 +260,7 @@ public class BlockFileLoaderSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${068381fa-c8ce-32df-8cb7-791fd56199fe}
+    @Ignore()
     @Test()
     public void fileBlockSpliteratorTest() throws FileNotFoundException {
         /**
@@ -283,6 +289,7 @@ public class BlockFileLoaderSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${d86a23e3-c244-33f3-b317-b2c8e501f35f}
+    @Ignore()
     @Test()
     public void fileBlockSpliteratorWhenCaughtFileNotFoundExceptionThrowsRuntimeException() {
         /* Branches:

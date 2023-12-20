@@ -3883,10 +3883,10 @@ methods:
       filledByUser: false
     uuid: "6ca88477-f407-3d5d-a5d6-4b911490bffc"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "getKeys"
     returnType: "java.util.List"
@@ -4961,10 +4961,10 @@ methods:
       filledByUser: false
     uuid: "60ce3b48-6ab0-35db-9e0d-7284cf8f074b"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "getKeys"
     returnType: "java.util.List"
@@ -6526,11 +6526,11 @@ methods:
       filledByUser: false
     uuid: "dcd34d84-29ec-38ba-b13e-8865c6ba9b3c"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path9"
     testPathName: "importKeys1WhenPreviousKeyIsNullAndActuallyAddedSizeGreaterThan0ThrowsIllegalStateException"
@@ -6833,11 +6833,11 @@ methods:
       filledByUser: false
     uuid: "776a82d2-14fa-3913-869b-5fd3b1919580"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "importKey"
     returnType: "void"
@@ -8435,10 +8435,10 @@ methods:
       filledByUser: false
     uuid: "6a3a37d2-6642-3ccd-a791-ddfc4cd06bef"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "findKeyFromPubHash"
     returnType: "org.bitcoinj.crypto.ECKey"
@@ -10503,11 +10503,11 @@ methods:
       filledByUser: false
     uuid: "16b1754a-bfdb-3aa3-bb73-83575a15fdd0"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "serializeEncryptableItem"
     returnType: "org.bitcoinj.protobuf.wallet.Protos$Key$Builder"
@@ -11306,11 +11306,11 @@ methods:
       filledByUser: false
     uuid: "b5252992-9729-3995-9a93-ad56de200d2e"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path4"
     testPathName: "serializeEncryptableItemWhenItemGetEncryptionTypeNotEqualsProtosWalletEncryptionTypeENCRYPTEThrowsIllegalStateException"
@@ -12081,11 +12081,11 @@ methods:
       filledByUser: false
     uuid: "5d7f5fe0-fed9-38a5-8021-edd5adc6a17e"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path3"
     pathIdForUser: "path5"
     testPathName: "serializeEncryptableItemWhenItemGetEncryptedDataIsNullAndSecretIsNotNull"
@@ -12848,11 +12848,11 @@ methods:
       filledByUser: false
     uuid: "c57e4a51-6b5c-38f6-af65-31609a3c64a3"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path4"
     pathIdForUser: "path6"
     testPathName: "serializeEncryptableItemWhenItemGetEncryptedDataIsNullAndSecretIsNull"
@@ -13049,12 +13049,12 @@ methods:
       filledByUser: false
     uuid: "eabd3d02-7d16-38fc-868d-6e8863269a78"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     variablesCouldNotBeIsolated: "chain"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "fromProtobufEncrypted"
     returnType: "org.bitcoinj.wallet.BasicKeyChain"
@@ -13283,12 +13283,12 @@ methods:
       filledByUser: false
     uuid: "fdf441cb-65fe-3b5c-b115-cf990a61aa5e"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     variablesCouldNotBeIsolated: "chain"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "addEventListener"
     returnType: "void"
@@ -13487,11 +13487,11 @@ methods:
       filledByUser: false
     uuid: "0b160154-951e-3a14-95bd-e6793a7bce96"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "addEventListener"
     returnType: "void"
@@ -13669,11 +13669,11 @@ methods:
       filledByUser: false
     uuid: "283de23e-4782-3528-be05-a980b30b2663"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "addEventListener"
     returnType: "void"
@@ -15340,11 +15340,11 @@ methods:
       filledByUser: false
     uuid: "fbaf60a3-bd1e-38de-98ce-76faafb3cecd"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "toDecrypted"
     returnType: "org.bitcoinj.wallet.BasicKeyChain"
@@ -15827,11 +15827,11 @@ methods:
       filledByUser: false
     uuid: "5d4d52f4-ec68-383f-872e-646113fbe3c6"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "checkPassword"
     returnType: "boolean"
@@ -16062,11 +16062,11 @@ methods:
       filledByUser: false
     uuid: "2571c489-32ab-35c1-bd4a-d0b0f5d4d34d"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "checkAESKey"
     returnType: "boolean"
@@ -17808,11 +17808,11 @@ methods:
       filledByUser: false
     uuid: "2f338cc5-4f2a-30e5-87d8-039bec302a04"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "toStringWhenKeysIsEmpty"

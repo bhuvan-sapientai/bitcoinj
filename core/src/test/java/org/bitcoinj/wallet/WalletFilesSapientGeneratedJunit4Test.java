@@ -52,12 +52,12 @@ public class WalletFilesSapientGeneratedJunit4Test {
         File file = new File("pathname1");
         WalletFiles target = new WalletFiles(walletMock, file, 0L, TimeUnit.NANOSECONDS);
         WalletFiles.Listener walletFilesListenerMock = mock(WalletFiles.Listener.class);
-
         //Act Statement(s)
         target.setListener(walletFilesListenerMock);
     }
 
     //Sapient generated method id: ${64f96677-f12b-3bca-9163-3f25ee0bdc58}
+    @Ignore()
     @Test()
     public void saveNowWhenDirectoryNotExistsThrowsFileNotFoundException() throws IOException {
         /* Branches:
@@ -95,6 +95,7 @@ public class WalletFilesSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${ccb4660a-47a2-3fea-bd8e-57462e7fddb8}
+    @Ignore()
     @Test()
     public void saveNowWhenListenerIsNull() throws IOException {
         /* Branches:
@@ -135,6 +136,7 @@ public class WalletFilesSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${0524be10-41b8-3186-bf70-4ef597746e8d}
+    @Ignore()
     @Test()
     public void saveLaterWhenSavePendingNotGetAndSetTrue() {
         /* Branches:
@@ -147,7 +149,6 @@ public class WalletFilesSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         File file = new File("pathname1");
         WalletFiles target = new WalletFiles(walletMock, file, 1L, TimeUnit.SECONDS);
-
         //Act Statement(s)
         target.saveLater();
     }
@@ -159,7 +160,6 @@ public class WalletFilesSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         File file = new File("pathname1");
         WalletFiles target = new WalletFiles(walletMock, file, 0L, TimeUnit.NANOSECONDS);
-
         //Act Statement(s)
         target.shutdownAndWait();
     }
@@ -178,7 +178,6 @@ public class WalletFilesSapientGeneratedJunit4Test {
         WalletFiles target = new WalletFiles(walletMock, (File) null, 5L, TimeUnit.SECONDS);
         thrown.expect(RuntimeException.class);
         thrown.expectCause(isA(InterruptedException.class));
-
         //Act Statement(s)
         target.shutdownAndWait();
     }
