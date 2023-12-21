@@ -1,0 +1,2344 @@
+---
+modelFingerprint: "55804EDCFFCD53AAC16AB3BAF6FCDAD0"
+methods:
+- method:
+    name: "setFeePerVkb"
+    returnType: "void"
+    signature: "setFeePerVkb(org.bitcoinj.base.Coin) : void"
+    instructionFingerprint: "CC5BA4C0CB0CF99F4C4C2C85074CF7FF"
+    parametersTypes:
+    - "org.bitcoinj.base.Coin"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "setFeePerVkbTest"
+    nameDefinedByUser: false
+    constructorSignature: "to(org.bitcoinj.core.NetworkParameters,org.bitcoinj.crypto.ECKey,org.bitcoinj.base.Coin)\
+      \ : org.bitcoinj.wallet.SendRequest"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "74F98F3623E3B7303EB1AE28717CF9DA"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "e7d61d32-64e2-38bb-b429-a921d26c8176"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "allowUnconfirmed"
+    returnType: "void"
+    signature: "allowUnconfirmed() : void"
+    instructionFingerprint: "60A60EFD559EE7D4D20088AEC130DAA3"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "allowUnconfirmedTest"
+    nameDefinedByUser: false
+    constructorSignature: "to(org.bitcoinj.core.NetworkParameters,org.bitcoinj.crypto.ECKey,org.bitcoinj.base.Coin)\
+      \ : org.bitcoinj.wallet.SendRequest"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "9525F53C7D2058204FC614480196FC2D"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "E7D54EB330446567882985C6D21C3070"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.wallet.SendRequest"
+          method: "to"
+          methodParameters:
+          - name: "params"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.core.NetworkParameters"
+              uuid: "to_networkParameters1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "destination"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.crypto.ECKey"
+              uuid: "to_eCKey1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "value"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.base.Coin"
+              uuid: "to_coin1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.wallet.SendRequest"
+          method: "to"
+          methodParameters:
+          - name: "params"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.core.NetworkParameters"
+              uuid: "to_networkParameters1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "destination"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.crypto.ECKey"
+              uuid: "to_eCKey1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "value"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.base.Coin"
+              uuid: "to_coin1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "org.bitcoinj.wallet.SendRequest"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "SendRequest"
+      modelFingerprint: "979C8A8CC3B2C54AA7DACF2EC2D88D87"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.wallet.SendRequest"
+        uuid: "org.bitcoinj.wallet.SendRequest"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.wallet.SendRequest"
+        name: "to"
+        parameters:
+        - name: "destination"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.crypto.ECKey"
+            uuid: "to_eCKey1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Coin"
+            uuid: "to_coin1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "to(ECKey,Coin): SendRequest"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.wallet.SendRequest"
+          uuid: "to_sendRequest1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "AllowUnconfirmedCoinSelector"
+      modelFingerprint: "C840B7AB5C6F26B63C767E0D7FCA011F"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "org.bitcoinj.wallet.AllowUnconfirmedCoinSelector"
+        uuid: "org.bitcoinj.wallet.AllowUnconfirmedCoinSelector"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.wallet.AllowUnconfirmedCoinSelector"
+        name: "get"
+        parameters: []
+        signature: "get(): CoinSelector"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.wallet.AllowUnconfirmedCoinSelector"
+            method: "get"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.wallet.AllowUnconfirmedCoinSelector"
+            method: "get"
+            methodParameters: []
+          valueType: "org.bitcoinj.wallet.CoinSelector"
+          uuid: "allowUnconfirmed_coinSelector1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "VOID"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "0c46e4d2-7a4e-3719-918f-e70a73b65493"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+- method:
+    name: "to"
+    returnType: "org.bitcoinj.wallet.SendRequest"
+    signature: "to(org.bitcoinj.base.Address,org.bitcoinj.base.Coin) : org.bitcoinj.wallet.SendRequest"
+    instructionFingerprint: "EC5C0BD7BBCE6233DD7889257CFEF5D8"
+    parametersTypes:
+    - "org.bitcoinj.base.Address"
+    - "org.bitcoinj.base.Coin"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "toTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "BF11EFFAA6F405D27E897098D8A759E5"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "destination"
+      modelFingerprint: "53EC43F05183ABCAD7712FD00BB44F5B"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Address"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Address"
+        uuid: "to_address1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "value"
+      modelFingerprint: "F6A500F099AC0986A3B1175CEAC22831"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Coin"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Coin"
+        uuid: "to_coin1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "tx"
+      modelFingerprint: "7A57BC7F58FAB977247E69A9A2933B00"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.Transaction"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.Transaction"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.core.Transaction"
+        uuid: "to_transaction1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "tx"
+        name: "addOutput"
+        parameters:
+        - name: "value"
+          value:
+            sapientType: "MOCK"
+            suggestedContent: !<unknown_object>
+              target: "org.bitcoinj.base.Coin"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "org.bitcoinj.base.Coin"
+            uuid: "to_coin1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "address"
+          value:
+            sapientType: "MOCK"
+            suggestedContent: !<unknown_object>
+              target: "org.bitcoinj.base.Address"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "org.bitcoinj.base.Address"
+            uuid: "to_address1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "addOutput(Coin,Address): TransactionOutput"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "org.bitcoinj.core.TransactionOutput"
+            localVariableValue:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "to_transaction1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "value"
+              value:
+                sapientType: "MOCK"
+                suggestedContent: !<unknown_object>
+                  target: "org.bitcoinj.base.Coin"
+                  onlyPojoFunctions: false
+                  builderPattern: false
+                valueType: "org.bitcoinj.base.Coin"
+                uuid: "to_coin1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "address"
+              value:
+                sapientType: "MOCK"
+                suggestedContent: !<unknown_object>
+                  target: "org.bitcoinj.base.Address"
+                  onlyPojoFunctions: false
+                  builderPattern: false
+                valueType: "org.bitcoinj.base.Address"
+                uuid: "to_address1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "addOutput"
+          suggestedContent: !<method_return_from_value>
+            target: "org.bitcoinj.core.TransactionOutput"
+            localVariableValue:
+              sapientType: "OBJECT"
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "to_transaction1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "value"
+              value:
+                sapientType: "MOCK"
+                suggestedContent: !<unknown_object>
+                  target: "org.bitcoinj.base.Coin"
+                  onlyPojoFunctions: false
+                  builderPattern: false
+                valueType: "org.bitcoinj.base.Coin"
+                uuid: "to_coin1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "address"
+              value:
+                sapientType: "MOCK"
+                suggestedContent: !<unknown_object>
+                  target: "org.bitcoinj.base.Address"
+                  onlyPojoFunctions: false
+                  builderPattern: false
+                valueType: "org.bitcoinj.base.Address"
+                uuid: "to_address1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "addOutput"
+          valueType: "org.bitcoinj.core.TransactionOutput"
+          uuid: "to_transactionOutput1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "A3B330870491AB7702890B1DD1BB4471"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.wallet.SendRequest"
+          parameters:
+          - name: "transaction"
+            value:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "to_transaction1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: true
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.wallet.SendRequest"
+          parameters:
+          - name: "transaction"
+            value:
+              sapientType: "OBJECT"
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "to_transaction1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: true
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.wallet.SendRequest"
+        uuid: "to_sendRequest1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "7237198f-d9d9-393e-941f-2bba58c11487"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    variablesCouldNotBeIsolated: "tx"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+- method:
+    name: "to"
+    returnType: "org.bitcoinj.wallet.SendRequest"
+    signature: "to(org.bitcoinj.crypto.ECKey,org.bitcoinj.base.Coin) : org.bitcoinj.wallet.SendRequest"
+    instructionFingerprint: "C2ECE13A608B7C5A4BF12F626728FACE"
+    parametersTypes:
+    - "org.bitcoinj.crypto.ECKey"
+    - "org.bitcoinj.base.Coin"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "to1Test"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "5FB8D34FEEFA255A37C6A74D9FC87B8E"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "destination"
+      modelFingerprint: "B14157F1C6E44027610E7B2B9674AAE7"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.crypto.ECKey"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.crypto.ECKey"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.crypto.ECKey"
+        uuid: "to_eCKey1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "value"
+      modelFingerprint: "F6A500F099AC0986A3B1175CEAC22831"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Coin"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Coin"
+        uuid: "to_coin1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "tx"
+      modelFingerprint: "CD19370654DF28DE7CE093BC30CD084D"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.Transaction"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.Transaction"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.core.Transaction"
+        uuid: "to_transaction1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "tx"
+        name: "addOutput"
+        parameters:
+        - name: "value"
+          value:
+            sapientType: "MOCK"
+            suggestedContent: !<unknown_object>
+              target: "org.bitcoinj.base.Coin"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "org.bitcoinj.base.Coin"
+            uuid: "to_coin1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "pubkey"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "org.bitcoinj.crypto.ECKey"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: false
+            suggestedContent: !<new>
+              target: "org.bitcoinj.crypto.ECKey"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "org.bitcoinj.crypto.ECKey"
+            uuid: "to_eCKey1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "addOutput(Coin,ECKey): TransactionOutput"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "org.bitcoinj.core.TransactionOutput"
+            localVariableValue:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "to_transaction1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "value"
+              value:
+                sapientType: "MOCK"
+                suggestedContent: !<unknown_object>
+                  target: "org.bitcoinj.base.Coin"
+                  onlyPojoFunctions: false
+                  builderPattern: false
+                valueType: "org.bitcoinj.base.Coin"
+                uuid: "to_coin1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "pubkey"
+              value:
+                sapientType: "OBJECT"
+                content: !<new>
+                  target: "org.bitcoinj.crypto.ECKey"
+                  parameters: []
+                  privateConstructor: false
+                  createdByTargetCode: false
+                suggestedContent: !<new>
+                  target: "org.bitcoinj.crypto.ECKey"
+                  parameters: []
+                  privateConstructor: false
+                  createdByTargetCode: false
+                valueType: "org.bitcoinj.crypto.ECKey"
+                uuid: "to_eCKey1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "addOutput"
+          suggestedContent: !<method_return_from_value>
+            target: "org.bitcoinj.core.TransactionOutput"
+            localVariableValue:
+              sapientType: "OBJECT"
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "to_transaction1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "value"
+              value:
+                sapientType: "MOCK"
+                suggestedContent: !<unknown_object>
+                  target: "org.bitcoinj.base.Coin"
+                  onlyPojoFunctions: false
+                  builderPattern: false
+                valueType: "org.bitcoinj.base.Coin"
+                uuid: "to_coin1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "pubkey"
+              value:
+                sapientType: "OBJECT"
+                content: !<new>
+                  target: "org.bitcoinj.crypto.ECKey"
+                  parameters: []
+                  privateConstructor: false
+                  createdByTargetCode: false
+                suggestedContent: !<new>
+                  target: "org.bitcoinj.crypto.ECKey"
+                  parameters: []
+                  privateConstructor: false
+                  createdByTargetCode: false
+                valueType: "org.bitcoinj.crypto.ECKey"
+                uuid: "to_eCKey1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "addOutput"
+          valueType: "org.bitcoinj.core.TransactionOutput"
+          uuid: "to_transactionOutput1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "A3B330870491AB7702890B1DD1BB4471"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.wallet.SendRequest"
+          parameters:
+          - name: "transaction"
+            value:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "to_transaction1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: true
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.wallet.SendRequest"
+          parameters:
+          - name: "transaction"
+            value:
+              sapientType: "OBJECT"
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "to_transaction1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: true
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.wallet.SendRequest"
+        uuid: "to_sendRequest1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "56ce40b9-1db9-3e13-b777-ca3cb31859cd"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    variablesCouldNotBeIsolated: "tx"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+- method:
+    name: "to"
+    returnType: "org.bitcoinj.wallet.SendRequest"
+    signature: "to(org.bitcoinj.core.NetworkParameters,org.bitcoinj.crypto.ECKey,org.bitcoinj.base.Coin)\
+      \ : org.bitcoinj.wallet.SendRequest"
+    instructionFingerprint: "22B42DE7E3422F8CA0CD0BC4C2437978"
+    parametersTypes:
+    - "org.bitcoinj.core.NetworkParameters"
+    - "org.bitcoinj.crypto.ECKey"
+    - "org.bitcoinj.base.Coin"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "to2Test"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "4807588B17F9C98C0F92D56F200CB893"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "params"
+      modelFingerprint: "B668779CA341827ABE80AF8E4B98FDFF"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.core.NetworkParameters"
+        uuid: "to_networkParameters1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "destination"
+      modelFingerprint: "1908ED46BDA9CADE3A2BD3BB4A64436A"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.crypto.ECKey"
+        uuid: "to_eCKey1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "value"
+      modelFingerprint: "E3737B26A0569D77942822D5F92581D4"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.Coin"
+        uuid: "to_coin1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "SendRequest"
+      modelFingerprint: "979C8A8CC3B2C54AA7DACF2EC2D88D87"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.wallet.SendRequest"
+        uuid: "org.bitcoinj.wallet.SendRequest"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.wallet.SendRequest"
+        name: "to"
+        parameters:
+        - name: "destination"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.crypto.ECKey"
+            uuid: "to_eCKey1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Coin"
+            uuid: "to_coin1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "to(ECKey,Coin): SendRequest"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.wallet.SendRequest"
+          uuid: "to_sendRequest1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "1A9CEF61A7D892E5B95A81E0E790F6D1"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.wallet.SendRequest"
+        uuid: "to_sendRequest1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "9bbbf358-bd89-3710-ab26-d3239a4cc15c"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "forTx"
+    returnType: "org.bitcoinj.wallet.SendRequest"
+    signature: "forTx(org.bitcoinj.core.Transaction) : org.bitcoinj.wallet.SendRequest"
+    instructionFingerprint: "41C8CF47A637241FE9713AC65287499A"
+    parametersTypes:
+    - "org.bitcoinj.core.Transaction"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "forTxTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "81EFFDBBBF9C2D7514AE613E54E75665"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "tx"
+      modelFingerprint: "F8B87C44786781D6A4ADD711C259C948"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.core.Transaction"
+        uuid: "forTx_transaction1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "CC7A33F0E4CA31637749657763FA09F9"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.wallet.SendRequest"
+          parameters:
+          - name: "transaction"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "forTx_transaction1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: true
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.wallet.SendRequest"
+          parameters:
+          - name: "transaction"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "forTx_transaction1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: true
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.wallet.SendRequest"
+        uuid: "forTx_sendRequest1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "1e0a17a1-6c41-343d-acba-baf19732e505"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+- method:
+    name: "emptyWallet"
+    returnType: "org.bitcoinj.wallet.SendRequest"
+    signature: "emptyWallet(org.bitcoinj.base.Address) : org.bitcoinj.wallet.SendRequest"
+    instructionFingerprint: "BDBC1389217BCF91CD796EB7AA8B58D5"
+    parametersTypes:
+    - "org.bitcoinj.base.Address"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "emptyWalletTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "521BA658BFB8A17B8DFC0B6C6793CC9D"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "destination"
+      modelFingerprint: "35ED30FE2EB978208527A22DEA3AEBCF"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.Address"
+        uuid: "emptyWallet_address1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "tx"
+      modelFingerprint: "C3CFE68EF214A79459553FD732FBE716"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.Transaction"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.Transaction"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.core.Transaction"
+        uuid: "emptyWallet_transaction1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "tx"
+        name: "addOutput"
+        parameters:
+        - name: "value"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_field_return>
+              target: "org.bitcoinj.base.Coin"
+              fieldName: "ZERO"
+            suggestedContent: !<static_field_return>
+              target: "org.bitcoinj.base.Coin"
+              fieldName: "ZERO"
+            valueType: "org.bitcoinj.base.Coin"
+            uuid: "emptyWallet_coin1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "address"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Address"
+            uuid: "emptyWallet_address1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "addOutput(Coin,Address): TransactionOutput"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "org.bitcoinj.core.TransactionOutput"
+            localVariableValue:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "emptyWallet_transaction1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "value"
+              value:
+                sapientType: "OBJECT"
+                content: !<static_field_return>
+                  target: "org.bitcoinj.base.Coin"
+                  fieldName: "ZERO"
+                suggestedContent: !<static_field_return>
+                  target: "org.bitcoinj.base.Coin"
+                  fieldName: "ZERO"
+                valueType: "org.bitcoinj.base.Coin"
+                uuid: "emptyWallet_coin1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "address"
+              value:
+                sapientType: "MOCK"
+                valueType: "org.bitcoinj.base.Address"
+                uuid: "emptyWallet_address1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "addOutput"
+          suggestedContent: !<method_return_from_value>
+            target: "org.bitcoinj.core.TransactionOutput"
+            localVariableValue:
+              sapientType: "OBJECT"
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "emptyWallet_transaction1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "value"
+              value:
+                sapientType: "OBJECT"
+                suggestedContent: !<static_field_return>
+                  target: "org.bitcoinj.base.Coin"
+                  fieldName: "ZERO"
+                valueType: "org.bitcoinj.base.Coin"
+                uuid: "emptyWallet_coin1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "address"
+              value:
+                sapientType: "UNKNOWN"
+                valueType: "org.bitcoinj.base.Address"
+                uuid: "emptyWallet_address1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "addOutput"
+          valueType: "org.bitcoinj.core.TransactionOutput"
+          uuid: "emptyWallet_transactionOutput1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "A3B330870491AB7702890B1DD1BB4471"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.wallet.SendRequest"
+          parameters:
+          - name: "transaction"
+            value:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "emptyWallet_transaction1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: true
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.wallet.SendRequest"
+          parameters:
+          - name: "transaction"
+            value:
+              sapientType: "OBJECT"
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "emptyWallet_transaction1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: true
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.wallet.SendRequest"
+        uuid: "emptyWallet_sendRequest1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "45cba896-53a6-3fe5-870b-c2bf338ffbae"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    variablesCouldNotBeIsolated: "tx"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+- method:
+    name: "childPaysForParent"
+    returnType: "org.bitcoinj.wallet.SendRequest"
+    signature: "childPaysForParent(org.bitcoinj.wallet.Wallet,org.bitcoinj.core.Transaction,org.bitcoinj.base.Coin)\
+      \ : org.bitcoinj.wallet.SendRequest"
+    instructionFingerprint: "43DDA2DEC6D9FBFB6388F219715AE29C"
+    parametersTypes:
+    - "org.bitcoinj.wallet.Wallet"
+    - "org.bitcoinj.core.Transaction"
+    - "org.bitcoinj.base.Coin"
+  paths:
+  - pathId: "path5"
+    pathIdForUser: "path1"
+    testPathName: "childPaysForParentWhenParentTransactionGetOutputsIsEmptyThrowsNullPointerException"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "54BF26434528F43FC955A99AC74C2178"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "f3b983b8-e7b5-3065-b3e6-93f48ff4b064"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path4"
+    pathIdForUser: "path2"
+    testPathName: "childPaysForParentWhenOutputNotIsMineWalletThrowsNullPointerException"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "83CA295F811E4BE681A441806CB97651"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "234b6e1a-38f5-3998-a198-03e6c2f0951a"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path3"
+    pathIdForUser: "path3"
+    testPathName: "childPaysForParentWhenOutputNotIsAvailableForSpendingThrowsNullPointerException"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "D127FF674F131F46575581F8E61184C6"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "cee4b152-a60f-3031-8682-dae4a40d144e"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path1"
+    pathIdForUser: "path4"
+    testPathName: "childPaysForParentWhenOutputGetValueIsGreaterThanFeeRaise"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "D30E8BD1DA92B4C80F784469269BB49A"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "wallet"
+      modelFingerprint: "2E00221971D43CC87B6B8DA272A04B82"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.Wallet"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.Wallet"
+        uuid: "childPaysForParent_wallet1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "parentTransaction"
+      modelFingerprint: "904468D9A1452DE6BFAC8FF781487E38"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.Transaction"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.Transaction"
+        uuid: "childPaysForParent_transaction1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "feeRaise"
+      modelFingerprint: "13A9BE6C58418F0F7CFE5CAA7D61A478"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.Coin"
+        uuid: "childPaysForParent_coin1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "parentTransaction"
+      modelFingerprint: "5D76BF58A5F1DF8229CC9BBAFED52532"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.Transaction"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.Transaction"
+        uuid: "childPaysForParent_transaction1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "parentTransaction"
+        name: "getOutputs"
+        parameters: []
+        signature: "getOutputs(): List"
+        returnValue:
+          sapientType: "COLLECTION"
+          content: !<collection>
+            collectionClass: "java.util.ArrayList"
+            parameters: []
+            values:
+            - sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.TransactionOutput"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.core.TransactionOutput"
+              uuid: "childPaysForParent_list1-0"
+              fixed: false
+              collectionUuid: "childPaysForParent_list1"
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          suggestedContent: !<collection>
+            collectionClass: "java.util.ArrayList"
+            parameters: []
+            values:
+            - sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.TransactionOutput"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.core.TransactionOutput"
+              uuid: "childPaysForParent_list1-0"
+              fixed: false
+              collectionUuid: "childPaysForParent_list1"
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          valueType: "java.util.List"
+          genericValueType: "org.bitcoinj.core.TransactionOutput"
+          uuid: "childPaysForParent_list1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "output"
+      modelFingerprint: "C535210D8DF253866C29D48DADD7057B"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionOutput"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionOutput"
+        uuid: "childPaysForParent_list1-0"
+        fixed: false
+        collectionUuid: "childPaysForParent_list1"
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "output"
+        name: "isMine"
+        parameters:
+        - name: "transactionBag"
+          value:
+            sapientType: "MOCK"
+            suggestedContent: !<unknown_object>
+              target: "org.bitcoinj.wallet.Wallet"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "org.bitcoinj.wallet.Wallet"
+            uuid: "childPaysForParent_wallet1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "isMine(Wallet): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: false
+          suggestedContent: !<regular>
+            value: false
+          valueType: "boolean"
+          uuid: "childPaysForParent_boolean2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "1544C3243427A58A5AE91A88CC628F77"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.NullPointerException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.lang.NullPointerException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.lang.NullPointerException"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "296cbaee-2c96-3f11-8688-962118a92952"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path5"
+    testPathName: "childPaysForParentWhenOutputGetValueNotIsGreaterThanFeeRaiseThrowsNullPointerException"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "DBED9441B864CE4C8DA42A223E1B1125"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "wallet"
+      modelFingerprint: "7BA238852DB9D47A392AC1E5D14B62D1"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.Wallet"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.Wallet"
+        uuid: "childPaysForParent_wallet1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "parentTransaction"
+      modelFingerprint: "F9B114754943FDB92D6C02040262FE4C"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.Transaction"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.Transaction"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.Transaction"
+        uuid: "childPaysForParent_transaction1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "feeRaise"
+      modelFingerprint: "42E26500F55B82063988E93ACE4E701E"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.Coin"
+          method: "valueOf"
+          methodParameters:
+          - name: "satoshis"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "childPaysForParent_coin1-satoshis"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.Coin"
+          method: "valueOf"
+          methodParameters:
+          - name: "satoshis"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "childPaysForParent_coin1-satoshis"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "org.bitcoinj.base.Coin"
+        uuid: "childPaysForParent_coin1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "parentTransaction"
+      modelFingerprint: "DE976AE7E4B026BCEC3D499DBE9735CC"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.Transaction"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.Transaction"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.Transaction"
+        uuid: "childPaysForParent_transaction1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "parentTransaction"
+        name: "getOutputs"
+        parameters: []
+        signature: "getOutputs(): List"
+        returnValue:
+          sapientType: "COLLECTION"
+          content: !<collection>
+            collectionClass: "java.util.ArrayList"
+            parameters: []
+            values:
+            - sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.TransactionOutput"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.core.TransactionOutput"
+              uuid: "childPaysForParent_list1-0"
+              fixed: false
+              collectionUuid: "childPaysForParent_list1"
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          suggestedContent: !<collection>
+            collectionClass: "java.util.ArrayList"
+            parameters: []
+            values:
+            - sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.TransactionOutput"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.core.TransactionOutput"
+              uuid: "childPaysForParent_list1-0"
+              fixed: false
+              collectionUuid: "childPaysForParent_list1"
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          valueType: "java.util.List"
+          genericValueType: "org.bitcoinj.core.TransactionOutput"
+          uuid: "childPaysForParent_list1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "output"
+      modelFingerprint: "41241985651E29F1E4BC7AD8A62A0DAB"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionOutput"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionOutput"
+        uuid: "childPaysForParent_list1-0"
+        fixed: false
+        collectionUuid: "childPaysForParent_list1"
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "output"
+        name: "isMine"
+        parameters:
+        - name: "transactionBag"
+          value:
+            sapientType: "MOCK"
+            suggestedContent: !<unknown_object>
+              target: "org.bitcoinj.wallet.Wallet"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "org.bitcoinj.wallet.Wallet"
+            uuid: "childPaysForParent_wallet1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "isMine(Wallet): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: false
+          suggestedContent: !<regular>
+            value: false
+          valueType: "boolean"
+          uuid: "childPaysForParent_boolean2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "1544C3243427A58A5AE91A88CC628F77"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.NullPointerException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.lang.NullPointerException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.lang.NullPointerException"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "76e133a0-6d9d-3059-b9cc-b4c75368438c"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "fromPaymentDetails"
+    returnType: "org.bitcoinj.wallet.SendRequest"
+    signature: "fromPaymentDetails(org.bitcoinj.protobuf.payments.Protos$PaymentDetails)\
+      \ : org.bitcoinj.wallet.SendRequest"
+    instructionFingerprint: "A2AD69E5431E0DC76F20732CF3051845"
+    parametersTypes:
+    - "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "fromPaymentDetailsWhenPaymentDetailsHasMemo"
+    nameDefinedByUser: false
+    constructorSignature: "to(org.bitcoinj.core.NetworkParameters,org.bitcoinj.crypto.ECKey,org.bitcoinj.base.Coin)\
+      \ : org.bitcoinj.wallet.SendRequest"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "5CD9D00045ADE587256BA35C1906063E"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "E7D54EB330446567882985C6D21C3070"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.wallet.SendRequest"
+          method: "to"
+          methodParameters:
+          - name: "params"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.core.NetworkParameters"
+              uuid: "to_networkParameters1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "destination"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.crypto.ECKey"
+              uuid: "to_eCKey1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "value"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.base.Coin"
+              uuid: "to_coin1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.wallet.SendRequest"
+          method: "to"
+          methodParameters:
+          - name: "params"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.core.NetworkParameters"
+              uuid: "to_networkParameters1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "destination"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.crypto.ECKey"
+              uuid: "to_eCKey1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "value"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.base.Coin"
+              uuid: "to_coin1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "org.bitcoinj.wallet.SendRequest"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "paymentDetails"
+      modelFingerprint: "EE085C016095ECAFD0D7C5826BA8D3A0"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
+        uuid: "fromPaymentDetails_protos.PaymentDetails1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "SendRequest"
+      modelFingerprint: "979C8A8CC3B2C54AA7DACF2EC2D88D87"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.wallet.SendRequest"
+        uuid: "org.bitcoinj.wallet.SendRequest"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.wallet.SendRequest"
+        name: "to"
+        parameters:
+        - name: "destination"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.crypto.ECKey"
+            uuid: "to_eCKey1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Coin"
+            uuid: "to_coin1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "to(ECKey,Coin): SendRequest"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.wallet.SendRequest"
+          uuid: "to_sendRequest1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "paymentDetails"
+      modelFingerprint: "2AB1CBFEBDF917F69D0B8F036C5326B8"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
+        uuid: "fromPaymentDetails_protos.PaymentDetails1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "paymentDetails"
+        name: "hasMemo"
+        parameters: []
+        signature: "hasMemo(): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: true
+          suggestedContent: !<regular>
+            value: true
+          valueType: "boolean"
+          uuid: "fromPaymentDetails_boolean1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "paymentDetails"
+      modelFingerprint: "03AA68C1F371BABFA3846BF21A9CAD10"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
+        uuid: "fromPaymentDetails_protos.PaymentDetails1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "paymentDetails"
+        name: "getMemo"
+        parameters: []
+        signature: "getMemo(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "return_of_getMemo1"
+          valueType: "java.lang.String"
+          uuid: "fromPaymentDetails_string1"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "BF48DFDAC3390FBFB779EE0623227160"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "THIS"
+        content: !<static_method_return>
+          target: "org.bitcoinj.wallet.SendRequest"
+          method: "to"
+          methodParameters:
+          - name: "params"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.core.NetworkParameters"
+              uuid: "to_networkParameters1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "destination"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.crypto.ECKey"
+              uuid: "to_eCKey1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "value"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.base.Coin"
+              uuid: "to_coin1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "org.bitcoinj.wallet.SendRequest"
+        uuid: "targetClassObject"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "f32b1224-074d-3f2a-860a-50e5e0099bd3"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "fromPaymentDetailsWhenPaymentDetailsNotHasMemo"
+    nameDefinedByUser: false
+    constructorSignature: "to(org.bitcoinj.core.NetworkParameters,org.bitcoinj.crypto.ECKey,org.bitcoinj.base.Coin)\
+      \ : org.bitcoinj.wallet.SendRequest"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "58729C12F392D3C8DEF5DF259C086BDB"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "119b1120-23c8-3fde-a242-7f44a537a844"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "toString"
+    returnType: "java.lang.String"
+    signature: "toString() : java.lang.String"
+    instructionFingerprint: "53B8EF7D02F30C28AF30CE554D8479E1"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "toStringWhenAesKeyIsNull"
+    nameDefinedByUser: false
+    constructorSignature: "to(org.bitcoinj.core.NetworkParameters,org.bitcoinj.crypto.ECKey,org.bitcoinj.base.Coin)\
+      \ : org.bitcoinj.wallet.SendRequest"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "9B8E8FC393231EA857CBAB410592FE37"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "82B7252D96904AA7C9A8AFF9E6CD611D"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.wallet.SendRequest"
+          method: "to"
+          methodParameters:
+          - name: "params"
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.bitcoinj.core.NetworkParameters"
+                method: "fromID"
+                methodParameters:
+                - name: "id"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "id1"
+                    valueType: "java.lang.String"
+                    uuid: "to_networkParameters1-id"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.core.NetworkParameters"
+                method: "fromID"
+                methodParameters:
+                - name: "id"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "java.lang.String"
+                    uuid: "to_networkParameters1-id"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "org.bitcoinj.core.NetworkParameters"
+              uuid: "to_networkParameters1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "destination"
+            value:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.crypto.ECKey"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "org.bitcoinj.crypto.ECKey"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "org.bitcoinj.crypto.ECKey"
+              uuid: "to_eCKey1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "value"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.base.Coin"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.base.Coin"
+              uuid: "to_coin1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.wallet.SendRequest"
+          method: "to"
+          methodParameters:
+          - name: "params"
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.bitcoinj.core.NetworkParameters"
+                method: "fromID"
+                methodParameters:
+                - name: "id"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "id1"
+                    valueType: "java.lang.String"
+                    uuid: "to_networkParameters1-id"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.core.NetworkParameters"
+                method: "fromID"
+                methodParameters:
+                - name: "id"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "java.lang.String"
+                    uuid: "to_networkParameters1-id"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "org.bitcoinj.core.NetworkParameters"
+              uuid: "to_networkParameters1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "destination"
+            value:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.crypto.ECKey"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "org.bitcoinj.crypto.ECKey"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "org.bitcoinj.crypto.ECKey"
+              uuid: "to_eCKey1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "value"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.base.Coin"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.base.Coin"
+              uuid: "to_coin1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "org.bitcoinj.wallet.SendRequest"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "SendRequest"
+      modelFingerprint: "14A6645F250FAA2CE0A427E4A0E51994"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.wallet.SendRequest"
+        uuid: "org.bitcoinj.wallet.SendRequest"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.wallet.SendRequest"
+        name: "to"
+        parameters:
+        - name: "destination"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "org.bitcoinj.crypto.ECKey"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: false
+            suggestedContent: !<new>
+              target: "org.bitcoinj.crypto.ECKey"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "org.bitcoinj.crypto.ECKey"
+            uuid: "to_eCKey1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "MOCK"
+            suggestedContent: !<unknown_object>
+              target: "org.bitcoinj.base.Coin"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "org.bitcoinj.base.Coin"
+            uuid: "to_coin1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "to(ECKey,Coin): SendRequest"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.wallet.SendRequest"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.wallet.SendRequest"
+          uuid: "to_sendRequest1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "1067630F3E2EC8811ADC76C71291CEB8"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "toString_moreObjects.ToStringHelper2"
+        suggestedContent: !<regular>
+          value: "toString_moreObjects.ToStringHelper2"
+        valueType: "java.lang.String"
+        uuid: "toString_string1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "8962e036-4105-33ed-81b5-9234d4ef36a1"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true

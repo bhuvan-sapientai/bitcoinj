@@ -1,0 +1,1564 @@
+---
+modelFingerprint: "06FD98A69DDD2B245A665A8C9B2AC66C"
+methods:
+- method:
+    name: "closeConnection"
+    returnType: "void"
+    signature: "closeConnection() : void"
+    instructionFingerprint: "1991D1FFDC3532809302754800F3721C"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "closeConnectionTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(java.net.SocketAddress,org.bitcoinj.net.StreamConnection,java.time.Duration)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "997BAD220966616C2D61716C3D71A545"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "18AC109B2AA06AF79AC58C082077946D"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.net.NioClient"
+          parameters:
+          - name: "serverAddress"
+            value:
+              sapientType: "NULL"
+              content: !<unknown_object>
+                target: "java.net.SocketAddress"
+                onlyPojoFunctions: false
+                builderPattern: false
+              suggestedContent: !<unknown_object>
+                target: "java.net.SocketAddress"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "java.net.SocketAddress"
+              uuid: "<init>_socketAddress1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "parser"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.net.StreamConnection"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.net.StreamConnection"
+              uuid: "<init>_streamConnection1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "connectTimeout"
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.time.Duration"
+                method: "ofDays"
+                methodParameters:
+                - name: "days"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "long"
+                    uuid: "<init>_duration1-days"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "java.time.Duration"
+                method: "ofDays"
+                methodParameters:
+                - name: "days"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "long"
+                    uuid: "<init>_duration1-days"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.time.Duration"
+              uuid: "<init>_duration1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.net.NioClient"
+          parameters:
+          - name: "serverAddress"
+            value:
+              sapientType: "NULL"
+              suggestedContent: !<unknown_object>
+                target: "java.net.SocketAddress"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "java.net.SocketAddress"
+              uuid: "<init>_socketAddress1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "parser"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.net.StreamConnection"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.net.StreamConnection"
+              uuid: "<init>_streamConnection1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "connectTimeout"
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.time.Duration"
+                method: "ofDays"
+                methodParameters:
+                - name: "days"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "long"
+                    uuid: "<init>_duration1-days"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "java.time.Duration"
+                method: "ofDays"
+                methodParameters:
+                - name: "days"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "long"
+                    uuid: "<init>_duration1-days"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.time.Duration"
+              uuid: "<init>_duration1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.net.NioClient"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "manager"
+      modelFingerprint: "3C49CA457C8952AF681E565CED236AAF"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.net.NioClientManager"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.net.NioClientManager"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.net.NioClientManager"
+        uuid: "<init>_nioClientManager1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.manager"
+        name: "startAsync"
+        parameters: []
+        signature: "startAsync(): Service"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "com.google.common.util.concurrent.Service"
+            localVariableValue:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.net.NioClientManager"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              suggestedContent: !<new>
+                target: "org.bitcoinj.net.NioClientManager"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.bitcoinj.net.NioClientManager"
+              uuid: "<init>_nioClientManager1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters: []
+            methodName: "startAsync"
+          suggestedContent: !<method_return_from_value>
+            target: "com.google.common.util.concurrent.Service"
+            localVariableValue:
+              sapientType: "OBJECT"
+              suggestedContent: !<new>
+                target: "org.bitcoinj.net.NioClientManager"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.bitcoinj.net.NioClientManager"
+              uuid: "<init>_nioClientManager1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters: []
+            methodName: "startAsync"
+          valueType: "com.google.common.util.concurrent.Service"
+          uuid: "<init>_service1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 17
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "manager"
+      modelFingerprint: "396137B1492683B7248E6FF5EFF65829"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.net.NioClientManager"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.net.NioClientManager"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.net.NioClientManager"
+        uuid: "<init>_nioClientManager1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.manager"
+        name: "awaitRunning"
+        parameters: []
+        signature: "awaitRunning(): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "<init>_void1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 17
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "manager"
+      modelFingerprint: "EE48D8E5D8B2B8829802A7E5DBA56AB7"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.net.NioClientManager"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.net.NioClientManager"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.net.NioClientManager"
+        uuid: "<init>_nioClientManager1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.manager"
+        name: "openConnection"
+        parameters:
+        - name: "serverAddress"
+          value:
+            sapientType: "NULL"
+            content: !<unknown_object>
+              target: "java.net.SocketAddress"
+              onlyPojoFunctions: false
+              builderPattern: false
+            suggestedContent: !<unknown_object>
+              target: "java.net.SocketAddress"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "java.net.SocketAddress"
+            uuid: "<init>_socketAddress1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "connection"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "org.bitcoinj.net.NioClient$Handler"
+            uuid: "<init>_nioClient.Handler1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "openConnection(SocketAddress,NioClient$Handler): ListenableCompletableFuture"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "org.bitcoinj.utils.ListenableCompletableFuture"
+            localVariableValue:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.net.NioClientManager"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              suggestedContent: !<new>
+                target: "org.bitcoinj.net.NioClientManager"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.bitcoinj.net.NioClientManager"
+              uuid: "<init>_nioClientManager1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "serverAddress"
+              value:
+                sapientType: "NULL"
+                content: !<unknown_object>
+                  target: "java.net.SocketAddress"
+                  onlyPojoFunctions: false
+                  builderPattern: false
+                suggestedContent: !<unknown_object>
+                  target: "java.net.SocketAddress"
+                  onlyPojoFunctions: false
+                  builderPattern: false
+                valueType: "java.net.SocketAddress"
+                uuid: "<init>_socketAddress1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "connection"
+              value:
+                sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+                valueType: "org.bitcoinj.net.NioClient$Handler"
+                uuid: "<init>_nioClient.Handler1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "openConnection"
+          suggestedContent: !<method_return_from_value>
+            target: "org.bitcoinj.utils.ListenableCompletableFuture"
+            localVariableValue:
+              sapientType: "OBJECT"
+              suggestedContent: !<new>
+                target: "org.bitcoinj.net.NioClientManager"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.bitcoinj.net.NioClientManager"
+              uuid: "<init>_nioClientManager1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "serverAddress"
+              value:
+                sapientType: "NULL"
+                suggestedContent: !<unknown_object>
+                  target: "java.net.SocketAddress"
+                  onlyPojoFunctions: false
+                  builderPattern: false
+                valueType: "java.net.SocketAddress"
+                uuid: "<init>_socketAddress1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "connection"
+              value:
+                sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+                valueType: "org.bitcoinj.net.NioClient$Handler"
+                uuid: "<init>_nioClient.Handler1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "openConnection"
+          valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+          genericValueType: "java.net.SocketAddress"
+          uuid: "<init>_listenableCompletableFuture1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "26635DF05CD03ED1D1664B993E3824BA"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<method_return_from_value>
+          target: "org.bitcoinj.utils.ListenableCompletableFuture"
+          localVariableValue:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "org.bitcoinj.net.NioClientManager"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: true
+            suggestedContent: !<new>
+              target: "org.bitcoinj.net.NioClientManager"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: true
+            valueType: "org.bitcoinj.net.NioClientManager"
+            uuid: "<init>_nioClientManager1"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          methodParameters:
+          - name: "serverAddress"
+            value:
+              sapientType: "NULL"
+              content: !<unknown_object>
+                target: "java.net.SocketAddress"
+                onlyPojoFunctions: false
+                builderPattern: false
+              suggestedContent: !<unknown_object>
+                target: "java.net.SocketAddress"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "java.net.SocketAddress"
+              uuid: "<init>_socketAddress1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "connection"
+            value:
+              sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+              valueType: "org.bitcoinj.net.NioClient$Handler"
+              uuid: "<init>_nioClient.Handler1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          methodName: "openConnection"
+        suggestedContent: !<method_return_from_value>
+          target: "org.bitcoinj.utils.ListenableCompletableFuture"
+          localVariableValue:
+            sapientType: "OBJECT"
+            suggestedContent: !<new>
+              target: "org.bitcoinj.net.NioClientManager"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: true
+            valueType: "org.bitcoinj.net.NioClientManager"
+            uuid: "<init>_nioClientManager1"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          methodParameters:
+          - name: "serverAddress"
+            value:
+              sapientType: "NULL"
+              suggestedContent: !<unknown_object>
+                target: "java.net.SocketAddress"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "java.net.SocketAddress"
+              uuid: "<init>_socketAddress1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "connection"
+            value:
+              sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+              valueType: "org.bitcoinj.net.NioClient$Handler"
+              uuid: "<init>_nioClient.Handler1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          methodName: "openConnection"
+        valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+        genericValueType: "java.net.SocketAddress"
+        uuid: "<init>_listenableCompletableFuture1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.utils.ListenableCompletableFuture"
+        name: "whenComplete"
+        parameters:
+        - name: "action"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.BiConsumer"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "whenComplete(BiConsumer): CompletableFuture"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "java.util.concurrent.CompletableFuture"
+            localVariableValue:
+              sapientType: "OBJECT"
+              content: !<method_return_from_value>
+                target: "org.bitcoinj.utils.ListenableCompletableFuture"
+                localVariableValue:
+                  sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.net.NioClientManager"
+                    parameters: []
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.net.NioClientManager"
+                    parameters: []
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.net.NioClientManager"
+                  uuid: "<init>_nioClientManager1"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                methodParameters:
+                - name: "serverAddress"
+                  value:
+                    sapientType: "NULL"
+                    content: !<unknown_object>
+                      target: "java.net.SocketAddress"
+                      onlyPojoFunctions: false
+                      builderPattern: false
+                    suggestedContent: !<unknown_object>
+                      target: "java.net.SocketAddress"
+                      onlyPojoFunctions: false
+                      builderPattern: false
+                    valueType: "java.net.SocketAddress"
+                    uuid: "<init>_socketAddress1"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "connection"
+                  value:
+                    sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+                    valueType: "org.bitcoinj.net.NioClient$Handler"
+                    uuid: "<init>_nioClient.Handler1"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                methodName: "openConnection"
+              suggestedContent: !<method_return_from_value>
+                target: "org.bitcoinj.utils.ListenableCompletableFuture"
+                localVariableValue:
+                  sapientType: "OBJECT"
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.net.NioClientManager"
+                    parameters: []
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.net.NioClientManager"
+                  uuid: "<init>_nioClientManager1"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                methodParameters:
+                - name: "serverAddress"
+                  value:
+                    sapientType: "NULL"
+                    suggestedContent: !<unknown_object>
+                      target: "java.net.SocketAddress"
+                      onlyPojoFunctions: false
+                      builderPattern: false
+                    valueType: "java.net.SocketAddress"
+                    uuid: "<init>_socketAddress1"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "connection"
+                  value:
+                    sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+                    valueType: "org.bitcoinj.net.NioClient$Handler"
+                    uuid: "<init>_nioClient.Handler1"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                methodName: "openConnection"
+              valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+              genericValueType: "java.net.SocketAddress"
+              uuid: "<init>_listenableCompletableFuture1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "action"
+              value:
+                sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+                valueType: "java.util.function.BiConsumer"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "whenComplete"
+          suggestedContent: !<method_return_from_value>
+            target: "java.util.concurrent.CompletableFuture"
+            localVariableValue:
+              sapientType: "OBJECT"
+              suggestedContent: !<method_return_from_value>
+                target: "org.bitcoinj.utils.ListenableCompletableFuture"
+                localVariableValue:
+                  sapientType: "OBJECT"
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.net.NioClientManager"
+                    parameters: []
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.net.NioClientManager"
+                  uuid: "<init>_nioClientManager1"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                methodParameters:
+                - name: "serverAddress"
+                  value:
+                    sapientType: "NULL"
+                    suggestedContent: !<unknown_object>
+                      target: "java.net.SocketAddress"
+                      onlyPojoFunctions: false
+                      builderPattern: false
+                    valueType: "java.net.SocketAddress"
+                    uuid: "<init>_socketAddress1"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "connection"
+                  value:
+                    sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+                    valueType: "org.bitcoinj.net.NioClient$Handler"
+                    uuid: "<init>_nioClient.Handler1"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                methodName: "openConnection"
+              valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+              genericValueType: "java.net.SocketAddress"
+              uuid: "<init>_listenableCompletableFuture1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "action"
+              value:
+                sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+                valueType: "java.util.function.BiConsumer"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "whenComplete"
+          valueType: "java.util.concurrent.CompletableFuture"
+          uuid: "<init>_completableFuture1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "B78DA13EF7E401B12CD5E0E22080416F"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.net.MessageWriteTarget"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.net.MessageWriteTarget"
+        uuid: "closeConnection_messageWriteTarget1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.net.MessageWriteTarget"
+        name: "closeConnection"
+        parameters: []
+        signature: "closeConnection(): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "closeConnection_void1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "VOID"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "561998f8-7691-38b6-b1d5-0712aa9b4d77"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+- method:
+    name: "writeBytes"
+    returnType: "org.bitcoinj.utils.ListenableCompletableFuture"
+    signature: "writeBytes(byte[]) : org.bitcoinj.utils.ListenableCompletableFuture<java.lang.Void>"
+    throwsExceptions:
+    - "java.io.IOException"
+    instructionFingerprint: "D21513350339A2E72C5F108A99E1F7BE"
+    parametersTypes:
+    - "byte[]"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "writeBytesTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(java.net.SocketAddress,org.bitcoinj.net.StreamConnection,java.time.Duration)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "DDB75476FD11E22C799F166675129686"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "18AC109B2AA06AF79AC58C082077946D"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.net.NioClient"
+          parameters:
+          - name: "serverAddress"
+            value:
+              sapientType: "NULL"
+              content: !<unknown_object>
+                target: "java.net.SocketAddress"
+                onlyPojoFunctions: false
+                builderPattern: false
+              suggestedContent: !<unknown_object>
+                target: "java.net.SocketAddress"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "java.net.SocketAddress"
+              uuid: "<init>_socketAddress1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "parser"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.net.StreamConnection"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.net.StreamConnection"
+              uuid: "<init>_streamConnection1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "connectTimeout"
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.time.Duration"
+                method: "ofDays"
+                methodParameters:
+                - name: "days"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "long"
+                    uuid: "<init>_duration1-days"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "java.time.Duration"
+                method: "ofDays"
+                methodParameters:
+                - name: "days"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "long"
+                    uuid: "<init>_duration1-days"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.time.Duration"
+              uuid: "<init>_duration1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.net.NioClient"
+          parameters:
+          - name: "serverAddress"
+            value:
+              sapientType: "NULL"
+              suggestedContent: !<unknown_object>
+                target: "java.net.SocketAddress"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "java.net.SocketAddress"
+              uuid: "<init>_socketAddress1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "parser"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.net.StreamConnection"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.net.StreamConnection"
+              uuid: "<init>_streamConnection1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "connectTimeout"
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.time.Duration"
+                method: "ofDays"
+                methodParameters:
+                - name: "days"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "long"
+                    uuid: "<init>_duration1-days"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "java.time.Duration"
+                method: "ofDays"
+                methodParameters:
+                - name: "days"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "long"
+                    uuid: "<init>_duration1-days"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.time.Duration"
+              uuid: "<init>_duration1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.net.NioClient"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "message"
+      modelFingerprint: "8A9FF2D9F721ABFE0E52A8A08EE4E01B"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ARRAY"
+        content: !<array>
+          values: {}
+        suggestedContent: !<array>
+          values: {}
+        valueType: "byte[]"
+        uuid: "writeBytes_byte[]1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "manager"
+      modelFingerprint: "3C49CA457C8952AF681E565CED236AAF"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.net.NioClientManager"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.net.NioClientManager"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.net.NioClientManager"
+        uuid: "<init>_nioClientManager1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.manager"
+        name: "startAsync"
+        parameters: []
+        signature: "startAsync(): Service"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "com.google.common.util.concurrent.Service"
+            localVariableValue:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.net.NioClientManager"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              suggestedContent: !<new>
+                target: "org.bitcoinj.net.NioClientManager"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.bitcoinj.net.NioClientManager"
+              uuid: "<init>_nioClientManager1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters: []
+            methodName: "startAsync"
+          suggestedContent: !<method_return_from_value>
+            target: "com.google.common.util.concurrent.Service"
+            localVariableValue:
+              sapientType: "OBJECT"
+              suggestedContent: !<new>
+                target: "org.bitcoinj.net.NioClientManager"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.bitcoinj.net.NioClientManager"
+              uuid: "<init>_nioClientManager1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters: []
+            methodName: "startAsync"
+          valueType: "com.google.common.util.concurrent.Service"
+          uuid: "<init>_service1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 17
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "manager"
+      modelFingerprint: "396137B1492683B7248E6FF5EFF65829"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.net.NioClientManager"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.net.NioClientManager"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.net.NioClientManager"
+        uuid: "<init>_nioClientManager1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.manager"
+        name: "awaitRunning"
+        parameters: []
+        signature: "awaitRunning(): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "<init>_void1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 17
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "manager"
+      modelFingerprint: "EE48D8E5D8B2B8829802A7E5DBA56AB7"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.net.NioClientManager"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.net.NioClientManager"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.net.NioClientManager"
+        uuid: "<init>_nioClientManager1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.manager"
+        name: "openConnection"
+        parameters:
+        - name: "serverAddress"
+          value:
+            sapientType: "NULL"
+            content: !<unknown_object>
+              target: "java.net.SocketAddress"
+              onlyPojoFunctions: false
+              builderPattern: false
+            suggestedContent: !<unknown_object>
+              target: "java.net.SocketAddress"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "java.net.SocketAddress"
+            uuid: "<init>_socketAddress1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "connection"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "org.bitcoinj.net.NioClient$Handler"
+            uuid: "<init>_nioClient.Handler1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "openConnection(SocketAddress,NioClient$Handler): ListenableCompletableFuture"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "org.bitcoinj.utils.ListenableCompletableFuture"
+            localVariableValue:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.net.NioClientManager"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              suggestedContent: !<new>
+                target: "org.bitcoinj.net.NioClientManager"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.bitcoinj.net.NioClientManager"
+              uuid: "<init>_nioClientManager1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "serverAddress"
+              value:
+                sapientType: "NULL"
+                content: !<unknown_object>
+                  target: "java.net.SocketAddress"
+                  onlyPojoFunctions: false
+                  builderPattern: false
+                suggestedContent: !<unknown_object>
+                  target: "java.net.SocketAddress"
+                  onlyPojoFunctions: false
+                  builderPattern: false
+                valueType: "java.net.SocketAddress"
+                uuid: "<init>_socketAddress1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "connection"
+              value:
+                sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+                valueType: "org.bitcoinj.net.NioClient$Handler"
+                uuid: "<init>_nioClient.Handler1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "openConnection"
+          suggestedContent: !<method_return_from_value>
+            target: "org.bitcoinj.utils.ListenableCompletableFuture"
+            localVariableValue:
+              sapientType: "OBJECT"
+              suggestedContent: !<new>
+                target: "org.bitcoinj.net.NioClientManager"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.bitcoinj.net.NioClientManager"
+              uuid: "<init>_nioClientManager1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "serverAddress"
+              value:
+                sapientType: "NULL"
+                suggestedContent: !<unknown_object>
+                  target: "java.net.SocketAddress"
+                  onlyPojoFunctions: false
+                  builderPattern: false
+                valueType: "java.net.SocketAddress"
+                uuid: "<init>_socketAddress1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "connection"
+              value:
+                sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+                valueType: "org.bitcoinj.net.NioClient$Handler"
+                uuid: "<init>_nioClient.Handler1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "openConnection"
+          valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+          genericValueType: "java.net.SocketAddress"
+          uuid: "<init>_listenableCompletableFuture1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "26635DF05CD03ED1D1664B993E3824BA"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<method_return_from_value>
+          target: "org.bitcoinj.utils.ListenableCompletableFuture"
+          localVariableValue:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "org.bitcoinj.net.NioClientManager"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: true
+            suggestedContent: !<new>
+              target: "org.bitcoinj.net.NioClientManager"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: true
+            valueType: "org.bitcoinj.net.NioClientManager"
+            uuid: "<init>_nioClientManager1"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          methodParameters:
+          - name: "serverAddress"
+            value:
+              sapientType: "NULL"
+              content: !<unknown_object>
+                target: "java.net.SocketAddress"
+                onlyPojoFunctions: false
+                builderPattern: false
+              suggestedContent: !<unknown_object>
+                target: "java.net.SocketAddress"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "java.net.SocketAddress"
+              uuid: "<init>_socketAddress1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "connection"
+            value:
+              sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+              valueType: "org.bitcoinj.net.NioClient$Handler"
+              uuid: "<init>_nioClient.Handler1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          methodName: "openConnection"
+        suggestedContent: !<method_return_from_value>
+          target: "org.bitcoinj.utils.ListenableCompletableFuture"
+          localVariableValue:
+            sapientType: "OBJECT"
+            suggestedContent: !<new>
+              target: "org.bitcoinj.net.NioClientManager"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: true
+            valueType: "org.bitcoinj.net.NioClientManager"
+            uuid: "<init>_nioClientManager1"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          methodParameters:
+          - name: "serverAddress"
+            value:
+              sapientType: "NULL"
+              suggestedContent: !<unknown_object>
+                target: "java.net.SocketAddress"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "java.net.SocketAddress"
+              uuid: "<init>_socketAddress1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "connection"
+            value:
+              sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+              valueType: "org.bitcoinj.net.NioClient$Handler"
+              uuid: "<init>_nioClient.Handler1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          methodName: "openConnection"
+        valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+        genericValueType: "java.net.SocketAddress"
+        uuid: "<init>_listenableCompletableFuture1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.utils.ListenableCompletableFuture"
+        name: "whenComplete"
+        parameters:
+        - name: "action"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.BiConsumer"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "whenComplete(BiConsumer): CompletableFuture"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "java.util.concurrent.CompletableFuture"
+            localVariableValue:
+              sapientType: "OBJECT"
+              content: !<method_return_from_value>
+                target: "org.bitcoinj.utils.ListenableCompletableFuture"
+                localVariableValue:
+                  sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.net.NioClientManager"
+                    parameters: []
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.net.NioClientManager"
+                    parameters: []
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.net.NioClientManager"
+                  uuid: "<init>_nioClientManager1"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                methodParameters:
+                - name: "serverAddress"
+                  value:
+                    sapientType: "NULL"
+                    content: !<unknown_object>
+                      target: "java.net.SocketAddress"
+                      onlyPojoFunctions: false
+                      builderPattern: false
+                    suggestedContent: !<unknown_object>
+                      target: "java.net.SocketAddress"
+                      onlyPojoFunctions: false
+                      builderPattern: false
+                    valueType: "java.net.SocketAddress"
+                    uuid: "<init>_socketAddress1"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "connection"
+                  value:
+                    sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+                    valueType: "org.bitcoinj.net.NioClient$Handler"
+                    uuid: "<init>_nioClient.Handler1"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                methodName: "openConnection"
+              suggestedContent: !<method_return_from_value>
+                target: "org.bitcoinj.utils.ListenableCompletableFuture"
+                localVariableValue:
+                  sapientType: "OBJECT"
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.net.NioClientManager"
+                    parameters: []
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.net.NioClientManager"
+                  uuid: "<init>_nioClientManager1"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                methodParameters:
+                - name: "serverAddress"
+                  value:
+                    sapientType: "NULL"
+                    suggestedContent: !<unknown_object>
+                      target: "java.net.SocketAddress"
+                      onlyPojoFunctions: false
+                      builderPattern: false
+                    valueType: "java.net.SocketAddress"
+                    uuid: "<init>_socketAddress1"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "connection"
+                  value:
+                    sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+                    valueType: "org.bitcoinj.net.NioClient$Handler"
+                    uuid: "<init>_nioClient.Handler1"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                methodName: "openConnection"
+              valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+              genericValueType: "java.net.SocketAddress"
+              uuid: "<init>_listenableCompletableFuture1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "action"
+              value:
+                sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+                valueType: "java.util.function.BiConsumer"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "whenComplete"
+          suggestedContent: !<method_return_from_value>
+            target: "java.util.concurrent.CompletableFuture"
+            localVariableValue:
+              sapientType: "OBJECT"
+              suggestedContent: !<method_return_from_value>
+                target: "org.bitcoinj.utils.ListenableCompletableFuture"
+                localVariableValue:
+                  sapientType: "OBJECT"
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.net.NioClientManager"
+                    parameters: []
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.net.NioClientManager"
+                  uuid: "<init>_nioClientManager1"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                methodParameters:
+                - name: "serverAddress"
+                  value:
+                    sapientType: "NULL"
+                    suggestedContent: !<unknown_object>
+                      target: "java.net.SocketAddress"
+                      onlyPojoFunctions: false
+                      builderPattern: false
+                    valueType: "java.net.SocketAddress"
+                    uuid: "<init>_socketAddress1"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "connection"
+                  value:
+                    sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+                    valueType: "org.bitcoinj.net.NioClient$Handler"
+                    uuid: "<init>_nioClient.Handler1"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                methodName: "openConnection"
+              valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+              genericValueType: "java.net.SocketAddress"
+              uuid: "<init>_listenableCompletableFuture1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "action"
+              value:
+                sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+                valueType: "java.util.function.BiConsumer"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "whenComplete"
+          valueType: "java.util.concurrent.CompletableFuture"
+          uuid: "<init>_completableFuture1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "61A749CEF1D6BBB81CEB569FBC442398"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.net.MessageWriteTarget"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.net.MessageWriteTarget"
+        uuid: "writeBytes_messageWriteTarget1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.net.MessageWriteTarget"
+        name: "writeBytes"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            suggestedContent: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "writeBytes_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "java.io.IOException"
+        signature: "writeBytes(byte[]): ListenableCompletableFuture throws java.io.IOException"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<new>
+            target: "org.bitcoinj.utils.ListenableCompletableFuture"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "org.bitcoinj.utils.ListenableCompletableFuture"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+          genericValueType: "java.lang.Void"
+          uuid: "writeBytes_listenableCompletableFuture1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "EC5E1929336438B12B8BE888000717C5"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.utils.ListenableCompletableFuture"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.utils.ListenableCompletableFuture"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+        genericValueType: "java.lang.Void"
+        uuid: "writeBytes_listenableCompletableFuture1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "90b47dad-6d2c-3295-946b-afa0a749fd31"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true

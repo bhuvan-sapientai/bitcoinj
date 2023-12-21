@@ -1,0 +1,283 @@
+---
+modelFingerprint: "4EA58039C62DF6A8A249528ECDED76A5"
+methods:
+- method:
+    name: "format"
+    returnType: "java.lang.String"
+    signature: "format(org.bitcoinj.base.Coin,org.bitcoinj.base.Coin,org.bitcoinj.base.Coin,org.bitcoinj.base.Coin)\
+      \ : java.lang.String"
+    instructionFingerprint: "C36D36942BE4DF85FE746C2FCD03F03C"
+    parametersTypes:
+    - "org.bitcoinj.base.Coin"
+    - "org.bitcoinj.base.Coin"
+    - "org.bitcoinj.base.Coin"
+    - "org.bitcoinj.base.Coin"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "formatTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "C9F1DA8BB158825A06E666EFCB01ADD2"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "missing"
+      modelFingerprint: "C262EB47ED8366DDB47C553FEA806B06"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Coin"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Coin"
+        uuid: "format_coin1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "available"
+      modelFingerprint: "9773A2764A80AB2B093C67496BE4E7E2"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Coin"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Coin"
+        uuid: "format_coin2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "outputs"
+      modelFingerprint: "ED95063869B26F988DA53F59844797DD"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Coin"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Coin"
+        uuid: "format_coin3"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "fee"
+      modelFingerprint: "1100625D9FE46136A74D85F8341702C5"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Coin"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Coin"
+        uuid: "format_coin4"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "missing"
+      modelFingerprint: "B914D6A830EE5E0FD51023457091AF3E"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Coin"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Coin"
+        uuid: "format_coin1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "missing"
+        name: "toFriendlyString"
+        parameters: []
+        signature: "toFriendlyString(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "A"
+          suggestedContent: !<regular>
+            value: "A"
+          valueType: "java.lang.String"
+          uuid: "format_string1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "available"
+      modelFingerprint: "2B801DBE31E1DD42F85E845BE7C0B662"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Coin"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Coin"
+        uuid: "format_coin2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "available"
+        name: "toFriendlyString"
+        parameters: []
+        signature: "toFriendlyString(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "B"
+          suggestedContent: !<regular>
+            value: "B"
+          valueType: "java.lang.String"
+          uuid: "format_string2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "outputs"
+      modelFingerprint: "3D6F750B2D29950BDB9228091B6E40F8"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Coin"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Coin"
+        uuid: "format_coin3"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "outputs"
+        name: "toFriendlyString"
+        parameters: []
+        signature: "toFriendlyString(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "C"
+          suggestedContent: !<regular>
+            value: "C"
+          valueType: "java.lang.String"
+          uuid: "format_string3"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "fee"
+      modelFingerprint: "79D36CADCC09F7AB97A210E4EC9BE1C2"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Coin"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Coin"
+        uuid: "format_coin4"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "fee"
+        name: "toFriendlyString"
+        parameters: []
+        signature: "toFriendlyString(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "D"
+          suggestedContent: !<regular>
+            value: "D"
+          valueType: "java.lang.String"
+          uuid: "format_string4"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "291133A61F78590824A222C98AB2268F"
+      index: 9
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "Insufficient money, missing A (available: B, total outputs: C, fee:\
+            \ D)"
+        suggestedContent: !<regular>
+          value: "Insufficient money, missing A (available: B, total outputs: C, fee:\
+            \ D)"
+        valueType: "java.lang.String"
+        uuid: "format_string5"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "d2023724-fb02-31bf-8f56-c852070520c4"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false

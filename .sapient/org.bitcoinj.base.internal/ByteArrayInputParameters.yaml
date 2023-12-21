@@ -1,0 +1,488 @@
+---
+modelFingerprint: "E417E038E76371CF9880A9BBE36F6FD6"
+methods:
+- method:
+    name: "bytes"
+    returnType: "byte[]"
+    signature: "bytes() : byte[]"
+    instructionFingerprint: "18F02BB4BA3B02ABA2E355727F5E7FA9"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "bytesTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(byte[]) : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "350128BBC86D26BA5CF620163349E923"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "A179DE28822BC308CA06F5F4678AE855"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.base.internal.ByteArray"
+          parameters:
+          - name: "bytes"
+            value:
+              sapientType: "ARRAY"
+              content: !<array>
+                values: {}
+              suggestedContent: !<array>
+                values: {}
+              valueType: "byte[]"
+              uuid: "<init>_byte[]1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.base.internal.ByteArray"
+          parameters:
+          - name: "bytes"
+            value:
+              sapientType: "ARRAY"
+              suggestedContent: !<array>
+                values: {}
+              valueType: "byte[]"
+              uuid: "<init>_byte[]1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.base.internal.ByteArray"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "6F284CA220F919F7D0C6EB6C97E89FCE"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ARRAY"
+        content: !<array>
+          values: {}
+        suggestedContent: !<array>
+          values: {}
+        valueType: "byte[]"
+        uuid: "bytes_byte[]1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "f230d68a-9413-3d49-ba72-f34d287d0a24"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "formatHex"
+    returnType: "java.lang.String"
+    signature: "formatHex() : java.lang.String"
+    instructionFingerprint: "AC7BAFE7433FDEBE5A20E439F219FD29"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "formatHexTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(byte[]) : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "FB51702A45C1C058448EABE5AC2722BA"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "A179DE28822BC308CA06F5F4678AE855"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.base.internal.ByteArray"
+          parameters:
+          - name: "bytes"
+            value:
+              sapientType: "ARRAY"
+              content: !<array>
+                values: {}
+              suggestedContent: !<array>
+                values: {}
+              valueType: "byte[]"
+              uuid: "<init>_byte[]1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.base.internal.ByteArray"
+          parameters:
+          - name: "bytes"
+            value:
+              sapientType: "ARRAY"
+              suggestedContent: !<array>
+                values: {}
+              valueType: "byte[]"
+              uuid: "<init>_byte[]1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.base.internal.ByteArray"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "ByteUtils"
+      modelFingerprint: "27D1AD2A7908332769A3DF5AF7A70A37"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "org.bitcoinj.base.internal.ByteUtils"
+        uuid: "org.bitcoinj.base.internal.ByteUtils"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.ByteUtils"
+        name: "formatHex"
+        parameters:
+        - name: "bytes"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            suggestedContent: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "formatHex(byte[]): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: ""
+          suggestedContent: !<regular>
+            value: ""
+          valueType: "java.lang.String"
+          uuid: "formatHex_string1"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: ""
+        suggestedContent: !<regular>
+          value: ""
+        valueType: "java.lang.String"
+        uuid: "formatHex_string1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "a1a42a93-2964-364e-ae5a-e96abe25ad1a"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "equals"
+    returnType: "boolean"
+    signature: "equals(java.lang.Object) : boolean"
+    instructionFingerprint: "1A9956D24D082896B93CAFF72A99E19D"
+    parametersTypes:
+    - "java.lang.Object"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "equalsWhenThisEqualsO"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(byte[]) : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "59DBBA5A268CC718209938C0DD024311"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "5b7cf5ba-f3cc-35d0-9b4a-3392d3a68eed"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path5"
+    pathIdForUser: "path2"
+    testPathName: "equalsWhenOIsNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(byte[]) : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "A26FAC367612B8C4F2C3D93565B72888"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "a2108c4d-bcbc-39b5-8254-0588b654f131"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path3"
+    testPathName: "equalsWhenGetClassNotEqualsOGetClass"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(byte[]) : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "E12A220A0EE7F8BBFC06D529D8B91262"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "6e6a0f87-c9aa-3e31-af0a-46c9467f5ce0"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path3"
+    pathIdForUser: "path4"
+    testPathName: "equalsWhenArraysEqualsThisBytesOtherBytes"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(byte[]) : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "766DDDBB075116E42CE34CB1B207EC93"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "0343052f-7a8f-33ac-9253-572100b8dce1"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path4"
+    pathIdForUser: "path5"
+    testPathName: "equalsWhenArraysNotEqualsThisBytesOtherBytes"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(byte[]) : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "873806370D8AF30822FF8DD8CFB33E3F"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "9431ea5b-c8c8-32c1-8c67-3db2f5737f55"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "compareTo"
+    returnType: "int"
+    signature: "compareTo(org.bitcoinj.base.internal.ByteArray) : int"
+    instructionFingerprint: "4AF10A1BFA99C6E2CC41F1F3199A1E23"
+    parametersTypes:
+    - "org.bitcoinj.base.internal.ByteArray"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "compareToTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(byte[]) : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "1D0BD79DAAF42ECF0F5F45C3E0D0D91F"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "A179DE28822BC308CA06F5F4678AE855"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.base.internal.ByteArray"
+          parameters:
+          - name: "bytes"
+            value:
+              sapientType: "ARRAY"
+              content: !<array>
+                values: {}
+              suggestedContent: !<array>
+                values: {}
+              valueType: "byte[]"
+              uuid: "<init>_byte[]1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.base.internal.ByteArray"
+          parameters:
+          - name: "bytes"
+            value:
+              sapientType: "ARRAY"
+              suggestedContent: !<array>
+                values: {}
+              valueType: "byte[]"
+              uuid: "<init>_byte[]1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.base.internal.ByteArray"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "o"
+      modelFingerprint: "92F78147F61126F4A2CCBAC7B293E59A"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.internal.ByteArray"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.internal.ByteArray"
+        uuid: "compareTo_byteArray1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "ByteUtils"
+      modelFingerprint: "0292E60C225A2317CB9AB6C655EA4899"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "org.bitcoinj.base.internal.ByteUtils"
+        uuid: "org.bitcoinj.base.internal.ByteUtils"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.ByteUtils"
+        name: "arrayUnsignedComparator"
+        parameters: []
+        signature: "arrayUnsignedComparator(): Comparator"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.base.internal.ByteUtils"
+            method: "arrayUnsignedComparator"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.internal.ByteUtils"
+            method: "arrayUnsignedComparator"
+            methodParameters: []
+          valueType: "java.util.Comparator"
+          genericValueType: "byte[]"
+          uuid: "compareTo_comparator1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "231276223B3DD65935C1F8594364B51A"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: 0
+        suggestedContent: !<regular>
+          value: 0
+        valueType: "int"
+        uuid: "compareTo_int1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "af5f6332-26a2-3749-8f9a-ac87ce6fe7cf"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true

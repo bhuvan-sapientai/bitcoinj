@@ -1,0 +1,1051 @@
+---
+modelFingerprint: "6CFF1F2079E81A84E017B9319A476D5B"
+methods:
+- method:
+    name: "start"
+    returnType: "org.bitcoinj.base.internal.Stopwatch"
+    signature: "start() : org.bitcoinj.base.internal.Stopwatch"
+    instructionFingerprint: "04883BD32168E94A0DAC03DD060B7065"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "startTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "5BEF1F0BD7FA7B9C533CE5480D963735"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "5AACEB57D3FFB9AF0113DAE9D7BF62E1"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.base.internal.Stopwatch"
+          parameters: []
+          privateConstructor: true
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.base.internal.Stopwatch"
+          parameters: []
+          privateConstructor: true
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.base.internal.Stopwatch"
+        uuid: "start_stopwatch1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "a9331398-240e-36aa-9522-b3dc4bcf14ad"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "stop"
+    returnType: "org.bitcoinj.base.internal.Stopwatch"
+    signature: "stop() : org.bitcoinj.base.internal.Stopwatch"
+    instructionFingerprint: "AC10269D21A259F30D748DE8499C78AD"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "stopWhenIsRunning"
+    nameDefinedByUser: false
+    constructorSignature: "start() : org.bitcoinj.base.internal.Stopwatch"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "680F2F31C97D0D2C1FF7B9345667354B"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.internal.Stopwatch"
+          method: "start"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.internal.Stopwatch"
+          method: "start"
+          methodParameters: []
+        valueType: "org.bitcoinj.base.internal.Stopwatch"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "5AA553E98DA4C3D57ED30564C215F872"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      methodExercised:
+        target: "target"
+        name: "isRunning"
+        parameters: []
+        signature: "isRunning(): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: true
+          suggestedContent: !<regular>
+            value: true
+          valueType: "boolean"
+          uuid: "stop_boolean1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "F0681303B39523FDC270D0436F851BC3"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "THIS"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.internal.Stopwatch"
+          method: "start"
+          methodParameters: []
+        valueType: "org.bitcoinj.base.internal.Stopwatch"
+        uuid: "targetClassObject"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "8b691c45-8849-3865-a710-9f1938dc8fe1"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "stopWhenIsRunningNot"
+    nameDefinedByUser: false
+    constructorSignature: "start() : org.bitcoinj.base.internal.Stopwatch"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "22F82DD9278B997C28D6B4C72CF573FA"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "7a94fe9b-c517-3ffb-8ced-53e4ffaa53f9"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "isRunning"
+    returnType: "boolean"
+    signature: "isRunning() : boolean"
+    instructionFingerprint: "8EBE46189ACFD700C7B2DAED1B9A53BE"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "isRunningWhenStopTimeIsNull"
+    nameDefinedByUser: false
+    constructorSignature: "start() : org.bitcoinj.base.internal.Stopwatch"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "534C51EE4522EEB59493D4F9800AC916"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.internal.Stopwatch"
+          method: "start"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.internal.Stopwatch"
+          method: "start"
+          methodParameters: []
+        valueType: "org.bitcoinj.base.internal.Stopwatch"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: true
+        valueType: "boolean"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "0ad2b469-3c49-34f9-8a63-6bb6b74df584"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "elapsed"
+    returnType: "java.time.Duration"
+    signature: "elapsed() : java.time.Duration"
+    instructionFingerprint: "7F03A3BCED12A4587C9A75461F18B3A9"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "elapsedWhenIsRunning"
+    nameDefinedByUser: false
+    constructorSignature: "start() : org.bitcoinj.base.internal.Stopwatch"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "15FBACE2F5E6E6FE7C2B7A39EDB4EE00"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.internal.Stopwatch"
+          method: "start"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.internal.Stopwatch"
+          method: "start"
+          methodParameters: []
+        valueType: "org.bitcoinj.base.internal.Stopwatch"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "5AA553E98DA4C3D57ED30564C215F872"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      methodExercised:
+        target: "target"
+        name: "isRunning"
+        parameters: []
+        signature: "isRunning(): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: true
+          suggestedContent: !<regular>
+            value: true
+          valueType: "boolean"
+          uuid: "elapsed_boolean1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "9B85EDF153F11E4BDED1A26C6C5A02D4"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.time.Duration"
+          method: "ofDays"
+          methodParameters:
+          - name: "days"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "elapsed_duration1-days"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "java.time.Duration"
+          method: "ofDays"
+          methodParameters:
+          - name: "days"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "elapsed_duration1-days"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "java.time.Duration"
+        uuid: "elapsed_duration1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "e2f476bb-c28c-39a7-9a72-0b234e1920b6"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "elapsedWhenIsRunningNot"
+    nameDefinedByUser: false
+    constructorSignature: "start() : org.bitcoinj.base.internal.Stopwatch"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "65B86E98294CBAE5DC4721A646274444"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.internal.Stopwatch"
+          method: "start"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.internal.Stopwatch"
+          method: "start"
+          methodParameters: []
+        valueType: "org.bitcoinj.base.internal.Stopwatch"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "EAE5DD9BE8BBFC7789A0E098A4C6B20A"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      methodExercised:
+        target: "target"
+        name: "isRunning"
+        parameters: []
+        signature: "isRunning(): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: false
+          suggestedContent: !<regular>
+            value: false
+          valueType: "boolean"
+          uuid: "elapsed_boolean1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "9B85EDF153F11E4BDED1A26C6C5A02D4"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.time.Duration"
+          method: "ofDays"
+          methodParameters:
+          - name: "days"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "elapsed_duration1-days"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "java.time.Duration"
+          method: "ofDays"
+          methodParameters:
+          - name: "days"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "elapsed_duration1-days"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "java.time.Duration"
+        uuid: "elapsed_duration1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "458ce76a-62e3-30e0-bfd8-695a48193e46"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+- method:
+    name: "get"
+    returnType: "long"
+    signature: "get(java.time.temporal.TemporalUnit) : long"
+    instructionFingerprint: "F047368B1F4BC5549FDC60F338655B68"
+    parametersTypes:
+    - "java.time.temporal.TemporalUnit"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "getTest"
+    nameDefinedByUser: false
+    constructorSignature: "start() : org.bitcoinj.base.internal.Stopwatch"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "8E4F7B5E6EFD63AE2D03DF215740265D"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.internal.Stopwatch"
+          method: "start"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.internal.Stopwatch"
+          method: "start"
+          methodParameters: []
+        valueType: "org.bitcoinj.base.internal.Stopwatch"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "temporalUnit"
+      modelFingerprint: "464D89FECE9C686601125AC59A3A6E85"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        content: !<unknown_object>
+          target: "java.time.temporal.TemporalUnit"
+          onlyPojoFunctions: false
+          builderPattern: false
+        suggestedContent: !<unknown_object>
+          target: "java.time.temporal.TemporalUnit"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "java.time.temporal.TemporalUnit"
+        uuid: "get_temporalUnit1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "1544C3243427A58A5AE91A88CC628F77"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.NullPointerException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.lang.NullPointerException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.lang.NullPointerException"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "9c25887d-767d-38e9-b5ae-c2e4012c49be"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "getUnits"
+    returnType: "java.util.List"
+    signature: "getUnits() : java.util.List<java.time.temporal.TemporalUnit>"
+    instructionFingerprint: "AD2725BF733D4EDCF601517BB6A09F04"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "getUnitsTest"
+    nameDefinedByUser: false
+    constructorSignature: "start() : org.bitcoinj.base.internal.Stopwatch"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "ED40815BDA4D23EDD70D05736698BCDD"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.internal.Stopwatch"
+          method: "start"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.internal.Stopwatch"
+          method: "start"
+          methodParameters: []
+        valueType: "org.bitcoinj.base.internal.Stopwatch"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "9FAC6DACC0B7D1C87FA1C047715D66A1"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "COLLECTION"
+        content: !<collection>
+          parameters: []
+          values:
+          - sapientType: "ENUM"
+            content: !<regular>
+              value: "MILLIS"
+            valueType: "java.time.temporal.ChronoUnit"
+            uuid: "Enum-java.time.temporal.ChronoUnit-MILLIS"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        suggestedContent: !<collection>
+          parameters: []
+          values:
+          - sapientType: "ENUM"
+            content: !<regular>
+              value: "MILLIS"
+            valueType: "java.time.temporal.ChronoUnit"
+            uuid: "Enum-java.time.temporal.ChronoUnit-MILLIS"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        valueType: "java.util.List"
+        genericValueType: "java.time.temporal.TemporalUnit"
+        uuid: "getUnits_list1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "77dd7c1d-eacf-3f7b-8351-0eb312695635"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "addTo"
+    returnType: "java.time.temporal.Temporal"
+    signature: "addTo(java.time.temporal.Temporal) : java.time.temporal.Temporal"
+    instructionFingerprint: "6D2FD6F100926269AB07C99F1D23FFDA"
+    parametersTypes:
+    - "java.time.temporal.Temporal"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "addToTest"
+    nameDefinedByUser: false
+    constructorSignature: "start() : org.bitcoinj.base.internal.Stopwatch"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "977527043A2AE155551D76D8BDE02888"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.internal.Stopwatch"
+          method: "start"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.internal.Stopwatch"
+          method: "start"
+          methodParameters: []
+        valueType: "org.bitcoinj.base.internal.Stopwatch"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "temporal"
+      modelFingerprint: "DDC4259CAC02CA8711D35129BE0451B1"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        content: !<unknown_object>
+          target: "java.time.temporal.Temporal"
+          onlyPojoFunctions: false
+          builderPattern: false
+        suggestedContent: !<unknown_object>
+          target: "java.time.temporal.Temporal"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "java.time.temporal.Temporal"
+        uuid: "addTo_temporal1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "71C07394705707681A7FDB2B2BB06D00"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      methodExercised:
+        target: "target"
+        name: "elapsed"
+        parameters: []
+        signature: "elapsed(): Duration"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "java.time.Duration"
+            method: "ofDays"
+            methodParameters:
+            - name: "days"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "long"
+                uuid: "addTo_duration1-days"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "java.time.Duration"
+            method: "ofDays"
+            methodParameters:
+            - name: "days"
+              value:
+                sapientType: "BASIC"
+                valueType: "long"
+                uuid: "addTo_duration1-days"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "java.time.Duration"
+          uuid: "addTo_duration1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "1544C3243427A58A5AE91A88CC628F77"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.NullPointerException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.lang.NullPointerException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.lang.NullPointerException"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "37fda9a0-27b1-39d9-844c-155c12172b76"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "subtractFrom"
+    returnType: "java.time.temporal.Temporal"
+    signature: "subtractFrom(java.time.temporal.Temporal) : java.time.temporal.Temporal"
+    instructionFingerprint: "03D9F6251A024E81CDC42CB5A73008A1"
+    parametersTypes:
+    - "java.time.temporal.Temporal"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "subtractFromTest"
+    nameDefinedByUser: false
+    constructorSignature: "start() : org.bitcoinj.base.internal.Stopwatch"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "977527043A2AE155551D76D8BDE02888"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.internal.Stopwatch"
+          method: "start"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.internal.Stopwatch"
+          method: "start"
+          methodParameters: []
+        valueType: "org.bitcoinj.base.internal.Stopwatch"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "temporal"
+      modelFingerprint: "DDC4259CAC02CA8711D35129BE0451B1"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        content: !<unknown_object>
+          target: "java.time.temporal.Temporal"
+          onlyPojoFunctions: false
+          builderPattern: false
+        suggestedContent: !<unknown_object>
+          target: "java.time.temporal.Temporal"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "java.time.temporal.Temporal"
+        uuid: "subtractFrom_temporal1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "71C07394705707681A7FDB2B2BB06D00"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      methodExercised:
+        target: "target"
+        name: "elapsed"
+        parameters: []
+        signature: "elapsed(): Duration"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "java.time.Duration"
+            method: "ofDays"
+            methodParameters:
+            - name: "days"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "long"
+                uuid: "subtractFrom_duration1-days"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "java.time.Duration"
+            method: "ofDays"
+            methodParameters:
+            - name: "days"
+              value:
+                sapientType: "BASIC"
+                valueType: "long"
+                uuid: "subtractFrom_duration1-days"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "java.time.Duration"
+          uuid: "subtractFrom_duration1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "1544C3243427A58A5AE91A88CC628F77"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.NullPointerException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.lang.NullPointerException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.lang.NullPointerException"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "5b4caf68-30d0-34d6-8e4d-e081a7ee3fdb"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "toString"
+    returnType: "java.lang.String"
+    signature: "toString() : java.lang.String"
+    instructionFingerprint: "E8760F85BB8C7270FD533548CB5BDF3D"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "toStringTest"
+    nameDefinedByUser: false
+    constructorSignature: "start() : org.bitcoinj.base.internal.Stopwatch"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "8A232345CDB73E0EBD83F9A78CCC32B2"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.internal.Stopwatch"
+          method: "start"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.internal.Stopwatch"
+          method: "start"
+          methodParameters: []
+        valueType: "org.bitcoinj.base.internal.Stopwatch"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "71C07394705707681A7FDB2B2BB06D00"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      methodExercised:
+        target: "target"
+        name: "elapsed"
+        parameters: []
+        signature: "elapsed(): Duration"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "java.time.Duration"
+            method: "ofDays"
+            methodParameters:
+            - name: "days"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "long"
+                uuid: "toString_duration1-days"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "java.time.Duration"
+            method: "ofDays"
+            methodParameters:
+            - name: "days"
+              value:
+                sapientType: "BASIC"
+                valueType: "long"
+                uuid: "toString_duration1-days"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "java.time.Duration"
+          uuid: "toString_duration1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "38FF519E07352D40D1DC0D833D9A2318"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "2 ms"
+        suggestedContent: !<regular>
+          value: "2 ms"
+        valueType: "java.lang.String"
+        uuid: "toString_string1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "363d3698-f34c-39ad-914f-376a19498023"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
