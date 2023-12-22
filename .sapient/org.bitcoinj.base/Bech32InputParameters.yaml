@@ -1,0 +1,2517 @@
+---
+modelFingerprint: "281A7E420601A5C2854B45CCEC695ADA"
+methods:
+- method:
+    name: "encodeBytes"
+    returnType: "java.lang.String"
+    signature: "encodeBytes(org.bitcoinj.base.Bech32$Encoding,java.lang.String,byte[])\
+      \ : java.lang.String"
+    instructionFingerprint: "7937701FE3BF642435F56142B8E58C96"
+    parametersTypes:
+    - "org.bitcoinj.base.Bech32$Encoding"
+    - "java.lang.String"
+    - "byte[]"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "encodeBytesTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "B57B3D75227F49CB43C4AB2478B8C12B"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "encoding"
+      modelFingerprint: "3830FBBD47A52BE006EAC083331FFD42"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ENUM"
+        content: !<regular>
+          value: "BECH32"
+        valueType: "org.bitcoinj.base.Bech32$Encoding"
+        uuid: "encodeBytes_bech32.Encoding1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "hrp"
+      modelFingerprint: "FFEEDCD00A02F47C98B13B6655897FEC"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "hrp1"
+        valueType: "java.lang.String"
+        uuid: "encodeBytes_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "bytes"
+      modelFingerprint: "F85D4DE73165DE8BC4C58CDAD86894A7"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ARRAY"
+        content: !<array>
+          values: {}
+        suggestedContent: !<array>
+          values: {}
+        valueType: "byte[]"
+        uuid: "encodeBytes_byte[]1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Bech32.Bech32Bytes"
+      modelFingerprint: "D4240CE9FBA9CF0F73CBA66B07C3BF69"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.Bech32$Bech32Bytes"
+        uuid: "org.bitcoinj.base.Bech32$Bech32Bytes"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.Bech32$Bech32Bytes"
+        name: "ofBytes"
+        parameters:
+        - name: "data"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            suggestedContent: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "encodeBytes_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "ofBytes(byte[]): Bech32$Bech32Bytes"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.base.Bech32$Bech32Bytes"
+          uuid: "encodeBytes_bech32.Bech32Bytes1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 8
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Bech32"
+      modelFingerprint: "1CB0319C5E4432FCF59CBB41E7CE8496"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.Bech32"
+        uuid: "org.bitcoinj.base.Bech32"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.Bech32"
+        name: "encode"
+        parameters:
+        - name: "encoding"
+          value:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "BECH32"
+            valueType: "org.bitcoinj.base.Bech32$Encoding"
+            uuid: "encodeBytes_bech32.Encoding1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "hrp"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "hrp1"
+            valueType: "java.lang.String"
+            uuid: "encodeBytes_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "values"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Bech32$Bech32Bytes"
+            uuid: "encodeBytes_bech32.Bech32Bytes1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "encode(Bech32$Encoding,String,Bech32$Bech32Bytes): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "return_of_encode1"
+          valueType: "java.lang.String"
+          uuid: "encodeBytes_string2"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "return_of_encode1"
+        valueType: "java.lang.String"
+        uuid: "encodeBytes_string2"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "fbbeaf74-231e-3c65-8cbd-93982294bb04"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "decodeBytes"
+    returnType: "byte[]"
+    signature: "decodeBytes(java.lang.String,java.lang.String,org.bitcoinj.base.Bech32$Encoding)\
+      \ : byte[]"
+    instructionFingerprint: "B4B2A327571CDE8DF84FD8DE83E0A78A"
+    parametersTypes:
+    - "java.lang.String"
+    - "java.lang.String"
+    - "org.bitcoinj.base.Bech32$Encoding"
+  paths:
+  - pathId: "path3"
+    pathIdForUser: "path1"
+    testPathName: "decodeBytesWhenDecodedHrpNotEqualsExpectedHrpThrowsAddressFormatException"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "049416338094FB7288116401BF719D53"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "bf8ce685-86b9-3a10-90fb-002ae3f17d2b"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path1"
+    pathIdForUser: "path2"
+    testPathName: "decodeBytesWhenDecodedEncodingNotEqualsExpectedEncodingThrowsAddressFormatException"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "FE05AC7D0E298701BEB71D65029CA685"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "bech32"
+      modelFingerprint: "C89F893223D91E9BC877C7B44F297943"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "bech32"
+        valueType: "java.lang.String"
+        uuid: "decodeBytes_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "expectedHrp"
+      modelFingerprint: "CB2166FD51F1DF54D7598C6E92EA87D2"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "A"
+        suggestedContent: !<regular>
+          value: "A"
+        valueType: "java.lang.String"
+        uuid: "decodeBytes_string2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "expectedEncoding"
+      modelFingerprint: "2A8325D04972DCD8C274A48417E19714"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ENUM"
+        content: !<regular>
+          value: "BECH32"
+        valueType: "org.bitcoinj.base.Bech32$Encoding"
+        uuid: "decodeBytes_bech32.Encoding1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Bech32"
+      modelFingerprint: "0963CE649491466C68B7366B45D8FA69"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.Bech32"
+        uuid: "org.bitcoinj.base.Bech32"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.Bech32"
+        name: "decode"
+        parameters:
+        - name: "str"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "bech32"
+            valueType: "java.lang.String"
+            uuid: "decodeBytes_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "decode(String): Bech32$Bech32Data"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.base.Bech32$Bech32Data"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.base.Bech32$Bech32Data"
+          uuid: "decodeBytes_bech32.Bech32Data1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "B58DBE22080DE0307E76CB8F814360CE"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "org.bitcoinj.base.exceptions.AddressFormatException"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "unexpected hrp or encoding"
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.base.exceptions.AddressFormatException"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "unexpected hrp or encoding"
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.base.exceptions.AddressFormatException"
+        uuid: "decodeBytes_addressFormatException1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "7d42dd02-a07c-33bf-b536-f0188bc26a83"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+  - pathId: "path2"
+    pathIdForUser: "path3"
+    testPathName: "decodeBytesWhenDecodedEncodingEqualsExpectedEncoding"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "956A6B68F65F79A915C5B706EEC0EC04"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "bech32"
+      modelFingerprint: "C89F893223D91E9BC877C7B44F297943"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "bech32"
+        valueType: "java.lang.String"
+        uuid: "decodeBytes_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "expectedHrp"
+      modelFingerprint: "CB2166FD51F1DF54D7598C6E92EA87D2"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "A"
+        suggestedContent: !<regular>
+          value: "A"
+        valueType: "java.lang.String"
+        uuid: "decodeBytes_string2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "expectedEncoding"
+      modelFingerprint: "40574C42B42A5538547F60A78852EE51"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        valueType: "org.bitcoinj.base.Bech32$Encoding"
+        uuid: "decodeBytes_bech32.Encoding2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Bech32"
+      modelFingerprint: "0963CE649491466C68B7366B45D8FA69"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.Bech32"
+        uuid: "org.bitcoinj.base.Bech32"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.Bech32"
+        name: "decode"
+        parameters:
+        - name: "str"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "bech32"
+            valueType: "java.lang.String"
+            uuid: "decodeBytes_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "decode(String): Bech32$Bech32Data"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.base.Bech32$Bech32Data"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.base.Bech32$Bech32Data"
+          uuid: "decodeBytes_bech32.Bech32Data1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "decoded"
+      modelFingerprint: "C0B8568663572C3415FC6B056B119CCF"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Bech32$Bech32Data"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Bech32$Bech32Data"
+        uuid: "decodeBytes_bech32.Bech32Data1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "decoded"
+        name: "decode5to8"
+        parameters: []
+        signature: "decode5to8(): byte[]"
+        returnValue:
+          sapientType: "ARRAY"
+          content: !<array>
+            values: {}
+          suggestedContent: !<array>
+            values: {}
+          valueType: "byte[]"
+          uuid: "decodeBytes_byte[]1"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "740324D8AEEA83F5639543B37CAABC19"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ARRAY"
+        content: !<array>
+          values: {}
+        suggestedContent: !<array>
+          values: {}
+        valueType: "byte[]"
+        uuid: "decodeBytes_byte[]1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "cbd7285d-6f27-3a36-900d-07a5cc0cf8a7"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+- method:
+    name: "encode"
+    returnType: "java.lang.String"
+    signature: "encode(org.bitcoinj.base.Bech32$Bech32Data) : java.lang.String"
+    instructionFingerprint: "C2FC8A33E8FAB95F3934ACEC66A26FE7"
+    parametersTypes:
+    - "org.bitcoinj.base.Bech32$Bech32Data"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "encodeTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "A139FCEF8B019CDEE98B121AFF35AE06"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "bech32"
+      modelFingerprint: "5C265238BAF43A718B680DAA6414DE3B"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Bech32$Bech32Data"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Bech32$Bech32Data"
+        uuid: "encode_bech32.Bech32Data1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Bech32"
+      modelFingerprint: "56E983B2A57A58377AF0C8DC45F84924"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.Bech32"
+        uuid: "org.bitcoinj.base.Bech32"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.Bech32"
+        name: "encode"
+        parameters:
+        - name: "encoding"
+          value:
+            sapientType: "NULL"
+            valueType: "org.bitcoinj.base.Bech32$Encoding"
+            uuid: "encode_bech32.Encoding1"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "hrp"
+          value:
+            sapientType: "NULL"
+            valueType: "java.lang.String"
+            uuid: "encode_string1"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "values"
+          value:
+            sapientType: "MOCK"
+            suggestedContent: !<unknown_object>
+              target: "org.bitcoinj.base.Bech32$Bech32Data"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "org.bitcoinj.base.Bech32$Bech32Data"
+            uuid: "encode_bech32.Bech32Data1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "encode(Bech32$Encoding,String,Bech32$Bech32Data): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "return_of_encode1"
+          valueType: "java.lang.String"
+          uuid: "encode_string2"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "return_of_encode1"
+        valueType: "java.lang.String"
+        uuid: "encode_string2"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "fafc308c-c2cf-3f58-97a4-997140e0ac23"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "encode"
+    returnType: "java.lang.String"
+    signature: "encode(org.bitcoinj.base.Bech32$Encoding,java.lang.String,org.bitcoinj.base.Bech32$Bech32Bytes)\
+      \ : java.lang.String"
+    instructionFingerprint: "426D762C157B219A681260512D338C15"
+    parametersTypes:
+    - "org.bitcoinj.base.Bech32$Encoding"
+    - "java.lang.String"
+    - "org.bitcoinj.base.Bech32$Bech32Bytes"
+  paths:
+  - pathId: "path4"
+    pathIdForUser: "path1"
+    testPathName: "encode1WhenCombinedIsEmpty"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "MODERATE"
+    modelFingerprint: "F5DEEB747566A5970850A4F686449FF4"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "9c2d726e-79b4-3793-928e-ac7a1700fb90"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path5"
+    pathIdForUser: "path2"
+    testPathName: "encode1WhenILessThan6AndCombinedIsEmpty"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "MODERATE"
+    modelFingerprint: "68D6A1C1BA5D71045E1F387C55E3DAA6"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "de6ce2ce-5949-3b60-b89e-2f07fddaa367"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path1"
+    pathIdForUser: "path3"
+    testPathName: "encode1WhenCombinedIsNotEmpty"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "MODERATE"
+    modelFingerprint: "180B9CA660D2D0867A8355BDD083097B"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "encoding"
+      modelFingerprint: "C0D933299E9B36EEEA9378A31BC2D01D"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ENUM"
+        content: !<regular>
+          value: "BECH32"
+        suggestedContent: !<regular>
+          value: "BECH32"
+        valueType: "org.bitcoinj.base.Bech32$Encoding"
+        uuid: "encode_bech32.Encoding1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "hrp"
+      modelFingerprint: "FEE12CF59C9130ABBFA80243FAA4C44E"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "bc"
+        suggestedContent: !<regular>
+          value: "bc"
+        valueType: "java.lang.String"
+        uuid: "encode_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "values"
+      modelFingerprint: "81FD692D7496978D60BBB5FA1BF253E0"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Bech32$Bech32Bytes"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Bech32$Bech32Bytes"
+        uuid: "encode_bech32.Bech32Bytes1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "60F4AB56A088909714BFE88747605281"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "encode_void1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "60F4AB56A088909714BFE88747605281"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "encode_void2"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "values"
+      modelFingerprint: "7DCB6ECF64B3E9BA0D17A9B5769D5DAB"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Bech32$Bech32Bytes"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Bech32$Bech32Bytes"
+        uuid: "encode_bech32.Bech32Bytes1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "values"
+        name: "bytes"
+        parameters: []
+        signature: "bytes(): byte[]"
+        returnValue:
+          sapientType: "ARRAY"
+          content: !<array>
+            values: {}
+          suggestedContent: !<array>
+            values: {}
+          valueType: "byte[]"
+          uuid: "encode_byte[]1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "values"
+      modelFingerprint: "7DCB6ECF64B3E9BA0D17A9B5769D5DAB"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Bech32$Bech32Bytes"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Bech32$Bech32Bytes"
+        uuid: "encode_bech32.Bech32Bytes1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "values"
+        name: "bytes"
+        parameters: []
+        signature: "bytes(): byte[]"
+        returnValue:
+          sapientType: "ARRAY"
+          content: !<array>
+            values: {}
+          suggestedContent: !<array>
+            values: {}
+          valueType: "byte[]"
+          uuid: "encode_byte[]2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "values"
+      modelFingerprint: "7DCB6ECF64B3E9BA0D17A9B5769D5DAB"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Bech32$Bech32Bytes"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Bech32$Bech32Bytes"
+        uuid: "encode_bech32.Bech32Bytes1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "values"
+        name: "bytes"
+        parameters: []
+        signature: "bytes(): byte[]"
+        returnValue:
+          sapientType: "ARRAY"
+          content: !<array>
+            values: {}
+          suggestedContent: !<array>
+            values: {}
+          valueType: "byte[]"
+          uuid: "encode_byte[]4"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "values"
+      modelFingerprint: "7DCB6ECF64B3E9BA0D17A9B5769D5DAB"
+      index: 9
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Bech32$Bech32Bytes"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Bech32$Bech32Bytes"
+        uuid: "encode_bech32.Bech32Bytes1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "values"
+        name: "bytes"
+        parameters: []
+        signature: "bytes(): byte[]"
+        returnValue:
+          sapientType: "ARRAY"
+          content: !<array>
+            values: {}
+          suggestedContent: !<array>
+            values: {}
+          valueType: "byte[]"
+          uuid: "encode_byte[]5"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "values"
+      modelFingerprint: "504BC9839FA187ACE05974A7863C81B8"
+      index: 10
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Bech32$Bech32Bytes"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Bech32$Bech32Bytes"
+        uuid: "encode_bech32.Bech32Bytes1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "values"
+        name: "bytes"
+        parameters: []
+        signature: "bytes(): byte[]"
+        returnValue:
+          sapientType: "ARRAY"
+          content: !<array>
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              1:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              2:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              3:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              4:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              5:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<array>
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              1:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              2:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              3:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              4:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              5:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "byte[]"
+          uuid: "encode_byte[]6"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "67A933573A922740D365D493B944BE55"
+      index: 11
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "bc1q"
+        suggestedContent: !<regular>
+          value: "bc1q"
+        valueType: "java.lang.String"
+        uuid: "encode_string3"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "de8b9fa0-b2fd-39f3-b03e-d9eae989c305"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+  - pathId: "path2"
+    pathIdForUser: "path4"
+    testPathName: "encode1WhenEncodingEqualsEncodingBECH32AndILessThan6AndCombinedIsEmpty"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "MODERATE"
+    modelFingerprint: "55100CA56835F8282504B1E41CA50EDB"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "3e3984f3-9985-3cde-9833-3f9eb6228601"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path3"
+    pathIdForUser: "path5"
+    testPathName: "encode1WhenEncodingNotEqualsEncodingBECH32AndILessThan6AndCombinedIsEmpty"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "MODERATE"
+    modelFingerprint: "7C56F09E93831BED8C4D112006517B24"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "encoding"
+      modelFingerprint: "C0D933299E9B36EEEA9378A31BC2D01D"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ENUM"
+        content: !<regular>
+          value: "BECH32"
+        suggestedContent: !<regular>
+          value: "BECH32"
+        valueType: "org.bitcoinj.base.Bech32$Encoding"
+        uuid: "encode_bech32.Encoding1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "hrp"
+      modelFingerprint: "FEE12CF59C9130ABBFA80243FAA4C44E"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "bc"
+        suggestedContent: !<regular>
+          value: "bc"
+        valueType: "java.lang.String"
+        uuid: "encode_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "values"
+      modelFingerprint: "81FD692D7496978D60BBB5FA1BF253E0"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Bech32$Bech32Bytes"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Bech32$Bech32Bytes"
+        uuid: "encode_bech32.Bech32Bytes1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "60F4AB56A088909714BFE88747605281"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "encode_void1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "60F4AB56A088909714BFE88747605281"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "encode_void2"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "values"
+      modelFingerprint: "7DCB6ECF64B3E9BA0D17A9B5769D5DAB"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Bech32$Bech32Bytes"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Bech32$Bech32Bytes"
+        uuid: "encode_bech32.Bech32Bytes1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "values"
+        name: "bytes"
+        parameters: []
+        signature: "bytes(): byte[]"
+        returnValue:
+          sapientType: "ARRAY"
+          content: !<array>
+            values: {}
+          suggestedContent: !<array>
+            values: {}
+          valueType: "byte[]"
+          uuid: "encode_byte[]1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "values"
+      modelFingerprint: "7DCB6ECF64B3E9BA0D17A9B5769D5DAB"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Bech32$Bech32Bytes"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Bech32$Bech32Bytes"
+        uuid: "encode_bech32.Bech32Bytes1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "values"
+        name: "bytes"
+        parameters: []
+        signature: "bytes(): byte[]"
+        returnValue:
+          sapientType: "ARRAY"
+          content: !<array>
+            values: {}
+          suggestedContent: !<array>
+            values: {}
+          valueType: "byte[]"
+          uuid: "encode_byte[]2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "values"
+      modelFingerprint: "7DCB6ECF64B3E9BA0D17A9B5769D5DAB"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Bech32$Bech32Bytes"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Bech32$Bech32Bytes"
+        uuid: "encode_bech32.Bech32Bytes1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "values"
+        name: "bytes"
+        parameters: []
+        signature: "bytes(): byte[]"
+        returnValue:
+          sapientType: "ARRAY"
+          content: !<array>
+            values: {}
+          suggestedContent: !<array>
+            values: {}
+          valueType: "byte[]"
+          uuid: "encode_byte[]4"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "values"
+      modelFingerprint: "7DCB6ECF64B3E9BA0D17A9B5769D5DAB"
+      index: 9
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Bech32$Bech32Bytes"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Bech32$Bech32Bytes"
+        uuid: "encode_bech32.Bech32Bytes1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "values"
+        name: "bytes"
+        parameters: []
+        signature: "bytes(): byte[]"
+        returnValue:
+          sapientType: "ARRAY"
+          content: !<array>
+            values: {}
+          suggestedContent: !<array>
+            values: {}
+          valueType: "byte[]"
+          uuid: "encode_byte[]5"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "values"
+      modelFingerprint: "A557C45F04F19635A1EA29E6BF4A6DE4"
+      index: 10
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Bech32$Bech32Bytes"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Bech32$Bech32Bytes"
+        uuid: "encode_bech32.Bech32Bytes1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "values"
+        name: "bytes"
+        parameters: []
+        signature: "bytes(): byte[]"
+        returnValue:
+          sapientType: "ARRAY"
+          content: !<array>
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              1:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              2:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              3:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<array>
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              1:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              2:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              3:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "byte[]"
+          uuid: "encode_byte[]6"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "67A933573A922740D365D493B944BE55"
+      index: 11
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "bc1q"
+        suggestedContent: !<regular>
+          value: "bc1q"
+        valueType: "java.lang.String"
+        uuid: "encode_string3"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "a9050d6a-16a6-3523-938f-67f081d71b1d"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+- method:
+    name: "decode"
+    returnType: "org.bitcoinj.base.Bech32$Bech32Data"
+    signature: "decode(java.lang.String) : org.bitcoinj.base.Bech32$Bech32Data"
+    throwsExceptions:
+    - "org.bitcoinj.base.exceptions.AddressFormatException"
+    instructionFingerprint: "C394418532F0DE2E665BCBF5875FB1CF"
+    parametersTypes:
+    - "java.lang.String"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "decodeWhenStrLengthLessThan8ThrowsAddressFormatExceptionInvalidDataLength"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "1E277D2C37F52F9B465512402F8C9DA5"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "str"
+      modelFingerprint: "3A58796E6CF67E9299BA217ADAFC0F1E"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "A"
+        suggestedContent: !<regular>
+          value: "A"
+        valueType: "java.lang.String"
+        uuid: "decode_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "B8415CF6C41AEE47ED456850448F4974"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidDataLength"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Input too short: 1"
+              suggestedContent: !<regular>
+                value: "Input too short: 1"
+              valueType: "java.lang.String"
+              uuid: "decode_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidDataLength"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: "Input too short: 1"
+              valueType: "java.lang.String"
+              uuid: "decode_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidDataLength"
+        uuid: "decode_addressFormatException.InvalidDataLength1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "ec59ef02-8050-39ff-89f3-56b2cd5df128"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "decodeWhenStrLengthGreaterThan90ThrowsAddressFormatExceptionInvalidDataLength"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "67DB1B094F033B04C9C1A674A0350AE0"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "str"
+      modelFingerprint: "D3DB42D024F413E70F5B13C52AB57BF7"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "ABCDEFGHJKLMNOPQRSTUVWXYZ[\\\\]^_`abcdefhijkmqrsvwxyz{|}~\x7f\\\
+            u0080\\u0081\\u0082\\u0083\\u0084\\u0085\\u0086\\u0087\\u0088\\u0089\\\
+            u008A\\u008B\\u008C\\u008D\\u008E\\u008F\\u0090\\u0091\\u0092\\u0093\\\
+            u0094\\u0095\\u0096\\u0097\\u0098\\u0099\\u009A\\u009B\\u009C\\u009D\\\
+            u009E\\u009F\\u00A0\\u00A1\\u00A2\\u00A3"
+        suggestedContent: !<regular>
+          value: "ABCDEFGHJKLMNOPQRSTUVWXYZ[\\\\]^_`abcdefhijkmqrsvwxyz{|}~\x7f\\\
+            u0080\\u0081\\u0082\\u0083\\u0084\\u0085\\u0086\\u0087\\u0088\\u0089\\\
+            u008A\\u008B\\u008C\\u008D\\u008E\\u008F\\u0090\\u0091\\u0092\\u0093\\\
+            u0094\\u0095\\u0096\\u0097\\u0098\\u0099\\u009A\\u009B\\u009C\\u009D\\\
+            u009E\\u009F\\u00A0\\u00A1\\u00A2\\u00A3"
+        valueType: "java.lang.String"
+        uuid: "decode_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "C85BC0AA7A9437D6024803746A37FCB7"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidDataLength"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Input too long: 91"
+              suggestedContent: !<regular>
+                value: "Input too long: 91"
+              valueType: "java.lang.String"
+              uuid: "decode_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidDataLength"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: "Input too long: 91"
+              valueType: "java.lang.String"
+              uuid: "decode_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidDataLength"
+        uuid: "decode_addressFormatException.InvalidDataLength1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "372800e1-1165-3aaa-b15a-40f82815668d"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path14"
+    pathIdForUser: "path3"
+    testPathName: "decodeWhenCLessThan33ThrowsAddressFormatExceptionInvalidCharacter"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "4B052D6444F4A1A10A34DEE00AB4676F"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "77b9ab4d-3fa3-3726-a86f-7091d5d4855d"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path15"
+    pathIdForUser: "path4"
+    testPathName: "decodeWhenPosLessThan1ThrowsAddressFormatExceptionInvalidPrefix"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "916A9D692868227D8186C003781E4A6A"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "68018ef6-1c71-3e77-bbec-c65b7aed2c46"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path3"
+    pathIdForUser: "path5"
+    testPathName: "decodeWhenCGreaterThan126ThrowsAddressFormatExceptionInvalidCharacter"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "6E74151C479C03A5132518EA6025CBC6"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "str"
+      modelFingerprint: "6E61A41CF873DB21766F5C918A924361"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "\\uFFFFBCDEFGH"
+        suggestedContent: !<regular>
+          value: "\\uFFFFBCDEFGH"
+        valueType: "java.lang.String"
+        uuid: "decode_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "DFB5E7FE04AF663D19063DCBA0EA077E"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidCharacter"
+          parameters:
+          - name: "character"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "\\uD87F"
+              suggestedContent: !<regular>
+                value: "\\uD87F"
+              valueType: "char"
+              uuid: "decode_char1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "position"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "decode_int5"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidCharacter"
+          parameters:
+          - name: "character"
+            value:
+              sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: "\\uD87F"
+              valueType: "char"
+              uuid: "decode_char1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "position"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "decode_int5"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidCharacter"
+        uuid: "decode_addressFormatException.InvalidCharacter1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "03c4c3e6-d8a2-36e7-81a6-0d62fe650353"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path13"
+    pathIdForUser: "path6"
+    testPathName: "decodeWhenCLessThan_A_AndPosLessThan1ThrowsAddressFormatExceptionInvalidPrefix"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "111796DD6E231CC02237E70AE4A74DC0"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "fb44db8e-2a24-3ded-99a7-7959112847ec"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path12"
+    pathIdForUser: "path7"
+    testPathName: "decodeWhenCGreaterThan_Z_AndPosLessThan1ThrowsAddressFormatExceptionInvalidPrefix"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "C81A926730F4A8D210A02B3A1FB5C8A2"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "ccb33566-1597-32d6-835b-ee4fc77a4236"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path9"
+    pathIdForUser: "path8"
+    testPathName: "decodeWhenCGreaterThanOrEqualsTo_A_AndCGreaterThan_Z_AndPosLessThan1ThrowsAddressFormatExceptionInvalidPrefix"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "944ADDA5AA32516C87A56D7F0EC9C187"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "b507a8a9-f301-3428-8350-ee800fd862cd"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path11"
+    pathIdForUser: "path9"
+    testPathName: "decodeWhenNotLowerAndPosLessThan1ThrowsAddressFormatExceptionInvalidPrefix"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "499821EDD8073284D410FF86326F4634"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "str"
+      modelFingerprint: "922A88C5471580657A4FC2C0D1089628"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "OEFGBCDH"
+        suggestedContent: !<regular>
+          value: "OEFGBCDH"
+        valueType: "java.lang.String"
+        uuid: "decode_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D7E36880B1ED92BE47D0EE733FACE219"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidPrefix"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Missing human-readable part"
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidPrefix"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Missing human-readable part"
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidPrefix"
+        uuid: "decode_addressFormatException.InvalidPrefix1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "02a9e6ce-6cb4-36ff-a28a-4e29f4a08a57"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path4"
+    pathIdForUser: "path10"
+    testPathName: "decodeWhenCGreaterThanOrEqualsTo_A_AndCGreaterThan_Z_AndPosLessThan12ThrowsAddressFormatExceptionInvalidPrefix"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "A5CF94221C418D6F197B245EFBE998A6"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "76f78bb6-82bb-31f0-ae9d-89f16ea5d63c"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path5"
+    pathIdForUser: "path11"
+    testPathName: "decodeWhenDataPartLengthLessThan6ThrowsAddressFormatExceptionInvalidDataLength"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "519C1B906E844B87014332C2978C8062"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "str"
+      modelFingerprint: "09977F28F7EC79AA3A30BDED7693E032"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "str1"
+        suggestedContent: !<regular>
+          value: "str1"
+        valueType: "java.lang.String"
+        uuid: "decode_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "00F771F1AAA2445532395420DF9DD110"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidDataLength"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Input too short: 4"
+              suggestedContent: !<regular>
+                value: "Input too short: 4"
+              valueType: "java.lang.String"
+              uuid: "decode_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidDataLength"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Input too short: 4"
+              suggestedContent: !<regular>
+                value: "Input too short: 4"
+              valueType: "java.lang.String"
+              uuid: "decode_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidDataLength"
+        uuid: "decode_addressFormatException.InvalidDataLength1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "29b6353b-924d-3faf-8709-7f1426958672"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path10"
+    pathIdForUser: "path12"
+    testPathName: "decodeWhenCIndexOfCHARSET_REVEqualsMinus1ThrowsAddressFormatExceptionInvalidCharacter"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "490E6AA02DC17AA4E8C259B8BA4B9142"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "d2c15770-942c-312e-8345-6cd352e98aa2"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path6"
+    pathIdForUser: "path13"
+    testPathName: "decodeWhenILessThanDataPartLengthAndCIndexOfCHARSET_REVEqualsMinus1ThrowsAddressFormatExceptionInvalidCharacter"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "519C1B906E844B87014332C2978C8062"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "str"
+      modelFingerprint: "09977F28F7EC79AA3A30BDED7693E032"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "str1"
+        suggestedContent: !<regular>
+          value: "str1"
+        valueType: "java.lang.String"
+        uuid: "decode_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "00F771F1AAA2445532395420DF9DD110"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidDataLength"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Input too short: 4"
+              suggestedContent: !<regular>
+                value: "Input too short: 4"
+              valueType: "java.lang.String"
+              uuid: "decode_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidDataLength"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Input too short: 4"
+              suggestedContent: !<regular>
+                value: "Input too short: 4"
+              valueType: "java.lang.String"
+              uuid: "decode_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidDataLength"
+        uuid: "decode_addressFormatException.InvalidDataLength1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "db0bfc4f-291b-3dd2-a7ba-bed317905439"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path8"
+    pathIdForUser: "path14"
+    testPathName: "decodeWhenEncodingIsNotNull"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "519C1B906E844B87014332C2978C8062"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "str"
+      modelFingerprint: "09977F28F7EC79AA3A30BDED7693E032"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "str1"
+        suggestedContent: !<regular>
+          value: "str1"
+        valueType: "java.lang.String"
+        uuid: "decode_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "00F771F1AAA2445532395420DF9DD110"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidDataLength"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Input too short: 4"
+              suggestedContent: !<regular>
+                value: "Input too short: 4"
+              valueType: "java.lang.String"
+              uuid: "decode_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidDataLength"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Input too short: 4"
+              suggestedContent: !<regular>
+                value: "Input too short: 4"
+              valueType: "java.lang.String"
+              uuid: "decode_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidDataLength"
+        uuid: "decode_addressFormatException.InvalidDataLength1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "1b9dfcb0-c453-326a-89a1-9c524713b9c7"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path7"
+    pathIdForUser: "path15"
+    testPathName: "decodeWhenEncodingIsNullThrowsAddressFormatExceptionInvalidChecksum"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "519C1B906E844B87014332C2978C8062"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "str"
+      modelFingerprint: "09977F28F7EC79AA3A30BDED7693E032"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "str1"
+        suggestedContent: !<regular>
+          value: "str1"
+        valueType: "java.lang.String"
+        uuid: "decode_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "00F771F1AAA2445532395420DF9DD110"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidDataLength"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Input too short: 4"
+              suggestedContent: !<regular>
+                value: "Input too short: 4"
+              valueType: "java.lang.String"
+              uuid: "decode_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidDataLength"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Input too short: 4"
+              suggestedContent: !<regular>
+                value: "Input too short: 4"
+              valueType: "java.lang.String"
+              uuid: "decode_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidDataLength"
+        uuid: "decode_addressFormatException.InvalidDataLength1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "e6706136-4ef7-3bce-9137-b6ab29e180db"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false

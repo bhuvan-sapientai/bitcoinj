@@ -1,0 +1,398 @@
+---
+modelFingerprint: "3971C0C40E448A94DD2CF991801D94FB"
+methods:
+- method:
+    name: "of"
+    returnType: "org.bitcoinj.base.ScriptType"
+    signature: "of(java.lang.String) : org.bitcoinj.base.ScriptType"
+    instructionFingerprint: "6A816FE2988D3995FB9506B85E065BC2"
+    parametersTypes:
+    - "java.lang.String"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "ofWhenDefaultBranch"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "D088260F3CB931B0F90488729545DB1C"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "id"
+      modelFingerprint: "ACD976F0A1DBD38FE4D389696A87F7D0"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "pkh"
+        suggestedContent: !<regular>
+          value: "pkh"
+        valueType: "java.lang.String"
+        uuid: "of_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "ScriptType"
+      modelFingerprint: "0B96596749EC7698EADB9A828EB29819"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "org.bitcoinj.base.ScriptType"
+        uuid: "org.bitcoinj.base.ScriptType"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.ScriptType"
+        name: "values"
+        parameters: []
+        signature: "values(): ScriptType[]"
+        returnValue:
+          sapientType: "ARRAY"
+          content: !<array>
+            values:
+              0:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2PKH"
+                valueType: "org.bitcoinj.base.ScriptType"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              1:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2PK"
+                valueType: "org.bitcoinj.base.ScriptType"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              2:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2SH"
+                valueType: "org.bitcoinj.base.ScriptType"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              3:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2WPKH"
+                valueType: "org.bitcoinj.base.ScriptType"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              4:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2WSH"
+                valueType: "org.bitcoinj.base.ScriptType"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              5:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2TR"
+                valueType: "org.bitcoinj.base.ScriptType"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<array>
+            values:
+              0:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2PKH"
+                valueType: "org.bitcoinj.base.ScriptType"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              1:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2PK"
+                valueType: "org.bitcoinj.base.ScriptType"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              2:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2SH"
+                valueType: "org.bitcoinj.base.ScriptType"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              3:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2WPKH"
+                valueType: "org.bitcoinj.base.ScriptType"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              4:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2WSH"
+                valueType: "org.bitcoinj.base.ScriptType"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              5:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2TR"
+                valueType: "org.bitcoinj.base.ScriptType"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "org.bitcoinj.base.ScriptType[]"
+          uuid: "find_scriptType[]1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "C5072EAA07E20A6A88DEBE372E373CB4"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ENUM"
+        content: !<regular>
+          value: "P2PKH"
+        valueType: "org.bitcoinj.base.ScriptType"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "2e242bfc-9175-3742-b63c-1cb781c17d38"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "find"
+    returnType: "java.util.Optional"
+    signature: "find(java.lang.String) : java.util.Optional<org.bitcoinj.base.ScriptType>"
+    instructionFingerprint: "54FCA2A155C036F24DD6AD8100F1158A"
+    parametersTypes:
+    - "java.lang.String"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "findWhenDefaultBranch"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "41B2713DE52270A02AEEA687EA8FE736"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "id"
+      modelFingerprint: "ACD976F0A1DBD38FE4D389696A87F7D0"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "pkh"
+        suggestedContent: !<regular>
+          value: "pkh"
+        valueType: "java.lang.String"
+        uuid: "find_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "ScriptType"
+      modelFingerprint: "0B96596749EC7698EADB9A828EB29819"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "org.bitcoinj.base.ScriptType"
+        uuid: "org.bitcoinj.base.ScriptType"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.ScriptType"
+        name: "values"
+        parameters: []
+        signature: "values(): ScriptType[]"
+        returnValue:
+          sapientType: "ARRAY"
+          content: !<array>
+            values:
+              0:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2PKH"
+                valueType: "org.bitcoinj.base.ScriptType"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              1:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2PK"
+                valueType: "org.bitcoinj.base.ScriptType"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              2:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2SH"
+                valueType: "org.bitcoinj.base.ScriptType"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              3:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2WPKH"
+                valueType: "org.bitcoinj.base.ScriptType"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              4:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2WSH"
+                valueType: "org.bitcoinj.base.ScriptType"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              5:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2TR"
+                valueType: "org.bitcoinj.base.ScriptType"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<array>
+            values:
+              0:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2PKH"
+                valueType: "org.bitcoinj.base.ScriptType"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              1:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2PK"
+                valueType: "org.bitcoinj.base.ScriptType"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              2:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2SH"
+                valueType: "org.bitcoinj.base.ScriptType"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              3:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2WPKH"
+                valueType: "org.bitcoinj.base.ScriptType"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              4:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2WSH"
+                valueType: "org.bitcoinj.base.ScriptType"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              5:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2TR"
+                valueType: "org.bitcoinj.base.ScriptType"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "org.bitcoinj.base.ScriptType[]"
+          uuid: "find_scriptType[]1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "6E6051F06063834A3B89DD504C426147"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OPTIONAL"
+        content: !<optional>
+          value:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "P2PKH"
+            valueType: "org.bitcoinj.base.ScriptType"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          target: "java.util.Optional"
+        valueType: "java.util.Optional"
+        genericValueType: "org.bitcoinj.base.ScriptType"
+        uuid: "find_optional1"
+        fixed: false
+        collectionUuid: "find_list1"
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "7e0a4b56-52c1-313d-ae3a-e4995514865b"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false

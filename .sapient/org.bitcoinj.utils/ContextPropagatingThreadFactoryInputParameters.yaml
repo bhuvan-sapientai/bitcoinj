@@ -1,0 +1,182 @@
+---
+modelFingerprint: "4365CA5FF69CBFE4FFBD6265B70B3265"
+methods:
+- method:
+    name: "newThread"
+    returnType: "java.lang.Thread"
+    signature: "newThread(java.lang.Runnable) : java.lang.Thread"
+    instructionFingerprint: "171490001C114DCE8FD954C77D889611"
+    parametersTypes:
+    - "java.lang.Runnable"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "newThreadWhenHandlerIsNotNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(java.lang.String,int) : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "DEB624CF5FF3CDE695CF282C4EB1D849"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "D725A5A13A20BE2D631F8F2EF804A1AE"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.utils.ContextPropagatingThreadFactory"
+          parameters:
+          - name: "name"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "MyThread"
+              suggestedContent: !<regular>
+                value: "MyThread"
+              valueType: "java.lang.String"
+              uuid: "<init>_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "priority"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 10
+              suggestedContent: !<regular>
+                value: 10
+              valueType: "int"
+              uuid: "<init>_int1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.utils.ContextPropagatingThreadFactory"
+          parameters:
+          - name: "name"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "MyThread"
+              suggestedContent: !<regular>
+                value: "MyThread"
+              valueType: "java.lang.String"
+              uuid: "<init>_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "priority"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 10
+              suggestedContent: !<regular>
+                value: 10
+              valueType: "int"
+              uuid: "<init>_int1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.utils.ContextPropagatingThreadFactory"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "r"
+      modelFingerprint: "141953A8D4501F319A47C4CC1CF03F91"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        content: !<unknown_object>
+          target: "java.lang.Runnable"
+          onlyPojoFunctions: false
+          builderPattern: false
+        suggestedContent: !<unknown_object>
+          target: "java.lang.Runnable"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "java.lang.Runnable"
+        uuid: "newThread_runnable1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Context"
+      modelFingerprint: "5F24CCB82A591202D5784F2C1CC00F11"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.core.Context"
+        uuid: "org.bitcoinj.core.Context"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.core.Context"
+        name: "get"
+        parameters: []
+        signature: "get(): Context"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<new>
+            target: "org.bitcoinj.core.Context"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "org.bitcoinj.core.Context"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "org.bitcoinj.core.Context"
+          uuid: "newThread_context1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "2415AF1ABECD69D9A1C0ECBB9A4147CF"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NOT_NULL"
+        valueType: "java.lang.Thread"
+        uuid: "newThread_thread1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "581615ec-fb96-3fea-b947-52c6c3049d90"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false

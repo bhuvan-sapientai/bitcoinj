@@ -1,0 +1,1175 @@
+---
+modelFingerprint: "AB347F186860A7A41BE441A1FB743EF1"
+methods:
+- method:
+    name: "setMockClock"
+    returnType: "void"
+    signature: "setMockClock() : void"
+    instructionFingerprint: "43F87C52F405E7A98104DA9DB04BA12C"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "setMockClockTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "0D5D3BF735C90E9E2F7CD90669FDB572"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "VOID"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "b07fefc0-4612-3b2e-b04f-06c71056b673"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "setMockClock"
+    returnType: "void"
+    signature: "setMockClock(java.time.Instant) : void"
+    instructionFingerprint: "A53ADC661EA1A2AEDA001411485724D2"
+    parametersTypes:
+    - "java.time.Instant"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "setMockClock1Test"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "A14ED70DD4083AB1124022E7D17C37B3"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "fixedInstant"
+      modelFingerprint: "181DE6E515D53716D25FE8CFC71570BF"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        valueType: "java.time.Instant"
+        uuid: "setMockClock_instant1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "VOID"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "a4dae03e-6232-37d5-8ea5-3ef450e4d8bf"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "rollMockClock"
+    returnType: "void"
+    signature: "rollMockClock(java.time.Duration) : void"
+    instructionFingerprint: "9DCE7DF279A75CF181B26346A2825152"
+    parametersTypes:
+    - "java.time.Duration"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "rollMockClockWhenClockEqualsClockSystemUTCThrowsIllegalStateException"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "EC56619C4A356BC6AE6F316C78726F6D"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "delta"
+      modelFingerprint: "667E9EFAA83A7392AD681D249BEB4B66"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.time.Duration"
+          method: "ofDays"
+          methodParameters:
+          - name: "days"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "rollMockClock_duration1-days"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "java.time.Duration"
+          method: "ofDays"
+          methodParameters:
+          - name: "days"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "rollMockClock_duration1-days"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "java.time.Duration"
+        uuid: "rollMockClock_duration1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "89DA0D7A4123DFED7DC86360E45165B3"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.IllegalStateException"
+          parameters:
+          - name: "s"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "You need to use setMockClock() first."
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "java.lang.IllegalStateException"
+          parameters:
+          - name: "s"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "You need to use setMockClock() first."
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "java.lang.IllegalStateException"
+        uuid: "rollMockClock_illegalStateException1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "9cc1c232-0e43-3602-bf30-98ba32ff48d4"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+- method:
+    name: "clearMockClock"
+    returnType: "void"
+    signature: "clearMockClock() : void"
+    instructionFingerprint: "18F38BCB7D9C7C99B1D39240FD11C3E8"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "clearMockClockTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "6E13917948F4503330A129503ABFC98B"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "VOID"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "0d541f49-3c59-374b-8b6b-f659640f0943"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "currentTime"
+    returnType: "java.time.Instant"
+    signature: "currentTime() : java.time.Instant"
+    instructionFingerprint: "922F282B8ACCE2EBCE1DEC56A51EDC8E"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "currentTimeTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "D1D4AF2C5AF2D86E046D968F7351B8FD"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "B5876663FC27495AE3889E7E3D61C4C6"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        valueType: "java.time.Instant"
+        uuid: "currentTime_instant1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "ad6048d6-082d-32ad-a3bf-ecc118184bdc"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+- method:
+    name: "elapsedTime"
+    returnType: "java.time.Duration"
+    signature: "elapsedTime(java.time.Instant) : java.time.Duration"
+    instructionFingerprint: "67F7C39CB42118B51BDF66B500434345"
+    parametersTypes:
+    - "java.time.Instant"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "elapsedTimeTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "15A9710F1DAA6877DB5AD84E0A7197AF"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "start"
+      modelFingerprint: "F09A04E312F3FB4F314C829906C3A3CA"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        valueType: "java.time.Instant"
+        uuid: "elapsedTime_instant1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "9B85EDF153F11E4BDED1A26C6C5A02D4"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.time.Duration"
+          method: "ofDays"
+          methodParameters:
+          - name: "days"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "elapsedTime_duration1-days"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "java.time.Duration"
+          method: "ofDays"
+          methodParameters:
+          - name: "days"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "elapsedTime_duration1-days"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "java.time.Duration"
+        uuid: "elapsedTime_duration1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "751f948e-1cd7-3b35-bafe-6fbce2e92955"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+- method:
+    name: "earlier"
+    returnType: "java.time.Instant"
+    signature: "earlier(java.time.Instant,java.time.Instant) : java.time.Instant"
+    instructionFingerprint: "7ED1FFB0BDF7558FA511093526E12ABF"
+    parametersTypes:
+    - "java.time.Instant"
+    - "java.time.Instant"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "earlierWhenTime1IsBeforeTime2"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "B199ABC5AFE7584A1939C52AC15F1D2A"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "time1"
+      modelFingerprint: "69BB4C897FB6D9436936A147C5E5815D"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        valueType: "java.time.Instant"
+        uuid: "earlier_instant1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "time2"
+      modelFingerprint: "038B504C4DDFEA395F28CAF4B6E52374"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        valueType: "java.time.Instant"
+        uuid: "earlier_instant2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "60CF57B64B135E62ED387F9E3E6F7F25"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        valueType: "java.time.Instant"
+        uuid: "earlier_instant1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "bd4f9ea2-32f7-3976-9bbb-0dca155e48d5"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "earlierWhenTime1NotIsBeforeTime2"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "3AA13C8D410C172D25A8300C90440C1E"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "time1"
+      modelFingerprint: "69BB4C897FB6D9436936A147C5E5815D"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        valueType: "java.time.Instant"
+        uuid: "earlier_instant1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "time2"
+      modelFingerprint: "4F99A8B6523BFBB9E3D6D8A63BD13E1C"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        valueType: "java.time.Instant"
+        uuid: "earlier_instant2"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "60CF57B64B135E62ED387F9E3E6F7F25"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        valueType: "java.time.Instant"
+        uuid: "earlier_instant1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "58bf7731-4cf4-34d3-b4bc-3b02c4828fbb"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "later"
+    returnType: "java.time.Instant"
+    signature: "later(java.time.Instant,java.time.Instant) : java.time.Instant"
+    instructionFingerprint: "D258CE3ACC1FBD0FB334DA0F5200BEBB"
+    parametersTypes:
+    - "java.time.Instant"
+    - "java.time.Instant"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "laterWhenTime1IsAfterTime2"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "89CC23B9BD49216F7EB78AA72DFFB6F8"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "time1"
+      modelFingerprint: "69BB4C897FB6D9436936A147C5E5815D"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        valueType: "java.time.Instant"
+        uuid: "later_instant1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "time2"
+      modelFingerprint: "4F99A8B6523BFBB9E3D6D8A63BD13E1C"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        valueType: "java.time.Instant"
+        uuid: "later_instant2"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "60CF57B64B135E62ED387F9E3E6F7F25"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        valueType: "java.time.Instant"
+        uuid: "later_instant2"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "6f6f90ff-0b94-3fc1-8feb-95d2c75b356c"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "laterWhenTime1NotIsAfterTime2"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "FDF0482F800187A4C5F6741419B205F8"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "time1"
+      modelFingerprint: "01108A7FBCB063576577DB21CC02F5A7"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        valueType: "java.time.Instant"
+        uuid: "later_instant1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "time2"
+      modelFingerprint: "4F99A8B6523BFBB9E3D6D8A63BD13E1C"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        valueType: "java.time.Instant"
+        uuid: "later_instant2"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "60CF57B64B135E62ED387F9E3E6F7F25"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        valueType: "java.time.Instant"
+        uuid: "later_instant2"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "b92850a2-bba2-3efc-b033-b6bf8dca9ca5"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "longest"
+    returnType: "java.time.Duration"
+    signature: "longest(java.time.Duration,java.time.Duration) : java.time.Duration"
+    instructionFingerprint: "6306557926A15F71CFE88905F0B7FAEB"
+    parametersTypes:
+    - "java.time.Duration"
+    - "java.time.Duration"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "longestWhenDuration1CompareToDuration2GreaterThan0"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "5044E96A56F0DCFC568CE4494A2CDC4F"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "duration1"
+      modelFingerprint: "6BE6D7F7E203CACC877B2985ADD0E94A"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.time.Duration"
+          method: "ofDays"
+          methodParameters:
+          - name: "days"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "longest_duration1-days"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "java.time.Duration"
+          method: "ofDays"
+          methodParameters:
+          - name: "days"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "longest_duration1-days"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "java.time.Duration"
+        uuid: "longest_duration1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "duration2"
+      modelFingerprint: "2D4081D83CB62C273BEE145D4B3B7142"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.time.Duration"
+          method: "ofDays"
+          methodParameters:
+          - name: "days"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "longest_duration2-days"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "java.time.Duration"
+          method: "ofDays"
+          methodParameters:
+          - name: "days"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "longest_duration2-days"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "java.time.Duration"
+        uuid: "longest_duration2"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "004A678DA61E76B971F82657EB947566"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.time.Duration"
+          method: "ofDays"
+          methodParameters:
+          - name: "days"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "longest_duration2-days"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "java.time.Duration"
+          method: "ofDays"
+          methodParameters:
+          - name: "days"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "longest_duration2-days"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "java.time.Duration"
+        uuid: "longest_duration2"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "a3e1c0b1-9bff-3c88-99c6-c84fb8652533"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "longestWhenDuration1CompareToDuration2NotGreaterThan0"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "800C7C48FB4B80E29BD5FB4732B18DFE"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "duration1"
+      modelFingerprint: "A58F8548484DDB83641F4789135DEB05"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.time.Duration"
+          method: "ofDays"
+          methodParameters:
+          - name: "days"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "longest_duration1-days"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "java.time.Duration"
+          method: "ofDays"
+          methodParameters:
+          - name: "days"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "longest_duration1-days"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "java.time.Duration"
+        uuid: "longest_duration1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "duration2"
+      modelFingerprint: "2D4081D83CB62C273BEE145D4B3B7142"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.time.Duration"
+          method: "ofDays"
+          methodParameters:
+          - name: "days"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "longest_duration2-days"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "java.time.Duration"
+          method: "ofDays"
+          methodParameters:
+          - name: "days"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "longest_duration2-days"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "java.time.Duration"
+        uuid: "longest_duration2"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "004A678DA61E76B971F82657EB947566"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.time.Duration"
+          method: "ofDays"
+          methodParameters:
+          - name: "days"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "longest_duration2-days"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "java.time.Duration"
+          method: "ofDays"
+          methodParameters:
+          - name: "days"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "longest_duration2-days"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "java.time.Duration"
+        uuid: "longest_duration2"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "0036fb62-43ba-3af3-a5c1-8bd23fee5bf9"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "dateTimeFormat"
+    returnType: "java.lang.String"
+    signature: "dateTimeFormat(java.time.Instant) : java.lang.String"
+    instructionFingerprint: "CCBA3A6C578EDA42CC42009FC9EC9BEC"
+    parametersTypes:
+    - "java.time.Instant"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "dateTimeFormatTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "9222ABA6DCF6E248392544141168787C"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "time"
+      modelFingerprint: "B6FB6B37DF72FBEDB10B501ABEF36E4F"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "java.time.Instant"
+          method: "now"
+          methodParameters: []
+        valueType: "java.time.Instant"
+        uuid: "dateTimeFormat_instant1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "7429374E2811460C6D4A25FD84B1F443"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "2023-12-22T04:44:13.306758Z"
+        valueType: "java.lang.String"
+        uuid: "dateTimeFormat_string1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "0e415065-719f-3aec-8eb3-0ae748007c6f"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true

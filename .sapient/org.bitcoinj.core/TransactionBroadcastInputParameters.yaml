@@ -1,0 +1,2408 @@
+---
+modelFingerprint: "05F1847A93F7996C34BF6296988C323F"
+methods:
+- method:
+    name: "transaction"
+    returnType: "org.bitcoinj.core.Transaction"
+    signature: "transaction() : org.bitcoinj.core.Transaction"
+    instructionFingerprint: "5F777A52889398B694D7869AF755BEB5"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "transactionTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.core.PeerGroup,org.bitcoinj.core.Transaction)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "6DCF3BC37895DE3890C7B9E6D9C22FFB"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "02567AE9FD62037CF26F49403C823863"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.TransactionBroadcast"
+          parameters:
+          - name: "peerGroup"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.PeerGroup"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.core.PeerGroup"
+              uuid: "<init>_peerGroup1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "tx"
+            value:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "<init>_transaction1"
+              fixed: false
+              equalsMethodPresent: true
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.TransactionBroadcast"
+          parameters:
+          - name: "peerGroup"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.PeerGroup"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.core.PeerGroup"
+              uuid: "<init>_peerGroup1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "tx"
+            value:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "<init>_transaction1"
+              fixed: false
+              equalsMethodPresent: true
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.TransactionBroadcast"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "peerGroup"
+      modelFingerprint: "BFC3441DB715179E8137D52453BDCE4F"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.PeerGroup"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.PeerGroup"
+        uuid: "<init>_peerGroup1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "peerGroup"
+        name: "getMinBroadcastConnections"
+        parameters: []
+        signature: "getMinBroadcastConnections(): int"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: 1
+          suggestedContent: !<regular>
+            value: 1
+          valueType: "int"
+          uuid: "<init>_int2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "7FA228A5D5F30FBDC139ABD310B35513"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.Transaction"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.Transaction"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.Transaction"
+        uuid: "<init>_transaction1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "927e77df-c1b6-3670-978e-59e7c92ee5b2"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "createMockBroadcast"
+    returnType: "org.bitcoinj.core.TransactionBroadcast"
+    signature: "createMockBroadcast(org.bitcoinj.core.Transaction,java.util.concurrent.CompletableFuture<org.bitcoinj.core.Transaction>)\
+      \ : org.bitcoinj.core.TransactionBroadcast"
+    instructionFingerprint: "EEC9C19C0605DAABED01015DABD36C11"
+    parametersTypes:
+    - "org.bitcoinj.core.Transaction"
+    - "java.util.concurrent.CompletableFuture"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "createMockBroadcastTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "35187B3CC13CB50D825B2AE546670E52"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "tx"
+      modelFingerprint: "F8B87C44786781D6A4ADD711C259C948"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.core.Transaction"
+        uuid: "createMockBroadcast_transaction1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "future"
+      modelFingerprint: "FE33962D416988933990AAD150DDF59F"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "java.util.concurrent.CompletableFuture"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.util.concurrent.CompletableFuture"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.util.concurrent.CompletableFuture"
+        genericValueType: "org.bitcoinj.core.Transaction"
+        uuid: "createMockBroadcast_completableFuture1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "657A90B2F2F4CDED8CF724BE628B2BAA"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NOT_NULL"
+        valueType: "org.bitcoinj.core.TransactionBroadcast"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "d7e77330-f070-3bc7-9504-6705e6b01f93"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "future"
+    returnType: "org.bitcoinj.utils.ListenableCompletableFuture"
+    signature: "future() : org.bitcoinj.utils.ListenableCompletableFuture<org.bitcoinj.core.Transaction>"
+    instructionFingerprint: "623E206F3DB2AFB69A65702CF2BA7426"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "futureTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.core.PeerGroup,org.bitcoinj.core.Transaction)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "2683BCD42688253FE139F27E42293782"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "3702D021E60803BCE8D7FCCB021DB200"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.TransactionBroadcast"
+          parameters:
+          - name: "peerGroup"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.PeerGroup"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.core.PeerGroup"
+              uuid: "<init>_peerGroup1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "tx"
+            value:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "<init>_transaction1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.TransactionBroadcast"
+          parameters:
+          - name: "peerGroup"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.PeerGroup"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.core.PeerGroup"
+              uuid: "<init>_peerGroup1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "tx"
+            value:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "<init>_transaction1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.TransactionBroadcast"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "peerGroup"
+      modelFingerprint: "D6D32F7DC78A76AE004B552198B600AC"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.PeerGroup"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.PeerGroup"
+        uuid: "<init>_peerGroup1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "peerGroup"
+        name: "getMinBroadcastConnections"
+        parameters: []
+        signature: "getMinBroadcastConnections(): int"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: 1
+          suggestedContent: !<regular>
+            value: 1
+          valueType: "int"
+          uuid: "<init>_int2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "3DB955B703BA9634CEF9A2B5715FBC9D"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      methodExercised:
+        target: "target"
+        name: "awaitRelayed"
+        parameters: []
+        signature: "awaitRelayed(): CompletableFuture"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<new>
+            target: "java.util.concurrent.CompletableFuture"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.util.concurrent.CompletableFuture"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.util.concurrent.CompletableFuture"
+          genericValueType: "org.bitcoinj.core.TransactionBroadcast"
+          uuid: "future_completableFuture1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "ListenableCompletableFuture"
+      modelFingerprint: "2D9392C491D493EDA71A2499227BABE5"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+        uuid: "org.bitcoinj.utils.ListenableCompletableFuture"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.utils.ListenableCompletableFuture"
+        name: "of"
+        parameters:
+        - name: "future"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.util.concurrent.CompletableFuture"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: false
+            suggestedContent: !<new>
+              target: "java.util.concurrent.CompletableFuture"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.util.concurrent.CompletableFuture"
+            uuid: "future_completableFuture2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "of(CompletableFuture): ListenableCompletableFuture"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+          genericValueType: "org.bitcoinj.core.Transaction"
+          uuid: "future_listenableCompletableFuture1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "033E4201F3BC5362B03704E2D1A74EEF"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+        genericValueType: "org.bitcoinj.core.Transaction"
+        uuid: "future_listenableCompletableFuture1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "498615c2-6f6a-34b5-b210-03ac9d0f99ca"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    disabledReason: "Potential harmful system call (CompletableFuture.thenApply) detected;\
+      \ Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "setMinConnections"
+    returnType: "void"
+    signature: "setMinConnections(int) : void"
+    instructionFingerprint: "A161F035ED870069F044673AD96861D9"
+    parametersTypes:
+    - "int"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "setMinConnectionsTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.core.PeerGroup,org.bitcoinj.core.Transaction)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "779899AFF6C3FA758696816F2425B792"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "c678e79d-652d-3ae8-943e-56433b30b992"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "setDropPeersAfterBroadcast"
+    returnType: "void"
+    signature: "setDropPeersAfterBroadcast(boolean) : void"
+    instructionFingerprint: "E923A727106EBA80F6C1F225CB9E2B70"
+    parametersTypes:
+    - "boolean"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "setDropPeersAfterBroadcastTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.core.PeerGroup,org.bitcoinj.core.Transaction)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "4F9101CEAFEB2A70E861817F49DFB86E"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "c613a6b6-867f-3a1e-9583-e73d6e447cd3"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "broadcastOnly"
+    returnType: "java.util.concurrent.CompletableFuture"
+    signature: "broadcastOnly() : java.util.concurrent.CompletableFuture<org.bitcoinj.core.TransactionBroadcast>"
+    instructionFingerprint: "8F49F621923DECF2C134E27D2A0406F4"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "broadcastOnlyTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.core.PeerGroup,org.bitcoinj.core.Transaction)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "ABAEB7EC87C99A28AC12353ED49D0AD5"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "8BD1F26836506A0C9ABC74630E0DCBB2"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.TransactionBroadcast"
+          parameters:
+          - name: "peerGroup"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.PeerGroup"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.core.PeerGroup"
+              uuid: "<init>_peerGroup1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "tx"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "<init>_transaction1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.TransactionBroadcast"
+          parameters:
+          - name: "peerGroup"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.PeerGroup"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.core.PeerGroup"
+              uuid: "<init>_peerGroup1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "tx"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "<init>_transaction1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.TransactionBroadcast"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "peerGroup"
+      modelFingerprint: "12A86C7CC46C4E35F1DD4E3C445212D0"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.PeerGroup"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.PeerGroup"
+        uuid: "<init>_peerGroup1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "peerGroup"
+        name: "getMinBroadcastConnections"
+        parameters: []
+        signature: "getMinBroadcastConnections(): int"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: 0
+          suggestedContent: !<regular>
+            value: 0
+          valueType: "int"
+          uuid: "<init>_int2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "peerGroup"
+      modelFingerprint: "D3461557E1A36B99B1C3B81C8E7636C4"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.PeerGroup"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.PeerGroup"
+        uuid: "<init>_peerGroup1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.peerGroup"
+        name: "addPreMessageReceivedEventListener"
+        parameters:
+        - name: "executor"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_field_return>
+              target: "org.bitcoinj.utils.Threading"
+              fieldName: "SAME_THREAD"
+            suggestedContent: !<static_field_return>
+              target: "org.bitcoinj.utils.Threading"
+              fieldName: "SAME_THREAD"
+            valueType: "java.util.concurrent.Executor"
+            uuid: "broadcastOnly_executor1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "listener"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "addPreMessageReceivedEventListener(Executor,not-detected): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "broadcastOnly_void1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "peerGroup"
+      modelFingerprint: "EB8C1A0D2FD6759D73C158EEF1C78690"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.PeerGroup"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.PeerGroup"
+        uuid: "<init>_peerGroup1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.peerGroup"
+        name: "getConnectedPeers"
+        parameters: []
+        signature: "getConnectedPeers(): List"
+        returnValue:
+          sapientType: "COLLECTION"
+          content: !<collection>
+            parameters: []
+            values: []
+          suggestedContent: !<collection>
+            parameters: []
+            values: []
+          valueType: "java.util.List"
+          genericValueType: "org.bitcoinj.core.Peer"
+          uuid: "broadcastOnly_list1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Context"
+      modelFingerprint: "48D221517E861357B3439FCF8D5FC88D"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.core.Context"
+        uuid: "org.bitcoinj.core.Context"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.core.Context"
+        name: "get"
+        parameters: []
+        signature: "get(): Context"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.core.Context"
+          uuid: "broadcastOnly_context1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "peerGroup"
+      modelFingerprint: "40EE6B31AD5FDB75F064EDD96B6D9E7B"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.PeerGroup"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.PeerGroup"
+        uuid: "<init>_peerGroup1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.peerGroup"
+        name: "waitForPeers"
+        parameters:
+        - name: "numPeers"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            suggestedContent: !<regular>
+              value: 1
+            valueType: "int"
+            uuid: "<init>_int3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "waitForPeers(int): ListenableCompletableFuture"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.utils.ListenableCompletableFuture"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+          genericValueType: "java.util.List<org.bitcoinj.core.Peer>"
+          uuid: "broadcastOnly_listenableCompletableFuture1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "C338FA2B9FF56B08499A27B236189D76"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.utils.ListenableCompletableFuture"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+        genericValueType: "java.util.List<org.bitcoinj.core.Peer>"
+        uuid: "broadcastOnly_listenableCompletableFuture1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.utils.ListenableCompletableFuture"
+        name: "thenComposeAsync"
+        parameters:
+        - name: "fn"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Function"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "executor"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_field_return>
+              target: "org.bitcoinj.utils.Threading"
+              fieldName: "SAME_THREAD"
+            suggestedContent: !<static_field_return>
+              target: "org.bitcoinj.utils.Threading"
+              fieldName: "SAME_THREAD"
+            valueType: "java.util.concurrent.Executor"
+            uuid: "broadcastOnly_executor1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "thenComposeAsync(Function,Executor): CompletableFuture"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<new>
+            target: "java.util.concurrent.CompletableFuture"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.util.concurrent.CompletableFuture"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.util.concurrent.CompletableFuture"
+          uuid: "broadcastOnly_completableFuture1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "C8AFFB783F552CEE807D6AD22966996D"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "java.util.concurrent.CompletableFuture"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.util.concurrent.CompletableFuture"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.util.concurrent.CompletableFuture"
+        genericValueType: "org.bitcoinj.core.TransactionBroadcast"
+        uuid: "broadcastOnly_completableFuture3"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "1de11617-d9de-392e-9d0d-290cce171c8f"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    disabledReason: "Potential harmful system call (CompletableFuture.thenCompose,\
+      \ CompletableFuture.whenComplete, ListenableCompletableFuture.thenComposeAsync)\
+      \ detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "broadcastAndAwaitRelay"
+    returnType: "java.util.concurrent.CompletableFuture"
+    signature: "broadcastAndAwaitRelay() : java.util.concurrent.CompletableFuture<org.bitcoinj.core.TransactionBroadcast>"
+    instructionFingerprint: "43B73484ABCABD8E02F525DF53F2F3BA"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "broadcastAndAwaitRelayTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.core.PeerGroup,org.bitcoinj.core.Transaction)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "E91C9AD0BB40DE47E514F7EEE99C2348"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "8BD1F26836506A0C9ABC74630E0DCBB2"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.TransactionBroadcast"
+          parameters:
+          - name: "peerGroup"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.PeerGroup"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.core.PeerGroup"
+              uuid: "<init>_peerGroup1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "tx"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "<init>_transaction1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.TransactionBroadcast"
+          parameters:
+          - name: "peerGroup"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.PeerGroup"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.core.PeerGroup"
+              uuid: "<init>_peerGroup1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "tx"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "<init>_transaction1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.TransactionBroadcast"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "peerGroup"
+      modelFingerprint: "12A86C7CC46C4E35F1DD4E3C445212D0"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.PeerGroup"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.PeerGroup"
+        uuid: "<init>_peerGroup1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "peerGroup"
+        name: "getMinBroadcastConnections"
+        parameters: []
+        signature: "getMinBroadcastConnections(): int"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: 0
+          suggestedContent: !<regular>
+            value: 0
+          valueType: "int"
+          uuid: "<init>_int2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "peerGroup"
+      modelFingerprint: "D3461557E1A36B99B1C3B81C8E7636C4"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.PeerGroup"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.PeerGroup"
+        uuid: "<init>_peerGroup1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.peerGroup"
+        name: "addPreMessageReceivedEventListener"
+        parameters:
+        - name: "executor"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_field_return>
+              target: "org.bitcoinj.utils.Threading"
+              fieldName: "SAME_THREAD"
+            suggestedContent: !<static_field_return>
+              target: "org.bitcoinj.utils.Threading"
+              fieldName: "SAME_THREAD"
+            valueType: "java.util.concurrent.Executor"
+            uuid: "broadcastOnly_executor1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "listener"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "addPreMessageReceivedEventListener(Executor,not-detected): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "broadcastOnly_void1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "peerGroup"
+      modelFingerprint: "EB8C1A0D2FD6759D73C158EEF1C78690"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.PeerGroup"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.PeerGroup"
+        uuid: "<init>_peerGroup1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.peerGroup"
+        name: "getConnectedPeers"
+        parameters: []
+        signature: "getConnectedPeers(): List"
+        returnValue:
+          sapientType: "COLLECTION"
+          content: !<collection>
+            parameters: []
+            values: []
+          suggestedContent: !<collection>
+            parameters: []
+            values: []
+          valueType: "java.util.List"
+          genericValueType: "org.bitcoinj.core.Peer"
+          uuid: "broadcastOnly_list1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Context"
+      modelFingerprint: "48D221517E861357B3439FCF8D5FC88D"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.core.Context"
+        uuid: "org.bitcoinj.core.Context"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.core.Context"
+        name: "get"
+        parameters: []
+        signature: "get(): Context"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.core.Context"
+          uuid: "broadcastOnly_context1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "peerGroup"
+      modelFingerprint: "40EE6B31AD5FDB75F064EDD96B6D9E7B"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.PeerGroup"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.PeerGroup"
+        uuid: "<init>_peerGroup1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.peerGroup"
+        name: "waitForPeers"
+        parameters:
+        - name: "numPeers"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            suggestedContent: !<regular>
+              value: 1
+            valueType: "int"
+            uuid: "<init>_int3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "waitForPeers(int): ListenableCompletableFuture"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.utils.ListenableCompletableFuture"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+          genericValueType: "java.util.List<org.bitcoinj.core.Peer>"
+          uuid: "broadcastOnly_listenableCompletableFuture1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "C338FA2B9FF56B08499A27B236189D76"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.utils.ListenableCompletableFuture"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+        genericValueType: "java.util.List<org.bitcoinj.core.Peer>"
+        uuid: "broadcastOnly_listenableCompletableFuture1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.utils.ListenableCompletableFuture"
+        name: "thenComposeAsync"
+        parameters:
+        - name: "fn"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Function"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "executor"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_field_return>
+              target: "org.bitcoinj.utils.Threading"
+              fieldName: "SAME_THREAD"
+            suggestedContent: !<static_field_return>
+              target: "org.bitcoinj.utils.Threading"
+              fieldName: "SAME_THREAD"
+            valueType: "java.util.concurrent.Executor"
+            uuid: "broadcastOnly_executor1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "thenComposeAsync(Function,Executor): CompletableFuture"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<new>
+            target: "java.util.concurrent.CompletableFuture"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.util.concurrent.CompletableFuture"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.util.concurrent.CompletableFuture"
+          uuid: "broadcastOnly_completableFuture1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "C8AFFB783F552CEE807D6AD22966996D"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "java.util.concurrent.CompletableFuture"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.util.concurrent.CompletableFuture"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.util.concurrent.CompletableFuture"
+        genericValueType: "org.bitcoinj.core.TransactionBroadcast"
+        uuid: "broadcastAndAwaitRelay_completableFuture1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "e719296f-3655-3e2c-aa33-4e67151418b3"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    disabledReason: "Potential harmful system call (CompletableFuture.thenCompose,\
+      \ CompletableFuture.whenComplete, ListenableCompletableFuture.thenComposeAsync)\
+      \ detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "awaitRelayed"
+    returnType: "java.util.concurrent.CompletableFuture"
+    signature: "awaitRelayed() : java.util.concurrent.CompletableFuture<org.bitcoinj.core.TransactionBroadcast>"
+    instructionFingerprint: "1C3D30C1BB919DB1E7DE2E36C93D600A"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "awaitRelayedTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.core.PeerGroup,org.bitcoinj.core.Transaction)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "2FCA73EB21AA6D4DFDA28BDF9288470A"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "3702D021E60803BCE8D7FCCB021DB200"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.TransactionBroadcast"
+          parameters:
+          - name: "peerGroup"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.PeerGroup"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.core.PeerGroup"
+              uuid: "<init>_peerGroup1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "tx"
+            value:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "<init>_transaction1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.TransactionBroadcast"
+          parameters:
+          - name: "peerGroup"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.PeerGroup"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.core.PeerGroup"
+              uuid: "<init>_peerGroup1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "tx"
+            value:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "<init>_transaction1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.TransactionBroadcast"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "peerGroup"
+      modelFingerprint: "D6D32F7DC78A76AE004B552198B600AC"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.PeerGroup"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.PeerGroup"
+        uuid: "<init>_peerGroup1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "peerGroup"
+        name: "getMinBroadcastConnections"
+        parameters: []
+        signature: "getMinBroadcastConnections(): int"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: 1
+          suggestedContent: !<regular>
+            value: 1
+          valueType: "int"
+          uuid: "<init>_int2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "9EC910B2142979E3F2B4E7A7F31AB4F7"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "java.util.concurrent.CompletableFuture"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "java.util.concurrent.CompletableFuture"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "java.util.concurrent.CompletableFuture"
+        genericValueType: "org.bitcoinj.core.TransactionBroadcast"
+        uuid: "<init>_completableFuture2"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "fe092c58-5bfb-32e7-8085-7332248b1e54"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+- method:
+    name: "awaitSent"
+    returnType: "java.util.concurrent.CompletableFuture"
+    signature: "awaitSent() : java.util.concurrent.CompletableFuture<org.bitcoinj.core.TransactionBroadcast>"
+    instructionFingerprint: "80BC812A7E487FAA1442F3FB0F28E20A"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "awaitSentTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.core.PeerGroup,org.bitcoinj.core.Transaction)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "1B296BAE45E3CB196686C2AD7C76941C"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "3702D021E60803BCE8D7FCCB021DB200"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.TransactionBroadcast"
+          parameters:
+          - name: "peerGroup"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.PeerGroup"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.core.PeerGroup"
+              uuid: "<init>_peerGroup1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "tx"
+            value:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "<init>_transaction1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.TransactionBroadcast"
+          parameters:
+          - name: "peerGroup"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.PeerGroup"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.core.PeerGroup"
+              uuid: "<init>_peerGroup1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "tx"
+            value:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "<init>_transaction1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.TransactionBroadcast"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "peerGroup"
+      modelFingerprint: "BFC3441DB715179E8137D52453BDCE4F"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.PeerGroup"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.PeerGroup"
+        uuid: "<init>_peerGroup1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "peerGroup"
+        name: "getMinBroadcastConnections"
+        parameters: []
+        signature: "getMinBroadcastConnections(): int"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: 1
+          suggestedContent: !<regular>
+            value: 1
+          valueType: "int"
+          uuid: "<init>_int2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "9EC910B2142979E3F2B4E7A7F31AB4F7"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "java.util.concurrent.CompletableFuture"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "java.util.concurrent.CompletableFuture"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "java.util.concurrent.CompletableFuture"
+        genericValueType: "org.bitcoinj.core.TransactionBroadcast"
+        uuid: "<init>_completableFuture1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "59a0d6d6-3259-3488-904b-6593cd7ea6c0"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+- method:
+    name: "broadcast"
+    returnType: "org.bitcoinj.utils.ListenableCompletableFuture"
+    signature: "broadcast() : org.bitcoinj.utils.ListenableCompletableFuture<org.bitcoinj.core.Transaction>"
+    instructionFingerprint: "554B28FE319875655B505D23E4CF6799"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "broadcastTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.core.PeerGroup,org.bitcoinj.core.Transaction)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "DE2602354D40F2C1224971EB690A7895"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "3702D021E60803BCE8D7FCCB021DB200"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.TransactionBroadcast"
+          parameters:
+          - name: "peerGroup"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.PeerGroup"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.core.PeerGroup"
+              uuid: "<init>_peerGroup1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "tx"
+            value:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "<init>_transaction1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.TransactionBroadcast"
+          parameters:
+          - name: "peerGroup"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.PeerGroup"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.core.PeerGroup"
+              uuid: "<init>_peerGroup1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "tx"
+            value:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "<init>_transaction1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.TransactionBroadcast"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "peerGroup"
+      modelFingerprint: "BFC3441DB715179E8137D52453BDCE4F"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.PeerGroup"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.PeerGroup"
+        uuid: "<init>_peerGroup1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "peerGroup"
+        name: "getMinBroadcastConnections"
+        parameters: []
+        signature: "getMinBroadcastConnections(): int"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: 1
+          suggestedContent: !<regular>
+            value: 1
+          valueType: "int"
+          uuid: "<init>_int2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "FBC646ADAB709147A1964C84FCB3F38C"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      methodExercised:
+        target: "target"
+        name: "broadcastAndAwaitRelay"
+        parameters: []
+        signature: "broadcastAndAwaitRelay(): CompletableFuture"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<new>
+            target: "java.util.concurrent.CompletableFuture"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.util.concurrent.CompletableFuture"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.util.concurrent.CompletableFuture"
+          genericValueType: "org.bitcoinj.core.TransactionBroadcast"
+          uuid: "broadcast_completableFuture1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "ListenableCompletableFuture"
+      modelFingerprint: "2D9392C491D493EDA71A2499227BABE5"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+        uuid: "org.bitcoinj.utils.ListenableCompletableFuture"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.utils.ListenableCompletableFuture"
+        name: "of"
+        parameters:
+        - name: "future"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.util.concurrent.CompletableFuture"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: false
+            suggestedContent: !<new>
+              target: "java.util.concurrent.CompletableFuture"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.util.concurrent.CompletableFuture"
+            uuid: "broadcast_completableFuture2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "of(CompletableFuture): ListenableCompletableFuture"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+          genericValueType: "org.bitcoinj.core.Transaction"
+          uuid: "broadcast_listenableCompletableFuture1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "033E4201F3BC5362B03704E2D1A74EEF"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+        genericValueType: "org.bitcoinj.core.Transaction"
+        uuid: "broadcast_listenableCompletableFuture1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "4eb7128d-6d35-3535-8be5-c40ff5bd2b32"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    disabledReason: "Potential harmful system call (CompletableFuture.thenApply) detected;\
+      \ Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "setProgressCallback"
+    returnType: "void"
+    signature: "setProgressCallback(org.bitcoinj.core.TransactionBroadcast$ProgressCallback)\
+      \ : void"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 2
+      catchExceptions:
+      - "java.lang.Throwable"
+    instructionFingerprint: "5DFBC214FA33247E05FE6AEE1D8E964B"
+    parametersTypes:
+    - "org.bitcoinj.core.TransactionBroadcast$ProgressCallback"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "setProgressCallbackTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.core.PeerGroup,org.bitcoinj.core.Transaction)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "767455D7344E201CCE3EE67E15E29D54"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "3702D021E60803BCE8D7FCCB021DB200"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.TransactionBroadcast"
+          parameters:
+          - name: "peerGroup"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.PeerGroup"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.core.PeerGroup"
+              uuid: "<init>_peerGroup1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "tx"
+            value:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "<init>_transaction1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.TransactionBroadcast"
+          parameters:
+          - name: "peerGroup"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.PeerGroup"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.core.PeerGroup"
+              uuid: "<init>_peerGroup1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "tx"
+            value:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "<init>_transaction1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.TransactionBroadcast"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "callback"
+      modelFingerprint: "765A72312B5BAB8825212BEDFBA37017"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionBroadcast$ProgressCallback"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionBroadcast$ProgressCallback"
+        uuid: "setProgressCallback_transactionBroadcast.ProgressCallback1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "peerGroup"
+      modelFingerprint: "BFC3441DB715179E8137D52453BDCE4F"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.PeerGroup"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.PeerGroup"
+        uuid: "<init>_peerGroup1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "peerGroup"
+        name: "getMinBroadcastConnections"
+        parameters: []
+        signature: "getMinBroadcastConnections(): int"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: 1
+          suggestedContent: !<regular>
+            value: 1
+          valueType: "int"
+          uuid: "<init>_int2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "51E3FFE177CC36CC8B46534FFDDB17CC"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      methodExercised:
+        target: "target"
+        name: "setProgressCallback"
+        parameters:
+        - name: "callback"
+          value:
+            sapientType: "MOCK"
+            suggestedContent: !<unknown_object>
+              target: "org.bitcoinj.core.TransactionBroadcast$ProgressCallback"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "org.bitcoinj.core.TransactionBroadcast$ProgressCallback"
+            uuid: "setProgressCallback_transactionBroadcast.ProgressCallback1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "executor"
+          value:
+            sapientType: "NULL"
+            suggestedContent: !<unknown_object>
+              target: "java.util.concurrent.Executor"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "java.util.concurrent.Executor"
+            uuid: "setProgressCallback_executor1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "setProgressCallback(TransactionBroadcast$ProgressCallback,Executor):\
+          \ void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "setProgressCallback_void1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "VOID"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "c2c4c7da-2b22-3c60-867a-84b1fa782b44"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+- method:
+    name: "setProgressCallback"
+    returnType: "void"
+    signature: "setProgressCallback(org.bitcoinj.core.TransactionBroadcast$ProgressCallback,java.util.concurrent.Executor)\
+      \ : void"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 2
+      catchExceptions:
+      - "java.lang.Throwable"
+    instructionFingerprint: "8050B374FDFB657A86449DD1C1429A32"
+    parametersTypes:
+    - "org.bitcoinj.core.TransactionBroadcast$ProgressCallback"
+    - "java.util.concurrent.Executor"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "setProgressCallback1WhenNotShouldInvoke"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.core.PeerGroup,org.bitcoinj.core.Transaction)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "8C22EBA45C59FD4F2B5F5EEF5EFE68FF"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "3702D021E60803BCE8D7FCCB021DB200"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.TransactionBroadcast"
+          parameters:
+          - name: "peerGroup"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.PeerGroup"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.core.PeerGroup"
+              uuid: "<init>_peerGroup1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "tx"
+            value:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "<init>_transaction1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.TransactionBroadcast"
+          parameters:
+          - name: "peerGroup"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.PeerGroup"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.core.PeerGroup"
+              uuid: "<init>_peerGroup1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "tx"
+            value:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.Transaction"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "<init>_transaction1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.TransactionBroadcast"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "callback"
+      modelFingerprint: "765A72312B5BAB8825212BEDFBA37017"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionBroadcast$ProgressCallback"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionBroadcast$ProgressCallback"
+        uuid: "setProgressCallback_transactionBroadcast.ProgressCallback1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "executor"
+      modelFingerprint: "E58384061C3443531D2F797D827E8497"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        content: !<unknown_object>
+          target: "java.util.concurrent.Executor"
+          onlyPojoFunctions: false
+          builderPattern: false
+        suggestedContent: !<unknown_object>
+          target: "java.util.concurrent.Executor"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "java.util.concurrent.Executor"
+        uuid: "setProgressCallback_executor1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "peerGroup"
+      modelFingerprint: "D6D32F7DC78A76AE004B552198B600AC"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.PeerGroup"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.PeerGroup"
+        uuid: "<init>_peerGroup1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "peerGroup"
+        name: "getMinBroadcastConnections"
+        parameters: []
+        signature: "getMinBroadcastConnections(): int"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: 1
+          suggestedContent: !<regular>
+            value: 1
+          valueType: "int"
+          uuid: "<init>_int2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "VOID"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "e620e18e-8ef2-3844-b03a-dcb75abe0587"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false

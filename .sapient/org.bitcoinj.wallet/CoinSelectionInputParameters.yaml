@@ -1,0 +1,263 @@
+---
+modelFingerprint: "7AB744CEA1E9E4E3D13C3AD672A052B3"
+methods:
+- method:
+    name: "totalValue"
+    returnType: "org.bitcoinj.base.Coin"
+    signature: "totalValue() : org.bitcoinj.base.Coin"
+    instructionFingerprint: "4B8C7982A56E5B0D88599E0B01BB4B00"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "totalValueTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.base.Coin,java.util.Collection<org.bitcoinj.core.TransactionOutput>)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "5F25E583DA8A75B92BE1B8A3DFFD2872"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "3B50D1FCC21D0657CD228A4BDBC2A039"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.wallet.CoinSelection"
+          parameters:
+          - name: "valueGathered"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.base.Coin"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.base.Coin"
+              uuid: "<init>_coin1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "gathered"
+            value:
+              sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values: []
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values: []
+              valueType: "java.util.Collection"
+              genericValueType: "org.bitcoinj.core.TransactionOutput"
+              uuid: "<init>_collection1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.wallet.CoinSelection"
+          parameters:
+          - name: "valueGathered"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.base.Coin"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.base.Coin"
+              uuid: "<init>_coin1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "gathered"
+            value:
+              sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values: []
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values: []
+              valueType: "java.util.Collection"
+              genericValueType: "org.bitcoinj.core.TransactionOutput"
+              uuid: "<init>_collection1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.wallet.CoinSelection"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "0BA4BF04ACA4335CDA636F583E8FE771"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.Coin"
+        uuid: "sumOutputValues_object1"
+        fixed: false
+        collectionUuid: "sumOutputValues_list1"
+        equalsMethodPresent: true
+        explicitCastNeeded: true
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "59671bab-6f05-338a-800c-34fb3c21b2b7"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "outputs"
+    returnType: "java.util.List"
+    signature: "outputs() : java.util.List<org.bitcoinj.core.TransactionOutput>"
+    instructionFingerprint: "B00FD1AF46F31E8F68D04452F946C234"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "outputsTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.base.Coin,java.util.Collection<org.bitcoinj.core.TransactionOutput>)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "71E772D5670429DE657DC47DCA0F56A9"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "3B50D1FCC21D0657CD228A4BDBC2A039"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.wallet.CoinSelection"
+          parameters:
+          - name: "valueGathered"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.base.Coin"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.base.Coin"
+              uuid: "<init>_coin1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "gathered"
+            value:
+              sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values: []
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values: []
+              valueType: "java.util.Collection"
+              genericValueType: "org.bitcoinj.core.TransactionOutput"
+              uuid: "<init>_collection1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.wallet.CoinSelection"
+          parameters:
+          - name: "valueGathered"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.base.Coin"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.base.Coin"
+              uuid: "<init>_coin1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "gathered"
+            value:
+              sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values: []
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values: []
+              valueType: "java.util.Collection"
+              genericValueType: "org.bitcoinj.core.TransactionOutput"
+              uuid: "<init>_collection1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.wallet.CoinSelection"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "BA33025B0F4B26EC35087B3846BC5FF1"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "COLLECTION"
+        content: !<collection>
+          parameters: []
+          values: []
+        suggestedContent: !<collection>
+          parameters: []
+          values: []
+        valueType: "java.util.List"
+        genericValueType: "org.bitcoinj.core.TransactionOutput"
+        uuid: "<init>_list1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "8a7db06b-a45c-39f7-9cee-fd18e03e9a46"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false

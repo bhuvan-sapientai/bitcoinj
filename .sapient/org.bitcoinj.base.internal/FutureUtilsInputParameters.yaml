@@ -1,0 +1,332 @@
+---
+modelFingerprint: "91FC2DEBFEB3CA7424A51300684F2D60"
+methods:
+- method:
+    name: "allAsList"
+    returnType: "java.util.concurrent.CompletableFuture"
+    signature: "allAsList(java.util.List<? extends java.util.concurrent.CompletionStage<?\
+      \ extends java.lang.Object>>) : java.util.concurrent.CompletableFuture<java.util.List<java.lang.Object>>"
+    instructionFingerprint: "A46836317A83D134B519D391AB115AF8"
+    parametersTypes:
+    - "java.util.List"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "allAsListTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "4682B753CAE8EF31D595211B5C97090B"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "stages"
+      modelFingerprint: "4FC399DB34E31ACD706E45A460A245C8"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "COLLECTION"
+        content: !<collection>
+          collectionClass: "java.util.ArrayList"
+          parameters: []
+          values:
+          - sapientType: "NULL"
+            valueType: "java.util.concurrent.CompletionStage"
+            uuid: "listToArray_completionStage1"
+            fixed: false
+            collectionUuid: "allAsList_list1"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        suggestedContent: !<collection>
+          collectionClass: "java.util.ArrayList"
+          parameters: []
+          values:
+          - sapientType: "NULL"
+            valueType: "java.util.concurrent.CompletionStage"
+            uuid: "listToArray_completionStage1"
+            fixed: false
+            collectionUuid: "allAsList_list1"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        valueType: "java.util.List"
+        genericValueType: "? extends java.util.concurrent.CompletionStage<? extends\
+          \ java.lang.Object>"
+        uuid: "allAsList_list1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "1544C3243427A58A5AE91A88CC628F77"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.NullPointerException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.lang.NullPointerException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.lang.NullPointerException"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "33a97d4c-0fd8-33da-ab65-fa4a8e25a2ec"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "successfulAsList"
+    returnType: "java.util.concurrent.CompletableFuture"
+    signature: "successfulAsList(java.util.List<? extends java.util.concurrent.CompletionStage<?\
+      \ extends java.lang.Object>>) : java.util.concurrent.CompletableFuture<java.util.List<java.lang.Object>>"
+    instructionFingerprint: "E1031F5607BCEAFD5ADD8D94AE9F6304"
+    parametersTypes:
+    - "java.util.List"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "successfulAsListTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "17494893238B0C8F08C3783647F8F7FB"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "stages"
+      modelFingerprint: "4FC399DB34E31ACD706E45A460A245C8"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "COLLECTION"
+        content: !<collection>
+          collectionClass: "java.util.ArrayList"
+          parameters: []
+          values:
+          - sapientType: "NULL"
+            valueType: "java.util.concurrent.CompletionStage"
+            uuid: "listToArray2_completionStage1"
+            fixed: false
+            collectionUuid: "successfulAsList_list1"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        suggestedContent: !<collection>
+          collectionClass: "java.util.ArrayList"
+          parameters: []
+          values:
+          - sapientType: "NULL"
+            valueType: "java.util.concurrent.CompletionStage"
+            uuid: "listToArray2_completionStage1"
+            fixed: false
+            collectionUuid: "successfulAsList_list1"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        valueType: "java.util.List"
+        genericValueType: "? extends java.util.concurrent.CompletionStage<? extends\
+          \ java.lang.Object>"
+        uuid: "successfulAsList_list1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "1544C3243427A58A5AE91A88CC628F77"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.NullPointerException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.lang.NullPointerException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.lang.NullPointerException"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "9e2f111f-9abd-3b28-a20a-678cdc496bfe"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "failedFuture"
+    returnType: "java.util.concurrent.CompletableFuture"
+    signature: "failedFuture(java.lang.Throwable) : java.util.concurrent.CompletableFuture<java.lang.Object>"
+    instructionFingerprint: "F9028BEA0C746D854F88F483D8248FD5"
+    parametersTypes:
+    - "java.lang.Throwable"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "failedFutureTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "591AE9409A6C4780FE17CF0CCE2847FC"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "t"
+      modelFingerprint: "46250BB1C43B77415D14E383D1C28F6E"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "java.lang.Throwable"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.lang.Throwable"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.lang.Throwable"
+        uuid: "failedFuture_throwable1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "62DEEB759C0EF53E48BCB587E3F3793C"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "java.util.concurrent.CompletableFuture"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "java.util.concurrent.CompletableFuture"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "java.util.concurrent.CompletableFuture"
+        genericValueType: "java.lang.Object"
+        uuid: "failedFuture_completableFuture1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "7b6d3857-4849-3516-91fa-a7394d7a23c0"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    disabledReason: "Potential harmful system call (CompletableFuture.completeExceptionally)\
+      \ detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "genericArray"
+    returnType: "java.util.function.IntFunction"
+    signature: "genericArray(java.util.function.IntFunction<java.lang.Object[]>) :\
+      \ java.util.function.IntFunction<java.util.function.IntFunction[]>"
+    instructionFingerprint: "BAA77336AB2EA43DA109A283B48B9028"
+    parametersTypes:
+    - "java.util.function.IntFunction"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "genericArrayTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "C76FE27E9AA7F43B93402A22E4E7E623"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "arrayCreator"
+      modelFingerprint: "FF06397376CD70ABA0BDF56264D2E444"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        suggestedContent: !<unknown_object>
+          target: "java.util.function.IntFunction"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "java.util.function.IntFunction"
+        uuid: "genericArray_intFunction1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "8B244CFC4C2CAE4CFC49015911E33ED5"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NOT_NULL"
+        valueType: "java.util.function.IntFunction"
+        genericValueType: "java.util.function.IntFunction[]"
+        uuid: "genericArray_intFunction2"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "4eced493-4c1c-39bc-8d4c-2475c19eb72e"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false

@@ -1,0 +1,2236 @@
+---
+modelFingerprint: "C4F738289966900FC07D630F0BD6356A"
+methods:
+- method:
+    name: "of"
+    returnType: "org.bitcoinj.core.Services"
+    signature: "of(long) : org.bitcoinj.core.Services"
+    instructionFingerprint: "7D247F0F5E9D10E42380DF5FAF75C80B"
+    parametersTypes:
+    - "long"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "ofTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "45D761566C153805809600C6CD18EE12"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "bits"
+      modelFingerprint: "56B5FA9553F5B2F088AB5F2F8C27F127"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: 0
+        valueType: "long"
+        uuid: "of_long1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3CF299A942F49AB1E02162CF99C19AE5"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.Services"
+          parameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "of_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: true
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.Services"
+          parameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "of_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: true
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.core.Services"
+        uuid: "of_services1"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "3155f475-158f-3510-8516-db6562387204"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "none"
+    returnType: "org.bitcoinj.core.Services"
+    signature: "none() : org.bitcoinj.core.Services"
+    instructionFingerprint: "2E0C9EAF5D87E413425FBDE970947261"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "noneTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "DB186F3D0DC4D1429D0B133764396E87"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D0B07BC7562B1D310E6277EF44B97639"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.Services"
+          parameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: true
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.Services"
+          parameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: true
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.core.Services"
+        uuid: "none_services1"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "7ef024fb-dd14-348c-bb93-ea4260fa7df5"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "read"
+    returnType: "org.bitcoinj.core.Services"
+    signature: "read(java.nio.ByteBuffer) : org.bitcoinj.core.Services"
+    throwsExceptions:
+    - "java.nio.BufferUnderflowException"
+    instructionFingerprint: "ECE25D742671DBDBEEB2012AB1780B7E"
+    parametersTypes:
+    - "java.nio.ByteBuffer"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "readTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "FC0867849C419D5025E93E90FDD58EDF"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "buf"
+      modelFingerprint: "1252C11318E77FDAA9B366ABFB220D79"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.nio.ByteBuffer"
+          method: "allocateDirect"
+          methodParameters:
+          - name: "capacity"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "read_byteBuffer1-capacity"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "java.nio.ByteBuffer"
+          method: "allocateDirect"
+          methodParameters:
+          - name: "capacity"
+            value:
+              sapientType: "BASIC"
+              valueType: "int"
+              uuid: "read_byteBuffer1-capacity"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "java.nio.ByteBuffer"
+        uuid: "read_byteBuffer1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3CF299A942F49AB1E02162CF99C19AE5"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.Services"
+          parameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "read_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: true
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.Services"
+          parameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "read_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: true
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.core.Services"
+        uuid: "read_services1"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "db344e3b-696d-3b02-8e35-1aaa5300bde6"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+- method:
+    name: "bits"
+    returnType: "long"
+    signature: "bits() : long"
+    instructionFingerprint: "9A70FBF51BE534F77ABD9513B8872B48"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "bitsTest"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "E8307844C6BAA8735D8FE56DB2B091CF"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "8CADD6C5892D810668F6EA57F528C4AD"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.core.Services"
+          method: "of"
+          methodParameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "of_long1"
+              fixed: false
+              equalsMethodPresent: true
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.core.Services"
+          method: "of"
+          methodParameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "of_long1"
+              fixed: false
+              equalsMethodPresent: true
+              explicitCastNeeded: false
+        valueType: "org.bitcoinj.core.Services"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "804632FC35F3D360B4AE3373F0AFA52B"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: 0
+        valueType: "long"
+        uuid: "of_long1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "178b56ae-48d8-313f-b80c-f3a29a972a32"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "hasAny"
+    returnType: "boolean"
+    signature: "hasAny() : boolean"
+    instructionFingerprint: "02BCC88BDA3032BF63CA04C6D074047C"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "hasAnyWhenBitsNotEquals0"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "BAC82B4D825121364240F5153701BF45"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "F473BC394C4774B83FDBB68C7C008A1B"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.core.Services"
+          method: "of"
+          methodParameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 1
+              suggestedContent: !<regular>
+                value: 1
+              valueType: "long"
+              uuid: "of_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.core.Services"
+          method: "of"
+          methodParameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: 1
+              valueType: "long"
+              uuid: "of_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "org.bitcoinj.core.Services"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: true
+        valueType: "boolean"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "93772c36-5780-31a9-9bb7-cc95344eb867"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "hasAnyWhenBitsEquals0"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "7FF8285630439BFE867C1F6C55082BBF"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "7940A68A3C039AD258C6CC2735023B60"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.core.Services"
+          method: "of"
+          methodParameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "of_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.core.Services"
+          method: "of"
+          methodParameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "of_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "org.bitcoinj.core.Services"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: false
+        valueType: "boolean"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "4d3691d1-e797-3ac1-a332-39497c106159"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "has"
+    returnType: "boolean"
+    signature: "has(long) : boolean"
+    instructionFingerprint: "7C1864B60EAFB88C0FB9217766C06AC6"
+    parametersTypes:
+    - "long"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "hasWhenBitsAndBitmaskEqualsBitmask"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "AFBBACBF0A50F6B13DCD9ED2A79ADEC7"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "72760FF360DD36BBB082282AA1DD3131"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.core.Services"
+          method: "of"
+          methodParameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "of_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.core.Services"
+          method: "of"
+          methodParameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "of_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "org.bitcoinj.core.Services"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "bitmask"
+      modelFingerprint: "D84DD3F6A90295777152CFE215D5E360"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: 0
+        suggestedContent: !<regular>
+          value: 0
+        valueType: "long"
+        uuid: "has_long1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: true
+        valueType: "boolean"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "711c1202-be2f-3257-9a83-1334fa377a87"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "hasWhenBitsAndBitmaskNotEqualsBitmask"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "0D87E77F449F323DBAF66F65BCCD0F42"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "72760FF360DD36BBB082282AA1DD3131"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.core.Services"
+          method: "of"
+          methodParameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "of_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.core.Services"
+          method: "of"
+          methodParameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "of_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "org.bitcoinj.core.Services"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "bitmask"
+      modelFingerprint: "ED1EDA8D930FD9769B912147F4B501C7"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: 2
+        suggestedContent: !<regular>
+          value: 2
+        valueType: "long"
+        uuid: "has_long1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: false
+        valueType: "boolean"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "587bc310-f3bc-3aae-9d37-59e189334df5"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "anyOf"
+    returnType: "boolean"
+    signature: "anyOf(long) : boolean"
+    instructionFingerprint: "D71EACB05AEE8D456BCE06CAF1EEC620"
+    parametersTypes:
+    - "long"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "anyOfWhenBitsAndBitmaskNotEquals0"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "C2F944AE342259571700DE84A79DBFE2"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "72760FF360DD36BBB082282AA1DD3131"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.core.Services"
+          method: "of"
+          methodParameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "of_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.core.Services"
+          method: "of"
+          methodParameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "of_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "org.bitcoinj.core.Services"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "bitmask"
+      modelFingerprint: "D84DD3F6A90295777152CFE215D5E360"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: 0
+        suggestedContent: !<regular>
+          value: 0
+        valueType: "long"
+        uuid: "anyOf_long1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: false
+        valueType: "boolean"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "a9728329-4398-3d9c-b998-05028ef306ac"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "anyOfWhenBitsAndBitmaskEquals0"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "C2F944AE342259571700DE84A79DBFE2"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "72760FF360DD36BBB082282AA1DD3131"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.core.Services"
+          method: "of"
+          methodParameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "of_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.core.Services"
+          method: "of"
+          methodParameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "of_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "org.bitcoinj.core.Services"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "bitmask"
+      modelFingerprint: "D84DD3F6A90295777152CFE215D5E360"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: 0
+        suggestedContent: !<regular>
+          value: 0
+        valueType: "long"
+        uuid: "anyOf_long1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: false
+        valueType: "boolean"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "ea1f51c5-5cc9-3632-b46f-e3b3b0933a74"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "write"
+    returnType: "java.nio.ByteBuffer"
+    signature: "write(java.nio.ByteBuffer) : java.nio.ByteBuffer"
+    throwsExceptions:
+    - "java.nio.BufferOverflowException"
+    instructionFingerprint: "16383C0078A2B6AA6DE37280891A8552"
+    parametersTypes:
+    - "java.nio.ByteBuffer"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "writeTest"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "3B63E6E85C0ACF2D3A48DE17D55E56E4"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "6F72F967E3162BF5AC4B30BB72D78EE8"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.core.Services"
+          method: "of"
+          methodParameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 123456789
+              suggestedContent: !<regular>
+                value: 123456789
+              valueType: "long"
+              uuid: "of_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.core.Services"
+          method: "of"
+          methodParameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 123456789
+              suggestedContent: !<regular>
+                value: 123456789
+              valueType: "long"
+              uuid: "of_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "org.bitcoinj.core.Services"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "buf"
+      modelFingerprint: "D9502874ABE1CA67297A590F5B7E0FB1"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.nio.ByteBuffer"
+          method: "allocateDirect"
+          methodParameters:
+          - name: "capacity"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "write_byteBuffer1-capacity"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "java.nio.ByteBuffer"
+          method: "allocateDirect"
+          methodParameters:
+          - name: "capacity"
+            value:
+              sapientType: "BASIC"
+              valueType: "int"
+              uuid: "write_byteBuffer1-capacity"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "java.nio.ByteBuffer"
+        uuid: "write_byteBuffer1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D443FCA5982459A6B11BB072DD2161AA"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.nio.ByteBuffer"
+          method: "allocateDirect"
+          methodParameters:
+          - name: "capacity"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "write_byteBuffer1-capacity"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "java.nio.ByteBuffer"
+          method: "allocateDirect"
+          methodParameters:
+          - name: "capacity"
+            value:
+              sapientType: "BASIC"
+              valueType: "int"
+              uuid: "write_byteBuffer1-capacity"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "java.nio.ByteBuffer"
+        uuid: "write_byteBuffer1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "74367ac6-67d1-3ba8-9bdd-4aafa43d4139"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+- method:
+    name: "serialize"
+    returnType: "byte[]"
+    signature: "serialize() : byte[]"
+    instructionFingerprint: "8770ABE876AE777909F925FCDA4A2459"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "serializeTest"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "A87F69F5AEE3E45663B0CFA554543AAA"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "F473BC394C4774B83FDBB68C7C008A1B"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.core.Services"
+          method: "of"
+          methodParameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 1
+              suggestedContent: !<regular>
+                value: 1
+              valueType: "long"
+              uuid: "of_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.core.Services"
+          method: "of"
+          methodParameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: 1
+              valueType: "long"
+              uuid: "of_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "org.bitcoinj.core.Services"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "850A205E812E0C52C13403E663D22E64"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ARRAY"
+        content: !<array>
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              uuid: "serialize_byte[]1-item0"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            1:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              uuid: "serialize_byte[]1-item1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            2:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              uuid: "serialize_byte[]1-item2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            3:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              uuid: "serialize_byte[]1-item3"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            4:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              uuid: "serialize_byte[]1-item4"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            5:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              uuid: "serialize_byte[]1-item5"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            6:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              uuid: "serialize_byte[]1-item6"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            7:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              uuid: "serialize_byte[]1-item7"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<array>
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              uuid: "serialize_byte[]1-item0"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            1:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              uuid: "serialize_byte[]1-item1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            2:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              uuid: "serialize_byte[]1-item2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            3:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              uuid: "serialize_byte[]1-item3"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            4:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              uuid: "serialize_byte[]1-item4"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            5:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              uuid: "serialize_byte[]1-item5"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            6:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              uuid: "serialize_byte[]1-item6"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            7:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              uuid: "serialize_byte[]1-item7"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "byte[]"
+        uuid: "serialize_byte[]1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "9d328af1-2293-3544-bbbc-a0683c1f9fbe"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+- method:
+    name: "toString"
+    returnType: "java.lang.String"
+    signature: "toString() : java.lang.String"
+    instructionFingerprint: "49C52F9D38C8CCF799802B8F5600EBD3"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "toStringWhenBitsNotEquals0"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "FC200B133C616638BE8D9A0DC25F790A"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "72760FF360DD36BBB082282AA1DD3131"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.core.Services"
+          method: "of"
+          methodParameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "of_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.core.Services"
+          method: "of"
+          methodParameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "of_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "org.bitcoinj.core.Services"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "InternalUtils"
+      modelFingerprint: "E71BC7CB6D2A84DC5086CF05B37C57E4"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "org.bitcoinj.base.internal.InternalUtils"
+        uuid: "org.bitcoinj.base.internal.InternalUtils"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.InternalUtils"
+        name: "joiner"
+        parameters:
+        - name: "delimiter"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: ", "
+            valueType: "java.lang.String"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "joiner(String): InternalUtils$Joiner"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.base.internal.InternalUtils"
+            method: "joiner"
+            methodParameters:
+            - value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: ", "
+                valueType: "java.lang.String"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.internal.InternalUtils"
+            method: "joiner"
+            methodParameters:
+            - value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: ", "
+                valueType: "java.lang.String"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "org.bitcoinj.base.internal.InternalUtils$Joiner"
+          uuid: "toString_internalUtils.Joiner1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "5F9A2E38F7ACB9A0E7C97E6F2508BB36"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.internal.InternalUtils"
+          method: "joiner"
+          methodParameters:
+          - value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: ", "
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.internal.InternalUtils"
+          method: "joiner"
+          methodParameters:
+          - value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: ", "
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "org.bitcoinj.base.internal.InternalUtils$Joiner"
+        uuid: "toString_internalUtils.Joiner1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.InternalUtils$Joiner"
+        name: "join"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              collectionClass: "java.util.LinkedList"
+              parameters: []
+              values: []
+            suggestedContent: !<collection>
+              collectionClass: "java.util.LinkedList"
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "java.lang.String"
+            uuid: "toString_linkedList1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "join(List): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: ""
+          valueType: "java.lang.String"
+          uuid: "toString_string1"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: ""
+        valueType: "java.lang.String"
+        uuid: "toString_string1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "de65989e-bf16-36ed-8772-7ccb6b0fc53a"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "toStringWhenBitsEquals0"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "0C9CF4D2B4D606B9821C5E957D7EE7CD"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "dd0121ef-7aea-3507-9701-9dfac7aad458"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path3"
+    pathIdForUser: "path3"
+    testPathName: "toStringWhenBitsAndNODE_NETWORK_LIMITEDNotEqualsNODE_NETWORK_LIMITEDAndBitsNotEquals0"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "F0628BDBDC09F39BE42A4C9498BF56F3"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "1e6441ec-b70c-341a-b311-4a06c174bff0"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path4"
+    pathIdForUser: "path4"
+    testPathName: "toStringWhenBitsAndNODE_NETWORK_LIMITEDNotEqualsNODE_NETWORK_LIMITEDAndBitsEquals0"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "084563CC284C445AA493A2E62DDC60EB"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "e134a02b-a1d0-3f31-bd30-803f72c1ce62"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path5"
+    pathIdForUser: "path5"
+    testPathName: "toStringWhenBitsAndNODE_NETWORK_LIMITEDEqualsNODE_NETWORK_LIMITEDAndBitsNotEquals0"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "3947CB58A54869D6A3D01408A33E01F7"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "921c876c-ef58-3565-9654-9a0739aa9e9a"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path6"
+    pathIdForUser: "path6"
+    testPathName: "toStringWhenBitsAndNODE_NETWORK_LIMITEDEqualsNODE_NETWORK_LIMITEDAndBitsEquals0"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "D5727B6E593178578D7483DE3A9F9C25"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "a6a4e476-362d-3b33-97f7-19fe5bba828d"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path7"
+    pathIdForUser: "path7"
+    testPathName: "toStringWhenBitsAndNODE_WITNESSNotEqualsNODE_WITNESSAndBitsAndNODE_NETWORK_LIMITEDNotEqualsNODE_NETWORK_LIMITEDAndBitsN"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "F2D5CEC1EB585A7B97B23F4346EB080F"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "c37c0a6d-e7cc-3c5c-9ab4-670f642c048d"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path8"
+    pathIdForUser: "path8"
+    testPathName: "toStringWhenBitsAndNODE_WITNESSNotEqualsNODE_WITNESSAndBitsAndNODE_NETWORK_LIMITEDNotEqualsNODE_NETWORK_LIMITEDAndBitsE"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "DA4809A95AC6878E891F07F425462861"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "f421c5ce-7436-378e-9592-803ca6eacb62"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path9"
+    pathIdForUser: "path9"
+    testPathName: "toStringWhenBitsAndNODE_WITNESSEqualsNODE_WITNESSAndBitsAndNODE_NETWORK_LIMITEDEqualsNODE_NETWORK_LIMITEDAndBitsNotEqua"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "D19C7B85FCB874EC21D11A8FE26A6915"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "d5c9d49d-f80a-3678-8939-0c158f479df5"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path10"
+    pathIdForUser: "path10"
+    testPathName: "toStringWhenBitsAndNODE_WITNESSEqualsNODE_WITNESSAndBitsAndNODE_NETWORK_LIMITEDEqualsNODE_NETWORK_LIMITEDAndBitsEquals0"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "DFF82C8184F59DDC0F5F038A2EAE9F2A"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "52370925-c904-3267-ae10-970eb7bb758e"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path11"
+    pathIdForUser: "path11"
+    testPathName: "toStringWhenBitsAndNODE_WITNESSEqualsNODE_WITNESSAndBitsAndNODE_NETWORK_LIMITEDNotEqualsNODE_NETWORK_LIMITEDAndBitsNotE"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "71BAC898C22C4EAE8E6F67706D4679D1"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "74042349-2b94-3f60-a9c2-75ee101d4f99"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path12"
+    pathIdForUser: "path12"
+    testPathName: "toStringWhenBitsAndNODE_WITNESSEqualsNODE_WITNESSAndBitsAndNODE_NETWORK_LIMITEDNotEqualsNODE_NETWORK_LIMITEDAndBitsEqua"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "DAF109EBDAA5DA473D126B0F22836169"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "7fac2a44-2714-3a58-a75f-49603e17012c"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path13"
+    pathIdForUser: "path13"
+    testPathName: "toStringWhenBitsAndNODE_WITNESSNotEqualsNODE_WITNESSAndBitsAndNODE_NETWORK_LIMITEDEqualsNODE_NETWORK_LIMITEDAndBitsNotE"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "13692C3A6D842CFEA9A8ECECA037EDC6"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "16d7ecfd-9194-371d-8305-e908a1614e57"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path14"
+    pathIdForUser: "path14"
+    testPathName: "toStringWhenBitsAndNODE_WITNESSNotEqualsNODE_WITNESSAndBitsAndNODE_NETWORK_LIMITEDEqualsNODE_NETWORK_LIMITEDAndBitsEqua"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "94AAC0EB79E768A31157593D1A419EF9"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "abcace90-7aba-3a56-9d9b-9af79f23aa84"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path15"
+    pathIdForUser: "path15"
+    testPathName: "toStringWhenBitsAndNODE_NETWORK_LIMITEDNotEqualsNODE_NETWORK_LIMITEDAndBitsNotEquals02"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "EEB20907CBD953D367C45B2A7B8A16FE"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "f9f49941-1283-364c-9403-943ccdc17641"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path16"
+    pathIdForUser: "path16"
+    testPathName: "toStringWhenBitsAndNODE_NETWORK_LIMITEDNotEqualsNODE_NETWORK_LIMITEDAndBitsEquals02"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "989378A8DA1CAC66E9C64CC70EC4581E"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "b46de083-eb12-3878-bd4b-10d75ac71581"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path17"
+    pathIdForUser: "path17"
+    testPathName: "toStringWhenBitsAndNODE_NETWORK_LIMITEDEqualsNODE_NETWORK_LIMITEDAndBitsNotEquals02"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "902015A1424BAFCE33AA8E224260CFCD"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "6aa42270-7a76-3cae-afe3-2058f3a7bc1b"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path18"
+    pathIdForUser: "path18"
+    testPathName: "toStringWhenBitsAndNODE_BLOOMEqualsNODE_BLOOMAndBitsAndNODE_WITNESSEqualsNODE_WITNESSAndBitsAndNODE_NETWORK_LIMITEDEqua"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "3BDA0CF6016FA38A38B242F5DE314E0B"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "ad289b84-b491-37df-b655-e15996310145"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path19"
+    pathIdForUser: "path19"
+    testPathName: "toStringWhenBitsAndNODE_NETWORK_LIMITEDNotEqualsNODE_NETWORK_LIMITEDAndBitsNotEquals03"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "24870E959BAFDB746CCC8650F4D1493D"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "11a5dbb5-397b-3c7b-b339-1d24683b773e"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path20"
+    pathIdForUser: "path20"
+    testPathName: "toStringWhenBitsAndNODE_NETWORK_LIMITEDNotEqualsNODE_NETWORK_LIMITEDAndBitsEquals03"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "BEC37BA51C0D67828AAE73DDAF0A3F00"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "c441449b-7ff6-3b25-8d67-82a5f878506e"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path21"
+    pathIdForUser: "path21"
+    testPathName: "toStringWhenBitsAndNODE_NETWORK_LIMITEDEqualsNODE_NETWORK_LIMITEDAndBitsNotEquals03"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "A73204C0EAD1E48222AB066742051D79"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "8af683cb-971c-3ba1-8306-6d7e80122adb"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path22"
+    pathIdForUser: "path22"
+    testPathName: "toStringWhenBitsAndNODE_NETWORK_LIMITEDEqualsNODE_NETWORK_LIMITEDAndBitsEquals02"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "FFE24E74E874F155D3D8A09055C2D378"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "bc54b61c-1bac-378f-a862-e519fec722c2"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path23"
+    pathIdForUser: "path23"
+    testPathName: "toStringWhenBitsAndNODE_NETWORK_LIMITEDNotEqualsNODE_NETWORK_LIMITEDAndBitsNotEquals04"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "B85A1B00A24A39E77C4EF99D8750E903"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "951f5e4f-7fb7-3c7b-981d-f306a5cb534a"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path24"
+    pathIdForUser: "path24"
+    testPathName: "toStringWhenBitsAndNODE_NETWORK_LIMITEDNotEqualsNODE_NETWORK_LIMITEDAndBitsEquals04"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "831287CE9CB7044C34F3847BB2577BF9"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "e3743ea1-86ea-371a-9ca4-0e622f90e26d"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path25"
+    pathIdForUser: "path25"
+    testPathName: "toStringWhenBitsAndNODE_NETWORK_LIMITEDEqualsNODE_NETWORK_LIMITEDAndBitsNotEquals04"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "F18804CE4533C9681D16DAFFF45D7850"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "bb649af1-1104-33c4-8770-683580189245"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path26"
+    pathIdForUser: "path26"
+    testPathName: "toStringWhenBitsAndNODE_BLOOMNotEqualsNODE_BLOOMAndBitsAndNODE_WITNESSEqualsNODE_WITNESSAndBitsAndNODE_NETWORK_LIMITEDE"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "62207F5C99D439747267A139FA00F2B0"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "7c0719d8-d21a-3071-849e-4bef1af75771"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path27"
+    pathIdForUser: "path27"
+    testPathName: "toStringWhenBitsAndNODE_NETWORK_LIMITEDNotEqualsNODE_NETWORK_LIMITEDAndBitsNotEquals05"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "1FA1EF94C9A27B989687DD99D993487F"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "d2ef1b88-5722-354d-a09c-ce69fe248914"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path28"
+    pathIdForUser: "path28"
+    testPathName: "toStringWhenBitsAndNODE_NETWORK_LIMITEDNotEqualsNODE_NETWORK_LIMITEDAndBitsEquals05"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "7D6E74A094B01E353641CA73CBFE17A4"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "768a01a5-407b-32d4-9713-7851b1f18dbf"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path29"
+    pathIdForUser: "path29"
+    testPathName: "toStringWhenBitsAndNODE_NETWORK_LIMITEDEqualsNODE_NETWORK_LIMITEDAndBitsNotEquals05"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "D02A3A1075AF1BFB06DFCE9E0C4F82CF"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "08306def-d4f2-308e-91fb-b65a868c8c85"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path30"
+    pathIdForUser: "path30"
+    testPathName: "toStringWhenBitsAndNODE_NETWORK_LIMITEDEqualsNODE_NETWORK_LIMITEDAndBitsEquals03"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "6FCC2E0A786A90DE3A6DA7F8C61A46BE"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "bc2ec7d4-cb2c-30cb-808b-a69b40f06ebc"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path31"
+    pathIdForUser: "path31"
+    testPathName: "toStringWhenBitsAndNODE_NETWORK_LIMITEDNotEqualsNODE_NETWORK_LIMITEDAndBitsNotEquals06"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "CA3D72AC9F5B7FFABE0373A1679226D7"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "77b15b15-41fa-3c27-8600-9a136c579a5e"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path32"
+    pathIdForUser: "path32"
+    testPathName: "toStringWhenBitsAndNODE_NETWORK_LIMITEDNotEqualsNODE_NETWORK_LIMITEDAndBitsEquals06"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "D68B1DD64A0E2D13689A8FC85885E5C1"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "195c5bfe-2e3d-3e94-9d7e-bbfa6850f11e"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "equals"
+    returnType: "boolean"
+    signature: "equals(java.lang.Object) : boolean"
+    instructionFingerprint: "A9BFE479BA165971013AFBC657C5A638"
+    parametersTypes:
+    - "java.lang.Object"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "equalsWhenThisEqualsO"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "7EB98A51383DC4EF31B87CACA4957584"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "5b7cf5ba-f3cc-35d0-9b4a-3392d3a68eed"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path5"
+    pathIdForUser: "path2"
+    testPathName: "equalsWhenOIsNull"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "731C0D672654B7410D71B41791AB51F3"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "a2108c4d-bcbc-39b5-8254-0588b654f131"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path3"
+    testPathName: "equalsWhenGetClassNotEqualsOGetClass"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "200403E717D456FA3C7E2C4B2C0D9B52"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "6e6a0f87-c9aa-3e31-af0a-46c9467f5ce0"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path3"
+    pathIdForUser: "path4"
+    testPathName: "equalsWhenThisBitsEqualsOBits"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "2D23B9B4B8B14156187A60874E830563"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "5c8dac40-505a-3c9c-ade2-ae9dceb3a83d"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path4"
+    pathIdForUser: "path5"
+    testPathName: "equalsWhenThisBitsNotEqualsOBits"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "9FE43AAEC1BCC09D1729CE4446732C4B"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "ae624a7d-8805-3006-8bdb-9533e8565398"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
