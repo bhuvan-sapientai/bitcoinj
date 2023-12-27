@@ -95,9 +95,9 @@ public class AppDataDirectorySapientGeneratedJunit4Test {
             platformUtils.when(() -> PlatformUtils.isWindows()).thenReturn(false);
             platformUtils.when(() -> PlatformUtils.isMac()).thenReturn(true);
             //Act Statement(s)
-            Path result = AppDataDirectory.getPath("MyApp");
+            Path result = AppDataDirectory.getPath("appName1");
             FileSystem fileSystem = FileSystems.getDefault();
-            String[] stringArray = new String[]{"Library/Application Support", "MyApp"};
+            String[] stringArray = new String[]{"Library/Application Support", "appName1"};
             Path path = fileSystem.getPath("A", stringArray);
             //Assert statement(s)
             assertThat(result, equalTo(path));

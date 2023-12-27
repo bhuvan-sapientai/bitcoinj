@@ -38,6 +38,8 @@ public class InventoryMessageSapientGeneratedJunit4Test {
 
     private final Transaction transactionMock = mock(Transaction.class);
 
+    private final Block blockMock = mock(Block.class);
+
     //Sapient generated method id: ${db344e3b-696d-3b02-8e35-1aaa5300bde6}
     @Test()
     public void readTest() throws BufferUnderflowException, ProtocolException {
@@ -63,23 +65,14 @@ public class InventoryMessageSapientGeneratedJunit4Test {
          * (!blocks.isEmpty()) : true
          */
         //Arrange Statement(s)
-        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
-        Instant instant = Instant.now();
-        List list = new ArrayList<>();
-        Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
-        Sha256Hash sha256HashMock3 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock4 = mock(Sha256Hash.class);
-        Instant instant2 = Instant.now();
-        List list2 = new ArrayList<>();
-        Block block2 = new Block(0L, sha256HashMock3, sha256HashMock4, instant2, 0L, 0L, list2);
         List<Block> blockList = new ArrayList<>();
-        blockList.add(block);
-        blockList.add(block2);
+        blockList.add(blockMock);
+
         //Act Statement(s)
         InventoryMessage result = InventoryMessage.ofBlocks(blockList);
         List<InventoryItem> inventoryItemList = new ArrayList<>();
         InventoryMessage inventoryMessage = new InventoryMessage(inventoryItemList);
+
         //Assert statement(s)
         assertThat(result, equalTo(inventoryMessage));
     }
@@ -129,10 +122,12 @@ public class InventoryMessageSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         List<Transaction> transactionList = new ArrayList<>();
         transactionList.add(transactionMock);
+
         //Act Statement(s)
         InventoryMessage result = InventoryMessage.ofTransactions(transactionList);
         List<InventoryItem> inventoryItemList = new ArrayList<>();
         InventoryMessage inventoryMessage = new InventoryMessage(inventoryItemList);
+
         //Assert statement(s)
         assertThat(result, equalTo(inventoryMessage));
     }
@@ -176,11 +171,11 @@ public class InventoryMessageSapientGeneratedJunit4Test {
     @Test()
     public void addBlockTest() {
         //Arrange Statement(s)
-        Block blockMock = mock(Block.class);
         InventoryItem inventoryItem = new InventoryItem(blockMock);
         List<InventoryItem> inventoryItemList = new ArrayList<>();
         inventoryItemList.add(inventoryItem);
         InventoryMessage target = new InventoryMessage(inventoryItemList);
+
         //Act Statement(s)
         target.addBlock(blockMock);
     }
@@ -193,6 +188,7 @@ public class InventoryMessageSapientGeneratedJunit4Test {
         List<InventoryItem> inventoryItemList = new ArrayList<>();
         inventoryItemList.add(inventoryItem);
         InventoryMessage target = new InventoryMessage(inventoryItemList);
+
         //Act Statement(s)
         target.addTransaction(transactionMock);
     }

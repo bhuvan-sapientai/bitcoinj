@@ -54,12 +54,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "E2A66A36436E6386A31EE3CC8E82DB25"
+    modelFingerprint: "DF92A1CA53451CE7759837AD0438DEE5"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "4949B0BDC08EC2ACE9B923BDA4049228"
+      modelFingerprint: "CBE4A20232FFDC05FE4D85502DBDFC4E"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -73,9 +73,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0.01
-              suggestedContent: !<regular>
-                value: 0.01
+                value: 0.0
               valueType: "double"
               uuid: "<init>_double1"
               fixed: false
@@ -89,10 +87,6 @@ methods:
           - name: "bloomFilterFPRate"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0.01
-              suggestedContent: !<regular>
-                value: 0.01
               valueType: "double"
               uuid: "<init>_double1"
               fixed: false
@@ -109,7 +103,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "providerList"
-      modelFingerprint: "E8F977AF21F7867619632130655F5CF8"
+      modelFingerprint: "D576A87F7F30434B05084068122FAB8E"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -117,35 +111,11 @@ methods:
       value:
         sapientType: "COLLECTION"
         content: !<collection>
-          collectionClass: "java.util.ArrayList"
           parameters: []
-          values:
-          - sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.core.PeerFilterProvider"
-              onlyPojoFunctions: false
-              builderPattern: false
-            valueType: "org.bitcoinj.core.PeerFilterProvider"
-            uuid: "calculate_list1-0"
-            fixed: false
-            collectionUuid: "calculate_list1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
+          values: []
         suggestedContent: !<collection>
-          collectionClass: "java.util.ArrayList"
           parameters: []
-          values:
-          - sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.core.PeerFilterProvider"
-              onlyPojoFunctions: false
-              builderPattern: false
-            valueType: "org.bitcoinj.core.PeerFilterProvider"
-            uuid: "calculate_list1-0"
-            fixed: false
-            collectionUuid: "calculate_list1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
+          values: []
         valueType: "java.util.List"
         genericValueType: "org.bitcoinj.core.PeerFilterProvider"
         uuid: "calculate_list1"
@@ -190,7 +160,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "p"
-      modelFingerprint: "4028333041EBB59BB1405F1F7E624291"
+      modelFingerprint: "DCF5AE5DE93C191CB9DE4C4085C30A60"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -213,15 +183,15 @@ methods:
         parameters: []
         signature: "earliestKeyCreationTime(): Instant"
         returnValue:
-          sapientType: "NULL"
-          content: !<unknown_object>
+          sapientType: "OBJECT"
+          content: !<static_method_return>
             target: "java.time.Instant"
-            onlyPojoFunctions: true
-            builderPattern: false
-          suggestedContent: !<unknown_object>
+            method: "now"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
             target: "java.time.Instant"
-            onlyPojoFunctions: true
-            builderPattern: false
+            method: "now"
+            methodParameters: []
           valueType: "java.time.Instant"
           uuid: "calculate_instant2"
           fixed: false
@@ -232,7 +202,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "TimeUtils"
-      modelFingerprint: "095B9781764E432CAD6B06621E6C8E26"
+      modelFingerprint: "DF1E1073499732A9B0BA9E1AFE4CC632"
       index: 5
       ignored: false
       nestedInLoop: true
@@ -264,15 +234,15 @@ methods:
             explicitCastNeeded: false
         - name: "time2"
           value:
-            sapientType: "NULL"
-            content: !<unknown_object>
+            sapientType: "OBJECT"
+            content: !<static_method_return>
               target: "java.time.Instant"
-              onlyPojoFunctions: true
-              builderPattern: false
-            suggestedContent: !<unknown_object>
+              method: "now"
+              methodParameters: []
+            suggestedContent: !<static_method_return>
               target: "java.time.Instant"
-              onlyPojoFunctions: true
-              builderPattern: false
+              method: "now"
+              methodParameters: []
             valueType: "java.time.Instant"
             uuid: "calculate_instant2"
             fixed: false
@@ -280,11 +250,15 @@ methods:
             explicitCastNeeded: false
         signature: "earlier(Instant,Instant): Instant"
         returnValue:
-          sapientType: "NULL"
-          suggestedContent: !<unknown_object>
+          sapientType: "OBJECT"
+          content: !<static_method_return>
             target: "java.time.Instant"
-            onlyPojoFunctions: false
-            builderPattern: false
+            method: "now"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
+            target: "java.time.Instant"
+            method: "now"
+            methodParameters: []
           valueType: "java.time.Instant"
           uuid: "calculate_instant3"
           fixed: false
@@ -295,7 +269,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "p"
-      modelFingerprint: "320A6C00959C01D283FCA6D3CB7302D7"
+      modelFingerprint: "D096C0F110BCEA0E8AEF19D6DCEA2CCC"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -320,8 +294,6 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 0
-          suggestedContent: !<regular>
             value: 0
           valueType: "int"
           uuid: "calculate_int2"
@@ -393,11 +365,11 @@ methods:
       filledByUser: false
     uuid: "974f6ce3-fb3d-379b-8bfb-4bedd1091387"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path4"
     testPathName: "calculateWhenProvidersIsEmptyAndFilterNotEqualsLastFilterAndBegunProvidersIsNotEmpty"

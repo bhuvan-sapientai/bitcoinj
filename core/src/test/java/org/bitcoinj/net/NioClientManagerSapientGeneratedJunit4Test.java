@@ -58,16 +58,16 @@ public class NioClientManagerSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
-    connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
-    NioClientManager target = spy(new NioClientManager());
-    doReturn(true, false).when(target).isRunning();
-    //Act Statement(s)
-    target.run();
-    //Assert statement(s)
-    connectionHandler.verify(() -> ConnectionHandler.handleKey((SelectionKey) null), atLeast(1));
-    verify(target, times(2)).isRunning();
-}*/
+        try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
+            connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
+            NioClientManager target = spy(new NioClientManager());
+            doReturn(true, false).when(target).isRunning();
+            //Act Statement(s)
+            target.run();
+            //Assert statement(s)
+            connectionHandler.verify(() -> ConnectionHandler.handleKey((SelectionKey) null), atLeast(1));
+            verify(target, times(2)).isRunning();
+        }
     }
 
     //Sapient generated method id: ${8f655aa5-ff3b-3366-ad66-38bb73867466}
@@ -87,12 +87,14 @@ public class NioClientManagerSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //NioClientManager target = spy(new NioClientManager());
-        //doReturn(true, false).when(target).isRunning();
+        NioClientManager target = spy(new NioClientManager());
+        doReturn(true, false).when(target).isRunning();
+
         //Act Statement(s)
-        //target.run();
+        target.run();
+
         //Assert statement(s)
-        //verify(target, times(2)).isRunning();
+        verify(target, times(2)).isRunning();
     }
 
     //Sapient generated method id: ${7d7f567a-d796-380f-a7e8-a3c075963831}
@@ -113,16 +115,16 @@ public class NioClientManagerSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
-    connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
-    NioClientManager target = spy(new NioClientManager());
-    doReturn(true, false).when(target).isRunning();
-    //Act Statement(s)
-    target.run();
-    //Assert statement(s)
-    connectionHandler.verify(() -> ConnectionHandler.handleKey((SelectionKey) null), atLeast(1));
-    verify(target, times(2)).isRunning();
-}*/
+        try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
+            connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
+            NioClientManager target = spy(new NioClientManager());
+            doReturn(true, false).when(target).isRunning();
+            //Act Statement(s)
+            target.run();
+            //Assert statement(s)
+            connectionHandler.verify(() -> ConnectionHandler.handleKey((SelectionKey) null), atLeast(1));
+            verify(target, times(2)).isRunning();
+        }
     }
 
     //Sapient generated method id: ${5ee56fb1-1efb-35fb-b1bb-d35d0790b8a8}
@@ -144,16 +146,16 @@ public class NioClientManagerSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
-    connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
-    NioClientManager target = spy(new NioClientManager());
-    doReturn(true, false).when(target).isRunning();
-    //Act Statement(s)
-    target.run();
-    //Assert statement(s)
-    connectionHandler.verify(() -> ConnectionHandler.handleKey((SelectionKey) null), atLeast(1));
-    verify(target, times(2)).isRunning();
-}*/
+        try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
+            connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
+            NioClientManager target = spy(new NioClientManager());
+            doReturn(true, false).when(target).isRunning();
+            //Act Statement(s)
+            target.run();
+            //Assert statement(s)
+            connectionHandler.verify(() -> ConnectionHandler.handleKey((SelectionKey) null), atLeast(1));
+            verify(target, times(2)).isRunning();
+        }
     }
 
     //Sapient generated method id: ${85955f9f-267e-3a90-a7aa-7d747ff39e80}
@@ -206,16 +208,16 @@ public class NioClientManagerSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
-    connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
-    NioClientManager target = spy(new NioClientManager());
-    doReturn(true, false).when(target).isRunning();
-    //Act Statement(s)
-    target.run();
-    //Assert statement(s)
-    connectionHandler.verify(() -> ConnectionHandler.handleKey((SelectionKey) null), atLeast(1));
-    verify(target, times(2)).isRunning();
-}*/
+        try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
+            connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
+            NioClientManager target = spy(new NioClientManager());
+            doReturn(true, false).when(target).isRunning();
+            //Act Statement(s)
+            target.run();
+            //Assert statement(s)
+            connectionHandler.verify(() -> ConnectionHandler.handleKey((SelectionKey) null), atLeast(1));
+            verify(target, times(2)).isRunning();
+        }
     }
 
     //Sapient generated method id: ${2bb3f3f2-19d9-3686-8409-b9ef5ffc97ff}
@@ -225,15 +227,17 @@ public class NioClientManagerSapientGeneratedJunit4Test {
          * (!isRunning()) : true
          */
         //Arrange Statement(s)
-        //NioClientManager target = spy(new NioClientManager());
-        //doReturn(false).when(target).isRunning();
-        //thrown.expect(IllegalStateException.class);
+        NioClientManager target = spy(new NioClientManager());
+        doReturn(false).when(target).isRunning();
+        thrown.expect(IllegalStateException.class);
         //TODO: Needs initialization with real value
-        //SocketAddress socketAddress = null;
+        SocketAddress socketAddress = null;
+
         //Act Statement(s)
-        //target.openConnection(socketAddress, streamConnectionMock);
+        target.openConnection(socketAddress, streamConnectionMock);
+
         //Assert statement(s)
-        //verify(target).isRunning();
+        verify(target).isRunning();
     }
 
     //Sapient generated method id: ${78ebb428-2cae-3916-9c06-f91746d86a49}
@@ -247,24 +251,25 @@ public class NioClientManagerSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<ListenableCompletableFuture> listenableCompletableFuture = mockStatic(ListenableCompletableFuture.class)) {
-    ListenableCompletableFuture<SocketAddress> listenableCompletableFuture2 = new ListenableCompletableFuture<>();
-    listenableCompletableFuture.when(() -> ListenableCompletableFuture.of((CompletableFuture) null)).thenReturn(listenableCompletableFuture2);
-    NioClientManager target = spy(new NioClientManager());
-    doReturn(true).when(target).isRunning();
-    //TODO: Needs initialization with real value
-    SocketAddress socketAddress = null;
-    //Act Statement(s)
-    ListenableCompletableFuture<SocketAddress> result = target.openConnection(socketAddress, streamConnectionMock);
-    //Assert statement(s)
-    assertThat(result, equalTo(listenableCompletableFuture2));
-    listenableCompletableFuture.verify(() -> ListenableCompletableFuture.of((CompletableFuture) null), atLeast(1));
-    verify(target).isRunning();
-}*/
+        ListenableCompletableFuture<SocketAddress> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
+        try (MockedStatic<ListenableCompletableFuture> listenableCompletableFuture = mockStatic(ListenableCompletableFuture.class)) {
+            listenableCompletableFuture.when(() -> ListenableCompletableFuture.of((CompletableFuture) null)).thenReturn(listenableCompletableFutureMock);
+            NioClientManager target = spy(new NioClientManager());
+            doReturn(true).when(target).isRunning();
+            //TODO: Needs initialization with real value
+            SocketAddress socketAddress = null;
+            //Act Statement(s)
+            ListenableCompletableFuture<SocketAddress> result = target.openConnection(socketAddress, streamConnectionMock);
+            //Assert statement(s)
+            assertThat(result, equalTo(listenableCompletableFutureMock));
+            listenableCompletableFuture.verify(() -> ListenableCompletableFuture.of((CompletableFuture) null), atLeast(1));
+            verify(target).isRunning();
+        }
     }
 
     //Sapient generated method id: ${c684a778-f95f-3a32-974c-99dde163048d}
     @Test()
+    @Ignore(value = "Potential harmful system call (Selector.wakeup) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void openConnectionWhenCaughtThrowable() throws Throwable {
         /* Branches:
          * (!isRunning()) : false
@@ -274,24 +279,28 @@ public class NioClientManagerSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<ListenableCompletableFuture> listenableCompletableFuture = mockStatic(ListenableCompletableFuture.class);
-    MockedStatic<SocketChannel> socketChannel = mockStatic(SocketChannel.class)) {
-    //TODO: Needs to return real value
-    socketChannel.when(() -> SocketChannel.open()).thenReturn(null);
-    ListenableCompletableFuture<SocketAddress> listenableCompletableFuture2 = new ListenableCompletableFuture<>();
-    listenableCompletableFuture.when(() -> ListenableCompletableFuture.failedFuture((SocketChannel) null)).thenReturn(listenableCompletableFuture2);
-    NioClientManager target = spy(new NioClientManager());
-    doReturn(true).when(target).isRunning();
-    //TODO: Needs initialization with real value
-    SocketAddress socketAddress = null;
-    //Act Statement(s)
-    ListenableCompletableFuture<SocketAddress> result = target.openConnection(socketAddress, streamConnectionMock);
-    //Assert statement(s)
-    assertThat(result, equalTo(listenableCompletableFuture2));
-    socketChannel.verify(() -> SocketChannel.open(), atLeast(1));
-    listenableCompletableFuture.verify(() -> ListenableCompletableFuture.failedFuture((SocketChannel) null), atLeast(1));
-    verify(target).isRunning();
-}*/
+        ListenableCompletableFuture listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
+        ListenableCompletableFuture<SocketAddress> listenableCompletableFutureMock2 = mock(ListenableCompletableFuture.class);
+        try (MockedStatic<ListenableCompletableFuture> listenableCompletableFuture = mockStatic(ListenableCompletableFuture.class);
+             MockedStatic<SocketChannel> socketChannel = mockStatic(SocketChannel.class)) {
+            SocketChannel socketChannel2 = SocketChannel.open();
+            socketChannel.when(() -> SocketChannel.open()).thenReturn(socketChannel2);
+            listenableCompletableFuture.when(() -> ListenableCompletableFuture.of((CompletableFuture) null)).thenReturn(listenableCompletableFutureMock);
+            Throwable throwable = new Throwable();
+            listenableCompletableFuture.when(() -> ListenableCompletableFuture.failedFuture(throwable)).thenReturn(listenableCompletableFutureMock2);
+            NioClientManager target = spy(new NioClientManager());
+            doReturn(true).when(target).isRunning();
+            //TODO: Needs initialization with real value
+            SocketAddress socketAddress = null;
+            //Act Statement(s)
+            ListenableCompletableFuture<SocketAddress> result = target.openConnection(socketAddress, streamConnectionMock);
+            //Assert statement(s)
+            assertThat(result, equalTo(listenableCompletableFutureMock2));
+            socketChannel.verify(() -> SocketChannel.open(), atLeast(1));
+            listenableCompletableFuture.verify(() -> ListenableCompletableFuture.of((CompletableFuture) null), atLeast(1));
+            listenableCompletableFuture.verify(() -> ListenableCompletableFuture.failedFuture(throwable), atLeast(1));
+            verify(target).isRunning();
+        }
     }
 
     //Sapient generated method id: ${f1f6783d-62f1-37cc-adb3-69889cbd30d0}
@@ -300,6 +309,7 @@ public class NioClientManagerSapientGeneratedJunit4Test {
     public void triggerShutdownTest() {
         //Arrange Statement(s)
         NioClientManager target = new NioClientManager();
+
         //Act Statement(s)
         target.triggerShutdown();
     }
@@ -308,11 +318,13 @@ public class NioClientManagerSapientGeneratedJunit4Test {
     @Test()
     public void getConnectedClientCountTest() {
         //Arrange Statement(s)
-        //NioClientManager target = new NioClientManager();
+        NioClientManager target = new NioClientManager();
+
         //Act Statement(s)
-        //int result = target.getConnectedClientCount();
+        int result = target.getConnectedClientCount();
+
         //Assert statement(s)
-        //assertThat(result, equalTo(0));
+        assertThat(result, equalTo(0));
     }
 
     //Sapient generated method id: ${de9c01ce-9f05-3bca-b3e8-176152935f28}
@@ -324,6 +336,7 @@ public class NioClientManagerSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         NioClientManager target = new NioClientManager();
         thrown.expect(NoSuchElementException.class);
+
         //Act Statement(s)
         target.closeConnections(2147483647);
     }
@@ -336,6 +349,7 @@ public class NioClientManagerSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         NioClientManager target = new NioClientManager();
+
         //Act Statement(s)
         target.closeConnections(-1);
     }
@@ -344,10 +358,12 @@ public class NioClientManagerSapientGeneratedJunit4Test {
     @Test()
     public void executorTest() {
         //Arrange Statement(s)
-        //NioClientManager target = new NioClientManager();
+        NioClientManager target = new NioClientManager();
+
         //Act Statement(s)
-        //Executor result = target.executor();
+        Executor result = target.executor();
+
         //Assert statement(s)
-        //assertThat(result, is(notNullValue()));
+        assertThat(result, is(notNullValue()));
     }
 }

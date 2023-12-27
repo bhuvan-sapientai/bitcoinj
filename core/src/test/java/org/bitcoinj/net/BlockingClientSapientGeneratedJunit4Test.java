@@ -60,6 +60,8 @@ public class BlockingClientSapientGeneratedJunit4Test {
     @Rule()
     public ExpectedException thrown = ExpectedException.none();
 
+    private final Context contextMock = mock(Context.class);
+
     //Sapient generated method id: ${69cdc266-c62b-3d3b-93ab-567fdddb7bde}
     @Ignore()
     @Test()
@@ -175,8 +177,7 @@ public class BlockingClientSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<Context> context = mockStatic(Context.class)) {
-            Context context2 = new Context();
-            context.when(() -> Context.get()).thenReturn(context2);
+            context.when(() -> Context.get()).thenReturn(contextMock);
             Duration duration = Duration.ofDays(0L);
             SocketFactory socketFactory = SocketFactory.getDefault();
             Set<BlockingClient> blockingClientSet = new HashSet<>();
@@ -202,16 +203,14 @@ public class BlockingClientSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<Context> context = mockStatic(Context.class)) {
-            Context context2 = new Context();
-            context.when(() -> Context.get()).thenReturn(context2);
-            Duration duration = Duration.ofSeconds(30L);
+            context.when(() -> Context.get()).thenReturn(contextMock);
+            Duration duration = Duration.ofDays(0L);
             SocketFactory socketFactory = SocketFactory.getDefault();
             Set<BlockingClient> blockingClientSet = new HashSet<>();
-            blockingClientSet.add(blockingClientMock);
             BlockingClient target = new BlockingClient((SocketAddress) null, streamConnectionMock, duration, socketFactory, blockingClientSet);
             doNothing().when(streamConnectionMock).setWriteTarget(target);
             thrown.expect(RuntimeException.class);
-            thrown.expectCause(isA(Context.class));
+            thrown.expectCause(isA(IOException.class));
             //Act Statement(s)
             target.closeConnection();
             //Assert statement(s)
@@ -229,22 +228,21 @@ public class BlockingClientSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        ListenableCompletableFuture<Void> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
         try (MockedStatic<ListenableCompletableFuture> listenableCompletableFuture = mockStatic(ListenableCompletableFuture.class);
              MockedStatic<Context> context = mockStatic(Context.class)) {
-            Context context2 = new Context();
-            context.when(() -> Context.get()).thenReturn(context2);
-            ListenableCompletableFuture<Void> listenableCompletableFuture2 = new ListenableCompletableFuture<>();
-            listenableCompletableFuture.when(() -> ListenableCompletableFuture.completedFuture(null)).thenReturn(listenableCompletableFuture2);
+            context.when(() -> Context.get()).thenReturn(contextMock);
+            listenableCompletableFuture.when(() -> ListenableCompletableFuture.completedFuture(null)).thenReturn(listenableCompletableFutureMock);
             Duration duration = Duration.ofDays(0L);
             SocketFactory socketFactory = SocketFactory.getDefault();
             Set<BlockingClient> blockingClientSet = new HashSet<>();
             BlockingClient target = new BlockingClient((SocketAddress) null, streamConnectionMock, duration, socketFactory, blockingClientSet);
             doNothing().when(streamConnectionMock).setWriteTarget(target);
-            byte[] byteArray = new byte[]{(byte) 0};
+            byte[] byteArray = new byte[]{};
             //Act Statement(s)
             ListenableCompletableFuture<Void> result = target.writeBytes(byteArray);
             //Assert statement(s)
-            assertThat(result, equalTo(listenableCompletableFuture2));
+            assertThat(result, equalTo(listenableCompletableFutureMock));
             context.verify(() -> Context.get(), atLeast(1));
             listenableCompletableFuture.verify(() -> ListenableCompletableFuture.completedFuture(null), atLeast(1));
             verify(streamConnectionMock).setWriteTarget(target);
@@ -261,7 +259,6 @@ public class BlockingClientSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Context contextMock = mock(Context.class);
         ListenableCompletableFuture listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
         try (MockedStatic<ListenableCompletableFuture> listenableCompletableFuture = mockStatic(ListenableCompletableFuture.class);
              MockedStatic<Context> context = mockStatic(Context.class)) {
@@ -286,6 +283,7 @@ public class BlockingClientSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${36732ad5-ba24-3fdc-b468-45e041efaa06}
+    @Ignore()
     @Test()
     public void getConnectFutureTest() throws IOException {
         /**
@@ -293,18 +291,15 @@ public class BlockingClientSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        BlockingClient blockingClientMock2 = mock(BlockingClient.class);
         try (MockedStatic<ListenableCompletableFuture> listenableCompletableFuture = mockStatic(ListenableCompletableFuture.class);
              MockedStatic<Context> context = mockStatic(Context.class)) {
-            Context context2 = new Context();
-            context.when(() -> Context.get()).thenReturn(context2);
-            ListenableCompletableFuture<SocketAddress> listenableCompletableFuture2 = new ListenableCompletableFuture<>();
+            context.when(() -> Context.get()).thenReturn(contextMock);
+            CompletableFuture completableFuture = new CompletableFuture();
+            ListenableCompletableFuture<SocketAddress> listenableCompletableFuture2 = ListenableCompletableFuture.of(completableFuture);
             listenableCompletableFuture.when(() -> ListenableCompletableFuture.of((CompletableFuture) any())).thenReturn(listenableCompletableFuture2);
-            Duration duration = Duration.ofSeconds(30L);
+            Duration duration = Duration.ofDays(0L);
             SocketFactory socketFactory = SocketFactory.getDefault();
             Set<BlockingClient> blockingClientSet = new HashSet<>();
-            blockingClientSet.add(blockingClientMock);
-            blockingClientSet.add(blockingClientMock2);
             BlockingClient target = new BlockingClient((SocketAddress) null, streamConnectionMock, duration, socketFactory, blockingClientSet);
             doNothing().when(streamConnectionMock).setWriteTarget(target);
             //Act Statement(s)

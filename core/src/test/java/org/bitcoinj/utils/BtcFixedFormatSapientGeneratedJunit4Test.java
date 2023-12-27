@@ -49,17 +49,17 @@ public class BtcFixedFormatSapientGeneratedJunit4Test {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkState(false)).thenAnswer((Answer<Void>) invocation -> null);
             DecimalFormat decimalFormat = new DecimalFormat();
-            btcFormat.when(() -> BtcFormat.prefixUnitsIndicator(decimalFormat, 0)).thenAnswer((Answer<Void>) invocation -> null);
+            btcFormat.when(() -> BtcFormat.prefixUnitsIndicator(decimalFormat, 1)).thenAnswer((Answer<Void>) invocation -> null);
             Locale locale = new Locale("language1");
             List<Integer> integerList = new ArrayList<>();
-            BtcFixedFormat target = new BtcFixedFormat(locale, 0, 0, integerList);
+            BtcFixedFormat target = new BtcFixedFormat(locale, 1, 1, integerList);
             //Act Statement(s)
             int result = target.scale(new BigInteger("0"), 0);
             //Assert statement(s)
-            assertThat(result, equalTo(0));
+            assertThat(result, equalTo(1));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
             preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
-            btcFormat.verify(() -> BtcFormat.prefixUnitsIndicator(decimalFormat, 0), atLeast(1));
+            btcFormat.verify(() -> BtcFormat.prefixUnitsIndicator(decimalFormat, 1), atLeast(1));
         }
     }
 
@@ -160,7 +160,7 @@ public class BtcFixedFormatSapientGeneratedJunit4Test {
             BtcFixedFormat target = new BtcFixedFormat(locale, 0, 0, integerList);
             //Act Statement(s)
             int[] result = target.fractionPlaceGroups();
-            int[] intResultArray = new int[]{0, 0};
+            int[] intResultArray = new int[]{0};
             //Assert statement(s)
             assertThat(result, equalTo(intResultArray));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
@@ -184,12 +184,12 @@ public class BtcFixedFormatSapientGeneratedJunit4Test {
             preconditions.when(() -> Preconditions.checkState(false)).thenAnswer((Answer<Void>) invocation -> null);
             Locale locale = new Locale("language1");
             List<Integer> integerList = new ArrayList<>();
-            BtcFixedFormat target = spy(new BtcFixedFormat(locale, 1, 1, integerList));
-            doReturn("A").when(target).pattern();
+            BtcFixedFormat target = spy(new BtcFixedFormat(locale, 1, 0, integerList));
+            doReturn("B").when(target).pattern();
             //Act Statement(s)
             String result = target.toString();
             //Assert statement(s)
-            assertThat(result, equalTo("Decicoin-format A"));
+            assertThat(result, equalTo("Decicoin-format B"));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
             preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
             verify(target).pattern();
@@ -212,12 +212,12 @@ public class BtcFixedFormatSapientGeneratedJunit4Test {
             preconditions.when(() -> Preconditions.checkState(false)).thenAnswer((Answer<Void>) invocation -> null);
             Locale locale = new Locale("language1");
             List<Integer> integerList = new ArrayList<>();
-            BtcFixedFormat target = spy(new BtcFixedFormat(locale, 2, 1, integerList));
-            doReturn("A").when(target).pattern();
+            BtcFixedFormat target = spy(new BtcFixedFormat(locale, 2, 0, integerList));
+            doReturn("B").when(target).pattern();
             //Act Statement(s)
             String result = target.toString();
             //Assert statement(s)
-            assertThat(result, equalTo("Centicoin-format A"));
+            assertThat(result, equalTo("Centicoin-format B"));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
             preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
             verify(target).pattern();
@@ -240,12 +240,12 @@ public class BtcFixedFormatSapientGeneratedJunit4Test {
             preconditions.when(() -> Preconditions.checkState(false)).thenAnswer((Answer<Void>) invocation -> null);
             Locale locale = new Locale("language1");
             List<Integer> integerList = new ArrayList<>();
-            BtcFixedFormat target = spy(new BtcFixedFormat(locale, 3, 1, integerList));
-            doReturn("A").when(target).pattern();
+            BtcFixedFormat target = spy(new BtcFixedFormat(locale, 3, 0, integerList));
+            doReturn("B").when(target).pattern();
             //Act Statement(s)
             String result = target.toString();
             //Assert statement(s)
-            assertThat(result, equalTo("Millicoin-format A"));
+            assertThat(result, equalTo("Millicoin-format B"));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
             preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
             verify(target).pattern();
@@ -268,12 +268,12 @@ public class BtcFixedFormatSapientGeneratedJunit4Test {
             preconditions.when(() -> Preconditions.checkState(false)).thenAnswer((Answer<Void>) invocation -> null);
             Locale locale = new Locale("language1");
             List<Integer> integerList = new ArrayList<>();
-            BtcFixedFormat target = spy(new BtcFixedFormat(locale, 6, 1, integerList));
-            doReturn("A").when(target).pattern();
+            BtcFixedFormat target = spy(new BtcFixedFormat(locale, 6, 0, integerList));
+            doReturn("B").when(target).pattern();
             //Act Statement(s)
             String result = target.toString();
             //Assert statement(s)
-            assertThat(result, equalTo("Microcoin-format A"));
+            assertThat(result, equalTo("Microcoin-format B"));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
             preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
             verify(target).pattern();
@@ -297,11 +297,11 @@ public class BtcFixedFormatSapientGeneratedJunit4Test {
             Locale locale = new Locale("language1");
             List<Integer> integerList = new ArrayList<>();
             BtcFixedFormat target = spy(new BtcFixedFormat(locale, -3, 0, integerList));
-            doReturn("A").when(target).pattern();
+            doReturn("B").when(target).pattern();
             //Act Statement(s)
             String result = target.toString();
             //Assert statement(s)
-            assertThat(result, equalTo("Kilocoin-format A"));
+            assertThat(result, equalTo("Kilocoin-format B"));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
             preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
             verify(target).pattern();
@@ -325,11 +325,11 @@ public class BtcFixedFormatSapientGeneratedJunit4Test {
             Locale locale = new Locale("language1");
             List<Integer> integerList = new ArrayList<>();
             BtcFixedFormat target = spy(new BtcFixedFormat(locale, -2, 0, integerList));
-            doReturn("A").when(target).pattern();
+            doReturn("B").when(target).pattern();
             //Act Statement(s)
             String result = target.toString();
             //Assert statement(s)
-            assertThat(result, equalTo("Hectocoin-format A"));
+            assertThat(result, equalTo("Hectocoin-format B"));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
             preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
             verify(target).pattern();
@@ -353,11 +353,11 @@ public class BtcFixedFormatSapientGeneratedJunit4Test {
             Locale locale = new Locale("language1");
             List<Integer> integerList = new ArrayList<>();
             BtcFixedFormat target = spy(new BtcFixedFormat(locale, -6, 0, integerList));
-            doReturn("A").when(target).pattern();
+            doReturn("B").when(target).pattern();
             //Act Statement(s)
             String result = target.toString();
             //Assert statement(s)
-            assertThat(result, equalTo("Megacoin-format A"));
+            assertThat(result, equalTo("Megacoin-format B"));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
             preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
             verify(target).pattern();
@@ -381,11 +381,11 @@ public class BtcFixedFormatSapientGeneratedJunit4Test {
             Locale locale = new Locale("language1");
             List<Integer> integerList = new ArrayList<>();
             BtcFixedFormat target = spy(new BtcFixedFormat(locale, 0, 0, integerList));
-            doReturn("A").when(target).pattern();
+            doReturn("B").when(target).pattern();
             //Act Statement(s)
             String result = target.toString();
             //Assert statement(s)
-            assertThat(result, equalTo("Coin-format A"));
+            assertThat(result, equalTo("Coin-format B"));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
             preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
             verify(target).pattern();
@@ -409,11 +409,11 @@ public class BtcFixedFormatSapientGeneratedJunit4Test {
             Locale locale = new Locale("language1");
             List<Integer> integerList = new ArrayList<>();
             BtcFixedFormat target = spy(new BtcFixedFormat(locale, -1, 0, integerList));
-            doReturn("A").when(target).pattern();
+            doReturn("B").when(target).pattern();
             //Act Statement(s)
             String result = target.toString();
             //Assert statement(s)
-            assertThat(result, equalTo("Dekacoin-format A"));
+            assertThat(result, equalTo("Dekacoin-format B"));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
             preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
             verify(target).pattern();
@@ -436,7 +436,7 @@ public class BtcFixedFormatSapientGeneratedJunit4Test {
             preconditions.when(() -> Preconditions.checkState(false)).thenAnswer((Answer<Void>) invocation -> null);
             Locale locale = new Locale("language1");
             List<Integer> integerList = new ArrayList<>();
-            BtcFixedFormat target = spy(new BtcFixedFormat(locale, 2, 1, integerList));
+            BtcFixedFormat target = spy(new BtcFixedFormat(locale, 2, 0, integerList));
             doReturn("A").when(target).pattern();
             //Act Statement(s)
             String result = target.toString();

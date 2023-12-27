@@ -18,8 +18,8 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "A3E1081BD218DD0F326D8451577C3D65"
-    problemWasSolvedByProver: true
+    modelFingerprint: "ED3A11DD42F63B3AF964CB863C43B1BE"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
@@ -42,7 +42,7 @@ methods:
           privateConstructor: false
           createdByTargetCode: false
         valueType: "java.lang.Object"
-        uuid: "removeFromList_object1"
+        uuid: "lambda$removeFromList$0_object2"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -50,7 +50,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "list"
-      modelFingerprint: "50AC07ADE6741A6F8C712755C6321C9D"
+      modelFingerprint: "3438CC900048BF97B5C4BB4E737A6643"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -58,11 +58,9 @@ methods:
       value:
         sapientType: "COLLECTION"
         content: !<collection>
-          collectionClass: "java.util.ArrayList"
           parameters: []
           values: []
         suggestedContent: !<collection>
-          collectionClass: "java.util.ArrayList"
           parameters: []
           values: []
         valueType: "java.util.List"
@@ -75,7 +73,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "26F354D57EDB6DE30F14FF7FA23B655D"
+      modelFingerprint: "EA0E76310322BEC2C2E83642E092EF02"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -83,21 +81,44 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: false
+          value: true
         valueType: "boolean"
-        uuid: "removeFromList_boolean2"
+        uuid: "removeFromList_boolean3"
         fixed: false
         equalsMethodPresent: true
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
+    - type: "STATE_VERIFICATION_PARAMETER"
+      name: "list"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "COLLECTION"
+        content: !<collection>
+          parameters: []
+          values: []
+        suggestedContent: !<collection>
+          parameters: []
+          values: []
+        valueType: "java.util.List"
+        genericValueType: "? extends org.bitcoinj.utils.ListenerRegistration<java.lang.Object>"
+        uuid: "removeFromList_list4"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      originalValueUuid: "removeFromList_list1"
+      staticReadMethodForField: false
+      filledByUser: false
     uuid: "6e6e00e4-4c77-3886-a8b5-2711d0dd31a1"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "removeFromListWhenRListenerNotEqualsListener"
@@ -324,8 +345,8 @@ methods:
       filledByUser: false
     uuid: "469cd85c-3ae7-33de-9206-c5c253c2a4a2"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false

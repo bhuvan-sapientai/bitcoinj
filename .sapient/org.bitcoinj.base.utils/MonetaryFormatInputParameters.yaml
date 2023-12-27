@@ -97,9 +97,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "\\uD83F"
+          value: "\ud83f"
         suggestedContent: !<regular>
-          value: "\\uD83F"
+          value: "\ud83f"
         valueType: "char"
         uuid: "negativeSign_char1"
         fixed: false
@@ -215,9 +215,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\uD83F"
+                value: "\ud83f"
               suggestedContent: !<regular>
-                value: "\\uD83F"
+                value: "\ud83f"
               valueType: "char"
               uuid: "negativeSign_char1"
               fixed: false
@@ -227,7 +227,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -456,7 +456,7 @@ methods:
             value:
               sapientType: "BASIC"
               suggestedContent: !<regular>
-                value: "\\uD83F"
+                value: "\ud83f"
               valueType: "char"
               uuid: "negativeSign_char1"
               fixed: false
@@ -466,7 +466,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -633,11 +633,11 @@ methods:
       filledByUser: false
     uuid: "9ec7ea02-1e86-342a-9733-d8b53a49beb7"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path3"
     testPathName: "negativeSignWhenNegativeSignNotGreaterThan0AndNegativeSignNotEqualsThisNegativeSign"
@@ -707,9 +707,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "\\u0000"
+          value: "\0"
         suggestedContent: !<regular>
-          value: "\\u0000"
+          value: "\0"
         valueType: "char"
         uuid: "negativeSign_char1"
         fixed: false
@@ -825,9 +825,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               suggestedContent: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "negativeSign_char1"
               fixed: false
@@ -837,7 +837,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -1066,7 +1066,7 @@ methods:
             value:
               sapientType: "BASIC"
               suggestedContent: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "negativeSign_char1"
               fixed: false
@@ -1076,7 +1076,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -1243,11 +1243,11 @@ methods:
       filledByUser: false
     uuid: "968d5cad-febe-36e0-a15e-ec998c66eec7"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path4"
     pathIdForUser: "path4"
     testPathName: "negativeSignWhenNegativeSignGreaterThan0AndNegativeSignEqualsThisNegativeSign"
@@ -1256,12 +1256,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "05B7848051A04BE57A61D055A3B7B8B9"
-    problemWasSolvedByProver: true
+    modelFingerprint: "66D494479207EFB691BA47E1739ABE22"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "E8AAA76518010EB4B9E2B05B3FF8C364"
+      modelFingerprint: "1812E57E39789A36E2C25DE1B2306BEA"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1275,9 +1275,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
+                value: false
               valueType: "boolean"
               uuid: "<init>_boolean1"
               fixed: false
@@ -1291,10 +1289,6 @@ methods:
           - name: "useSymbol"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
               valueType: "boolean"
               uuid: "<init>_boolean1"
               fixed: false
@@ -1311,7 +1305,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "negativeSign"
-      modelFingerprint: "2D02D6D5A5B08F3E8F83A92295AAA9B4"
+      modelFingerprint: "2025AFA085D3B814D46DEFD8C806B63A"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1319,9 +1313,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "-"
-        suggestedContent: !<regular>
-          value: "-"
+          value: "A"
         valueType: "char"
         uuid: "negativeSign_char1"
         fixed: false
@@ -1423,7 +1415,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "EA8EC3434797088D6B8D885700BAF914"
+      modelFingerprint: "3D4112C1B84462A9EB66D9A942CCEF40"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -1436,10 +1428,6 @@ methods:
           - name: "useSymbol"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
               valueType: "boolean"
               uuid: "<init>_boolean1"
               fixed: false
@@ -1456,11 +1444,11 @@ methods:
       filledByUser: false
     uuid: "abb2957d-2fc8-3c18-8545-fe5f578003da"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path5"
     pathIdForUser: "path5"
     testPathName: "negativeSignWhenNegativeSignGreaterThan0AndNegativeSignNotEqualsThisNegativeSign"
@@ -2065,11 +2053,11 @@ methods:
       filledByUser: false
     uuid: "e50e351c-b8ae-3da4-b637-d9f0a98e77b4"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path3"
     testPathName: "positiveSignWhenCharacterIsDigitPositiveSignAndPositiveSignEqualsThisPositiveSign"
@@ -2078,12 +2066,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "121479DE2925E8E83888BC7C4B46E09B"
-    problemWasSolvedByProver: true
+    modelFingerprint: "8359F774C2A44841468830561A81F032"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "E8AAA76518010EB4B9E2B05B3FF8C364"
+      modelFingerprint: "1812E57E39789A36E2C25DE1B2306BEA"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2097,9 +2085,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
+                value: false
               valueType: "boolean"
               uuid: "<init>_boolean1"
               fixed: false
@@ -2113,10 +2099,6 @@ methods:
           - name: "useSymbol"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
               valueType: "boolean"
               uuid: "<init>_boolean1"
               fixed: false
@@ -2133,7 +2115,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "positiveSign"
-      modelFingerprint: "88B0152D983EFDB84BB1DB4CDE8338E6"
+      modelFingerprint: "971123B0BF2E687C6F27AF09DA7E0D56"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -2141,9 +2123,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "+"
-        suggestedContent: !<regular>
-          value: "+"
+          value: "A"
         valueType: "char"
         uuid: "positiveSign_char1"
         fixed: false
@@ -2199,433 +2179,28 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "F2179233EDA35DC28A5132C1A348CEBA"
+      modelFingerprint: "3D4112C1B84462A9EB66D9A942CCEF40"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
+        sapientType: "THIS"
         content: !<new>
           target: "org.bitcoinj.base.utils.MonetaryFormat"
           parameters:
-          - name: "negativeSign"
+          - name: "useSymbol"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "-"
-              valueType: "char"
-              uuid: "<init>_int41"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "positiveSign"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "+"
-              suggestedContent: !<regular>
-                value: "+"
-              valueType: "char"
-              uuid: "positiveSign_char1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "zeroDigit"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "0"
-              valueType: "char"
-              uuid: "<init>_int43"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "decimalMark"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "."
-              valueType: "char"
-              uuid: "<init>_int44"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "minDecimals"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              valueType: "int"
-              uuid: "<init>_int45"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "decimalGroups"
-            value:
-              sapientType: "NULL"
-              valueType: "java.util.List"
-              genericValueType: "java.lang.Integer"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "shift"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "int"
-              uuid: "<init>_int46"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "roundingMode"
-            value:
-              sapientType: "ENUM"
-              content: !<regular>
-                value: "HALF_UP"
-              valueType: "java.math.RoundingMode"
-              uuid: "Enum-java.math.RoundingMode-HALF_UP"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "codes"
-            value:
-              sapientType: "ARRAY"
-              content: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "\\u20BF"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  2:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  3:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "m\\u20BF"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  4:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  5:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  6:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "\\u00B5\\u20BF"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  7:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  8:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "\\u0219"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "\\u20BF"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  2:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  3:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "m\\u20BF"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  4:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  5:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  6:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "\\u00B5\\u20BF"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  7:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  8:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "\\u0219"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              valueType: "java.lang.String[]"
-              uuid: "<init>_string[]6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "codeSeparator"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: " "
-              valueType: "char"
-              uuid: "<init>_int47"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "codePrefixed"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: true
               valueType: "boolean"
-              uuid: "<init>_int48"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: true
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "org.bitcoinj.base.utils.MonetaryFormat"
-          parameters:
-          - name: "negativeSign"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "-"
-              valueType: "char"
-              uuid: "<init>_int41"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "positiveSign"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "+"
-              suggestedContent: !<regular>
-                value: "+"
-              valueType: "char"
-              uuid: "positiveSign_char1"
+              uuid: "<init>_boolean1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
-          - name: "zeroDigit"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "0"
-              valueType: "char"
-              uuid: "<init>_int43"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "decimalMark"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "."
-              valueType: "char"
-              uuid: "<init>_int44"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "minDecimals"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              valueType: "int"
-              uuid: "<init>_int45"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "decimalGroups"
-            value:
-              sapientType: "NULL"
-              valueType: "java.util.List"
-              genericValueType: "java.lang.Integer"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "shift"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "int"
-              uuid: "<init>_int46"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "roundingMode"
-            value:
-              sapientType: "ENUM"
-              content: !<regular>
-                value: "HALF_UP"
-              valueType: "java.math.RoundingMode"
-              uuid: "Enum-java.math.RoundingMode-HALF_UP"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "codes"
-            value:
-              sapientType: "ARRAY"
-              suggestedContent: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "\\u20BF"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  2:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  3:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "m\\u20BF"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  4:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  5:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  6:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "\\u00B5\\u20BF"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  7:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  8:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "\\u0219"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              valueType: "java.lang.String[]"
-              uuid: "<init>_string[]6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "codeSeparator"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: " "
-              valueType: "char"
-              uuid: "<init>_int47"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "codePrefixed"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: true
-              valueType: "boolean"
-              uuid: "<init>_int48"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: true
-          createdByTargetCode: true
+          privateConstructor: false
+          createdByTargetCode: false
         valueType: "org.bitcoinj.base.utils.MonetaryFormat"
-        uuid: "positiveSign_monetaryFormat1"
+        uuid: "targetClassObject"
         fixed: true
         equalsMethodPresent: true
         explicitCastNeeded: false
@@ -2633,11 +2208,11 @@ methods:
       filledByUser: false
     uuid: "fc6a10e3-518c-3989-8a18-49894fe983b8"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path4"
     pathIdForUser: "path4"
     testPathName: "positiveSignWhenCharacterIsDigitPositiveSignAndPositiveSignNotEqualsThisPositiveSign"
@@ -2886,7 +2461,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -3127,7 +2702,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -3395,9 +2970,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "\\uD83F"
+          value: "\ud83f"
         suggestedContent: !<regular>
-          value: "\\uD83F"
+          value: "\ud83f"
         valueType: "char"
         uuid: "decimalMark_char1"
         fixed: false
@@ -3523,7 +3098,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -3543,9 +3118,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\uD83F"
+                value: "\ud83f"
               suggestedContent: !<regular>
-                value: "\\uD83F"
+                value: "\ud83f"
               valueType: "char"
               uuid: "decimalMark_char1"
               fixed: false
@@ -3764,7 +3339,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -3784,7 +3359,7 @@ methods:
             value:
               sapientType: "BASIC"
               suggestedContent: !<regular>
-                value: "\\uD83F"
+                value: "\ud83f"
               valueType: "char"
               uuid: "decimalMark_char1"
               fixed: false
@@ -3931,11 +3506,11 @@ methods:
       filledByUser: false
     uuid: "22c1f48a-0e87-3add-ab60-f4de673cd1f3"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path3"
     testPathName: "decimalMarkWhenDecimalMarkNotGreaterThan0AndDecimalMarkNotEqualsThisDecimalMark"
@@ -4005,9 +3580,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "\\u0000"
+          value: "\0"
         suggestedContent: !<regular>
-          value: "\\u0000"
+          value: "\0"
         valueType: "char"
         uuid: "decimalMark_char1"
         fixed: false
@@ -4133,7 +3708,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -4153,9 +3728,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               suggestedContent: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "decimalMark_char1"
               fixed: false
@@ -4374,7 +3949,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -4394,7 +3969,7 @@ methods:
             value:
               sapientType: "BASIC"
               suggestedContent: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "decimalMark_char1"
               fixed: false
@@ -4541,11 +4116,11 @@ methods:
       filledByUser: false
     uuid: "565633aa-d902-397b-b2b7-a3bdf639a4bf"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path4"
     pathIdForUser: "path4"
     testPathName: "decimalMarkWhenDecimalMarkGreaterThan0AndDecimalMarkEqualsThisDecimalMark"
@@ -4554,12 +4129,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "346490A4239B0C409EB6B9BF8D6D5C0D"
-    problemWasSolvedByProver: true
+    modelFingerprint: "65269E8D4B79499071CAF6C70A59D1FA"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "E8AAA76518010EB4B9E2B05B3FF8C364"
+      modelFingerprint: "1812E57E39789A36E2C25DE1B2306BEA"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -4573,9 +4148,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
+                value: false
               valueType: "boolean"
               uuid: "<init>_boolean1"
               fixed: false
@@ -4589,10 +4162,6 @@ methods:
           - name: "useSymbol"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
               valueType: "boolean"
               uuid: "<init>_boolean1"
               fixed: false
@@ -4609,7 +4178,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "decimalMark"
-      modelFingerprint: "9F9EE3C8337D209CBD79B49E95AB8D09"
+      modelFingerprint: "3381E4D9728C066B030665CFD237CD8A"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -4617,9 +4186,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "."
-        suggestedContent: !<regular>
-          value: "."
+          value: "A"
         valueType: "char"
         uuid: "decimalMark_char1"
         fixed: false
@@ -4721,7 +4288,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "EA8EC3434797088D6B8D885700BAF914"
+      modelFingerprint: "3D4112C1B84462A9EB66D9A942CCEF40"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -4734,10 +4301,6 @@ methods:
           - name: "useSymbol"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
               valueType: "boolean"
               uuid: "<init>_boolean1"
               fixed: false
@@ -4754,11 +4317,11 @@ methods:
       filledByUser: false
     uuid: "8fd7fce3-46b9-3c46-b098-90645e1ab1dc"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path5"
     pathIdForUser: "path5"
     testPathName: "decimalMarkWhenDecimalMarkGreaterThan0AndDecimalMarkNotEqualsThisDecimalMark"
@@ -5007,7 +4570,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -5248,7 +4811,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -5557,7 +5120,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -5604,7 +5167,9 @@ methods:
                   content: !<regular>
                     value: 1
                   valueType: "java.lang.Integer"
+                  uuid: "optionalDecimals_arrayList1-item0"
                   fixed: true
+                  collectionUuid: "optionalDecimals_arrayList1"
                   equalsMethodPresent: false
                   explicitCastNeeded: false
               suggestedContent: !<collection>
@@ -5615,7 +5180,9 @@ methods:
                   content: !<regular>
                     value: 1
                   valueType: "java.lang.Integer"
+                  uuid: "optionalDecimals_arrayList1-item0"
                   fixed: true
+                  collectionUuid: "optionalDecimals_arrayList1"
                   equalsMethodPresent: false
                   explicitCastNeeded: false
               valueType: "java.util.List"
@@ -5819,7 +5386,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -5866,7 +5433,9 @@ methods:
                   content: !<regular>
                     value: 1
                   valueType: "java.lang.Integer"
+                  uuid: "optionalDecimals_arrayList1-item0"
                   fixed: true
+                  collectionUuid: "optionalDecimals_arrayList1"
                   equalsMethodPresent: false
                   explicitCastNeeded: false
               valueType: "java.util.List"
@@ -6204,7 +5773,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -6251,7 +5820,9 @@ methods:
                   content: !<regular>
                     value: 1
                   valueType: "java.lang.Integer"
+                  uuid: "repeatOptionalDecimals_arrayList1-item0"
                   fixed: true
+                  collectionUuid: "repeatOptionalDecimals_arrayList1"
                   equalsMethodPresent: false
                   explicitCastNeeded: false
               suggestedContent: !<collection>
@@ -6262,7 +5833,9 @@ methods:
                   content: !<regular>
                     value: 1
                   valueType: "java.lang.Integer"
+                  uuid: "repeatOptionalDecimals_arrayList1-item0"
                   fixed: true
+                  collectionUuid: "repeatOptionalDecimals_arrayList1"
                   equalsMethodPresent: false
                   explicitCastNeeded: false
               valueType: "java.util.List"
@@ -6466,7 +6039,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -6513,7 +6086,9 @@ methods:
                   content: !<regular>
                     value: 1
                   valueType: "java.lang.Integer"
+                  uuid: "repeatOptionalDecimals_arrayList1-item0"
                   fixed: true
+                  collectionUuid: "repeatOptionalDecimals_arrayList1"
                   equalsMethodPresent: false
                   explicitCastNeeded: false
               valueType: "java.util.List"
@@ -6645,11 +6220,11 @@ methods:
       filledByUser: false
     uuid: "7e2882fb-08d8-36ce-8620-3ad9b74c6e58"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "repeatOptionalDecimalsWhenINotLessThanRepetitions"
@@ -6838,7 +6413,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -7110,7 +6685,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -7292,11 +6867,11 @@ methods:
       filledByUser: false
     uuid: "bcfdbac0-9191-3e5b-a2ee-5b6de14c4e73"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "shift"
     returnType: "org.bitcoinj.base.utils.MonetaryFormat"
@@ -7527,7 +7102,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -7768,7 +7343,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -8170,7 +7745,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -8411,7 +7986,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -8675,7 +8250,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -8785,7 +8360,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -9089,7 +8664,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -9163,6 +8738,7 @@ methods:
                     content: !<regular>
                       value: "\\u20BF"
                     valueType: "java.lang.String"
+                    uuid: "code_string[]1-item0"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -9180,6 +8756,7 @@ methods:
                     content: !<regular>
                       value: "codesItem1"
                     valueType: "java.lang.String"
+                    uuid: "code_string[]1-item2"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -9188,6 +8765,7 @@ methods:
                     content: !<regular>
                       value: "m\\u20BF"
                     valueType: "java.lang.String"
+                    uuid: "code_string[]1-item3"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -9196,6 +8774,7 @@ methods:
                     content: !<regular>
                       value: "codesItem1"
                     valueType: "java.lang.String"
+                    uuid: "code_string[]1-item4"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -9204,6 +8783,7 @@ methods:
                     content: !<regular>
                       value: "codesItem1"
                     valueType: "java.lang.String"
+                    uuid: "code_string[]1-item5"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -9212,6 +8792,7 @@ methods:
                     content: !<regular>
                       value: "\\u00B5\\u20BF"
                     valueType: "java.lang.String"
+                    uuid: "code_string[]1-item6"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -9220,6 +8801,7 @@ methods:
                     content: !<regular>
                       value: "codesItem1"
                     valueType: "java.lang.String"
+                    uuid: "code_string[]1-item7"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -9228,6 +8810,7 @@ methods:
                     content: !<regular>
                       value: "\\u0219"
                     valueType: "java.lang.String"
+                    uuid: "code_string[]1-item8"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -9238,6 +8821,7 @@ methods:
                     content: !<regular>
                       value: "\\u20BF"
                     valueType: "java.lang.String"
+                    uuid: "code_string[]1-item0"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -9255,6 +8839,7 @@ methods:
                     content: !<regular>
                       value: "codesItem1"
                     valueType: "java.lang.String"
+                    uuid: "code_string[]1-item2"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -9263,6 +8848,7 @@ methods:
                     content: !<regular>
                       value: "m\\u20BF"
                     valueType: "java.lang.String"
+                    uuid: "code_string[]1-item3"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -9271,6 +8857,7 @@ methods:
                     content: !<regular>
                       value: "codesItem1"
                     valueType: "java.lang.String"
+                    uuid: "code_string[]1-item4"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -9279,6 +8866,7 @@ methods:
                     content: !<regular>
                       value: "codesItem1"
                     valueType: "java.lang.String"
+                    uuid: "code_string[]1-item5"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -9287,6 +8875,7 @@ methods:
                     content: !<regular>
                       value: "\\u00B5\\u20BF"
                     valueType: "java.lang.String"
+                    uuid: "code_string[]1-item6"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -9295,6 +8884,7 @@ methods:
                     content: !<regular>
                       value: "codesItem1"
                     valueType: "java.lang.String"
+                    uuid: "code_string[]1-item7"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -9303,6 +8893,7 @@ methods:
                     content: !<regular>
                       value: "\\u0219"
                     valueType: "java.lang.String"
+                    uuid: "code_string[]1-item8"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -9350,7 +8941,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -9424,6 +9015,7 @@ methods:
                     content: !<regular>
                       value: "\\u20BF"
                     valueType: "java.lang.String"
+                    uuid: "code_string[]1-item0"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -9437,6 +9029,7 @@ methods:
                   2:
                     sapientType: "BASIC"
                     valueType: "java.lang.String"
+                    uuid: "code_string[]1-item2"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -9445,18 +9038,21 @@ methods:
                     content: !<regular>
                       value: "m\\u20BF"
                     valueType: "java.lang.String"
+                    uuid: "code_string[]1-item3"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
                   4:
                     sapientType: "BASIC"
                     valueType: "java.lang.String"
+                    uuid: "code_string[]1-item4"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
                   5:
                     sapientType: "BASIC"
                     valueType: "java.lang.String"
+                    uuid: "code_string[]1-item5"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -9465,12 +9061,14 @@ methods:
                     content: !<regular>
                       value: "\\u00B5\\u20BF"
                     valueType: "java.lang.String"
+                    uuid: "code_string[]1-item6"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
                   7:
                     sapientType: "BASIC"
                     valueType: "java.lang.String"
+                    uuid: "code_string[]1-item7"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -9479,6 +9077,7 @@ methods:
                     content: !<regular>
                       value: "\\u0219"
                     valueType: "java.lang.String"
+                    uuid: "code_string[]1-item8"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -9518,11 +9117,11 @@ methods:
       filledByUser: false
     uuid: "47fdf695-5162-3f40-8756-0cc1e6d87bba"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path3"
     testPathName: "codeWhenCodeShiftLessThan0AndThisCodesIsNull"
@@ -9686,7 +9285,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -9801,7 +9400,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -9904,10 +9503,11 @@ methods:
       filledByUser: false
     uuid: "38bc8407-2b3e-3065-b034-3ce7247d4bc6"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "codeSeparator"
     returnType: "org.bitcoinj.base.utils.MonetaryFormat"
@@ -10004,9 +9604,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "\\uD83F"
+          value: "\ud83f"
         suggestedContent: !<regular>
-          value: "\\uD83F"
+          value: "\ud83f"
         valueType: "char"
         uuid: "codeSeparator_char1"
         fixed: false
@@ -10132,7 +9732,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -10336,9 +9936,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\uD83F"
+                value: "\ud83f"
               suggestedContent: !<regular>
-                value: "\\uD83F"
+                value: "\ud83f"
               valueType: "char"
               uuid: "codeSeparator_char1"
               fixed: false
@@ -10373,7 +9973,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -10513,7 +10113,7 @@ methods:
             value:
               sapientType: "BASIC"
               suggestedContent: !<regular>
-                value: "\\uD83F"
+                value: "\ud83f"
               valueType: "char"
               uuid: "codeSeparator_char1"
               fixed: false
@@ -10540,11 +10140,11 @@ methods:
       filledByUser: false
     uuid: "9c03b39f-7b25-316b-81db-7affa0e97c56"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path3"
     testPathName: "codeSeparatorWhenCodeSeparatorNotGreaterThan0AndCodeSeparatorNotEqualsThisCodeSeparator"
@@ -10614,9 +10214,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "\\u0000"
+          value: "\0"
         suggestedContent: !<regular>
-          value: "\\u0000"
+          value: "\0"
         valueType: "char"
         uuid: "codeSeparator_char1"
         fixed: false
@@ -10742,7 +10342,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -10946,9 +10546,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               suggestedContent: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "codeSeparator_char1"
               fixed: false
@@ -10983,7 +10583,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -11123,7 +10723,7 @@ methods:
             value:
               sapientType: "BASIC"
               suggestedContent: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "codeSeparator_char1"
               fixed: false
@@ -11150,11 +10750,11 @@ methods:
       filledByUser: false
     uuid: "9e00b82f-3a63-3c35-bd9e-e50876b333fd"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path4"
     pathIdForUser: "path4"
     testPathName: "codeSeparatorWhenCodeSeparatorGreaterThan0AndCodeSeparatorEqualsThisCodeSeparator"
@@ -11163,12 +10763,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "715236E3B3B26C16B8EBFBE446AD5E1D"
-    problemWasSolvedByProver: true
+    modelFingerprint: "AE5F0CB40FF0DDE59155A19863284E17"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "E8AAA76518010EB4B9E2B05B3FF8C364"
+      modelFingerprint: "1812E57E39789A36E2C25DE1B2306BEA"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -11182,9 +10782,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
+                value: false
               valueType: "boolean"
               uuid: "<init>_boolean1"
               fixed: false
@@ -11198,10 +10796,6 @@ methods:
           - name: "useSymbol"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
               valueType: "boolean"
               uuid: "<init>_boolean1"
               fixed: false
@@ -11218,7 +10812,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "codeSeparator"
-      modelFingerprint: "F6DEBFDFA093F176637CD274155D6569"
+      modelFingerprint: "B6E45096313DE4F1E0A46780A36CB7AA"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -11226,8 +10820,6 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "A"
-        suggestedContent: !<regular>
           value: "A"
         valueType: "char"
         uuid: "codeSeparator_char1"
@@ -11330,433 +10922,28 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "7D624351F52233A5DA35DCC9CAD58E39"
+      modelFingerprint: "3D4112C1B84462A9EB66D9A942CCEF40"
       index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
+        sapientType: "THIS"
         content: !<new>
           target: "org.bitcoinj.base.utils.MonetaryFormat"
           parameters:
-          - name: "negativeSign"
+          - name: "useSymbol"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "-"
-              valueType: "char"
-              uuid: "<init>_int41"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "positiveSign"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "\\u0000"
-              valueType: "char"
-              uuid: "<init>_int42"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "zeroDigit"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "0"
-              valueType: "char"
-              uuid: "<init>_int43"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "decimalMark"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "."
-              valueType: "char"
-              uuid: "<init>_int44"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "minDecimals"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              valueType: "int"
-              uuid: "<init>_int45"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "decimalGroups"
-            value:
-              sapientType: "NULL"
-              valueType: "java.util.List"
-              genericValueType: "java.lang.Integer"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "shift"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "int"
-              uuid: "<init>_int46"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "roundingMode"
-            value:
-              sapientType: "ENUM"
-              content: !<regular>
-                value: "HALF_UP"
-              valueType: "java.math.RoundingMode"
-              uuid: "Enum-java.math.RoundingMode-HALF_UP"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "codes"
-            value:
-              sapientType: "ARRAY"
-              content: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "\\u20BF"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  2:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  3:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "m\\u20BF"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  4:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  5:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  6:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "\\u00B5\\u20BF"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  7:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  8:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "\\u0219"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "\\u20BF"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  2:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  3:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "m\\u20BF"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  4:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  5:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  6:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "\\u00B5\\u20BF"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  7:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  8:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "\\u0219"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              valueType: "java.lang.String[]"
-              uuid: "<init>_string[]6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "codeSeparator"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "A"
-              suggestedContent: !<regular>
-                value: "A"
-              valueType: "char"
-              uuid: "codeSeparator_char1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "codePrefixed"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: true
               valueType: "boolean"
-              uuid: "<init>_int48"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: true
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "org.bitcoinj.base.utils.MonetaryFormat"
-          parameters:
-          - name: "negativeSign"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "-"
-              valueType: "char"
-              uuid: "<init>_int41"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "positiveSign"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "\\u0000"
-              valueType: "char"
-              uuid: "<init>_int42"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "zeroDigit"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "0"
-              valueType: "char"
-              uuid: "<init>_int43"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "decimalMark"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "."
-              valueType: "char"
-              uuid: "<init>_int44"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "minDecimals"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              valueType: "int"
-              uuid: "<init>_int45"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "decimalGroups"
-            value:
-              sapientType: "NULL"
-              valueType: "java.util.List"
-              genericValueType: "java.lang.Integer"
+              uuid: "<init>_boolean1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
-          - name: "shift"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "int"
-              uuid: "<init>_int46"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "roundingMode"
-            value:
-              sapientType: "ENUM"
-              content: !<regular>
-                value: "HALF_UP"
-              valueType: "java.math.RoundingMode"
-              uuid: "Enum-java.math.RoundingMode-HALF_UP"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "codes"
-            value:
-              sapientType: "ARRAY"
-              suggestedContent: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "\\u20BF"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  2:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  3:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "m\\u20BF"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  4:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  5:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  6:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "\\u00B5\\u20BF"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  7:
-                    sapientType: "NULL"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  8:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "\\u0219"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              valueType: "java.lang.String[]"
-              uuid: "<init>_string[]6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "codeSeparator"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "A"
-              suggestedContent: !<regular>
-                value: "A"
-              valueType: "char"
-              uuid: "codeSeparator_char1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "codePrefixed"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: true
-              valueType: "boolean"
-              uuid: "<init>_int48"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: true
-          createdByTargetCode: true
+          privateConstructor: false
+          createdByTargetCode: false
         valueType: "org.bitcoinj.base.utils.MonetaryFormat"
-        uuid: "codeSeparator_monetaryFormat1"
+        uuid: "targetClassObject"
         fixed: true
         equalsMethodPresent: true
         explicitCastNeeded: false
@@ -11764,11 +10951,11 @@ methods:
       filledByUser: false
     uuid: "50ee4e14-0df4-36aa-aac0-30a4e6e3b57f"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path5"
     pathIdForUser: "path5"
     testPathName: "codeSeparatorWhenCodeSeparatorGreaterThan0AndCodeSeparatorNotEqualsThisCodeSeparator"
@@ -11983,7 +11170,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -12221,7 +11408,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -12537,7 +11724,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -12776,7 +11963,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -13154,11 +12341,11 @@ methods:
       filledByUser: false
     uuid: "93ef893b-c9d5-3a85-9f7e-7bb1fd8e643f"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "formatWhenMaxVisibleDecimalsGreaterThanSmallestUnitExponentThrowsIllegalStateException"
@@ -13531,11 +12718,11 @@ methods:
       filledByUser: false
     uuid: "07a9f07d-6825-3bb7-807f-438d0659ea5f"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "parseFiat"
     returnType: "org.bitcoinj.base.utils.Fiat"
@@ -13724,11 +12911,11 @@ methods:
       filledByUser: false
     uuid: "b9eee9ff-59f0-3ba3-85c4-6a295192363a"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "code"
     returnType: "java.lang.String"

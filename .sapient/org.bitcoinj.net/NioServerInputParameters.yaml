@@ -390,12 +390,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "305D8FA52BC0F7C175D68EA5E56461BC"
+    modelFingerprint: "056D5A408B05DBFC37CBCD292F15AC5D"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "BF2F5388711AD364E52782E23E483572"
+      modelFingerprint: "9554BDB551A980A8314B3E64377B2619"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -456,7 +456,7 @@ methods:
           parameters:
           - name: "connectionFactory"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.net.StreamConnectionFactory"
               uuid: "<init>_streamConnectionFactory1"
               fixed: false
@@ -464,20 +464,7 @@ methods:
               explicitCastNeeded: false
           - name: "bindAddress"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.net.InetSocketAddress"
-                parameters:
-                - name: "port"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "int"
-                    uuid: "<init>_inetSocketAddress1-port"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
                 target: "java.net.InetSocketAddress"
                 parameters:
@@ -651,7 +638,6 @@ methods:
     ignoredBySystem: false
     disabledReason: "Potential harmful system call (Selector.select, Selector.close,\
       \ Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -663,12 +649,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "79850299BC5979EB805959B71CCF8878"
+    modelFingerprint: "B222D59143C42163E9A53207805771A2"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "BF2F5388711AD364E52782E23E483572"
+      modelFingerprint: "9554BDB551A980A8314B3E64377B2619"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -729,7 +715,7 @@ methods:
           parameters:
           - name: "connectionFactory"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.net.StreamConnectionFactory"
               uuid: "<init>_streamConnectionFactory1"
               fixed: false
@@ -737,20 +723,7 @@ methods:
               explicitCastNeeded: false
           - name: "bindAddress"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.net.InetSocketAddress"
-                parameters:
-                - name: "port"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "int"
-                    uuid: "<init>_inetSocketAddress1-port"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
                 target: "java.net.InetSocketAddress"
                 parameters:
@@ -965,12 +938,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "35733C6C2472F34E3B4D8F7AFF3F602E"
+    modelFingerprint: "64D2FD8E5CF65FACB48F078B9CF9F14D"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "BF2F5388711AD364E52782E23E483572"
+      modelFingerprint: "9554BDB551A980A8314B3E64377B2619"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1031,7 +1004,7 @@ methods:
           parameters:
           - name: "connectionFactory"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.net.StreamConnectionFactory"
               uuid: "<init>_streamConnectionFactory1"
               fixed: false
@@ -1039,20 +1012,7 @@ methods:
               explicitCastNeeded: false
           - name: "bindAddress"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.net.InetSocketAddress"
-                parameters:
-                - name: "port"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "int"
-                    uuid: "<init>_inetSocketAddress1-port"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
                 target: "java.net.InetSocketAddress"
                 parameters:
@@ -1288,7 +1248,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "F6E2DE9F3C00AC6C43E313EC3783B3A6"
+    modelFingerprint: "D7860438F4151BFCEA3396473A6B55A5"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -1298,7 +1258,7 @@ methods:
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "BF2F5388711AD364E52782E23E483572"
+      modelFingerprint: "9554BDB551A980A8314B3E64377B2619"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1359,7 +1319,7 @@ methods:
           parameters:
           - name: "connectionFactory"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.net.StreamConnectionFactory"
               uuid: "<init>_streamConnectionFactory1"
               fixed: false
@@ -1367,20 +1327,7 @@ methods:
               explicitCastNeeded: false
           - name: "bindAddress"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.net.InetSocketAddress"
-                parameters:
-                - name: "port"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "int"
-                    uuid: "<init>_inetSocketAddress1-port"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
                 target: "java.net.InetSocketAddress"
                 parameters:
@@ -1777,7 +1724,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "6202B80E63663E27B900127F4F367078"
+    modelFingerprint: "95AEE6F20DA8CBE2E144C901CB60D3FB"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -1787,7 +1734,7 @@ methods:
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "BF2F5388711AD364E52782E23E483572"
+      modelFingerprint: "9554BDB551A980A8314B3E64377B2619"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1848,7 +1795,7 @@ methods:
           parameters:
           - name: "connectionFactory"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.net.StreamConnectionFactory"
               uuid: "<init>_streamConnectionFactory1"
               fixed: false
@@ -1856,20 +1803,7 @@ methods:
               explicitCastNeeded: false
           - name: "bindAddress"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.net.InetSocketAddress"
-                parameters:
-                - name: "port"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "int"
-                    uuid: "<init>_inetSocketAddress1-port"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
                 target: "java.net.InetSocketAddress"
                 parameters:
@@ -2268,7 +2202,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "6202B80E63663E27B900127F4F367078"
+    modelFingerprint: "95AEE6F20DA8CBE2E144C901CB60D3FB"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -2278,7 +2212,7 @@ methods:
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "BF2F5388711AD364E52782E23E483572"
+      modelFingerprint: "9554BDB551A980A8314B3E64377B2619"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2339,7 +2273,7 @@ methods:
           parameters:
           - name: "connectionFactory"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.net.StreamConnectionFactory"
               uuid: "<init>_streamConnectionFactory1"
               fixed: false
@@ -2347,20 +2281,7 @@ methods:
               explicitCastNeeded: false
           - name: "bindAddress"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.net.InetSocketAddress"
-                parameters:
-                - name: "port"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "int"
-                    uuid: "<init>_inetSocketAddress1-port"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
                 target: "java.net.InetSocketAddress"
                 parameters:
@@ -2759,7 +2680,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "6202B80E63663E27B900127F4F367078"
+    modelFingerprint: "95AEE6F20DA8CBE2E144C901CB60D3FB"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -2769,7 +2690,7 @@ methods:
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "BF2F5388711AD364E52782E23E483572"
+      modelFingerprint: "9554BDB551A980A8314B3E64377B2619"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2830,7 +2751,7 @@ methods:
           parameters:
           - name: "connectionFactory"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.net.StreamConnectionFactory"
               uuid: "<init>_streamConnectionFactory1"
               fixed: false
@@ -2838,20 +2759,7 @@ methods:
               explicitCastNeeded: false
           - name: "bindAddress"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.net.InetSocketAddress"
-                parameters:
-                - name: "port"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "int"
-                    uuid: "<init>_inetSocketAddress1-port"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
                 target: "java.net.InetSocketAddress"
                 parameters:
@@ -3238,7 +3146,6 @@ methods:
     ignoredBySystem: false
     disabledReason: "Potential harmful system call (Selector.select, Selector.close,\
       \ Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path10"

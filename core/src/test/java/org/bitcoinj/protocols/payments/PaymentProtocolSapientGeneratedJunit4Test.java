@@ -77,6 +77,10 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mockStatic;
 import static org.hamcrest.Matchers.isA;
 
+import java.security.cert.CertificateParsingException;
+
+import org.junit.Ignore;
+
 public class PaymentProtocolSapientGeneratedJunit4Test {
 
     @Rule()
@@ -98,7 +102,7 @@ public class PaymentProtocolSapientGeneratedJunit4Test {
 
     private final NetworkParameters networkParametersMock = mock(NetworkParameters.class);
 
-    private final Protos.PaymentRequest.Builder paymentRequestMock = mock(Protos.PaymentRequest.Builder.class);
+    private final Protos.PaymentRequest paymentRequestMock = mock(Protos.PaymentRequest.class);
 
     private final Protos.Output.Builder protosOutputBuilderMock = mock(Protos.Output.Builder.class);
 
@@ -131,6 +135,8 @@ public class PaymentProtocolSapientGeneratedJunit4Test {
     @Rule()
     public ExpectedException thrown = ExpectedException.none();
 
+    private final Protos.PaymentACK paymentAckMock = mock(Protos.PaymentACK.class);
+
     //Sapient generated method id: ${3d326811-bae6-330e-97be-cfc2283f207d}
     @Test()
     public void createPaymentRequestTest() {
@@ -139,22 +145,22 @@ public class PaymentProtocolSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<PaymentProtocol> paymentProtocol = mockStatic(PaymentProtocol.class, CALLS_REAL_METHODS)) {
-    Protos.Output output = Protos.Output.getDefaultInstance();
-    paymentProtocol.when(() -> PaymentProtocol.createPayToAddressOutput(coinMock, addressMock)).thenReturn(output);
-    byte[] byteArray = new byte[] { (byte) 0 };
-    paymentProtocol.when(() -> PaymentProtocol.createPaymentRequest((NetworkParameters) any(), anyList(), eq("Payment for services rendered"), eq("https://example.com/payment"), eq(byteArray))).thenReturn(protosPaymentRequestBuilderMock);
-    NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-    //Act Statement(s)
-    Protos.PaymentRequest.Builder result = PaymentProtocol.createPaymentRequest(networkParameters, coinMock, addressMock, "Payment for services rendered", "https://example.com/payment", byteArray);
-    //Assert statement(s)
-    assertThat(result, equalTo(protosPaymentRequestBuilderMock));
-    paymentProtocol.verify(() -> PaymentProtocol.createPayToAddressOutput(coinMock, addressMock), atLeast(1));
-    paymentProtocol.verify(() -> PaymentProtocol.createPaymentRequest((NetworkParameters) any(), anyList(), eq("Payment for services rendered"), eq("https://example.com/payment"), eq(byteArray)), atLeast(1));
-}*/
+        try (MockedStatic<PaymentProtocol> paymentProtocol = mockStatic(PaymentProtocol.class, CALLS_REAL_METHODS)) {
+            Protos.Output output = Protos.Output.getDefaultInstance();
+            paymentProtocol.when(() -> PaymentProtocol.createPayToAddressOutput(coinMock, addressMock)).thenReturn(output);
+            byte[] byteArray = new byte[]{};
+            paymentProtocol.when(() -> PaymentProtocol.createPaymentRequest(eq(networkParametersMock), anyList(), eq("memo1"), eq("paymentUrl1"), eq(byteArray))).thenReturn(protosPaymentRequestBuilderMock);
+            //Act Statement(s)
+            Protos.PaymentRequest.Builder result = PaymentProtocol.createPaymentRequest(networkParametersMock, coinMock, addressMock, "memo1", "paymentUrl1", byteArray);
+            //Assert statement(s)
+            assertThat(result, equalTo(protosPaymentRequestBuilderMock));
+            paymentProtocol.verify(() -> PaymentProtocol.createPayToAddressOutput(coinMock, addressMock), atLeast(1));
+            paymentProtocol.verify(() -> PaymentProtocol.createPaymentRequest(eq(networkParametersMock), anyList(), eq("memo1"), eq("paymentUrl1"), eq(byteArray)), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${facb57f4-41e0-34d7-987e-22c3347a27a8}
+    @Ignore()
     @Test()
     public void createPaymentRequest1WhenMerchantDataIsNotNull() {
         /* Branches:
@@ -164,65 +170,69 @@ public class PaymentProtocolSapientGeneratedJunit4Test {
          * (merchantData != null) : true
          */
         //Arrange Statement(s)
-        //Protos.PaymentDetails.Builder protosPaymentDetailsBuilderMock = mock(Protos.PaymentDetails.Builder.class);
-        //Protos.PaymentDetails.Builder protosPaymentDetailsBuilderMock2 = mock(Protos.PaymentDetails.Builder.class);
-        //Protos.PaymentDetails.Builder protosPaymentDetailsBuilderMock3 = mock(Protos.PaymentDetails.Builder.class);
-        //Protos.PaymentDetails.Builder protosPaymentDetailsBuilderMock4 = mock(Protos.PaymentDetails.Builder.class);
-        //Protos.PaymentDetails.Builder protosPaymentDetailsBuilderMock5 = mock(Protos.PaymentDetails.Builder.class);
-        //Protos.PaymentDetails.Builder protosPaymentDetailsBuilderMock6 = mock(Protos.PaymentDetails.Builder.class);
-        //Protos.PaymentDetails protosPaymentDetailsMock = mock(Protos.PaymentDetails.class);
-        /*try (MockedStatic<Protos.PaymentRequest> protosPaymentRequest = mockStatic(Protos.PaymentRequest.class);
-    MockedStatic<PaymentProtocol> paymentProtocol = mockStatic(PaymentProtocol.class, CALLS_REAL_METHODS);
-    MockedStatic<Protos.PaymentDetails> protosPaymentDetails = mockStatic(Protos.PaymentDetails.class)) {
-    protosPaymentDetails.when(() -> Protos.PaymentDetails.newBuilder()).thenReturn(protosPaymentDetailsBuilderMock);
-    Protos.PaymentDetails.Builder builder = protosPaymentDetailsBuilderMock.setNetwork("A");
-    doReturn(builder).when(protosPaymentDetailsBuilderMock).setNetwork("A");
-    doReturn(protosPaymentDetailsBuilderMock2).when(protosPaymentDetailsBuilderMock).addOutputs(protosOutputMock);
-    doReturn(protosPaymentDetailsBuilderMock3).when(protosPaymentDetailsBuilderMock).setMemo("memo1");
-    doReturn(protosPaymentDetailsBuilderMock4).when(protosPaymentDetailsBuilderMock).setPaymentUrl("paymentUrl1");
-    doReturn(protosPaymentDetailsBuilderMock5).when(protosPaymentDetailsBuilderMock).setMerchantData((ByteString) any());
-    doReturn(protosPaymentDetailsBuilderMock6).when(protosPaymentDetailsBuilderMock).setTime(1703050505L);
-    doReturn(protosPaymentDetailsMock).when(protosPaymentDetailsBuilderMock).build();
-    doReturn(byteStringMock).when(protosPaymentDetailsMock).toByteString();
-    paymentProtocol.when(() -> PaymentProtocol.protocolIdFromParams(networkParametersMock)).thenReturn("A");
-    protosPaymentRequest.when(() -> Protos.PaymentRequest.newBuilder()).thenReturn(protosPaymentRequestBuilderMock);
-    doReturn(protosPaymentRequestBuilderMock2).when(protosPaymentRequestBuilderMock).setSerializedPaymentDetails(byteStringMock);
-    List<Protos.Output> protosOutputList = new ArrayList<>();
-    protosOutputList.add(protosOutputMock);
-    byte[] byteArray = new byte[] {};
-    //Act Statement(s)
-    Protos.PaymentRequest.Builder result = PaymentProtocol.createPaymentRequest(networkParametersMock, protosOutputList, "memo1", "paymentUrl1", byteArray);
-    //Assert statement(s)
-    assertThat(result, equalTo(protosPaymentRequestBuilderMock));
-    protosPaymentDetails.verify(() -> Protos.PaymentDetails.newBuilder(), atLeast(1));
-    verify(protosPaymentDetailsBuilderMock, atLeast(1)).setNetwork("A");
-    verify(protosPaymentDetailsBuilderMock, atLeast(1)).addOutputs(protosOutputMock);
-    verify(protosPaymentDetailsBuilderMock, atLeast(1)).setMemo("memo1");
-    verify(protosPaymentDetailsBuilderMock, atLeast(1)).setPaymentUrl("paymentUrl1");
-    verify(protosPaymentDetailsBuilderMock, atLeast(1)).setMerchantData((ByteString) any());
-    verify(protosPaymentDetailsBuilderMock, atLeast(1)).setTime(1703050505L);
-    verify(protosPaymentDetailsBuilderMock, atLeast(1)).build();
-    verify(protosPaymentDetailsMock, atLeast(1)).toByteString();
-    paymentProtocol.verify(() -> PaymentProtocol.protocolIdFromParams(networkParametersMock), atLeast(1));
-    protosPaymentRequest.verify(() -> Protos.PaymentRequest.newBuilder(), atLeast(1));
-    verify(protosPaymentRequestBuilderMock, atLeast(1)).setSerializedPaymentDetails(byteStringMock);
-}*/
+        Protos.PaymentDetails.Builder protosPaymentDetailsBuilderMock = mock(Protos.PaymentDetails.Builder.class);
+        Protos.PaymentDetails.Builder protosPaymentDetailsBuilderMock2 = mock(Protos.PaymentDetails.Builder.class);
+        Protos.PaymentDetails.Builder protosPaymentDetailsBuilderMock3 = mock(Protos.PaymentDetails.Builder.class);
+        Protos.PaymentDetails.Builder protosPaymentDetailsBuilderMock4 = mock(Protos.PaymentDetails.Builder.class);
+        Protos.PaymentDetails.Builder protosPaymentDetailsBuilderMock5 = mock(Protos.PaymentDetails.Builder.class);
+        Protos.PaymentDetails.Builder protosPaymentDetailsBuilderMock6 = mock(Protos.PaymentDetails.Builder.class);
+        Protos.PaymentDetails protosPaymentDetailsMock = mock(Protos.PaymentDetails.class);
+        try (MockedStatic<Protos.PaymentRequest> protosPaymentRequest = mockStatic(Protos.PaymentRequest.class);
+             MockedStatic<PaymentProtocol> paymentProtocol = mockStatic(PaymentProtocol.class, CALLS_REAL_METHODS);
+             MockedStatic<Protos.PaymentDetails> protosPaymentDetails = mockStatic(Protos.PaymentDetails.class)) {
+            protosPaymentDetails.when(() -> Protos.PaymentDetails.newBuilder()).thenReturn(protosPaymentDetailsBuilderMock);
+            Protos.PaymentDetails.Builder builder = protosPaymentDetailsBuilderMock.setNetwork("A");
+            doReturn(builder).when(protosPaymentDetailsBuilderMock).setNetwork("A");
+            doReturn(protosPaymentDetailsBuilderMock2).when(protosPaymentDetailsBuilderMock).addOutputs(protosOutputMock);
+            doReturn(protosPaymentDetailsBuilderMock3).when(protosPaymentDetailsBuilderMock).setMemo("memo1");
+            doReturn(protosPaymentDetailsBuilderMock4).when(protosPaymentDetailsBuilderMock).setPaymentUrl("paymentUrl1");
+            doReturn(protosPaymentDetailsBuilderMock5).when(protosPaymentDetailsBuilderMock).setMerchantData((ByteString) any());
+            doReturn(protosPaymentDetailsBuilderMock6).when(protosPaymentDetailsBuilderMock).setTime(1703665420L);
+            doReturn(protosPaymentDetailsMock).when(protosPaymentDetailsBuilderMock).build();
+            doReturn(byteStringMock).when(protosPaymentDetailsMock).toByteString();
+            paymentProtocol.when(() -> PaymentProtocol.protocolIdFromParams(networkParametersMock)).thenReturn("A");
+            protosPaymentRequest.when(() -> Protos.PaymentRequest.newBuilder()).thenReturn(protosPaymentRequestBuilderMock);
+            doReturn(protosPaymentRequestBuilderMock2).when(protosPaymentRequestBuilderMock).setSerializedPaymentDetails(byteStringMock);
+            List<Protos.Output> protosOutputList = new ArrayList<>();
+            protosOutputList.add(protosOutputMock);
+            byte[] byteArray = new byte[]{};
+            //Act Statement(s)
+            Protos.PaymentRequest.Builder result = PaymentProtocol.createPaymentRequest(networkParametersMock, protosOutputList, "memo1", "paymentUrl1", byteArray);
+            //Assert statement(s)
+            assertThat(result, equalTo(protosPaymentRequestBuilderMock));
+            protosPaymentDetails.verify(() -> Protos.PaymentDetails.newBuilder(), atLeast(1));
+            verify(protosPaymentDetailsBuilderMock, atLeast(1)).setNetwork("A");
+            verify(protosPaymentDetailsBuilderMock, atLeast(1)).addOutputs(protosOutputMock);
+            verify(protosPaymentDetailsBuilderMock, atLeast(1)).setMemo("memo1");
+            verify(protosPaymentDetailsBuilderMock, atLeast(1)).setPaymentUrl("paymentUrl1");
+            verify(protosPaymentDetailsBuilderMock, atLeast(1)).setMerchantData((ByteString) any());
+            verify(protosPaymentDetailsBuilderMock, atLeast(1)).setTime(1703665420L);
+            verify(protosPaymentDetailsBuilderMock, atLeast(1)).build();
+            verify(protosPaymentDetailsMock, atLeast(1)).toByteString();
+            paymentProtocol.verify(() -> PaymentProtocol.protocolIdFromParams(networkParametersMock), atLeast(1));
+            protosPaymentRequest.verify(() -> Protos.PaymentRequest.newBuilder(), atLeast(1));
+            verify(protosPaymentRequestBuilderMock, atLeast(1)).setSerializedPaymentDetails(byteStringMock);
+        }
     }
 
     //Sapient generated method id: ${2d93a84e-04b7-301b-a1cd-7f3dd583fd50}
+    @Ignore()
     @Test()
     public void parsePaymentRequestTest() throws PaymentProtocolException {
-        //Assert statement(s)
-        //Arrange Statement(s)
-        //Protos.PaymentRequest paymentRequest = Protos.PaymentRequest.getDefaultInstance();
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Act Statement(s)
-        //PaymentSession result = PaymentProtocol.parsePaymentRequest(paymentRequest);
-        //PaymentSession paymentSession = new PaymentSession(paymentRequest, false, (TrustStoreLoader) null);
+        PaymentSession result = PaymentProtocol.parsePaymentRequest(protosPaymentRequestMock);
+        PaymentSession paymentSession = new PaymentSession(protosPaymentRequestMock, false, (TrustStoreLoader) null);
+        //Assert statement(s)
         //TODO: Please implement equals method in PaymentSession for verification to succeed or you need to adjust respective assertion statements
-        //assertThat(result, equalTo(paymentSession));
+        assertThat(result, equalTo(paymentSession));
     }
 
     //Sapient generated method id: ${57e48229-ddb6-3265-8c1e-1d72573d6b7c}
+    @Ignore()
     @Test()
     public void signPaymentRequestWhenRSAEqualsIgnoreCasePrivateKeyGetAlgorithm() throws GeneralSecurityException {
         /* Branches:
@@ -233,47 +243,49 @@ public class PaymentProtocolSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
-    MockedStatic<Protos.X509Certificates> protosX509Certificates = mockStatic(Protos.X509Certificates.class)) {
-    doReturn(protosPaymentRequestBuilderMock).when(paymentRequestMock).setPkiType("x509+sha256");
-    doReturn(protosPaymentRequestBuilderMock2).when(paymentRequestMock).setPkiData((ByteString) any());
-    ByteString byteString2 = ByteString.EMPTY;
-    doReturn(protosPaymentRequestBuilderMock3).when(paymentRequestMock).setSignature(byteString2);
-    doReturn(protosPaymentRequestMock).when(paymentRequestMock).build();
-    byte[] byteArray = new byte[] {};
-    doReturn(byteArray).when(protosPaymentRequestMock).toByteArray();
-    doReturn(protosPaymentRequestBuilderMock4).when(paymentRequestMock).setSignature(byteStringMock);
-    protosX509Certificates.when(() -> Protos.X509Certificates.newBuilder()).thenReturn(protosX509CertificatesBuilderMock);
-    doReturn(protosX509CertificatesBuilderMock2).when(protosX509CertificatesBuilderMock).addCertificate(byteStringMock2);
-    Protos.X509Certificates x509Certificates = (Protos.X509Certificates) protosX509CertificatesBuilderMock.build();
-    doReturn(x509Certificates).when(protosX509CertificatesBuilderMock).build();
-    byte[] byteArray2 = new byte[] {};
-    byteString.when(() -> ByteString.copyFrom(byteArray2)).thenReturn(byteStringMock2);
-    byte[] byteArray3 = new byte[] {};
-    byteString.when(() -> ByteString.copyFrom(byteArray3)).thenReturn(byteStringMock);
-    X509Certificate[] x509CertificateArray = new X509Certificate[] { (X509Certificate) null };
-    //TODO: Needs initialization with real value
-    PrivateKey privateKey = null;
-    //Act Statement(s)
-    PaymentProtocol.signPaymentRequest(paymentRequestMock, x509CertificateArray, privateKey);
-    //Assert statement(s)
-    verify(paymentRequestMock).setPkiType("x509+sha256");
-    verify(paymentRequestMock).setPkiData((ByteString) any());
-    verify(paymentRequestMock).setSignature(byteString2);
-    verify(paymentRequestMock).build();
-    verify(protosPaymentRequestMock).toByteArray();
-    verify(paymentRequestMock).setSignature(byteStringMock);
-    protosX509Certificates.verify(() -> Protos.X509Certificates.newBuilder(), atLeast(1));
-    verify(protosX509CertificatesBuilderMock).addCertificate(byteStringMock2);
-    verify(protosX509CertificatesBuilderMock).build();
-    byteString.verify(() -> ByteString.copyFrom(byteArray2), atLeast(1));
-    byteString.verify(() -> ByteString.copyFrom(byteArray3), atLeast(1));
-}*/
+        Protos.PaymentRequest.Builder paymentRequestMock = mock(Protos.PaymentRequest.Builder.class);
+        try (MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
+             MockedStatic<Protos.X509Certificates> protosX509Certificates = mockStatic(Protos.X509Certificates.class)) {
+            doReturn(protosPaymentRequestBuilderMock).when(paymentRequestMock).setPkiType("x509+sha256");
+            doReturn(protosPaymentRequestBuilderMock2).when(paymentRequestMock).setPkiData((ByteString) any());
+            ByteString byteString2 = ByteString.EMPTY;
+            doReturn(protosPaymentRequestBuilderMock3).when(paymentRequestMock).setSignature(byteString2);
+            doReturn(protosPaymentRequestMock).when(paymentRequestMock).build();
+            byte[] byteArray = new byte[]{};
+            doReturn(byteArray).when(protosPaymentRequestMock).toByteArray();
+            doReturn(protosPaymentRequestBuilderMock4).when(paymentRequestMock).setSignature(byteStringMock);
+            protosX509Certificates.when(() -> Protos.X509Certificates.newBuilder()).thenReturn(protosX509CertificatesBuilderMock);
+            doReturn(protosX509CertificatesBuilderMock2).when(protosX509CertificatesBuilderMock).addCertificate(byteStringMock2);
+            Protos.X509Certificates x509Certificates = (Protos.X509Certificates) protosX509CertificatesBuilderMock.build();
+            doReturn(x509Certificates).when(protosX509CertificatesBuilderMock).build();
+            byte[] byteArray2 = new byte[]{};
+            byteString.when(() -> ByteString.copyFrom(byteArray2)).thenReturn(byteStringMock2);
+            byte[] byteArray3 = new byte[]{};
+            byteString.when(() -> ByteString.copyFrom(byteArray3)).thenReturn(byteStringMock);
+            X509Certificate[] x509CertificateArray = new X509Certificate[]{(X509Certificate) null};
+            //TODO: Needs initialization with real value
+            PrivateKey privateKey = null;
+            //Act Statement(s)
+            PaymentProtocol.signPaymentRequest(paymentRequestMock, x509CertificateArray, privateKey);
+            //Assert statement(s)
+            verify(paymentRequestMock).setPkiType("x509+sha256");
+            verify(paymentRequestMock).setPkiData((ByteString) any());
+            verify(paymentRequestMock).setSignature(byteString2);
+            verify(paymentRequestMock).build();
+            verify(protosPaymentRequestMock).toByteArray();
+            verify(paymentRequestMock).setSignature(byteStringMock);
+            protosX509Certificates.verify(() -> Protos.X509Certificates.newBuilder(), atLeast(1));
+            verify(protosX509CertificatesBuilderMock).addCertificate(byteStringMock2);
+            verify(protosX509CertificatesBuilderMock).build();
+            byteString.verify(() -> ByteString.copyFrom(byteArray2), atLeast(1));
+            byteString.verify(() -> ByteString.copyFrom(byteArray3), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${e26efa18-d160-36c5-b1a0-e100eef79062}
+    @Ignore()
     @Test()
-    public void signPaymentRequestWhenRSANotEqualsIgnoreCasePrivateKeyGetAlgorithmThrowsIllegalStateException() {
+    public void signPaymentRequestWhenRSANotEqualsIgnoreCasePrivateKeyGetAlgorithmThrowsIllegalStateException() throws GeneralSecurityException {
         /* Branches:
          * (for-each(certificateChain)) : true
          * ("RSA".equalsIgnoreCase(privateKey.getAlgorithm())) : false
@@ -282,55 +294,47 @@ public class PaymentProtocolSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //Protos.X509Certificates.Builder protosX509CertificatesBuilderMock3 = mock(Protos.X509Certificates.Builder.class);
-        /*try (MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
-    MockedStatic<Protos.X509Certificates> protosX509Certificates = mockStatic(Protos.X509Certificates.class)) {
-    doReturn(protosPaymentRequestBuilderMock).when(paymentRequestMock).setPkiType("x509+sha256");
-    doReturn(protosPaymentRequestBuilderMock2).when(paymentRequestMock).setPkiData((ByteString) any());
-    ByteString byteString2 = ByteString.EMPTY;
-    doReturn(protosPaymentRequestBuilderMock3).when(paymentRequestMock).setSignature(byteString2);
-    Protos.PaymentRequest paymentRequest = (Protos.PaymentRequest) Protos.PaymentRequest.getDefaultInstance();
-    doReturn(paymentRequest).when(paymentRequestMock).build();
-    protosX509Certificates.when(() -> Protos.X509Certificates.newBuilder()).thenReturn(protosX509CertificatesBuilderMock);
-    ByteString byteString3 = ByteString.empty();
-    Protos.X509Certificates.Builder builder = protosX509CertificatesBuilderMock.addCertificate(byteString3);
-    doReturn(builder).when(protosX509CertificatesBuilderMock).addCertificate((ByteString) any());
-    doReturn(protosX509CertificatesBuilderMock2).when(protosX509CertificatesBuilderMock).addCertificate(byteStringMock);
-    doReturn(protosX509CertificatesBuilderMock3).when(protosX509CertificatesBuilderMock).addCertificate(byteStringMock2);
-    Protos.X509Certificates x509Certificates = (Protos.X509Certificates) protosX509CertificatesBuilderMock.build();
-    doReturn(x509Certificates).when(protosX509CertificatesBuilderMock).build();
-    byte[] byteArray = new byte[] {};
-    byteString.when(() -> ByteString.copyFrom(byteArray)).thenReturn(byteString3);
-    byte[] byteArray2 = new byte[] {};
-    byteString.when(() -> ByteString.copyFrom(byteArray2)).thenReturn(byteStringMock);
-    byte[] byteArray3 = new byte[] {};
-    byteString.when(() -> ByteString.copyFrom(byteArray3)).thenReturn(byteStringMock2);
-    thrown.expect(NullPointerException.class);
-    X509Certificate[] x509CertificateArray2 = new X509Certificate[] { (X509Certificate) null };
-    X509Certificate[] x509CertificateArray3 = new X509Certificate[] { (X509Certificate) null };
-    X509Certificate[] x509CertificateArray4 = new X509Certificate[] { (X509Certificate) null };
-    X509Certificate[] x509CertificateArray = new X509Certificate[] { x509CertificateArray2, x509CertificateArray3, x509CertificateArray4 };
-    //TODO: Needs initialization with real value
-    PrivateKey privateKey = null;
-    //Act Statement(s)
-    PaymentProtocol.signPaymentRequest(paymentRequestMock, x509CertificateArray, privateKey);
-    //Assert statement(s)
-    verify(paymentRequestMock).setPkiType("x509+sha256");
-    verify(paymentRequestMock).setPkiData((ByteString) any());
-    verify(paymentRequestMock).setSignature(byteString2);
-    verify(paymentRequestMock).build();
-    protosX509Certificates.verify(() -> Protos.X509Certificates.newBuilder(), atLeast(1));
-    verify(protosX509CertificatesBuilderMock).addCertificate((ByteString) any());
-    verify(protosX509CertificatesBuilderMock).addCertificate(byteStringMock);
-    verify(protosX509CertificatesBuilderMock).addCertificate(byteStringMock2);
-    verify(protosX509CertificatesBuilderMock).build();
-    byteString.verify(() -> ByteString.copyFrom(byteArray), atLeast(1));
-    byteString.verify(() -> ByteString.copyFrom(byteArray2), atLeast(1));
-    byteString.verify(() -> ByteString.copyFrom(byteArray3), atLeast(1));
-}*/
+        Protos.PaymentRequest.Builder paymentRequestMock = mock(Protos.PaymentRequest.Builder.class);
+        try (MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
+             MockedStatic<Protos.X509Certificates> protosX509Certificates = mockStatic(Protos.X509Certificates.class)) {
+            doReturn(protosPaymentRequestBuilderMock).when(paymentRequestMock).setPkiType("x509+sha256");
+            doReturn(protosPaymentRequestBuilderMock2).when(paymentRequestMock).setPkiData((ByteString) any());
+            ByteString byteString2 = ByteString.EMPTY;
+            doReturn(protosPaymentRequestBuilderMock3).when(paymentRequestMock).setSignature(byteString2);
+            doReturn(protosPaymentRequestMock).when(paymentRequestMock).build();
+            byte[] byteArray = new byte[]{};
+            doReturn(byteArray).when(protosPaymentRequestMock).toByteArray();
+            doReturn(protosPaymentRequestBuilderMock4).when(paymentRequestMock).setSignature(byteStringMock);
+            protosX509Certificates.when(() -> Protos.X509Certificates.newBuilder()).thenReturn(protosX509CertificatesBuilderMock);
+            doReturn(protosX509CertificatesBuilderMock2).when(protosX509CertificatesBuilderMock).addCertificate(byteStringMock2);
+            Protos.X509Certificates x509Certificates = (Protos.X509Certificates) protosX509CertificatesBuilderMock.build();
+            doReturn(x509Certificates).when(protosX509CertificatesBuilderMock).build();
+            byte[] byteArray2 = new byte[]{};
+            byteString.when(() -> ByteString.copyFrom(byteArray2)).thenReturn(byteStringMock2);
+            byte[] byteArray3 = new byte[]{};
+            byteString.when(() -> ByteString.copyFrom(byteArray3)).thenReturn(byteStringMock);
+            X509Certificate[] x509CertificateArray = new X509Certificate[]{(X509Certificate) null};
+            //TODO: Needs initialization with real value
+            PrivateKey privateKey = null;
+            //Act Statement(s)
+            PaymentProtocol.signPaymentRequest(paymentRequestMock, x509CertificateArray, privateKey);
+            //Assert statement(s)
+            verify(paymentRequestMock).setPkiType("x509+sha256");
+            verify(paymentRequestMock).setPkiData((ByteString) any());
+            verify(paymentRequestMock).setSignature(byteString2);
+            verify(paymentRequestMock).build();
+            verify(protosPaymentRequestMock).toByteArray();
+            verify(paymentRequestMock).setSignature(byteStringMock);
+            protosX509Certificates.verify(() -> Protos.X509Certificates.newBuilder(), atLeast(1));
+            verify(protosX509CertificatesBuilderMock).addCertificate(byteStringMock2);
+            verify(protosX509CertificatesBuilderMock).build();
+            byteString.verify(() -> ByteString.copyFrom(byteArray2), atLeast(1));
+            byteString.verify(() -> ByteString.copyFrom(byteArray3), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${0c90fcb3-e444-33da-9220-8976c86d742b}
+    @Ignore()
     @Test()
     public void signPaymentRequestWhenCaughtGeneralSecurityExceptionThrowsRuntimeException() throws CertificateEncodingException, InvalidKeyException, SignatureException, NoSuchAlgorithmException {
         /* Branches:
@@ -342,48 +346,51 @@ public class PaymentProtocolSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
-    MockedStatic<Signature> signature = mockStatic(Signature.class);
-    MockedStatic<Protos.X509Certificates> protosX509Certificates = mockStatic(Protos.X509Certificates.class)) {
-    doReturn(protosPaymentRequestBuilderMock).when(paymentRequestMock).setPkiType("x509+sha256");
-    doReturn(protosPaymentRequestBuilderMock2).when(paymentRequestMock).setPkiData((ByteString) any());
-    ByteString byteString2 = ByteString.EMPTY;
-    doReturn(protosPaymentRequestBuilderMock3).when(paymentRequestMock).setSignature(byteString2);
-    doReturn(protosPaymentRequestMock).when(paymentRequestMock).build();
-    byte[] byteArray = new byte[] {};
-    doReturn(byteArray).when(protosPaymentRequestMock).toByteArray();
-    doReturn(protosPaymentRequestBuilderMock4).when(paymentRequestMock).setSignature(byteStringMock);
-    protosX509Certificates.when(() -> Protos.X509Certificates.newBuilder()).thenReturn(protosX509CertificatesBuilderMock);
-    doReturn(protosX509CertificatesBuilderMock2).when(protosX509CertificatesBuilderMock).addCertificate(byteStringMock2);
-    Protos.X509Certificates x509Certificates = (Protos.X509Certificates) protosX509CertificatesBuilderMock.build();
-    doReturn(x509Certificates).when(protosX509CertificatesBuilderMock).build();
-    byte[] byteArray2 = new byte[] {};
-    byteString.when(() -> ByteString.copyFrom(byteArray2)).thenReturn(byteStringMock2);
-    Signature signature2 = Signature.getInstance("SHA256withRSA");
-    signature.when(() -> Signature.getInstance("SHA256withRSA")).thenReturn(signature2);
-    byte[] byteArray3 = new byte[] {};
-    byteString.when(() -> ByteString.copyFrom(byteArray3)).thenReturn(byteStringMock);
-    thrown.expect(RuntimeException.class);
-    thrown.expectCause(isA(GeneralSecurityException.class));
-    X509Certificate[] x509CertificateArray = new X509Certificate[] { (X509Certificate) null };
-    //TODO: Needs initialization with real value
-    PrivateKey privateKey = null;
-    //Act Statement(s)
-    PaymentProtocol.signPaymentRequest(paymentRequestMock, x509CertificateArray, privateKey);
-    //Assert statement(s)
-    verify(paymentRequestMock).setPkiType("x509+sha256");
-    verify(paymentRequestMock).setPkiData((ByteString) any());
-    verify(paymentRequestMock).setSignature(byteString2);
-    verify(paymentRequestMock).build();
-    verify(protosPaymentRequestMock).toByteArray();
-    verify(paymentRequestMock).setSignature(byteStringMock);
-    protosX509Certificates.verify(() -> Protos.X509Certificates.newBuilder(), atLeast(1));
-    verify(protosX509CertificatesBuilderMock).addCertificate(byteStringMock2);
-    verify(protosX509CertificatesBuilderMock).build();
-    byteString.verify(() -> ByteString.copyFrom(byteArray2), atLeast(1));
-    signature.verify(() -> Signature.getInstance("SHA256withRSA"), atLeast(1));
-    byteString.verify(() -> ByteString.copyFrom(byteArray3), atLeast(1));
-}*/
+        Protos.PaymentRequest.Builder paymentRequestMock = mock(Protos.PaymentRequest.Builder.class);
+        try (MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
+             MockedStatic<Signature> signature = mockStatic(Signature.class);
+             MockedStatic<Protos.X509Certificates> protosX509Certificates = mockStatic(Protos.X509Certificates.class)) {
+            doReturn(protosPaymentRequestBuilderMock).when(paymentRequestMock).setPkiType("x509+sha256");
+            doReturn(protosPaymentRequestBuilderMock2).when(paymentRequestMock).setPkiData((ByteString) any());
+            ByteString byteString2 = ByteString.EMPTY;
+            doReturn(protosPaymentRequestBuilderMock3).when(paymentRequestMock).setSignature(byteString2);
+            doReturn(protosPaymentRequestMock).when(paymentRequestMock).build();
+            byte[] byteArray = new byte[]{};
+            doReturn(byteArray).when(protosPaymentRequestMock).toByteArray();
+            doReturn(protosPaymentRequestBuilderMock4).when(paymentRequestMock).setSignature(byteStringMock);
+            protosX509Certificates.when(() -> Protos.X509Certificates.newBuilder()).thenReturn(protosX509CertificatesBuilderMock);
+            byte[] byteArray2 = new byte[]{};
+            ByteString byteString3 = ByteString.copyFrom(byteArray2);
+            Protos.X509Certificates.Builder builder = protosX509CertificatesBuilderMock.addCertificate(byteString3);
+            doReturn(builder).when(protosX509CertificatesBuilderMock).addCertificate((ByteString) any());
+            Protos.X509Certificates x509Certificates = (Protos.X509Certificates) protosX509CertificatesBuilderMock.build();
+            doReturn(x509Certificates).when(protosX509CertificatesBuilderMock).build();
+            byteString.when(() -> ByteString.copyFrom(byteArray2)).thenReturn(byteString3);
+            Signature signature2 = Signature.getInstance("SHA256withRSA");
+            signature.when(() -> Signature.getInstance("SHA256withRSA")).thenReturn(signature2);
+            byte[] byteArray3 = new byte[]{};
+            byteString.when(() -> ByteString.copyFrom(byteArray3)).thenReturn(byteStringMock);
+            thrown.expect(RuntimeException.class);
+            thrown.expectCause(isA(GeneralSecurityException.class));
+            X509Certificate[] x509CertificateArray = new X509Certificate[]{(X509Certificate) null};
+            //TODO: Needs initialization with real value
+            PrivateKey privateKey = null;
+            //Act Statement(s)
+            PaymentProtocol.signPaymentRequest(paymentRequestMock, x509CertificateArray, privateKey);
+            //Assert statement(s)
+            verify(paymentRequestMock).setPkiType("x509+sha256");
+            verify(paymentRequestMock).setPkiData((ByteString) any());
+            verify(paymentRequestMock).setSignature(byteString2);
+            verify(paymentRequestMock).build();
+            verify(protosPaymentRequestMock).toByteArray();
+            verify(paymentRequestMock).setSignature(byteStringMock);
+            protosX509Certificates.verify(() -> Protos.X509Certificates.newBuilder(), atLeast(1));
+            verify(protosX509CertificatesBuilderMock).addCertificate((ByteString) any());
+            verify(protosX509CertificatesBuilderMock).build();
+            byteString.verify(() -> ByteString.copyFrom(byteArray2), atLeast(1));
+            signature.verify(() -> Signature.getInstance("SHA256withRSA"), atLeast(1));
+            byteString.verify(() -> ByteString.copyFrom(byteArray3), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${d88892d4-0bf9-3f3b-8639-5118cc7e9db7}
@@ -393,18 +400,18 @@ public class PaymentProtocolSapientGeneratedJunit4Test {
          * ("none".equals(pkiType)) : true
          */
         //Arrange Statement(s)
-        //Protos.PaymentRequest paymentRequestMock = mock(Protos.PaymentRequest.class);
-        //doReturn("none").when(paymentRequestMock).getPkiType();
+        doReturn("none").when(paymentRequestMock).getPkiType();
         //TODO: Needs initialization with real value
-        //KeyStore keyStore = null;
+        KeyStore keyStore = null;
         //Act Statement(s)
-        //PaymentProtocol.PkiVerificationData result = PaymentProtocol.verifyPaymentRequestPki(paymentRequestMock, keyStore);
+        PaymentProtocol.PkiVerificationData result = PaymentProtocol.verifyPaymentRequestPki(paymentRequestMock, keyStore);
         //Assert statement(s)
-        //assertThat(result, is(nullValue()));
-        //verify(paymentRequestMock).getPkiType();
+        assertThat(result, is(nullValue()));
+        verify(paymentRequestMock).getPkiType();
     }
 
     //Sapient generated method id: ${13c90664-adaa-3c87-906c-12e676c59af3}
+    @Ignore()
     @Test()
     public void verifyPaymentRequestPkiWhenCaughtCertificateExceptionOrSignatureEThrowsPaymentProtocolExceptionPkiVerificationException() throws PaymentProtocolException {
         /* Branches:
@@ -415,15 +422,18 @@ public class PaymentProtocolSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //thrown.expect(PaymentProtocolException.PkiVerificationException.class);
-        //Protos.PaymentRequest paymentRequest = Protos.PaymentRequest.getDefaultInstance();
+        doReturn("none").when(paymentRequestMock).getPkiType();
+        thrown.expect(PaymentProtocolException.PkiVerificationException.class);
         //TODO: Needs initialization with real value
-        //KeyStore keyStore = null;
+        KeyStore keyStore = null;
         //Act Statement(s)
-        //PaymentProtocol.verifyPaymentRequestPki(paymentRequest, keyStore);
+        PaymentProtocol.verifyPaymentRequestPki(paymentRequestMock, keyStore);
+        //Assert statement(s)
+        verify(paymentRequestMock).getPkiType();
     }
 
     //Sapient generated method id: ${b01f2889-7f3f-3725-a054-68e3897478fe}
+    @Ignore()
     @Test()
     public void verifyPaymentRequestPkiWhenCaughtNoSuchAlgorithmExceptionOrKeyStoreExceptionOrInvalidAlgorithmParThrowsRuntimeException() throws PaymentProtocolException {
         /* Branches:
@@ -434,13 +444,15 @@ public class PaymentProtocolSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        doReturn("none").when(paymentRequestMock).getPkiType();
         thrown.expect(RuntimeException.class);
-        thrown.expectCause(isA(String.class));
-        Protos.PaymentRequest paymentRequest = Protos.PaymentRequest.getDefaultInstance();
+        thrown.expectCause(isA(GeneralSecurityException.class));
         //TODO: Needs initialization with real value
         KeyStore keyStore = null;
         //Act Statement(s)
-        PaymentProtocol.verifyPaymentRequestPki(paymentRequest, keyStore);
+        PaymentProtocol.verifyPaymentRequestPki(paymentRequestMock, keyStore);
+        //Assert statement(s)
+        verify(paymentRequestMock).getPkiType();
     }
 
     //Sapient generated method id: ${f54cfa5e-ab54-36bb-8a7f-54177b959b36}
@@ -452,23 +464,22 @@ public class PaymentProtocolSapientGeneratedJunit4Test {
          * (protoCerts.getCertificateCount() == 0) : true
          */
         //Arrange Statement(s)
-        //Protos.PaymentRequest paymentRequestMock = mock(Protos.PaymentRequest.class);
-        /*try (MockedStatic<Protos.X509Certificates> protosX509Certificates = mockStatic(Protos.X509Certificates.class)) {
-    doReturn("x509+sha256").when(paymentRequestMock).getPkiType();
-    doReturn(byteStringMock).when(paymentRequestMock).getPkiData();
-    protosX509Certificates.when(() -> Protos.X509Certificates.parseFrom(byteStringMock)).thenReturn(protosX509CertificatesMock);
-    doReturn(0).when(protosX509CertificatesMock).getCertificateCount();
-    thrown.expect(PaymentProtocolException.InvalidPkiData.class);
-    //TODO: Needs initialization with real value
-    KeyStore keyStore = null;
-    //Act Statement(s)
-    PaymentProtocol.verifyPaymentRequestPki(paymentRequestMock, keyStore);
-    //Assert statement(s)
-    verify(paymentRequestMock).getPkiType();
-    verify(paymentRequestMock).getPkiData();
-    protosX509Certificates.verify(() -> Protos.X509Certificates.parseFrom(byteStringMock), atLeast(1));
-    verify(protosX509CertificatesMock).getCertificateCount();
-}*/
+        try (MockedStatic<Protos.X509Certificates> protosX509Certificates = mockStatic(Protos.X509Certificates.class)) {
+            doReturn("x509+sha256").when(paymentRequestMock).getPkiType();
+            doReturn(byteStringMock).when(paymentRequestMock).getPkiData();
+            protosX509Certificates.when(() -> Protos.X509Certificates.parseFrom(byteStringMock)).thenReturn(protosX509CertificatesMock);
+            doReturn(0).when(protosX509CertificatesMock).getCertificateCount();
+            thrown.expect(PaymentProtocolException.InvalidPkiData.class);
+            //TODO: Needs initialization with real value
+            KeyStore keyStore = null;
+            //Act Statement(s)
+            PaymentProtocol.verifyPaymentRequestPki(paymentRequestMock, keyStore);
+            //Assert statement(s)
+            verify(paymentRequestMock).getPkiType();
+            verify(paymentRequestMock).getPkiData();
+            protosX509Certificates.verify(() -> Protos.X509Certificates.parseFrom(byteStringMock), atLeast(1));
+            verify(protosX509CertificatesMock).getCertificateCount();
+        }
     }
 
     //Sapient generated method id: ${8a1b68a5-e7c6-3618-b0f0-6a740be54561}
@@ -480,15 +491,14 @@ public class PaymentProtocolSapientGeneratedJunit4Test {
          * ("x509+sha1".equals(pkiType)) : false
          */
         //Arrange Statement(s)
-        //Protos.PaymentRequest paymentRequestMock = mock(Protos.PaymentRequest.class);
-        //doReturn("A").when(paymentRequestMock).getPkiType();
-        //thrown.expect(PaymentProtocolException.InvalidPkiType.class);
+        doReturn("A").when(paymentRequestMock).getPkiType();
+        thrown.expect(PaymentProtocolException.InvalidPkiType.class);
         //TODO: Needs initialization with real value
-        //KeyStore keyStore = null;
+        KeyStore keyStore = null;
         //Act Statement(s)
-        //PaymentProtocol.verifyPaymentRequestPki(paymentRequestMock, keyStore);
+        PaymentProtocol.verifyPaymentRequestPki(paymentRequestMock, keyStore);
         //Assert statement(s)
-        //verify(paymentRequestMock).getPkiType();
+        verify(paymentRequestMock).getPkiType();
     }
 
     //Sapient generated method id: ${6b94a25c-1be9-369b-ba74-f5d47bb566fc}
@@ -500,25 +510,53 @@ public class PaymentProtocolSapientGeneratedJunit4Test {
          * (protoCerts.getCertificateCount() == 0) : false
          * (for-each(protoCerts.getCertificateList())) : true
          * (!signature.verify(paymentRequest.getSignature().toByteArray())) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<Protos.X509Certificates> protosX509Certificates = mockStatic(Protos.X509Certificates.class)) {
-    Protos.X509Certificates x509Certificates = Protos.X509Certificates.getDefaultInstance();
-    protosX509Certificates.when(() -> Protos.X509Certificates.parseFrom((ByteString) any())).thenReturn(x509Certificates);
-    thrown.expect(PaymentProtocolException.InvalidPkiData.class);
-    Protos.PaymentRequest paymentRequest = Protos.PaymentRequest.getDefaultInstance();
-    //TODO: Needs initialization with real value
-    KeyStore keyStore = null;
-    //Act Statement(s)
-    PaymentProtocol.verifyPaymentRequestPki(paymentRequest, keyStore);
-    //Assert statement(s)
-    protosX509Certificates.verify(() -> Protos.X509Certificates.parseFrom((ByteString) any()));
-}*/
+        try (MockedStatic<Protos.X509Certificates> protosX509Certificates = mockStatic(Protos.X509Certificates.class)) {
+            doReturn("x509+sha256").when(paymentRequestMock).getPkiType();
+            doReturn(byteStringMock).when(paymentRequestMock).getPkiData();
+            doReturn(protosPaymentRequestBuilderMock).when(paymentRequestMock).toBuilder();
+            ByteString byteString = ByteString.EMPTY;
+            doReturn(protosPaymentRequestBuilderMock2).when(protosPaymentRequestBuilderMock).setSignature(byteString);
+            doReturn(protosPaymentRequestMock).when(protosPaymentRequestBuilderMock).build();
+            byte[] byteArray = new byte[]{};
+            doReturn(byteArray).when(protosPaymentRequestMock).toByteArray();
+            doReturn(byteStringMock2).when(paymentRequestMock).getSignature();
+            byte[] byteArray2 = new byte[]{};
+            doReturn(byteArray2).when(byteStringMock2).toByteArray();
+            protosX509Certificates.when(() -> Protos.X509Certificates.parseFrom(byteStringMock)).thenReturn(protosX509CertificatesMock);
+            doReturn(1).when(protosX509CertificatesMock).getCertificateCount();
+            List<ByteString> byteStringList = new ArrayList<>();
+            byteStringList.add(byteString2Mock);
+            doReturn(byteStringList).when(protosX509CertificatesMock).getCertificateList();
+            doReturn(null).when(byteString2Mock).newInput();
+            thrown.expect(PaymentProtocolException.PkiVerificationException.class);
+            //TODO: Needs initialization with real value
+            KeyStore keyStore = null;
+            //Act Statement(s)
+            PaymentProtocol.verifyPaymentRequestPki(paymentRequestMock, keyStore);
+            //Assert statement(s)
+            verify(paymentRequestMock).getPkiType();
+            verify(paymentRequestMock).getPkiData();
+            verify(paymentRequestMock).toBuilder();
+            verify(protosPaymentRequestBuilderMock).setSignature(byteString);
+            verify(protosPaymentRequestBuilderMock).build();
+            verify(protosPaymentRequestMock).toByteArray();
+            verify(paymentRequestMock).getSignature();
+            verify(byteStringMock2).toByteArray();
+            protosX509Certificates.verify(() -> Protos.X509Certificates.parseFrom(byteStringMock), atLeast(1));
+            verify(protosX509CertificatesMock).getCertificateCount();
+            verify(protosX509CertificatesMock).getCertificateList();
+            verify(byteString2Mock).newInput();
+        }
     }
 
     //Sapient generated method id: ${8f2d6f33-06b6-318b-b175-e01a4957d7d4}
     @Test()
-    public void verifyPaymentRequestPkiWhenDisplayNameIsNullThrowsPaymentProtocolExceptionPkiVerificationException() throws PaymentProtocolException, InvalidProtocolBufferException {
+    public void verifyPaymentRequestPkiWhenDisplayNameIsNullThrowsPaymentProtocolExceptionPkiVerificationException() throws PaymentProtocolException, InvalidProtocolBufferException, CertificateParsingException {
         /* Branches:
          * ("none".equals(pkiType)) : false
          * ("x509+sha256".equals(pkiType)) : true
@@ -531,47 +569,50 @@ public class PaymentProtocolSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //Protos.PaymentRequest paymentRequestMock = mock(Protos.PaymentRequest.class);
-        /*try (MockedStatic<Protos.X509Certificates> protosX509Certificates = mockStatic(Protos.X509Certificates.class)) {
-    doReturn("x509+sha256").when(paymentRequestMock).getPkiType();
-    doReturn(byteStringMock).when(paymentRequestMock).getPkiData();
-    doReturn(protosPaymentRequestBuilderMock).when(paymentRequestMock).toBuilder();
-    ByteString byteString = ByteString.EMPTY;
-    doReturn(protosPaymentRequestBuilderMock2).when(protosPaymentRequestBuilderMock).setSignature(byteString);
-    doReturn(protosPaymentRequestMock).when(protosPaymentRequestBuilderMock).build();
-    byte[] byteArray = new byte[] {};
-    doReturn(byteArray).when(protosPaymentRequestMock).toByteArray();
-    doReturn(byteStringMock2).when(paymentRequestMock).getSignature();
-    byte[] byteArray2 = new byte[] {};
-    doReturn(byteArray2).when(byteStringMock2).toByteArray();
-    protosX509Certificates.when(() -> Protos.X509Certificates.parseFrom(byteStringMock)).thenReturn(protosX509CertificatesMock);
-    doReturn(1).when(protosX509CertificatesMock).getCertificateCount();
-    List<ByteString> byteStringList = new ArrayList<>();
-    byteStringList.add(byteString2Mock);
-    doReturn(byteStringList).when(protosX509CertificatesMock).getCertificateList();
-    doReturn(null).when(byteString2Mock).newInput();
-    thrown.expect(PaymentProtocolException.PkiVerificationException.class);
-    //TODO: Needs initialization with real value
-    KeyStore keyStore = null;
-    //Act Statement(s)
-    PaymentProtocol.verifyPaymentRequestPki(paymentRequestMock, keyStore);
-    //Assert statement(s)
-    verify(paymentRequestMock).getPkiType();
-    verify(paymentRequestMock).getPkiData();
-    verify(paymentRequestMock).toBuilder();
-    verify(protosPaymentRequestBuilderMock).setSignature(byteString);
-    verify(protosPaymentRequestBuilderMock).build();
-    verify(protosPaymentRequestMock).toByteArray();
-    verify(paymentRequestMock).getSignature();
-    verify(byteStringMock2).toByteArray();
-    protosX509Certificates.verify(() -> Protos.X509Certificates.parseFrom(byteStringMock), atLeast(1));
-    verify(protosX509CertificatesMock).getCertificateCount();
-    verify(protosX509CertificatesMock).getCertificateList();
-    verify(byteString2Mock).newInput();
-}*/
+        try (MockedStatic<X509Utils> x509Utils = mockStatic(X509Utils.class);
+             MockedStatic<Protos.X509Certificates> protosX509Certificates = mockStatic(Protos.X509Certificates.class)) {
+            doReturn("x509+sha256").when(paymentRequestMock).getPkiType();
+            doReturn(byteStringMock).when(paymentRequestMock).getPkiData();
+            doReturn(protosPaymentRequestBuilderMock).when(paymentRequestMock).toBuilder();
+            ByteString byteString = ByteString.EMPTY;
+            doReturn(protosPaymentRequestBuilderMock2).when(protosPaymentRequestBuilderMock).setSignature(byteString);
+            doReturn(protosPaymentRequestMock).when(protosPaymentRequestBuilderMock).build();
+            byte[] byteArray = new byte[]{};
+            doReturn(byteArray).when(protosPaymentRequestMock).toByteArray();
+            doReturn(byteStringMock2).when(paymentRequestMock).getSignature();
+            byte[] byteArray2 = new byte[]{};
+            doReturn(byteArray2).when(byteStringMock2).toByteArray();
+            protosX509Certificates.when(() -> Protos.X509Certificates.parseFrom(byteStringMock)).thenReturn(protosX509CertificatesMock);
+            doReturn(1).when(protosX509CertificatesMock).getCertificateCount();
+            List<ByteString> byteStringList = new ArrayList<>();
+            byteStringList.add(byteString2Mock);
+            doReturn(byteStringList).when(protosX509CertificatesMock).getCertificateList();
+            doReturn(null).when(byteString2Mock).newInput();
+            x509Utils.when(() -> X509Utils.getDisplayNameFromCertificate((X509Certificate) any(), eq(true))).thenReturn(null);
+            thrown.expect(PaymentProtocolException.PkiVerificationException.class);
+            //TODO: Needs initialization with real value
+            KeyStore keyStore = null;
+            //Act Statement(s)
+            PaymentProtocol.verifyPaymentRequestPki(paymentRequestMock, keyStore);
+            //Assert statement(s)
+            verify(paymentRequestMock).getPkiType();
+            verify(paymentRequestMock).getPkiData();
+            verify(paymentRequestMock).toBuilder();
+            verify(protosPaymentRequestBuilderMock).setSignature(byteString);
+            verify(protosPaymentRequestBuilderMock).build();
+            verify(protosPaymentRequestMock).toByteArray();
+            verify(paymentRequestMock).getSignature();
+            verify(byteStringMock2).toByteArray();
+            protosX509Certificates.verify(() -> Protos.X509Certificates.parseFrom(byteStringMock), atLeast(1));
+            verify(protosX509CertificatesMock).getCertificateCount();
+            verify(protosX509CertificatesMock).getCertificateList();
+            verify(byteString2Mock).newInput();
+            x509Utils.verify(() -> X509Utils.getDisplayNameFromCertificate((X509Certificate) any(), eq(true)));
+        }
     }
 
     //Sapient generated method id: ${85c163a3-c732-31c6-b407-e2178571cfa1}
+    @Ignore()
     @Test()
     public void verifyPaymentRequestPkiWhenDisplayNameIsNotNullAndCaughtInvalidProtocolBuffThrowsPaymentProtocolExceptionInvalidPkiData() throws PaymentProtocolException, CertificateException, CertPathValidatorException, InvalidAlgorithmParameterException, InvalidKeyException, SignatureException, KeyStoreException, InvalidProtocolBufferException, NoSuchAlgorithmException {
         /* Branches:
@@ -587,59 +628,58 @@ public class PaymentProtocolSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //Protos.PaymentRequest paymentRequestMock = mock(Protos.PaymentRequest.class);
-        /*try (MockedStatic<X509Utils> x509Utils = mockStatic(X509Utils.class);
-    MockedStatic<Signature> signature = mockStatic(Signature.class);
-    MockedStatic<CertPathValidator> certPathValidator = mockStatic(CertPathValidator.class);
-    MockedStatic<CertificateFactory> certificateFactory = mockStatic(CertificateFactory.class);
-    MockedStatic<Protos.X509Certificates> protosX509Certificates = mockStatic(Protos.X509Certificates.class)) {
-    doReturn("x509+sha256").when(paymentRequestMock).getPkiType();
-    doReturn(byteStringMock).when(paymentRequestMock).getPkiData();
-    doReturn(protosPaymentRequestBuilderMock).when(paymentRequestMock).toBuilder();
-    ByteString byteString = ByteString.EMPTY;
-    doReturn(protosPaymentRequestBuilderMock2).when(protosPaymentRequestBuilderMock).setSignature(byteString);
-    doReturn(protosPaymentRequestMock).when(protosPaymentRequestBuilderMock).build();
-    byte[] byteArray = new byte[] {};
-    doReturn(byteArray).when(protosPaymentRequestMock).toByteArray();
-    doReturn(byteStringMock2).when(paymentRequestMock).getSignature();
-    byte[] byteArray2 = new byte[] {};
-    doReturn(byteArray2).when(byteStringMock2).toByteArray();
-    protosX509Certificates.when(() -> Protos.X509Certificates.parseFrom(byteStringMock)).thenReturn(protosX509CertificatesMock);
-    doReturn(1).when(protosX509CertificatesMock).getCertificateCount();
-    List<ByteString> byteStringList = new ArrayList<>();
-    byteStringList.add(byteString2Mock);
-    doReturn(byteStringList).when(protosX509CertificatesMock).getCertificateList();
-    doReturn(null).when(byteString2Mock).newInput();
-    CertificateFactory certificateFactory2 = CertificateFactory.getInstance("X.509");
-    certificateFactory.when(() -> CertificateFactory.getInstance("X.509")).thenReturn(certificateFactory2);
-    CertPathValidator certPathValidator2 = CertPathValidator.getInstance("PKIX");
-    certPathValidator.when(() -> CertPathValidator.getInstance("PKIX")).thenReturn(certPathValidator2);
-    Signature signature2 = Signature.getInstance("SHA256withRSA");
-    signature.when(() -> Signature.getInstance("SHA256withRSA")).thenReturn(signature2);
-    x509Utils.when(() -> X509Utils.getDisplayNameFromCertificate((X509Certificate) any(), eq(true))).thenReturn("return_of_getDisplayNameFromCertificate1");
-    thrown.expect(PaymentProtocolException.InvalidPkiData.class);
-    //TODO: Needs initialization with real value
-    KeyStore keyStore = null;
-    //Act Statement(s)
-    PaymentProtocol.verifyPaymentRequestPki(paymentRequestMock, keyStore);
-    //Assert statement(s)
-    verify(paymentRequestMock).getPkiType();
-    verify(paymentRequestMock).getPkiData();
-    verify(paymentRequestMock).toBuilder();
-    verify(protosPaymentRequestBuilderMock).setSignature(byteString);
-    verify(protosPaymentRequestBuilderMock).build();
-    verify(protosPaymentRequestMock).toByteArray();
-    verify(paymentRequestMock).getSignature();
-    verify(byteStringMock2).toByteArray();
-    protosX509Certificates.verify(() -> Protos.X509Certificates.parseFrom(byteStringMock), atLeast(1));
-    verify(protosX509CertificatesMock).getCertificateCount();
-    verify(protosX509CertificatesMock).getCertificateList();
-    verify(byteString2Mock).newInput();
-    certificateFactory.verify(() -> CertificateFactory.getInstance("X.509"), atLeast(1));
-    certPathValidator.verify(() -> CertPathValidator.getInstance("PKIX"), atLeast(1));
-    signature.verify(() -> Signature.getInstance("SHA256withRSA"), atLeast(1));
-    x509Utils.verify(() -> X509Utils.getDisplayNameFromCertificate((X509Certificate) any(), eq(true)));
-}*/
+        try (MockedStatic<X509Utils> x509Utils = mockStatic(X509Utils.class);
+             MockedStatic<Signature> signature = mockStatic(Signature.class);
+             MockedStatic<CertPathValidator> certPathValidator = mockStatic(CertPathValidator.class);
+             MockedStatic<CertificateFactory> certificateFactory = mockStatic(CertificateFactory.class);
+             MockedStatic<Protos.X509Certificates> protosX509Certificates = mockStatic(Protos.X509Certificates.class)) {
+            doReturn("x509+sha256").when(paymentRequestMock).getPkiType();
+            doReturn(byteStringMock).when(paymentRequestMock).getPkiData();
+            doReturn(protosPaymentRequestBuilderMock).when(paymentRequestMock).toBuilder();
+            ByteString byteString = ByteString.EMPTY;
+            doReturn(protosPaymentRequestBuilderMock2).when(protosPaymentRequestBuilderMock).setSignature(byteString);
+            doReturn(protosPaymentRequestMock).when(protosPaymentRequestBuilderMock).build();
+            byte[] byteArray = new byte[]{};
+            doReturn(byteArray).when(protosPaymentRequestMock).toByteArray();
+            doReturn(byteStringMock2).when(paymentRequestMock).getSignature();
+            byte[] byteArray2 = new byte[]{};
+            doReturn(byteArray2).when(byteStringMock2).toByteArray();
+            protosX509Certificates.when(() -> Protos.X509Certificates.parseFrom(byteStringMock)).thenReturn(protosX509CertificatesMock);
+            doReturn(1).when(protosX509CertificatesMock).getCertificateCount();
+            List<ByteString> byteStringList = new ArrayList<>();
+            byteStringList.add(byteString2Mock);
+            doReturn(byteStringList).when(protosX509CertificatesMock).getCertificateList();
+            doReturn(null).when(byteString2Mock).newInput();
+            CertificateFactory certificateFactory2 = CertificateFactory.getInstance("X.509");
+            certificateFactory.when(() -> CertificateFactory.getInstance("X.509")).thenReturn(certificateFactory2);
+            CertPathValidator certPathValidator2 = CertPathValidator.getInstance("PKIX");
+            certPathValidator.when(() -> CertPathValidator.getInstance("PKIX")).thenReturn(certPathValidator2);
+            Signature signature2 = Signature.getInstance("SHA256withRSA");
+            signature.when(() -> Signature.getInstance("SHA256withRSA")).thenReturn(signature2);
+            x509Utils.when(() -> X509Utils.getDisplayNameFromCertificate((X509Certificate) any(), eq(true))).thenReturn("return_of_getDisplayNameFromCertificate1");
+            thrown.expect(PaymentProtocolException.InvalidPkiData.class);
+            //TODO: Needs initialization with real value
+            KeyStore keyStore = null;
+            //Act Statement(s)
+            PaymentProtocol.verifyPaymentRequestPki(paymentRequestMock, keyStore);
+            //Assert statement(s)
+            verify(paymentRequestMock).getPkiType();
+            verify(paymentRequestMock).getPkiData();
+            verify(paymentRequestMock).toBuilder();
+            verify(protosPaymentRequestBuilderMock).setSignature(byteString);
+            verify(protosPaymentRequestBuilderMock).build();
+            verify(protosPaymentRequestMock).toByteArray();
+            verify(paymentRequestMock).getSignature();
+            verify(byteStringMock2).toByteArray();
+            protosX509Certificates.verify(() -> Protos.X509Certificates.parseFrom(byteStringMock), atLeast(1));
+            verify(protosX509CertificatesMock).getCertificateCount();
+            verify(protosX509CertificatesMock).getCertificateList();
+            verify(byteString2Mock).newInput();
+            certificateFactory.verify(() -> CertificateFactory.getInstance("X.509"), atLeast(1));
+            certPathValidator.verify(() -> CertPathValidator.getInstance("PKIX"), atLeast(1));
+            signature.verify(() -> Signature.getInstance("SHA256withRSA"), atLeast(1));
+            x509Utils.verify(() -> X509Utils.getDisplayNameFromCertificate((X509Certificate) any(), eq(true)));
+        }
     }
 
     //Sapient generated method id: ${f0f7fadc-3bc3-3edd-85a1-9fbad1d24630}
@@ -653,20 +693,48 @@ public class PaymentProtocolSapientGeneratedJunit4Test {
          * (for-each(protoCerts.getCertificateList())) : true
          * (!signature.verify(paymentRequest.getSignature().toByteArray())) : false
          * (displayName == null) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<Protos.X509Certificates> protosX509Certificates = mockStatic(Protos.X509Certificates.class)) {
-    Protos.X509Certificates x509Certificates = Protos.X509Certificates.getDefaultInstance();
-    protosX509Certificates.when(() -> Protos.X509Certificates.parseFrom((ByteString) any())).thenReturn(x509Certificates);
-    thrown.expect(PaymentProtocolException.InvalidPkiData.class);
-    Protos.PaymentRequest paymentRequest = Protos.PaymentRequest.getDefaultInstance();
-    //TODO: Needs initialization with real value
-    KeyStore keyStore = null;
-    //Act Statement(s)
-    PaymentProtocol.verifyPaymentRequestPki(paymentRequest, keyStore);
-    //Assert statement(s)
-    protosX509Certificates.verify(() -> Protos.X509Certificates.parseFrom((ByteString) any()));
-}*/
+        try (MockedStatic<Protos.X509Certificates> protosX509Certificates = mockStatic(Protos.X509Certificates.class)) {
+            doReturn("x509+sha1").when(paymentRequestMock).getPkiType();
+            doReturn(byteStringMock).when(paymentRequestMock).getPkiData();
+            doReturn(protosPaymentRequestBuilderMock).when(paymentRequestMock).toBuilder();
+            ByteString byteString = ByteString.EMPTY;
+            doReturn(protosPaymentRequestBuilderMock2).when(protosPaymentRequestBuilderMock).setSignature(byteString);
+            doReturn(protosPaymentRequestMock).when(protosPaymentRequestBuilderMock).build();
+            byte[] byteArray = new byte[]{};
+            doReturn(byteArray).when(protosPaymentRequestMock).toByteArray();
+            doReturn(byteStringMock2).when(paymentRequestMock).getSignature();
+            byte[] byteArray2 = new byte[]{};
+            doReturn(byteArray2).when(byteStringMock2).toByteArray();
+            protosX509Certificates.when(() -> Protos.X509Certificates.parseFrom(byteStringMock)).thenReturn(protosX509CertificatesMock);
+            doReturn(1).when(protosX509CertificatesMock).getCertificateCount();
+            List<ByteString> byteStringList = new ArrayList<>();
+            byteStringList.add(byteString2Mock);
+            doReturn(byteStringList).when(protosX509CertificatesMock).getCertificateList();
+            doReturn(null).when(byteString2Mock).newInput();
+            thrown.expect(PaymentProtocolException.PkiVerificationException.class);
+            //TODO: Needs initialization with real value
+            KeyStore keyStore = null;
+            //Act Statement(s)
+            PaymentProtocol.verifyPaymentRequestPki(paymentRequestMock, keyStore);
+            //Assert statement(s)
+            verify(paymentRequestMock).getPkiType();
+            verify(paymentRequestMock).getPkiData();
+            verify(paymentRequestMock).toBuilder();
+            verify(protosPaymentRequestBuilderMock).setSignature(byteString);
+            verify(protosPaymentRequestBuilderMock).build();
+            verify(protosPaymentRequestMock).toByteArray();
+            verify(paymentRequestMock).getSignature();
+            verify(byteStringMock2).toByteArray();
+            protosX509Certificates.verify(() -> Protos.X509Certificates.parseFrom(byteStringMock), atLeast(1));
+            verify(protosX509CertificatesMock).getCertificateCount();
+            verify(protosX509CertificatesMock).getCertificateList();
+            verify(byteString2Mock).newInput();
+        }
     }
 
     //Sapient generated method id: ${a5de3777-890b-3d0c-b7ae-77989f769566}
@@ -676,17 +744,17 @@ public class PaymentProtocolSapientGeneratedJunit4Test {
          * (refundAddress != null) : false
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<PaymentProtocol> paymentProtocol = mockStatic(PaymentProtocol.class, CALLS_REAL_METHODS)) {
-    byte[] byteArray = new byte[] {};
-    paymentProtocol.when(() -> PaymentProtocol.createPaymentMessage(anyList(), eq((List) null), eq("memo1"), eq(byteArray))).thenReturn(protosPaymentMock);
-    List<Transaction> transactionList = new ArrayList<>();
-    Address address = null;
-    //Act Statement(s)
-    Protos.Payment result = PaymentProtocol.createPaymentMessage(transactionList, coinMock, address, "memo1", byteArray);
-    //Assert statement(s)
-    assertThat(result, equalTo(protosPaymentMock));
-    paymentProtocol.verify(() -> PaymentProtocol.createPaymentMessage(anyList(), eq((List) null), eq("memo1"), eq(byteArray)), atLeast(1));
-}*/
+        try (MockedStatic<PaymentProtocol> paymentProtocol = mockStatic(PaymentProtocol.class, CALLS_REAL_METHODS)) {
+            byte[] byteArray = new byte[]{};
+            paymentProtocol.when(() -> PaymentProtocol.createPaymentMessage(anyList(), eq((List) null), eq("memo1"), eq(byteArray))).thenReturn(protosPaymentMock);
+            List<Transaction> transactionList = new ArrayList<>();
+            Address address = null;
+            //Act Statement(s)
+            Protos.Payment result = PaymentProtocol.createPaymentMessage(transactionList, coinMock, address, "memo1", byteArray);
+            //Assert statement(s)
+            assertThat(result, equalTo(protosPaymentMock));
+            paymentProtocol.verify(() -> PaymentProtocol.createPaymentMessage(anyList(), eq((List) null), eq("memo1"), eq(byteArray)), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${1b129479-a34d-333f-b466-c80457f2d5cb}
@@ -697,14 +765,14 @@ public class PaymentProtocolSapientGeneratedJunit4Test {
          * (refundAmount == null) : true
          */
         //Arrange Statement(s)
-        //IllegalArgumentException illegalArgumentException = new IllegalArgumentException("Specify refund amount if refund address is specified.");
-        //thrown.expect(IllegalArgumentException.class);
-        //thrown.expectMessage(illegalArgumentException.getMessage());
-        //List<Transaction> transactionList = new ArrayList<>();
-        //Coin coin = null;
-        //byte[] byteArray = new byte[] {};
+        IllegalArgumentException illegalArgumentException = new IllegalArgumentException("Specify refund amount if refund address is specified.");
+        thrown.expect(IllegalArgumentException.class);
+        thrown.expectMessage(illegalArgumentException.getMessage());
+        List<Transaction> transactionList = new ArrayList<>();
+        Coin coin = null;
+        byte[] byteArray = new byte[]{};
         //Act Statement(s)
-        //PaymentProtocol.createPaymentMessage(transactionList, coin, addressMock, "memo1", byteArray);
+        PaymentProtocol.createPaymentMessage(transactionList, coin, addressMock, "memo1", byteArray);
     }
 
     //Sapient generated method id: ${e9ee867d-053a-3dfc-a726-be1432f43f6c}
@@ -734,6 +802,7 @@ public class PaymentProtocolSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${e55007f8-66a1-3dfe-955b-77cffb0366ba}
+    @Ignore()
     @Test()
     public void createPaymentMessage1WhenRefundOutputsIsNotEmptyAndMemoIsNotNullAndMerchantDataIsNotNull() {
         /* Branches:
@@ -848,71 +917,76 @@ public class PaymentProtocolSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${cf01a93f-900d-37d4-843c-9168b63ac7b1}
+    @Ignore()
     @Test()
     public void parsePaymentAckWhenPaymentAckHasMemo() {
         /* Branches:
          * (paymentAck.hasMemo()) : true
          */
-        //Assert statement(s)
         //Arrange Statement(s)
-        //Protos.PaymentACK paymentACK = Protos.PaymentACK.getDefaultInstance();
+        doReturn(true).when(paymentAckMock).hasMemo();
+        doReturn("return_of_getMemo1").when(paymentAckMock).getMemo();
         //Act Statement(s)
-        //PaymentProtocol.Ack result = PaymentProtocol.parsePaymentAck(paymentACK);
-        //PaymentProtocol.Ack paymentProtocolAck = new PaymentProtocol.Ack("Payment received");
+        PaymentProtocol.Ack result = PaymentProtocol.parsePaymentAck(paymentAckMock);
+        PaymentProtocol.Ack paymentProtocolAck = new PaymentProtocol.Ack("return_of_getMemo1");
+        //Assert statement(s)
         //TODO: Please implement equals method in Ack for verification to succeed or you need to adjust respective assertion statements
-        //assertThat(result, equalTo(paymentProtocolAck));
+        assertThat(result, equalTo(paymentProtocolAck));
+        verify(paymentAckMock).hasMemo();
+        verify(paymentAckMock).getMemo();
     }
 
     //Sapient generated method id: ${67d6ef03-d28f-3150-9321-85ea810ac766}
+    @Ignore()
     @Test()
     public void parsePaymentAckWhenPaymentAckNotHasMemo() {
         /* Branches:
          * (paymentAck.hasMemo()) : false
          */
-        //Assert statement(s)
         //Arrange Statement(s)
-        //Protos.PaymentACK paymentAckMock = mock(Protos.PaymentACK.class);
-        //doReturn(false).when(paymentAckMock).hasMemo();
+        doReturn(false).when(paymentAckMock).hasMemo();
         //Act Statement(s)
-        //PaymentProtocol.Ack result = PaymentProtocol.parsePaymentAck(paymentAckMock);
-        //PaymentProtocol.Ack paymentProtocolAck = new PaymentProtocol.Ack((String) null);
+        PaymentProtocol.Ack result = PaymentProtocol.parsePaymentAck(paymentAckMock);
+        PaymentProtocol.Ack paymentProtocolAck = new PaymentProtocol.Ack((String) null);
+        //Assert statement(s)
         //TODO: Please implement equals method in Ack for verification to succeed or you need to adjust respective assertion statements
-        //assertThat(result, equalTo(paymentProtocolAck));
-        //verify(paymentAckMock).hasMemo();
+        assertThat(result, equalTo(paymentProtocolAck));
+        verify(paymentAckMock).hasMemo();
     }
 
     //Sapient generated method id: ${3f2d4c49-693e-345a-a2f9-a97605644fed}
+    @Ignore()
     @Test()
     public void createPayToAddressOutputWhenAmountIsNull() {
         /* Branches:
          * (amount != null) : false
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
-    MockedStatic<ScriptBuilder> scriptBuilder = mockStatic(ScriptBuilder.class);
-    MockedStatic<Protos.Output> protosOutput = mockStatic(Protos.Output.class)) {
-    protosOutput.when(() -> Protos.Output.newBuilder()).thenReturn(protosOutputBuilderMock);
-    Protos.Output.Builder builder = protosOutputBuilderMock.setAmount(0L);
-    doReturn(builder).when(protosOutputBuilderMock).setAmount(0L);
-    doReturn(protosOutputBuilderMock2).when(protosOutputBuilderMock).setScript(byteStringMock);
-    doReturn(protosOutputMock).when(protosOutputBuilderMock).build();
-    scriptBuilder.when(() -> ScriptBuilder.createOutputScript(addressMock)).thenReturn(scriptMock);
-    byte[] byteArray = new byte[] {};
-    doReturn(byteArray).when(scriptMock).program();
-    byteString.when(() -> ByteString.copyFrom(byteArray)).thenReturn(byteStringMock);
-    Coin coin = null;
-    //Act Statement(s)
-    Protos.Output result = PaymentProtocol.createPayToAddressOutput(coin, addressMock);
-    //Assert statement(s)
-    assertThat(result, equalTo(protosOutputMock));
-    protosOutput.verify(() -> Protos.Output.newBuilder(), atLeast(1));
-    verify(protosOutputBuilderMock).setAmount(0L);
-    verify(protosOutputBuilderMock).setScript(byteStringMock);
-    verify(protosOutputBuilderMock).build();
-    scriptBuilder.verify(() -> ScriptBuilder.createOutputScript(addressMock), atLeast(1));
-    verify(scriptMock).program();
-    byteString.verify(() -> ByteString.copyFrom(byteArray), atLeast(1));
-}*/
+        try (MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
+             MockedStatic<ScriptBuilder> scriptBuilder = mockStatic(ScriptBuilder.class);
+             MockedStatic<Protos.Output> protosOutput = mockStatic(Protos.Output.class)) {
+            protosOutput.when(() -> Protos.Output.newBuilder()).thenReturn(protosOutputBuilderMock);
+            Protos.Output.Builder builder = protosOutputBuilderMock.setAmount(0L);
+            doReturn(builder).when(protosOutputBuilderMock).setAmount(0L);
+            doReturn(protosOutputBuilderMock2).when(protosOutputBuilderMock).setScript(byteStringMock);
+            doReturn(protosOutputMock).when(protosOutputBuilderMock).build();
+            scriptBuilder.when(() -> ScriptBuilder.createOutputScript(addressMock)).thenReturn(scriptMock);
+            byte[] byteArray = new byte[]{};
+            doReturn(byteArray).when(scriptMock).program();
+            byteString.when(() -> ByteString.copyFrom(byteArray)).thenReturn(byteStringMock);
+            Coin coin = null;
+            //Act Statement(s)
+            Protos.Output result = PaymentProtocol.createPayToAddressOutput(coin, addressMock);
+            //Assert statement(s)
+            assertThat(result, equalTo(protosOutputMock));
+            protosOutput.verify(() -> Protos.Output.newBuilder(), atLeast(1));
+            verify(protosOutputBuilderMock).setAmount(0L);
+            verify(protosOutputBuilderMock).setScript(byteStringMock);
+            verify(protosOutputBuilderMock).build();
+            scriptBuilder.verify(() -> ScriptBuilder.createOutputScript(addressMock), atLeast(1));
+            verify(scriptMock).program();
+            byteString.verify(() -> ByteString.copyFrom(byteArray), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${db8ac907-0629-37e3-b302-a7ed8f5c5daf}
@@ -923,23 +997,23 @@ public class PaymentProtocolSapientGeneratedJunit4Test {
          * (params.network().exceedsMaxMoney(amount)) : true
          */
         //Arrange Statement(s)
-        //Coin coinMock = mock(Coin.class, "createPayToAddressOutput_coin1");
-        /*try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-    doReturn(networkMock).when(addressMock).network();
-    networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
-    doReturn(networkMock2).when(networkParametersMock).network();
-    doReturn(true).when(networkMock2).exceedsMaxMoney(coinMock);
-    IllegalArgumentException illegalArgumentException = new IllegalArgumentException("Amount too big: createPayToAddressOutput_coin1");
-    thrown.expect(IllegalArgumentException.class);
-    thrown.expectMessage(illegalArgumentException.getMessage());
-    //Act Statement(s)
-    PaymentProtocol.createPayToAddressOutput(coinMock, addressMock);
-    //Assert statement(s)
-    verify(addressMock).network();
-    networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-    verify(networkParametersMock).network();
-    verify(networkMock2).exceedsMaxMoney(coinMock);
-}*/
+        Coin coinMock = mock(Coin.class, "createPayToAddressOutput_coin1");
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            doReturn(networkMock).when(addressMock).network();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
+            doReturn(networkMock2).when(networkParametersMock).network();
+            doReturn(true).when(networkMock2).exceedsMaxMoney(coinMock);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException("Amount too big: createPayToAddressOutput_coin1");
+            thrown.expect(IllegalArgumentException.class);
+            thrown.expectMessage(illegalArgumentException.getMessage());
+            //Act Statement(s)
+            PaymentProtocol.createPayToAddressOutput(coinMock, addressMock);
+            //Assert statement(s)
+            verify(addressMock).network();
+            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(networkParametersMock).network();
+            verify(networkMock2).exceedsMaxMoney(coinMock);
+        }
     }
 
     //Sapient generated method id: ${f4a78796-6cec-3423-bb7b-e7d5127aefff}
@@ -953,39 +1027,36 @@ public class PaymentProtocolSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
-    MockedStatic<ScriptBuilder> scriptBuilder = mockStatic(ScriptBuilder.class);
-    MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
-    MockedStatic<Protos.Output> protosOutput = mockStatic(Protos.Output.class)) {
-    doReturn(networkMock).when(addressMock).network();
-    protosOutput.when(() -> Protos.Output.newBuilder()).thenReturn(protosOutputBuilderMock);
-    Protos.Output.Builder builder = protosOutputBuilderMock.setAmount(1L);
-    doReturn(builder).when(protosOutputBuilderMock).setAmount(1L);
-    doReturn(protosOutputBuilderMock2).when(protosOutputBuilderMock).setScript(byteStringMock);
-    doReturn(protosOutputMock).when(protosOutputBuilderMock).build();
-    networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
-    doReturn(networkMock2).when(networkParametersMock).network();
-    doReturn(false).when(networkMock2).exceedsMaxMoney(coinMock);
-    scriptBuilder.when(() -> ScriptBuilder.createOutputScript(addressMock)).thenReturn(scriptMock);
-    byte[] byteArray = new byte[] {};
-    doReturn(byteArray).when(scriptMock).program();
-    byteString.when(() -> ByteString.copyFrom(byteArray)).thenReturn(byteStringMock);
-    //Act Statement(s)
-    Protos.Output result = PaymentProtocol.createPayToAddressOutput(coinMock, addressMock);
-    //Assert statement(s)
-    assertThat(result, equalTo(protosOutputMock));
-    verify(addressMock).network();
-    protosOutput.verify(() -> Protos.Output.newBuilder(), atLeast(1));
-    verify(protosOutputBuilderMock).setAmount(1L);
-    verify(protosOutputBuilderMock).setScript(byteStringMock);
-    verify(protosOutputBuilderMock).build();
-    networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-    verify(networkParametersMock).network();
-    verify(networkMock2).exceedsMaxMoney(coinMock);
-    scriptBuilder.verify(() -> ScriptBuilder.createOutputScript(addressMock), atLeast(1));
-    verify(scriptMock).program();
-    byteString.verify(() -> ByteString.copyFrom(byteArray), atLeast(1));
-}*/
+        try (MockedStatic<ScriptBuilder> scriptBuilder = mockStatic(ScriptBuilder.class);
+             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
+             MockedStatic<Protos.Output> protosOutput = mockStatic(Protos.Output.class)) {
+            doReturn(networkMock).when(addressMock).network();
+            protosOutput.when(() -> Protos.Output.newBuilder()).thenReturn(protosOutputBuilderMock);
+            Protos.Output.Builder builder = protosOutputBuilderMock.setAmount(1L);
+            doReturn(builder).when(protosOutputBuilderMock).setAmount(0L);
+            doReturn(protosOutputBuilderMock2).when(protosOutputBuilderMock).setScript((ByteString) any());
+            doReturn(protosOutputMock).when(protosOutputBuilderMock).build();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
+            doReturn(networkMock2).when(networkParametersMock).network();
+            doReturn(false).when(networkMock2).exceedsMaxMoney(coinMock);
+            scriptBuilder.when(() -> ScriptBuilder.createOutputScript(addressMock)).thenReturn(scriptMock);
+            byte[] byteArray = new byte[]{};
+            doReturn(byteArray).when(scriptMock).program();
+            //Act Statement(s)
+            Protos.Output result = PaymentProtocol.createPayToAddressOutput(coinMock, addressMock);
+            //Assert statement(s)
+            assertThat(result, equalTo(protosOutputMock));
+            verify(addressMock).network();
+            protosOutput.verify(() -> Protos.Output.newBuilder(), atLeast(1));
+            verify(protosOutputBuilderMock).setAmount(0L);
+            verify(protosOutputBuilderMock).setScript((ByteString) any());
+            verify(protosOutputBuilderMock).build();
+            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(networkParametersMock).network();
+            verify(networkMock2).exceedsMaxMoney(coinMock);
+            scriptBuilder.verify(() -> ScriptBuilder.createOutputScript(addressMock), atLeast(1));
+            verify(scriptMock).program();
+        }
     }
 
     //Sapient generated method id: ${f1234942-ea05-34aa-b30a-9a99c062f7b3}

@@ -694,11 +694,11 @@ methods:
       filledByUser: false
     uuid: "118bbc22-6633-3a3f-ba11-ced895a866d0"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "ofMnemonic"
     returnType: "org.bitcoinj.wallet.DeterministicSeed"
@@ -858,11 +858,11 @@ methods:
       filledByUser: false
     uuid: "cfa071ed-dabf-305c-9e6c-390b89e99a34"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "ofEntropy"
     returnType: "org.bitcoinj.wallet.DeterministicSeed"
@@ -1936,11 +1936,11 @@ methods:
       filledByUser: false
     uuid: "5d4d94a2-9c70-335e-8a9c-bd4a5fd851b5"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "ofEntropy"
     returnType: "org.bitcoinj.wallet.DeterministicSeed"
@@ -2937,11 +2937,11 @@ methods:
       filledByUser: false
     uuid: "8dba0aaa-7140-3d30-9741-f866354a7894"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "ofRandom"
     returnType: "org.bitcoinj.wallet.DeterministicSeed"
@@ -3209,11 +3209,11 @@ methods:
       filledByUser: false
     uuid: "e0e63339-de46-337b-b131-03efb72cf524"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "ofRandomWhenBitsLessThanOrEqualsToMAX_SEED_ENTROPY_BITSAndDefaultBranch"
@@ -3238,13 +3238,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "348810BC63D898DBF5A3ADDAB771CF95"
+    modelFingerprint: "5CE5E3A4ABC65EDF2A9B8F5C4F7BD0D9"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "random"
-      modelFingerprint: "D0D6B96E884DBC544378FE37AB964DA9"
+      modelFingerprint: "18F3A090BA5BF7EE7D8CC446C3D17E0E"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -3270,7 +3270,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "bits"
-      modelFingerprint: "9F3A9D3D53BB78108F52BE67EBF0BCE8"
+      modelFingerprint: "3242CD04884852DB32FAFA8FB87D9543"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -3278,9 +3278,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 519
-        suggestedContent: !<regular>
-          value: 519
+          value: 0
         valueType: "int"
         uuid: "ofRandom_int1"
         fixed: false
@@ -3290,7 +3288,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "passphrase"
-      modelFingerprint: "80DE334E6DD4F8EA2B23F5393CCAE43B"
+      modelFingerprint: "0E1F422B03D62B186627FE225A73E9EC"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -3298,9 +3296,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "java.lang.String"
-        suggestedContent: !<regular>
-          value: "java.lang.String"
+          value: "passphrase1"
         valueType: "java.lang.String"
         uuid: "ofRandom_string1"
         fixed: false
@@ -3356,7 +3352,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "TimeUtils"
-      modelFingerprint: "CB533F35E7D5AB74C82EBC56B1360C1D"
+      modelFingerprint: "19DE031B758E44392582012D4037D413"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -3374,15 +3370,15 @@ methods:
         parameters: []
         signature: "currentTime(): Instant"
         returnValue:
-          sapientType: "NULL"
-          content: !<unknown_object>
-            target: "java.time.Instant"
-            onlyPojoFunctions: true
-            builderPattern: false
-          suggestedContent: !<unknown_object>
-            target: "java.time.Instant"
-            onlyPojoFunctions: true
-            builderPattern: false
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.base.internal.TimeUtils"
+            method: "currentTime"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.internal.TimeUtils"
+            method: "currentTime"
+            methodParameters: []
           valueType: "java.time.Instant"
           uuid: "<init>_instant1"
           fixed: false
@@ -3393,36 +3389,104 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "1544C3243427A58A5AE91A88CC628F77"
+      modelFingerprint: "4CD8596FDFEF59B0665D95413F63AE34"
       index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "EXCEPTION"
+        sapientType: "OBJECT"
         content: !<new>
-          target: "java.lang.NullPointerException"
-          parameters: []
+          target: "org.bitcoinj.wallet.DeterministicSeed"
+          parameters:
+          - name: "random"
+            value:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.security.SecureRandom"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "java.security.SecureRandom"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "java.security.SecureRandom"
+              uuid: "ofRandom_secureRandom1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "ofRandom_int1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "passphrase"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "passphrase1"
+              valueType: "java.lang.String"
+              uuid: "ofRandom_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
           privateConstructor: false
-          createdByTargetCode: false
+          createdByTargetCode: true
         suggestedContent: !<new>
-          target: "java.lang.NullPointerException"
-          parameters: []
+          target: "org.bitcoinj.wallet.DeterministicSeed"
+          parameters:
+          - name: "random"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<new>
+                target: "java.security.SecureRandom"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "java.security.SecureRandom"
+              uuid: "ofRandom_secureRandom1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              valueType: "int"
+              uuid: "ofRandom_int1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "passphrase"
+            value:
+              sapientType: "BASIC"
+              valueType: "java.lang.String"
+              uuid: "ofRandom_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
           privateConstructor: false
-          createdByTargetCode: false
-        valueType: "java.lang.NullPointerException"
-        fixed: false
-        equalsMethodPresent: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.wallet.DeterministicSeed"
+        uuid: "ofRandom_deterministicSeed1"
+        fixed: true
+        equalsMethodPresent: true
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     uuid: "11618a64-70a2-357d-8b6f-d14c69a05b95"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "isEncrypted"
     returnType: "boolean"
@@ -3934,10 +3998,11 @@ methods:
       filledByUser: false
     uuid: "6feb8104-e1fb-3c31-8751-eb2a06a07f7a"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "toString"
     returnType: "java.lang.String"
@@ -4214,12 +4279,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "D8142142408A240FBC950151A2916A8D"
+    modelFingerprint: "0EF2BCC00B2C249568395ADE2BC99364"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "E6AED7DFEA9B2EC6E0FA515C3A8EBE5F"
+      modelFingerprint: "1C33DEE7CF61B977522C7CC16094760D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -4233,9 +4298,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "test mnemonic"
+                value: "A"
               suggestedContent: !<regular>
-                value: "test mnemonic"
+                value: "A"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -4245,109 +4310,9 @@ methods:
             value:
               sapientType: "ARRAY"
               content: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 2
-                    suggestedContent: !<regular>
-                      value: 2
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  2:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 3
-                    suggestedContent: !<regular>
-                      value: 3
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  3:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 4
-                    suggestedContent: !<regular>
-                      value: 4
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  4:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 5
-                    suggestedContent: !<regular>
-                      value: 5
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                values: {}
               suggestedContent: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 2
-                    suggestedContent: !<regular>
-                      value: 2
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  2:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 3
-                    suggestedContent: !<regular>
-                      value: 3
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  3:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 4
-                    suggestedContent: !<regular>
-                      value: 4
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  4:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 5
-                    suggestedContent: !<regular>
-                      value: 5
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                values: {}
               valueType: "byte[]"
               uuid: "<init>_byte[]1"
               fixed: false
@@ -4357,9 +4322,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "test passphrase"
-              suggestedContent: !<regular>
-                value: "test passphrase"
+                value: "passphrase1"
               valueType: "java.lang.String"
               uuid: "<init>_string2"
               fixed: false
@@ -4389,10 +4352,8 @@ methods:
           - name: "mnemonicString"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "test mnemonic"
               suggestedContent: !<regular>
-                value: "test mnemonic"
+                value: "A"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -4401,110 +4362,6 @@ methods:
           - name: "seed"
             value:
               sapientType: "ARRAY"
-              content: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 2
-                    suggestedContent: !<regular>
-                      value: 2
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  2:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 3
-                    suggestedContent: !<regular>
-                      value: 3
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  3:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 4
-                    suggestedContent: !<regular>
-                      value: 4
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  4:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 5
-                    suggestedContent: !<regular>
-                      value: 5
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 2
-                    suggestedContent: !<regular>
-                      value: 2
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  2:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 3
-                    suggestedContent: !<regular>
-                      value: 3
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  3:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 4
-                    suggestedContent: !<regular>
-                      value: 4
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  4:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 5
-                    suggestedContent: !<regular>
-                      value: 5
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
               valueType: "byte[]"
               uuid: "<init>_byte[]1"
               fixed: false
@@ -4513,10 +4370,6 @@ methods:
           - name: "passphrase"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "test passphrase"
-              suggestedContent: !<regular>
-                value: "test passphrase"
               valueType: "java.lang.String"
               uuid: "<init>_string2"
               fixed: false
@@ -4524,11 +4377,7 @@ methods:
               explicitCastNeeded: false
           - name: "creationTime"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "java.time.Instant"
-                method: "now"
-                methodParameters: []
+              sapientType: "UNKNOWN"
               suggestedContent: !<static_method_return>
                 target: "java.time.Instant"
                 method: "now"
@@ -4549,7 +4398,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "includePrivate"
-      modelFingerprint: "218BCE81312024750857A28E481FBBA8"
+      modelFingerprint: "CE51E2BACACEEBD2F587BB1D257044FA"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -4557,9 +4406,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: true
-        suggestedContent: !<regular>
-          value: true
+          value: false
         valueType: "boolean"
         uuid: "toString_boolean1"
         fixed: false
@@ -4569,7 +4416,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "WHITESPACE_SPLITTER"
-      modelFingerprint: "70CE4A936ACBFBE02A69490A383A33DB"
+      modelFingerprint: "F22087D31AC429BAD600CADD92A0E3CC"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -4595,9 +4442,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "test mnemonic"
+              value: "A"
             suggestedContent: !<regular>
-              value: "test mnemonic"
+              value: "A"
             valueType: "java.lang.String"
             uuid: "<init>_string1"
             fixed: false
@@ -4611,14 +4458,7 @@ methods:
             values:
             - sapientType: "BASIC"
               content: !<regular>
-                value: "test"
-              valueType: "java.lang.String"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "BASIC"
-              content: !<regular>
-                value: "mnemonic"
+                value: "A"
               valueType: "java.lang.String"
               fixed: true
               equalsMethodPresent: false
@@ -4628,14 +4468,7 @@ methods:
             values:
             - sapientType: "BASIC"
               content: !<regular>
-                value: "test"
-              valueType: "java.lang.String"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "BASIC"
-              content: !<regular>
-                value: "mnemonic"
+                value: "A"
               valueType: "java.lang.String"
               fixed: true
               equalsMethodPresent: false
@@ -4697,11 +4530,11 @@ methods:
       filledByUser: false
     uuid: "6dad8bd2-d85e-3449-9e91-b444ceb1332f"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "toString1WhenIncludePrivate"
@@ -4711,12 +4544,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "446D050A6FF97DF8262404B2585E000A"
+    modelFingerprint: "D41A5FDD0814321D15D8A7AD41499F03"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "B39C662B828C1F30FA680840ECF1637A"
+      modelFingerprint: "67212CAB23BC1E6DA1615AD2FBBFC78A"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -4730,9 +4563,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "example mnemonic string"
+                value: ""
               suggestedContent: !<regular>
-                value: "example mnemonic string"
+                value: ""
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -4742,69 +4575,9 @@ methods:
             value:
               sapientType: "ARRAY"
               content: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 2
-                    suggestedContent: !<regular>
-                      value: 2
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  2:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 3
-                    suggestedContent: !<regular>
-                      value: 3
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                values: {}
               suggestedContent: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 2
-                    suggestedContent: !<regular>
-                      value: 2
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  2:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 3
-                    suggestedContent: !<regular>
-                      value: 3
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                values: {}
               valueType: "byte[]"
               uuid: "<init>_byte[]1"
               fixed: false
@@ -4814,9 +4587,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "example passphrase"
-              suggestedContent: !<regular>
-                value: "example passphrase"
+                value: "passphrase1"
               valueType: "java.lang.String"
               uuid: "<init>_string2"
               fixed: false
@@ -4846,10 +4617,8 @@ methods:
           - name: "mnemonicString"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "example mnemonic string"
               suggestedContent: !<regular>
-                value: "example mnemonic string"
+                value: ""
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -4858,70 +4627,6 @@ methods:
           - name: "seed"
             value:
               sapientType: "ARRAY"
-              content: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 2
-                    suggestedContent: !<regular>
-                      value: 2
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  2:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 3
-                    suggestedContent: !<regular>
-                      value: 3
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 2
-                    suggestedContent: !<regular>
-                      value: 2
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  2:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 3
-                    suggestedContent: !<regular>
-                      value: 3
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
               valueType: "byte[]"
               uuid: "<init>_byte[]1"
               fixed: false
@@ -4930,10 +4635,6 @@ methods:
           - name: "passphrase"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "example passphrase"
-              suggestedContent: !<regular>
-                value: "example passphrase"
               valueType: "java.lang.String"
               uuid: "<init>_string2"
               fixed: false
@@ -4941,11 +4642,7 @@ methods:
               explicitCastNeeded: false
           - name: "creationTime"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "java.time.Instant"
-                method: "now"
-                methodParameters: []
+              sapientType: "UNKNOWN"
               suggestedContent: !<static_method_return>
                 target: "java.time.Instant"
                 method: "now"
@@ -4966,7 +4663,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "includePrivate"
-      modelFingerprint: "218BCE81312024750857A28E481FBBA8"
+      modelFingerprint: "A18F60CA769F18A4636AB056F7DBBB1B"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -4986,7 +4683,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "WHITESPACE_SPLITTER"
-      modelFingerprint: "F6D8166CE23219DE20B3C14BF13981C8"
+      modelFingerprint: "64FAEFD882345EACBD7DB90AE77EF97E"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -5012,9 +4709,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "example mnemonic string"
+              value: ""
             suggestedContent: !<regular>
-              value: "example mnemonic string"
+              value: ""
             valueType: "java.lang.String"
             uuid: "<init>_string1"
             fixed: false
@@ -5028,21 +4725,7 @@ methods:
             values:
             - sapientType: "BASIC"
               content: !<regular>
-                value: "example"
-              valueType: "java.lang.String"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "BASIC"
-              content: !<regular>
-                value: "mnemonic"
-              valueType: "java.lang.String"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "BASIC"
-              content: !<regular>
-                value: "string"
+                value: ""
               valueType: "java.lang.String"
               fixed: true
               equalsMethodPresent: false
@@ -5052,21 +4735,7 @@ methods:
             values:
             - sapientType: "BASIC"
               content: !<regular>
-                value: "example"
-              valueType: "java.lang.String"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "BASIC"
-              content: !<regular>
-                value: "mnemonic"
-              valueType: "java.lang.String"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "BASIC"
-              content: !<regular>
-                value: "string"
+                value: ""
               valueType: "java.lang.String"
               fixed: true
               equalsMethodPresent: false
@@ -5176,11 +4845,11 @@ methods:
       filledByUser: false
     uuid: "2d2467cc-8fbc-3cca-8870-867277564658"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path3"
     testPathName: "toString1WhenNotIncludePrivate"
@@ -5190,12 +4859,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "75A7DA8DECBCA4F37A277A85CC53A32D"
+    modelFingerprint: "067E04AF00DB3E18E07F30936F10E340"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "977F39EAADB5CB1D7E27A084973A8BB3"
+      modelFingerprint: "67212CAB23BC1E6DA1615AD2FBBFC78A"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -5209,9 +4878,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "example mnemonic"
+                value: ""
               suggestedContent: !<regular>
-                value: "example mnemonic"
+                value: ""
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -5221,69 +4890,9 @@ methods:
             value:
               sapientType: "ARRAY"
               content: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 2
-                    suggestedContent: !<regular>
-                      value: 2
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  2:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 3
-                    suggestedContent: !<regular>
-                      value: 3
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                values: {}
               suggestedContent: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 2
-                    suggestedContent: !<regular>
-                      value: 2
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  2:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 3
-                    suggestedContent: !<regular>
-                      value: 3
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                values: {}
               valueType: "byte[]"
               uuid: "<init>_byte[]1"
               fixed: false
@@ -5293,9 +4902,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "example passphrase"
-              suggestedContent: !<regular>
-                value: "example passphrase"
+                value: "passphrase1"
               valueType: "java.lang.String"
               uuid: "<init>_string2"
               fixed: false
@@ -5325,10 +4932,8 @@ methods:
           - name: "mnemonicString"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "example mnemonic"
               suggestedContent: !<regular>
-                value: "example mnemonic"
+                value: ""
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -5337,70 +4942,6 @@ methods:
           - name: "seed"
             value:
               sapientType: "ARRAY"
-              content: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 2
-                    suggestedContent: !<regular>
-                      value: 2
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  2:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 3
-                    suggestedContent: !<regular>
-                      value: 3
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 2
-                    suggestedContent: !<regular>
-                      value: 2
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  2:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 3
-                    suggestedContent: !<regular>
-                      value: 3
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
               valueType: "byte[]"
               uuid: "<init>_byte[]1"
               fixed: false
@@ -5409,10 +4950,6 @@ methods:
           - name: "passphrase"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "example passphrase"
-              suggestedContent: !<regular>
-                value: "example passphrase"
               valueType: "java.lang.String"
               uuid: "<init>_string2"
               fixed: false
@@ -5420,11 +4957,7 @@ methods:
               explicitCastNeeded: false
           - name: "creationTime"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "java.time.Instant"
-                method: "now"
-                methodParameters: []
+              sapientType: "UNKNOWN"
               suggestedContent: !<static_method_return>
                 target: "java.time.Instant"
                 method: "now"
@@ -5445,7 +4978,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "includePrivate"
-      modelFingerprint: "6E69C7E95CFEA9A4F87CBB8B0B65EDA1"
+      modelFingerprint: "CEBCE632B8C274092CFE644E9187D87A"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -5465,7 +4998,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "WHITESPACE_SPLITTER"
-      modelFingerprint: "012222A51E2EB2BD87FDEE11A95694F1"
+      modelFingerprint: "64FAEFD882345EACBD7DB90AE77EF97E"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -5491,9 +5024,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "example mnemonic"
+              value: ""
             suggestedContent: !<regular>
-              value: "example mnemonic"
+              value: ""
             valueType: "java.lang.String"
             uuid: "<init>_string1"
             fixed: false
@@ -5507,14 +5040,7 @@ methods:
             values:
             - sapientType: "BASIC"
               content: !<regular>
-                value: "example"
-              valueType: "java.lang.String"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "BASIC"
-              content: !<regular>
-                value: "mnemonic"
+                value: ""
               valueType: "java.lang.String"
               fixed: true
               equalsMethodPresent: false
@@ -5524,14 +5050,7 @@ methods:
             values:
             - sapientType: "BASIC"
               content: !<regular>
-                value: "example"
-              valueType: "java.lang.String"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "BASIC"
-              content: !<regular>
-                value: "mnemonic"
+                value: ""
               valueType: "java.lang.String"
               fixed: true
               equalsMethodPresent: false
@@ -5593,11 +5112,11 @@ methods:
       filledByUser: false
     uuid: "5ebed118-9b1d-35c1-a79b-42d21b8e7844"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "toHexString"
     returnType: "java.lang.String"
@@ -6081,10 +5600,11 @@ methods:
       filledByUser: false
     uuid: "f3d9549d-5c4c-3a8a-b78c-ec40ba218fa1"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getSecretBytes"
     returnType: "byte[]"
@@ -6101,12 +5621,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "11E3BAE192D23330290E0136D58B2211"
+    modelFingerprint: "399243EDCBF5EDC9B5EBF57BF08CF1E4"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "FAFF84A671DADDFD8DBD726462A11E13"
+      modelFingerprint: "1C33DEE7CF61B977522C7CC16094760D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -6120,9 +5640,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "test"
+                value: "A"
               suggestedContent: !<regular>
-                value: "test"
+                value: "A"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -6132,69 +5652,9 @@ methods:
             value:
               sapientType: "ARRAY"
               content: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 2
-                    suggestedContent: !<regular>
-                      value: 2
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  2:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 3
-                    suggestedContent: !<regular>
-                      value: 3
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                values: {}
               suggestedContent: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 2
-                    suggestedContent: !<regular>
-                      value: 2
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  2:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 3
-                    suggestedContent: !<regular>
-                      value: 3
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                values: {}
               valueType: "byte[]"
               uuid: "<init>_byte[]1"
               fixed: false
@@ -6204,9 +5664,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "password"
-              suggestedContent: !<regular>
-                value: "password"
+                value: "passphrase1"
               valueType: "java.lang.String"
               uuid: "<init>_string2"
               fixed: false
@@ -6236,10 +5694,8 @@ methods:
           - name: "mnemonicString"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "test"
               suggestedContent: !<regular>
-                value: "test"
+                value: "A"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -6248,70 +5704,6 @@ methods:
           - name: "seed"
             value:
               sapientType: "ARRAY"
-              content: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 2
-                    suggestedContent: !<regular>
-                      value: 2
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  2:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 3
-                    suggestedContent: !<regular>
-                      value: 3
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 2
-                    suggestedContent: !<regular>
-                      value: 2
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  2:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 3
-                    suggestedContent: !<regular>
-                      value: 3
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
               valueType: "byte[]"
               uuid: "<init>_byte[]1"
               fixed: false
@@ -6320,10 +5712,6 @@ methods:
           - name: "passphrase"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "password"
-              suggestedContent: !<regular>
-                value: "password"
               valueType: "java.lang.String"
               uuid: "<init>_string2"
               fixed: false
@@ -6331,11 +5719,7 @@ methods:
               explicitCastNeeded: false
           - name: "creationTime"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "java.time.Instant"
-                method: "now"
-                methodParameters: []
+              sapientType: "UNKNOWN"
               suggestedContent: !<static_method_return>
                 target: "java.time.Instant"
                 method: "now"
@@ -6356,7 +5740,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "WHITESPACE_SPLITTER"
-      modelFingerprint: "656BAABCACA917E4968FCD34C204E276"
+      modelFingerprint: "F22087D31AC429BAD600CADD92A0E3CC"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -6382,9 +5766,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "test"
+              value: "A"
             suggestedContent: !<regular>
-              value: "test"
+              value: "A"
             valueType: "java.lang.String"
             uuid: "<init>_string1"
             fixed: false
@@ -6398,7 +5782,7 @@ methods:
             values:
             - sapientType: "BASIC"
               content: !<regular>
-                value: "test"
+                value: "A"
               valueType: "java.lang.String"
               fixed: true
               equalsMethodPresent: false
@@ -6408,7 +5792,7 @@ methods:
             values:
             - sapientType: "BASIC"
               content: !<regular>
-                value: "test"
+                value: "A"
               valueType: "java.lang.String"
               fixed: true
               equalsMethodPresent: false
@@ -6468,11 +5852,11 @@ methods:
       filledByUser: false
     uuid: "e399bed6-0e41-3bca-b4bf-c1d08029cd4b"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getSeedBytes"
     returnType: "byte[]"
@@ -8207,10 +7591,11 @@ methods:
       filledByUser: false
     uuid: "6efdfffb-ab76-3832-8528-819e02d958d6"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "encrypt"
     returnType: "org.bitcoinj.wallet.DeterministicSeed"
@@ -8529,11 +7914,11 @@ methods:
       filledByUser: false
     uuid: "8b7e84bd-0ccd-3596-9058-c8181dad2a0e"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "decrypt"
     returnType: "org.bitcoinj.wallet.DeterministicSeed"
@@ -9295,11 +8680,11 @@ methods:
       filledByUser: false
     uuid: "5f5d7fab-8006-359a-b433-0cb11c860206"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "checkWhenMnemonicCodeIsNull"
@@ -9614,11 +8999,11 @@ methods:
       filledByUser: false
     uuid: "32c74248-2930-3c12-927c-0325b00acc83"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getMnemonicCode"
     returnType: "java.util.List"
@@ -9955,11 +9340,11 @@ methods:
       filledByUser: false
     uuid: "abf14659-70c3-3a8a-bba9-d38bcc45c268"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "getMnemonicStringWhenMnemonicCodeIsNull"
@@ -10152,7 +9537,7 @@ methods:
       filledByUser: false
     uuid: "3819241d-fc61-3112-8e31-bff67d14fc8f"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false

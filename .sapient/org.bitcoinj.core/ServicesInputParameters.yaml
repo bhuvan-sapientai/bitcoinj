@@ -267,11 +267,11 @@ methods:
       filledByUser: false
     uuid: "db344e3b-696d-3b02-8e35-1aaa5300bde6"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "bits"
     returnType: "long"
@@ -838,10 +838,11 @@ methods:
       filledByUser: false
     uuid: "a9728329-4398-3d9c-b998-05028ef306ac"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "anyOfWhenBitsAndBitmaskEquals0"
@@ -963,12 +964,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "341D85A850D8EB02E18D479A5B80ED4D"
+    modelFingerprint: "E3E3F55EFA585746DCE50C0E2887A385"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "6F72F967E3162BF5AC4B30BB72D78EE8"
+      modelFingerprint: "BC8DA871DAA01DF161BF3CE87FC89FBB"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -983,9 +984,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 123456789
-              suggestedContent: !<regular>
-                value: 123456789
+                value: 0
               valueType: "long"
               uuid: "of_long1"
               fixed: false
@@ -998,10 +997,6 @@ methods:
           - name: "bits"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 123456789
-              suggestedContent: !<regular>
-                value: 123456789
               valueType: "long"
               uuid: "of_long1"
               fixed: false
@@ -1016,7 +1011,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "buf"
-      modelFingerprint: "9D13C849BCC1465FF050A2AB0D89CC97"
+      modelFingerprint: "E78EB9D5CB826E0A6A0C7C85F54F4F2A"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1058,7 +1053,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "E08D2A739B09737F85B3BD2CADF80F48"
+      modelFingerprint: "7D316644F1B80F06BF95B6F66B39B36C"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1100,11 +1095,11 @@ methods:
       filledByUser: false
     uuid: "74367ac6-67d1-3ba8-9bdd-4aafa43d4139"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "serialize"
     returnType: "byte[]"
@@ -1185,6 +1180,7 @@ methods:
               content: !<regular>
                 value: 0
               valueType: "byte"
+              uuid: "serialize_byte[]1-item0"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1193,6 +1189,7 @@ methods:
               content: !<regular>
                 value: 0
               valueType: "byte"
+              uuid: "serialize_byte[]1-item1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1201,6 +1198,7 @@ methods:
               content: !<regular>
                 value: 0
               valueType: "byte"
+              uuid: "serialize_byte[]1-item2"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1209,6 +1207,7 @@ methods:
               content: !<regular>
                 value: 0
               valueType: "byte"
+              uuid: "serialize_byte[]1-item3"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1217,6 +1216,7 @@ methods:
               content: !<regular>
                 value: 0
               valueType: "byte"
+              uuid: "serialize_byte[]1-item4"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1225,6 +1225,7 @@ methods:
               content: !<regular>
                 value: 0
               valueType: "byte"
+              uuid: "serialize_byte[]1-item5"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1233,6 +1234,7 @@ methods:
               content: !<regular>
                 value: 0
               valueType: "byte"
+              uuid: "serialize_byte[]1-item6"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1241,6 +1243,7 @@ methods:
               content: !<regular>
                 value: 0
               valueType: "byte"
+              uuid: "serialize_byte[]1-item7"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1251,6 +1254,7 @@ methods:
               content: !<regular>
                 value: 0
               valueType: "byte"
+              uuid: "serialize_byte[]1-item0"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1259,6 +1263,7 @@ methods:
               content: !<regular>
                 value: 0
               valueType: "byte"
+              uuid: "serialize_byte[]1-item1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1267,6 +1272,7 @@ methods:
               content: !<regular>
                 value: 0
               valueType: "byte"
+              uuid: "serialize_byte[]1-item2"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1275,6 +1281,7 @@ methods:
               content: !<regular>
                 value: 0
               valueType: "byte"
+              uuid: "serialize_byte[]1-item3"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1283,6 +1290,7 @@ methods:
               content: !<regular>
                 value: 0
               valueType: "byte"
+              uuid: "serialize_byte[]1-item4"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1291,6 +1299,7 @@ methods:
               content: !<regular>
                 value: 0
               valueType: "byte"
+              uuid: "serialize_byte[]1-item5"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1299,6 +1308,7 @@ methods:
               content: !<regular>
                 value: 0
               valueType: "byte"
+              uuid: "serialize_byte[]1-item6"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1307,6 +1317,7 @@ methods:
               content: !<regular>
                 value: 0
               valueType: "byte"
+              uuid: "serialize_byte[]1-item7"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1319,11 +1330,11 @@ methods:
       filledByUser: false
     uuid: "9d328af1-2293-3544-bbbc-a0683c1f9fbe"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "toString"
     returnType: "java.lang.String"
@@ -1339,7 +1350,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "FCDB56C43F3B0649DFD199FB3DAD818B"
+    modelFingerprint: "D8C7C8E4A8F8C84DCA0D87E613FE4353"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -1386,13 +1397,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "InternalUtils"
-      modelFingerprint: "B30A06AC9FC819374A5D628DC569ADA0"
+      modelFingerprint: "E71BC7CB6D2A84DC5086CF05B37C57E4"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "REAL"
         valueType: "org.bitcoinj.base.internal.InternalUtils"
         uuid: "org.bitcoinj.base.internal.InternalUtils"
         fixed: false
@@ -1413,7 +1424,31 @@ methods:
             explicitCastNeeded: false
         signature: "joiner(String): InternalUtils$Joiner"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.base.internal.InternalUtils"
+            method: "joiner"
+            methodParameters:
+            - value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: ", "
+                valueType: "java.lang.String"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.internal.InternalUtils"
+            method: "joiner"
+            methodParameters:
+            - value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: ", "
+                valueType: "java.lang.String"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "org.bitcoinj.base.internal.InternalUtils$Joiner"
           uuid: "toString_internalUtils.Joiner1"
           fixed: false
@@ -1423,13 +1458,37 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "A6D599DE26E56BB3A2B8AD337607307B"
+      modelFingerprint: "0B0804412F097E612806ED3A0A4A109E"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.internal.InternalUtils"
+          method: "joiner"
+          methodParameters:
+          - value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: ", "
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.internal.InternalUtils"
+          method: "joiner"
+          methodParameters:
+          - value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: ", "
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.base.internal.InternalUtils$Joiner"
         uuid: "toString_internalUtils.Joiner1"
         fixed: false
@@ -1450,28 +1509,36 @@ methods:
                 content: !<regular>
                   value: "NETWORK"
                 valueType: "java.lang.String"
+                uuid: "toString_linkedList1-item0"
                 fixed: true
+                collectionUuid: "toString_linkedList1"
                 equalsMethodPresent: false
                 explicitCastNeeded: false
               - sapientType: "BASIC"
                 content: !<regular>
                   value: "BLOOM"
                 valueType: "java.lang.String"
+                uuid: "toString_linkedList1-item1"
                 fixed: true
+                collectionUuid: "toString_linkedList1"
                 equalsMethodPresent: false
                 explicitCastNeeded: false
               - sapientType: "BASIC"
                 content: !<regular>
                   value: "WITNESS"
                 valueType: "java.lang.String"
+                uuid: "toString_linkedList1-item2"
                 fixed: true
+                collectionUuid: "toString_linkedList1"
                 equalsMethodPresent: false
                 explicitCastNeeded: false
               - sapientType: "BASIC"
                 content: !<regular>
                   value: "NETWORK_LIMITED"
                 valueType: "java.lang.String"
+                uuid: "toString_linkedList1-item3"
                 fixed: true
+                collectionUuid: "toString_linkedList1"
                 equalsMethodPresent: false
                 explicitCastNeeded: false
               - sapientType: "BASIC"
@@ -1492,28 +1559,36 @@ methods:
                 content: !<regular>
                   value: "NETWORK"
                 valueType: "java.lang.String"
+                uuid: "toString_linkedList1-item0"
                 fixed: true
+                collectionUuid: "toString_linkedList1"
                 equalsMethodPresent: false
                 explicitCastNeeded: false
               - sapientType: "BASIC"
                 content: !<regular>
                   value: "BLOOM"
                 valueType: "java.lang.String"
+                uuid: "toString_linkedList1-item1"
                 fixed: true
+                collectionUuid: "toString_linkedList1"
                 equalsMethodPresent: false
                 explicitCastNeeded: false
               - sapientType: "BASIC"
                 content: !<regular>
                   value: "WITNESS"
                 valueType: "java.lang.String"
+                uuid: "toString_linkedList1-item2"
                 fixed: true
+                collectionUuid: "toString_linkedList1"
                 equalsMethodPresent: false
                 explicitCastNeeded: false
               - sapientType: "BASIC"
                 content: !<regular>
                   value: "NETWORK_LIMITED"
                 valueType: "java.lang.String"
+                uuid: "toString_linkedList1-item3"
                 fixed: true
+                collectionUuid: "toString_linkedList1"
                 equalsMethodPresent: false
                 explicitCastNeeded: false
               - sapientType: "BASIC"
@@ -1547,7 +1622,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      modelFingerprint: "A2384A070C8594AC9B4976B6E4923C6F"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -1565,10 +1640,11 @@ methods:
       filledByUser: false
     uuid: "de65989e-bf16-36ed-8772-7ccb6b0fc53a"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "toStringWhenBitsEquals0"

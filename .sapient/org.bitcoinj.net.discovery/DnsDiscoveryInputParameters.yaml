@@ -17,12 +17,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "1987B4BE726423F7D7D0FBA3881FD872"
-    problemWasSolvedByProver: true
+    modelFingerprint: "B5CF5104BFD9AE06F19C8D8CFB129824"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "210F87C00BED8861A7FDFA7BD3E8CBED"
+      modelFingerprint: "680850EF6A1A69C484360799FF61CE61"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -40,20 +40,9 @@ methods:
                   0:
                     sapientType: "BASIC"
                     content: !<regular>
-                      value: "seed1.example.com"
-                    suggestedContent: !<regular>
-                      value: "seed1.example.com"
+                      value: "dnsSeedsItem1"
                     valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "seed2.example.com"
-                    suggestedContent: !<regular>
-                      value: "seed2.example.com"
-                    valueType: "java.lang.String"
+                    uuid: "buildDiscoveries_string1"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -62,20 +51,9 @@ methods:
                   0:
                     sapientType: "BASIC"
                     content: !<regular>
-                      value: "seed1.example.com"
-                    suggestedContent: !<regular>
-                      value: "seed1.example.com"
+                      value: "dnsSeedsItem1"
                     valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "seed2.example.com"
-                    suggestedContent: !<regular>
-                      value: "seed2.example.com"
-                    valueType: "java.lang.String"
+                    uuid: "buildDiscoveries_string1"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -100,47 +78,12 @@ methods:
           - name: "dnsSeeds"
             value:
               sapientType: "ARRAY"
-              content: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "seed1.example.com"
-                    suggestedContent: !<regular>
-                      value: "seed1.example.com"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "seed2.example.com"
-                    suggestedContent: !<regular>
-                      value: "seed2.example.com"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
               suggestedContent: !<array>
                 values:
                   0:
                     sapientType: "BASIC"
-                    content: !<regular>
-                      value: "seed1.example.com"
-                    suggestedContent: !<regular>
-                      value: "seed1.example.com"
                     valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "seed2.example.com"
-                    suggestedContent: !<regular>
-                      value: "seed2.example.com"
-                    valueType: "java.lang.String"
+                    uuid: "buildDiscoveries_string1"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -151,7 +94,7 @@ methods:
               explicitCastNeeded: false
           - name: "network"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.base.Network"
               uuid: "<init>_network1"
               fixed: false
@@ -168,7 +111,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "6E4B9F84DAA7DD2924AA4B202C6597BB"
+      modelFingerprint: "1B4135473B111B5EA9277298B05A3885"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -182,7 +125,7 @@ methods:
           - value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 2
+                value: 1
               valueType: "int"
               uuid: "createExecutor_int1"
               fixed: false
@@ -231,7 +174,7 @@ methods:
           - value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 2
+                value: 1
               valueType: "int"
               uuid: "createExecutor_int1"
               fixed: false
@@ -268,8 +211,8 @@ methods:
       filledByUser: false
     uuid: "57e52633-2497-3d26-a12d-63324ebc60fe"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false

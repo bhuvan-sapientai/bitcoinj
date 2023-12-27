@@ -333,8 +333,8 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
             List<ScriptChunk> scriptChunkList = new ArrayList<>();
             doReturn(scriptChunkList).when(templateMock).chunks();
-            //TODO: Needs to return real value
-            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(null);
+            Instant instant = TimeUtils.currentTime();
+            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(instant);
             ScriptBuilder target = new ScriptBuilder(templateMock);
             byte[] byteArray = new byte[]{};
             //Act Statement(s)
@@ -524,9 +524,12 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<Script> script = mockStatic(Script.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
             List<ScriptChunk> scriptChunkList = new ArrayList<>();
             doReturn(scriptChunkList).when(templateMock).chunks();
+            Instant instant = TimeUtils.currentTime();
+            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(instant);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             script.when(() -> Script.encodeToOpN(17)).thenReturn(0);
             ScriptBuilder target = new ScriptBuilder(templateMock);
@@ -535,6 +538,7 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(result, equalTo(target));
             verify(templateMock).chunks();
+            timeUtils.verify(() -> TimeUtils.currentTime(), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
             script.verify(() -> Script.encodeToOpN(17), atLeast(1));
         }
@@ -581,6 +585,7 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${5c0f2262-6b98-318c-a6e6-3a2993c04528}
+    @Ignore()
     @Test()
     public void bigNum1WhenByteIdxLessThanDataLength() {
         /* Branches:
@@ -595,14 +600,19 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        List<ScriptChunk> scriptChunkList = new ArrayList<>();
-        doReturn(scriptChunkList).when(templateMock).chunks();
-        ScriptBuilder target = new ScriptBuilder(templateMock);
-        //Act Statement(s)
-        ScriptBuilder result = target.bigNum(0, -1L);
-        //Assert statement(s)
-        assertThat(result, equalTo(target));
-        verify(templateMock).chunks();
+        try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
+            List<ScriptChunk> scriptChunkList = new ArrayList<>();
+            doReturn(scriptChunkList).when(templateMock).chunks();
+            Instant instant = TimeUtils.currentTime();
+            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(instant);
+            ScriptBuilder target = new ScriptBuilder(templateMock);
+            //Act Statement(s)
+            ScriptBuilder result = target.bigNum(-1, -1L);
+            //Assert statement(s)
+            assertThat(result, equalTo(target));
+            verify(templateMock).chunks();
+            timeUtils.verify(() -> TimeUtils.currentTime(), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${58acef08-017d-3c16-b25f-291052e1397d}
@@ -628,6 +638,7 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${a72b081f-226f-3a1e-b20c-d0332a2cb7df}
+    @Ignore()
     @Test()
     public void bigNum1WhenNotNegAndByteIdxLessThanDataLength() {
         /* Branches:
@@ -642,14 +653,19 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        List<ScriptChunk> scriptChunkList = new ArrayList<>();
-        doReturn(scriptChunkList).when(templateMock).chunks();
-        ScriptBuilder target = new ScriptBuilder(templateMock);
-        //Act Statement(s)
-        ScriptBuilder result = target.bigNum(0, 1L);
-        //Assert statement(s)
-        assertThat(result, equalTo(target));
-        verify(templateMock).chunks();
+        try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
+            List<ScriptChunk> scriptChunkList = new ArrayList<>();
+            doReturn(scriptChunkList).when(templateMock).chunks();
+            Instant instant = TimeUtils.currentTime();
+            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(instant);
+            ScriptBuilder target = new ScriptBuilder(templateMock);
+            //Act Statement(s)
+            ScriptBuilder result = target.bigNum(-1, 1L);
+            //Assert statement(s)
+            assertThat(result, equalTo(target));
+            verify(templateMock).chunks();
+            timeUtils.verify(() -> TimeUtils.currentTime(), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${e67f115e-e5a2-39e9-833d-52d96810b04f}
@@ -907,45 +923,80 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        ECKey eCKeyMock = mock(ECKey.class);
-        ECKey eCKeyMock2 = mock(ECKey.class);
-        ECKey eCKeyMock3 = mock(ECKey.class);
-        ECKey eCKeyMock4 = mock(ECKey.class);
-        ECKey eCKeyMock5 = mock(ECKey.class);
-        ECKey eCKeyMock6 = mock(ECKey.class);
-        ECKey eCKeyMock7 = mock(ECKey.class);
-        ECKey eCKeyMock8 = mock(ECKey.class);
-        ECKey eCKeyMock9 = mock(ECKey.class);
-        ECKey eCKeyMock10 = mock(ECKey.class);
-        ECKey eCKeyMock11 = mock(ECKey.class);
-        ECKey eCKeyMock12 = mock(ECKey.class);
-        ECKey eCKeyMock13 = mock(ECKey.class);
-        ECKey eCKeyMock14 = mock(ECKey.class);
-        ECKey eCKeyMock15 = mock(ECKey.class);
-        ECKey eCKeyMock16 = mock(ECKey.class);
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+        ECKey keyMock2 = mock(ECKey.class);
+        ECKey keyMock3 = mock(ECKey.class);
+        ECKey keyMock4 = mock(ECKey.class);
+        ECKey keyMock5 = mock(ECKey.class);
+        ECKey keyMock6 = mock(ECKey.class);
+        ECKey keyMock7 = mock(ECKey.class);
+        ECKey keyMock8 = mock(ECKey.class);
+        ECKey keyMock9 = mock(ECKey.class);
+        ECKey keyMock10 = mock(ECKey.class);
+        ECKey keyMock11 = mock(ECKey.class);
+        ECKey keyMock12 = mock(ECKey.class);
+        ECKey keyMock13 = mock(ECKey.class);
+        ECKey keyMock14 = mock(ECKey.class);
+        ECKey keyMock15 = mock(ECKey.class);
+        ECKey keyMock16 = mock(ECKey.class);
+        ECKey keyMock17 = mock(ECKey.class);
+        try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class);
+             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             byte[] byteArray = new byte[]{};
             doReturn(byteArray).when(keyMock).getPubKey();
+            byte[] byteArray2 = new byte[]{};
+            doReturn(byteArray2).when(keyMock2).getPubKey();
+            byte[] byteArray3 = new byte[]{};
+            doReturn(byteArray3).when(keyMock3).getPubKey();
+            byte[] byteArray4 = new byte[]{};
+            doReturn(byteArray4).when(keyMock4).getPubKey();
+            byte[] byteArray5 = new byte[]{};
+            doReturn(byteArray5).when(keyMock5).getPubKey();
+            byte[] byteArray6 = new byte[]{};
+            doReturn(byteArray6).when(keyMock6).getPubKey();
+            byte[] byteArray7 = new byte[]{};
+            doReturn(byteArray7).when(keyMock7).getPubKey();
+            byte[] byteArray8 = new byte[]{};
+            doReturn(byteArray8).when(keyMock8).getPubKey();
+            byte[] byteArray9 = new byte[]{};
+            doReturn(byteArray9).when(keyMock9).getPubKey();
+            byte[] byteArray10 = new byte[]{};
+            doReturn(byteArray10).when(keyMock10).getPubKey();
+            byte[] byteArray11 = new byte[]{};
+            doReturn(byteArray11).when(keyMock11).getPubKey();
+            byte[] byteArray12 = new byte[]{};
+            doReturn(byteArray12).when(keyMock12).getPubKey();
+            byte[] byteArray13 = new byte[]{};
+            doReturn(byteArray13).when(keyMock13).getPubKey();
+            byte[] byteArray14 = new byte[]{};
+            doReturn(byteArray14).when(keyMock14).getPubKey();
+            byte[] byteArray15 = new byte[]{};
+            doReturn(byteArray15).when(keyMock15).getPubKey();
+            byte[] byteArray16 = new byte[]{};
+            doReturn(byteArray16).when(keyMock16).getPubKey();
+            byte[] byteArray17 = new byte[]{};
+            doReturn(byteArray17).when(keyMock17).getPubKey();
             preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
+            Instant instant = TimeUtils.currentTime();
+            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(instant);
             List<ECKey> eCKeyList = new ArrayList<>();
             eCKeyList.add(keyMock);
-            eCKeyList.add(eCKeyMock);
-            eCKeyList.add(eCKeyMock2);
-            eCKeyList.add(eCKeyMock3);
-            eCKeyList.add(eCKeyMock4);
-            eCKeyList.add(eCKeyMock5);
-            eCKeyList.add(eCKeyMock6);
-            eCKeyList.add(eCKeyMock7);
-            eCKeyList.add(eCKeyMock8);
-            eCKeyList.add(eCKeyMock9);
-            eCKeyList.add(eCKeyMock10);
-            eCKeyList.add(eCKeyMock11);
-            eCKeyList.add(eCKeyMock12);
-            eCKeyList.add(eCKeyMock13);
-            eCKeyList.add(eCKeyMock14);
-            eCKeyList.add(eCKeyMock15);
-            eCKeyList.add(eCKeyMock16);
+            eCKeyList.add(keyMock2);
+            eCKeyList.add(keyMock3);
+            eCKeyList.add(keyMock4);
+            eCKeyList.add(keyMock5);
+            eCKeyList.add(keyMock6);
+            eCKeyList.add(keyMock7);
+            eCKeyList.add(keyMock8);
+            eCKeyList.add(keyMock9);
+            eCKeyList.add(keyMock10);
+            eCKeyList.add(keyMock11);
+            eCKeyList.add(keyMock12);
+            eCKeyList.add(keyMock13);
+            eCKeyList.add(keyMock14);
+            eCKeyList.add(keyMock15);
+            eCKeyList.add(keyMock16);
+            eCKeyList.add(keyMock17);
             //Act Statement(s)
             Script result = ScriptBuilder.createMultiSigOutputScript(18, eCKeyList);
             ScriptBuilder scriptBuilder = new ScriptBuilder();
@@ -953,8 +1004,25 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(result, equalTo(script));
             verify(keyMock).getPubKey();
+            verify(keyMock2).getPubKey();
+            verify(keyMock3).getPubKey();
+            verify(keyMock4).getPubKey();
+            verify(keyMock5).getPubKey();
+            verify(keyMock6).getPubKey();
+            verify(keyMock7).getPubKey();
+            verify(keyMock8).getPubKey();
+            verify(keyMock9).getPubKey();
+            verify(keyMock10).getPubKey();
+            verify(keyMock11).getPubKey();
+            verify(keyMock12).getPubKey();
+            verify(keyMock13).getPubKey();
+            verify(keyMock14).getPubKey();
+            verify(keyMock15).getPubKey();
+            verify(keyMock16).getPubKey();
+            verify(keyMock17).getPubKey();
             preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(2));
+            timeUtils.verify(() -> TimeUtils.currentTime(), atLeast(1));
         }
     }
 
@@ -1111,20 +1179,34 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          * (for-each(signatures)) : true
          * (multisigProgramBytes != null) : true
          *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         * TODO: Help needed! This method is not unit testable!
+         *  Following variables could not be isolated/mocked: builder
+         *  Suggestions:
+         *  You can change the initialization of above variables and make it injectable or
+         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        byte[] byteArray = new byte[]{};
-        List<byte[]> byteList = new ArrayList<>();
-        byteList.add(byteArray);
-        byte[] byteArray2 = new byte[]{};
-        //Act Statement(s)
-        Script result = ScriptBuilder.createMultiSigInputScriptBytes(byteList, byteArray2);
-        ScriptBuilder scriptBuilder = new ScriptBuilder();
-        Script script = scriptBuilder.build();
-        //Assert statement(s)
-        assertThat(result, equalTo(script));
+        try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
+            Instant instant = TimeUtils.currentTime();
+            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(instant);
+            byte[] byteArray = new byte[]{};
+            List<byte[]> byteList = new ArrayList<>();
+            byteList.add(byteArray);
+            byte[] byteArray2 = new byte[]{};
+            //Act Statement(s)
+            Script result = ScriptBuilder.createMultiSigInputScriptBytes(byteList, byteArray2);
+            ScriptBuilder scriptBuilder = new ScriptBuilder();
+            Script script = scriptBuilder.build();
+            byte[] byteArray3 = new byte[]{};
+            List<byte[]> byteByteListList = new ArrayList<>();
+            byteByteListList.add(byteArray3);
+            //Assert statement(s)
+            assertThat(result, equalTo(script));
+            assertThat(byteList.size(), equalTo(byteByteListList.size()));
+            assertThat(byteList, containsInRelativeOrder(byteByteListList.toArray()));
+            timeUtils.verify(() -> TimeUtils.currentTime(), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${78084a7c-25a2-3fe6-925b-d33c879f9e5a}
@@ -1135,13 +1217,13 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          * (signatures.size() <= 16) : false
          * (for-each(signatures)) : true
          * (multisigProgramBytes != null) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+        try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class);
+             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
+            Instant instant = TimeUtils.currentTime();
+            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(instant);
             byte[] byteArray = new byte[]{};
             byte[] byteArray2 = new byte[]{};
             byte[] byteArray3 = new byte[]{};
@@ -1185,6 +1267,7 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(result, equalTo(script));
             preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
+            timeUtils.verify(() -> TimeUtils.currentTime(), atLeast(1));
         }
     }
 
@@ -1210,7 +1293,8 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         ScriptChunk scriptChunkMock5 = mock(ScriptChunk.class);
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS)) {
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS);
+             MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
             List<ScriptChunk> scriptChunkList = new ArrayList<>();
             scriptChunkList.add(scriptChunkMock);
             scriptChunkList.add(scriptChunkMock2);
@@ -1218,8 +1302,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
             scriptChunkList.add(scriptChunkMock4);
             scriptChunkList.add(scriptChunkMock5);
             doReturn(scriptChunkList).when(scriptSigMock).chunks();
+            doReturn(false).when(scriptChunkMock).equalsOpCode(0);
             doReturn(false).when(scriptChunkMock2).equalsOpCode(0);
-            doReturn(false).when(scriptChunkMock4).equalsOpCode(0);
+            Instant instant = TimeUtils.currentTime();
+            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(instant);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             byte[] byteArray = new byte[]{};
             //Act Statement(s)
@@ -1229,8 +1315,9 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(result, equalTo(script));
             verify(scriptSigMock, atLeast(1)).chunks();
+            verify(scriptChunkMock, atLeast(1)).equalsOpCode(0);
             verify(scriptChunkMock2, atLeast(1)).equalsOpCode(0);
-            verify(scriptChunkMock4, atLeast(1)).equalsOpCode(0);
+            timeUtils.verify(() -> TimeUtils.currentTime(), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(1));
         }
     }
@@ -1256,15 +1343,18 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS)) {
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS);
+             MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
             List<ScriptChunk> scriptChunkList = new ArrayList<>();
             scriptChunkList.add(scriptChunkMock);
             scriptChunkList.add(scriptChunkMock2);
             scriptChunkList.add(scriptChunkMock3);
             scriptChunkList.add(scriptChunkMock4);
             doReturn(scriptChunkList).when(scriptSigMock).chunks();
+            doReturn(false).when(scriptChunkMock).equalsOpCode(0);
             doReturn(false).when(scriptChunkMock2).equalsOpCode(0);
-            doReturn(false).when(scriptChunkMock3).equalsOpCode(0);
+            Instant instant = TimeUtils.currentTime();
+            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(instant);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             byte[] byteArray = new byte[]{};
             //Act Statement(s)
@@ -1274,8 +1364,9 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(result, equalTo(script));
             verify(scriptSigMock, atLeast(1)).chunks();
+            verify(scriptChunkMock, atLeast(1)).equalsOpCode(0);
             verify(scriptChunkMock2, atLeast(1)).equalsOpCode(0);
-            verify(scriptChunkMock3, atLeast(1)).equalsOpCode(0);
+            timeUtils.verify(() -> TimeUtils.currentTime(), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(1));
         }
     }

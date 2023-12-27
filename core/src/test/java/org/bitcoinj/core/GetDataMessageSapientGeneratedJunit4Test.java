@@ -59,13 +59,12 @@ public class GetDataMessageSapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
-        //Arrange Statement(s)
-        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-        Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
+
         //Act Statement(s)
-        GetDataMessage result = GetDataMessage.ofBlock(sha256Hash, true);
+        GetDataMessage result = GetDataMessage.ofBlock(sha256HashMock, true);
         List<InventoryItem> inventoryItemList = new ArrayList<>();
         GetDataMessage getDataMessage = new GetDataMessage(inventoryItemList);
+
         //Assert statement(s)
         assertThat(result, equalTo(getDataMessage));
     }
@@ -80,13 +79,12 @@ public class GetDataMessageSapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
-        //Arrange Statement(s)
-        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-        Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
+
         //Act Statement(s)
-        GetDataMessage result = GetDataMessage.ofBlock(sha256Hash, false);
+        GetDataMessage result = GetDataMessage.ofBlock(sha256HashMock, false);
         List<InventoryItem> inventoryItemList = new ArrayList<>();
         GetDataMessage getDataMessage = new GetDataMessage(inventoryItemList);
+
         //Assert statement(s)
         assertThat(result, equalTo(getDataMessage));
     }
@@ -101,13 +99,12 @@ public class GetDataMessageSapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
-        //Arrange Statement(s)
-        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-        Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
+
         //Act Statement(s)
-        GetDataMessage result = GetDataMessage.ofTransaction(sha256Hash, true);
+        GetDataMessage result = GetDataMessage.ofTransaction(sha256HashMock, true);
         List<InventoryItem> inventoryItemList = new ArrayList<>();
         GetDataMessage getDataMessage = new GetDataMessage(inventoryItemList);
+
         //Assert statement(s)
         assertThat(result, equalTo(getDataMessage));
     }
@@ -122,13 +119,12 @@ public class GetDataMessageSapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
-        //Arrange Statement(s)
-        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-        Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
+
         //Act Statement(s)
-        GetDataMessage result = GetDataMessage.ofTransaction(sha256Hash, false);
+        GetDataMessage result = GetDataMessage.ofTransaction(sha256HashMock, false);
         List<InventoryItem> inventoryItemList = new ArrayList<>();
         GetDataMessage getDataMessage = new GetDataMessage(inventoryItemList);
+
         //Assert statement(s)
         assertThat(result, equalTo(getDataMessage));
     }
@@ -144,6 +140,7 @@ public class GetDataMessageSapientGeneratedJunit4Test {
         List<InventoryItem> inventoryItemList = new ArrayList<>();
         inventoryItemList.add(inventoryItem);
         GetDataMessage target = new GetDataMessage(inventoryItemList);
+
         //Act Statement(s)
         target.addTransaction(sha256HashMock, true);
     }
@@ -159,6 +156,7 @@ public class GetDataMessageSapientGeneratedJunit4Test {
         List<InventoryItem> inventoryItemList = new ArrayList<>();
         inventoryItemList.add(inventoryItem);
         GetDataMessage target = new GetDataMessage(inventoryItemList);
+
         //Act Statement(s)
         target.addTransaction(sha256HashMock, false);
     }
@@ -174,6 +172,7 @@ public class GetDataMessageSapientGeneratedJunit4Test {
         List<InventoryItem> inventoryItemList = new ArrayList<>();
         inventoryItemList.add(inventoryItem);
         GetDataMessage target = new GetDataMessage(inventoryItemList);
+
         //Act Statement(s)
         target.addBlock(sha256HashMock, true);
     }
@@ -189,6 +188,7 @@ public class GetDataMessageSapientGeneratedJunit4Test {
         List<InventoryItem> inventoryItemList = new ArrayList<>();
         inventoryItemList.add(inventoryItem);
         GetDataMessage target = new GetDataMessage(inventoryItemList);
+
         //Act Statement(s)
         target.addBlock(sha256HashMock, false);
     }
@@ -201,6 +201,7 @@ public class GetDataMessageSapientGeneratedJunit4Test {
         List<InventoryItem> inventoryItemList = new ArrayList<>();
         inventoryItemList.add(inventoryItem);
         GetDataMessage target = new GetDataMessage(inventoryItemList);
+
         //Act Statement(s)
         target.addFilteredBlock(sha256HashMock);
     }
@@ -214,18 +215,12 @@ public class GetDataMessageSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-        Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
-        InventoryItem inventoryItem = new InventoryItem(InventoryItem.Type.ERROR, sha256Hash);
-        ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
-        Sha256Hash sha256Hash2 = Sha256Hash.read(byteBuffer2);
-        InventoryItem inventoryItem2 = new InventoryItem(InventoryItem.Type.ERROR, sha256Hash2);
         List<InventoryItem> inventoryItemList = new ArrayList<>();
-        inventoryItemList.add(inventoryItem);
-        inventoryItemList.add(inventoryItem2);
         GetDataMessage target = new GetDataMessage(inventoryItemList);
+
         //Act Statement(s)
-        Sha256Hash result = target.getHashOf(1);
+        Sha256Hash result = target.getHashOf(0);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }

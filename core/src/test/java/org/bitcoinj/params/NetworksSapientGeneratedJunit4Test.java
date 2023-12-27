@@ -34,8 +34,10 @@ public class NetworksSapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void getTest() {
+
         //Act Statement(s)
         Set<NetworkParameters> result = Networks.get();
+
         //Assert statement(s)
         assertThat(result.size(), equalTo(0));
     }
@@ -46,9 +48,11 @@ public class NetworksSapientGeneratedJunit4Test {
     public void findTest() {
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+
         //Act Statement(s)
         Optional<NetworkParameters> result = Networks.find(networkMock);
         Optional<NetworkParameters> networkParametersOptional = Optional.empty();
+
         //Assert statement(s)
         assertThat(result, equalTo(networkParametersOptional));
     }
@@ -63,7 +67,7 @@ public class NetworksSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<Networks> networks = mockStatic(Networks.class, CALLS_REAL_METHODS)) {
             networks.when(() -> Networks.register(anySet())).thenAnswer((Answer<Void>) invocation -> null);
-            NetworkParameters networkParameters = NetworkParameters.fromID("100");
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
             //Act Statement(s)
             Networks.register(networkParameters);
             //Assert statement(s)
@@ -79,11 +83,8 @@ public class NetworksSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-        NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
         Collection<NetworkParameters> collection = new ArrayList<>();
-        collection.add(networkParameters);
-        collection.add(networkParameters2);
+
         //Act Statement(s)
         Networks.register(collection);
     }
@@ -97,6 +98,7 @@ public class NetworksSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         NetworkParameters networkParametersMock = mock(NetworkParameters.class);
+
         //Act Statement(s)
         Networks.unregister(networkParametersMock);
     }

@@ -28,6 +28,7 @@ public class ScriptErrorSapientGeneratedJunit4Test {
         IllegalArgumentException illegalArgumentException = new IllegalArgumentException("J is not a valid name");
         thrown.expect(IllegalArgumentException.class);
         thrown.expectMessage(illegalArgumentException.getMessage());
+
         //Act Statement(s)
         ScriptError.fromMnemonic("J");
     }
@@ -42,8 +43,10 @@ public class ScriptErrorSapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
+
         //Act Statement(s)
         ScriptError result = ScriptError.fromMnemonic("J");
+
         //Assert statement(s)
         assertThat(result, equalTo(ScriptError.SCRIPT_ERR_ERROR_COUNT));
     }

@@ -36,7 +36,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "3B923FB5279A6E717968A2F11FE0E01B"
+    modelFingerprint: "F076A41CA77B9D6139A14E61425E8CE9"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -153,7 +153,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "RejectMessage.RejectCode"
-      modelFingerprint: "6DF2B8E4A1E19750AFDF3C9112B11007"
+      modelFingerprint: "2890A72A6093B7A7E99B92D26F74A941"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -173,9 +173,7 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 1
-            suggestedContent: !<regular>
-              value: 1
+              value: 0
             valueType: "byte"
             uuid: "read_byte1"
             fixed: false
@@ -196,7 +194,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Buffers"
-      modelFingerprint: "392FA163E3875B6D025AE522F693C117"
+      modelFingerprint: "0F587DA197074BFA6572474AD946C417"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -328,7 +326,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "FC766CC3FE864E26EC7F61B4311C879D"
+      modelFingerprint: "B240AA294329A6AF5E1C08EB2EF03242"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -386,6 +384,8 @@ methods:
           - name: "code"
             value:
               sapientType: "ENUM"
+              content: !<regular>
+                value: "MALFORMED"
               valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
               uuid: "read_rejectMessage.RejectCode1"
               fixed: false
@@ -412,6 +412,8 @@ methods:
           - name: "reason"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: "return_of_readLengthPrefixedString1"
               valueType: "java.lang.String"
               uuid: "read_string2"
               fixed: false
@@ -428,10 +430,11 @@ methods:
       filledByUser: false
     uuid: "2d6649f8-c557-3067-98c4-0d6fc7f7c485"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path3"
     testPathName: "readWhenMessageNotEqualsTx"
@@ -439,7 +442,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "29DDB4CC0A5EA8EABA2C4921EB9188C5"
+    modelFingerprint: "279831435F3A3A5AF2A0B615AF5EC538"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -487,7 +490,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Buffers"
-      modelFingerprint: "392FA163E3875B6D025AE522F693C117"
+      modelFingerprint: "04546EC1F72274643009B5AC99E6E1F4"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -543,9 +546,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: ""
+            value: "A"
           suggestedContent: !<regular>
-            value: ""
+            value: "A"
           valueType: "java.lang.String"
           uuid: "read_string1"
           fixed: false
@@ -556,7 +559,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "RejectMessage.RejectCode"
-      modelFingerprint: "6DF2B8E4A1E19750AFDF3C9112B11007"
+      modelFingerprint: "2890A72A6093B7A7E99B92D26F74A941"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -576,9 +579,7 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 1
-            suggestedContent: !<regular>
-              value: 1
+              value: 0
             valueType: "byte"
             uuid: "read_byte1"
             fixed: false
@@ -599,7 +600,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Buffers"
-      modelFingerprint: "392FA163E3875B6D025AE522F693C117"
+      modelFingerprint: "0F587DA197074BFA6572474AD946C417"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -666,7 +667,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "F3C74A3A4A84235C4B32BC4463FE9E36"
+      modelFingerprint: "FF6D1115B2E84974B249A12EC35D00B7"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -697,9 +698,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: ""
+                value: "A"
               suggestedContent: !<regular>
-                value: ""
+                value: "A"
               valueType: "java.lang.String"
               uuid: "read_string1"
               fixed: false
@@ -723,6 +724,8 @@ methods:
           - name: "code"
             value:
               sapientType: "ENUM"
+              content: !<regular>
+                value: "MALFORMED"
               valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
               uuid: "read_rejectMessage.RejectCode1"
               fixed: false
@@ -739,7 +742,7 @@ methods:
             value:
               sapientType: "BASIC"
               suggestedContent: !<regular>
-                value: ""
+                value: "A"
               valueType: "java.lang.String"
               uuid: "read_string1"
               fixed: false
@@ -748,6 +751,8 @@ methods:
           - name: "reason"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: "return_of_readLengthPrefixedString1"
               valueType: "java.lang.String"
               uuid: "read_string2"
               fixed: false
@@ -766,6 +771,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -1054,6 +1060,7 @@ methods:
                 content: !<regular>
                   value: 2
                 valueType: "byte"
+                uuid: "bitcoinSerializeToStream_byte[]2-item0"
                 fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
@@ -1064,6 +1071,7 @@ methods:
                 content: !<regular>
                   value: 2
                 valueType: "byte"
+                uuid: "bitcoinSerializeToStream_byte[]2-item0"
                 fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
@@ -1193,6 +1201,7 @@ methods:
                 content: !<regular>
                   value: 7
                 valueType: "byte"
+                uuid: "bitcoinSerializeToStream_byte[]4-item0"
                 fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
@@ -1203,6 +1212,7 @@ methods:
                 content: !<regular>
                   value: 7
                 valueType: "byte"
+                uuid: "bitcoinSerializeToStream_byte[]4-item0"
                 fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
@@ -2546,10 +2556,10 @@ methods:
       filledByUser: false
     uuid: "3c2a2659-1610-37fb-a611-5e70478e1ca0"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "equals"
     returnType: "boolean"

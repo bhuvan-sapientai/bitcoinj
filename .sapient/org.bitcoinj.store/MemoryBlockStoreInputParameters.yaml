@@ -19,7 +19,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "231090E309D52C6581625651AB2108C2"
+    modelFingerprint: "7D939972BEC28CB87A019B2811F2E93C"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -74,7 +74,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "block"
-      modelFingerprint: "42F3245ED9D0E1E75EB3D187821211F8"
+      modelFingerprint: "7ED30994DAFD02F3E8E56D63DAC27C58"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -122,7 +122,7 @@ methods:
           parameters:
           - name: "header"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.Block"
                 onlyPojoFunctions: false
@@ -135,6 +135,8 @@ methods:
           - name: "chainWork"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 0
               valueType: "java.math.BigInteger"
               uuid: "<init>_bigInteger1"
               fixed: false
@@ -160,7 +162,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "genesisBlock"
-      modelFingerprint: "EDDE8501C6F0423ED4DACE0D21184967"
+      modelFingerprint: "D82F84AC04C4C6BB62CEAD4AF5D6D38A"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -199,7 +201,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "genesisHeader"
-      modelFingerprint: "27941F72C534C66A27C66995CFEECEE6"
+      modelFingerprint: "9FBE7FBDB53B416102C9CFF13DC4F93B"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -237,7 +239,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "093923621BD05377325D6E7FCBB5633F"
+      modelFingerprint: "13FFA3DA003BB95DAB5B8242226FFCF7"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -271,7 +273,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "093923621BD05377325D6E7FCBB5633F"
+      modelFingerprint: "13FFA3DA003BB95DAB5B8242226FFCF7"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -320,6 +322,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -340,7 +343,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "61A9718A2F7097B4F077049A22CE6C10"
+    modelFingerprint: "30F30C1F7FD65FA932AB1268DF82EE2E"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -411,7 +414,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "genesisBlock"
-      modelFingerprint: "EDDE8501C6F0423ED4DACE0D21184967"
+      modelFingerprint: "D82F84AC04C4C6BB62CEAD4AF5D6D38A"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -450,7 +453,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "genesisHeader"
-      modelFingerprint: "27941F72C534C66A27C66995CFEECEE6"
+      modelFingerprint: "9FBE7FBDB53B416102C9CFF13DC4F93B"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -488,7 +491,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "093923621BD05377325D6E7FCBB5633F"
+      modelFingerprint: "13FFA3DA003BB95DAB5B8242226FFCF7"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -539,10 +542,11 @@ methods:
       filledByUser: false
     uuid: "bdad3ce5-9bf5-3345-b74d-b0512e0208b6"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getChainHead"
     returnType: "org.bitcoinj.core.StoredBlock"

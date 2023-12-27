@@ -23,8 +23,10 @@ public class ChildNumberSapientGeneratedJunit4Test {
     public void iTest() {
         //Arrange Statement(s)
         ChildNumber target = new ChildNumber(0, true);
+
         //Act Statement(s)
         int result = target.i();
+
         //Assert statement(s)
         assertThat(result, equalTo(-2147483648));
     }
@@ -37,8 +39,10 @@ public class ChildNumberSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         ChildNumber target = new ChildNumber(0, true);
+
         //Act Statement(s)
         boolean result = target.isHardened();
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
     }
@@ -55,8 +59,10 @@ public class ChildNumberSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         ChildNumber target = new ChildNumber(0, true);
+
         //Act Statement(s)
         boolean result = target.isHardened();
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }
@@ -66,8 +72,10 @@ public class ChildNumberSapientGeneratedJunit4Test {
     public void numTest() {
         //Arrange Statement(s)
         ChildNumber target = new ChildNumber(0, true);
+
         //Act Statement(s)
         int result = target.num();
+
         //Assert statement(s)
         assertThat(result, equalTo(0));
     }
@@ -82,8 +90,10 @@ public class ChildNumberSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         ChildNumber target = spy(new ChildNumber(0, true));
         doReturn(true).when(target).isHardened();
+
         //Act Statement(s)
         String result = target.toString();
+
         //Assert statement(s)
         assertThat(result, equalTo("nullnull"));
         verify(target).isHardened();
@@ -99,8 +109,10 @@ public class ChildNumberSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         ChildNumber target = spy(new ChildNumber(0, true));
         doReturn(false).when(target).isHardened();
+
         //Act Statement(s)
         String result = target.toString();
+
         //Assert statement(s)
         assertThat(result, equalTo("nullnull"));
         verify(target).isHardened();
@@ -113,8 +125,10 @@ public class ChildNumberSapientGeneratedJunit4Test {
         ChildNumber otherMock = mock(ChildNumber.class);
         doReturn(-1).when(otherMock).num();
         ChildNumber target = new ChildNumber(0, true);
+
         //Act Statement(s)
         int result = target.compareTo(otherMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(1));
         verify(otherMock).num();

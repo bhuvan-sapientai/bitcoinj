@@ -2072,10 +2072,11 @@ methods:
       filledByUser: false
     uuid: "0fb967ea-5cf9-3b00-b91a-83e3da7223c3"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path4"
     pathIdForUser: "path3"
     testPathName: "findRedeemDataFromScriptHashWhenKeyNotIsEncrypted"
@@ -2085,7 +2086,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "0EC67C13CFFD975792B367832610B6A6"
+    modelFingerprint: "9EE7BC9F8FB5243B2A5BA5CD949CC7D3"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -2221,7 +2222,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "key"
-      modelFingerprint: "1D1C45787C63F8F3BC5DBD38CF4E01A5"
+      modelFingerprint: "B2BA59F46AE467241BC01E0C00579559"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -2351,10 +2352,11 @@ methods:
       filledByUser: false
     uuid: "e32c1ee9-0c0e-3c15-8bcc-1afa0d2f3717"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path4"
     testPathName: "findRedeemDataFromScriptHashWhenAesKeyIsNullThrowsECKeyKeyIsEncryptedException"
@@ -2364,7 +2366,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "F50104B9E14C8032E95FF3ED2AA7EB9F"
+    modelFingerprint: "8F77AC8C01D4C5B53B14E87FD90D8F02"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -2500,7 +2502,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "key"
-      modelFingerprint: "610E8DB7B91193C0CE2593494B7F9AB5"
+      modelFingerprint: "815A3D17EC0589245536C408B6029AA7"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -2564,10 +2566,11 @@ methods:
       filledByUser: false
     uuid: "3c1f3b56-8350-39d8-a8d3-99a55c0bd742"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path5"
     testPathName: "findRedeemDataFromScriptHashWhenAesKeyIsNotNull"
@@ -2577,12 +2580,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "54448D034A7D87AEF39F4A9FB9AB978B"
+    modelFingerprint: "8F77AC8C01D4C5B53B14E87FD90D8F02"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "5F30E18AAC3E8FB97DA8DD2327D941A1"
+      modelFingerprint: "D9CB3381764E6D2B8286119D40647259"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2606,10 +2609,10 @@ methods:
               explicitCastNeeded: false
           - name: "aesKey"
             value:
-              sapientType: "MOCK"
+              sapientType: "NULL"
               valueType: "org.bitcoinj.crypto.AesKey"
               uuid: "<init>_aesKey1"
-              fixed: false
+              fixed: true
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -2631,10 +2634,10 @@ methods:
               explicitCastNeeded: false
           - name: "aesKey"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "NULL"
               valueType: "org.bitcoinj.crypto.AesKey"
               uuid: "<init>_aesKey1"
-              fixed: false
+              fixed: true
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -2713,7 +2716,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "key"
-      modelFingerprint: "610E8DB7B91193C0CE2593494B7F9AB5"
+      modelFingerprint: "815A3D17EC0589245536C408B6029AA7"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -2749,135 +2752,36 @@ methods:
         access: 1
       staticReadMethodForField: false
       filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "key"
-      modelFingerprint: "D1261D52CA9E70C7E58B5EF0BB3F0402"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "E693FEC55CE33EA5DEA8526262D3A904"
       index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.crypto.ECKey"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.crypto.ECKey"
-        uuid: "maybeDecrypt_object1"
-        fixed: false
-        collectionUuid: "maybeDecrypt_list1"
-        equalsMethodPresent: false
-        explicitCastNeeded: true
-      methodExercised:
-        target: "key"
-        name: "decrypt"
-        parameters:
-        - name: "aesKey"
-          value:
-            sapientType: "MOCK"
-            valueType: "org.bitcoinj.crypto.AesKey"
-            uuid: "<init>_aesKey1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        throwsExceptions:
-        - "org.bitcoinj.crypto.KeyCrypterException"
-        signature: "decrypt(AesKey): ECKey throws org.bitcoinj.crypto.KeyCrypterException"
-        returnValue:
-          sapientType: "MOCK"
-          valueType: "org.bitcoinj.crypto.ECKey"
-          uuid: "maybeDecrypt_eCKey1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "RedeemData"
-      modelFingerprint: "76B94A33E5CD32DFA3177C53877041E3"
-      index: 6
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.wallet.RedeemData"
-        uuid: "org.bitcoinj.wallet.RedeemData"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.wallet.RedeemData"
-        name: "of"
-        parameters:
-        - name: "keys"
-          value:
-            sapientType: "COLLECTION"
-            content: !<collection>
-              collectionClass: "java.util.ArrayList"
-              parameters: []
-              values:
-              - sapientType: "MOCK"
-                valueType: "org.bitcoinj.crypto.ECKey"
-                uuid: "maybeDecrypt_eCKey1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            suggestedContent: !<collection>
-              collectionClass: "java.util.ArrayList"
-              parameters: []
-              values:
-              - sapientType: "MOCK"
-                valueType: "org.bitcoinj.crypto.ECKey"
-                uuid: "maybeDecrypt_eCKey1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            valueType: "java.util.List"
-            genericValueType: "org.bitcoinj.crypto.ECKey"
-            uuid: "maybeDecrypt_arrayList1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "redeemScript"
-          value:
-            sapientType: "MOCK"
-            valueType: "org.bitcoinj.script.Script"
-            uuid: "maybeDecrypt_script1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "of(List,Script): RedeemData"
-        returnValue:
-          sapientType: "MOCK"
-          valueType: "org.bitcoinj.wallet.RedeemData"
-          uuid: "maybeDecrypt_redeemData1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "E72FAEA21AC64BC712F6669CDCD57BBA"
-      index: 7
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.wallet.RedeemData"
-        uuid: "maybeDecrypt_redeemData1"
-        fixed: false
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "org.bitcoinj.crypto.ECKey$KeyIsEncryptedException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.crypto.ECKey$KeyIsEncryptedException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.crypto.ECKey$KeyIsEncryptedException"
+        uuid: "maybeDecrypt_eCKey.KeyIsEncryptedException1"
+        fixed: true
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     uuid: "a6d40181-ac68-3236-a9df-d3031ae980dc"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false

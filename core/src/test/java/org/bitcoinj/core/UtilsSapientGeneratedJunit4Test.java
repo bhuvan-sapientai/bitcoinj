@@ -34,17 +34,16 @@ public class UtilsSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
             byte[] byteArray = new byte[]{};
-            byteUtils.when(() -> ByteUtils.formatHex(byteArray)).thenReturn("String");
-            byte[] byteArray2 = new byte[]{(byte) 1, (byte) 2, (byte) 3};
+            byteUtils.when(() -> ByteUtils.formatHex(byteArray)).thenReturn("");
+            byte[] byteArray2 = new byte[]{};
             List<byte[]> byteList = new ArrayList<>();
             byteList.add(byteArray2);
             //Act Statement(s)
             String result = Utils.toString(byteList);
-            byte[] byteArray3 = new byte[]{};
             List<byte[]> byteByteListList = new ArrayList<>();
-            byteByteListList.add(byteArray3);
+            byteByteListList.add(byteArray);
             //Assert statement(s)
-            assertThat(result, equalTo("[String]"));
+            assertThat(result, equalTo("[]"));
             assertThat(byteList.size(), equalTo(byteByteListList.size()));
             assertThat(byteList, containsInRelativeOrder(byteByteListList.toArray()));
             byteUtils.verify(() -> ByteUtils.formatHex(byteArray), atLeast(1));

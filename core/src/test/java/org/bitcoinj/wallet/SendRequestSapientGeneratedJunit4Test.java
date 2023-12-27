@@ -31,6 +31,9 @@ import static org.hamcrest.Matchers.is;
 
 import org.junit.Ignore;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.times;
+
 public class SendRequestSapientGeneratedJunit4Test {
 
     @Rule()
@@ -54,6 +57,8 @@ public class SendRequestSapientGeneratedJunit4Test {
 
     @Rule()
     public ExpectedException thrown = ExpectedException.none();
+
+    private final Coin coinMock2 = mock(Coin.class);
 
     //Sapient generated method id: ${0c46e4d2-7a4e-3719-918f-e70a73b65493}
     @Ignore()
@@ -82,8 +87,10 @@ public class SendRequestSapientGeneratedJunit4Test {
          *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
+
         //Act Statement(s)
         SendRequest result = SendRequest.to(addressMock, coinMock);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -100,10 +107,10 @@ public class SendRequestSapientGeneratedJunit4Test {
          *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
-        //Arrange Statement(s)
-        ECKey eCKey = new ECKey();
+
         //Act Statement(s)
-        SendRequest result = SendRequest.to(eCKey, coinMock);
+        SendRequest result = SendRequest.to(eCKeyMock, coinMock);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -128,8 +135,10 @@ public class SendRequestSapientGeneratedJunit4Test {
     public void forTxTest() {
         //Arrange Statement(s)
         Transaction transactionMock = mock(Transaction.class);
+
         //Act Statement(s)
         SendRequest result = SendRequest.forTx(transactionMock);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -146,8 +155,10 @@ public class SendRequestSapientGeneratedJunit4Test {
          *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
+
         //Act Statement(s)
         SendRequest result = SendRequest.emptyWallet(addressMock);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -160,18 +171,41 @@ public class SendRequestSapientGeneratedJunit4Test {
          * (output.isMine(wallet)) : true
          * (output.isAvailableForSpending()) : true
          * (output.getValue().isGreaterThan(feeRaise)) : true
+         *
+         * TODO: Help needed! This method is not unit testable!
+         *  Following variables could not be isolated/mocked: tx
+         *  Suggestions:
+         *  You can change the initialization of above variables and make it injectable or
+         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        List<TransactionOutput> transactionOutputList = new ArrayList<>();
-        transactionOutputList.add(transactionOutputMock);
-        doReturn(transactionOutputList).when(parentTransactionMock).getOutputs();
-        doReturn(false).when(transactionOutputMock).isMine(walletMock);
-        thrown.expect(NullPointerException.class);
-        //Act Statement(s)
-        SendRequest.childPaysForParent(walletMock, parentTransactionMock, coinMock);
-        //Assert statement(s)
-        verify(parentTransactionMock).getOutputs();
-        verify(transactionOutputMock).isMine(walletMock);
+        Coin coinMock3 = mock(Coin.class);
+        Coin coinMock4 = mock(Coin.class);
+        try (MockedStatic<SendRequest> sendRequest = mockStatic(SendRequest.class, CALLS_REAL_METHODS)) {
+            doReturn(addressMock).when(walletMock).freshAddress(KeyChain.KeyPurpose.CHANGE);
+            List<TransactionOutput> transactionOutputList = new ArrayList<>();
+            transactionOutputList.add(transactionOutputMock);
+            doReturn(transactionOutputList).when(parentTransactionMock).getOutputs();
+            doReturn(true).when(transactionOutputMock).isMine(walletMock);
+            doReturn(true).when(transactionOutputMock).isAvailableForSpending();
+            doReturn(true).when(coinMock).isGreaterThan(coinMock2);
+            doReturn(coinMock, coinMock3).when(transactionOutputMock).getValue();
+            doReturn(coinMock4).when(coinMock3).subtract(coinMock2);
+            sendRequest.when(() -> SendRequest.forTx((Transaction) any())).thenReturn(sendRequestMock);
+            //Act Statement(s)
+            SendRequest result = SendRequest.childPaysForParent(walletMock, parentTransactionMock, coinMock2);
+            //Assert statement(s)
+            assertThat(result, equalTo(sendRequestMock));
+            verify(walletMock, atLeast(1)).freshAddress(KeyChain.KeyPurpose.CHANGE);
+            verify(parentTransactionMock, atLeast(1)).getOutputs();
+            verify(transactionOutputMock, atLeast(1)).isMine(walletMock);
+            verify(transactionOutputMock, atLeast(1)).isAvailableForSpending();
+            verify(transactionOutputMock, times(2)).getValue();
+            verify(coinMock, atLeast(1)).isGreaterThan(coinMock2);
+            verify(coinMock3, atLeast(1)).subtract(coinMock2);
+            sendRequest.verify(() -> SendRequest.forTx((Transaction) any()), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${76e133a0-6d9d-3059-b9cc-b4c75368438c}
@@ -184,24 +218,24 @@ public class SendRequestSapientGeneratedJunit4Test {
          * (output.getValue().isGreaterThan(feeRaise)) : false
          */
         //Arrange Statement(s)
-        TransactionOutput transactionOutputMock2 = mock(TransactionOutput.class);
-        TransactionOutput transactionOutputMock3 = mock(TransactionOutput.class);
-        TransactionOutput transactionOutputMock4 = mock(TransactionOutput.class);
-        TransactionOutput transactionOutputMock5 = mock(TransactionOutput.class);
         List<TransactionOutput> transactionOutputList = new ArrayList<>();
         transactionOutputList.add(transactionOutputMock);
-        transactionOutputList.add(transactionOutputMock2);
-        transactionOutputList.add(transactionOutputMock3);
-        transactionOutputList.add(transactionOutputMock4);
-        transactionOutputList.add(transactionOutputMock5);
         doReturn(transactionOutputList).when(parentTransactionMock).getOutputs();
-        doReturn(false).when(transactionOutputMock).isMine(walletMock);
+        doReturn(true).when(transactionOutputMock).isMine(walletMock);
+        doReturn(true).when(transactionOutputMock).isAvailableForSpending();
+        doReturn(coinMock).when(transactionOutputMock).getValue();
+        doReturn(false).when(coinMock).isGreaterThan(coinMock2);
         thrown.expect(NullPointerException.class);
+
         //Act Statement(s)
-        SendRequest.childPaysForParent(walletMock, parentTransactionMock, coinMock);
+        SendRequest.childPaysForParent(walletMock, parentTransactionMock, coinMock2);
+
         //Assert statement(s)
         verify(parentTransactionMock).getOutputs();
         verify(transactionOutputMock).isMine(walletMock);
+        verify(transactionOutputMock).isAvailableForSpending();
+        verify(transactionOutputMock).getValue();
+        verify(coinMock).isGreaterThan(coinMock2);
     }
 
     //Sapient generated method id: ${f32b1224-074d-3f2a-860a-50e5e0099bd3}

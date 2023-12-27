@@ -179,7 +179,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "27F40B0EB11BCFAC7D72610A7C87001E"
+    modelFingerprint: "0BFD89C87471B365173D7FD411DD5634"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -255,7 +255,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "NetworkParameters"
-      modelFingerprint: "D30C934CC9807B6FCC7A18BF98BD72E7"
+      modelFingerprint: "B73070C46AE7B63EC8C3F19BB523D99E"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -295,7 +295,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "02EBE3767727D37D6826A2734DEEFF42"
+      modelFingerprint: "9B99445D56873FB292250A99AFCA7EB8"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -350,7 +350,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "807C80C3B93040AAF948FC0BD24DBE1F"
+      modelFingerprint: "E661AE7DA1AA5F1D72AFB2C2A998FF1C"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -413,6 +413,8 @@ methods:
                     - name: "hostname"
                       value:
                         sapientType: "BASIC"
+                        content: !<regular>
+                          value: "return_of_getDnsSeedsItem1"
                         valueType: "java.lang.String"
                         uuid: "forServices_string1"
                         fixed: false
@@ -467,6 +469,8 @@ methods:
                     - name: "hostname"
                       value:
                         sapientType: "BASIC"
+                        content: !<regular>
+                          value: "return_of_getDnsSeedsItem1"
                         valueType: "java.lang.String"
                         uuid: "forServices_string1"
                         fixed: false
@@ -540,6 +544,8 @@ methods:
                     - name: "hostname"
                       value:
                         sapientType: "BASIC"
+                        content: !<regular>
+                          value: "return_of_getDnsSeedsItem1"
                         valueType: "java.lang.String"
                         uuid: "forServices_string1"
                         fixed: false
@@ -587,6 +593,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path3"
@@ -857,11 +864,11 @@ methods:
       filledByUser: false
     uuid: "d777278a-7102-3890-a0ba-d871dcc80ae1"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path4"
     testPathName: "forServices1WhenDnsSeedsIsNotNullAndDnsSeedsIsEmptyAndDefaultBranch"
@@ -1337,12 +1344,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "61400361DEE494A77833A3B9FC726A0B"
+    modelFingerprint: "47C1CD7BDAB5C73AB71EB50902F7AC3F"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "54CA1ABE5ED8F5C0C6E4E4B9ADFD3CDD"
+      modelFingerprint: "C3E8A5EC74BF850DCEDD5343B09A2028"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1354,9 +1361,11 @@ methods:
           parameters:
           - name: "network"
             value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Network"
-              uuid: "<init>_network1"
+              sapientType: "ENUM"
+              content: !<regular>
+                value: "REGTEST"
+              valueType: "org.bitcoinj.base.BitcoinNetwork"
+              uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1364,35 +1373,11 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
-                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values:
-                - sapientType: "MOCK"
-                  suggestedContent: !<unknown_object>
-                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
-                    onlyPojoFunctions: false
-                    builderPattern: false
-                  valueType: "org.bitcoinj.net.discovery.PeerDiscovery"
-                  uuid: "<init>_list1-0"
-                  fixed: false
-                  collectionUuid: "<init>_list1"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+                values: []
               suggestedContent: !<collection>
-                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values:
-                - sapientType: "MOCK"
-                  suggestedContent: !<unknown_object>
-                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
-                    onlyPojoFunctions: false
-                    builderPattern: false
-                  valueType: "org.bitcoinj.net.discovery.PeerDiscovery"
-                  uuid: "<init>_list1-0"
-                  fixed: false
-                  collectionUuid: "<init>_list1"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+                values: []
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.net.discovery.PeerDiscovery"
               uuid: "<init>_list1"
@@ -1406,53 +1391,17 @@ methods:
           parameters:
           - name: "network"
             value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Network"
-              uuid: "<init>_network1"
+              sapientType: "ENUM"
+              content: !<regular>
+                value: "REGTEST"
+              valueType: "org.bitcoinj.base.BitcoinNetwork"
+              uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "seeds"
             value:
               sapientType: "COLLECTION"
-              content: !<collection>
-                collectionClass: "java.util.ArrayList"
-                parameters: []
-                values:
-                - sapientType: "MOCK"
-                  content: !<unknown_object>
-                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
-                    onlyPojoFunctions: false
-                    builderPattern: false
-                  suggestedContent: !<unknown_object>
-                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
-                    onlyPojoFunctions: false
-                    builderPattern: false
-                  valueType: "org.bitcoinj.net.discovery.PeerDiscovery"
-                  uuid: "<init>_list1-0"
-                  fixed: false
-                  collectionUuid: "<init>_list1"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              suggestedContent: !<collection>
-                collectionClass: "java.util.ArrayList"
-                parameters: []
-                values:
-                - sapientType: "MOCK"
-                  content: !<unknown_object>
-                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
-                    onlyPojoFunctions: false
-                    builderPattern: false
-                  suggestedContent: !<unknown_object>
-                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
-                    onlyPojoFunctions: false
-                    builderPattern: false
-                  valueType: "org.bitcoinj.net.discovery.PeerDiscovery"
-                  uuid: "<init>_list1-0"
-                  fixed: false
-                  collectionUuid: "<init>_list1"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.net.discovery.PeerDiscovery"
               uuid: "<init>_list1"
@@ -1470,7 +1419,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "services"
-      modelFingerprint: "F8877380B48E1EA586A3ED00B6298812"
+      modelFingerprint: "909050AB7B1EF8A162245F33E8EE0D3E"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1478,9 +1427,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 1
-        suggestedContent: !<regular>
-          value: 1
+          value: 0
         valueType: "long"
         uuid: "getPeers_long1"
         fixed: false
@@ -1490,7 +1437,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "timeout"
-      modelFingerprint: "03292E4763C76AA9FBDF6D12BA1B6B00"
+      modelFingerprint: "56FF28DDA68F2DB8B71AE2A0D84E5A0E"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1558,7 +1505,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "577D2426C3E52494C50DB55105DC61B8"
+      modelFingerprint: "B850A1E5D0D8F91559D5FC65910A279A"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -1572,11 +1519,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "No peer discovery returned any results in 2 ms. Check internet\
-                  \ connection?"
-              suggestedContent: !<regular>
-                value: "No peer discovery returned any results in 2 ms. Check internet\
-                  \ connection?"
+                value: "message1"
               valueType: "java.lang.String"
               uuid: "getPeers_string1"
               fixed: false
@@ -1590,9 +1533,6 @@ methods:
           - name: "message"
             value:
               sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: "No peer discovery returned any results in 2 ms. Check internet\
-                  \ connection?"
               valueType: "java.lang.String"
               uuid: "getPeers_string1"
               fixed: false
@@ -1625,12 +1565,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "61400361DEE494A77833A3B9FC726A0B"
+    modelFingerprint: "7B1CF2572F16C770767F7E38B6FFBC50"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "54CA1ABE5ED8F5C0C6E4E4B9ADFD3CDD"
+      modelFingerprint: "C3E8A5EC74BF850DCEDD5343B09A2028"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1642,9 +1582,11 @@ methods:
           parameters:
           - name: "network"
             value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Network"
-              uuid: "<init>_network1"
+              sapientType: "ENUM"
+              content: !<regular>
+                value: "REGTEST"
+              valueType: "org.bitcoinj.base.BitcoinNetwork"
+              uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1652,35 +1594,11 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
-                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values:
-                - sapientType: "MOCK"
-                  suggestedContent: !<unknown_object>
-                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
-                    onlyPojoFunctions: false
-                    builderPattern: false
-                  valueType: "org.bitcoinj.net.discovery.PeerDiscovery"
-                  uuid: "<init>_list1-0"
-                  fixed: false
-                  collectionUuid: "<init>_list1"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+                values: []
               suggestedContent: !<collection>
-                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values:
-                - sapientType: "MOCK"
-                  suggestedContent: !<unknown_object>
-                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
-                    onlyPojoFunctions: false
-                    builderPattern: false
-                  valueType: "org.bitcoinj.net.discovery.PeerDiscovery"
-                  uuid: "<init>_list1-0"
-                  fixed: false
-                  collectionUuid: "<init>_list1"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+                values: []
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.net.discovery.PeerDiscovery"
               uuid: "<init>_list1"
@@ -1694,53 +1612,17 @@ methods:
           parameters:
           - name: "network"
             value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Network"
-              uuid: "<init>_network1"
+              sapientType: "ENUM"
+              content: !<regular>
+                value: "REGTEST"
+              valueType: "org.bitcoinj.base.BitcoinNetwork"
+              uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "seeds"
             value:
               sapientType: "COLLECTION"
-              content: !<collection>
-                collectionClass: "java.util.ArrayList"
-                parameters: []
-                values:
-                - sapientType: "MOCK"
-                  content: !<unknown_object>
-                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
-                    onlyPojoFunctions: false
-                    builderPattern: false
-                  suggestedContent: !<unknown_object>
-                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
-                    onlyPojoFunctions: false
-                    builderPattern: false
-                  valueType: "org.bitcoinj.net.discovery.PeerDiscovery"
-                  uuid: "<init>_list1-0"
-                  fixed: false
-                  collectionUuid: "<init>_list1"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              suggestedContent: !<collection>
-                collectionClass: "java.util.ArrayList"
-                parameters: []
-                values:
-                - sapientType: "MOCK"
-                  content: !<unknown_object>
-                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
-                    onlyPojoFunctions: false
-                    builderPattern: false
-                  suggestedContent: !<unknown_object>
-                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
-                    onlyPojoFunctions: false
-                    builderPattern: false
-                  valueType: "org.bitcoinj.net.discovery.PeerDiscovery"
-                  uuid: "<init>_list1-0"
-                  fixed: false
-                  collectionUuid: "<init>_list1"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.net.discovery.PeerDiscovery"
               uuid: "<init>_list1"
@@ -1758,7 +1640,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "services"
-      modelFingerprint: "F8877380B48E1EA586A3ED00B6298812"
+      modelFingerprint: "909050AB7B1EF8A162245F33E8EE0D3E"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1766,9 +1648,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 1
-        suggestedContent: !<regular>
-          value: 1
+          value: 0
         valueType: "long"
         uuid: "getPeers_long1"
         fixed: false
@@ -1778,7 +1658,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "timeout"
-      modelFingerprint: "03292E4763C76AA9FBDF6D12BA1B6B00"
+      modelFingerprint: "56FF28DDA68F2DB8B71AE2A0D84E5A0E"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1846,52 +1726,24 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "577D2426C3E52494C50DB55105DC61B8"
+      modelFingerprint: "C7A4E6D356E1197E3489A0B78E0C0D24"
       index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "EXCEPTION"
-        content: !<new>
-          target: "org.bitcoinj.net.discovery.PeerDiscoveryException"
-          parameters:
-          - name: "message"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "No peer discovery returned any results in 2 ms. Check internet\
-                  \ connection?"
-              suggestedContent: !<regular>
-                value: "No peer discovery returned any results in 2 ms. Check internet\
-                  \ connection?"
-              valueType: "java.lang.String"
-              uuid: "getPeers_string1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "org.bitcoinj.net.discovery.PeerDiscoveryException"
-          parameters:
-          - name: "message"
-            value:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: "No peer discovery returned any results in 2 ms. Check internet\
-                  \ connection?"
-              valueType: "java.lang.String"
-              uuid: "getPeers_string1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        valueType: "org.bitcoinj.net.discovery.PeerDiscoveryException"
-        uuid: "getPeers_peerDiscoveryException1"
-        fixed: true
-        equalsMethodPresent: false
+        sapientType: "COLLECTION"
+        content: !<collection>
+          parameters: []
+          values: []
+        suggestedContent: !<collection>
+          parameters: []
+          values: []
+        valueType: "java.util.List"
+        genericValueType: "java.net.InetSocketAddress"
+        uuid: "getPeers_arrayList2"
+        fixed: false
+        equalsMethodPresent: true
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
@@ -1899,7 +1751,8 @@ methods:
     deleted: false
     disabled: true
     ignoredBySystem: false
-    disabledReason: "Potential harmful system call (Future.isCancelled, ExecutorService.invokeAll)\
+    disabledReason: "Potential harmful system call (Future.isCancelled, Future.get,\
+      \ ExecutorService.shutdown, ExecutorService.invokeAll, ExecutorService.shutdownNow)\
       \ detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
@@ -1935,7 +1788,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "BDF21F2BC869BF6C7E2D4E86F6F15E28"
+    modelFingerprint: "7983F16EC6A280FE4803DD1DE57C678C"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -2125,7 +1978,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "vThreadPool"
-      modelFingerprint: "511625242BF7BD1AED97BB38F57D42D6"
+      modelFingerprint: "CB8080514EE98CCEA1508AC95541B947"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -2260,10 +2113,9 @@ methods:
       filledByUser: false
     uuid: "bedae1ab-56a9-386a-af42-c9a753de6250"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    disabledReason: "Potential harmful system call (Future.isCancelled, ExecutorService.invokeAll)\
-      \ detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path6"
@@ -2275,7 +2127,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "155ACCE22B3E334C4FD5FE708660F520"
+    modelFingerprint: "7983F16EC6A280FE4803DD1DE57C678C"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -2465,7 +2317,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "vThreadPool"
-      modelFingerprint: "511625242BF7BD1AED97BB38F57D42D6"
+      modelFingerprint: "CB8080514EE98CCEA1508AC95541B947"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -2554,56 +2406,10 @@ methods:
         access: 1025
       staticReadMethodForField: false
       filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "future"
-      modelFingerprint: "8E622536064A21218CE94BB2A1DAE534"
-      index: 6
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 1
-      - 2
-      value:
-        sapientType: "NULL"
-        suggestedContent: !<unknown_object>
-          target: "java.util.concurrent.Future"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "java.util.concurrent.Future"
-        uuid: "getPeers_future1"
-        fixed: false
-        collectionUuid: "getPeers_list1"
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "future"
-        name: "get"
-        parameters: []
-        throwsExceptions:
-        - "java.lang.InterruptedException"
-        - "java.util.concurrent.ExecutionException"
-        signature: "get(): Object throws java.lang.InterruptedException,java.util.concurrent.ExecutionException"
-        returnValue:
-          sapientType: "COLLECTION"
-          content: !<collection>
-            parameters: []
-            values: []
-          suggestedContent: !<collection>
-            parameters: []
-            values: []
-          valueType: "java.util.List"
-          uuid: "getPeers_object2"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: true
-        access: 1025
-      staticReadMethodForField: false
-      filledByUser: false
     - type: "RESULT"
       name: "result"
       modelFingerprint: "B850A1E5D0D8F91559D5FC65910A279A"
-      index: 7
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -2618,7 +2424,7 @@ methods:
               content: !<regular>
                 value: "message1"
               valueType: "java.lang.String"
-              uuid: "getPeers_string2"
+              uuid: "getPeers_string1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -2631,7 +2437,7 @@ methods:
             value:
               sapientType: "BASIC"
               valueType: "java.lang.String"
-              uuid: "getPeers_string2"
+              uuid: "getPeers_string1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -2646,10 +2452,9 @@ methods:
       filledByUser: false
     uuid: "465ee7d3-758b-3ef4-b38b-1eb319998f3d"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    disabledReason: "Potential harmful system call (Future.isCancelled, Future.get,\
-      \ ExecutorService.invokeAll) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path8"
@@ -3068,12 +2873,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "0726FB1B48C39F0D4E81A448B84763DA"
-    problemWasSolvedByProver: true
+    modelFingerprint: "85DC516C9A75C511ACE008E99206DDE0"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "54CA1ABE5ED8F5C0C6E4E4B9ADFD3CDD"
+      modelFingerprint: "C51DCB929FB0FF2BE4FB49006A98E4BC"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -3085,9 +2890,11 @@ methods:
           parameters:
           - name: "network"
             value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Network"
-              uuid: "<init>_network1"
+              sapientType: "ENUM"
+              content: !<regular>
+                value: "REGTEST"
+              valueType: "org.bitcoinj.base.BitcoinNetwork"
+              uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -3095,35 +2902,11 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
-                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values:
-                - sapientType: "MOCK"
-                  suggestedContent: !<unknown_object>
-                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
-                    onlyPojoFunctions: false
-                    builderPattern: false
-                  valueType: "org.bitcoinj.net.discovery.PeerDiscovery"
-                  uuid: "<init>_list1-0"
-                  fixed: false
-                  collectionUuid: "<init>_list1"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+                values: []
               suggestedContent: !<collection>
-                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values:
-                - sapientType: "MOCK"
-                  suggestedContent: !<unknown_object>
-                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
-                    onlyPojoFunctions: false
-                    builderPattern: false
-                  valueType: "org.bitcoinj.net.discovery.PeerDiscovery"
-                  uuid: "<init>_list1-0"
-                  fixed: false
-                  collectionUuid: "<init>_list1"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+                values: []
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.net.discovery.PeerDiscovery"
               uuid: "<init>_list1"
@@ -3137,53 +2920,20 @@ methods:
           parameters:
           - name: "network"
             value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Network"
-              uuid: "<init>_network1"
+              sapientType: "ENUM"
+              content: !<regular>
+                value: "REGTEST"
+              valueType: "org.bitcoinj.base.BitcoinNetwork"
+              uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "seeds"
             value:
               sapientType: "COLLECTION"
-              content: !<collection>
-                collectionClass: "java.util.ArrayList"
-                parameters: []
-                values:
-                - sapientType: "MOCK"
-                  content: !<unknown_object>
-                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
-                    onlyPojoFunctions: false
-                    builderPattern: false
-                  suggestedContent: !<unknown_object>
-                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
-                    onlyPojoFunctions: false
-                    builderPattern: false
-                  valueType: "org.bitcoinj.net.discovery.PeerDiscovery"
-                  uuid: "<init>_list1-0"
-                  fixed: false
-                  collectionUuid: "<init>_list1"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
               suggestedContent: !<collection>
-                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values:
-                - sapientType: "MOCK"
-                  content: !<unknown_object>
-                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
-                    onlyPojoFunctions: false
-                    builderPattern: false
-                  suggestedContent: !<unknown_object>
-                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
-                    onlyPojoFunctions: false
-                    builderPattern: false
-                  valueType: "org.bitcoinj.net.discovery.PeerDiscovery"
-                  uuid: "<init>_list1-0"
-                  fixed: false
-                  collectionUuid: "<init>_list1"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+                values: []
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.net.discovery.PeerDiscovery"
               uuid: "<init>_list1"
@@ -3201,97 +2951,17 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "3EF51ABEB9C3477B1D9A1FB8D591E6E2"
+      modelFingerprint: "8ADA05C44EBA4547B9E98972A0609D18"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "java.util.concurrent.Executors"
-          method: "newFixedThreadPool"
-          methodParameters:
-          - value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              valueType: "int"
-              uuid: "createExecutor_int1"
-              fixed: false
-              collectionUuid: "<init>_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "org.bitcoinj.utils.ContextPropagatingThreadFactory"
-                parameters:
-                - name: "name"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "Multiplexing discovery"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: true
-              suggestedContent: !<new>
-                target: "org.bitcoinj.utils.ContextPropagatingThreadFactory"
-                parameters:
-                - name: "name"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "Multiplexing discovery"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: true
-              valueType: "org.bitcoinj.utils.ContextPropagatingThreadFactory"
-              uuid: "createExecutor_contextPropagatingThreadFactory1"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "java.util.concurrent.Executors"
-          method: "newFixedThreadPool"
-          methodParameters:
-          - value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              valueType: "int"
-              uuid: "createExecutor_int1"
-              fixed: false
-              collectionUuid: "<init>_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - value:
-              sapientType: "OBJECT"
-              suggestedContent: !<new>
-                target: "org.bitcoinj.utils.ContextPropagatingThreadFactory"
-                parameters:
-                - name: "name"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "Multiplexing discovery"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: true
-              valueType: "org.bitcoinj.utils.ContextPropagatingThreadFactory"
-              uuid: "createExecutor_contextPropagatingThreadFactory1"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+        sapientType: "NULL"
+        suggestedContent: !<unknown_object>
+          target: "java.util.concurrent.ExecutorService"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "java.util.concurrent.ExecutorService"
         uuid: "createExecutor_executorService1"
         fixed: false
@@ -3301,11 +2971,11 @@ methods:
       filledByUser: false
     uuid: "57e52633-2497-3d26-a12d-63324ebc60fe"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "shutdown"
     returnType: "void"

@@ -54,9 +54,11 @@ public class SigNetParamsSapientGeneratedJunit4Test {
         /* Branches:
          * (instance == null) : true
          */
+
         //Act Statement(s)
         SigNetParams result = SigNetParams.get();
         SigNetParams sigNetParams = new SigNetParams();
+
         //Assert statement(s)
         assertThat(result, equalTo(sigNetParams));
     }

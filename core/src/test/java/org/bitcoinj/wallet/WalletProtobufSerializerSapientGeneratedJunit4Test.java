@@ -337,20 +337,30 @@ public class WalletProtobufSerializerSapientGeneratedJunit4Test {
          * (keyCrypter instanceof KeyCrypterScrypt) : false
          */
         //Arrange Statement(s)
-        //doReturn(networkMock).when(walletMock).network();
-        //doReturn("int").when(networkMock).id();
-        //doReturn("return_of_getDescription1", "String").when(walletMock).getDescription();
-        //TODO: Needs to return real value
-        //doReturn(null).when(walletMock).getWalletTransactions();
-        //WalletProtobufSerializer target = new WalletProtobufSerializer(walletProtobufSerializerWalletFactoryMock);
-        //thrown.expect(NullPointerException.class);
-        //Act Statement(s)
-        //target.walletToProto(walletMock);
-        //Assert statement(s)
-        //verify(walletMock).network();
-        //verify(networkMock).id();
-        //verify(walletMock, times(2)).getDescription();
-        //verify(walletMock).getWalletTransactions();
+        /*try (MockedStatic<Protos.Wallet> protosWallet = mockStatic(Protos.Wallet.class)) {
+    doReturn(networkMock).when(walletMock).network();
+    doReturn("J").when(networkMock).id();
+    doReturn("return_of_getDescription1", "Q").when(walletMock).getDescription();
+    //TODO: Needs to return real value
+    doReturn(null).when(walletMock).getWalletTransactions();
+    protosWallet.when(() -> Protos.Wallet.newBuilder()).thenReturn(protosWalletBuilderMock);
+    Protos.Wallet.Builder builder = protosWalletBuilderMock.setNetworkIdentifier("J");
+    doReturn(builder).when(protosWalletBuilderMock).setNetworkIdentifier("J");
+    Protos.Wallet.Builder builder2 = protosWalletBuilderMock.setDescription("Q");
+    doReturn(builder2).when(protosWalletBuilderMock).setDescription("Q");
+    WalletProtobufSerializer target = new WalletProtobufSerializer(walletProtobufSerializerWalletFactoryMock);
+    thrown.expect(NullPointerException.class);
+    //Act Statement(s)
+    target.walletToProto(walletMock);
+    //Assert statement(s)
+    verify(walletMock).network();
+    verify(networkMock).id();
+    verify(walletMock, times(2)).getDescription();
+    verify(walletMock).getWalletTransactions();
+    protosWallet.verify(() -> Protos.Wallet.newBuilder(), atLeast(1));
+    verify(protosWalletBuilderMock).setNetworkIdentifier("J");
+    verify(protosWalletBuilderMock).setDescription("Q");
+}*/
     }
 
     //Sapient generated method id: ${8d122d67-a9cc-31c9-bede-2f8cf668fe53}
@@ -385,20 +395,30 @@ public class WalletProtobufSerializerSapientGeneratedJunit4Test {
          * (keyCrypter instanceof KeyCrypterScrypt) : false
          */
         //Arrange Statement(s)
-        //doReturn(networkMock).when(walletMock).network();
-        //doReturn("int").when(networkMock).id();
-        //doReturn("return_of_getDescription1", "String").when(walletMock).getDescription();
-        //TODO: Needs to return real value
-        //doReturn(null).when(walletMock).getWalletTransactions();
-        //WalletProtobufSerializer target = new WalletProtobufSerializer(walletProtobufSerializerWalletFactoryMock);
-        //thrown.expect(NullPointerException.class);
-        //Act Statement(s)
-        //target.walletToProto(walletMock);
-        //Assert statement(s)
-        //verify(walletMock).network();
-        //verify(networkMock).id();
-        //verify(walletMock, times(2)).getDescription();
-        //verify(walletMock).getWalletTransactions();
+        try (MockedStatic<Protos.Wallet> protosWallet = mockStatic(Protos.Wallet.class)) {
+            doReturn(networkMock).when(walletMock).network();
+            doReturn("J").when(networkMock).id();
+            doReturn("return_of_getDescription1", "Q").when(walletMock).getDescription();
+            //TODO: Needs to return real value
+            doReturn(null).when(walletMock).getWalletTransactions();
+            protosWallet.when(() -> Protos.Wallet.newBuilder()).thenReturn(protosWalletBuilderMock);
+            Protos.Wallet.Builder builder = protosWalletBuilderMock.setNetworkIdentifier("J");
+            doReturn(builder).when(protosWalletBuilderMock).setNetworkIdentifier("J");
+            Protos.Wallet.Builder builder2 = protosWalletBuilderMock.setDescription("Q");
+            doReturn(builder2).when(protosWalletBuilderMock).setDescription("Q");
+            WalletProtobufSerializer target = new WalletProtobufSerializer(walletProtobufSerializerWalletFactoryMock);
+            thrown.expect(NullPointerException.class);
+            //Act Statement(s)
+            target.walletToProto(walletMock);
+            //Assert statement(s)
+            verify(walletMock).network();
+            verify(networkMock).id();
+            verify(walletMock, times(2)).getDescription();
+            verify(walletMock).getWalletTransactions();
+            protosWallet.verify(() -> Protos.Wallet.newBuilder(), atLeast(1));
+            verify(protosWalletBuilderMock).setNetworkIdentifier("J");
+            verify(protosWalletBuilderMock).setDescription("Q");
+        }
     }
 
     //Sapient generated method id: ${89ee7775-a040-3f4a-aaf9-ef01cd907bf1}
@@ -491,20 +511,30 @@ public class WalletProtobufSerializerSapientGeneratedJunit4Test {
          * (keyCrypter instanceof KeyCrypterScrypt) : false
          */
         //Arrange Statement(s)
-        //doReturn(networkMock).when(walletMock).network();
-        //doReturn("int").when(networkMock).id();
-        //doReturn("return_of_getDescription1", "String").when(walletMock).getDescription();
-        //TODO: Needs to return real value
-        //doReturn(null).when(walletMock).getWalletTransactions();
-        //WalletProtobufSerializer target = new WalletProtobufSerializer(walletProtobufSerializerWalletFactoryMock);
-        //thrown.expect(NullPointerException.class);
-        //Act Statement(s)
-        //target.walletToProto(walletMock);
-        //Assert statement(s)
-        //verify(walletMock).network();
-        //verify(networkMock).id();
-        //verify(walletMock, times(2)).getDescription();
-        //verify(walletMock).getWalletTransactions();
+        /*try (MockedStatic<Protos.Wallet> protosWallet = mockStatic(Protos.Wallet.class)) {
+    doReturn(networkMock).when(walletMock).network();
+    doReturn("J").when(networkMock).id();
+    doReturn("return_of_getDescription1", "Q").when(walletMock).getDescription();
+    //TODO: Needs to return real value
+    doReturn(null).when(walletMock).getWalletTransactions();
+    protosWallet.when(() -> Protos.Wallet.newBuilder()).thenReturn(protosWalletBuilderMock);
+    Protos.Wallet.Builder builder = protosWalletBuilderMock.setNetworkIdentifier("J");
+    doReturn(builder).when(protosWalletBuilderMock).setNetworkIdentifier("J");
+    Protos.Wallet.Builder builder2 = protosWalletBuilderMock.setDescription("Q");
+    doReturn(builder2).when(protosWalletBuilderMock).setDescription("Q");
+    WalletProtobufSerializer target = new WalletProtobufSerializer(walletProtobufSerializerWalletFactoryMock);
+    thrown.expect(NullPointerException.class);
+    //Act Statement(s)
+    target.walletToProto(walletMock);
+    //Assert statement(s)
+    verify(walletMock).network();
+    verify(networkMock).id();
+    verify(walletMock, times(2)).getDescription();
+    verify(walletMock).getWalletTransactions();
+    protosWallet.verify(() -> Protos.Wallet.newBuilder(), atLeast(1));
+    verify(protosWalletBuilderMock).setNetworkIdentifier("J");
+    verify(protosWalletBuilderMock).setDescription("Q");
+}*/
     }
 
     //Sapient generated method id: ${48c09dfc-17f1-3157-9adb-1fb96bdc8387}
@@ -597,20 +627,30 @@ public class WalletProtobufSerializerSapientGeneratedJunit4Test {
          * (keyCrypter instanceof KeyCrypterScrypt) : false
          */
         //Arrange Statement(s)
-        //doReturn(networkMock).when(walletMock).network();
-        //doReturn("Network.id()").when(networkMock).id();
-        //doReturn("return_of_getDescription1", "Wallet.getDescription()").when(walletMock).getDescription();
-        //TODO: Needs to return real value
-        //doReturn(null).when(walletMock).getWalletTransactions();
-        //WalletProtobufSerializer target = new WalletProtobufSerializer(walletProtobufSerializerWalletFactoryMock);
-        //thrown.expect(NullPointerException.class);
-        //Act Statement(s)
-        //target.walletToProto(walletMock);
-        //Assert statement(s)
-        //verify(walletMock).network();
-        //verify(networkMock).id();
-        //verify(walletMock, times(2)).getDescription();
-        //verify(walletMock).getWalletTransactions();
+        /*try (MockedStatic<Protos.Wallet> protosWallet = mockStatic(Protos.Wallet.class)) {
+    doReturn(networkMock).when(walletMock).network();
+    doReturn("").when(networkMock).id();
+    doReturn("return_of_getDescription1", "").when(walletMock).getDescription();
+    //TODO: Needs to return real value
+    doReturn(null).when(walletMock).getWalletTransactions();
+    protosWallet.when(() -> Protos.Wallet.newBuilder()).thenReturn(protosWalletBuilderMock);
+    Protos.Wallet.Builder builder = protosWalletBuilderMock.setNetworkIdentifier("");
+    doReturn(builder).when(protosWalletBuilderMock).setNetworkIdentifier("");
+    Protos.Wallet.Builder builder2 = protosWalletBuilderMock.setDescription("");
+    doReturn(builder2).when(protosWalletBuilderMock).setDescription("");
+    WalletProtobufSerializer target = new WalletProtobufSerializer(walletProtobufSerializerWalletFactoryMock);
+    thrown.expect(NullPointerException.class);
+    //Act Statement(s)
+    target.walletToProto(walletMock);
+    //Assert statement(s)
+    verify(walletMock).network();
+    verify(networkMock).id();
+    verify(walletMock, times(2)).getDescription();
+    verify(walletMock).getWalletTransactions();
+    protosWallet.verify(() -> Protos.Wallet.newBuilder(), atLeast(1));
+    verify(protosWalletBuilderMock).setNetworkIdentifier("");
+    verify(protosWalletBuilderMock).setDescription("");
+}*/
     }
 
     //Sapient generated method id: ${c2653ee9-0456-39df-99f7-b9e7f3b4dff8}
@@ -647,100 +687,110 @@ public class WalletProtobufSerializerSapientGeneratedJunit4Test {
          * (for-each(wallet.getTags().entrySet())) : true
          */
         //Arrange Statement(s)
-        //doReturn(networkMock).when(walletMock).network();
-        //doReturn("String").when(networkMock).id();
-        //doReturn("return_of_getDescription1", "String").when(walletMock).getDescription();
-        //TODO: Needs to return real value
-        //doReturn(null).when(walletMock).getWalletTransactions();
-        //WalletProtobufSerializer target = new WalletProtobufSerializer(walletProtobufSerializerWalletFactoryMock);
-        //thrown.expect(NullPointerException.class);
-        //Act Statement(s)
-        //target.walletToProto(walletMock);
-        //Assert statement(s)
-        //verify(walletMock).network();
-        //verify(networkMock).id();
-        //verify(walletMock, times(2)).getDescription();
-        //verify(walletMock).getWalletTransactions();
+        /*try (MockedStatic<Protos.Wallet> protosWallet = mockStatic(Protos.Wallet.class)) {
+    doReturn(networkMock).when(walletMock).network();
+    doReturn("J").when(networkMock).id();
+    doReturn("return_of_getDescription1", "Q").when(walletMock).getDescription();
+    //TODO: Needs to return real value
+    doReturn(null).when(walletMock).getWalletTransactions();
+    protosWallet.when(() -> Protos.Wallet.newBuilder()).thenReturn(protosWalletBuilderMock);
+    Protos.Wallet.Builder builder = protosWalletBuilderMock.setNetworkIdentifier("J");
+    doReturn(builder).when(protosWalletBuilderMock).setNetworkIdentifier("J");
+    Protos.Wallet.Builder builder2 = protosWalletBuilderMock.setDescription("Q");
+    doReturn(builder2).when(protosWalletBuilderMock).setDescription("Q");
+    WalletProtobufSerializer target = new WalletProtobufSerializer(walletProtobufSerializerWalletFactoryMock);
+    thrown.expect(NullPointerException.class);
+    //Act Statement(s)
+    target.walletToProto(walletMock);
+    //Assert statement(s)
+    verify(walletMock).network();
+    verify(networkMock).id();
+    verify(walletMock, times(2)).getDescription();
+    verify(walletMock).getWalletTransactions();
+    protosWallet.verify(() -> Protos.Wallet.newBuilder(), atLeast(1));
+    verify(protosWalletBuilderMock).setNetworkIdentifier("J");
+    verify(protosWalletBuilderMock).setDescription("Q");
+}*/
     }
 
     //Sapient generated method id: ${eb970ee3-e78f-3dc8-89e1-d93d405ef84a}
     @Test()
     public void hashToByteStringTest() {
         //Arrange Statement(s)
-        //Sha256Hash hashMock = mock(Sha256Hash.class);
-        /*try (MockedStatic<ByteString> byteString = mockStatic(ByteString.class)) {
-    byte[] byteArray = new byte[] {};
-    doReturn(byteArray).when(hashMock).getBytes();
-    byteString.when(() -> ByteString.copyFrom(byteArray)).thenReturn(byteStringMock);
-    //Act Statement(s)
-    ByteString result = WalletProtobufSerializer.hashToByteString(hashMock);
-    //Assert statement(s)
-    assertThat(result, equalTo(byteStringMock));
-    verify(hashMock).getBytes();
-    byteString.verify(() -> ByteString.copyFrom(byteArray), atLeast(1));
-}*/
+        Sha256Hash hashMock = mock(Sha256Hash.class);
+        try (MockedStatic<ByteString> byteString = mockStatic(ByteString.class)) {
+            byte[] byteArray = new byte[]{};
+            doReturn(byteArray).when(hashMock).getBytes();
+            byteString.when(() -> ByteString.copyFrom(byteArray)).thenReturn(byteStringMock);
+            //Act Statement(s)
+            ByteString result = WalletProtobufSerializer.hashToByteString(hashMock);
+            //Assert statement(s)
+            assertThat(result, equalTo(byteStringMock));
+            verify(hashMock).getBytes();
+            byteString.verify(() -> ByteString.copyFrom(byteArray), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${b26f93c5-0f0b-3b74-ad48-b1aeac61ec7e}
     @Test()
     public void byteStringToHashTest() {
         //Arrange Statement(s)
-        ByteString bsMock = mock(ByteString.class);
-        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
-        try (MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class)) {
-            byte[] byteArray = new byte[]{};
-            doReturn(byteArray).when(bsMock).toByteArray();
-            sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256HashMock);
-            //Act Statement(s)
-            Sha256Hash result = WalletProtobufSerializer.byteStringToHash(bsMock);
-            //Assert statement(s)
-            assertThat(result, equalTo(sha256HashMock));
-            verify(bsMock).toByteArray();
-            sha256Hash.verify(() -> Sha256Hash.wrap(byteArray), atLeast(1));
-        }
+        //ByteString bsMock = mock(ByteString.class);
+        //Sha256Hash sha256HashMock = mock(Sha256Hash.class);
+        /*try (MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class)) {
+    byte[] byteArray = new byte[] {};
+    doReturn(byteArray).when(bsMock).toByteArray();
+    sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256HashMock);
+    //Act Statement(s)
+    Sha256Hash result = WalletProtobufSerializer.byteStringToHash(bsMock);
+    //Assert statement(s)
+    assertThat(result, equalTo(sha256HashMock));
+    verify(bsMock).toByteArray();
+    sha256Hash.verify(() -> Sha256Hash.wrap(byteArray), atLeast(1));
+}*/
     }
 
     //Sapient generated method id: ${2971dd73-51b2-30d4-963e-1ec5abd7e5fb}
     @Test()
     public void readWalletTest() throws Exception {
         //Arrange Statement(s)
-        //WalletProtobufSerializer target = spy(new WalletProtobufSerializer(walletProtobufSerializerWalletFactoryMock));
-        //ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        //InputStream inputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
-        //WalletExtension[] walletExtensionArray = new WalletExtension[] {};
-        //doReturn(walletMock).when(target).readWallet(inputStream, false, walletExtensionArray);
+        WalletProtobufSerializer target = spy(new WalletProtobufSerializer(walletProtobufSerializerWalletFactoryMock));
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        InputStream inputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
+        WalletExtension[] walletExtensionArray = new WalletExtension[]{};
+        doReturn(walletMock).when(target).readWallet(inputStream, false, walletExtensionArray);
         //Act Statement(s)
-        //org.bitcoinj.wallet.Wallet result = target.readWallet(inputStream, walletExtensionArray);
+        org.bitcoinj.wallet.Wallet result = target.readWallet(inputStream, walletExtensionArray);
         //Assert statement(s)
-        //assertThat(result, equalTo(walletMock));
-        //verify(target).readWallet(inputStream, false, walletExtensionArray);
+        assertThat(result, equalTo(walletMock));
+        verify(target).readWallet(inputStream, false, walletExtensionArray);
     }
 
     //Sapient generated method id: ${c484b432-3a34-3125-b70e-c91951f7ca34}
     @Test()
     public void readWallet1ThrowsUnreadableWalletException() throws UnreadableWalletException, IOException {
         //Arrange Statement(s)
-        /*try (MockedStatic<Protos.Wallet> protosWallet = mockStatic(Protos.Wallet.class);
-    MockedStatic<CodedInputStream> codedInputStream = mockStatic(CodedInputStream.class)) {
-    ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-    InputStream inputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
-    codedInputStream.when(() -> CodedInputStream.newInstance(inputStream)).thenReturn(codedInputStreamMock);
-    doReturn(0).when(codedInputStreamMock).setSizeLimit(536870912);
-    protosWallet.when(() -> Protos.Wallet.parseFrom(codedInputStreamMock)).thenReturn(protosWalletMock);
-    doReturn("A").when(protosWalletMock).getNetworkIdentifier();
-    WalletProtobufSerializer target = new WalletProtobufSerializer(walletProtobufSerializerWalletFactoryMock);
-    UnreadableWalletException unreadableWalletException = new UnreadableWalletException("Unknown network parameters ID A");
-    thrown.expect(UnreadableWalletException.class);
-    thrown.expectMessage(unreadableWalletException.getMessage());
-    WalletExtension[] walletExtensionArray = new WalletExtension[] {};
-    //Act Statement(s)
-    target.readWallet(inputStream, false, walletExtensionArray);
-    //Assert statement(s)
-    codedInputStream.verify(() -> CodedInputStream.newInstance(inputStream), atLeast(1));
-    verify(codedInputStreamMock).setSizeLimit(536870912);
-    protosWallet.verify(() -> Protos.Wallet.parseFrom(codedInputStreamMock), atLeast(1));
-    verify(protosWalletMock).getNetworkIdentifier();
-}*/
+        try (MockedStatic<Protos.Wallet> protosWallet = mockStatic(Protos.Wallet.class);
+             MockedStatic<CodedInputStream> codedInputStream = mockStatic(CodedInputStream.class)) {
+            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+            InputStream inputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
+            codedInputStream.when(() -> CodedInputStream.newInstance(inputStream)).thenReturn(codedInputStreamMock);
+            doReturn(0).when(codedInputStreamMock).setSizeLimit(536870912);
+            protosWallet.when(() -> Protos.Wallet.parseFrom(codedInputStreamMock)).thenReturn(protosWalletMock);
+            doReturn("A").when(protosWalletMock).getNetworkIdentifier();
+            WalletProtobufSerializer target = new WalletProtobufSerializer(walletProtobufSerializerWalletFactoryMock);
+            UnreadableWalletException unreadableWalletException = new UnreadableWalletException("Unknown network parameters ID A");
+            thrown.expect(UnreadableWalletException.class);
+            thrown.expectMessage(unreadableWalletException.getMessage());
+            WalletExtension[] walletExtensionArray = new WalletExtension[]{};
+            //Act Statement(s)
+            target.readWallet(inputStream, false, walletExtensionArray);
+            //Assert statement(s)
+            codedInputStream.verify(() -> CodedInputStream.newInstance(inputStream), atLeast(1));
+            verify(codedInputStreamMock).setSizeLimit(536870912);
+            protosWallet.verify(() -> Protos.Wallet.parseFrom(codedInputStreamMock), atLeast(1));
+            verify(protosWalletMock).getNetworkIdentifier();
+        }
     }
 
     //Sapient generated method id: ${a5bd7750-ca1e-32e2-b152-00d6dd8bc37a}
@@ -847,26 +897,26 @@ public class WalletProtobufSerializerSapientGeneratedJunit4Test {
          * (BitcoinNetworkParams.fromID(network) != null) : false
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<BitcoinNetworkParams> bitcoinNetworkParams = mockStatic(BitcoinNetworkParams.class);
-    MockedStatic<WireFormat> wireFormat = mockStatic(WireFormat.class);
-    MockedStatic<CodedInputStream> codedInputStream = mockStatic(CodedInputStream.class)) {
-    ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-    InputStream inputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
-    codedInputStream.when(() -> CodedInputStream.newInstance(inputStream)).thenReturn(codedInputStreamMock);
-    doReturn(1).when(codedInputStreamMock).readTag();
-    doReturn("return_of_readString1").when(codedInputStreamMock).readString();
-    wireFormat.when(() -> WireFormat.getTagFieldNumber(1)).thenReturn(1);
-    bitcoinNetworkParams.when(() -> BitcoinNetworkParams.fromID("return_of_readString1")).thenReturn(null);
-    //Act Statement(s)
-    boolean result = WalletProtobufSerializer.isWallet(inputStream);
-    //Assert statement(s)
-    assertThat(result, equalTo(Boolean.FALSE));
-    codedInputStream.verify(() -> CodedInputStream.newInstance(inputStream), atLeast(1));
-    verify(codedInputStreamMock).readTag();
-    verify(codedInputStreamMock).readString();
-    wireFormat.verify(() -> WireFormat.getTagFieldNumber(1), atLeast(1));
-    bitcoinNetworkParams.verify(() -> BitcoinNetworkParams.fromID("return_of_readString1"), atLeast(1));
-}*/
+        try (MockedStatic<BitcoinNetworkParams> bitcoinNetworkParams = mockStatic(BitcoinNetworkParams.class);
+             MockedStatic<WireFormat> wireFormat = mockStatic(WireFormat.class);
+             MockedStatic<CodedInputStream> codedInputStream = mockStatic(CodedInputStream.class)) {
+            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+            InputStream inputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
+            codedInputStream.when(() -> CodedInputStream.newInstance(inputStream)).thenReturn(codedInputStreamMock);
+            doReturn(1).when(codedInputStreamMock).readTag();
+            doReturn("return_of_readString1").when(codedInputStreamMock).readString();
+            wireFormat.when(() -> WireFormat.getTagFieldNumber(1)).thenReturn(1);
+            bitcoinNetworkParams.when(() -> BitcoinNetworkParams.fromID("return_of_readString1")).thenReturn(null);
+            //Act Statement(s)
+            boolean result = WalletProtobufSerializer.isWallet(inputStream);
+            //Assert statement(s)
+            assertThat(result, equalTo(Boolean.FALSE));
+            codedInputStream.verify(() -> CodedInputStream.newInstance(inputStream), atLeast(1));
+            verify(codedInputStreamMock).readTag();
+            verify(codedInputStreamMock).readString();
+            wireFormat.verify(() -> WireFormat.getTagFieldNumber(1), atLeast(1));
+            bitcoinNetworkParams.verify(() -> BitcoinNetworkParams.fromID("return_of_readString1"), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${207e3b59-f227-391a-a24b-359230c1ae17}
@@ -878,23 +928,23 @@ public class WalletProtobufSerializerSapientGeneratedJunit4Test {
          * (catch-exception (IOException)) : true
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<WireFormat> wireFormat = mockStatic(WireFormat.class);
-    MockedStatic<CodedInputStream> codedInputStream = mockStatic(CodedInputStream.class)) {
-    ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-    InputStream inputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
-    codedInputStream.when(() -> CodedInputStream.newInstance(inputStream)).thenReturn(codedInputStreamMock);
-    doReturn(1).when(codedInputStreamMock).readTag();
-    IOException iOException = new IOException();
-    doThrow(iOException).when(codedInputStreamMock).readString();
-    wireFormat.when(() -> WireFormat.getTagFieldNumber(1)).thenReturn(1);
-    //Act Statement(s)
-    boolean result = WalletProtobufSerializer.isWallet(inputStream);
-    //Assert statement(s)
-    assertThat(result, equalTo(Boolean.FALSE));
-    codedInputStream.verify(() -> CodedInputStream.newInstance(inputStream), atLeast(1));
-    verify(codedInputStreamMock).readTag();
-    verify(codedInputStreamMock).readString();
-    wireFormat.verify(() -> WireFormat.getTagFieldNumber(1), atLeast(1));
-}*/
+        try (MockedStatic<WireFormat> wireFormat = mockStatic(WireFormat.class);
+             MockedStatic<CodedInputStream> codedInputStream = mockStatic(CodedInputStream.class)) {
+            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+            InputStream inputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
+            codedInputStream.when(() -> CodedInputStream.newInstance(inputStream)).thenReturn(codedInputStreamMock);
+            doReturn(1).when(codedInputStreamMock).readTag();
+            IOException iOException = new IOException();
+            doThrow(iOException).when(codedInputStreamMock).readString();
+            wireFormat.when(() -> WireFormat.getTagFieldNumber(1)).thenReturn(1);
+            //Act Statement(s)
+            boolean result = WalletProtobufSerializer.isWallet(inputStream);
+            //Assert statement(s)
+            assertThat(result, equalTo(Boolean.FALSE));
+            codedInputStream.verify(() -> CodedInputStream.newInstance(inputStream), atLeast(1));
+            verify(codedInputStreamMock).readTag();
+            verify(codedInputStreamMock).readString();
+            wireFormat.verify(() -> WireFormat.getTagFieldNumber(1), atLeast(1));
+        }
     }
 }

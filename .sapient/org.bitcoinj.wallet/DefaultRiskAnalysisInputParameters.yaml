@@ -1872,19 +1872,23 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "833370E03D1570636CDBEAD7DB281023"
+    modelFingerprint: "F00A8EC0F2826405797E0D019A1C62BA"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "input"
-      modelFingerprint: "F533A64B0AA9C943E4301A1E53E22075"
+      modelFingerprint: "20B0EF921C05DF5E6F7971FE33568C1E"
       index: 1
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionInput"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.TransactionInput"
         uuid: "isInputStandard_transactionInput1"
         fixed: false
@@ -1894,13 +1898,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "input"
-      modelFingerprint: "B5525CCBCA87863F6DBB0EED5900C39F"
+      modelFingerprint: "8250AE2AB5F8A675C8C9F2EED4B2A76F"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionInput"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.TransactionInput"
         uuid: "isInputStandard_transactionInput1"
         fixed: false
@@ -1914,37 +1922,11 @@ methods:
         - "org.bitcoinj.script.ScriptException"
         signature: "getScriptSig(): Script throws org.bitcoinj.script.ScriptException"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
             target: "org.bitcoinj.script.Script"
-            method: "of"
-            methodParameters:
-            - name: "chunks"
-              value:
-                sapientType: "COLLECTION"
-                content: !<collection>
-                  parameters: []
-                  values: []
-                suggestedContent: !<collection>
-                  parameters: []
-                  values: []
-                valueType: "java.util.List"
-                uuid: "isInputStandard_script1-chunks"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.script.Script"
-            method: "of"
-            methodParameters:
-            - name: "chunks"
-              value:
-                sapientType: "COLLECTION"
-                valueType: "java.util.List"
-                uuid: "isInputStandard_script1-chunks"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+            onlyPojoFunctions: false
+            builderPattern: false
           valueType: "org.bitcoinj.script.Script"
           uuid: "isInputStandard_script1"
           fixed: false
@@ -1954,43 +1936,17 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "33C5832E4EAF35E7DDE415F918D1F2B2"
+      modelFingerprint: "CEFD339414E0248C0243043954E09BBA"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.script.Script"
-          method: "of"
-          methodParameters:
-          - name: "chunks"
-            value:
-              sapientType: "COLLECTION"
-              content: !<collection>
-                parameters: []
-                values: []
-              suggestedContent: !<collection>
-                parameters: []
-                values: []
-              valueType: "java.util.List"
-              uuid: "isInputStandard_script1-chunks"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.script.Script"
-          method: "of"
-          methodParameters:
-          - name: "chunks"
-            value:
-              sapientType: "COLLECTION"
-              valueType: "java.util.List"
-              uuid: "isInputStandard_script1-chunks"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.script.Script"
         uuid: "isInputStandard_script1"
         fixed: false
@@ -2013,29 +1969,7 @@ methods:
                 onlyPojoFunctions: false
                 builderPattern: false
               valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-0"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-1"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-2"
+              uuid: "isInputStandard_object1"
               fixed: false
               collectionUuid: "isInputStandard_list1"
               equalsMethodPresent: false
@@ -2050,29 +1984,7 @@ methods:
                 onlyPojoFunctions: false
                 builderPattern: false
               valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-0"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-1"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-2"
+              uuid: "isInputStandard_object1"
               fixed: false
               collectionUuid: "isInputStandard_list1"
               equalsMethodPresent: false
@@ -2088,7 +2000,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "chunk"
-      modelFingerprint: "D915FE75359ABB9668A3D5D0DD4421EB"
+      modelFingerprint: "E99D0665023852B342A5725D3C75BE24"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -2100,7 +2012,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.script.ScriptChunk"
-        uuid: "isInputStandard_list1-0"
+        uuid: "isInputStandard_object1"
         fixed: false
         collectionUuid: "isInputStandard_list1"
         equalsMethodPresent: false
@@ -2144,11 +2056,11 @@ methods:
       filledByUser: false
     uuid: "a0cee6c4-daed-338a-a3bc-a4820f05105c"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path11"
     pathIdForUser: "path3"
     testPathName: "isInputStandardWhenChunkNotIsPushData"
@@ -2263,7 +2175,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "4139751778F17185683E983DF1DAFDB9"
+    modelFingerprint: "A0E44C90B3E57EA427A3C73E2BB8A253"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -2274,13 +2186,17 @@ methods:
     inputParameters:
     - type: "INPUT"
       name: "input"
-      modelFingerprint: "F533A64B0AA9C943E4301A1E53E22075"
+      modelFingerprint: "20B0EF921C05DF5E6F7971FE33568C1E"
       index: 1
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionInput"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.TransactionInput"
         uuid: "isInputStandard_transactionInput1"
         fixed: false
@@ -2290,13 +2206,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "input"
-      modelFingerprint: "B5525CCBCA87863F6DBB0EED5900C39F"
+      modelFingerprint: "8250AE2AB5F8A675C8C9F2EED4B2A76F"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionInput"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.TransactionInput"
         uuid: "isInputStandard_transactionInput1"
         fixed: false
@@ -2310,37 +2230,11 @@ methods:
         - "org.bitcoinj.script.ScriptException"
         signature: "getScriptSig(): Script throws org.bitcoinj.script.ScriptException"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
             target: "org.bitcoinj.script.Script"
-            method: "of"
-            methodParameters:
-            - name: "chunks"
-              value:
-                sapientType: "COLLECTION"
-                content: !<collection>
-                  parameters: []
-                  values: []
-                suggestedContent: !<collection>
-                  parameters: []
-                  values: []
-                valueType: "java.util.List"
-                uuid: "isInputStandard_script1-chunks"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.script.Script"
-            method: "of"
-            methodParameters:
-            - name: "chunks"
-              value:
-                sapientType: "COLLECTION"
-                valueType: "java.util.List"
-                uuid: "isInputStandard_script1-chunks"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+            onlyPojoFunctions: false
+            builderPattern: false
           valueType: "org.bitcoinj.script.Script"
           uuid: "isInputStandard_script1"
           fixed: false
@@ -2350,43 +2244,17 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "33C5832E4EAF35E7DDE415F918D1F2B2"
+      modelFingerprint: "CEFD339414E0248C0243043954E09BBA"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.script.Script"
-          method: "of"
-          methodParameters:
-          - name: "chunks"
-            value:
-              sapientType: "COLLECTION"
-              content: !<collection>
-                parameters: []
-                values: []
-              suggestedContent: !<collection>
-                parameters: []
-                values: []
-              valueType: "java.util.List"
-              uuid: "isInputStandard_script1-chunks"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.script.Script"
-          method: "of"
-          methodParameters:
-          - name: "chunks"
-            value:
-              sapientType: "COLLECTION"
-              valueType: "java.util.List"
-              uuid: "isInputStandard_script1-chunks"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.script.Script"
         uuid: "isInputStandard_script1"
         fixed: false
@@ -2409,29 +2277,7 @@ methods:
                 onlyPojoFunctions: false
                 builderPattern: false
               valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-0"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-1"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-2"
+              uuid: "isInputStandard_object1"
               fixed: false
               collectionUuid: "isInputStandard_list1"
               equalsMethodPresent: false
@@ -2446,29 +2292,7 @@ methods:
                 onlyPojoFunctions: false
                 builderPattern: false
               valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-0"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-1"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-2"
+              uuid: "isInputStandard_object1"
               fixed: false
               collectionUuid: "isInputStandard_list1"
               equalsMethodPresent: false
@@ -2484,7 +2308,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "chunk"
-      modelFingerprint: "8FC5ADAB5617D6561F76EDDE33E9F12F"
+      modelFingerprint: "2D1F2DD829DAF238D895916035C262D8"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -2496,7 +2320,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.script.ScriptChunk"
-        uuid: "isInputStandard_list1-0"
+        uuid: "isInputStandard_object1"
         fixed: false
         collectionUuid: "isInputStandard_list1"
         equalsMethodPresent: false
@@ -2522,7 +2346,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "chunk"
-      modelFingerprint: "7E60047945B220B104D985B70B4E3D41"
+      modelFingerprint: "22A54EC9D257A4813E9BA4C9ED0AFAF1"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -2534,7 +2358,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.script.ScriptChunk"
-        uuid: "isInputStandard_list1-0"
+        uuid: "isInputStandard_object1"
         fixed: false
         collectionUuid: "isInputStandard_list1"
         equalsMethodPresent: false
@@ -2603,57 +2427,19 @@ methods:
         access: 9
       staticReadMethodForField: false
       filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "chunk"
-      modelFingerprint: "86496F361FC33BBBCA2528A739DD1551"
-      index: 7
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.script.ScriptChunk"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.script.ScriptChunk"
-        uuid: "isInputStandard_list1-1"
-        fixed: false
-        collectionUuid: "isInputStandard_list1"
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "chunk"
-        name: "isShortestPossiblePushData"
-        parameters: []
-        signature: "isShortestPossiblePushData(): boolean"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: false
-          suggestedContent: !<regular>
-            value: false
-          valueType: "boolean"
-          uuid: "isInputStandard_boolean5"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "AB16204D881976157F5378299D891D68"
-      index: 8
+      modelFingerprint: "6A77113E70BA989703988F1F4CC19662"
+      index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "ENUM"
         content: !<regular>
-          value: "SHORTEST_POSSIBLE_PUSHDATA"
+          value: "NONE"
         valueType: "org.bitcoinj.wallet.DefaultRiskAnalysis$RuleViolation"
-        uuid: "Enum-org.bitcoinj.wallet.DefaultRiskAnalysis$RuleViolation-SHORTEST_POSSIBLE_PUSHDATA"
+        uuid: "Enum-org.bitcoinj.wallet.DefaultRiskAnalysis$RuleViolation-NONE"
         fixed: true
         equalsMethodPresent: true
         explicitCastNeeded: false
@@ -2661,11 +2447,11 @@ methods:
       filledByUser: false
     uuid: "24a0f4c8-bfec-3c7b-9369-c8e61e2ccad4"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path10"
     testPathName: "isInputStandardWhenSignatureIsNotNullAndTransactionSignatureNotIsEncodingCanonicalChunkData"
@@ -2985,11 +2771,11 @@ methods:
       filledByUser: false
     uuid: "dd5e79fd-c0bd-3e4f-973b-f31885c77ded"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path8"
     pathIdForUser: "path11"
     testPathName: "isInputStandardWhenSignatureNotIsCanonical"
@@ -3031,19 +2817,23 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "ECDED18C8E54F7759515B26596C63AA2"
+    modelFingerprint: "AAA237E6487C46C0452E22DFDC30C926"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "input"
-      modelFingerprint: "F533A64B0AA9C943E4301A1E53E22075"
+      modelFingerprint: "20B0EF921C05DF5E6F7971FE33568C1E"
       index: 1
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionInput"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.TransactionInput"
         uuid: "isInputStandard_transactionInput1"
         fixed: false
@@ -3053,13 +2843,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "input"
-      modelFingerprint: "B5525CCBCA87863F6DBB0EED5900C39F"
+      modelFingerprint: "8250AE2AB5F8A675C8C9F2EED4B2A76F"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionInput"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.TransactionInput"
         uuid: "isInputStandard_transactionInput1"
         fixed: false
@@ -3073,37 +2867,11 @@ methods:
         - "org.bitcoinj.script.ScriptException"
         signature: "getScriptSig(): Script throws org.bitcoinj.script.ScriptException"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
             target: "org.bitcoinj.script.Script"
-            method: "of"
-            methodParameters:
-            - name: "chunks"
-              value:
-                sapientType: "COLLECTION"
-                content: !<collection>
-                  parameters: []
-                  values: []
-                suggestedContent: !<collection>
-                  parameters: []
-                  values: []
-                valueType: "java.util.List"
-                uuid: "isInputStandard_script1-chunks"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.script.Script"
-            method: "of"
-            methodParameters:
-            - name: "chunks"
-              value:
-                sapientType: "COLLECTION"
-                valueType: "java.util.List"
-                uuid: "isInputStandard_script1-chunks"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+            onlyPojoFunctions: false
+            builderPattern: false
           valueType: "org.bitcoinj.script.Script"
           uuid: "isInputStandard_script1"
           fixed: false
@@ -3113,43 +2881,17 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "53611DB1B52728CC40F04C885348EDF7"
+      modelFingerprint: "CEFD339414E0248C0243043954E09BBA"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.script.Script"
-          method: "of"
-          methodParameters:
-          - name: "chunks"
-            value:
-              sapientType: "COLLECTION"
-              content: !<collection>
-                parameters: []
-                values: []
-              suggestedContent: !<collection>
-                parameters: []
-                values: []
-              valueType: "java.util.List"
-              uuid: "isInputStandard_script1-chunks"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.script.Script"
-          method: "of"
-          methodParameters:
-          - name: "chunks"
-            value:
-              sapientType: "COLLECTION"
-              valueType: "java.util.List"
-              uuid: "isInputStandard_script1-chunks"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.script.Script"
         uuid: "isInputStandard_script1"
         fixed: false
@@ -3172,117 +2914,7 @@ methods:
                 onlyPojoFunctions: false
                 builderPattern: false
               valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-0"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-1"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-2"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-3"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-4"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-5"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-6"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-7"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-8"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-9"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-10"
+              uuid: "isInputStandard_object1"
               fixed: false
               collectionUuid: "isInputStandard_list1"
               equalsMethodPresent: false
@@ -3297,117 +2929,7 @@ methods:
                 onlyPojoFunctions: false
                 builderPattern: false
               valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-0"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-1"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-2"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-3"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-4"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-5"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-6"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-7"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-8"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-9"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-10"
+              uuid: "isInputStandard_object1"
               fixed: false
               collectionUuid: "isInputStandard_list1"
               equalsMethodPresent: false
@@ -3423,7 +2945,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "chunk"
-      modelFingerprint: "D915FE75359ABB9668A3D5D0DD4421EB"
+      modelFingerprint: "2D1F2DD829DAF238D895916035C262D8"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -3435,379 +2957,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.script.ScriptChunk"
-        uuid: "isInputStandard_list1-0"
-        fixed: false
-        collectionUuid: "isInputStandard_list1"
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "chunk"
-        name: "isShortestPossiblePushData"
-        parameters: []
-        signature: "isShortestPossiblePushData(): boolean"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: false
-          suggestedContent: !<regular>
-            value: false
-          valueType: "boolean"
-          uuid: "isInputStandard_boolean2"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "AB16204D881976157F5378299D891D68"
-      index: 5
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "ENUM"
-        content: !<regular>
-          value: "SHORTEST_POSSIBLE_PUSHDATA"
-        valueType: "org.bitcoinj.wallet.DefaultRiskAnalysis$RuleViolation"
-        uuid: "Enum-org.bitcoinj.wallet.DefaultRiskAnalysis$RuleViolation-SHORTEST_POSSIBLE_PUSHDATA"
-        fixed: true
-        equalsMethodPresent: true
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    uuid: "b89f4d12-9b97-3f14-b6b4-4d37fd5470f6"
-    deleted: false
-    disabled: true
-    ignoredBySystem: false
-    prover: "LLM"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
-  - pathId: "path4"
-    pathIdForUser: "path14"
-    testPathName: "isInputStandardWhenTransactionSignatureIsEncodingCanonicalChunkDataAndSignatureIsCanonical"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "3199013377EB54AE867D0054B81F71E1"
-    problemWasSolvedByProver: false
-    truncated: false
-    inputParameters:
-    - type: "INPUT"
-      name: "input"
-      modelFingerprint: "F533A64B0AA9C943E4301A1E53E22075"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.core.TransactionInput"
-        uuid: "isInputStandard_transactionInput1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "input"
-      modelFingerprint: "B5525CCBCA87863F6DBB0EED5900C39F"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.core.TransactionInput"
-        uuid: "isInputStandard_transactionInput1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "input"
-        name: "getScriptSig"
-        parameters: []
-        throwsExceptions:
-        - "org.bitcoinj.script.ScriptException"
-        signature: "getScriptSig(): Script throws org.bitcoinj.script.ScriptException"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.script.Script"
-            method: "of"
-            methodParameters:
-            - name: "chunks"
-              value:
-                sapientType: "COLLECTION"
-                content: !<collection>
-                  parameters: []
-                  values: []
-                suggestedContent: !<collection>
-                  parameters: []
-                  values: []
-                valueType: "java.util.List"
-                uuid: "isInputStandard_script1-chunks"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.script.Script"
-            method: "of"
-            methodParameters:
-            - name: "chunks"
-              value:
-                sapientType: "COLLECTION"
-                valueType: "java.util.List"
-                uuid: "isInputStandard_script1-chunks"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          valueType: "org.bitcoinj.script.Script"
-          uuid: "isInputStandard_script1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      modelFingerprint: "83A8CE8BF6597500B179B3F5124662A9"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "org.bitcoinj.script.Script"
-          method: "of"
-          methodParameters:
-          - name: "chunks"
-            value:
-              sapientType: "COLLECTION"
-              content: !<collection>
-                parameters: []
-                values: []
-              suggestedContent: !<collection>
-                parameters: []
-                values: []
-              valueType: "java.util.List"
-              uuid: "isInputStandard_script1-chunks"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.script.Script"
-          method: "of"
-          methodParameters:
-          - name: "chunks"
-            value:
-              sapientType: "COLLECTION"
-              valueType: "java.util.List"
-              uuid: "isInputStandard_script1-chunks"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        valueType: "org.bitcoinj.script.Script"
-        uuid: "isInputStandard_script1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.script.Script"
-        name: "chunks"
-        parameters: []
-        signature: "chunks(): List"
-        returnValue:
-          sapientType: "COLLECTION"
-          content: !<collection>
-            collectionClass: "java.util.ArrayList"
-            parameters: []
-            values:
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-0"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-1"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-2"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-3"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-4"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-5"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-6"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          suggestedContent: !<collection>
-            collectionClass: "java.util.ArrayList"
-            parameters: []
-            values:
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-0"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-1"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-2"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-3"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-4"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-5"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.script.ScriptChunk"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.script.ScriptChunk"
-              uuid: "isInputStandard_list1-6"
-              fixed: false
-              collectionUuid: "isInputStandard_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          valueType: "java.util.List"
-          genericValueType: "org.bitcoinj.script.ScriptChunk"
-          uuid: "isInputStandard_list1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "chunk"
-      modelFingerprint: "8FC5ADAB5617D6561F76EDDE33E9F12F"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.script.ScriptChunk"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.script.ScriptChunk"
-        uuid: "isInputStandard_list1-0"
+        uuid: "isInputStandard_object1"
         fixed: false
         collectionUuid: "isInputStandard_list1"
         equalsMethodPresent: false
@@ -3833,7 +2983,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "chunk"
-      modelFingerprint: "7E60047945B220B104D985B70B4E3D41"
+      modelFingerprint: "22A54EC9D257A4813E9BA4C9ED0AFAF1"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -3845,7 +2995,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.script.ScriptChunk"
-        uuid: "isInputStandard_list1-0"
+        uuid: "isInputStandard_object1"
         fixed: false
         collectionUuid: "isInputStandard_list1"
         equalsMethodPresent: false
@@ -3871,7 +3021,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ECKey.ECDSASignature"
-      modelFingerprint: "45C4A60C6C37C1728D51F825EE1EAC6E"
+      modelFingerprint: "1D7C7AD621225E5D7778D51F8CA18138"
       index: 6
       ignored: false
       nestedInLoop: true
@@ -3905,53 +3055,11 @@ methods:
         - "org.bitcoinj.crypto.SignatureDecodeException"
         signature: "decodeFromDER(byte[]): ECKey$ECDSASignature throws org.bitcoinj.crypto.SignatureDecodeException"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<new>
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
             target: "org.bitcoinj.crypto.ECKey$ECDSASignature"
-            parameters:
-            - name: "r"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "java.math.BigInteger"
-                uuid: "isInputStandard_eCKey.ECDSASignature1-r"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "s"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "java.math.BigInteger"
-                uuid: "isInputStandard_eCKey.ECDSASignature1-s"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
-            target: "org.bitcoinj.crypto.ECKey$ECDSASignature"
-            parameters:
-            - name: "r"
-              value:
-                sapientType: "BASIC"
-                valueType: "java.math.BigInteger"
-                uuid: "isInputStandard_eCKey.ECDSASignature1-r"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "s"
-              value:
-                sapientType: "BASIC"
-                valueType: "java.math.BigInteger"
-                uuid: "isInputStandard_eCKey.ECDSASignature1-s"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
+            onlyPojoFunctions: false
+            builderPattern: false
           valueType: "org.bitcoinj.crypto.ECKey$ECDSASignature"
           uuid: "isInputStandard_eCKey.ECDSASignature1"
           fixed: false
@@ -4007,59 +3115,382 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "signature"
-      modelFingerprint: "BB810494AD8FF3B4FDD91FB819EB7A8B"
+      modelFingerprint: "C3B91C761DF885DDC6C9622E2E7813BC"
       index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<new>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.crypto.ECKey$ECDSASignature"
-          parameters:
-          - name: "r"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "java.math.BigInteger"
-              uuid: "isInputStandard_eCKey.ECDSASignature1-r"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.crypto.ECKey$ECDSASignature"
+        uuid: "isInputStandard_eCKey.ECDSASignature1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "signature"
+        name: "isCanonical"
+        parameters: []
+        signature: "isCanonical(): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: false
+          suggestedContent: !<regular>
+            value: false
+          valueType: "boolean"
+          uuid: "isInputStandard_boolean5"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "B2C2F2484BDF6C636148504012E6EE15"
+      index: 9
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ENUM"
+        content: !<regular>
+          value: "SIGNATURE_CANONICAL_ENCODING"
+        valueType: "org.bitcoinj.wallet.DefaultRiskAnalysis$RuleViolation"
+        uuid: "Enum-org.bitcoinj.wallet.DefaultRiskAnalysis$RuleViolation-SIGNATURE_CANONICAL_ENCODING"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "b89f4d12-9b97-3f14-b6b4-4d37fd5470f6"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path4"
+    pathIdForUser: "path14"
+    testPathName: "isInputStandardWhenTransactionSignatureIsEncodingCanonicalChunkDataAndSignatureIsCanonical"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "E5A0C1C817E5A8149CA2E6CC8AA4CB05"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "input"
+      modelFingerprint: "20B0EF921C05DF5E6F7971FE33568C1E"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionInput"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionInput"
+        uuid: "isInputStandard_transactionInput1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "input"
+      modelFingerprint: "8250AE2AB5F8A675C8C9F2EED4B2A76F"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionInput"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionInput"
+        uuid: "isInputStandard_transactionInput1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "input"
+        name: "getScriptSig"
+        parameters: []
+        throwsExceptions:
+        - "org.bitcoinj.script.ScriptException"
+        signature: "getScriptSig(): Script throws org.bitcoinj.script.ScriptException"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.script.Script"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.script.Script"
+          uuid: "isInputStandard_script1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "CEFD339414E0248C0243043954E09BBA"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.script.Script"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.script.Script"
+        uuid: "isInputStandard_script1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.script.Script"
+        name: "chunks"
+        parameters: []
+        signature: "chunks(): List"
+        returnValue:
+          sapientType: "COLLECTION"
+          content: !<collection>
+            collectionClass: "java.util.ArrayList"
+            parameters: []
+            values:
+            - sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.script.ScriptChunk"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.script.ScriptChunk"
+              uuid: "isInputStandard_object1"
               fixed: false
+              collectionUuid: "isInputStandard_list1"
               equalsMethodPresent: false
               explicitCastNeeded: false
-          - name: "s"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "java.math.BigInteger"
-              uuid: "isInputStandard_eCKey.ECDSASignature1-s"
+          suggestedContent: !<collection>
+            collectionClass: "java.util.ArrayList"
+            parameters: []
+            values:
+            - sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.script.ScriptChunk"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.script.ScriptChunk"
+              uuid: "isInputStandard_object1"
               fixed: false
+              collectionUuid: "isInputStandard_list1"
               equalsMethodPresent: false
               explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
+          valueType: "java.util.List"
+          genericValueType: "org.bitcoinj.script.ScriptChunk"
+          uuid: "isInputStandard_list1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "chunk"
+      modelFingerprint: "2D1F2DD829DAF238D895916035C262D8"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.script.ScriptChunk"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.script.ScriptChunk"
+        uuid: "isInputStandard_object1"
+        fixed: false
+        collectionUuid: "isInputStandard_list1"
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "chunk"
+        name: "isShortestPossiblePushData"
+        parameters: []
+        signature: "isShortestPossiblePushData(): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: true
+          suggestedContent: !<regular>
+            value: true
+          valueType: "boolean"
+          uuid: "isInputStandard_boolean2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "chunk"
+      modelFingerprint: "22A54EC9D257A4813E9BA4C9ED0AFAF1"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.script.ScriptChunk"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.script.ScriptChunk"
+        uuid: "isInputStandard_object1"
+        fixed: false
+        collectionUuid: "isInputStandard_list1"
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "chunk"
+        name: "isPushData"
+        parameters: []
+        signature: "isPushData(): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: true
+          suggestedContent: !<regular>
+            value: true
+          valueType: "boolean"
+          uuid: "isInputStandard_boolean3"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "ECKey.ECDSASignature"
+      modelFingerprint: "1D7C7AD621225E5D7778D51F8CA18138"
+      index: 6
+      ignored: false
+      nestedInLoop: true
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.crypto.ECKey$ECDSASignature"
+        uuid: "org.bitcoinj.crypto.ECKey$ECDSASignature"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey$ECDSASignature"
+        name: "decodeFromDER"
+        parameters:
+        - name: "bytes"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            suggestedContent: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "isInputStandard_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "org.bitcoinj.crypto.SignatureDecodeException"
+        signature: "decodeFromDER(byte[]): ECKey$ECDSASignature throws org.bitcoinj.crypto.SignatureDecodeException"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.crypto.ECKey$ECDSASignature"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.crypto.ECKey$ECDSASignature"
+          uuid: "isInputStandard_eCKey.ECDSASignature1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "TransactionSignature"
+      modelFingerprint: "AC15303416FC37C6DC75103E2E3B702D"
+      index: 7
+      ignored: false
+      nestedInLoop: true
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.crypto.TransactionSignature"
+        uuid: "org.bitcoinj.crypto.TransactionSignature"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.crypto.TransactionSignature"
+        name: "isEncodingCanonical"
+        parameters:
+        - name: "signature"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            suggestedContent: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "isInputStandard_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "isEncodingCanonical(byte[]): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: true
+          suggestedContent: !<regular>
+            value: true
+          valueType: "boolean"
+          uuid: "isInputStandard_boolean4"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "signature"
+      modelFingerprint: "6404D4EAB99C1006DA54E34D19095CDE"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.crypto.ECKey$ECDSASignature"
-          parameters:
-          - name: "r"
-            value:
-              sapientType: "BASIC"
-              valueType: "java.math.BigInteger"
-              uuid: "isInputStandard_eCKey.ECDSASignature1-r"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "s"
-            value:
-              sapientType: "BASIC"
-              valueType: "java.math.BigInteger"
-              uuid: "isInputStandard_eCKey.ECDSASignature1-s"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.crypto.ECKey$ECDSASignature"
         uuid: "isInputStandard_eCKey.ECDSASignature1"
         fixed: false
@@ -4084,57 +3515,19 @@ methods:
         access: 1
       staticReadMethodForField: false
       filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "chunk"
-      modelFingerprint: "86496F361FC33BBBCA2528A739DD1551"
-      index: 9
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.script.ScriptChunk"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.script.ScriptChunk"
-        uuid: "isInputStandard_list1-1"
-        fixed: false
-        collectionUuid: "isInputStandard_list1"
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "chunk"
-        name: "isShortestPossiblePushData"
-        parameters: []
-        signature: "isShortestPossiblePushData(): boolean"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: false
-          suggestedContent: !<regular>
-            value: false
-          valueType: "boolean"
-          uuid: "isInputStandard_boolean7"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "AB16204D881976157F5378299D891D68"
-      index: 10
+      modelFingerprint: "6A77113E70BA989703988F1F4CC19662"
+      index: 9
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "ENUM"
         content: !<regular>
-          value: "SHORTEST_POSSIBLE_PUSHDATA"
+          value: "NONE"
         valueType: "org.bitcoinj.wallet.DefaultRiskAnalysis$RuleViolation"
-        uuid: "Enum-org.bitcoinj.wallet.DefaultRiskAnalysis$RuleViolation-SHORTEST_POSSIBLE_PUSHDATA"
+        uuid: "Enum-org.bitcoinj.wallet.DefaultRiskAnalysis$RuleViolation-NONE"
         fixed: true
         equalsMethodPresent: true
         explicitCastNeeded: false
@@ -4142,8 +3535,8 @@ methods:
       filledByUser: false
     uuid: "cad28a8e-63ea-355d-bc48-48e6c688bf52"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false

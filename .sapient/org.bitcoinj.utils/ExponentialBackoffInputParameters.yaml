@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "DC7AC10054E96434F8BD4B808038C7B5"
+modelFingerprint: "05BC934E773269E681FBE48CA547B7DE"
 methods:
 - method:
     name: "trackSuccess"
@@ -17,12 +17,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "10B8107FA88D59A08347A9F270A0E6DF"
+    modelFingerprint: "B23EA5ECDB5CCF8E5CB030AB3D519A3C"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "78DEC31BD9F6639BBDD28CE9B4C0EC49"
+      modelFingerprint: "09804A2925F5260A27E65AC6F4F05FDE"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -47,7 +47,7 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.utils.ExponentialBackoff$Params"
               uuid: "<init>_exponentialBackoff.Params1"
               fixed: false
@@ -101,7 +101,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "TimeUtils"
-      modelFingerprint: "7B813780EEA8884E82490CD06FFFB398"
+      modelFingerprint: "70F19286EF73B0A6DAAE99227E505874"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -119,15 +119,15 @@ methods:
         parameters: []
         signature: "currentTime(): Instant"
         returnValue:
-          sapientType: "NULL"
-          content: !<unknown_object>
-            target: "java.time.Instant"
-            onlyPojoFunctions: true
-            builderPattern: false
-          suggestedContent: !<unknown_object>
-            target: "java.time.Instant"
-            onlyPojoFunctions: true
-            builderPattern: false
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.base.internal.TimeUtils"
+            method: "currentTime"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.internal.TimeUtils"
+            method: "currentTime"
+            methodParameters: []
           valueType: "java.time.Instant"
           uuid: "trackSuccess_instant2"
           fixed: false
@@ -173,12 +173,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "D07B46E1D037B789A325D756B5B26C5E"
+    modelFingerprint: "69C94096E1C3F8954A5E9D13D3665CF9"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "78DEC31BD9F6639BBDD28CE9B4C0EC49"
+      modelFingerprint: "09804A2925F5260A27E65AC6F4F05FDE"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -203,7 +203,7 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.utils.ExponentialBackoff$Params"
               uuid: "<init>_exponentialBackoff.Params1"
               fixed: false
@@ -257,7 +257,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "TimeUtils"
-      modelFingerprint: "CB533F35E7D5AB74C82EBC56B1360C1D"
+      modelFingerprint: "19DE031B758E44392582012D4037D413"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -275,15 +275,15 @@ methods:
         parameters: []
         signature: "currentTime(): Instant"
         returnValue:
-          sapientType: "NULL"
-          content: !<unknown_object>
-            target: "java.time.Instant"
-            onlyPojoFunctions: true
-            builderPattern: false
-          suggestedContent: !<unknown_object>
-            target: "java.time.Instant"
-            onlyPojoFunctions: true
-            builderPattern: false
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.base.internal.TimeUtils"
+            method: "currentTime"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.internal.TimeUtils"
+            method: "currentTime"
+            methodParameters: []
           valueType: "java.time.Instant"
           uuid: "trackFailure_instant1"
           fixed: false
@@ -294,36 +294,25 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "1544C3243427A58A5AE91A88CC628F77"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "EXCEPTION"
-        content: !<new>
-          target: "java.lang.NullPointerException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "java.lang.NullPointerException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "java.lang.NullPointerException"
-        fixed: false
+        sapientType: "VOID"
+        fixed: true
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     uuid: "812e1600-1008-3380-8ccb-18e4f7bb25fb"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "retryTime"
     returnType: "java.time.Instant"
@@ -469,7 +458,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "C5F69D99A06F238EC2F4BC80F79AD657"
+    modelFingerprint: "96D510955211FE8B9F9C5C7345B3D4E3"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -553,7 +542,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "4EE35C2D18F8C93A632B614B074479DB"
+      modelFingerprint: "5FDD601F9B6D21E48A5C5BDEEA32F8A0"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -561,7 +550,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 1703050988830
+          value: 1703665776539
         valueType: "long"
         uuid: "getRetryTime_long1"
         fixed: false
@@ -571,11 +560,11 @@ methods:
       filledByUser: false
     uuid: "1841a798-331a-3eb9-b2cd-d7600dfa9716"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "compareTo"
     returnType: "int"
@@ -737,11 +726,11 @@ methods:
       filledByUser: false
     uuid: "af5f6332-26a2-3749-8f9a-ac87ce6fe7cf"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "toString"
     returnType: "java.lang.String"
@@ -758,12 +747,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "01D582941C105C211D9821E57E8D5ABF"
+    modelFingerprint: "2D86E2495542E7541F8883556A0479C5"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "78DEC31BD9F6639BBDD28CE9B4C0EC49"
+      modelFingerprint: "09804A2925F5260A27E65AC6F4F05FDE"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -788,7 +777,7 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.utils.ExponentialBackoff$Params"
               uuid: "<init>_exponentialBackoff.Params1"
               fixed: false
@@ -805,7 +794,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "TimeUtils"
-      modelFingerprint: "CB533F35E7D5AB74C82EBC56B1360C1D"
+      modelFingerprint: "19DE031B758E44392582012D4037D413"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -823,15 +812,15 @@ methods:
         parameters: []
         signature: "currentTime(): Instant"
         returnValue:
-          sapientType: "NULL"
-          content: !<unknown_object>
-            target: "java.time.Instant"
-            onlyPojoFunctions: true
-            builderPattern: false
-          suggestedContent: !<unknown_object>
-            target: "java.time.Instant"
-            onlyPojoFunctions: true
-            builderPattern: false
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.base.internal.TimeUtils"
+            method: "currentTime"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.internal.TimeUtils"
+            method: "currentTime"
+            methodParameters: []
           valueType: "java.time.Instant"
           uuid: "trackSuccess_instant1"
           fixed: false
@@ -842,7 +831,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "4CA2C7644CC7C4E590FCF6AE1EACE93D"
+      modelFingerprint: "81303409C9791A0803A7CF0ADF48B87E"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -850,9 +839,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "ExponentialBackoff retry=null backoff=2 ms"
+          value: "ExponentialBackoff retry=2023-12-27T08:29:36.558920Z backoff=2 ms"
         suggestedContent: !<regular>
-          value: "ExponentialBackoff retry=null backoff=2 ms"
+          value: "ExponentialBackoff retry=2023-12-27T08:29:36.558920Z backoff=2 ms"
         valueType: "java.lang.String"
         uuid: "toString_string1"
         fixed: false
@@ -862,8 +851,8 @@ methods:
       filledByUser: false
     uuid: "363d3698-f34c-39ad-914f-376a19498023"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false

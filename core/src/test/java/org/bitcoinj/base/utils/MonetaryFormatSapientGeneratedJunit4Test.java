@@ -90,13 +90,16 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          * (!Character.isDigit(negativeSign)) : false
          * (negativeSign > 0) : true
          * (negativeSign == this.negativeSign) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            MonetaryFormat target = new MonetaryFormat(true);
+            MonetaryFormat target = new MonetaryFormat(false);
             //Act Statement(s)
-            MonetaryFormat result = target.negativeSign('-');
+            MonetaryFormat result = target.negativeSign('A');
             //Assert statement(s)
             assertThat(result, equalTo(target));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
@@ -130,15 +133,18 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
         /* Branches:
          * (!Character.isDigit(positiveSign)) : false
          * (positiveSign == this.positiveSign) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            MonetaryFormat target = new MonetaryFormat(true);
+            MonetaryFormat target = new MonetaryFormat(false);
             //Act Statement(s)
-            MonetaryFormat result = target.positiveSign('+');
+            MonetaryFormat result = target.positiveSign('A');
             //Assert statement(s)
-            assertThat(result, is(notNullValue()));
+            assertThat(result, equalTo(target));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
         }
     }
@@ -151,8 +157,10 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         MonetaryFormat target = new MonetaryFormat(true);
+
         //Act Statement(s)
         MonetaryFormat result = target.digits('0');
+
         //Assert statement(s)
         assertThat(result, equalTo(target));
     }
@@ -165,8 +173,10 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         MonetaryFormat target = new MonetaryFormat(true);
+
         //Act Statement(s)
         MonetaryFormat result = target.digits('A');
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -221,13 +231,16 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          * (!Character.isDigit(decimalMark)) : false
          * (decimalMark > 0) : true
          * (decimalMark == this.decimalMark) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            MonetaryFormat target = new MonetaryFormat(true);
+            MonetaryFormat target = new MonetaryFormat(false);
             //Act Statement(s)
-            MonetaryFormat result = target.decimalMark('.');
+            MonetaryFormat result = target.decimalMark('A');
             //Assert statement(s)
             assertThat(result, equalTo(target));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
@@ -242,8 +255,10 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         MonetaryFormat target = new MonetaryFormat(true);
+
         //Act Statement(s)
         MonetaryFormat result = target.minDecimals(2);
+
         //Assert statement(s)
         assertThat(result, equalTo(target));
     }
@@ -256,8 +271,10 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         MonetaryFormat target = new MonetaryFormat(true);
+
         //Act Statement(s)
         MonetaryFormat result = target.minDecimals(1);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -271,8 +288,10 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         MonetaryFormat target = new MonetaryFormat(true);
         int[] intArray = new int[]{1};
+
         //Act Statement(s)
         MonetaryFormat result = target.optionalDecimals(intArray);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -325,8 +344,10 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         MonetaryFormat target = new MonetaryFormat(true);
+
         //Act Statement(s)
         MonetaryFormat result = target.shift(0);
+
         //Assert statement(s)
         assertThat(result, equalTo(target));
     }
@@ -339,8 +360,10 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         MonetaryFormat target = new MonetaryFormat(true);
+
         //Act Statement(s)
         MonetaryFormat result = target.shift(1);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -353,8 +376,10 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         MonetaryFormat target = new MonetaryFormat(true);
+
         //Act Statement(s)
         MonetaryFormat result = target.roundingMode(RoundingMode.HALF_UP);
+
         //Assert statement(s)
         assertThat(result, equalTo(target));
     }
@@ -367,8 +392,10 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         MonetaryFormat target = new MonetaryFormat(true);
+
         //Act Statement(s)
         MonetaryFormat result = target.roundingMode(RoundingMode.UNNECESSARY);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -381,8 +408,10 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         MonetaryFormat target = new MonetaryFormat(true);
+
         //Act Statement(s)
         MonetaryFormat result = target.noCode();
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -480,15 +509,18 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          * (!Character.isDigit(codeSeparator)) : false
          * (codeSeparator > 0) : true
          * (codeSeparator == this.codeSeparator) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            MonetaryFormat target = new MonetaryFormat(true);
+            MonetaryFormat target = new MonetaryFormat(false);
             //Act Statement(s)
             MonetaryFormat result = target.codeSeparator('A');
             //Assert statement(s)
-            assertThat(result, is(notNullValue()));
+            assertThat(result, equalTo(target));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
         }
     }
@@ -501,8 +533,10 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         MonetaryFormat target = new MonetaryFormat(true);
+
         //Act Statement(s)
         MonetaryFormat result = target.prefixCode();
+
         //Assert statement(s)
         assertThat(result, equalTo(target));
     }
@@ -515,8 +549,10 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         MonetaryFormat target = new MonetaryFormat(true);
+
         //Act Statement(s)
         MonetaryFormat result = target.postfixCode();
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -527,8 +563,10 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         MonetaryFormat target = new MonetaryFormat(true);
         Locale locale = new Locale("language1");
+
         //Act Statement(s)
         MonetaryFormat result = target.withLocale(locale);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -627,8 +665,10 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         MonetaryFormat target = new MonetaryFormat(true);
+
         //Act Statement(s)
         String result = target.code();
+
         //Assert statement(s)
         assertThat(result, equalTo("\u20BF"));
     }

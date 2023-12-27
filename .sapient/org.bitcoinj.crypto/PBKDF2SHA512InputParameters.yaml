@@ -374,7 +374,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "66C6A89314018BCD93FDFF2A8960A4FC"
+    modelFingerprint: "53C97261A824758D1673FCC417F9E8AB"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -423,7 +423,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "c"
-      modelFingerprint: "1E8847C987DD246F8A89BE30CBA0008F"
+      modelFingerprint: "1ABFD9B49DEA021D84BD158222A82F31"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -431,9 +431,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: -64
+          value: 0
         suggestedContent: !<regular>
-          value: -64
+          value: 0
         valueType: "int"
         uuid: "derive_int1"
         fixed: false
@@ -443,7 +443,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "dkLen"
-      modelFingerprint: "B953CCE4240BD80D6ECF55B74FCCF4C0"
+      modelFingerprint: "894F1C2ACF1D4789A3548341D5F410BC"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -451,9 +451,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: -64
+          value: 0
         suggestedContent: !<regular>
-          value: -64
+          value: 0
         valueType: "int"
         uuid: "derive_int2"
         fixed: false
@@ -612,11 +612,11 @@ methods:
       filledByUser: false
     uuid: "6083de3b-8578-3540-ab0c-6cab23e8ec38"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path1"
     pathIdForUser: "path10"
     testPathName: "deriveWhenJEquals0"
@@ -919,6 +919,7 @@ methods:
                   content: !<regular>
                     value: 83
                   valueType: "byte"
+                  uuid: "F_byte[]2-item0"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -927,6 +928,7 @@ methods:
                   content: !<regular>
                     value: 49
                   valueType: "byte"
+                  uuid: "F_byte[]2-item1"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -937,6 +939,7 @@ methods:
                   content: !<regular>
                     value: 83
                   valueType: "byte"
+                  uuid: "F_byte[]2-item0"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -945,6 +948,7 @@ methods:
                   content: !<regular>
                     value: 49
                   valueType: "byte"
+                  uuid: "F_byte[]2-item1"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -963,6 +967,7 @@ methods:
                   content: !<regular>
                     value: 0
                   valueType: "byte"
+                  uuid: "INT_byte[]1-item0"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -971,6 +976,7 @@ methods:
                   content: !<regular>
                     value: 0
                   valueType: "byte"
+                  uuid: "INT_byte[]1-item1"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -979,6 +985,7 @@ methods:
                   content: !<regular>
                     value: 0
                   valueType: "byte"
+                  uuid: "INT_byte[]1-item2"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -987,6 +994,7 @@ methods:
                   content: !<regular>
                     value: 1
                   valueType: "byte"
+                  uuid: "INT_byte[]1-item3"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -997,6 +1005,7 @@ methods:
                   content: !<regular>
                     value: 0
                   valueType: "byte"
+                  uuid: "INT_byte[]1-item0"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -1005,6 +1014,7 @@ methods:
                   content: !<regular>
                     value: 0
                   valueType: "byte"
+                  uuid: "INT_byte[]1-item1"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -1013,6 +1023,7 @@ methods:
                   content: !<regular>
                     value: 0
                   valueType: "byte"
+                  uuid: "INT_byte[]1-item2"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -1021,6 +1032,7 @@ methods:
                   content: !<regular>
                     value: 1
                   valueType: "byte"
+                  uuid: "INT_byte[]1-item3"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -1039,6 +1051,7 @@ methods:
                 content: !<regular>
                   value: 83
                 valueType: "byte"
+                uuid: "F_byte[]3-item0"
                 fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
@@ -1047,6 +1060,7 @@ methods:
                 content: !<regular>
                   value: 49
                 valueType: "byte"
+                uuid: "F_byte[]3-item1"
                 fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
@@ -1055,6 +1069,7 @@ methods:
                 content: !<regular>
                   value: 0
                 valueType: "byte"
+                uuid: "F_byte[]3-item2"
                 fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
@@ -1063,6 +1078,7 @@ methods:
                 content: !<regular>
                   value: 0
                 valueType: "byte"
+                uuid: "F_byte[]3-item3"
                 fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
@@ -1071,6 +1087,7 @@ methods:
                 content: !<regular>
                   value: 0
                 valueType: "byte"
+                uuid: "F_byte[]3-item4"
                 fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
@@ -1079,6 +1096,7 @@ methods:
                 content: !<regular>
                   value: 1
                 valueType: "byte"
+                uuid: "F_byte[]3-item5"
                 fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
@@ -1089,6 +1107,7 @@ methods:
                 content: !<regular>
                   value: 83
                 valueType: "byte"
+                uuid: "F_byte[]3-item0"
                 fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
@@ -1097,6 +1116,7 @@ methods:
                 content: !<regular>
                   value: 49
                 valueType: "byte"
+                uuid: "F_byte[]3-item1"
                 fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
@@ -1105,6 +1125,7 @@ methods:
                 content: !<regular>
                   value: 0
                 valueType: "byte"
+                uuid: "F_byte[]3-item2"
                 fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
@@ -1113,6 +1134,7 @@ methods:
                 content: !<regular>
                   value: 0
                 valueType: "byte"
+                uuid: "F_byte[]3-item3"
                 fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
@@ -1121,6 +1143,7 @@ methods:
                 content: !<regular>
                   value: 0
                 valueType: "byte"
+                uuid: "F_byte[]3-item4"
                 fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
@@ -1129,6 +1152,7 @@ methods:
                 content: !<regular>
                   value: 1
                 valueType: "byte"
+                uuid: "F_byte[]3-item5"
                 fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
@@ -1156,6 +1180,7 @@ methods:
               content: !<regular>
                 value: -44
               valueType: "byte"
+              uuid: "derive_byte[]1-item0"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1166,6 +1191,7 @@ methods:
               content: !<regular>
                 value: -44
               valueType: "byte"
+              uuid: "derive_byte[]1-item0"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1178,11 +1204,11 @@ methods:
       filledByUser: false
     uuid: "3060f228-bd9a-3b1d-9e16-ced38010f96e"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path9"
     pathIdForUser: "path15"
     testPathName: "deriveWhenKLessThanU_XORLengthAndCaughtIOExceptionOrNoSuchAlgorithmExceptionOrInvalidKeyExceptionThrowsRuntimeException"
@@ -1190,7 +1216,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "8ECBDC66F207603BD90D2BAD8A119144"
+    modelFingerprint: "3040CB8F0600F3FE719AC7E92FE329EF"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -1371,7 +1397,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ByteUtils"
-      modelFingerprint: "16743863FC674FBC6EA301A9A506D460"
+      modelFingerprint: "F59DE86ADE34028BA724544C5E5D5325"
       index: 7
       ignored: false
       nestedInLoop: true
@@ -1379,7 +1405,7 @@ methods:
       idsTryCatchBlockSurrounding:
       - 1
       value:
-        sapientType: "REAL"
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.base.internal.ByteUtils"
         uuid: "org.bitcoinj.base.internal.ByteUtils"
         fixed: false
@@ -1411,6 +1437,7 @@ methods:
                   content: !<regular>
                     value: 0
                   valueType: "byte"
+                  uuid: "INT_byte[]1-item0"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -1419,6 +1446,7 @@ methods:
                   content: !<regular>
                     value: 0
                   valueType: "byte"
+                  uuid: "INT_byte[]1-item1"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -1427,6 +1455,7 @@ methods:
                   content: !<regular>
                     value: 0
                   valueType: "byte"
+                  uuid: "INT_byte[]1-item2"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -1435,6 +1464,7 @@ methods:
                   content: !<regular>
                     value: 1
                   valueType: "byte"
+                  uuid: "INT_byte[]1-item3"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -1445,6 +1475,7 @@ methods:
                   content: !<regular>
                     value: 0
                   valueType: "byte"
+                  uuid: "INT_byte[]1-item0"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -1453,6 +1484,7 @@ methods:
                   content: !<regular>
                     value: 0
                   valueType: "byte"
+                  uuid: "INT_byte[]1-item1"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -1461,6 +1493,7 @@ methods:
                   content: !<regular>
                     value: 0
                   valueType: "byte"
+                  uuid: "INT_byte[]1-item2"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -1469,6 +1502,7 @@ methods:
                   content: !<regular>
                     value: 1
                   valueType: "byte"
+                  uuid: "INT_byte[]1-item3"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -1702,7 +1736,8 @@ methods:
       filledByUser: false
     uuid: "1e26360d-137e-3978-b018-4b5a879346ca"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false

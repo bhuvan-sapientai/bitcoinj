@@ -6795,7 +6795,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "CF85D1A319A6ABA3B65BFBE6AF59EF06"
+    modelFingerprint: "5545D566E4803DE1A76B7A89E36E8A1A"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -6853,1202 +6853,6 @@ methods:
           target: "org.bitcoinj.wallet.Wallet"
           onlyPojoFunctions: false
           builderPattern: false
-        valueType: "org.bitcoinj.wallet.Wallet"
-        uuid: "walletToProto_wallet1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Protos.Wallet"
-      modelFingerprint: "33AFF3367338EC39DF4B03083922C5E2"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "REAL"
-        valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-        uuid: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-        name: "newBuilder"
-        parameters: []
-        signature: "newBuilder(): Protos$Wallet$Builder"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-            method: "newBuilder"
-            methodParameters: []
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-            method: "newBuilder"
-            methodParameters: []
-          valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-          uuid: "walletToProto_protos.Wallet.Builder1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "wallet"
-      modelFingerprint: "584DCCE234D3002F5D62B2226CB3C695"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.wallet.Wallet"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.wallet.Wallet"
-        uuid: "walletToProto_wallet1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "wallet"
-        name: "network"
-        parameters: []
-        signature: "network(): Network"
-        returnValue:
-          sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
-            target: "org.bitcoinj.base.Network"
-            onlyPojoFunctions: false
-            builderPattern: false
-          valueType: "org.bitcoinj.base.Network"
-          uuid: "walletToProto_network1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      modelFingerprint: "508A841515B55E332487837E1A4D7815"
-      index: 5
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.base.Network"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.base.Network"
-        uuid: "walletToProto_network1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.Network"
-        name: "id"
-        parameters: []
-        signature: "id(): String"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: "int"
-          suggestedContent: !<regular>
-            value: "int"
-          valueType: "java.lang.String"
-          uuid: "walletToProto_string1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1025
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "walletBuilder"
-      modelFingerprint: "0C7693BD1887C1DBE4B42C6C6A9C4364"
-      index: 6
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-          method: "newBuilder"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-          method: "newBuilder"
-          methodParameters: []
-        valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-        uuid: "walletToProto_protos.Wallet.Builder1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "walletBuilder"
-        name: "setNetworkIdentifier"
-        parameters:
-        - name: "value"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: "int"
-            suggestedContent: !<regular>
-              value: "int"
-            valueType: "java.lang.String"
-            uuid: "walletToProto_string1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "setNetworkIdentifier(String): Protos$Wallet$Builder"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<method_return_from_value>
-            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-            localVariableValue:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
-              valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-              uuid: "walletToProto_protos.Wallet.Builder1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            methodParameters:
-            - name: "value"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: "int"
-                suggestedContent: !<regular>
-                  value: "int"
-                valueType: "java.lang.String"
-                uuid: "walletToProto_string1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            methodName: "setNetworkIdentifier"
-          suggestedContent: !<method_return_from_value>
-            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-            localVariableValue:
-              sapientType: "OBJECT"
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
-              valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-              uuid: "walletToProto_protos.Wallet.Builder1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            methodParameters:
-            - name: "value"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: "int"
-                suggestedContent: !<regular>
-                  value: "int"
-                valueType: "java.lang.String"
-                uuid: "walletToProto_string1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            methodName: "setNetworkIdentifier"
-          valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-          uuid: "walletToProto_protos.Wallet.Builder2"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "wallet"
-      modelFingerprint: "43D28A9739C0326111342D444B67A9BC"
-      index: 7
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.wallet.Wallet"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.wallet.Wallet"
-        uuid: "walletToProto_wallet1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "wallet"
-        name: "getDescription"
-        parameters: []
-        signature: "getDescription(): String"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: "return_of_getDescription1"
-          valueType: "java.lang.String"
-          uuid: "walletToProto_string2"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "wallet"
-      modelFingerprint: "D8F24E40976350B78C9E99633BA8E8A6"
-      index: 8
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.wallet.Wallet"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.wallet.Wallet"
-        uuid: "walletToProto_wallet1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "wallet"
-        name: "getDescription"
-        parameters: []
-        signature: "getDescription(): String"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: "String"
-          suggestedContent: !<regular>
-            value: "String"
-          valueType: "java.lang.String"
-          uuid: "walletToProto_string3"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "walletBuilder"
-      modelFingerprint: "6E416634594683E0663EDFF4A5C121AB"
-      index: 9
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-          method: "newBuilder"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-          method: "newBuilder"
-          methodParameters: []
-        valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-        uuid: "walletToProto_protos.Wallet.Builder1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "walletBuilder"
-        name: "setDescription"
-        parameters:
-        - name: "value"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: "String"
-            suggestedContent: !<regular>
-              value: "String"
-            valueType: "java.lang.String"
-            uuid: "walletToProto_string3"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "setDescription(String): Protos$Wallet$Builder"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<method_return_from_value>
-            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-            localVariableValue:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
-              valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-              uuid: "walletToProto_protos.Wallet.Builder1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            methodParameters:
-            - name: "value"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: "String"
-                suggestedContent: !<regular>
-                  value: "String"
-                valueType: "java.lang.String"
-                uuid: "walletToProto_string3"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            methodName: "setDescription"
-          suggestedContent: !<method_return_from_value>
-            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-            localVariableValue:
-              sapientType: "OBJECT"
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
-              valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-              uuid: "walletToProto_protos.Wallet.Builder1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            methodParameters:
-            - name: "value"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: "String"
-                suggestedContent: !<regular>
-                  value: "String"
-                valueType: "java.lang.String"
-                uuid: "walletToProto_string3"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            methodName: "setDescription"
-          valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-          uuid: "walletToProto_protos.Wallet.Builder3"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "wallet"
-      modelFingerprint: "F2414355118B686DE62141287B17516C"
-      index: 10
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.wallet.Wallet"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.wallet.Wallet"
-        uuid: "walletToProto_wallet1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "wallet"
-        name: "getWalletTransactions"
-        parameters: []
-        signature: "getWalletTransactions(): Iterable"
-        returnValue:
-          sapientType: "NULL"
-          content: !<unknown_object>
-            target: "java.lang.Iterable"
-            onlyPojoFunctions: true
-            builderPattern: false
-          suggestedContent: !<unknown_object>
-            target: "java.lang.Iterable"
-            onlyPojoFunctions: true
-            builderPattern: false
-          valueType: "java.lang.Iterable"
-          uuid: "walletToProto_iterable1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "1544C3243427A58A5AE91A88CC628F77"
-      index: 11
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "EXCEPTION"
-        content: !<new>
-          target: "java.lang.NullPointerException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "java.lang.NullPointerException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "java.lang.NullPointerException"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    uuid: "334c093c-30d2-3708-be57-99714061aa1f"
-    deleted: false
-    disabled: false
-    ignoredBySystem: false
-    prover: "LLM"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path34"
-    pathIdForUser: "path4"
-    testPathName: "walletToProtoWhenKeyCrypterIsNotNullAndKeyCrypterNotInstanceOfKeyCrypterScryptThrowsRuntimeException"
-    nameDefinedByUser: false
-    constructorSignature: "<init>(org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory)\
-      \ : void"
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "HIGH"
-    modelFingerprint: "6062DEE9784C82CC4BDD1E042A18F31C"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "4a237138-67a2-3e0c-bbee-ef0e7c9f930d"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path35"
-    pathIdForUser: "path5"
-    testPathName: "walletToProtoWhenLastSeenBlockHashIsNullAndKeyCrypterIsNotNullAndKeyCrypterNotInstanceOfKeyCrypteThrowsRuntimeException"
-    nameDefinedByUser: false
-    constructorSignature: "<init>(org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory)\
-      \ : void"
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "HIGH"
-    modelFingerprint: "59E69FAB68CC69089C68A12C9C3EB866"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "1980ea78-5e9f-3b53-99d6-60b46872e4ac"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path36"
-    pathIdForUser: "path6"
-    testPathName: "walletToProtoWhenKeyCrypterIsNotNullAndKeyCrypterNotInstanceOfKeyCrypterScrypt2ThrowsRuntimeException"
-    nameDefinedByUser: false
-    constructorSignature: "<init>(org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory)\
-      \ : void"
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "HIGH"
-    modelFingerprint: "E73E4665A1D2413EDAF1CF283D427A3D"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "640faaa2-cc0a-39c6-acff-97636a038b6f"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path37"
-    pathIdForUser: "path7"
-    testPathName: "walletToProtoWhenKeyCrypterIsNotNullAndKeyCrypterNotInstanceOfKeyCrypterScrypt3ThrowsRuntimeException"
-    nameDefinedByUser: false
-    constructorSignature: "<init>(org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory)\
-      \ : void"
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "CF85D1A319A6ABA3B65BFBE6AF59EF06"
-    problemWasSolvedByProver: true
-    truncated: false
-    inputParameters:
-    - type: "CONSTRUCTOR"
-      modelFingerprint: "2446136662A4545F91024DB212E70B4C"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.wallet.WalletProtobufSerializer"
-          parameters:
-          - name: "factory"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory"
-              uuid: "<init>_walletProtobufSerializer.WalletFactory1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.wallet.WalletProtobufSerializer"
-          parameters:
-          - name: "factory"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory"
-              uuid: "<init>_walletProtobufSerializer.WalletFactory1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "org.bitcoinj.wallet.WalletProtobufSerializer"
-        uuid: "target"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "wallet"
-      modelFingerprint: "2E00221971D43CC87B6B8DA272A04B82"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.wallet.Wallet"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.wallet.Wallet"
-        uuid: "walletToProto_wallet1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Protos.Wallet"
-      modelFingerprint: "33AFF3367338EC39DF4B03083922C5E2"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "REAL"
-        valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-        uuid: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-        name: "newBuilder"
-        parameters: []
-        signature: "newBuilder(): Protos$Wallet$Builder"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-            method: "newBuilder"
-            methodParameters: []
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-            method: "newBuilder"
-            methodParameters: []
-          valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-          uuid: "walletToProto_protos.Wallet.Builder1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "wallet"
-      modelFingerprint: "584DCCE234D3002F5D62B2226CB3C695"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.wallet.Wallet"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.wallet.Wallet"
-        uuid: "walletToProto_wallet1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "wallet"
-        name: "network"
-        parameters: []
-        signature: "network(): Network"
-        returnValue:
-          sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
-            target: "org.bitcoinj.base.Network"
-            onlyPojoFunctions: false
-            builderPattern: false
-          valueType: "org.bitcoinj.base.Network"
-          uuid: "walletToProto_network1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      modelFingerprint: "508A841515B55E332487837E1A4D7815"
-      index: 5
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.base.Network"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.base.Network"
-        uuid: "walletToProto_network1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.Network"
-        name: "id"
-        parameters: []
-        signature: "id(): String"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: "int"
-          suggestedContent: !<regular>
-            value: "int"
-          valueType: "java.lang.String"
-          uuid: "walletToProto_string1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1025
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "walletBuilder"
-      modelFingerprint: "0C7693BD1887C1DBE4B42C6C6A9C4364"
-      index: 6
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-          method: "newBuilder"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-          method: "newBuilder"
-          methodParameters: []
-        valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-        uuid: "walletToProto_protos.Wallet.Builder1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "walletBuilder"
-        name: "setNetworkIdentifier"
-        parameters:
-        - name: "value"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: "int"
-            suggestedContent: !<regular>
-              value: "int"
-            valueType: "java.lang.String"
-            uuid: "walletToProto_string1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "setNetworkIdentifier(String): Protos$Wallet$Builder"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<method_return_from_value>
-            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-            localVariableValue:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
-              valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-              uuid: "walletToProto_protos.Wallet.Builder1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            methodParameters:
-            - name: "value"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: "int"
-                suggestedContent: !<regular>
-                  value: "int"
-                valueType: "java.lang.String"
-                uuid: "walletToProto_string1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            methodName: "setNetworkIdentifier"
-          suggestedContent: !<method_return_from_value>
-            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-            localVariableValue:
-              sapientType: "OBJECT"
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
-              valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-              uuid: "walletToProto_protos.Wallet.Builder1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            methodParameters:
-            - name: "value"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: "int"
-                suggestedContent: !<regular>
-                  value: "int"
-                valueType: "java.lang.String"
-                uuid: "walletToProto_string1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            methodName: "setNetworkIdentifier"
-          valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-          uuid: "walletToProto_protos.Wallet.Builder2"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "wallet"
-      modelFingerprint: "43D28A9739C0326111342D444B67A9BC"
-      index: 7
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.wallet.Wallet"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.wallet.Wallet"
-        uuid: "walletToProto_wallet1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "wallet"
-        name: "getDescription"
-        parameters: []
-        signature: "getDescription(): String"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: "return_of_getDescription1"
-          valueType: "java.lang.String"
-          uuid: "walletToProto_string2"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "wallet"
-      modelFingerprint: "D8F24E40976350B78C9E99633BA8E8A6"
-      index: 8
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.wallet.Wallet"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.wallet.Wallet"
-        uuid: "walletToProto_wallet1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "wallet"
-        name: "getDescription"
-        parameters: []
-        signature: "getDescription(): String"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: "String"
-          suggestedContent: !<regular>
-            value: "String"
-          valueType: "java.lang.String"
-          uuid: "walletToProto_string3"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "walletBuilder"
-      modelFingerprint: "6E416634594683E0663EDFF4A5C121AB"
-      index: 9
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-          method: "newBuilder"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-          method: "newBuilder"
-          methodParameters: []
-        valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-        uuid: "walletToProto_protos.Wallet.Builder1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "walletBuilder"
-        name: "setDescription"
-        parameters:
-        - name: "value"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: "String"
-            suggestedContent: !<regular>
-              value: "String"
-            valueType: "java.lang.String"
-            uuid: "walletToProto_string3"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "setDescription(String): Protos$Wallet$Builder"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<method_return_from_value>
-            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-            localVariableValue:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
-              valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-              uuid: "walletToProto_protos.Wallet.Builder1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            methodParameters:
-            - name: "value"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: "String"
-                suggestedContent: !<regular>
-                  value: "String"
-                valueType: "java.lang.String"
-                uuid: "walletToProto_string3"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            methodName: "setDescription"
-          suggestedContent: !<method_return_from_value>
-            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-            localVariableValue:
-              sapientType: "OBJECT"
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
-              valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-              uuid: "walletToProto_protos.Wallet.Builder1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            methodParameters:
-            - name: "value"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: "String"
-                suggestedContent: !<regular>
-                  value: "String"
-                valueType: "java.lang.String"
-                uuid: "walletToProto_string3"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            methodName: "setDescription"
-          valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-          uuid: "walletToProto_protos.Wallet.Builder3"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "wallet"
-      modelFingerprint: "F2414355118B686DE62141287B17516C"
-      index: 10
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.wallet.Wallet"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.wallet.Wallet"
-        uuid: "walletToProto_wallet1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "wallet"
-        name: "getWalletTransactions"
-        parameters: []
-        signature: "getWalletTransactions(): Iterable"
-        returnValue:
-          sapientType: "NULL"
-          content: !<unknown_object>
-            target: "java.lang.Iterable"
-            onlyPojoFunctions: true
-            builderPattern: false
-          suggestedContent: !<unknown_object>
-            target: "java.lang.Iterable"
-            onlyPojoFunctions: true
-            builderPattern: false
-          valueType: "java.lang.Iterable"
-          uuid: "walletToProto_iterable1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "1544C3243427A58A5AE91A88CC628F77"
-      index: 11
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "EXCEPTION"
-        content: !<new>
-          target: "java.lang.NullPointerException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "java.lang.NullPointerException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "java.lang.NullPointerException"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    uuid: "8d122d67-a9cc-31c9-bede-2f8cf668fe53"
-    deleted: false
-    disabled: false
-    ignoredBySystem: false
-    prover: "LLM"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path38"
-    pathIdForUser: "path8"
-    testPathName: "walletToProtoWhenKeyCrypterIsNotNullAndKeyCrypterNotInstanceOfKeyCrypterScrypt4ThrowsRuntimeException"
-    nameDefinedByUser: false
-    constructorSignature: "<init>(org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory)\
-      \ : void"
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "HIGH"
-    modelFingerprint: "C3C30AA974D40AC3E52F9E9FC2C80894"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "c3abab8f-019a-3e4a-9030-555fcde16e63"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path39"
-    pathIdForUser: "path9"
-    testPathName: "walletToProtoWhenKeyCrypterIsNotNullAndKeyCrypterNotInstanceOfKeyCrypterScrypt5ThrowsRuntimeException"
-    nameDefinedByUser: false
-    constructorSignature: "<init>(org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory)\
-      \ : void"
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "HIGH"
-    modelFingerprint: "62BFC9FEB236B91C903BB55E253D7264"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "7d4ca60c-b054-31e7-a549-deca3c62ede0"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path40"
-    pathIdForUser: "path10"
-    testPathName: "walletToProtoWhenKeyCrypterIsNotNullAndKeyCrypterNotInstanceOfKeyCrypterScrypt6ThrowsRuntimeException"
-    nameDefinedByUser: false
-    constructorSignature: "<init>(org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory)\
-      \ : void"
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "HIGH"
-    modelFingerprint: "C7A2ECCCC4F33A218FCA1F941F1D2713"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "0a79de8a-f3f9-3a19-932f-2949f8fed9c9"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path41"
-    pathIdForUser: "path11"
-    testPathName: "walletToProtoWhenKeyCrypterIsNotNullAndKeyCrypterNotInstanceOfKeyCrypterScrypt7ThrowsRuntimeException"
-    nameDefinedByUser: false
-    constructorSignature: "<init>(org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory)\
-      \ : void"
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "872C82C85D8DF7C25ABBD926FE5DECC6"
-    problemWasSolvedByProver: true
-    truncated: false
-    inputParameters:
-    - type: "CONSTRUCTOR"
-      modelFingerprint: "5B62062E8FB82E8B526CF365555B3247"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.wallet.WalletProtobufSerializer"
-          parameters:
-          - name: "factory"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory"
-              uuid: "<init>_walletProtobufSerializer.WalletFactory1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.wallet.WalletProtobufSerializer"
-          parameters:
-          - name: "factory"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory"
-              uuid: "<init>_walletProtobufSerializer.WalletFactory1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "org.bitcoinj.wallet.WalletProtobufSerializer"
-        uuid: "target"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "wallet"
-      modelFingerprint: "AE362AF60DB5F74BA8EDCAF9B2A6BF11"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
         valueType: "org.bitcoinj.wallet.Wallet"
         uuid: "walletToProto_wallet1"
         fixed: false
@@ -8091,13 +6895,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "wallet"
-      modelFingerprint: "C80AECFD7D2E618DA4EF198B0D88DE60"
+      modelFingerprint: "BC6A34E789A9DA3231949F6E31E2AE9C"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.Wallet"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.wallet.Wallet"
         uuid: "walletToProto_wallet1"
         fixed: false
@@ -8257,13 +7065,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "wallet"
-      modelFingerprint: "898F1A7C0D82D9BF56D9C229BCB389AB"
+      modelFingerprint: "43D28A9739C0326111342D444B67A9BC"
       index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.Wallet"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.wallet.Wallet"
         uuid: "walletToProto_wallet1"
         fixed: false
@@ -8288,13 +7100,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "wallet"
-      modelFingerprint: "217EAE3C20255B85B330D9BA0E862066"
+      modelFingerprint: "3421ECBACD3BCDFB12D6530F12BA8934"
       index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.Wallet"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.wallet.Wallet"
         uuid: "walletToProto_wallet1"
         fixed: false
@@ -8418,13 +7234,1169 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "wallet"
-      modelFingerprint: "7625EAB09ED27463AD38CB8BE208EF1E"
+      modelFingerprint: "4D6F3AD8F898088F78B8145AC9E70036"
       index: 10
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.Wallet"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.Wallet"
+        uuid: "walletToProto_wallet1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "wallet"
+        name: "getWalletTransactions"
+        parameters: []
+        signature: "getWalletTransactions(): Iterable"
+        returnValue:
+          sapientType: "NULL"
+          content: !<unknown_object>
+            target: "java.lang.Iterable"
+            onlyPojoFunctions: false
+            builderPattern: false
+          suggestedContent: !<unknown_object>
+            target: "java.lang.Iterable"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "java.lang.Iterable"
+          uuid: "walletToProto_iterable1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "1544C3243427A58A5AE91A88CC628F77"
+      index: 11
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.NullPointerException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.lang.NullPointerException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.lang.NullPointerException"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "334c093c-30d2-3708-be57-99714061aa1f"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path34"
+    pathIdForUser: "path4"
+    testPathName: "walletToProtoWhenKeyCrypterIsNotNullAndKeyCrypterNotInstanceOfKeyCrypterScryptThrowsRuntimeException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "HIGH"
+    modelFingerprint: "6062DEE9784C82CC4BDD1E042A18F31C"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "4a237138-67a2-3e0c-bbee-ef0e7c9f930d"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path35"
+    pathIdForUser: "path5"
+    testPathName: "walletToProtoWhenLastSeenBlockHashIsNullAndKeyCrypterIsNotNullAndKeyCrypterNotInstanceOfKeyCrypteThrowsRuntimeException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "HIGH"
+    modelFingerprint: "59E69FAB68CC69089C68A12C9C3EB866"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "1980ea78-5e9f-3b53-99d6-60b46872e4ac"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path36"
+    pathIdForUser: "path6"
+    testPathName: "walletToProtoWhenKeyCrypterIsNotNullAndKeyCrypterNotInstanceOfKeyCrypterScrypt2ThrowsRuntimeException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "HIGH"
+    modelFingerprint: "E73E4665A1D2413EDAF1CF283D427A3D"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "640faaa2-cc0a-39c6-acff-97636a038b6f"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path37"
+    pathIdForUser: "path7"
+    testPathName: "walletToProtoWhenKeyCrypterIsNotNullAndKeyCrypterNotInstanceOfKeyCrypterScrypt3ThrowsRuntimeException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "5545D566E4803DE1A76B7A89E36E8A1A"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "2446136662A4545F91024DB212E70B4C"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.wallet.WalletProtobufSerializer"
+          parameters:
+          - name: "factory"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory"
+              uuid: "<init>_walletProtobufSerializer.WalletFactory1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.wallet.WalletProtobufSerializer"
+          parameters:
+          - name: "factory"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory"
+              uuid: "<init>_walletProtobufSerializer.WalletFactory1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.wallet.WalletProtobufSerializer"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "wallet"
+      modelFingerprint: "2E00221971D43CC87B6B8DA272A04B82"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.Wallet"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.Wallet"
+        uuid: "walletToProto_wallet1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Protos.Wallet"
+      modelFingerprint: "E854A594D72077119C1BA6ED7E390222"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
+        uuid: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
+        name: "newBuilder"
+        parameters: []
+        signature: "newBuilder(): Protos$Wallet$Builder"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+          uuid: "walletToProto_protos.Wallet.Builder1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "wallet"
+      modelFingerprint: "BC6A34E789A9DA3231949F6E31E2AE9C"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.Wallet"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.Wallet"
+        uuid: "walletToProto_wallet1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "wallet"
+        name: "network"
+        parameters: []
+        signature: "network(): Network"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.base.Network"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.base.Network"
+          uuid: "walletToProto_network1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "929C5FF143185F1A8E43636C9DD7BFAD"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Network"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Network"
+        uuid: "walletToProto_network1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.Network"
+        name: "id"
+        parameters: []
+        signature: "id(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "J"
+          suggestedContent: !<regular>
+            value: "J"
+          valueType: "java.lang.String"
+          uuid: "walletToProto_string1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "walletBuilder"
+      modelFingerprint: "1DC46F17902C952CEEA260CA96096215"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+        uuid: "walletToProto_protos.Wallet.Builder1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "walletBuilder"
+        name: "setNetworkIdentifier"
+        parameters:
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "J"
+            suggestedContent: !<regular>
+              value: "J"
+            valueType: "java.lang.String"
+            uuid: "walletToProto_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "setNetworkIdentifier(String): Protos$Wallet$Builder"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+            localVariableValue:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+              uuid: "walletToProto_protos.Wallet.Builder1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "value"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "J"
+                suggestedContent: !<regular>
+                  value: "J"
+                valueType: "java.lang.String"
+                uuid: "walletToProto_string1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "setNetworkIdentifier"
+          suggestedContent: !<method_return_from_value>
+            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+            localVariableValue:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+              uuid: "walletToProto_protos.Wallet.Builder1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "value"
+              value:
+                sapientType: "BASIC"
+                suggestedContent: !<regular>
+                  value: "J"
+                valueType: "java.lang.String"
+                uuid: "walletToProto_string1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "setNetworkIdentifier"
+          valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+          uuid: "walletToProto_protos.Wallet.Builder2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "wallet"
+      modelFingerprint: "43D28A9739C0326111342D444B67A9BC"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.Wallet"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.Wallet"
+        uuid: "walletToProto_wallet1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "wallet"
+        name: "getDescription"
+        parameters: []
+        signature: "getDescription(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "return_of_getDescription1"
+          valueType: "java.lang.String"
+          uuid: "walletToProto_string2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "wallet"
+      modelFingerprint: "3421ECBACD3BCDFB12D6530F12BA8934"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.Wallet"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.Wallet"
+        uuid: "walletToProto_wallet1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "wallet"
+        name: "getDescription"
+        parameters: []
+        signature: "getDescription(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "Q"
+          suggestedContent: !<regular>
+            value: "Q"
+          valueType: "java.lang.String"
+          uuid: "walletToProto_string3"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "walletBuilder"
+      modelFingerprint: "401BCD44DB9E0DCF617CD8E0DB297585"
+      index: 9
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+        uuid: "walletToProto_protos.Wallet.Builder1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "walletBuilder"
+        name: "setDescription"
+        parameters:
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "Q"
+            suggestedContent: !<regular>
+              value: "Q"
+            valueType: "java.lang.String"
+            uuid: "walletToProto_string3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "setDescription(String): Protos$Wallet$Builder"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+            localVariableValue:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+              uuid: "walletToProto_protos.Wallet.Builder1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "value"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "Q"
+                suggestedContent: !<regular>
+                  value: "Q"
+                valueType: "java.lang.String"
+                uuid: "walletToProto_string3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "setDescription"
+          suggestedContent: !<method_return_from_value>
+            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+            localVariableValue:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+              uuid: "walletToProto_protos.Wallet.Builder1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "value"
+              value:
+                sapientType: "BASIC"
+                suggestedContent: !<regular>
+                  value: "Q"
+                valueType: "java.lang.String"
+                uuid: "walletToProto_string3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "setDescription"
+          valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+          uuid: "walletToProto_protos.Wallet.Builder3"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "wallet"
+      modelFingerprint: "4D6F3AD8F898088F78B8145AC9E70036"
+      index: 10
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.Wallet"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.Wallet"
+        uuid: "walletToProto_wallet1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "wallet"
+        name: "getWalletTransactions"
+        parameters: []
+        signature: "getWalletTransactions(): Iterable"
+        returnValue:
+          sapientType: "NULL"
+          content: !<unknown_object>
+            target: "java.lang.Iterable"
+            onlyPojoFunctions: false
+            builderPattern: false
+          suggestedContent: !<unknown_object>
+            target: "java.lang.Iterable"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "java.lang.Iterable"
+          uuid: "walletToProto_iterable1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "1544C3243427A58A5AE91A88CC628F77"
+      index: 11
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.NullPointerException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.lang.NullPointerException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.lang.NullPointerException"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "8d122d67-a9cc-31c9-bede-2f8cf668fe53"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path38"
+    pathIdForUser: "path8"
+    testPathName: "walletToProtoWhenKeyCrypterIsNotNullAndKeyCrypterNotInstanceOfKeyCrypterScrypt4ThrowsRuntimeException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "HIGH"
+    modelFingerprint: "C3C30AA974D40AC3E52F9E9FC2C80894"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "c3abab8f-019a-3e4a-9030-555fcde16e63"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path39"
+    pathIdForUser: "path9"
+    testPathName: "walletToProtoWhenKeyCrypterIsNotNullAndKeyCrypterNotInstanceOfKeyCrypterScrypt5ThrowsRuntimeException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "HIGH"
+    modelFingerprint: "62BFC9FEB236B91C903BB55E253D7264"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "7d4ca60c-b054-31e7-a549-deca3c62ede0"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path40"
+    pathIdForUser: "path10"
+    testPathName: "walletToProtoWhenKeyCrypterIsNotNullAndKeyCrypterNotInstanceOfKeyCrypterScrypt6ThrowsRuntimeException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "HIGH"
+    modelFingerprint: "C7A2ECCCC4F33A218FCA1F941F1D2713"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "0a79de8a-f3f9-3a19-932f-2949f8fed9c9"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path41"
+    pathIdForUser: "path11"
+    testPathName: "walletToProtoWhenKeyCrypterIsNotNullAndKeyCrypterNotInstanceOfKeyCrypterScrypt7ThrowsRuntimeException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "5545D566E4803DE1A76B7A89E36E8A1A"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "2446136662A4545F91024DB212E70B4C"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.wallet.WalletProtobufSerializer"
+          parameters:
+          - name: "factory"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory"
+              uuid: "<init>_walletProtobufSerializer.WalletFactory1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.wallet.WalletProtobufSerializer"
+          parameters:
+          - name: "factory"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory"
+              uuid: "<init>_walletProtobufSerializer.WalletFactory1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.wallet.WalletProtobufSerializer"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "wallet"
+      modelFingerprint: "2E00221971D43CC87B6B8DA272A04B82"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.Wallet"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.Wallet"
+        uuid: "walletToProto_wallet1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Protos.Wallet"
+      modelFingerprint: "E854A594D72077119C1BA6ED7E390222"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
+        uuid: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
+        name: "newBuilder"
+        parameters: []
+        signature: "newBuilder(): Protos$Wallet$Builder"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+          uuid: "walletToProto_protos.Wallet.Builder1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "wallet"
+      modelFingerprint: "BC6A34E789A9DA3231949F6E31E2AE9C"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.Wallet"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.Wallet"
+        uuid: "walletToProto_wallet1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "wallet"
+        name: "network"
+        parameters: []
+        signature: "network(): Network"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.base.Network"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.base.Network"
+          uuid: "walletToProto_network1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "929C5FF143185F1A8E43636C9DD7BFAD"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Network"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Network"
+        uuid: "walletToProto_network1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.Network"
+        name: "id"
+        parameters: []
+        signature: "id(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "J"
+          suggestedContent: !<regular>
+            value: "J"
+          valueType: "java.lang.String"
+          uuid: "walletToProto_string1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "walletBuilder"
+      modelFingerprint: "1DC46F17902C952CEEA260CA96096215"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+        uuid: "walletToProto_protos.Wallet.Builder1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "walletBuilder"
+        name: "setNetworkIdentifier"
+        parameters:
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "J"
+            suggestedContent: !<regular>
+              value: "J"
+            valueType: "java.lang.String"
+            uuid: "walletToProto_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "setNetworkIdentifier(String): Protos$Wallet$Builder"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+            localVariableValue:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+              uuid: "walletToProto_protos.Wallet.Builder1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "value"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "J"
+                suggestedContent: !<regular>
+                  value: "J"
+                valueType: "java.lang.String"
+                uuid: "walletToProto_string1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "setNetworkIdentifier"
+          suggestedContent: !<method_return_from_value>
+            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+            localVariableValue:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+              uuid: "walletToProto_protos.Wallet.Builder1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "value"
+              value:
+                sapientType: "BASIC"
+                suggestedContent: !<regular>
+                  value: "J"
+                valueType: "java.lang.String"
+                uuid: "walletToProto_string1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "setNetworkIdentifier"
+          valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+          uuid: "walletToProto_protos.Wallet.Builder2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "wallet"
+      modelFingerprint: "43D28A9739C0326111342D444B67A9BC"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.Wallet"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.Wallet"
+        uuid: "walletToProto_wallet1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "wallet"
+        name: "getDescription"
+        parameters: []
+        signature: "getDescription(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "return_of_getDescription1"
+          valueType: "java.lang.String"
+          uuid: "walletToProto_string2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "wallet"
+      modelFingerprint: "3421ECBACD3BCDFB12D6530F12BA8934"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.Wallet"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.Wallet"
+        uuid: "walletToProto_wallet1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "wallet"
+        name: "getDescription"
+        parameters: []
+        signature: "getDescription(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "Q"
+          suggestedContent: !<regular>
+            value: "Q"
+          valueType: "java.lang.String"
+          uuid: "walletToProto_string3"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "walletBuilder"
+      modelFingerprint: "401BCD44DB9E0DCF617CD8E0DB297585"
+      index: 9
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+        uuid: "walletToProto_protos.Wallet.Builder1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "walletBuilder"
+        name: "setDescription"
+        parameters:
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "Q"
+            suggestedContent: !<regular>
+              value: "Q"
+            valueType: "java.lang.String"
+            uuid: "walletToProto_string3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "setDescription(String): Protos$Wallet$Builder"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+            localVariableValue:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+              uuid: "walletToProto_protos.Wallet.Builder1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "value"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "Q"
+                suggestedContent: !<regular>
+                  value: "Q"
+                valueType: "java.lang.String"
+                uuid: "walletToProto_string3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "setDescription"
+          suggestedContent: !<method_return_from_value>
+            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+            localVariableValue:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+              uuid: "walletToProto_protos.Wallet.Builder1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "value"
+              value:
+                sapientType: "BASIC"
+                suggestedContent: !<regular>
+                  value: "Q"
+                valueType: "java.lang.String"
+                uuid: "walletToProto_string3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "setDescription"
+          valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+          uuid: "walletToProto_protos.Wallet.Builder3"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "wallet"
+      modelFingerprint: "4D6F3AD8F898088F78B8145AC9E70036"
+      index: 10
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.Wallet"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.wallet.Wallet"
         uuid: "walletToProto_wallet1"
         fixed: false
@@ -8551,7 +8523,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "CF85D1A319A6ABA3B65BFBE6AF59EF06"
+    modelFingerprint: "5545D566E4803DE1A76B7A89E36E8A1A"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -8618,602 +8590,6 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Protos.Wallet"
-      modelFingerprint: "33AFF3367338EC39DF4B03083922C5E2"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "REAL"
-        valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-        uuid: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-        name: "newBuilder"
-        parameters: []
-        signature: "newBuilder(): Protos$Wallet$Builder"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-            method: "newBuilder"
-            methodParameters: []
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-            method: "newBuilder"
-            methodParameters: []
-          valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-          uuid: "walletToProto_protos.Wallet.Builder1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "wallet"
-      modelFingerprint: "584DCCE234D3002F5D62B2226CB3C695"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.wallet.Wallet"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.wallet.Wallet"
-        uuid: "walletToProto_wallet1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "wallet"
-        name: "network"
-        parameters: []
-        signature: "network(): Network"
-        returnValue:
-          sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
-            target: "org.bitcoinj.base.Network"
-            onlyPojoFunctions: false
-            builderPattern: false
-          valueType: "org.bitcoinj.base.Network"
-          uuid: "walletToProto_network1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      modelFingerprint: "508A841515B55E332487837E1A4D7815"
-      index: 5
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.base.Network"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.base.Network"
-        uuid: "walletToProto_network1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.Network"
-        name: "id"
-        parameters: []
-        signature: "id(): String"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: "int"
-          suggestedContent: !<regular>
-            value: "int"
-          valueType: "java.lang.String"
-          uuid: "walletToProto_string1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1025
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "walletBuilder"
-      modelFingerprint: "0C7693BD1887C1DBE4B42C6C6A9C4364"
-      index: 6
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-          method: "newBuilder"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-          method: "newBuilder"
-          methodParameters: []
-        valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-        uuid: "walletToProto_protos.Wallet.Builder1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "walletBuilder"
-        name: "setNetworkIdentifier"
-        parameters:
-        - name: "value"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: "int"
-            suggestedContent: !<regular>
-              value: "int"
-            valueType: "java.lang.String"
-            uuid: "walletToProto_string1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "setNetworkIdentifier(String): Protos$Wallet$Builder"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<method_return_from_value>
-            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-            localVariableValue:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
-              valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-              uuid: "walletToProto_protos.Wallet.Builder1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            methodParameters:
-            - name: "value"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: "int"
-                suggestedContent: !<regular>
-                  value: "int"
-                valueType: "java.lang.String"
-                uuid: "walletToProto_string1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            methodName: "setNetworkIdentifier"
-          suggestedContent: !<method_return_from_value>
-            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-            localVariableValue:
-              sapientType: "OBJECT"
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
-              valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-              uuid: "walletToProto_protos.Wallet.Builder1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            methodParameters:
-            - name: "value"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: "int"
-                suggestedContent: !<regular>
-                  value: "int"
-                valueType: "java.lang.String"
-                uuid: "walletToProto_string1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            methodName: "setNetworkIdentifier"
-          valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-          uuid: "walletToProto_protos.Wallet.Builder2"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "wallet"
-      modelFingerprint: "43D28A9739C0326111342D444B67A9BC"
-      index: 7
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.wallet.Wallet"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.wallet.Wallet"
-        uuid: "walletToProto_wallet1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "wallet"
-        name: "getDescription"
-        parameters: []
-        signature: "getDescription(): String"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: "return_of_getDescription1"
-          valueType: "java.lang.String"
-          uuid: "walletToProto_string2"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "wallet"
-      modelFingerprint: "D8F24E40976350B78C9E99633BA8E8A6"
-      index: 8
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.wallet.Wallet"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.wallet.Wallet"
-        uuid: "walletToProto_wallet1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "wallet"
-        name: "getDescription"
-        parameters: []
-        signature: "getDescription(): String"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: "String"
-          suggestedContent: !<regular>
-            value: "String"
-          valueType: "java.lang.String"
-          uuid: "walletToProto_string3"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "walletBuilder"
-      modelFingerprint: "6E416634594683E0663EDFF4A5C121AB"
-      index: 9
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-          method: "newBuilder"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-          method: "newBuilder"
-          methodParameters: []
-        valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-        uuid: "walletToProto_protos.Wallet.Builder1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "walletBuilder"
-        name: "setDescription"
-        parameters:
-        - name: "value"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: "String"
-            suggestedContent: !<regular>
-              value: "String"
-            valueType: "java.lang.String"
-            uuid: "walletToProto_string3"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "setDescription(String): Protos$Wallet$Builder"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<method_return_from_value>
-            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-            localVariableValue:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
-              valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-              uuid: "walletToProto_protos.Wallet.Builder1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            methodParameters:
-            - name: "value"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: "String"
-                suggestedContent: !<regular>
-                  value: "String"
-                valueType: "java.lang.String"
-                uuid: "walletToProto_string3"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            methodName: "setDescription"
-          suggestedContent: !<method_return_from_value>
-            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-            localVariableValue:
-              sapientType: "OBJECT"
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
-              valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-              uuid: "walletToProto_protos.Wallet.Builder1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            methodParameters:
-            - name: "value"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: "String"
-                suggestedContent: !<regular>
-                  value: "String"
-                valueType: "java.lang.String"
-                uuid: "walletToProto_string3"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            methodName: "setDescription"
-          valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
-          uuid: "walletToProto_protos.Wallet.Builder3"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "wallet"
-      modelFingerprint: "F2414355118B686DE62141287B17516C"
-      index: 10
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.wallet.Wallet"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.wallet.Wallet"
-        uuid: "walletToProto_wallet1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "wallet"
-        name: "getWalletTransactions"
-        parameters: []
-        signature: "getWalletTransactions(): Iterable"
-        returnValue:
-          sapientType: "NULL"
-          content: !<unknown_object>
-            target: "java.lang.Iterable"
-            onlyPojoFunctions: true
-            builderPattern: false
-          suggestedContent: !<unknown_object>
-            target: "java.lang.Iterable"
-            onlyPojoFunctions: true
-            builderPattern: false
-          valueType: "java.lang.Iterable"
-          uuid: "walletToProto_iterable1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "1544C3243427A58A5AE91A88CC628F77"
-      index: 11
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "EXCEPTION"
-        content: !<new>
-          target: "java.lang.NullPointerException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "java.lang.NullPointerException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "java.lang.NullPointerException"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    uuid: "a4edb7ed-59e3-3fe2-8e75-cb4fc00f11b5"
-    deleted: false
-    disabled: false
-    ignoredBySystem: false
-    prover: "LLM"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path30"
-    pathIdForUser: "path16"
-    testPathName: "walletToProtoWhenKeyCrypterIsNotNullAndKeyCrypterNotInstanceOfKeyCrypterScrypt12ThrowsRuntimeException"
-    nameDefinedByUser: false
-    constructorSignature: "<init>(org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory)\
-      \ : void"
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "HIGH"
-    modelFingerprint: "731D13EF8CE645A238A48BCDBBBF3017"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "abb7f2ca-f754-32e1-9b21-a5ef7b9a3431"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path31"
-    pathIdForUser: "path17"
-    testPathName: "walletToProtoWhenKeyCrypterIsNotNullAndKeyCrypterNotInstanceOfKeyCrypterScrypt13ThrowsRuntimeException"
-    nameDefinedByUser: false
-    constructorSignature: "<init>(org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory)\
-      \ : void"
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "HIGH"
-    modelFingerprint: "31CE8A9567D592AF8B4B5683C5E574B5"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "d2b8fd89-7d4c-39b2-ae22-c2d03c12efa1"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path32"
-    pathIdForUser: "path18"
-    testPathName: "walletToProtoWhenKeyCrypterIsNotNullAndKeyCrypterNotInstanceOfKeyCrypterScrypt14ThrowsRuntimeException"
-    nameDefinedByUser: false
-    constructorSignature: "<init>(org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory)\
-      \ : void"
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "HIGH"
-    modelFingerprint: "859A73AE850B240682F142AB92964E66"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "0e07e934-9cb2-3b83-ac1b-c0122c4c5c62"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path45"
-    pathIdForUser: "path19"
-    testPathName: "walletToProtoWhenKeyCrypterIsNotNullAndKeyCrypterNotInstanceOfKeyCrypterScrypt15ThrowsRuntimeException"
-    nameDefinedByUser: false
-    constructorSignature: "<init>(org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory)\
-      \ : void"
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "872C82C85D8DF7C25ABBD926FE5DECC6"
-    problemWasSolvedByProver: true
-    truncated: false
-    inputParameters:
-    - type: "CONSTRUCTOR"
-      modelFingerprint: "5B62062E8FB82E8B526CF365555B3247"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.wallet.WalletProtobufSerializer"
-          parameters:
-          - name: "factory"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory"
-              uuid: "<init>_walletProtobufSerializer.WalletFactory1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.wallet.WalletProtobufSerializer"
-          parameters:
-          - name: "factory"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory"
-              uuid: "<init>_walletProtobufSerializer.WalletFactory1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "org.bitcoinj.wallet.WalletProtobufSerializer"
-        uuid: "target"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "wallet"
-      modelFingerprint: "AE362AF60DB5F74BA8EDCAF9B2A6BF11"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.wallet.Wallet"
-        uuid: "walletToProto_wallet1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Protos.Wallet"
       modelFingerprint: "E854A594D72077119C1BA6ED7E390222"
       index: 3
       ignored: false
@@ -9247,13 +8623,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "wallet"
-      modelFingerprint: "C80AECFD7D2E618DA4EF198B0D88DE60"
+      modelFingerprint: "BC6A34E789A9DA3231949F6E31E2AE9C"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.Wallet"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.wallet.Wallet"
         uuid: "walletToProto_wallet1"
         fixed: false
@@ -9413,13 +8793,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "wallet"
-      modelFingerprint: "898F1A7C0D82D9BF56D9C229BCB389AB"
+      modelFingerprint: "43D28A9739C0326111342D444B67A9BC"
       index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.Wallet"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.wallet.Wallet"
         uuid: "walletToProto_wallet1"
         fixed: false
@@ -9444,13 +8828,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "wallet"
-      modelFingerprint: "217EAE3C20255B85B330D9BA0E862066"
+      modelFingerprint: "3421ECBACD3BCDFB12D6530F12BA8934"
       index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.Wallet"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.wallet.Wallet"
         uuid: "walletToProto_wallet1"
         fixed: false
@@ -9574,13 +8962,593 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "wallet"
-      modelFingerprint: "7625EAB09ED27463AD38CB8BE208EF1E"
+      modelFingerprint: "4D6F3AD8F898088F78B8145AC9E70036"
       index: 10
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.Wallet"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.Wallet"
+        uuid: "walletToProto_wallet1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "wallet"
+        name: "getWalletTransactions"
+        parameters: []
+        signature: "getWalletTransactions(): Iterable"
+        returnValue:
+          sapientType: "NULL"
+          content: !<unknown_object>
+            target: "java.lang.Iterable"
+            onlyPojoFunctions: false
+            builderPattern: false
+          suggestedContent: !<unknown_object>
+            target: "java.lang.Iterable"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "java.lang.Iterable"
+          uuid: "walletToProto_iterable1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "1544C3243427A58A5AE91A88CC628F77"
+      index: 11
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.NullPointerException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.lang.NullPointerException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.lang.NullPointerException"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "a4edb7ed-59e3-3fe2-8e75-cb4fc00f11b5"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path30"
+    pathIdForUser: "path16"
+    testPathName: "walletToProtoWhenKeyCrypterIsNotNullAndKeyCrypterNotInstanceOfKeyCrypterScrypt12ThrowsRuntimeException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "HIGH"
+    modelFingerprint: "731D13EF8CE645A238A48BCDBBBF3017"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "abb7f2ca-f754-32e1-9b21-a5ef7b9a3431"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path31"
+    pathIdForUser: "path17"
+    testPathName: "walletToProtoWhenKeyCrypterIsNotNullAndKeyCrypterNotInstanceOfKeyCrypterScrypt13ThrowsRuntimeException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "HIGH"
+    modelFingerprint: "31CE8A9567D592AF8B4B5683C5E574B5"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "d2b8fd89-7d4c-39b2-ae22-c2d03c12efa1"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path32"
+    pathIdForUser: "path18"
+    testPathName: "walletToProtoWhenKeyCrypterIsNotNullAndKeyCrypterNotInstanceOfKeyCrypterScrypt14ThrowsRuntimeException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "HIGH"
+    modelFingerprint: "859A73AE850B240682F142AB92964E66"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "0e07e934-9cb2-3b83-ac1b-c0122c4c5c62"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path45"
+    pathIdForUser: "path19"
+    testPathName: "walletToProtoWhenKeyCrypterIsNotNullAndKeyCrypterNotInstanceOfKeyCrypterScrypt15ThrowsRuntimeException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "5545D566E4803DE1A76B7A89E36E8A1A"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "2446136662A4545F91024DB212E70B4C"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.wallet.WalletProtobufSerializer"
+          parameters:
+          - name: "factory"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory"
+              uuid: "<init>_walletProtobufSerializer.WalletFactory1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.wallet.WalletProtobufSerializer"
+          parameters:
+          - name: "factory"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.wallet.WalletProtobufSerializer$WalletFactory"
+              uuid: "<init>_walletProtobufSerializer.WalletFactory1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.wallet.WalletProtobufSerializer"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "wallet"
+      modelFingerprint: "2E00221971D43CC87B6B8DA272A04B82"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.Wallet"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.Wallet"
+        uuid: "walletToProto_wallet1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Protos.Wallet"
+      modelFingerprint: "E854A594D72077119C1BA6ED7E390222"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
+        uuid: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
+        name: "newBuilder"
+        parameters: []
+        signature: "newBuilder(): Protos$Wallet$Builder"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+          uuid: "walletToProto_protos.Wallet.Builder1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "wallet"
+      modelFingerprint: "BC6A34E789A9DA3231949F6E31E2AE9C"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.Wallet"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.Wallet"
+        uuid: "walletToProto_wallet1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "wallet"
+        name: "network"
+        parameters: []
+        signature: "network(): Network"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.base.Network"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.base.Network"
+          uuid: "walletToProto_network1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "929C5FF143185F1A8E43636C9DD7BFAD"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Network"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Network"
+        uuid: "walletToProto_network1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.Network"
+        name: "id"
+        parameters: []
+        signature: "id(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "J"
+          suggestedContent: !<regular>
+            value: "J"
+          valueType: "java.lang.String"
+          uuid: "walletToProto_string1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "walletBuilder"
+      modelFingerprint: "1DC46F17902C952CEEA260CA96096215"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+        uuid: "walletToProto_protos.Wallet.Builder1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "walletBuilder"
+        name: "setNetworkIdentifier"
+        parameters:
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "J"
+            suggestedContent: !<regular>
+              value: "J"
+            valueType: "java.lang.String"
+            uuid: "walletToProto_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "setNetworkIdentifier(String): Protos$Wallet$Builder"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+            localVariableValue:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+              uuid: "walletToProto_protos.Wallet.Builder1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "value"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "J"
+                suggestedContent: !<regular>
+                  value: "J"
+                valueType: "java.lang.String"
+                uuid: "walletToProto_string1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "setNetworkIdentifier"
+          suggestedContent: !<method_return_from_value>
+            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+            localVariableValue:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+              uuid: "walletToProto_protos.Wallet.Builder1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "value"
+              value:
+                sapientType: "BASIC"
+                suggestedContent: !<regular>
+                  value: "J"
+                valueType: "java.lang.String"
+                uuid: "walletToProto_string1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "setNetworkIdentifier"
+          valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+          uuid: "walletToProto_protos.Wallet.Builder2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "wallet"
+      modelFingerprint: "43D28A9739C0326111342D444B67A9BC"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.Wallet"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.Wallet"
+        uuid: "walletToProto_wallet1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "wallet"
+        name: "getDescription"
+        parameters: []
+        signature: "getDescription(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "return_of_getDescription1"
+          valueType: "java.lang.String"
+          uuid: "walletToProto_string2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "wallet"
+      modelFingerprint: "3421ECBACD3BCDFB12D6530F12BA8934"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.Wallet"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.Wallet"
+        uuid: "walletToProto_wallet1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "wallet"
+        name: "getDescription"
+        parameters: []
+        signature: "getDescription(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "Q"
+          suggestedContent: !<regular>
+            value: "Q"
+          valueType: "java.lang.String"
+          uuid: "walletToProto_string3"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "walletBuilder"
+      modelFingerprint: "401BCD44DB9E0DCF617CD8E0DB297585"
+      index: 9
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+        uuid: "walletToProto_protos.Wallet.Builder1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "walletBuilder"
+        name: "setDescription"
+        parameters:
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "Q"
+            suggestedContent: !<regular>
+              value: "Q"
+            valueType: "java.lang.String"
+            uuid: "walletToProto_string3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "setDescription(String): Protos$Wallet$Builder"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+            localVariableValue:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+              uuid: "walletToProto_protos.Wallet.Builder1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "value"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "Q"
+                suggestedContent: !<regular>
+                  value: "Q"
+                valueType: "java.lang.String"
+                uuid: "walletToProto_string3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "setDescription"
+          suggestedContent: !<method_return_from_value>
+            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+            localVariableValue:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+              uuid: "walletToProto_protos.Wallet.Builder1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "value"
+              value:
+                sapientType: "BASIC"
+                suggestedContent: !<regular>
+                  value: "Q"
+                valueType: "java.lang.String"
+                uuid: "walletToProto_string3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "setDescription"
+          valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+          uuid: "walletToProto_protos.Wallet.Builder3"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "wallet"
+      modelFingerprint: "4D6F3AD8F898088F78B8145AC9E70036"
+      index: 10
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.Wallet"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.wallet.Wallet"
         uuid: "walletToProto_wallet1"
         fixed: false
@@ -9840,7 +9808,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "A5E3A1FDB4C87A0FE8FF69007B683EEE"
+    modelFingerprint: "BDBB3236C7A29925F506422A9CBE7C8D"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -9907,13 +9875,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Protos.Wallet"
-      modelFingerprint: "33AFF3367338EC39DF4B03083922C5E2"
+      modelFingerprint: "E854A594D72077119C1BA6ED7E390222"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "REAL"
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
         uuid: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
         fixed: false
@@ -9925,15 +9893,11 @@ methods:
         parameters: []
         signature: "newBuilder(): Protos$Wallet$Builder"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-            method: "newBuilder"
-            methodParameters: []
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-            method: "newBuilder"
-            methodParameters: []
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+            onlyPojoFunctions: false
+            builderPattern: false
           valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
           uuid: "walletToProto_protos.Wallet.Builder1"
           fixed: false
@@ -9944,7 +9908,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "wallet"
-      modelFingerprint: "584DCCE234D3002F5D62B2226CB3C695"
+      modelFingerprint: "BC6A34E789A9DA3231949F6E31E2AE9C"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -9980,7 +9944,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "FE3B01C413446B37A2DC90C83D7E0ACF"
+      modelFingerprint: "2E2EDDD95C9DA9DDF6DCF8610F2008DF"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -10004,9 +9968,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "Network.id()"
+            value: ""
           suggestedContent: !<regular>
-            value: "Network.id()"
+            value: ""
           valueType: "java.lang.String"
           uuid: "walletToProto_string1"
           fixed: false
@@ -10017,21 +9981,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "walletBuilder"
-      modelFingerprint: "814E5CA6B384FD0AABB9A72DF478B379"
+      modelFingerprint: "2CE7AAB42965568091624CDCB4167245"
       index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-          method: "newBuilder"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-          method: "newBuilder"
-          methodParameters: []
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
         uuid: "walletToProto_protos.Wallet.Builder1"
         fixed: false
@@ -10045,9 +10005,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "Network.id()"
+              value: ""
             suggestedContent: !<regular>
-              value: "Network.id()"
+              value: ""
             valueType: "java.lang.String"
             uuid: "walletToProto_string1"
             fixed: false
@@ -10059,15 +10019,11 @@ methods:
           content: !<method_return_from_value>
             target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
             localVariableValue:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
               uuid: "walletToProto_protos.Wallet.Builder1"
               fixed: false
@@ -10078,9 +10034,9 @@ methods:
               value:
                 sapientType: "BASIC"
                 content: !<regular>
-                  value: "Network.id()"
+                  value: ""
                 suggestedContent: !<regular>
-                  value: "Network.id()"
+                  value: ""
                 valueType: "java.lang.String"
                 uuid: "walletToProto_string1"
                 fixed: false
@@ -10090,11 +10046,11 @@ methods:
           suggestedContent: !<method_return_from_value>
             target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
             localVariableValue:
-              sapientType: "OBJECT"
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
               uuid: "walletToProto_protos.Wallet.Builder1"
               fixed: false
@@ -10104,10 +10060,8 @@ methods:
             - name: "value"
               value:
                 sapientType: "BASIC"
-                content: !<regular>
-                  value: "Network.id()"
                 suggestedContent: !<regular>
-                  value: "Network.id()"
+                  value: ""
                 valueType: "java.lang.String"
                 uuid: "walletToProto_string1"
                 fixed: false
@@ -10159,7 +10113,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "wallet"
-      modelFingerprint: "0386E9533ADCA950A643B1657653B933"
+      modelFingerprint: "43D28A9739C0326111342D444B67A9BC"
       index: 8
       ignored: false
       nestedInLoop: false
@@ -10183,9 +10137,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "Wallet.getDescription()"
+            value: ""
           suggestedContent: !<regular>
-            value: "Wallet.getDescription()"
+            value: ""
           valueType: "java.lang.String"
           uuid: "walletToProto_string3"
           fixed: false
@@ -10196,21 +10150,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "walletBuilder"
-      modelFingerprint: "FB6F891E9BEA1E0317CBF67D517DBAC7"
+      modelFingerprint: "BF856B7B84C8E80318975FEB309D9ED1"
       index: 9
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-          method: "newBuilder"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-          method: "newBuilder"
-          methodParameters: []
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
         uuid: "walletToProto_protos.Wallet.Builder1"
         fixed: false
@@ -10224,9 +10174,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "Wallet.getDescription()"
+              value: ""
             suggestedContent: !<regular>
-              value: "Wallet.getDescription()"
+              value: ""
             valueType: "java.lang.String"
             uuid: "walletToProto_string3"
             fixed: false
@@ -10238,15 +10188,11 @@ methods:
           content: !<method_return_from_value>
             target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
             localVariableValue:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
               uuid: "walletToProto_protos.Wallet.Builder1"
               fixed: false
@@ -10257,9 +10203,9 @@ methods:
               value:
                 sapientType: "BASIC"
                 content: !<regular>
-                  value: "Wallet.getDescription()"
+                  value: ""
                 suggestedContent: !<regular>
-                  value: "Wallet.getDescription()"
+                  value: ""
                 valueType: "java.lang.String"
                 uuid: "walletToProto_string3"
                 fixed: false
@@ -10269,11 +10215,11 @@ methods:
           suggestedContent: !<method_return_from_value>
             target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
             localVariableValue:
-              sapientType: "OBJECT"
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
               uuid: "walletToProto_protos.Wallet.Builder1"
               fixed: false
@@ -10283,10 +10229,8 @@ methods:
             - name: "value"
               value:
                 sapientType: "BASIC"
-                content: !<regular>
-                  value: "Wallet.getDescription()"
                 suggestedContent: !<regular>
-                  value: "Wallet.getDescription()"
+                  value: ""
                 valueType: "java.lang.String"
                 uuid: "walletToProto_string3"
                 fixed: false
@@ -10303,7 +10247,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "wallet"
-      modelFingerprint: "F2414355118B686DE62141287B17516C"
+      modelFingerprint: "4D6F3AD8F898088F78B8145AC9E70036"
       index: 10
       ignored: false
       nestedInLoop: false
@@ -10328,11 +10272,11 @@ methods:
           sapientType: "NULL"
           content: !<unknown_object>
             target: "java.lang.Iterable"
-            onlyPojoFunctions: true
+            onlyPojoFunctions: false
             builderPattern: false
           suggestedContent: !<unknown_object>
             target: "java.lang.Iterable"
-            onlyPojoFunctions: true
+            onlyPojoFunctions: false
             builderPattern: false
           valueType: "java.lang.Iterable"
           uuid: "walletToProto_iterable1"
@@ -10440,7 +10384,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "1A3ADB8DE02ED15F4736F0FB4FD630D4"
+    modelFingerprint: "5545D566E4803DE1A76B7A89E36E8A1A"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -10507,13 +10451,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Protos.Wallet"
-      modelFingerprint: "33AFF3367338EC39DF4B03083922C5E2"
+      modelFingerprint: "E854A594D72077119C1BA6ED7E390222"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "REAL"
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
         uuid: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
         fixed: false
@@ -10525,15 +10469,11 @@ methods:
         parameters: []
         signature: "newBuilder(): Protos$Wallet$Builder"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-            method: "newBuilder"
-            methodParameters: []
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-            method: "newBuilder"
-            methodParameters: []
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+            onlyPojoFunctions: false
+            builderPattern: false
           valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
           uuid: "walletToProto_protos.Wallet.Builder1"
           fixed: false
@@ -10544,7 +10484,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "wallet"
-      modelFingerprint: "584DCCE234D3002F5D62B2226CB3C695"
+      modelFingerprint: "BC6A34E789A9DA3231949F6E31E2AE9C"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -10580,7 +10520,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "A019D461CC2FF6B8C77D68485670275F"
+      modelFingerprint: "929C5FF143185F1A8E43636C9DD7BFAD"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -10604,9 +10544,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "String"
+            value: "J"
           suggestedContent: !<regular>
-            value: "String"
+            value: "J"
           valueType: "java.lang.String"
           uuid: "walletToProto_string1"
           fixed: false
@@ -10617,21 +10557,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "walletBuilder"
-      modelFingerprint: "B88A43E04F5F2E609DF9492FC1A31BEC"
+      modelFingerprint: "1DC46F17902C952CEEA260CA96096215"
       index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-          method: "newBuilder"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-          method: "newBuilder"
-          methodParameters: []
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
         uuid: "walletToProto_protos.Wallet.Builder1"
         fixed: false
@@ -10645,9 +10581,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "String"
+              value: "J"
             suggestedContent: !<regular>
-              value: "String"
+              value: "J"
             valueType: "java.lang.String"
             uuid: "walletToProto_string1"
             fixed: false
@@ -10659,15 +10595,11 @@ methods:
           content: !<method_return_from_value>
             target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
             localVariableValue:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
               uuid: "walletToProto_protos.Wallet.Builder1"
               fixed: false
@@ -10678,9 +10610,9 @@ methods:
               value:
                 sapientType: "BASIC"
                 content: !<regular>
-                  value: "String"
+                  value: "J"
                 suggestedContent: !<regular>
-                  value: "String"
+                  value: "J"
                 valueType: "java.lang.String"
                 uuid: "walletToProto_string1"
                 fixed: false
@@ -10690,11 +10622,11 @@ methods:
           suggestedContent: !<method_return_from_value>
             target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
             localVariableValue:
-              sapientType: "OBJECT"
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
               uuid: "walletToProto_protos.Wallet.Builder1"
               fixed: false
@@ -10704,10 +10636,8 @@ methods:
             - name: "value"
               value:
                 sapientType: "BASIC"
-                content: !<regular>
-                  value: "String"
                 suggestedContent: !<regular>
-                  value: "String"
+                  value: "J"
                 valueType: "java.lang.String"
                 uuid: "walletToProto_string1"
                 fixed: false
@@ -10759,7 +10689,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "wallet"
-      modelFingerprint: "D8F24E40976350B78C9E99633BA8E8A6"
+      modelFingerprint: "3421ECBACD3BCDFB12D6530F12BA8934"
       index: 8
       ignored: false
       nestedInLoop: false
@@ -10783,9 +10713,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "String"
+            value: "Q"
           suggestedContent: !<regular>
-            value: "String"
+            value: "Q"
           valueType: "java.lang.String"
           uuid: "walletToProto_string3"
           fixed: false
@@ -10796,21 +10726,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "walletBuilder"
-      modelFingerprint: "6E416634594683E0663EDFF4A5C121AB"
+      modelFingerprint: "401BCD44DB9E0DCF617CD8E0DB297585"
       index: 9
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-          method: "newBuilder"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-          method: "newBuilder"
-          methodParameters: []
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
         uuid: "walletToProto_protos.Wallet.Builder1"
         fixed: false
@@ -10824,9 +10750,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "String"
+              value: "Q"
             suggestedContent: !<regular>
-              value: "String"
+              value: "Q"
             valueType: "java.lang.String"
             uuid: "walletToProto_string3"
             fixed: false
@@ -10838,15 +10764,11 @@ methods:
           content: !<method_return_from_value>
             target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
             localVariableValue:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
               uuid: "walletToProto_protos.Wallet.Builder1"
               fixed: false
@@ -10857,9 +10779,9 @@ methods:
               value:
                 sapientType: "BASIC"
                 content: !<regular>
-                  value: "String"
+                  value: "Q"
                 suggestedContent: !<regular>
-                  value: "String"
+                  value: "Q"
                 valueType: "java.lang.String"
                 uuid: "walletToProto_string3"
                 fixed: false
@@ -10869,11 +10791,11 @@ methods:
           suggestedContent: !<method_return_from_value>
             target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
             localVariableValue:
-              sapientType: "OBJECT"
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet"
-                method: "newBuilder"
-                methodParameters: []
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.protobuf.wallet.Protos$Wallet$Builder"
               uuid: "walletToProto_protos.Wallet.Builder1"
               fixed: false
@@ -10883,10 +10805,8 @@ methods:
             - name: "value"
               value:
                 sapientType: "BASIC"
-                content: !<regular>
-                  value: "String"
                 suggestedContent: !<regular>
-                  value: "String"
+                  value: "Q"
                 valueType: "java.lang.String"
                 uuid: "walletToProto_string3"
                 fixed: false
@@ -10903,7 +10823,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "wallet"
-      modelFingerprint: "F2414355118B686DE62141287B17516C"
+      modelFingerprint: "4D6F3AD8F898088F78B8145AC9E70036"
       index: 10
       ignored: false
       nestedInLoop: false
@@ -10928,11 +10848,11 @@ methods:
           sapientType: "NULL"
           content: !<unknown_object>
             target: "java.lang.Iterable"
-            onlyPojoFunctions: true
+            onlyPojoFunctions: false
             builderPattern: false
           suggestedContent: !<unknown_object>
             target: "java.lang.Iterable"
-            onlyPojoFunctions: true
+            onlyPojoFunctions: false
             builderPattern: false
           valueType: "java.lang.Iterable"
           uuid: "walletToProto_iterable1"

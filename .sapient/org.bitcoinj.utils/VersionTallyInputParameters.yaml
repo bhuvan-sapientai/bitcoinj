@@ -17,8 +17,8 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "38D57E70D75DF949DC72D6770317463C"
-    problemWasSolvedByProver: false
+    modelFingerprint: "3CC71D5C704B45935736B6CF6D5ACF2B"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -72,17 +72,24 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "version"
-      modelFingerprint: "460F215D1CFEF9E6314FF187BED37B8E"
+      modelFingerprint: "EA5A443312BBDF8C2B194A192CA19E72"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: 0
-        valueType: "long"
-        uuid: "add_long1"
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.ArrayIndexOutOfBoundsException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.lang.ArrayIndexOutOfBoundsException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.lang.ArrayIndexOutOfBoundsException"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -90,7 +97,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "params"
-      modelFingerprint: "602704B1EE15D9B3C8B74B72392EDE9A"
+      modelFingerprint: "1113C10D54FF94A05963232E9EE1F45D"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -125,24 +132,36 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      modelFingerprint: "399A42305DBAC95DB70E56205A7C45EE"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "VOID"
-        fixed: true
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.ArrayIndexOutOfBoundsException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.lang.ArrayIndexOutOfBoundsException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.lang.ArrayIndexOutOfBoundsException"
+        fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     uuid: "a7db2f47-9b73-3a8d-a89d-4c6c9d13f9dd"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "addWhenVersionWriteHeadNotEqualsVersionWindowLength"
@@ -336,8 +355,8 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "F6592246B98A82857816BD4A8CD32EE7"
-    problemWasSolvedByProver: false
+    modelFingerprint: "A79BF0353C7B586B1C3BED6EDD8B1091"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -409,7 +428,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "params"
-      modelFingerprint: "602704B1EE15D9B3C8B74B72392EDE9A"
+      modelFingerprint: "1113C10D54FF94A05963232E9EE1F45D"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -444,7 +463,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "07C0C88BA81C7FDF045BFD408418C0E4"
+      modelFingerprint: "5997CAD00732478D5A8B2DC540BBE4B4"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -452,7 +471,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 1
+          value: 0
         valueType: "java.lang.Integer"
         uuid: "getCountAtOrAbove_integer1"
         fixed: false
@@ -462,10 +481,11 @@ methods:
       filledByUser: false
     uuid: "be311949-3aac-3c21-9d70-15573dd3de6a"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path4"
     testPathName: "getCountAtOrAboveWhenLLessThanVersion"
@@ -2621,11 +2641,11 @@ methods:
       filledByUser: false
     uuid: "90774a0d-9888-3368-afc7-9818d032960b"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "size"
     returnType: "int"

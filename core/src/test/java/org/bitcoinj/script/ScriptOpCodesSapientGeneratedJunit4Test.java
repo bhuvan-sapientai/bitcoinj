@@ -24,8 +24,10 @@ public class ScriptOpCodesSapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
+
         //Act Statement(s)
-        String result = ScriptOpCodes.getOpCodeName(118);
+        String result = ScriptOpCodes.getOpCodeName(1);
+
         //Assert statement(s)
         assertThat(result, equalTo("result1"));
     }
@@ -39,8 +41,10 @@ public class ScriptOpCodesSapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
+
         //Act Statement(s)
         String result = ScriptOpCodes.getOpCodeName(2);
+
         //Assert statement(s)
         assertThat(result, equalTo("NON_OP(2)"));
     }
@@ -55,8 +59,10 @@ public class ScriptOpCodesSapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
+
         //Act Statement(s)
         String result = ScriptOpCodes.getPushDataName(1);
+
         //Assert statement(s)
         assertThat(result, equalTo("result1"));
     }
@@ -71,10 +77,12 @@ public class ScriptOpCodesSapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
+
         //Act Statement(s)
-        String result = ScriptOpCodes.getPushDataName(100);
+        String result = ScriptOpCodes.getPushDataName(2);
+
         //Assert statement(s)
-        assertThat(result, equalTo("PUSHDATA(100)"));
+        assertThat(result, equalTo("PUSHDATA(2)"));
     }
 
     //Sapient generated method id: ${98749a8d-84cf-3675-aca0-3f4fb869e089}
@@ -82,14 +90,13 @@ public class ScriptOpCodesSapientGeneratedJunit4Test {
     public void getOpCodeWhenOpCodeNameMapContainsKeyOpCodeName() {
         /* Branches:
          * (opCodeNameMap.containsKey(opCodeName)) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
+
         //Act Statement(s)
-        int result = ScriptOpCodes.getOpCode("OPCODE_NAME");
+        int result = ScriptOpCodes.getOpCode("NOP3");
+
         //Assert statement(s)
-        assertThat(result, equalTo(255));
+        assertThat(result, equalTo(178));
     }
 
     //Sapient generated method id: ${f3edb0c5-7f4d-37de-aff4-a880aaa93b92}
@@ -97,12 +104,11 @@ public class ScriptOpCodesSapientGeneratedJunit4Test {
     public void getOpCodeWhenOpCodeNameMapNotContainsKeyOpCodeName() {
         /* Branches:
          * (opCodeNameMap.containsKey(opCodeName)) : false
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
+
         //Act Statement(s)
         int result = ScriptOpCodes.getOpCode("B");
+
         //Assert statement(s)
         assertThat(result, equalTo(255));
     }

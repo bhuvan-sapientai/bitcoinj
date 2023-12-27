@@ -1088,12 +1088,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "0CD9AEA57911268142384A868BE999B9"
+    modelFingerprint: "DCD2F26E5B17E24136A20351ECCFC5F3"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "E8E486ED9ABF45CA04465EF575596D0B"
+      modelFingerprint: "EECB3E6DFE935558D2C55BAF8FF4392A"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1144,19 +1144,7 @@ methods:
           methodParameters:
           - name: "payload"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "java.nio.ByteBuffer"
-                method: "allocateDirect"
-                methodParameters:
-                - name: "capacity"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "int"
-                    uuid: "read_byteBuffer1-capacity"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<static_method_return>
                 target: "java.nio.ByteBuffer"
                 method: "allocateDirect"
@@ -1183,7 +1171,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "AddressMessage"
-      modelFingerprint: "E200227F56D39EDCF46CAD6BBE460FB8"
+      modelFingerprint: "1E8CABFA4DF3BBCA687710A9AE2820B7"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1249,11 +1237,9 @@ methods:
         returnValue:
           sapientType: "COLLECTION"
           content: !<collection>
-            collectionClass: "java.util.ArrayList"
             parameters: []
             values: []
           suggestedContent: !<collection>
-            collectionClass: "java.util.ArrayList"
             parameters: []
             values: []
           valueType: "java.util.List"
@@ -1267,7 +1253,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "SPACE_JOINER"
-      modelFingerprint: "95F5736AB0C5931E76F5304DC7853ECE"
+      modelFingerprint: "7DCCB8A13A894CB829297D3505C4D14A"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1293,11 +1279,9 @@ methods:
           value:
             sapientType: "COLLECTION"
             content: !<collection>
-              collectionClass: "java.util.ArrayList"
               parameters: []
               values: []
             suggestedContent: !<collection>
-              collectionClass: "java.util.ArrayList"
               parameters: []
               values: []
             valueType: "java.util.List"

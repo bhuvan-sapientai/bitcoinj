@@ -135,12 +135,12 @@ public class FeeFilterMessageSapientGeneratedJunit4Test {
     @Test()
     public void toStringTest() {
         //Arrange Statement(s)
-        //FeeFilterMessage target = FeeFilterMessage.of(feeRateMock);
-        //doReturn("A").when(feeRateMock).toFriendlyString();
+        FeeFilterMessage target = FeeFilterMessage.of(feeRateMock);
+        doReturn("A").when(feeRateMock).toFriendlyString();
         //Act Statement(s)
-        //String result = target.toString();
+        String result = target.toString();
         //Assert statement(s)
-        //assertThat(result, equalTo("feefilter: A/kB"));
-        //verify(feeRateMock).toFriendlyString();
+        assertThat(result, equalTo("feefilter: A/kB"));
+        verify(feeRateMock).toFriendlyString();
     }
 }

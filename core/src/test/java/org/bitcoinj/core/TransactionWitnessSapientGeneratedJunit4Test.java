@@ -149,6 +149,7 @@ public class TransactionWitnessSapientGeneratedJunit4Test {
         thrown.expect(NullPointerException.class);
         //TODO: Needs initialization with real value
         List<byte[]> list = null;
+
         //Act Statement(s)
         TransactionWitness.of(list);
     }
@@ -305,9 +306,7 @@ public class TransactionWitnessSapientGeneratedJunit4Test {
             byte[] byteArray2 = new byte[]{};
             doReturn(byteArray2).when(pubKeyMock).getPubKey();
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            List list = new ArrayList<>();
-            TransactionWitness transactionWitness2 = TransactionWitness.of(list);
-            transactionWitness.when(() -> TransactionWitness.of(anyList())).thenReturn(transactionWitness2);
+            transactionWitness.when(() -> TransactionWitness.of(anyList())).thenReturn(transactionWitnessMock);
             TransactionWitness target = spy(TransactionWitness.redeemP2WPKH(signatureMock, pubKeyMock));
             doReturn(1).when(target).messageSize();
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);

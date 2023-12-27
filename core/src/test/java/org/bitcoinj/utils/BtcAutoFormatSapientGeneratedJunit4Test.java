@@ -143,9 +143,9 @@ public class BtcAutoFormatSapientGeneratedJunit4Test {
             DecimalFormat decimalFormat = new DecimalFormat();
             btcFormat.when(() -> BtcFormat.prefixUnitsIndicator(decimalFormat, 0)).thenAnswer((Answer<Void>) invocation -> null);
             Locale locale = new Locale("language1");
-            BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 1);
+            BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 0);
             //Act Statement(s)
-            int result = target.scale(new BigInteger("0"), 1);
+            int result = target.scale(new BigInteger("0"), 9);
             //Assert statement(s)
             assertThat(result, equalTo(0));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
@@ -176,9 +176,9 @@ public class BtcAutoFormatSapientGeneratedJunit4Test {
             DecimalFormat decimalFormat = new DecimalFormat();
             btcFormat.when(() -> BtcFormat.prefixUnitsIndicator(decimalFormat, 6)).thenAnswer((Answer<Void>) invocation -> null);
             Locale locale = new Locale("language1");
-            BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 1);
+            BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 0);
             //Act Statement(s)
-            int result = target.scale(new BigInteger("0"), 1);
+            int result = target.scale(new BigInteger("0"), 9);
             //Assert statement(s)
             assertThat(result, equalTo(6));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
@@ -209,9 +209,9 @@ public class BtcAutoFormatSapientGeneratedJunit4Test {
             DecimalFormat decimalFormat = new DecimalFormat();
             btcFormat.when(() -> BtcFormat.prefixUnitsIndicator(decimalFormat, 3)).thenAnswer((Answer<Void>) invocation -> null);
             Locale locale = new Locale("language1");
-            BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 1);
+            BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 0);
             //Act Statement(s)
-            int result = target.scale(new BigInteger("0"), 1);
+            int result = target.scale(new BigInteger("0"), 9);
             //Assert statement(s)
             assertThat(result, equalTo(3));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
@@ -266,7 +266,7 @@ public class BtcAutoFormatSapientGeneratedJunit4Test {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkState(false)).thenAnswer((Answer<Void>) invocation -> null);
             Locale locale = new Locale("language1");
-            BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 2);
+            BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 1);
             //Act Statement(s)
             int result = target.scale();
             //Assert statement(s)
@@ -289,11 +289,11 @@ public class BtcAutoFormatSapientGeneratedJunit4Test {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkState(false)).thenAnswer((Answer<Void>) invocation -> null);
             Locale locale = new Locale("language1");
-            BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 2);
+            BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 1);
             //Act Statement(s)
             int result = target.fractionPlaces();
             //Assert statement(s)
-            assertThat(result, equalTo(2));
+            assertThat(result, equalTo(1));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
             preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
         }
@@ -312,7 +312,7 @@ public class BtcAutoFormatSapientGeneratedJunit4Test {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkState(false)).thenAnswer((Answer<Void>) invocation -> null);
             Locale locale = new Locale("language1");
-            BtcAutoFormat target = spy(new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 2));
+            BtcAutoFormat target = spy(new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 1));
             doReturn("B").when(target).pattern();
             //Act Statement(s)
             String result = target.toString();

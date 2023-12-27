@@ -56,8 +56,8 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "E755A687793A01A8D8DDE2178F0654B2"
-    problemWasSolvedByProver: false
+    modelFingerprint: "CA03C33BD5ACAF2159A79D832CDA35BF"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
@@ -80,7 +80,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Threading"
-      modelFingerprint: "F7AA7B4C77DB972A4DB9C7161A602F8E"
+      modelFingerprint: "842A725988BE23BF631EFDD153404099"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -131,7 +131,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "9BA093927341CE18A9CCD7F02D76883D"
+      modelFingerprint: "F1B954AC657731003C93FF1C671503A6"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -159,7 +159,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "LLM"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -177,13 +177,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "578F093E53EF7F28E03CCD48F7230C73"
-    problemWasSolvedByProver: false
+    modelFingerprint: "D12A5B4BA28880FEF575EED0F65B1DCE"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "name"
-      modelFingerprint: "CC1C489A3E3CC155F2451E4548EA380C"
+      modelFingerprint: "A5A677781F1AA239DD8FD18CBAF96F68"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -191,9 +191,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "non-android"
+          value: "A"
         suggestedContent: !<regular>
-          value: "non-android"
+          value: "A"
         valueType: "java.lang.String"
         uuid: "lock_string1"
         fixed: false
@@ -203,13 +203,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "PlatformUtils"
-      modelFingerprint: "D3DBC06A8B920A45FF610FBA5ABE2491"
+      modelFingerprint: "38E10FB1C4F0A28C2077A4287FF064E2"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "REAL"
         valueType: "org.bitcoinj.base.internal.PlatformUtils"
         uuid: "org.bitcoinj.base.internal.PlatformUtils"
         fixed: false
@@ -224,8 +224,6 @@ methods:
           sapientType: "BASIC"
           content: !<regular>
             value: false
-          suggestedContent: !<regular>
-            value: false
           valueType: "boolean"
           uuid: "lock_boolean1"
           fixed: false
@@ -236,7 +234,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "7358767AC2C5DA9F0293F5DAEACDE903"
+      modelFingerprint: "214882BD9E9AE1EA212CC6B9C4E47FEF"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -283,9 +281,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "non-android"
+                value: "A"
               suggestedContent: !<regular>
-                value: "non-android"
+                value: "A"
               valueType: "java.lang.String"
               uuid: "lock_string1"
               fixed: false
@@ -318,10 +316,8 @@ methods:
           - name: "lockName"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "non-android"
               suggestedContent: !<regular>
-                value: "non-android"
+                value: "A"
               valueType: "java.lang.String"
               uuid: "lock_string1"
               fixed: false
@@ -337,11 +333,11 @@ methods:
       filledByUser: false
     uuid: "c8797ac2-3ff2-3636-b136-78c3f8e09094"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    prover: "LLM"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "warnOnLockCycles"
     returnType: "void"
@@ -357,7 +353,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "8461F672846B9DA640E7CFE7D724C3CD"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "RESULT"
@@ -378,6 +374,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -395,7 +392,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "EFDBA0E41E1C0F79544E7C16F47CA503"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "RESULT"
@@ -416,6 +413,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -433,7 +431,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "AE81C666F13EE8C5F61E42D1B1338A97"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "RESULT"
@@ -454,6 +452,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -473,7 +472,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "03A93D7BE878574C2A2DEE4C99F6B3FD"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
@@ -531,7 +530,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "LLM"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -549,7 +548,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "99763398F884DC25EEF9A5AB35038114"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "RESULT"
@@ -574,5 +573,6 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

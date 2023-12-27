@@ -61,6 +61,10 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
     @Rule()
     public ExpectedException thrown = ExpectedException.none();
 
+    private final HDPath hDPathMock = mock(HDPath.class);
+
+    private final HDPath hDPathMock2 = mock(HDPath.class);
+
     //Sapient generated method id: ${86570818-8d4b-3aa8-b29e-b79ed980b8a8}
     @Ignore()
     @Test()
@@ -132,6 +136,7 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
         thrown.expectMessage(hDDerivationException.getMessage());
         byte[] byteArray = new byte[]{};
         byte[] byteArray2 = new byte[]{};
+
         //Act Statement(s)
         HDKeyDerivation.createMasterPrivKeyFromBytes(byteArray, byteArray2);
     }
@@ -165,19 +170,21 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
         /* Branches:
          * (integer.equals(BigInteger.ZERO)) : false  #  inside assertNonZero method
          * (integer.compareTo(ECKey.CURVE.getN()) > 0) : false  #  inside assertLessThanN method
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
              MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
-            byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3, (byte) 4};
-            byteUtils.when(() -> ByteUtils.bytesToBigInteger(byteArray)).thenReturn(new BigInteger("1234"));
-            List list = new ArrayList<>();
-            HDPath hDPath2 = new HDPath(false, list);
+            byte[] byteArray = new byte[]{};
+            byteUtils.when(() -> ByteUtils.bytesToBigInteger(byteArray)).thenReturn(new BigInteger("0"));
+            HDPath hDPath2 = HDPath.m();
             hDPath.when(() -> HDPath.m()).thenReturn(hDPath2);
-            byte[] byteArray2 = new byte[]{(byte) 5, (byte) 6, (byte) 7, (byte) 8};
+            byte[] byteArray2 = new byte[]{};
             //Act Statement(s)
             DeterministicKey result = HDKeyDerivation.createMasterPrivKeyFromBytes(byteArray, byteArray2);
-            DeterministicKey deterministicKey = new DeterministicKey(hDPath2, byteArray2, new BigInteger("1234"), (DeterministicKey) null);
+            DeterministicKey deterministicKey = new DeterministicKey(hDPath2, byteArray2, new BigInteger("0"), (DeterministicKey) null);
             //Assert statement(s)
             assertThat(result, equalTo(deterministicKey));
             byteUtils.verify(() -> ByteUtils.bytesToBigInteger(byteArray), atLeast(1));
@@ -195,11 +202,10 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
-            List list = new ArrayList<>();
-            HDPath hDPath2 = new HDPath(false, list);
+            HDPath hDPath2 = HDPath.M();
             hDPath.when(() -> HDPath.M()).thenReturn(hDPath2);
-            byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3, (byte) 4};
-            byte[] byteArray2 = new byte[]{(byte) 5, (byte) 6, (byte) 7, (byte) 8};
+            byte[] byteArray = new byte[]{};
+            byte[] byteArray2 = new byte[]{};
             //Act Statement(s)
             DeterministicKey result = HDKeyDerivation.createMasterPubKeyFromBytes(byteArray, byteArray2);
             ECDomainParameters eCDomainParameters = ECKey.CURVE;
@@ -378,9 +384,11 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
+
         //Act Statement(s)
-        Stream<DeterministicKey> result = HDKeyDerivation.generate(deterministicKeyMock, 1);
+        Stream<DeterministicKey> result = HDKeyDerivation.generate(deterministicKeyMock, 0);
         Stream stream = Stream.empty();
+
         //Assert statement(s)
         //TODO: Please implement equals method in Stream for verification to succeed or you need to adjust respective assertion statements
         assertThat(result, equalTo(stream));
@@ -435,23 +443,21 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
              MockedStatic<HDKeyDerivation> hDKeyDerivation = mockStatic(HDKeyDerivation.class, CALLS_REAL_METHODS)) {
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(parentMock).getPath();
-            ChildNumber childNumber = new ChildNumber(0, false);
-            hDKeyDerivation.when(() -> HDKeyDerivation.deriveChildKeyBytesFromPrivate(parentMock, childNumber)).thenReturn(hDKeyDerivationRawKeyBytesMock);
+            doReturn(hDPathMock).when(parentMock).getPath();
+            ChildNumber[] childNumberArray = new ChildNumber[]{};
+            doReturn(hDPathMock2).when(hDPathMock).extend(childNumberMock, childNumberArray);
+            hDKeyDerivation.when(() -> HDKeyDerivation.deriveChildKeyBytesFromPrivate(parentMock, childNumberMock)).thenReturn(hDKeyDerivationRawKeyBytesMock);
             byte[] byteArray = new byte[]{};
-            byteUtils.when(() -> ByteUtils.bytesToBigInteger(byteArray)).thenReturn(new BigInteger("1234567890"));
+            byteUtils.when(() -> ByteUtils.bytesToBigInteger(byteArray)).thenReturn(new BigInteger("0"));
             //Act Statement(s)
-            DeterministicKey result = HDKeyDerivation.deriveChildKeyFromPrivate(parentMock, childNumber);
-            List list2 = new ArrayList<>();
-            HDPath hDPath2 = new HDPath(false, list2);
+            DeterministicKey result = HDKeyDerivation.deriveChildKeyFromPrivate(parentMock, childNumberMock);
             byte[] byteArray2 = new byte[]{};
-            DeterministicKey deterministicKey = new DeterministicKey(hDPath2, byteArray2, new BigInteger("1234567890"), parentMock);
+            DeterministicKey deterministicKey = new DeterministicKey(hDPathMock2, byteArray2, new BigInteger("0"), parentMock);
             //Assert statement(s)
             assertThat(result, equalTo(deterministicKey));
             verify(parentMock, atLeast(1)).getPath();
-            hDKeyDerivation.verify(() -> HDKeyDerivation.deriveChildKeyBytesFromPrivate(parentMock, childNumber), atLeast(1));
+            verify(hDPathMock, atLeast(1)).extend(childNumberMock, childNumberArray);
+            hDKeyDerivation.verify(() -> HDKeyDerivation.deriveChildKeyBytesFromPrivate(parentMock, childNumberMock), atLeast(1));
             byteUtils.verify(() -> ByteUtils.bytesToBigInteger(byteArray), atLeast(1));
         }
     }
@@ -521,23 +527,22 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<HDKeyDerivation> hDKeyDerivation = mockStatic(HDKeyDerivation.class, CALLS_REAL_METHODS)) {
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(parentMock).getPath();
+            doReturn(hDPathMock).when(parentMock).getPath();
+            ChildNumber[] childNumberArray = new ChildNumber[]{};
+            doReturn(hDPathMock2).when(hDPathMock).extend(childNumberMock, childNumberArray);
             hDKeyDerivation.when(() -> HDKeyDerivation.deriveChildKeyBytesFromPublic(parentMock, childNumberMock, HDKeyDerivation.PublicDeriveMode.NORMAL)).thenReturn(hDKeyDerivationRawKeyBytesMock);
             //Act Statement(s)
             DeterministicKey result = HDKeyDerivation.deriveChildKeyFromPublic(parentMock, childNumberMock, HDKeyDerivation.PublicDeriveMode.NORMAL);
-            List list2 = new ArrayList<>();
-            HDPath hDPath2 = new HDPath(false, list2);
             byte[] byteArray = new byte[]{};
             ECDomainParameters eCDomainParameters = ECKey.CURVE;
             ECCurve eCCurve = eCDomainParameters.getCurve();
             byte[] byteArray2 = new byte[]{};
             LazyECPoint lazyECPoint = new LazyECPoint(eCCurve, byteArray2);
-            DeterministicKey deterministicKey = new DeterministicKey(hDPath2, byteArray, lazyECPoint, (BigInteger) null, parentMock);
+            DeterministicKey deterministicKey = new DeterministicKey(hDPathMock2, byteArray, lazyECPoint, (BigInteger) null, parentMock);
             //Assert statement(s)
             assertThat(result, equalTo(deterministicKey));
             verify(parentMock, atLeast(1)).getPath();
+            verify(hDPathMock, atLeast(1)).extend(childNumberMock, childNumberArray);
             hDKeyDerivation.verify(() -> HDKeyDerivation.deriveChildKeyBytesFromPublic(parentMock, childNumberMock, HDKeyDerivation.PublicDeriveMode.NORMAL), atLeast(1));
         }
     }

@@ -16,13 +16,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "25EB8A9B9A92701A3215F5BE0E1033ED"
+    modelFingerprint: "C634E5F9AF6DEE1FE41B0E54E9748F3E"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "opcode"
-      modelFingerprint: "0A2401D2093F3A799694557AA09A7A76"
+      modelFingerprint: "5FD67A31D22A966826ABC78776B9E01E"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -30,9 +30,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 118
+          value: 1
         suggestedContent: !<regular>
-          value: 118
+          value: 1
         valueType: "int"
         uuid: "getOpCodeName_int1"
         fixed: false
@@ -60,11 +60,11 @@ methods:
       filledByUser: false
     uuid: "30d5902b-94ed-3293-b781-8d63e65c6e22"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "getOpCodeNameWhenOpCodeMapNotContainsKeyOpcode"
@@ -120,6 +120,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -181,11 +182,11 @@ methods:
       filledByUser: false
     uuid: "2085f4ca-53bf-3a20-bd24-b2d70ca47c0a"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "getPushDataNameWhenOpCodeMapNotContainsKeyOpcode"
@@ -193,13 +194,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "0118AA53877DFED8A0E0AB9A9B813C5C"
+    modelFingerprint: "E5E7F8D722C55B98A8FD8C919B170846"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "opcode"
-      modelFingerprint: "A14496C2D479BA9A4B769D0DE1180F7B"
+      modelFingerprint: "66A26AEC2ECE837758702C03369DABAE"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -207,9 +208,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 100
+          value: 2
         suggestedContent: !<regular>
-          value: 100
+          value: 2
         valueType: "int"
         uuid: "getPushDataName_int1"
         fixed: false
@@ -219,7 +220,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "8FF27B4A62CB05D49DC571E368B5D4F3"
+      modelFingerprint: "241B6FB3F222E7D063226568DFE8F128"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -227,9 +228,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "PUSHDATA(100)"
+          value: "PUSHDATA(2)"
         suggestedContent: !<regular>
-          value: "PUSHDATA(100)"
+          value: "PUSHDATA(2)"
         valueType: "java.lang.String"
         uuid: "getPushDataName_string1"
         fixed: false
@@ -239,11 +240,11 @@ methods:
       filledByUser: false
     uuid: "85c350a7-2bb3-3cca-8669-ccbfa2236fd6"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getOpCode"
     returnType: "int"
@@ -259,13 +260,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "00EFE61B17E2865618B0AD8BF01D28AD"
-    problemWasSolvedByProver: false
+    modelFingerprint: "0C463F345EC0A30267B64CF4E7B1052C"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "opCodeName"
-      modelFingerprint: "F5EAEA56C8953AB717C478EED24E5DC5"
+      modelFingerprint: "29A1B2674EECA421598875F3EA7D320C"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -273,9 +274,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "OPCODE_NAME"
+          value: "NOP3"
         suggestedContent: !<regular>
-          value: "OPCODE_NAME"
+          value: "NOP3"
         valueType: "java.lang.String"
         uuid: "getOpCode_string1"
         fixed: false
@@ -285,7 +286,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "DEFB82E119BEB06D142FAEB10EEE9273"
+      modelFingerprint: "E5C3AD67D07515CC69793E85E383B533"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -293,9 +294,12 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 255
+          value: 178
+        suggestedContent: !<regular>
+          value: 178
         valueType: "int"
-        fixed: true
+        uuid: "getOpCode_int1"
+        fixed: false
         equalsMethodPresent: true
         explicitCastNeeded: false
       staticReadMethodForField: false
@@ -304,7 +308,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "LLM"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -315,7 +319,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "C88D8DA32137DAA8B014CF760A1FD79C"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
@@ -359,6 +363,6 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "LLM"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

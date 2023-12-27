@@ -98,13 +98,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "E0C95065D44A6C98C3518AD3A8FE424E"
+    modelFingerprint: "C0EA4B80D64A7EAC458246ED7DC5F5DE"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "level"
-      modelFingerprint: "6CD17F023DF1F154308C49E02B338B60"
+      modelFingerprint: "A788F2BC2750865845141C6636FE3F7F"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -160,11 +160,11 @@ methods:
       filledByUser: false
     uuid: "77d9580d-0a0c-3794-aeb1-13da2a5e4954"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "init1WhenHandlersLengthNotGreaterThan0"
@@ -496,10 +496,10 @@ methods:
       filledByUser: false
     uuid: "5378ac91-7deb-341c-89c9-a5f9224b65ce"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "formatWhenLogRecordGetThrownIsNull"
@@ -655,7 +655,8 @@ methods:
       filledByUser: false
     uuid: "ac8ff3d4-4f6a-3dff-8982-4e680415e084"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false

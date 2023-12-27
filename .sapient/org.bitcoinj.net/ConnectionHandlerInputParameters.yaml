@@ -37,12 +37,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "C555D13BDFE4449197E59391F0A35A79"
+    modelFingerprint: "FF0E46C48C4C22A136E566EF5375523F"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "2144679A8AFB8B9DA49B9EE5B6CC582C"
+      modelFingerprint: "0B7FB36AFDC02010F8F50CAF01D6A661"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -150,50 +150,10 @@ methods:
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "3325E3DBBAFAF0B0DFF2BC0C264319B2"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "REAL"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkState"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: true
-            valueType: "boolean"
-            uuid: "<init>_boolean1"
-            fixed: false
-            collectionUuid: "<init>_set1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkState(boolean): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "<init>_void2"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "080E683FC0A42D9E0F5A3CA433450463"
-      index: 4
+      index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -215,7 +175,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "965790A7B356318904D2C9B18A586D2E"
-      index: 5
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -258,10 +218,11 @@ methods:
       filledByUser: false
     uuid: "9064f274-a506-30bf-be65-c6e849f200e4"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path2"
     testPathName: "writeBytesWhenCaughtCancelledKeyExceptionThrowsIOException"
@@ -271,7 +232,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "A11A4840CF935EA9FD581D0E12480C20"
+    modelFingerprint: "648ACFE56928FD351A89F6F1E7AE5C2D"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -281,7 +242,7 @@ methods:
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "2144679A8AFB8B9DA49B9EE5B6CC582C"
+      modelFingerprint: "0B7FB36AFDC02010F8F50CAF01D6A661"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -389,50 +350,10 @@ methods:
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "3325E3DBBAFAF0B0DFF2BC0C264319B2"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "REAL"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkState"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: true
-            valueType: "boolean"
-            uuid: "<init>_boolean1"
-            fixed: false
-            collectionUuid: "<init>_set1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkState(boolean): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "<init>_void2"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "080E683FC0A42D9E0F5A3CA433450463"
-      index: 4
+      index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -454,7 +375,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "BC7A4EEA984A9C51C35583B0D6D3D37F"
-      index: 5
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -537,10 +458,11 @@ methods:
       filledByUser: false
     uuid: "ff0e0c4a-603f-3689-8781-b818ec592a3a"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path4"
     pathIdForUser: "path3"
     testPathName: "writeBytesWhenBytesToWriteRemainingPlusMessageLengthNotGreaterThanOUTBOUND_BUFFER_BYTE_COUNTAndCaughtCThrowsIOException"
@@ -550,7 +472,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "D266511617B973BE605536ADA348067D"
+    modelFingerprint: "3BD955234DF11726772577E445490C6B"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -560,7 +482,7 @@ methods:
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "6A28D882D6EDB89271A4C64FD0E8C468"
+      modelFingerprint: "0903F04D846474F7A434E831154C310B"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -692,50 +614,10 @@ methods:
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "3325E3DBBAFAF0B0DFF2BC0C264319B2"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "REAL"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkState"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: true
-            valueType: "boolean"
-            uuid: "<init>_boolean1"
-            fixed: false
-            collectionUuid: "<init>_set1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkState(boolean): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "<init>_void2"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "080E683FC0A42D9E0F5A3CA433450463"
-      index: 4
+      index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -756,8 +638,8 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "BC7A4EEA984A9C51C35583B0D6D3D37F"
-      index: 5
+      modelFingerprint: "8481C87C2B2D34F4D9E6272065F76EE8"
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -768,38 +650,20 @@ methods:
           parameters:
           - name: "cause"
             value:
-              sapientType: "EXCEPTION"
+              sapientType: "OBJECT"
               content: !<new>
-                target: "java.io.IOException"
-                parameters:
-                - name: "message"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "Outbound buffer overflowed"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                target: "java.nio.channels.CancelledKeyException"
+                parameters: []
                 privateConstructor: false
-                createdByTargetCode: true
+                createdByTargetCode: false
               suggestedContent: !<new>
-                target: "java.io.IOException"
-                parameters:
-                - name: "message"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "Outbound buffer overflowed"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                target: "java.nio.channels.CancelledKeyException"
+                parameters: []
                 privateConstructor: false
-                createdByTargetCode: true
-              valueType: "java.io.IOException"
-              uuid: "writeBytes_iOException1"
-              fixed: true
+                createdByTargetCode: false
+              valueType: "java.nio.channels.CancelledKeyException"
+              uuid: "writeBytes_cancelledKeyException1"
+              fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -809,24 +673,15 @@ methods:
           parameters:
           - name: "cause"
             value:
-              sapientType: "EXCEPTION"
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
-                target: "java.io.IOException"
-                parameters:
-                - name: "message"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "Outbound buffer overflowed"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                target: "java.nio.channels.CancelledKeyException"
+                parameters: []
                 privateConstructor: false
-                createdByTargetCode: true
-              valueType: "java.io.IOException"
-              uuid: "writeBytes_iOException1"
-              fixed: true
+                createdByTargetCode: false
+              valueType: "java.nio.channels.CancelledKeyException"
+              uuid: "writeBytes_cancelledKeyException1"
+              fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -844,6 +699,7 @@ methods:
     ignoredBySystem: false
     disabledReason: "Potential harmful system call (Selector.wakeup) detected; Learn\
       \ more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -855,12 +711,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "343C1193AFAE8E7BAC79D0E630417480"
+    modelFingerprint: "C9BDC104918EADF2C2DAB9C78FD34E90"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "6A28D882D6EDB89271A4C64FD0E8C468"
+      modelFingerprint: "0903F04D846474F7A434E831154C310B"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -992,50 +848,10 @@ methods:
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "3325E3DBBAFAF0B0DFF2BC0C264319B2"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "REAL"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkState"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: true
-            valueType: "boolean"
-            uuid: "<init>_boolean1"
-            fixed: false
-            collectionUuid: "<init>_set1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkState(boolean): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "<init>_void2"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
     - type: "RESULT"
       name: "result"
       modelFingerprint: "26BBAB4CACDF04EF38682B6FB29FFBBD"
-      index: 4
+      index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -1065,6 +881,7 @@ methods:
     ignoredBySystem: false
     disabledReason: "Potential harmful system call (Selector.wakeup) detected; Learn\
       \ more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -1088,7 +905,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "E64A267965047B90C34A19EAC12EF17A"
+    modelFingerprint: "C5040C9A85EBF2454C7DC0D73D9C4515"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -1098,7 +915,7 @@ methods:
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "CBEEF87343B13C8DF6C0ACC9064E11BE"
+      modelFingerprint: "0903F04D846474F7A434E831154C310B"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1111,14 +928,6 @@ methods:
           - name: "connection"
             value:
               sapientType: "NULL"
-              content: !<unknown_object>
-                target: "org.bitcoinj.net.StreamConnection"
-                onlyPojoFunctions: true
-                builderPattern: false
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.net.StreamConnection"
-                onlyPojoFunctions: true
-                builderPattern: false
               valueType: "org.bitcoinj.net.StreamConnection"
               uuid: "<init>_streamConnection1"
               fixed: false
@@ -1127,10 +936,6 @@ methods:
           - name: "key"
             value:
               sapientType: "NULL"
-              content: !<unknown_object>
-                target: "java.nio.channels.SelectionKey"
-                onlyPojoFunctions: false
-                builderPattern: false
               suggestedContent: !<unknown_object>
                 target: "java.nio.channels.SelectionKey"
                 onlyPojoFunctions: false
@@ -1146,11 +951,23 @@ methods:
               content: !<collection>
                 collectionClass: "java.util.HashSet"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "THIS"
+                  valueType: "org.bitcoinj.net.ConnectionHandler"
+                  uuid: "targetClassObject"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               suggestedContent: !<collection>
                 collectionClass: "java.util.HashSet"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "THIS"
+                  valueType: "org.bitcoinj.net.ConnectionHandler"
+                  uuid: "targetClassObject"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.Set"
               genericValueType: "org.bitcoinj.net.ConnectionHandler"
               uuid: "<init>_set1"
@@ -1165,14 +982,6 @@ methods:
           - name: "connection"
             value:
               sapientType: "NULL"
-              content: !<unknown_object>
-                target: "org.bitcoinj.net.StreamConnection"
-                onlyPojoFunctions: true
-                builderPattern: false
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.net.StreamConnection"
-                onlyPojoFunctions: true
-                builderPattern: false
               valueType: "org.bitcoinj.net.StreamConnection"
               uuid: "<init>_streamConnection1"
               fixed: false
@@ -1180,11 +989,7 @@ methods:
               explicitCastNeeded: false
           - name: "key"
             value:
-              sapientType: "NULL"
-              content: !<unknown_object>
-                target: "java.nio.channels.SelectionKey"
-                onlyPojoFunctions: false
-                builderPattern: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<unknown_object>
                 target: "java.nio.channels.SelectionKey"
                 onlyPojoFunctions: false
@@ -1197,14 +1002,16 @@ methods:
           - name: "connectedHandlers"
             value:
               sapientType: "COLLECTION"
-              content: !<collection>
-                collectionClass: "java.util.HashSet"
-                parameters: []
-                values: []
               suggestedContent: !<collection>
                 collectionClass: "java.util.HashSet"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "THIS"
+                  valueType: "org.bitcoinj.net.ConnectionHandler"
+                  uuid: "targetClassObject"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.Set"
               genericValueType: "org.bitcoinj.net.ConnectionHandler"
               uuid: "<init>_set1"
@@ -1354,11 +1161,11 @@ methods:
       filledByUser: false
     uuid: "ba15c53d-07b3-3a43-bed0-8662bcd3e061"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "closeConnectionWhenConnectedHandlersIsNull"
@@ -1368,12 +1175,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "6291ED9D119CA65573B8379DC2C9E5C5"
+    modelFingerprint: "BCBFCEA71E3AFFC62C1CA068DA9EB9A3"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "BB85F15D3F50F7E700606CED5340BFBB"
+      modelFingerprint: "D45B9178C355AC1BC1AC77EC2748F2B3"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1386,14 +1193,6 @@ methods:
           - name: "connection"
             value:
               sapientType: "NULL"
-              content: !<unknown_object>
-                target: "org.bitcoinj.net.StreamConnection"
-                onlyPojoFunctions: true
-                builderPattern: false
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.net.StreamConnection"
-                onlyPojoFunctions: true
-                builderPattern: false
               valueType: "org.bitcoinj.net.StreamConnection"
               uuid: "<init>_streamConnection1"
               fixed: false
@@ -1402,10 +1201,6 @@ methods:
           - name: "key"
             value:
               sapientType: "NULL"
-              content: !<unknown_object>
-                target: "java.nio.channels.SelectionKey"
-                onlyPojoFunctions: false
-                builderPattern: false
               suggestedContent: !<unknown_object>
                 target: "java.nio.channels.SelectionKey"
                 onlyPojoFunctions: false
@@ -1421,11 +1216,23 @@ methods:
               content: !<collection>
                 collectionClass: "java.util.HashSet"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "THIS"
+                  valueType: "org.bitcoinj.net.ConnectionHandler"
+                  uuid: "targetClassObject"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               suggestedContent: !<collection>
                 collectionClass: "java.util.HashSet"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "THIS"
+                  valueType: "org.bitcoinj.net.ConnectionHandler"
+                  uuid: "targetClassObject"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.Set"
               genericValueType: "org.bitcoinj.net.ConnectionHandler"
               uuid: "<init>_set1"
@@ -1452,14 +1259,6 @@ methods:
           - name: "connection"
             value:
               sapientType: "NULL"
-              content: !<unknown_object>
-                target: "org.bitcoinj.net.StreamConnection"
-                onlyPojoFunctions: true
-                builderPattern: false
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.net.StreamConnection"
-                onlyPojoFunctions: true
-                builderPattern: false
               valueType: "org.bitcoinj.net.StreamConnection"
               uuid: "<init>_streamConnection1"
               fixed: false
@@ -1467,11 +1266,7 @@ methods:
               explicitCastNeeded: false
           - name: "key"
             value:
-              sapientType: "NULL"
-              content: !<unknown_object>
-                target: "java.nio.channels.SelectionKey"
-                onlyPojoFunctions: false
-                builderPattern: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<unknown_object>
                 target: "java.nio.channels.SelectionKey"
                 onlyPojoFunctions: false
@@ -1484,14 +1279,16 @@ methods:
           - name: "connectedHandlers"
             value:
               sapientType: "NULL"
-              content: !<collection>
-                collectionClass: "java.util.HashSet"
-                parameters: []
-                values: []
               suggestedContent: !<collection>
                 collectionClass: "java.util.HashSet"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "THIS"
+                  valueType: "org.bitcoinj.net.ConnectionHandler"
+                  uuid: "targetClassObject"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.Set"
               genericValueType: "org.bitcoinj.net.ConnectionHandler"
               uuid: "<init>_set1"
@@ -1644,11 +1441,11 @@ methods:
       filledByUser: false
     uuid: "45eba761-9d43-358e-9382-654546ac97fe"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path1"
     pathIdForUser: "path3"
     testPathName: "closeConnectionWhenConnectedHandlersNotRemoveThisThrowsIllegalStateException"
@@ -1658,12 +1455,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "F2A80A0DD1AC94838E95DA2C10B3AF37"
+    modelFingerprint: "BE12FB2123E4D90B57E93057558A202D"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "CBEEF87343B13C8DF6C0ACC9064E11BE"
+      modelFingerprint: "0903F04D846474F7A434E831154C310B"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1676,14 +1473,6 @@ methods:
           - name: "connection"
             value:
               sapientType: "NULL"
-              content: !<unknown_object>
-                target: "org.bitcoinj.net.StreamConnection"
-                onlyPojoFunctions: true
-                builderPattern: false
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.net.StreamConnection"
-                onlyPojoFunctions: true
-                builderPattern: false
               valueType: "org.bitcoinj.net.StreamConnection"
               uuid: "<init>_streamConnection1"
               fixed: false
@@ -1692,10 +1481,6 @@ methods:
           - name: "key"
             value:
               sapientType: "NULL"
-              content: !<unknown_object>
-                target: "java.nio.channels.SelectionKey"
-                onlyPojoFunctions: false
-                builderPattern: false
               suggestedContent: !<unknown_object>
                 target: "java.nio.channels.SelectionKey"
                 onlyPojoFunctions: false
@@ -1711,11 +1496,23 @@ methods:
               content: !<collection>
                 collectionClass: "java.util.HashSet"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "THIS"
+                  valueType: "org.bitcoinj.net.ConnectionHandler"
+                  uuid: "targetClassObject"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               suggestedContent: !<collection>
                 collectionClass: "java.util.HashSet"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "THIS"
+                  valueType: "org.bitcoinj.net.ConnectionHandler"
+                  uuid: "targetClassObject"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.Set"
               genericValueType: "org.bitcoinj.net.ConnectionHandler"
               uuid: "<init>_set1"
@@ -1742,14 +1539,6 @@ methods:
           - name: "connection"
             value:
               sapientType: "NULL"
-              content: !<unknown_object>
-                target: "org.bitcoinj.net.StreamConnection"
-                onlyPojoFunctions: true
-                builderPattern: false
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.net.StreamConnection"
-                onlyPojoFunctions: true
-                builderPattern: false
               valueType: "org.bitcoinj.net.StreamConnection"
               uuid: "<init>_streamConnection1"
               fixed: false
@@ -1757,11 +1546,7 @@ methods:
               explicitCastNeeded: false
           - name: "key"
             value:
-              sapientType: "NULL"
-              content: !<unknown_object>
-                target: "java.nio.channels.SelectionKey"
-                onlyPojoFunctions: false
-                builderPattern: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<unknown_object>
                 target: "java.nio.channels.SelectionKey"
                 onlyPojoFunctions: false
@@ -1774,14 +1559,16 @@ methods:
           - name: "connectedHandlers"
             value:
               sapientType: "COLLECTION"
-              content: !<collection>
-                collectionClass: "java.util.HashSet"
-                parameters: []
-                values: []
               suggestedContent: !<collection>
                 collectionClass: "java.util.HashSet"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "THIS"
+                  valueType: "org.bitcoinj.net.ConnectionHandler"
+                  uuid: "targetClassObject"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.Set"
               genericValueType: "org.bitcoinj.net.ConnectionHandler"
               uuid: "<init>_set1"
@@ -1934,11 +1721,11 @@ methods:
       filledByUser: false
     uuid: "8cf3a4b5-9dad-3e1b-8fdb-a33cebbd0346"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "handleKey"
     returnType: "void"
@@ -2015,10 +1802,10 @@ methods:
       filledByUser: false
     uuid: "c8522d7c-b12e-3760-afe1-4aef4bbe70c2"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "handleKeyWhenKeyNotIsValid"
@@ -2101,10 +1888,10 @@ methods:
       filledByUser: false
     uuid: "f30e32c7-b1b1-3dcf-912f-c877c210b02e"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path8"
     pathIdForUser: "path3"
     testPathName: "handleKeyWhenTGetMessageIsNotNullThrowsNullPointerException"
@@ -2396,10 +2183,10 @@ methods:
       filledByUser: false
     uuid: "8dd15228-f18e-36f7-bb3b-0267ba046ba1"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path7"
     pathIdForUser: "path8"
     testPathName: "handleKeyWhenKeyIsWritable"
@@ -2543,10 +2330,10 @@ methods:
       filledByUser: false
     uuid: "2b6f46d9-9014-3c84-aea9-8946119c95e2"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path15"
     pathIdForUser: "path12"
     testPathName: "handleKeyWhenKeyNotIsReadableAndCaughtExceptionAndTGetMessageIsNotNull"
@@ -2804,10 +2591,10 @@ methods:
       filledByUser: false
     uuid: "ea709432-4919-38c1-b0ec-1c3c03e0aaa8"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path4"
     pathIdForUser: "path17"
     testPathName: "handleKeyWhenHandlerReadBuffPositionEqualsBytesConsumedAndKeyIsWritable"
@@ -3006,10 +2793,10 @@ methods:
       filledByUser: false
     uuid: "24627816-8d5d-3930-a4db-6b6f12291aff"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path5"
     pathIdForUser: "path18"
     testPathName: "handleKeyWhenKeyNotIsWritable"
@@ -3230,7 +3017,7 @@ methods:
       filledByUser: false
     uuid: "7f01fbea-3b7d-3ee8-a186-b1ba26d6f395"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false

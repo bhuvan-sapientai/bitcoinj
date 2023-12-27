@@ -30,10 +30,12 @@ public class HDUtilsSapientGeneratedJunit4Test {
     public void createHmacSha512DigestTest() {
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{};
+
         //Act Statement(s)
         HMac result = HDUtils.createHmacSha512Digest(byteArray);
         SHA512Digest sHA512Digest = new SHA512Digest();
         HMac hMac = new HMac(sHA512Digest);
+
         //Assert statement(s)
         //TODO: Please implement equals method in HMac for verification to succeed or you need to adjust respective assertion statements
         assertThat(result, equalTo(hMac));
@@ -49,8 +51,10 @@ public class HDUtilsSapientGeneratedJunit4Test {
         doNothing().when(hmacSha512Mock).update(byteArray, 0, 0);
         byte[] byteArray2 = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
         doReturn(0).when(hmacSha512Mock).doFinal(byteArray2, 0);
+
         //Act Statement(s)
         byte[] result = HDUtils.hmacSha512(hmacSha512Mock, byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo(byteArray2));
         verify(hmacSha512Mock).reset();
@@ -88,9 +92,11 @@ public class HDUtilsSapientGeneratedJunit4Test {
     public void toCompressedTest() {
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{};
+
         //Act Statement(s)
         byte[] result = HDUtils.toCompressed(byteArray);
         byte[] byteResultArray = new byte[]{};
+
         //Assert statement(s)
         assertThat(result, equalTo(byteResultArray));
     }
@@ -102,9 +108,11 @@ public class HDUtilsSapientGeneratedJunit4Test {
          * (bytes.length == 4) : true
          * (branch expression (line 57)) : false
          */
+
         //Act Statement(s)
         byte[] result = HDUtils.longTo4ByteArray(0L);
         byte[] byteResultArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0};
+
         //Assert statement(s)
         assertThat(result, equalTo(byteResultArray));
     }
@@ -117,9 +125,11 @@ public class HDUtilsSapientGeneratedJunit4Test {
          * (bytes.length == 4) : true
          * (branch expression (line 57)) : false
          */
+
         //Act Statement(s)
         byte[] result = HDUtils.longTo4ByteArray(1L);
         byte[] byteResultArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3};
+
         //Assert statement(s)
         assertThat(result, equalTo(byteResultArray));
     }

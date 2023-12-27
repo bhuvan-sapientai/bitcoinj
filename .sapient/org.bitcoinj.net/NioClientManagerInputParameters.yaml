@@ -2881,7 +2881,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "93850189592620C02EF34B0BD30AD9FB"
+    modelFingerprint: "AA11AF513534E9A1014A458FF84FA481"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -2912,17 +2912,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "serverAddress"
-      modelFingerprint: "5611EE46DE0CD31836B4B87FB30D59D3"
+      modelFingerprint: "CF0EB3DEA07F1171B2E1DFD1E85D42CB"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "NULL"
-        content: !<unknown_object>
-          target: "java.net.SocketAddress"
-          onlyPojoFunctions: false
-          builderPattern: false
         suggestedContent: !<unknown_object>
           target: "java.net.SocketAddress"
           onlyPojoFunctions: false
@@ -2936,7 +2932,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "connection"
-      modelFingerprint: "CFEAF31B6D925C54D1A50C56053AE460"
+      modelFingerprint: "C453A5F8EB06108289088AA7A602A9A1"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -2978,7 +2974,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ListenableCompletableFuture"
-      modelFingerprint: "7FE1CA43A6F5AEAEA79D2B1F5EF9FC88"
+      modelFingerprint: "6320B21079751B911A7BF1C489E4610F"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -3006,17 +3002,7 @@ methods:
             explicitCastNeeded: false
         signature: "of(CompletableFuture): ListenableCompletableFuture"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<new>
-            target: "org.bitcoinj.utils.ListenableCompletableFuture"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
-            target: "org.bitcoinj.utils.ListenableCompletableFuture"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
           genericValueType: "java.net.SocketAddress"
           uuid: "openConnection_listenableCompletableFuture1"
@@ -3028,23 +3014,13 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "0F4637A39FDED4239184273EA9F5DF2D"
+      modelFingerprint: "48F39B04B15CFD93DB26837D8AA61EC7"
       index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.utils.ListenableCompletableFuture"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.utils.ListenableCompletableFuture"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
         genericValueType: "java.net.SocketAddress"
         uuid: "openConnection_listenableCompletableFuture1"
@@ -3070,7 +3046,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "4F0201C73E0DB779A6E293ACCA511EF3"
+    modelFingerprint: "94D4BA4634CE40482BC65071A8C344C0"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -3106,17 +3082,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "serverAddress"
-      modelFingerprint: "5611EE46DE0CD31836B4B87FB30D59D3"
+      modelFingerprint: "CF0EB3DEA07F1171B2E1DFD1E85D42CB"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "NULL"
-        content: !<unknown_object>
-          target: "java.net.SocketAddress"
-          onlyPojoFunctions: false
-          builderPattern: false
         suggestedContent: !<unknown_object>
           target: "java.net.SocketAddress"
           onlyPojoFunctions: false
@@ -3130,7 +3102,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "connection"
-      modelFingerprint: "CFEAF31B6D925C54D1A50C56053AE460"
+      modelFingerprint: "C453A5F8EB06108289088AA7A602A9A1"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -3172,7 +3144,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "SocketChannel"
-      modelFingerprint: "5FCCE977CC9F87825D2118D3CE278DA2"
+      modelFingerprint: "2B34611D4066F4D6862389DD614E8323"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -3194,15 +3166,15 @@ methods:
         - "java.io.IOException"
         signature: "open(): SocketChannel throws java.io.IOException"
         returnValue:
-          sapientType: "NULL"
-          content: !<unknown_object>
+          sapientType: "OBJECT"
+          content: !<static_method_return>
             target: "java.nio.channels.SocketChannel"
-            onlyPojoFunctions: true
-            builderPattern: false
-          suggestedContent: !<unknown_object>
+            method: "open"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
             target: "java.nio.channels.SocketChannel"
-            onlyPojoFunctions: true
-            builderPattern: false
+            method: "open"
+            methodParameters: []
           valueType: "java.nio.channels.SocketChannel"
           uuid: "openConnection_socketChannel1"
           fixed: false
@@ -3211,10 +3183,210 @@ methods:
         access: 9
       staticReadMethodForField: false
       filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "sc"
+      modelFingerprint: "8217D1DDE224B57065455BBE588E6BD5"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 11
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.nio.channels.SocketChannel"
+          method: "open"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "java.nio.channels.SocketChannel"
+          method: "open"
+          methodParameters: []
+        valueType: "java.nio.channels.SocketChannel"
+        uuid: "openConnection_socketChannel1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "sc"
+        name: "configureBlocking"
+        parameters:
+        - name: "block"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "java.io.IOException"
+        signature: "configureBlocking(boolean): SelectableChannel throws java.io.IOException"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "java.nio.channels.SelectableChannel"
+            localVariableValue:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.nio.channels.SocketChannel"
+                method: "open"
+                methodParameters: []
+              suggestedContent: !<static_method_return>
+                target: "java.nio.channels.SocketChannel"
+                method: "open"
+                methodParameters: []
+              valueType: "java.nio.channels.SocketChannel"
+              uuid: "openConnection_socketChannel1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "block"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: false
+                valueType: "boolean"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "configureBlocking"
+          suggestedContent: !<method_return_from_value>
+            target: "java.nio.channels.SelectableChannel"
+            localVariableValue:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.nio.channels.SocketChannel"
+                method: "open"
+                methodParameters: []
+              suggestedContent: !<static_method_return>
+                target: "java.nio.channels.SocketChannel"
+                method: "open"
+                methodParameters: []
+              valueType: "java.nio.channels.SocketChannel"
+              uuid: "openConnection_socketChannel1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "block"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: false
+                valueType: "boolean"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "configureBlocking"
+          valueType: "java.nio.channels.SelectableChannel"
+          uuid: "openConnection_selectableChannel1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 17
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "sc"
+      modelFingerprint: "062CBAC4CE00733EC6F6DC06D4C250A9"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 11
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.nio.channels.SocketChannel"
+          method: "open"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "java.nio.channels.SocketChannel"
+          method: "open"
+          methodParameters: []
+        valueType: "java.nio.channels.SocketChannel"
+        uuid: "openConnection_socketChannel1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "sc"
+        name: "connect"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "NULL"
+            suggestedContent: !<unknown_object>
+              target: "java.net.SocketAddress"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "java.net.SocketAddress"
+            uuid: "openConnection_socketAddress1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "java.io.IOException"
+        signature: "connect(SocketAddress): boolean throws java.io.IOException"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: false
+          valueType: "boolean"
+          uuid: "openConnection_boolean2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
     - type: "STATIC"
       name: "ListenableCompletableFuture"
-      modelFingerprint: "96DAFE6409631D04679A267A9E352734"
-      index: 7
+      modelFingerprint: "E099530F457B85530B1403960C8C78EC"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 11
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+        uuid: "org.bitcoinj.utils.ListenableCompletableFuture"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.utils.ListenableCompletableFuture"
+        name: "of"
+        parameters:
+        - name: "future"
+          value:
+            sapientType: "NULL"
+            valueType: "java.util.concurrent.CompletableFuture"
+            uuid: "openConnection_completableFuture1"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "of(CompletableFuture): ListenableCompletableFuture"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+          uuid: "openConnection_listenableCompletableFuture1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "ListenableCompletableFuture"
+      modelFingerprint: "2AD9A68291724B7A94B3B801D730C9ED"
+      index: 9
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3231,36 +3403,28 @@ methods:
         parameters:
         - name: "throwable"
           value:
-            sapientType: "NULL"
-            content: !<unknown_object>
-              target: "java.nio.channels.SocketChannel"
-              onlyPojoFunctions: true
-              builderPattern: false
-            suggestedContent: !<unknown_object>
-              target: "java.nio.channels.SocketChannel"
-              onlyPojoFunctions: true
-              builderPattern: false
-            valueType: "java.nio.channels.SocketChannel"
-            uuid: "openConnection_socketChannel1"
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.lang.Throwable"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: false
+            suggestedContent: !<new>
+              target: "java.lang.Throwable"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.lang.Throwable"
+            uuid: "openConnection_throwable1"
             fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
-        signature: "failedFuture(SocketChannel): ListenableCompletableFuture"
+        signature: "failedFuture(Throwable): ListenableCompletableFuture"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<new>
-            target: "org.bitcoinj.utils.ListenableCompletableFuture"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
-            target: "org.bitcoinj.utils.ListenableCompletableFuture"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
           genericValueType: "java.net.SocketAddress"
-          uuid: "openConnection_listenableCompletableFuture1"
+          uuid: "openConnection_listenableCompletableFuture2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -3269,26 +3433,16 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "0F4637A39FDED4239184273EA9F5DF2D"
-      index: 8
+      modelFingerprint: "48F39B04B15CFD93DB26837D8AA61EC7"
+      index: 10
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.utils.ListenableCompletableFuture"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.utils.ListenableCompletableFuture"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
         genericValueType: "java.net.SocketAddress"
-        uuid: "openConnection_listenableCompletableFuture1"
+        uuid: "openConnection_listenableCompletableFuture2"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -3296,8 +3450,10 @@ methods:
       filledByUser: false
     uuid: "c684a778-f95f-3a32-974c-99dde163048d"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
+    disabledReason: "Potential harmful system call (Selector.wakeup) detected; Learn\
+      \ more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

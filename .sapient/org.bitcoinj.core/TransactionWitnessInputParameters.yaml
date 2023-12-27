@@ -542,7 +542,9 @@ methods:
                 suggestedContent: !<array>
                   values: {}
                 valueType: "byte[]"
+                uuid: "redeemP2WPKH_arrayList1-item0"
                 fixed: true
+                collectionUuid: "redeemP2WPKH_arrayList1"
                 equalsMethodPresent: false
                 explicitCastNeeded: false
               - sapientType: "ARRAY"
@@ -565,7 +567,9 @@ methods:
                 suggestedContent: !<array>
                   values: {}
                 valueType: "byte[]"
+                uuid: "redeemP2WPKH_arrayList1-item0"
                 fixed: true
+                collectionUuid: "redeemP2WPKH_arrayList1"
                 equalsMethodPresent: false
                 explicitCastNeeded: false
               - sapientType: "ARRAY"
@@ -798,7 +802,9 @@ methods:
                 suggestedContent: !<array>
                   values: {}
                 valueType: "byte[]"
+                uuid: "redeemP2WSH_arrayList1-item0"
                 fixed: true
+                collectionUuid: "redeemP2WSH_arrayList1"
                 equalsMethodPresent: false
                 explicitCastNeeded: false
               - sapientType: "ARRAY"
@@ -831,7 +837,9 @@ methods:
                 suggestedContent: !<array>
                   values: {}
                 valueType: "byte[]"
+                uuid: "redeemP2WSH_arrayList1-item0"
                 fixed: true
+                collectionUuid: "redeemP2WSH_arrayList1"
                 equalsMethodPresent: false
                 explicitCastNeeded: false
               - sapientType: "ARRAY"
@@ -2016,11 +2024,11 @@ methods:
       filledByUser: false
     uuid: "0638e125-c093-35a7-84b6-d0e54de8f380"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getPushCount"
     returnType: "int"
@@ -2393,11 +2401,11 @@ methods:
       filledByUser: false
     uuid: "a2bf3b9b-c78f-381f-a368-c4049790a3f0"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "write"
     returnType: "java.nio.ByteBuffer"
@@ -2941,11 +2949,11 @@ methods:
       filledByUser: false
     uuid: "77eab095-a4c8-34d9-9e51-066a5f4001e1"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "serialize"
     returnType: "byte[]"
@@ -2962,7 +2970,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "AB4409FB35CA375C2160ADDE060483BE"
+    modelFingerprint: "4B58BEC33F161D54E3AC11EAAD4E2EBC"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -3039,7 +3047,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "pubKey"
-      modelFingerprint: "546B73F4F67D3986E55AF0E94F346267"
+      modelFingerprint: "01AE41460FE247E9DE28530EB1979D92"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -3064,8 +3072,6 @@ methods:
           sapientType: "BASIC"
           content: !<regular>
             value: false
-          suggestedContent: !<regular>
-            value: false
           valueType: "boolean"
           uuid: "redeemP2WPKH_boolean1"
           fixed: false
@@ -3076,7 +3082,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "B295F0063A491CA345DEC9F505367FF7"
+      modelFingerprint: "A3C9A66787E8779386C502876A29BDCE"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -3096,8 +3102,6 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: false
-            suggestedContent: !<regular>
               value: false
             valueType: "boolean"
             uuid: "redeemP2WPKH_boolean1"
@@ -3125,7 +3129,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "signature"
-      modelFingerprint: "BEF5C37C818235F2917AAEDD2C956D4E"
+      modelFingerprint: "A499290BE996013F9DA20F1935954C52"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -3162,7 +3166,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "pubKey"
-      modelFingerprint: "164E3878F098B0D6EBBCD03DD6A339D7"
+      modelFingerprint: "E8CC71C57D5FE22B7EA34F376F4790D1"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -3199,7 +3203,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "TransactionWitness"
-      modelFingerprint: "BE545898E87DD4AF87EF1EE42F8A49FF"
+      modelFingerprint: "EAA91CDE1FE3E3195B3E3B74E3854052"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -3220,7 +3224,16 @@ methods:
             sapientType: "COLLECTION"
             content: !<collection>
               collectionClass: "java.util.ArrayList"
-              parameters: []
+              parameters:
+              - name: "initialCapacity"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  valueType: "int"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               values:
               - sapientType: "ARRAY"
                 content: !<array>
@@ -3228,7 +3241,8 @@ methods:
                 suggestedContent: !<array>
                   values: {}
                 valueType: "byte[]"
-                fixed: true
+                uuid: "redeemP2WPKH_byte[]1"
+                fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
               - sapientType: "ARRAY"
@@ -3237,12 +3251,22 @@ methods:
                 suggestedContent: !<array>
                   values: {}
                 valueType: "byte[]"
-                fixed: true
+                uuid: "redeemP2WPKH_byte[]2"
+                fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
             suggestedContent: !<collection>
               collectionClass: "java.util.ArrayList"
-              parameters: []
+              parameters:
+              - name: "initialCapacity"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  valueType: "int"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               values:
               - sapientType: "ARRAY"
                 content: !<array>
@@ -3250,7 +3274,8 @@ methods:
                 suggestedContent: !<array>
                   values: {}
                 valueType: "byte[]"
-                fixed: true
+                uuid: "redeemP2WPKH_byte[]1"
+                fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
               - sapientType: "ARRAY"
@@ -3259,7 +3284,8 @@ methods:
                 suggestedContent: !<array>
                   values: {}
                 valueType: "byte[]"
-                fixed: true
+                uuid: "redeemP2WPKH_byte[]2"
+                fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
             valueType: "java.util.List"
@@ -3270,37 +3296,7 @@ methods:
             explicitCastNeeded: false
         signature: "of(List): TransactionWitness"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.core.TransactionWitness"
-            method: "of"
-            methodParameters:
-            - name: "pushes"
-              value:
-                sapientType: "COLLECTION"
-                content: !<collection>
-                  parameters: []
-                  values: []
-                suggestedContent: !<collection>
-                  parameters: []
-                  values: []
-                valueType: "java.util.List"
-                uuid: "redeemP2WPKH_transactionWitness1-pushes"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.core.TransactionWitness"
-            method: "of"
-            methodParameters:
-            - name: "pushes"
-              value:
-                sapientType: "COLLECTION"
-                valueType: "java.util.List"
-                uuid: "redeemP2WPKH_transactionWitness1-pushes"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.core.TransactionWitness"
           uuid: "redeemP2WPKH_transactionWitness1"
           fixed: false
@@ -3441,11 +3437,10 @@ methods:
       filledByUser: false
     uuid: "9d328af1-2293-3544-bbbc-a0683c1f9fbe"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "messageSize"
     returnType: "int"
@@ -3858,11 +3853,11 @@ methods:
       filledByUser: false
     uuid: "e09fc3d2-21a1-396e-a8d9-14d666298824"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getMessageSize"
     returnType: "int"
@@ -4258,11 +4253,11 @@ methods:
       filledByUser: false
     uuid: "435d64f5-8fca-31bf-b014-13944bac4d4c"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "toString"
     returnType: "java.lang.String"
@@ -4710,11 +4705,11 @@ methods:
       filledByUser: false
     uuid: "e6355e02-ffe7-36cf-882f-9b4527452410"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "equals"
     returnType: "boolean"

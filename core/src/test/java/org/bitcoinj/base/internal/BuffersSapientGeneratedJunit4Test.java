@@ -93,18 +93,18 @@ public class BuffersSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<VarInt> varInt = mockStatic(VarInt.class)) {
-            VarInt varInt2 = new VarInt(0L);
-            varInt.when(() -> VarInt.of(1L)).thenReturn(varInt2);
+            varInt.when(() -> VarInt.of(0L)).thenReturn(varIntMock);
+            byte[] byteArray = new byte[]{};
+            doReturn(byteArray).when(varIntMock).serialize();
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            byte[] byteArray = new byte[]{(byte) 0};
+            byte[] byteArray2 = new byte[]{};
             //Act Statement(s)
-            ByteBuffer result = Buffers.writeLengthPrefixedBytes(byteBuffer, byteArray);
-            byte[] byteArray2 = new byte[]{(byte) 0};
-            ByteBuffer byteBuffer2 = byteBuffer.put(byteArray2);
-            ByteBuffer byteBuffer3 = byteBuffer2.put(byteArray);
+            ByteBuffer result = Buffers.writeLengthPrefixedBytes(byteBuffer, byteArray2);
+            ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
             //Assert statement(s)
-            assertThat(result, equalTo(byteBuffer3));
-            varInt.verify(() -> VarInt.of(1L), atLeast(1));
+            assertThat(result, equalTo(byteBuffer2));
+            varInt.verify(() -> VarInt.of(0L), atLeast(1));
+            verify(varIntMock).serialize();
         }
     }
 

@@ -101,6 +101,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mockStatic;
 import static org.hamcrest.Matchers.isA;
 
+import java.net.Inet6Address;
+
 public class PeerGroupSapientGeneratedJunit4Test {
 
     @Rule()
@@ -136,16 +138,19 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             ScheduledExecutorService result = target.createPrivateExecutor();
@@ -155,6 +160,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             //TODO: Please implement equals method in ScheduledThreadPoolExecutor for verification to succeed or you need to adjust respective assertion statements
             assertThat(result, equalTo(scheduledThreadPoolExecutor));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
@@ -170,21 +177,26 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.01"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
-            target.setPeerDiscoveryTimeoutMillis(5000L);
+            target.setPeerDiscoveryTimeoutMillis(1L);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
@@ -202,22 +214,27 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(false).when(target).isRunning();
             //Act Statement(s)
-            target.setMaxConnections(10);
+            target.setMaxConnections(0);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).isRunning();
@@ -238,24 +255,29 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.01")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(true).when(target).isRunning();
-            doReturn(11).when(channelsMock).getConnectedClientCount();
+            doReturn(0).when(channelsMock).getConnectedClientCount();
             doNothing().when(channelsMock).closeConnections(1);
             //Act Statement(s)
-            target.setMaxConnections(10);
+            target.setMaxConnections(-1);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).isRunning();
@@ -279,23 +301,28 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.01")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(true).when(target).isRunning();
             doReturn(0).when(channelsMock).getConnectedClientCount();
             //Act Statement(s)
-            target.setMaxConnections(10);
+            target.setMaxConnections(1);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).isRunning();
@@ -313,21 +340,26 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
-            target.setDownloadTxDependencies(5);
+            target.setDownloadTxDependencies(0);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
@@ -343,22 +375,27 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             int result = target.getMaxConnections();
             //Assert statement(s)
             assertThat(result, equalTo(0));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
@@ -374,25 +411,21 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
-        NetworkParameters networkParameters3Mock = mock(NetworkParameters.class);
-        try (MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
-            context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.01"));
+        Block blockMock = mock(Block.class);
+        VersionMessage versionMessageMock = mock(VersionMessage.class);
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            VersionMessage versionMessage = new VersionMessage(networkParameters3Mock, 0);
             //Act Statement(s)
-            target.setVersionMessage(versionMessage);
+            target.setVersionMessage(versionMessageMock);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
-            context.verify(() -> Context.getOrCreate(), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
         }
     }
 
@@ -406,23 +439,28 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             VersionMessage result = target.getVersionMessage();
-            VersionMessage versionMessage = new VersionMessage(networkParameters2, 0);
+            VersionMessage versionMessage = new VersionMessage(paramsMock, 0);
             //Assert statement(s)
             assertThat(result, equalTo(versionMessage));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
@@ -448,11 +486,17 @@ public class PeerGroupSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
-        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+        try (MockedStatic<Context> context = mockStatic(Context.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class);
+             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
+            context.when(() -> Context.getOrCreate()).thenReturn(context2);
             target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
@@ -461,6 +505,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
+            threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
+            context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
     }
 
@@ -474,25 +520,30 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doNothing().when(target).setUserAgent("MyPeerGroup", "1.0", (String) null);
+            doNothing().when(target).setUserAgent("name1", "version1", (String) null);
             //Act Statement(s)
-            target.setUserAgent("MyPeerGroup", "1.0");
+            target.setUserAgent("name1", "version1");
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
-            verify(target).setUserAgent("MyPeerGroup", "1.0", (String) null);
+            verify(target).setUserAgent("name1", "version1", (String) null);
         }
     }
 
@@ -506,23 +557,28 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         BlocksDownloadedEventListener blocksDownloadedEventListenerMock = mock(BlocksDownloadedEventListener.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.01")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doNothing().when(target).addBlocksDownloadedEventListener((Executor) null, blocksDownloadedEventListenerMock);
             //Act Statement(s)
             target.addBlocksDownloadedEventListener(blocksDownloadedEventListenerMock);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).addBlocksDownloadedEventListener((Executor) null, blocksDownloadedEventListenerMock);
@@ -542,19 +598,22 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         Peer peerMock = mock(Peer.class);
         BlocksDownloadedEventListener blocksDownloadedEventListenerMock = mock(BlocksDownloadedEventListener.class);
         Peer peerMock2 = mock(Peer.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
@@ -570,6 +629,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             target.addBlocksDownloadedEventListener(executor, blocksDownloadedEventListenerMock);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).getConnectedPeers();
@@ -589,23 +650,28 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         ChainDownloadStartedEventListener chainDownloadStartedEventListenerMock = mock(ChainDownloadStartedEventListener.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doNothing().when(target).addChainDownloadStartedEventListener((Executor) null, chainDownloadStartedEventListenerMock);
             //Act Statement(s)
             target.addChainDownloadStartedEventListener(chainDownloadStartedEventListenerMock);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).addChainDownloadStartedEventListener((Executor) null, chainDownloadStartedEventListenerMock);
@@ -625,19 +691,22 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         Peer peerMock = mock(Peer.class);
         ChainDownloadStartedEventListener chainDownloadStartedEventListenerMock = mock(ChainDownloadStartedEventListener.class);
         Peer peerMock2 = mock(Peer.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
@@ -653,6 +722,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             target.addChainDownloadStartedEventListener(executor, chainDownloadStartedEventListenerMock);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).getConnectedPeers();
@@ -672,15 +743,18 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         PeerConnectedEventListener peerConnectedEventListenerMock = mock(PeerConnectedEventListener.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
@@ -689,6 +763,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             target.addConnectedEventListener(peerConnectedEventListenerMock);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).addConnectedEventListener((Executor) null, peerConnectedEventListenerMock);
@@ -752,23 +828,28 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         PeerDisconnectedEventListener peerDisconnectedEventListenerMock = mock(PeerDisconnectedEventListener.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.01")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doNothing().when(target).addDisconnectedEventListener((Executor) null, peerDisconnectedEventListenerMock);
             //Act Statement(s)
             target.addDisconnectedEventListener(peerDisconnectedEventListenerMock);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).addDisconnectedEventListener((Executor) null, peerDisconnectedEventListenerMock);
@@ -788,19 +869,22 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         Peer peerMock = mock(Peer.class);
         PeerDisconnectedEventListener peerDisconnectedEventListenerMock = mock(PeerDisconnectedEventListener.class);
         Peer peerMock2 = mock(Peer.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
@@ -816,6 +900,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             target.addDisconnectedEventListener(executor, peerDisconnectedEventListenerMock);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).getConnectedPeers();
@@ -835,23 +921,28 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         PeerDiscoveredEventListener peerDiscoveredEventListenerMock = mock(PeerDiscoveredEventListener.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.01")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doNothing().when(target).addDiscoveredEventListener((Executor) null, peerDiscoveredEventListenerMock);
             //Act Statement(s)
             target.addDiscoveredEventListener(peerDiscoveredEventListenerMock);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).addDiscoveredEventListener((Executor) null, peerDiscoveredEventListenerMock);
@@ -868,17 +959,20 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         PeerDiscoveredEventListener peerDiscoveredEventListenerMock = mock(PeerDiscoveredEventListener.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //TODO: Needs initialization with real value
             Executor executor = null;
@@ -886,6 +980,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             target.addDiscoveredEventListener(executor, peerDiscoveredEventListenerMock);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
@@ -901,15 +997,18 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         GetDataEventListener getDataEventListenerMock = mock(GetDataEventListener.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
@@ -918,6 +1017,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             target.addGetDataEventListener(getDataEventListenerMock);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).addGetDataEventListener((Executor) null, getDataEventListenerMock);
@@ -937,19 +1038,22 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         Peer peerMock = mock(Peer.class);
         GetDataEventListener getDataEventListenerMock = mock(GetDataEventListener.class);
         Peer peerMock2 = mock(Peer.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
@@ -965,6 +1069,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             target.addGetDataEventListener(executor, getDataEventListenerMock);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).getConnectedPeers();
@@ -984,15 +1090,18 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         OnTransactionBroadcastListener onTransactionBroadcastListenerMock = mock(OnTransactionBroadcastListener.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
@@ -1001,6 +1110,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             target.addOnTransactionBroadcastListener(onTransactionBroadcastListenerMock);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).addOnTransactionBroadcastListener((Executor) null, onTransactionBroadcastListenerMock);
@@ -1020,19 +1131,22 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         Peer peerMock = mock(Peer.class);
         OnTransactionBroadcastListener onTransactionBroadcastListenerMock = mock(OnTransactionBroadcastListener.class);
         Peer peerMock2 = mock(Peer.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
@@ -1048,6 +1162,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             target.addOnTransactionBroadcastListener(executor, onTransactionBroadcastListenerMock);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).getConnectedPeers();
@@ -1067,15 +1183,18 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         PreMessageReceivedEventListener preMessageReceivedEventListenerMock = mock(PreMessageReceivedEventListener.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
@@ -1084,6 +1203,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             target.addPreMessageReceivedEventListener(preMessageReceivedEventListenerMock);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).addPreMessageReceivedEventListener((Executor) null, preMessageReceivedEventListenerMock);
@@ -1103,19 +1224,22 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         Peer peerMock = mock(Peer.class);
         PreMessageReceivedEventListener preMessageReceivedEventListenerMock = mock(PreMessageReceivedEventListener.class);
         Peer peerMock2 = mock(Peer.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.000010")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
@@ -1131,6 +1255,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             target.addPreMessageReceivedEventListener(executor, preMessageReceivedEventListenerMock);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).getConnectedPeers();
@@ -1154,6 +1280,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         BlocksDownloadedEventListener blocksDownloadedEventListenerMock = mock(BlocksDownloadedEventListener.class);
         Peer peerMock = mock(Peer.class);
         Peer peerMock2 = mock(Peer.class);
@@ -1161,14 +1288,16 @@ public class PeerGroupSapientGeneratedJunit4Test {
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             listenerRegistration.when(() -> ListenerRegistration.removeFromList(eq(blocksDownloadedEventListenerMock), any())).thenReturn(true);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
@@ -1183,6 +1312,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.TRUE));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             listenerRegistration.verify(() -> ListenerRegistration.removeFromList(eq(blocksDownloadedEventListenerMock), any()));
@@ -1207,6 +1338,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         BlocksDownloadedEventListener blocksDownloadedEventListenerMock = mock(BlocksDownloadedEventListener.class);
         Peer peerMock = mock(Peer.class);
         Peer peerMock2 = mock(Peer.class);
@@ -1214,14 +1346,16 @@ public class PeerGroupSapientGeneratedJunit4Test {
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             listenerRegistration.when(() -> ListenerRegistration.removeFromList(eq(blocksDownloadedEventListenerMock), any())).thenReturn(false);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.1")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
@@ -1236,6 +1370,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.FALSE));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             listenerRegistration.verify(() -> ListenerRegistration.removeFromList(eq(blocksDownloadedEventListenerMock), any()));
@@ -1260,6 +1396,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         ChainDownloadStartedEventListener chainDownloadStartedEventListenerMock = mock(ChainDownloadStartedEventListener.class);
         Peer peerMock = mock(Peer.class);
         Peer peerMock2 = mock(Peer.class);
@@ -1267,14 +1404,16 @@ public class PeerGroupSapientGeneratedJunit4Test {
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             listenerRegistration.when(() -> ListenerRegistration.removeFromList(eq(chainDownloadStartedEventListenerMock), any())).thenReturn(true);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
@@ -1289,6 +1428,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.TRUE));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             listenerRegistration.verify(() -> ListenerRegistration.removeFromList(eq(chainDownloadStartedEventListenerMock), any()));
@@ -1313,6 +1454,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         ChainDownloadStartedEventListener chainDownloadStartedEventListenerMock = mock(ChainDownloadStartedEventListener.class);
         Peer peerMock = mock(Peer.class);
         Peer peerMock2 = mock(Peer.class);
@@ -1320,14 +1462,16 @@ public class PeerGroupSapientGeneratedJunit4Test {
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             listenerRegistration.when(() -> ListenerRegistration.removeFromList(eq(chainDownloadStartedEventListenerMock), any())).thenReturn(false);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
@@ -1342,6 +1486,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.FALSE));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             listenerRegistration.verify(() -> ListenerRegistration.removeFromList(eq(chainDownloadStartedEventListenerMock), any()));
@@ -1366,6 +1512,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         PeerConnectedEventListener peerConnectedEventListenerMock = mock(PeerConnectedEventListener.class);
         Peer peerMock = mock(Peer.class);
         Peer peerMock2 = mock(Peer.class);
@@ -1373,14 +1520,16 @@ public class PeerGroupSapientGeneratedJunit4Test {
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             listenerRegistration.when(() -> ListenerRegistration.removeFromList(eq(peerConnectedEventListenerMock), any())).thenReturn(true);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
@@ -1389,12 +1538,14 @@ public class PeerGroupSapientGeneratedJunit4Test {
             List<Peer> peerList2 = new ArrayList<>();
             peerList2.add(peerMock2);
             doReturn(peerList2).when(target).getPendingPeers();
-            doReturn(true).when(peerMock2).removeConnectedEventListener(peerConnectedEventListenerMock);
+            doReturn(false).when(peerMock2).removeConnectedEventListener(peerConnectedEventListenerMock);
             //Act Statement(s)
             boolean result = target.removeConnectedEventListener(peerConnectedEventListenerMock);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.TRUE));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             listenerRegistration.verify(() -> ListenerRegistration.removeFromList(eq(peerConnectedEventListenerMock), any()));
@@ -1419,6 +1570,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         PeerConnectedEventListener peerConnectedEventListenerMock = mock(PeerConnectedEventListener.class);
         Peer peerMock = mock(Peer.class);
         Peer peerMock2 = mock(Peer.class);
@@ -1426,14 +1578,16 @@ public class PeerGroupSapientGeneratedJunit4Test {
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             listenerRegistration.when(() -> ListenerRegistration.removeFromList(eq(peerConnectedEventListenerMock), any())).thenReturn(false);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
@@ -1448,6 +1602,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.FALSE));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             listenerRegistration.verify(() -> ListenerRegistration.removeFromList(eq(peerConnectedEventListenerMock), any()));
@@ -1472,21 +1628,18 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         PeerDisconnectedEventListener peerDisconnectedEventListenerMock = mock(PeerDisconnectedEventListener.class);
         Peer peerMock = mock(Peer.class);
         Peer peerMock2 = mock(Peer.class);
         try (MockedStatic<ListenerRegistration> listenerRegistration = mockStatic(ListenerRegistration.class);
-             MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
-            context.when(() -> Context.getOrCreate()).thenReturn(context2);
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
             listenerRegistration.when(() -> ListenerRegistration.removeFromList(eq(peerDisconnectedEventListenerMock), any())).thenReturn(true);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
@@ -1495,14 +1648,14 @@ public class PeerGroupSapientGeneratedJunit4Test {
             List<Peer> peerList2 = new ArrayList<>();
             peerList2.add(peerMock2);
             doReturn(peerList2).when(target).getPendingPeers();
-            doReturn(true).when(peerMock2).removeDisconnectedEventListener(peerDisconnectedEventListenerMock);
+            doReturn(false).when(peerMock2).removeDisconnectedEventListener(peerDisconnectedEventListenerMock);
             //Act Statement(s)
             boolean result = target.removeDisconnectedEventListener(peerDisconnectedEventListenerMock);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.TRUE));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
-            context.verify(() -> Context.getOrCreate(), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             listenerRegistration.verify(() -> ListenerRegistration.removeFromList(eq(peerDisconnectedEventListenerMock), any()));
             verify(target).getConnectedPeers();
             verify(peerMock).removeDisconnectedEventListener(peerDisconnectedEventListenerMock);
@@ -1525,6 +1678,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         PeerDisconnectedEventListener peerDisconnectedEventListenerMock = mock(PeerDisconnectedEventListener.class);
         Peer peerMock = mock(Peer.class);
         Peer peerMock2 = mock(Peer.class);
@@ -1532,14 +1686,16 @@ public class PeerGroupSapientGeneratedJunit4Test {
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             listenerRegistration.when(() -> ListenerRegistration.removeFromList(eq(peerDisconnectedEventListenerMock), any())).thenReturn(false);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
@@ -1548,12 +1704,14 @@ public class PeerGroupSapientGeneratedJunit4Test {
             List<Peer> peerList2 = new ArrayList<>();
             peerList2.add(peerMock2);
             doReturn(peerList2).when(target).getPendingPeers();
-            doReturn(true).when(peerMock2).removeDisconnectedEventListener(peerDisconnectedEventListenerMock);
+            doReturn(false).when(peerMock2).removeDisconnectedEventListener(peerDisconnectedEventListenerMock);
             //Act Statement(s)
             boolean result = target.removeDisconnectedEventListener(peerDisconnectedEventListenerMock);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.FALSE));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             listenerRegistration.verify(() -> ListenerRegistration.removeFromList(eq(peerDisconnectedEventListenerMock), any()));
@@ -1576,25 +1734,30 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         PeerDiscoveredEventListener peerDiscoveredEventListenerMock = mock(PeerDiscoveredEventListener.class);
         try (MockedStatic<ListenerRegistration> listenerRegistration = mockStatic(ListenerRegistration.class);
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             listenerRegistration.when(() -> ListenerRegistration.removeFromList(eq(peerDiscoveredEventListenerMock), any())).thenReturn(true);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             boolean result = target.removeDiscoveredEventListener(peerDiscoveredEventListenerMock);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.TRUE));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             listenerRegistration.verify(() -> ListenerRegistration.removeFromList(eq(peerDiscoveredEventListenerMock), any()));
@@ -1613,25 +1776,30 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         PeerDiscoveredEventListener peerDiscoveredEventListenerMock = mock(PeerDiscoveredEventListener.class);
         try (MockedStatic<ListenerRegistration> listenerRegistration = mockStatic(ListenerRegistration.class);
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             listenerRegistration.when(() -> ListenerRegistration.removeFromList(eq(peerDiscoveredEventListenerMock), any())).thenReturn(false);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.01"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             boolean result = target.removeDiscoveredEventListener(peerDiscoveredEventListenerMock);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.FALSE));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             listenerRegistration.verify(() -> ListenerRegistration.removeFromList(eq(peerDiscoveredEventListenerMock), any()));
@@ -1652,6 +1820,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         GetDataEventListener getDataEventListenerMock = mock(GetDataEventListener.class);
         Peer peerMock = mock(Peer.class);
         Peer peerMock2 = mock(Peer.class);
@@ -1659,14 +1828,16 @@ public class PeerGroupSapientGeneratedJunit4Test {
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             listenerRegistration.when(() -> ListenerRegistration.removeFromList(eq(getDataEventListenerMock), any())).thenReturn(true);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
@@ -1681,6 +1852,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.TRUE));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             listenerRegistration.verify(() -> ListenerRegistration.removeFromList(eq(getDataEventListenerMock), any()));
@@ -1705,6 +1878,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         GetDataEventListener getDataEventListenerMock = mock(GetDataEventListener.class);
         Peer peerMock = mock(Peer.class);
         Peer peerMock2 = mock(Peer.class);
@@ -1712,14 +1886,16 @@ public class PeerGroupSapientGeneratedJunit4Test {
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             listenerRegistration.when(() -> ListenerRegistration.removeFromList(eq(getDataEventListenerMock), any())).thenReturn(false);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.000010")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
@@ -1728,12 +1904,14 @@ public class PeerGroupSapientGeneratedJunit4Test {
             List<Peer> peerList2 = new ArrayList<>();
             peerList2.add(peerMock2);
             doReturn(peerList2).when(target).getPendingPeers();
-            doReturn(true).when(peerMock2).removeGetDataEventListener(getDataEventListenerMock);
+            doReturn(false).when(peerMock2).removeGetDataEventListener(getDataEventListenerMock);
             //Act Statement(s)
             boolean result = target.removeGetDataEventListener(getDataEventListenerMock);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.FALSE));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             listenerRegistration.verify(() -> ListenerRegistration.removeFromList(eq(getDataEventListenerMock), any()));
@@ -1758,6 +1936,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         OnTransactionBroadcastListener onTransactionBroadcastListenerMock = mock(OnTransactionBroadcastListener.class);
         Peer peerMock = mock(Peer.class);
         Peer peerMock2 = mock(Peer.class);
@@ -1765,14 +1944,16 @@ public class PeerGroupSapientGeneratedJunit4Test {
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             listenerRegistration.when(() -> ListenerRegistration.removeFromList(eq(onTransactionBroadcastListenerMock), any())).thenReturn(true);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
@@ -1787,6 +1968,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.TRUE));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             listenerRegistration.verify(() -> ListenerRegistration.removeFromList(eq(onTransactionBroadcastListenerMock), any()));
@@ -1811,6 +1994,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         OnTransactionBroadcastListener onTransactionBroadcastListenerMock = mock(OnTransactionBroadcastListener.class);
         Peer peerMock = mock(Peer.class);
         Peer peerMock2 = mock(Peer.class);
@@ -1818,14 +2002,16 @@ public class PeerGroupSapientGeneratedJunit4Test {
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             listenerRegistration.when(() -> ListenerRegistration.removeFromList(eq(onTransactionBroadcastListenerMock), any())).thenReturn(false);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
@@ -1840,6 +2026,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.FALSE));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             listenerRegistration.verify(() -> ListenerRegistration.removeFromList(eq(onTransactionBroadcastListenerMock), any()));
@@ -1864,21 +2052,18 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         PreMessageReceivedEventListener preMessageReceivedEventListenerMock = mock(PreMessageReceivedEventListener.class);
         Peer peerMock = mock(Peer.class);
         Peer peerMock2 = mock(Peer.class);
         try (MockedStatic<ListenerRegistration> listenerRegistration = mockStatic(ListenerRegistration.class);
-             MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
-            context.when(() -> Context.getOrCreate()).thenReturn(context2);
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
             listenerRegistration.when(() -> ListenerRegistration.removeFromList(eq(preMessageReceivedEventListenerMock), any())).thenReturn(true);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
@@ -1893,8 +2078,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.TRUE));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
-            context.verify(() -> Context.getOrCreate(), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             listenerRegistration.verify(() -> ListenerRegistration.removeFromList(eq(preMessageReceivedEventListenerMock), any()));
             verify(target).getConnectedPeers();
             verify(peerMock).removePreMessageReceivedEventListener(preMessageReceivedEventListenerMock);
@@ -1917,6 +2102,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         PreMessageReceivedEventListener preMessageReceivedEventListenerMock = mock(PreMessageReceivedEventListener.class);
         Peer peerMock = mock(Peer.class);
         Peer peerMock2 = mock(Peer.class);
@@ -1924,14 +2110,16 @@ public class PeerGroupSapientGeneratedJunit4Test {
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             listenerRegistration.when(() -> ListenerRegistration.removeFromList(eq(preMessageReceivedEventListenerMock), any())).thenReturn(false);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
@@ -1940,12 +2128,14 @@ public class PeerGroupSapientGeneratedJunit4Test {
             List<Peer> peerList2 = new ArrayList<>();
             peerList2.add(peerMock2);
             doReturn(peerList2).when(target).getPendingPeers();
-            doReturn(true).when(peerMock2).removePreMessageReceivedEventListener(preMessageReceivedEventListenerMock);
+            doReturn(false).when(peerMock2).removePreMessageReceivedEventListener(preMessageReceivedEventListenerMock);
             //Act Statement(s)
             boolean result = target.removePreMessageReceivedEventListener(preMessageReceivedEventListenerMock);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.FALSE));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             listenerRegistration.verify(() -> ListenerRegistration.removeFromList(eq(preMessageReceivedEventListenerMock), any()));
@@ -1966,22 +2156,27 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             List<Peer> result = target.getConnectedPeers();
             //Assert statement(s)
             assertThat(result.size(), equalTo(0));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
@@ -1997,22 +2192,27 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             List<Peer> result = target.getPendingPeers();
             //Assert statement(s)
             assertThat(result.size(), equalTo(0));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
@@ -2028,29 +2228,31 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
+        PeerAddress peerAddressMock = mock(PeerAddress.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
-            context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
-            autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doNothing().when(target).addAddress((PeerAddress) any(), eq(0));
-            InetAddress inetAddress = InetAddress.getLoopbackAddress();
-            Services services = Services.of(0L);
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
-            PeerAddress peerAddress = PeerAddress.inet(inetAddress, 8333, services, instant);
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
+            context.when(() -> Context.getOrCreate()).thenReturn(context2);
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            doNothing().when(target).addAddress(peerAddressMock, 0);
             //Act Statement(s)
-            target.addAddress(peerAddress);
+            target.addAddress(peerAddressMock);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
-            verify(target).addAddress((PeerAddress) any(), eq(0));
+            verify(target).addAddress(peerAddressMock, 0);
         }
     }
 
@@ -2115,6 +2317,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
+        PeerAddress peerAddressMock = mock(PeerAddress.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
@@ -2126,15 +2329,13 @@ public class PeerGroupSapientGeneratedJunit4Test {
             threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
             Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(true).when(target).isRunning();
             doReturn(2).when(channelsMock).getConnectedClientCount();
             doNothing().when(channelsMock).closeConnections(1);
-            InetAddress inetAddress = InetAddress.getLoopbackAddress();
-            PeerAddress peerAddress = PeerAddress.simple(inetAddress, 8333);
             //Act Statement(s)
-            target.addAddress(peerAddress, 1);
+            target.addAddress(peerAddressMock, 1);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
@@ -2165,24 +2366,29 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         PeerAddress peerAddressMock = mock(PeerAddress.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(true).when(target).isRunning();
-            doReturn(-1).when(channelsMock).getConnectedClientCount();
+            doReturn(0).when(channelsMock).getConnectedClientCount();
             //Act Statement(s)
-            target.addAddress(peerAddressMock, -1);
+            target.addAddress(peerAddressMock, 1);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).isRunning();
@@ -2200,29 +2406,36 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         MultiplexingDiscovery multiplexingDiscoveryMock = mock(MultiplexingDiscovery.class);
         Network networkMock2 = mock(Network.class);
         try (MockedStatic<MultiplexingDiscovery> multiplexingDiscovery = mockStatic(MultiplexingDiscovery.class);
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            multiplexingDiscovery.when(() -> MultiplexingDiscovery.forServices(networkMock2, 1L)).thenReturn(multiplexingDiscoveryMock);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.1")));
+            multiplexingDiscovery.when(() -> MultiplexingDiscovery.forServices(networkMock2, 0L)).thenReturn(multiplexingDiscoveryMock);
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            doReturn(networkMock2).when(paramsMock).network();
             doNothing().when(target).addPeerDiscovery(multiplexingDiscoveryMock);
             //Act Statement(s)
-            target.setRequiredServices(1L);
+            target.setRequiredServices(0L);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
-            multiplexingDiscovery.verify(() -> MultiplexingDiscovery.forServices(networkMock2, 1L), atLeast(1));
+            multiplexingDiscovery.verify(() -> MultiplexingDiscovery.forServices(networkMock2, 0L), atLeast(1));
+            verify(paramsMock).network();
             verify(target).addPeerDiscovery(multiplexingDiscoveryMock);
         }
     }
@@ -2237,31 +2450,37 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
+        PeerAddress peerAddressMock = mock(PeerAddress.class);
         try (MockedStatic<PeerAddress> peerAddress = mockStatic(PeerAddress.class);
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            InetAddress inetAddress = InetAddress.getLoopbackAddress();
-            PeerAddress peerAddress2 = PeerAddress.simple(inetAddress, 0);
-            peerAddress.when(() -> PeerAddress.simple((InetAddress) any(), eq(0))).thenReturn(peerAddress2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            peerAddress.when(() -> PeerAddress.simple((InetAddress) any(), eq(0))).thenReturn(peerAddressMock);
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doNothing().when(target).addAddress((PeerAddress) any());
-            InetAddress inetAddress2 = InetAddress.getLoopbackAddress();
+            doReturn(0).when(paramsMock).getPort();
+            doNothing().when(target).addAddress(peerAddressMock);
+            InetAddress inetAddress = InetAddress.getLoopbackAddress();
             //Act Statement(s)
-            target.addAddress(inetAddress2);
+            target.addAddress(inetAddress);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             peerAddress.verify(() -> PeerAddress.simple((InetAddress) any(), eq(0)));
-            verify(target).addAddress((PeerAddress) any());
+            verify(paramsMock).getPort();
+            verify(target).addAddress(peerAddressMock);
         }
     }
 
@@ -2276,7 +2495,9 @@ public class PeerGroupSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
-        try (MockedStatic<Context> context = mockStatic(Context.class);
+        PeerAddress peerAddressMock = mock(PeerAddress.class);
+        try (MockedStatic<PeerAddress> peerAddress = mockStatic(PeerAddress.class);
+             MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
@@ -2287,21 +2508,23 @@ public class PeerGroupSapientGeneratedJunit4Test {
             threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
             Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            peerAddress.when(() -> PeerAddress.simple((InetAddress) any(), eq(0))).thenReturn(peerAddressMock);
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(0).when(paramsMock).getPort();
-            doNothing().when(target).addAddress((PeerAddress) any(), eq(1));
+            doNothing().when(target).addAddress(peerAddressMock, 0);
             InetAddress inetAddress = InetAddress.getLoopbackAddress();
             //Act Statement(s)
-            target.addAddress(inetAddress, 1);
+            target.addAddress(inetAddress, 0);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
+            peerAddress.verify(() -> PeerAddress.simple((InetAddress) any(), eq(0)));
             verify(paramsMock).getPort();
-            verify(target).addAddress((PeerAddress) any(), eq(1));
+            verify(target).addAddress(peerAddressMock, 0);
         }
     }
 
@@ -2318,15 +2541,18 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         PeerDiscovery peerDiscoveryMock = mock(PeerDiscovery.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
@@ -2335,6 +2561,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             target.addPeerDiscovery(peerDiscoveryMock);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).isRunning();
@@ -2356,17 +2584,20 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         PeerDiscovery peerDiscoveryMock = mock(PeerDiscovery.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.1")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(true).when(target).isRunning();
             doReturn(13).when(channelsMock).getConnectedClientCount();
@@ -2375,6 +2606,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             target.addPeerDiscovery(peerDiscoveryMock);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).isRunning();
@@ -2399,24 +2632,29 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         PeerDiscovery peerDiscoveryMock = mock(PeerDiscovery.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.01")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(true).when(target).isRunning();
-            doReturn(0).when(channelsMock).getConnectedClientCount();
+            doReturn(1).when(channelsMock).getConnectedClientCount();
             //Act Statement(s)
             target.addPeerDiscovery(peerDiscoveryMock);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).isRunning();
@@ -2438,25 +2676,30 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Stopwatch> stopwatch = mockStatic(Stopwatch.class);
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             Stopwatch stopwatch2 = Stopwatch.start();
             stopwatch.when(() -> Stopwatch.start()).thenReturn(stopwatch2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             int result = target.discoverPeers();
             //Assert statement(s)
             assertThat(result, equalTo(0));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             stopwatch.verify(() -> Stopwatch.start(), atLeast(1));
@@ -2473,21 +2716,26 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             target.waitForJobQueue();
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
@@ -2538,25 +2786,30 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         ListenableCompletableFuture<Void> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(listenableCompletableFutureMock).when(target).startAsync();
-            //TODO: Needs to return real value
-            doReturn(null).when(listenableCompletableFutureMock).join();
+            Object object = new Object();
+            doReturn(object).when(listenableCompletableFutureMock).join();
             //Act Statement(s)
             target.start();
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).startAsync();
@@ -2606,28 +2859,33 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Stopwatch> stopwatch = mockStatic(Stopwatch.class);
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             Stopwatch stopwatch2 = Stopwatch.start();
             stopwatch.when(() -> Stopwatch.start()).thenReturn(stopwatch2);
             IllegalStateException illegalStateException = new IllegalStateException();
             preconditions.when(() -> Preconditions.checkState(false)).thenThrow(illegalStateException);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             thrown.expect(IllegalStateException.class);
             //Act Statement(s)
             target.stop();
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             stopwatch.verify(() -> Stopwatch.start(), atLeast(1));
@@ -2647,21 +2905,26 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             target.dropAllPeers();
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
@@ -2689,11 +2952,11 @@ public class PeerGroupSapientGeneratedJunit4Test {
         KeyChainEventListener keyChainEventListenerMock = mock(KeyChainEventListener.class);
         ScriptsChangeEventListener scriptsChangeEventListenerMock = mock(ScriptsChangeEventListener.class);
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         Script scriptMock = mock(Script.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock2 = mock(ListenableCompletableFuture.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock3 = mock(ListenableCompletableFuture.class);
-        ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock4 = mock(ListenableCompletableFuture.class);
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
@@ -2703,20 +2966,20 @@ public class PeerGroupSapientGeneratedJunit4Test {
             doNothing().when(walletMock).addCoinsSentEventListener(executor, walletCoinsSentEventListenerMock);
             doNothing().when(walletMock).addKeyChainEventListener(executor, keyChainEventListenerMock);
             doNothing().when(walletMock).addScriptsChangeEventListener(executor, scriptsChangeEventListenerMock);
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            scriptPattern.when(() -> ScriptPattern.isP2PK((Script) any())).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2WPKH((Script) any())).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(true);
             target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(listenableCompletableFutureMock, listenableCompletableFutureMock2, listenableCompletableFutureMock3).when(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
-            doReturn(listenableCompletableFutureMock4).when(target).addPeerFilterProvider(walletMock);
+            doReturn(listenableCompletableFutureMock, listenableCompletableFutureMock2).when(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
+            doReturn(listenableCompletableFutureMock3).when(target).addPeerFilterProvider(walletMock);
             doNothing().when(walletMock).setTransactionBroadcaster(target);
             //Act Statement(s)
             target.addWallet(walletMock);
@@ -2726,13 +2989,13 @@ public class PeerGroupSapientGeneratedJunit4Test {
             verify(walletMock).addKeyChainEventListener(executor, keyChainEventListenerMock);
             verify(walletMock).addScriptsChangeEventListener(executor, scriptsChangeEventListenerMock);
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2PK((Script) any()));
-            scriptPattern.verify(() -> ScriptPattern.isP2WPKH((Script) any()));
             scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock), atLeast(1));
-            verify(target, times(3)).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
+            verify(target, times(2)).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
             verify(target).addPeerFilterProvider(walletMock);
             verify(walletMock).setTransactionBroadcaster(target);
         }
@@ -2761,11 +3024,14 @@ public class PeerGroupSapientGeneratedJunit4Test {
         KeyChainEventListener keyChainEventListenerMock = mock(KeyChainEventListener.class);
         ScriptsChangeEventListener scriptsChangeEventListenerMock = mock(ScriptsChangeEventListener.class);
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         Script scriptMock = mock(Script.class);
+        Script scriptMock2 = mock(Script.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock2 = mock(ListenableCompletableFuture.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock3 = mock(ListenableCompletableFuture.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock4 = mock(ListenableCompletableFuture.class);
+        ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock5 = mock(ListenableCompletableFuture.class);
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
@@ -2775,20 +3041,22 @@ public class PeerGroupSapientGeneratedJunit4Test {
             doNothing().when(walletMock).addCoinsSentEventListener(executor, walletCoinsSentEventListenerMock);
             doNothing().when(walletMock).addKeyChainEventListener(executor, keyChainEventListenerMock);
             doNothing().when(walletMock).addScriptsChangeEventListener(executor, scriptsChangeEventListenerMock);
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(true);
-            scriptPattern.when(() -> ScriptPattern.isP2PK((Script) any())).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2WPKH((Script) any())).thenReturn(false);
+            scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock2)).thenReturn(false);
+            scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock2)).thenReturn(true);
             target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(listenableCompletableFutureMock, listenableCompletableFutureMock2, listenableCompletableFutureMock3).when(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
-            doReturn(listenableCompletableFutureMock4).when(target).addPeerFilterProvider(walletMock);
+            doReturn(listenableCompletableFutureMock, listenableCompletableFutureMock2, listenableCompletableFutureMock3, listenableCompletableFutureMock4).when(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
+            doReturn(listenableCompletableFutureMock5).when(target).addPeerFilterProvider(walletMock);
             doNothing().when(walletMock).setTransactionBroadcaster(target);
             //Act Statement(s)
             target.addWallet(walletMock);
@@ -2798,13 +3066,15 @@ public class PeerGroupSapientGeneratedJunit4Test {
             verify(walletMock).addKeyChainEventListener(executor, keyChainEventListenerMock);
             verify(walletMock).addScriptsChangeEventListener(executor, scriptsChangeEventListenerMock);
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2PK((Script) any()));
-            scriptPattern.verify(() -> ScriptPattern.isP2WPKH((Script) any()));
-            verify(target, times(3)).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
+            scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock2), atLeast(1));
+            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock2), atLeast(1));
+            verify(target, times(4)).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
             verify(target).addPeerFilterProvider(walletMock);
             verify(walletMock).setTransactionBroadcaster(target);
         }
@@ -2833,11 +3103,14 @@ public class PeerGroupSapientGeneratedJunit4Test {
         KeyChainEventListener keyChainEventListenerMock = mock(KeyChainEventListener.class);
         ScriptsChangeEventListener scriptsChangeEventListenerMock = mock(ScriptsChangeEventListener.class);
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         Script scriptMock = mock(Script.class);
+        Script scriptMock2 = mock(Script.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock2 = mock(ListenableCompletableFuture.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock3 = mock(ListenableCompletableFuture.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock4 = mock(ListenableCompletableFuture.class);
+        ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock5 = mock(ListenableCompletableFuture.class);
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
@@ -2847,20 +3120,22 @@ public class PeerGroupSapientGeneratedJunit4Test {
             doNothing().when(walletMock).addCoinsSentEventListener(executor, walletCoinsSentEventListenerMock);
             doNothing().when(walletMock).addKeyChainEventListener(executor, keyChainEventListenerMock);
             doNothing().when(walletMock).addScriptsChangeEventListener(executor, scriptsChangeEventListenerMock);
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(true);
-            scriptPattern.when(() -> ScriptPattern.isP2PK((Script) any())).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2WPKH((Script) any())).thenReturn(false);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock2)).thenReturn(false);
+            scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock2)).thenReturn(true);
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(listenableCompletableFutureMock, listenableCompletableFutureMock2, listenableCompletableFutureMock3).when(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
-            doReturn(listenableCompletableFutureMock4).when(target).addPeerFilterProvider(walletMock);
+            doReturn(listenableCompletableFutureMock, listenableCompletableFutureMock2, listenableCompletableFutureMock3, listenableCompletableFutureMock4).when(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
+            doReturn(listenableCompletableFutureMock5).when(target).addPeerFilterProvider(walletMock);
             doNothing().when(walletMock).setTransactionBroadcaster(target);
             //Act Statement(s)
             target.addWallet(walletMock);
@@ -2870,13 +3145,15 @@ public class PeerGroupSapientGeneratedJunit4Test {
             verify(walletMock).addKeyChainEventListener(executor, keyChainEventListenerMock);
             verify(walletMock).addScriptsChangeEventListener(executor, scriptsChangeEventListenerMock);
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2PK((Script) any()));
-            scriptPattern.verify(() -> ScriptPattern.isP2WPKH((Script) any()));
-            verify(target, times(3)).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
+            scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock2), atLeast(1));
+            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock2), atLeast(1));
+            verify(target, times(4)).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
             verify(target).addPeerFilterProvider(walletMock);
             verify(walletMock).setTransactionBroadcaster(target);
         }
@@ -2905,7 +3182,9 @@ public class PeerGroupSapientGeneratedJunit4Test {
         KeyChainEventListener keyChainEventListenerMock = mock(KeyChainEventListener.class);
         ScriptsChangeEventListener scriptsChangeEventListenerMock = mock(ScriptsChangeEventListener.class);
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         Script scriptMock = mock(Script.class);
+        Script scriptMock2 = mock(Script.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock2 = mock(ListenableCompletableFuture.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock3 = mock(ListenableCompletableFuture.class);
@@ -2919,20 +3198,21 @@ public class PeerGroupSapientGeneratedJunit4Test {
             doNothing().when(walletMock).addCoinsSentEventListener(executor, walletCoinsSentEventListenerMock);
             doNothing().when(walletMock).addKeyChainEventListener(executor, keyChainEventListenerMock);
             doNothing().when(walletMock).addScriptsChangeEventListener(executor, scriptsChangeEventListenerMock);
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(true);
-            scriptPattern.when(() -> ScriptPattern.isP2PK((Script) any())).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2WPKH((Script) any())).thenReturn(false);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock2)).thenReturn(false);
+            scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock2)).thenReturn(true);
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(listenableCompletableFutureMock).when(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.DONT_SEND);
-            doReturn(listenableCompletableFutureMock2, listenableCompletableFutureMock3).when(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
+            doReturn(listenableCompletableFutureMock, listenableCompletableFutureMock2, listenableCompletableFutureMock3).when(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
             doReturn(listenableCompletableFutureMock4).when(target).addPeerFilterProvider(walletMock);
             doNothing().when(walletMock).setTransactionBroadcaster(target);
             //Act Statement(s)
@@ -2943,14 +3223,15 @@ public class PeerGroupSapientGeneratedJunit4Test {
             verify(walletMock).addKeyChainEventListener(executor, keyChainEventListenerMock);
             verify(walletMock).addScriptsChangeEventListener(executor, scriptsChangeEventListenerMock);
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2PK((Script) any()));
-            scriptPattern.verify(() -> ScriptPattern.isP2WPKH((Script) any()));
-            verify(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.DONT_SEND);
-            verify(target, times(2)).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
+            scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock2), atLeast(1));
+            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock2), atLeast(1));
+            verify(target, times(3)).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
             verify(target).addPeerFilterProvider(walletMock);
             verify(walletMock).setTransactionBroadcaster(target);
         }
@@ -2979,6 +3260,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
         KeyChainEventListener keyChainEventListenerMock = mock(KeyChainEventListener.class);
         ScriptsChangeEventListener scriptsChangeEventListenerMock = mock(ScriptsChangeEventListener.class);
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         Script scriptMock = mock(Script.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock2 = mock(ListenableCompletableFuture.class);
@@ -2993,20 +3275,19 @@ public class PeerGroupSapientGeneratedJunit4Test {
             doNothing().when(walletMock).addCoinsSentEventListener(executor, walletCoinsSentEventListenerMock);
             doNothing().when(walletMock).addKeyChainEventListener(executor, keyChainEventListenerMock);
             doNothing().when(walletMock).addScriptsChangeEventListener(executor, scriptsChangeEventListenerMock);
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            scriptPattern.when(() -> ScriptPattern.isP2PK((Script) any())).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2WPKH((Script) any())).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(true);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(listenableCompletableFutureMock).when(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.DONT_SEND);
-            doReturn(listenableCompletableFutureMock2, listenableCompletableFutureMock3).when(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
+            doReturn(listenableCompletableFutureMock, listenableCompletableFutureMock2, listenableCompletableFutureMock3).when(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
             doReturn(listenableCompletableFutureMock4).when(target).addPeerFilterProvider(walletMock);
             doNothing().when(walletMock).setTransactionBroadcaster(target);
             //Act Statement(s)
@@ -3017,14 +3298,13 @@ public class PeerGroupSapientGeneratedJunit4Test {
             verify(walletMock).addKeyChainEventListener(executor, keyChainEventListenerMock);
             verify(walletMock).addScriptsChangeEventListener(executor, scriptsChangeEventListenerMock);
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2PK((Script) any()));
-            scriptPattern.verify(() -> ScriptPattern.isP2WPKH((Script) any()));
             scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock), atLeast(1));
-            verify(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.DONT_SEND);
-            verify(target, times(2)).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
+            verify(target, times(3)).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
             verify(target).addPeerFilterProvider(walletMock);
             verify(walletMock).setTransactionBroadcaster(target);
         }
@@ -3085,24 +3365,29 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         PeerFilterProvider peerFilterProviderMock = mock(PeerFilterProvider.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.01"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             target.removePeerFilterProvider(peerFilterProviderMock);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
@@ -3130,6 +3415,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
         KeyChainEventListener keyChainEventListenerMock = mock(KeyChainEventListener.class);
         ScriptsChangeEventListener scriptsChangeEventListenerMock = mock(ScriptsChangeEventListener.class);
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
@@ -3138,13 +3424,15 @@ public class PeerGroupSapientGeneratedJunit4Test {
             doReturn(false).when(walletMock).removeKeyChainEventListener(keyChainEventListenerMock);
             doReturn(false).when(walletMock).removeScriptsChangeEventListener(scriptsChangeEventListenerMock);
             doNothing().when(walletMock).setTransactionBroadcaster(null);
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             target.removeWallet(walletMock);
@@ -3155,6 +3443,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             verify(walletMock).removeScriptsChangeEventListener(scriptsChangeEventListenerMock);
             verify(walletMock).setTransactionBroadcaster(null);
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
@@ -3182,6 +3472,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
         KeyChainEventListener keyChainEventListenerMock = mock(KeyChainEventListener.class);
         ScriptsChangeEventListener scriptsChangeEventListenerMock = mock(ScriptsChangeEventListener.class);
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
@@ -3190,13 +3481,15 @@ public class PeerGroupSapientGeneratedJunit4Test {
             doReturn(false).when(walletMock).removeKeyChainEventListener(keyChainEventListenerMock);
             doReturn(false).when(walletMock).removeScriptsChangeEventListener(scriptsChangeEventListenerMock);
             doNothing().when(walletMock).setTransactionBroadcaster(null);
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             target.removeWallet(walletMock);
@@ -3207,6 +3500,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             verify(walletMock).removeScriptsChangeEventListener(scriptsChangeEventListenerMock);
             verify(walletMock).setTransactionBroadcaster(null);
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
@@ -3234,6 +3529,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
         KeyChainEventListener keyChainEventListenerMock = mock(KeyChainEventListener.class);
         ScriptsChangeEventListener scriptsChangeEventListenerMock = mock(ScriptsChangeEventListener.class);
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
@@ -3242,13 +3538,15 @@ public class PeerGroupSapientGeneratedJunit4Test {
             doReturn(false).when(walletMock).removeKeyChainEventListener(keyChainEventListenerMock);
             doReturn(false).when(walletMock).removeScriptsChangeEventListener(scriptsChangeEventListenerMock);
             doNothing().when(walletMock).setTransactionBroadcaster(null);
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.00010"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             target.removeWallet(walletMock);
@@ -3259,6 +3557,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             verify(walletMock).removeScriptsChangeEventListener(scriptsChangeEventListenerMock);
             verify(walletMock).setTransactionBroadcaster(null);
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
@@ -3286,6 +3586,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
         KeyChainEventListener keyChainEventListenerMock = mock(KeyChainEventListener.class);
         ScriptsChangeEventListener scriptsChangeEventListenerMock = mock(ScriptsChangeEventListener.class);
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
@@ -3294,13 +3595,15 @@ public class PeerGroupSapientGeneratedJunit4Test {
             doReturn(false).when(walletMock).removeKeyChainEventListener(keyChainEventListenerMock);
             doReturn(false).when(walletMock).removeScriptsChangeEventListener(scriptsChangeEventListenerMock);
             doNothing().when(walletMock).setTransactionBroadcaster(null);
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.00010"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             target.removeWallet(walletMock);
@@ -3311,6 +3614,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             verify(walletMock).removeScriptsChangeEventListener(scriptsChangeEventListenerMock);
             verify(walletMock).setTransactionBroadcaster(null);
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
@@ -3338,6 +3643,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
         KeyChainEventListener keyChainEventListenerMock = mock(KeyChainEventListener.class);
         ScriptsChangeEventListener scriptsChangeEventListenerMock = mock(ScriptsChangeEventListener.class);
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
@@ -3346,13 +3652,15 @@ public class PeerGroupSapientGeneratedJunit4Test {
             doReturn(false).when(walletMock).removeKeyChainEventListener(keyChainEventListenerMock);
             doReturn(false).when(walletMock).removeScriptsChangeEventListener(scriptsChangeEventListenerMock);
             doNothing().when(walletMock).setTransactionBroadcaster(null);
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             target.removeWallet(walletMock);
@@ -3363,6 +3671,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             verify(walletMock).removeScriptsChangeEventListener(scriptsChangeEventListenerMock);
             verify(walletMock).setTransactionBroadcaster(null);
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
@@ -3380,22 +3690,27 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             ListenableCompletableFuture<BloomFilter> result = target.recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
             //Assert statement(s)
             assertThat(result, is(notNullValue()));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
@@ -3413,16 +3728,19 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             ListenableCompletableFuture<BloomFilter> result = target.recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
@@ -3431,6 +3749,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             //TODO: Please implement equals method in ListenableCompletableFuture for verification to succeed or you need to adjust respective assertion statements
             assertThat(result, equalTo(listenableCompletableFuture));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
@@ -3450,23 +3770,28 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(listenableCompletableFutureMock).when(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
             //Act Statement(s)
-            target.setBloomFilterFalsePositiveRate(Double.parseDouble("0.001"));
+            target.setBloomFilterFalsePositiveRate(Double.parseDouble("0.0"));
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
@@ -3483,14 +3808,17 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
@@ -3499,6 +3827,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(result, equalTo(0));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
@@ -3514,33 +3844,37 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
+        PeerAddress peerAddressMock = mock(PeerAddress.class);
         Peer peerMock = mock(Peer.class);
         try (MockedStatic<PeerAddress> peerAddress = mockStatic(PeerAddress.class);
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            InetAddress inetAddress = InetAddress.getLoopbackAddress();
-            PeerAddress peerAddress2 = PeerAddress.simple(inetAddress, 0);
             InetSocketAddress inetSocketAddress = new InetSocketAddress(0);
-            peerAddress.when(() -> PeerAddress.simple(inetSocketAddress)).thenReturn(peerAddress2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            peerAddress.when(() -> PeerAddress.simple(inetSocketAddress)).thenReturn(peerAddressMock);
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(peerMock).when(target).connectTo((PeerAddress) any(), eq(true), (Duration) any());
+            doReturn(peerMock).when(target).connectTo(eq(peerAddressMock), eq(true), (Duration) any());
             //Act Statement(s)
             Peer result = target.connectTo(inetSocketAddress);
             //Assert statement(s)
             assertThat(result, equalTo(peerMock));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             peerAddress.verify(() -> PeerAddress.simple(inetSocketAddress), atLeast(1));
-            verify(target).connectTo((PeerAddress) any(), eq(true), (Duration) any());
+            verify(target).connectTo(eq(peerAddressMock), eq(true), (Duration) any());
         }
     }
 
@@ -3554,32 +3888,36 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
+        PeerAddress peerAddressMock = mock(PeerAddress.class);
         Peer peerMock = mock(Peer.class);
         try (MockedStatic<PeerAddress> peerAddress = mockStatic(PeerAddress.class);
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            InetAddress inetAddress = InetAddress.getLoopbackAddress();
-            PeerAddress peerAddress2 = PeerAddress.simple(inetAddress, 0);
-            peerAddress.when(() -> PeerAddress.localhost((NetworkParameters) any())).thenReturn(peerAddress2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            peerAddress.when(() -> PeerAddress.localhost(paramsMock)).thenReturn(peerAddressMock);
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(peerMock).when(target).connectTo((PeerAddress) any(), eq(true), (Duration) any());
+            doReturn(peerMock).when(target).connectTo(eq(peerAddressMock), eq(true), (Duration) any());
             //Act Statement(s)
             Peer result = target.connectToLocalHost();
             //Assert statement(s)
             assertThat(result, equalTo(peerMock));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
-            peerAddress.verify(() -> PeerAddress.localhost((NetworkParameters) any()));
-            verify(target).connectTo((PeerAddress) any(), eq(true), (Duration) any());
+            peerAddress.verify(() -> PeerAddress.localhost(paramsMock), atLeast(1));
+            verify(target).connectTo(eq(peerAddressMock), eq(true), (Duration) any());
         }
     }
 
@@ -3630,11 +3968,17 @@ public class PeerGroupSapientGeneratedJunit4Test {
         Block blockMock = mock(Block.class);
         PeerAddress peerAddressMock = mock(PeerAddress.class);
         VersionMessage versionMessageMock = mock(VersionMessage.class);
-        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+        try (MockedStatic<Context> context = mockStatic(Context.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class);
+             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
+            context.when(() -> Context.getOrCreate()).thenReturn(context2);
             target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
@@ -3646,6 +3990,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
+            threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
+            context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
     }
 
@@ -3659,21 +4005,26 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
-            target.setConnectTimeoutMillis(5000);
+            target.setConnectTimeoutMillis(1);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
@@ -3693,11 +4044,17 @@ public class PeerGroupSapientGeneratedJunit4Test {
         Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
         BlockchainDownloadEventListener blockchainDownloadEventListenerMock = mock(BlockchainDownloadEventListener.class);
-        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+        try (MockedStatic<Context> context = mockStatic(Context.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class);
+             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
+            context.when(() -> Context.getOrCreate()).thenReturn(context2);
             target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
@@ -3706,6 +4063,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
+            threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
+            context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
     }
 
@@ -3723,22 +4082,27 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doNothing().when(target).startBlockChainDownload((DownloadProgressTracker) any());
             //Act Statement(s)
             target.downloadBlockChain();
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).startBlockChainDownload((DownloadProgressTracker) any());
@@ -3761,24 +4125,29 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doNothing().when(target).startBlockChainDownload((DownloadProgressTracker) any());
             thrown.expect(RuntimeException.class);
-            thrown.expectCause(isA(Context.class));
+            thrown.expectCause(isA(InterruptedException.class));
             //Act Statement(s)
             target.downloadBlockChain();
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).startBlockChainDownload((DownloadProgressTracker) any());
@@ -3827,18 +4196,21 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            Context context3 = new Context();
+            Context context3 = Context.get();
             context.when(() -> Context.get()).thenReturn(context3);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             TxConfidenceTable result = target.getMemoryPool();
@@ -3847,6 +4219,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             //TODO: Please implement equals method in TxConfidenceTable for verification to succeed or you need to adjust respective assertion statements
             assertThat(result, equalTo(txConfidenceTable));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             context.verify(() -> Context.get(), atLeast(1));
@@ -3868,11 +4242,17 @@ public class PeerGroupSapientGeneratedJunit4Test {
         Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<Context> context = mockStatic(Context.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
+            context.when(() -> Context.getOrCreate()).thenReturn(context2);
             preconditions.when(() -> Preconditions.checkState(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
@@ -3883,6 +4263,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
+            threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
+            context.verify(() -> Context.getOrCreate(), atLeast(1));
             preconditions.verify(() -> Preconditions.checkState(eq(true), (Supplier) any()));
         }
     }
@@ -3897,22 +4279,27 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.00010")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doNothing().when(target).setFastCatchupTime((Instant) any());
             //Act Statement(s)
-            target.setFastCatchupTimeSecs(1630454400L);
+            target.setFastCatchupTimeSecs(1L);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).setFastCatchupTime((Instant) any());
@@ -3929,22 +4316,27 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             Instant result = target.fastCatchupTime();
             //Assert statement(s)
-            assertThat(result, is(nullValue()));
+            assertThat(result, equalTo(instant));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
@@ -3960,22 +4352,27 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            thrown.expect(NullPointerException.class);
             //Act Statement(s)
-            target.getFastCatchupTimeSecs();
+            long result = target.getFastCatchupTimeSecs();
             //Assert statement(s)
+            assertThat(result, equalTo(1703664760L));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
@@ -3993,15 +4390,18 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         Peer peerMock = mock(Peer.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
@@ -4011,6 +4411,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             target.handlePeerDeath(peerMock, throwable);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).isRunning();
@@ -4116,7 +4518,6 @@ public class PeerGroupSapientGeneratedJunit4Test {
         //TODO: Please change the modifier of the below class from private to public to isolate the test case scenario.
         //TODO: Please change the modifier of the below class from private to public to isolate the test case scenario.
         //TODO: Please change the modifier of the below class from private to public to isolate the test case scenario.
-        //TODO: Needs to return real value
         //Act Statement(s)
         //Assert statement(s)
         /* Branches:
@@ -4140,23 +4541,23 @@ public class PeerGroupSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         //Peer peerMock = mock(Peer.class);
         //Network networkMock = mock(Network.class);
-        //InetAddress inetAddress = InetAddress.getLoopbackAddress();
-        //PeerAddress peerAddress = PeerAddress.simple(inetAddress, 0);
+        //Block blockMock = mock(Block.class);
+        //PeerAddress peerAddress = PeerAddress.simple((Inet6Address) null, 0);
         //doReturn(peerAddress).when(peerMock).getAddress();
         //doReturn(false).when(peerMock).removeAddressEventListener((PeerGroup.PeerListener) any());
         //doReturn(false).when(peerMock).removeBlocksDownloadedEventListener((PeerGroup.PeerListener) any());
         //doReturn(false).when(peerMock).removeGetDataEventListener((PeerGroup.PeerListener) any());
-        //NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-        //networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-        //threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-        //Context context2 = new Context();
+        //networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+        //doReturn(blockMock).when(paramsMock).getGenesisBlock();
+        //Instant instant = Instant.now();
+        //doReturn(instant).when(blockMock).time();
+        //ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+        //threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+        //Context context2 = Context.getOrCreate();
         //context.when(() -> Context.getOrCreate()).thenReturn(context2);
-        //target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+        //target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
         //autoCloseableMocks = MockitoAnnotations.openMocks(this);
         //doReturn(true).when(target).isRunning();
-        //CopyOnWriteArrayList<Peer> peerList = new CopyOnWriteArrayList<>();
-        //doReturn(downloadPeerMock).when(target).selectDownloadPeer(peerList);
-        //doNothing().when(downloadPeerMock).setDownloadData(true);
         //NoRouteToHostException noRouteToHostException = new NoRouteToHostException();
         //target.handlePeerDeath(peerMock, noRouteToHostException);
         //verify(peerMock).getAddress();
@@ -4164,11 +4565,11 @@ public class PeerGroupSapientGeneratedJunit4Test {
         //verify(peerMock).removeBlocksDownloadedEventListener((PeerGroup.PeerListener) any());
         //verify(peerMock).removeGetDataEventListener((PeerGroup.PeerListener) any());
         //networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+        //verify(paramsMock).getGenesisBlock();
+        //verify(blockMock).time();
         //threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
         //context.verify(() -> Context.getOrCreate(), atLeast(1));
         //verify(target).isRunning();
-        //verify(target).selectDownloadPeer(peerList);
-        //verify(downloadPeerMock).setDownloadData(true);
     }
 
     //Sapient generated method id: ${88590d65-c1a6-3069-916f-c1571ef3b9dd}
@@ -4181,21 +4582,26 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
-            target.setStallThreshold(10, 1024);
+            target.setStallThreshold(0, 0);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
@@ -4215,11 +4621,17 @@ public class PeerGroupSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
-        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+        try (MockedStatic<Context> context = mockStatic(Context.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class);
+             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
+            context.when(() -> Context.getOrCreate()).thenReturn(context2);
             target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             thrown.expect(NullPointerException.class);
@@ -4230,6 +4642,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
+            threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
+            context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
     }
 
@@ -4283,27 +4697,32 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         ListenableCompletableFuture<List<Peer>> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(listenableCompletableFutureMock).when(target).waitForPeersOfVersion(1, 0L);
+            doReturn(listenableCompletableFutureMock).when(target).waitForPeersOfVersion(0, 0L);
             //Act Statement(s)
-            ListenableCompletableFuture<List<Peer>> result = target.waitForPeers(1);
+            ListenableCompletableFuture<List<Peer>> result = target.waitForPeers(0);
             //Assert statement(s)
             assertThat(result, equalTo(listenableCompletableFutureMock));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
-            verify(target).waitForPeersOfVersion(1, 0L);
+            verify(target).waitForPeersOfVersion(0, 0L);
         }
     }
 
@@ -4320,11 +4739,17 @@ public class PeerGroupSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
-        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+        try (MockedStatic<Context> context = mockStatic(Context.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class);
+             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
+            context.when(() -> Context.getOrCreate()).thenReturn(context2);
             target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
@@ -4338,6 +4763,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
+            threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
+            context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).findPeersOfAtLeastVersion(0L);
         }
     }
@@ -4355,11 +4782,17 @@ public class PeerGroupSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
-        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+        try (MockedStatic<Context> context = mockStatic(Context.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class);
+             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
+            context.when(() -> Context.getOrCreate()).thenReturn(context2);
             target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
@@ -4374,6 +4807,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
+            threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
+            context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).findPeersOfAtLeastVersion(0L);
             verify(target).addConnectedEventListener((PeerConnectedEventListener) any());
         }
@@ -4391,22 +4826,27 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.01"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
-            List<Peer> result = target.findPeersOfAtLeastVersion(1L);
+            List<Peer> result = target.findPeersOfAtLeastVersion(0L);
             //Assert statement(s)
             assertThat(result.size(), equalTo(0));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
@@ -4425,11 +4865,17 @@ public class PeerGroupSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
-        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+        try (MockedStatic<Context> context = mockStatic(Context.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class);
+             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
+            context.when(() -> Context.getOrCreate()).thenReturn(context2);
             target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
@@ -4443,6 +4889,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
+            threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
+            context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).findPeersWithServiceMask(0);
         }
     }
@@ -4460,11 +4908,17 @@ public class PeerGroupSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
-        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+        try (MockedStatic<Context> context = mockStatic(Context.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class);
+             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
+            context.when(() -> Context.getOrCreate()).thenReturn(context2);
             target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
@@ -4479,6 +4933,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
+            threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
+            context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).findPeersWithServiceMask(0);
             verify(target).addConnectedEventListener((PeerConnectedEventListener) any());
         }
@@ -4508,10 +4964,10 @@ public class PeerGroupSapientGeneratedJunit4Test {
             threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
             Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.1"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
-            List<Peer> result = target.findPeersWithServiceMask(1);
+            List<Peer> result = target.findPeersWithServiceMask(0);
             //Assert statement(s)
             assertThat(result.size(), equalTo(0));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
@@ -4536,11 +4992,17 @@ public class PeerGroupSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
-        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+        try (MockedStatic<Context> context = mockStatic(Context.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class);
+             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
+            context.when(() -> Context.getOrCreate()).thenReturn(context2);
             target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
@@ -4550,6 +5012,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
+            threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
+            context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
     }
 
@@ -4563,21 +5027,26 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
-            target.setMinBroadcastConnections(10);
+            target.setMinBroadcastConnections(0);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
@@ -4596,28 +5065,33 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         TransactionBroadcast transactionBroadcastMock = mock(TransactionBroadcast.class);
+        Transaction transactionMock = mock(Transaction.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            Transaction transaction = new Transaction();
-            doReturn(transactionBroadcastMock).when(target).broadcastTransaction(transaction, 1, true);
+            doReturn(transactionBroadcastMock).when(target).broadcastTransaction(transactionMock, 1, true);
             //Act Statement(s)
-            TransactionBroadcast result = target.broadcastTransaction(transaction);
+            TransactionBroadcast result = target.broadcastTransaction(transactionMock);
             //Assert statement(s)
             assertThat(result, equalTo(transactionBroadcastMock));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
-            verify(target).broadcastTransaction(transaction, 1, true);
+            verify(target).broadcastTransaction(transactionMock, 1, true);
         }
     }
 
@@ -4686,35 +5160,54 @@ public class PeerGroupSapientGeneratedJunit4Test {
          * (tx.getConfidence().numBroadcastPeers() == 0) : false
          *
          * TODO: Help needed! This method is not unit testable!
-         *  Following variables could not be isolated/mocked: broadcast, org.bitcoinj.core.TransactionConfidence
+         *  Following variables could not be isolated/mocked: broadcast
          *  Suggestions:
          *  You can change the initialization of above variables and make it injectable or
          *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Transaction txMock = mock(Transaction.class);
+        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
+        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
+        Sha256Hash sha256HashMock3 = mock(Sha256Hash.class);
+        TransactionConfidence transactionConfidenceMock = mock(TransactionConfidence.class);
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            TransactionConfidence transactionConfidence = new TransactionConfidence(sha256HashMock);
+            transactionConfidence.setSource(TransactionConfidence.Source.UNKNOWN);
+            doReturn(sha256HashMock2).when(txMock).getTxId();
+            TransactionConfidence transactionConfidence2 = new TransactionConfidence(sha256HashMock3);
+            transactionConfidence2.setSource(TransactionConfidence.Source.SELF);
+            doReturn(transactionConfidence, transactionConfidence2, transactionConfidenceMock).when(txMock).getConfidence();
+            doReturn(-1).when(transactionConfidenceMock).numBroadcastPeers();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            Transaction transaction = new Transaction();
             //Act Statement(s)
-            TransactionBroadcast result = target.broadcastTransaction(transaction, 0, true);
-            TransactionBroadcast transactionBroadcast = new TransactionBroadcast(target, transaction);
+            TransactionBroadcast result = target.broadcastTransaction(txMock, 0, true);
+            TransactionBroadcast transactionBroadcast = new TransactionBroadcast(target, txMock);
             transactionBroadcast.setMinConnections(0);
-            transactionBroadcast.setDropPeersAfterBroadcast(true);
+            transactionBroadcast.setDropPeersAfterBroadcast(false);
             //Assert statement(s)
             //TODO: Please implement equals method in TransactionBroadcast for verification to succeed or you need to adjust respective assertion statements
             assertThat(result, equalTo(transactionBroadcast));
+            verify(txMock, times(3)).getConfidence();
+            verify(txMock).getTxId();
+            verify(transactionConfidenceMock).numBroadcastPeers();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
@@ -4730,22 +5223,27 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             long result = target.getPingIntervalMsec();
             //Assert statement(s)
             assertThat(result, equalTo(2000L));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
@@ -4765,19 +5263,27 @@ public class PeerGroupSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
-        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+        try (MockedStatic<Context> context = mockStatic(Context.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class);
+             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
+            context.when(() -> Context.getOrCreate()).thenReturn(context2);
             target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
-            target.setPingIntervalMsec(0L);
+            target.setPingIntervalMsec(-1L);
             //Assert statement(s)
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
+            threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
+            context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
     }
 
@@ -4821,24 +5327,29 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<PeerGroup> peerGroup = mockStatic(PeerGroup.class);
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             peerGroup.when(() -> PeerGroup.getMostCommonChainHeight(any())).thenReturn(0);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             int result = target.getMostCommonChainHeight();
             //Assert statement(s)
             assertThat(result, equalTo(0));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             peerGroup.verify(() -> PeerGroup.getMostCommonChainHeight(any()));
@@ -4853,8 +5364,10 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         List<Peer> peerList = new ArrayList<>();
+
         //Act Statement(s)
         int result = PeerGroup.getMostCommonChainHeight(peerList);
+
         //Assert statement(s)
         assertThat(result, equalTo(0));
     }
@@ -4895,8 +5408,10 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         List<Integer> integerList = new ArrayList<>();
+
         //Act Statement(s)
         int result = PeerGroup.maxOfMostFreq(integerList);
+
         //Assert statement(s)
         assertThat(result, equalTo(0));
     }
@@ -4916,15 +5431,10 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         List<Integer> integerList = new ArrayList<>();
-        integerList.add(2);
-        integerList.add(2);
-        integerList.add(2);
-        integerList.add(3);
-        integerList.add(3);
-        integerList.add(3);
-        integerList.add(3);
+
         //Act Statement(s)
         int result = PeerGroup.maxOfMostFreq(integerList);
+
         //Assert statement(s)
         assertThat(result, equalTo(0));
     }
@@ -4945,17 +5455,10 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         List<Integer> integerList = new ArrayList<>();
-        integerList.add(3);
-        integerList.add(2);
-        integerList.add(1);
-        integerList.add(3);
-        integerList.add(2);
-        integerList.add(1);
-        integerList.add(3);
-        integerList.add(3);
-        integerList.add(3);
+
         //Act Statement(s)
         int result = PeerGroup.maxOfMostFreq(integerList);
+
         //Assert statement(s)
         assertThat(result, equalTo(0));
     }
@@ -4976,11 +5479,10 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         List<Integer> integerList = new ArrayList<>();
-        integerList.add(1);
-        integerList.add(2);
-        integerList.add(3);
+
         //Act Statement(s)
         int result = PeerGroup.maxOfMostFreq(integerList);
+
         //Assert statement(s)
         assertThat(result, equalTo(0));
     }
@@ -5001,17 +5503,16 @@ public class PeerGroupSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        List<Integer> integerList = new ArrayList<>();
-        integerList.add(1);
-        integerList.add(2);
-        integerList.add(2);
-        integerList.add(3);
-        integerList.add(3);
-        integerList.add(3);
-        //Act Statement(s)
-        int result = PeerGroup.maxOfMostFreq(integerList);
-        //Assert statement(s)
-        assertThat(result, equalTo(0));
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            IllegalStateException illegalStateException = new IllegalStateException();
+            preconditions.when(() -> Preconditions.checkState(false)).thenThrow(illegalStateException);
+            thrown.expect(IllegalStateException.class);
+            List<Integer> integerList = new ArrayList<>();
+            //Act Statement(s)
+            PeerGroup.maxOfMostFreq(integerList);
+            //Assert statement(s)
+            preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${3c962c46-a729-32ba-8921-bf4c756fddbc}
@@ -5026,30 +5527,30 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
-        Peer peerMock = mock(Peer.class);
-        try (MockedStatic<PeerGroup> peerGroup = mockStatic(PeerGroup.class);
-             MockedStatic<Context> context = mockStatic(Context.class);
+        Block blockMock = mock(Block.class);
+        try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            peerGroup.when(() -> PeerGroup.getMostCommonChainHeight(anyList())).thenReturn(0);
             target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
-            peerList.add(peerMock);
             //Act Statement(s)
             Peer result = target.selectDownloadPeer(peerList);
             //Assert statement(s)
             assertThat(result, is(nullValue()));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
-            peerGroup.verify(() -> PeerGroup.getMostCommonChainHeight(anyList()));
         }
     }
 
@@ -5066,19 +5567,22 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         Peer peerMock = mock(Peer.class);
         try (MockedStatic<PeerGroup> peerGroup = mockStatic(PeerGroup.class);
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
             peerGroup.when(() -> PeerGroup.getMostCommonChainHeight(anyList())).thenReturn(0);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.1"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
@@ -5087,6 +5591,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(result, is(nullValue()));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             peerGroup.verify(() -> PeerGroup.getMostCommonChainHeight(anyList()));
@@ -5109,37 +5615,36 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Peer peerMock = mock(Peer.class);
-        NetworkParameters networkParameters2Mock = mock(NetworkParameters.class);
-        Peer peerMock2 = mock(Peer.class);
         VersionMessage versionMessageMock = mock(VersionMessage.class);
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<PeerGroup> peerGroup = mockStatic(PeerGroup.class);
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            VersionMessage versionMessage = new VersionMessage(networkParameters2Mock, 0);
-            doReturn(versionMessage).when(peerMock).getPeerVersionMessage();
-            doReturn(versionMessageMock).when(peerMock2).getPeerVersionMessage();
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            doReturn(versionMessageMock).when(peerMock).getPeerVersionMessage();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            peerGroup.when(() -> PeerGroup.getMostCommonChainHeight(anyList())).thenReturn(10);
-            versionMessageMock.clientVersion = 0;
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            peerGroup.when(() -> PeerGroup.getMostCommonChainHeight(anyList())).thenReturn(-1);
+            versionMessageMock.clientVersion = 1;
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
-            peerList.add(peerMock2);
             //Act Statement(s)
             Peer result = target.selectDownloadPeer(peerList);
             //Assert statement(s)
             assertThat(result, is(nullValue()));
             verify(peerMock).getPeerVersionMessage();
-            verify(peerMock2).getPeerVersionMessage();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             peerGroup.verify(() -> PeerGroup.getMostCommonChainHeight(anyList()));
@@ -5162,20 +5667,26 @@ public class PeerGroupSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Network networkMock = mock(Network.class);
         Peer peerMock = mock(Peer.class);
+        VersionMessage versionMessageMock = mock(VersionMessage.class);
+        Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<PeerGroup> peerGroup = mockStatic(PeerGroup.class);
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            doReturn(versionMessageMock).when(peerMock).getPeerVersionMessage();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            peerGroup.when(() -> PeerGroup.getMostCommonChainHeight(anyList())).thenReturn(0);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            peerGroup.when(() -> PeerGroup.getMostCommonChainHeight(anyList())).thenReturn(-1);
+            versionMessageMock.clientVersion = 1;
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
@@ -5183,7 +5694,10 @@ public class PeerGroupSapientGeneratedJunit4Test {
             Peer result = target.selectDownloadPeer(peerList);
             //Assert statement(s)
             assertThat(result, is(nullValue()));
+            verify(peerMock).getPeerVersionMessage();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             peerGroup.verify(() -> PeerGroup.getMostCommonChainHeight(anyList()));
@@ -5209,37 +5723,37 @@ public class PeerGroupSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         Peer peerMock = mock(Peer.class);
         VersionMessage versionMessageMock = mock(VersionMessage.class);
-        Services servicesMock = mock(Services.class);
-        Services servicesMock2 = mock(Services.class);
         Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
         try (MockedStatic<PeerGroup> peerGroup = mockStatic(PeerGroup.class);
+             MockedStatic<Context> context = mockStatic(Context.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             doReturn(versionMessageMock).when(peerMock).getPeerVersionMessage();
-            doReturn(true).when(servicesMock).has(1L);
-            doReturn(servicesMock, servicesMock2).when(versionMessageMock).services();
-            doReturn(false).when(servicesMock2).has(8L);
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
+            context.when(() -> Context.getOrCreate()).thenReturn(context2);
             peerGroup.when(() -> PeerGroup.getMostCommonChainHeight(anyList())).thenReturn(-1);
-            versionMessageMock.clientVersion = 70012;
+            versionMessageMock.clientVersion = 1;
             target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            thrown.expect(IndexOutOfBoundsException.class);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
             //Act Statement(s)
-            Peer result = target.selectDownloadPeer(peerList);
+            target.selectDownloadPeer(peerList);
             //Assert statement(s)
-            assertThat(result, is(nullValue()));
             verify(peerMock).getPeerVersionMessage();
-            verify(versionMessageMock, times(2)).services();
-            verify(servicesMock).has(1L);
-            verify(servicesMock2).has(8L);
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
+            threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
+            context.verify(() -> Context.getOrCreate(), atLeast(1));
             peerGroup.verify(() -> PeerGroup.getMostCommonChainHeight(anyList()));
         }
     }
@@ -5264,31 +5778,36 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Peer peerMock = mock(Peer.class);
-        NetworkParameters networkParameters2Mock = mock(NetworkParameters.class);
+        VersionMessage versionMessageMock = mock(VersionMessage.class);
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<PeerGroup> peerGroup = mockStatic(PeerGroup.class);
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            VersionMessage versionMessage = new VersionMessage(networkParameters2Mock, 0);
-            doReturn(versionMessage).when(peerMock).getPeerVersionMessage();
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            doReturn(versionMessageMock).when(peerMock).getPeerVersionMessage();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            peerGroup.when(() -> PeerGroup.getMostCommonChainHeight(anyList())).thenReturn(100);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            peerGroup.when(() -> PeerGroup.getMostCommonChainHeight(anyList())).thenReturn(-1);
+            versionMessageMock.clientVersion = 1;
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            thrown.expect(IndexOutOfBoundsException.class);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
             //Act Statement(s)
-            target.selectDownloadPeer(peerList);
+            Peer result = target.selectDownloadPeer(peerList);
             //Assert statement(s)
+            assertThat(result, is(nullValue()));
             verify(peerMock).getPeerVersionMessage();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             peerGroup.verify(() -> PeerGroup.getMostCommonChainHeight(anyList()));
@@ -5317,30 +5836,37 @@ public class PeerGroupSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Network networkMock = mock(Network.class);
         Peer peerMock = mock(Peer.class);
-        Peer peerMock2 = mock(Peer.class);
+        VersionMessage versionMessageMock = mock(VersionMessage.class);
+        Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<PeerGroup> peerGroup = mockStatic(PeerGroup.class);
              MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            doReturn(versionMessageMock).when(peerMock).getPeerVersionMessage();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            peerGroup.when(() -> PeerGroup.getMostCommonChainHeight(anyList())).thenReturn(0);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            peerGroup.when(() -> PeerGroup.getMostCommonChainHeight(anyList())).thenReturn(-1);
+            versionMessageMock.clientVersion = 1;
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
-            peerList.add(peerMock2);
             //Act Statement(s)
             Peer result = target.selectDownloadPeer(peerList);
             //Assert statement(s)
             assertThat(result, is(nullValue()));
+            verify(peerMock).getPeerVersionMessage();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
             peerGroup.verify(() -> PeerGroup.getMostCommonChainHeight(anyList()));
@@ -5357,22 +5883,27 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             Peer result = target.getDownloadPeer();
             //Assert statement(s)
             assertThat(result, is(nullValue()));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
@@ -5388,22 +5919,27 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+        Block blockMock = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
             context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             boolean result = target.getUseLocalhostPeerWhenPossible();
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.TRUE));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
             context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
@@ -5420,11 +5956,17 @@ public class PeerGroupSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
-        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+        try (MockedStatic<Context> context = mockStatic(Context.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class);
+             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
+            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
+            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
+            Context context2 = Context.getOrCreate();
+            context.when(() -> Context.getOrCreate()).thenReturn(context2);
             target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
@@ -5433,6 +5975,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
+            threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
+            context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
     }
 }

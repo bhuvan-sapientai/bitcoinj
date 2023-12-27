@@ -1370,11 +1370,11 @@ methods:
       filledByUser: false
     uuid: "4df030c0-1a62-3804-8470-eaebd2a652a6"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "wrap"
     returnType: "org.bitcoinj.base.Sha256Hash"
@@ -1688,13 +1688,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "9C0CD721CEE0B4F0BF6A915AF20D9EC6"
+    modelFingerprint: "9376C8307FEE1FC47E7F093080EC9197"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "buf"
-      modelFingerprint: "088D6A658D4960F9145DEBCAB2A35AC9"
+      modelFingerprint: "1252C11318E77FDAA9B366ABFB220D79"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1736,7 +1736,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "B9B3929C5C47B728945C95D786787642"
+      modelFingerprint: "5CB0F741162E9DEBCD6BB1F360E3F6EE"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -2278,69 +2278,7 @@ methods:
             explicitCastNeeded: false
         signature: "wrapReversed(byte[]): Sha256Hash"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "read"
-            methodParameters:
-            - name: "buf"
-              value:
-                sapientType: "OBJECT"
-                content: !<static_method_return>
-                  target: "java.nio.ByteBuffer"
-                  method: "allocateDirect"
-                  methodParameters:
-                  - name: "capacity"
-                    value:
-                      sapientType: "BASIC"
-                      content: !<regular>
-                        value: 0
-                      valueType: "int"
-                      uuid: "read_sha256Hash1-buf-capacity"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                suggestedContent: !<static_method_return>
-                  target: "java.nio.ByteBuffer"
-                  method: "allocateDirect"
-                  methodParameters:
-                  - name: "capacity"
-                    value:
-                      sapientType: "BASIC"
-                      valueType: "int"
-                      uuid: "read_sha256Hash1-buf-capacity"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                valueType: "java.nio.ByteBuffer"
-                uuid: "read_sha256Hash1-buf"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "read"
-            methodParameters:
-            - name: "buf"
-              value:
-                sapientType: "UNKNOWN"
-                suggestedContent: !<static_method_return>
-                  target: "java.nio.ByteBuffer"
-                  method: "allocateDirect"
-                  methodParameters:
-                  - name: "capacity"
-                    value:
-                      sapientType: "BASIC"
-                      valueType: "int"
-                      uuid: "read_sha256Hash1-buf-capacity"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                valueType: "java.nio.ByteBuffer"
-                uuid: "read_sha256Hash1-buf"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.base.Sha256Hash"
           uuid: "read_sha256Hash1"
           fixed: false
@@ -2351,75 +2289,13 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "C19FE13D8DCB65AD8C6ED506D9B63943"
+      modelFingerprint: "D5F995FF16038F8C8CEB6ED663606C67"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "org.bitcoinj.base.Sha256Hash"
-          method: "read"
-          methodParameters:
-          - name: "buf"
-            value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "java.nio.ByteBuffer"
-                method: "allocateDirect"
-                methodParameters:
-                - name: "capacity"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    valueType: "int"
-                    uuid: "read_sha256Hash1-buf-capacity"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "java.nio.ByteBuffer"
-                method: "allocateDirect"
-                methodParameters:
-                - name: "capacity"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "int"
-                    uuid: "read_sha256Hash1-buf-capacity"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              valueType: "java.nio.ByteBuffer"
-              uuid: "read_sha256Hash1-buf"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.base.Sha256Hash"
-          method: "read"
-          methodParameters:
-          - name: "buf"
-            value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<static_method_return>
-                target: "java.nio.ByteBuffer"
-                method: "allocateDirect"
-                methodParameters:
-                - name: "capacity"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "int"
-                    uuid: "read_sha256Hash1-buf-capacity"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              valueType: "java.nio.ByteBuffer"
-              uuid: "read_sha256Hash1-buf"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.base.Sha256Hash"
         uuid: "read_sha256Hash1"
         fixed: false
@@ -2429,11 +2305,11 @@ methods:
       filledByUser: false
     uuid: "db344e3b-696d-3b02-8e35-1aaa5300bde6"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "of"
     returnType: "org.bitcoinj.base.Sha256Hash"
@@ -2948,13 +2824,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "325076E14D2BAD1D34789916EF60ED44"
+    modelFingerprint: "AE2996D215928E693ABDA8052604F9A8"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "file"
-      modelFingerprint: "97C7E6BC43DA4D5F6D1F58EC5AB54140"
+      modelFingerprint: "8A5A0F22DD9C1795C4DF7630ED5A969D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2998,7 +2874,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "49B0F7E538A68E2602DE93D1818A91DF"
+      modelFingerprint: "8F1237432E263601D827E8CAD2D5D568"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -3028,69 +2904,7 @@ methods:
             explicitCastNeeded: false
         signature: "of(byte[]): Sha256Hash"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "read"
-            methodParameters:
-            - name: "buf"
-              value:
-                sapientType: "OBJECT"
-                content: !<static_method_return>
-                  target: "java.nio.ByteBuffer"
-                  method: "allocateDirect"
-                  methodParameters:
-                  - name: "capacity"
-                    value:
-                      sapientType: "BASIC"
-                      content: !<regular>
-                        value: 0
-                      valueType: "int"
-                      uuid: "of_sha256Hash1-buf-capacity"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                suggestedContent: !<static_method_return>
-                  target: "java.nio.ByteBuffer"
-                  method: "allocateDirect"
-                  methodParameters:
-                  - name: "capacity"
-                    value:
-                      sapientType: "BASIC"
-                      valueType: "int"
-                      uuid: "of_sha256Hash1-buf-capacity"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                valueType: "java.nio.ByteBuffer"
-                uuid: "of_sha256Hash1-buf"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "read"
-            methodParameters:
-            - name: "buf"
-              value:
-                sapientType: "UNKNOWN"
-                suggestedContent: !<static_method_return>
-                  target: "java.nio.ByteBuffer"
-                  method: "allocateDirect"
-                  methodParameters:
-                  - name: "capacity"
-                    value:
-                      sapientType: "BASIC"
-                      valueType: "int"
-                      uuid: "of_sha256Hash1-buf-capacity"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                valueType: "java.nio.ByteBuffer"
-                uuid: "of_sha256Hash1-buf"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.base.Sha256Hash"
           uuid: "of_sha256Hash1"
           fixed: false
@@ -3101,75 +2915,13 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "C19FE13D8DCB65AD8C6ED506D9B63943"
+      modelFingerprint: "D5F995FF16038F8C8CEB6ED663606C67"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "org.bitcoinj.base.Sha256Hash"
-          method: "read"
-          methodParameters:
-          - name: "buf"
-            value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "java.nio.ByteBuffer"
-                method: "allocateDirect"
-                methodParameters:
-                - name: "capacity"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    valueType: "int"
-                    uuid: "of_sha256Hash1-buf-capacity"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "java.nio.ByteBuffer"
-                method: "allocateDirect"
-                methodParameters:
-                - name: "capacity"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "int"
-                    uuid: "of_sha256Hash1-buf-capacity"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              valueType: "java.nio.ByteBuffer"
-              uuid: "of_sha256Hash1-buf"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.base.Sha256Hash"
-          method: "read"
-          methodParameters:
-          - name: "buf"
-            value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<static_method_return>
-                target: "java.nio.ByteBuffer"
-                method: "allocateDirect"
-                methodParameters:
-                - name: "capacity"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "int"
-                    uuid: "of_sha256Hash1-buf-capacity"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              valueType: "java.nio.ByteBuffer"
-              uuid: "of_sha256Hash1-buf"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.base.Sha256Hash"
         uuid: "of_sha256Hash1"
         fixed: false
@@ -3179,11 +2931,10 @@ methods:
       filledByUser: false
     uuid: "2d9e451b-59ca-3da9-a6c7-f80da9bfa12e"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "newDigest"
     returnType: "java.security.MessageDigest"
@@ -3249,11 +3000,11 @@ methods:
       filledByUser: false
     uuid: "864b40bf-1d57-3bcc-af03-b58d82f51832"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "newDigestWhenCaughtNoSuchAlgorithmExceptionThrowsRuntimeException"
@@ -3545,13 +3296,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "451EDF263DC8D07329003D012A59D168"
+    modelFingerprint: "358838006C5C9455B9D93E588F1D42D1"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "input"
-      modelFingerprint: "160285FD932AED38E895D47DDFA16A26"
+      modelFingerprint: "31E764E38B187D23082B82C51F361082"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -3559,25 +3310,9 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         suggestedContent: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         valueType: "byte[]"
         uuid: "hash_byte[]1"
         fixed: false
@@ -3587,7 +3322,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "offset"
-      modelFingerprint: "50F3967790793FB32EEE755BEBABA84A"
+      modelFingerprint: "CE54242AD935D48AF0BA03B577FAB81E"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -3595,8 +3330,6 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
-        suggestedContent: !<regular>
           value: 0
         valueType: "int"
         uuid: "hash_int1"
@@ -3607,7 +3340,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "length"
-      modelFingerprint: "87115E6F5D4DF9F2E249F367B2F77104"
+      modelFingerprint: "8AE05FEFB40801A952622E806B6936F2"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -3615,9 +3348,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 11
-        suggestedContent: !<regular>
-          value: 11
+          value: 0
         valueType: "int"
         uuid: "hash_int2"
         fixed: false
@@ -3627,7 +3358,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "05DFF1266BE9373119C49545D1076164"
+      modelFingerprint: "A4724087C9136D329D6992C9CBC79367"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -3648,11 +3379,11 @@ methods:
           sapientType: "NULL"
           content: !<unknown_object>
             target: "java.security.MessageDigest"
-            onlyPojoFunctions: true
+            onlyPojoFunctions: false
             builderPattern: false
           suggestedContent: !<unknown_object>
             target: "java.security.MessageDigest"
-            onlyPojoFunctions: true
+            onlyPojoFunctions: false
             builderPattern: false
           valueType: "java.security.MessageDigest"
           uuid: "hash_messageDigest1"
@@ -3852,13 +3583,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "7B32EBE869DE4369421F26FAF9A0E314"
+    modelFingerprint: "BAA48B11952448886C1980882110B59C"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "input1"
-      modelFingerprint: "464854875F83A5595D9434A385921079"
+      modelFingerprint: "330A72684610EF60529A6E8171CD0E42"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -3866,25 +3597,9 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         suggestedContent: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         valueType: "byte[]"
         uuid: "hashTwice_byte[]1"
         fixed: false
@@ -3894,7 +3609,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "input2"
-      modelFingerprint: "F4339D86A6ACB2075E9851429C43658D"
+      modelFingerprint: "0091245B0ECAFFDAFA01681C06FAEE78"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -3902,25 +3617,9 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         suggestedContent: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         valueType: "byte[]"
         uuid: "hashTwice_byte[]2"
         fixed: false
@@ -3930,7 +3629,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "05DFF1266BE9373119C49545D1076164"
+      modelFingerprint: "A4724087C9136D329D6992C9CBC79367"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -3951,11 +3650,11 @@ methods:
           sapientType: "NULL"
           content: !<unknown_object>
             target: "java.security.MessageDigest"
-            onlyPojoFunctions: true
+            onlyPojoFunctions: false
             builderPattern: false
           suggestedContent: !<unknown_object>
             target: "java.security.MessageDigest"
-            onlyPojoFunctions: true
+            onlyPojoFunctions: false
             builderPattern: false
           valueType: "java.security.MessageDigest"
           uuid: "hashTwice_messageDigest1"
@@ -4019,13 +3718,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "451EDF263DC8D07329003D012A59D168"
+    modelFingerprint: "358838006C5C9455B9D93E588F1D42D1"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "input"
-      modelFingerprint: "160285FD932AED38E895D47DDFA16A26"
+      modelFingerprint: "31E764E38B187D23082B82C51F361082"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -4033,25 +3732,9 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         suggestedContent: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         valueType: "byte[]"
         uuid: "hashTwice_byte[]1"
         fixed: false
@@ -4061,7 +3744,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "offset"
-      modelFingerprint: "50F3967790793FB32EEE755BEBABA84A"
+      modelFingerprint: "CE54242AD935D48AF0BA03B577FAB81E"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -4069,8 +3752,6 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
-        suggestedContent: !<regular>
           value: 0
         valueType: "int"
         uuid: "hashTwice_int1"
@@ -4081,7 +3762,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "length"
-      modelFingerprint: "87115E6F5D4DF9F2E249F367B2F77104"
+      modelFingerprint: "8AE05FEFB40801A952622E806B6936F2"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -4089,9 +3770,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 11
-        suggestedContent: !<regular>
-          value: 11
+          value: 0
         valueType: "int"
         uuid: "hashTwice_int2"
         fixed: false
@@ -4101,7 +3780,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "05DFF1266BE9373119C49545D1076164"
+      modelFingerprint: "A4724087C9136D329D6992C9CBC79367"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -4122,11 +3801,11 @@ methods:
           sapientType: "NULL"
           content: !<unknown_object>
             target: "java.security.MessageDigest"
-            onlyPojoFunctions: true
+            onlyPojoFunctions: false
             builderPattern: false
           suggestedContent: !<unknown_object>
             target: "java.security.MessageDigest"
-            onlyPojoFunctions: true
+            onlyPojoFunctions: false
             builderPattern: false
           valueType: "java.security.MessageDigest"
           uuid: "hashTwice_messageDigest1"
@@ -4193,13 +3872,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "F264015CB79BE43F4478C2D42092582E"
+    modelFingerprint: "9BBA47186C43B95451B8E51D6C559FB1"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "input1"
-      modelFingerprint: "464854875F83A5595D9434A385921079"
+      modelFingerprint: "330A72684610EF60529A6E8171CD0E42"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -4207,25 +3886,9 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         suggestedContent: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         valueType: "byte[]"
         uuid: "hashTwice_byte[]1"
         fixed: false
@@ -4235,7 +3898,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "offset1"
-      modelFingerprint: "FAA79CB5705DC9A2E7750782C095AD7F"
+      modelFingerprint: "48B4BFF20ED5A49795B33166D207C944"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -4243,8 +3906,6 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
-        suggestedContent: !<regular>
           value: 0
         valueType: "int"
         uuid: "hashTwice_int1"
@@ -4255,7 +3916,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "length1"
-      modelFingerprint: "962A09FCE0260E86A2CD703D5ACC7F93"
+      modelFingerprint: "F049D25154C851B61661945A16C40E4D"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -4263,9 +3924,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 5
-        suggestedContent: !<regular>
-          value: 5
+          value: 0
         valueType: "int"
         uuid: "hashTwice_int2"
         fixed: false
@@ -4275,7 +3934,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "input2"
-      modelFingerprint: "F4339D86A6ACB2075E9851429C43658D"
+      modelFingerprint: "0091245B0ECAFFDAFA01681C06FAEE78"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -4283,25 +3942,9 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         suggestedContent: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         valueType: "byte[]"
         uuid: "hashTwice_byte[]2"
         fixed: false
@@ -4311,7 +3954,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "offset2"
-      modelFingerprint: "35709A1646679B188ACD1E44C4132E77"
+      modelFingerprint: "D30F7F8F817AF72BE443CD91BFDC6228"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -4319,8 +3962,6 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
-        suggestedContent: !<regular>
           value: 0
         valueType: "int"
         uuid: "hashTwice_int3"
@@ -4331,7 +3972,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "length2"
-      modelFingerprint: "FA59493D2165A629A7D9E4AC7DA62B73"
+      modelFingerprint: "76D8FA2E78003E1DCC0B4FF0B65AFA78"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -4339,9 +3980,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 5
-        suggestedContent: !<regular>
-          value: 5
+          value: 0
         valueType: "int"
         uuid: "hashTwice_int4"
         fixed: false
@@ -4351,7 +3990,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "05DFF1266BE9373119C49545D1076164"
+      modelFingerprint: "A4724087C9136D329D6992C9CBC79367"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -4372,11 +4011,11 @@ methods:
           sapientType: "NULL"
           content: !<unknown_object>
             target: "java.security.MessageDigest"
-            onlyPojoFunctions: true
+            onlyPojoFunctions: false
             builderPattern: false
           suggestedContent: !<unknown_object>
             target: "java.security.MessageDigest"
-            onlyPojoFunctions: true
+            onlyPojoFunctions: false
             builderPattern: false
           valueType: "java.security.MessageDigest"
           uuid: "hashTwice_messageDigest1"
@@ -5257,11 +4896,11 @@ methods:
       filledByUser: false
     uuid: "363d3698-f34c-39ad-914f-376a19498023"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "toBigInteger"
     returnType: "java.math.BigInteger"
@@ -6017,11 +5656,11 @@ methods:
       filledByUser: false
     uuid: "1f842de1-beeb-323a-86bc-a9b438a7a3f9"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getBytes"
     returnType: "byte[]"
@@ -6807,11 +6446,11 @@ methods:
       filledByUser: false
     uuid: "9d328af1-2293-3544-bbbc-a0683c1f9fbe"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getReversedBytes"
     returnType: "byte[]"
@@ -7571,11 +7210,11 @@ methods:
       filledByUser: false
     uuid: "af8de4b5-d82f-350a-889c-fa470726d745"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "write"
     returnType: "java.nio.ByteBuffer"
@@ -8422,11 +8061,11 @@ methods:
       filledByUser: false
     uuid: "74367ac6-67d1-3ba8-9bdd-4aafa43d4139"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "compareTo"
     returnType: "int"
@@ -8443,7 +8082,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "FE3B91690D8DE1C2D528310B2D37EEC2"
+    modelFingerprint: "672253211CFD066D298C63A05D60C530"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -8590,7 +8229,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "7AE243ECFCBBB2D4F1748957860A09D4"
+      modelFingerprint: "356CB6A5174F0B7CF8AB623C920B57FF"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -8647,7 +8286,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "CEBE22911E18CAB985D94F461E798AED"
+      modelFingerprint: "4705AF2665CE98206DC40695B007F04D"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -8705,10 +8344,11 @@ methods:
       filledByUser: false
     uuid: "44e07f67-963f-3a27-9290-b547f1375318"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "compareToWhenThisByteLessThanOtherByte"
@@ -8717,7 +8357,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "A4A8928E5C7DBDD81BC35BF8391EFC97"
+    modelFingerprint: "F57A43F327755D2C1716D6F813487340"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -8864,7 +8504,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "7AE243ECFCBBB2D4F1748957860A09D4"
+      modelFingerprint: "356CB6A5174F0B7CF8AB623C920B57FF"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -8921,7 +8561,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "CEBE22911E18CAB985D94F461E798AED"
+      modelFingerprint: "4705AF2665CE98206DC40695B007F04D"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -8979,10 +8619,11 @@ methods:
       filledByUser: false
     uuid: "e3ac1708-671d-3cbd-a87a-ed5dcaebdffd"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path3"
     testPathName: "compareToWhenThisByteNotLessThanOtherByte"
@@ -8991,7 +8632,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "FABF9292C0E4B6C275F603D44D30613A"
+    modelFingerprint: "93C4DA425A2865F9B75873509FB9C3B0"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -9138,7 +8779,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "7AE243ECFCBBB2D4F1748957860A09D4"
+      modelFingerprint: "356CB6A5174F0B7CF8AB623C920B57FF"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -9195,7 +8836,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "CEBE22911E18CAB985D94F461E798AED"
+      modelFingerprint: "4705AF2665CE98206DC40695B007F04D"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -9253,7 +8894,8 @@ methods:
       filledByUser: false
     uuid: "51259a53-7681-3584-a930-5f0b5fa7bf75"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false

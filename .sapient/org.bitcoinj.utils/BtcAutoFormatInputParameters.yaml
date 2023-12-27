@@ -347,10 +347,11 @@ methods:
       filledByUser: false
     uuid: "25558c3d-aa04-3bbe-8934-01044c4a6207"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "scaleWhenInMillisRemainderONECompareToZEROEquals0"
@@ -688,10 +689,10 @@ methods:
       filledByUser: false
     uuid: "0584d934-2ad4-3e0e-90b2-b3a1032e9676"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path3"
     testPathName: "scaleWhenInMicrosRemainderONECompareToZEROEquals0"
@@ -1029,10 +1030,11 @@ methods:
       filledByUser: false
     uuid: "99afa0ac-8d38-3d5c-9f51-cdcd642225c3"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path4"
     pathIdForUser: "path4"
     testPathName: "scaleWhenACompareToCLessThan0"
@@ -1042,12 +1044,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "52AD00DAD05EEBC4456B44BEEA77FF13"
+    modelFingerprint: "5ED178879ED55D5638278EAE59957AB3"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "CA4095EFA220D567B857F9582CD63D08"
+      modelFingerprint: "61FDEDB90D2CBEDE6656F224EDFDFDC7"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1107,9 +1109,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 1
+                value: 0
               suggestedContent: !<regular>
-                value: 1
+                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -1153,7 +1155,7 @@ methods:
             value:
               sapientType: "BASIC"
               suggestedContent: !<regular>
-                value: 1
+                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -1188,7 +1190,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "fractionPlaces"
-      modelFingerprint: "D161200CDAA41AB99931C02915D71803"
+      modelFingerprint: "83BE06097D250D515C7DC1FC9DC73BC0"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1196,9 +1198,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 1
+          value: 9
         suggestedContent: !<regular>
-          value: 1
+          value: 9
         valueType: "int"
         uuid: "scale_int1"
         fixed: false
@@ -1370,10 +1372,11 @@ methods:
       filledByUser: false
     uuid: "83f5728d-60ec-3807-8924-8687984b7da5"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path5"
     pathIdForUser: "path5"
     testPathName: "scaleWhenACompareToCNotLessThan0"
@@ -1383,12 +1386,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "B3A52EAE239D69B5DB1E4EDFB39981EB"
+    modelFingerprint: "4122FD601817B1906D0AF7481662F5A4"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "CA4095EFA220D567B857F9582CD63D08"
+      modelFingerprint: "61FDEDB90D2CBEDE6656F224EDFDFDC7"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1448,9 +1451,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 1
+                value: 0
               suggestedContent: !<regular>
-                value: 1
+                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -1494,7 +1497,7 @@ methods:
             value:
               sapientType: "BASIC"
               suggestedContent: !<regular>
-                value: 1
+                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -1529,7 +1532,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "fractionPlaces"
-      modelFingerprint: "D161200CDAA41AB99931C02915D71803"
+      modelFingerprint: "83BE06097D250D515C7DC1FC9DC73BC0"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1537,9 +1540,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 1
+          value: 9
         suggestedContent: !<regular>
-          value: 1
+          value: 9
         valueType: "int"
         uuid: "scale_int1"
         fixed: false
@@ -1711,10 +1714,11 @@ methods:
       filledByUser: false
     uuid: "43a84968-3632-381d-bbce-43469a39b92b"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path6"
     pathIdForUser: "path6"
     testPathName: "scaleWhenBCompareToCLessThan0"
@@ -1724,12 +1728,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "D66B76A0722654CD9BB4DB6A00D01F25"
+    modelFingerprint: "8B256036450E3AEA92208838D897F1D3"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "CA4095EFA220D567B857F9582CD63D08"
+      modelFingerprint: "61FDEDB90D2CBEDE6656F224EDFDFDC7"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1789,9 +1793,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 1
+                value: 0
               suggestedContent: !<regular>
-                value: 1
+                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -1835,7 +1839,7 @@ methods:
             value:
               sapientType: "BASIC"
               suggestedContent: !<regular>
-                value: 1
+                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -1870,7 +1874,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "fractionPlaces"
-      modelFingerprint: "D161200CDAA41AB99931C02915D71803"
+      modelFingerprint: "83BE06097D250D515C7DC1FC9DC73BC0"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1878,9 +1882,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 1
+          value: 9
         suggestedContent: !<regular>
-          value: 1
+          value: 9
         valueType: "int"
         uuid: "scale_int1"
         fixed: false
@@ -2052,10 +2056,11 @@ methods:
       filledByUser: false
     uuid: "957b8eb2-a667-3b5a-b03c-28ae51761b52"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path7"
     pathIdForUser: "path7"
     testPathName: "scaleWhenBCompareToCNotLessThan0"
@@ -2393,10 +2398,11 @@ methods:
       filledByUser: false
     uuid: "a29a346b-3c1d-3af7-8f3a-fe2710486b7b"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "scale"
     returnType: "int"
@@ -2413,12 +2419,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "B29270399D1D23BF9296F7877FDEAF39"
+    modelFingerprint: "BC7BDC214B52075B311BF27BCC52F905"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "D098A5975499CF499EA8DB77DC65EB42"
+      modelFingerprint: "CA4095EFA220D567B857F9582CD63D08"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2469,8 +2475,6 @@ methods:
               sapientType: "ENUM"
               content: !<regular>
                 value: "CODE"
-              suggestedContent: !<regular>
-                value: "CODE"
               valueType: "org.bitcoinj.utils.BtcAutoFormat$Style"
               uuid: "<init>_btcAutoFormat.Style1"
               fixed: false
@@ -2480,9 +2484,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 2
+                value: 1
               suggestedContent: !<regular>
-                value: 2
+                value: 1
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -2495,20 +2499,7 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.util.Locale"
-                parameters:
-                - name: "language"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_locale1-language"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -2530,10 +2521,6 @@ methods:
           - name: "style"
             value:
               sapientType: "ENUM"
-              content: !<regular>
-                value: "CODE"
-              suggestedContent: !<regular>
-                value: "CODE"
               valueType: "org.bitcoinj.utils.BtcAutoFormat$Style"
               uuid: "<init>_btcAutoFormat.Style1"
               fixed: false
@@ -2542,10 +2529,8 @@ methods:
           - name: "fractionPlaces"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 2
               suggestedContent: !<regular>
-                value: 2
+                value: 1
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -2666,11 +2651,11 @@ methods:
       filledByUser: false
     uuid: "034db038-3d0f-3f3e-91ee-291ef4cf2b7b"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "fractionPlaces"
     returnType: "int"
@@ -2687,12 +2672,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "FC76206E6FF4D0F8BF060BB057D5E1EB"
+    modelFingerprint: "F56699972E2FF6D5BA3859A44557760A"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "6E291BB5E0C7F7C1A029CAFFA72C6971"
+      modelFingerprint: "D40432949E3EEF524962C9950BE37343"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2743,8 +2728,6 @@ methods:
               sapientType: "ENUM"
               content: !<regular>
                 value: "CODE"
-              suggestedContent: !<regular>
-                value: "CODE"
               valueType: "org.bitcoinj.utils.BtcAutoFormat$Style"
               uuid: "<init>_btcAutoFormat.Style1"
               fixed: false
@@ -2754,9 +2737,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 2
+                value: 1
               suggestedContent: !<regular>
-                value: 2
+                value: 1
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -2769,20 +2752,7 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.util.Locale"
-                parameters:
-                - name: "language"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_locale1-language"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -2804,10 +2774,6 @@ methods:
           - name: "style"
             value:
               sapientType: "ENUM"
-              content: !<regular>
-                value: "CODE"
-              suggestedContent: !<regular>
-                value: "CODE"
               valueType: "org.bitcoinj.utils.BtcAutoFormat$Style"
               uuid: "<init>_btcAutoFormat.Style1"
               fixed: false
@@ -2816,10 +2782,8 @@ methods:
           - name: "fractionPlaces"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 2
               suggestedContent: !<regular>
-                value: 2
+                value: 1
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -2923,7 +2887,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "3BC5F6A918EF10F4D4675325B8E40858"
+      modelFingerprint: "E2A8AB981A1505AD6737DABDF7241F1F"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -2931,9 +2895,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 2
+          value: 1
         suggestedContent: !<regular>
-          value: 2
+          value: 1
         valueType: "int"
         uuid: "<init>_int1"
         fixed: false
@@ -2943,11 +2907,11 @@ methods:
       filledByUser: false
     uuid: "3cc79711-79d6-37a1-bbad-147886aad9f5"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "equals"
     returnType: "boolean"
@@ -3105,12 +3069,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "48C5BFD3F554DD67A4AB72D5E40761B1"
+    modelFingerprint: "9B1552E6C5220F8DBB85CCB371DDEEB8"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "D098A5975499CF499EA8DB77DC65EB42"
+      modelFingerprint: "CA4095EFA220D567B857F9582CD63D08"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -3161,8 +3125,6 @@ methods:
               sapientType: "ENUM"
               content: !<regular>
                 value: "CODE"
-              suggestedContent: !<regular>
-                value: "CODE"
               valueType: "org.bitcoinj.utils.BtcAutoFormat$Style"
               uuid: "<init>_btcAutoFormat.Style1"
               fixed: false
@@ -3172,9 +3134,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 2
+                value: 1
               suggestedContent: !<regular>
-                value: 2
+                value: 1
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -3187,20 +3149,7 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.util.Locale"
-                parameters:
-                - name: "language"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_locale1-language"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -3222,10 +3171,6 @@ methods:
           - name: "style"
             value:
               sapientType: "ENUM"
-              content: !<regular>
-                value: "CODE"
-              suggestedContent: !<regular>
-                value: "CODE"
               valueType: "org.bitcoinj.utils.BtcAutoFormat$Style"
               uuid: "<init>_btcAutoFormat.Style1"
               fixed: false
@@ -3234,10 +3179,8 @@ methods:
           - name: "fractionPlaces"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 2
               suggestedContent: !<regular>
-                value: 2
+                value: 1
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -3387,8 +3330,8 @@ methods:
       filledByUser: false
     uuid: "363d3698-f34c-39ad-914f-376a19498023"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false

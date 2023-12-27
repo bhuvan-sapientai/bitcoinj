@@ -1088,12 +1088,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "3F10B1923E6881ABF97B83C3D5776B59"
+    modelFingerprint: "389231DB840A7033EBE51DEAB3E0E514"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "E8E486ED9ABF45CA04465EF575596D0B"
+      modelFingerprint: "EECB3E6DFE935558D2C55BAF8FF4392A"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1144,19 +1144,7 @@ methods:
           methodParameters:
           - name: "payload"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "java.nio.ByteBuffer"
-                method: "allocateDirect"
-                methodParameters:
-                - name: "capacity"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "int"
-                    uuid: "read_byteBuffer1-capacity"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<static_method_return>
                 target: "java.nio.ByteBuffer"
                 method: "allocateDirect"
@@ -1183,7 +1171,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "AddressMessage"
-      modelFingerprint: "DA40F38CC3180221BC67FE99A6C3FE42"
+      modelFingerprint: "B281DBC2AD02B3F026DB9B312DADEAB6"
       index: 2
       ignored: false
       nestedInLoop: false

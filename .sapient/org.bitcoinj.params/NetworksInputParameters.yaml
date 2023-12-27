@@ -44,11 +44,11 @@ methods:
       filledByUser: false
     uuid: "9c25887d-767d-38e9-b5ae-c2e4012c49be"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "find"
     returnType: "java.util.Optional"
@@ -111,11 +111,11 @@ methods:
       filledByUser: false
     uuid: "2065002a-9c1f-335e-ba7c-3ceed12bc7e9"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "register"
     returnType: "void"
@@ -131,13 +131,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "1CA36A8BAAA86EB468B5786D8357B90B"
+    modelFingerprint: "CA46E11BB22467EEE973539D6B620E30"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "network"
-      modelFingerprint: "458461DA661432DB46B848C1D0062646"
+      modelFingerprint: "F09C69242129400F401736834C6BD427"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -152,9 +152,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "100"
-              suggestedContent: !<regular>
-                value: "100"
+                value: "id1"
               valueType: "java.lang.String"
               uuid: "register_networkParameters1-id"
               fixed: false
@@ -167,10 +165,6 @@ methods:
           - name: "id"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "100"
-              suggestedContent: !<regular>
-                value: "100"
               valueType: "java.lang.String"
               uuid: "register_networkParameters1-id"
               fixed: false
@@ -264,13 +258,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "5E0FBCA47AD2FDE6E20DDEE21CE5CC67"
+    modelFingerprint: "F3D0F1740152CF400023C04FA1540332"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "networks"
-      modelFingerprint: "14DF2F34065F868C6A81233CD21D8607"
+      modelFingerprint: "737D81D97CBD9CD20A499C84D353E267"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -278,145 +272,11 @@ methods:
       value:
         sapientType: "COLLECTION"
         content: !<collection>
-          collectionClass: "java.util.ArrayList"
           parameters: []
-          values:
-          - sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "org.bitcoinj.core.NetworkParameters"
-              method: "fromID"
-              methodParameters:
-              - name: "id"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: "id1"
-                  valueType: "java.lang.String"
-                  uuid: "register_collection1-0-id"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            suggestedContent: !<static_method_return>
-              target: "org.bitcoinj.core.NetworkParameters"
-              method: "fromID"
-              methodParameters:
-              - name: "id"
-                value:
-                  sapientType: "BASIC"
-                  valueType: "java.lang.String"
-                  uuid: "register_collection1-0-id"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            valueType: "org.bitcoinj.core.NetworkParameters"
-            uuid: "register_collection1-0"
-            fixed: false
-            collectionUuid: "register_collection1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          - sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "org.bitcoinj.core.NetworkParameters"
-              method: "fromID"
-              methodParameters:
-              - name: "id"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: "id1"
-                  valueType: "java.lang.String"
-                  uuid: "register_collection1-1-id"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            suggestedContent: !<static_method_return>
-              target: "org.bitcoinj.core.NetworkParameters"
-              method: "fromID"
-              methodParameters:
-              - name: "id"
-                value:
-                  sapientType: "BASIC"
-                  valueType: "java.lang.String"
-                  uuid: "register_collection1-1-id"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            valueType: "org.bitcoinj.core.NetworkParameters"
-            uuid: "register_collection1-1"
-            fixed: false
-            collectionUuid: "register_collection1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
+          values: []
         suggestedContent: !<collection>
-          collectionClass: "java.util.ArrayList"
           parameters: []
-          values:
-          - sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "org.bitcoinj.core.NetworkParameters"
-              method: "fromID"
-              methodParameters:
-              - name: "id"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: "id1"
-                  valueType: "java.lang.String"
-                  uuid: "register_collection1-0-id"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            suggestedContent: !<static_method_return>
-              target: "org.bitcoinj.core.NetworkParameters"
-              method: "fromID"
-              methodParameters:
-              - name: "id"
-                value:
-                  sapientType: "BASIC"
-                  valueType: "java.lang.String"
-                  uuid: "register_collection1-0-id"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            valueType: "org.bitcoinj.core.NetworkParameters"
-            uuid: "register_collection1-0"
-            fixed: false
-            collectionUuid: "register_collection1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          - sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "org.bitcoinj.core.NetworkParameters"
-              method: "fromID"
-              methodParameters:
-              - name: "id"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: "id1"
-                  valueType: "java.lang.String"
-                  uuid: "register_collection1-1-id"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            suggestedContent: !<static_method_return>
-              target: "org.bitcoinj.core.NetworkParameters"
-              method: "fromID"
-              methodParameters:
-              - name: "id"
-                value:
-                  sapientType: "BASIC"
-                  valueType: "java.lang.String"
-                  uuid: "register_collection1-1-id"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            valueType: "org.bitcoinj.core.NetworkParameters"
-            uuid: "register_collection1-1"
-            fixed: false
-            collectionUuid: "register_collection1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
+          values: []
         valueType: "java.util.Collection"
         genericValueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "register_collection1"
@@ -443,7 +303,6 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:

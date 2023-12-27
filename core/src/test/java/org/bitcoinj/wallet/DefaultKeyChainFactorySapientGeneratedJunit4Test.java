@@ -40,16 +40,14 @@ public class DefaultKeyChainFactorySapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DefaultKeyChainFactory target = new DefaultKeyChainFactory();
-        EncryptedData encryptedDataMock = mock(EncryptedData.class);
-        EncryptedData encryptedDataMock2 = mock(EncryptedData.class);
-        DeterministicSeed deterministicSeed = new DeterministicSeed(encryptedDataMock, encryptedDataMock2, 0L);
+        DeterministicSeed deterministicSeedMock = mock(DeterministicSeed.class);
         KeyCrypter keyCrypterMock = mock(KeyCrypter.class);
-        ChildNumber childNumber = new ChildNumber(0);
         List<ChildNumber> childNumberList = new ArrayList<>();
-        childNumberList.add(childNumber);
+
         //Act Statement(s)
-        DeterministicKeyChain result = target.makeKeyChain(deterministicSeed, keyCrypterMock, ScriptType.P2PKH, childNumberList);
-        DeterministicKeyChain deterministicKeyChain = new DeterministicKeyChain(deterministicSeed, keyCrypterMock, ScriptType.P2PKH, childNumberList);
+        DeterministicKeyChain result = target.makeKeyChain(deterministicSeedMock, keyCrypterMock, ScriptType.P2PKH, childNumberList);
+        DeterministicKeyChain deterministicKeyChain = new DeterministicKeyChain(deterministicSeedMock, keyCrypterMock, ScriptType.P2PKH, childNumberList);
+
         //Assert statement(s)
         //TODO: Please implement equals method in DeterministicKeyChain for verification to succeed or you need to adjust respective assertion statements
         assertThat(result, equalTo(deterministicKeyChain));
@@ -65,8 +63,10 @@ public class DefaultKeyChainFactorySapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DefaultKeyChainFactory target = new DefaultKeyChainFactory();
+
         //Act Statement(s)
         DeterministicKeyChain result = target.makeWatchingKeyChain(deterministicKeyMock, ScriptType.P2PKH);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -81,8 +81,10 @@ public class DefaultKeyChainFactorySapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DefaultKeyChainFactory target = new DefaultKeyChainFactory();
+
         //Act Statement(s)
         DeterministicKeyChain result = target.makeSpendingKeyChain(deterministicKeyMock, ScriptType.P2PKH);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }

@@ -26,8 +26,10 @@ public class StreamUtilsSapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
+
         //Act Statement(s)
         Collector<Object, ?, List<Object>> result = StreamUtils.toUnmodifiableList();
+
         //Assert statement(s)
         assertThat(result, is(nullValue()));
     }

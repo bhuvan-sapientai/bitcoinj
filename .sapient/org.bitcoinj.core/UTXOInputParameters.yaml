@@ -226,12 +226,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "A29377B5599AC5A8A5A7730D45F7D6B3"
+    modelFingerprint: "0B1E7ABC0273B3DDE54C673257EE876E"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "FCB5121E3F92523D32497925E0DED5FD"
+      modelFingerprint: "E97F794323FDCDE20E877EE20257CD81"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -243,69 +243,7 @@ methods:
           parameters:
           - name: "hash"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "org.bitcoinj.base.Sha256Hash"
-                method: "read"
-                methodParameters:
-                - name: "buf"
-                  value:
-                    sapientType: "OBJECT"
-                    content: !<static_method_return>
-                      target: "java.nio.ByteBuffer"
-                      method: "allocateDirect"
-                      methodParameters:
-                      - name: "capacity"
-                        value:
-                          sapientType: "BASIC"
-                          content: !<regular>
-                            value: 0
-                          valueType: "int"
-                          uuid: "<init>_sha256Hash1-buf-capacity"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    suggestedContent: !<static_method_return>
-                      target: "java.nio.ByteBuffer"
-                      method: "allocateDirect"
-                      methodParameters:
-                      - name: "capacity"
-                        value:
-                          sapientType: "BASIC"
-                          valueType: "int"
-                          uuid: "<init>_sha256Hash1-buf-capacity"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    valueType: "java.nio.ByteBuffer"
-                    uuid: "<init>_sha256Hash1-buf"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.base.Sha256Hash"
-                method: "read"
-                methodParameters:
-                - name: "buf"
-                  value:
-                    sapientType: "UNKNOWN"
-                    suggestedContent: !<static_method_return>
-                      target: "java.nio.ByteBuffer"
-                      method: "allocateDirect"
-                      methodParameters:
-                      - name: "capacity"
-                        value:
-                          sapientType: "BASIC"
-                          valueType: "int"
-                          uuid: "<init>_sha256Hash1-buf-capacity"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    valueType: "java.nio.ByteBuffer"
-                    uuid: "<init>_sha256Hash1-buf"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+              sapientType: "MOCK"
               valueType: "org.bitcoinj.base.Sha256Hash"
               uuid: "<init>_sha256Hash1"
               fixed: false
@@ -325,33 +263,11 @@ methods:
               explicitCastNeeded: false
           - name: "value"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.base.Coin"
-                method: "valueOf"
-                methodParameters:
-                - name: "satoshis"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    valueType: "long"
-                    uuid: "<init>_coin1-satoshis"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.base.Coin"
-                method: "valueOf"
-                methodParameters:
-                - name: "satoshis"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "long"
-                    uuid: "<init>_coin1-satoshis"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.base.Coin"
               uuid: "<init>_coin1"
               fixed: false
@@ -361,9 +277,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
+                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -373,9 +287,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
+                value: false
               valueType: "boolean"
               uuid: "<init>_boolean1"
               fixed: false
@@ -383,37 +295,7 @@ methods:
               explicitCastNeeded: false
           - name: "script"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "org.bitcoinj.script.Script"
-                method: "of"
-                methodParameters:
-                - name: "chunks"
-                  value:
-                    sapientType: "COLLECTION"
-                    content: !<collection>
-                      parameters: []
-                      values: []
-                    suggestedContent: !<collection>
-                      parameters: []
-                      values: []
-                    valueType: "java.util.List"
-                    uuid: "<init>_script1-chunks"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.script.Script"
-                method: "of"
-                methodParameters:
-                - name: "chunks"
-                  value:
-                    sapientType: "COLLECTION"
-                    valueType: "java.util.List"
-                    uuid: "<init>_script1-chunks"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+              sapientType: "MOCK"
               valueType: "org.bitcoinj.script.Script"
               uuid: "<init>_script1"
               fixed: false
@@ -423,9 +305,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"
-              suggestedContent: !<regular>
-                value: "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"
+                value: "address1"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -438,55 +318,7 @@ methods:
           parameters:
           - name: "hash"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "org.bitcoinj.base.Sha256Hash"
-                method: "read"
-                methodParameters:
-                - name: "buf"
-                  value:
-                    sapientType: "UNKNOWN"
-                    suggestedContent: !<static_method_return>
-                      target: "java.nio.ByteBuffer"
-                      method: "allocateDirect"
-                      methodParameters:
-                      - name: "capacity"
-                        value:
-                          sapientType: "BASIC"
-                          valueType: "int"
-                          uuid: "<init>_sha256Hash1-buf-capacity"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    valueType: "java.nio.ByteBuffer"
-                    uuid: "<init>_sha256Hash1-buf"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.base.Sha256Hash"
-                method: "read"
-                methodParameters:
-                - name: "buf"
-                  value:
-                    sapientType: "UNKNOWN"
-                    suggestedContent: !<static_method_return>
-                      target: "java.nio.ByteBuffer"
-                      method: "allocateDirect"
-                      methodParameters:
-                      - name: "capacity"
-                        value:
-                          sapientType: "BASIC"
-                          valueType: "int"
-                          uuid: "<init>_sha256Hash1-buf-capacity"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    valueType: "java.nio.ByteBuffer"
-                    uuid: "<init>_sha256Hash1-buf"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.base.Sha256Hash"
               uuid: "<init>_sha256Hash1"
               fixed: false
@@ -495,8 +327,6 @@ methods:
           - name: "index"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0
               suggestedContent: !<regular>
                 value: 0
               valueType: "long"
@@ -506,31 +336,11 @@ methods:
               explicitCastNeeded: false
           - name: "value"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.base.Coin"
-                method: "valueOf"
-                methodParameters:
-                - name: "satoshis"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "long"
-                    uuid: "<init>_coin1-satoshis"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.base.Coin"
-                method: "valueOf"
-                methodParameters:
-                - name: "satoshis"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "long"
-                    uuid: "<init>_coin1-satoshis"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.base.Coin"
               uuid: "<init>_coin1"
               fixed: false
@@ -539,10 +349,6 @@ methods:
           - name: "height"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -551,10 +357,6 @@ methods:
           - name: "coinbase"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
               valueType: "boolean"
               uuid: "<init>_boolean1"
               fixed: false
@@ -562,31 +364,7 @@ methods:
               explicitCastNeeded: false
           - name: "script"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "org.bitcoinj.script.Script"
-                method: "of"
-                methodParameters:
-                - name: "chunks"
-                  value:
-                    sapientType: "COLLECTION"
-                    valueType: "java.util.List"
-                    uuid: "<init>_script1-chunks"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.script.Script"
-                method: "of"
-                methodParameters:
-                - name: "chunks"
-                  value:
-                    sapientType: "COLLECTION"
-                    valueType: "java.util.List"
-                    uuid: "<init>_script1-chunks"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.script.Script"
               uuid: "<init>_script1"
               fixed: false
@@ -595,10 +373,6 @@ methods:
           - name: "address"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"
-              suggestedContent: !<regular>
-                value: "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -615,39 +389,17 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "value"
-      modelFingerprint: "4FB2C0B34FB094B145EC3A93C8A0CC09"
+      modelFingerprint: "850DF4EB7D227D4BCE42895D466AADCC"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.base.Coin"
-          method: "valueOf"
-          methodParameters:
-          - name: "satoshis"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "<init>_coin1-satoshis"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.base.Coin"
-          method: "valueOf"
-          methodParameters:
-          - name: "satoshis"
-            value:
-              sapientType: "BASIC"
-              valueType: "long"
-              uuid: "<init>_coin1-satoshis"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.base.Coin"
         uuid: "<init>_coin1"
         fixed: false
@@ -690,11 +442,11 @@ methods:
       filledByUser: false
     uuid: "363d3698-f34c-39ad-914f-376a19498023"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "equals"
     returnType: "boolean"

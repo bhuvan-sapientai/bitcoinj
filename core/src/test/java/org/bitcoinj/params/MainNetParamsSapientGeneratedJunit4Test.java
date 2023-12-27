@@ -54,9 +54,11 @@ public class MainNetParamsSapientGeneratedJunit4Test {
         /* Branches:
          * (instance == null) : true
          */
+
         //Act Statement(s)
         MainNetParams result = MainNetParams.get();
         MainNetParams mainNetParams = new MainNetParams();
+
         //Assert statement(s)
         assertThat(result, equalTo(mainNetParams));
     }

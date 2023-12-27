@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "ACC6FC38B1905E1D856C39642107ABB9"
+modelFingerprint: "1B12042E95A4C905F7C86BBE45DD916D"
 methods:
 - method:
     name: "select"
@@ -183,11 +183,11 @@ methods:
       filledByUser: false
     uuid: "6df8707e-9185-30b4-8c99-8abb00f110d8"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path3"
     testPathName: "selectWhenShouldSelectNotOutputGetParentTransaction"
@@ -196,7 +196,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "C779930553BB714E0E4CC806C993671F"
+    modelFingerprint: "CF47B333DF406158D3AF325ABB4DFEF4"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -227,13 +227,17 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "target"
-      modelFingerprint: "610855BDC377045B64378372D37C7991"
+      modelFingerprint: "22AF3625FC43ABA7BA61A457CE03D96E"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Coin"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.base.Coin"
         uuid: "select_coin1"
         fixed: false
@@ -243,7 +247,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "candidates"
-      modelFingerprint: "C8137A5AB86FDA2EF4CCE15D5863EDEB"
+      modelFingerprint: "76ED83868864DA17F59F647A5686AA04"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -260,31 +264,9 @@ methods:
               onlyPojoFunctions: false
               builderPattern: false
             valueType: "org.bitcoinj.core.TransactionOutput"
-            uuid: "select_list1-0"
+            uuid: "select_object1"
             fixed: false
-            collectionUuid: "select_list1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          - sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.core.TransactionOutput"
-              onlyPojoFunctions: false
-              builderPattern: false
-            valueType: "org.bitcoinj.core.TransactionOutput"
-            uuid: "select_list1-1"
-            fixed: false
-            collectionUuid: "select_list1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          - sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.core.TransactionOutput"
-              onlyPojoFunctions: false
-              builderPattern: false
-            valueType: "org.bitcoinj.core.TransactionOutput"
-            uuid: "select_list1-2"
-            fixed: false
-            collectionUuid: "select_list1"
+            collectionUuid: "select_arrayList2"
             equalsMethodPresent: false
             explicitCastNeeded: false
         suggestedContent: !<collection>
@@ -297,31 +279,9 @@ methods:
               onlyPojoFunctions: false
               builderPattern: false
             valueType: "org.bitcoinj.core.TransactionOutput"
-            uuid: "select_list1-0"
+            uuid: "select_object1"
             fixed: false
-            collectionUuid: "select_list1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          - sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.core.TransactionOutput"
-              onlyPojoFunctions: false
-              builderPattern: false
-            valueType: "org.bitcoinj.core.TransactionOutput"
-            uuid: "select_list1-1"
-            fixed: false
-            collectionUuid: "select_list1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          - sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.core.TransactionOutput"
-              onlyPojoFunctions: false
-              builderPattern: false
-            valueType: "org.bitcoinj.core.TransactionOutput"
-            uuid: "select_list1-2"
-            fixed: false
-            collectionUuid: "select_list1"
+            collectionUuid: "select_arrayList2"
             equalsMethodPresent: false
             explicitCastNeeded: false
         valueType: "java.util.List"
@@ -390,11 +350,11 @@ methods:
       filledByUser: false
     uuid: "5eb292a3-c78e-36d5-94e6-2b0fb99d4b29"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path4"
     testPathName: "selectWhenShouldSelectOutputGetParentTransaction"
@@ -430,7 +390,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "4E2928DF18C7A95E1C9A409876C1E159"
+    modelFingerprint: "7567B435A4F4F07363C088B694259CCD"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -511,7 +471,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "b"
-      modelFingerprint: "F0B2AB5CEA92D06B8DD1BDD4EC47CB1B"
+      modelFingerprint: "F50432C3D5E4D1192EE7C9BAA4CD3DB9"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -630,10 +590,11 @@ methods:
       filledByUser: false
     uuid: "4e845f71-377a-3bf8-9408-a25f76e968ef"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "compareByDepthWhenC2NotEquals0"
@@ -641,7 +602,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "65EE77C058A48863046E9ED463013739"
+    modelFingerprint: "BF0E4B330F61BEF84D819D2A16150A77"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -687,7 +648,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "a"
-      modelFingerprint: "51DAA9A2F5AC5AB206EF33CF9CDDFDDD"
+      modelFingerprint: "22E72A116B792433BD56DEF0D40C0FBF"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -711,9 +672,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: -33554432
+            value: 0
           suggestedContent: !<regular>
-            value: -33554432
+            value: 0
           valueType: "int"
           uuid: "compareByDepth_int1"
           fixed: false
@@ -724,7 +685,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "b"
-      modelFingerprint: "603D04A077AAED949798FB4EAA4B01C2"
+      modelFingerprint: "F50432C3D5E4D1192EE7C9BAA4CD3DB9"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -748,9 +709,7 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: -1
-          suggestedContent: !<regular>
-            value: -1
+            value: 0
           valueType: "int"
           uuid: "compareByDepth_int2"
           fixed: false
@@ -794,7 +753,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "b"
-      modelFingerprint: "1AA8E78BDF2AFD06F709900C15106E9E"
+      modelFingerprint: "8590D09BB93DC1279051A7628CEC763D"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -831,7 +790,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "bValue"
-      modelFingerprint: "0112DDB6EB623A94506245C006F4519D"
+      modelFingerprint: "5CAB9C1D963BDFFBD4D19C13201CF8A8"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -863,9 +822,7 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: -536870896
-          suggestedContent: !<regular>
-            value: -536870896
+            value: 0
           valueType: "int"
           uuid: "compareByDepth_int4"
           fixed: false
@@ -874,21 +831,167 @@ methods:
         access: 1
       staticReadMethodForField: false
       filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "a"
+      modelFingerprint: "ECF2FD3709199B34B68C59CDD77F9A92"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionOutput"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionOutput"
+        uuid: "compareByDepth_transactionOutput1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "a"
+        name: "getParentTransactionHash"
+        parameters: []
+        signature: "getParentTransactionHash(): Sha256Hash"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.base.Sha256Hash"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.base.Sha256Hash"
+          uuid: "compareByDepth_sha256Hash1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "809486E3020B77F65B59C9087FD8AE25"
+      index: 9
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Sha256Hash"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Sha256Hash"
+        uuid: "compareByDepth_sha256Hash1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "toBigInteger"
+        parameters: []
+        signature: "toBigInteger(): BigInteger"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: -7
+          suggestedContent: !<regular>
+            value: -7
+          valueType: "java.math.BigInteger"
+          uuid: "compareByDepth_bigInteger7"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "b"
+      modelFingerprint: "ECF2FD3709199B34B68C59CDD77F9A92"
+      index: 10
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionOutput"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionOutput"
+        uuid: "compareByDepth_transactionOutput2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "b"
+        name: "getParentTransactionHash"
+        parameters: []
+        signature: "getParentTransactionHash(): Sha256Hash"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.base.Sha256Hash"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.base.Sha256Hash"
+          uuid: "compareByDepth_sha256Hash2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "809486E3020B77F65B59C9087FD8AE25"
+      index: 11
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Sha256Hash"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Sha256Hash"
+        uuid: "compareByDepth_sha256Hash2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "toBigInteger"
+        parameters: []
+        signature: "toBigInteger(): BigInteger"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: -7
+          suggestedContent: !<regular>
+            value: -7
+          valueType: "java.math.BigInteger"
+          uuid: "compareByDepth_bigInteger8"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "BF45CA8ED2A5A3E01B104A987BEC5955"
-      index: 8
+      modelFingerprint: "231276223B3DD65935C1F8594364B51A"
+      index: 12
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: -536870896
+          value: 0
         suggestedContent: !<regular>
-          value: -536870896
+          value: 0
         valueType: "int"
-        uuid: "compareByDepth_int4"
+        uuid: "compareByDepth_int5"
         fixed: false
         equalsMethodPresent: true
         explicitCastNeeded: false
@@ -898,6 +1001,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path3"
@@ -907,7 +1011,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "CFFE27AC0CD7B84A2FF6A3FAF08CD95C"
+    modelFingerprint: "80F5F3D59FCF98315F1637362E07BE9D"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -953,7 +1057,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "a"
-      modelFingerprint: "1DE86BB01C41386116F9DE1B2C37165B"
+      modelFingerprint: "6455BEB46BADA6A0E0C18D75308716D7"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -977,9 +1081,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 4
+            value: -2
           suggestedContent: !<regular>
-            value: 4
+            value: -2
           valueType: "int"
           uuid: "compareByDepth_int1"
           fixed: false
@@ -990,7 +1094,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "b"
-      modelFingerprint: "93C7D819098ABA635F06F896C6A7E3B0"
+      modelFingerprint: "9547177BC1DECC4CE37AFEDBBCB3ED3E"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -1060,7 +1164,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "b"
-      modelFingerprint: "1AA8E78BDF2AFD06F709900C15106E9E"
+      modelFingerprint: "8590D09BB93DC1279051A7628CEC763D"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -1097,7 +1201,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "bValue"
-      modelFingerprint: "C394A13A5E4D0C6C5020EF12F444AE0E"
+      modelFingerprint: "388B3A960593631D792DE4B99235443C"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -1178,7 +1282,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "4D93DBB55B51DCFC0508C26DD7DE31ED"
+      modelFingerprint: "826CDDE834EBFE18A911F2D8215B3E85"
       index: 9
       ignored: false
       nestedInLoop: false
@@ -1202,9 +1306,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: -8
+            value: -2
           suggestedContent: !<regular>
-            value: -8
+            value: -2
           valueType: "java.math.BigInteger"
           uuid: "compareByDepth_bigInteger7"
           fixed: false
@@ -1215,7 +1319,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "b"
-      modelFingerprint: "ECF2FD3709199B34B68C59CDD77F9A92"
+      modelFingerprint: "8933F7303C19E463BDC111CFFAB4A8C7"
       index: 10
       ignored: false
       nestedInLoop: false
@@ -1251,7 +1355,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "4D93DBB55B51DCFC0508C26DD7DE31ED"
+      modelFingerprint: "533FC63968BBA85D16192A083FD42328"
       index: 11
       ignored: false
       nestedInLoop: false
@@ -1288,7 +1392,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "231276223B3DD65935C1F8594364B51A"
+      modelFingerprint: "E2A8AB981A1505AD6737DABDF7241F1F"
       index: 12
       ignored: false
       nestedInLoop: false
@@ -1296,9 +1400,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
+          value: 1
         suggestedContent: !<regular>
-          value: 0
+          value: 1
         valueType: "int"
         uuid: "compareByDepth_int5"
         fixed: false
@@ -1310,6 +1414,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -1328,13 +1433,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "8D01F980E4324F93D88A30D57E350AE6"
+    modelFingerprint: "435F4A1451A79CCF7679B14E8B5F5B37"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "outputs"
-      modelFingerprint: "84801C3F2F8B92DDAE9BE1335F03805C"
+      modelFingerprint: "4CA4594DC516FA8BDB1C10E8B94C8D5F"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1343,76 +1448,10 @@ methods:
         sapientType: "COLLECTION"
         content: !<collection>
           parameters: []
-          values:
-          - sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.core.TransactionOutput"
-              onlyPojoFunctions: false
-              builderPattern: false
-            valueType: "org.bitcoinj.core.TransactionOutput"
-            uuid: "sortOutputs_arrayList1-0"
-            fixed: false
-            collectionUuid: "sortOutputs_arrayList1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          - sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.core.TransactionOutput"
-              onlyPojoFunctions: false
-              builderPattern: false
-            valueType: "org.bitcoinj.core.TransactionOutput"
-            uuid: "sortOutputs_arrayList1-1"
-            fixed: false
-            collectionUuid: "sortOutputs_arrayList1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          - sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.core.TransactionOutput"
-              onlyPojoFunctions: false
-              builderPattern: false
-            valueType: "org.bitcoinj.core.TransactionOutput"
-            uuid: "sortOutputs_arrayList1-2"
-            fixed: false
-            collectionUuid: "sortOutputs_arrayList1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
+          values: []
         suggestedContent: !<collection>
           parameters: []
-          values:
-          - sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.core.TransactionOutput"
-              onlyPojoFunctions: false
-              builderPattern: false
-            valueType: "org.bitcoinj.core.TransactionOutput"
-            uuid: "sortOutputs_arrayList1-0"
-            fixed: false
-            collectionUuid: "sortOutputs_arrayList1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          - sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.core.TransactionOutput"
-              onlyPojoFunctions: false
-              builderPattern: false
-            valueType: "org.bitcoinj.core.TransactionOutput"
-            uuid: "sortOutputs_arrayList1-1"
-            fixed: false
-            collectionUuid: "sortOutputs_arrayList1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          - sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.core.TransactionOutput"
-              onlyPojoFunctions: false
-              builderPattern: false
-            valueType: "org.bitcoinj.core.TransactionOutput"
-            uuid: "sortOutputs_arrayList1-2"
-            fixed: false
-            collectionUuid: "sortOutputs_arrayList1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
+          values: []
         valueType: "java.util.ArrayList"
         genericValueType: "org.bitcoinj.core.TransactionOutput"
         uuid: "sortOutputs_arrayList1"
@@ -1437,11 +1476,11 @@ methods:
       filledByUser: false
     uuid: "2d5f29f1-90e7-3f61-a9d7-f2281c1948cc"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "shouldSelect"
     returnType: "boolean"

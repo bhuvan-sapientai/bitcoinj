@@ -38,6 +38,7 @@ public class ContextSapientGeneratedJunit4Test {
         IllegalStateException illegalStateException = new IllegalStateException("You must construct a Context object before using bitcoinj!");
         thrown.expect(IllegalStateException.class);
         thrown.expectMessage(illegalStateException.getMessage());
+
         //Act Statement(s)
         Context.get();
     }
@@ -45,6 +46,7 @@ public class ContextSapientGeneratedJunit4Test {
     //Sapient generated method id: ${75314fee-fe7b-30a2-87e6-72443018f845}
     @Test()
     public void enableStrictModeTest() {
+
         //Act Statement(s)
         Context.enableStrictMode();
     }
@@ -106,6 +108,7 @@ public class ContextSapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
+
         //Act Statement(s)
         Context.propagate(contextMock);
     }

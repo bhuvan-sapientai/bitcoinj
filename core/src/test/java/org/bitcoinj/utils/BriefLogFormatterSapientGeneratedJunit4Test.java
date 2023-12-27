@@ -48,6 +48,7 @@ public class BriefLogFormatterSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Level level = Level.parse("name1");
+
         //Act Statement(s)
         BriefLogFormatter.init(level);
     }
@@ -93,8 +94,10 @@ public class BriefLogFormatterSapientGeneratedJunit4Test {
         BriefLogFormatter target = new BriefLogFormatter();
         Level level = Level.parse("name1");
         LogRecord logRecord = new LogRecord(level, "msg1");
+
         //Act Statement(s)
         String result = target.format(logRecord);
+
         //Assert statement(s)
         assertThat(result, equalTo("result1"));
     }
@@ -113,8 +116,10 @@ public class BriefLogFormatterSapientGeneratedJunit4Test {
         BriefLogFormatter target = new BriefLogFormatter();
         Level level = Level.parse("name1");
         LogRecord logRecord = new LogRecord(level, "msg1");
+
         //Act Statement(s)
         String result = target.format(logRecord);
+
         //Assert statement(s)
         assertThat(result, equalTo("result1"));
     }

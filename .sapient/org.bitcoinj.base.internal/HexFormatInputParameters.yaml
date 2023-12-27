@@ -110,11 +110,11 @@ methods:
       filledByUser: false
     uuid: "9f0bd176-2947-3835-8354-48a50fe9e80e"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "formatHexWhenBytesIsEmpty"
@@ -492,9 +492,9 @@ methods:
     constructorSignature: "<init>() : void"
     priorityDefinedByUser: false
     filledByUser: false
-    priority: "MODERATE"
-    modelFingerprint: "E7E318DB530D73F2D22EB287BC6B11E5"
-    problemWasSolvedByProver: true
+    priority: "LOW"
+    modelFingerprint: "23DCC46C8D8AA8BDB207306B0C932D9F"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -524,7 +524,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "hexString"
-      modelFingerprint: "D2278AC70E525B4586C773E0F2AF3775"
+      modelFingerprint: "3639838A810522EA34916D28DD51ACA1"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -532,9 +532,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "1A2B3C"
-        suggestedContent: !<regular>
-          value: "1A2B3C"
+          value: "hexString1"
         valueType: "java.lang.String"
         uuid: "parseHex_string1"
         fixed: false
@@ -544,82 +542,52 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "D8329903E065FCA74D08BD9C39A6A545"
+      modelFingerprint: "B6F4E421083EF3778FEA1644A8BA9751"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "ARRAY"
-        content: !<array>
-          values:
-            0:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.IllegalArgumentException"
+          parameters:
+          - name: "s"
+            value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 26
-              valueType: "byte"
-              originalValueType: "int"
-              fixed: true
+                value: "s1"
+              valueType: "java.lang.String"
+              uuid: "toDigit_string1"
+              fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
-            1:
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "java.lang.IllegalArgumentException"
+          parameters:
+          - name: "s"
+            value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 43
-              valueType: "byte"
-              originalValueType: "int"
-              fixed: true
+              valueType: "java.lang.String"
+              uuid: "toDigit_string1"
+              fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 60
-              valueType: "byte"
-              originalValueType: "int"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 26
-              valueType: "byte"
-              originalValueType: "int"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 43
-              valueType: "byte"
-              originalValueType: "int"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 60
-              valueType: "byte"
-              originalValueType: "int"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        valueType: "byte[]"
-        uuid: "parseHex_byte[]1"
-        fixed: false
-        equalsMethodPresent: true
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "java.lang.IllegalArgumentException"
+        uuid: "toDigit_illegalArgumentException1"
+        fixed: true
+        equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     uuid: "9964fa33-e815-336b-82d2-f30602c027a5"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true

@@ -24,13 +24,11 @@ public class BitcoinNetworkSapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void fromStringTest() {
-        /**
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
+
         //Act Statement(s)
         Optional<BitcoinNetwork> result = BitcoinNetwork.fromString("nameString1");
         Optional<BitcoinNetwork> bitcoinNetworkOptional = Optional.of(BitcoinNetwork.MAINNET);
+
         //Assert statement(s)
         assertThat(result, equalTo(bitcoinNetworkOptional));
     }
@@ -47,10 +45,10 @@ public class BitcoinNetworkSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<BitcoinNetwork> bitcoinNetwork = mockStatic(BitcoinNetwork.class, CALLS_REAL_METHODS)) {
-            BitcoinNetwork[] bitcoinNetworkArray = new BitcoinNetwork[]{BitcoinNetwork.MAINNET, BitcoinNetwork.MAINNET, BitcoinNetwork.MAINNET, BitcoinNetwork.MAINNET, BitcoinNetwork.MAINNET, BitcoinNetwork.MAINNET, BitcoinNetwork.MAINNET, BitcoinNetwork.MAINNET, BitcoinNetwork.MAINNET, BitcoinNetwork.MAINNET};
+            BitcoinNetwork[] bitcoinNetworkArray = new BitcoinNetwork[]{BitcoinNetwork.MAINNET, BitcoinNetwork.TESTNET, BitcoinNetwork.SIGNET, BitcoinNetwork.REGTEST};
             bitcoinNetwork.when(() -> BitcoinNetwork.values()).thenReturn(bitcoinNetworkArray);
             //Act Statement(s)
-            Optional<BitcoinNetwork> result = BitcoinNetwork.fromIdString("prod");
+            Optional<BitcoinNetwork> result = BitcoinNetwork.fromIdString("idString1");
             Optional<BitcoinNetwork> bitcoinNetworkOptional = Optional.of(BitcoinNetwork.MAINNET);
             //Assert statement(s)
             assertThat(result, equalTo(bitcoinNetworkOptional));
