@@ -56,41 +56,23 @@ public class DefaultAddressParserProviderSapientGeneratedJunit4Test {
     @Test()
     public void forNetworkTest() {
         //Arrange Statement(s)
+        Network networkMock = mock(Network.class, "MAINNET");
+        Network networkMock2 = mock(Network.class, "TESTNET");
         List<Network> networkList = new ArrayList<>();
+        networkList.add(networkMock);
+        networkList.add(networkMock2);
+        Network networkMock3 = mock(Network.class, "MAINNET");
+        Network networkMock4 = mock(Network.class, "TESTNET");
         List<Network> networkList2 = new ArrayList<>();
+        networkList2.add(networkMock3);
+        networkList2.add(networkMock4);
         DefaultAddressParserProvider target = new DefaultAddressParserProvider(networkList, networkList2);
+        Network networkMock5 = mock(Network.class, "MAINNET");
 
         //Act Statement(s)
-        AddressParser result = target.forNetwork(networkMock);
+        AddressParser result = target.forNetwork(networkMock5);
 
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
-    }
-
-    //Sapient generated method id: ${5d91f3cf-df8f-39bd-ae91-3cf293f7795c}
-    @Ignore()
-    @Test()
-    public void fromNetworksTest() {
-        /**
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        NetworkParameters networkParametersMock = mock(NetworkParameters.class);
-        try (MockedStatic<Networks> networks = mockStatic(Networks.class)) {
-            Set<NetworkParameters> networkParametersSet = new HashSet<>();
-            networkParametersSet.add(networkParametersMock);
-            networks.when(() -> Networks.get()).thenReturn(networkParametersSet);
-            doReturn(networkMock).when(networkParametersMock).network();
-            //Act Statement(s)
-            DefaultAddressParserProvider result = DefaultAddressParserProvider.fromNetworks();
-            List list = new ArrayList<>();
-            DefaultAddressParserProvider defaultAddressParserProvider = new DefaultAddressParserProvider(list, list);
-            //Assert statement(s)
-            //TODO: Please implement equals method in DefaultAddressParserProvider for verification to succeed or you need to adjust respective assertion statements
-            assertThat(result, equalTo(defaultAddressParserProvider));
-            networks.verify(() -> Networks.get(), atLeast(1));
-            verify(networkParametersMock).network();
-        }
     }
 }

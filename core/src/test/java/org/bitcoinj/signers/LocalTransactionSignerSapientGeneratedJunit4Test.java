@@ -24,13 +24,14 @@ import static org.mockito.Mockito.mockStatic;
 import static org.mockito.Mockito.doReturn;
 
 import org.junit.Ignore;
+import org.bitcoinj.core.Transaction;
 
 public class LocalTransactionSignerSapientGeneratedJunit4Test {
 
     @Rule()
     public Timeout timeoutRule = Timeout.seconds(5);
 
-    private final KeyBag keyBagMock = mock(KeyBag.class);
+    private final KeyBag keyBagMock = mock(KeyBag.class, "{}");
 
     private final Script redeemScriptMock = mock(Script.class);
 
@@ -46,6 +47,10 @@ public class LocalTransactionSignerSapientGeneratedJunit4Test {
     //Sapient generated method id: ${f340c579-9bbd-36cd-bf14-09059bcfa900}
     @Test()
     public void isReadyTest() {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
         LocalTransactionSigner target = new LocalTransactionSigner();
 
@@ -69,9 +74,10 @@ public class LocalTransactionSignerSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         LocalTransactionSigner target = new LocalTransactionSigner();
+        TransactionSigner.ProposedTransaction transactionSignerProposedTransaction = new TransactionSigner.ProposedTransaction(transactionMock);
 
         //Act Statement(s)
-        boolean result = target.signInputs(transactionSignerProposedTransactionMock, keyBagMock);
+        boolean result = target.signInputs(transactionSignerProposedTransaction, keyBagMock);
 
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
@@ -90,9 +96,11 @@ public class LocalTransactionSignerSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         LocalTransactionSigner target = new LocalTransactionSigner();
+        Transaction transaction = new Transaction();
+        TransactionSigner.ProposedTransaction transactionSignerProposedTransaction = new TransactionSigner.ProposedTransaction(transaction);
 
         //Act Statement(s)
-        boolean result = target.signInputs(transactionSignerProposedTransactionMock, keyBagMock);
+        boolean result = target.signInputs(transactionSignerProposedTransaction, keyBagMock);
 
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
@@ -112,9 +120,11 @@ public class LocalTransactionSignerSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         LocalTransactionSigner target = new LocalTransactionSigner();
+        Transaction transaction = new Transaction();
+        TransactionSigner.ProposedTransaction transactionSignerProposedTransaction = new TransactionSigner.ProposedTransaction(transaction);
 
         //Act Statement(s)
-        boolean result = target.signInputs(transactionSignerProposedTransactionMock, keyBagMock);
+        boolean result = target.signInputs(transactionSignerProposedTransaction, keyBagMock);
 
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
@@ -136,92 +146,11 @@ public class LocalTransactionSignerSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         LocalTransactionSigner target = new LocalTransactionSigner();
+        Transaction transaction = new Transaction();
+        TransactionSigner.ProposedTransaction transactionSignerProposedTransaction = new TransactionSigner.ProposedTransaction(transaction);
 
         //Act Statement(s)
-        boolean result = target.signInputs(transactionSignerProposedTransactionMock, keyBagMock);
-
-        //Assert statement(s)
-        assertThat(result, equalTo(Boolean.TRUE));
-    }
-
-    //Sapient generated method id: ${951ea5e3-3861-3283-8f62-4545c29a363c}
-    @Ignore()
-    @Test()
-    public void signInputsWhenScriptPatternIsP2SHScriptPubKey() throws ScriptException {
-        /* Branches:
-         * (i < numInputs) : true
-         * (connectedOutput == null) : false
-         * (catch-exception (ScriptException)) : true
-         * (pubKey instanceof DeterministicKey) : true
-         * (key == null) : false
-         * (ScriptPattern.isP2PK(scriptPubKey)) : false
-         * (ScriptPattern.isP2PKH(scriptPubKey)) : false
-         * (ScriptPattern.isP2SH(scriptPubKey)) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        LocalTransactionSigner target = new LocalTransactionSigner();
-
-        //Act Statement(s)
-        boolean result = target.signInputs(transactionSignerProposedTransactionMock, keyBagMock);
-
-        //Assert statement(s)
-        assertThat(result, equalTo(Boolean.TRUE));
-    }
-
-    //Sapient generated method id: ${39ebdb8f-3c95-380c-bed7-3e2b9f53ac26}
-    @Ignore()
-    @Test()
-    public void signInputsWhenScriptPatternIsP2WPKHScriptPubKey() throws ScriptException {
-        /* Branches:
-         * (i < numInputs) : true
-         * (connectedOutput == null) : false
-         * (catch-exception (ScriptException)) : true
-         * (pubKey instanceof DeterministicKey) : true
-         * (key == null) : false
-         * (ScriptPattern.isP2PK(scriptPubKey)) : false
-         * (ScriptPattern.isP2PKH(scriptPubKey)) : false
-         * (ScriptPattern.isP2SH(scriptPubKey)) : false
-         * (ScriptPattern.isP2WPKH(scriptPubKey)) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        LocalTransactionSigner target = new LocalTransactionSigner();
-
-        //Act Statement(s)
-        boolean result = target.signInputs(transactionSignerProposedTransactionMock, keyBagMock);
-
-        //Assert statement(s)
-        assertThat(result, equalTo(Boolean.TRUE));
-    }
-
-    //Sapient generated method id: ${50a6b179-2cb2-315d-82b7-4c781026abf7}
-    @Ignore()
-    @Test()
-    public void signInputsWhenScriptPatternNotIsP2WPKHScriptPubKeyThrowsIllegalStateException() throws ScriptException {
-        /* Branches:
-         * (i < numInputs) : true
-         * (connectedOutput == null) : false
-         * (catch-exception (ScriptException)) : true
-         * (pubKey instanceof DeterministicKey) : true
-         * (key == null) : false
-         * (ScriptPattern.isP2PK(scriptPubKey)) : false
-         * (ScriptPattern.isP2PKH(scriptPubKey)) : false
-         * (ScriptPattern.isP2SH(scriptPubKey)) : false
-         * (ScriptPattern.isP2WPKH(scriptPubKey)) : false
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        LocalTransactionSigner target = new LocalTransactionSigner();
-
-        //Act Statement(s)
-        boolean result = target.signInputs(transactionSignerProposedTransactionMock, keyBagMock);
+        boolean result = target.signInputs(transactionSignerProposedTransaction, keyBagMock);
 
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));

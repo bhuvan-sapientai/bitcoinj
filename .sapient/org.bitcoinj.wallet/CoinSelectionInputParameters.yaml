@@ -17,12 +17,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "1332E83DE6B50AAF9A1EE5CBCB838B85"
+    modelFingerprint: "5F25E583DA8A75B92BE1B8A3DFFD2872"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "25278E0A9E69A3F06F050EBD7F649223"
+      modelFingerprint: "3B50D1FCC21D0657CD228A4BDBC2A039"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -35,18 +35,25 @@ methods:
           - name: "valueGathered"
             value:
               sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.base.Coin"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.base.Coin"
               uuid: "<init>_coin1"
               fixed: false
+              nameForMock: "10"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "gathered"
             value:
               sapientType: "COLLECTION"
               content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
                 values: []
               suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
                 values: []
               valueType: "java.util.Collection"
@@ -62,15 +69,28 @@ methods:
           parameters:
           - name: "valueGathered"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.base.Coin"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.base.Coin"
               uuid: "<init>_coin1"
               fixed: false
+              nameForMock: "10"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "gathered"
             value:
               sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values: []
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values: []
               valueType: "java.util.Collection"
               genericValueType: "org.bitcoinj.core.TransactionOutput"
               uuid: "<init>_collection1"
@@ -107,6 +127,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -125,12 +146,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "814361417B160F7BA1ACC965C5D9CB2B"
+    modelFingerprint: "71E772D5670429DE657DC47DCA0F56A9"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "25278E0A9E69A3F06F050EBD7F649223"
+      modelFingerprint: "3B50D1FCC21D0657CD228A4BDBC2A039"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -143,18 +164,25 @@ methods:
           - name: "valueGathered"
             value:
               sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.base.Coin"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.base.Coin"
               uuid: "<init>_coin1"
               fixed: false
+              nameForMock: "10"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "gathered"
             value:
               sapientType: "COLLECTION"
               content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
                 values: []
               suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
                 values: []
               valueType: "java.util.Collection"
@@ -170,15 +198,28 @@ methods:
           parameters:
           - name: "valueGathered"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.base.Coin"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.base.Coin"
               uuid: "<init>_coin1"
               fixed: false
+              nameForMock: "10"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "gathered"
             value:
               sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values: []
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values: []
               valueType: "java.util.Collection"
               genericValueType: "org.bitcoinj.core.TransactionOutput"
               uuid: "<init>_collection1"

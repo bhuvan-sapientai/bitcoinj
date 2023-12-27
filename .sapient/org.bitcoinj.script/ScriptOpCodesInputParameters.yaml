@@ -194,13 +194,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "E5E7F8D722C55B98A8FD8C919B170846"
+    modelFingerprint: "0118AA53877DFED8A0E0AB9A9B813C5C"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "opcode"
-      modelFingerprint: "66A26AEC2ECE837758702C03369DABAE"
+      modelFingerprint: "A14496C2D479BA9A4B769D0DE1180F7B"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -208,9 +208,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 2
+          value: 100
         suggestedContent: !<regular>
-          value: 2
+          value: 100
         valueType: "int"
         uuid: "getPushDataName_int1"
         fixed: false
@@ -220,7 +220,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "241B6FB3F222E7D063226568DFE8F128"
+      modelFingerprint: "8FF27B4A62CB05D49DC571E368B5D4F3"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -228,9 +228,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "PUSHDATA(2)"
+          value: "PUSHDATA(100)"
         suggestedContent: !<regular>
-          value: "PUSHDATA(2)"
+          value: "PUSHDATA(100)"
         valueType: "java.lang.String"
         uuid: "getPushDataName_string1"
         fixed: false
@@ -260,13 +260,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "0C463F345EC0A30267B64CF4E7B1052C"
+    modelFingerprint: "00EFE61B17E2865618B0AD8BF01D28AD"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "opCodeName"
-      modelFingerprint: "29A1B2674EECA421598875F3EA7D320C"
+      modelFingerprint: "F5EAEA56C8953AB717C478EED24E5DC5"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -274,9 +274,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "NOP3"
+          value: "OPCODE_NAME"
         suggestedContent: !<regular>
-          value: "NOP3"
+          value: "OPCODE_NAME"
         valueType: "java.lang.String"
         uuid: "getOpCode_string1"
         fixed: false
@@ -286,7 +286,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "E5C3AD67D07515CC69793E85E383B533"
+      modelFingerprint: "DEFB82E119BEB06D142FAEB10EEE9273"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -294,12 +294,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 178
-        suggestedContent: !<regular>
-          value: 178
+          value: 255
         valueType: "int"
-        uuid: "getOpCode_int1"
-        fixed: false
+        fixed: true
         equalsMethodPresent: true
         explicitCastNeeded: false
       staticReadMethodForField: false
@@ -308,7 +305,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -318,13 +315,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "C88D8DA32137DAA8B014CF760A1FD79C"
+    modelFingerprint: "473954392CB9587A67C636ECD5BFE29A"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "opCodeName"
-      modelFingerprint: "CF983F00F748679A2E5DBBA98B1C6A51"
+      modelFingerprint: "5233B2472138398815027A3493287A90"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -332,9 +329,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "B"
+          value: "RANDOM_STRING"
         suggestedContent: !<regular>
-          value: "B"
+          value: "RANDOM_STRING"
         valueType: "java.lang.String"
         uuid: "getOpCode_string1"
         fixed: false
@@ -363,6 +360,6 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

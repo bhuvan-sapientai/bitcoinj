@@ -23,16 +23,19 @@ public class CryptoUtilsSapientGeneratedJunit4Test {
     @Test()
     public void sha256hash160Test() {
         //Arrange Statement(s)
-        try (MockedStatic<CryptoUtils> cryptoUtils = mockStatic(CryptoUtils.class, CALLS_REAL_METHODS)) {
-            byte[] byteArray = new byte[]{};
-            byte[] byteArray2 = new byte[]{(byte) -29, (byte) -80, (byte) -60, (byte) 66, (byte) -104, (byte) -4, (byte) 28, (byte) 20, (byte) -102, (byte) -5, (byte) -12, (byte) -56, (byte) -103, (byte) 111, (byte) -71, (byte) 36, (byte) 39, (byte) -82, (byte) 65, (byte) -28, (byte) 100, (byte) -101, (byte) -109, (byte) 76, (byte) -92, (byte) -107, (byte) -103, (byte) 27, (byte) 120, (byte) 82, (byte) -72, (byte) 85};
-            cryptoUtils.when(() -> CryptoUtils.digestRipeMd160(byteArray2)).thenReturn(byteArray);
+        try (MockedStatic<CryptoUtils> cryptoUtils = mockStatic(CryptoUtils.class, CALLS_REAL_METHODS);
+             MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class)) {
+            byte[] byteArray = new byte[]{(byte) -29, (byte) -80, (byte) -60, (byte) 66, (byte) -104, (byte) -4, (byte) 28, (byte) 20, (byte) -102, (byte) -5, (byte) -12, (byte) -56, (byte) -103, (byte) 111, (byte) -71, (byte) 36, (byte) 39, (byte) -82, (byte) 65, (byte) -28, (byte) 100, (byte) -101, (byte) -109, (byte) 76, (byte) -92, (byte) -107, (byte) -103, (byte) 27, (byte) 120, (byte) 82, (byte) -72, (byte) 85};
+            byte[] byteArray2 = new byte[]{};
+            sha256Hash.when(() -> Sha256Hash.hash(byteArray2)).thenReturn(byteArray);
             byte[] byteArray3 = new byte[]{};
+            cryptoUtils.when(() -> CryptoUtils.digestRipeMd160(byteArray)).thenReturn(byteArray3);
             //Act Statement(s)
-            byte[] result = CryptoUtils.sha256hash160(byteArray3);
+            byte[] result = CryptoUtils.sha256hash160(byteArray2);
             //Assert statement(s)
-            assertThat(result, equalTo(byteArray));
-            cryptoUtils.verify(() -> CryptoUtils.digestRipeMd160(byteArray2), atLeast(1));
+            assertThat(result, equalTo(byteArray3));
+            sha256Hash.verify(() -> Sha256Hash.hash(byteArray2), atLeast(1));
+            cryptoUtils.verify(() -> CryptoUtils.digestRipeMd160(byteArray), atLeast(1));
         }
     }
 
@@ -41,7 +44,7 @@ public class CryptoUtilsSapientGeneratedJunit4Test {
     @Test()
     public void digestRipeMd160Test() {
         //Arrange Statement(s)
-        byte[] byteArray = new byte[]{};
+        byte[] byteArray = new byte[]{(byte) 0};
 
         //Act Statement(s)
         byte[] result = CryptoUtils.digestRipeMd160(byteArray);

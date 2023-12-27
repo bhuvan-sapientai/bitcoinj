@@ -29,6 +29,8 @@ import static org.hamcrest.Matchers.is;
 
 import org.junit.Ignore;
 
+import static org.mockito.Mockito.mock;
+
 public class AppDataDirectorySapientGeneratedJunit4Test {
 
     @Rule()
@@ -44,12 +46,12 @@ public class AppDataDirectorySapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<AppDataDirectory> appDataDirectory = mockStatic(AppDataDirectory.class, CALLS_REAL_METHODS)) {
             //TODO: Needs to return real value
-            appDataDirectory.when(() -> AppDataDirectory.getPath("appName1")).thenReturn(null);
+            appDataDirectory.when(() -> AppDataDirectory.getPath("<value>")).thenReturn(null);
             //Act Statement(s)
-            Path result = AppDataDirectory.get("appName1");
+            Path result = AppDataDirectory.get("<value>");
             //Assert statement(s)
             assertThat(result, is(nullValue()));
-            appDataDirectory.verify(() -> AppDataDirectory.getPath("appName1"), atLeast(1));
+            appDataDirectory.verify(() -> AppDataDirectory.getPath("<value>"), atLeast(1));
         }
     }
 
@@ -60,21 +62,22 @@ public class AppDataDirectorySapientGeneratedJunit4Test {
          * (catch-exception (IOException)) : true
          */
         //Arrange Statement(s)
+        IOException iOExceptionMock = mock(IOException.class);
         try (MockedStatic<Files> files = mockStatic(Files.class);
              MockedStatic<AppDataDirectory> appDataDirectory = mockStatic(AppDataDirectory.class, CALLS_REAL_METHODS)) {
             //TODO: Needs to return real value
-            appDataDirectory.when(() -> AppDataDirectory.getPath("appName1")).thenReturn(null);
-            IOException iOException = new IOException();
+            appDataDirectory.when(() -> AppDataDirectory.getPath("MyApp")).thenReturn(null);
             FileAttribute[] fileAttributeArray = new FileAttribute[]{};
-            files.when(() -> Files.createDirectories((Path) null, fileAttributeArray)).thenThrow(iOException);
+            files.when(() -> Files.createDirectories((Path) null, fileAttributeArray)).thenThrow(iOExceptionMock);
+            IOException iOException = new IOException();
             RuntimeException runtimeException = new RuntimeException("Couldn't find/create AppDataDirectory", iOException);
             thrown.expect(RuntimeException.class);
             thrown.expectMessage(runtimeException.getMessage());
             thrown.expectCause(isA(IOException.class));
             //Act Statement(s)
-            AppDataDirectory.get("appName1");
+            AppDataDirectory.get("MyApp");
             //Assert statement(s)
-            appDataDirectory.verify(() -> AppDataDirectory.getPath("appName1"), atLeast(1));
+            appDataDirectory.verify(() -> AppDataDirectory.getPath("MyApp"), atLeast(1));
             files.verify(() -> Files.createDirectories((Path) null, fileAttributeArray), atLeast(1));
         }
     }
@@ -95,9 +98,9 @@ public class AppDataDirectorySapientGeneratedJunit4Test {
             platformUtils.when(() -> PlatformUtils.isWindows()).thenReturn(false);
             platformUtils.when(() -> PlatformUtils.isMac()).thenReturn(true);
             //Act Statement(s)
-            Path result = AppDataDirectory.getPath("appName1");
+            Path result = AppDataDirectory.getPath("TestApp");
             FileSystem fileSystem = FileSystems.getDefault();
-            String[] stringArray = new String[]{"Library/Application Support", "appName1"};
+            String[] stringArray = new String[]{"Library/Application Support", "TestApp"};
             Path path = fileSystem.getPath("A", stringArray);
             //Assert statement(s)
             assertThat(result, equalTo(path));

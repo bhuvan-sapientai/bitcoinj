@@ -54,9 +54,9 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             MonetaryFormat target = new MonetaryFormat(true);
             //Act Statement(s)
-            MonetaryFormat result = target.negativeSign('\uD83F');
+            MonetaryFormat result = target.negativeSign('-');
             //Assert statement(s)
-            assertThat(result, is(notNullValue()));
+            assertThat(result, equalTo(target));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
         }
     }
@@ -73,9 +73,9 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            MonetaryFormat target = new MonetaryFormat(true);
+            MonetaryFormat target = new MonetaryFormat(false);
             //Act Statement(s)
-            MonetaryFormat result = target.negativeSign('\u0000');
+            MonetaryFormat result = target.negativeSign('@');
             //Assert statement(s)
             assertThat(result, is(notNullValue()));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
@@ -90,16 +90,13 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          * (!Character.isDigit(negativeSign)) : false
          * (negativeSign > 0) : true
          * (negativeSign == this.negativeSign) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            MonetaryFormat target = new MonetaryFormat(false);
+            MonetaryFormat target = new MonetaryFormat(true);
             //Act Statement(s)
-            MonetaryFormat result = target.negativeSign('A');
+            MonetaryFormat result = target.negativeSign('-');
             //Assert statement(s)
             assertThat(result, equalTo(target));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
@@ -119,7 +116,7 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             MonetaryFormat target = new MonetaryFormat(true);
             //Act Statement(s)
-            MonetaryFormat result = target.positiveSign('A');
+            MonetaryFormat result = target.positiveSign('+');
             //Assert statement(s)
             assertThat(result, is(notNullValue()));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
@@ -133,18 +130,15 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
         /* Branches:
          * (!Character.isDigit(positiveSign)) : false
          * (positiveSign == this.positiveSign) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            MonetaryFormat target = new MonetaryFormat(false);
+            MonetaryFormat target = new MonetaryFormat(true);
             //Act Statement(s)
-            MonetaryFormat result = target.positiveSign('A');
+            MonetaryFormat result = target.positiveSign('5');
             //Assert statement(s)
-            assertThat(result, equalTo(target));
+            assertThat(result, is(notNullValue()));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
         }
     }
@@ -175,7 +169,7 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
         MonetaryFormat target = new MonetaryFormat(true);
 
         //Act Statement(s)
-        MonetaryFormat result = target.digits('A');
+        MonetaryFormat result = target.digits('1');
 
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
@@ -193,11 +187,11 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            MonetaryFormat target = new MonetaryFormat(true);
+            MonetaryFormat target = new MonetaryFormat(false);
             //Act Statement(s)
-            MonetaryFormat result = target.decimalMark('\uD83F');
+            MonetaryFormat result = target.decimalMark('.');
             //Assert statement(s)
-            assertThat(result, is(notNullValue()));
+            assertThat(result, equalTo(target));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
         }
     }
@@ -216,9 +210,9 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             MonetaryFormat target = new MonetaryFormat(true);
             //Act Statement(s)
-            MonetaryFormat result = target.decimalMark('\u0000');
+            MonetaryFormat result = target.decimalMark('.');
             //Assert statement(s)
-            assertThat(result, is(notNullValue()));
+            assertThat(result, equalTo(target));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
         }
     }
@@ -231,18 +225,15 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          * (!Character.isDigit(decimalMark)) : false
          * (decimalMark > 0) : true
          * (decimalMark == this.decimalMark) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            MonetaryFormat target = new MonetaryFormat(false);
+            MonetaryFormat target = new MonetaryFormat(true);
             //Act Statement(s)
-            MonetaryFormat result = target.decimalMark('A');
+            MonetaryFormat result = target.decimalMark('a');
             //Assert statement(s)
-            assertThat(result, equalTo(target));
+            assertThat(result, is(notNullValue()));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
         }
     }
@@ -273,7 +264,7 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
         MonetaryFormat target = new MonetaryFormat(true);
 
         //Act Statement(s)
-        MonetaryFormat result = target.minDecimals(1);
+        MonetaryFormat result = target.minDecimals(3);
 
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
@@ -287,7 +278,7 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         MonetaryFormat target = new MonetaryFormat(true);
-        int[] intArray = new int[]{1};
+        int[] intArray = new int[]{1, 2, 3};
 
         //Act Statement(s)
         MonetaryFormat result = target.optionalDecimals(intArray);
@@ -309,7 +300,7 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             MonetaryFormat target = new MonetaryFormat(true);
             //Act Statement(s)
-            MonetaryFormat result = target.repeatOptionalDecimals(1, 1);
+            MonetaryFormat result = target.repeatOptionalDecimals(2, 3);
             //Assert statement(s)
             assertThat(result, is(notNullValue()));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
@@ -329,7 +320,7 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             MonetaryFormat target = new MonetaryFormat(true);
             //Act Statement(s)
-            MonetaryFormat result = target.repeatOptionalDecimals(0, -1);
+            MonetaryFormat result = target.repeatOptionalDecimals(2, -1);
             //Assert statement(s)
             assertThat(result, is(notNullValue()));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
@@ -362,39 +353,7 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
         MonetaryFormat target = new MonetaryFormat(true);
 
         //Act Statement(s)
-        MonetaryFormat result = target.shift(1);
-
-        //Assert statement(s)
-        assertThat(result, is(notNullValue()));
-    }
-
-    //Sapient generated method id: ${b4c9b158-e2dc-3e26-a9d7-a64c0451b549}
-    @Test()
-    public void roundingModeWhenRoundingModeEqualsThisRoundingMode() {
-        /* Branches:
-         * (roundingMode == this.roundingMode) : true
-         */
-        //Arrange Statement(s)
-        MonetaryFormat target = new MonetaryFormat(true);
-
-        //Act Statement(s)
-        MonetaryFormat result = target.roundingMode(RoundingMode.HALF_UP);
-
-        //Assert statement(s)
-        assertThat(result, equalTo(target));
-    }
-
-    //Sapient generated method id: ${eae234ba-a3a1-30fc-96ae-dbc2f074d429}
-    @Test()
-    public void roundingModeWhenRoundingModeNotEqualsThisRoundingMode() {
-        /* Branches:
-         * (roundingMode == this.roundingMode) : false
-         */
-        //Arrange Statement(s)
-        MonetaryFormat target = new MonetaryFormat(true);
-
-        //Act Statement(s)
-        MonetaryFormat result = target.roundingMode(RoundingMode.UNNECESSARY);
+        MonetaryFormat result = target.shift(5);
 
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
@@ -429,7 +388,7 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             MonetaryFormat target = new MonetaryFormat(true);
             //Act Statement(s)
-            MonetaryFormat result = target.code(1, "code1");
+            MonetaryFormat result = target.code(0, "USD");
             //Assert statement(s)
             assertThat(result, is(notNullValue()));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
@@ -440,23 +399,6 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void codeWhenCodeShiftLessThan0AndThisCodesIsNull() {
-        /* Branches:
-         * (codeShift >= 0) : false
-         * (null == this.codes) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            MonetaryFormat target = new MonetaryFormat(false);
-            //Act Statement(s)
-            MonetaryFormat result = target.code(0, "code1");
-            //Assert statement(s)
-            assertThat(result, is(notNullValue()));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-        }
     }
 
     //Sapient generated method id: ${9c03b39f-7b25-316b-81db-7affa0e97c56}
@@ -473,7 +415,7 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             MonetaryFormat target = new MonetaryFormat(true);
             //Act Statement(s)
-            MonetaryFormat result = target.codeSeparator('\uD83F');
+            MonetaryFormat result = target.codeSeparator('#');
             //Assert statement(s)
             assertThat(result, is(notNullValue()));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
@@ -494,9 +436,9 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             MonetaryFormat target = new MonetaryFormat(true);
             //Act Statement(s)
-            MonetaryFormat result = target.codeSeparator('\u0000');
+            MonetaryFormat result = target.codeSeparator(' ');
             //Assert statement(s)
-            assertThat(result, is(notNullValue()));
+            assertThat(result, equalTo(target));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
         }
     }
@@ -509,18 +451,15 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          * (!Character.isDigit(codeSeparator)) : false
          * (codeSeparator > 0) : true
          * (codeSeparator == this.codeSeparator) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            MonetaryFormat target = new MonetaryFormat(false);
+            MonetaryFormat target = new MonetaryFormat(true);
             //Act Statement(s)
             MonetaryFormat result = target.codeSeparator('A');
             //Assert statement(s)
-            assertThat(result, equalTo(target));
+            assertThat(result, is(notNullValue()));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
         }
     }
@@ -569,91 +508,6 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
 
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
-    }
-
-    //Sapient generated method id: ${93ef893b-c9d5-3a85-9f7e-7bb1fd8e643f}
-    @Ignore()
-    @Test()
-    public void formatWhenMaxVisibleDecimalsLessThanOrEqualsToSmallestUnitExponentThrowsIllegalStateException() {
-        /* Branches:
-         * (decimalGroups != null) : false
-         * (maxVisibleDecimals <= smallestUnitExponent) : true
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(2).when(monetaryMock).smallestUnitExponent();
-            IllegalStateException illegalStateException = new IllegalStateException();
-            preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
-            MonetaryFormat target = new MonetaryFormat(true);
-            thrown.expect(IllegalStateException.class);
-            //Act Statement(s)
-            target.format(monetaryMock);
-            //Assert statement(s)
-            verify(monetaryMock).smallestUnitExponent();
-            preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
-        }
-    }
-
-    //Sapient generated method id: ${6a648dd6-5ded-38b1-8ffe-c69abe6c9e98}
-    @Test()
-    public void formatWhenMaxVisibleDecimalsGreaterThanSmallestUnitExponentThrowsIllegalStateException() {
-        /* Branches:
-         * (decimalGroups != null) : false
-         * (maxVisibleDecimals <= smallestUnitExponent) : false
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(1).when(monetaryMock).smallestUnitExponent();
-            IllegalStateException illegalStateException = new IllegalStateException();
-            preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
-            MonetaryFormat target = new MonetaryFormat(true);
-            thrown.expect(IllegalStateException.class);
-            //Act Statement(s)
-            target.format(monetaryMock);
-            //Assert statement(s)
-            verify(monetaryMock).smallestUnitExponent();
-            preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
-        }
-    }
-
-    //Sapient generated method id: ${07a9f07d-6825-3bb7-807f-438d0659ea5f}
-    @Ignore()
-    @Test()
-    public void parseWhenDECIMALS_PADDINGLengthGreaterThanOrEqualsToSmallestUnitExponentThrowsIllegalStateException() throws NumberFormatException {
-        /* Branches:
-         * (DECIMALS_PADDING.length() >= smallestUnitExponent) : true  #  inside parseValue method
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            IllegalStateException illegalStateException = new IllegalStateException();
-            preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
-            MonetaryFormat target = new MonetaryFormat(true);
-            thrown.expect(IllegalStateException.class);
-            //Act Statement(s)
-            target.parse("str1");
-            //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
-        }
-    }
-
-    //Sapient generated method id: ${b9eee9ff-59f0-3ba3-85c4-6a295192363a}
-    @Ignore()
-    @Test()
-    public void parseFiatWhenDECIMALS_PADDINGLengthGreaterThanOrEqualsToSmallestUnitExponentThrowsIllegalStateException() throws NumberFormatException {
-        /* Branches:
-         * (DECIMALS_PADDING.length() >= smallestUnitExponent) : true  #  inside parseValue method
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            IllegalStateException illegalStateException = new IllegalStateException();
-            preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
-            MonetaryFormat target = new MonetaryFormat(true);
-            thrown.expect(IllegalStateException.class);
-            //Act Statement(s)
-            target.parseFiat("currencyCode1", "str1");
-            //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
-        }
     }
 
     //Sapient generated method id: ${2cd301d0-2498-3878-97bf-070e1fdb8e53}

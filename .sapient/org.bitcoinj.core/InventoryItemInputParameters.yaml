@@ -18,7 +18,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "34718F31DEC393F5D1D308BD6DACF8E5"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -35,8 +35,6 @@ methods:
           - name: "type"
             value:
               sapientType: "ENUM"
-              content: !<regular>
-                value: "WITNESS_FILTERED_BLOCK"
               suggestedContent: !<regular>
                 value: "WITNESS_FILTERED_BLOCK"
               valueType: "org.bitcoinj.core.InventoryItem$Type"
@@ -46,7 +44,7 @@ methods:
               explicitCastNeeded: false
           - name: "hash"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.base.Sha256Hash"
               uuid: "<init>_sha256Hash1"
               fixed: false
@@ -95,8 +93,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "BASIC"
-        content: !<regular>
-          value: "WITNESS_FILTERED_BLOCK: <init>_sha256Hash1"
         suggestedContent: !<regular>
           value: "WITNESS_FILTERED_BLOCK: <init>_sha256Hash1"
         valueType: "java.lang.String"

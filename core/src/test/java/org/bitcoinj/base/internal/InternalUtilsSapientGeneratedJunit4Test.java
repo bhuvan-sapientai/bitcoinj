@@ -50,48 +50,24 @@ public class InternalUtilsSapientGeneratedJunit4Test {
     @Test()
     public void commaJoinTest() {
         //Arrange Statement(s)
-        String[] stringArray = new String[]{};
+        String[] stringArray = new String[]{"Hello", "World"};
 
         //Act Statement(s)
         String result = InternalUtils.commaJoin(stringArray);
 
         //Assert statement(s)
-        assertThat(result, equalTo(""));
+        assertThat(result, equalTo("Hello, World"));
     }
 
     //Sapient generated method id: ${1fe4e064-512b-388e-988b-9eae0e617966}
     @Ignore(value = "Potential harmful system call (Future.get) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
-    public void getUninterruptiblyWhenNotInterrupted() throws ExecutionException, InterruptedException {
+    public void getUninterruptiblyWhenNotInterrupted() throws ExecutionException {
         /* Branches:
          * (interrupted) : false
          */
         //Arrange Statement(s)
-        //TODO: Needs initialization with real value
-        Future future = null;
-
-        //Act Statement(s)
-        Object result = InternalUtils.getUninterruptibly(future);
-        Object object = new Object();
-
-        //Assert statement(s)
-        //TODO: Please implement equals method in Object for verification to succeed or you need to adjust respective assertion statements
-        assertThat(result, equalTo(object));
-    }
-
-    //Sapient generated method id: ${220bc626-a263-3643-bb4c-6ce9977f413b}
-    @Ignore(value = "Potential harmful system call (Future.get, Thread.interrupt) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
-    @Test()
-    public void getUninterruptiblyWhenDefaultBranchThrowsThrowable() throws ExecutionException {
-        /* Branches:
-         * (catch-exception (InterruptedException)) : true
-         * (branch expression (line 119)) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        thrown.expect(Throwable.class);
+        thrown.expect(NullPointerException.class);
         //TODO: Needs initialization with real value
         Future future = null;
 

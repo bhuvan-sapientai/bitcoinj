@@ -23,7 +23,7 @@ public class SocketTimeoutTaskSapientGeneratedJunit4Test {
         doNothing().when(target).resetTimeout();
 
         //Act Statement(s)
-        target.setTimeoutEnabled(false);
+        target.setTimeoutEnabled(true);
 
         //Assert statement(s)
         verify(target).resetTimeout();

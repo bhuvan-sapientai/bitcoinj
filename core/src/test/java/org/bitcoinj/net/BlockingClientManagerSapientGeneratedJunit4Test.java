@@ -33,7 +33,7 @@ public class BlockingClientManagerSapientGeneratedJunit4Test {
     @Rule()
     public Timeout timeoutRule = Timeout.seconds(5);
 
-    private final StreamConnection streamConnectionMock = mock(StreamConnection.class);
+    private final StreamConnection streamConnectionMock = mock(StreamConnection.class, "{}");
 
     @Rule()
     public ExpectedException thrown = ExpectedException.none();
@@ -79,12 +79,14 @@ public class BlockingClientManagerSapientGeneratedJunit4Test {
         doReturn(true).when(target).isRunning();
         //TODO: Needs initialization with real value
         SocketAddress socketAddress = null;
+        StreamConnection streamConnectionMock = mock(StreamConnection.class, "<value>");
 
         //Act Statement(s)
         ListenableCompletableFuture<SocketAddress> result = target.openConnection(socketAddress, streamConnectionMock);
         Duration duration = Duration.ofSeconds(1L);
+        SocketFactory socketFactory2 = Objects.requireNonNull(socketFactory);
         Set<BlockingClient> blockingClientSet = new HashSet<>();
-        BlockingClient blockingClient = new BlockingClient((SocketAddress) null, streamConnectionMock, duration, socketFactory, blockingClientSet);
+        BlockingClient blockingClient = new BlockingClient((SocketAddress) null, streamConnectionMock, duration, socketFactory2, blockingClientSet);
         ListenableCompletableFuture<SocketAddress> listenableCompletableFuture = blockingClient.getConnectFuture();
 
         //Assert statement(s)
@@ -132,7 +134,7 @@ public class BlockingClientManagerSapientGeneratedJunit4Test {
         BlockingClientManager target = new BlockingClientManager(socketFactory);
 
         //Act Statement(s)
-        target.setConnectTimeoutMillis(1);
+        target.setConnectTimeoutMillis(5000);
     }
 
     //Sapient generated method id: ${2eae9292-3a4e-3aef-a658-61695265ca34}

@@ -204,12 +204,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "069CFEA06E9689037589FA3DBFA96737"
-    problemWasSolvedByProver: true
+    modelFingerprint: "3CDBD6D249FFEA897362145D821378CC"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "BA44DEB5E55F9A5670B1AE1F4C34FE08"
+      modelFingerprint: "A3AEA07A13BEE029158BD53D261D74E5"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -221,7 +221,69 @@ methods:
           parameters:
           - name: "hash"
             value:
-              sapientType: "MOCK"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "OBJECT"
+                    content: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          content: !<regular>
+                            value: 0
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "UNKNOWN"
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.base.Sha256Hash"
               uuid: "<init>_sha256Hash1"
               fixed: false
@@ -230,7 +292,61 @@ methods:
               explicitCastNeeded: false
           - name: "txOutChanges"
             value:
-              sapientType: "MOCK"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.core.TransactionOutputChanges"
+                parameters:
+                - name: "txOutsCreated"
+                  value:
+                    sapientType: "COLLECTION"
+                    content: !<collection>
+                      parameters: []
+                      values: []
+                    suggestedContent: !<collection>
+                      parameters: []
+                      values: []
+                    valueType: "java.util.List"
+                    uuid: "<init>_transactionOutputChanges1-txOutsCreated"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "txOutsSpent"
+                  value:
+                    sapientType: "COLLECTION"
+                    content: !<collection>
+                      parameters: []
+                      values: []
+                    suggestedContent: !<collection>
+                      parameters: []
+                      values: []
+                    valueType: "java.util.List"
+                    uuid: "<init>_transactionOutputChanges1-txOutsSpent"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.TransactionOutputChanges"
+                parameters:
+                - name: "txOutsCreated"
+                  value:
+                    sapientType: "COLLECTION"
+                    valueType: "java.util.List"
+                    uuid: "<init>_transactionOutputChanges1-txOutsCreated"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "txOutsSpent"
+                  value:
+                    sapientType: "COLLECTION"
+                    valueType: "java.util.List"
+                    uuid: "<init>_transactionOutputChanges1-txOutsSpent"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               valueType: "org.bitcoinj.core.TransactionOutputChanges"
               uuid: "<init>_transactionOutputChanges1"
               fixed: false
@@ -243,7 +359,69 @@ methods:
           parameters:
           - name: "hash"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "OBJECT"
+                    content: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          content: !<regular>
+                            value: 0
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "UNKNOWN"
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.base.Sha256Hash"
               uuid: "<init>_sha256Hash1"
               fixed: false
@@ -252,7 +430,61 @@ methods:
               explicitCastNeeded: false
           - name: "txOutChanges"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.core.TransactionOutputChanges"
+                parameters:
+                - name: "txOutsCreated"
+                  value:
+                    sapientType: "COLLECTION"
+                    content: !<collection>
+                      parameters: []
+                      values: []
+                    suggestedContent: !<collection>
+                      parameters: []
+                      values: []
+                    valueType: "java.util.List"
+                    uuid: "<init>_transactionOutputChanges1-txOutsCreated"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "txOutsSpent"
+                  value:
+                    sapientType: "COLLECTION"
+                    content: !<collection>
+                      parameters: []
+                      values: []
+                    suggestedContent: !<collection>
+                      parameters: []
+                      values: []
+                    valueType: "java.util.List"
+                    uuid: "<init>_transactionOutputChanges1-txOutsSpent"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.TransactionOutputChanges"
+                parameters:
+                - name: "txOutsCreated"
+                  value:
+                    sapientType: "COLLECTION"
+                    valueType: "java.util.List"
+                    uuid: "<init>_transactionOutputChanges1-txOutsCreated"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "txOutsSpent"
+                  value:
+                    sapientType: "COLLECTION"
+                    valueType: "java.util.List"
+                    uuid: "<init>_transactionOutputChanges1-txOutsSpent"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               valueType: "org.bitcoinj.core.TransactionOutputChanges"
               uuid: "<init>_transactionOutputChanges1"
               fixed: false
@@ -269,7 +501,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "8F9251D0C4D7EF1F9DA690612A54EECF"
+      modelFingerprint: "5134108C9BF18FB5D39D96559943D559"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -277,9 +509,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "Undoable Block <init>_sha256Hash1"
+          value: "Undoable Block A"
         suggestedContent: !<regular>
-          value: "Undoable Block <init>_sha256Hash1"
+          value: "Undoable Block A"
         valueType: "java.lang.String"
         uuid: "toString_string1"
         fixed: false
@@ -289,8 +521,8 @@ methods:
       filledByUser: false
     uuid: "363d3698-f34c-39ad-914f-376a19498023"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true

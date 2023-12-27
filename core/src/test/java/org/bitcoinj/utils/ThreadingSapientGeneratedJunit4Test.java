@@ -56,20 +56,27 @@ public class ThreadingSapientGeneratedJunit4Test {
         /* Branches:
          * (PlatformUtils.isAndroidRuntime()) : false
          */
-
-        //Act Statement(s)
-        ReentrantLock result = Threading.lock("A");
-        CycleDetectingLockFactory cycleDetectingLockFactory = CycleDetectingLockFactory.newInstance(CycleDetectingLockFactory.Policies.THROW);
-        ReentrantLock reentrantLock = cycleDetectingLockFactory.newReentrantLock("A");
-
-        //Assert statement(s)
-        //TODO: Please implement equals method in ReentrantLock for verification to succeed or you need to adjust respective assertion statements
-        assertThat(result, equalTo(reentrantLock));
+        //Arrange Statement(s)
+        try (MockedStatic<PlatformUtils> platformUtils = mockStatic(PlatformUtils.class)) {
+            platformUtils.when(() -> PlatformUtils.isAndroidRuntime()).thenReturn(false);
+            //Act Statement(s)
+            ReentrantLock result = Threading.lock("myLock");
+            CycleDetectingLockFactory cycleDetectingLockFactory = CycleDetectingLockFactory.newInstance(CycleDetectingLockFactory.Policies.THROW);
+            ReentrantLock reentrantLock = cycleDetectingLockFactory.newReentrantLock("myLock");
+            //Assert statement(s)
+            //TODO: Please implement equals method in ReentrantLock for verification to succeed or you need to adjust respective assertion statements
+            assertThat(result, equalTo(reentrantLock));
+            platformUtils.verify(() -> PlatformUtils.isAndroidRuntime(), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${c709ef01-e2a5-3bd3-a000-165e7ea4587b}
     @Test()
     public void warnOnLockCyclesTest() {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
 
         //Act Statement(s)
         Threading.warnOnLockCycles();
@@ -78,6 +85,10 @@ public class ThreadingSapientGeneratedJunit4Test {
     //Sapient generated method id: ${1b7c8f1c-c415-3464-8cb6-3edf54bfde7c}
     @Test()
     public void throwOnLockCyclesTest() {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
 
         //Act Statement(s)
         Threading.throwOnLockCycles();
@@ -86,6 +97,10 @@ public class ThreadingSapientGeneratedJunit4Test {
     //Sapient generated method id: ${5ce10835-ac42-3f12-8f8f-0f4ad46215c3}
     @Test()
     public void ignoreLockCyclesTest() {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
 
         //Act Statement(s)
         Threading.ignoreLockCycles();
@@ -105,6 +120,10 @@ public class ThreadingSapientGeneratedJunit4Test {
     //Sapient generated method id: ${24082d81-f972-3165-924d-5598e3d763e8}
     @Test()
     public void getPolicyTest() {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
 
         //Act Statement(s)
         CycleDetectingLockFactory.Policy result = Threading.getPolicy();

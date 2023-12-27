@@ -17,7 +17,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "3D287BC9B4382E05B22FCAD7C6E8537A"
+    modelFingerprint: "EB431BDF8D4C3660CE093E8DEA5CB035"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -48,7 +48,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "tag"
-      modelFingerprint: "5AF388E520D9305B9040E1F617026446"
+      modelFingerprint: "85E2BE3A8F6079EF1BCBA8483964A541"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -56,7 +56,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "tag1"
+          value: "sampleTag"
+        suggestedContent: !<regular>
+          value: "sampleTag"
         valueType: "java.lang.String"
         uuid: "maybeGetTag_string1"
         fixed: false
@@ -85,7 +87,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -104,7 +106,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "7F073B35BC1E2585CFAECCB5691BE928"
+    modelFingerprint: "3F36B4EAA6BB0A648CB2BCF2E1CEA2B8"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -135,7 +137,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "tag"
-      modelFingerprint: "12F80D40BE09AC85A04006F785439195"
+      modelFingerprint: "E6479C86A819FA857FF0DABDD60B6365"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -143,9 +145,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "A"
+          value: "unknown_tag"
         suggestedContent: !<regular>
-          value: "A"
+          value: "unknown_tag"
         valueType: "java.lang.String"
         uuid: "getTag_string1"
         fixed: false
@@ -155,7 +157,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "4E9FC7E311CE3DD987FFF85A88AD1098"
+      modelFingerprint: "31E5FF5DC6315BEAEDF82A66EEAADAD1"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -169,9 +171,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "Unknown tag A"
+                value: "Unknown tag unknown_tag"
               suggestedContent: !<regular>
-                value: "Unknown tag A"
+                value: "Unknown tag unknown_tag"
               valueType: "java.lang.String"
               uuid: "getTag_string2"
               fixed: false
@@ -185,8 +187,10 @@ methods:
           - name: "s"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: "Unknown tag unknown_tag"
               suggestedContent: !<regular>
-                value: "Unknown tag A"
+                value: "Unknown tag unknown_tag"
               valueType: "java.lang.String"
               uuid: "getTag_string2"
               fixed: false
@@ -205,7 +209,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -225,7 +229,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "214654029E216ED10C4B966B3C2E3538"
+    modelFingerprint: "10B0C2DF3944DD2D64EA9331FD7AC161"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -256,7 +260,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "tag"
-      modelFingerprint: "5AF388E520D9305B9040E1F617026446"
+      modelFingerprint: "85E2BE3A8F6079EF1BCBA8483964A541"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -264,7 +268,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "tag1"
+          value: "sampleTag"
+        suggestedContent: !<regular>
+          value: "sampleTag"
         valueType: "java.lang.String"
         uuid: "setTag_string1"
         fixed: false
@@ -274,13 +280,21 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "value"
-      modelFingerprint: "93D30D33C330003DA9527298CDFA2838"
+      modelFingerprint: "51431D1369A24054F5CF412683C27340"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "com.google.protobuf.ByteString"
+          method: "empty"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "com.google.protobuf.ByteString"
+          method: "empty"
+          methodParameters: []
         valueType: "com.google.protobuf.ByteString"
         uuid: "setTag_byteString1"
         fixed: false
@@ -306,7 +320,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -325,7 +339,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "87B4E4972973A1E8FF1E2CE3320587A7"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -362,37 +376,12 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "COLLECTION"
-        content: !<collection>
-          collectionClass: "java.util.HashMap"
-          parameters:
-          - name: "m"
-            value:
-              sapientType: "COLLECTION"
-              content: !<collection>
-                collectionClass: "java.util.HashMap"
-                parameters: []
-                values: []
-              suggestedContent: !<collection>
-                collectionClass: "java.util.HashMap"
-                parameters: []
-                values: []
-              valueType: "java.util.Map"
-              genericValueType: "java.lang.String,com.google.protobuf.ByteString"
-              uuid: "<init>_hashMap1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          values: []
         suggestedContent: !<collection>
           collectionClass: "java.util.HashMap"
           parameters:
           - name: "m"
             value:
               sapientType: "COLLECTION"
-              content: !<collection>
-                collectionClass: "java.util.HashMap"
-                parameters: []
-                values: []
               suggestedContent: !<collection>
                 collectionClass: "java.util.HashMap"
                 parameters: []

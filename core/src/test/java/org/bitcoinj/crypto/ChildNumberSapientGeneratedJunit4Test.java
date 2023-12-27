@@ -21,6 +21,10 @@ public class ChildNumberSapientGeneratedJunit4Test {
     //Sapient generated method id: ${5715801c-29ce-3faa-847f-2805dbc97707}
     @Test()
     public void iTest() {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
         ChildNumber target = new ChildNumber(0, true);
 
@@ -28,7 +32,7 @@ public class ChildNumberSapientGeneratedJunit4Test {
         int result = target.i();
 
         //Assert statement(s)
-        assertThat(result, equalTo(-2147483648));
+        assertThat(result, equalTo(0));
     }
 
     //Sapient generated method id: ${0bca5d32-7671-34ce-92f1-91721a0bb29e}
@@ -38,7 +42,7 @@ public class ChildNumberSapientGeneratedJunit4Test {
          * ((a & HARDENED_BIT) != 0) : true  #  inside hasHardenedBit method
          */
         //Arrange Statement(s)
-        ChildNumber target = new ChildNumber(0, true);
+        ChildNumber target = new ChildNumber(100, true);
 
         //Act Statement(s)
         boolean result = target.isHardened();
@@ -53,31 +57,28 @@ public class ChildNumberSapientGeneratedJunit4Test {
     public void isHardenedWhenAAndHARDENED_BITEquals0() {
         /* Branches:
          * ((a & HARDENED_BIT) != 0) : false  #  inside hasHardenedBit method
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        ChildNumber target = new ChildNumber(0, true);
+        ChildNumber target = new ChildNumber(2147483647, true);
 
         //Act Statement(s)
         boolean result = target.isHardened();
 
         //Assert statement(s)
-        assertThat(result, equalTo(Boolean.FALSE));
+        assertThat(result, equalTo(Boolean.TRUE));
     }
 
     //Sapient generated method id: ${ad9b5f75-34be-31db-8a72-a191bdec0933}
     @Test()
     public void numTest() {
         //Arrange Statement(s)
-        ChildNumber target = new ChildNumber(0, true);
+        ChildNumber target = new ChildNumber(2147483647, true);
 
         //Act Statement(s)
         int result = target.num();
 
         //Assert statement(s)
-        assertThat(result, equalTo(0));
+        assertThat(result, equalTo(2147483647));
     }
 
     //Sapient generated method id: ${9bd5d305-ab5e-308f-93f5-7e7a290227df}
@@ -88,7 +89,7 @@ public class ChildNumberSapientGeneratedJunit4Test {
          * (isHardened()) : true
          */
         //Arrange Statement(s)
-        ChildNumber target = spy(new ChildNumber(0, true));
+        ChildNumber target = spy(new ChildNumber(2147483647, true));
         doReturn(true).when(target).isHardened();
 
         //Act Statement(s)
@@ -122,15 +123,13 @@ public class ChildNumberSapientGeneratedJunit4Test {
     @Test()
     public void compareToTest() {
         //Arrange Statement(s)
-        ChildNumber otherMock = mock(ChildNumber.class);
-        doReturn(-1).when(otherMock).num();
-        ChildNumber target = new ChildNumber(0, true);
+        ChildNumber target = new ChildNumber(10, true);
+        ChildNumber childNumber = new ChildNumber(0, false);
 
         //Act Statement(s)
-        int result = target.compareTo(otherMock);
+        int result = target.compareTo(childNumber);
 
         //Assert statement(s)
         assertThat(result, equalTo(1));
-        verify(otherMock).num();
     }
 }

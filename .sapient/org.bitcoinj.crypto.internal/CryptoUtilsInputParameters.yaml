@@ -48,7 +48,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "REAL"
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.base.Sha256Hash"
         uuid: "org.bitcoinj.base.Sha256Hash"
         fixed: false
@@ -1306,7 +1306,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -1324,13 +1324,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "AE2A24874BD0CB768880189A93F3F182"
+    modelFingerprint: "8D5F5063965FDED4C3E1DED74A3C41EB"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "input"
-      modelFingerprint: "68E3083EC24107B5F413E2319428B6C2"
+      modelFingerprint: "160285FD932AED38E895D47DDFA16A26"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1338,9 +1338,25 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values: {}
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         suggestedContent: !<array>
-          values: {}
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "byte[]"
         uuid: "digestRipeMd160_byte[]1"
         fixed: false
@@ -1350,7 +1366,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "digest"
-      modelFingerprint: "1AB8F36F86C8334A99A64E06B952372C"
+      modelFingerprint: "3C0190DAB0FE5BBA0AB9A703B14AD267"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1380,9 +1396,25 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             suggestedContent: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "byte[]"
             uuid: "digestRipeMd160_byte[]1"
             fixed: false
@@ -1401,9 +1433,7 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 0
-            suggestedContent: !<regular>
-              value: 0
+              value: 1
             valueType: "int"
             uuid: "digestRipeMd160_int1"
             fixed: false
@@ -2148,6 +2178,6 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

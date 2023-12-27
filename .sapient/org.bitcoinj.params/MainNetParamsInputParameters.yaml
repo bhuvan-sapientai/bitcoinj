@@ -16,7 +16,7 @@ methods:
     filledByUser: false
     priority: "MODERATE"
     modelFingerprint: "3C76C27EB61335E846FDEB46E55AEF23"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "LOCAL_VARIABLE"
@@ -122,18 +122,6 @@ methods:
         signature: "wrap(String): Sha256Hash"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "wrap"
-            methodParameters:
-            - value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: "00000000000271a2dc26e7667f8419f2e15416dc6955e5a6c6cdf3f2574dd08e"
-                valueType: "java.lang.String"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.base.Sha256Hash"
             method: "wrap"
@@ -184,18 +172,6 @@ methods:
         signature: "wrap(String): Sha256Hash"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "wrap"
-            methodParameters:
-            - value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: "00000000000af0aed4792b1acee3d966af36cf5def14935db8de83d6f9306f2f"
-                valueType: "java.lang.String"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.base.Sha256Hash"
             method: "wrap"
@@ -246,18 +222,6 @@ methods:
         signature: "wrap(String): Sha256Hash"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "wrap"
-            methodParameters:
-            - value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: "00000000000a4d0a398161ffc163c503763b1f4360639393e0e4c8e300e0caec"
-                valueType: "java.lang.String"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.base.Sha256Hash"
             method: "wrap"
@@ -308,18 +272,6 @@ methods:
         signature: "wrap(String): Sha256Hash"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "wrap"
-            methodParameters:
-            - value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: "00000000000743f190a18c5577a3c2d2a1f610ae9601ac046a38084ccb7cd721"
-                valueType: "java.lang.String"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.base.Sha256Hash"
             method: "wrap"
@@ -370,18 +322,6 @@ methods:
         signature: "wrap(String): Sha256Hash"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "wrap"
-            methodParameters:
-            - value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: "000000000000034a7dedef4a161fa058a2d67a173a90155f3a2fe6fc132e0ebf"
-                valueType: "java.lang.String"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.base.Sha256Hash"
             method: "wrap"
@@ -411,11 +351,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.params.MainNetParams"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: true
         suggestedContent: !<new>
           target: "org.bitcoinj.params.MainNetParams"
           parameters: []
@@ -469,7 +404,7 @@ methods:
           createdByTargetCode: false
           propertiesMap:
             genesisBlock:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.Block"
                 onlyPojoFunctions: false
@@ -606,18 +541,6 @@ methods:
         signature: "wrap(String): Sha256Hash"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "wrap"
-            methodParameters:
-            - value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: "00000000000271a2dc26e7667f8419f2e15416dc6955e5a6c6cdf3f2574dd08e"
-                valueType: "java.lang.String"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.base.Sha256Hash"
             method: "wrap"
@@ -668,18 +591,6 @@ methods:
         signature: "wrap(String): Sha256Hash"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "wrap"
-            methodParameters:
-            - value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: "00000000000af0aed4792b1acee3d966af36cf5def14935db8de83d6f9306f2f"
-                valueType: "java.lang.String"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.base.Sha256Hash"
             method: "wrap"
@@ -730,18 +641,6 @@ methods:
         signature: "wrap(String): Sha256Hash"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "wrap"
-            methodParameters:
-            - value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: "00000000000a4d0a398161ffc163c503763b1f4360639393e0e4c8e300e0caec"
-                valueType: "java.lang.String"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.base.Sha256Hash"
             method: "wrap"
@@ -792,18 +691,6 @@ methods:
         signature: "wrap(String): Sha256Hash"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "wrap"
-            methodParameters:
-            - value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: "00000000000743f190a18c5577a3c2d2a1f610ae9601ac046a38084ccb7cd721"
-                valueType: "java.lang.String"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.base.Sha256Hash"
             method: "wrap"
@@ -854,18 +741,6 @@ methods:
         signature: "wrap(String): Sha256Hash"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "wrap"
-            methodParameters:
-            - value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: "000000000000034a7dedef4a161fa058a2d67a173a90155f3a2fe6fc132e0ebf"
-                valueType: "java.lang.String"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.base.Sha256Hash"
             method: "wrap"
@@ -894,7 +769,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         valueType: "org.bitcoinj.core.Block"
         uuid: "org.bitcoinj.core.Block"
         fixed: false
@@ -906,11 +781,7 @@ methods:
         parameters:
         - name: "time"
           value:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "java.time.Instant"
-              method: "now"
-              methodParameters: []
+            sapientType: "UNKNOWN"
             suggestedContent: !<static_method_return>
               target: "java.time.Instant"
               method: "now"
@@ -940,7 +811,7 @@ methods:
             explicitCastNeeded: false
         signature: "createGenesis(Instant,long,long): Block"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "UNKNOWN"
           suggestedContent: !<unknown_object>
             target: "org.bitcoinj.core.Block"
             onlyPojoFunctions: false
@@ -961,7 +832,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.Block"
           onlyPojoFunctions: false
@@ -977,7 +848,7 @@ methods:
         parameters: []
         signature: "getHash(): Sha256Hash"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "UNKNOWN"
           suggestedContent: !<unknown_object>
             target: "org.bitcoinj.base.Sha256Hash"
             onlyPojoFunctions: false
@@ -998,7 +869,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         valueType: "org.bitcoinj.base.internal.Preconditions"
         uuid: "org.bitcoinj.base.internal.Preconditions"
         fixed: false
@@ -1011,8 +882,6 @@ methods:
         - name: "expression"
           value:
             sapientType: "BASIC"
-            content: !<regular>
-              value: false
             valueType: "boolean"
             uuid: "getGenesisBlock_boolean1"
             fixed: false
@@ -1045,7 +914,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.Block"
           onlyPojoFunctions: false

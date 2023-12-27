@@ -22,6 +22,11 @@ import static org.hamcrest.Matchers.is;
 
 import org.junit.Ignore;
 
+import java.util.List;
+import java.nio.ByteBuffer;
+import java.util.ArrayList;
+import java.time.Instant;
+
 public class MemoryBlockStoreSapientGeneratedJunit4Test {
 
     @Rule()
@@ -29,7 +34,7 @@ public class MemoryBlockStoreSapientGeneratedJunit4Test {
 
     private final Block blockMock = mock(Block.class);
 
-    private final Block genesisBlockMock = mock(Block.class);
+    private final Block genesisBlockMock = mock(Block.class, "{}");
 
     private final Block genesisHeaderMock = mock(Block.class);
 
@@ -47,18 +52,17 @@ public class MemoryBlockStoreSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        doReturn(new BigInteger("0")).when(genesisHeaderMock).getWork();
-        doReturn(sha256HashMock, sha256HashMock2).when(genesisHeaderMock).getHash();
-        doReturn(genesisHeaderMock).when(genesisBlockMock).cloneAsHeader();
+        Instant instant = Instant.now();
+        List list = new ArrayList<>();
+        Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
+        doReturn(block).when(genesisBlockMock).cloneAsHeader();
         MemoryBlockStore target = new MemoryBlockStore(genesisBlockMock);
-        StoredBlock storedBlock = new StoredBlock(genesisHeaderMock, new BigInteger("0"), 0);
+        StoredBlock storedBlock = new StoredBlock(block, new BigInteger("115792089237316195423570985008687907853269984665640564039457584007913129639936"), 0);
 
         //Act Statement(s)
         target.put(storedBlock);
 
         //Assert statement(s)
-        verify(genesisHeaderMock).getWork();
-        verify(genesisHeaderMock, times(2)).getHash();
         verify(genesisBlockMock).cloneAsHeader();
     }
 
@@ -73,19 +77,18 @@ public class MemoryBlockStoreSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        doReturn(blockMock).when(genesisBlockMock).cloneAsHeader();
-        doReturn(new BigInteger("0")).when(blockMock).getWork();
-        doReturn(sha256HashMock).when(blockMock).getHash();
-        MemoryBlockStore target = new MemoryBlockStore(genesisBlockMock);
+        Instant instant = Instant.now();
+        List list = new ArrayList<>();
+        Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
+        MemoryBlockStore target = new MemoryBlockStore(block);
+        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+        Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
 
         //Act Statement(s)
-        StoredBlock result = target.get(sha256HashMock2);
+        StoredBlock result = target.get(sha256Hash);
 
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
-        verify(genesisBlockMock).cloneAsHeader();
-        verify(blockMock).getWork();
-        verify(blockMock).getHash();
     }
 
     //Sapient generated method id: ${21ed6da0-f82f-3eac-84ef-f7da4d646f7c}
@@ -98,20 +101,20 @@ public class MemoryBlockStoreSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        doReturn(blockMock).when(genesisBlockMock).cloneAsHeader();
-        doReturn(new BigInteger("0")).when(blockMock).getWork();
-        doReturn(sha256HashMock).when(blockMock).getHash();
+        Block genesisBlockMock = mock(Block.class, "BigInteger");
+        Instant instant = Instant.now();
+        List list = new ArrayList<>();
+        Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
+        doReturn(block).when(genesisBlockMock).cloneAsHeader();
         MemoryBlockStore target = new MemoryBlockStore(genesisBlockMock);
 
         //Act Statement(s)
         StoredBlock result = target.getChainHead();
-        StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
+        StoredBlock storedBlock = new StoredBlock(block, new BigInteger("115792089237316195423570985008687907853269984665640564039457584007913129639936"), 0);
 
         //Assert statement(s)
         assertThat(result, equalTo(storedBlock));
         verify(genesisBlockMock).cloneAsHeader();
-        verify(blockMock).getWork();
-        verify(blockMock).getHash();
     }
 
     //Sapient generated method id: ${7f46c20f-91a7-37c9-a337-f1d1de82a194}
@@ -124,18 +127,17 @@ public class MemoryBlockStoreSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        doReturn(new BigInteger("0")).when(genesisHeaderMock).getWork();
-        doReturn(sha256HashMock).when(genesisHeaderMock).getHash();
-        doReturn(genesisHeaderMock).when(genesisBlockMock).cloneAsHeader();
+        Instant instant = Instant.now();
+        List list = new ArrayList<>();
+        Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
+        doReturn(block).when(genesisBlockMock).cloneAsHeader();
         MemoryBlockStore target = new MemoryBlockStore(genesisBlockMock);
-        StoredBlock storedBlock = new StoredBlock(genesisHeaderMock, new BigInteger("0"), 0);
+        StoredBlock storedBlock = new StoredBlock(block, new BigInteger("115792089237316195423570985008687907853269984665640564039457584007913129639936"), 0);
 
         //Act Statement(s)
         target.setChainHead(storedBlock);
 
         //Assert statement(s)
-        verify(genesisHeaderMock).getWork();
-        verify(genesisHeaderMock).getHash();
         verify(genesisBlockMock).cloneAsHeader();
     }
 
@@ -147,9 +149,11 @@ public class MemoryBlockStoreSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        doReturn(blockMock).when(genesisBlockMock).cloneAsHeader();
-        doReturn(new BigInteger("0")).when(blockMock).getWork();
-        doReturn(sha256HashMock).when(blockMock).getHash();
+        Block genesisBlockMock = mock(Block.class, "0");
+        Instant instant = Instant.now();
+        List list = new ArrayList<>();
+        Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
+        doReturn(block).when(genesisBlockMock).cloneAsHeader();
         MemoryBlockStore target = new MemoryBlockStore(genesisBlockMock);
 
         //Act Statement(s)
@@ -157,7 +161,5 @@ public class MemoryBlockStoreSapientGeneratedJunit4Test {
 
         //Assert statement(s)
         verify(genesisBlockMock).cloneAsHeader();
-        verify(blockMock).getWork();
-        verify(blockMock).getHash();
     }
 }

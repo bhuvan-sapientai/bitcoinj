@@ -16,29 +16,34 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "400C6BF31858731A17B632CF24827017"
+    modelFingerprint: "4D0F6537FFA1703EBBBC602085321F57"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "feeRate"
-      modelFingerprint: "A5D6A1323FEE94058BE3D03F92FAB0A2"
+      modelFingerprint: "C879F482360413581B46EAEEE9FFDF5F"
       index: 1
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Coin"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.base.Coin"
         uuid: "of_coin1"
         fixed: false
+        nameForMock: "100"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "CFA9CF1AD427744F3B772BB48590D144"
+      modelFingerprint: "A440D8818E982FF2FC67AE4544F0B091"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -51,9 +56,14 @@ methods:
           - name: "feeRate"
             value:
               sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.base.Coin"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.base.Coin"
               uuid: "of_coin1"
               fixed: false
+              nameForMock: "100"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: true
@@ -63,10 +73,15 @@ methods:
           parameters:
           - name: "feeRate"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.base.Coin"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.base.Coin"
               uuid: "of_coin1"
               fixed: false
+              nameForMock: "100"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: true
@@ -82,7 +97,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -103,13 +118,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "FADEF30AAD22C2FE591D4B1DC062878A"
+    modelFingerprint: "498364F30B29C6CEA6EB001E99951D99"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "payload"
-      modelFingerprint: "335B7D7442C1E51D6EECFEAEF136D4CA"
+      modelFingerprint: "C871D067662095A198DE0F4DE90B3DF9"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -151,7 +166,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Coin"
-      modelFingerprint: "4F058D1403B5E226570650A935201450"
+      modelFingerprint: "C9BFB441DF4FFCABB088E46BEAAC023B"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -205,11 +220,33 @@ methods:
         - "java.nio.BufferUnderflowException"
         signature: "read(ByteBuffer): Coin throws java.nio.BufferUnderflowException"
         returnValue:
-          sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
+          sapientType: "OBJECT"
+          content: !<static_method_return>
             target: "org.bitcoinj.base.Coin"
-            onlyPojoFunctions: false
-            builderPattern: false
+            method: "valueOf"
+            methodParameters:
+            - name: "satoshis"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "long"
+                uuid: "read_coin1-satoshis"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.Coin"
+            method: "valueOf"
+            methodParameters:
+            - name: "satoshis"
+              value:
+                sapientType: "BASIC"
+                valueType: "long"
+                uuid: "read_coin1-satoshis"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "org.bitcoinj.base.Coin"
           uuid: "read_coin1"
           fixed: false
@@ -220,17 +257,39 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "feeRate"
-      modelFingerprint: "2FA8228322760FBFC20CDE1983242629"
+      modelFingerprint: "44AA3B09404B22EC7B98215FBC303003"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
+        sapientType: "OBJECT"
+        content: !<static_method_return>
           target: "org.bitcoinj.base.Coin"
-          onlyPojoFunctions: false
-          builderPattern: false
+          method: "valueOf"
+          methodParameters:
+          - name: "satoshis"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "read_coin1-satoshis"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.Coin"
+          method: "valueOf"
+          methodParameters:
+          - name: "satoshis"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "read_coin1-satoshis"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.base.Coin"
         uuid: "read_coin1"
         fixed: false
@@ -244,9 +303,7 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 1
-          suggestedContent: !<regular>
-            value: 1
+            value: 0
           valueType: "int"
           uuid: "read_int1"
           fixed: false
@@ -304,7 +361,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "EE023D74C9FAF6A0B989DE6BEC4BE0B4"
+      modelFingerprint: "150241BE148473F56F00DAA8ECD2F8BC"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -316,11 +373,33 @@ methods:
           parameters:
           - name: "feeRate"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
+              sapientType: "OBJECT"
+              content: !<static_method_return>
                 target: "org.bitcoinj.base.Coin"
-                onlyPojoFunctions: false
-                builderPattern: false
+                method: "valueOf"
+                methodParameters:
+                - name: "satoshis"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "long"
+                    uuid: "read_coin1-satoshis"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.Coin"
+                method: "valueOf"
+                methodParameters:
+                - name: "satoshis"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "long"
+                    uuid: "read_coin1-satoshis"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.base.Coin"
               uuid: "read_coin1"
               fixed: false
@@ -333,11 +412,33 @@ methods:
           parameters:
           - name: "feeRate"
             value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<unknown_object>
+              sapientType: "OBJECT"
+              content: !<static_method_return>
                 target: "org.bitcoinj.base.Coin"
-                onlyPojoFunctions: false
-                builderPattern: false
+                method: "valueOf"
+                methodParameters:
+                - name: "satoshis"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "long"
+                    uuid: "read_coin1-satoshis"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.Coin"
+                method: "valueOf"
+                methodParameters:
+                - name: "satoshis"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "long"
+                    uuid: "read_coin1-satoshis"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.base.Coin"
               uuid: "read_coin1"
               fixed: false
@@ -356,7 +457,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -366,13 +467,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "023D65E2E5D44C2597E0827E0A61828B"
+    modelFingerprint: "E4B8D9079C17F54D1DEDE967AFE850CA"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "payload"
-      modelFingerprint: "335B7D7442C1E51D6EECFEAEF136D4CA"
+      modelFingerprint: "C871D067662095A198DE0F4DE90B3DF9"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -414,7 +515,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Coin"
-      modelFingerprint: "4F058D1403B5E226570650A935201450"
+      modelFingerprint: "C9BFB441DF4FFCABB088E46BEAAC023B"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -468,11 +569,33 @@ methods:
         - "java.nio.BufferUnderflowException"
         signature: "read(ByteBuffer): Coin throws java.nio.BufferUnderflowException"
         returnValue:
-          sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
+          sapientType: "OBJECT"
+          content: !<static_method_return>
             target: "org.bitcoinj.base.Coin"
-            onlyPojoFunctions: false
-            builderPattern: false
+            method: "valueOf"
+            methodParameters:
+            - name: "satoshis"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "long"
+                uuid: "read_coin1-satoshis"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.Coin"
+            method: "valueOf"
+            methodParameters:
+            - name: "satoshis"
+              value:
+                sapientType: "BASIC"
+                valueType: "long"
+                uuid: "read_coin1-satoshis"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "org.bitcoinj.base.Coin"
           uuid: "read_coin1"
           fixed: false
@@ -483,17 +606,39 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "feeRate"
-      modelFingerprint: "4C824B74E1C8CDD8912FB9BDE8A828C9"
+      modelFingerprint: "203661CAC2737D514C1C5A6B478C1753"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
+        sapientType: "OBJECT"
+        content: !<static_method_return>
           target: "org.bitcoinj.base.Coin"
-          onlyPojoFunctions: false
-          builderPattern: false
+          method: "valueOf"
+          methodParameters:
+          - name: "satoshis"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "read_coin1-satoshis"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.Coin"
+          method: "valueOf"
+          methodParameters:
+          - name: "satoshis"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "read_coin1-satoshis"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.base.Coin"
         uuid: "read_coin1"
         fixed: false
@@ -567,7 +712,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "EE023D74C9FAF6A0B989DE6BEC4BE0B4"
+      modelFingerprint: "150241BE148473F56F00DAA8ECD2F8BC"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -579,11 +724,33 @@ methods:
           parameters:
           - name: "feeRate"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
+              sapientType: "OBJECT"
+              content: !<static_method_return>
                 target: "org.bitcoinj.base.Coin"
-                onlyPojoFunctions: false
-                builderPattern: false
+                method: "valueOf"
+                methodParameters:
+                - name: "satoshis"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "long"
+                    uuid: "read_coin1-satoshis"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.Coin"
+                method: "valueOf"
+                methodParameters:
+                - name: "satoshis"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "long"
+                    uuid: "read_coin1-satoshis"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.base.Coin"
               uuid: "read_coin1"
               fixed: false
@@ -596,11 +763,33 @@ methods:
           parameters:
           - name: "feeRate"
             value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<unknown_object>
+              sapientType: "OBJECT"
+              content: !<static_method_return>
                 target: "org.bitcoinj.base.Coin"
-                onlyPojoFunctions: false
-                builderPattern: false
+                method: "valueOf"
+                methodParameters:
+                - name: "satoshis"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "long"
+                    uuid: "read_coin1-satoshis"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.Coin"
+                method: "valueOf"
+                methodParameters:
+                - name: "satoshis"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "long"
+                    uuid: "read_coin1-satoshis"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.base.Coin"
               uuid: "read_coin1"
               fixed: false
@@ -619,7 +808,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -640,12 +829,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "05134FDC7444DEDDCE8B9222BE474B62"
+    modelFingerprint: "3F43ECFCE73205FB2F4F2AAA34EB5EC4"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "1EC3B67C9C690FD14D91161C74F7A3C8"
+      modelFingerprint: "FC2243FD339DC0B6D2CA959F769C4BA4"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -658,11 +847,33 @@ methods:
           methodParameters:
           - name: "feeRate"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
+              sapientType: "OBJECT"
+              content: !<static_method_return>
                 target: "org.bitcoinj.base.Coin"
-                onlyPojoFunctions: false
-                builderPattern: false
+                method: "valueOf"
+                methodParameters:
+                - name: "satoshis"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "long"
+                    uuid: "of_coin1-satoshis"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.Coin"
+                method: "valueOf"
+                methodParameters:
+                - name: "satoshis"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "long"
+                    uuid: "of_coin1-satoshis"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.base.Coin"
               uuid: "of_coin1"
               fixed: false
@@ -674,11 +885,33 @@ methods:
           methodParameters:
           - name: "feeRate"
             value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<unknown_object>
+              sapientType: "OBJECT"
+              content: !<static_method_return>
                 target: "org.bitcoinj.base.Coin"
-                onlyPojoFunctions: false
-                builderPattern: false
+                method: "valueOf"
+                methodParameters:
+                - name: "satoshis"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "long"
+                    uuid: "of_coin1-satoshis"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.Coin"
+                method: "valueOf"
+                methodParameters:
+                - name: "satoshis"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "long"
+                    uuid: "of_coin1-satoshis"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.base.Coin"
               uuid: "of_coin1"
               fixed: false
@@ -717,17 +950,39 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "feeRate"
-      modelFingerprint: "8CCD0F02371362E5700ED8315C220871"
+      modelFingerprint: "FFC3F28A623F2805164B089E674C1001"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
+        sapientType: "OBJECT"
+        content: !<static_method_return>
           target: "org.bitcoinj.base.Coin"
-          onlyPojoFunctions: false
-          builderPattern: false
+          method: "valueOf"
+          methodParameters:
+          - name: "satoshis"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "of_coin1-satoshis"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.Coin"
+          method: "valueOf"
+          methodParameters:
+          - name: "satoshis"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "of_coin1-satoshis"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.base.Coin"
         uuid: "of_coin1"
         fixed: false
@@ -741,9 +996,25 @@ methods:
         returnValue:
           sapientType: "ARRAY"
           content: !<array>
-            values: {}
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           suggestedContent: !<array>
-            values: {}
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "byte[]"
           uuid: "bitcoinSerializeToStream_byte[]1"
           fixed: false
@@ -770,7 +1041,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -788,12 +1059,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "ABC10BDA05DA63D93FA4A7B75E7600B3"
+    modelFingerprint: "E4B4E8617312E13F6603A6FDF3F8BB77"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "945200989F7EF6F40E3AF01527365A68"
+      modelFingerprint: "97ACF5A9CE9245C7FEA7057110331A8E"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -807,9 +1078,14 @@ methods:
           - name: "feeRate"
             value:
               sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.base.Coin"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.base.Coin"
               uuid: "of_coin1"
               fixed: false
+              nameForMock: "10"
               equalsMethodPresent: true
               explicitCastNeeded: false
         suggestedContent: !<static_method_return>
@@ -818,10 +1094,15 @@ methods:
           methodParameters:
           - name: "feeRate"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.base.Coin"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.base.Coin"
               uuid: "of_coin1"
               fixed: false
+              nameForMock: "10"
               equalsMethodPresent: true
               explicitCastNeeded: false
         valueType: "org.bitcoinj.core.FeeFilterMessage"
@@ -833,16 +1114,21 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "0BA4BF04ACA4335CDA636F583E8FE771"
+      modelFingerprint: "47AD8BC001B3EE81F3A4921649EC1EF3"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Coin"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.base.Coin"
         uuid: "of_coin1"
         fixed: false
+        nameForMock: "10"
         equalsMethodPresent: true
         explicitCastNeeded: false
       staticReadMethodForField: false
@@ -851,7 +1137,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -869,12 +1155,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "C88C9064FC26DB4440C779171F2197D7"
+    modelFingerprint: "4A1CE89C2D35870541BC41FB3FB95694"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "945200989F7EF6F40E3AF01527365A68"
+      modelFingerprint: "97ACF5A9CE9245C7FEA7057110331A8E"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -888,9 +1174,14 @@ methods:
           - name: "feeRate"
             value:
               sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.base.Coin"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.base.Coin"
               uuid: "of_coin1"
               fixed: false
+              nameForMock: "100"
               equalsMethodPresent: true
               explicitCastNeeded: false
         suggestedContent: !<static_method_return>
@@ -899,10 +1190,15 @@ methods:
           methodParameters:
           - name: "feeRate"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.base.Coin"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.base.Coin"
               uuid: "of_coin1"
               fixed: false
+              nameForMock: "100"
               equalsMethodPresent: true
               explicitCastNeeded: false
         valueType: "org.bitcoinj.core.FeeFilterMessage"
@@ -914,16 +1210,21 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "0BA4BF04ACA4335CDA636F583E8FE771"
+      modelFingerprint: "47AD8BC001B3EE81F3A4921649EC1EF3"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Coin"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.base.Coin"
         uuid: "of_coin1"
         fixed: false
+        nameForMock: "100"
         equalsMethodPresent: true
         explicitCastNeeded: false
       staticReadMethodForField: false
@@ -932,7 +1233,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -950,12 +1251,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "393A6958E0F560296B12D789F01DC37D"
+    modelFingerprint: "1A5C1B0625E165F86F6C335BA70F6D30"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "1EC3B67C9C690FD14D91161C74F7A3C8"
+      modelFingerprint: "F31951F06EFF7649FF4B012B1183F332"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -976,6 +1277,7 @@ methods:
               valueType: "org.bitcoinj.base.Coin"
               uuid: "of_coin1"
               fixed: false
+              nameForMock: "10000"
               equalsMethodPresent: false
               explicitCastNeeded: false
         suggestedContent: !<static_method_return>
@@ -984,7 +1286,7 @@ methods:
           methodParameters:
           - name: "feeRate"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.base.Coin"
                 onlyPojoFunctions: false
@@ -992,6 +1294,7 @@ methods:
               valueType: "org.bitcoinj.base.Coin"
               uuid: "of_coin1"
               fixed: false
+              nameForMock: "10000"
               equalsMethodPresent: false
               explicitCastNeeded: false
         valueType: "org.bitcoinj.core.FeeFilterMessage"
@@ -1003,7 +1306,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "feeRate"
-      modelFingerprint: "5C26757BD379C9E9CF0EB17E3535ABC1"
+      modelFingerprint: "0220FEB6409A2827D92EF1371C07CDF3"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1017,6 +1320,7 @@ methods:
         valueType: "org.bitcoinj.base.Coin"
         uuid: "of_coin1"
         fixed: false
+        nameForMock: "10000"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -1027,9 +1331,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "A"
+            value: "0.0001 BTC/kB"
           suggestedContent: !<regular>
-            value: "A"
+            value: "0.0001 BTC/kB"
           valueType: "java.lang.String"
           uuid: "toString_string1"
           fixed: false
@@ -1040,7 +1344,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "A498806819866422321870D540692269"
+      modelFingerprint: "61E449B30B642879D72C1FCF18FE4E51"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1048,9 +1352,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "feefilter: A/kB"
+          value: "feefilter: 0.0001 BTC/kB/kB"
         suggestedContent: !<regular>
-          value: "feefilter: A/kB"
+          value: "feefilter: 0.0001 BTC/kB/kB"
         valueType: "java.lang.String"
         uuid: "toString_string2"
         fixed: false
@@ -1062,6 +1366,6 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

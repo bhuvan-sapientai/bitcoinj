@@ -17,7 +17,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "4D9AFAB2A205024FD8468A26EE9ECC9E"
+    modelFingerprint: "8D6DF51286A9D71158752DFCBE793BE9"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -48,13 +48,23 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "tx"
-      modelFingerprint: "F8B87C44786781D6A4ADD711C259C948"
+      modelFingerprint: "F9C8EA14E1B7F6B8BB7DB04737D7BACB"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.Transaction"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.Transaction"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
         valueType: "org.bitcoinj.core.Transaction"
         uuid: "shouldSelect_transaction1"
         fixed: false
@@ -83,7 +93,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -101,7 +111,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "645569BCBFEAA1F30D3E92D6CC532E6F"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "RESULT"
@@ -113,11 +123,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.wallet.AllowUnconfirmedCoinSelector"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: true
         suggestedContent: !<new>
           target: "org.bitcoinj.wallet.AllowUnconfirmedCoinSelector"
           parameters: []

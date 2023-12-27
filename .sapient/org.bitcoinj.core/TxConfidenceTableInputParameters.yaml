@@ -18,12 +18,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "D9E98223EBCBD5637ABC72B5A7AB2740"
-    problemWasSolvedByProver: true
+    modelFingerprint: "BC8F90640EF642D9E9653F2DC3742AD5"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "A52486AFF6476539515C1E7414949B5F"
+      modelFingerprint: "EBDCBFC1B3FCC6A50DC442B0892CC03A"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -36,10 +36,6 @@ methods:
           - name: "size"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -47,7 +43,7 @@ methods:
               explicitCastNeeded: false
           - name: "confidenceFactory"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
               uuid: "<init>_transactionConfidence.Factory1"
               fixed: false
@@ -61,10 +57,6 @@ methods:
           - name: "size"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -95,7 +87,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.Transaction"
           onlyPojoFunctions: false
@@ -137,18 +129,6 @@ methods:
         signature: "lock(Class): ReentrantLock"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.utils.Threading"
-            method: "lock"
-            methodParameters:
-            - value:
-                sapientType: "CLASS"
-                content: !<regular>
-                  value: "org.bitcoinj.core.TxConfidenceTable"
-                valueType: "java.lang.Class"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.utils.Threading"
             method: "lock"
@@ -171,13 +151,13 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "tx"
-      modelFingerprint: "403173F5474E8D126C0E46B38AC2AD44"
+      modelFingerprint: "EB2FD83714C31CA07F4E50A571DBBDC6"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.Transaction"
           onlyPojoFunctions: false
@@ -200,10 +180,6 @@ methods:
               - name: "size"
                 value:
                   sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  suggestedContent: !<regular>
-                    value: 0
                   valueType: "int"
                   uuid: "<init>_int1"
                   fixed: false
@@ -226,7 +202,7 @@ methods:
             explicitCastNeeded: false
         signature: "getConfidence(TxConfidenceTable): TransactionConfidence"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "UNKNOWN"
           valueType: "org.bitcoinj.core.TransactionConfidence"
           uuid: "getConfidence_transactionConfidence1"
           fixed: false
@@ -243,7 +219,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         valueType: "org.bitcoinj.core.TransactionConfidence"
         uuid: "getConfidence_transactionConfidence1"
         fixed: false
@@ -255,7 +231,6 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -293,8 +268,6 @@ methods:
           - name: "size"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -302,7 +275,7 @@ methods:
               explicitCastNeeded: false
           - name: "confidenceFactory"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
               uuid: "<init>_transactionConfidence.Factory1"
               fixed: false
@@ -346,7 +319,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         valueType: "org.bitcoinj.base.Sha256Hash"
         uuid: "numBroadcastPeers_sha256Hash1"
         fixed: false
@@ -384,18 +357,6 @@ methods:
         signature: "lock(Class): ReentrantLock"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.utils.Threading"
-            method: "lock"
-            methodParameters:
-            - value:
-                sapientType: "CLASS"
-                content: !<regular>
-                  value: "org.bitcoinj.core.TxConfidenceTable"
-                valueType: "java.lang.Class"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.utils.Threading"
             method: "lock"
@@ -467,8 +428,6 @@ methods:
           - name: "size"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -476,7 +435,7 @@ methods:
               explicitCastNeeded: false
           - name: "confidenceFactory"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
               uuid: "<init>_transactionConfidence.Factory1"
               fixed: false
@@ -520,7 +479,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         valueType: "org.bitcoinj.base.Sha256Hash"
         uuid: "numBroadcastPeers_sha256Hash1"
         fixed: false
@@ -558,18 +517,6 @@ methods:
         signature: "lock(Class): ReentrantLock"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.utils.Threading"
-            method: "lock"
-            methodParameters:
-            - value:
-                sapientType: "CLASS"
-                content: !<regular>
-                  value: "org.bitcoinj.core.TxConfidenceTable"
-                valueType: "java.lang.Class"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.utils.Threading"
             method: "lock"
@@ -598,7 +545,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.TransactionConfidence"
           onlyPojoFunctions: false
@@ -615,8 +562,6 @@ methods:
         signature: "numBroadcastPeers(): int"
         returnValue:
           sapientType: "BASIC"
-          content: !<regular>
-            value: 0
           valueType: "int"
           uuid: "numBroadcastPeers_int1"
           fixed: false
@@ -634,8 +579,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "BASIC"
-        content: !<regular>
-          value: 0
         valueType: "int"
         uuid: "numBroadcastPeers_int1"
         fixed: false
@@ -668,12 +611,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "329F5787D38718D3E4F676F171B3CE8F"
-    problemWasSolvedByProver: true
+    modelFingerprint: "80323E78C14D1276FFA4F4FBFECAF812"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "A52486AFF6476539515C1E7414949B5F"
+      modelFingerprint: "EBDCBFC1B3FCC6A50DC442B0892CC03A"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -686,10 +629,6 @@ methods:
           - name: "size"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -697,7 +636,7 @@ methods:
               explicitCastNeeded: false
           - name: "confidenceFactory"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
               uuid: "<init>_transactionConfidence.Factory1"
               fixed: false
@@ -711,10 +650,6 @@ methods:
           - name: "size"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -745,7 +680,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         valueType: "org.bitcoinj.base.Sha256Hash"
         uuid: "seen_sha256Hash1"
         fixed: false
@@ -761,7 +696,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         valueType: "org.bitcoinj.core.PeerAddress"
         uuid: "seen_peerAddress1"
         fixed: false
@@ -799,18 +734,6 @@ methods:
         signature: "lock(Class): ReentrantLock"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.utils.Threading"
-            method: "lock"
-            methodParameters:
-            - value:
-                sapientType: "CLASS"
-                content: !<regular>
-                  value: "org.bitcoinj.core.TxConfidenceTable"
-                valueType: "java.lang.Class"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.utils.Threading"
             method: "lock"
@@ -844,7 +767,7 @@ methods:
         parameters:
         - name: "hash"
           value:
-            sapientType: "MOCK"
+            sapientType: "UNKNOWN"
             valueType: "org.bitcoinj.base.Sha256Hash"
             uuid: "seen_sha256Hash1"
             fixed: false
@@ -852,7 +775,7 @@ methods:
             explicitCastNeeded: false
         signature: "getOrCreate(Sha256Hash): TransactionConfidence"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "UNKNOWN"
           suggestedContent: !<unknown_object>
             target: "org.bitcoinj.core.TransactionConfidence"
             onlyPojoFunctions: false
@@ -873,7 +796,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.TransactionConfidence"
           onlyPojoFunctions: false
@@ -889,7 +812,7 @@ methods:
         parameters:
         - name: "address"
           value:
-            sapientType: "MOCK"
+            sapientType: "UNKNOWN"
             valueType: "org.bitcoinj.core.PeerAddress"
             uuid: "seen_peerAddress1"
             fixed: false
@@ -898,8 +821,6 @@ methods:
         signature: "markBroadcastBy(PeerAddress): boolean"
         returnValue:
           sapientType: "BASIC"
-          content: !<regular>
-            value: true
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
@@ -918,7 +839,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.TransactionConfidence"
           onlyPojoFunctions: false
@@ -961,7 +882,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.TransactionConfidence"
           onlyPojoFunctions: false
@@ -977,7 +898,6 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -1016,12 +936,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "F124522090E01A56515852E1625B4683"
+    modelFingerprint: "59C6A6CA91B9B23287B355DB2605F350"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "EBDCBFC1B3FCC6A50DC442B0892CC03A"
+      modelFingerprint: "B14829FA13411B332785855CECA9842A"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1035,7 +955,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 10
+              suggestedContent: !<regular>
+                value: 10
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -1044,9 +966,14 @@ methods:
           - name: "confidenceFactory"
             value:
               sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.TransactionConfidence$Factory"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
               uuid: "<init>_transactionConfidence.Factory1"
               fixed: false
+              nameForMock: "{}"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -1057,6 +984,10 @@ methods:
           - name: "size"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 10
+              suggestedContent: !<regular>
+                value: 10
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -1064,10 +995,15 @@ methods:
               explicitCastNeeded: false
           - name: "confidenceFactory"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.TransactionConfidence$Factory"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
               uuid: "<init>_transactionConfidence.Factory1"
               fixed: false
+              nameForMock: "{}"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -1081,13 +1017,75 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "hash"
-      modelFingerprint: "5013FA43D41C42D0C9BB2BBEE9A02D24"
+      modelFingerprint: "D66F4BE9A6381FFDE650F2858FD63D17"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.Sha256Hash"
+          method: "read"
+          methodParameters:
+          - name: "buf"
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "int"
+                    uuid: "getOrCreate_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "int"
+                    uuid: "getOrCreate_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.nio.ByteBuffer"
+              uuid: "getOrCreate_sha256Hash1-buf"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.Sha256Hash"
+          method: "read"
+          methodParameters:
+          - name: "buf"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "int"
+                    uuid: "getOrCreate_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.nio.ByteBuffer"
+              uuid: "getOrCreate_sha256Hash1-buf"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.base.Sha256Hash"
         uuid: "getOrCreate_sha256Hash1"
         fixed: false
@@ -1097,7 +1095,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Threading"
-      modelFingerprint: "3BF5A84F184568138342BF8A9699C74F"
+      modelFingerprint: "17E540F9A3CF58F6FFC66CDE54E70482"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1125,30 +1123,16 @@ methods:
         signature: "lock(Class): ReentrantLock"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.utils.Threading"
-            method: "lock"
-            methodParameters:
-            - value:
-                sapientType: "CLASS"
-                content: !<regular>
-                  value: "org.bitcoinj.core.TxConfidenceTable"
-                valueType: "java.lang.Class"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.utils.Threading"
-            method: "lock"
-            methodParameters:
-            - value:
-                sapientType: "CLASS"
-                content: !<regular>
-                  value: "org.bitcoinj.core.TxConfidenceTable"
-                valueType: "java.lang.Class"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+          content: !<new>
+            target: "java.util.concurrent.locks.ReentrantLock"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.util.concurrent.locks.ReentrantLock"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
           valueType: "java.util.concurrent.locks.ReentrantLock"
           uuid: "<init>_reentrantLock1"
           fixed: false
@@ -1189,7 +1173,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "4956D8049D8870C499D1926BD2CFF1E1"
+    modelFingerprint: "D00DEED81E37FDF783F5AE91950211AD"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -1278,7 +1262,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Threading"
-      modelFingerprint: "3BF5A84F184568138342BF8A9699C74F"
+      modelFingerprint: "1EADE58514ABAA7B893D554D2D4DD735"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1397,11 +1381,11 @@ methods:
       filledByUser: false
     uuid: "0612b96e-688d-399d-89cc-93535a129726"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path3"
     testPathName: "getOrCreateWhenRefIsNullAndConfidenceIsNull"
@@ -1411,12 +1395,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "0E31C81773C70CF5E75064A085BDA906"
+    modelFingerprint: "327B7B531FD80DE8F785FCA7853F4A8E"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "7445DBA83B1213F7A683CAC9A1C97BA7"
+      modelFingerprint: "B14829FA13411B332785855CECA9842A"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1430,7 +1414,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 10
+              suggestedContent: !<regular>
+                value: 10
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -1446,6 +1432,7 @@ methods:
               valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
               uuid: "<init>_transactionConfidence.Factory1"
               fixed: false
+              nameForMock: "{}"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -1456,6 +1443,10 @@ methods:
           - name: "size"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 10
+              suggestedContent: !<regular>
+                value: 10
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -1463,7 +1454,7 @@ methods:
               explicitCastNeeded: false
           - name: "confidenceFactory"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.TransactionConfidence$Factory"
                 onlyPojoFunctions: false
@@ -1471,6 +1462,7 @@ methods:
               valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
               uuid: "<init>_transactionConfidence.Factory1"
               fixed: false
+              nameForMock: "{}"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -1484,13 +1476,75 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "hash"
-      modelFingerprint: "5013FA43D41C42D0C9BB2BBEE9A02D24"
+      modelFingerprint: "D66F4BE9A6381FFDE650F2858FD63D17"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.Sha256Hash"
+          method: "read"
+          methodParameters:
+          - name: "buf"
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "int"
+                    uuid: "getOrCreate_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "int"
+                    uuid: "getOrCreate_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.nio.ByteBuffer"
+              uuid: "getOrCreate_sha256Hash1-buf"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.Sha256Hash"
+          method: "read"
+          methodParameters:
+          - name: "buf"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "int"
+                    uuid: "getOrCreate_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.nio.ByteBuffer"
+              uuid: "getOrCreate_sha256Hash1-buf"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.base.Sha256Hash"
         uuid: "getOrCreate_sha256Hash1"
         fixed: false
@@ -1500,7 +1554,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Threading"
-      modelFingerprint: "3BF5A84F184568138342BF8A9699C74F"
+      modelFingerprint: "17E540F9A3CF58F6FFC66CDE54E70482"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1528,30 +1582,16 @@ methods:
         signature: "lock(Class): ReentrantLock"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.utils.Threading"
-            method: "lock"
-            methodParameters:
-            - value:
-                sapientType: "CLASS"
-                content: !<regular>
-                  value: "org.bitcoinj.core.TxConfidenceTable"
-                valueType: "java.lang.Class"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.utils.Threading"
-            method: "lock"
-            methodParameters:
-            - value:
-                sapientType: "CLASS"
-                content: !<regular>
-                  value: "org.bitcoinj.core.TxConfidenceTable"
-                valueType: "java.lang.Class"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+          content: !<new>
+            target: "java.util.concurrent.locks.ReentrantLock"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.util.concurrent.locks.ReentrantLock"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
           valueType: "java.util.concurrent.locks.ReentrantLock"
           uuid: "<init>_reentrantLock1"
           fixed: false
@@ -1562,7 +1602,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "confidenceFactory"
-      modelFingerprint: "19FFCFC2FC1E79CF645F8429858B19F8"
+      modelFingerprint: "D1EF0636B55FA0B2D1F8F8B4DDA20F4A"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -1576,6 +1616,7 @@ methods:
         valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
         uuid: "<init>_transactionConfidence.Factory1"
         fixed: false
+        nameForMock: "{}"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -1584,7 +1625,69 @@ methods:
         parameters:
         - name: "arg0"
           value:
-            sapientType: "MOCK"
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "org.bitcoinj.base.Sha256Hash"
+              method: "read"
+              methodParameters:
+              - name: "buf"
+                value:
+                  sapientType: "OBJECT"
+                  content: !<static_method_return>
+                    target: "java.nio.ByteBuffer"
+                    method: "allocateDirect"
+                    methodParameters:
+                    - name: "capacity"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: 0
+                        valueType: "int"
+                        uuid: "getOrCreate_sha256Hash1-buf-capacity"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                  suggestedContent: !<static_method_return>
+                    target: "java.nio.ByteBuffer"
+                    method: "allocateDirect"
+                    methodParameters:
+                    - name: "capacity"
+                      value:
+                        sapientType: "BASIC"
+                        valueType: "int"
+                        uuid: "getOrCreate_sha256Hash1-buf-capacity"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                  valueType: "java.nio.ByteBuffer"
+                  uuid: "getOrCreate_sha256Hash1-buf"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<static_method_return>
+              target: "org.bitcoinj.base.Sha256Hash"
+              method: "read"
+              methodParameters:
+              - name: "buf"
+                value:
+                  sapientType: "UNKNOWN"
+                  suggestedContent: !<static_method_return>
+                    target: "java.nio.ByteBuffer"
+                    method: "allocateDirect"
+                    methodParameters:
+                    - name: "capacity"
+                      value:
+                        sapientType: "BASIC"
+                        valueType: "int"
+                        uuid: "getOrCreate_sha256Hash1-buf-capacity"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                  valueType: "java.nio.ByteBuffer"
+                  uuid: "getOrCreate_sha256Hash1-buf"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "org.bitcoinj.base.Sha256Hash"
             uuid: "getOrCreate_sha256Hash1"
             fixed: false
@@ -1592,7 +1695,33 @@ methods:
             explicitCastNeeded: false
         signature: "createConfidence(Sha256Hash): TransactionConfidence"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "OBJECT"
+          content: !<new>
+            target: "org.bitcoinj.core.TransactionConfidence"
+            parameters:
+            - name: "hash"
+              value:
+                sapientType: "MOCK"
+                valueType: "org.bitcoinj.base.Sha256Hash"
+                uuid: "newConfidence_transactionConfidence1-hash"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "org.bitcoinj.core.TransactionConfidence"
+            parameters:
+            - name: "hash"
+              value:
+                sapientType: "UNKNOWN"
+                valueType: "org.bitcoinj.base.Sha256Hash"
+                uuid: "newConfidence_transactionConfidence1-hash"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            privateConstructor: false
+            createdByTargetCode: false
           valueType: "org.bitcoinj.core.TransactionConfidence"
           uuid: "newConfidence_transactionConfidence1"
           fixed: false
@@ -1603,13 +1732,39 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "AE3D07253E851641137DC926F04FF075"
+      modelFingerprint: "A79DE48616CA1BA6BD4EFAF90A9734F1"
       index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.TransactionConfidence"
+          parameters:
+          - name: "hash"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              uuid: "newConfidence_transactionConfidence1-hash"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.TransactionConfidence"
+          parameters:
+          - name: "hash"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              uuid: "newConfidence_transactionConfidence1-hash"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
         valueType: "org.bitcoinj.core.TransactionConfidence"
         uuid: "newConfidence_transactionConfidence1"
         fixed: false
@@ -1619,11 +1774,11 @@ methods:
       filledByUser: false
     uuid: "4d479f5c-8930-32ad-a59c-7acb1d6b6030"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "get"
     returnType: "org.bitcoinj.core.TransactionConfidence"
@@ -1641,12 +1796,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "73ABA9F8FCA508A7CE31CD67B2D37602"
+    modelFingerprint: "2BDD01B3866811EA5CED1537D03027EC"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "EBDCBFC1B3FCC6A50DC442B0892CC03A"
+      modelFingerprint: "A479490A79717265B78334B499655D41"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1669,9 +1824,14 @@ methods:
           - name: "confidenceFactory"
             value:
               sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.TransactionConfidence$Factory"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
               uuid: "<init>_transactionConfidence.Factory1"
               fixed: false
+              nameForMock: "valid TransactionConfidence.Factory object"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -1689,10 +1849,15 @@ methods:
               explicitCastNeeded: false
           - name: "confidenceFactory"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.TransactionConfidence$Factory"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
               uuid: "<init>_transactionConfidence.Factory1"
               fixed: false
+              nameForMock: "valid TransactionConfidence.Factory object"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -1706,13 +1871,75 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "hash"
-      modelFingerprint: "5013FA43D41C42D0C9BB2BBEE9A02D24"
+      modelFingerprint: "D66F4BE9A6381FFDE650F2858FD63D17"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.Sha256Hash"
+          method: "read"
+          methodParameters:
+          - name: "buf"
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "int"
+                    uuid: "get_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "int"
+                    uuid: "get_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.nio.ByteBuffer"
+              uuid: "get_sha256Hash1-buf"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.Sha256Hash"
+          method: "read"
+          methodParameters:
+          - name: "buf"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "int"
+                    uuid: "get_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.nio.ByteBuffer"
+              uuid: "get_sha256Hash1-buf"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.base.Sha256Hash"
         uuid: "get_sha256Hash1"
         fixed: false
@@ -1722,7 +1949,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Threading"
-      modelFingerprint: "3BF5A84F184568138342BF8A9699C74F"
+      modelFingerprint: "17E540F9A3CF58F6FFC66CDE54E70482"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1750,30 +1977,16 @@ methods:
         signature: "lock(Class): ReentrantLock"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.utils.Threading"
-            method: "lock"
-            methodParameters:
-            - value:
-                sapientType: "CLASS"
-                content: !<regular>
-                  value: "org.bitcoinj.core.TxConfidenceTable"
-                valueType: "java.lang.Class"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.utils.Threading"
-            method: "lock"
-            methodParameters:
-            - value:
-                sapientType: "CLASS"
-                content: !<regular>
-                  value: "org.bitcoinj.core.TxConfidenceTable"
-                valueType: "java.lang.Class"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+          content: !<new>
+            target: "java.util.concurrent.locks.ReentrantLock"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.util.concurrent.locks.ReentrantLock"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
           valueType: "java.util.concurrent.locks.ReentrantLock"
           uuid: "<init>_reentrantLock1"
           fixed: false
@@ -1814,12 +2027,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "4800A7837CB0A77668FE46758816AC93"
+    modelFingerprint: "F96CDED5BD1C5E9925F11315B433124E"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "EBDCBFC1B3FCC6A50DC442B0892CC03A"
+      modelFingerprint: "B14829FA13411B332785855CECA9842A"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1833,7 +2046,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 10
+              suggestedContent: !<regular>
+                value: 10
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -1842,9 +2057,14 @@ methods:
           - name: "confidenceFactory"
             value:
               sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.TransactionConfidence$Factory"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
               uuid: "<init>_transactionConfidence.Factory1"
               fixed: false
+              nameForMock: "<valid TransactionConfidence.Factory object>"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -1855,6 +2075,10 @@ methods:
           - name: "size"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 10
+              suggestedContent: !<regular>
+                value: 10
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -1862,10 +2086,15 @@ methods:
               explicitCastNeeded: false
           - name: "confidenceFactory"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.TransactionConfidence$Factory"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.core.TransactionConfidence$Factory"
               uuid: "<init>_transactionConfidence.Factory1"
               fixed: false
+              nameForMock: "<valid TransactionConfidence.Factory object>"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -1879,13 +2108,75 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "hash"
-      modelFingerprint: "5013FA43D41C42D0C9BB2BBEE9A02D24"
+      modelFingerprint: "D66F4BE9A6381FFDE650F2858FD63D17"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.Sha256Hash"
+          method: "read"
+          methodParameters:
+          - name: "buf"
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "int"
+                    uuid: "get_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "int"
+                    uuid: "get_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.nio.ByteBuffer"
+              uuid: "get_sha256Hash1-buf"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.Sha256Hash"
+          method: "read"
+          methodParameters:
+          - name: "buf"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "int"
+                    uuid: "get_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.nio.ByteBuffer"
+              uuid: "get_sha256Hash1-buf"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.base.Sha256Hash"
         uuid: "get_sha256Hash1"
         fixed: false
@@ -1895,7 +2186,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Threading"
-      modelFingerprint: "3BF5A84F184568138342BF8A9699C74F"
+      modelFingerprint: "17E540F9A3CF58F6FFC66CDE54E70482"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1923,30 +2214,16 @@ methods:
         signature: "lock(Class): ReentrantLock"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.utils.Threading"
-            method: "lock"
-            methodParameters:
-            - value:
-                sapientType: "CLASS"
-                content: !<regular>
-                  value: "org.bitcoinj.core.TxConfidenceTable"
-                valueType: "java.lang.Class"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.utils.Threading"
-            method: "lock"
-            methodParameters:
-            - value:
-                sapientType: "CLASS"
-                content: !<regular>
-                  value: "org.bitcoinj.core.TxConfidenceTable"
-                valueType: "java.lang.Class"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+          content: !<new>
+            target: "java.util.concurrent.locks.ReentrantLock"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.util.concurrent.locks.ReentrantLock"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
           valueType: "java.util.concurrent.locks.ReentrantLock"
           uuid: "<init>_reentrantLock1"
           fixed: false
@@ -1973,8 +2250,8 @@ methods:
       filledByUser: false
     uuid: "9f0bc527-6f06-32ef-9c0f-30f4d74475bb"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false

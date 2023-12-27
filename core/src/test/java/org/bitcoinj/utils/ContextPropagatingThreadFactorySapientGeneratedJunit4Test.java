@@ -31,10 +31,10 @@ public class ContextPropagatingThreadFactorySapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Context contextMock = mock(Context.class);
         try (MockedStatic<Context> context = mockStatic(Context.class)) {
-            context.when(() -> Context.get()).thenReturn(contextMock);
-            ContextPropagatingThreadFactory target = new ContextPropagatingThreadFactory("name1", 0);
+            Context context2 = new Context();
+            context.when(() -> Context.get()).thenReturn(context2);
+            ContextPropagatingThreadFactory target = new ContextPropagatingThreadFactory("Thread-1", 5);
             //TODO: Needs initialization with real value
             Runnable runnable = null;
             //Act Statement(s)

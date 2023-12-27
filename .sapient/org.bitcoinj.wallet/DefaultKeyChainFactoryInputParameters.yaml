@@ -21,8 +21,8 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "E640D7721B5844075093D6C0F4FA1C3C"
-    problemWasSolvedByProver: false
+    modelFingerprint: "8A3423A88E3AEBE9FFC90F54DF77F04F"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -52,13 +52,73 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "seed"
-      modelFingerprint: "6D95675195317F741FDA63D3E0EFA2DA"
+      modelFingerprint: "841B9E11A8590BFA54C5AF8C2C1ACB56"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.wallet.DeterministicSeed"
+          parameters:
+          - name: "encryptedMnemonic"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.crypto.EncryptedData"
+              uuid: "makeKeyChain_deterministicSeed1-encryptedMnemonic"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "encryptedSeed"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.crypto.EncryptedData"
+              uuid: "makeKeyChain_deterministicSeed1-encryptedSeed"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "creationTimeSecs"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "makeKeyChain_deterministicSeed1-creationTimeSecs"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.wallet.DeterministicSeed"
+          parameters:
+          - name: "encryptedMnemonic"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.crypto.EncryptedData"
+              uuid: "makeKeyChain_deterministicSeed1-encryptedMnemonic"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "encryptedSeed"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.crypto.EncryptedData"
+              uuid: "makeKeyChain_deterministicSeed1-encryptedSeed"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "creationTimeSecs"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "makeKeyChain_deterministicSeed1-creationTimeSecs"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
         valueType: "org.bitcoinj.wallet.DeterministicSeed"
         uuid: "makeKeyChain_deterministicSeed1"
         fixed: false
@@ -68,23 +128,28 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "crypter"
-      modelFingerprint: "54D82D350B26481CFBCE9AF2863B26DE"
+      modelFingerprint: "745B2FE0EB74A91913C92410643B1E51"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.crypto.KeyCrypter"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.crypto.KeyCrypter"
         uuid: "makeKeyChain_keyCrypter1"
         fixed: false
+        nameForMock: "null"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     - type: "INPUT"
       name: "outputScriptType"
-      modelFingerprint: "3262D3D7AA38C31827496D23D9B0F158"
+      modelFingerprint: "C5CF75BDEE01025CD6BDB6F567B13690"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -92,6 +157,8 @@ methods:
       value:
         sapientType: "ENUM"
         content: !<regular>
+          value: "P2PKH"
+        suggestedContent: !<regular>
           value: "P2PKH"
         valueType: "org.bitcoinj.base.ScriptType"
         uuid: "makeKeyChain_scriptType1"
@@ -102,7 +169,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "accountPath"
-      modelFingerprint: "486CB8D8543C355065FCD7D8BF588197"
+      modelFingerprint: "05B421DD43457DDE9328FDB4BB6F071A"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -110,9 +177,11 @@ methods:
       value:
         sapientType: "COLLECTION"
         content: !<collection>
+          collectionClass: "java.util.ArrayList"
           parameters: []
           values: []
         suggestedContent: !<collection>
+          collectionClass: "java.util.ArrayList"
           parameters: []
           values: []
         valueType: "java.util.List"
@@ -125,7 +194,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "30C4F9F644E2B0BB6FD0C9DC18CA553B"
+      modelFingerprint: "367B5D4B3CABE0FA2F1DE00A2443B971"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -137,7 +206,67 @@ methods:
           parameters:
           - name: "seed"
             value:
-              sapientType: "MOCK"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.wallet.DeterministicSeed"
+                parameters:
+                - name: "encryptedMnemonic"
+                  value:
+                    sapientType: "MOCK"
+                    valueType: "org.bitcoinj.crypto.EncryptedData"
+                    uuid: "makeKeyChain_deterministicSeed1-encryptedMnemonic"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "encryptedSeed"
+                  value:
+                    sapientType: "MOCK"
+                    valueType: "org.bitcoinj.crypto.EncryptedData"
+                    uuid: "makeKeyChain_deterministicSeed1-encryptedSeed"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "creationTimeSecs"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "long"
+                    uuid: "makeKeyChain_deterministicSeed1-creationTimeSecs"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "org.bitcoinj.wallet.DeterministicSeed"
+                parameters:
+                - name: "encryptedMnemonic"
+                  value:
+                    sapientType: "UNKNOWN"
+                    valueType: "org.bitcoinj.crypto.EncryptedData"
+                    uuid: "makeKeyChain_deterministicSeed1-encryptedMnemonic"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "encryptedSeed"
+                  value:
+                    sapientType: "UNKNOWN"
+                    valueType: "org.bitcoinj.crypto.EncryptedData"
+                    uuid: "makeKeyChain_deterministicSeed1-encryptedSeed"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "creationTimeSecs"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "long"
+                    uuid: "makeKeyChain_deterministicSeed1-creationTimeSecs"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               valueType: "org.bitcoinj.wallet.DeterministicSeed"
               uuid: "makeKeyChain_deterministicSeed1"
               fixed: false
@@ -146,15 +275,22 @@ methods:
           - name: "crypter"
             value:
               sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.crypto.KeyCrypter"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.crypto.KeyCrypter"
               uuid: "makeKeyChain_keyCrypter1"
               fixed: false
+              nameForMock: "null"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "outputScriptType"
             value:
               sapientType: "ENUM"
               content: !<regular>
+                value: "P2PKH"
+              suggestedContent: !<regular>
                 value: "P2PKH"
               valueType: "org.bitcoinj.base.ScriptType"
               uuid: "makeKeyChain_scriptType1"
@@ -165,9 +301,11 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
                 values: []
               suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
                 values: []
               valueType: "java.util.List"
@@ -183,7 +321,67 @@ methods:
           parameters:
           - name: "seed"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.wallet.DeterministicSeed"
+                parameters:
+                - name: "encryptedMnemonic"
+                  value:
+                    sapientType: "MOCK"
+                    valueType: "org.bitcoinj.crypto.EncryptedData"
+                    uuid: "makeKeyChain_deterministicSeed1-encryptedMnemonic"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "encryptedSeed"
+                  value:
+                    sapientType: "MOCK"
+                    valueType: "org.bitcoinj.crypto.EncryptedData"
+                    uuid: "makeKeyChain_deterministicSeed1-encryptedSeed"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "creationTimeSecs"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "long"
+                    uuid: "makeKeyChain_deterministicSeed1-creationTimeSecs"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "org.bitcoinj.wallet.DeterministicSeed"
+                parameters:
+                - name: "encryptedMnemonic"
+                  value:
+                    sapientType: "UNKNOWN"
+                    valueType: "org.bitcoinj.crypto.EncryptedData"
+                    uuid: "makeKeyChain_deterministicSeed1-encryptedMnemonic"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "encryptedSeed"
+                  value:
+                    sapientType: "UNKNOWN"
+                    valueType: "org.bitcoinj.crypto.EncryptedData"
+                    uuid: "makeKeyChain_deterministicSeed1-encryptedSeed"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "creationTimeSecs"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "long"
+                    uuid: "makeKeyChain_deterministicSeed1-creationTimeSecs"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               valueType: "org.bitcoinj.wallet.DeterministicSeed"
               uuid: "makeKeyChain_deterministicSeed1"
               fixed: false
@@ -191,15 +389,24 @@ methods:
               explicitCastNeeded: false
           - name: "crypter"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.crypto.KeyCrypter"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.crypto.KeyCrypter"
               uuid: "makeKeyChain_keyCrypter1"
               fixed: false
+              nameForMock: "null"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "outputScriptType"
             value:
               sapientType: "ENUM"
+              content: !<regular>
+                value: "P2PKH"
+              suggestedContent: !<regular>
+                value: "P2PKH"
               valueType: "org.bitcoinj.base.ScriptType"
               uuid: "makeKeyChain_scriptType1"
               fixed: false
@@ -208,6 +415,14 @@ methods:
           - name: "accountPath"
             value:
               sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values: []
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values: []
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.crypto.ChildNumber"
               uuid: "makeKeyChain_list1"
@@ -250,7 +465,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "F96D393F85D11F98159DBE305ED26B0B"
+    modelFingerprint: "1F2347558129DD805D0708DBA45E9823"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -281,23 +496,28 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "accountKey"
-      modelFingerprint: "D3AB171AD444E2F4D71C70E30124F97A"
+      modelFingerprint: "506346887CA11F521064F027101F4019"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.crypto.DeterministicKey"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.crypto.DeterministicKey"
         uuid: "makeWatchingKeyChain_deterministicKey1"
         fixed: false
+        nameForMock: "<DeterministicKey object>"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     - type: "INPUT"
       name: "outputScriptType"
-      modelFingerprint: "3262D3D7AA38C31827496D23D9B0F158"
+      modelFingerprint: "C5CF75BDEE01025CD6BDB6F567B13690"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -305,6 +525,8 @@ methods:
       value:
         sapientType: "ENUM"
         content: !<regular>
+          value: "P2PKH"
+        suggestedContent: !<regular>
           value: "P2PKH"
         valueType: "org.bitcoinj.base.ScriptType"
         uuid: "makeWatchingKeyChain_scriptType1"
@@ -314,7 +536,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "65ED38034A87942CA34769667C84054B"
+      modelFingerprint: "5027D1DE067D6D2CD4BBEDA05700CD2E"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -338,9 +560,14 @@ methods:
         - name: "accountKey"
           value:
             sapientType: "MOCK"
+            suggestedContent: !<unknown_object>
+              target: "org.bitcoinj.crypto.DeterministicKey"
+              onlyPojoFunctions: false
+              builderPattern: false
             valueType: "org.bitcoinj.crypto.DeterministicKey"
             uuid: "makeWatchingKeyChain_deterministicKey1"
             fixed: false
+            nameForMock: "<DeterministicKey object>"
             equalsMethodPresent: false
             explicitCastNeeded: false
         signature: "watch(DeterministicKey): DeterministicKeyChain$Builder"
@@ -353,13 +580,15 @@ methods:
           valueType: "org.bitcoinj.wallet.DeterministicKeyChain$Builder"
           uuid: "makeWatchingKeyChain_deterministicKeyChain.Builder2"
           fixed: false
+          nameForMock: "UnknownObjectContent{target='org.bitcoinj.wallet.DeterministicKeyChain$Builder',\
+            \ onlyPojoFunctions=false, builderPattern=false}"
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 1
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "ABA16320E68230D83BF1086585338204"
+      modelFingerprint: "E6F8C674F716E77DAC7ADC8F77A2C591"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -373,6 +602,8 @@ methods:
         valueType: "org.bitcoinj.wallet.DeterministicKeyChain$Builder"
         uuid: "makeWatchingKeyChain_deterministicKeyChain.Builder2"
         fixed: false
+        nameForMock: "UnknownObjectContent{target='org.bitcoinj.wallet.DeterministicKeyChain$Builder',\
+          \ onlyPojoFunctions=false, builderPattern=false}"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -383,6 +614,8 @@ methods:
           value:
             sapientType: "ENUM"
             content: !<regular>
+              value: "P2PKH"
+            suggestedContent: !<regular>
               value: "P2PKH"
             valueType: "org.bitcoinj.base.ScriptType"
             uuid: "makeWatchingKeyChain_scriptType1"
@@ -399,13 +632,15 @@ methods:
           valueType: "org.bitcoinj.wallet.DeterministicKeyChain$Builder"
           uuid: "makeWatchingKeyChain_deterministicKeyChain.Builder3"
           fixed: false
+          nameForMock: "UnknownObjectContent{target='org.bitcoinj.wallet.DeterministicKeyChain$Builder',\
+            \ onlyPojoFunctions=false, builderPattern=false}"
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 1
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "0305606F1B94673BA8845F7981AEA95C"
+      modelFingerprint: "7C2EF75D52974EEAD4F88A2C96F2DB00"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -419,6 +654,8 @@ methods:
         valueType: "org.bitcoinj.wallet.DeterministicKeyChain$Builder"
         uuid: "makeWatchingKeyChain_deterministicKeyChain.Builder3"
         fixed: false
+        nameForMock: "UnknownObjectContent{target='org.bitcoinj.wallet.DeterministicKeyChain$Builder',\
+          \ onlyPojoFunctions=false, builderPattern=false}"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -428,9 +665,15 @@ methods:
         signature: "build(): DeterministicKeyChain"
         returnValue:
           sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.wallet.DeterministicKeyChain"
+            onlyPojoFunctions: false
+            builderPattern: false
           valueType: "org.bitcoinj.wallet.DeterministicKeyChain"
           uuid: "makeWatchingKeyChain_deterministicKeyChain1"
           fixed: false
+          nameForMock: "UnknownObjectContent{target='org.bitcoinj.wallet.DeterministicKeyChain',\
+            \ onlyPojoFunctions=false, builderPattern=false}"
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 1
@@ -438,16 +681,22 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "03C05085A1F0864E10FCE15E8CF994CB"
+      modelFingerprint: "25D82DA5A3E843733D04C981271A139C"
       index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.DeterministicKeyChain"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.wallet.DeterministicKeyChain"
         uuid: "makeWatchingKeyChain_deterministicKeyChain1"
         fixed: false
+        nameForMock: "UnknownObjectContent{target='org.bitcoinj.wallet.DeterministicKeyChain',\
+          \ onlyPojoFunctions=false, builderPattern=false}"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
@@ -479,7 +728,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "ECA2AE7E14E1E623C73A64223B846DE3"
+    modelFingerprint: "CC929B34EF5D8C46A7A0DC8E586AFAD4"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -510,16 +759,21 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "accountKey"
-      modelFingerprint: "D3AB171AD444E2F4D71C70E30124F97A"
+      modelFingerprint: "506346887CA11F521064F027101F4019"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.crypto.DeterministicKey"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.crypto.DeterministicKey"
         uuid: "makeSpendingKeyChain_deterministicKey1"
         fixed: false
+        nameForMock: "<value>"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
@@ -543,7 +797,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "A98397B5656933AD90128F5569177211"
+      modelFingerprint: "D35D5F369F0194957D95DF40AB147163"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -567,9 +821,14 @@ methods:
         - name: "accountKey"
           value:
             sapientType: "MOCK"
+            suggestedContent: !<unknown_object>
+              target: "org.bitcoinj.crypto.DeterministicKey"
+              onlyPojoFunctions: false
+              builderPattern: false
             valueType: "org.bitcoinj.crypto.DeterministicKey"
             uuid: "makeSpendingKeyChain_deterministicKey1"
             fixed: false
+            nameForMock: "<value>"
             equalsMethodPresent: false
             explicitCastNeeded: false
         signature: "spend(DeterministicKey): DeterministicKeyChain$Builder"
@@ -582,6 +841,8 @@ methods:
           valueType: "org.bitcoinj.wallet.DeterministicKeyChain$Builder"
           uuid: "makeSpendingKeyChain_deterministicKeyChain.Builder2"
           fixed: false
+          nameForMock: "UnknownObjectContent{target='org.bitcoinj.wallet.DeterministicKeyChain$Builder',\
+            \ onlyPojoFunctions=false, builderPattern=false}"
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 1
@@ -602,6 +863,8 @@ methods:
         valueType: "org.bitcoinj.wallet.DeterministicKeyChain$Builder"
         uuid: "makeSpendingKeyChain_deterministicKeyChain.Builder2"
         fixed: false
+        nameForMock: "UnknownObjectContent{target='org.bitcoinj.wallet.DeterministicKeyChain$Builder',\
+          \ onlyPojoFunctions=false, builderPattern=false}"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -628,13 +891,15 @@ methods:
           valueType: "org.bitcoinj.wallet.DeterministicKeyChain$Builder"
           uuid: "makeSpendingKeyChain_deterministicKeyChain.Builder3"
           fixed: false
+          nameForMock: "UnknownObjectContent{target='org.bitcoinj.wallet.DeterministicKeyChain$Builder',\
+            \ onlyPojoFunctions=false, builderPattern=false}"
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 1
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "0305606F1B94673BA8845F7981AEA95C"
+      modelFingerprint: "7C2EF75D52974EEAD4F88A2C96F2DB00"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -648,6 +913,8 @@ methods:
         valueType: "org.bitcoinj.wallet.DeterministicKeyChain$Builder"
         uuid: "makeSpendingKeyChain_deterministicKeyChain.Builder3"
         fixed: false
+        nameForMock: "UnknownObjectContent{target='org.bitcoinj.wallet.DeterministicKeyChain$Builder',\
+          \ onlyPojoFunctions=false, builderPattern=false}"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -657,9 +924,15 @@ methods:
         signature: "build(): DeterministicKeyChain"
         returnValue:
           sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.wallet.DeterministicKeyChain"
+            onlyPojoFunctions: false
+            builderPattern: false
           valueType: "org.bitcoinj.wallet.DeterministicKeyChain"
           uuid: "makeSpendingKeyChain_deterministicKeyChain1"
           fixed: false
+          nameForMock: "UnknownObjectContent{target='org.bitcoinj.wallet.DeterministicKeyChain',\
+            \ onlyPojoFunctions=false, builderPattern=false}"
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 1
@@ -667,16 +940,22 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "03C05085A1F0864E10FCE15E8CF994CB"
+      modelFingerprint: "25D82DA5A3E843733D04C981271A139C"
       index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.DeterministicKeyChain"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.wallet.DeterministicKeyChain"
         uuid: "makeSpendingKeyChain_deterministicKeyChain1"
         fixed: false
+        nameForMock: "UnknownObjectContent{target='org.bitcoinj.wallet.DeterministicKeyChain',\
+          \ onlyPojoFunctions=false, builderPattern=false}"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false

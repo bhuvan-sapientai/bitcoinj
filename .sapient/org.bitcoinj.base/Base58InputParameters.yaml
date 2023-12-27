@@ -16,13 +16,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "C4CAF92C6054AC888C58BCBF852AA153"
+    modelFingerprint: "02978719FF7C47687D979020E51139CD"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "input"
-      modelFingerprint: "68E3083EC24107B5F413E2319428B6C2"
+      modelFingerprint: "5E8574F4FB1EB0E457AF7B6CA4253A8C"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -61,7 +61,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path6"
@@ -188,25 +188,10 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "ARRAY"
-        content: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "encode_byte1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
         suggestedContent: !<array>
           values:
             0:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0
               suggestedContent: !<regular>
                 value: 0
               valueType: "byte"
@@ -230,8 +215,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "BASIC"
-        content: !<regular>
-          value: "result1"
         valueType: "java.lang.String"
         uuid: "encode_string1"
         fixed: false
@@ -243,7 +226,6 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path3"
@@ -331,13 +313,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "1AA90318A605C6AE2C01550A91FF39B3"
+    modelFingerprint: "57878EEB9583770AF73EFD2101B56768"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "version"
-      modelFingerprint: "4E6FBE3BE1DBE0CDA21BDBC7C1D3BAA9"
+      modelFingerprint: "4099C30601799705D065B6B41F307D4E"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -345,9 +327,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 256
+          value: 300
         suggestedContent: !<regular>
-          value: 256
+          value: 300
         valueType: "int"
         uuid: "encodeChecked_int1"
         fixed: false
@@ -357,7 +339,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "payload"
-      modelFingerprint: "7DE5E617F8D43A7E64AE355157EB43BE"
+      modelFingerprint: "05165C39539D5012076912346F6EBFD9"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -365,9 +347,89 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values: {}
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            1:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 1
+              suggestedContent: !<regular>
+                value: 1
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            2:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 2
+              suggestedContent: !<regular>
+                value: 2
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            3:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 3
+              suggestedContent: !<regular>
+                value: 3
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         suggestedContent: !<array>
-          values: {}
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            1:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 1
+              suggestedContent: !<regular>
+                value: 1
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            2:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 2
+              suggestedContent: !<regular>
+                value: 2
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            3:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 3
+              suggestedContent: !<regular>
+                value: 3
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "byte[]"
         uuid: "encodeChecked_byte[]1"
         fixed: false
@@ -423,7 +485,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -433,13 +495,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "DFA10C2EEA774CA1AD8F8BEAD540A9CC"
+    modelFingerprint: "A4A0F91A54AD73A1EDF93AE02E95658B"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "version"
-      modelFingerprint: "6649E9CF9A8CD8CC0D8E1AFE94F866C0"
+      modelFingerprint: "DD72AA0642D25F0059E8EF205A31B542"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -447,9 +509,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 1
+          value: 100
         suggestedContent: !<regular>
-          value: 1
+          value: 100
         valueType: "int"
         uuid: "encodeChecked_int1"
         fixed: false
@@ -459,7 +521,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "payload"
-      modelFingerprint: "37A8D45DDE670B4414CD865EA49F4234"
+      modelFingerprint: "133B6E8DA3B5E4198F27ECD50176CA14"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -467,9 +529,209 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values: {}
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 1
+              suggestedContent: !<regular>
+                value: 1
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            1:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 2
+              suggestedContent: !<regular>
+                value: 2
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            2:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 3
+              suggestedContent: !<regular>
+                value: 3
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            3:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 4
+              suggestedContent: !<regular>
+                value: 4
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            4:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 5
+              suggestedContent: !<regular>
+                value: 5
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            5:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 6
+              suggestedContent: !<regular>
+                value: 6
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            6:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 7
+              suggestedContent: !<regular>
+                value: 7
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            7:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 8
+              suggestedContent: !<regular>
+                value: 8
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            8:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 9
+              suggestedContent: !<regular>
+                value: 9
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            9:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 10
+              suggestedContent: !<regular>
+                value: 10
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         suggestedContent: !<array>
-          values: {}
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 1
+              suggestedContent: !<regular>
+                value: 1
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            1:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 2
+              suggestedContent: !<regular>
+                value: 2
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            2:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 3
+              suggestedContent: !<regular>
+                value: 3
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            3:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 4
+              suggestedContent: !<regular>
+                value: 4
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            4:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 5
+              suggestedContent: !<regular>
+                value: 5
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            5:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 6
+              suggestedContent: !<regular>
+                value: 6
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            6:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 7
+              suggestedContent: !<regular>
+                value: 7
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            7:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 8
+              suggestedContent: !<regular>
+                value: 8
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            8:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 9
+              suggestedContent: !<regular>
+                value: 9
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            9:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 10
+              suggestedContent: !<regular>
+                value: 10
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "byte[]"
         uuid: "encodeChecked_byte[]1"
         fixed: false
@@ -479,7 +741,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "CBBB208A98B4FC863610282A9ED38FA3"
+      modelFingerprint: "407926730A16871B43E64632C2BBD40B"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -503,48 +765,135 @@ methods:
                 0:
                   sapientType: "BASIC"
                   content: !<regular>
-                    value: 1
-                  suggestedContent: !<regular>
-                    value: 1
+                    value: 100
                   valueType: "byte"
-                  originalValueType: "int"
-                  uuid: "encodeChecked_byte1"
+                  uuid: "encodeChecked_byte[]2-item0"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
                 1:
                   sapientType: "BASIC"
                   content: !<regular>
-                    value: 0
+                    value: 1
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item1"
+                  uuid: "encodeChecked_byte[]2-item1"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
                 2:
                   sapientType: "BASIC"
                   content: !<regular>
-                    value: 0
+                    value: 2
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item2"
+                  uuid: "encodeChecked_byte[]2-item2"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
                 3:
                   sapientType: "BASIC"
                   content: !<regular>
-                    value: 0
+                    value: 3
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item3"
+                  uuid: "encodeChecked_byte[]2-item3"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
                 4:
                   sapientType: "BASIC"
                   content: !<regular>
+                    value: 4
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item4"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                5:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 5
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item5"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                6:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 6
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item6"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                7:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 7
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item7"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                8:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 8
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item8"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                9:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 9
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item9"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                10:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 10
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item10"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                11:
+                  sapientType: "BASIC"
+                  content: !<regular>
                     value: 0
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item4"
+                  uuid: "encodeChecked_byte[]2-item11"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                12:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item12"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                13:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item13"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                14:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item14"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -553,48 +902,135 @@ methods:
                 0:
                   sapientType: "BASIC"
                   content: !<regular>
-                    value: 1
-                  suggestedContent: !<regular>
-                    value: 1
+                    value: 100
                   valueType: "byte"
-                  originalValueType: "int"
-                  uuid: "encodeChecked_byte1"
+                  uuid: "encodeChecked_byte[]2-item0"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
                 1:
                   sapientType: "BASIC"
                   content: !<regular>
-                    value: 0
+                    value: 1
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item1"
+                  uuid: "encodeChecked_byte[]2-item1"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
                 2:
                   sapientType: "BASIC"
                   content: !<regular>
-                    value: 0
+                    value: 2
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item2"
+                  uuid: "encodeChecked_byte[]2-item2"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
                 3:
                   sapientType: "BASIC"
                   content: !<regular>
-                    value: 0
+                    value: 3
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item3"
+                  uuid: "encodeChecked_byte[]2-item3"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
                 4:
                   sapientType: "BASIC"
                   content: !<regular>
+                    value: 4
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item4"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                5:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 5
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item5"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                6:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 6
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item6"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                7:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 7
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item7"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                8:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 8
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item8"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                9:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 9
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item9"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                10:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 10
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item10"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                11:
+                  sapientType: "BASIC"
+                  content: !<regular>
                     value: 0
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item4"
+                  uuid: "encodeChecked_byte[]2-item11"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                12:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item12"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                13:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item13"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                14:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item14"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -616,21 +1052,34 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 1
-            suggestedContent: !<regular>
-              value: 1
+              value: 11
             valueType: "int"
-            uuid: "encodeChecked_int7"
-            fixed: false
+            fixed: true
             equalsMethodPresent: false
             explicitCastNeeded: false
         signature: "hashTwice(byte[],int,int): byte[]"
         returnValue:
           sapientType: "ARRAY"
           content: !<array>
-            values: {}
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           suggestedContent: !<array>
-            values: {}
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "byte[]"
           uuid: "encodeChecked_byte[]3"
           fixed: false
@@ -641,7 +1090,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Base58"
-      modelFingerprint: "F3A12D052D9B1A05D7F5B9AC421F607C"
+      modelFingerprint: "658280FBA8EB622CC3B6BE33CA945531"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -665,48 +1114,135 @@ methods:
                 0:
                   sapientType: "BASIC"
                   content: !<regular>
-                    value: 1
-                  suggestedContent: !<regular>
-                    value: 1
+                    value: 100
                   valueType: "byte"
-                  originalValueType: "int"
-                  uuid: "encodeChecked_byte1"
+                  uuid: "encodeChecked_byte[]2-item0"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
                 1:
                   sapientType: "BASIC"
                   content: !<regular>
-                    value: 0
+                    value: 1
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item1"
+                  uuid: "encodeChecked_byte[]2-item1"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
                 2:
                   sapientType: "BASIC"
                   content: !<regular>
-                    value: 0
+                    value: 2
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item2"
+                  uuid: "encodeChecked_byte[]2-item2"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
                 3:
                   sapientType: "BASIC"
                   content: !<regular>
-                    value: 0
+                    value: 3
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item3"
+                  uuid: "encodeChecked_byte[]2-item3"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
                 4:
                   sapientType: "BASIC"
                   content: !<regular>
+                    value: 4
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item4"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                5:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 5
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item5"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                6:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 6
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item6"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                7:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 7
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item7"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                8:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 8
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item8"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                9:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 9
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item9"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                10:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 10
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item10"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                11:
+                  sapientType: "BASIC"
+                  content: !<regular>
                     value: 0
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item4"
+                  uuid: "encodeChecked_byte[]2-item11"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                12:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item12"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                13:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item13"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                14:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item14"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -715,48 +1251,135 @@ methods:
                 0:
                   sapientType: "BASIC"
                   content: !<regular>
-                    value: 1
-                  suggestedContent: !<regular>
-                    value: 1
+                    value: 100
                   valueType: "byte"
-                  originalValueType: "int"
-                  uuid: "encodeChecked_byte1"
+                  uuid: "encodeChecked_byte[]2-item0"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
                 1:
                   sapientType: "BASIC"
                   content: !<regular>
-                    value: 0
+                    value: 1
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item1"
+                  uuid: "encodeChecked_byte[]2-item1"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
                 2:
                   sapientType: "BASIC"
                   content: !<regular>
-                    value: 0
+                    value: 2
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item2"
+                  uuid: "encodeChecked_byte[]2-item2"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
                 3:
                   sapientType: "BASIC"
                   content: !<regular>
-                    value: 0
+                    value: 3
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item3"
+                  uuid: "encodeChecked_byte[]2-item3"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
                 4:
                   sapientType: "BASIC"
                   content: !<regular>
+                    value: 4
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item4"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                5:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 5
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item5"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                6:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 6
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item6"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                7:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 7
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item7"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                8:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 8
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item8"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                9:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 9
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item9"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                10:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 10
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item10"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                11:
+                  sapientType: "BASIC"
+                  content: !<regular>
                     value: 0
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item4"
+                  uuid: "encodeChecked_byte[]2-item11"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                12:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item12"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                13:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item13"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                14:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  uuid: "encodeChecked_byte[]2-item14"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -769,7 +1392,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "return_of_encode1"
+            value: "<String value>"
+          suggestedContent: !<regular>
+            value: "<String value>"
           valueType: "java.lang.String"
           uuid: "encodeChecked_string1"
           fixed: false
@@ -780,7 +1405,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      modelFingerprint: "8107C9D4BFA44362D2581B19A1CB908C"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -788,7 +1413,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "return_of_encode1"
+          value: "<String value>"
+        suggestedContent: !<regular>
+          value: "<String value>"
         valueType: "java.lang.String"
         uuid: "encodeChecked_string1"
         fixed: false
@@ -800,7 +1427,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -868,7 +1495,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -895,14 +1522,14 @@ methods:
     nameDefinedByUser: false
     priorityDefinedByUser: false
     filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "A390457061815E00D439D440B40C1656"
+    priority: "HIGH"
+    modelFingerprint: "A8E81890201E8A4C4F5A8F949BEDE644"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "input"
-      modelFingerprint: "9F7C953D624CA9B587DF3C543B0898F3"
+      modelFingerprint: "7D273105A93503D6295C11A8DBEFF519"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -910,9 +1537,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "\\uFFFF"
+          value: "abc123"
         suggestedContent: !<regular>
-          value: "\\uFFFF"
+          value: "abc123"
         valueType: "java.lang.String"
         uuid: "decode_string1"
         fixed: false
@@ -922,7 +1549,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "DFB5E7FE04AF663D19063DCBA0EA077E"
+      modelFingerprint: "163D4EBA43F8625118F3671D61E977E3"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -930,59 +1557,16 @@ methods:
       value:
         sapientType: "EXCEPTION"
         content: !<new>
-          target: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidCharacter"
-          parameters:
-          - name: "character"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "\ud83f"
-              suggestedContent: !<regular>
-                value: "\ud83f"
-              valueType: "char"
-              uuid: "decode_char1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "position"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "int"
-              uuid: "decode_int3"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          target: "java.lang.ArrayIndexOutOfBoundsException"
+          parameters: []
           privateConstructor: false
-          createdByTargetCode: true
+          createdByTargetCode: false
         suggestedContent: !<new>
-          target: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidCharacter"
-          parameters:
-          - name: "character"
-            value:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: "\ud83f"
-              valueType: "char"
-              uuid: "decode_char1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "position"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "int"
-              uuid: "decode_int3"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          target: "java.lang.ArrayIndexOutOfBoundsException"
+          parameters: []
           privateConstructor: false
-          createdByTargetCode: true
-        valueType: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidCharacter"
-        uuid: "decode_addressFormatException.InvalidCharacter1"
+          createdByTargetCode: false
+        valueType: "java.lang.ArrayIndexOutOfBoundsException"
         fixed: true
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -990,11 +1574,11 @@ methods:
       filledByUser: false
     uuid: "3b46bdbd-16c4-3445-9690-b660a76f1610"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path6"
     pathIdForUser: "path4"
     testPathName: "decodeWhenOutputStartNotLessThanDecodedLength"
@@ -1105,13 +1689,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "8A531ECBB59E08D32BB9886525159954"
+    modelFingerprint: "504F39C4AB78FACD97396700ED470315"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "input"
-      modelFingerprint: "E946A2A33718ECA476C44528BEA4B59E"
+      modelFingerprint: "F69475355F502C5DD33A280485E7A005"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1119,9 +1703,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "1A"
+          value: "5Q7"
         suggestedContent: !<regular>
-          value: "1A"
+          value: "5Q7"
         valueType: "java.lang.String"
         uuid: "decode_string1"
         fixed: false
@@ -1131,57 +1715,26 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "2A3B2C783AE74B818AA0721F9193C86A"
+      modelFingerprint: "163D4EBA43F8625118F3671D61E977E3"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "ARRAY"
-        content: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "decode_byte[]3-item0"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "decode_byte[]3-item1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "decode_byte[]3-item0"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "decode_byte[]3-item1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        valueType: "byte[]"
-        uuid: "decode_byte[]3"
-        fixed: false
-        equalsMethodPresent: true
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.ArrayIndexOutOfBoundsException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.lang.ArrayIndexOutOfBoundsException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.lang.ArrayIndexOutOfBoundsException"
+        fixed: true
+        equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
@@ -1198,14 +1751,14 @@ methods:
     nameDefinedByUser: false
     priorityDefinedByUser: false
     filledByUser: false
-    priority: "MODERATE"
-    modelFingerprint: "9594457CA89079CF7E71287A3CF658D4"
-    problemWasSolvedByProver: false
+    priority: "HIGH"
+    modelFingerprint: "71D4E79F532C87C9C465B188F3929678"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "input"
-      modelFingerprint: "9A909F116EF2878BD44D7168F49B5A53"
+      modelFingerprint: "531C0DD0483E5646D5C4C19BDED70A57"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1213,9 +1766,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "P"
+          value: "1HhnLW9WnKc9K7UToZzqZQg9tZz"
         suggestedContent: !<regular>
-          value: "P"
+          value: "1HhnLW9WnKc9K7UToZzqZQg9tZz"
         valueType: "java.lang.String"
         uuid: "decode_string1"
         fixed: false
@@ -1225,21 +1778,26 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "740324D8AEEA83F5639543B37CAABC19"
+      modelFingerprint: "163D4EBA43F8625118F3671D61E977E3"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "ARRAY"
-        content: !<array>
-          values: {}
-        suggestedContent: !<array>
-          values: {}
-        valueType: "byte[]"
-        uuid: "decode_byte[]3"
-        fixed: false
-        equalsMethodPresent: true
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.ArrayIndexOutOfBoundsException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.lang.ArrayIndexOutOfBoundsException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.lang.ArrayIndexOutOfBoundsException"
+        fixed: true
+        equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
@@ -1284,13 +1842,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "A08262ED668E5D8EC514D756BB8A2190"
+    modelFingerprint: "19A08420C3B8655400D4B347AA40B5D4"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "input"
-      modelFingerprint: "076F1FC7BD68AA24F9EE17B7687CB6EA"
+      modelFingerprint: "7C15350767EAA7482BBA2C752EDAE7A3"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1298,7 +1856,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "input1"
+          value: "Hello World!"
+        suggestedContent: !<regular>
+          value: "Hello World!"
         valueType: "java.lang.String"
         uuid: "decodeToBigInteger_string1"
         fixed: false
@@ -1308,7 +1868,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Base58"
-      modelFingerprint: "91BE9373AB852B6A49E870232B06871A"
+      modelFingerprint: "1EA8DFCE6E1BB5C50A2D0287DA072655"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1328,7 +1888,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "input1"
+              value: "Hello World!"
+            suggestedContent: !<regular>
+              value: "Hello World!"
             valueType: "java.lang.String"
             uuid: "decodeToBigInteger_string1"
             fixed: false
@@ -1351,13 +1913,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ByteUtils"
-      modelFingerprint: "5266881C5970913775CF57C161EFAA67"
+      modelFingerprint: "6E726D1923620A2E1B3C862AE7A9E6D7"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "REAL"
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.base.internal.ByteUtils"
         uuid: "org.bitcoinj.base.internal.ByteUtils"
         fixed: false
@@ -1383,9 +1945,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 0
+            value: 696096962927383696875982887557939128174
           suggestedContent: !<regular>
-            value: 0
+            value: 696096962927383696875982887557939128174
           valueType: "java.math.BigInteger"
           uuid: "decodeToBigInteger_bigInteger1"
           fixed: false
@@ -1396,7 +1958,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "E5A64257DCE3EDB0D3F3CCB96E931B43"
+      modelFingerprint: "767E0AA0E7B7F8A7F8BBA30A1919E903"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -1404,9 +1966,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
+          value: 696096962927383696875982887557939128174
         suggestedContent: !<regular>
-          value: 0
+          value: 696096962927383696875982887557939128174
         valueType: "java.math.BigInteger"
         uuid: "decodeToBigInteger_bigInteger1"
         fixed: false
@@ -1418,7 +1980,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -1438,13 +2000,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "88854FA65F09E6849E122E33E42262B7"
+    modelFingerprint: "505AE4F72938699B8725DD1EB19211AC"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "input"
-      modelFingerprint: "076F1FC7BD68AA24F9EE17B7687CB6EA"
+      modelFingerprint: "AB877BB582313222DDC764A1DE02C900"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1452,7 +2014,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "input1"
+          value: "1234"
+        suggestedContent: !<regular>
+          value: "1234"
         valueType: "java.lang.String"
         uuid: "decodeChecked_string1"
         fixed: false
@@ -1462,7 +2026,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Base58"
-      modelFingerprint: "91BE9373AB852B6A49E870232B06871A"
+      modelFingerprint: "FE25A05998BE2B4EE0CE9B668721301B"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1482,7 +2046,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "input1"
+              value: "1234"
+            suggestedContent: !<regular>
+              value: "1234"
             valueType: "java.lang.String"
             uuid: "decodeChecked_string1"
             fixed: false
@@ -1492,9 +2058,41 @@ methods:
         returnValue:
           sapientType: "ARRAY"
           content: !<array>
-            values: {}
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              1:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           suggestedContent: !<array>
-            values: {}
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              1:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "byte[]"
           uuid: "decodeChecked_byte[]1"
           fixed: false
@@ -1505,7 +2103,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "B4FA0CB2DECA4D24A8DAAEB7277F81C8"
+      modelFingerprint: "44B650063362446EDB37B568A0CE8696"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1519,9 +2117,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "Input too short: 0"
+                value: "Input too short: 2"
               suggestedContent: !<regular>
-                value: "Input too short: 0"
+                value: "Input too short: 2"
               valueType: "java.lang.String"
               uuid: "decodeChecked_string2"
               fixed: false
@@ -1535,8 +2133,10 @@ methods:
           - name: "message"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: "Input too short: 2"
               suggestedContent: !<regular>
-                value: "Input too short: 0"
+                value: "Input too short: 2"
               valueType: "java.lang.String"
               uuid: "decodeChecked_string2"
               fixed: false
@@ -1555,7 +2155,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -1566,7 +2166,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "52B4C1BBD28C5172DF15C7B2B316A725"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
@@ -1578,8 +2178,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "BASIC"
-        content: !<regular>
-          value: "input1"
         valueType: "java.lang.String"
         uuid: "decodeChecked_string1"
         fixed: false
@@ -1595,7 +2193,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         valueType: "org.bitcoinj.base.Base58"
         uuid: "org.bitcoinj.base.Base58"
         fixed: false
@@ -1608,8 +2206,6 @@ methods:
         - name: "input"
           value:
             sapientType: "BASIC"
-            content: !<regular>
-              value: "input1"
             valueType: "java.lang.String"
             uuid: "decodeChecked_string1"
             fixed: false
@@ -1618,44 +2214,6 @@ methods:
         signature: "decode(String): byte[]"
         returnValue:
           sapientType: "ARRAY"
-          content: !<array>
-            values:
-              0:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]1Item0"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              1:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 1
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]1Item1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              2:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 2
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]1Item2"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              3:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 3
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]1Item3"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
           suggestedContent: !<array>
             values:
               0:
@@ -1723,8 +2281,6 @@ methods:
         - name: "input"
           value:
             sapientType: "ARRAY"
-            content: !<array>
-              values: {}
             suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
@@ -1735,296 +2291,6 @@ methods:
         signature: "hashTwice(byte[]): byte[]"
         returnValue:
           sapientType: "ARRAY"
-          content: !<array>
-            values:
-              0:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item0"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              1:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 1
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              2:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 2
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item2"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              3:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 3
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item3"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              4:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 4
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item4"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              5:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 5
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item5"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              6:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 6
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item6"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              7:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 7
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item7"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              8:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 8
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item8"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              9:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 9
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item9"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              10:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 10
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item10"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              11:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 11
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item11"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              12:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 12
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item12"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              13:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 13
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item13"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              14:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 14
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item14"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              15:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 15
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item15"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              16:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 16
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item16"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              17:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 17
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item17"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              18:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 18
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item18"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              19:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 19
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item19"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              20:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 20
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item20"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              21:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 21
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item21"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              22:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 22
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item22"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              23:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 23
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item23"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              24:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 24
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item24"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              25:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 25
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item25"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              26:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 26
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item26"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              27:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 27
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item27"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              28:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 28
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item28"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              29:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 29
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item29"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              30:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 30
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item30"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              31:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 31
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4Item31"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
           suggestedContent: !<array>
             values:
               0:
@@ -2332,11 +2598,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "EXCEPTION"
-        content: !<new>
-          target: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidChecksum"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: true
         suggestedContent: !<new>
           target: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidChecksum"
           parameters: []
@@ -2363,7 +2624,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "1567E6CB5EE3527BCC5244EF3D3D7ED2"
+    modelFingerprint: "42C520EDC32885205BB0E1AD893E5ECA"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -2376,8 +2637,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "BASIC"
-        content: !<regular>
-          value: "input1"
         valueType: "java.lang.String"
         uuid: "decodeChecked_string1"
         fixed: false
@@ -2387,13 +2646,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Base58"
-      modelFingerprint: "8D35D3022455EE00579081B243051B7C"
+      modelFingerprint: "0E2D253883E414F56EB302E7EE25CDDA"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         valueType: "org.bitcoinj.base.Base58"
         uuid: "org.bitcoinj.base.Base58"
         fixed: false
@@ -2406,8 +2665,6 @@ methods:
         - name: "input"
           value:
             sapientType: "BASIC"
-            content: !<regular>
-              value: "input1"
             valueType: "java.lang.String"
             uuid: "decodeChecked_string1"
             fixed: false
@@ -2416,44 +2673,6 @@ methods:
         signature: "decode(String): byte[]"
         returnValue:
           sapientType: "ARRAY"
-          content: !<array>
-            values:
-              0:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]1Item0"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              1:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 1
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]1Item1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              2:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 2
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]1Item2"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              3:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 3
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]1Item3"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
           suggestedContent: !<array>
             values:
               0:
@@ -2502,13 +2721,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "10B5DFD277F3AC3A109D8B0AA7D405C5"
+      modelFingerprint: "3038E472CD12875D91E184DF06EAE579"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "REAL"
         valueType: "org.bitcoinj.base.Sha256Hash"
         uuid: "org.bitcoinj.base.Sha256Hash"
         fixed: false
@@ -2521,8 +2740,6 @@ methods:
         - name: "input"
           value:
             sapientType: "ARRAY"
-            content: !<array>
-              values: {}
             suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
@@ -2533,296 +2750,6 @@ methods:
         signature: "hashTwice(byte[]): byte[]"
         returnValue:
           sapientType: "ARRAY"
-          content: !<array>
-            values:
-              0:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 93
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item0"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              1:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -10
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              2:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -32
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item2"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              3:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -30
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item3"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              4:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 118
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item4"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              5:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 19
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item5"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              6:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 89
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item6"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              7:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -45
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item7"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              8:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 10
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item8"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              9:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -126
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item9"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              10:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 117
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item10"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              11:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 5
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item11"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              12:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -114
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item12"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              13:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 41
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item13"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              14:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -97
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item14"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              15:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -52
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item15"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              16:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 3
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item16"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              17:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -127
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item17"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              18:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 83
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item18"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              19:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 69
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item19"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              20:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 69
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item20"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              21:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -11
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item21"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              22:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 92
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item22"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              23:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -12
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item23"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              24:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 62
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item24"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              25:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 65
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item25"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              26:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -104
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item26"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              27:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 63
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item27"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              28:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 93
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item28"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              29:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 76
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item29"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              30:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -108
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item30"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              31:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 86
-                valueType: "byte"
-                uuid: "decodeChecked_byte[]4-item31"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
           suggestedContent: !<array>
             values:
               0:
@@ -3130,8 +3057,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "ARRAY"
-        content: !<array>
-          values: {}
         suggestedContent: !<array>
           values: {}
         valueType: "byte[]"
@@ -3145,6 +3070,5 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

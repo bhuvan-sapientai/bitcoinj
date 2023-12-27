@@ -42,13 +42,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "B609E0B0935CBF513EC5B3A77AFF64FA"
+    modelFingerprint: "E9F5CE797584FF4F67785BC00E12976B"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "words"
-      modelFingerprint: "FDCA10C1017B9845D3F09241A63BEB70"
+      modelFingerprint: "635CF904C6D150352CAA55C3E42250A5"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -56,11 +56,79 @@ methods:
       value:
         sapientType: "COLLECTION"
         content: !<collection>
+          collectionClass: "java.util.ArrayList"
           parameters: []
-          values: []
+          values:
+          - sapientType: "BASIC"
+            content: !<regular>
+              value: "{value=0}"
+            suggestedContent: !<regular>
+              value: "{value=0}"
+            valueType: "java.lang.String"
+            uuid: "toSeed_list1-0"
+            fixed: false
+            collectionUuid: "toSeed_list1"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          - sapientType: "BASIC"
+            content: !<regular>
+              value: "apple banana cherry date elderberry"
+            suggestedContent: !<regular>
+              value: "apple banana cherry date elderberry"
+            valueType: "java.lang.String"
+            uuid: "toSeed_list1-1"
+            fixed: false
+            collectionUuid: "toSeed_list1"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          - sapientType: "BASIC"
+            content: !<regular>
+              value: "[10, 20, 30, 40, 50]"
+            suggestedContent: !<regular>
+              value: "[10, 20, 30, 40, 50]"
+            valueType: "java.lang.String"
+            uuid: "toSeed_list1-2"
+            fixed: false
+            collectionUuid: "toSeed_list1"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
         suggestedContent: !<collection>
+          collectionClass: "java.util.ArrayList"
           parameters: []
-          values: []
+          values:
+          - sapientType: "BASIC"
+            content: !<regular>
+              value: "{value=0}"
+            suggestedContent: !<regular>
+              value: "{value=0}"
+            valueType: "java.lang.String"
+            uuid: "toSeed_list1-0"
+            fixed: false
+            collectionUuid: "toSeed_list1"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          - sapientType: "BASIC"
+            content: !<regular>
+              value: "apple banana cherry date elderberry"
+            suggestedContent: !<regular>
+              value: "apple banana cherry date elderberry"
+            valueType: "java.lang.String"
+            uuid: "toSeed_list1-1"
+            fixed: false
+            collectionUuid: "toSeed_list1"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          - sapientType: "BASIC"
+            content: !<regular>
+              value: "[10, 20, 30, 40, 50]"
+            suggestedContent: !<regular>
+              value: "[10, 20, 30, 40, 50]"
+            valueType: "java.lang.String"
+            uuid: "toSeed_list1-2"
+            fixed: false
+            collectionUuid: "toSeed_list1"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
         valueType: "java.util.List"
         genericValueType: "java.lang.String"
         uuid: "toSeed_list1"
@@ -71,7 +139,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "passphrase"
-      modelFingerprint: "67EFC10ED4E9619C83CD690A34E58160"
+      modelFingerprint: "715DED9585BDFA91F17A3ED1157DFA58"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -79,9 +147,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "A"
+          value: "test"
         suggestedContent: !<regular>
-          value: "A"
+          value: "test"
         valueType: "java.lang.String"
         uuid: "toSeed_string1"
         fixed: false
@@ -91,17 +159,19 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "SPACE_JOINER"
-      modelFingerprint: "F6B55BEDCF445DB459A5E7278FFC2896"
+      modelFingerprint: "B781453EB1D65052073593241659BB9C"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.base.internal.InternalUtils$Joiner"
-          onlyPojoFunctions: false
-          builderPattern: false
+        sapientType: "OBJECT"
+        content: !<static_field_return>
+          target: "org.bitcoinj.base.internal.InternalUtils"
+          fieldName: "SPACE_JOINER"
+        suggestedContent: !<static_field_return>
+          target: "org.bitcoinj.base.internal.InternalUtils"
+          fieldName: "SPACE_JOINER"
         valueType: "org.bitcoinj.base.internal.InternalUtils$Joiner"
         uuid: "toSeed_internalUtils.Joiner1"
         fixed: false
@@ -115,11 +185,79 @@ methods:
           value:
             sapientType: "COLLECTION"
             content: !<collection>
+              collectionClass: "java.util.ArrayList"
               parameters: []
-              values: []
+              values:
+              - sapientType: "BASIC"
+                content: !<regular>
+                  value: "{value=0}"
+                suggestedContent: !<regular>
+                  value: "{value=0}"
+                valueType: "java.lang.String"
+                uuid: "toSeed_list1-0"
+                fixed: false
+                collectionUuid: "toSeed_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              - sapientType: "BASIC"
+                content: !<regular>
+                  value: "apple banana cherry date elderberry"
+                suggestedContent: !<regular>
+                  value: "apple banana cherry date elderberry"
+                valueType: "java.lang.String"
+                uuid: "toSeed_list1-1"
+                fixed: false
+                collectionUuid: "toSeed_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              - sapientType: "BASIC"
+                content: !<regular>
+                  value: "[10, 20, 30, 40, 50]"
+                suggestedContent: !<regular>
+                  value: "[10, 20, 30, 40, 50]"
+                valueType: "java.lang.String"
+                uuid: "toSeed_list1-2"
+                fixed: false
+                collectionUuid: "toSeed_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
             suggestedContent: !<collection>
+              collectionClass: "java.util.ArrayList"
               parameters: []
-              values: []
+              values:
+              - sapientType: "BASIC"
+                content: !<regular>
+                  value: "{value=0}"
+                suggestedContent: !<regular>
+                  value: "{value=0}"
+                valueType: "java.lang.String"
+                uuid: "toSeed_list1-0"
+                fixed: false
+                collectionUuid: "toSeed_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              - sapientType: "BASIC"
+                content: !<regular>
+                  value: "apple banana cherry date elderberry"
+                suggestedContent: !<regular>
+                  value: "apple banana cherry date elderberry"
+                valueType: "java.lang.String"
+                uuid: "toSeed_list1-1"
+                fixed: false
+                collectionUuid: "toSeed_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              - sapientType: "BASIC"
+                content: !<regular>
+                  value: "[10, 20, 30, 40, 50]"
+                suggestedContent: !<regular>
+                  value: "[10, 20, 30, 40, 50]"
+                valueType: "java.lang.String"
+                uuid: "toSeed_list1-2"
+                fixed: false
+                collectionUuid: "toSeed_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
             valueType: "java.util.List"
             genericValueType: "java.lang.String"
             uuid: "toSeed_list1"
@@ -130,9 +268,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "B"
+            value: "apple banana cherry date elderberry"
           suggestedContent: !<regular>
-            value: "B"
+            value: "apple banana cherry date elderberry"
           valueType: "java.lang.String"
           uuid: "toSeed_string3"
           fixed: false
@@ -143,13 +281,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Stopwatch"
-      modelFingerprint: "71AF847896A00D498D3A500958753D86"
+      modelFingerprint: "137F4C42149C884FA4701780108D6C85"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "REAL"
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.base.internal.Stopwatch"
         uuid: "org.bitcoinj.base.internal.Stopwatch"
         fixed: false
@@ -173,6 +311,8 @@ methods:
           valueType: "org.bitcoinj.base.internal.Stopwatch"
           uuid: "toSeed_stopwatch1"
           fixed: false
+          nameForMock: "{\\\"elapsedNanos\\\":{\\\"value\\\":\\\"0\\\"},\\\"isRunning\\\
+            \":{\\\"value\\\":\\\"false\\\"}}"
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 9
@@ -180,13 +320,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "PBKDF2SHA512"
-      modelFingerprint: "52542B2FA07192A6490B9A484EED74A8"
+      modelFingerprint: "072401CF55E308E739276868F95E3918"
       index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "REAL"
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.crypto.PBKDF2SHA512"
         uuid: "org.bitcoinj.crypto.PBKDF2SHA512"
         fixed: false
@@ -200,9 +340,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "B"
+              value: "apple banana cherry date elderberry"
             suggestedContent: !<regular>
-              value: "B"
+              value: "apple banana cherry date elderberry"
             valueType: "java.lang.String"
             uuid: "toSeed_string3"
             fixed: false
@@ -212,9 +352,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "mnemonicA"
+              value: "mnemonictest"
             suggestedContent: !<regular>
-              value: "mnemonicA"
+              value: "mnemonictest"
             valueType: "java.lang.String"
             uuid: "toSeed_string4"
             fixed: false
@@ -242,1161 +382,9 @@ methods:
         returnValue:
           sapientType: "ARRAY"
           content: !<array>
-            values:
-              0:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 102
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item0"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              1:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 64
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              2:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -79
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item2"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              3:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -70
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item3"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              4:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -21
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item4"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              5:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 103
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item5"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              6:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -127
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item6"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              7:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -29
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item7"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              8:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -112
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item8"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              9:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 37
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item9"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              10:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -101
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item10"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              11:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -50
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item11"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              12:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 91
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item12"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              13:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 82
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item13"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              14:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 102
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item14"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              15:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -52
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item15"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              16:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -86
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item16"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              17:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -57
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item17"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              18:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 93
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item18"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              19:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -29
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item19"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              20:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 4
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item20"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              21:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 15
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item21"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              22:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 63
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item22"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              23:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -57
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item23"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              24:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -53
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item24"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              25:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 114
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item25"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              26:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -61
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item26"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              27:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 64
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item27"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              28:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 97
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item28"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              29:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 58
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item29"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              30:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 9
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item30"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              31:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 60
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item31"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              32:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -92
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item32"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              33:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 38
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item33"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              34:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 73
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item34"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              35:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -21
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item35"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              36:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 116
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item36"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              37:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -4
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item37"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              38:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 54
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item38"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              39:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 10
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item39"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              40:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -9
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item40"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              41:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 26
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item41"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              42:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -61
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item42"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              43:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 58
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item43"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              44:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 126
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item44"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              45:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -56
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item45"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              46:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -66
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item46"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              47:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -91
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item47"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              48:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -21
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item48"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              49:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 127
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item49"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              50:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 113
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item50"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              51:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -120
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item51"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              52:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -64
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item52"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              53:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -85
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item53"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              54:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 120
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item54"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              55:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -1
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item55"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              56:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -32
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item56"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              57:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 24
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item57"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              58:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 40
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item58"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              59:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 20
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item59"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              60:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 102
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item60"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              61:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 66
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item61"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              62:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -128
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item62"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              63:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -95
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item63"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+            values: {}
           suggestedContent: !<array>
-            values:
-              0:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 102
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item0"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              1:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 64
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              2:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -79
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item2"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              3:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -70
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item3"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              4:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -21
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item4"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              5:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 103
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item5"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              6:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -127
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item6"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              7:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -29
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item7"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              8:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -112
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item8"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              9:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 37
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item9"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              10:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -101
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item10"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              11:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -50
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item11"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              12:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 91
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item12"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              13:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 82
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item13"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              14:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 102
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item14"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              15:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -52
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item15"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              16:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -86
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item16"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              17:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -57
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item17"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              18:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 93
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item18"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              19:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -29
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item19"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              20:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 4
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item20"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              21:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 15
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item21"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              22:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 63
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item22"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              23:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -57
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item23"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              24:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -53
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item24"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              25:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 114
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item25"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              26:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -61
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item26"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              27:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 64
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item27"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              28:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 97
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item28"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              29:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 58
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item29"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              30:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 9
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item30"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              31:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 60
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item31"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              32:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -92
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item32"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              33:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 38
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item33"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              34:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 73
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item34"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              35:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -21
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item35"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              36:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 116
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item36"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              37:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -4
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item37"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              38:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 54
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item38"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              39:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 10
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item39"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              40:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -9
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item40"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              41:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 26
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item41"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              42:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -61
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item42"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              43:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 58
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item43"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              44:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 126
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item44"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              45:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -56
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item45"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              46:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -66
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item46"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              47:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -91
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item47"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              48:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -21
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item48"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              49:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 127
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item49"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              50:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 113
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item50"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              51:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -120
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item51"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              52:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -64
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item52"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              53:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -85
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item53"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              54:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 120
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item54"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              55:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -1
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item55"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              56:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -32
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item56"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              57:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 24
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item57"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              58:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 40
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item58"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              59:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 20
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item59"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              60:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 102
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item60"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              61:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 66
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item61"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              62:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -128
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item62"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              63:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -95
-                valueType: "byte"
-                uuid: "toSeed_byte[]1-item63"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+            values: {}
           valueType: "byte[]"
           uuid: "toSeed_byte[]1"
           fixed: false
@@ -1407,7 +395,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "38A29D780668640B1C71198EB66EB55B"
+      modelFingerprint: "2230D5F90E8EBC18AD26F4DEEEAC7D11"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -1415,1161 +403,9 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 102
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item0"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 64
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -79
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            3:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -70
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item3"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            4:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -21
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item4"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            5:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 103
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item5"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            6:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -127
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            7:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -29
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item7"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            8:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -112
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item8"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            9:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 37
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item9"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            10:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -101
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item10"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            11:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -50
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item11"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            12:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 91
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item12"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            13:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 82
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item13"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            14:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 102
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item14"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            15:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -52
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item15"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            16:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -86
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item16"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            17:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -57
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item17"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            18:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 93
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item18"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            19:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -29
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item19"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            20:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 4
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item20"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            21:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 15
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item21"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            22:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 63
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item22"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            23:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -57
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item23"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            24:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -53
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item24"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            25:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 114
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item25"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            26:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -61
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item26"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            27:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 64
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item27"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            28:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 97
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item28"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            29:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 58
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item29"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            30:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 9
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item30"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            31:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 60
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item31"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            32:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -92
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item32"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            33:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 38
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item33"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            34:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 73
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item34"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            35:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -21
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item35"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            36:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 116
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item36"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            37:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -4
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item37"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            38:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 54
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item38"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            39:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 10
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item39"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            40:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -9
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item40"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            41:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 26
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item41"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            42:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -61
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item42"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            43:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 58
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item43"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            44:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 126
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item44"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            45:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -56
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item45"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            46:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -66
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item46"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            47:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -91
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item47"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            48:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -21
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item48"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            49:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 127
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item49"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            50:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 113
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item50"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            51:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -120
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item51"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            52:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -64
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item52"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            53:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -85
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item53"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            54:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 120
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item54"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            55:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -1
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item55"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            56:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -32
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item56"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            57:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 24
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item57"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            58:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 40
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item58"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            59:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 20
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item59"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            60:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 102
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item60"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            61:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 66
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item61"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            62:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -128
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item62"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            63:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -95
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item63"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         suggestedContent: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 102
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item0"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 64
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -79
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            3:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -70
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item3"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            4:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -21
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item4"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            5:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 103
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item5"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            6:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -127
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            7:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -29
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item7"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            8:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -112
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item8"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            9:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 37
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item9"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            10:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -101
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item10"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            11:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -50
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item11"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            12:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 91
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item12"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            13:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 82
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item13"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            14:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 102
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item14"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            15:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -52
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item15"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            16:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -86
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item16"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            17:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -57
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item17"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            18:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 93
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item18"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            19:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -29
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item19"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            20:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 4
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item20"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            21:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 15
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item21"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            22:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 63
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item22"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            23:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -57
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item23"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            24:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -53
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item24"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            25:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 114
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item25"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            26:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -61
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item26"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            27:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 64
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item27"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            28:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 97
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item28"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            29:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 58
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item29"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            30:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 9
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item30"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            31:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 60
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item31"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            32:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -92
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item32"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            33:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 38
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item33"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            34:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 73
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item34"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            35:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -21
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item35"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            36:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 116
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item36"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            37:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -4
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item37"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            38:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 54
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item38"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            39:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 10
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item39"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            40:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -9
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item40"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            41:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 26
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item41"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            42:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -61
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item42"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            43:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 58
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item43"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            44:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 126
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item44"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            45:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -56
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item45"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            46:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -66
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item46"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            47:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -91
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item47"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            48:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -21
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item48"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            49:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 127
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item49"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            50:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 113
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item50"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            51:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -120
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item51"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            52:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -64
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item52"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            53:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -85
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item53"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            54:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 120
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item54"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            55:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -1
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item55"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            56:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -32
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item56"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            57:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 24
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item57"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            58:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 40
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item58"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            59:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 20
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item59"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            60:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 102
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item60"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            61:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 66
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item61"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            62:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -128
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item62"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            63:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -95
-              valueType: "byte"
-              uuid: "toSeed_byte[]1-item63"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         valueType: "byte[]"
         uuid: "toSeed_byte[]1"
         fixed: false
@@ -2579,11 +415,11 @@ methods:
       filledByUser: false
     uuid: "bbc7e52c-9056-3edb-af4e-83f69b845157"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "toEntropy"
     returnType: "byte[]"
@@ -2622,8 +458,6 @@ methods:
           - name: "wordstream"
             value:
               sapientType: "INPUT_STREAM"
-              content: !<inputStream>
-                values: []
               valueType: "java.io.InputStream"
               uuid: "<init>_inputStream1"
               fixed: false
@@ -2632,8 +466,6 @@ methods:
           - name: "wordListDigest"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "wordListDigest1"
               valueType: "java.lang.String"
               uuid: "<init>_string5"
               fixed: false
@@ -2678,12 +510,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "COLLECTION"
-        content: !<collection>
-          parameters: []
-          values: []
-        suggestedContent: !<collection>
-          parameters: []
-          values: []
         valueType: "java.util.List"
         genericValueType: "java.lang.String"
         uuid: "toEntropy_list1"
@@ -2713,10 +539,6 @@ methods:
         signature: "newDigest(): MessageDigest"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "newDigest"
-            methodParameters: []
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.base.Sha256Hash"
             method: "newDigest"
@@ -2752,10 +574,6 @@ methods:
         signature: "toUnmodifiableList(): Collector"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.internal.StreamUtils"
-            method: "toUnmodifiableList"
-            methodParameters: []
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.base.internal.StreamUtils"
             method: "toUnmodifiableList"
@@ -2789,296 +607,6 @@ methods:
         - name: "bytes"
           value:
             sapientType: "ARRAY"
-            content: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -29
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item0"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -80
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item1"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                2:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -60
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item2"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                3:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 66
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item3"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                4:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -104
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item4"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                5:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -4
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item5"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                6:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 28
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item6"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                7:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 20
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item7"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                8:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -102
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item8"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                9:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -5
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item9"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                10:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -12
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item10"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                11:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -56
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item11"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                12:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -103
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item12"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                13:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 111
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item13"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                14:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -71
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item14"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                15:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 36
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item15"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                16:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 39
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item16"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                17:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -82
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item17"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                18:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 65
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item18"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                19:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -28
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item19"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                20:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 100
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item20"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                21:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -101
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item21"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                22:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -109
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item22"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                23:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 76
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item23"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                24:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -92
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item24"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                25:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -107
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item25"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                26:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -103
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item26"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                27:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 27
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item27"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                28:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 120
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item28"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                29:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 82
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item29"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                30:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -72
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item30"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                31:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 85
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item31"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
             suggestedContent: !<array>
               values:
                 0:
@@ -3396,20 +924,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "EXCEPTION"
-        content: !<new>
-          target: "org.bitcoinj.crypto.MnemonicException$MnemonicLengthException"
-          parameters:
-          - name: "msg"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "Word list size must be multiple of three words."
-              valueType: "java.lang.String"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
         suggestedContent: !<new>
           target: "org.bitcoinj.crypto.MnemonicException$MnemonicLengthException"
           parameters:
@@ -3433,10 +947,10 @@ methods:
       filledByUser: false
     uuid: "cd6664c3-b205-317a-8c07-54f8cb1633ba"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "toEntropyWhenWordsSizeEquals0ThrowsMnemonicExceptionMnemonicLengthException"
@@ -3463,8 +977,6 @@ methods:
           - name: "wordstream"
             value:
               sapientType: "INPUT_STREAM"
-              content: !<inputStream>
-                values: []
               valueType: "java.io.InputStream"
               uuid: "<init>_inputStream1"
               fixed: false
@@ -3473,8 +985,6 @@ methods:
           - name: "wordListDigest"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "wordListDigest1"
               valueType: "java.lang.String"
               uuid: "<init>_string5"
               fixed: false
@@ -3519,12 +1029,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "COLLECTION"
-        content: !<collection>
-          parameters: []
-          values: []
-        suggestedContent: !<collection>
-          parameters: []
-          values: []
         valueType: "java.util.List"
         genericValueType: "java.lang.String"
         uuid: "toEntropy_list1"
@@ -3554,10 +1058,6 @@ methods:
         signature: "newDigest(): MessageDigest"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "newDigest"
-            methodParameters: []
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.base.Sha256Hash"
             method: "newDigest"
@@ -3593,10 +1093,6 @@ methods:
         signature: "toUnmodifiableList(): Collector"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.internal.StreamUtils"
-            method: "toUnmodifiableList"
-            methodParameters: []
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.base.internal.StreamUtils"
             method: "toUnmodifiableList"
@@ -3630,296 +1126,6 @@ methods:
         - name: "bytes"
           value:
             sapientType: "ARRAY"
-            content: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -29
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item0"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -80
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item1"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                2:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -60
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item2"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                3:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 66
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item3"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                4:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -104
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item4"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                5:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -4
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item5"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                6:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 28
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item6"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                7:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 20
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item7"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                8:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -102
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item8"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                9:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -5
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item9"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                10:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -12
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item10"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                11:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -56
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item11"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                12:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -103
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item12"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                13:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 111
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item13"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                14:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -71
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item14"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                15:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 36
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item15"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                16:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 39
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item16"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                17:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -82
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item17"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                18:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 65
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item18"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                19:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -28
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item19"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                20:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 100
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item20"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                21:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -101
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item21"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                22:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -109
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item22"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                23:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 76
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item23"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                24:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -92
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item24"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                25:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -107
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item25"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                26:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -103
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item26"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                27:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 27
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item27"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                28:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 120
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item28"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                29:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 82
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item29"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                30:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -72
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item30"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                31:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 85
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item31"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
             suggestedContent: !<array>
               values:
                 0:
@@ -4237,20 +1443,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "EXCEPTION"
-        content: !<new>
-          target: "org.bitcoinj.crypto.MnemonicException$MnemonicLengthException"
-          parameters:
-          - name: "msg"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "Word list is empty."
-              valueType: "java.lang.String"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
         suggestedContent: !<new>
           target: "org.bitcoinj.crypto.MnemonicException$MnemonicLengthException"
           parameters:
@@ -4274,10 +1466,10 @@ methods:
       filledByUser: false
     uuid: "973fbebd-53b7-3c6e-a1fd-f480f251ddc2"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path3"
     testPathName: "toEntropyWhenNdxLessThan0ThrowsMnemonicExceptionMnemonicWordException"
@@ -4304,8 +1496,6 @@ methods:
           - name: "wordstream"
             value:
               sapientType: "INPUT_STREAM"
-              content: !<inputStream>
-                values: []
               valueType: "java.io.InputStream"
               uuid: "<init>_inputStream1"
               fixed: false
@@ -4314,8 +1504,6 @@ methods:
           - name: "wordListDigest"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "wordListDigest1"
               valueType: "java.lang.String"
               uuid: "<init>_string5"
               fixed: false
@@ -4360,12 +1548,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "COLLECTION"
-        content: !<collection>
-          parameters: []
-          values: []
-        suggestedContent: !<collection>
-          parameters: []
-          values: []
         valueType: "java.util.List"
         genericValueType: "java.lang.String"
         uuid: "toEntropy_list1"
@@ -4395,10 +1577,6 @@ methods:
         signature: "newDigest(): MessageDigest"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "newDigest"
-            methodParameters: []
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.base.Sha256Hash"
             method: "newDigest"
@@ -4434,10 +1612,6 @@ methods:
         signature: "toUnmodifiableList(): Collector"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.internal.StreamUtils"
-            method: "toUnmodifiableList"
-            methodParameters: []
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.base.internal.StreamUtils"
             method: "toUnmodifiableList"
@@ -4471,296 +1645,6 @@ methods:
         - name: "bytes"
           value:
             sapientType: "ARRAY"
-            content: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -29
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item0"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -80
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item1"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                2:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -60
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item2"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                3:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 66
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item3"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                4:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -104
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item4"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                5:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -4
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item5"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                6:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 28
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item6"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                7:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 20
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item7"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                8:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -102
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item8"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                9:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -5
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item9"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                10:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -12
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item10"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                11:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -56
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item11"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                12:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -103
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item12"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                13:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 111
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item13"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                14:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -71
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item14"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                15:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 36
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item15"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                16:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 39
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item16"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                17:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -82
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item17"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                18:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 65
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item18"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                19:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -28
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item19"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                20:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 100
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item20"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                21:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -101
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item21"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                22:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -109
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item22"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                23:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 76
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item23"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                24:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -92
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item24"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                25:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -107
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item25"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                26:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -103
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item26"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                27:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 27
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item27"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                28:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 120
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item28"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                29:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 82
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item29"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                30:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -72
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item30"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                31:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 85
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item31"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
             suggestedContent: !<array>
               values:
                 0:
@@ -5078,22 +1962,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "EXCEPTION"
-        content: !<new>
-          target: "org.bitcoinj.crypto.MnemonicException$MnemonicWordException"
-          parameters:
-          - name: "badWord"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "badWord1"
-              valueType: "java.lang.String"
-              uuid: "toEntropy_object1"
-              fixed: false
-              collectionUuid: "toEntropy_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
         suggestedContent: !<new>
           target: "org.bitcoinj.crypto.MnemonicException$MnemonicWordException"
           parameters:
@@ -5117,10 +1985,10 @@ methods:
       filledByUser: false
     uuid: "217e12af-132b-3155-8355-f57077b628c3"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path5"
     pathIdForUser: "path4"
     testPathName: "toEntropyWhenINotLessThanChecksumLengthBits"
@@ -5147,8 +2015,6 @@ methods:
           - name: "wordstream"
             value:
               sapientType: "INPUT_STREAM"
-              content: !<inputStream>
-                values: []
               valueType: "java.io.InputStream"
               uuid: "<init>_inputStream1"
               fixed: false
@@ -5157,8 +2023,6 @@ methods:
           - name: "wordListDigest"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "wordListDigest1"
               valueType: "java.lang.String"
               uuid: "<init>_string5"
               fixed: false
@@ -5203,12 +2067,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "COLLECTION"
-        content: !<collection>
-          parameters: []
-          values: []
-        suggestedContent: !<collection>
-          parameters: []
-          values: []
         valueType: "java.util.List"
         genericValueType: "java.lang.String"
         uuid: "toEntropy_list1"
@@ -5238,10 +2096,6 @@ methods:
         signature: "newDigest(): MessageDigest"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "newDigest"
-            methodParameters: []
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.base.Sha256Hash"
             method: "newDigest"
@@ -5277,10 +2131,6 @@ methods:
         signature: "toUnmodifiableList(): Collector"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.internal.StreamUtils"
-            method: "toUnmodifiableList"
-            methodParameters: []
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.base.internal.StreamUtils"
             method: "toUnmodifiableList"
@@ -5314,296 +2164,6 @@ methods:
         - name: "bytes"
           value:
             sapientType: "ARRAY"
-            content: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -29
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item0"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -80
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item1"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                2:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -60
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item2"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                3:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 66
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item3"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                4:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -104
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item4"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                5:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -4
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item5"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                6:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 28
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item6"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                7:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 20
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item7"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                8:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -102
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item8"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                9:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -5
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item9"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                10:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -12
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item10"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                11:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -56
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item11"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                12:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -103
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item12"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                13:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 111
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item13"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                14:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -71
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item14"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                15:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 36
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item15"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                16:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 39
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item16"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                17:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -82
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item17"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                18:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 65
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item18"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                19:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -28
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item19"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                20:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 100
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item20"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                21:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -101
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item21"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                22:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -109
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item22"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                23:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 76
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item23"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                24:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -92
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item24"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                25:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -107
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item25"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                26:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -103
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item26"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                27:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 27
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item27"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                28:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 120
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item28"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                29:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 82
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item29"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                30:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -72
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item30"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                31:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 85
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item31"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
             suggestedContent: !<array>
               values:
                 0:
@@ -5920,7 +2480,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         valueType: "org.bitcoinj.base.Sha256Hash"
         uuid: "org.bitcoinj.base.Sha256Hash"
         fixed: false
@@ -5933,10 +2493,6 @@ methods:
         - name: "input"
           value:
             sapientType: "ARRAY"
-            content: !<array>
-              values: {}
-            suggestedContent: !<array>
-              values: {}
             valueType: "byte[]"
             uuid: "toEntropy_byte[]1"
             fixed: false
@@ -5945,10 +2501,6 @@ methods:
         signature: "hash(byte[]): byte[]"
         returnValue:
           sapientType: "ARRAY"
-          content: !<array>
-            values: {}
-          suggestedContent: !<array>
-            values: {}
           valueType: "byte[]"
           uuid: "toEntropy_byte[]2"
           fixed: false
@@ -5966,10 +2518,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "ARRAY"
-        content: !<array>
-          values: {}
-        suggestedContent: !<array>
-          values: {}
         valueType: "byte[]"
         uuid: "toEntropy_byte[]1"
         fixed: false
@@ -5979,10 +2527,10 @@ methods:
       filledByUser: false
     uuid: "8796868f-bc14-312a-8177-3b0f021a7660"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path4"
     pathIdForUser: "path5"
     testPathName: "toEntropyWhenEntropyLengthBitsPlusIIndexOfConcatBitsNotEqualsIIndexOfHaThrowsMnemonicExceptionMnemonicChecksumException"
@@ -6009,8 +2557,6 @@ methods:
           - name: "wordstream"
             value:
               sapientType: "INPUT_STREAM"
-              content: !<inputStream>
-                values: []
               valueType: "java.io.InputStream"
               uuid: "<init>_inputStream1"
               fixed: false
@@ -6019,8 +2565,6 @@ methods:
           - name: "wordListDigest"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "wordListDigest1"
               valueType: "java.lang.String"
               uuid: "<init>_string5"
               fixed: false
@@ -6065,12 +2609,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "COLLECTION"
-        content: !<collection>
-          parameters: []
-          values: []
-        suggestedContent: !<collection>
-          parameters: []
-          values: []
         valueType: "java.util.List"
         genericValueType: "java.lang.String"
         uuid: "toEntropy_list1"
@@ -6100,10 +2638,6 @@ methods:
         signature: "newDigest(): MessageDigest"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "newDigest"
-            methodParameters: []
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.base.Sha256Hash"
             method: "newDigest"
@@ -6139,10 +2673,6 @@ methods:
         signature: "toUnmodifiableList(): Collector"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.internal.StreamUtils"
-            method: "toUnmodifiableList"
-            methodParameters: []
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.base.internal.StreamUtils"
             method: "toUnmodifiableList"
@@ -6176,296 +2706,6 @@ methods:
         - name: "bytes"
           value:
             sapientType: "ARRAY"
-            content: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -29
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item0"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -80
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item1"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                2:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -60
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item2"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                3:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 66
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item3"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                4:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -104
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item4"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                5:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -4
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item5"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                6:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 28
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item6"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                7:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 20
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item7"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                8:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -102
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item8"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                9:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -5
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item9"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                10:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -12
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item10"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                11:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -56
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item11"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                12:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -103
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item12"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                13:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 111
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item13"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                14:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -71
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item14"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                15:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 36
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item15"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                16:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 39
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item16"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                17:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -82
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item17"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                18:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 65
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item18"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                19:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -28
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item19"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                20:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 100
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item20"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                21:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -101
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item21"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                22:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -109
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item22"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                23:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 76
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item23"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                24:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -92
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item24"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                25:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -107
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item25"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                26:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -103
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item26"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                27:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 27
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item27"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                28:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 120
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item28"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                29:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 82
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item29"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                30:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -72
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item30"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                31:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 85
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item31"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
             suggestedContent: !<array>
               values:
                 0:
@@ -6782,7 +3022,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         valueType: "org.bitcoinj.base.Sha256Hash"
         uuid: "org.bitcoinj.base.Sha256Hash"
         fixed: false
@@ -6795,10 +3035,6 @@ methods:
         - name: "input"
           value:
             sapientType: "ARRAY"
-            content: !<array>
-              values: {}
-            suggestedContent: !<array>
-              values: {}
             valueType: "byte[]"
             uuid: "toEntropy_byte[]1"
             fixed: false
@@ -6807,10 +3043,6 @@ methods:
         signature: "hash(byte[]): byte[]"
         returnValue:
           sapientType: "ARRAY"
-          content: !<array>
-            values: {}
-          suggestedContent: !<array>
-            values: {}
           valueType: "byte[]"
           uuid: "toEntropy_byte[]2"
           fixed: false
@@ -6828,11 +3060,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "EXCEPTION"
-        content: !<new>
-          target: "org.bitcoinj.crypto.MnemonicException$MnemonicChecksumException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: true
         suggestedContent: !<new>
           target: "org.bitcoinj.crypto.MnemonicException$MnemonicChecksumException"
           parameters: []
@@ -6847,10 +3074,10 @@ methods:
       filledByUser: false
     uuid: "0a62abab-0505-343f-b42e-33f2aaec19a1"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "toMnemonic"
     returnType: "java.util.List"
@@ -6903,8 +3130,6 @@ methods:
           - name: "wordstream"
             value:
               sapientType: "INPUT_STREAM"
-              content: !<inputStream>
-                values: []
               valueType: "java.io.InputStream"
               uuid: "<init>_inputStream1"
               fixed: false
@@ -6913,8 +3138,6 @@ methods:
           - name: "wordListDigest"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "wordListDigest1"
               valueType: "java.lang.String"
               uuid: "<init>_string5"
               fixed: false
@@ -6959,10 +3182,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "ARRAY"
-        content: !<array>
-          values: {}
-        suggestedContent: !<array>
-          values: {}
         valueType: "byte[]"
         uuid: "toMnemonic_byte[]1"
         fixed: false
@@ -6991,10 +3210,6 @@ methods:
         signature: "newDigest(): MessageDigest"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "newDigest"
-            methodParameters: []
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.base.Sha256Hash"
             method: "newDigest"
@@ -7030,10 +3245,6 @@ methods:
         signature: "toUnmodifiableList(): Collector"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.internal.StreamUtils"
-            method: "toUnmodifiableList"
-            methodParameters: []
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.base.internal.StreamUtils"
             method: "toUnmodifiableList"
@@ -7067,296 +3278,6 @@ methods:
         - name: "bytes"
           value:
             sapientType: "ARRAY"
-            content: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -29
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item0"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -80
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item1"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                2:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -60
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item2"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                3:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 66
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item3"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                4:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -104
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item4"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                5:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -4
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item5"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                6:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 28
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item6"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                7:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 20
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item7"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                8:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -102
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item8"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                9:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -5
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item9"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                10:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -12
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item10"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                11:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -56
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item11"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                12:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -103
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item12"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                13:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 111
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item13"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                14:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -71
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item14"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                15:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 36
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item15"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                16:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 39
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item16"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                17:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -82
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item17"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                18:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 65
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item18"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                19:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -28
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item19"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                20:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 100
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item20"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                21:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -101
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item21"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                22:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -109
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item22"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                23:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 76
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item23"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                24:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -92
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item24"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                25:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -107
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item25"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                26:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -103
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item26"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                27:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 27
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item27"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                28:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 120
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item28"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                29:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 82
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item29"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                30:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -72
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item30"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                31:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 85
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item31"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
             suggestedContent: !<array>
               values:
                 0:
@@ -7673,7 +3594,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         valueType: "org.bitcoinj.base.internal.Preconditions"
         uuid: "org.bitcoinj.base.internal.Preconditions"
         fixed: false
@@ -7719,7 +3640,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         valueType: "org.bitcoinj.base.internal.Preconditions"
         uuid: "org.bitcoinj.base.internal.Preconditions"
         fixed: false
@@ -7765,7 +3686,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         valueType: "org.bitcoinj.base.Sha256Hash"
         uuid: "org.bitcoinj.base.Sha256Hash"
         fixed: false
@@ -7778,10 +3699,6 @@ methods:
         - name: "input"
           value:
             sapientType: "ARRAY"
-            content: !<array>
-              values: {}
-            suggestedContent: !<array>
-              values: {}
             valueType: "byte[]"
             uuid: "toMnemonic_byte[]1"
             fixed: false
@@ -7790,10 +3707,6 @@ methods:
         signature: "hash(byte[]): byte[]"
         returnValue:
           sapientType: "ARRAY"
-          content: !<array>
-            values: {}
-          suggestedContent: !<array>
-            values: {}
           valueType: "byte[]"
           uuid: "toMnemonic_byte[]2"
           fixed: false
@@ -7811,25 +3724,11 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "COLLECTION"
-        content: !<collection>
-          collectionClass: "java.util.ArrayList"
-          parameters: []
-          values:
-          - sapientType: "BASIC"
-            content: !<regular>
-              value: "resultItem1"
-            valueType: "java.lang.String"
-            uuid: "toMnemonic_object1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: true
         suggestedContent: !<collection>
           collectionClass: "java.util.ArrayList"
           parameters: []
           values:
           - sapientType: "BASIC"
-            content: !<regular>
-              value: "resultItem1"
             valueType: "java.lang.String"
             uuid: "toMnemonic_object1"
             fixed: false
@@ -7845,10 +3744,10 @@ methods:
       filledByUser: false
     uuid: "a116309e-a6de-3f0d-b2d6-cdb2dc854864"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "check"
     returnType: "void"
@@ -7885,8 +3784,6 @@ methods:
           - name: "wordstream"
             value:
               sapientType: "INPUT_STREAM"
-              content: !<inputStream>
-                values: []
               valueType: "java.io.InputStream"
               uuid: "<init>_inputStream1"
               fixed: false
@@ -7895,8 +3792,6 @@ methods:
           - name: "wordListDigest"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "wordListDigest1"
               valueType: "java.lang.String"
               uuid: "<init>_string5"
               fixed: false
@@ -7941,12 +3836,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "COLLECTION"
-        content: !<collection>
-          parameters: []
-          values: []
-        suggestedContent: !<collection>
-          parameters: []
-          values: []
         valueType: "java.util.List"
         genericValueType: "java.lang.String"
         uuid: "check_list1"
@@ -7976,10 +3865,6 @@ methods:
         signature: "newDigest(): MessageDigest"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "newDigest"
-            methodParameters: []
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.base.Sha256Hash"
             method: "newDigest"
@@ -8015,10 +3900,6 @@ methods:
         signature: "toUnmodifiableList(): Collector"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.internal.StreamUtils"
-            method: "toUnmodifiableList"
-            methodParameters: []
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.base.internal.StreamUtils"
             method: "toUnmodifiableList"
@@ -8052,296 +3933,6 @@ methods:
         - name: "bytes"
           value:
             sapientType: "ARRAY"
-            content: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -29
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item0"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -80
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item1"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                2:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -60
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item2"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                3:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 66
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item3"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                4:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -104
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item4"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                5:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -4
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item5"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                6:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 28
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item6"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                7:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 20
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item7"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                8:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -102
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item8"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                9:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -5
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item9"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                10:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -12
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item10"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                11:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -56
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item11"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                12:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -103
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item12"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                13:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 111
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item13"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                14:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -71
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item14"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                15:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 36
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item15"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                16:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 39
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item16"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                17:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -82
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item17"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                18:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 65
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item18"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                19:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -28
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item19"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                20:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 100
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item20"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                21:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -101
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item21"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                22:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -109
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item22"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                23:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 76
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item23"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                24:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -92
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item24"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                25:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -107
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item25"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                26:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -103
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item26"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                27:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 27
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item27"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                28:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 120
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item28"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                29:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 82
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item29"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                30:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -72
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item30"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                31:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 85
-                  valueType: "byte"
-                  uuid: "<init>_byte[]6-item31"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
             suggestedContent: !<array>
               values:
                 0:
@@ -8664,12 +4255,6 @@ methods:
         - name: "words"
           value:
             sapientType: "COLLECTION"
-            content: !<collection>
-              parameters: []
-              values: []
-            suggestedContent: !<collection>
-              parameters: []
-              values: []
             valueType: "java.util.List"
             genericValueType: "java.lang.String"
             uuid: "check_list1"
@@ -8683,10 +4268,6 @@ methods:
         signature: "toEntropy(List): byte[] throws org.bitcoinj.crypto.MnemonicException$MnemonicLengthException,org.bitcoinj.crypto.MnemonicException$MnemonicWordException,org.bitcoinj.crypto.MnemonicException$MnemonicChecksumException"
         returnValue:
           sapientType: "ARRAY"
-          content: !<array>
-            values: {}
-          suggestedContent: !<array>
-            values: {}
           valueType: "byte[]"
           uuid: "check_byte[]1"
           fixed: false
@@ -8711,7 +4292,7 @@ methods:
       filledByUser: false
     uuid: "f9cae5fb-7a74-3290-b15f-1bbc915cb180"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false

@@ -16,13 +16,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "BEF5EBCA2CB21CBBA89303E25EED9F36"
+    modelFingerprint: "100D90E1694A88FC5E6B4641B6A8E060"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "name"
-      modelFingerprint: "7ACB4C7EBF6D36049913B220FC88F117"
+      modelFingerprint: "291EF2EFC1C16BC5588EBCD053F5C86E"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -30,9 +30,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "J"
+          value: "<valid mnemonic>"
         suggestedContent: !<regular>
-          value: "J"
+          value: "<valid mnemonic>"
         valueType: "java.lang.String"
         uuid: "fromMnemonic_string1"
         fixed: false
@@ -42,7 +42,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "6B9D3C6328E35A62BE46837C1246B79B"
+      modelFingerprint: "FF7A1C86E2A55D48A1550E7FF493A4DA"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -56,9 +56,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "J is not a valid name"
+                value: "<valid mnemonic> is not a valid name"
               suggestedContent: !<regular>
-                value: "J is not a valid name"
+                value: "<valid mnemonic> is not a valid name"
               valueType: "java.lang.String"
               uuid: "fromMnemonic_string2"
               fixed: false
@@ -73,9 +73,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "J is not a valid name"
+                value: "<valid mnemonic> is not a valid name"
               suggestedContent: !<regular>
-                value: "J is not a valid name"
+                value: "<valid mnemonic> is not a valid name"
               valueType: "java.lang.String"
               uuid: "fromMnemonic_string2"
               fixed: false
@@ -94,7 +94,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -104,13 +104,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "E775A44C5F755BB73872BC7EC5FDEACB"
-    problemWasSolvedByProver: false
+    modelFingerprint: "171BC2D741673E6B12A72DEF91A94E86"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "name"
-      modelFingerprint: "6EA07A17E3D3E21407332E2E522586C1"
+      modelFingerprint: "3830444B9B8AF74B18598135ED0CC485"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -118,9 +118,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "J"
+          value: "OK"
         suggestedContent: !<regular>
-          value: "J"
+          value: "OK"
         valueType: "java.lang.String"
         uuid: "fromMnemonic_string1"
         fixed: false
@@ -130,7 +130,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "33B6BE2DD587778575E36BE82D6908A5"
+      modelFingerprint: "E8D717724AA1ED7E85C91A784DC2F249"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -138,9 +138,7 @@ methods:
       value:
         sapientType: "ENUM"
         content: !<regular>
-          value: "SCRIPT_ERR_ERROR_COUNT"
-        suggestedContent: !<regular>
-          value: "SCRIPT_ERR_ERROR_COUNT"
+          value: "SCRIPT_ERR_OK"
         valueType: "org.bitcoinj.script.ScriptError"
         uuid: "fromMnemonic_scriptError1"
         fixed: false

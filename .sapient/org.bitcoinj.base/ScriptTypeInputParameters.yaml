@@ -17,7 +17,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "D088260F3CB931B0F90488729545DB1C"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
@@ -29,8 +29,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "BASIC"
-        content: !<regular>
-          value: "pkh"
         suggestedContent: !<regular>
           value: "pkh"
         valueType: "java.lang.String"
@@ -61,56 +59,6 @@ methods:
         signature: "values(): ScriptType[]"
         returnValue:
           sapientType: "ARRAY"
-          content: !<array>
-            values:
-              0:
-                sapientType: "ENUM"
-                content: !<regular>
-                  value: "P2PKH"
-                valueType: "org.bitcoinj.base.ScriptType"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              1:
-                sapientType: "ENUM"
-                content: !<regular>
-                  value: "P2PK"
-                valueType: "org.bitcoinj.base.ScriptType"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              2:
-                sapientType: "ENUM"
-                content: !<regular>
-                  value: "P2SH"
-                valueType: "org.bitcoinj.base.ScriptType"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              3:
-                sapientType: "ENUM"
-                content: !<regular>
-                  value: "P2WPKH"
-                valueType: "org.bitcoinj.base.ScriptType"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              4:
-                sapientType: "ENUM"
-                content: !<regular>
-                  value: "P2WSH"
-                valueType: "org.bitcoinj.base.ScriptType"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              5:
-                sapientType: "ENUM"
-                content: !<regular>
-                  value: "P2TR"
-                valueType: "org.bitcoinj.base.ScriptType"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
           suggestedContent: !<array>
             values:
               0:
@@ -208,13 +156,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "41B2713DE52270A02AEEA687EA8FE736"
+    modelFingerprint: "E567ACBCD4704CDBEED4CB3888613802"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "id"
-      modelFingerprint: "ACD976F0A1DBD38FE4D389696A87F7D0"
+      modelFingerprint: "66B7D23BA39A4993885E6AC11D50DDAB"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -240,7 +188,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "REAL"
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.base.ScriptType"
         uuid: "org.bitcoinj.base.ScriptType"
         fixed: false
@@ -393,6 +341,6 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

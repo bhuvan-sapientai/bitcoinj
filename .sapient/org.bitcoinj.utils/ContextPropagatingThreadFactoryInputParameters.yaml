@@ -17,12 +17,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "A6EC1DD60C7F338C0BE03515BA4A8BC1"
+    modelFingerprint: "FE7938CB0F21274BB714EDA3F82E058E"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "F992F37F1CE9530AA4CC1D83C521A98D"
+      modelFingerprint: "B829529B0A1B7B9BA00A11555D278CAA"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -36,7 +36,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "name1"
+                value: "Thread-1"
+              suggestedContent: !<regular>
+                value: "Thread-1"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -46,7 +48,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 5
+              suggestedContent: !<regular>
+                value: 5
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -60,6 +64,10 @@ methods:
           - name: "name"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: "Thread-1"
+              suggestedContent: !<regular>
+                value: "Thread-1"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -68,6 +76,10 @@ methods:
           - name: "priority"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 5
+              suggestedContent: !<regular>
+                value: 5
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -84,13 +96,17 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "r"
-      modelFingerprint: "E19F7DDCD869EDBB675FEEDF46089F9F"
+      modelFingerprint: "141953A8D4501F319A47C4CC1CF03F91"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "NULL"
+        content: !<unknown_object>
+          target: "java.lang.Runnable"
+          onlyPojoFunctions: false
+          builderPattern: false
         suggestedContent: !<unknown_object>
           target: "java.lang.Runnable"
           onlyPojoFunctions: false
@@ -104,7 +120,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Context"
-      modelFingerprint: "48D221517E861357B3439FCF8D5FC88D"
+      modelFingerprint: "5F24CCB82A591202D5784F2C1CC00F11"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -122,7 +138,17 @@ methods:
         parameters: []
         signature: "get(): Context"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "OBJECT"
+          content: !<new>
+            target: "org.bitcoinj.core.Context"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "org.bitcoinj.core.Context"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
           valueType: "org.bitcoinj.core.Context"
           uuid: "newThread_context1"
           fixed: false
@@ -133,7 +159,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "70319B4504DBF8DD1AE03242AE00A184"
+      modelFingerprint: "8D8AA1CFE24ABB9F3097F1E6B4B85AAB"
       index: 4
       ignored: false
       nestedInLoop: false

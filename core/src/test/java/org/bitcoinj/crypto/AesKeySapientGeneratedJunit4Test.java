@@ -22,12 +22,12 @@ public class AesKeySapientGeneratedJunit4Test {
     @Test()
     public void getKeyTest() {
         //Arrange Statement(s)
-        byte[] byteArray = new byte[]{};
+        byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5};
         AesKey target = new AesKey(byteArray);
 
         //Act Statement(s)
         byte[] result = target.getKey();
-        byte[] byteResultArray = new byte[]{};
+        byte[] byteResultArray = new byte[]{(byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5};
 
         //Assert statement(s)
         assertThat(result, equalTo(byteResultArray));
@@ -37,7 +37,7 @@ public class AesKeySapientGeneratedJunit4Test {
     @Test()
     public void ofKeyParameterTest() {
         //Arrange Statement(s)
-        KeyParameter keyParameterMock = mock(KeyParameter.class);
+        KeyParameter keyParameterMock = mock(KeyParameter.class, "[1, 2, 3, 4]");
         byte[] byteArray = new byte[]{};
         doReturn(byteArray).when(keyParameterMock).getKey();
 
@@ -55,12 +55,12 @@ public class AesKeySapientGeneratedJunit4Test {
     @Test()
     public void toKeyParameterTest() {
         //Arrange Statement(s)
-        byte[] byteArray = new byte[]{};
+        byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16};
         AesKey target = new AesKey(byteArray);
 
         //Act Statement(s)
         KeyParameter result = target.toKeyParameter();
-        byte[] byteArray2 = new byte[]{};
+        byte[] byteArray2 = new byte[]{(byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16};
         KeyParameter keyParameter = new KeyParameter(byteArray2);
 
         //Assert statement(s)

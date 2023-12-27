@@ -100,7 +100,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -118,13 +118,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "EC56619C4A356BC6AE6F316C78726F6D"
+    modelFingerprint: "3E6E2D374FBE9FEFF784C75F493316B2"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "delta"
-      modelFingerprint: "667E9EFAA83A7392AD681D249BEB4B66"
+      modelFingerprint: "502C206D9E8FCB6AFAF06DC9DF6B37DC"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -212,7 +212,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -230,7 +230,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "6E13917948F4503330A129503ABFC98B"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "RESULT"
@@ -280,11 +280,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "java.time.Instant"
-          method: "now"
-          methodParameters: []
+        sapientType: "UNKNOWN"
         suggestedContent: !<static_method_return>
           target: "java.time.Instant"
           method: "now"
@@ -490,7 +486,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -500,13 +496,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "384EC664294F1DB7919797C33DD6581B"
-    problemWasSolvedByProver: false
+    modelFingerprint: "3AA13C8D410C172D25A8300C90440C1E"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "time1"
-      modelFingerprint: "DD4ECA5E64E937B80861BA2803049774"
+      modelFingerprint: "69BB4C897FB6D9436936A147C5E5815D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -524,13 +520,13 @@ methods:
         valueType: "java.time.Instant"
         uuid: "earlier_instant1"
         fixed: false
-        equalsMethodPresent: false
+        equalsMethodPresent: true
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     - type: "INPUT"
       name: "time2"
-      modelFingerprint: "9053F7DAB7E958F120A2A29E2C5DF484"
+      modelFingerprint: "4F99A8B6523BFBB9E3D6D8A63BD13E1C"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -554,7 +550,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "B5876663FC27495AE3889E7E3D61C4C6"
+      modelFingerprint: "60CF57B64B135E62ED387F9E3E6F7F25"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -570,7 +566,7 @@ methods:
           method: "now"
           methodParameters: []
         valueType: "java.time.Instant"
-        uuid: "earlier_instant2"
+        uuid: "earlier_instant1"
         fixed: false
         equalsMethodPresent: true
         explicitCastNeeded: false
@@ -578,11 +574,11 @@ methods:
       filledByUser: false
     uuid: "58bf7731-4cf4-34d3-b4bc-3b02c4828fbb"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "later"
     returnType: "java.time.Instant"
@@ -599,13 +595,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "8624B57B3CA5A6DAA2B13517D85923E9"
-    problemWasSolvedByProver: false
+    modelFingerprint: "89CC23B9BD49216F7EB78AA72DFFB6F8"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "time1"
-      modelFingerprint: "7AC6A39B785C4903E5F60DA7580EB552"
+      modelFingerprint: "69BB4C897FB6D9436936A147C5E5815D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -629,7 +625,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "time2"
-      modelFingerprint: "FF1CE2157AC2BB7C0301DBD10D7D8296"
+      modelFingerprint: "4F99A8B6523BFBB9E3D6D8A63BD13E1C"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -647,13 +643,13 @@ methods:
         valueType: "java.time.Instant"
         uuid: "later_instant2"
         fixed: false
-        equalsMethodPresent: false
+        equalsMethodPresent: true
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "B5876663FC27495AE3889E7E3D61C4C6"
+      modelFingerprint: "60CF57B64B135E62ED387F9E3E6F7F25"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -669,7 +665,7 @@ methods:
           method: "now"
           methodParameters: []
         valueType: "java.time.Instant"
-        uuid: "later_instant1"
+        uuid: "later_instant2"
         fixed: false
         equalsMethodPresent: true
         explicitCastNeeded: false
@@ -677,11 +673,11 @@ methods:
       filledByUser: false
     uuid: "6f6f90ff-0b94-3fc1-8feb-95d2c75b356c"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "laterWhenTime1NotIsAfterTime2"
@@ -769,7 +765,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -788,13 +784,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "16428E1218785DFADC581BC235059200"
-    problemWasSolvedByProver: false
+    modelFingerprint: "B4F40A39C1F045A22C3E855415280012"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "duration1"
-      modelFingerprint: "24DE8D46D0A7BB8797082AC9EEA43F2C"
+      modelFingerprint: "813E6A4750F8B375C9C39BDF88F06D8D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -836,7 +832,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "duration2"
-      modelFingerprint: "98457028C7FA48885024EC58121BB384"
+      modelFingerprint: "908E134A16ACF8C0B56770D992E95A8E"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -872,13 +868,13 @@ methods:
         valueType: "java.time.Duration"
         uuid: "longest_duration2"
         fixed: false
-        equalsMethodPresent: false
+        equalsMethodPresent: true
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "9B85EDF153F11E4BDED1A26C6C5A02D4"
+      modelFingerprint: "00FBFACB4082748E8E0E680F31653328"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -895,7 +891,7 @@ methods:
               content: !<regular>
                 value: 0
               valueType: "long"
-              uuid: "longest_duration1-days"
+              uuid: "longest_duration2-days"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -907,12 +903,12 @@ methods:
             value:
               sapientType: "BASIC"
               valueType: "long"
-              uuid: "longest_duration1-days"
+              uuid: "longest_duration2-days"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
         valueType: "java.time.Duration"
-        uuid: "longest_duration1"
+        uuid: "longest_duration2"
         fixed: false
         equalsMethodPresent: true
         explicitCastNeeded: false
@@ -932,13 +928,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "800C7C48FB4B80E29BD5FB4732B18DFE"
+    modelFingerprint: "000D2B9CE6D970415163C3CED4A47B9A"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "duration1"
-      modelFingerprint: "A58F8548484DDB83641F4789135DEB05"
+      modelFingerprint: "691AF32DEA7AEAFE6E177A7C326F1416"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -954,8 +950,6 @@ methods:
               sapientType: "BASIC"
               content: !<regular>
                 value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "longest_duration1-days"
               fixed: false
@@ -968,10 +962,6 @@ methods:
           - name: "days"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "longest_duration1-days"
               fixed: false
@@ -986,7 +976,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "duration2"
-      modelFingerprint: "2D4081D83CB62C273BEE145D4B3B7142"
+      modelFingerprint: "908E134A16ACF8C0B56770D992E95A8E"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1002,8 +992,6 @@ methods:
               sapientType: "BASIC"
               content: !<regular>
                 value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "longest_duration2-days"
               fixed: false
@@ -1016,10 +1004,6 @@ methods:
           - name: "days"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "longest_duration2-days"
               fixed: false
@@ -1034,7 +1018,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "004A678DA61E76B971F82657EB947566"
+      modelFingerprint: "00FBFACB4082748E8E0E680F31653328"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1050,8 +1034,6 @@ methods:
               sapientType: "BASIC"
               content: !<regular>
                 value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "longest_duration2-days"
               fixed: false
@@ -1064,10 +1046,6 @@ methods:
           - name: "days"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "longest_duration2-days"
               fixed: false
@@ -1084,7 +1062,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -1102,7 +1080,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "9A8C1F9D72C7C4C581AB13EE71BDA040"
+    modelFingerprint: "9D6196D86F17A3925C141774E18C8D9A"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -1132,7 +1110,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "4AFE55CFF244424F7BB551F334D10763"
+      modelFingerprint: "22E935E816A1859FF9CE31B3B8B50D55"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1140,7 +1118,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "2023-12-27T08:08:41.474799Z"
+          value: "2023-12-27T10:39:01.911209Z"
         valueType: "java.lang.String"
         uuid: "dateTimeFormat_string1"
         fixed: false
@@ -1152,6 +1130,6 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

@@ -32,7 +32,7 @@ public class FilteringCoinSelectorSapientGeneratedJunit4Test {
     @Rule()
     public Timeout timeoutRule = Timeout.seconds(5);
 
-    private final CoinSelector delegateMock = mock(CoinSelector.class, "delegate");
+    private final CoinSelector delegateMock = mock(CoinSelector.class, "DefaultCoinSelector@<some memory address>");
 
     //Sapient generated method id: ${9e2ce5b6-94bc-30f3-943d-762a6bc97ad7}
     @Ignore()
@@ -45,27 +45,31 @@ public class FilteringCoinSelectorSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        TransactionOutput outputMock = mock(TransactionOutput.class);
-        TransactionOutPoint transactionOutPointMock = mock(TransactionOutPoint.class);
-        CoinSelection coinSelectionMock = mock(CoinSelection.class);
-        Coin coinMock = mock(Coin.class);
+        TransactionOutput outputMock = mock(TransactionOutput.class, "[1, 2, 3]");
+        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
+        TransactionOutPoint transactionOutPoint2Mock = mock(TransactionOutPoint.class, "0");
+        Coin coinMock = mock(Coin.class, "1000");
         try (MockedStatic<StreamUtils> streamUtils = mockStatic(StreamUtils.class)) {
-            doReturn(transactionOutPointMock).when(outputMock).getOutPointFor();
-            Collector collector = StreamUtils.toUnmodifiableList();
-            streamUtils.when(() -> StreamUtils.toUnmodifiableList()).thenReturn(collector);
+            TransactionOutPoint transactionOutPoint = new TransactionOutPoint(0L, sha256HashMock);
+            doReturn(transactionOutPoint).when(outputMock).getOutPointFor();
+            //TODO: Needs to return real value
+            streamUtils.when(() -> StreamUtils.toUnmodifiableList()).thenReturn(null);
             List<TransactionOutPoint> transactionOutPointList = new ArrayList<>();
+            transactionOutPointList.add(transactionOutPoint2Mock);
             FilteringCoinSelector target = new FilteringCoinSelector(delegateMock, transactionOutPointList);
             List list = new ArrayList<>();
-            doReturn(coinSelectionMock).when(delegateMock).select(coinMock, list);
+            CoinSelection coinSelection = new CoinSelection(list);
+            List list2 = new ArrayList<>();
+            doReturn(coinSelection).when(delegateMock).select(coinMock, list2);
             List<TransactionOutput> transactionOutputList = new ArrayList<>();
             transactionOutputList.add(outputMock);
             //Act Statement(s)
             CoinSelection result = target.select(coinMock, transactionOutputList);
             //Assert statement(s)
-            assertThat(result, equalTo(coinSelectionMock));
+            assertThat(result, equalTo(coinSelection));
             verify(outputMock).getOutPointFor();
             streamUtils.verify(() -> StreamUtils.toUnmodifiableList(), atLeast(1));
-            verify(delegateMock).select(coinMock, list);
+            verify(delegateMock).select(coinMock, list2);
         }
     }
 }

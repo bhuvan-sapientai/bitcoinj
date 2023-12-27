@@ -20,23 +20,45 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "C9F1DA8BB158825A06E666EFCB01ADD2"
+    modelFingerprint: "E83ED66C52B2F659965C58357570589D"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "missing"
-      modelFingerprint: "C262EB47ED8366DDB47C553FEA806B06"
+      modelFingerprint: "008D2A0E28A2795D5A40148E74DE368F"
       index: 1
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
+        sapientType: "OBJECT"
+        content: !<static_method_return>
           target: "org.bitcoinj.base.Coin"
-          onlyPojoFunctions: false
-          builderPattern: false
+          method: "valueOf"
+          methodParameters:
+          - name: "satoshis"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "format_coin1-satoshis"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.Coin"
+          method: "valueOf"
+          methodParameters:
+          - name: "satoshis"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "format_coin1-satoshis"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.base.Coin"
         uuid: "format_coin1"
         fixed: false
@@ -46,17 +68,39 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "available"
-      modelFingerprint: "9773A2764A80AB2B093C67496BE4E7E2"
+      modelFingerprint: "17E8593D42C712748A2AF1AC0256CF97"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
+        sapientType: "OBJECT"
+        content: !<static_method_return>
           target: "org.bitcoinj.base.Coin"
-          onlyPojoFunctions: false
-          builderPattern: false
+          method: "valueOf"
+          methodParameters:
+          - name: "satoshis"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "format_coin2-satoshis"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.Coin"
+          method: "valueOf"
+          methodParameters:
+          - name: "satoshis"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "format_coin2-satoshis"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.base.Coin"
         uuid: "format_coin2"
         fixed: false
@@ -66,17 +110,39 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "outputs"
-      modelFingerprint: "ED95063869B26F988DA53F59844797DD"
+      modelFingerprint: "697D7185045E5BF39F377D2EE94D970D"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
+        sapientType: "OBJECT"
+        content: !<static_method_return>
           target: "org.bitcoinj.base.Coin"
-          onlyPojoFunctions: false
-          builderPattern: false
+          method: "valueOf"
+          methodParameters:
+          - name: "satoshis"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "format_coin3-satoshis"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.Coin"
+          method: "valueOf"
+          methodParameters:
+          - name: "satoshis"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "format_coin3-satoshis"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.base.Coin"
         uuid: "format_coin3"
         fixed: false
@@ -86,17 +152,39 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "fee"
-      modelFingerprint: "1100625D9FE46136A74D85F8341702C5"
+      modelFingerprint: "9E89C69EC284C6A415DED8E902D0A85D"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
+        sapientType: "OBJECT"
+        content: !<static_method_return>
           target: "org.bitcoinj.base.Coin"
-          onlyPojoFunctions: false
-          builderPattern: false
+          method: "valueOf"
+          methodParameters:
+          - name: "satoshis"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "format_coin4-satoshis"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.Coin"
+          method: "valueOf"
+          methodParameters:
+          - name: "satoshis"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "format_coin4-satoshis"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.base.Coin"
         uuid: "format_coin4"
         fixed: false
@@ -106,17 +194,39 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "missing"
-      modelFingerprint: "B914D6A830EE5E0FD51023457091AF3E"
+      modelFingerprint: "A107896046A534D39F3E7F7F9392F21F"
       index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
+        sapientType: "OBJECT"
+        content: !<static_method_return>
           target: "org.bitcoinj.base.Coin"
-          onlyPojoFunctions: false
-          builderPattern: false
+          method: "valueOf"
+          methodParameters:
+          - name: "satoshis"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "format_coin1-satoshis"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.Coin"
+          method: "valueOf"
+          methodParameters:
+          - name: "satoshis"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "format_coin1-satoshis"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.base.Coin"
         uuid: "format_coin1"
         fixed: false
@@ -130,9 +240,7 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "A"
-          suggestedContent: !<regular>
-            value: "A"
+            value: "0.00 BTC"
           valueType: "java.lang.String"
           uuid: "format_string1"
           fixed: false
@@ -143,17 +251,39 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "available"
-      modelFingerprint: "2B801DBE31E1DD42F85E845BE7C0B662"
+      modelFingerprint: "A107896046A534D39F3E7F7F9392F21F"
       index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
+        sapientType: "OBJECT"
+        content: !<static_method_return>
           target: "org.bitcoinj.base.Coin"
-          onlyPojoFunctions: false
-          builderPattern: false
+          method: "valueOf"
+          methodParameters:
+          - name: "satoshis"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "format_coin2-satoshis"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.Coin"
+          method: "valueOf"
+          methodParameters:
+          - name: "satoshis"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "format_coin2-satoshis"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.base.Coin"
         uuid: "format_coin2"
         fixed: false
@@ -167,9 +297,7 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "B"
-          suggestedContent: !<regular>
-            value: "B"
+            value: "0.00 BTC"
           valueType: "java.lang.String"
           uuid: "format_string2"
           fixed: false
@@ -180,17 +308,39 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "outputs"
-      modelFingerprint: "3D6F750B2D29950BDB9228091B6E40F8"
+      modelFingerprint: "A107896046A534D39F3E7F7F9392F21F"
       index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
+        sapientType: "OBJECT"
+        content: !<static_method_return>
           target: "org.bitcoinj.base.Coin"
-          onlyPojoFunctions: false
-          builderPattern: false
+          method: "valueOf"
+          methodParameters:
+          - name: "satoshis"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "format_coin3-satoshis"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.Coin"
+          method: "valueOf"
+          methodParameters:
+          - name: "satoshis"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "format_coin3-satoshis"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.base.Coin"
         uuid: "format_coin3"
         fixed: false
@@ -204,9 +354,7 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "C"
-          suggestedContent: !<regular>
-            value: "C"
+            value: "0.00 BTC"
           valueType: "java.lang.String"
           uuid: "format_string3"
           fixed: false
@@ -217,17 +365,39 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "fee"
-      modelFingerprint: "79D36CADCC09F7AB97A210E4EC9BE1C2"
+      modelFingerprint: "A41A08E68B334F2E8AF8FFFC8272AC18"
       index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
+        sapientType: "OBJECT"
+        content: !<static_method_return>
           target: "org.bitcoinj.base.Coin"
-          onlyPojoFunctions: false
-          builderPattern: false
+          method: "valueOf"
+          methodParameters:
+          - name: "satoshis"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "format_coin4-satoshis"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.Coin"
+          method: "valueOf"
+          methodParameters:
+          - name: "satoshis"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "format_coin4-satoshis"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.base.Coin"
         uuid: "format_coin4"
         fixed: false
@@ -241,9 +411,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "D"
+            value: "A"
           suggestedContent: !<regular>
-            value: "D"
+            value: "A"
           valueType: "java.lang.String"
           uuid: "format_string4"
           fixed: false
@@ -254,7 +424,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "291133A61F78590824A222C98AB2268F"
+      modelFingerprint: "40F6CB04BC2C42E2354AE635821A2F59"
       index: 9
       ignored: false
       nestedInLoop: false
@@ -262,11 +432,11 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "Insufficient money, missing A (available: B, total outputs: C, fee:\
-            \ D)"
+          value: "Insufficient money, missing 0.00 BTC (available: 0.00 BTC, total\
+            \ outputs: 0.00 BTC, fee: A)"
         suggestedContent: !<regular>
-          value: "Insufficient money, missing A (available: B, total outputs: C, fee:\
-            \ D)"
+          value: "Insufficient money, missing 0.00 BTC (available: 0.00 BTC, total\
+            \ outputs: 0.00 BTC, fee: A)"
         valueType: "java.lang.String"
         uuid: "format_string5"
         fixed: false
@@ -276,8 +446,8 @@ methods:
       filledByUser: false
     uuid: "d2023724-fb02-31bf-8f56-c852070520c4"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true

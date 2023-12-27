@@ -17,12 +17,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "3BF025A83E5648D4115CAD189E8FD24B"
+    modelFingerprint: "AD78C7E324FDB6E1F1F1FDAE91DE36CE"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "4A5938CAAF95B74BBB04F2BC47F6DBDB"
+      modelFingerprint: "922D0EF7FC311F356F9D962182DAB02C"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -30,6 +30,80 @@ methods:
       value:
         sapientType: "OBJECT"
         content: !<new>
+          target: "org.bitcoinj.net.NioClient"
+          parameters:
+          - name: "serverAddress"
+            value:
+              sapientType: "NULL"
+              content: !<unknown_object>
+                target: "java.net.SocketAddress"
+                onlyPojoFunctions: false
+                builderPattern: false
+              suggestedContent: !<unknown_object>
+                target: "java.net.SocketAddress"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "java.net.SocketAddress"
+              uuid: "<init>_socketAddress1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "parser"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.net.StreamConnection"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.net.StreamConnection"
+              uuid: "<init>_streamConnection1"
+              fixed: false
+              nameForMock: "{}"
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "connectTimeout"
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.time.Duration"
+                method: "ofSeconds"
+                methodParameters:
+                - name: "seconds"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 10
+                    suggestedContent: !<regular>
+                      value: 10
+                    valueType: "long"
+                    uuid: "<init>_duration1-seconds"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "java.time.Duration"
+                method: "ofSeconds"
+                methodParameters:
+                - name: "seconds"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 10
+                    suggestedContent: !<regular>
+                      value: 10
+                    valueType: "long"
+                    uuid: "<init>_duration1-seconds"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.time.Duration"
+              uuid: "<init>_duration1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
           target: "org.bitcoinj.net.NioClient"
           parameters:
           - name: "serverAddress"
@@ -47,9 +121,14 @@ methods:
           - name: "parser"
             value:
               sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.net.StreamConnection"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.net.StreamConnection"
               uuid: "<init>_streamConnection1"
               fixed: false
+              nameForMock: "{}"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "connectTimeout"
@@ -57,72 +136,33 @@ methods:
               sapientType: "OBJECT"
               content: !<static_method_return>
                 target: "java.time.Duration"
-                method: "ofDays"
+                method: "ofSeconds"
                 methodParameters:
-                - name: "days"
+                - name: "seconds"
                   value:
                     sapientType: "BASIC"
                     content: !<regular>
-                      value: 0
+                      value: 10
+                    suggestedContent: !<regular>
+                      value: 10
                     valueType: "long"
-                    uuid: "<init>_duration1-days"
+                    uuid: "<init>_duration1-seconds"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
               suggestedContent: !<static_method_return>
                 target: "java.time.Duration"
-                method: "ofDays"
+                method: "ofSeconds"
                 methodParameters:
-                - name: "days"
+                - name: "seconds"
                   value:
                     sapientType: "BASIC"
+                    content: !<regular>
+                      value: 10
+                    suggestedContent: !<regular>
+                      value: 10
                     valueType: "long"
-                    uuid: "<init>_duration1-days"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              valueType: "java.time.Duration"
-              uuid: "<init>_duration1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.net.NioClient"
-          parameters:
-          - name: "serverAddress"
-            value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<unknown_object>
-                target: "java.net.SocketAddress"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "java.net.SocketAddress"
-              uuid: "<init>_socketAddress1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "parser"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.net.StreamConnection"
-              uuid: "<init>_streamConnection1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "connectTimeout"
-            value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<static_method_return>
-                target: "java.time.Duration"
-                method: "ofDays"
-                methodParameters:
-                - name: "days"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "long"
-                    uuid: "<init>_duration1-days"
+                    uuid: "<init>_duration1-seconds"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -257,7 +297,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "manager"
-      modelFingerprint: "FC70FB85CB9A13A69BF41773EE1E477A"
+      modelFingerprint: "EE48D8E5D8B2B8829802A7E5DBA56AB7"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -286,6 +326,10 @@ methods:
         - name: "serverAddress"
           value:
             sapientType: "NULL"
+            content: !<unknown_object>
+              target: "java.net.SocketAddress"
+              onlyPojoFunctions: false
+              builderPattern: false
             suggestedContent: !<unknown_object>
               target: "java.net.SocketAddress"
               onlyPojoFunctions: false
@@ -329,6 +373,10 @@ methods:
             - name: "serverAddress"
               value:
                 sapientType: "NULL"
+                content: !<unknown_object>
+                  target: "java.net.SocketAddress"
+                  onlyPojoFunctions: false
+                  builderPattern: false
                 suggestedContent: !<unknown_object>
                   target: "java.net.SocketAddress"
                   onlyPojoFunctions: false
@@ -364,7 +412,7 @@ methods:
             methodParameters:
             - name: "serverAddress"
               value:
-                sapientType: "UNKNOWN"
+                sapientType: "NULL"
                 suggestedContent: !<unknown_object>
                   target: "java.net.SocketAddress"
                   onlyPojoFunctions: false
@@ -393,7 +441,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "1AE663D891F803F03A3E9D5BFE59C8AC"
+      modelFingerprint: "26635DF05CD03ED1D1664B993E3824BA"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -423,6 +471,10 @@ methods:
           - name: "serverAddress"
             value:
               sapientType: "NULL"
+              content: !<unknown_object>
+                target: "java.net.SocketAddress"
+                onlyPojoFunctions: false
+                builderPattern: false
               suggestedContent: !<unknown_object>
                 target: "java.net.SocketAddress"
                 onlyPojoFunctions: false
@@ -458,7 +510,7 @@ methods:
           methodParameters:
           - name: "serverAddress"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "NULL"
               suggestedContent: !<unknown_object>
                 target: "java.net.SocketAddress"
                 onlyPojoFunctions: false
@@ -524,6 +576,10 @@ methods:
                 - name: "serverAddress"
                   value:
                     sapientType: "NULL"
+                    content: !<unknown_object>
+                      target: "java.net.SocketAddress"
+                      onlyPojoFunctions: false
+                      builderPattern: false
                     suggestedContent: !<unknown_object>
                       target: "java.net.SocketAddress"
                       onlyPojoFunctions: false
@@ -559,7 +615,7 @@ methods:
                 methodParameters:
                 - name: "serverAddress"
                   value:
-                    sapientType: "UNKNOWN"
+                    sapientType: "NULL"
                     suggestedContent: !<unknown_object>
                       target: "java.net.SocketAddress"
                       onlyPojoFunctions: false
@@ -614,7 +670,7 @@ methods:
                 methodParameters:
                 - name: "serverAddress"
                   value:
-                    sapientType: "UNKNOWN"
+                    sapientType: "NULL"
                     suggestedContent: !<unknown_object>
                       target: "java.net.SocketAddress"
                       onlyPojoFunctions: false
@@ -728,12 +784,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "8C5C23C6829F48801A1C4FB39DFD160B"
+    modelFingerprint: "597E9991C0C8980746A7785BA0B758F8"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "4A5938CAAF95B74BBB04F2BC47F6DBDB"
+      modelFingerprint: "922D0EF7FC311F356F9D962182DAB02C"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -741,6 +797,80 @@ methods:
       value:
         sapientType: "OBJECT"
         content: !<new>
+          target: "org.bitcoinj.net.NioClient"
+          parameters:
+          - name: "serverAddress"
+            value:
+              sapientType: "NULL"
+              content: !<unknown_object>
+                target: "java.net.SocketAddress"
+                onlyPojoFunctions: false
+                builderPattern: false
+              suggestedContent: !<unknown_object>
+                target: "java.net.SocketAddress"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "java.net.SocketAddress"
+              uuid: "<init>_socketAddress1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "parser"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.net.StreamConnection"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.net.StreamConnection"
+              uuid: "<init>_streamConnection1"
+              fixed: false
+              nameForMock: "{}"
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "connectTimeout"
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.time.Duration"
+                method: "ofSeconds"
+                methodParameters:
+                - name: "seconds"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 10
+                    suggestedContent: !<regular>
+                      value: 10
+                    valueType: "long"
+                    uuid: "<init>_duration1-seconds"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "java.time.Duration"
+                method: "ofSeconds"
+                methodParameters:
+                - name: "seconds"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 10
+                    suggestedContent: !<regular>
+                      value: 10
+                    valueType: "long"
+                    uuid: "<init>_duration1-seconds"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.time.Duration"
+              uuid: "<init>_duration1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
           target: "org.bitcoinj.net.NioClient"
           parameters:
           - name: "serverAddress"
@@ -758,9 +888,14 @@ methods:
           - name: "parser"
             value:
               sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.net.StreamConnection"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.net.StreamConnection"
               uuid: "<init>_streamConnection1"
               fixed: false
+              nameForMock: "{}"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "connectTimeout"
@@ -768,72 +903,33 @@ methods:
               sapientType: "OBJECT"
               content: !<static_method_return>
                 target: "java.time.Duration"
-                method: "ofDays"
+                method: "ofSeconds"
                 methodParameters:
-                - name: "days"
+                - name: "seconds"
                   value:
                     sapientType: "BASIC"
                     content: !<regular>
-                      value: 0
+                      value: 10
+                    suggestedContent: !<regular>
+                      value: 10
                     valueType: "long"
-                    uuid: "<init>_duration1-days"
+                    uuid: "<init>_duration1-seconds"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
               suggestedContent: !<static_method_return>
                 target: "java.time.Duration"
-                method: "ofDays"
+                method: "ofSeconds"
                 methodParameters:
-                - name: "days"
+                - name: "seconds"
                   value:
                     sapientType: "BASIC"
+                    content: !<regular>
+                      value: 10
+                    suggestedContent: !<regular>
+                      value: 10
                     valueType: "long"
-                    uuid: "<init>_duration1-days"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              valueType: "java.time.Duration"
-              uuid: "<init>_duration1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.net.NioClient"
-          parameters:
-          - name: "serverAddress"
-            value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<unknown_object>
-                target: "java.net.SocketAddress"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "java.net.SocketAddress"
-              uuid: "<init>_socketAddress1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "parser"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.net.StreamConnection"
-              uuid: "<init>_streamConnection1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "connectTimeout"
-            value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<static_method_return>
-                target: "java.time.Duration"
-                method: "ofDays"
-                methodParameters:
-                - name: "days"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "long"
-                    uuid: "<init>_duration1-days"
+                    uuid: "<init>_duration1-seconds"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -853,7 +949,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "message"
-      modelFingerprint: "54D9EEAEA514F5356DF5662A69D316E6"
+      modelFingerprint: "E19EC5DE85BF187D32FEBCB627D7B3E9"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -861,9 +957,69 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values: {}
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 1
+              suggestedContent: !<regular>
+                value: 1
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            1:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 2
+              suggestedContent: !<regular>
+                value: 2
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            2:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 3
+              suggestedContent: !<regular>
+                value: 3
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         suggestedContent: !<array>
-          values: {}
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 1
+              suggestedContent: !<regular>
+                value: 1
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            1:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 2
+              suggestedContent: !<regular>
+                value: 2
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            2:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 3
+              suggestedContent: !<regular>
+                value: 3
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "byte[]"
         uuid: "writeBytes_byte[]1"
         fixed: false
@@ -988,7 +1144,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "manager"
-      modelFingerprint: "FC70FB85CB9A13A69BF41773EE1E477A"
+      modelFingerprint: "EE48D8E5D8B2B8829802A7E5DBA56AB7"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -1017,6 +1173,10 @@ methods:
         - name: "serverAddress"
           value:
             sapientType: "NULL"
+            content: !<unknown_object>
+              target: "java.net.SocketAddress"
+              onlyPojoFunctions: false
+              builderPattern: false
             suggestedContent: !<unknown_object>
               target: "java.net.SocketAddress"
               onlyPojoFunctions: false
@@ -1060,6 +1220,10 @@ methods:
             - name: "serverAddress"
               value:
                 sapientType: "NULL"
+                content: !<unknown_object>
+                  target: "java.net.SocketAddress"
+                  onlyPojoFunctions: false
+                  builderPattern: false
                 suggestedContent: !<unknown_object>
                   target: "java.net.SocketAddress"
                   onlyPojoFunctions: false
@@ -1095,7 +1259,7 @@ methods:
             methodParameters:
             - name: "serverAddress"
               value:
-                sapientType: "UNKNOWN"
+                sapientType: "NULL"
                 suggestedContent: !<unknown_object>
                   target: "java.net.SocketAddress"
                   onlyPojoFunctions: false
@@ -1124,7 +1288,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "1AE663D891F803F03A3E9D5BFE59C8AC"
+      modelFingerprint: "26635DF05CD03ED1D1664B993E3824BA"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -1154,6 +1318,10 @@ methods:
           - name: "serverAddress"
             value:
               sapientType: "NULL"
+              content: !<unknown_object>
+                target: "java.net.SocketAddress"
+                onlyPojoFunctions: false
+                builderPattern: false
               suggestedContent: !<unknown_object>
                 target: "java.net.SocketAddress"
                 onlyPojoFunctions: false
@@ -1189,7 +1357,7 @@ methods:
           methodParameters:
           - name: "serverAddress"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "NULL"
               suggestedContent: !<unknown_object>
                 target: "java.net.SocketAddress"
                 onlyPojoFunctions: false
@@ -1255,6 +1423,10 @@ methods:
                 - name: "serverAddress"
                   value:
                     sapientType: "NULL"
+                    content: !<unknown_object>
+                      target: "java.net.SocketAddress"
+                      onlyPojoFunctions: false
+                      builderPattern: false
                     suggestedContent: !<unknown_object>
                       target: "java.net.SocketAddress"
                       onlyPojoFunctions: false
@@ -1290,7 +1462,7 @@ methods:
                 methodParameters:
                 - name: "serverAddress"
                   value:
-                    sapientType: "UNKNOWN"
+                    sapientType: "NULL"
                     suggestedContent: !<unknown_object>
                       target: "java.net.SocketAddress"
                       onlyPojoFunctions: false
@@ -1345,7 +1517,7 @@ methods:
                 methodParameters:
                 - name: "serverAddress"
                   value:
-                    sapientType: "UNKNOWN"
+                    sapientType: "NULL"
                     suggestedContent: !<unknown_object>
                       target: "java.net.SocketAddress"
                       onlyPojoFunctions: false
@@ -1388,7 +1560,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "A25D8035A19E67D655AA36956CF5147A"
+      modelFingerprint: "F6679D9321EDA942C7DC76B7A89776C6"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -1412,9 +1584,69 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  suggestedContent: !<regular>
+                    value: 1
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  suggestedContent: !<regular>
+                    value: 2
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             suggestedContent: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  suggestedContent: !<regular>
+                    value: 1
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  suggestedContent: !<regular>
+                    value: 2
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "byte[]"
             uuid: "writeBytes_byte[]1"
             fixed: false
@@ -1424,7 +1656,17 @@ methods:
         - "java.io.IOException"
         signature: "writeBytes(byte[]): ListenableCompletableFuture throws java.io.IOException"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "OBJECT"
+          content: !<new>
+            target: "org.bitcoinj.utils.ListenableCompletableFuture"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "org.bitcoinj.utils.ListenableCompletableFuture"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
           valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
           genericValueType: "java.lang.Void"
           uuid: "writeBytes_listenableCompletableFuture1"
@@ -1436,13 +1678,23 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "8E15E36321FED74CF220288EB0713D3E"
+      modelFingerprint: "EC5E1929336438B12B8BE888000717C5"
       index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.utils.ListenableCompletableFuture"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.utils.ListenableCompletableFuture"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
         valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
         genericValueType: "java.lang.Void"
         uuid: "writeBytes_listenableCompletableFuture1"

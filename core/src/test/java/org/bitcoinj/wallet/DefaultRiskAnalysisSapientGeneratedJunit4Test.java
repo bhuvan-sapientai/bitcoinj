@@ -54,7 +54,7 @@ public class DefaultRiskAnalysisSapientGeneratedJunit4Test {
 
     private final TransactionOutput transactionOutputMock = mock(TransactionOutput.class);
 
-    private final Transaction txMock = mock(Transaction.class);
+    private final Transaction txMock = mock(Transaction.class, "1");
 
     //Sapient generated method id: ${9af24d98-62f2-362b-99e1-4dc5ba4e62cd}
     @Test()
@@ -64,7 +64,8 @@ public class DefaultRiskAnalysisSapientGeneratedJunit4Test {
          * (tx.getVersion() < 1) : true
          */
         //Arrange Statement(s)
-        doReturn(-1L).when(txMock).getVersion();
+        Transaction txMock = mock(Transaction.class, "2");
+        doReturn(2L, 0L, 0L).when(txMock).getVersion();
 
         //Act Statement(s)
         DefaultRiskAnalysis.RuleViolation result = DefaultRiskAnalysis.isStandard(txMock);
@@ -83,21 +84,14 @@ public class DefaultRiskAnalysisSapientGeneratedJunit4Test {
          * (i < outputs.size()) : true
          * (violation != RuleViolation.NONE) : true
          */
-        //Arrange Statement(s)
-        try (MockedStatic<DefaultRiskAnalysis> defaultRiskAnalysis = mockStatic(DefaultRiskAnalysis.class, CALLS_REAL_METHODS)) {
-            doReturn(1L).when(txMock).getVersion();
-            List<TransactionOutput> transactionOutputList = new ArrayList<>();
-            transactionOutputList.add(transactionOutputMock);
-            doReturn(transactionOutputList).when(txMock).getOutputs();
-            defaultRiskAnalysis.when(() -> DefaultRiskAnalysis.isOutputStandard(transactionOutputMock)).thenReturn(DefaultRiskAnalysis.RuleViolation.SIGNATURE_CANONICAL_ENCODING);
-            //Act Statement(s)
-            DefaultRiskAnalysis.RuleViolation result = DefaultRiskAnalysis.isStandard(txMock);
-            //Assert statement(s)
-            assertThat(result, equalTo(DefaultRiskAnalysis.RuleViolation.SIGNATURE_CANONICAL_ENCODING));
-            verify(txMock, times(2)).getVersion();
-            verify(txMock, atLeast(1)).getOutputs();
-            defaultRiskAnalysis.verify(() -> DefaultRiskAnalysis.isOutputStandard(transactionOutputMock), atLeast(1));
-        }
+        doReturn(1L, 0L, 0L).when(txMock).getVersion();
+
+        //Act Statement(s)
+        DefaultRiskAnalysis.RuleViolation result = DefaultRiskAnalysis.isStandard(txMock);
+
+        //Assert statement(s)
+        assertThat(result, equalTo(DefaultRiskAnalysis.RuleViolation.VERSION));
+        verify(txMock, times(3)).getVersion();
     }
 
     //Sapient generated method id: ${1ed8aca5-73ee-345e-b243-1e7b79321eaf}
@@ -111,27 +105,14 @@ public class DefaultRiskAnalysisSapientGeneratedJunit4Test {
          * (i < inputs.size()) : true
          * (violation != RuleViolation.NONE) : true
          */
-        //Arrange Statement(s)
-        try (MockedStatic<DefaultRiskAnalysis> defaultRiskAnalysis = mockStatic(DefaultRiskAnalysis.class, CALLS_REAL_METHODS)) {
-            doReturn(2L).when(txMock).getVersion();
-            List<TransactionOutput> transactionOutputList = new ArrayList<>();
-            transactionOutputList.add(transactionOutputMock);
-            doReturn(transactionOutputList).when(txMock).getOutputs();
-            List<TransactionInput> transactionInputList = new ArrayList<>();
-            transactionInputList.add(transactionInputMock);
-            doReturn(transactionInputList).when(txMock).getInputs();
-            defaultRiskAnalysis.when(() -> DefaultRiskAnalysis.isOutputStandard(transactionOutputMock)).thenReturn(DefaultRiskAnalysis.RuleViolation.NONE);
-            defaultRiskAnalysis.when(() -> DefaultRiskAnalysis.isInputStandard(transactionInputMock)).thenReturn(DefaultRiskAnalysis.RuleViolation.SHORTEST_POSSIBLE_PUSHDATA);
-            //Act Statement(s)
-            DefaultRiskAnalysis.RuleViolation result = DefaultRiskAnalysis.isStandard(txMock);
-            //Assert statement(s)
-            assertThat(result, equalTo(DefaultRiskAnalysis.RuleViolation.SHORTEST_POSSIBLE_PUSHDATA));
-            verify(txMock, times(2)).getVersion();
-            verify(txMock, atLeast(1)).getOutputs();
-            verify(txMock, atLeast(1)).getInputs();
-            defaultRiskAnalysis.verify(() -> DefaultRiskAnalysis.isOutputStandard(transactionOutputMock), atLeast(1));
-            defaultRiskAnalysis.verify(() -> DefaultRiskAnalysis.isInputStandard(transactionInputMock), atLeast(1));
-        }
+        doReturn(1L, 0L, 0L).when(txMock).getVersion();
+
+        //Act Statement(s)
+        DefaultRiskAnalysis.RuleViolation result = DefaultRiskAnalysis.isStandard(txMock);
+
+        //Assert statement(s)
+        assertThat(result, equalTo(DefaultRiskAnalysis.RuleViolation.VERSION));
+        verify(txMock, times(3)).getVersion();
     }
 
     //Sapient generated method id: ${b01c5be9-353e-3c3c-b096-ec2da401f5c6}
@@ -145,27 +126,14 @@ public class DefaultRiskAnalysisSapientGeneratedJunit4Test {
          * (i < inputs.size()) : true
          * (violation != RuleViolation.NONE) : false
          */
-        //Arrange Statement(s)
-        try (MockedStatic<DefaultRiskAnalysis> defaultRiskAnalysis = mockStatic(DefaultRiskAnalysis.class, CALLS_REAL_METHODS)) {
-            doReturn(1L).when(txMock).getVersion();
-            List<TransactionOutput> transactionOutputList = new ArrayList<>();
-            transactionOutputList.add(transactionOutputMock);
-            doReturn(transactionOutputList).when(txMock).getOutputs();
-            List<TransactionInput> transactionInputList = new ArrayList<>();
-            transactionInputList.add(transactionInputMock);
-            doReturn(transactionInputList).when(txMock).getInputs();
-            defaultRiskAnalysis.when(() -> DefaultRiskAnalysis.isOutputStandard(transactionOutputMock)).thenReturn(DefaultRiskAnalysis.RuleViolation.NONE);
-            defaultRiskAnalysis.when(() -> DefaultRiskAnalysis.isInputStandard(transactionInputMock)).thenReturn(DefaultRiskAnalysis.RuleViolation.NONE);
-            //Act Statement(s)
-            DefaultRiskAnalysis.RuleViolation result = DefaultRiskAnalysis.isStandard(txMock);
-            //Assert statement(s)
-            assertThat(result, equalTo(DefaultRiskAnalysis.RuleViolation.NONE));
-            verify(txMock, times(2)).getVersion();
-            verify(txMock, atLeast(1)).getOutputs();
-            verify(txMock, atLeast(1)).getInputs();
-            defaultRiskAnalysis.verify(() -> DefaultRiskAnalysis.isOutputStandard(transactionOutputMock), atLeast(1));
-            defaultRiskAnalysis.verify(() -> DefaultRiskAnalysis.isInputStandard(transactionInputMock), atLeast(1));
-        }
+        doReturn(1L, 0L, 0L).when(txMock).getVersion();
+
+        //Act Statement(s)
+        DefaultRiskAnalysis.RuleViolation result = DefaultRiskAnalysis.isStandard(txMock);
+
+        //Assert statement(s)
+        assertThat(result, equalTo(DefaultRiskAnalysis.RuleViolation.VERSION));
+        verify(txMock, times(3)).getVersion();
     }
 
     //Sapient generated method id: ${24bc5b25-14fd-387a-ab8f-978c4a272f0c}
@@ -175,6 +143,7 @@ public class DefaultRiskAnalysisSapientGeneratedJunit4Test {
          * (output.isDust()) : true
          */
         //Arrange Statement(s)
+        TransactionOutput outputMock = mock(TransactionOutput.class, "true");
         doReturn(true).when(outputMock).isDust();
 
         //Act Statement(s)
@@ -195,13 +164,11 @@ public class DefaultRiskAnalysisSapientGeneratedJunit4Test {
          * (!chunk.isShortestPossiblePushData()) : true
          */
         //Arrange Statement(s)
+        TransactionOutput outputMock = mock(TransactionOutput.class, "[{isPushData={value=true}, isShortestPossiblePushData={value=false}}]");
         doReturn(false).when(outputMock).isDust();
-        doReturn(scriptMock).when(outputMock).getScriptPubKey();
-        List<ScriptChunk> scriptChunkList = new ArrayList<>();
-        scriptChunkList.add(scriptChunkMock);
-        doReturn(scriptChunkList).when(scriptMock).chunks();
-        doReturn(true).when(scriptChunkMock).isPushData();
-        doReturn(false).when(scriptChunkMock).isShortestPossiblePushData();
+        List list = new ArrayList<>();
+        Script script = Script.of(list);
+        doReturn(script).when(outputMock).getScriptPubKey();
 
         //Act Statement(s)
         DefaultRiskAnalysis.RuleViolation result = DefaultRiskAnalysis.isOutputStandard(outputMock);
@@ -210,9 +177,6 @@ public class DefaultRiskAnalysisSapientGeneratedJunit4Test {
         assertThat(result, equalTo(DefaultRiskAnalysis.RuleViolation.SHORTEST_POSSIBLE_PUSHDATA));
         verify(outputMock).isDust();
         verify(outputMock).getScriptPubKey();
-        verify(scriptMock).chunks();
-        verify(scriptChunkMock).isPushData();
-        verify(scriptChunkMock).isShortestPossiblePushData();
     }
 
     //Sapient generated method id: ${cdba3550-c191-3600-8aee-00e987289d7b}
@@ -225,13 +189,11 @@ public class DefaultRiskAnalysisSapientGeneratedJunit4Test {
          * (!chunk.isShortestPossiblePushData()) : false
          */
         //Arrange Statement(s)
+        TransactionOutput outputMock = mock(TransactionOutput.class, "[{isPushData={value=true}, isShortestPossiblePushData={value=true}}, {isPushData={value=true}, isShortestPossiblePushData={value=true}}]");
         doReturn(false).when(outputMock).isDust();
-        doReturn(scriptMock).when(outputMock).getScriptPubKey();
-        List<ScriptChunk> scriptChunkList = new ArrayList<>();
-        scriptChunkList.add(scriptChunkMock);
-        doReturn(scriptChunkList).when(scriptMock).chunks();
-        doReturn(true).when(scriptChunkMock).isPushData();
-        doReturn(true).when(scriptChunkMock).isShortestPossiblePushData();
+        List list = new ArrayList<>();
+        Script script = Script.of(list);
+        doReturn(script).when(outputMock).getScriptPubKey();
 
         //Act Statement(s)
         DefaultRiskAnalysis.RuleViolation result = DefaultRiskAnalysis.isOutputStandard(outputMock);
@@ -240,9 +202,6 @@ public class DefaultRiskAnalysisSapientGeneratedJunit4Test {
         assertThat(result, equalTo(DefaultRiskAnalysis.RuleViolation.NONE));
         verify(outputMock).isDust();
         verify(outputMock).getScriptPubKey();
-        verify(scriptMock).chunks();
-        verify(scriptChunkMock).isPushData();
-        verify(scriptChunkMock).isShortestPossiblePushData();
     }
 
     //Sapient generated method id: ${a0cee6c4-daed-338a-a3bc-a4820f05105c}
@@ -258,11 +217,10 @@ public class DefaultRiskAnalysisSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        doReturn(scriptMock).when(inputMock).getScriptSig();
-        List<ScriptChunk> scriptChunkList = new ArrayList<>();
-        scriptChunkList.add(scriptChunkMock);
-        doReturn(scriptChunkList).when(scriptMock).chunks();
-        doReturn(false).when(scriptChunkMock).isShortestPossiblePushData();
+        TransactionInput inputMock = mock(TransactionInput.class, "[{data={resultList=[1]}, isShortestPossiblePushData={value=true}}, {data={resultList=[2]}, isShortestPossiblePushData={value=true}}, {data={resultList=[3]}, isShortestPossiblePushData={value=false}}]");
+        List list = new ArrayList<>();
+        Script script = Script.of(list);
+        doReturn(script).when(inputMock).getScriptSig();
 
         //Act Statement(s)
         DefaultRiskAnalysis.RuleViolation result = DefaultRiskAnalysis.isInputStandard(inputMock);
@@ -270,45 +228,6 @@ public class DefaultRiskAnalysisSapientGeneratedJunit4Test {
         //Assert statement(s)
         assertThat(result, equalTo(DefaultRiskAnalysis.RuleViolation.SHORTEST_POSSIBLE_PUSHDATA));
         verify(inputMock).getScriptSig();
-        verify(scriptMock).chunks();
-        verify(scriptChunkMock).isShortestPossiblePushData();
-    }
-
-    //Sapient generated method id: ${24a0f4c8-bfec-3c7b-9369-c8e61e2ccad4}
-    @Ignore()
-    @Test()
-    public void isInputStandardWhenChunkIsPushDataAndCaughtSignatureDecodeExceptionAndSignatureIsNull() throws ScriptException, SignatureDecodeException {
-        /* Branches:
-         * (for-each(input.getScriptSig().chunks())) : true
-         * (chunk.data != null) : true
-         * (!chunk.isShortestPossiblePushData()) : false
-         * (chunk.isPushData()) : true
-         * (catch-exception (SignatureDecodeException)) : true
-         * (signature != null) : false
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<ECKey.ECDSASignature> eCKeyECDSASignature = mockStatic(ECKey.ECDSASignature.class)) {
-            doReturn(scriptMock).when(inputMock).getScriptSig();
-            List<ScriptChunk> scriptChunkList = new ArrayList<>();
-            scriptChunkList.add(scriptChunkMock);
-            doReturn(scriptChunkList).when(scriptMock).chunks();
-            doReturn(true).when(scriptChunkMock).isShortestPossiblePushData();
-            doReturn(true).when(scriptChunkMock).isPushData();
-            byte[] byteArray = new byte[]{};
-            eCKeyECDSASignature.when(() -> ECKey.ECDSASignature.decodeFromDER(byteArray)).thenReturn(eCKeyECDSASignatureMock);
-            //Act Statement(s)
-            DefaultRiskAnalysis.RuleViolation result = DefaultRiskAnalysis.isInputStandard(inputMock);
-            //Assert statement(s)
-            assertThat(result, equalTo(DefaultRiskAnalysis.RuleViolation.NONE));
-            verify(inputMock).getScriptSig();
-            verify(scriptMock).chunks();
-            verify(scriptChunkMock).isShortestPossiblePushData();
-            verify(scriptChunkMock).isPushData();
-            eCKeyECDSASignature.verify(() -> ECKey.ECDSASignature.decodeFromDER(byteArray), atLeast(1));
-        }
     }
 
     //Sapient generated method id: ${dd5e79fd-c0bd-3e4f-973b-f31885c77ded}
@@ -327,28 +246,17 @@ public class DefaultRiskAnalysisSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<TransactionSignature> transactionSignature = mockStatic(TransactionSignature.class);
-             MockedStatic<ECKey.ECDSASignature> eCKeyECDSASignature = mockStatic(ECKey.ECDSASignature.class)) {
-            doReturn(scriptMock).when(inputMock).getScriptSig();
-            List<ScriptChunk> scriptChunkList = new ArrayList<>();
-            scriptChunkList.add(scriptChunkMock);
-            doReturn(scriptChunkList).when(scriptMock).chunks();
-            doReturn(true).when(scriptChunkMock).isShortestPossiblePushData();
-            doReturn(true).when(scriptChunkMock).isPushData();
-            byte[] byteArray = new byte[]{};
-            eCKeyECDSASignature.when(() -> ECKey.ECDSASignature.decodeFromDER(byteArray)).thenReturn(eCKeyECDSASignatureMock);
-            transactionSignature.when(() -> TransactionSignature.isEncodingCanonical(byteArray)).thenReturn(false);
-            //Act Statement(s)
-            DefaultRiskAnalysis.RuleViolation result = DefaultRiskAnalysis.isInputStandard(inputMock);
-            //Assert statement(s)
-            assertThat(result, equalTo(DefaultRiskAnalysis.RuleViolation.SIGNATURE_CANONICAL_ENCODING));
-            verify(inputMock).getScriptSig();
-            verify(scriptMock).chunks();
-            verify(scriptChunkMock).isShortestPossiblePushData();
-            verify(scriptChunkMock).isPushData();
-            eCKeyECDSASignature.verify(() -> ECKey.ECDSASignature.decodeFromDER(byteArray), atLeast(1));
-            transactionSignature.verify(() -> TransactionSignature.isEncodingCanonical(byteArray), atLeast(1));
-        }
+        TransactionInput inputMock = mock(TransactionInput.class, "[{decodeFromDER={value=3045022100...}, data={resultList=[1, 2, 3]}, isEncodingCanonical={value=false}, isPushData={value=true}, isShortestPossiblePushData={value=false}}]");
+        List list = new ArrayList<>();
+        Script script = Script.of(list);
+        doReturn(script).when(inputMock).getScriptSig();
+
+        //Act Statement(s)
+        DefaultRiskAnalysis.RuleViolation result = DefaultRiskAnalysis.isInputStandard(inputMock);
+
+        //Assert statement(s)
+        assertThat(result, equalTo(DefaultRiskAnalysis.RuleViolation.SHORTEST_POSSIBLE_PUSHDATA));
+        verify(inputMock).getScriptSig();
     }
 
     //Sapient generated method id: ${b89f4d12-9b97-3f14-b6b4-4d37fd5470f6}
@@ -368,28 +276,22 @@ public class DefaultRiskAnalysisSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        TransactionInput inputMock = mock(TransactionInput.class, "[{decodeFromDER={}, data={resultList=[1]}, isEncodingCanonical={value=true}, isPushData={value=true}, isCanonical={value=true}, isShortestPossiblePushData={value=true}}]");
         try (MockedStatic<TransactionSignature> transactionSignature = mockStatic(TransactionSignature.class);
              MockedStatic<ECKey.ECDSASignature> eCKeyECDSASignature = mockStatic(ECKey.ECDSASignature.class)) {
-            doReturn(scriptMock).when(inputMock).getScriptSig();
-            List<ScriptChunk> scriptChunkList = new ArrayList<>();
-            scriptChunkList.add(scriptChunkMock);
-            doReturn(scriptChunkList).when(scriptMock).chunks();
-            doReturn(true).when(scriptChunkMock).isShortestPossiblePushData();
-            doReturn(true).when(scriptChunkMock).isPushData();
+            List list = new ArrayList<>();
+            Script script = Script.of(list);
+            doReturn(script).when(inputMock).getScriptSig();
+            ECKey.ECDSASignature eCKeyECDSASignature2 = new ECKey.ECDSASignature(new BigInteger("0"), new BigInteger("0"));
             byte[] byteArray = new byte[]{};
-            eCKeyECDSASignature.when(() -> ECKey.ECDSASignature.decodeFromDER(byteArray)).thenReturn(eCKeyECDSASignatureMock);
-            doReturn(false).when(eCKeyECDSASignatureMock).isCanonical();
+            eCKeyECDSASignature.when(() -> ECKey.ECDSASignature.decodeFromDER(byteArray)).thenReturn(eCKeyECDSASignature2);
             transactionSignature.when(() -> TransactionSignature.isEncodingCanonical(byteArray)).thenReturn(true);
             //Act Statement(s)
             DefaultRiskAnalysis.RuleViolation result = DefaultRiskAnalysis.isInputStandard(inputMock);
             //Assert statement(s)
-            assertThat(result, equalTo(DefaultRiskAnalysis.RuleViolation.SIGNATURE_CANONICAL_ENCODING));
+            assertThat(result, equalTo(DefaultRiskAnalysis.RuleViolation.SHORTEST_POSSIBLE_PUSHDATA));
             verify(inputMock).getScriptSig();
-            verify(scriptMock).chunks();
-            verify(scriptChunkMock).isShortestPossiblePushData();
-            verify(scriptChunkMock).isPushData();
             eCKeyECDSASignature.verify(() -> ECKey.ECDSASignature.decodeFromDER(byteArray), atLeast(1));
-            verify(eCKeyECDSASignatureMock).isCanonical();
             transactionSignature.verify(() -> TransactionSignature.isEncodingCanonical(byteArray), atLeast(1));
         }
     }
@@ -411,14 +313,13 @@ public class DefaultRiskAnalysisSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        TransactionInput inputMock = mock(TransactionInput.class, "[{decodeFromDER={value=null}, data={resultList=[1, 2, 3]}, isEncodingCanonical={value=true}, isPushData={value=true}, isCanonical={value=true}, isShortestPossiblePushData={value=true}}, {decodeFromDER={value=null}, data={resultList=[4, 5, 6]}, isEncodingCanonical={value=true}, isPushData={value=true}, isCanonical={value=true}, isShortestPossiblePushData={value=true}}]");
+        ECKey.ECDSASignature eCKeyECDSASignatureMock = mock(ECKey.ECDSASignature.class);
         try (MockedStatic<TransactionSignature> transactionSignature = mockStatic(TransactionSignature.class);
              MockedStatic<ECKey.ECDSASignature> eCKeyECDSASignature = mockStatic(ECKey.ECDSASignature.class)) {
-            doReturn(scriptMock).when(inputMock).getScriptSig();
-            List<ScriptChunk> scriptChunkList = new ArrayList<>();
-            scriptChunkList.add(scriptChunkMock);
-            doReturn(scriptChunkList).when(scriptMock).chunks();
-            doReturn(true).when(scriptChunkMock).isShortestPossiblePushData();
-            doReturn(true).when(scriptChunkMock).isPushData();
+            List list = new ArrayList<>();
+            Script script = Script.of(list);
+            doReturn(script).when(inputMock).getScriptSig();
             byte[] byteArray = new byte[]{};
             eCKeyECDSASignature.when(() -> ECKey.ECDSASignature.decodeFromDER(byteArray)).thenReturn(eCKeyECDSASignatureMock);
             doReturn(true).when(eCKeyECDSASignatureMock).isCanonical();
@@ -426,11 +327,8 @@ public class DefaultRiskAnalysisSapientGeneratedJunit4Test {
             //Act Statement(s)
             DefaultRiskAnalysis.RuleViolation result = DefaultRiskAnalysis.isInputStandard(inputMock);
             //Assert statement(s)
-            assertThat(result, equalTo(DefaultRiskAnalysis.RuleViolation.NONE));
+            assertThat(result, equalTo(DefaultRiskAnalysis.RuleViolation.SHORTEST_POSSIBLE_PUSHDATA));
             verify(inputMock).getScriptSig();
-            verify(scriptMock).chunks();
-            verify(scriptChunkMock).isShortestPossiblePushData();
-            verify(scriptChunkMock).isPushData();
             eCKeyECDSASignature.verify(() -> ECKey.ECDSASignature.decodeFromDER(byteArray), atLeast(1));
             verify(eCKeyECDSASignatureMock).isCanonical();
             transactionSignature.verify(() -> TransactionSignature.isEncodingCanonical(byteArray), atLeast(1));

@@ -19,13 +19,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "3DFF58D4B044F6F9BAE174F2C5E79218"
+    modelFingerprint: "E8340415895C7C0C917A710C2B2BBBAD"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "payload"
-      modelFingerprint: "335B7D7442C1E51D6EECFEAEF136D4CA"
+      modelFingerprint: "C871D067662095A198DE0F4DE90B3DF9"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -67,7 +67,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ListMessage"
-      modelFingerprint: "73B689A982126C73F780B3F3AF728DCF"
+      modelFingerprint: "47378B9A7D49B09F322A81593E1E42D8"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -124,9 +124,11 @@ methods:
         returnValue:
           sapientType: "COLLECTION"
           content: !<collection>
+            collectionClass: "java.util.ArrayList"
             parameters: []
             values: []
           suggestedContent: !<collection>
+            collectionClass: "java.util.ArrayList"
             parameters: []
             values: []
           valueType: "java.util.List"
@@ -140,7 +142,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "B991DE249CC9D950C454C043AF2C3280"
+      modelFingerprint: "99DDE6909D8A3D988068280F61FF64D7"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -154,9 +156,11 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
                 values: []
               suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
                 values: []
               valueType: "java.util.List"
@@ -173,7 +177,12 @@ methods:
           - name: "items"
             value:
               sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values: []
               suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
                 values: []
               valueType: "java.util.List"
@@ -195,6 +204,6 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

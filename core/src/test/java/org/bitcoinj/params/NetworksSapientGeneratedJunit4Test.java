@@ -30,18 +30,6 @@ public class NetworksSapientGeneratedJunit4Test {
     @Rule()
     public Timeout timeoutRule = Timeout.seconds(5);
 
-    //Sapient generated method id: ${9c25887d-767d-38e9-b5ae-c2e4012c49be}
-    @Ignore()
-    @Test()
-    public void getTest() {
-
-        //Act Statement(s)
-        Set<NetworkParameters> result = Networks.get();
-
-        //Assert statement(s)
-        assertThat(result.size(), equalTo(0));
-    }
-
     //Sapient generated method id: ${2065002a-9c1f-335e-ba7c-3ceed12bc7e9}
     @Ignore()
     @Test()
@@ -65,11 +53,11 @@ public class NetworksSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        NetworkParameters networkParametersMock = mock(NetworkParameters.class, "8080");
         try (MockedStatic<Networks> networks = mockStatic(Networks.class, CALLS_REAL_METHODS)) {
             networks.when(() -> Networks.register(anySet())).thenAnswer((Answer<Void>) invocation -> null);
-            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
             //Act Statement(s)
-            Networks.register(networkParameters);
+            Networks.register(networkParametersMock);
             //Assert statement(s)
             networks.verify(() -> Networks.register(anySet()), atLeast(1));
         }
@@ -83,7 +71,11 @@ public class NetworksSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+        NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
         Collection<NetworkParameters> collection = new ArrayList<>();
+        collection.add(networkParameters);
+        collection.add(networkParameters2);
 
         //Act Statement(s)
         Networks.register(collection);

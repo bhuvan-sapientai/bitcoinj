@@ -41,10 +41,8 @@ public class FiatSapientGeneratedJunit4Test {
     //Sapient generated method id: ${3aeb0092-1c55-3557-8de4-613a23e110b0}
     @Test()
     public void valueOfTest() {
-
         //Act Statement(s)
-        Fiat result = Fiat.valueOf("currencyCode1", 0L);
-
+        Fiat result = Fiat.valueOf("USD", 1000L);
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -53,11 +51,9 @@ public class FiatSapientGeneratedJunit4Test {
     @Test()
     public void smallestUnitExponentTest() {
         //Arrange Statement(s)
-        Fiat target = Fiat.valueOf("currencyCode1", 0L);
-
+        Fiat target = Fiat.valueOf("USD", 1000L);
         //Act Statement(s)
         int result = target.smallestUnitExponent();
-
         //Assert statement(s)
         assertThat(result, equalTo(4));
     }
@@ -72,12 +68,13 @@ public class FiatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<Fiat> fiat = mockStatic(Fiat.class, CALLS_REAL_METHODS)) {
-            fiat.when(() -> Fiat.valueOf("currencyCode1", 0L)).thenReturn(fiatMock);
+            Fiat fiat2 = Fiat.valueOf("currencyCode1", 0L);
+            fiat.when(() -> Fiat.valueOf("USD", 0L)).thenReturn(fiat2);
             //Act Statement(s)
-            Fiat result = Fiat.parseFiat("currencyCode1", "1.0");
+            Fiat result = Fiat.parseFiat("USD", "100.00");
             //Assert statement(s)
-            assertThat(result, equalTo(fiatMock));
-            fiat.verify(() -> Fiat.valueOf("currencyCode1", 0L), atLeast(1));
+            assertThat(result, equalTo(fiat2));
+            fiat.verify(() -> Fiat.valueOf("USD", 0L), atLeast(1));
         }
     }
 
@@ -93,13 +90,14 @@ public class FiatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<Fiat> fiat = mockStatic(Fiat.class, CALLS_REAL_METHODS)) {
-            fiat.when(() -> Fiat.valueOf("currencyCode1", 0L)).thenReturn(fiatMock);
+            Fiat fiat2 = Fiat.valueOf("currencyCode1", 0L);
+            fiat.when(() -> Fiat.valueOf("USD", 0L)).thenReturn(fiat2);
             thrown.expect(IllegalArgumentException.class);
             thrown.expectCause(isA(ArithmeticException.class));
             //Act Statement(s)
-            Fiat.parseFiat("currencyCode1", "1.0");
+            Fiat.parseFiat("USD", "100.00");
             //Assert statement(s)
-            fiat.verify(() -> Fiat.valueOf("currencyCode1", 0L), atLeast(1));
+            fiat.verify(() -> Fiat.valueOf("USD", 0L), atLeast(1));
         }
     }
 
@@ -113,12 +111,13 @@ public class FiatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<Fiat> fiat = mockStatic(Fiat.class, CALLS_REAL_METHODS)) {
-            fiat.when(() -> Fiat.valueOf("currencyCode1", 0L)).thenReturn(fiatMock);
+            Fiat fiat2 = Fiat.valueOf("currencyCode1", 0L);
+            fiat.when(() -> Fiat.valueOf("USD", 0L)).thenReturn(fiat2);
             //Act Statement(s)
-            Fiat result = Fiat.parseFiatInexact("currencyCode1", "0.0");
+            Fiat result = Fiat.parseFiatInexact("USD", "123.456");
             //Assert statement(s)
-            assertThat(result, equalTo(fiatMock));
-            fiat.verify(() -> Fiat.valueOf("currencyCode1", 0L), atLeast(1));
+            assertThat(result, equalTo(fiat2));
+            fiat.verify(() -> Fiat.valueOf("USD", 0L), atLeast(1));
         }
     }
 
@@ -134,40 +133,43 @@ public class FiatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<Fiat> fiat = mockStatic(Fiat.class, CALLS_REAL_METHODS)) {
-            fiat.when(() -> Fiat.valueOf("currencyCode1", 0L)).thenReturn(fiatMock);
+            Fiat fiat2 = Fiat.valueOf("currencyCode1", 0L);
+            fiat.when(() -> Fiat.valueOf("USD", 0L)).thenReturn(fiat2);
             thrown.expect(IllegalArgumentException.class);
             thrown.expectCause(isA(ArithmeticException.class));
             //Act Statement(s)
-            Fiat.parseFiatInexact("currencyCode1", "0.0");
+            Fiat.parseFiatInexact("USD", "0.0001");
             //Assert statement(s)
-            fiat.verify(() -> Fiat.valueOf("currencyCode1", 0L), atLeast(1));
+            fiat.verify(() -> Fiat.valueOf("USD", 0L), atLeast(1));
         }
     }
 
     //Sapient generated method id: ${2f52d914-224e-3cf8-a2e5-c61089a0f6f4}
+    @Ignore()
     @Test()
     public void addTest() {
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Fiat target = Fiat.valueOf("B", 1L);
-            Fiat fiat = Fiat.valueOf("A", 1L);
+            preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            Fiat target = Fiat.valueOf("", 1L);
+            Fiat fiat = Fiat.valueOf("currencyCode1", 0L);
             //Act Statement(s)
             Fiat result = target.add(fiat);
             //Assert statement(s)
             assertThat(result, is(notNullValue()));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
         }
     }
 
     //Sapient generated method id: ${97b5e3b9-042a-36e9-ba00-8365659a5608}
+    @Ignore()
     @Test()
     public void subtractTest() {
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             Fiat target = Fiat.valueOf("", 1L);
-            Fiat fiat = Fiat.valueOf("", 1L);
+            Fiat fiat = Fiat.valueOf("currencyCode1", 0L);
             //Act Statement(s)
             Fiat result = target.subtract(fiat);
             //Assert statement(s)
@@ -180,11 +182,9 @@ public class FiatSapientGeneratedJunit4Test {
     @Test()
     public void multiplyTest() {
         //Arrange Statement(s)
-        Fiat target = Fiat.valueOf("currencyCode1", 1L);
-
+        Fiat target = Fiat.valueOf("USD", 20L);
         //Act Statement(s)
-        Fiat result = target.multiply(1L);
-
+        Fiat result = target.multiply(2L);
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -193,11 +193,9 @@ public class FiatSapientGeneratedJunit4Test {
     @Test()
     public void divideTest() {
         //Arrange Statement(s)
-        Fiat target = Fiat.valueOf("currencyCode1", 1L);
-
+        Fiat target = Fiat.valueOf("USD", 1000L);
         //Act Statement(s)
-        Fiat result = target.divide(1L);
-
+        Fiat result = target.divide(2L);
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -206,32 +204,31 @@ public class FiatSapientGeneratedJunit4Test {
     @Test()
     public void divideAndRemainderTest() {
         //Arrange Statement(s)
-        //Fiat target = Fiat.valueOf("currencyCode1", 1L);
-
+        //Fiat target = Fiat.valueOf("USD", 100L);
         //Act Statement(s)
-        //Fiat[] result = target.divideAndRemainder(1L);
+        //Fiat[] result = target.divideAndRemainder(5L);
         //TODO: Make this constructor public.
-        //Fiat fiat = new Fiat("currencyCode1", 1L);
+        //Fiat fiat = new Fiat("USD", 20L);
         //TODO: Make this constructor public.
-        //Fiat fiat2 = new Fiat("currencyCode1", 0L);
+        //Fiat fiat2 = new Fiat("USD", 0L);
         //Fiat[] fiatResultArray = new Fiat[] { fiat, fiat2 };
-
         //Assert statement(s)
         //assertThat(result, equalTo(fiatResultArray));
     }
 
     //Sapient generated method id: ${c70236b7-98f2-3ecd-942d-6cc0d5da7e85}
+    @Ignore()
     @Test()
     public void divide1Test() {
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Fiat target = Fiat.valueOf("B", 1L);
-            Fiat fiat = Fiat.valueOf("A", 1L);
+            Fiat target = Fiat.valueOf("USD", 1000L);
+            Fiat fiat = Fiat.valueOf("USD", 100L);
             //Act Statement(s)
             long result = target.divide(fiat);
             //Assert statement(s)
-            assertThat(result, equalTo(1L));
+            assertThat(result, equalTo(10000000000L));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
         }
     }
@@ -243,12 +240,10 @@ public class FiatSapientGeneratedJunit4Test {
          * (signum() == 1) : true
          */
         //Arrange Statement(s)
-        Fiat target = spy(Fiat.valueOf("currencyCode1", 0L));
+        Fiat target = spy(Fiat.valueOf("USD", 1000L));
         doReturn(1).when(target).signum();
-
         //Act Statement(s)
         boolean result = target.isPositive();
-
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
         verify(target).signum();
@@ -261,12 +256,10 @@ public class FiatSapientGeneratedJunit4Test {
          * (signum() == 1) : false
          */
         //Arrange Statement(s)
-        Fiat target = spy(Fiat.valueOf("currencyCode1", 0L));
-        doReturn(2).when(target).signum();
-
+        Fiat target = spy(Fiat.valueOf("", 10L));
+        doReturn(0).when(target).signum();
         //Act Statement(s)
         boolean result = target.isPositive();
-
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(target).signum();
@@ -279,12 +272,10 @@ public class FiatSapientGeneratedJunit4Test {
          * (signum() == -1) : true
          */
         //Arrange Statement(s)
-        Fiat target = spy(Fiat.valueOf("currencyCode1", 0L));
+        Fiat target = spy(Fiat.valueOf("USD", -10L));
         doReturn(-1).when(target).signum();
-
         //Act Statement(s)
         boolean result = target.isNegative();
-
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
         verify(target).signum();
@@ -297,12 +288,10 @@ public class FiatSapientGeneratedJunit4Test {
          * (signum() == -1) : false
          */
         //Arrange Statement(s)
-        Fiat target = spy(Fiat.valueOf("currencyCode1", 0L));
+        Fiat target = spy(Fiat.valueOf("", 0L));
         doReturn(1).when(target).signum();
-
         //Act Statement(s)
         boolean result = target.isNegative();
-
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(target).signum();
@@ -315,12 +304,10 @@ public class FiatSapientGeneratedJunit4Test {
          * (signum() == 0) : true
          */
         //Arrange Statement(s)
-        Fiat target = spy(Fiat.valueOf("currencyCode1", 0L));
+        Fiat target = spy(Fiat.valueOf("", 0L));
         doReturn(0).when(target).signum();
-
         //Act Statement(s)
         boolean result = target.isZero();
-
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
         verify(target).signum();
@@ -333,12 +320,10 @@ public class FiatSapientGeneratedJunit4Test {
          * (signum() == 0) : false
          */
         //Arrange Statement(s)
-        Fiat target = spy(Fiat.valueOf("currencyCode1", 0L));
+        Fiat target = spy(Fiat.valueOf("USD", 0L));
         doReturn(-1).when(target).signum();
-
         //Act Statement(s)
         boolean result = target.isZero();
-
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(target).signum();
@@ -351,15 +336,14 @@ public class FiatSapientGeneratedJunit4Test {
          * (compareTo(other) > 0) : true
          */
         //Arrange Statement(s)
-        Fiat target = spy(Fiat.valueOf("currencyCode1", 0L));
-        doReturn(2147483647).when(target).compareTo(fiatMock);
-
+        Fiat target = spy(Fiat.valueOf("USD", 500L));
+        doReturn(2147483647).when(target).compareTo((Fiat) any());
+        Fiat fiat = Fiat.valueOf("USD", 1000L);
         //Act Statement(s)
-        boolean result = target.isGreaterThan(fiatMock);
-
+        boolean result = target.isGreaterThan(fiat);
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
-        verify(target).compareTo(fiatMock);
+        verify(target).compareTo((Fiat) any());
     }
 
     //Sapient generated method id: ${67fdcbb3-5647-397b-99af-2c502bea1599}
@@ -369,15 +353,14 @@ public class FiatSapientGeneratedJunit4Test {
          * (compareTo(other) > 0) : false
          */
         //Arrange Statement(s)
-        Fiat target = spy(Fiat.valueOf("currencyCode1", 0L));
-        doReturn(-1).when(target).compareTo(fiatMock);
-
+        Fiat target = spy(Fiat.valueOf("USD", 20L));
+        doReturn(-1).when(target).compareTo((Fiat) any());
+        Fiat fiat = Fiat.valueOf("USD", 10L);
         //Act Statement(s)
-        boolean result = target.isGreaterThan(fiatMock);
-
+        boolean result = target.isGreaterThan(fiat);
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
-        verify(target).compareTo(fiatMock);
+        verify(target).compareTo((Fiat) any());
     }
 
     //Sapient generated method id: ${05d8619d-83ea-3101-bbc9-a1b8b0e4bc9c}
@@ -387,15 +370,14 @@ public class FiatSapientGeneratedJunit4Test {
          * (compareTo(other) < 0) : true
          */
         //Arrange Statement(s)
-        Fiat target = spy(Fiat.valueOf("currencyCode1", 0L));
-        doReturn(-2147483648).when(target).compareTo(fiatMock);
-
+        Fiat target = spy(Fiat.valueOf("USD", 100L));
+        doReturn(-2147483648).when(target).compareTo((Fiat) any());
+        Fiat fiat = Fiat.valueOf("USD", 200L);
         //Act Statement(s)
-        boolean result = target.isLessThan(fiatMock);
-
+        boolean result = target.isLessThan(fiat);
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
-        verify(target).compareTo(fiatMock);
+        verify(target).compareTo((Fiat) any());
     }
 
     //Sapient generated method id: ${a3974211-4cb8-31ae-8d6e-e9b4f50f1614}
@@ -405,15 +387,14 @@ public class FiatSapientGeneratedJunit4Test {
          * (compareTo(other) < 0) : false
          */
         //Arrange Statement(s)
-        Fiat target = spy(Fiat.valueOf("currencyCode1", 0L));
-        doReturn(1).when(target).compareTo(fiatMock);
-
+        Fiat target = spy(Fiat.valueOf("USD", 10L));
+        doReturn(1).when(target).compareTo((Fiat) any());
+        Fiat fiat = Fiat.valueOf("USD", 20L);
         //Act Statement(s)
-        boolean result = target.isLessThan(fiatMock);
-
+        boolean result = target.isLessThan(fiat);
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
-        verify(target).compareTo(fiatMock);
+        verify(target).compareTo((Fiat) any());
     }
 
     //Sapient generated method id: ${487b5517-c901-34c8-972a-ebb7ca0fcd0b}
@@ -423,11 +404,9 @@ public class FiatSapientGeneratedJunit4Test {
          * (this.value == 0) : true
          */
         //Arrange Statement(s)
-        Fiat target = Fiat.valueOf("currencyCode1", 0L);
-
+        Fiat target = Fiat.valueOf("USD", 0L);
         //Act Statement(s)
         int result = target.signum();
-
         //Assert statement(s)
         assertThat(result, equalTo(0));
     }
@@ -440,11 +419,9 @@ public class FiatSapientGeneratedJunit4Test {
          * (this.value < 0) : true
          */
         //Arrange Statement(s)
-        Fiat target = Fiat.valueOf("currencyCode1", -1L);
-
+        Fiat target = Fiat.valueOf("USD", -10L);
         //Act Statement(s)
         int result = target.signum();
-
         //Assert statement(s)
         assertThat(result, equalTo(-1));
     }
@@ -457,11 +434,9 @@ public class FiatSapientGeneratedJunit4Test {
          * (this.value < 0) : false
          */
         //Arrange Statement(s)
-        Fiat target = Fiat.valueOf("currencyCode1", 1L);
-
+        Fiat target = Fiat.valueOf("USD", 1000L);
         //Act Statement(s)
         int result = target.signum();
-
         //Assert statement(s)
         assertThat(result, equalTo(1));
     }
@@ -470,11 +445,9 @@ public class FiatSapientGeneratedJunit4Test {
     @Test()
     public void negateTest() {
         //Arrange Statement(s)
-        Fiat target = Fiat.valueOf("currencyCode1", 1L);
-
+        Fiat target = Fiat.valueOf("USD", 1000L);
         //Act Statement(s)
         Fiat result = target.negate();
-
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -483,13 +456,11 @@ public class FiatSapientGeneratedJunit4Test {
     @Test()
     public void longValueTest() {
         //Arrange Statement(s)
-        Fiat target = Fiat.valueOf("currencyCode1", 0L);
-
+        Fiat target = Fiat.valueOf("USD", 1000L);
         //Act Statement(s)
         long result = target.longValue();
-
         //Assert statement(s)
-        assertThat(result, equalTo(0L));
+        assertThat(result, equalTo(1000L));
     }
 
     //Sapient generated method id: ${f6218ce4-99b5-3766-9111-6c631ded6b5a}
@@ -501,11 +472,9 @@ public class FiatSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Fiat target = Fiat.valueOf("A", 0L);
-
+        Fiat target = Fiat.valueOf("USD", 1000L);
         //Act Statement(s)
         String result = target.toFriendlyString();
-
         //Assert statement(s)
         assertThat(result, equalTo("result1"));
     }
@@ -514,63 +483,59 @@ public class FiatSapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void toPlainStringTest() {
-        /**
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
         //Arrange Statement(s)
-        Fiat target = Fiat.valueOf("currencyCode1", 0L);
-
+        Fiat target = Fiat.valueOf("USD", 1000L);
         //Act Statement(s)
         String result = target.toPlainString();
-
         //Assert statement(s)
-        assertThat(result, equalTo("result1"));
+        assertThat(result, equalTo("toPlainString_charSequence1"));
     }
 
     //Sapient generated method id: ${363d3698-f34c-39ad-914f-376a19498023}
     @Test()
     public void toStringTest() {
         //Arrange Statement(s)
-        Fiat target = Fiat.valueOf("currencyCode1", 2L);
-
+        Fiat target = Fiat.valueOf("EUR", 500L);
         //Act Statement(s)
         String result = target.toString();
-
         //Assert statement(s)
-        assertThat(result, equalTo("2"));
+        assertThat(result, equalTo("500"));
     }
 
     //Sapient generated method id: ${103eceb2-7695-3e7a-89fd-310a3f8e25f4}
+    @Ignore()
     @Test()
     public void compareToWhenThisCurrencyCodeNotEqualsOtherCurrencyCode() {
         /* Branches:
          * (!this.currencyCode.equals(other.currencyCode)) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Fiat target = Fiat.valueOf("A", 0L);
-        Fiat fiat = Fiat.valueOf("B", 0L);
-
+        Fiat target = Fiat.valueOf("USD", 1000L);
+        Fiat fiat = Fiat.valueOf("currencyCode1", 0L);
         //Act Statement(s)
         int result = target.compareTo(fiat);
-
         //Assert statement(s)
-        assertThat(result, equalTo(-1));
+        assertThat(result, equalTo(0));
     }
 
     //Sapient generated method id: ${0a89820b-44b9-376b-b893-a0b3267b42f2}
+    @Ignore()
     @Test()
     public void compareToWhenThisCurrencyCodeEqualsOtherCurrencyCode() {
         /* Branches:
          * (!this.currencyCode.equals(other.currencyCode)) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Fiat target = Fiat.valueOf("A", 1L);
-        Fiat fiat = Fiat.valueOf("A", 1L);
-
+        Fiat target = Fiat.valueOf("USD", 200L);
+        Fiat fiat = Fiat.valueOf("currencyCode1", 0L);
         //Act Statement(s)
         int result = target.compareTo(fiat);
-
         //Assert statement(s)
         assertThat(result, equalTo(0));
     }

@@ -17,7 +17,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "7117955EB28C48ECF062A270962F3590"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -41,7 +41,7 @@ methods:
               explicitCastNeeded: false
           - name: "params"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
@@ -142,7 +142,7 @@ methods:
               explicitCastNeeded: false
           - name: "params"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
@@ -187,8 +187,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "BASIC"
-        content: !<regular>
-          value: 1
         suggestedContent: !<regular>
           value: 1
         valueType: "long"
@@ -206,21 +204,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "java.time.Duration"
-          method: "ofDays"
-          methodParameters:
-          - name: "days"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "getPeers_duration1-days"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+        sapientType: "UNKNOWN"
         suggestedContent: !<static_method_return>
           target: "java.time.Duration"
           method: "ofDays"
@@ -249,12 +233,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "COLLECTION"
-        content: !<collection>
-          parameters: []
-          values: []
-        suggestedContent: !<collection>
-          parameters: []
-          values: []
         valueType: "java.util.List"
         genericValueType: "java.net.InetSocketAddress"
         uuid: "getPeers_list1"

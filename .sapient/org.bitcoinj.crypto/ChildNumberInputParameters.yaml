@@ -41,12 +41,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "C871B482A55DE3C44FD99015E843B01C"
-    problemWasSolvedByProver: true
+    modelFingerprint: "DF4B21B3EF8199726FBF3FB99B9B17B4"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "469AD2ECDC7AED7F0D3ACD1AA51FF3C6"
+      modelFingerprint: "988EC9E0DBB60DA1470EEA7ACBB500E8"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -60,8 +60,6 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
                 value: 0
               valueType: "int"
               uuid: "<init>_int21"
@@ -88,10 +86,6 @@ methods:
           - name: "childNumber"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "int"
               uuid: "<init>_int21"
               fixed: false
@@ -120,7 +114,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "1C064C628DF828E22B7E13C2A78A9A43"
+      modelFingerprint: "ACBCF6744C1A4F89BFBA83521C7CE3BD"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -128,10 +122,10 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: -2147483648
+          value: 0
         valueType: "int"
-        uuid: "<init>_int23"
-        fixed: true
+        uuid: "<init>_int22"
+        fixed: false
         equalsMethodPresent: true
         explicitCastNeeded: false
       staticReadMethodForField: false
@@ -140,7 +134,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -158,12 +152,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "9E023D915ED22D33F43D3A5ECEE642C2"
+    modelFingerprint: "59A2C2FAF400712CA6AAF4619C91567C"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "469AD2ECDC7AED7F0D3ACD1AA51FF3C6"
+      modelFingerprint: "B04B3363C3674322C1D4E4E7DF37E360"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -177,9 +171,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 100
               suggestedContent: !<regular>
-                value: 0
+                value: 100
               valueType: "int"
               uuid: "<init>_int21"
               fixed: false
@@ -206,9 +200,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 100
               suggestedContent: !<regular>
-                value: 0
+                value: 100
               valueType: "int"
               uuid: "<init>_int21"
               fixed: false
@@ -256,7 +250,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -267,12 +261,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "E07F53AE73914C8906FEF90085F5732E"
-    problemWasSolvedByProver: false
+    modelFingerprint: "B29C961625F19CFBB8695BFB7D64DBF5"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "62E34A0204F27D9D9FD1FA8531F3EC9C"
+      modelFingerprint: "C6ACE701E442152471B2237B6A1F8377"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -286,7 +280,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 2147483647
+              suggestedContent: !<regular>
+                value: 2147483647
               valueType: "int"
               uuid: "<init>_int21"
               fixed: false
@@ -312,6 +308,10 @@ methods:
           - name: "childNumber"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 2147483647
+              suggestedContent: !<regular>
+                value: 2147483647
               valueType: "int"
               uuid: "<init>_int21"
               fixed: false
@@ -320,6 +320,8 @@ methods:
           - name: "isHardened"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: true
               suggestedContent: !<regular>
                 value: true
               valueType: "boolean"
@@ -338,7 +340,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
+      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -346,7 +348,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: false
+          value: true
         valueType: "boolean"
         fixed: true
         equalsMethodPresent: true
@@ -375,12 +377,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "4250B44055AD96009AEEF0F4C85CE8F5"
+    modelFingerprint: "CC984DAE2B410C93CA0E7016EB0317E1"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "469AD2ECDC7AED7F0D3ACD1AA51FF3C6"
+      modelFingerprint: "C6ACE701E442152471B2237B6A1F8377"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -394,9 +396,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 2147483647
               suggestedContent: !<regular>
-                value: 0
+                value: 2147483647
               valueType: "int"
               uuid: "<init>_int21"
               fixed: false
@@ -423,9 +425,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 2147483647
               suggestedContent: !<regular>
-                value: 0
+                value: 2147483647
               valueType: "int"
               uuid: "<init>_int21"
               fixed: false
@@ -454,7 +456,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "158A76FAE4C1E5741587C22A6148B6F0"
+      modelFingerprint: "DCF6BB5D4A1CB5C8DF037C76FEC807F2"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -462,7 +464,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
+          value: 2147483647
         valueType: "int"
         fixed: true
         equalsMethodPresent: true
@@ -473,7 +475,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -491,12 +493,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "B9DEBB7B7FDFA07AA6A148925ED53B9C"
+    modelFingerprint: "86D3618F3EB2C85C92527908E176365F"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "469AD2ECDC7AED7F0D3ACD1AA51FF3C6"
+      modelFingerprint: "C6ACE701E442152471B2237B6A1F8377"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -510,9 +512,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 2147483647
               suggestedContent: !<regular>
-                value: 0
+                value: 2147483647
               valueType: "int"
               uuid: "<init>_int21"
               fixed: false
@@ -539,9 +541,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 2147483647
               suggestedContent: !<regular>
-                value: 0
+                value: 2147483647
               valueType: "int"
               uuid: "<init>_int21"
               fixed: false
@@ -616,7 +618,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -752,7 +754,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -869,12 +871,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "A27E8517526F154ECFFDBD87F6B86FA6"
+    modelFingerprint: "01D0781DBAAB301DAE89E692DD2FD4C8"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "469AD2ECDC7AED7F0D3ACD1AA51FF3C6"
+      modelFingerprint: "61C3C2D589A1A909A62B2FB66FA4F3CF"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -888,9 +890,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 10
               suggestedContent: !<regular>
-                value: 0
+                value: 10
               valueType: "int"
               uuid: "<init>_int21"
               fixed: false
@@ -917,9 +919,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 10
               suggestedContent: !<regular>
-                value: 0
+                value: 10
               valueType: "int"
               uuid: "<init>_int21"
               fixed: false
@@ -948,17 +950,59 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "other"
-      modelFingerprint: "F6CF0D84D58F9331F2DB50299543BC1F"
+      modelFingerprint: "9621B81BDCB55BD78D2403722BE8EA1D"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
+        sapientType: "OBJECT"
+        content: !<new>
           target: "org.bitcoinj.crypto.ChildNumber"
-          onlyPojoFunctions: false
-          builderPattern: false
+          parameters:
+          - name: "childNumber"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "compareTo_childNumber1-childNumber"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "isHardened"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: false
+              valueType: "boolean"
+              uuid: "compareTo_childNumber1-isHardened"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.crypto.ChildNumber"
+          parameters:
+          - name: "childNumber"
+            value:
+              sapientType: "BASIC"
+              valueType: "int"
+              uuid: "compareTo_childNumber1-childNumber"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "isHardened"
+            value:
+              sapientType: "BASIC"
+              valueType: "boolean"
+              uuid: "compareTo_childNumber1-isHardened"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
         valueType: "org.bitcoinj.crypto.ChildNumber"
         uuid: "compareTo_childNumber1"
         fixed: false
@@ -968,17 +1012,59 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "other"
-      modelFingerprint: "CEF0C61F31B93AD5123FAC5CE891C3D1"
+      modelFingerprint: "3823C6AF25057538EF0D171E2CA81E1B"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
+        sapientType: "OBJECT"
+        content: !<new>
           target: "org.bitcoinj.crypto.ChildNumber"
-          onlyPojoFunctions: false
-          builderPattern: false
+          parameters:
+          - name: "childNumber"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "compareTo_childNumber1-childNumber"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "isHardened"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: false
+              valueType: "boolean"
+              uuid: "compareTo_childNumber1-isHardened"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.crypto.ChildNumber"
+          parameters:
+          - name: "childNumber"
+            value:
+              sapientType: "BASIC"
+              valueType: "int"
+              uuid: "compareTo_childNumber1-childNumber"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "isHardened"
+            value:
+              sapientType: "BASIC"
+              valueType: "boolean"
+              uuid: "compareTo_childNumber1-isHardened"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
         valueType: "org.bitcoinj.crypto.ChildNumber"
         uuid: "compareTo_childNumber1"
         fixed: false
@@ -992,9 +1078,7 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: -1
-          suggestedContent: !<regular>
-            value: -1
+            value: 0
           valueType: "int"
           uuid: "compareTo_int1"
           fixed: false
@@ -1005,7 +1089,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "E2A8AB981A1505AD6737DABDF7241F1F"
+      modelFingerprint: "9FF7AC4985BCA90E6EC922541E9BE11E"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -1013,8 +1097,6 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 1
-        suggestedContent: !<regular>
           value: 1
         valueType: "int"
         uuid: "compareTo_int2"
@@ -1027,6 +1109,6 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

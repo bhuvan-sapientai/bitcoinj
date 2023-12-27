@@ -25,12 +25,12 @@ public class ScriptErrorSapientGeneratedJunit4Test {
          * (err == null) : true
          */
         //Arrange Statement(s)
-        IllegalArgumentException illegalArgumentException = new IllegalArgumentException("J is not a valid name");
+        IllegalArgumentException illegalArgumentException = new IllegalArgumentException("<valid mnemonic> is not a valid name");
         thrown.expect(IllegalArgumentException.class);
         thrown.expectMessage(illegalArgumentException.getMessage());
 
         //Act Statement(s)
-        ScriptError.fromMnemonic("J");
+        ScriptError.fromMnemonic("<valid mnemonic>");
     }
 
     //Sapient generated method id: ${1917e9f8-0714-38f6-afb9-d52c8973b4ef}
@@ -39,15 +39,12 @@ public class ScriptErrorSapientGeneratedJunit4Test {
     public void fromMnemonicWhenErrIsNotNull() {
         /* Branches:
          * (err == null) : false
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
 
         //Act Statement(s)
-        ScriptError result = ScriptError.fromMnemonic("J");
+        ScriptError result = ScriptError.fromMnemonic("OK");
 
         //Assert statement(s)
-        assertThat(result, equalTo(ScriptError.SCRIPT_ERR_ERROR_COUNT));
+        assertThat(result, equalTo(ScriptError.SCRIPT_ERR_OK));
     }
 }

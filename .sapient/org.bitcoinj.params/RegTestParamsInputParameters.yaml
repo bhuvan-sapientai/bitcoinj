@@ -17,7 +17,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "C7A98EF9A4A0C49E26428282B0383F32"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -157,7 +157,7 @@ methods:
     filledByUser: false
     priority: "MODERATE"
     modelFingerprint: "CD559544AC78F8FF8093C575C7039B64"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "LOCAL_VARIABLE"
@@ -242,11 +242,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.params.RegTestParams"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: true
         suggestedContent: !<new>
           target: "org.bitcoinj.params.RegTestParams"
           parameters: []
@@ -300,7 +295,7 @@ methods:
           createdByTargetCode: false
           propertiesMap:
             genesisBlock:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.Block"
                 onlyPojoFunctions: false
@@ -415,7 +410,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         valueType: "org.bitcoinj.core.Block"
         uuid: "org.bitcoinj.core.Block"
         fixed: false
@@ -427,11 +422,7 @@ methods:
         parameters:
         - name: "time"
           value:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "java.time.Instant"
-              method: "now"
-              methodParameters: []
+            sapientType: "UNKNOWN"
             suggestedContent: !<static_method_return>
               target: "java.time.Instant"
               method: "now"
@@ -461,7 +452,7 @@ methods:
             explicitCastNeeded: false
         signature: "createGenesis(Instant,long,long): Block"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "UNKNOWN"
           suggestedContent: !<unknown_object>
             target: "org.bitcoinj.core.Block"
             onlyPojoFunctions: false
@@ -482,7 +473,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.Block"
           onlyPojoFunctions: false
@@ -498,7 +489,7 @@ methods:
         parameters: []
         signature: "getHash(): Sha256Hash"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "UNKNOWN"
           suggestedContent: !<unknown_object>
             target: "org.bitcoinj.base.Sha256Hash"
             onlyPojoFunctions: false
@@ -519,7 +510,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         valueType: "org.bitcoinj.base.internal.Preconditions"
         uuid: "org.bitcoinj.base.internal.Preconditions"
         fixed: false
@@ -532,8 +523,6 @@ methods:
         - name: "expression"
           value:
             sapientType: "BASIC"
-            content: !<regular>
-              value: false
             valueType: "boolean"
             uuid: "getGenesisBlock_boolean1"
             fixed: false
@@ -566,7 +555,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.Block"
           onlyPojoFunctions: false

@@ -19,13 +19,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "B75E5FDD600F3E94B7D498DB00278EB8"
+    modelFingerprint: "B272F881CA5A0FCEA1352D1D676EE54D"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "payload"
-      modelFingerprint: "335B7D7442C1E51D6EECFEAEF136D4CA"
+      modelFingerprint: "C871D067662095A198DE0F4DE90B3DF9"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -67,7 +67,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ByteUtils"
-      modelFingerprint: "1F650A2A1F19F2ADB8134592DAC7D737"
+      modelFingerprint: "0149749ECB5C50B622BD6088543A1936"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -123,385 +123,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 0
-          valueType: "long"
-          uuid: "read_long1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "VarInt"
-      modelFingerprint: "3B8F57F8FE575EC7D5B5121573F3F595"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.VarInt"
-        uuid: "org.bitcoinj.base.VarInt"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.VarInt"
-        name: "read"
-        parameters:
-        - name: "buf"
-          value:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "java.nio.ByteBuffer"
-              method: "allocateDirect"
-              methodParameters:
-              - name: "capacity"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  valueType: "int"
-                  uuid: "read_byteBuffer1-capacity"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            suggestedContent: !<static_method_return>
-              target: "java.nio.ByteBuffer"
-              method: "allocateDirect"
-              methodParameters:
-              - name: "capacity"
-                value:
-                  sapientType: "BASIC"
-                  valueType: "int"
-                  uuid: "read_byteBuffer1-capacity"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            valueType: "java.nio.ByteBuffer"
-            uuid: "read_byteBuffer1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        throwsExceptions:
-        - "java.nio.BufferUnderflowException"
-        signature: "read(ByteBuffer): VarInt throws java.nio.BufferUnderflowException"
-        returnValue:
-          sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
-            target: "org.bitcoinj.base.VarInt"
-            onlyPojoFunctions: false
-            builderPattern: false
-          valueType: "org.bitcoinj.base.VarInt"
-          uuid: "read_varInt1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "startCountVarInt"
-      modelFingerprint: "B43C3ADB283FA5163913ABBABB5EC75C"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.base.VarInt"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.base.VarInt"
-        uuid: "read_varInt1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "startCountVarInt"
-        name: "fitsInt"
-        parameters: []
-        signature: "fitsInt(): boolean"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: false
-          valueType: "boolean"
-          uuid: "read_boolean1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "3D0E364D028507E0FB885F547F95618C"
-      index: 5
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "check"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            uuid: "read_boolean1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "exceptionSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        throwsExceptions:
-        - "java.lang.Throwable"
-        signature: "check(boolean,Supplier): void throws java.lang.Throwable"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "read_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "startCountVarInt"
-      modelFingerprint: "B9613399F5875212F3CCA307CA3A940F"
-      index: 6
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.base.VarInt"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.base.VarInt"
-        uuid: "read_varInt1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "startCountVarInt"
-        name: "intValue"
-        parameters: []
-        throwsExceptions:
-        - "java.lang.ArithmeticException"
-        signature: "intValue(): int throws java.lang.ArithmeticException"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: 2008
+            value: 1
           suggestedContent: !<regular>
-            value: 2008
-          valueType: "int"
-          uuid: "read_int1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "256EA9AD6A25206EE3FAA4A18E7C2475"
-      index: 7
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "EXCEPTION"
-        content: !<new>
-          target: "org.bitcoinj.core.ProtocolException"
-          parameters:
-          - name: "msg"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "Number of locators cannot be > 500, received: 2008"
-              suggestedContent: !<regular>
-                value: "Number of locators cannot be > 500, received: 2008"
-              valueType: "java.lang.String"
-              uuid: "read_string1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.ProtocolException"
-          parameters:
-          - name: "msg"
-            value:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: "Number of locators cannot be > 500, received: 2008"
-              valueType: "java.lang.String"
-              uuid: "read_string1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        valueType: "org.bitcoinj.core.ProtocolException"
-        uuid: "read_protocolException1"
-        fixed: true
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    uuid: "86e0d287-5510-3b35-b2bc-a4afd75ec5c7"
-    deleted: false
-    disabled: false
-    ignoredBySystem: false
-    prover: "DEFAULT"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path2"
-    pathIdForUser: "path2"
-    testPathName: "read1WhenILessThanStartCount"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "59DB2A791421E0635D27F9B1BE8AD284"
-    problemWasSolvedByProver: true
-    truncated: false
-    inputParameters:
-    - type: "INPUT"
-      name: "payload"
-      modelFingerprint: "12F225585F873185D590D2F2A6F76ECA"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "java.nio.ByteBuffer"
-          method: "allocateDirect"
-          methodParameters:
-          - name: "capacity"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "int"
-              uuid: "read_byteBuffer1-capacity"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "java.nio.ByteBuffer"
-          method: "allocateDirect"
-          methodParameters:
-          - name: "capacity"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "int"
-              uuid: "read_byteBuffer1-capacity"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        valueType: "java.nio.ByteBuffer"
-        uuid: "read_byteBuffer1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "ByteUtils"
-      modelFingerprint: "8A1677E112350CB37B55197ED2C902A9"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.ByteUtils"
-        uuid: "org.bitcoinj.base.internal.ByteUtils"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.ByteUtils"
-        name: "readUint32"
-        parameters:
-        - name: "buf"
-          value:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "java.nio.ByteBuffer"
-              method: "allocateDirect"
-              methodParameters:
-              - name: "capacity"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  suggestedContent: !<regular>
-                    value: 0
-                  valueType: "int"
-                  uuid: "read_byteBuffer1-capacity"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            suggestedContent: !<static_method_return>
-              target: "java.nio.ByteBuffer"
-              method: "allocateDirect"
-              methodParameters:
-              - name: "capacity"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  suggestedContent: !<regular>
-                    value: 0
-                  valueType: "int"
-                  uuid: "read_byteBuffer1-capacity"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            valueType: "java.nio.ByteBuffer"
-            uuid: "read_byteBuffer1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        throwsExceptions:
-        - "java.nio.BufferUnderflowException"
-        signature: "readUint32(ByteBuffer): long throws java.nio.BufferUnderflowException"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: 0
+            value: 1
           valueType: "long"
           uuid: "read_long1"
           fixed: false
@@ -512,7 +136,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "VarInt"
-      modelFingerprint: "E3F3D497965B779A32EE59D24A5974AA"
+      modelFingerprint: "19C0F0DEF206D37B50C772C640D3A883"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -540,8 +164,6 @@ methods:
                   sapientType: "BASIC"
                   content: !<regular>
                     value: 0
-                  suggestedContent: !<regular>
-                    value: 0
                   valueType: "int"
                   uuid: "read_byteBuffer1-capacity"
                   fixed: false
@@ -554,10 +176,6 @@ methods:
               - name: "capacity"
                 value:
                   sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  suggestedContent: !<regular>
-                    value: 0
                   valueType: "int"
                   uuid: "read_byteBuffer1-capacity"
                   fixed: false
@@ -572,11 +190,35 @@ methods:
         - "java.nio.BufferUnderflowException"
         signature: "read(ByteBuffer): VarInt throws java.nio.BufferUnderflowException"
         returnValue:
-          sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
+          sapientType: "OBJECT"
+          content: !<new>
             target: "org.bitcoinj.base.VarInt"
-            onlyPojoFunctions: false
-            builderPattern: false
+            parameters:
+            - name: "value"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "long"
+                uuid: "read_varInt1-value"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "org.bitcoinj.base.VarInt"
+            parameters:
+            - name: "value"
+              value:
+                sapientType: "BASIC"
+                valueType: "long"
+                uuid: "read_varInt1-value"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            privateConstructor: false
+            createdByTargetCode: false
           valueType: "org.bitcoinj.base.VarInt"
           uuid: "read_varInt1"
           fixed: false
@@ -587,17 +229,41 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "startCountVarInt"
-      modelFingerprint: "B43C3ADB283FA5163913ABBABB5EC75C"
+      modelFingerprint: "A52B7C00A6C9B7E2C3651480A34EEA2E"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
+        sapientType: "OBJECT"
+        content: !<new>
           target: "org.bitcoinj.base.VarInt"
-          onlyPojoFunctions: false
-          builderPattern: false
+          parameters:
+          - name: "value"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "read_varInt1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.base.VarInt"
+          parameters:
+          - name: "value"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "read_varInt1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
         valueType: "org.bitcoinj.base.VarInt"
         uuid: "read_varInt1"
         fixed: false
@@ -611,7 +277,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: false
+            value: true
+          suggestedContent: !<regular>
+            value: true
           valueType: "boolean"
           uuid: "read_boolean1"
           fixed: false
@@ -622,7 +290,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "3D0E364D028507E0FB885F547F95618C"
+      modelFingerprint: "124EDFBDEF61063FFF00756110604E5A"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -642,7 +310,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: false
+              value: true
+            suggestedContent: !<regular>
+              value: true
             valueType: "boolean"
             uuid: "read_boolean1"
             fixed: false
@@ -670,17 +340,41 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "startCountVarInt"
-      modelFingerprint: "E18E8389FB67DC1989D76FFF7E8C92E6"
+      modelFingerprint: "F402420E9215CFDE0B3DB0671F670648"
       index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
+        sapientType: "OBJECT"
+        content: !<new>
           target: "org.bitcoinj.base.VarInt"
-          onlyPojoFunctions: false
-          builderPattern: false
+          parameters:
+          - name: "value"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "read_varInt1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.base.VarInt"
+          parameters:
+          - name: "value"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "read_varInt1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
         valueType: "org.bitcoinj.base.VarInt"
         uuid: "read_varInt1"
         fixed: false
@@ -709,7 +403,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "B750BA4CBA0A0BD5F6AA5C484CB6824B"
+      modelFingerprint: "55AB46F37AB430C1204B1C937E0B1FA2"
       index: 7
       ignored: false
       nestedInLoop: true
@@ -737,8 +431,6 @@ methods:
                   sapientType: "BASIC"
                   content: !<regular>
                     value: 0
-                  suggestedContent: !<regular>
-                    value: 0
                   valueType: "int"
                   uuid: "read_byteBuffer1-capacity"
                   fixed: false
@@ -751,10 +443,6 @@ methods:
               - name: "capacity"
                 value:
                   sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  suggestedContent: !<regular>
-                    value: 0
                   valueType: "int"
                   uuid: "read_byteBuffer1-capacity"
                   fixed: false
@@ -780,7 +468,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "B750BA4CBA0A0BD5F6AA5C484CB6824B"
+      modelFingerprint: "55AB46F37AB430C1204B1C937E0B1FA2"
       index: 8
       ignored: false
       nestedInLoop: false
@@ -808,8 +496,6 @@ methods:
                   sapientType: "BASIC"
                   content: !<regular>
                     value: 0
-                  suggestedContent: !<regular>
-                    value: 0
                   valueType: "int"
                   uuid: "read_byteBuffer1-capacity"
                   fixed: false
@@ -822,10 +508,6 @@ methods:
               - name: "capacity"
                 value:
                   sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  suggestedContent: !<regular>
-                    value: 0
                   valueType: "int"
                   uuid: "read_byteBuffer1-capacity"
                   fixed: false
@@ -851,7 +533,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "3DD7A79EB5C469DEC215A9CF28FC3759"
+      modelFingerprint: "433309D4E60398143585EF20CE1DBDCB"
       index: 9
       ignored: false
       nestedInLoop: false
@@ -865,7 +547,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 1
+              suggestedContent: !<regular>
+                value: 1
               valueType: "long"
               uuid: "read_long1"
               fixed: false
@@ -953,6 +637,10 @@ methods:
           - name: "protocolVersion"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 1
+              suggestedContent: !<regular>
+                value: 1
               valueType: "long"
               uuid: "read_long1"
               fixed: false
@@ -1007,13 +695,604 @@ methods:
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
+    uuid: "86e0d287-5510-3b35-b2bc-a4afd75ec5c7"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "read1WhenILessThanStartCount"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "3AE4D7276982BCC87FFE4DB3ABDE7345"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "payload"
+      modelFingerprint: "C871D067662095A198DE0F4DE90B3DF9"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.nio.ByteBuffer"
+          method: "allocateDirect"
+          methodParameters:
+          - name: "capacity"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "read_byteBuffer1-capacity"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "java.nio.ByteBuffer"
+          method: "allocateDirect"
+          methodParameters:
+          - name: "capacity"
+            value:
+              sapientType: "BASIC"
+              valueType: "int"
+              uuid: "read_byteBuffer1-capacity"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "java.nio.ByteBuffer"
+        uuid: "read_byteBuffer1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "ByteUtils"
+      modelFingerprint: "0AD0E1B825F876D790C5B0CD3D02F33D"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.ByteUtils"
+        uuid: "org.bitcoinj.base.internal.ByteUtils"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.ByteUtils"
+        name: "readUint32"
+        parameters:
+        - name: "buf"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "java.nio.ByteBuffer"
+              method: "allocateDirect"
+              methodParameters:
+              - name: "capacity"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "int"
+                  uuid: "read_byteBuffer1-capacity"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<static_method_return>
+              target: "java.nio.ByteBuffer"
+              method: "allocateDirect"
+              methodParameters:
+              - name: "capacity"
+                value:
+                  sapientType: "BASIC"
+                  valueType: "int"
+                  uuid: "read_byteBuffer1-capacity"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "java.nio.ByteBuffer"
+            uuid: "read_byteBuffer1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        signature: "readUint32(ByteBuffer): long throws java.nio.BufferUnderflowException"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: 0
+          valueType: "long"
+          uuid: "read_long1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "VarInt"
+      modelFingerprint: "19C0F0DEF206D37B50C772C640D3A883"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.VarInt"
+        uuid: "org.bitcoinj.base.VarInt"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.VarInt"
+        name: "read"
+        parameters:
+        - name: "buf"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "java.nio.ByteBuffer"
+              method: "allocateDirect"
+              methodParameters:
+              - name: "capacity"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "int"
+                  uuid: "read_byteBuffer1-capacity"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<static_method_return>
+              target: "java.nio.ByteBuffer"
+              method: "allocateDirect"
+              methodParameters:
+              - name: "capacity"
+                value:
+                  sapientType: "BASIC"
+                  valueType: "int"
+                  uuid: "read_byteBuffer1-capacity"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "java.nio.ByteBuffer"
+            uuid: "read_byteBuffer1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        signature: "read(ByteBuffer): VarInt throws java.nio.BufferUnderflowException"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<new>
+            target: "org.bitcoinj.base.VarInt"
+            parameters:
+            - name: "value"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "long"
+                uuid: "read_varInt1-value"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "org.bitcoinj.base.VarInt"
+            parameters:
+            - name: "value"
+              value:
+                sapientType: "BASIC"
+                valueType: "long"
+                uuid: "read_varInt1-value"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "org.bitcoinj.base.VarInt"
+          uuid: "read_varInt1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "startCountVarInt"
+      modelFingerprint: "A05A4AEB59F06B39FC43F4B9645B35B5"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.base.VarInt"
+          parameters:
+          - name: "value"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "read_varInt1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.base.VarInt"
+          parameters:
+          - name: "value"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "read_varInt1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.base.VarInt"
+        uuid: "read_varInt1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "startCountVarInt"
+        name: "fitsInt"
+        parameters: []
+        signature: "fitsInt(): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: false
+          suggestedContent: !<regular>
+            value: false
+          valueType: "boolean"
+          uuid: "read_boolean1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "3392381CF3AE8DD11E933A45C8FBA46A"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "check"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            suggestedContent: !<regular>
+              value: false
+            valueType: "boolean"
+            uuid: "read_boolean1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "exceptionSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "java.lang.Throwable"
+        signature: "check(boolean,Supplier): void throws java.lang.Throwable"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "read_void1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "startCountVarInt"
+      modelFingerprint: "B98F533DB962401A6CE25C8AF7112E96"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.base.VarInt"
+          parameters:
+          - name: "value"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "read_varInt1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.base.VarInt"
+          parameters:
+          - name: "value"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "read_varInt1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.base.VarInt"
+        uuid: "read_varInt1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "startCountVarInt"
+        name: "intValue"
+        parameters: []
+        throwsExceptions:
+        - "java.lang.ArithmeticException"
+        signature: "intValue(): int throws java.lang.ArithmeticException"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: 0
+          valueType: "int"
+          uuid: "read_int1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "55AB46F37AB430C1204B1C937E0B1FA2"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.Sha256Hash"
+        uuid: "org.bitcoinj.base.Sha256Hash"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "read"
+        parameters:
+        - name: "buf"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "java.nio.ByteBuffer"
+              method: "allocateDirect"
+              methodParameters:
+              - name: "capacity"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "int"
+                  uuid: "read_byteBuffer1-capacity"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<static_method_return>
+              target: "java.nio.ByteBuffer"
+              method: "allocateDirect"
+              methodParameters:
+              - name: "capacity"
+                value:
+                  sapientType: "BASIC"
+                  valueType: "int"
+                  uuid: "read_byteBuffer1-capacity"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "java.nio.ByteBuffer"
+            uuid: "read_byteBuffer1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        signature: "read(ByteBuffer): Sha256Hash throws java.nio.BufferUnderflowException"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.base.Sha256Hash"
+          uuid: "read_sha256Hash1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "C89640203CC2EA5AF5EE941C2F5089FB"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.GetHeadersMessage"
+          parameters:
+          - name: "protocolVersion"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "read_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "arg1"
+            value:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.core.BlockLocator"
+                parameters:
+                - name: "hashes"
+                  value:
+                    sapientType: "COLLECTION"
+                    content: !<collection>
+                      collectionClass: "java.util.ArrayList"
+                      parameters: []
+                      values: []
+                    suggestedContent: !<collection>
+                      collectionClass: "java.util.ArrayList"
+                      parameters: []
+                      values: []
+                    valueType: "java.util.List"
+                    genericValueType: "org.bitcoinj.base.Sha256Hash"
+                    uuid: "read_arrayList1"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: true
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.BlockLocator"
+                parameters:
+                - name: "hashes"
+                  value:
+                    sapientType: "COLLECTION"
+                    suggestedContent: !<collection>
+                      collectionClass: "java.util.ArrayList"
+                      parameters: []
+                      values: []
+                    valueType: "java.util.List"
+                    genericValueType: "org.bitcoinj.base.Sha256Hash"
+                    uuid: "read_arrayList1"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.bitcoinj.core.BlockLocator"
+              uuid: "read_blockLocator1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "locator"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              uuid: "read_sha256Hash1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.GetHeadersMessage"
+          parameters:
+          - name: "protocolVersion"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "read_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "arg1"
+            value:
+              sapientType: "OBJECT"
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.BlockLocator"
+                parameters:
+                - name: "hashes"
+                  value:
+                    sapientType: "COLLECTION"
+                    suggestedContent: !<collection>
+                      collectionClass: "java.util.ArrayList"
+                      parameters: []
+                      values: []
+                    valueType: "java.util.List"
+                    genericValueType: "org.bitcoinj.base.Sha256Hash"
+                    uuid: "read_arrayList1"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.bitcoinj.core.BlockLocator"
+              uuid: "read_blockLocator1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "locator"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              uuid: "read_sha256Hash1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.core.GetHeadersMessage"
+        uuid: "read_getHeadersMessage1"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
     uuid: "d661fd02-25e3-3539-a62f-d00e938c58b4"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path3"
     pathIdForUser: "path3"
     testPathName: "read1WhenINotLessThanStartCount"
@@ -1048,12 +1327,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "77D92B775607CA266877DBC2D5BFC4FE"
+    modelFingerprint: "8518C6820F26C0CA9B1ECB7AD6F7A41F"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "C700201F1C9B9D8DB6ACDCEA295CC0BC"
+      modelFingerprint: "8A2551E7B2C455F069D928833ED22D65"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1067,7 +1346,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 1
+              suggestedContent: !<regular>
+                value: 1
               valueType: "long"
               uuid: "<init>_long1"
               fixed: false
@@ -1075,11 +1356,17 @@ methods:
               explicitCastNeeded: false
           - name: "locator"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
+              sapientType: "OBJECT"
+              content: !<new>
                 target: "org.bitcoinj.core.BlockLocator"
-                onlyPojoFunctions: false
-                builderPattern: false
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.BlockLocator"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
               valueType: "org.bitcoinj.core.BlockLocator"
               uuid: "<init>_blockLocator1"
               fixed: false
@@ -1088,7 +1375,69 @@ methods:
               explicitCastNeeded: false
           - name: "stopHash"
             value:
-              sapientType: "MOCK"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "OBJECT"
+                    content: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          content: !<regular>
+                            value: 0
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "UNKNOWN"
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.base.Sha256Hash"
               uuid: "<init>_sha256Hash1"
               fixed: false
@@ -1102,6 +1451,10 @@ methods:
           - name: "protocolVersion"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 1
+              suggestedContent: !<regular>
+                value: 1
               valueType: "long"
               uuid: "<init>_long1"
               fixed: false
@@ -1109,11 +1462,17 @@ methods:
               explicitCastNeeded: false
           - name: "locator"
             value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<unknown_object>
+              sapientType: "OBJECT"
+              content: !<new>
                 target: "org.bitcoinj.core.BlockLocator"
-                onlyPojoFunctions: false
-                builderPattern: false
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.BlockLocator"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
               valueType: "org.bitcoinj.core.BlockLocator"
               uuid: "<init>_blockLocator1"
               fixed: false
@@ -1122,7 +1481,69 @@ methods:
               explicitCastNeeded: false
           - name: "stopHash"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "OBJECT"
+                    content: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          content: !<regular>
+                            value: 0
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "UNKNOWN"
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.base.Sha256Hash"
               uuid: "<init>_sha256Hash1"
               fixed: false
@@ -1139,7 +1560,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "F66A6F294CAE9A822C6464F745636C08"
+      modelFingerprint: "8AECDB12BB860A34D48EE0FA538A53D9"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1147,9 +1568,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "getheaders: <init>_blockLocator1"
+          value: "getheaders: Block locator with 0 blocks\\n "
         suggestedContent: !<regular>
-          value: "getheaders: <init>_blockLocator1"
+          value: "getheaders: Block locator with 0 blocks\\n "
         valueType: "java.lang.String"
         uuid: "toString_string2"
         fixed: false
@@ -1159,11 +1580,11 @@ methods:
       filledByUser: false
     uuid: "363d3698-f34c-39ad-914f-376a19498023"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "equals"
     returnType: "boolean"

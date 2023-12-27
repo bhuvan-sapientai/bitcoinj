@@ -27,9 +27,11 @@ public class HexFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         HexFormat target = new HexFormat();
-        byte[] byteArray = new byte[]{(byte) 0};
+        byte[] byteArray = new byte[]{(byte) 1};
+
         //Act Statement(s)
         String result = target.formatHex(byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo("A"));
     }
@@ -42,11 +44,13 @@ public class HexFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         HexFormat target = new HexFormat();
-        IllegalArgumentException illegalArgumentException = new IllegalArgumentException("Invalid hexadecimal String supplied.");
-        thrown.expect(IllegalArgumentException.class);
-        thrown.expectMessage(illegalArgumentException.getMessage());
+
         //Act Statement(s)
-        target.parseHex("A");
+        byte[] result = target.parseHex("abcdef");
+        byte[] byteResultArray = new byte[]{(byte) -85, (byte) -51, (byte) -17};
+
+        //Assert statement(s)
+        assertThat(result, equalTo(byteResultArray));
     }
 
     //Sapient generated method id: ${54602f71-0d40-36da-b499-ce62ba6f2488}
@@ -59,11 +63,13 @@ public class HexFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         HexFormat target = new HexFormat();
-        IllegalArgumentException illegalArgumentException = new IllegalArgumentException("Invalid Hexadecimal Character: h");
-        thrown.expect(IllegalArgumentException.class);
-        thrown.expectMessage(illegalArgumentException.getMessage());
+
         //Act Statement(s)
-        target.parseHex("hexString1");
+        byte[] result = target.parseHex("1F2A");
+        byte[] byteResultArray = new byte[]{(byte) 31, (byte) 42};
+
+        //Assert statement(s)
+        assertThat(result, equalTo(byteResultArray));
     }
 
     //Sapient generated method id: ${571b79cf-cc03-3c23-beb4-1c0eefab5867}
@@ -76,9 +82,11 @@ public class HexFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         HexFormat target = new HexFormat();
+
         //Act Statement(s)
-        byte[] result = target.parseHex("AB");
-        byte[] byteResultArray = new byte[]{(byte) -85};
+        byte[] result = target.parseHex("1F");
+        byte[] byteResultArray = new byte[]{(byte) 31};
+
         //Assert statement(s)
         assertThat(result, equalTo(byteResultArray));
     }
@@ -91,16 +99,15 @@ public class HexFormatSapientGeneratedJunit4Test {
          * (hexString.length() % 2 == 1) : false
          * (i < hexString.length()) : true
          * (digit == -1) : false  #  inside toDigit method
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         HexFormat target = new HexFormat();
-        IllegalArgumentException illegalArgumentException = new IllegalArgumentException("s1");
-        thrown.expect(IllegalArgumentException.class);
-        thrown.expectMessage(illegalArgumentException.getMessage());
+
         //Act Statement(s)
-        target.parseHex("hexString1");
+        byte[] result = target.parseHex("1A2B3C");
+        byte[] byteResultArray = new byte[]{(byte) 26, (byte) 43, (byte) 60};
+
+        //Assert statement(s)
+        assertThat(result, equalTo(byteResultArray));
     }
 }

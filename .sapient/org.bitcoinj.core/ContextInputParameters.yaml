@@ -16,7 +16,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "C8E17FDC1709520D4A91ED017734C7D3"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "RESULT"
@@ -28,20 +28,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "EXCEPTION"
-        content: !<new>
-          target: "java.lang.IllegalStateException"
-          parameters:
-          - name: "s"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "You must construct a Context object before using bitcoinj!"
-              valueType: "java.lang.String"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
         suggestedContent: !<new>
           target: "java.lang.IllegalStateException"
           parameters:
@@ -85,7 +71,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "6E13917948F4503330A129503ABFC98B"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "RESULT"
@@ -129,7 +115,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "817D3A4C1941FBD2204BA82D1AEE0C6E"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "STATIC"
@@ -142,7 +128,7 @@ methods:
       idsTryCatchBlockSurrounding:
       - 1
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         valueType: "org.bitcoinj.core.Context"
         uuid: "org.bitcoinj.core.Context"
         fixed: false
@@ -154,7 +140,7 @@ methods:
         parameters: []
         signature: "get(): Context"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "UNKNOWN"
           valueType: "org.bitcoinj.core.Context"
           uuid: "getOrCreate_context1"
           fixed: false
@@ -171,7 +157,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         valueType: "org.bitcoinj.core.Context"
         uuid: "getOrCreate_context1"
         fixed: false
@@ -193,8 +179,8 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "34821D771454A294F05F68A201909DE8"
-    problemWasSolvedByProver: true
+    modelFingerprint: "209722FBF511E37CD1255F53A144E244"
+    problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
       id: 1
@@ -204,7 +190,7 @@ methods:
     inputParameters:
     - type: "STATIC"
       name: "Context"
-      modelFingerprint: "E693A0F7BC32F6711D1C6C3C1BC5E38E"
+      modelFingerprint: "48D221517E861357B3439FCF8D5FC88D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -212,7 +198,7 @@ methods:
       idsTryCatchBlockSurrounding:
       - 1
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         valueType: "org.bitcoinj.core.Context"
         uuid: "org.bitcoinj.core.Context"
         fixed: false
@@ -224,18 +210,8 @@ methods:
         parameters: []
         signature: "get(): Context"
         returnValue:
-          sapientType: "EXCEPTION"
-          content: !<new>
-            target: "java.lang.IllegalStateException"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
-            target: "java.lang.IllegalStateException"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
-          valueType: "java.lang.IllegalStateException"
+          sapientType: "UNKNOWN"
+          valueType: "org.bitcoinj.core.Context"
           uuid: "getOrCreate_context1"
           fixed: false
           equalsMethodPresent: false
@@ -252,11 +228,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.core.Context"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: true
         suggestedContent: !<new>
           target: "org.bitcoinj.core.Context"
           parameters: []
@@ -365,7 +336,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:

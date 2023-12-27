@@ -17,7 +17,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "702D54CB3309D1896C3D349A86587716"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
@@ -29,8 +29,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "BASIC"
-        content: !<regular>
-          value: "nameString1"
         valueType: "java.lang.String"
         uuid: "fromString_string1"
         fixed: false
@@ -50,8 +48,6 @@ methods:
         content: !<optional>
           value:
             sapientType: "ENUM"
-            content: !<regular>
-              value: "MAINNET"
             valueType: "org.bitcoinj.base.BitcoinNetwork"
             uuid: "fromString_object1"
             fixed: false
@@ -89,13 +85,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "7F6CB46EC38FE3E57FE52195FE5E8761"
+    modelFingerprint: "3B21EAEE44E0ECBF83616BC1A0EE49BF"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "idString"
-      modelFingerprint: "D474F4BCBB7550D9924BBC548B0EBC72"
+      modelFingerprint: "738398BE388DD1DE3BA9A7D40113D368"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -103,7 +99,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "idString1"
+          value: "prod"
+        suggestedContent: !<regular>
+          value: "prod"
         valueType: "java.lang.String"
         uuid: "fromIdString_string1"
         fixed: false
@@ -113,7 +111,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "BitcoinNetwork"
-      modelFingerprint: "AF99B619D9D712880E7E5BACC4D2E66B"
+      modelFingerprint: "BFF649C8F89BF6C981B806F9807C1192"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -145,7 +143,7 @@ methods:
               1:
                 sapientType: "ENUM"
                 content: !<regular>
-                  value: "TESTNET"
+                  value: "MAINNET"
                 valueType: "org.bitcoinj.base.BitcoinNetwork"
                 fixed: false
                 equalsMethodPresent: false
@@ -153,7 +151,7 @@ methods:
               2:
                 sapientType: "ENUM"
                 content: !<regular>
-                  value: "SIGNET"
+                  value: "MAINNET"
                 valueType: "org.bitcoinj.base.BitcoinNetwork"
                 fixed: false
                 equalsMethodPresent: false
@@ -161,7 +159,103 @@ methods:
               3:
                 sapientType: "ENUM"
                 content: !<regular>
-                  value: "REGTEST"
+                  value: "MAINNET"
+                valueType: "org.bitcoinj.base.BitcoinNetwork"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              4:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "MAINNET"
+                valueType: "org.bitcoinj.base.BitcoinNetwork"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              5:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "MAINNET"
+                valueType: "org.bitcoinj.base.BitcoinNetwork"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              6:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "MAINNET"
+                valueType: "org.bitcoinj.base.BitcoinNetwork"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              7:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "MAINNET"
+                valueType: "org.bitcoinj.base.BitcoinNetwork"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              8:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "MAINNET"
+                valueType: "org.bitcoinj.base.BitcoinNetwork"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              9:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "MAINNET"
+                valueType: "org.bitcoinj.base.BitcoinNetwork"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              10:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "MAINNET"
+                valueType: "org.bitcoinj.base.BitcoinNetwork"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              11:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "MAINNET"
+                valueType: "org.bitcoinj.base.BitcoinNetwork"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              12:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "MAINNET"
+                valueType: "org.bitcoinj.base.BitcoinNetwork"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              13:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "MAINNET"
+                valueType: "org.bitcoinj.base.BitcoinNetwork"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              14:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "MAINNET"
+                valueType: "org.bitcoinj.base.BitcoinNetwork"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              15:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "MAINNET"
                 valueType: "org.bitcoinj.base.BitcoinNetwork"
                 fixed: false
                 equalsMethodPresent: false
@@ -179,7 +273,7 @@ methods:
               1:
                 sapientType: "ENUM"
                 content: !<regular>
-                  value: "TESTNET"
+                  value: "MAINNET"
                 valueType: "org.bitcoinj.base.BitcoinNetwork"
                 fixed: false
                 equalsMethodPresent: false
@@ -187,7 +281,7 @@ methods:
               2:
                 sapientType: "ENUM"
                 content: !<regular>
-                  value: "SIGNET"
+                  value: "MAINNET"
                 valueType: "org.bitcoinj.base.BitcoinNetwork"
                 fixed: false
                 equalsMethodPresent: false
@@ -195,7 +289,103 @@ methods:
               3:
                 sapientType: "ENUM"
                 content: !<regular>
-                  value: "REGTEST"
+                  value: "MAINNET"
+                valueType: "org.bitcoinj.base.BitcoinNetwork"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              4:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "MAINNET"
+                valueType: "org.bitcoinj.base.BitcoinNetwork"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              5:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "MAINNET"
+                valueType: "org.bitcoinj.base.BitcoinNetwork"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              6:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "MAINNET"
+                valueType: "org.bitcoinj.base.BitcoinNetwork"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              7:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "MAINNET"
+                valueType: "org.bitcoinj.base.BitcoinNetwork"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              8:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "MAINNET"
+                valueType: "org.bitcoinj.base.BitcoinNetwork"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              9:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "MAINNET"
+                valueType: "org.bitcoinj.base.BitcoinNetwork"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              10:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "MAINNET"
+                valueType: "org.bitcoinj.base.BitcoinNetwork"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              11:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "MAINNET"
+                valueType: "org.bitcoinj.base.BitcoinNetwork"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              12:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "MAINNET"
+                valueType: "org.bitcoinj.base.BitcoinNetwork"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              13:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "MAINNET"
+                valueType: "org.bitcoinj.base.BitcoinNetwork"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              14:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "MAINNET"
+                valueType: "org.bitcoinj.base.BitcoinNetwork"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              15:
+                sapientType: "ENUM"
+                content: !<regular>
+                  value: "MAINNET"
                 valueType: "org.bitcoinj.base.BitcoinNetwork"
                 fixed: false
                 equalsMethodPresent: false
@@ -210,7 +400,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "D68CD8CF82657D0975008B0E701B36B8"
+      modelFingerprint: "D8125FD0DD1BED56601FD0D538B4E41F"
       index: 3
       ignored: false
       nestedInLoop: false

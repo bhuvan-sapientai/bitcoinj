@@ -33,8 +33,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "INPUT_STREAM"
-        content: !<inputStream>
-          values: []
         valueType: "java.io.InputStream"
         uuid: "runReadLoop_inputStream1"
         fixed: false
@@ -50,7 +48,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.net.StreamConnection"
           onlyPojoFunctions: false
@@ -70,7 +68,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.net.StreamConnection"
           onlyPojoFunctions: false
@@ -87,8 +85,6 @@ methods:
         signature: "getMaxMessageSize(): int"
         returnValue:
           sapientType: "BASIC"
-          content: !<regular>
-            value: 0
           valueType: "int"
           uuid: "runReadLoop_int1"
           fixed: false
@@ -105,7 +101,7 @@ methods:
       nestedInLoop: true
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         valueType: "org.bitcoinj.base.internal.Preconditions"
         uuid: "org.bitcoinj.base.internal.Preconditions"
         fixed: false
@@ -127,11 +123,6 @@ methods:
         signature: "checkState(boolean): void"
         returnValue:
           sapientType: "EXCEPTION"
-          content: !<new>
-            target: "java.lang.IllegalStateException"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
           suggestedContent: !<new>
             target: "java.lang.IllegalStateException"
             parameters: []
@@ -153,11 +144,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "EXCEPTION"
-        content: !<new>
-          target: "java.lang.IllegalStateException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
         suggestedContent: !<new>
           target: "java.lang.IllegalStateException"
           parameters: []
@@ -195,8 +181,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "INPUT_STREAM"
-        content: !<inputStream>
-          values: []
         valueType: "java.io.InputStream"
         uuid: "runReadLoop_inputStream1"
         fixed: false
@@ -212,7 +196,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.net.StreamConnection"
           onlyPojoFunctions: false
@@ -232,7 +216,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.net.StreamConnection"
           onlyPojoFunctions: false
@@ -249,8 +233,6 @@ methods:
         signature: "getMaxMessageSize(): int"
         returnValue:
           sapientType: "BASIC"
-          content: !<regular>
-            value: 0
           valueType: "int"
           uuid: "runReadLoop_int1"
           fixed: false
@@ -337,8 +319,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "INPUT_STREAM"
-        content: !<inputStream>
-          values: []
         valueType: "java.io.InputStream"
         uuid: "runReadLoop_inputStream1"
         fixed: false
@@ -354,7 +334,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.net.StreamConnection"
           onlyPojoFunctions: false
@@ -374,7 +354,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.net.StreamConnection"
           onlyPojoFunctions: false
@@ -391,8 +371,6 @@ methods:
         signature: "getMaxMessageSize(): int"
         returnValue:
           sapientType: "BASIC"
-          content: !<regular>
-            value: 0
           valueType: "int"
           uuid: "runReadLoop_int1"
           fixed: false
@@ -447,7 +425,7 @@ methods:
       nestedInLoop: true
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.net.StreamConnection"
           onlyPojoFunctions: false
@@ -464,19 +442,6 @@ methods:
         - name: "arg0"
           value:
             sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "java.nio.ByteBuffer"
-              method: "allocateDirect"
-              methodParameters:
-              - value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 4096
-                  valueType: "int"
-                  uuid: "runReadLoop_int3"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
             suggestedContent: !<static_method_return>
               target: "java.nio.ByteBuffer"
               method: "allocateDirect"
@@ -500,8 +465,6 @@ methods:
         signature: "receiveBytes(ByteBuffer): int throws java.lang.Exception"
         returnValue:
           sapientType: "BASIC"
-          content: !<regular>
-            value: 0
           valueType: "int"
           uuid: "runReadLoop_int13"
           fixed: false
@@ -588,8 +551,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "INPUT_STREAM"
-        content: !<inputStream>
-          values: []
         valueType: "java.io.InputStream"
         uuid: "runReadLoop_inputStream1"
         fixed: false
@@ -605,7 +566,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.net.StreamConnection"
           onlyPojoFunctions: false
@@ -625,7 +586,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.net.StreamConnection"
           onlyPojoFunctions: false
@@ -642,8 +603,6 @@ methods:
         signature: "getMaxMessageSize(): int"
         returnValue:
           sapientType: "BASIC"
-          content: !<regular>
-            value: 0
           valueType: "int"
           uuid: "runReadLoop_int1"
           fixed: false
@@ -660,7 +619,7 @@ methods:
       nestedInLoop: true
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         valueType: "org.bitcoinj.base.internal.Preconditions"
         uuid: "org.bitcoinj.base.internal.Preconditions"
         fixed: false
@@ -698,7 +657,7 @@ methods:
       nestedInLoop: true
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.net.StreamConnection"
           onlyPojoFunctions: false
@@ -715,19 +674,6 @@ methods:
         - name: "arg0"
           value:
             sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "java.nio.ByteBuffer"
-              method: "allocateDirect"
-              methodParameters:
-              - value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 4096
-                  valueType: "int"
-                  uuid: "runReadLoop_int3"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
             suggestedContent: !<static_method_return>
               target: "java.nio.ByteBuffer"
               method: "allocateDirect"
@@ -751,8 +697,6 @@ methods:
         signature: "receiveBytes(ByteBuffer): int throws java.lang.Exception"
         returnValue:
           sapientType: "BASIC"
-          content: !<regular>
-            value: 0
           valueType: "int"
           uuid: "runReadLoop_int13"
           fixed: false
@@ -769,7 +713,7 @@ methods:
       nestedInLoop: true
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         valueType: "org.bitcoinj.base.internal.Preconditions"
         uuid: "org.bitcoinj.base.internal.Preconditions"
         fixed: false
@@ -791,11 +735,6 @@ methods:
         signature: "checkState(boolean): void"
         returnValue:
           sapientType: "EXCEPTION"
-          content: !<new>
-            target: "java.lang.IllegalStateException"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
           suggestedContent: !<new>
             target: "java.lang.IllegalStateException"
             parameters: []
@@ -817,11 +756,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "EXCEPTION"
-        content: !<new>
-          target: "java.lang.IllegalStateException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
         suggestedContent: !<new>
           target: "java.lang.IllegalStateException"
           parameters: []
@@ -860,12 +794,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "C3EF2AB4A30AE8C4A712B62C530BE853"
+    modelFingerprint: "DA6C0B6E46EC419EC5126E7F950D90F8"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "10C86A1652452619E2BE2865E49F4C28"
+      modelFingerprint: "C266A98D58346F0F57CAE81E77BF570B"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -878,6 +812,10 @@ methods:
           - name: "serverAddress"
             value:
               sapientType: "NULL"
+              content: !<unknown_object>
+                target: "java.net.SocketAddress"
+                onlyPojoFunctions: false
+                builderPattern: false
               suggestedContent: !<unknown_object>
                 target: "java.net.SocketAddress"
                 onlyPojoFunctions: false
@@ -898,6 +836,7 @@ methods:
               valueType: "org.bitcoinj.net.StreamConnection"
               uuid: "<init>_streamConnection1"
               fixed: false
+              nameForMock: "null"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "connectTimeout"
@@ -954,9 +893,11 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
+                collectionClass: "java.util.HashSet"
                 parameters: []
                 values: []
               suggestedContent: !<collection>
+                collectionClass: "java.util.HashSet"
                 parameters: []
                 values: []
               valueType: "java.util.Set"
@@ -972,7 +913,7 @@ methods:
           parameters:
           - name: "serverAddress"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "NULL"
               suggestedContent: !<unknown_object>
                 target: "java.net.SocketAddress"
                 onlyPojoFunctions: false
@@ -985,7 +926,7 @@ methods:
               explicitCastNeeded: false
           - name: "connection"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.net.StreamConnection"
                 onlyPojoFunctions: false
@@ -993,11 +934,26 @@ methods:
               valueType: "org.bitcoinj.net.StreamConnection"
               uuid: "<init>_streamConnection1"
               fixed: false
+              nameForMock: "null"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "connectTimeout"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.time.Duration"
+                method: "ofDays"
+                methodParameters:
+                - name: "days"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "long"
+                    uuid: "<init>_duration1-days"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               suggestedContent: !<static_method_return>
                 target: "java.time.Duration"
                 method: "ofDays"
@@ -1017,7 +973,11 @@ methods:
               explicitCastNeeded: false
           - name: "socketFactory"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "javax.net.SocketFactory"
+                method: "getDefault"
+                methodParameters: []
               suggestedContent: !<static_method_return>
                 target: "javax.net.SocketFactory"
                 method: "getDefault"
@@ -1030,6 +990,14 @@ methods:
           - name: "clientSet"
             value:
               sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.HashSet"
+                parameters: []
+                values: []
+              suggestedContent: !<collection>
+                collectionClass: "java.util.HashSet"
+                parameters: []
+                values: []
               valueType: "java.util.Set"
               genericValueType: "org.bitcoinj.net.BlockingClient"
               uuid: "<init>_set1"
@@ -1047,7 +1015,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "connection"
-      modelFingerprint: "338AECD28A50E06746FBAE5940EDD0FD"
+      modelFingerprint: "541958D8F79ABFCB518EC47198AB4797"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1061,6 +1029,7 @@ methods:
         valueType: "org.bitcoinj.net.StreamConnection"
         uuid: "<init>_streamConnection1"
         fixed: false
+        nameForMock: "null"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -1088,7 +1057,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Context"
-      modelFingerprint: "48D221517E861357B3439FCF8D5FC88D"
+      modelFingerprint: "5F24CCB82A591202D5784F2C1CC00F11"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1106,7 +1075,17 @@ methods:
         parameters: []
         signature: "get(): Context"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "OBJECT"
+          content: !<new>
+            target: "org.bitcoinj.core.Context"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "org.bitcoinj.core.Context"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
           valueType: "org.bitcoinj.core.Context"
           uuid: "<init>_context1"
           fixed: false
@@ -1145,7 +1124,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "56F1F25C0A67EE1E4CD2DA8A77F14160"
+    modelFingerprint: "5C6250F2D4CA46FBF65DF757AA0354FA"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -1409,13 +1388,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Context"
-      modelFingerprint: "48D221517E861357B3439FCF8D5FC88D"
+      modelFingerprint: "8844008653DC641C2374B8DCFBDA516E"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "REAL"
         valueType: "org.bitcoinj.core.Context"
         uuid: "org.bitcoinj.core.Context"
         fixed: false
@@ -1427,7 +1406,15 @@ methods:
         parameters: []
         signature: "get(): Context"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.core.Context"
+            method: "get"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.core.Context"
+            method: "get"
+            methodParameters: []
           valueType: "org.bitcoinj.core.Context"
           uuid: "<init>_context1"
           fixed: false
@@ -1571,7 +1558,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "DC2800556AC8C6FAF661CB6392FCE82A"
+    modelFingerprint: "8121984A6EDE431917956B721847D2F5"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -1819,13 +1806,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Context"
-      modelFingerprint: "48D221517E861357B3439FCF8D5FC88D"
+      modelFingerprint: "8844008653DC641C2374B8DCFBDA516E"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "REAL"
         valueType: "org.bitcoinj.core.Context"
         uuid: "org.bitcoinj.core.Context"
         fixed: false
@@ -1837,7 +1824,15 @@ methods:
         parameters: []
         signature: "get(): Context"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.core.Context"
+            method: "get"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.core.Context"
+            method: "get"
+            methodParameters: []
           valueType: "org.bitcoinj.core.Context"
           uuid: "<init>_context1"
           fixed: false
@@ -1917,7 +1912,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "AF54366932875F8C500C2649416B0454"
+    modelFingerprint: "A625B5E3D3628B0BD4A18268A71FC963"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -2201,13 +2196,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Context"
-      modelFingerprint: "48D221517E861357B3439FCF8D5FC88D"
+      modelFingerprint: "8844008653DC641C2374B8DCFBDA516E"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "REAL"
         valueType: "org.bitcoinj.core.Context"
         uuid: "org.bitcoinj.core.Context"
         fixed: false
@@ -2219,7 +2214,15 @@ methods:
         parameters: []
         signature: "get(): Context"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.core.Context"
+            method: "get"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.core.Context"
+            method: "get"
+            methodParameters: []
           valueType: "org.bitcoinj.core.Context"
           uuid: "<init>_context1"
           fixed: false
@@ -2230,7 +2233,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "socket"
-      modelFingerprint: "C848E4FC79B658BA8D5BB90DDA02083B"
+      modelFingerprint: "EC42C8D42CE5BCC6342E98FBCFA2B00F"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -2281,7 +2284,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "stream"
-      modelFingerprint: "2343184A0CD74CA2B8EEEB14C35B66F8"
+      modelFingerprint: "8A1E7460231C13D4F858C24D8264F24E"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -2334,7 +2337,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "stream"
-      modelFingerprint: "45C714B6456FEF206DEF6F43081A49C0"
+      modelFingerprint: "85AACCCCF47C53D7EA0CE22934211188"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -2434,7 +2437,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "A2DC1F0DDC8354D53D1A3A99E9C93D9C"
+      modelFingerprint: "22F570B905D53D103225BA3749A834D6"
       index: 10
       ignored: false
       nestedInLoop: false
@@ -2481,12 +2484,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "C0DCA6BEF4BEA5B4BC34B77822753160"
+    modelFingerprint: "6BBB8D25DC0E4FABF4FE1B78A692A5C4"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "10C86A1652452619E2BE2865E49F4C28"
+      modelFingerprint: "C266A98D58346F0F57CAE81E77BF570B"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2499,6 +2502,10 @@ methods:
           - name: "serverAddress"
             value:
               sapientType: "NULL"
+              content: !<unknown_object>
+                target: "java.net.SocketAddress"
+                onlyPojoFunctions: false
+                builderPattern: false
               suggestedContent: !<unknown_object>
                 target: "java.net.SocketAddress"
                 onlyPojoFunctions: false
@@ -2519,6 +2526,7 @@ methods:
               valueType: "org.bitcoinj.net.StreamConnection"
               uuid: "<init>_streamConnection1"
               fixed: false
+              nameForMock: "{}"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "connectTimeout"
@@ -2575,9 +2583,11 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
+                collectionClass: "java.util.HashSet"
                 parameters: []
                 values: []
               suggestedContent: !<collection>
+                collectionClass: "java.util.HashSet"
                 parameters: []
                 values: []
               valueType: "java.util.Set"
@@ -2593,7 +2603,7 @@ methods:
           parameters:
           - name: "serverAddress"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "NULL"
               suggestedContent: !<unknown_object>
                 target: "java.net.SocketAddress"
                 onlyPojoFunctions: false
@@ -2606,7 +2616,7 @@ methods:
               explicitCastNeeded: false
           - name: "connection"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.net.StreamConnection"
                 onlyPojoFunctions: false
@@ -2614,11 +2624,26 @@ methods:
               valueType: "org.bitcoinj.net.StreamConnection"
               uuid: "<init>_streamConnection1"
               fixed: false
+              nameForMock: "{}"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "connectTimeout"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.time.Duration"
+                method: "ofDays"
+                methodParameters:
+                - name: "days"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "long"
+                    uuid: "<init>_duration1-days"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               suggestedContent: !<static_method_return>
                 target: "java.time.Duration"
                 method: "ofDays"
@@ -2638,7 +2663,11 @@ methods:
               explicitCastNeeded: false
           - name: "socketFactory"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "javax.net.SocketFactory"
+                method: "getDefault"
+                methodParameters: []
               suggestedContent: !<static_method_return>
                 target: "javax.net.SocketFactory"
                 method: "getDefault"
@@ -2651,6 +2680,14 @@ methods:
           - name: "clientSet"
             value:
               sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.HashSet"
+                parameters: []
+                values: []
+              suggestedContent: !<collection>
+                collectionClass: "java.util.HashSet"
+                parameters: []
+                values: []
               valueType: "java.util.Set"
               genericValueType: "org.bitcoinj.net.BlockingClient"
               uuid: "<init>_set1"
@@ -2668,7 +2705,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "connection"
-      modelFingerprint: "338AECD28A50E06746FBAE5940EDD0FD"
+      modelFingerprint: "541958D8F79ABFCB518EC47198AB4797"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -2682,6 +2719,7 @@ methods:
         valueType: "org.bitcoinj.net.StreamConnection"
         uuid: "<init>_streamConnection1"
         fixed: false
+        nameForMock: "{}"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -2709,7 +2747,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Context"
-      modelFingerprint: "48D221517E861357B3439FCF8D5FC88D"
+      modelFingerprint: "5F24CCB82A591202D5784F2C1CC00F11"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -2727,7 +2765,17 @@ methods:
         parameters: []
         signature: "get(): Context"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "OBJECT"
+          content: !<new>
+            target: "org.bitcoinj.core.Context"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "org.bitcoinj.core.Context"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
           valueType: "org.bitcoinj.core.Context"
           uuid: "<init>_context1"
           fixed: false
@@ -2738,7 +2786,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ListenableCompletableFuture"
-      modelFingerprint: "9B0F84458816CD01A701FE3203003406"
+      modelFingerprint: "F04C79B628615906491582E27A6D0AF7"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -2776,49 +2824,22 @@ methods:
         signature: "of(CompletableFuture): ListenableCompletableFuture"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
+          content: !<new>
             target: "org.bitcoinj.utils.ListenableCompletableFuture"
-            method: "of"
-            methodParameters:
-            - value:
-                sapientType: "OBJECT"
-                content: !<new>
-                  target: "java.util.concurrent.CompletableFuture"
-                  parameters: []
-                  privateConstructor: false
-                  createdByTargetCode: true
-                suggestedContent: !<new>
-                  target: "java.util.concurrent.CompletableFuture"
-                  parameters: []
-                  privateConstructor: false
-                  createdByTargetCode: true
-                valueType: "java.util.concurrent.CompletableFuture"
-                genericValueType: "java.net.SocketAddress"
-                uuid: "<init>_completableFuture1"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
             target: "org.bitcoinj.utils.ListenableCompletableFuture"
-            method: "of"
-            methodParameters:
-            - value:
-                sapientType: "OBJECT"
-                suggestedContent: !<new>
-                  target: "java.util.concurrent.CompletableFuture"
-                  parameters: []
-                  privateConstructor: false
-                  createdByTargetCode: true
-                valueType: "java.util.concurrent.CompletableFuture"
-                genericValueType: "java.net.SocketAddress"
-                uuid: "<init>_completableFuture1"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
           valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
           genericValueType: "java.net.SocketAddress"
           uuid: "getConnectFuture_listenableCompletableFuture1"
           fixed: false
+          nameForMock: "UnknownObjectContent{target='org.bitcoinj.utils.ListenableCompletableFuture',\
+            \ onlyPojoFunctions=true, builderPattern=false}"
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 9
@@ -2826,64 +2847,37 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "C79E8F5B3E8FF6F50473E559AFF62337"
+      modelFingerprint: "D7F45BA52EDE80D908BE5D569A2F39C6"
       index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "OBJECT"
-        content: !<static_method_return>
+        content: !<new>
           target: "org.bitcoinj.utils.ListenableCompletableFuture"
-          method: "of"
-          methodParameters:
-          - value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.util.concurrent.CompletableFuture"
-                parameters: []
-                privateConstructor: false
-                createdByTargetCode: true
-              suggestedContent: !<new>
-                target: "java.util.concurrent.CompletableFuture"
-                parameters: []
-                privateConstructor: false
-                createdByTargetCode: true
-              valueType: "java.util.concurrent.CompletableFuture"
-              genericValueType: "java.net.SocketAddress"
-              uuid: "<init>_completableFuture1"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
           target: "org.bitcoinj.utils.ListenableCompletableFuture"
-          method: "of"
-          methodParameters:
-          - value:
-              sapientType: "OBJECT"
-              suggestedContent: !<new>
-                target: "java.util.concurrent.CompletableFuture"
-                parameters: []
-                privateConstructor: false
-                createdByTargetCode: true
-              valueType: "java.util.concurrent.CompletableFuture"
-              genericValueType: "java.net.SocketAddress"
-              uuid: "<init>_completableFuture1"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
         valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
         genericValueType: "java.net.SocketAddress"
         uuid: "getConnectFuture_listenableCompletableFuture1"
         fixed: false
+        nameForMock: "UnknownObjectContent{target='org.bitcoinj.utils.ListenableCompletableFuture',\
+          \ onlyPojoFunctions=true, builderPattern=false}"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     uuid: "36732ad5-ba24-3fdc-b468-45e041efaa06"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false

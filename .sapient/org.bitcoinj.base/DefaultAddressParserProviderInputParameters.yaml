@@ -17,12 +17,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "6C0EDCCF67D643CE5774D2BB6311449F"
+    modelFingerprint: "9A49AAD0FA49FDC3DF84B1A8AA9F419C"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "EFC25401227755A79A1D4B8D60BF9A00"
+      modelFingerprint: "BDCDAC3B4846C55D665F393949C0D587"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -36,9 +36,11 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
                 values: []
               suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
                 values: []
               valueType: "java.util.List"
@@ -51,9 +53,11 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
                 values: []
               suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
                 values: []
               valueType: "java.util.List"
@@ -70,6 +74,14 @@ methods:
           - name: "segwitNetworks"
             value:
               sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values: []
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values: []
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.base.Network"
               uuid: "<init>_list1"
@@ -79,6 +91,14 @@ methods:
           - name: "base58Networks"
             value:
               sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values: []
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values: []
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.base.Network"
               uuid: "<init>_list2"
@@ -114,7 +134,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -134,12 +154,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "46841208158CC461E2EAD72C95E75604"
+    modelFingerprint: "FFC5A3B4B9DA4E8D093E4904D5E622EE"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "EFC25401227755A79A1D4B8D60BF9A00"
+      modelFingerprint: "A04FF0DE8D68343D8BB3F4C7BD239CFF"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -153,11 +173,61 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "MOCK"
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.base.Network"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.base.Network"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  nameForMock: "MAINNET"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "MOCK"
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.base.Network"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.base.Network"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  nameForMock: "TESTNET"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "MOCK"
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.base.Network"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.base.Network"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  nameForMock: "MAINNET"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "MOCK"
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.base.Network"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.base.Network"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  nameForMock: "TESTNET"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.base.Network"
               uuid: "<init>_list1"
@@ -168,11 +238,61 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "MOCK"
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.base.Network"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.base.Network"
+                  uuid: "<init>_list2-0"
+                  fixed: false
+                  collectionUuid: "<init>_list2"
+                  nameForMock: "MAINNET"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "MOCK"
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.base.Network"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.base.Network"
+                  uuid: "<init>_list2-1"
+                  fixed: false
+                  collectionUuid: "<init>_list2"
+                  nameForMock: "TESTNET"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "MOCK"
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.base.Network"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.base.Network"
+                  uuid: "<init>_list2-0"
+                  fixed: false
+                  collectionUuid: "<init>_list2"
+                  nameForMock: "MAINNET"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "MOCK"
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.base.Network"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.base.Network"
+                  uuid: "<init>_list2-1"
+                  fixed: false
+                  collectionUuid: "<init>_list2"
+                  nameForMock: "TESTNET"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.base.Network"
               uuid: "<init>_list2"
@@ -187,6 +307,78 @@ methods:
           - name: "segwitNetworks"
             value:
               sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "MOCK"
+                  content: !<unknown_object>
+                    target: "org.bitcoinj.base.Network"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.base.Network"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.base.Network"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  nameForMock: "MAINNET"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "MOCK"
+                  content: !<unknown_object>
+                    target: "org.bitcoinj.base.Network"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.base.Network"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.base.Network"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  nameForMock: "TESTNET"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "MOCK"
+                  content: !<unknown_object>
+                    target: "org.bitcoinj.base.Network"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.base.Network"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.base.Network"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  nameForMock: "MAINNET"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "MOCK"
+                  content: !<unknown_object>
+                    target: "org.bitcoinj.base.Network"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.base.Network"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.base.Network"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  nameForMock: "TESTNET"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.base.Network"
               uuid: "<init>_list1"
@@ -196,6 +388,78 @@ methods:
           - name: "base58Networks"
             value:
               sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "MOCK"
+                  content: !<unknown_object>
+                    target: "org.bitcoinj.base.Network"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.base.Network"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.base.Network"
+                  uuid: "<init>_list2-0"
+                  fixed: false
+                  collectionUuid: "<init>_list2"
+                  nameForMock: "MAINNET"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "MOCK"
+                  content: !<unknown_object>
+                    target: "org.bitcoinj.base.Network"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.base.Network"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.base.Network"
+                  uuid: "<init>_list2-1"
+                  fixed: false
+                  collectionUuid: "<init>_list2"
+                  nameForMock: "TESTNET"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "MOCK"
+                  content: !<unknown_object>
+                    target: "org.bitcoinj.base.Network"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.base.Network"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.base.Network"
+                  uuid: "<init>_list2-0"
+                  fixed: false
+                  collectionUuid: "<init>_list2"
+                  nameForMock: "MAINNET"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "MOCK"
+                  content: !<unknown_object>
+                    target: "org.bitcoinj.base.Network"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.base.Network"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.base.Network"
+                  uuid: "<init>_list2-1"
+                  fixed: false
+                  collectionUuid: "<init>_list2"
+                  nameForMock: "TESTNET"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.base.Network"
               uuid: "<init>_list2"
@@ -213,16 +477,21 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "network"
-      modelFingerprint: "ECD5777B98096C66D018424DBD7F2C5A"
+      modelFingerprint: "62D36D9D71CD6C8C1AEBB21D1EB5E1D6"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Network"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.base.Network"
         uuid: "forNetwork_network1"
         fixed: false
+        nameForMock: "MAINNET"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
@@ -247,7 +516,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -276,7 +545,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         valueType: "org.bitcoinj.params.Networks"
         uuid: "org.bitcoinj.params.Networks"
         fixed: false
@@ -289,26 +558,11 @@ methods:
         signature: "get(): Set"
         returnValue:
           sapientType: "COLLECTION"
-          content: !<collection>
-            collectionClass: "java.util.HashSet"
-            parameters: []
-            values:
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.NetworkParameters"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.NetworkParameters"
-              uuid: "fromNetworks_networkParameters1"
-              fixed: false
-              collectionUuid: "fromNetworks_set1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
           suggestedContent: !<collection>
             collectionClass: "java.util.HashSet"
             parameters: []
             values:
-            - sapientType: "MOCK"
+            - sapientType: "UNKNOWN"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.NetworkParameters"
                 onlyPojoFunctions: false
@@ -335,7 +589,7 @@ methods:
       nestedInLoop: true
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.NetworkParameters"
           onlyPojoFunctions: false
@@ -352,7 +606,7 @@ methods:
         parameters: []
         signature: "network(): Network"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "UNKNOWN"
           valueType: "org.bitcoinj.base.Network"
           uuid: "fromNetworks_network1"
           fixed: false
@@ -382,10 +636,6 @@ methods:
         signature: "toUnmodifiableList(): Collector"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.internal.StreamUtils"
-            method: "toUnmodifiableList"
-            methodParameters: []
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.base.internal.StreamUtils"
             method: "toUnmodifiableList"
@@ -407,41 +657,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.base.DefaultAddressParserProvider"
-          parameters:
-          - name: "segwitNetworks"
-            value:
-              sapientType: "COLLECTION"
-              content: !<collection>
-                parameters: []
-                values: []
-              suggestedContent: !<collection>
-                parameters: []
-                values: []
-              valueType: "java.util.List"
-              uuid: "fromNetworks_object1"
-              fixed: false
-              collectionUuid: "fromNetworks_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: true
-          - name: "base58Networks"
-            value:
-              sapientType: "COLLECTION"
-              content: !<collection>
-                parameters: []
-                values: []
-              suggestedContent: !<collection>
-                parameters: []
-                values: []
-              valueType: "java.util.List"
-              uuid: "fromNetworks_object1"
-              fixed: false
-              collectionUuid: "fromNetworks_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: true
-          privateConstructor: false
-          createdByTargetCode: true
         suggestedContent: !<new>
           target: "org.bitcoinj.base.DefaultAddressParserProvider"
           parameters:

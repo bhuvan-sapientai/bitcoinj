@@ -55,13 +55,14 @@ import static org.hamcrest.Matchers.isA;
 
 import org.junit.Ignore;
 import org.bitcoinj.core.ProtocolException;
+import org.bitcoinj.base.Sha256Hash;
 
 public class FakeTxBuilderSapientGeneratedJunit4Test {
 
     @Rule()
     public Timeout timeoutRule = Timeout.seconds(5);
 
-    private final Address addressMock = mock(Address.class);
+    private final Address addressMock = mock(Address.class, "Address");
 
     private final Address addressMock2 = mock(Address.class);
 
@@ -92,42 +93,25 @@ public class FakeTxBuilderSapientGeneratedJunit4Test {
     @Rule()
     public ExpectedException thrown = ExpectedException.none();
 
+    private final Block previousBlockMock = mock(Block.class);
+
+    private final Sha256Hash sha256HashMock = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
+
     //Sapient generated method id: ${211162e4-2a32-3ff6-ab53-26894c139a7c}
     @Test()
     public void createFakeTxTest() {
-        /**
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
         //Arrange Statement(s)
+        Network networkMock = mock(Network.class, "MAINNET");
         try (MockedStatic<FakeTxBuilder> fakeTxBuilder = mockStatic(FakeTxBuilder.class, CALLS_REAL_METHODS)) {
+            Transaction transaction = new Transaction();
             Coin coin = Coin.COIN;
-            fakeTxBuilder.when(() -> FakeTxBuilder.createFakeTxWithoutChangeAddress(eq(coin), (Address) any())).thenReturn(transactionMock);
+            fakeTxBuilder.when(() -> FakeTxBuilder.createFakeTxWithoutChangeAddress(eq(coin), (Address) any())).thenReturn(transaction);
             //Act Statement(s)
             Transaction result = FakeTxBuilder.createFakeTx(networkMock);
             //Assert statement(s)
-            assertThat(result, equalTo(transactionMock));
-            fakeTxBuilder.verify(() -> FakeTxBuilder.createFakeTxWithoutChangeAddress(eq(coin), (Address) any()), atLeast(1));
-        }
-    }
-
-    //Sapient generated method id: ${ca2d87fa-9b31-3344-a08d-c5119edbe4e6}
-    @Test()
-    public void createFakeTx1Test() {
-        /**
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<FakeTxBuilder> fakeTxBuilder = mockStatic(FakeTxBuilder.class, CALLS_REAL_METHODS)) {
-            doReturn(networkMock).when(paramsMock).network();
-            Coin coin = Coin.COIN;
-            fakeTxBuilder.when(() -> FakeTxBuilder.createFakeTxWithoutChangeAddress(eq(coin), (Address) any())).thenReturn(transactionMock);
-            //Act Statement(s)
-            Transaction result = FakeTxBuilder.createFakeTx(paramsMock);
-            //Assert statement(s)
-            assertThat(result, equalTo(transactionMock));
-            verify(paramsMock, atLeast(1)).network();
+            assertThat(result, equalTo(transaction));
             fakeTxBuilder.verify(() -> FakeTxBuilder.createFakeTxWithoutChangeAddress(eq(coin), (Address) any()), atLeast(1));
         }
     }
@@ -145,33 +129,18 @@ public class FakeTxBuilderSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        TransactionOutput transactionOutputMock = mock(TransactionOutput.class);
-        TransactionOutput transactionOutputMock2 = mock(TransactionOutput.class);
+        TransactionOutput transactionOutputMock = mock(TransactionOutput.class, "Transaction");
         try (MockedStatic<FakeTxBuilder> fakeTxBuilder = mockStatic(FakeTxBuilder.class, CALLS_REAL_METHODS)) {
-            Coin coin = Coin.COIN;
-            fakeTxBuilder.when(() -> FakeTxBuilder.createFakeTx(eq(coin), (ECKey) any())).thenReturn(transactionMock);
-            doReturn(transactionOutputMock).when(transactionMock).getOutput(0L);
-            //Act Statement(s)
-            Transaction result = FakeTxBuilder.createFakeTxWithoutChange(transactionOutputMock2);
             Transaction transaction = new Transaction();
+            Coin coin = Coin.COIN;
+            fakeTxBuilder.when(() -> FakeTxBuilder.createFakeTx(eq(coin), (ECKey) any())).thenReturn(transaction);
+            //Act Statement(s)
+            Transaction result = FakeTxBuilder.createFakeTxWithoutChange(transactionOutputMock);
+            Transaction transaction2 = new Transaction();
             //Assert statement(s)
-            assertThat(result, equalTo(transaction));
+            assertThat(result, equalTo(transaction2));
             fakeTxBuilder.verify(() -> FakeTxBuilder.createFakeTx(eq(coin), (ECKey) any()), atLeast(1));
-            verify(transactionMock, atLeast(1)).getOutput(0L);
         }
-    }
-
-    //Sapient generated method id: ${0830d095-8eb4-37ca-beae-5eb8a100eb8f}
-    @Ignore()
-    @Test()
-    public void createFakeCoinbaseTxTest() {
-
-        //Act Statement(s)
-        Transaction result = FakeTxBuilder.createFakeCoinbaseTx();
-        Transaction transaction = Transaction.coinbase();
-
-        //Assert statement(s)
-        assertThat(result, equalTo(transaction));
     }
 
     //Sapient generated method id: ${f6a38e48-7cc0-35fc-bac6-5234e82a0bee}
@@ -187,27 +156,29 @@ public class FakeTxBuilderSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Address addressMock = mock(Address.class, "TransactionSignature");
+        Address addressMock2 = mock(Address.class, "TransactionSignature");
         try (MockedStatic<Transaction> transaction = mockStatic(Transaction.class);
              MockedStatic<ScriptBuilder> scriptBuilder = mockStatic(ScriptBuilder.class);
              MockedStatic<TransactionSignature> transactionSignature = mockStatic(TransactionSignature.class);
              MockedStatic<Coin> coin = mockStatic(Coin.class)) {
-            Coin coin2 = Coin.valueOf(1, 11);
+            Coin coin2 = Coin.valueOf(0L);
             coin.when(() -> Coin.valueOf(1, 11)).thenReturn(coin2);
-            TransactionSignature transactionSignature2 = TransactionSignature.dummy();
+            TransactionSignature transactionSignature2 = new TransactionSignature(new BigInteger("0"), new BigInteger("0"));
             transactionSignature.when(() -> TransactionSignature.dummy()).thenReturn(transactionSignature2);
-            Script script = ScriptBuilder.createInputScript(transactionSignature2);
-            scriptBuilder.when(() -> ScriptBuilder.createInputScript((TransactionSignature) any())).thenReturn(script);
-            byte[] byteArray = new byte[]{(byte) 1, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
-            ByteBuffer byteBuffer = ByteBuffer.wrap(byteArray);
-            Transaction transaction2 = Transaction.read(byteBuffer);
+            List list = new ArrayList<>();
+            Script script = Script.of(list);
+            scriptBuilder.when(() -> ScriptBuilder.createInputScript(transactionSignature2)).thenReturn(script);
+            Transaction transaction2 = new Transaction();
             transaction.when(() -> Transaction.read((ByteBuffer) any())).thenReturn(transaction2);
+            Coin coin3 = Coin.valueOf(0L);
             //Act Statement(s)
-            Transaction result = FakeTxBuilder.createFakeTxWithChangeAddress(coinMock, addressMock, addressMock2);
+            Transaction result = FakeTxBuilder.createFakeTxWithChangeAddress(coin3, addressMock, addressMock2);
             //Assert statement(s)
             assertThat(result, equalTo(transaction2));
             coin.verify(() -> Coin.valueOf(1, 11), atLeast(1));
             transactionSignature.verify(() -> TransactionSignature.dummy(), atLeast(1));
-            scriptBuilder.verify(() -> ScriptBuilder.createInputScript((TransactionSignature) any()));
+            scriptBuilder.verify(() -> ScriptBuilder.createInputScript(transactionSignature2), atLeast(1));
             transaction.verify(() -> Transaction.read((ByteBuffer) any()));
         }
     }
@@ -229,34 +200,35 @@ public class FakeTxBuilderSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Coin valueMock = mock(Coin.class);
+        Coin valueMock = mock(Coin.class, "20");
+        Address addressMock = mock(Address.class, "{}");
         try (MockedStatic<Transaction> transaction = mockStatic(Transaction.class);
              MockedStatic<ScriptBuilder> scriptBuilder = mockStatic(ScriptBuilder.class);
              MockedStatic<TransactionSignature> transactionSignature = mockStatic(TransactionSignature.class);
              MockedStatic<Coin> coin = mockStatic(Coin.class)) {
             doReturn(0L).when(valueMock).getValue();
-            Coin coin2 = Coin.valueOf(7L);
-            coin.when(() -> Coin.valueOf(7L)).thenReturn(coin2);
+            Coin coin2 = Coin.valueOf(0L);
             TransactionSignature transactionSignature2 = TransactionSignature.dummy();
             Script script = ScriptBuilder.createInputScript(transactionSignature2);
-            coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
-            TransactionSignature transactionSignature3 = TransactionSignature.dummy();
+            scriptBuilder.when(() -> ScriptBuilder.createInputScript((TransactionSignature) any())).thenReturn(script);
+            Coin coin3 = Coin.valueOf(0L);
+            coin.when(() -> Coin.valueOf(0L)).thenReturn(coin2).thenReturn(coin3);
+            TransactionSignature transactionSignature3 = new TransactionSignature(new BigInteger("0"), new BigInteger("0"));
             transactionSignature.when(() -> TransactionSignature.dummy()).thenReturn(transactionSignature2).thenReturn(transactionSignature3);
-            Script script2 = ScriptBuilder.createInputScript(transactionSignature3);
-            scriptBuilder.when(() -> ScriptBuilder.createInputScript((TransactionSignature) any())).thenReturn(script).thenReturn(script2);
-            byte[] byteArray = new byte[]{(byte) 1, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
-            ByteBuffer byteBuffer = ByteBuffer.wrap(byteArray);
-            Transaction transaction2 = Transaction.read(byteBuffer);
+            List list = new ArrayList<>();
+            Script script2 = Script.of(list);
+            scriptBuilder.when(() -> ScriptBuilder.createInputScript(transactionSignature3)).thenReturn(script2);
+            Transaction transaction2 = new Transaction();
             transaction.when(() -> Transaction.read((ByteBuffer) any())).thenReturn(transaction2);
             //Act Statement(s)
             Transaction result = FakeTxBuilder.createFakeTxWithoutChangeAddress(valueMock, addressMock);
             //Assert statement(s)
             assertThat(result, equalTo(transaction2));
-            verify(valueMock, times(3)).getValue();
-            coin.verify(() -> Coin.valueOf(7L), atLeast(1));
+            verify(valueMock, times(6)).getValue();
+            coin.verify(() -> Coin.valueOf(0L), atLeast(2));
             transactionSignature.verify(() -> TransactionSignature.dummy(), atLeast(2));
-            scriptBuilder.verify(() -> ScriptBuilder.createInputScript((TransactionSignature) any()), atLeast(2));
-            coin.verify(() -> Coin.valueOf(0L), atLeast(1));
+            scriptBuilder.verify(() -> ScriptBuilder.createInputScript((TransactionSignature) any()));
+            scriptBuilder.verify(() -> ScriptBuilder.createInputScript(transactionSignature3), atLeast(1));
             transaction.verify(() -> Transaction.read((ByteBuffer) any()));
         }
     }
@@ -264,18 +236,17 @@ public class FakeTxBuilderSapientGeneratedJunit4Test {
     //Sapient generated method id: ${4dabd547-3de6-3c74-a633-929892028759}
     @Test()
     public void createFakeTx2Test() {
-        /**
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
         //Arrange Statement(s)
+        Network networkMock = mock(Network.class, "Network");
         try (MockedStatic<FakeTxBuilder> fakeTxBuilder = mockStatic(FakeTxBuilder.class, CALLS_REAL_METHODS)) {
-            fakeTxBuilder.when(() -> FakeTxBuilder.createFakeTxWithChangeAddress(eq(coinMock), eq(addressMock), (Address) any())).thenReturn(transactionMock);
+            Transaction transaction = new Transaction();
+            fakeTxBuilder.when(() -> FakeTxBuilder.createFakeTxWithChangeAddress((Coin) any(), eq(addressMock), (Address) any())).thenReturn(transaction);
+            Coin coin = Coin.valueOf(0L);
             //Act Statement(s)
-            Transaction result = FakeTxBuilder.createFakeTx(networkMock, coinMock, addressMock);
+            Transaction result = FakeTxBuilder.createFakeTx(networkMock, coin, addressMock);
             //Assert statement(s)
-            assertThat(result, equalTo(transactionMock));
-            fakeTxBuilder.verify(() -> FakeTxBuilder.createFakeTxWithChangeAddress(eq(coinMock), eq(addressMock), (Address) any()), atLeast(1));
+            assertThat(result, equalTo(transaction));
+            fakeTxBuilder.verify(() -> FakeTxBuilder.createFakeTxWithChangeAddress((Coin) any(), eq(addressMock), (Address) any()), atLeast(1));
         }
     }
 
@@ -283,14 +254,16 @@ public class FakeTxBuilderSapientGeneratedJunit4Test {
     @Test()
     public void createFakeTx3Test() {
         //Arrange Statement(s)
+        Network networkMock = mock(Network.class);
+        Coin coinMock = mock(Coin.class, "100");
+        Address addressMock = mock(Address.class, "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa");
         try (MockedStatic<FakeTxBuilder> fakeTxBuilder = mockStatic(FakeTxBuilder.class, CALLS_REAL_METHODS)) {
-            doReturn(networkMock).when(paramsMock).network();
             fakeTxBuilder.when(() -> FakeTxBuilder.createFakeTx(networkMock, coinMock, addressMock)).thenReturn(transactionMock);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
             //Act Statement(s)
-            Transaction result = FakeTxBuilder.createFakeTx(paramsMock, coinMock, addressMock);
+            Transaction result = FakeTxBuilder.createFakeTx(networkParameters, coinMock, addressMock);
             //Assert statement(s)
             assertThat(result, equalTo(transactionMock));
-            verify(paramsMock, atLeast(1)).network();
             fakeTxBuilder.verify(() -> FakeTxBuilder.createFakeTx(networkMock, coinMock, addressMock), atLeast(1));
         }
     }
@@ -311,13 +284,14 @@ public class FakeTxBuilderSapientGeneratedJunit4Test {
         ECKey eCKeyMock = mock(ECKey.class);
         try (MockedStatic<Transaction> transaction = mockStatic(Transaction.class);
              MockedStatic<Coin> coin = mockStatic(Coin.class)) {
-            Coin coin2 = Coin.valueOf(1, 11);
+            Coin coin2 = Coin.valueOf(0L);
             coin.when(() -> Coin.valueOf(1, 11)).thenReturn(coin2);
-            transaction.when(() -> Transaction.read((ByteBuffer) any())).thenReturn(transactionMock);
+            Transaction transaction2 = new Transaction();
+            transaction.when(() -> Transaction.read((ByteBuffer) any())).thenReturn(transaction2);
             //Act Statement(s)
             Transaction result = FakeTxBuilder.createFakeTx(coinMock, eCKeyMock);
             //Assert statement(s)
-            assertThat(result, equalTo(transactionMock));
+            assertThat(result, equalTo(transaction2));
             coin.verify(() -> Coin.valueOf(1, 11), atLeast(1));
             transaction.verify(() -> Transaction.read((ByteBuffer) any()));
         }
@@ -335,18 +309,18 @@ public class FakeTxBuilderSapientGeneratedJunit4Test {
          *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
-        //Arrange Statement(s)
         try (MockedStatic<Transaction> transaction = mockStatic(Transaction.class);
              MockedStatic<Coin> coin = mockStatic(Coin.class)) {
-            Coin coin2 = Coin.valueOf(1, 11);
+            Coin coin2 = Coin.valueOf(0L);
             coin.when(() -> Coin.valueOf(1, 11)).thenReturn(coin2);
             byte[] byteArray = new byte[]{(byte) 1, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
             ByteBuffer byteBuffer = ByteBuffer.wrap(byteArray);
             Transaction transaction2 = Transaction.read(byteBuffer);
-            transaction.when(() -> Transaction.read((ByteBuffer) any())).thenReturn(transaction2).thenReturn(transactionMock);
+            Transaction transaction3 = new Transaction();
+            transaction.when(() -> Transaction.read((ByteBuffer) any())).thenReturn(transaction2).thenReturn(transaction3);
             //Act Statement(s)
             Transaction[] result = FakeTxBuilder.createFakeTx(coinMock, addressMock, addressMock2);
-            Transaction[] transactionResultArray = new Transaction[]{transaction2, transactionMock};
+            Transaction[] transactionResultArray = new Transaction[]{transaction2, transaction3};
             //Assert statement(s)
             assertThat(result, equalTo(transactionResultArray));
             coin.verify(() -> Coin.valueOf(1, 11), atLeast(1));
@@ -358,16 +332,14 @@ public class FakeTxBuilderSapientGeneratedJunit4Test {
     @Test()
     public void roundTripTransactionTest() {
         //Arrange Statement(s)
-        Transaction txMock = mock(Transaction.class);
         try (MockedStatic<Transaction> transaction = mockStatic(Transaction.class)) {
-            byte[] byteArray = new byte[]{};
-            doReturn(byteArray).when(txMock).serialize();
-            transaction.when(() -> Transaction.read((ByteBuffer) any())).thenReturn(transactionMock);
+            Transaction transaction2 = new Transaction();
+            transaction.when(() -> Transaction.read((ByteBuffer) any())).thenReturn(transaction2);
+            Transaction transaction3 = new Transaction();
             //Act Statement(s)
-            Transaction result = FakeTxBuilder.roundTripTransaction(txMock);
+            Transaction result = FakeTxBuilder.roundTripTransaction(transaction3);
             //Assert statement(s)
-            assertThat(result, equalTo(transactionMock));
-            verify(txMock).serialize();
+            assertThat(result, equalTo(transaction2));
             transaction.verify(() -> Transaction.read((ByteBuffer) any()));
         }
     }
@@ -381,14 +353,10 @@ public class FakeTxBuilderSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Address addressMock = mock(Address.class);
         try (MockedStatic<Transaction> transaction = mockStatic(Transaction.class)) {
-            byte[] byteArray = new byte[]{(byte) 1, (byte) 0, (byte) 0, (byte) 0, (byte) 1, (byte) -120, (byte) -56, (byte) -95, (byte) -60, (byte) 101, (byte) -85, (byte) 121, (byte) 61, (byte) 105, (byte) -108, (byte) -49, (byte) -89, (byte) 85, (byte) -35, (byte) -1, (byte) 9, (byte) -68, (byte) -109, (byte) -88, (byte) 76, (byte) 71, (byte) -38, (byte) 122, (byte) -16, (byte) -96, (byte) 78, (byte) 91, (byte) -72, (byte) -88, (byte) -101, (byte) -2, (byte) -51, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) -1, (byte) -1, (byte) -1, (byte) -1, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
-            ByteBuffer byteBuffer = ByteBuffer.wrap(byteArray);
-            Transaction transaction2 = Transaction.read(byteBuffer);
-            byte[] byteArray2 = new byte[]{(byte) 1, (byte) 0, (byte) 0, (byte) 0, (byte) 1, (byte) -120, (byte) -56, (byte) -95, (byte) -60, (byte) 101, (byte) -85, (byte) 121, (byte) 61, (byte) 105, (byte) -108, (byte) -49, (byte) -89, (byte) 85, (byte) -35, (byte) -1, (byte) 9, (byte) -68, (byte) -109, (byte) -88, (byte) 76, (byte) 71, (byte) -38, (byte) 122, (byte) -16, (byte) -96, (byte) 78, (byte) 91, (byte) -72, (byte) -88, (byte) -101, (byte) -2, (byte) -51, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) -1, (byte) -1, (byte) -1, (byte) -1, (byte) 1, (byte) 0, (byte) -31, (byte) -11, (byte) 5, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 35, (byte) 33, (byte) 2, (byte) -12, (byte) 79, (byte) 20, (byte) 100, (byte) 101, (byte) -109, (byte) -46, (byte) -53, (byte) -51, (byte) 83, (byte) -19, (byte) -63, (byte) -109, (byte) -52, (byte) -19, (byte) 99, (byte) 24, (byte) 62, (byte) 122, (byte) 50, (byte) 41, (byte) -110, (byte) 17, (byte) -111, (byte) -6, (byte) 86, (byte) 43, (byte) 71, (byte) -22, (byte) 115, (byte) -19, (byte) 15, (byte) -84, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
-            ByteBuffer byteBuffer2 = ByteBuffer.wrap(byteArray2);
-            Transaction transaction3 = Transaction.read(byteBuffer2);
-            transaction.when(() -> Transaction.read((ByteBuffer) any())).thenReturn(transaction2).thenReturn(transaction3);
+            Transaction transaction2 = new Transaction();
+            transaction.when(() -> Transaction.read((ByteBuffer) any())).thenReturn(transactionMock).thenReturn(transaction2);
             //Act Statement(s)
             FakeTxBuilder.DoubleSpends result = FakeTxBuilder.createFakeDoubleSpendTxns(addressMock);
             FakeTxBuilder.DoubleSpends fakeTxBuilderDoubleSpends = new FakeTxBuilder.DoubleSpends();
@@ -410,14 +378,10 @@ public class FakeTxBuilderSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Address addressMock = mock(Address.class);
         try (MockedStatic<Transaction> transaction = mockStatic(Transaction.class)) {
-            byte[] byteArray = new byte[]{(byte) 1, (byte) 0, (byte) 0, (byte) 0, (byte) 1, (byte) -84, (byte) 99, (byte) -9, (byte) -15, (byte) 16, (byte) -63, (byte) -20, (byte) -33, (byte) -111, (byte) -38, (byte) -63, (byte) 87, (byte) -98, (byte) 122, (byte) -100, (byte) 107, (byte) 64, (byte) -6, (byte) 104, (byte) -8, (byte) -111, (byte) -96, (byte) -78, (byte) 99, (byte) 31, (byte) -53, (byte) -84, (byte) -20, (byte) 64, (byte) -68, (byte) -111, (byte) 123, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) -1, (byte) -1, (byte) -1, (byte) -1, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
-            ByteBuffer byteBuffer = ByteBuffer.wrap(byteArray);
-            Transaction transaction2 = Transaction.read(byteBuffer);
-            byte[] byteArray2 = new byte[]{(byte) 1, (byte) 0, (byte) 0, (byte) 0, (byte) 1, (byte) -84, (byte) 99, (byte) -9, (byte) -15, (byte) 16, (byte) -63, (byte) -20, (byte) -33, (byte) -111, (byte) -38, (byte) -63, (byte) 87, (byte) -98, (byte) 122, (byte) -100, (byte) 107, (byte) 64, (byte) -6, (byte) 104, (byte) -8, (byte) -111, (byte) -96, (byte) -78, (byte) 99, (byte) 31, (byte) -53, (byte) -84, (byte) -20, (byte) 64, (byte) -68, (byte) -111, (byte) 123, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) -1, (byte) -1, (byte) -1, (byte) -1, (byte) 1, (byte) 0, (byte) -31, (byte) -11, (byte) 5, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 35, (byte) 33, (byte) 2, (byte) 0, (byte) 44, (byte) -80, (byte) -84, (byte) -72, (byte) 43, (byte) -7, (byte) 102, (byte) 79, (byte) -126, (byte) -87, (byte) -101, (byte) -6, (byte) 105, (byte) 61, (byte) -30, (byte) -112, (byte) -125, (byte) -67, (byte) 8, (byte) 16, (byte) -59, (byte) 84, (byte) -95, (byte) -103, (byte) 3, (byte) 41, (byte) 30, (byte) -111, (byte) 44, (byte) 118, (byte) -112, (byte) -84, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
-            ByteBuffer byteBuffer2 = ByteBuffer.wrap(byteArray2);
-            Transaction transaction3 = Transaction.read(byteBuffer2);
-            transaction.when(() -> Transaction.read((ByteBuffer) any())).thenReturn(transaction2).thenReturn(transaction3);
+            Transaction transaction2 = new Transaction();
+            transaction.when(() -> Transaction.read((ByteBuffer) any())).thenReturn(transactionMock).thenReturn(transaction2);
             thrown.expect(RuntimeException.class);
             thrown.expectCause(isA(ProtocolException.class));
             //Act Statement(s)
@@ -431,14 +395,17 @@ public class FakeTxBuilderSapientGeneratedJunit4Test {
     @Test()
     public void createFakeBlockTest() throws BlockStoreException {
         //Arrange Statement(s)
+        BlockStore blockStoreMock = mock(BlockStore.class, "BlockStore");
         try (MockedStatic<FakeTxBuilder> fakeTxBuilder = mockStatic(FakeTxBuilder.class, CALLS_REAL_METHODS)) {
-            Transaction[] transactionArray = new Transaction[]{};
-            fakeTxBuilder.when(() -> FakeTxBuilder.createFakeBlock(eq(blockStoreMock), eq(0L), (Instant) any(), eq(0), eq(transactionArray))).thenReturn(fakeTxBuilderBlockPairMock);
+            FakeTxBuilder.BlockPair fakeTxBuilderBlockPair = new FakeTxBuilder.BlockPair(blockMock, storedBlockMock);
+            Transaction transaction = new Transaction();
+            Transaction[] transactionArray = new Transaction[]{transaction};
+            fakeTxBuilder.when(() -> FakeTxBuilder.createFakeBlock(eq(blockStoreMock), eq(0L), (Instant) any(), eq(0), eq(transactionArray))).thenReturn(fakeTxBuilderBlockPair);
             Instant instant = Instant.now();
             //Act Statement(s)
             FakeTxBuilder.BlockPair result = FakeTxBuilder.createFakeBlock(blockStoreMock, 0L, instant, transactionArray);
             //Assert statement(s)
-            assertThat(result, equalTo(fakeTxBuilderBlockPairMock));
+            assertThat(result, equalTo(fakeTxBuilderBlockPair));
             fakeTxBuilder.verify(() -> FakeTxBuilder.createFakeBlock(eq(blockStoreMock), eq(0L), (Instant) any(), eq(0), eq(transactionArray)), atLeast(1));
         }
     }
@@ -448,12 +415,13 @@ public class FakeTxBuilderSapientGeneratedJunit4Test {
     public void createFakeBlock1Test() throws BlockStoreException {
         //Arrange Statement(s)
         try (MockedStatic<FakeTxBuilder> fakeTxBuilder = mockStatic(FakeTxBuilder.class, CALLS_REAL_METHODS)) {
+            FakeTxBuilder.BlockPair fakeTxBuilderBlockPair = new FakeTxBuilder.BlockPair(blockMock, storedBlockMock);
             Transaction[] transactionArray = new Transaction[]{};
-            fakeTxBuilder.when(() -> FakeTxBuilder.createFakeBlock(eq(blockStoreMock), eq(0L), (Instant) any(), eq(transactionArray))).thenReturn(fakeTxBuilderBlockPairMock);
+            fakeTxBuilder.when(() -> FakeTxBuilder.createFakeBlock(eq(blockStoreMock), eq(0L), (Instant) any(), eq(transactionArray))).thenReturn(fakeTxBuilderBlockPair);
             //Act Statement(s)
             FakeTxBuilder.BlockPair result = FakeTxBuilder.createFakeBlock(blockStoreMock, 0L, 1L, transactionArray);
             //Assert statement(s)
-            assertThat(result, equalTo(fakeTxBuilderBlockPairMock));
+            assertThat(result, equalTo(fakeTxBuilderBlockPair));
             fakeTxBuilder.verify(() -> FakeTxBuilder.createFakeBlock(eq(blockStoreMock), eq(0L), (Instant) any(), eq(transactionArray)), atLeast(1));
         }
     }
@@ -464,88 +432,93 @@ public class FakeTxBuilderSapientGeneratedJunit4Test {
     public void createFakeBlock2WhenTransactionsIsNotEmpty() throws VerificationException, BlockStoreException {
         /* Branches:
          * (for-each(transactions)) : true
+         *
+         * TODO: Help needed! This method is not unit testable!
+         *  Following variables could not be isolated/mocked: b
+         *  Suggestions:
+         *  You can change the initialization of above variables and make it injectable or
+         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        doNothing().when(blockStoreMock).put(storedBlockMock);
-        doNothing().when(blockStoreMock).setChainHead(storedBlockMock);
-        doReturn(blockMock).when(previousStoredBlockMock).getHeader();
-        doReturn(blockMock2).when(blockMock).createNextBlock(eq(null), eq(0L), (Instant) any(), eq(0));
-        doNothing().when(blockMock2).addTransaction(transactionMock);
-        doReturn(transactionConfidenceMock).when(transactionMock).getConfidence();
-        doNothing().when(transactionConfidenceMock).maybeSetSourceToNetwork();
-        doNothing().when(blockMock2).solve();
-        doReturn(storedBlockMock).when(previousStoredBlockMock).build(blockMock2);
+        BlockStore blockStoreMock = mock(BlockStore.class, "StoredBlock");
+        StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
+        doNothing().when(blockStoreMock).put(storedBlock);
+        doNothing().when(blockStoreMock).setChainHead(storedBlock);
         Instant instant = Instant.now();
-        Transaction[] transactionArray = new Transaction[]{transactionMock};
+        List list = new ArrayList<>();
+        Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
+        doReturn(block).when(previousBlockMock).createNextBlock(eq(null), eq(0L), (Instant) any(), eq(0));
+        StoredBlock storedBlock2 = new StoredBlock(previousBlockMock, new BigInteger("0"), 0);
+        Instant instant2 = Instant.now();
+        Transaction transaction = new Transaction();
+        Transaction[] transactionArray = new Transaction[]{transaction};
 
         //Act Statement(s)
-        FakeTxBuilder.BlockPair result = FakeTxBuilder.createFakeBlock(blockStoreMock, previousStoredBlockMock, 0L, instant, 0, transactionArray);
-        FakeTxBuilder.BlockPair fakeTxBuilderBlockPair = new FakeTxBuilder.BlockPair(blockMock2, storedBlockMock);
-        Transaction[] transactionTransactionArrayArray = new Transaction[]{transactionMock};
+        FakeTxBuilder.BlockPair result = FakeTxBuilder.createFakeBlock(blockStoreMock, storedBlock2, 0L, instant2, 0, transactionArray);
+        FakeTxBuilder.BlockPair fakeTxBuilderBlockPair = new FakeTxBuilder.BlockPair(block, storedBlock);
 
         //Assert statement(s)
         //TODO: Please implement equals method in BlockPair for verification to succeed or you need to adjust respective assertion statements
         assertThat(result, equalTo(fakeTxBuilderBlockPair));
-        assertThat(transactionArray, equalTo(transactionTransactionArrayArray));
-        verify(blockStoreMock).put(storedBlockMock);
-        verify(blockStoreMock).setChainHead(storedBlockMock);
-        verify(previousStoredBlockMock).getHeader();
-        verify(blockMock).createNextBlock(eq(null), eq(0L), (Instant) any(), eq(0));
-        verify(blockMock2).addTransaction(transactionMock);
-        verify(transactionMock).getConfidence();
-        verify(transactionConfidenceMock).maybeSetSourceToNetwork();
-        verify(blockMock2).solve();
-        verify(previousStoredBlockMock).build(blockMock2);
+        verify(blockStoreMock).put(storedBlock);
+        verify(blockStoreMock).setChainHead(storedBlock);
+        verify(previousBlockMock).createNextBlock(eq(null), eq(0L), (Instant) any(), eq(0));
     }
 
     //Sapient generated method id: ${bb501089-99bf-38dd-bee0-0947caacce98}
     @Test()
-    public void createFakeBlock2WhenCaughtVerificationExceptionOrBlockStoreExceptionThrowsRuntimeException() throws VerificationException {
+    public void createFakeBlock2WhenCaughtVerificationExceptionOrBlockStoreExceptionThrowsRuntimeException() throws VerificationException, BlockStoreException {
         /* Branches:
          * (for-each(transactions)) : true
          * (catch-exception (VerificationException | BlockStoreException)) : true
+         *
+         * TODO: Help needed! This method is not unit testable!
+         *  Following variables could not be isolated/mocked: b
+         *  Suggestions:
+         *  You can change the initialization of above variables and make it injectable or
+         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        doReturn(blockMock).when(previousStoredBlockMock).getHeader();
-        doReturn(blockMock2).when(blockMock).createNextBlock(eq(null), eq(0L), (Instant) any(), eq(0));
-        doNothing().when(blockMock2).addTransaction(transactionMock);
-        doReturn(transactionConfidenceMock).when(transactionMock).getConfidence();
-        doNothing().when(transactionConfidenceMock).maybeSetSourceToNetwork();
-        doNothing().when(blockMock2).solve();
-        VerificationException verificationExceptionMock = mock(VerificationException.class);
-        doThrow(verificationExceptionMock).when(previousStoredBlockMock).build(blockMock2);
-        thrown.expect(RuntimeException.class);
-        thrown.expectCause(isA(VerificationException.class));
+        BlockStore blockStoreMock = mock(BlockStore.class, "StoredBlock");
+        StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
+        doNothing().when(blockStoreMock).put(storedBlock);
+        doNothing().when(blockStoreMock).setChainHead(storedBlock);
         Instant instant = Instant.now();
-        Transaction[] transactionArray = new Transaction[]{transactionMock};
+        List list = new ArrayList<>();
+        Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
+        doReturn(block).when(previousBlockMock).createNextBlock(eq(null), eq(0L), (Instant) any(), eq(0));
+        thrown.expect(RuntimeException.class);
+        thrown.expectCause(isA(Exception.class));
+        StoredBlock storedBlock2 = new StoredBlock(previousBlockMock, new BigInteger("0"), 0);
+        Instant instant2 = Instant.now();
+        Transaction transaction = new Transaction();
+        Transaction[] transactionArray = new Transaction[]{transaction};
 
         //Act Statement(s)
-        FakeTxBuilder.createFakeBlock(blockStoreMock, previousStoredBlockMock, 0L, instant, 0, transactionArray);
-        Transaction[] transactionTransactionArrayArray = new Transaction[]{transactionMock};
+        FakeTxBuilder.createFakeBlock(blockStoreMock, storedBlock2, 0L, instant2, 0, transactionArray);
 
         //Assert statement(s)
-        assertThat(transactionArray, equalTo(transactionTransactionArrayArray));
-        verify(previousStoredBlockMock).getHeader();
-        verify(blockMock).createNextBlock(eq(null), eq(0L), (Instant) any(), eq(0));
-        verify(blockMock2).addTransaction(transactionMock);
-        verify(transactionMock).getConfidence();
-        verify(transactionConfidenceMock).maybeSetSourceToNetwork();
-        verify(blockMock2).solve();
-        verify(previousStoredBlockMock).build(blockMock2);
+        verify(blockStoreMock).put(storedBlock);
+        verify(blockStoreMock).setChainHead(storedBlock);
+        verify(previousBlockMock).createNextBlock(eq(null), eq(0L), (Instant) any(), eq(0));
     }
 
     //Sapient generated method id: ${1a15db4d-141d-3311-8317-07e838579120}
     @Test()
     public void createFakeBlock3Test() throws BlockStoreException {
         //Arrange Statement(s)
+        StoredBlock storedBlockMock2 = mock(StoredBlock.class);
         try (MockedStatic<FakeTxBuilder> fakeTxBuilder = mockStatic(FakeTxBuilder.class, CALLS_REAL_METHODS)) {
+            FakeTxBuilder.BlockPair fakeTxBuilderBlockPair = new FakeTxBuilder.BlockPair(blockMock, storedBlockMock);
             Transaction[] transactionArray = new Transaction[]{};
-            fakeTxBuilder.when(() -> FakeTxBuilder.createFakeBlock(eq(blockStoreMock), eq(storedBlockMock), eq(0L), (Instant) any(), eq(0), eq(transactionArray))).thenReturn(fakeTxBuilderBlockPairMock);
+            fakeTxBuilder.when(() -> FakeTxBuilder.createFakeBlock(eq(blockStoreMock), eq(storedBlockMock2), eq(0L), (Instant) any(), eq(0), eq(transactionArray))).thenReturn(fakeTxBuilderBlockPair);
             //Act Statement(s)
-            FakeTxBuilder.BlockPair result = FakeTxBuilder.createFakeBlock(blockStoreMock, storedBlockMock, 0L, 1L, 0, transactionArray);
+            FakeTxBuilder.BlockPair result = FakeTxBuilder.createFakeBlock(blockStoreMock, storedBlockMock2, 0L, 1L, 0, transactionArray);
             //Assert statement(s)
-            assertThat(result, equalTo(fakeTxBuilderBlockPairMock));
-            fakeTxBuilder.verify(() -> FakeTxBuilder.createFakeBlock(eq(blockStoreMock), eq(storedBlockMock), eq(0L), (Instant) any(), eq(0), eq(transactionArray)), atLeast(1));
+            assertThat(result, equalTo(fakeTxBuilderBlockPair));
+            fakeTxBuilder.verify(() -> FakeTxBuilder.createFakeBlock(eq(blockStoreMock), eq(storedBlockMock2), eq(0L), (Instant) any(), eq(0), eq(transactionArray)), atLeast(1));
         }
     }
 
@@ -553,14 +526,24 @@ public class FakeTxBuilderSapientGeneratedJunit4Test {
     @Test()
     public void createFakeBlock4Test() throws BlockStoreException {
         //Arrange Statement(s)
-        try (MockedStatic<FakeTxBuilder> fakeTxBuilder = mockStatic(FakeTxBuilder.class, CALLS_REAL_METHODS)) {
-            Transaction[] transactionArray = new Transaction[]{};
-            fakeTxBuilder.when(() -> FakeTxBuilder.createFakeBlock(eq(blockStoreMock), eq(storedBlockMock), eq(3L), (Instant) any(), eq(0), eq(transactionArray))).thenReturn(fakeTxBuilderBlockPairMock);
+        BlockStore blockStoreMock = mock(BlockStore.class, "{}");
+        Block blockMock2 = mock(Block.class);
+        try (MockedStatic<FakeTxBuilder> fakeTxBuilder = mockStatic(FakeTxBuilder.class, CALLS_REAL_METHODS);
+             MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
+            //TODO: Needs to return real value
+            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(null);
+            FakeTxBuilder.BlockPair fakeTxBuilderBlockPair = new FakeTxBuilder.BlockPair(blockMock, storedBlockMock);
+            StoredBlock storedBlock = new StoredBlock(blockMock2, new BigInteger("0"), 0);
+            Transaction[] transactionArray2 = new Transaction[]{};
+            Transaction[] transactionArray3 = new Transaction[]{};
+            Transaction[] transactionArray = new Transaction[]{transactionArray2, transactionArray3};
+            fakeTxBuilder.when(() -> FakeTxBuilder.createFakeBlock(blockStoreMock, storedBlock, 3L, (Instant) null, 10, transactionArray)).thenReturn(fakeTxBuilderBlockPair);
             //Act Statement(s)
-            FakeTxBuilder.BlockPair result = FakeTxBuilder.createFakeBlock(blockStoreMock, storedBlockMock, 0, transactionArray);
+            FakeTxBuilder.BlockPair result = FakeTxBuilder.createFakeBlock(blockStoreMock, storedBlock, 10, transactionArray);
             //Assert statement(s)
-            assertThat(result, equalTo(fakeTxBuilderBlockPairMock));
-            fakeTxBuilder.verify(() -> FakeTxBuilder.createFakeBlock(eq(blockStoreMock), eq(storedBlockMock), eq(3L), (Instant) any(), eq(0), eq(transactionArray)), atLeast(1));
+            assertThat(result, equalTo(fakeTxBuilderBlockPair));
+            timeUtils.verify(() -> TimeUtils.currentTime(), atLeast(1));
+            fakeTxBuilder.verify(() -> FakeTxBuilder.createFakeBlock(blockStoreMock, storedBlock, 3L, (Instant) null, 10, transactionArray), atLeast(1));
         }
     }
 
@@ -568,17 +551,18 @@ public class FakeTxBuilderSapientGeneratedJunit4Test {
     @Test()
     public void createFakeBlock5Test() throws BlockStoreException {
         //Arrange Statement(s)
+        BlockStore blockStoreMock = mock(BlockStore.class, "BlockStore");
         try (MockedStatic<FakeTxBuilder> fakeTxBuilder = mockStatic(FakeTxBuilder.class, CALLS_REAL_METHODS)) {
-            doReturn(storedBlockMock).when(blockStoreMock).getChainHead();
+            doReturn(null).when(blockStoreMock).getChainHead();
             Transaction[] transactionArray = new Transaction[]{};
-            fakeTxBuilder.when(() -> FakeTxBuilder.createFakeBlock(eq(blockStoreMock), eq(storedBlockMock), eq(0L), (Instant) any(), eq(0), eq(transactionArray))).thenReturn(fakeTxBuilderBlockPairMock);
+            fakeTxBuilder.when(() -> FakeTxBuilder.createFakeBlock(eq(blockStoreMock), eq((StoredBlock) null), eq(1234567890L), (Instant) any(), eq(10), eq(transactionArray))).thenReturn(fakeTxBuilderBlockPairMock);
             Instant instant = Instant.now();
             //Act Statement(s)
-            FakeTxBuilder.BlockPair result = FakeTxBuilder.createFakeBlock(blockStoreMock, 0L, instant, 0, transactionArray);
+            FakeTxBuilder.BlockPair result = FakeTxBuilder.createFakeBlock(blockStoreMock, 1234567890L, instant, 10, transactionArray);
             //Assert statement(s)
             assertThat(result, equalTo(fakeTxBuilderBlockPairMock));
             verify(blockStoreMock, atLeast(1)).getChainHead();
-            fakeTxBuilder.verify(() -> FakeTxBuilder.createFakeBlock(eq(blockStoreMock), eq(storedBlockMock), eq(0L), (Instant) any(), eq(0), eq(transactionArray)), atLeast(1));
+            fakeTxBuilder.verify(() -> FakeTxBuilder.createFakeBlock(eq(blockStoreMock), eq((StoredBlock) null), eq(1234567890L), (Instant) any(), eq(10), eq(transactionArray)), atLeast(1));
         }
     }
 
@@ -590,31 +574,37 @@ public class FakeTxBuilderSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         BlockStoreException blockStoreExceptionMock = mock(BlockStoreException.class);
-        doThrow(blockStoreExceptionMock).when(blockStoreMock).getChainHead();
-        thrown.expect(RuntimeException.class);
-        thrown.expectCause(isA(BlockStoreException.class));
-        Instant instant = Instant.now();
-        Transaction[] transactionArray = new Transaction[]{};
-
-        //Act Statement(s)
-        FakeTxBuilder.createFakeBlock(blockStoreMock, 0L, instant, 0, transactionArray);
-
-        //Assert statement(s)
-        verify(blockStoreMock).getChainHead();
+        try (MockedStatic<FakeTxBuilder> fakeTxBuilder = mockStatic(FakeTxBuilder.class, CALLS_REAL_METHODS)) {
+            doThrow(blockStoreExceptionMock).when(blockStoreMock).getChainHead();
+            Transaction[] transactionArray = new Transaction[]{};
+            fakeTxBuilder.when(() -> FakeTxBuilder.createFakeBlock(eq(blockStoreMock), eq(storedBlockMock), eq(0L), (Instant) any(), eq(0), eq(transactionArray))).thenReturn(fakeTxBuilderBlockPairMock);
+            thrown.expect(RuntimeException.class);
+            thrown.expectCause(isA(BlockStoreException.class));
+            Instant instant = Instant.now();
+            //Act Statement(s)
+            FakeTxBuilder.createFakeBlock(blockStoreMock, 0L, instant, 0, transactionArray);
+            //Assert statement(s)
+            verify(blockStoreMock, atLeast(1)).getChainHead();
+            fakeTxBuilder.verify(() -> FakeTxBuilder.createFakeBlock(eq(blockStoreMock), eq(storedBlockMock), eq(0L), (Instant) any(), eq(0), eq(transactionArray)), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${93f240e5-e78e-3a05-b3cd-efe915f6debe}
     @Test()
     public void createFakeBlock6Test() throws BlockStoreException {
         //Arrange Statement(s)
+        BlockStore blockStoreMock = mock(BlockStore.class, "{}");
         try (MockedStatic<FakeTxBuilder> fakeTxBuilder = mockStatic(FakeTxBuilder.class, CALLS_REAL_METHODS)) {
-            Transaction[] transactionArray = new Transaction[]{};
-            fakeTxBuilder.when(() -> FakeTxBuilder.createFakeBlock(eq(blockStoreMock), eq(0L), (Instant) any(), eq(0), eq(transactionArray))).thenReturn(fakeTxBuilderBlockPairMock);
+            FakeTxBuilder.BlockPair fakeTxBuilderBlockPair = new FakeTxBuilder.BlockPair(blockMock, storedBlockMock);
+            Transaction[] transactionArray2 = new Transaction[]{};
+            Transaction[] transactionArray3 = new Transaction[]{};
+            Transaction[] transactionArray = new Transaction[]{transactionArray2, transactionArray3};
+            fakeTxBuilder.when(() -> FakeTxBuilder.createFakeBlock(eq(blockStoreMock), eq(1L), (Instant) any(), eq(10), eq(transactionArray))).thenReturn(fakeTxBuilderBlockPair);
             //Act Statement(s)
-            FakeTxBuilder.BlockPair result = FakeTxBuilder.createFakeBlock(blockStoreMock, 0L, 1L, 0, transactionArray);
+            FakeTxBuilder.BlockPair result = FakeTxBuilder.createFakeBlock(blockStoreMock, 1L, 1629349200L, 10, transactionArray);
             //Assert statement(s)
-            assertThat(result, equalTo(fakeTxBuilderBlockPairMock));
-            fakeTxBuilder.verify(() -> FakeTxBuilder.createFakeBlock(eq(blockStoreMock), eq(0L), (Instant) any(), eq(0), eq(transactionArray)), atLeast(1));
+            assertThat(result, equalTo(fakeTxBuilderBlockPair));
+            fakeTxBuilder.verify(() -> FakeTxBuilder.createFakeBlock(eq(blockStoreMock), eq(1L), (Instant) any(), eq(10), eq(transactionArray)), atLeast(1));
         }
     }
 
@@ -622,14 +612,21 @@ public class FakeTxBuilderSapientGeneratedJunit4Test {
     @Test()
     public void createFakeBlock7Test() throws BlockStoreException {
         //Arrange Statement(s)
-        try (MockedStatic<FakeTxBuilder> fakeTxBuilder = mockStatic(FakeTxBuilder.class, CALLS_REAL_METHODS)) {
-            Transaction[] transactionArray = new Transaction[]{};
-            fakeTxBuilder.when(() -> FakeTxBuilder.createFakeBlock(eq(blockStoreMock), eq(1L), (Instant) any(), eq(0), eq(transactionArray))).thenReturn(fakeTxBuilderBlockPairMock);
+        BlockStore blockStoreMock = mock(BlockStore.class, "BlockStore");
+        try (MockedStatic<FakeTxBuilder> fakeTxBuilder = mockStatic(FakeTxBuilder.class, CALLS_REAL_METHODS);
+             MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
+            //TODO: Needs to return real value
+            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(null);
+            FakeTxBuilder.BlockPair fakeTxBuilderBlockPair = new FakeTxBuilder.BlockPair(blockMock, storedBlockMock);
+            Transaction transaction = new Transaction();
+            Transaction[] transactionArray = new Transaction[]{transaction};
+            fakeTxBuilder.when(() -> FakeTxBuilder.createFakeBlock(blockStoreMock, 1L, (Instant) null, 1, transactionArray)).thenReturn(fakeTxBuilderBlockPair);
             //Act Statement(s)
-            FakeTxBuilder.BlockPair result = FakeTxBuilder.createFakeBlock(blockStoreMock, 0, transactionArray);
+            FakeTxBuilder.BlockPair result = FakeTxBuilder.createFakeBlock(blockStoreMock, 1, transactionArray);
             //Assert statement(s)
-            assertThat(result, equalTo(fakeTxBuilderBlockPairMock));
-            fakeTxBuilder.verify(() -> FakeTxBuilder.createFakeBlock(eq(blockStoreMock), eq(1L), (Instant) any(), eq(0), eq(transactionArray)), atLeast(1));
+            assertThat(result, equalTo(fakeTxBuilderBlockPair));
+            timeUtils.verify(() -> TimeUtils.currentTime(), atLeast(1));
+            fakeTxBuilder.verify(() -> FakeTxBuilder.createFakeBlock(blockStoreMock, 1L, (Instant) null, 1, transactionArray), atLeast(1));
         }
     }
 
@@ -637,34 +634,53 @@ public class FakeTxBuilderSapientGeneratedJunit4Test {
     @Test()
     public void createFakeBlock8Test() throws BlockStoreException {
         //Arrange Statement(s)
-        try (MockedStatic<FakeTxBuilder> fakeTxBuilder = mockStatic(FakeTxBuilder.class, CALLS_REAL_METHODS)) {
-            Transaction[] transactionArray = new Transaction[]{};
-            fakeTxBuilder.when(() -> FakeTxBuilder.createFakeBlock(eq(blockStoreMock), eq(1L), (Instant) any(), eq(0), eq(transactionArray))).thenReturn(fakeTxBuilderBlockPairMock);
+        BlockStore blockStoreMock = mock(BlockStore.class, "{}");
+        try (MockedStatic<FakeTxBuilder> fakeTxBuilder = mockStatic(FakeTxBuilder.class, CALLS_REAL_METHODS);
+             MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
+            //TODO: Needs to return real value
+            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(null);
+            FakeTxBuilder.BlockPair fakeTxBuilderBlockPair = new FakeTxBuilder.BlockPair(blockMock, storedBlockMock);
+            Transaction[] transactionArray2 = new Transaction[]{};
+            Transaction[] transactionArray3 = new Transaction[]{};
+            Transaction[] transactionArray = new Transaction[]{transactionArray2, transactionArray3};
+            fakeTxBuilder.when(() -> FakeTxBuilder.createFakeBlock(blockStoreMock, 1L, (Instant) null, 0, transactionArray)).thenReturn(fakeTxBuilderBlockPair);
             //Act Statement(s)
             FakeTxBuilder.BlockPair result = FakeTxBuilder.createFakeBlock(blockStoreMock, transactionArray);
             //Assert statement(s)
-            assertThat(result, equalTo(fakeTxBuilderBlockPairMock));
-            fakeTxBuilder.verify(() -> FakeTxBuilder.createFakeBlock(eq(blockStoreMock), eq(1L), (Instant) any(), eq(0), eq(transactionArray)), atLeast(1));
+            assertThat(result, equalTo(fakeTxBuilderBlockPair));
+            timeUtils.verify(() -> TimeUtils.currentTime(), atLeast(1));
+            fakeTxBuilder.verify(() -> FakeTxBuilder.createFakeBlock(blockStoreMock, 1L, (Instant) null, 0, transactionArray), atLeast(1));
         }
     }
 
     //Sapient generated method id: ${a3e4190c-182c-33e0-b260-86c912fd5f94}
     @Test()
     public void makeSolvedTestBlockTest() throws BlockStoreException {
+        /**
+         * TODO: Help needed! This method is not unit testable!
+         *  Following variables could not be isolated/mocked: b
+         *  Suggestions:
+         *  You can change the initialization of above variables and make it injectable or
+         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
+        BlockStore blockStoreMock = mock(BlockStore.class, "BlockStore@<hashcode>");
         StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
         doReturn(storedBlock).when(blockStoreMock).getChainHead();
-        doReturn(blockMock2).when(blockMock).createNextBlock(addressMock);
-        doNothing().when(blockMock2).solve();
+        Instant instant = Instant.now();
+        List list = new ArrayList<>();
+        Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
+        Address addressMock = mock(Address.class, "Address@<hashcode>");
+        doReturn(block).when(blockMock).createNextBlock(addressMock);
 
         //Act Statement(s)
         Block result = FakeTxBuilder.makeSolvedTestBlock(blockStoreMock, addressMock);
 
         //Assert statement(s)
-        assertThat(result, equalTo(blockMock2));
+        assertThat(result, equalTo(block));
         verify(blockStoreMock).getChainHead();
         verify(blockMock).createNextBlock(addressMock);
-        verify(blockMock2).solve();
     }
 
     //Sapient generated method id: ${6ceb4e69-8b85-32e6-af84-49d1386cc6a5}
@@ -672,13 +688,16 @@ public class FakeTxBuilderSapientGeneratedJunit4Test {
     public void makeSolvedTestBlock1Test() throws BlockStoreException {
         //Arrange Statement(s)
         try (MockedStatic<FakeTxBuilder> fakeTxBuilder = mockStatic(FakeTxBuilder.class, CALLS_REAL_METHODS)) {
+            Instant instant = Instant.now();
+            List list = new ArrayList<>();
+            Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
             Transaction[] transactionArray = new Transaction[]{};
-            fakeTxBuilder.when(() -> FakeTxBuilder.makeSolvedTestBlock(blockMock2, (Address) null, transactionArray)).thenReturn(blockMock);
+            fakeTxBuilder.when(() -> FakeTxBuilder.makeSolvedTestBlock(blockMock, (Address) null, transactionArray)).thenReturn(block);
             //Act Statement(s)
-            Block result = FakeTxBuilder.makeSolvedTestBlock(blockMock2, transactionArray);
+            Block result = FakeTxBuilder.makeSolvedTestBlock(blockMock, transactionArray);
             //Assert statement(s)
-            assertThat(result, equalTo(blockMock));
-            fakeTxBuilder.verify(() -> FakeTxBuilder.makeSolvedTestBlock(blockMock2, (Address) null, transactionArray), atLeast(1));
+            assertThat(result, equalTo(block));
+            fakeTxBuilder.verify(() -> FakeTxBuilder.makeSolvedTestBlock(blockMock, (Address) null, transactionArray), atLeast(1));
         }
     }
 
@@ -687,21 +706,30 @@ public class FakeTxBuilderSapientGeneratedJunit4Test {
     public void makeSolvedTestBlock2WhenTransactionsIsNotEmpty() throws BlockStoreException {
         /* Branches:
          * (for-each(transactions)) : true
+         *
+         * TODO: Help needed! This method is not unit testable!
+         *  Following variables could not be isolated/mocked: b
+         *  Suggestions:
+         *  You can change the initialization of above variables and make it injectable or
+         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Block prevMock = mock(Block.class);
-        doReturn(blockMock).when(prevMock).createNextBlock(addressMock);
-        doNothing().when(blockMock).addTransaction(transactionMock);
-        doNothing().when(blockMock).solve();
-        Transaction[] transactionArray = new Transaction[]{transactionMock};
+        Instant instant = Instant.now();
+        List list = new ArrayList<>();
+        Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
+        Transaction transaction = new Transaction();
+        Transaction[] transactionArray = new Transaction[]{transaction};
 
         //Act Statement(s)
-        Block result = FakeTxBuilder.makeSolvedTestBlock(prevMock, addressMock, transactionArray);
+        Block result = FakeTxBuilder.makeSolvedTestBlock(block, addressMock, transactionArray);
+        Sha256Hash sha256HashMock3 = mock(Sha256Hash.class);
+        Sha256Hash sha256HashMock4 = mock(Sha256Hash.class);
+        Instant instant2 = Instant.now();
+        List list2 = new ArrayList<>();
+        Block block2 = new Block(0L, sha256HashMock3, sha256HashMock4, instant2, 0L, 0L, list2);
 
         //Assert statement(s)
-        assertThat(result, equalTo(blockMock));
-        verify(prevMock).createNextBlock(addressMock);
-        verify(blockMock).addTransaction(transactionMock);
-        verify(blockMock).solve();
+        assertThat(result, equalTo(block2));
     }
 }

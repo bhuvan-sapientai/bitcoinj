@@ -62,112 +62,6 @@ public class BlockingClientSapientGeneratedJunit4Test {
 
     private final Context contextMock = mock(Context.class);
 
-    //Sapient generated method id: ${69cdc266-c62b-3d3b-93ab-567fdddb7bde}
-    @Ignore()
-    @Test()
-    public void runReadLoopWhenDbufRemainingGreaterThanReadBuffLengthThrowsIllegalStateException() throws Exception {
-        /* Branches:
-         * (dbuf.remaining() > 0) : true
-         * (dbuf.remaining() <= readBuff.length) : false
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(0).when(connectionMock).getMaxMessageSize();
-            IllegalStateException illegalStateException = new IllegalStateException();
-            preconditions.when(() -> Preconditions.checkState(false)).thenThrow(illegalStateException);
-            thrown.expect(IllegalStateException.class);
-            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-            InputStream inputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
-            //Act Statement(s)
-            BlockingClient.runReadLoop(inputStream, connectionMock);
-            //Assert statement(s)
-            verify(connectionMock).getMaxMessageSize();
-            preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
-        }
-    }
-
-    //Sapient generated method id: ${5eb93115-729d-31cb-85df-54ea07ce10c3}
-    @Test()
-    public void runReadLoopWhenReadEqualsMinus1() throws Exception {
-        /* Branches:
-         * (dbuf.remaining() > 0) : true
-         * (dbuf.remaining() <= readBuff.length) : true
-         * (read == -1) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        doReturn(0).when(connectionMock).getMaxMessageSize();
-        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        InputStream inputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
-        //Act Statement(s)
-        BlockingClient.runReadLoop(inputStream, connectionMock);
-        //Assert statement(s)
-        verify(connectionMock).getMaxMessageSize();
-    }
-
-    //Sapient generated method id: ${547ee14d-cdf1-3b26-8e42-54547c702e60}
-    @Ignore()
-    @Test()
-    public void runReadLoopWhenDbufPositionEqualsBytesConsumed() throws Exception {
-        /* Branches:
-         * (dbuf.remaining() > 0) : true
-         * (dbuf.remaining() <= readBuff.length) : true
-         * (read == -1) : false
-         * (dbuf.position() == bytesConsumed) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        doReturn(0).when(connectionMock).getMaxMessageSize();
-        doReturn(0).when(connectionMock).receiveBytes((ByteBuffer) any());
-        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        InputStream inputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
-        //Act Statement(s)
-        BlockingClient.runReadLoop(inputStream, connectionMock);
-        //Assert statement(s)
-        verify(connectionMock).getMaxMessageSize();
-        verify(connectionMock).receiveBytes((ByteBuffer) any());
-    }
-
-    //Sapient generated method id: ${886d77d4-a1e2-30a4-97cb-cb0f1a8e5b34}
-    @Ignore()
-    @Test()
-    public void runReadLoopWhenDbufPositionNotEqualsBytesConsumedThrowsIllegalStateException() throws Exception {
-        /* Branches:
-         * (dbuf.remaining() > 0) : true
-         * (dbuf.remaining() <= readBuff.length) : true
-         * (read == -1) : false
-         * (dbuf.position() == bytesConsumed) : false
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(0).when(connectionMock).getMaxMessageSize();
-            doReturn(0).when(connectionMock).receiveBytes((ByteBuffer) any());
-            preconditions.when(() -> Preconditions.checkState(true)).thenAnswer((Answer<Void>) invocation -> null);
-            IllegalStateException illegalStateException = new IllegalStateException();
-            preconditions.when(() -> Preconditions.checkState(false)).thenThrow(illegalStateException);
-            thrown.expect(IllegalStateException.class);
-            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-            InputStream inputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
-            //Act Statement(s)
-            BlockingClient.runReadLoop(inputStream, connectionMock);
-            //Assert statement(s)
-            verify(connectionMock).getMaxMessageSize();
-            verify(connectionMock).receiveBytes((ByteBuffer) any());
-            preconditions.verify(() -> Preconditions.checkState(true), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
-        }
-    }
-
     //Sapient generated method id: ${561998f8-7691-38b6-b1d5-0712aa9b4d77}
     @Test()
     public void closeConnectionTest() throws IOException {
@@ -176,8 +70,10 @@ public class BlockingClientSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        StreamConnection streamConnectionMock = mock(StreamConnection.class, "null");
         try (MockedStatic<Context> context = mockStatic(Context.class)) {
-            context.when(() -> Context.get()).thenReturn(contextMock);
+            Context context2 = new Context();
+            context.when(() -> Context.get()).thenReturn(context2);
             Duration duration = Duration.ofDays(0L);
             SocketFactory socketFactory = SocketFactory.getDefault();
             Set<BlockingClient> blockingClientSet = new HashSet<>();
@@ -202,21 +98,19 @@ public class BlockingClientSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<Context> context = mockStatic(Context.class)) {
-            context.when(() -> Context.get()).thenReturn(contextMock);
-            Duration duration = Duration.ofDays(0L);
-            SocketFactory socketFactory = SocketFactory.getDefault();
-            Set<BlockingClient> blockingClientSet = new HashSet<>();
-            BlockingClient target = new BlockingClient((SocketAddress) null, streamConnectionMock, duration, socketFactory, blockingClientSet);
-            doNothing().when(streamConnectionMock).setWriteTarget(target);
-            thrown.expect(RuntimeException.class);
-            thrown.expectCause(isA(IOException.class));
-            //Act Statement(s)
-            target.closeConnection();
-            //Assert statement(s)
-            context.verify(() -> Context.get(), atLeast(1));
-            verify(streamConnectionMock).setWriteTarget(target);
-        }
+        Duration duration = Duration.ofDays(0L);
+        SocketFactory socketFactory = SocketFactory.getDefault();
+        Set<BlockingClient> blockingClientSet = new HashSet<>();
+        BlockingClient target = new BlockingClient((SocketAddress) null, streamConnectionMock, duration, socketFactory, blockingClientSet);
+        doNothing().when(streamConnectionMock).setWriteTarget(target);
+        thrown.expect(RuntimeException.class);
+        thrown.expectCause(isA(IOException.class));
+
+        //Act Statement(s)
+        target.closeConnection();
+
+        //Assert statement(s)
+        verify(streamConnectionMock).setWriteTarget(target);
     }
 
     //Sapient generated method id: ${90b47dad-6d2c-3295-946b-afa0a749fd31}
@@ -229,9 +123,7 @@ public class BlockingClientSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         ListenableCompletableFuture<Void> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
-        try (MockedStatic<ListenableCompletableFuture> listenableCompletableFuture = mockStatic(ListenableCompletableFuture.class);
-             MockedStatic<Context> context = mockStatic(Context.class)) {
-            context.when(() -> Context.get()).thenReturn(contextMock);
+        try (MockedStatic<ListenableCompletableFuture> listenableCompletableFuture = mockStatic(ListenableCompletableFuture.class)) {
             listenableCompletableFuture.when(() -> ListenableCompletableFuture.completedFuture(null)).thenReturn(listenableCompletableFutureMock);
             Duration duration = Duration.ofDays(0L);
             SocketFactory socketFactory = SocketFactory.getDefault();
@@ -243,7 +135,6 @@ public class BlockingClientSapientGeneratedJunit4Test {
             ListenableCompletableFuture<Void> result = target.writeBytes(byteArray);
             //Assert statement(s)
             assertThat(result, equalTo(listenableCompletableFutureMock));
-            context.verify(() -> Context.get(), atLeast(1));
             listenableCompletableFuture.verify(() -> ListenableCompletableFuture.completedFuture(null), atLeast(1));
             verify(streamConnectionMock).setWriteTarget(target);
         }
@@ -260,9 +151,7 @@ public class BlockingClientSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         ListenableCompletableFuture listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
-        try (MockedStatic<ListenableCompletableFuture> listenableCompletableFuture = mockStatic(ListenableCompletableFuture.class);
-             MockedStatic<Context> context = mockStatic(Context.class)) {
-            context.when(() -> Context.get()).thenReturn(contextMock);
+        try (MockedStatic<ListenableCompletableFuture> listenableCompletableFuture = mockStatic(ListenableCompletableFuture.class)) {
             listenableCompletableFuture.when(() -> ListenableCompletableFuture.completedFuture(null)).thenReturn(listenableCompletableFutureMock);
             Duration duration = Duration.ofDays(0L);
             SocketFactory socketFactory = SocketFactory.getDefault();
@@ -275,7 +164,6 @@ public class BlockingClientSapientGeneratedJunit4Test {
             //Act Statement(s)
             target.writeBytes(byteArray);
             //Assert statement(s)
-            context.verify(() -> Context.get(), atLeast(1));
             listenableCompletableFuture.verify(() -> ListenableCompletableFuture.completedFuture(null), atLeast(1));
             verify(target).closeConnection();
             verify(streamConnectionMock).setWriteTarget(target);
@@ -291,11 +179,12 @@ public class BlockingClientSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        StreamConnection streamConnectionMock = mock(StreamConnection.class, "{}");
         try (MockedStatic<ListenableCompletableFuture> listenableCompletableFuture = mockStatic(ListenableCompletableFuture.class);
              MockedStatic<Context> context = mockStatic(Context.class)) {
-            context.when(() -> Context.get()).thenReturn(contextMock);
-            CompletableFuture completableFuture = new CompletableFuture();
-            ListenableCompletableFuture<SocketAddress> listenableCompletableFuture2 = ListenableCompletableFuture.of(completableFuture);
+            Context context2 = new Context();
+            context.when(() -> Context.get()).thenReturn(context2);
+            ListenableCompletableFuture<SocketAddress> listenableCompletableFuture2 = new ListenableCompletableFuture<>();
             listenableCompletableFuture.when(() -> ListenableCompletableFuture.of((CompletableFuture) any())).thenReturn(listenableCompletableFuture2);
             Duration duration = Duration.ofDays(0L);
             SocketFactory socketFactory = SocketFactory.getDefault();

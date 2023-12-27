@@ -25,7 +25,7 @@ public class CoinSelectionSapientGeneratedJunit4Test {
     @Rule()
     public Timeout timeoutRule = Timeout.seconds(5);
 
-    private final Coin coinMock = mock(Coin.class);
+    private final Coin coinMock = mock(Coin.class, "10");
 
     //Sapient generated method id: ${59671bab-6f05-338a-800c-34fb3c21b2b7}
     @Test()

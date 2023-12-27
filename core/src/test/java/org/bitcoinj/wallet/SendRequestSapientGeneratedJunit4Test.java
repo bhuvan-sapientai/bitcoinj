@@ -33,6 +33,7 @@ import org.junit.Ignore;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.times;
+import static org.mockito.ArgumentMatchers.eq;
 
 public class SendRequestSapientGeneratedJunit4Test {
 
@@ -65,13 +66,20 @@ public class SendRequestSapientGeneratedJunit4Test {
     @Test()
     public void allowUnconfirmedTest() {
         //Arrange Statement(s)
-        try (MockedStatic<SendRequest> sendRequest = mockStatic(SendRequest.class)) {
-            sendRequest.when(() -> SendRequest.to(eCKeyMock, coinMock)).thenReturn(sendRequestMock);
-            SendRequest target = SendRequest.to(networkParametersMock, eCKeyMock, coinMock);
+        Coin coinMock = mock(Coin.class, "org.bitcoinj.core.Coin");
+        try (MockedStatic<AllowUnconfirmedCoinSelector> allowUnconfirmedCoinSelector = mockStatic(AllowUnconfirmedCoinSelector.class);
+             MockedStatic<SendRequest> sendRequest = mockStatic(SendRequest.class)) {
+            ECKey eCKey = new ECKey();
+            sendRequest.when(() -> SendRequest.to(eCKey, coinMock)).thenReturn(sendRequestMock);
+            CoinSelector coinSelector = AllowUnconfirmedCoinSelector.get();
+            allowUnconfirmedCoinSelector.when(() -> AllowUnconfirmedCoinSelector.get()).thenReturn(coinSelector);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            SendRequest target = SendRequest.to(networkParameters, eCKey, coinMock);
             //Act Statement(s)
             target.allowUnconfirmed();
             //Assert statement(s)
-            sendRequest.verify(() -> SendRequest.to(eCKeyMock, coinMock), atLeast(1));
+            sendRequest.verify(() -> SendRequest.to(eCKey, coinMock), atLeast(1));
+            allowUnconfirmedCoinSelector.verify(() -> AllowUnconfirmedCoinSelector.get(), atLeast(1));
         }
     }
 
@@ -87,9 +95,12 @@ public class SendRequestSapientGeneratedJunit4Test {
          *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
+        //Arrange Statement(s)
+        Address addressMock = mock(Address.class);
+        Coin coin = Coin.valueOf(0L);
 
         //Act Statement(s)
-        SendRequest result = SendRequest.to(addressMock, coinMock);
+        SendRequest result = SendRequest.to(addressMock, coin);
 
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
@@ -99,17 +110,12 @@ public class SendRequestSapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void to1Test() {
-        /**
-         * TODO: Help needed! This method is not unit testable!
-         *  Following variables could not be isolated/mocked: tx
-         *  Suggestions:
-         *  You can change the initialization of above variables and make it injectable or
-         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
+        //Arrange Statement(s)
+        ECKey eCKey = new ECKey();
+        Coin coinMock = mock(Coin.class, "100");
 
         //Act Statement(s)
-        SendRequest result = SendRequest.to(eCKeyMock, coinMock);
+        SendRequest result = SendRequest.to(eCKey, coinMock);
 
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
@@ -120,12 +126,15 @@ public class SendRequestSapientGeneratedJunit4Test {
     public void to2Test() {
         //Arrange Statement(s)
         try (MockedStatic<SendRequest> sendRequest = mockStatic(SendRequest.class, CALLS_REAL_METHODS)) {
-            sendRequest.when(() -> SendRequest.to(eCKeyMock, coinMock)).thenReturn(sendRequestMock);
+            ECKey eCKey = new ECKey();
+            sendRequest.when(() -> SendRequest.to(eq(eCKey), (Coin) any())).thenReturn(sendRequestMock);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Coin coin = Coin.valueOf(0L);
             //Act Statement(s)
-            SendRequest result = SendRequest.to(networkParametersMock, eCKeyMock, coinMock);
+            SendRequest result = SendRequest.to(networkParameters, eCKey, coin);
             //Assert statement(s)
             assertThat(result, equalTo(sendRequestMock));
-            sendRequest.verify(() -> SendRequest.to(eCKeyMock, coinMock), atLeast(1));
+            sendRequest.verify(() -> SendRequest.to(eq(eCKey), (Coin) any()), atLeast(1));
         }
     }
 
@@ -155,6 +164,8 @@ public class SendRequestSapientGeneratedJunit4Test {
          *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
+        //Arrange Statement(s)
+        Address addressMock = mock(Address.class, "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa");
 
         //Act Statement(s)
         SendRequest result = SendRequest.emptyWallet(addressMock);
@@ -171,41 +182,24 @@ public class SendRequestSapientGeneratedJunit4Test {
          * (output.isMine(wallet)) : true
          * (output.isAvailableForSpending()) : true
          * (output.getValue().isGreaterThan(feeRaise)) : true
-         *
-         * TODO: Help needed! This method is not unit testable!
-         *  Following variables could not be isolated/mocked: tx
-         *  Suggestions:
-         *  You can change the initialization of above variables and make it injectable or
-         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Coin coinMock3 = mock(Coin.class);
-        Coin coinMock4 = mock(Coin.class);
-        try (MockedStatic<SendRequest> sendRequest = mockStatic(SendRequest.class, CALLS_REAL_METHODS)) {
-            doReturn(addressMock).when(walletMock).freshAddress(KeyChain.KeyPurpose.CHANGE);
-            List<TransactionOutput> transactionOutputList = new ArrayList<>();
-            transactionOutputList.add(transactionOutputMock);
-            doReturn(transactionOutputList).when(parentTransactionMock).getOutputs();
-            doReturn(true).when(transactionOutputMock).isMine(walletMock);
-            doReturn(true).when(transactionOutputMock).isAvailableForSpending();
-            doReturn(true).when(coinMock).isGreaterThan(coinMock2);
-            doReturn(coinMock, coinMock3).when(transactionOutputMock).getValue();
-            doReturn(coinMock4).when(coinMock3).subtract(coinMock2);
-            sendRequest.when(() -> SendRequest.forTx((Transaction) any())).thenReturn(sendRequestMock);
-            //Act Statement(s)
-            SendRequest result = SendRequest.childPaysForParent(walletMock, parentTransactionMock, coinMock2);
-            //Assert statement(s)
-            assertThat(result, equalTo(sendRequestMock));
-            verify(walletMock, atLeast(1)).freshAddress(KeyChain.KeyPurpose.CHANGE);
-            verify(parentTransactionMock, atLeast(1)).getOutputs();
-            verify(transactionOutputMock, atLeast(1)).isMine(walletMock);
-            verify(transactionOutputMock, atLeast(1)).isAvailableForSpending();
-            verify(transactionOutputMock, times(2)).getValue();
-            verify(coinMock, atLeast(1)).isGreaterThan(coinMock2);
-            verify(coinMock3, atLeast(1)).subtract(coinMock2);
-            sendRequest.verify(() -> SendRequest.forTx((Transaction) any()), atLeast(1));
-        }
+        Transaction parentTransactionMock = mock(Transaction.class);
+        TransactionOutput transactionOutputMock = mock(TransactionOutput.class, "List<TransactionOutput>");
+        List<TransactionOutput> transactionOutputList = new ArrayList<>();
+        transactionOutputList.add(transactionOutputMock);
+        doReturn(transactionOutputList).when(parentTransactionMock).getOutputs();
+        Wallet walletMock = mock(Wallet.class);
+        doReturn(false).when(transactionOutputMock).isMine(walletMock);
+        thrown.expect(NullPointerException.class);
+        Coin coinMock = mock(Coin.class);
+
+        //Act Statement(s)
+        SendRequest.childPaysForParent(walletMock, parentTransactionMock, coinMock);
+
+        //Assert statement(s)
+        verify(parentTransactionMock).getOutputs();
+        verify(transactionOutputMock).isMine(walletMock);
     }
 
     //Sapient generated method id: ${76e133a0-6d9d-3059-b9cc-b4c75368438c}
@@ -218,24 +212,13 @@ public class SendRequestSapientGeneratedJunit4Test {
          * (output.getValue().isGreaterThan(feeRaise)) : false
          */
         //Arrange Statement(s)
-        List<TransactionOutput> transactionOutputList = new ArrayList<>();
-        transactionOutputList.add(transactionOutputMock);
-        doReturn(transactionOutputList).when(parentTransactionMock).getOutputs();
-        doReturn(true).when(transactionOutputMock).isMine(walletMock);
-        doReturn(true).when(transactionOutputMock).isAvailableForSpending();
-        doReturn(coinMock).when(transactionOutputMock).getValue();
-        doReturn(false).when(coinMock).isGreaterThan(coinMock2);
         thrown.expect(NullPointerException.class);
+        Wallet walletMock = mock(Wallet.class, "valid_wallet_object");
+        Transaction transaction = new Transaction();
+        Coin coin = Coin.valueOf(0L);
 
         //Act Statement(s)
-        SendRequest.childPaysForParent(walletMock, parentTransactionMock, coinMock2);
-
-        //Assert statement(s)
-        verify(parentTransactionMock).getOutputs();
-        verify(transactionOutputMock).isMine(walletMock);
-        verify(transactionOutputMock).isAvailableForSpending();
-        verify(transactionOutputMock).getValue();
-        verify(coinMock).isGreaterThan(coinMock2);
+        SendRequest.childPaysForParent(walletMock, transaction, coin);
     }
 
     //Sapient generated method id: ${f32b1224-074d-3f2a-860a-50e5e0099bd3}
@@ -246,19 +229,19 @@ public class SendRequestSapientGeneratedJunit4Test {
          * (paymentDetails.hasMemo()) : true
          */
         //Arrange Statement(s)
-        Protos.PaymentDetails paymentDetailsMock = mock(Protos.PaymentDetails.class);
+        SendRequest sendRequestMock = mock(SendRequest.class, "<value>");
         try (MockedStatic<SendRequest> sendRequest = mockStatic(SendRequest.class)) {
-            doReturn(true).when(paymentDetailsMock).hasMemo();
-            doReturn("return_of_getMemo1").when(paymentDetailsMock).getMemo();
-            sendRequest.when(() -> SendRequest.to(eCKeyMock, coinMock)).thenReturn(sendRequestMock);
-            SendRequest target = SendRequest.to(networkParametersMock, eCKeyMock, coinMock);
+            ECKey eCKey = new ECKey();
+            sendRequest.when(() -> SendRequest.to(eq(eCKey), (Coin) any())).thenReturn(sendRequestMock);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Coin coin = Coin.valueOf(0L);
+            SendRequest target = SendRequest.to(networkParameters, eCKey, coin);
+            Protos.PaymentDetails paymentDetails = Protos.PaymentDetails.getDefaultInstance();
             //Act Statement(s)
-            SendRequest result = target.fromPaymentDetails(paymentDetailsMock);
+            SendRequest result = target.fromPaymentDetails(paymentDetails);
             //Assert statement(s)
             assertThat(result, equalTo(target));
-            verify(paymentDetailsMock).hasMemo();
-            verify(paymentDetailsMock).getMemo();
-            sendRequest.verify(() -> SendRequest.to(eCKeyMock, coinMock), atLeast(1));
+            sendRequest.verify(() -> SendRequest.to(eq(eCKey), (Coin) any()));
         }
     }
 
@@ -272,15 +255,17 @@ public class SendRequestSapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
-        //Arrange Statement(s)
+        Coin coinMock = mock(Coin.class, "1000000");
         try (MockedStatic<SendRequest> sendRequest = mockStatic(SendRequest.class)) {
-            sendRequest.when(() -> SendRequest.to(eCKeyMock, coinMock)).thenReturn(sendRequestMock);
-            SendRequest target = SendRequest.to(networkParametersMock, eCKeyMock, coinMock);
+            ECKey eCKey = new ECKey();
+            sendRequest.when(() -> SendRequest.to(eCKey, coinMock)).thenReturn(sendRequestMock);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            SendRequest target = SendRequest.to(networkParameters, eCKey, coinMock);
             //Act Statement(s)
             String result = target.toString();
             //Assert statement(s)
             assertThat(result, equalTo("toString_moreObjects.ToStringHelper2"));
-            sendRequest.verify(() -> SendRequest.to(eCKeyMock, coinMock), atLeast(1));
+            sendRequest.verify(() -> SendRequest.to(eCKey, coinMock), atLeast(1));
         }
     }
 }

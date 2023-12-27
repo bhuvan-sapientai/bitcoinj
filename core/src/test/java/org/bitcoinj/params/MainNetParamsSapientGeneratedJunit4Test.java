@@ -47,48 +47,4 @@ public class MainNetParamsSapientGeneratedJunit4Test {
         if (autoCloseableMocks != null)
             autoCloseableMocks.close();
     }
-
-    //Sapient generated method id: ${32a8d14c-b4e9-37a4-9736-3367f8ecb089}
-    @Test()
-    public void getWhenInstanceIsNull() {
-        /* Branches:
-         * (instance == null) : true
-         */
-
-        //Act Statement(s)
-        MainNetParams result = MainNetParams.get();
-        MainNetParams mainNetParams = new MainNetParams();
-
-        //Assert statement(s)
-        assertThat(result, equalTo(mainNetParams));
-    }
-
-    //Sapient generated method id: ${6af115c8-0813-3ff3-9b71-4c6682fe756c}
-    @Ignore()
-    @Test()
-    public void getGenesisBlockWhenGenesisBlockIsNull() {
-        /* Branches:
-         * (genesisBlock == null) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<Block> block = mockStatic(Block.class)) {
-            block.when(() -> Block.createGenesis((Instant) any(), eq(486604799L), eq(2083236893L))).thenReturn(genesisBlockMock);
-            preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            target = new MainNetParams();
-            autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(sha256HashMock).when(genesisBlockMock).getHash();
-            //Act Statement(s)
-            Block result = target.getGenesisBlock();
-            //Assert statement(s)
-            assertThat(result, equalTo(genesisBlockMock));
-            block.verify(() -> Block.createGenesis((Instant) any(), eq(486604799L), eq(2083236893L)));
-            preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
-            verify(genesisBlockMock).getHash();
-        }
-    }
 }

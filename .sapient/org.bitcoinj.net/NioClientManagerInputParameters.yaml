@@ -409,8 +409,6 @@ methods:
         signature: "isRunning(): boolean"
         returnValue:
           sapientType: "BASIC"
-          content: !<regular>
-            value: true
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
@@ -431,7 +429,7 @@ methods:
       idsTryCatchBlockSurrounding:
       - 6
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         valueType: "org.bitcoinj.net.ConnectionHandler"
         uuid: "org.bitcoinj.net.ConnectionHandler"
         fixed: false
@@ -443,7 +441,7 @@ methods:
         parameters:
         - name: "key"
           value:
-            sapientType: "NULL"
+            sapientType: "UNKNOWN"
             suggestedContent: !<unknown_object>
               target: "java.nio.channels.SelectionKey"
               onlyPojoFunctions: false
@@ -481,8 +479,6 @@ methods:
         signature: "isRunning(): boolean"
         returnValue:
           sapientType: "BASIC"
-          content: !<regular>
-            value: false
           valueType: "boolean"
           uuid: "run_boolean4"
           fixed: false
@@ -566,8 +562,6 @@ methods:
         signature: "isRunning(): boolean"
         returnValue:
           sapientType: "BASIC"
-          content: !<regular>
-            value: true
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
@@ -590,47 +584,6 @@ methods:
       - 6
       value:
         sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.net.ConnectionHandler"
-          parameters:
-          - name: "connection"
-            value:
-              sapientType: "NULL"
-              valueType: "org.bitcoinj.net.StreamConnection"
-              uuid: "handleKey_streamConnection1"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "key"
-            value:
-              sapientType: "NULL"
-              suggestedContent: !<unknown_object>
-                target: "java.nio.channels.SelectionKey"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "java.nio.channels.SelectionKey"
-              uuid: "run_object1"
-              fixed: false
-              collectionUuid: "run_set1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "connectedHandlers"
-            value:
-              sapientType: "COLLECTION"
-              content: !<collection>
-                parameters: []
-                values: []
-              suggestedContent: !<collection>
-                parameters: []
-                values: []
-              valueType: "java.util.Set"
-              genericValueType: "org.bitcoinj.net.ConnectionHandler"
-              uuid: "<init>_set1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
         suggestedContent: !<new>
           target: "org.bitcoinj.net.ConnectionHandler"
           parameters:
@@ -705,8 +658,6 @@ methods:
         signature: "isRunning(): boolean"
         returnValue:
           sapientType: "BASIC"
-          content: !<regular>
-            value: false
           valueType: "boolean"
           uuid: "run_boolean4"
           fixed: false
@@ -817,8 +768,6 @@ methods:
         signature: "isRunning(): boolean"
         returnValue:
           sapientType: "BASIC"
-          content: !<regular>
-            value: true
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
@@ -853,11 +802,6 @@ methods:
         signature: "connectionOpened(): void"
         returnValue:
           sapientType: "EXCEPTION"
-          content: !<new>
-            target: "java.lang.NullPointerException"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
           suggestedContent: !<new>
             target: "java.lang.NullPointerException"
             parameters: []
@@ -881,47 +825,6 @@ methods:
       - 6
       value:
         sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.net.ConnectionHandler"
-          parameters:
-          - name: "connection"
-            value:
-              sapientType: "NULL"
-              valueType: "org.bitcoinj.net.StreamConnection"
-              uuid: "handleKey_streamConnection1"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "key"
-            value:
-              sapientType: "NULL"
-              suggestedContent: !<unknown_object>
-                target: "java.nio.channels.SelectionKey"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "java.nio.channels.SelectionKey"
-              uuid: "run_object1"
-              fixed: false
-              collectionUuid: "run_set1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "connectedHandlers"
-            value:
-              sapientType: "COLLECTION"
-              content: !<collection>
-                parameters: []
-                values: []
-              suggestedContent: !<collection>
-                parameters: []
-                values: []
-              valueType: "java.util.Set"
-              genericValueType: "org.bitcoinj.net.ConnectionHandler"
-              uuid: "<init>_set1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
         suggestedContent: !<new>
           target: "org.bitcoinj.net.ConnectionHandler"
           parameters:
@@ -996,8 +899,6 @@ methods:
         signature: "isRunning(): boolean"
         returnValue:
           sapientType: "BASIC"
-          content: !<regular>
-            value: false
           valueType: "boolean"
           uuid: "run_boolean4"
           fixed: false
@@ -1014,7 +915,7 @@ methods:
       nestedInLoop: true
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         valueType: "org.bitcoinj.net.ConnectionHandler"
         uuid: "org.bitcoinj.net.ConnectionHandler"
         fixed: false
@@ -1026,7 +927,7 @@ methods:
         parameters:
         - name: "key"
           value:
-            sapientType: "NULL"
+            sapientType: "UNKNOWN"
             suggestedContent: !<unknown_object>
               target: "java.nio.channels.SelectionKey"
               onlyPojoFunctions: false
@@ -1254,8 +1155,6 @@ methods:
         signature: "isRunning(): boolean"
         returnValue:
           sapientType: "BASIC"
-          content: !<regular>
-            value: true
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
@@ -1277,25 +1176,6 @@ methods:
       - 6
       value:
         sapientType: "OBJECT"
-        content: !<method_return_from_value>
-          target: "java.nio.channels.spi.AbstractSelector"
-          localVariableValue:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "java.nio.channels.spi.SelectorProvider"
-              method: "provider"
-              methodParameters: []
-            suggestedContent: !<static_method_return>
-              target: "java.nio.channels.spi.SelectorProvider"
-              method: "provider"
-              methodParameters: []
-            valueType: "java.nio.channels.spi.SelectorProvider"
-            uuid: "<init>_selectorProvider1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          methodParameters: []
-          methodName: "openSelector"
         suggestedContent: !<method_return_from_value>
           target: "java.nio.channels.spi.AbstractSelector"
           localVariableValue:
@@ -1325,8 +1205,6 @@ methods:
         signature: "select(): int throws java.io.IOException"
         returnValue:
           sapientType: "BASIC"
-          content: !<regular>
-            value: 0
           valueType: "int"
           uuid: "run_int1"
           fixed: false
@@ -1359,11 +1237,6 @@ methods:
         signature: "connectionOpened(): void"
         returnValue:
           sapientType: "EXCEPTION"
-          content: !<new>
-            target: "java.lang.NullPointerException"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
           suggestedContent: !<new>
             target: "java.lang.NullPointerException"
             parameters: []
@@ -1387,47 +1260,6 @@ methods:
       - 6
       value:
         sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.net.ConnectionHandler"
-          parameters:
-          - name: "connection"
-            value:
-              sapientType: "NULL"
-              valueType: "org.bitcoinj.net.StreamConnection"
-              uuid: "handleKey_streamConnection1"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "key"
-            value:
-              sapientType: "NULL"
-              suggestedContent: !<unknown_object>
-                target: "java.nio.channels.SelectionKey"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "java.nio.channels.SelectionKey"
-              uuid: "run_object1"
-              fixed: false
-              collectionUuid: "run_set1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "connectedHandlers"
-            value:
-              sapientType: "COLLECTION"
-              content: !<collection>
-                parameters: []
-                values: []
-              suggestedContent: !<collection>
-                parameters: []
-                values: []
-              valueType: "java.util.Set"
-              genericValueType: "org.bitcoinj.net.ConnectionHandler"
-              uuid: "<init>_set1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
         suggestedContent: !<new>
           target: "org.bitcoinj.net.ConnectionHandler"
           parameters:
@@ -1502,8 +1334,6 @@ methods:
         signature: "isRunning(): boolean"
         returnValue:
           sapientType: "BASIC"
-          content: !<regular>
-            value: false
           valueType: "boolean"
           uuid: "run_boolean4"
           fixed: false
@@ -1521,7 +1351,7 @@ methods:
       idsTryCatchBlockSurrounding:
       - 7
       value:
-        sapientType: "NULL"
+        sapientType: "UNKNOWN"
         suggestedContent: !<unknown_object>
           target: "java.nio.channels.SelectableChannel"
           onlyPojoFunctions: false
@@ -1556,7 +1386,7 @@ methods:
       nestedInLoop: true
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         valueType: "org.bitcoinj.net.ConnectionHandler"
         uuid: "org.bitcoinj.net.ConnectionHandler"
         fixed: false
@@ -1568,7 +1398,7 @@ methods:
         parameters:
         - name: "key"
           value:
-            sapientType: "NULL"
+            sapientType: "UNKNOWN"
             suggestedContent: !<unknown_object>
               target: "java.nio.channels.SelectionKey"
               onlyPojoFunctions: false
@@ -1601,25 +1431,6 @@ methods:
       - 8
       value:
         sapientType: "OBJECT"
-        content: !<method_return_from_value>
-          target: "java.nio.channels.spi.AbstractSelector"
-          localVariableValue:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "java.nio.channels.spi.SelectorProvider"
-              method: "provider"
-              methodParameters: []
-            suggestedContent: !<static_method_return>
-              target: "java.nio.channels.spi.SelectorProvider"
-              method: "provider"
-              methodParameters: []
-            valueType: "java.nio.channels.spi.SelectorProvider"
-            uuid: "<init>_selectorProvider1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          methodParameters: []
-          methodName: "openSelector"
         suggestedContent: !<method_return_from_value>
           target: "java.nio.channels.spi.AbstractSelector"
           localVariableValue:
@@ -1764,8 +1575,6 @@ methods:
         signature: "isRunning(): boolean"
         returnValue:
           sapientType: "BASIC"
-          content: !<regular>
-            value: true
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
@@ -1787,25 +1596,6 @@ methods:
       - 6
       value:
         sapientType: "OBJECT"
-        content: !<method_return_from_value>
-          target: "java.nio.channels.spi.AbstractSelector"
-          localVariableValue:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "java.nio.channels.spi.SelectorProvider"
-              method: "provider"
-              methodParameters: []
-            suggestedContent: !<static_method_return>
-              target: "java.nio.channels.spi.SelectorProvider"
-              method: "provider"
-              methodParameters: []
-            valueType: "java.nio.channels.spi.SelectorProvider"
-            uuid: "<init>_selectorProvider1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          methodParameters: []
-          methodName: "openSelector"
         suggestedContent: !<method_return_from_value>
           target: "java.nio.channels.spi.AbstractSelector"
           localVariableValue:
@@ -1835,8 +1625,6 @@ methods:
         signature: "select(): int throws java.io.IOException"
         returnValue:
           sapientType: "BASIC"
-          content: !<regular>
-            value: 0
           valueType: "int"
           uuid: "run_int1"
           fixed: false
@@ -1869,11 +1657,6 @@ methods:
         signature: "connectionOpened(): void"
         returnValue:
           sapientType: "EXCEPTION"
-          content: !<new>
-            target: "java.lang.NullPointerException"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
           suggestedContent: !<new>
             target: "java.lang.NullPointerException"
             parameters: []
@@ -1897,47 +1680,6 @@ methods:
       - 6
       value:
         sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.net.ConnectionHandler"
-          parameters:
-          - name: "connection"
-            value:
-              sapientType: "NULL"
-              valueType: "org.bitcoinj.net.StreamConnection"
-              uuid: "handleKey_streamConnection1"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "key"
-            value:
-              sapientType: "NULL"
-              suggestedContent: !<unknown_object>
-                target: "java.nio.channels.SelectionKey"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "java.nio.channels.SelectionKey"
-              uuid: "run_object1"
-              fixed: false
-              collectionUuid: "run_set1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "connectedHandlers"
-            value:
-              sapientType: "COLLECTION"
-              content: !<collection>
-                parameters: []
-                values: []
-              suggestedContent: !<collection>
-                parameters: []
-                values: []
-              valueType: "java.util.Set"
-              genericValueType: "org.bitcoinj.net.ConnectionHandler"
-              uuid: "<init>_set1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
         suggestedContent: !<new>
           target: "org.bitcoinj.net.ConnectionHandler"
           parameters:
@@ -2012,8 +1754,6 @@ methods:
         signature: "isRunning(): boolean"
         returnValue:
           sapientType: "BASIC"
-          content: !<regular>
-            value: false
           valueType: "boolean"
           uuid: "run_boolean4"
           fixed: false
@@ -2031,7 +1771,7 @@ methods:
       idsTryCatchBlockSurrounding:
       - 4
       value:
-        sapientType: "NULL"
+        sapientType: "UNKNOWN"
         suggestedContent: !<unknown_object>
           target: "java.nio.channels.SelectableChannel"
           onlyPojoFunctions: false
@@ -2066,7 +1806,7 @@ methods:
       nestedInLoop: true
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         valueType: "org.bitcoinj.net.ConnectionHandler"
         uuid: "org.bitcoinj.net.ConnectionHandler"
         fixed: false
@@ -2078,7 +1818,7 @@ methods:
         parameters:
         - name: "key"
           value:
-            sapientType: "NULL"
+            sapientType: "UNKNOWN"
             suggestedContent: !<unknown_object>
               target: "java.nio.channels.SelectionKey"
               onlyPojoFunctions: false
@@ -2111,25 +1851,6 @@ methods:
       - 5
       value:
         sapientType: "OBJECT"
-        content: !<method_return_from_value>
-          target: "java.nio.channels.spi.AbstractSelector"
-          localVariableValue:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "java.nio.channels.spi.SelectorProvider"
-              method: "provider"
-              methodParameters: []
-            suggestedContent: !<static_method_return>
-              target: "java.nio.channels.spi.SelectorProvider"
-              method: "provider"
-              methodParameters: []
-            valueType: "java.nio.channels.spi.SelectorProvider"
-            uuid: "<init>_selectorProvider1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          methodParameters: []
-          methodName: "openSelector"
         suggestedContent: !<method_return_from_value>
           target: "java.nio.channels.spi.AbstractSelector"
           localVariableValue:
@@ -2274,8 +1995,6 @@ methods:
         signature: "isRunning(): boolean"
         returnValue:
           sapientType: "BASIC"
-          content: !<regular>
-            value: true
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
@@ -2297,25 +2016,6 @@ methods:
       - 6
       value:
         sapientType: "OBJECT"
-        content: !<method_return_from_value>
-          target: "java.nio.channels.spi.AbstractSelector"
-          localVariableValue:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "java.nio.channels.spi.SelectorProvider"
-              method: "provider"
-              methodParameters: []
-            suggestedContent: !<static_method_return>
-              target: "java.nio.channels.spi.SelectorProvider"
-              method: "provider"
-              methodParameters: []
-            valueType: "java.nio.channels.spi.SelectorProvider"
-            uuid: "<init>_selectorProvider1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          methodParameters: []
-          methodName: "openSelector"
         suggestedContent: !<method_return_from_value>
           target: "java.nio.channels.spi.AbstractSelector"
           localVariableValue:
@@ -2345,8 +2045,6 @@ methods:
         signature: "select(): int throws java.io.IOException"
         returnValue:
           sapientType: "BASIC"
-          content: !<regular>
-            value: 0
           valueType: "int"
           uuid: "run_int1"
           fixed: false
@@ -2379,11 +2077,6 @@ methods:
         signature: "connectionOpened(): void"
         returnValue:
           sapientType: "EXCEPTION"
-          content: !<new>
-            target: "java.lang.NullPointerException"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
           suggestedContent: !<new>
             target: "java.lang.NullPointerException"
             parameters: []
@@ -2407,47 +2100,6 @@ methods:
       - 6
       value:
         sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.net.ConnectionHandler"
-          parameters:
-          - name: "connection"
-            value:
-              sapientType: "NULL"
-              valueType: "org.bitcoinj.net.StreamConnection"
-              uuid: "handleKey_streamConnection1"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "key"
-            value:
-              sapientType: "NULL"
-              suggestedContent: !<unknown_object>
-                target: "java.nio.channels.SelectionKey"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "java.nio.channels.SelectionKey"
-              uuid: "run_object1"
-              fixed: false
-              collectionUuid: "run_set1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "connectedHandlers"
-            value:
-              sapientType: "COLLECTION"
-              content: !<collection>
-                parameters: []
-                values: []
-              suggestedContent: !<collection>
-                parameters: []
-                values: []
-              valueType: "java.util.Set"
-              genericValueType: "org.bitcoinj.net.ConnectionHandler"
-              uuid: "<init>_set1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
         suggestedContent: !<new>
           target: "org.bitcoinj.net.ConnectionHandler"
           parameters:
@@ -2522,8 +2174,6 @@ methods:
         signature: "isRunning(): boolean"
         returnValue:
           sapientType: "BASIC"
-          content: !<regular>
-            value: false
           valueType: "boolean"
           uuid: "run_boolean4"
           fixed: false
@@ -2541,7 +2191,7 @@ methods:
       idsTryCatchBlockSurrounding:
       - 4
       value:
-        sapientType: "NULL"
+        sapientType: "UNKNOWN"
         suggestedContent: !<unknown_object>
           target: "java.nio.channels.SelectableChannel"
           onlyPojoFunctions: false
@@ -2576,7 +2226,7 @@ methods:
       nestedInLoop: true
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         valueType: "org.bitcoinj.net.ConnectionHandler"
         uuid: "org.bitcoinj.net.ConnectionHandler"
         fixed: false
@@ -2588,7 +2238,7 @@ methods:
         parameters:
         - name: "key"
           value:
-            sapientType: "NULL"
+            sapientType: "UNKNOWN"
             suggestedContent: !<unknown_object>
               target: "java.nio.channels.SelectionKey"
               onlyPojoFunctions: false
@@ -2621,25 +2271,6 @@ methods:
       - 5
       value:
         sapientType: "OBJECT"
-        content: !<method_return_from_value>
-          target: "java.nio.channels.spi.AbstractSelector"
-          localVariableValue:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "java.nio.channels.spi.SelectorProvider"
-              method: "provider"
-              methodParameters: []
-            suggestedContent: !<static_method_return>
-              target: "java.nio.channels.spi.SelectorProvider"
-              method: "provider"
-              methodParameters: []
-            valueType: "java.nio.channels.spi.SelectorProvider"
-            uuid: "<init>_selectorProvider1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          methodParameters: []
-          methodName: "openSelector"
         suggestedContent: !<method_return_from_value>
           target: "java.nio.channels.spi.AbstractSelector"
           localVariableValue:
@@ -2749,7 +2380,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "EBA8C2D809A9B5195AADA04B7B7A5C25"
+    modelFingerprint: "4AC81C9C63235ED35432E1541FA93862"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -2780,13 +2411,17 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "serverAddress"
-      modelFingerprint: "CF0EB3DEA07F1171B2E1DFD1E85D42CB"
+      modelFingerprint: "27A5E9DEBCCD63D4A5D14B0EC36BBC7A"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "NULL"
+        content: !<unknown_object>
+          target: "java.net.SocketAddress"
+          onlyPojoFunctions: false
+          builderPattern: false
         suggestedContent: !<unknown_object>
           target: "java.net.SocketAddress"
           onlyPojoFunctions: false
@@ -2800,16 +2435,21 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "connection"
-      modelFingerprint: "C453A5F8EB06108289088AA7A602A9A1"
+      modelFingerprint: "E240B08557456B8245A8AF209F29B3D5"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.net.StreamConnection"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.net.StreamConnection"
         uuid: "openConnection_streamConnection1"
         fixed: false
+        nameForMock: "com.example.StreamConnection@<hashcode>"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
@@ -2870,7 +2510,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -2881,7 +2521,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "AA11AF513534E9A1014A458FF84FA481"
+    modelFingerprint: "388D765FDBC3C2B57C71ABD115E619C3"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -2912,13 +2552,17 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "serverAddress"
-      modelFingerprint: "CF0EB3DEA07F1171B2E1DFD1E85D42CB"
+      modelFingerprint: "27A5E9DEBCCD63D4A5D14B0EC36BBC7A"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "NULL"
+        content: !<unknown_object>
+          target: "java.net.SocketAddress"
+          onlyPojoFunctions: false
+          builderPattern: false
         suggestedContent: !<unknown_object>
           target: "java.net.SocketAddress"
           onlyPojoFunctions: false
@@ -2932,16 +2576,21 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "connection"
-      modelFingerprint: "C453A5F8EB06108289088AA7A602A9A1"
+      modelFingerprint: "E240B08557456B8245A8AF209F29B3D5"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.net.StreamConnection"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.net.StreamConnection"
         uuid: "openConnection_streamConnection1"
         fixed: false
+        nameForMock: "{}"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
@@ -3046,7 +2695,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "94D4BA4634CE40482BC65071A8C344C0"
+    modelFingerprint: "90E59A97241FBB8065D4E88E8B5BD223"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -3082,13 +2731,17 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "serverAddress"
-      modelFingerprint: "CF0EB3DEA07F1171B2E1DFD1E85D42CB"
+      modelFingerprint: "27A5E9DEBCCD63D4A5D14B0EC36BBC7A"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "NULL"
+        content: !<unknown_object>
+          target: "java.net.SocketAddress"
+          onlyPojoFunctions: false
+          builderPattern: false
         suggestedContent: !<unknown_object>
           target: "java.net.SocketAddress"
           onlyPojoFunctions: false
@@ -3102,16 +2755,21 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "connection"
-      modelFingerprint: "C453A5F8EB06108289088AA7A602A9A1"
+      modelFingerprint: "E240B08557456B8245A8AF209F29B3D5"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.net.StreamConnection"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.net.StreamConnection"
         uuid: "openConnection_streamConnection1"
         fixed: false
+        nameForMock: "java.nio.channels.SocketChannel"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
@@ -3144,7 +2802,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "SocketChannel"
-      modelFingerprint: "2B34611D4066F4D6862389DD614E8323"
+      modelFingerprint: "3A96418CD7C7E5507919E53EA6B3D611"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -3166,15 +2824,15 @@ methods:
         - "java.io.IOException"
         signature: "open(): SocketChannel throws java.io.IOException"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
+          sapientType: "NULL"
+          content: !<unknown_object>
             target: "java.nio.channels.SocketChannel"
-            method: "open"
-            methodParameters: []
-          suggestedContent: !<static_method_return>
+            onlyPojoFunctions: true
+            builderPattern: false
+          suggestedContent: !<unknown_object>
             target: "java.nio.channels.SocketChannel"
-            method: "open"
-            methodParameters: []
+            onlyPojoFunctions: true
+            builderPattern: false
           valueType: "java.nio.channels.SocketChannel"
           uuid: "openConnection_socketChannel1"
           fixed: false
@@ -3183,210 +2841,10 @@ methods:
         access: 9
       staticReadMethodForField: false
       filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "sc"
-      modelFingerprint: "8217D1DDE224B57065455BBE588E6BD5"
-      index: 6
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 11
-      value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "java.nio.channels.SocketChannel"
-          method: "open"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "java.nio.channels.SocketChannel"
-          method: "open"
-          methodParameters: []
-        valueType: "java.nio.channels.SocketChannel"
-        uuid: "openConnection_socketChannel1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "sc"
-        name: "configureBlocking"
-        parameters:
-        - name: "block"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        throwsExceptions:
-        - "java.io.IOException"
-        signature: "configureBlocking(boolean): SelectableChannel throws java.io.IOException"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<method_return_from_value>
-            target: "java.nio.channels.SelectableChannel"
-            localVariableValue:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "java.nio.channels.SocketChannel"
-                method: "open"
-                methodParameters: []
-              suggestedContent: !<static_method_return>
-                target: "java.nio.channels.SocketChannel"
-                method: "open"
-                methodParameters: []
-              valueType: "java.nio.channels.SocketChannel"
-              uuid: "openConnection_socketChannel1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            methodParameters:
-            - name: "block"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: false
-                valueType: "boolean"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            methodName: "configureBlocking"
-          suggestedContent: !<method_return_from_value>
-            target: "java.nio.channels.SelectableChannel"
-            localVariableValue:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "java.nio.channels.SocketChannel"
-                method: "open"
-                methodParameters: []
-              suggestedContent: !<static_method_return>
-                target: "java.nio.channels.SocketChannel"
-                method: "open"
-                methodParameters: []
-              valueType: "java.nio.channels.SocketChannel"
-              uuid: "openConnection_socketChannel1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            methodParameters:
-            - name: "block"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: false
-                valueType: "boolean"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            methodName: "configureBlocking"
-          valueType: "java.nio.channels.SelectableChannel"
-          uuid: "openConnection_selectableChannel1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 17
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "sc"
-      modelFingerprint: "062CBAC4CE00733EC6F6DC06D4C250A9"
+    - type: "STATIC"
+      name: "ListenableCompletableFuture"
+      modelFingerprint: "0AA885994C91D83DF594E7C46CF4250D"
       index: 7
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 11
-      value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "java.nio.channels.SocketChannel"
-          method: "open"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "java.nio.channels.SocketChannel"
-          method: "open"
-          methodParameters: []
-        valueType: "java.nio.channels.SocketChannel"
-        uuid: "openConnection_socketChannel1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "sc"
-        name: "connect"
-        parameters:
-        - name: "arg0"
-          value:
-            sapientType: "NULL"
-            suggestedContent: !<unknown_object>
-              target: "java.net.SocketAddress"
-              onlyPojoFunctions: false
-              builderPattern: false
-            valueType: "java.net.SocketAddress"
-            uuid: "openConnection_socketAddress1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        throwsExceptions:
-        - "java.io.IOException"
-        signature: "connect(SocketAddress): boolean throws java.io.IOException"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: false
-          valueType: "boolean"
-          uuid: "openConnection_boolean2"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1025
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "ListenableCompletableFuture"
-      modelFingerprint: "E099530F457B85530B1403960C8C78EC"
-      index: 8
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 11
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
-        uuid: "org.bitcoinj.utils.ListenableCompletableFuture"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.utils.ListenableCompletableFuture"
-        name: "of"
-        parameters:
-        - name: "future"
-          value:
-            sapientType: "NULL"
-            valueType: "java.util.concurrent.CompletableFuture"
-            uuid: "openConnection_completableFuture1"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "of(CompletableFuture): ListenableCompletableFuture"
-        returnValue:
-          sapientType: "MOCK"
-          valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
-          uuid: "openConnection_listenableCompletableFuture1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "ListenableCompletableFuture"
-      modelFingerprint: "2AD9A68291724B7A94B3B801D730C9ED"
-      index: 9
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3421,10 +2879,20 @@ methods:
             explicitCastNeeded: false
         signature: "failedFuture(Throwable): ListenableCompletableFuture"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "OBJECT"
+          content: !<new>
+            target: "org.bitcoinj.utils.ListenableCompletableFuture"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "org.bitcoinj.utils.ListenableCompletableFuture"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
           valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
           genericValueType: "java.net.SocketAddress"
-          uuid: "openConnection_listenableCompletableFuture2"
+          uuid: "openConnection_listenableCompletableFuture1"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -3433,16 +2901,26 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "48F39B04B15CFD93DB26837D8AA61EC7"
-      index: 10
+      modelFingerprint: "0F4637A39FDED4239184273EA9F5DF2D"
+      index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.utils.ListenableCompletableFuture"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.utils.ListenableCompletableFuture"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
         valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
         genericValueType: "java.net.SocketAddress"
-        uuid: "openConnection_listenableCompletableFuture2"
+        uuid: "openConnection_listenableCompletableFuture1"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -3450,10 +2928,8 @@ methods:
       filledByUser: false
     uuid: "c684a778-f95f-3a32-974c-99dde163048d"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    disabledReason: "Potential harmful system call (Selector.wakeup) detected; Learn\
-      \ more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -3473,7 +2949,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "CB2ED74B31B647C67B761B61AB5DDEFB"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -3540,7 +3016,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "3C1DA5291EA5ABC0A9446AC529822619"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -3611,7 +3087,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "7C32E1E4A8CDF1779821296F0C2DF0C4"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -3648,8 +3124,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "BASIC"
-        content: !<regular>
-          value: 2147483647
         suggestedContent: !<regular>
           value: 2147483647
         valueType: "int"
@@ -3668,11 +3142,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "EXCEPTION"
-        content: !<new>
-          target: "java.util.NoSuchElementException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
         suggestedContent: !<new>
           target: "java.util.NoSuchElementException"
           parameters: []
@@ -3700,7 +3169,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "8065113FC4C8813DE812167E109FE18C"
+    modelFingerprint: "22C834DA130E3C772B410CD4D5EF8751"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -3731,7 +3200,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "n"
-      modelFingerprint: "22189F1A57AD84C190D91C5BF56B148D"
+      modelFingerprint: "881F2AEF2F7ADE5010CAA03A8E421ED0"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -3767,7 +3236,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -3786,7 +3255,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "080ABD0332DBDDB0B26FC4711FEB15FF"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"

@@ -201,7 +201,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -220,7 +220,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "937AD5372FBF109D1D79AA081A577B11"
+    modelFingerprint: "E8EF621F1FEFAAADD40234BFC3DBADEE"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -319,7 +319,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "AddressMessage"
-      modelFingerprint: "8E9C7E3C2256364BF185C625B69721BA"
+      modelFingerprint: "79B2D7313849055E2416172FA7D7589C"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -394,10 +394,22 @@ methods:
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
+            - sapientType: "MOCK"
+              valueType: "org.bitcoinj.core.PeerAddress"
+              uuid: "addAddress_peerAddress1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
           suggestedContent: !<collection>
             collectionClass: "java.util.ArrayList"
             parameters: []
             values:
+            - sapientType: "MOCK"
+              valueType: "org.bitcoinj.core.PeerAddress"
+              uuid: "addAddress_peerAddress1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
             - sapientType: "MOCK"
               valueType: "org.bitcoinj.core.PeerAddress"
               uuid: "addAddress_peerAddress1"
@@ -431,7 +443,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -452,12 +464,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "4EE9C525F1FCCD7C06850F5160C4C1CE"
+    modelFingerprint: "0020C46D9A4A3A0A5D0D4FE01E0FBDC4"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "EECB3E6DFE935558D2C55BAF8FF4392A"
+      modelFingerprint: "728D7A6433D2257EA53FDCBAA5C23C16"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -508,7 +520,21 @@ methods:
           methodParameters:
           - name: "payload"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "int"
+                    uuid: "read_byteBuffer1-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               suggestedContent: !<static_method_return>
                 target: "java.nio.ByteBuffer"
                 method: "allocateDirect"
@@ -535,7 +561,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "stream"
-      modelFingerprint: "B8BEF8756892BE49F09AC257065C85DF"
+      modelFingerprint: "B621D4240DEEFC267BEA013D97BEB77E"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -559,7 +585,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "AddressMessage"
-      modelFingerprint: "CC90420C79009647189E3D6C979DFC96"
+      modelFingerprint: "40A27D0EF13CA8974C6683B39DFF6CD4"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -651,7 +677,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -662,12 +688,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "62ECA1D36CD66F5A312657B95A8A727D"
+    modelFingerprint: "4A35B3FAD1284D129B1AB58803219ED6"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "2BE46A214FC8AEDCDF0DE3C983875A69"
+      modelFingerprint: "728D7A6433D2257EA53FDCBAA5C23C16"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -690,8 +716,6 @@ methods:
                     sapientType: "BASIC"
                     content: !<regular>
                       value: 0
-                    suggestedContent: !<regular>
-                      value: 0
                     valueType: "int"
                     uuid: "read_byteBuffer1-capacity"
                     fixed: false
@@ -704,10 +728,6 @@ methods:
                 - name: "capacity"
                   value:
                     sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    suggestedContent: !<regular>
-                      value: 0
                     valueType: "int"
                     uuid: "read_byteBuffer1-capacity"
                     fixed: false
@@ -734,8 +754,6 @@ methods:
                     sapientType: "BASIC"
                     content: !<regular>
                       value: 0
-                    suggestedContent: !<regular>
-                      value: 0
                     valueType: "int"
                     uuid: "read_byteBuffer1-capacity"
                     fixed: false
@@ -748,10 +766,6 @@ methods:
                 - name: "capacity"
                   value:
                     sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    suggestedContent: !<regular>
-                      value: 0
                     valueType: "int"
                     uuid: "read_byteBuffer1-capacity"
                     fixed: false
@@ -795,7 +809,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "AddressMessage"
-      modelFingerprint: "91E8FCCF2D28BC6F4D8CDC8919BC5193"
+      modelFingerprint: "6381EFECE54C01921629FFCDA70DB1C6"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -823,8 +837,6 @@ methods:
                   sapientType: "BASIC"
                   content: !<regular>
                     value: 0
-                  suggestedContent: !<regular>
-                    value: 0
                   valueType: "int"
                   uuid: "read_byteBuffer1-capacity"
                   fixed: false
@@ -837,10 +849,6 @@ methods:
               - name: "capacity"
                 value:
                   sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  suggestedContent: !<regular>
-                    value: 0
                   valueType: "int"
                   uuid: "read_byteBuffer1-capacity"
                   fixed: false
@@ -870,13 +878,63 @@ methods:
             collectionClass: "java.util.ArrayList"
             parameters: []
             values:
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
+            - sapientType: "OBJECT"
+              content: !<static_method_return>
                 target: "org.bitcoinj.core.PeerAddress"
-                onlyPojoFunctions: false
-                builderPattern: false
+                method: "simple"
+                methodParameters:
+                - name: "addr"
+                  value:
+                    sapientType: "OBJECT"
+                    content: !<static_method_return>
+                      target: "java.net.InetAddress"
+                      method: "getLoopbackAddress"
+                      methodParameters: []
+                    suggestedContent: !<static_method_return>
+                      target: "java.net.InetAddress"
+                      method: "getLoopbackAddress"
+                      methodParameters: []
+                    valueType: "java.net.InetAddress"
+                    uuid: "read_list1-0-addr"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "port"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "int"
+                    uuid: "read_list1-0-port"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.core.PeerAddress"
+                method: "simple"
+                methodParameters:
+                - name: "addr"
+                  value:
+                    sapientType: "UNKNOWN"
+                    suggestedContent: !<static_method_return>
+                      target: "java.net.InetAddress"
+                      method: "getLoopbackAddress"
+                      methodParameters: []
+                    valueType: "java.net.InetAddress"
+                    uuid: "read_list1-0-addr"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "port"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "int"
+                    uuid: "read_list1-0-port"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.core.PeerAddress"
-              uuid: "bitcoinSerializeToStream_object1"
+              uuid: "read_list1-0"
               fixed: false
               collectionUuid: "read_list1"
               equalsMethodPresent: false
@@ -885,13 +943,63 @@ methods:
             collectionClass: "java.util.ArrayList"
             parameters: []
             values:
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
+            - sapientType: "OBJECT"
+              content: !<static_method_return>
                 target: "org.bitcoinj.core.PeerAddress"
-                onlyPojoFunctions: false
-                builderPattern: false
+                method: "simple"
+                methodParameters:
+                - name: "addr"
+                  value:
+                    sapientType: "OBJECT"
+                    content: !<static_method_return>
+                      target: "java.net.InetAddress"
+                      method: "getLoopbackAddress"
+                      methodParameters: []
+                    suggestedContent: !<static_method_return>
+                      target: "java.net.InetAddress"
+                      method: "getLoopbackAddress"
+                      methodParameters: []
+                    valueType: "java.net.InetAddress"
+                    uuid: "read_list1-0-addr"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "port"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "int"
+                    uuid: "read_list1-0-port"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.core.PeerAddress"
+                method: "simple"
+                methodParameters:
+                - name: "addr"
+                  value:
+                    sapientType: "UNKNOWN"
+                    suggestedContent: !<static_method_return>
+                      target: "java.net.InetAddress"
+                      method: "getLoopbackAddress"
+                      methodParameters: []
+                    valueType: "java.net.InetAddress"
+                    uuid: "read_list1-0-addr"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "port"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "int"
+                    uuid: "read_list1-0-port"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.core.PeerAddress"
-              uuid: "bitcoinSerializeToStream_object1"
+              uuid: "read_list1-0"
               fixed: false
               collectionUuid: "read_list1"
               equalsMethodPresent: false
@@ -907,7 +1015,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "VarInt"
-      modelFingerprint: "54C3A14A93FEB21BA9565DD4804E4A11"
+      modelFingerprint: "65E2FD62712D949B0BBCFA2C5C935188"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -928,21 +1036,42 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: 1
-            suggestedContent: !<regular>
-              value: 1
             valueType: "long"
             originalValueType: "int"
-            uuid: "bitcoinSerializeToStream_long1"
-            fixed: false
+            fixed: true
             equalsMethodPresent: false
             explicitCastNeeded: false
         signature: "of(long): VarInt"
         returnValue:
-          sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
+          sapientType: "OBJECT"
+          content: !<new>
             target: "org.bitcoinj.base.VarInt"
-            onlyPojoFunctions: false
-            builderPattern: false
+            parameters:
+            - name: "value"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "long"
+                uuid: "bitcoinSerializeToStream_varInt1-value"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "org.bitcoinj.base.VarInt"
+            parameters:
+            - name: "value"
+              value:
+                sapientType: "BASIC"
+                valueType: "long"
+                uuid: "bitcoinSerializeToStream_varInt1-value"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            privateConstructor: false
+            createdByTargetCode: false
           valueType: "org.bitcoinj.base.VarInt"
           uuid: "bitcoinSerializeToStream_varInt1"
           fixed: false
@@ -952,17 +1081,41 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "CC85204A567BE17A1D1BFFD5A0DE208E"
+      modelFingerprint: "5CC6CEFCC82F6431F2AC4966D766F110"
       index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
+        sapientType: "OBJECT"
+        content: !<new>
           target: "org.bitcoinj.base.VarInt"
-          onlyPojoFunctions: false
-          builderPattern: false
+          parameters:
+          - name: "value"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "bitcoinSerializeToStream_varInt1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.base.VarInt"
+          parameters:
+          - name: "value"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "bitcoinSerializeToStream_varInt1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
         valueType: "org.bitcoinj.base.VarInt"
         uuid: "bitcoinSerializeToStream_varInt1"
         fixed: false
@@ -976,9 +1129,27 @@ methods:
         returnValue:
           sapientType: "ARRAY"
           content: !<array>
-            values: {}
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                uuid: "bitcoinSerializeToStream_byte[]1-item0"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           suggestedContent: !<array>
-            values: {}
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                uuid: "bitcoinSerializeToStream_byte[]1-item0"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "byte[]"
           uuid: "bitcoinSerializeToStream_byte[]1"
           fixed: false
@@ -989,19 +1160,69 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "addr"
-      modelFingerprint: "C2171F6F6451CB403DE56FFACB9451E2"
+      modelFingerprint: "DB8B22F4D6FE66920BF3522744ED1034"
       index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
+        sapientType: "OBJECT"
+        content: !<static_method_return>
           target: "org.bitcoinj.core.PeerAddress"
-          onlyPojoFunctions: false
-          builderPattern: false
+          method: "simple"
+          methodParameters:
+          - name: "addr"
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.net.InetAddress"
+                method: "getLoopbackAddress"
+                methodParameters: []
+              suggestedContent: !<static_method_return>
+                target: "java.net.InetAddress"
+                method: "getLoopbackAddress"
+                methodParameters: []
+              valueType: "java.net.InetAddress"
+              uuid: "read_list1-0-addr"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "port"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "read_list1-0-port"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.core.PeerAddress"
+          method: "simple"
+          methodParameters:
+          - name: "addr"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<static_method_return>
+                target: "java.net.InetAddress"
+                method: "getLoopbackAddress"
+                methodParameters: []
+              valueType: "java.net.InetAddress"
+              uuid: "read_list1-0-addr"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "port"
+            value:
+              sapientType: "BASIC"
+              valueType: "int"
+              uuid: "read_list1-0-port"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.core.PeerAddress"
-        uuid: "bitcoinSerializeToStream_object1"
+        uuid: "read_list1-0"
         fixed: false
         collectionUuid: "read_list1"
         equalsMethodPresent: false
@@ -1023,9 +1244,25 @@ methods:
         returnValue:
           sapientType: "ARRAY"
           content: !<array>
-            values: {}
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           suggestedContent: !<array>
-            values: {}
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "byte[]"
           uuid: "bitcoinSerializeToStream_byte[]2"
           fixed: false
@@ -1052,7 +1289,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path3"
@@ -1088,12 +1325,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "DCD2F26E5B17E24136A20351ECCFC5F3"
+    modelFingerprint: "A3B672725796CB008601A32DCDE17557"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "EECB3E6DFE935558D2C55BAF8FF4392A"
+      modelFingerprint: "728D7A6433D2257EA53FDCBAA5C23C16"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1144,7 +1381,21 @@ methods:
           methodParameters:
           - name: "payload"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "int"
+                    uuid: "read_byteBuffer1-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               suggestedContent: !<static_method_return>
                 target: "java.nio.ByteBuffer"
                 method: "allocateDirect"
@@ -1171,7 +1422,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "AddressMessage"
-      modelFingerprint: "1E8CABFA4DF3BBCA687710A9AE2820B7"
+      modelFingerprint: "9D110BFD10FCAAE2AE1CF046DF21D9CC"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1237,9 +1488,11 @@ methods:
         returnValue:
           sapientType: "COLLECTION"
           content: !<collection>
+            collectionClass: "java.util.ArrayList"
             parameters: []
             values: []
           suggestedContent: !<collection>
+            collectionClass: "java.util.ArrayList"
             parameters: []
             values: []
           valueType: "java.util.List"
@@ -1253,7 +1506,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "SPACE_JOINER"
-      modelFingerprint: "7DCCB8A13A894CB829297D3505C4D14A"
+      modelFingerprint: "95F5736AB0C5931E76F5304DC7853ECE"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1279,9 +1532,11 @@ methods:
           value:
             sapientType: "COLLECTION"
             content: !<collection>
+              collectionClass: "java.util.ArrayList"
               parameters: []
               values: []
             suggestedContent: !<collection>
+              collectionClass: "java.util.ArrayList"
               parameters: []
               values: []
             valueType: "java.util.List"

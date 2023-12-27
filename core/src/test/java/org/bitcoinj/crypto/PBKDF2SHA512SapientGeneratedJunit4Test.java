@@ -47,7 +47,7 @@ public class PBKDF2SHA512SapientGeneratedJunit4Test {
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             //Act Statement(s)
-            byte[] result = PBKDF2SHA512.derive("P1", "S1", 0, 0);
+            byte[] result = PBKDF2SHA512.derive("password", "salt", -5, -10);
             byte[] byteResultArray = new byte[]{};
             //Assert statement(s)
             assertThat(result, equalTo(byteResultArray));
@@ -74,7 +74,7 @@ public class PBKDF2SHA512SapientGeneratedJunit4Test {
             thrown.expect(RuntimeException.class);
             thrown.expectCause(isA(Exception.class));
             //Act Statement(s)
-            PBKDF2SHA512.derive("P1", "S1", 0, 0);
+            PBKDF2SHA512.derive("password", "salt", 0, 0);
             //Assert statement(s)
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
         }
@@ -91,16 +91,25 @@ public class PBKDF2SHA512SapientGeneratedJunit4Test {
          * (j < c) : true  #  inside F method
          * (j == 0) : true  #  inside F method
          * (k < U_XOR.length) : true  #  inside F method
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
+             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            byte[] byteArray = new byte[]{(byte) 0};
+            byte[] byteArray2 = new byte[]{(byte) 115, (byte) 97, (byte) 108, (byte) 116};
+            byte[] byteArray3 = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 1};
+            byteUtils.when(() -> ByteUtils.concat(byteArray2, byteArray3)).thenReturn(byteArray);
             //Act Statement(s)
-            byte[] result = PBKDF2SHA512.derive("P1", "S1", 2, 1);
-            byte[] byteResultArray = new byte[]{(byte) -44};
+            byte[] result = PBKDF2SHA512.derive("password", "salt", 1, 64);
+            byte[] byteResultArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
             //Assert statement(s)
             assertThat(result, equalTo(byteResultArray));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
+            byteUtils.verify(() -> ByteUtils.concat(byteArray2, byteArray3), atLeast(1));
         }
     }
 
@@ -124,14 +133,14 @@ public class PBKDF2SHA512SapientGeneratedJunit4Test {
         try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3};
-            byte[] byteArray2 = new byte[]{};
+            byte[] byteArray = new byte[]{(byte) 0};
+            byte[] byteArray2 = new byte[]{(byte) 115, (byte) 97, (byte) 108, (byte) 116};
             byte[] byteArray3 = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 1};
             byteUtils.when(() -> ByteUtils.concat(byteArray2, byteArray3)).thenReturn(byteArray);
             thrown.expect(RuntimeException.class);
             thrown.expectCause(isA(Exception.class));
             //Act Statement(s)
-            PBKDF2SHA512.derive("P1", "S1", 2, 1);
+            PBKDF2SHA512.derive("password", "salt", 1, 64);
             //Assert statement(s)
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
             byteUtils.verify(() -> ByteUtils.concat(byteArray2, byteArray3), atLeast(1));

@@ -53,12 +53,15 @@ public class ExchangeRateSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Coin coinMock = mock(Coin.class, "500");
+        Coin coinMock2 = mock(Coin.class, "1000");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             doReturn(false).when(coinMock).isPositive();
-            doReturn(false).when(fiatMock).isPositive();
             preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
+            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            ExchangeRate target = new ExchangeRate(coinMock, fiatMock);
+            Fiat fiat = Fiat.valueOf("currencyCode1", 10L);
+            ExchangeRate target = new ExchangeRate(coinMock, fiat);
             ArithmeticException arithmeticException = new ArithmeticException("Overflow");
             thrown.expect(ArithmeticException.class);
             thrown.expectMessage(arithmeticException.getMessage());
@@ -66,8 +69,8 @@ public class ExchangeRateSapientGeneratedJunit4Test {
             target.coinToFiat(coinMock2);
             //Assert statement(s)
             verify(coinMock).isPositive();
-            verify(fiatMock).isPositive();
-            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
         }
     }
@@ -84,21 +87,25 @@ public class ExchangeRateSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Coin coinMock = mock(Coin.class, "50");
+        Fiat fiatMock = mock(Fiat.class);
+        Coin coinMock2 = mock(Coin.class, "100");
         try (MockedStatic<Fiat> fiat = mockStatic(Fiat.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             doReturn(false).when(coinMock).isPositive();
-            doReturn(false).when(fiatMock).isPositive();
             preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
+            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            fiat.when(() -> Fiat.valueOf("currencyCode1", 1L)).thenReturn(fiatMock2);
-            ExchangeRate target = new ExchangeRate(coinMock, fiatMock);
+            fiat.when(() -> Fiat.valueOf("currencyCode1", 1L)).thenReturn(fiatMock);
+            Fiat fiat2 = Fiat.valueOf("USD", 500L);
+            ExchangeRate target = new ExchangeRate(coinMock, fiat2);
             //Act Statement(s)
             Fiat result = target.coinToFiat(coinMock2);
             //Assert statement(s)
-            assertThat(result, equalTo(fiatMock2));
+            assertThat(result, equalTo(fiatMock));
             verify(coinMock).isPositive();
-            verify(fiatMock).isPositive();
-            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
             fiat.verify(() -> Fiat.valueOf("currencyCode1", 1L), atLeast(1));
         }
@@ -116,21 +123,24 @@ public class ExchangeRateSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Coin coinMock = mock(Coin.class, "BTC");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             doReturn(false).when(coinMock).isPositive();
-            doReturn(false).when(fiatMock).isPositive();
             preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
+            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            ExchangeRate target = new ExchangeRate(coinMock, fiatMock);
+            Fiat fiat = Fiat.valueOf("USD", 1000L);
+            ExchangeRate target = new ExchangeRate(coinMock, fiat);
             ArithmeticException arithmeticException = new ArithmeticException("Overflow");
             thrown.expect(ArithmeticException.class);
             thrown.expectMessage(arithmeticException.getMessage());
+            Fiat fiat2 = Fiat.valueOf("USD", 100L);
             //Act Statement(s)
-            target.fiatToCoin(fiatMock2);
+            target.fiatToCoin(fiat2);
             //Assert statement(s)
             verify(coinMock).isPositive();
-            verify(fiatMock).isPositive();
-            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
         }
     }
@@ -147,23 +157,27 @@ public class ExchangeRateSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Coin coinMock = mock(Coin.class, "10");
         try (MockedStatic<Coin> coin = mockStatic(Coin.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             doReturn(false).when(coinMock).isPositive();
-            doReturn(false).when(fiatMock).isPositive();
             preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
+            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock2);
-            ExchangeRate target = new ExchangeRate(coinMock, fiatMock);
+            Coin coin2 = Coin.valueOf(0L);
+            coin.when(() -> Coin.valueOf(1L)).thenReturn(coin2);
+            Fiat fiat = Fiat.valueOf("currencyCode1", 20L);
+            ExchangeRate target = new ExchangeRate(coinMock, fiat);
+            Fiat fiat2 = Fiat.valueOf("USD", 100L);
             //Act Statement(s)
-            Coin result = target.fiatToCoin(fiatMock2);
+            Coin result = target.fiatToCoin(fiat2);
             //Assert statement(s)
-            assertThat(result, equalTo(coinMock2));
+            assertThat(result, equalTo(coin2));
             verify(coinMock).isPositive();
-            verify(fiatMock).isPositive();
-            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
-            coin.verify(() -> Coin.valueOf(0L), atLeast(1));
+            coin.verify(() -> Coin.valueOf(1L), atLeast(1));
         }
     }
 
@@ -180,25 +194,29 @@ public class ExchangeRateSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Coin coinMock = mock(Coin.class, "100");
         try (MockedStatic<Coin> coin = mockStatic(Coin.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             doReturn(false).when(coinMock).isPositive();
-            doReturn(false).when(fiatMock).isPositive();
             preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
+            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock2);
-            ExchangeRate target = new ExchangeRate(coinMock, fiatMock);
+            Coin coin2 = Coin.valueOf(0L);
+            coin.when(() -> Coin.valueOf(1L)).thenReturn(coin2);
+            Fiat fiat = Fiat.valueOf("USD", 10L);
+            ExchangeRate target = new ExchangeRate(coinMock, fiat);
             ArithmeticException arithmeticException = new ArithmeticException("Overflow: C");
             thrown.expect(ArithmeticException.class);
             thrown.expectMessage(arithmeticException.getMessage());
+            Fiat fiat2 = Fiat.valueOf("USD", 1000L);
             //Act Statement(s)
-            target.fiatToCoin(fiatMock2);
+            target.fiatToCoin(fiat2);
             //Assert statement(s)
             verify(coinMock).isPositive();
-            verify(fiatMock).isPositive();
-            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
-            coin.verify(() -> Coin.valueOf(0L), atLeast(1));
+            coin.verify(() -> Coin.valueOf(1L), atLeast(1));
         }
     }
 }

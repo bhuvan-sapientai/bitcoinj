@@ -16,7 +16,7 @@ methods:
     filledByUser: false
     priority: "MODERATE"
     modelFingerprint: "F527447DE6775EB4C1E816A94352549F"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "LOCAL_VARIABLE"
@@ -101,11 +101,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.params.UnitTestParams"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: true
         suggestedContent: !<new>
           target: "org.bitcoinj.params.UnitTestParams"
           parameters: []
@@ -141,7 +136,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "9BC38510D15CBEC349196F2B2CE0E4EB"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -263,10 +258,6 @@ methods:
         signature: "currentTime(): Instant"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.internal.TimeUtils"
-            method: "currentTime"
-            methodParameters: []
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.base.internal.TimeUtils"
             method: "currentTime"
@@ -300,10 +291,6 @@ methods:
         - name: "time"
           value:
             sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "org.bitcoinj.base.internal.TimeUtils"
-              method: "currentTime"
-              methodParameters: []
             suggestedContent: !<static_method_return>
               target: "org.bitcoinj.base.internal.TimeUtils"
               method: "currentTime"
@@ -325,33 +312,6 @@ methods:
         signature: "createGenesis(Instant,long): Block"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.core.Block"
-            method: "createGenesis"
-            methodParameters:
-            - value:
-                sapientType: "OBJECT"
-                content: !<static_method_return>
-                  target: "org.bitcoinj.base.internal.TimeUtils"
-                  method: "currentTime"
-                  methodParameters: []
-                suggestedContent: !<static_method_return>
-                  target: "org.bitcoinj.base.internal.TimeUtils"
-                  method: "currentTime"
-                  methodParameters: []
-                valueType: "java.time.Instant"
-                uuid: "getGenesisBlock_instant1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 545259519
-                valueType: "long"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.core.Block"
             method: "createGenesis"
@@ -392,33 +352,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "org.bitcoinj.core.Block"
-          method: "createGenesis"
-          methodParameters:
-          - value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "org.bitcoinj.base.internal.TimeUtils"
-                method: "currentTime"
-                methodParameters: []
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.base.internal.TimeUtils"
-                method: "currentTime"
-                methodParameters: []
-              valueType: "java.time.Instant"
-              uuid: "getGenesisBlock_instant1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 545259519
-              valueType: "long"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
         suggestedContent: !<static_method_return>
           target: "org.bitcoinj.core.Block"
           method: "createGenesis"

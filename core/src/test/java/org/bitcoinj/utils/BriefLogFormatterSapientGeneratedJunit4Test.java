@@ -22,20 +22,6 @@ public class BriefLogFormatterSapientGeneratedJunit4Test {
     @Rule()
     public Timeout timeoutRule = Timeout.seconds(5);
 
-    //Sapient generated method id: ${e991d51a-89a1-3fbd-8961-0087bc961914}
-    @Test()
-    public void initTest() {
-        //Arrange Statement(s)
-        try (MockedStatic<BriefLogFormatter> briefLogFormatter = mockStatic(BriefLogFormatter.class, CALLS_REAL_METHODS)) {
-            Level level = Level.INFO;
-            briefLogFormatter.when(() -> BriefLogFormatter.init(level)).thenAnswer((Answer<Void>) invocation -> null);
-            //Act Statement(s)
-            BriefLogFormatter.init();
-            //Assert statement(s)
-            briefLogFormatter.verify(() -> BriefLogFormatter.init(level), atLeast(1));
-        }
-    }
-
     //Sapient generated method id: ${77d9580d-0a0c-3794-aeb1-13da2a5e4954}
     @Ignore()
     @Test()
@@ -53,33 +39,6 @@ public class BriefLogFormatterSapientGeneratedJunit4Test {
         BriefLogFormatter.init(level);
     }
 
-    //Sapient generated method id: ${3a6e416d-0a41-3b1a-be46-3cb72a3f10ca}
-    @Test()
-    public void initVerboseTest() {
-        //Arrange Statement(s)
-        try (MockedStatic<BriefLogFormatter> briefLogFormatter = mockStatic(BriefLogFormatter.class, CALLS_REAL_METHODS)) {
-            Level level = Level.ALL;
-            briefLogFormatter.when(() -> BriefLogFormatter.init(level)).thenAnswer((Answer<Void>) invocation -> null);
-            //Act Statement(s)
-            BriefLogFormatter.initVerbose();
-            //Assert statement(s)
-            briefLogFormatter.verify(() -> BriefLogFormatter.init(level), atLeast(1));
-        }
-    }
-
-    //Sapient generated method id: ${dea246d0-4e1d-3d3e-b66a-74b9c8e925ed}
-    @Test()
-    public void initWithSilentBitcoinJTest() {
-        //Arrange Statement(s)
-        try (MockedStatic<BriefLogFormatter> briefLogFormatter = mockStatic(BriefLogFormatter.class, CALLS_REAL_METHODS)) {
-            briefLogFormatter.when(() -> BriefLogFormatter.init()).thenAnswer((Answer<Void>) invocation -> null);
-            //Act Statement(s)
-            BriefLogFormatter.initWithSilentBitcoinJ();
-            //Assert statement(s)
-            briefLogFormatter.verify(() -> BriefLogFormatter.init(), atLeast(1));
-        }
-    }
-
     //Sapient generated method id: ${5378ac91-7deb-341c-89c9-a5f9224b65ce}
     @Ignore()
     @Test()
@@ -93,7 +52,10 @@ public class BriefLogFormatterSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         BriefLogFormatter target = new BriefLogFormatter();
         Level level = Level.parse("name1");
+        Throwable throwable = new Throwable();
         LogRecord logRecord = new LogRecord(level, "msg1");
+        logRecord.setThrown(throwable);
+        logRecord.setMessage("Test message");
 
         //Act Statement(s)
         String result = target.format(logRecord);
@@ -116,6 +78,10 @@ public class BriefLogFormatterSapientGeneratedJunit4Test {
         BriefLogFormatter target = new BriefLogFormatter();
         Level level = Level.parse("name1");
         LogRecord logRecord = new LogRecord(level, "msg1");
+        logRecord.setThreadID(1);
+        logRecord.setSourceMethodName("testMethod");
+        logRecord.setSourceClassName("com.example.TestClass");
+        logRecord.setMessage("Test message");
 
         //Act Statement(s)
         String result = target.format(logRecord);

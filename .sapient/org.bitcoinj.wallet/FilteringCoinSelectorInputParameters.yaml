@@ -20,12 +20,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "A4C0972ACD6E33AA61F703A5BF5D1EBA"
+    modelFingerprint: "13F9A104D2DDF961C72BF110D7941D20"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "8696A571E58D62002CFC9ACC46FB4FAC"
+      modelFingerprint: "E368B12F613B57D49617900BE8661D53"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -45,17 +45,44 @@ methods:
               valueType: "org.bitcoinj.wallet.CoinSelector"
               uuid: "<init>_coinSelector1"
               fixed: false
+              nameForMock: "DefaultCoinSelector@<some memory address>"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "excludedOutPoints"
             value:
               sapientType: "COLLECTION"
               content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "MOCK"
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.core.TransactionOutPoint"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.core.TransactionOutPoint"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  nameForMock: "0"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "MOCK"
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.core.TransactionOutPoint"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.core.TransactionOutPoint"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  nameForMock: "0"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.core.TransactionOutPoint"
               uuid: "<init>_list1"
@@ -69,7 +96,7 @@ methods:
           parameters:
           - name: "delegate"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.wallet.CoinSelector"
                 onlyPojoFunctions: false
@@ -77,14 +104,52 @@ methods:
               valueType: "org.bitcoinj.wallet.CoinSelector"
               uuid: "<init>_coinSelector1"
               fixed: false
+              nameForMock: "DefaultCoinSelector@<some memory address>"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "excludedOutPoints"
             value:
               sapientType: "COLLECTION"
-              suggestedContent: !<collection>
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "MOCK"
+                  content: !<unknown_object>
+                    target: "org.bitcoinj.core.TransactionOutPoint"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.core.TransactionOutPoint"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.core.TransactionOutPoint"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  nameForMock: "0"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "MOCK"
+                  content: !<unknown_object>
+                    target: "org.bitcoinj.core.TransactionOutPoint"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.core.TransactionOutPoint"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.core.TransactionOutPoint"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  nameForMock: "0"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.core.TransactionOutPoint"
               uuid: "<init>_list1"
@@ -102,23 +167,28 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "target"
-      modelFingerprint: "A6826959D0A573C27579006EDB07A212"
+      modelFingerprint: "E1F74D26F043CC28D52EB4D4ADDE94A5"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Coin"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.base.Coin"
         uuid: "select_coin1"
         fixed: false
+        nameForMock: "1000"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     - type: "INPUT"
       name: "candidates"
-      modelFingerprint: "76ED83868864DA17F59F647A5686AA04"
+      modelFingerprint: "821A7A45E747678B406E7ABC2141EA66"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -135,9 +205,10 @@ methods:
               onlyPojoFunctions: false
               builderPattern: false
             valueType: "org.bitcoinj.core.TransactionOutput"
-            uuid: "select_transactionOutput1"
+            uuid: "select_list1-0"
             fixed: false
             collectionUuid: "select_list1"
+            nameForMock: "[1, 2, 3]"
             equalsMethodPresent: false
             explicitCastNeeded: false
         suggestedContent: !<collection>
@@ -150,9 +221,10 @@ methods:
               onlyPojoFunctions: false
               builderPattern: false
             valueType: "org.bitcoinj.core.TransactionOutput"
-            uuid: "select_transactionOutput1"
+            uuid: "select_list1-0"
             fixed: false
             collectionUuid: "select_list1"
+            nameForMock: "[1, 2, 3]"
             equalsMethodPresent: false
             explicitCastNeeded: false
         valueType: "java.util.List"
@@ -165,7 +237,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "output"
-      modelFingerprint: "1CAD6357838089549AE487D67896A6E9"
+      modelFingerprint: "44340542D86818F8CADF9DFBA3BA32FD"
       index: 4
       ignored: false
       nestedInLoop: true
@@ -177,9 +249,10 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.core.TransactionOutput"
-        uuid: "select_transactionOutput1"
+        uuid: "select_list1-0"
         fixed: false
         collectionUuid: "select_list1"
+        nameForMock: "[1, 2, 3]"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -188,7 +261,51 @@ methods:
         parameters: []
         signature: "getOutPointFor(): TransactionOutPoint"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "OBJECT"
+          content: !<new>
+            target: "org.bitcoinj.core.TransactionOutPoint"
+            parameters:
+            - name: "index"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "long"
+                uuid: "lambda$select$0_transactionOutPoint1-index"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "arg1"
+              value:
+                sapientType: "MOCK"
+                valueType: "org.bitcoinj.base.Sha256Hash"
+                uuid: "lambda$select$0_transactionOutPoint1-arg1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "org.bitcoinj.core.TransactionOutPoint"
+            parameters:
+            - name: "index"
+              value:
+                sapientType: "BASIC"
+                valueType: "long"
+                uuid: "lambda$select$0_transactionOutPoint1-index"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "arg1"
+              value:
+                sapientType: "UNKNOWN"
+                valueType: "org.bitcoinj.base.Sha256Hash"
+                uuid: "lambda$select$0_transactionOutPoint1-arg1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            privateConstructor: false
+            createdByTargetCode: false
           valueType: "org.bitcoinj.core.TransactionOutPoint"
           uuid: "lambda$select$0_transactionOutPoint1"
           fixed: false
@@ -199,7 +316,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "StreamUtils"
-      modelFingerprint: "4D9CC476786D03FCF3DF6E4543F55595"
+      modelFingerprint: "90C71B12F00966BD21156D8FEEFC9829"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -217,15 +334,15 @@ methods:
         parameters: []
         signature: "toUnmodifiableList(): Collector"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.internal.StreamUtils"
-            method: "toUnmodifiableList"
-            methodParameters: []
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.base.internal.StreamUtils"
-            method: "toUnmodifiableList"
-            methodParameters: []
+          sapientType: "NULL"
+          content: !<unknown_object>
+            target: "java.util.stream.Collector"
+            onlyPojoFunctions: true
+            builderPattern: false
+          suggestedContent: !<unknown_object>
+            target: "java.util.stream.Collector"
+            onlyPojoFunctions: true
+            builderPattern: false
           valueType: "java.util.stream.Collector"
           uuid: "select_collector1"
           fixed: false
@@ -236,7 +353,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "delegate"
-      modelFingerprint: "0079F655682389652F8E0B6576376638"
+      modelFingerprint: "3EA1102E62F49D2DE83B72CBA84937A4"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -250,6 +367,7 @@ methods:
         valueType: "org.bitcoinj.wallet.CoinSelector"
         uuid: "<init>_coinSelector1"
         fixed: false
+        nameForMock: "DefaultCoinSelector@<some memory address>"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -259,9 +377,14 @@ methods:
         - name: "arg0"
           value:
             sapientType: "MOCK"
+            suggestedContent: !<unknown_object>
+              target: "org.bitcoinj.base.Coin"
+              onlyPojoFunctions: false
+              builderPattern: false
             valueType: "org.bitcoinj.base.Coin"
             uuid: "select_coin1"
             fixed: false
+            nameForMock: "1000"
             equalsMethodPresent: false
             explicitCastNeeded: false
         - name: "arg1"
@@ -281,7 +404,39 @@ methods:
             explicitCastNeeded: true
         signature: "select(Coin,List): CoinSelection"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "OBJECT"
+          content: !<new>
+            target: "org.bitcoinj.wallet.CoinSelection"
+            parameters:
+            - name: "gathered"
+              value:
+                sapientType: "COLLECTION"
+                content: !<collection>
+                  parameters: []
+                  values: []
+                suggestedContent: !<collection>
+                  parameters: []
+                  values: []
+                valueType: "java.util.List"
+                uuid: "select_coinSelection1-gathered"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "org.bitcoinj.wallet.CoinSelection"
+            parameters:
+            - name: "gathered"
+              value:
+                sapientType: "COLLECTION"
+                valueType: "java.util.List"
+                uuid: "select_coinSelection1-gathered"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            privateConstructor: false
+            createdByTargetCode: false
           valueType: "org.bitcoinj.wallet.CoinSelection"
           uuid: "select_coinSelection1"
           fixed: false
@@ -292,13 +447,45 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "AC44EABA76A7D13A42E13E422FC39028"
+      modelFingerprint: "94A0B5327F9A5A9BB5C63C213CC128D4"
       index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.wallet.CoinSelection"
+          parameters:
+          - name: "gathered"
+            value:
+              sapientType: "COLLECTION"
+              content: !<collection>
+                parameters: []
+                values: []
+              suggestedContent: !<collection>
+                parameters: []
+                values: []
+              valueType: "java.util.List"
+              uuid: "select_coinSelection1-gathered"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.wallet.CoinSelection"
+          parameters:
+          - name: "gathered"
+            value:
+              sapientType: "COLLECTION"
+              valueType: "java.util.List"
+              uuid: "select_coinSelection1-gathered"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
         valueType: "org.bitcoinj.wallet.CoinSelection"
         uuid: "select_coinSelection1"
         fixed: false

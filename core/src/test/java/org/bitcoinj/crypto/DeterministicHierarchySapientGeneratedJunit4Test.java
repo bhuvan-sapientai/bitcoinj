@@ -41,7 +41,7 @@ public class DeterministicHierarchySapientGeneratedJunit4Test {
 
     private final ChildNumber childNumberMock2 = mock(ChildNumber.class);
 
-    private final DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
+    private final DeterministicKey deterministicKeyMock = mock(DeterministicKey.class, "UnknownObjectContent{target='org.bitcoinj.crypto.DeterministicKey', onlyPojoFunctions=false, builderPattern=false}");
 
     private final DeterministicKey deterministicKeyMock2 = mock(DeterministicKey.class);
 
@@ -53,7 +53,7 @@ public class DeterministicHierarchySapientGeneratedJunit4Test {
 
     private final HDPath hDPathMock3 = mock(HDPath.class);
 
-    private final DeterministicKey keyMock = mock(DeterministicKey.class);
+    private final DeterministicKey keyMock = mock(DeterministicKey.class, "{}");
 
     @Rule()
     public ExpectedException thrown = ExpectedException.none();
@@ -68,11 +68,13 @@ public class DeterministicHierarchySapientGeneratedJunit4Test {
         /* Branches:
          * (parent != null) : true
          */
-        doReturn(hDPathMock2).when(deterministicKeyMock).getPath();
-        doReturn(hDPathMock, rootPathMock, hDPathMock3).when(keyMock).getPath();
-        doReturn(deterministicKeyMock, deterministicKeyMock2).when(keyMock).getParent();
-        doReturn(hDPathMock4).when(deterministicKeyMock2).getPath();
-        doReturn(childNumberMock, childNumberMock2).when(keyMock).getChildNumber();
+        //Arrange Statement(s)
+        DeterministicKey keyMock = mock(DeterministicKey.class, "UnknownObjectContent{target='org.bitcoinj.crypto.DeterministicKey', onlyPojoFunctions=false, builderPattern=false}");
+        doReturn(null).when(keyMock).getPath();
+        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
+        doReturn(null, deterministicKeyMock).when(keyMock).getParent();
+        doReturn(hDPathMock).when(deterministicKeyMock).getPath();
+        doReturn(null).when(keyMock).getChildNumber();
         DeterministicHierarchy target = new DeterministicHierarchy(keyMock);
 
         //Act Statement(s)
@@ -82,18 +84,23 @@ public class DeterministicHierarchySapientGeneratedJunit4Test {
         verify(keyMock, times(3)).getPath();
         verify(keyMock, times(2)).getParent();
         verify(deterministicKeyMock).getPath();
-        verify(keyMock, times(2)).getChildNumber();
-        verify(deterministicKeyMock2).getPath();
+        verify(keyMock).getChildNumber();
     }
 
     //Sapient generated method id: ${278d7fd4-a2c9-352f-ab36-f62c16594b92}
     @Test()
     public void putKeysTest() {
+        //Arrange Statement(s)
+        DeterministicKey keyMock = mock(DeterministicKey.class, "DeterministicKey");
         doReturn(deterministicKeyMock).when(keyMock).getParent();
-        doReturn(hDPathMock2).when(deterministicKeyMock).getPath();
-        doReturn(childNumberMock).when(keyMock).getChildNumber();
-        doReturn(hDPathMock, rootPathMock).when(keyMock).getPath();
+        doReturn(null).when(deterministicKeyMock).getPath();
+        ChildNumber childNumber = new ChildNumber(0, false);
+        doReturn(childNumber).when(keyMock).getChildNumber();
+        List list = new ArrayList<>();
+        HDPath hDPath = new HDPath(false, list);
+        doReturn(null, hDPath).when(keyMock).getPath();
         DeterministicHierarchy target = spy(new DeterministicHierarchy(keyMock));
+        DeterministicKey deterministicKeyMock2 = mock(DeterministicKey.class, "DeterministicKey");
         doNothing().when(target).putKey(deterministicKeyMock2);
         List<DeterministicKey> deterministicKeyList = new ArrayList<>();
         deterministicKeyList.add(deterministicKeyMock2);
@@ -118,24 +125,28 @@ public class DeterministicHierarchySapientGeneratedJunit4Test {
          * (!keys.containsKey(absolutePath)) : true
          * (!create) : true
          * (relativePath) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        HDPath hDPathMock3 = mock(HDPath.class, "get_hDPath1");
         try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             doReturn(deterministicKeyMock).when(keyMock).getParent();
-            doReturn(hDPathMock2).when(deterministicKeyMock).getPath();
-            doReturn(childNumberMock).when(keyMock).getChildNumber();
-            doReturn(hDPathMock, rootPathMock).when(keyMock).getPath();
-            hDPath.when(() -> HDPath.M(anyList())).thenReturn(hDPathMock3);
+            doReturn(null).when(deterministicKeyMock).getPath();
+            ChildNumber childNumber = new ChildNumber(0, false);
+            doReturn(childNumber).when(keyMock).getChildNumber();
+            List list = new ArrayList<>();
+            HDPath hDPath2 = new HDPath(false, list);
+            doReturn(null, hDPath2).when(keyMock).getPath();
+            List list2 = new ArrayList<>();
+            HDPath hDPath3 = new HDPath(false, list2);
+            hDPath.when(() -> HDPath.M(anyList())).thenReturn(hDPath3);
             DeterministicHierarchy target = new DeterministicHierarchy(keyMock);
-            List<ChildNumber> childNumberList = new ArrayList<>();
-            doReturn(hDPathMock4).when(rootPathMock).extend(childNumberList);
-            IllegalArgumentException illegalArgumentException = new IllegalArgumentException("No key found for relative path get_hDPath1.");
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException("No key found for relative path M.");
             thrown.expect(IllegalArgumentException.class);
             thrown.expectMessage(illegalArgumentException.getMessage());
+            ChildNumber childNumber2 = new ChildNumber(1);
+            ChildNumber childNumber3 = new ChildNumber(2);
+            List<ChildNumber> childNumberList = new ArrayList<>();
+            childNumberList.add(childNumber2);
+            childNumberList.add(childNumber3);
             //Act Statement(s)
             target.get(childNumberList, true, false);
             //Assert statement(s)
@@ -144,7 +155,6 @@ public class DeterministicHierarchySapientGeneratedJunit4Test {
             verify(deterministicKeyMock).getPath();
             verify(keyMock).getChildNumber();
             hDPath.verify(() -> HDPath.M(anyList()));
-            verify(rootPathMock).extend(childNumberList);
         }
     }
 
@@ -162,23 +172,25 @@ public class DeterministicHierarchySapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
         try (MockedStatic<HDKeyDerivation> hDKeyDerivation = mockStatic(HDKeyDerivation.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
-            List list = new ArrayList<>();
-            doReturn(list).when(hDPathMock).subList(0, 0);
-            doReturn(1, 1, 2147483647).when(hDPathMock).size();
-            doReturn(childNumberMock).when(hDPathMock).get(2147483646);
+             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             doReturn(deterministicKeyMock).when(keyMock).getParent();
-            doReturn(hDPathMock2).when(deterministicKeyMock).getPath();
-            doReturn(childNumberMock2).when(keyMock).getChildNumber();
-            doReturn(hDPathMock, rootPathMock).when(keyMock).getPath();
-            hDPath.when(() -> HDPath.M(anyList())).thenReturn(hDPathMock3);
+            doReturn(hDPathMock).when(deterministicKeyMock).getPath();
+            doReturn(null).when(keyMock).getChildNumber();
+            doReturn(null, rootPathMock).when(keyMock).getPath();
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             hDKeyDerivation.when(() -> HDKeyDerivation.deriveChildKey(deterministicKeyMock3, childNumberMock)).thenReturn(deterministicKeyMock2);
             DeterministicHierarchy target = spy(new DeterministicHierarchy(keyMock));
+            ChildNumber childNumber = new ChildNumber(1);
+            ChildNumber childNumber2 = new ChildNumber(2);
+            ChildNumber childNumber3 = new ChildNumber(3);
             List<ChildNumber> childNumberList = new ArrayList<>();
-            doReturn(hDPathMock).when(rootPathMock).extend(childNumberList);
+            childNumberList.add(childNumber);
+            childNumberList.add(childNumber2);
+            childNumberList.add(childNumber3);
+            doReturn(null).when(rootPathMock).extend(childNumberList);
+            List list = new ArrayList<>();
             doReturn(deterministicKeyMock3).when(target).get(list, false, true);
             doNothing().when(target).putKey(deterministicKeyMock2);
             //Act Statement(s)
@@ -186,13 +198,9 @@ public class DeterministicHierarchySapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(result, equalTo(keyMock));
             verify(keyMock, times(2)).getPath();
-            verify(hDPathMock, times(3)).size();
-            verify(hDPathMock).subList(0, 0);
-            verify(hDPathMock).get(2147483646);
             verify(keyMock).getParent();
             verify(deterministicKeyMock).getPath();
             verify(keyMock).getChildNumber();
-            hDPath.verify(() -> HDPath.M(anyList()));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
             hDKeyDerivation.verify(() -> HDKeyDerivation.deriveChildKey(deterministicKeyMock3, childNumberMock), atLeast(1));
             verify(rootPathMock).extend(childNumberList);
@@ -211,45 +219,55 @@ public class DeterministicHierarchySapientGeneratedJunit4Test {
          * (!create) : false
          * (absolutePath.size() > 0) : false
          *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         * TODO: Help needed! This method is not unit testable!
+         *  Following variables could not be isolated/mocked: rootPath
+         *  Suggestions:
+         *  You can change the initialization of above variables and make it injectable or
+         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        DeterministicKey keyMock = mock(DeterministicKey.class, "DeterministicKey");
+        DeterministicKey deterministicKeyMock2 = mock(DeterministicKey.class, "UnknownObjectContent{target='org.bitcoinj.crypto.DeterministicKey', onlyPojoFunctions=false, builderPattern=false}");
         try (MockedStatic<HDKeyDerivation> hDKeyDerivation = mockStatic(HDKeyDerivation.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             List list = new ArrayList<>();
-            doReturn(list).when(hDPathMock).subList(0, -1);
-            doReturn(0, 0, -1).when(hDPathMock).size();
-            doReturn(childNumberMock).when(hDPathMock).get(-2);
+            HDPath hDPath2 = new HDPath(false, list);
             doReturn(deterministicKeyMock).when(keyMock).getParent();
-            doReturn(hDPathMock2).when(deterministicKeyMock).getPath();
-            doReturn(childNumberMock2).when(keyMock).getChildNumber();
-            doReturn(hDPathMock, rootPathMock).when(keyMock).getPath();
-            hDPath.when(() -> HDPath.M(anyList())).thenReturn(hDPathMock3);
+            doReturn(null).when(deterministicKeyMock).getPath();
+            ChildNumber childNumber = new ChildNumber(0, false);
+            doReturn(childNumber).when(keyMock).getChildNumber();
+            List list2 = new ArrayList<>();
+            HDPath hDPath3 = new HDPath(false, list2);
+            doReturn(hDPath2, hDPath3).when(keyMock).getPath();
+            List list3 = new ArrayList<>();
+            HDPath hDPath4 = new HDPath(false, list3);
+            hDPath.when(() -> HDPath.M(anyList())).thenReturn(hDPath4);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            hDKeyDerivation.when(() -> HDKeyDerivation.deriveChildKey(deterministicKeyMock3, childNumberMock)).thenReturn(deterministicKeyMock2);
+            ChildNumber childNumber2 = new ChildNumber(0, false);
+            hDKeyDerivation.when(() -> HDKeyDerivation.deriveChildKey(deterministicKeyMock3, childNumber2)).thenReturn(deterministicKeyMock2);
             DeterministicHierarchy target = spy(new DeterministicHierarchy(keyMock));
-            List<ChildNumber> childNumberList = new ArrayList<>();
-            doReturn(hDPathMock).when(rootPathMock).extend(childNumberList);
-            doReturn(deterministicKeyMock3).when(target).get(list, false, true);
+            List list4 = new ArrayList<>();
+            doReturn(deterministicKeyMock3).when(target).get(list4, false, true);
             doNothing().when(target).putKey(deterministicKeyMock2);
+            ChildNumber childNumber3 = new ChildNumber(0, false);
+            ChildNumber childNumber4 = new ChildNumber(0, false);
+            List<ChildNumber> childNumberList = new ArrayList<>();
+            childNumberList.add(childNumber3);
+            childNumberList.add(childNumber4);
             //Act Statement(s)
             DeterministicKey result = target.get(childNumberList, true, true);
             //Assert statement(s)
             assertThat(result, equalTo(keyMock));
             verify(keyMock, times(2)).getPath();
-            verify(hDPathMock, times(3)).size();
-            verify(hDPathMock).subList(0, -1);
-            verify(hDPathMock).get(-2);
             verify(keyMock).getParent();
             verify(deterministicKeyMock).getPath();
             verify(keyMock).getChildNumber();
             hDPath.verify(() -> HDPath.M(anyList()));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            hDKeyDerivation.verify(() -> HDKeyDerivation.deriveChildKey(deterministicKeyMock3, childNumberMock), atLeast(1));
-            verify(rootPathMock).extend(childNumberList);
-            verify(target).get(list, false, true);
+            hDKeyDerivation.verify(() -> HDKeyDerivation.deriveChildKey(deterministicKeyMock3, childNumber2), atLeast(1));
+            verify(target).get(list4, false, true);
             verify(target).putKey(deterministicKeyMock2);
         }
     }
@@ -263,17 +281,21 @@ public class DeterministicHierarchySapientGeneratedJunit4Test {
          * (!keys.containsKey(absolutePath)) : true
          * (!create) : true
          * (relativePath) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        HDPath hDPathMock3 = mock(HDPath.class, "get_hDPath1");
+        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock2 = mock(HDPath.class, "get_hDPath1");
         try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
+            doReturn(null).when(keyMock).getPath();
             doReturn(deterministicKeyMock).when(keyMock).getParent();
-            doReturn(hDPathMock2).when(deterministicKeyMock).getPath();
-            doReturn(childNumberMock).when(keyMock).getChildNumber();
-            doReturn(hDPathMock, rootPathMock).when(keyMock).getPath();
-            hDPath.when(() -> HDPath.M(anyList())).thenReturn(hDPathMock3);
+            doReturn(hDPathMock).when(deterministicKeyMock).getPath();
+            doReturn(null).when(keyMock).getChildNumber();
+            hDPath.when(() -> HDPath.M(anyList())).thenReturn(hDPathMock2);
             DeterministicHierarchy target = new DeterministicHierarchy(keyMock);
-            IllegalArgumentException illegalArgumentException = new IllegalArgumentException("No key found for absolute path get_hDPath1.");
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException("s1");
             thrown.expect(IllegalArgumentException.class);
             thrown.expectMessage(illegalArgumentException.getMessage());
             List<ChildNumber> childNumberList = new ArrayList<>();
@@ -288,42 +310,6 @@ public class DeterministicHierarchySapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${40fc7af5-625c-3a83-a14b-2599ed1dfea5}
-    @Test()
-    public void deriveNextChildWhenLastChildNumberIsNotNull() {
-        /* Branches:
-         * (nAttempts++ < HDKeyDerivation.MAX_CHILD_DERIVATION_ATTEMPTS) : true
-         * (lastChildNumber != null) : true  #  inside getNextChildNumberToDerive method
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<HDKeyDerivation> hDKeyDerivation = mockStatic(HDKeyDerivation.class)) {
-            doReturn(deterministicKeyMock).when(keyMock).getParent();
-            doReturn(hDPathMock2).when(deterministicKeyMock).getPath();
-            doReturn(childNumberMock).when(keyMock).getChildNumber();
-            doReturn(0).when(childNumberMock).num();
-            doReturn(hDPathMock, rootPathMock).when(keyMock).getPath();
-            hDKeyDerivation.when(() -> HDKeyDerivation.deriveChildKey(eq(deterministicKeyMock3), (ChildNumber) any())).thenReturn(deterministicKeyMock2);
-            doReturn(hDPathMock2).when(deterministicKeyMock3).getPath();
-            DeterministicHierarchy target = spy(new DeterministicHierarchy(keyMock));
-            List<ChildNumber> childNumberList = new ArrayList<>();
-            doReturn(deterministicKeyMock3).when(target).get(childNumberList, false, false);
-            doNothing().when(target).putKey(deterministicKeyMock2);
-            //Act Statement(s)
-            DeterministicKey result = target.deriveNextChild(childNumberList, false, false, false);
-            //Assert statement(s)
-            assertThat(result, equalTo(deterministicKeyMock2));
-            verify(keyMock, times(2)).getPath();
-            verify(keyMock).getParent();
-            verify(deterministicKeyMock).getPath();
-            verify(keyMock).getChildNumber();
-            verify(childNumberMock).num();
-            hDKeyDerivation.verify(() -> HDKeyDerivation.deriveChildKey(eq(deterministicKeyMock3), (ChildNumber) any()));
-            verify(deterministicKeyMock3).getPath();
-            verify(target).get(childNumberList, false, false);
-            verify(target).putKey(deterministicKeyMock2);
-        }
-    }
-
     //Sapient generated method id: ${514c68b2-346c-3a06-a3e4-20fb83054539}
     @Test()
     public void deriveNextChildWhenLastChildNumberIsNull() {
@@ -332,19 +318,27 @@ public class DeterministicHierarchySapientGeneratedJunit4Test {
          * (lastChildNumber != null) : false  #  inside getNextChildNumberToDerive method
          */
         //Arrange Statement(s)
+        DeterministicKey keyMock = mock(DeterministicKey.class, "null");
+        DeterministicKey deterministicKeyMock2 = mock(DeterministicKey.class, "UnknownObjectContent{target='org.bitcoinj.crypto.DeterministicKey', onlyPojoFunctions=false, builderPattern=false}");
         try (MockedStatic<HDKeyDerivation> hDKeyDerivation = mockStatic(HDKeyDerivation.class)) {
+            doReturn(null).when(keyMock).getPath();
             doReturn(deterministicKeyMock).when(keyMock).getParent();
-            doReturn(hDPathMock2).when(deterministicKeyMock).getPath();
+            List list = new ArrayList<>();
+            HDPath hDPath = new HDPath(false, list);
+            doReturn(hDPath).when(deterministicKeyMock).getPath();
             doReturn(null).when(keyMock).getChildNumber();
-            doReturn(hDPathMock, rootPathMock).when(keyMock).getPath();
             hDKeyDerivation.when(() -> HDKeyDerivation.deriveChildKey(eq(deterministicKeyMock3), (ChildNumber) any())).thenReturn(deterministicKeyMock2);
-            doReturn(hDPathMock2).when(deterministicKeyMock3).getPath();
+            doReturn(hDPath).when(deterministicKeyMock3).getPath();
             DeterministicHierarchy target = spy(new DeterministicHierarchy(keyMock));
+            ChildNumber childNumber = new ChildNumber(0, false);
+            ChildNumber childNumber2 = new ChildNumber(0, false);
             List<ChildNumber> childNumberList = new ArrayList<>();
-            doReturn(deterministicKeyMock3).when(target).get(childNumberList, false, false);
+            childNumberList.add(childNumber);
+            childNumberList.add(childNumber2);
+            doReturn(deterministicKeyMock3).when(target).get(childNumberList, true, true);
             doNothing().when(target).putKey(deterministicKeyMock2);
             //Act Statement(s)
-            DeterministicKey result = target.deriveNextChild(childNumberList, false, false, false);
+            DeterministicKey result = target.deriveNextChild(childNumberList, true, true, false);
             //Assert statement(s)
             assertThat(result, equalTo(deterministicKeyMock2));
             verify(keyMock, times(2)).getPath();
@@ -353,7 +347,7 @@ public class DeterministicHierarchySapientGeneratedJunit4Test {
             verify(keyMock).getChildNumber();
             hDKeyDerivation.verify(() -> HDKeyDerivation.deriveChildKey(eq(deterministicKeyMock3), (ChildNumber) any()));
             verify(deterministicKeyMock3).getPath();
-            verify(target).get(childNumberList, false, false);
+            verify(target).get(childNumberList, true, true);
             verify(target).putKey(deterministicKeyMock2);
         }
     }
@@ -368,6 +362,8 @@ public class DeterministicHierarchySapientGeneratedJunit4Test {
          * (catch-exception (HDDerivationException)) : true
          */
         //Arrange Statement(s)
+        DeterministicKey keyMock = mock(DeterministicKey.class);
+        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
         HDDerivationException hDDerivationExceptionMock = mock(HDDerivationException.class);
         DeterministicKey deterministicKeyMock4 = mock(DeterministicKey.class);
         DeterministicKey deterministicKeyMock5 = mock(DeterministicKey.class);
@@ -467,6 +463,7 @@ public class DeterministicHierarchySapientGeneratedJunit4Test {
         DeterministicKey deterministicKeyMock99 = mock(DeterministicKey.class);
         DeterministicKey deterministicKeyMock100 = mock(DeterministicKey.class);
         DeterministicKey deterministicKeyMock101 = mock(DeterministicKey.class);
+        DeterministicKey deterministicKeyMock102 = mock(DeterministicKey.class);
         try (MockedStatic<HDKeyDerivation> hDKeyDerivation = mockStatic(HDKeyDerivation.class)) {
             doReturn(deterministicKeyMock).when(keyMock).getParent();
             doReturn(hDPathMock2).when(deterministicKeyMock).getPath();
@@ -479,6 +476,7 @@ public class DeterministicHierarchySapientGeneratedJunit4Test {
             DeterministicHierarchy target = spy(new DeterministicHierarchy(keyMock));
             List<ChildNumber> childNumberList = new ArrayList<>();
             doReturn(deterministicKeyMock2).when(target).get(childNumberList, false, false);
+            doNothing().when(target).putKey(deterministicKeyMock102);
             doNothing().when(target).putKey(deterministicKeyMock3);
             doNothing().when(target).putKey(deterministicKeyMock4);
             doNothing().when(target).putKey(deterministicKeyMock5);
@@ -593,6 +591,7 @@ public class DeterministicHierarchySapientGeneratedJunit4Test {
             verify(deterministicKeyMock2, times(100)).getPath();
             hDKeyDerivation.verify(() -> HDKeyDerivation.deriveChildKey(eq(deterministicKeyMock2), (ChildNumber) any()));
             verify(target).get(childNumberList, false, false);
+            verify(target).putKey(deterministicKeyMock102);
             verify(target).putKey(deterministicKeyMock3);
             verify(target).putKey(deterministicKeyMock4);
             verify(target).putKey(deterministicKeyMock5);
@@ -701,14 +700,19 @@ public class DeterministicHierarchySapientGeneratedJunit4Test {
         /* Branches:
          * (cn == null) : true
          */
+        //Arrange Statement(s)
+        DeterministicKey keyMock = mock(DeterministicKey.class, "<rootKey string representation>");
         doReturn(deterministicKeyMock).when(keyMock).getParent();
-        doReturn(hDPathMock2).when(deterministicKeyMock).getPath();
+        doReturn(null).when(deterministicKeyMock).getPath();
         doReturn(null).when(keyMock).getChildNumber();
-        doReturn(hDPathMock, rootPathMock).when(keyMock).getPath();
+        List list = new ArrayList<>();
+        HDPath hDPath = new HDPath(false, list);
+        doReturn(null, hDPath).when(keyMock).getPath();
         DeterministicHierarchy target = new DeterministicHierarchy(keyMock);
+        HDPath hDPath2 = null;
 
         //Act Statement(s)
-        int result = target.getNumChildren(hDPathMock2);
+        int result = target.getNumChildren(hDPath2);
 
         //Assert statement(s)
         assertThat(result, equalTo(0));
@@ -724,15 +728,20 @@ public class DeterministicHierarchySapientGeneratedJunit4Test {
         /* Branches:
          * (cn == null) : false
          */
+        //Arrange Statement(s)
+        DeterministicKey keyMock = mock(DeterministicKey.class, "null");
+        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
         doReturn(deterministicKeyMock).when(keyMock).getParent();
-        doReturn(hDPathMock2).when(deterministicKeyMock).getPath();
+        doReturn(hDPathMock).when(deterministicKeyMock).getPath();
         doReturn(childNumberMock).when(keyMock).getChildNumber();
         doReturn(0).when(childNumberMock).num();
-        doReturn(hDPathMock, rootPathMock).when(keyMock).getPath();
+        List list = new ArrayList<>();
+        HDPath hDPath = new HDPath(false, list);
+        doReturn(null, hDPath).when(keyMock).getPath();
         DeterministicHierarchy target = new DeterministicHierarchy(keyMock);
 
         //Act Statement(s)
-        int result = target.getNumChildren(hDPathMock2);
+        int result = target.getNumChildren(hDPathMock);
 
         //Assert statement(s)
         assertThat(result, equalTo(1));
@@ -747,6 +756,9 @@ public class DeterministicHierarchySapientGeneratedJunit4Test {
     @Test()
     public void deriveChildTest() {
         //Arrange Statement(s)
+        DeterministicKey keyMock = mock(DeterministicKey.class);
+        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
+        ChildNumber childNumberMock2 = mock(ChildNumber.class);
         try (MockedStatic<HDKeyDerivation> hDKeyDerivation = mockStatic(HDKeyDerivation.class)) {
             doReturn(deterministicKeyMock).when(keyMock).getParent();
             doReturn(hDPathMock2).when(deterministicKeyMock).getPath();
@@ -774,12 +786,18 @@ public class DeterministicHierarchySapientGeneratedJunit4Test {
     //Sapient generated method id: ${2a8672b2-2ecd-3251-b270-144f691989dc}
     @Test()
     public void getRootKeyTest() {
+        //Arrange Statement(s)
+        DeterministicKey keyMock = mock(DeterministicKey.class, "null");
+        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
         doReturn(deterministicKeyMock).when(keyMock).getParent();
-        doReturn(hDPathMock2).when(deterministicKeyMock).getPath();
-        doReturn(childNumberMock).when(keyMock).getChildNumber();
-        doReturn(hDPathMock, rootPathMock).when(keyMock).getPath();
+        doReturn(hDPathMock).when(deterministicKeyMock).getPath();
+        ChildNumber childNumber = new ChildNumber(0);
+        doReturn(childNumber).when(keyMock).getChildNumber();
+        List list = new ArrayList<>();
+        HDPath hDPath = new HDPath(false, list);
+        doReturn(null, hDPath).when(keyMock).getPath();
         DeterministicHierarchy target = spy(new DeterministicHierarchy(keyMock));
-        doReturn(deterministicKeyMock2).when(target).get(rootPathMock, false, false);
+        doReturn(deterministicKeyMock2).when(target).get(hDPath, false, false);
 
         //Act Statement(s)
         DeterministicKey result = target.getRootKey();
@@ -790,6 +808,6 @@ public class DeterministicHierarchySapientGeneratedJunit4Test {
         verify(keyMock).getParent();
         verify(deterministicKeyMock).getPath();
         verify(keyMock).getChildNumber();
-        verify(target).get(rootPathMock, false, false);
+        verify(target).get(hDPath, false, false);
     }
 }

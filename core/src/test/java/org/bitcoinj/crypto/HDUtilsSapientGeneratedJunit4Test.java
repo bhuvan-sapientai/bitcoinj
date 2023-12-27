@@ -29,7 +29,7 @@ public class HDUtilsSapientGeneratedJunit4Test {
     @Test()
     public void createHmacSha512DigestTest() {
         //Arrange Statement(s)
-        byte[] byteArray = new byte[]{};
+        byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10};
 
         //Act Statement(s)
         HMac result = HDUtils.createHmacSha512Digest(byteArray);
@@ -45,10 +45,10 @@ public class HDUtilsSapientGeneratedJunit4Test {
     @Test()
     public void hmacSha512Test() {
         //Arrange Statement(s)
-        HMac hmacSha512Mock = mock(HMac.class);
+        HMac hmacSha512Mock = mock(HMac.class, "null");
         doNothing().when(hmacSha512Mock).reset();
-        byte[] byteArray = new byte[]{};
-        doNothing().when(hmacSha512Mock).update(byteArray, 0, 0);
+        byte[] byteArray = new byte[]{(byte) 0};
+        doNothing().when(hmacSha512Mock).update(byteArray, 0, 1);
         byte[] byteArray2 = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
         doReturn(0).when(hmacSha512Mock).doFinal(byteArray2, 0);
 
@@ -58,7 +58,7 @@ public class HDUtilsSapientGeneratedJunit4Test {
         //Assert statement(s)
         assertThat(result, equalTo(byteArray2));
         verify(hmacSha512Mock).reset();
-        verify(hmacSha512Mock).update(byteArray, 0, 0);
+        verify(hmacSha512Mock).update(byteArray, 0, 1);
         verify(hmacSha512Mock).doFinal(byteArray2, 0);
     }
 
@@ -66,13 +66,13 @@ public class HDUtilsSapientGeneratedJunit4Test {
     @Test()
     public void hmacSha5121Test() {
         //Arrange Statement(s)
-        HMac hMacMock = mock(HMac.class);
+        HMac hMacMock = mock(HMac.class, "UnknownObjectContent{target='org.bouncycastle.crypto.macs.HMac', onlyPojoFunctions=false, builderPattern=false}");
         try (MockedStatic<HDUtils> hDUtils = mockStatic(HDUtils.class, CALLS_REAL_METHODS)) {
-            byte[] byteArray = new byte[]{};
+            byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3};
             hDUtils.when(() -> HDUtils.createHmacSha512Digest(byteArray)).thenReturn(hMacMock);
             doNothing().when(hMacMock).reset();
-            byte[] byteArray2 = new byte[]{};
-            doNothing().when(hMacMock).update(byteArray2, 0, 0);
+            byte[] byteArray2 = new byte[]{(byte) 4, (byte) 5, (byte) 6};
+            doNothing().when(hMacMock).update(byteArray2, 0, 3);
             byte[] byteArray3 = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
             doReturn(0).when(hMacMock).doFinal(byteArray3, 0);
             //Act Statement(s)
@@ -81,7 +81,7 @@ public class HDUtilsSapientGeneratedJunit4Test {
             assertThat(result, equalTo(byteArray3));
             hDUtils.verify(() -> HDUtils.createHmacSha512Digest(byteArray), atLeast(1));
             verify(hMacMock, atLeast(1)).reset();
-            verify(hMacMock, atLeast(1)).update(byteArray2, 0, 0);
+            verify(hMacMock, atLeast(1)).update(byteArray2, 0, 3);
             verify(hMacMock, atLeast(1)).doFinal(byteArray3, 0);
         }
     }
@@ -90,8 +90,12 @@ public class HDUtilsSapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void toCompressedTest() {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
-        byte[] byteArray = new byte[]{};
+        byte[] byteArray = new byte[]{(byte) 4, (byte) 30, (byte) 35, (byte) 79, (byte) 106, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 1, (byte) 35, (byte) 69, (byte) 103, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 1, (byte) 35, (byte) 69, (byte) 103, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 1, (byte) 35, (byte) 69, (byte) 103, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 1, (byte) 35, (byte) 69, (byte) 103, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 1, (byte) 35, (byte) 69, (byte) 103, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 1, (byte) 35, (byte) 69, (byte) 103, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
 
         //Act Statement(s)
         byte[] result = HDUtils.toCompressed(byteArray);
@@ -110,8 +114,8 @@ public class HDUtilsSapientGeneratedJunit4Test {
          */
 
         //Act Statement(s)
-        byte[] result = HDUtils.longTo4ByteArray(0L);
-        byte[] byteResultArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0};
+        byte[] result = HDUtils.longTo4ByteArray(1234567890L);
+        byte[] byteResultArray = new byte[]{(byte) 73, (byte) -106, (byte) 2, (byte) -46};
 
         //Assert statement(s)
         assertThat(result, equalTo(byteResultArray));
@@ -127,8 +131,8 @@ public class HDUtilsSapientGeneratedJunit4Test {
          */
 
         //Act Statement(s)
-        byte[] result = HDUtils.longTo4ByteArray(1L);
-        byte[] byteResultArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3};
+        byte[] result = HDUtils.longTo4ByteArray(1234567890L);
+        byte[] byteResultArray = new byte[]{(byte) 73, (byte) -106, (byte) 2, (byte) -46};
 
         //Assert statement(s)
         assertThat(result, equalTo(byteResultArray));

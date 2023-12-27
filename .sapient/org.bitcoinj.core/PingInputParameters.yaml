@@ -19,13 +19,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "ABDAF39382F2799DEF495354443E4E34"
+    modelFingerprint: "98707D3EB5A1A520B57892F921B07D89"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "payload"
-      modelFingerprint: "335B7D7442C1E51D6EECFEAEF136D4CA"
+      modelFingerprint: "C871D067662095A198DE0F4DE90B3DF9"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -67,7 +67,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ByteUtils"
-      modelFingerprint: "5FC74EC3B48CE1CB10871229E33CE162"
+      modelFingerprint: "F0A3E6BBABFB8E857088C5D5C8786962"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -123,7 +123,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 0
+            value: 1234567890
+          suggestedContent: !<regular>
+            value: 1234567890
           valueType: "long"
           uuid: "read_long1"
           fixed: false
@@ -134,7 +136,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "3195552CA3EEDD315062D6AE0C718681"
+      modelFingerprint: "A3DB61F97E388D43ECB05C251E4F34F0"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -148,7 +150,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 1234567890
+              suggestedContent: !<regular>
+                value: 1234567890
               valueType: "long"
               uuid: "read_long1"
               fixed: false
@@ -162,6 +166,10 @@ methods:
           - name: "nonce"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 1234567890
+              suggestedContent: !<regular>
+                value: 1234567890
               valueType: "long"
               uuid: "read_long1"
               fixed: false
@@ -180,7 +188,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -198,13 +206,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "F0D169559F3FA4C4AF6B70F1E54F4666"
+    modelFingerprint: "09E84760CAD87E5DE72CEF5793BA3C92"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "nonce"
-      modelFingerprint: "E3C52F2435FBB7D94FFFD7F77387E073"
+      modelFingerprint: "83151D2C61B08FD7B82117945E0899CA"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -212,7 +220,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
+          value: 123456789
+        suggestedContent: !<regular>
+          value: 123456789
         valueType: "long"
         uuid: "of_long1"
         fixed: false
@@ -222,7 +232,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "3195552CA3EEDD315062D6AE0C718681"
+      modelFingerprint: "616AD6E1E291EED9773F354EE50B32F2"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -236,7 +246,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 123456789
+              suggestedContent: !<regular>
+                value: 123456789
               valueType: "long"
               uuid: "of_long1"
               fixed: false
@@ -250,6 +262,10 @@ methods:
           - name: "nonce"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 123456789
+              suggestedContent: !<regular>
+                value: 123456789
               valueType: "long"
               uuid: "of_long1"
               fixed: false
@@ -268,7 +284,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -298,21 +314,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.core.Ping"
-          parameters:
-          - name: "nonce"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "random_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: true
-          createdByTargetCode: true
         suggestedContent: !<new>
           target: "org.bitcoinj.core.Ping"
           parameters:
@@ -357,12 +358,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "05B0EE24D0E0B77071384B459BBBC01F"
+    modelFingerprint: "B5AB5899F44703E4F431145FBE7CF0DF"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "EECB3E6DFE935558D2C55BAF8FF4392A"
+      modelFingerprint: "728D7A6433D2257EA53FDCBAA5C23C16"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -413,7 +414,21 @@ methods:
           methodParameters:
           - name: "payload"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "int"
+                    uuid: "read_byteBuffer1-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               suggestedContent: !<static_method_return>
                 target: "java.nio.ByteBuffer"
                 method: "allocateDirect"
@@ -440,7 +455,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "stream"
-      modelFingerprint: "B8BEF8756892BE49F09AC257065C85DF"
+      modelFingerprint: "B621D4240DEEFC267BEA013D97BEB77E"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -464,7 +479,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ByteUtils"
-      modelFingerprint: "5FC74EC3B48CE1CB10871229E33CE162"
+      modelFingerprint: "44AAFC6508FF0C7B56EDB49583E2BD7E"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -531,7 +546,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ByteUtils"
-      modelFingerprint: "7BAEF94F71020E71A7DD14FD136B25D4"
+      modelFingerprint: "CDD6B8C392A435DCB608FDC215D84C09"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -604,7 +619,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -622,12 +637,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "69738160B5566269D74A28CA1BB76540"
+    modelFingerprint: "C36E6A7777656CBD8F01037F448A9382"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "EECB3E6DFE935558D2C55BAF8FF4392A"
+      modelFingerprint: "728D7A6433D2257EA53FDCBAA5C23C16"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -678,7 +693,21 @@ methods:
           methodParameters:
           - name: "payload"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "int"
+                    uuid: "read_byteBuffer1-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               suggestedContent: !<static_method_return>
                 target: "java.nio.ByteBuffer"
                 method: "allocateDirect"
@@ -705,7 +734,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ByteUtils"
-      modelFingerprint: "5FC74EC3B48CE1CB10871229E33CE162"
+      modelFingerprint: "44AAFC6508FF0C7B56EDB49583E2BD7E"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -791,7 +820,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -809,12 +838,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "83FE9337F7CC5A92D67FE1870ECFAFED"
+    modelFingerprint: "C44AD87D248DFE57FFEC67905B7B178E"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "EECB3E6DFE935558D2C55BAF8FF4392A"
+      modelFingerprint: "728D7A6433D2257EA53FDCBAA5C23C16"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -865,7 +894,21 @@ methods:
           methodParameters:
           - name: "payload"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "int"
+                    uuid: "read_byteBuffer1-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               suggestedContent: !<static_method_return>
                 target: "java.nio.ByteBuffer"
                 method: "allocateDirect"
@@ -892,7 +935,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ByteUtils"
-      modelFingerprint: "A1724BD17B360E2821E4040CB8560DD3"
+      modelFingerprint: "E94499475A9C5B8503A71187AE1EEDB3"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -948,7 +991,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 0
+            value: 123456789
+          suggestedContent: !<regular>
+            value: 123456789
           valueType: "long"
           uuid: "read_long1"
           fixed: false
@@ -959,7 +1004,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "804632FC35F3D360B4AE3373F0AFA52B"
+      modelFingerprint: "F06BD74B92BA4828B37B41CCAB1152AE"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -967,7 +1012,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
+          value: 123456789
+        suggestedContent: !<regular>
+          value: 123456789
         valueType: "long"
         uuid: "read_long1"
         fixed: false
@@ -979,7 +1026,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -997,12 +1044,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "C5FF7FBDD1033F064587B81BB1705E1A"
+    modelFingerprint: "F005B0DE069484DBD74E4F08B976DFCB"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "EECB3E6DFE935558D2C55BAF8FF4392A"
+      modelFingerprint: "728D7A6433D2257EA53FDCBAA5C23C16"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1053,7 +1100,21 @@ methods:
           methodParameters:
           - name: "payload"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "int"
+                    uuid: "read_byteBuffer1-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               suggestedContent: !<static_method_return>
                 target: "java.nio.ByteBuffer"
                 method: "allocateDirect"
@@ -1080,7 +1141,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ByteUtils"
-      modelFingerprint: "5FC74EC3B48CE1CB10871229E33CE162"
+      modelFingerprint: "97E3885427572BCD20093B6F4BF2AB04"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1136,7 +1197,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 0
+            value: 123456789
+          suggestedContent: !<regular>
+            value: 123456789
           valueType: "long"
           uuid: "read_long1"
           fixed: false
@@ -1147,7 +1210,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Pong"
-      modelFingerprint: "E9950E4D0A0EEE51DE6A2F6CB2AF83B6"
+      modelFingerprint: "50712BE1D1F1C1F6B06FC9D9701A85A1"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1167,7 +1230,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 0
+              value: 123456789
+            suggestedContent: !<regular>
+              value: 123456789
             valueType: "long"
             uuid: "read_long1"
             fixed: false
@@ -1175,7 +1240,33 @@ methods:
             explicitCastNeeded: false
         signature: "of(long): Pong"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.core.Pong"
+            method: "of"
+            methodParameters:
+            - name: "nonce"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "long"
+                uuid: "pong_pong1-nonce"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.core.Pong"
+            method: "of"
+            methodParameters:
+            - name: "nonce"
+              value:
+                sapientType: "BASIC"
+                valueType: "long"
+                uuid: "pong_pong1-nonce"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "org.bitcoinj.core.Pong"
           uuid: "pong_pong1"
           fixed: false
@@ -1186,13 +1277,39 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "18193BFC4A4E335E3BAB72C4CBCC61F6"
+      modelFingerprint: "1F2A31EECDA618E7851A86B866860CB4"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.core.Pong"
+          method: "of"
+          methodParameters:
+          - name: "nonce"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "pong_pong1-nonce"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.core.Pong"
+          method: "of"
+          methodParameters:
+          - name: "nonce"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "pong_pong1-nonce"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.core.Pong"
         uuid: "pong_pong1"
         fixed: false
@@ -1204,6 +1321,6 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

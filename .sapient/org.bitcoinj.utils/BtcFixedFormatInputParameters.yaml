@@ -19,12 +19,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "809EA94615B88FF35A718403F3129EBA"
+    modelFingerprint: "59FD55042F7F938A1911271C21A95E96"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "A99E452A41453838423B150C47DA09D9"
+      modelFingerprint: "99A90E01BC1E52F9F773733F32DAEAA8"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -74,9 +74,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 1
+                value: 8
               suggestedContent: !<regular>
-                value: 1
+                value: 8
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -86,9 +86,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 1
+                value: 2
               suggestedContent: !<regular>
-                value: 1
+                value: 2
               valueType: "int"
               uuid: "<init>_int2"
               fixed: false
@@ -98,11 +98,79 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "java.lang.Integer"
               uuid: "<init>_list1"
@@ -116,7 +184,22 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.util.Locale"
+                parameters:
+                - name: "language"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "language1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_locale1-language"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -138,8 +221,10 @@ methods:
           - name: "scale"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 8
               suggestedContent: !<regular>
-                value: 1
+                value: 8
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -148,8 +233,10 @@ methods:
           - name: "minDecimals"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 2
               suggestedContent: !<regular>
-                value: 1
+                value: 2
               valueType: "int"
               uuid: "<init>_int2"
               fixed: false
@@ -158,6 +245,80 @@ methods:
           - name: "groups"
             value:
               sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "java.lang.Integer"
               uuid: "<init>_list1"
@@ -175,7 +336,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "satoshis"
-      modelFingerprint: "699A41330AF0B963D9E309E2B61E202B"
+      modelFingerprint: "403D888FF890AF44110387096CA1B6BF"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -183,7 +344,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
+          value: 1000000000000000000
+        suggestedContent: !<regular>
+          value: 1000000000000000000
         valueType: "java.math.BigInteger"
         uuid: "scale_bigInteger1"
         fixed: false
@@ -193,7 +356,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "fractionPlaces"
-      modelFingerprint: "7AD13ABA9D1C7E075FDE4CC43AF875CC"
+      modelFingerprint: "DC4AE32C0AA7C937B382CF8DC56DC810"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -201,7 +364,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
+          value: 8
+        suggestedContent: !<regular>
+          value: 8
         valueType: "int"
         uuid: "scale_int1"
         fixed: false
@@ -257,7 +422,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "B9A534114EB42AB39C9D204CE242341B"
+      modelFingerprint: "8E65D47E3C0602D60B2F22B827CB011E"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -278,8 +443,6 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: false
-            suggestedContent: !<regular>
-              value: false
             valueType: "boolean"
             uuid: "setSymbolAndCode_boolean1"
             fixed: false
@@ -287,55 +450,18 @@ methods:
             explicitCastNeeded: false
         signature: "checkState(boolean): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "setSymbolAndCode_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "60F4AB56A088909714BFE88747605281"
-      index: 6
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "<init>_void6"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalStateException"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -344,8 +470,8 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "BtcFormat"
-      modelFingerprint: "2D7B6A848654723FABF5638359EE7AD7"
-      index: 7
+      modelFingerprint: "9E62F8EC1EE5F25113EC2B4222587D1D"
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -363,16 +489,84 @@ methods:
         - name: "numberFormat"
           value:
             sapientType: "OBJECT"
-            content: !<new>
-              target: "java.text.DecimalFormat"
-              parameters: []
-              privateConstructor: false
-              createdByTargetCode: false
-            suggestedContent: !<new>
-              target: "java.text.DecimalFormat"
-              parameters: []
-              privateConstructor: false
-              createdByTargetCode: false
+            content: !<static_method_return>
+              target: "java.text.NumberFormat"
+              method: "getInstance"
+              methodParameters:
+              - value:
+                  sapientType: "OBJECT"
+                  content: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "language1"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "java.util.Locale"
+                  uuid: "<init>_locale1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<static_method_return>
+              target: "java.text.NumberFormat"
+              method: "getInstance"
+              methodParameters:
+              - value:
+                  sapientType: "OBJECT"
+                  content: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "language1"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "java.util.Locale"
+                  uuid: "<init>_locale1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "java.text.DecimalFormat"
             uuid: "<init>_numberFormat1"
             fixed: false
@@ -382,13 +576,11 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 1
-            suggestedContent: !<regular>
-              value: 1
+              value: 0
             valueType: "int"
-            uuid: "<init>_int1"
+            uuid: "int1"
             fixed: false
-            equalsMethodPresent: true
+            equalsMethodPresent: false
             explicitCastNeeded: false
         signature: "prefixUnitsIndicator(DecimalFormat,int): void"
         returnValue:
@@ -403,19 +595,17 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "E2A8AB981A1505AD6737DABDF7241F1F"
-      index: 8
+      modelFingerprint: "8E4E4A3F04320A5F313F9B77CB2C7276"
+      index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 1
-        suggestedContent: !<regular>
-          value: 1
+          value: 0
         valueType: "int"
-        uuid: "<init>_int1"
+        uuid: "int1"
         fixed: false
         equalsMethodPresent: true
         explicitCastNeeded: false
@@ -444,12 +634,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "33EC2931161E0981B4533A4D5D17E8B5"
+    modelFingerprint: "C06C2AFFEE32D06E079CC318A29C1063"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "56F158AA7D75A100DDAEC63A2C4ED19E"
+      modelFingerprint: "E46BD329E227FBBD0B7A2A0DAE938AE5"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -499,9 +689,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 5
               suggestedContent: !<regular>
-                value: 0
+                value: 5
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -511,9 +701,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 2
               suggestedContent: !<regular>
-                value: 0
+                value: 2
               valueType: "int"
               uuid: "<init>_int2"
               fixed: false
@@ -523,11 +713,57 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "java.lang.Integer"
               uuid: "<init>_list1"
@@ -541,7 +777,22 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.util.Locale"
+                parameters:
+                - name: "language"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "language1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_locale1-language"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -563,8 +814,10 @@ methods:
           - name: "scale"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 5
               suggestedContent: !<regular>
-                value: 0
+                value: 5
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -573,8 +826,10 @@ methods:
           - name: "minDecimals"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 2
               suggestedContent: !<regular>
-                value: 0
+                value: 2
               valueType: "int"
               uuid: "<init>_int2"
               fixed: false
@@ -583,6 +838,58 @@ methods:
           - name: "groups"
             value:
               sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "java.lang.Integer"
               uuid: "<init>_list1"
@@ -646,7 +953,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "B9A534114EB42AB39C9D204CE242341B"
+      modelFingerprint: "8E65D47E3C0602D60B2F22B827CB011E"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -667,8 +974,6 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: false
-            suggestedContent: !<regular>
-              value: false
             valueType: "boolean"
             uuid: "setSymbolAndCode_boolean1"
             fixed: false
@@ -676,55 +981,18 @@ methods:
             explicitCastNeeded: false
         signature: "checkState(boolean): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "setSymbolAndCode_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "60F4AB56A088909714BFE88747605281"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "<init>_void6"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalStateException"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -733,8 +1001,8 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "231276223B3DD65935C1F8594364B51A"
-      index: 5
+      modelFingerprint: "8E4E4A3F04320A5F313F9B77CB2C7276"
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -742,10 +1010,8 @@ methods:
         sapientType: "BASIC"
         content: !<regular>
           value: 0
-        suggestedContent: !<regular>
-          value: 0
         valueType: "int"
-        uuid: "<init>_int1"
+        uuid: "int1"
         fixed: false
         equalsMethodPresent: true
         explicitCastNeeded: false
@@ -774,12 +1040,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "8A919041307B388C1A855DF6D0B37404"
+    modelFingerprint: "C552B9BCEFD72DC9D1319BFD9FF9FDD6"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "8A4C5079FCFA15B0405D04928F2CEB40"
+      modelFingerprint: "7F132A6E2955806160FCFEB2363B440C"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -829,9 +1095,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 5
               suggestedContent: !<regular>
-                value: 0
+                value: 5
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -841,9 +1107,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 2
               suggestedContent: !<regular>
-                value: 0
+                value: 2
               valueType: "int"
               uuid: "<init>_int2"
               fixed: false
@@ -853,11 +1119,57 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "java.lang.Integer"
               uuid: "<init>_list1"
@@ -871,7 +1183,22 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.util.Locale"
+                parameters:
+                - name: "language"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "language1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_locale1-language"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -893,8 +1220,10 @@ methods:
           - name: "scale"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 5
               suggestedContent: !<regular>
-                value: 0
+                value: 5
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -903,8 +1232,10 @@ methods:
           - name: "minDecimals"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 2
               suggestedContent: !<regular>
-                value: 0
+                value: 2
               valueType: "int"
               uuid: "<init>_int2"
               fixed: false
@@ -913,6 +1244,58 @@ methods:
           - name: "groups"
             value:
               sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "java.lang.Integer"
               uuid: "<init>_list1"
@@ -976,7 +1359,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "B9A534114EB42AB39C9D204CE242341B"
+      modelFingerprint: "8E65D47E3C0602D60B2F22B827CB011E"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -997,8 +1380,6 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: false
-            suggestedContent: !<regular>
-              value: false
             valueType: "boolean"
             uuid: "setSymbolAndCode_boolean1"
             fixed: false
@@ -1006,55 +1387,18 @@ methods:
             explicitCastNeeded: false
         signature: "checkState(boolean): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "setSymbolAndCode_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "60F4AB56A088909714BFE88747605281"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "<init>_void6"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalStateException"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -1063,8 +1407,8 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "BtcFormat"
-      modelFingerprint: "D86B1B401A4694D7ECC662F35F0CD1F8"
-      index: 5
+      modelFingerprint: "3F2878EB2AC4911943F5A28B3B6EA75C"
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -1083,7 +1427,7 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "code1"
+              value: "XXX"
             valueType: "java.lang.String"
             uuid: "coinCode_string1"
             fixed: false
@@ -1094,10 +1438,8 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: 0
-            suggestedContent: !<regular>
-              value: 0
             valueType: "int"
-            uuid: "<init>_int1"
+            uuid: "int1"
             fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -1105,7 +1447,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "return_of_prefixCode1"
+            value: "String"
+          suggestedContent: !<regular>
+            value: "String"
           valueType: "java.lang.String"
           uuid: "code_string1"
           fixed: false
@@ -1116,15 +1460,17 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "32B8036524E38DD04E1088156F03FE29"
-      index: 6
+      modelFingerprint: "BFE6C391442D4A3516CBB362C232EE74"
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "return_of_prefixCode1"
+          value: "String"
+        suggestedContent: !<regular>
+          value: "String"
         valueType: "java.lang.String"
         uuid: "code_string1"
         fixed: false
@@ -1155,12 +1501,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "02D17319580DE7FFC4E6C14CEB8587EB"
+    modelFingerprint: "3D98706A9C7D472B05F0C72B00F01967"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "8A4C5079FCFA15B0405D04928F2CEB40"
+      modelFingerprint: "7F132A6E2955806160FCFEB2363B440C"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1210,9 +1556,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 5
               suggestedContent: !<regular>
-                value: 0
+                value: 5
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -1222,9 +1568,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 2
               suggestedContent: !<regular>
-                value: 0
+                value: 2
               valueType: "int"
               uuid: "<init>_int2"
               fixed: false
@@ -1234,11 +1580,57 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "java.lang.Integer"
               uuid: "<init>_list1"
@@ -1252,7 +1644,22 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.util.Locale"
+                parameters:
+                - name: "language"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "language1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_locale1-language"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -1274,8 +1681,10 @@ methods:
           - name: "scale"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 5
               suggestedContent: !<regular>
-                value: 0
+                value: 5
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -1284,8 +1693,10 @@ methods:
           - name: "minDecimals"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 2
               suggestedContent: !<regular>
-                value: 0
+                value: 2
               valueType: "int"
               uuid: "<init>_int2"
               fixed: false
@@ -1294,6 +1705,58 @@ methods:
           - name: "groups"
             value:
               sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "java.lang.Integer"
               uuid: "<init>_list1"
@@ -1357,7 +1820,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "B9A534114EB42AB39C9D204CE242341B"
+      modelFingerprint: "8E65D47E3C0602D60B2F22B827CB011E"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1378,8 +1841,6 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: false
-            suggestedContent: !<regular>
-              value: false
             valueType: "boolean"
             uuid: "setSymbolAndCode_boolean1"
             fixed: false
@@ -1387,55 +1848,18 @@ methods:
             explicitCastNeeded: false
         signature: "checkState(boolean): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "setSymbolAndCode_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "60F4AB56A088909714BFE88747605281"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "<init>_void6"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalStateException"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -1444,8 +1868,8 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "BtcFormat"
-      modelFingerprint: "FA57F7A60B03086EC00B187C899D5D83"
-      index: 5
+      modelFingerprint: "0E6FC4EFCF4F5CEC9B3F0456A9EE3C2F"
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -1464,7 +1888,7 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "symbol1"
+              value: "\\u00A4"
             valueType: "java.lang.String"
             uuid: "coinSymbol_string1"
             fixed: false
@@ -1475,10 +1899,8 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: 0
-            suggestedContent: !<regular>
-              value: 0
             valueType: "int"
-            uuid: "<init>_int1"
+            uuid: "int1"
             fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -1486,7 +1908,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "return_of_prefixSymbol1"
+            value: "BTC 0.00005"
+          suggestedContent: !<regular>
+            value: "BTC 0.00005"
           valueType: "java.lang.String"
           uuid: "symbol_string1"
           fixed: false
@@ -1497,15 +1921,17 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
-      index: 6
+      modelFingerprint: "A58E0F482E9BC11C263B57EC22559AE0"
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "return_of_prefixSymbol1"
+          value: "BTC 0.00005"
+        suggestedContent: !<regular>
+          value: "BTC 0.00005"
         valueType: "java.lang.String"
         uuid: "symbol_string1"
         fixed: false
@@ -1517,6 +1943,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -1535,12 +1962,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "671C76C83CD71C6F8937E6ED164ED27A"
+    modelFingerprint: "121ADCD1A180B908B239EF418B132808"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "45C4523D8CD58E686C3A1A2A0F1BE2FE"
+      modelFingerprint: "E68F393479F5278EDAFF2A857C456602"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1590,9 +2017,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 1
               suggestedContent: !<regular>
-                value: 0
+                value: 1
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -1614,11 +2041,67 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-item0"
+                  fixed: true
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-item1"
+                  fixed: true
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 4
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-item2"
+                  fixed: true
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-item0"
+                  fixed: true
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-item1"
+                  fixed: true
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 4
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-item2"
+                  fixed: true
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "java.lang.Integer"
               uuid: "<init>_list1"
@@ -1632,7 +2115,22 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.util.Locale"
+                parameters:
+                - name: "language"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "language1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_locale1-language"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -1654,8 +2152,10 @@ methods:
           - name: "scale"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 1
               suggestedContent: !<regular>
-                value: 0
+                value: 1
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -1664,6 +2164,8 @@ methods:
           - name: "minDecimals"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 0
               suggestedContent: !<regular>
                 value: 0
               valueType: "int"
@@ -1674,9 +2176,74 @@ methods:
           - name: "groups"
             value:
               sapientType: "COLLECTION"
-              suggestedContent: !<collection>
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  suggestedContent: !<regular>
+                    value: 2
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 4
+                  suggestedContent: !<regular>
+                    value: 4
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-item0"
+                  fixed: true
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-item1"
+                  fixed: true
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 4
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-item2"
+                  fixed: true
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "java.lang.Integer"
               uuid: "<init>_list1"
@@ -1740,7 +2307,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "B9A534114EB42AB39C9D204CE242341B"
+      modelFingerprint: "8E65D47E3C0602D60B2F22B827CB011E"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1761,8 +2328,6 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: false
-            suggestedContent: !<regular>
-              value: false
             valueType: "boolean"
             uuid: "setSymbolAndCode_boolean1"
             fixed: false
@@ -1770,55 +2335,18 @@ methods:
             explicitCastNeeded: false
         signature: "checkState(boolean): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "setSymbolAndCode_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "60F4AB56A088909714BFE88747605281"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "<init>_void6"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalStateException"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -1827,8 +2355,8 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "EE8A53432DDD83890E36A3BFE9D8CE3E"
-      index: 5
+      modelFingerprint: "FA617694984EC9EE5D4E70A4E2E81E60"
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -1847,6 +2375,17 @@ methods:
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
+            1:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 1
+              suggestedContent: !<regular>
+                value: 1
+              valueType: "int"
+              uuid: "fractionPlaceGroups_int5"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         suggestedContent: !<array>
           values:
             0:
@@ -1857,6 +2396,17 @@ methods:
                 value: 0
               valueType: "int"
               uuid: "<init>_int2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            1:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 1
+              suggestedContent: !<regular>
+                value: 1
+              valueType: "int"
+              uuid: "fractionPlaceGroups_int5"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -2088,12 +2638,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "6D04786772C86A3C392AF2391735B523"
+    modelFingerprint: "8E1DC6733AFDB437C251CDB847EC8B39"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "97D80C9787D357EA756C2A5A5C25F173"
+      modelFingerprint: "EFAD11EADDDE095A863BC1E467C65533"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2143,9 +2693,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 1
+                value: 0
               suggestedContent: !<regular>
-                value: 1
+                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -2155,9 +2705,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 2
               suggestedContent: !<regular>
-                value: 0
+                value: 2
               valueType: "int"
               uuid: "<init>_int2"
               fixed: false
@@ -2167,11 +2717,79 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "java.lang.Integer"
               uuid: "<init>_list1"
@@ -2185,7 +2803,22 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.util.Locale"
+                parameters:
+                - name: "language"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "language1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_locale1-language"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -2207,8 +2840,10 @@ methods:
           - name: "scale"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 0
               suggestedContent: !<regular>
-                value: 1
+                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -2217,8 +2852,10 @@ methods:
           - name: "minDecimals"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 2
               suggestedContent: !<regular>
-                value: 0
+                value: 2
               valueType: "int"
               uuid: "<init>_int2"
               fixed: false
@@ -2227,6 +2864,80 @@ methods:
           - name: "groups"
             value:
               sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "java.lang.Integer"
               uuid: "<init>_list1"
@@ -2290,7 +3001,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "B9A534114EB42AB39C9D204CE242341B"
+      modelFingerprint: "8E65D47E3C0602D60B2F22B827CB011E"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -2311,8 +3022,6 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: false
-            suggestedContent: !<regular>
-              value: false
             valueType: "boolean"
             uuid: "setSymbolAndCode_boolean1"
             fixed: false
@@ -2320,55 +3029,18 @@ methods:
             explicitCastNeeded: false
         signature: "checkState(boolean): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "setSymbolAndCode_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "60F4AB56A088909714BFE88747605281"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "<init>_void6"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalStateException"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -2377,8 +3049,8 @@ methods:
       filledByUser: false
     - type: "INTERNAL"
       name: "internalMethod"
-      modelFingerprint: "C2F3C3986483511BA425DFAFFA03F2C0"
-      index: 5
+      modelFingerprint: "AA20AA76211C2FD5EDBFD872253E165B"
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -2390,9 +3062,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "B"
+            value: "A"
           suggestedContent: !<regular>
-            value: "B"
+            value: "A"
           valueType: "java.lang.String"
           uuid: "toString_string1"
           fixed: false
@@ -2403,17 +3075,17 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "2A1F023213BAD42D5FBEF9F9604D76D1"
-      index: 6
+      modelFingerprint: "5A7FF67A646FC8E989CDF47D8E07C734"
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "Decicoin-format B"
+          value: "Coin-format A"
         suggestedContent: !<regular>
-          value: "Decicoin-format B"
+          value: "Coin-format A"
         valueType: "java.lang.String"
         uuid: "toString_string2"
         fixed: false
@@ -2437,12 +3109,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "9627945BC4588CC75751A5933EB4D8B2"
+    modelFingerprint: "2D78510B4E1943135B1A535E50C175FB"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "F4951E6643A18C3972250F12DB87DF54"
+      modelFingerprint: "CF37962B1D1FA1B99C75AC40E30AB45D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2492,9 +3164,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 2
+                value: -1
               suggestedContent: !<regular>
-                value: 2
+                value: -1
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -2504,9 +3176,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 2
               suggestedContent: !<regular>
-                value: 0
+                value: 2
               valueType: "int"
               uuid: "<init>_int2"
               fixed: false
@@ -2516,11 +3188,79 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  suggestedContent: !<regular>
+                    value: 1
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  suggestedContent: !<regular>
+                    value: 2
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  suggestedContent: !<regular>
+                    value: 1
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  suggestedContent: !<regular>
+                    value: 2
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "java.lang.Integer"
               uuid: "<init>_list1"
@@ -2534,7 +3274,22 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.util.Locale"
+                parameters:
+                - name: "language"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "language1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_locale1-language"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -2556,8 +3311,10 @@ methods:
           - name: "scale"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: -1
               suggestedContent: !<regular>
-                value: 2
+                value: -1
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -2566,8 +3323,10 @@ methods:
           - name: "minDecimals"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 2
               suggestedContent: !<regular>
-                value: 0
+                value: 2
               valueType: "int"
               uuid: "<init>_int2"
               fixed: false
@@ -2576,6 +3335,80 @@ methods:
           - name: "groups"
             value:
               sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  suggestedContent: !<regular>
+                    value: 1
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  suggestedContent: !<regular>
+                    value: 2
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  suggestedContent: !<regular>
+                    value: 1
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  suggestedContent: !<regular>
+                    value: 2
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "java.lang.Integer"
               uuid: "<init>_list1"
@@ -2639,7 +3472,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "B9A534114EB42AB39C9D204CE242341B"
+      modelFingerprint: "8E65D47E3C0602D60B2F22B827CB011E"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -2660,8 +3493,6 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: false
-            suggestedContent: !<regular>
-              value: false
             valueType: "boolean"
             uuid: "setSymbolAndCode_boolean1"
             fixed: false
@@ -2669,55 +3500,18 @@ methods:
             explicitCastNeeded: false
         signature: "checkState(boolean): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "setSymbolAndCode_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "60F4AB56A088909714BFE88747605281"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "<init>_void6"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalStateException"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -2726,8 +3520,8 @@ methods:
       filledByUser: false
     - type: "INTERNAL"
       name: "internalMethod"
-      modelFingerprint: "C2F3C3986483511BA425DFAFFA03F2C0"
-      index: 5
+      modelFingerprint: "AA20AA76211C2FD5EDBFD872253E165B"
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -2739,9 +3533,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "B"
+            value: "A"
           suggestedContent: !<regular>
-            value: "B"
+            value: "A"
           valueType: "java.lang.String"
           uuid: "toString_string1"
           fixed: false
@@ -2752,17 +3546,17 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "DCC55791C4544521FD750EBD02337832"
-      index: 6
+      modelFingerprint: "5A7FF67A646FC8E989CDF47D8E07C734"
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "Centicoin-format B"
+          value: "Coin-format A"
         suggestedContent: !<regular>
-          value: "Centicoin-format B"
+          value: "Coin-format A"
         valueType: "java.lang.String"
         uuid: "toString_string2"
         fixed: false
@@ -2786,12 +3580,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "F38D40DF94CFCDDF1D401CBF5D3A7B8E"
+    modelFingerprint: "3C26BF38EA9858A44DD7A3B8A0C38861"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "B888888BBA399E260C0B9C551FEA5688"
+      modelFingerprint: "9D500BB96C05818E2822CC904CE5580C"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2841,9 +3635,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 3
+                value: -3
               suggestedContent: !<regular>
-                value: 3
+                value: -3
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -2853,9 +3647,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 2
               suggestedContent: !<regular>
-                value: 0
+                value: 2
               valueType: "int"
               uuid: "<init>_int2"
               fixed: false
@@ -2865,11 +3659,79 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "java.lang.Integer"
               uuid: "<init>_list1"
@@ -2883,7 +3745,22 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.util.Locale"
+                parameters:
+                - name: "language"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "language1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_locale1-language"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -2905,8 +3782,10 @@ methods:
           - name: "scale"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: -3
               suggestedContent: !<regular>
-                value: 3
+                value: -3
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -2915,8 +3794,10 @@ methods:
           - name: "minDecimals"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 2
               suggestedContent: !<regular>
-                value: 0
+                value: 2
               valueType: "int"
               uuid: "<init>_int2"
               fixed: false
@@ -2925,6 +3806,80 @@ methods:
           - name: "groups"
             value:
               sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "java.lang.Integer"
               uuid: "<init>_list1"
@@ -2988,7 +3943,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "B9A534114EB42AB39C9D204CE242341B"
+      modelFingerprint: "8E65D47E3C0602D60B2F22B827CB011E"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -3009,8 +3964,6 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: false
-            suggestedContent: !<regular>
-              value: false
             valueType: "boolean"
             uuid: "setSymbolAndCode_boolean1"
             fixed: false
@@ -3018,55 +3971,18 @@ methods:
             explicitCastNeeded: false
         signature: "checkState(boolean): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "setSymbolAndCode_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "60F4AB56A088909714BFE88747605281"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "<init>_void6"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalStateException"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -3075,8 +3991,8 @@ methods:
       filledByUser: false
     - type: "INTERNAL"
       name: "internalMethod"
-      modelFingerprint: "C2F3C3986483511BA425DFAFFA03F2C0"
-      index: 5
+      modelFingerprint: "AA20AA76211C2FD5EDBFD872253E165B"
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3088,9 +4004,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "B"
+            value: "A"
           suggestedContent: !<regular>
-            value: "B"
+            value: "A"
           valueType: "java.lang.String"
           uuid: "toString_string1"
           fixed: false
@@ -3101,17 +4017,17 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "C933D1EC0B12123C30804535864F9A77"
-      index: 6
+      modelFingerprint: "5A7FF67A646FC8E989CDF47D8E07C734"
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "Millicoin-format B"
+          value: "Coin-format A"
         suggestedContent: !<regular>
-          value: "Millicoin-format B"
+          value: "Coin-format A"
         valueType: "java.lang.String"
         uuid: "toString_string2"
         fixed: false
@@ -3135,12 +4051,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "FFC1AD5942B40BBDFBC324042DA580E0"
+    modelFingerprint: "A0B8CFC0C936F913B3E513468FC4A9B1"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "E374BC1D779094C62B3DBE578C6049D1"
+      modelFingerprint: "9E1D548D37BADEE0E25ECE8B98CF93FC"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -3190,9 +4106,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 6
+                value: -6
               suggestedContent: !<regular>
-                value: 6
+                value: -6
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -3202,9 +4118,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 2
               suggestedContent: !<regular>
-                value: 0
+                value: 2
               valueType: "int"
               uuid: "<init>_int2"
               fixed: false
@@ -3214,11 +4130,79 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "java.lang.Integer"
               uuid: "<init>_list1"
@@ -3232,7 +4216,22 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.util.Locale"
+                parameters:
+                - name: "language"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "language1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_locale1-language"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -3254,8 +4253,10 @@ methods:
           - name: "scale"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: -6
               suggestedContent: !<regular>
-                value: 6
+                value: -6
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -3264,8 +4265,10 @@ methods:
           - name: "minDecimals"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 2
               suggestedContent: !<regular>
-                value: 0
+                value: 2
               valueType: "int"
               uuid: "<init>_int2"
               fixed: false
@@ -3274,6 +4277,80 @@ methods:
           - name: "groups"
             value:
               sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "java.lang.Integer"
               uuid: "<init>_list1"
@@ -3337,7 +4414,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "B9A534114EB42AB39C9D204CE242341B"
+      modelFingerprint: "8E65D47E3C0602D60B2F22B827CB011E"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -3358,8 +4435,6 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: false
-            suggestedContent: !<regular>
-              value: false
             valueType: "boolean"
             uuid: "setSymbolAndCode_boolean1"
             fixed: false
@@ -3367,55 +4442,18 @@ methods:
             explicitCastNeeded: false
         signature: "checkState(boolean): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "setSymbolAndCode_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "60F4AB56A088909714BFE88747605281"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "<init>_void6"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalStateException"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -3424,8 +4462,8 @@ methods:
       filledByUser: false
     - type: "INTERNAL"
       name: "internalMethod"
-      modelFingerprint: "C2F3C3986483511BA425DFAFFA03F2C0"
-      index: 5
+      modelFingerprint: "AA20AA76211C2FD5EDBFD872253E165B"
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3437,9 +4475,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "B"
+            value: "A"
           suggestedContent: !<regular>
-            value: "B"
+            value: "A"
           valueType: "java.lang.String"
           uuid: "toString_string1"
           fixed: false
@@ -3450,17 +4488,17 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "B30A8D0B3563A5BDD1DB60403D8CA433"
-      index: 6
+      modelFingerprint: "5A7FF67A646FC8E989CDF47D8E07C734"
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "Microcoin-format B"
+          value: "Coin-format A"
         suggestedContent: !<regular>
-          value: "Microcoin-format B"
+          value: "Coin-format A"
         valueType: "java.lang.String"
         uuid: "toString_string2"
         fixed: false
@@ -3484,12 +4522,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "283689C44BBF12008F05EA280C43D5E1"
+    modelFingerprint: "9F5233E3653669F3D8FAE225CE4010E3"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "8D4137602C5D89B8F0F039431256C233"
+      modelFingerprint: "C623F8F9A287BE199D90320F353A14AE"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -3539,9 +4577,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: -3
+                value: 2
               suggestedContent: !<regular>
-                value: -3
+                value: 2
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -3551,9 +4589,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 1
               suggestedContent: !<regular>
-                value: 0
+                value: 1
               valueType: "int"
               uuid: "<init>_int2"
               fixed: false
@@ -3563,11 +4601,79 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 5
+                  suggestedContent: !<regular>
+                    value: 5
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 7
+                  suggestedContent: !<regular>
+                    value: 7
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 5
+                  suggestedContent: !<regular>
+                    value: 5
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 7
+                  suggestedContent: !<regular>
+                    value: 7
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "java.lang.Integer"
               uuid: "<init>_list1"
@@ -3581,7 +4687,22 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.util.Locale"
+                parameters:
+                - name: "language"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "language1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_locale1-language"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -3603,8 +4724,10 @@ methods:
           - name: "scale"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 2
               suggestedContent: !<regular>
-                value: -3
+                value: 2
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -3613,8 +4736,10 @@ methods:
           - name: "minDecimals"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 1
               suggestedContent: !<regular>
-                value: 0
+                value: 1
               valueType: "int"
               uuid: "<init>_int2"
               fixed: false
@@ -3623,6 +4748,80 @@ methods:
           - name: "groups"
             value:
               sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 5
+                  suggestedContent: !<regular>
+                    value: 5
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 7
+                  suggestedContent: !<regular>
+                    value: 7
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 5
+                  suggestedContent: !<regular>
+                    value: 5
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 7
+                  suggestedContent: !<regular>
+                    value: 7
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "java.lang.Integer"
               uuid: "<init>_list1"
@@ -3686,7 +4885,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "B9A534114EB42AB39C9D204CE242341B"
+      modelFingerprint: "8E65D47E3C0602D60B2F22B827CB011E"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -3707,8 +4906,6 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: false
-            suggestedContent: !<regular>
-              value: false
             valueType: "boolean"
             uuid: "setSymbolAndCode_boolean1"
             fixed: false
@@ -3716,55 +4913,18 @@ methods:
             explicitCastNeeded: false
         signature: "checkState(boolean): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "setSymbolAndCode_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "60F4AB56A088909714BFE88747605281"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "<init>_void6"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalStateException"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -3773,8 +4933,8 @@ methods:
       filledByUser: false
     - type: "INTERNAL"
       name: "internalMethod"
-      modelFingerprint: "C2F3C3986483511BA425DFAFFA03F2C0"
-      index: 5
+      modelFingerprint: "AA20AA76211C2FD5EDBFD872253E165B"
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3786,9 +4946,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "B"
+            value: "A"
           suggestedContent: !<regular>
-            value: "B"
+            value: "A"
           valueType: "java.lang.String"
           uuid: "toString_string1"
           fixed: false
@@ -3799,17 +4959,17 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "D698DD20DF7FF20684ECD5097C61E73F"
-      index: 6
+      modelFingerprint: "5A7FF67A646FC8E989CDF47D8E07C734"
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "Kilocoin-format B"
+          value: "Coin-format A"
         suggestedContent: !<regular>
-          value: "Kilocoin-format B"
+          value: "Coin-format A"
         valueType: "java.lang.String"
         uuid: "toString_string2"
         fixed: false
@@ -4182,12 +5342,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "FBE71C7CA305958EFA205DEBA8F0F682"
+    modelFingerprint: "D25F82CAE0240788FA4E62C27F153BDE"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "3F18EAEA92B3119B7BD03F3E8EA8F948"
+      modelFingerprint: "9C4C82417ECAEFEFB6145C986DE56846"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -4237,9 +5397,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: -6
+                value: 5
               suggestedContent: !<regular>
-                value: -6
+                value: 5
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -4249,9 +5409,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 2
               suggestedContent: !<regular>
-                value: 0
+                value: 2
               valueType: "int"
               uuid: "<init>_int2"
               fixed: false
@@ -4261,11 +5421,79 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  suggestedContent: !<regular>
+                    value: 2
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  suggestedContent: !<regular>
+                    value: 2
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "java.lang.Integer"
               uuid: "<init>_list1"
@@ -4279,7 +5507,22 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.util.Locale"
+                parameters:
+                - name: "language"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "language1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_locale1-language"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -4301,8 +5544,10 @@ methods:
           - name: "scale"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 5
               suggestedContent: !<regular>
-                value: -6
+                value: 5
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -4311,8 +5556,10 @@ methods:
           - name: "minDecimals"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 2
               suggestedContent: !<regular>
-                value: 0
+                value: 2
               valueType: "int"
               uuid: "<init>_int2"
               fixed: false
@@ -4321,6 +5568,80 @@ methods:
           - name: "groups"
             value:
               sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  suggestedContent: !<regular>
+                    value: 2
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  suggestedContent: !<regular>
+                    value: 2
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "java.lang.Integer"
               uuid: "<init>_list1"
@@ -4384,7 +5705,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "B9A534114EB42AB39C9D204CE242341B"
+      modelFingerprint: "8E65D47E3C0602D60B2F22B827CB011E"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -4405,8 +5726,6 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: false
-            suggestedContent: !<regular>
-              value: false
             valueType: "boolean"
             uuid: "setSymbolAndCode_boolean1"
             fixed: false
@@ -4414,55 +5733,18 @@ methods:
             explicitCastNeeded: false
         signature: "checkState(boolean): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "setSymbolAndCode_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "60F4AB56A088909714BFE88747605281"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "<init>_void6"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalStateException"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -4471,8 +5753,8 @@ methods:
       filledByUser: false
     - type: "INTERNAL"
       name: "internalMethod"
-      modelFingerprint: "C2F3C3986483511BA425DFAFFA03F2C0"
-      index: 5
+      modelFingerprint: "AA20AA76211C2FD5EDBFD872253E165B"
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4484,9 +5766,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "B"
+            value: "A"
           suggestedContent: !<regular>
-            value: "B"
+            value: "A"
           valueType: "java.lang.String"
           uuid: "toString_string1"
           fixed: false
@@ -4497,17 +5779,17 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "FC352F974353B272027A827507EC9A1A"
-      index: 6
+      modelFingerprint: "5A7FF67A646FC8E989CDF47D8E07C734"
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "Megacoin-format B"
+          value: "Coin-format A"
         suggestedContent: !<regular>
-          value: "Megacoin-format B"
+          value: "Coin-format A"
         valueType: "java.lang.String"
         uuid: "toString_string2"
         fixed: false
@@ -4531,12 +5813,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "00BAD52A1C578EF222CA6F5C3625DC70"
+    modelFingerprint: "8E1DC6733AFDB437C251CDB847EC8B39"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "8A4C5079FCFA15B0405D04928F2CEB40"
+      modelFingerprint: "EFAD11EADDDE095A863BC1E467C65533"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -4598,9 +5880,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 2
               suggestedContent: !<regular>
-                value: 0
+                value: 2
               valueType: "int"
               uuid: "<init>_int2"
               fixed: false
@@ -4610,11 +5892,79 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "java.lang.Integer"
               uuid: "<init>_list1"
@@ -4628,7 +5978,22 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.util.Locale"
+                parameters:
+                - name: "language"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "language1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_locale1-language"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -4650,6 +6015,8 @@ methods:
           - name: "scale"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 0
               suggestedContent: !<regular>
                 value: 0
               valueType: "int"
@@ -4660,8 +6027,10 @@ methods:
           - name: "minDecimals"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 2
               suggestedContent: !<regular>
-                value: 0
+                value: 2
               valueType: "int"
               uuid: "<init>_int2"
               fixed: false
@@ -4670,6 +6039,80 @@ methods:
           - name: "groups"
             value:
               sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "java.lang.Integer"
               uuid: "<init>_list1"
@@ -4733,7 +6176,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "B9A534114EB42AB39C9D204CE242341B"
+      modelFingerprint: "8E65D47E3C0602D60B2F22B827CB011E"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -4754,8 +6197,6 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: false
-            suggestedContent: !<regular>
-              value: false
             valueType: "boolean"
             uuid: "setSymbolAndCode_boolean1"
             fixed: false
@@ -4763,55 +6204,18 @@ methods:
             explicitCastNeeded: false
         signature: "checkState(boolean): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "setSymbolAndCode_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "60F4AB56A088909714BFE88747605281"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "<init>_void6"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalStateException"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -4820,8 +6224,8 @@ methods:
       filledByUser: false
     - type: "INTERNAL"
       name: "internalMethod"
-      modelFingerprint: "C2F3C3986483511BA425DFAFFA03F2C0"
-      index: 5
+      modelFingerprint: "AA20AA76211C2FD5EDBFD872253E165B"
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4833,9 +6237,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "B"
+            value: "A"
           suggestedContent: !<regular>
-            value: "B"
+            value: "A"
           valueType: "java.lang.String"
           uuid: "toString_string1"
           fixed: false
@@ -4846,17 +6250,17 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "BDAB5C2051DF7916296C6C4D9082F801"
-      index: 6
+      modelFingerprint: "5A7FF67A646FC8E989CDF47D8E07C734"
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "Coin-format B"
+          value: "Coin-format A"
         suggestedContent: !<regular>
-          value: "Coin-format B"
+          value: "Coin-format A"
         valueType: "java.lang.String"
         uuid: "toString_string2"
         fixed: false
@@ -4880,12 +6284,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "E86716C8B5B39A3CAC42DA42DF08E188"
+    modelFingerprint: "8E1DC6733AFDB437C251CDB847EC8B39"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "17ED6C17CBACBE354318F60BE81F8993"
+      modelFingerprint: "EFAD11EADDDE095A863BC1E467C65533"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -4935,9 +6339,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: -1
+                value: 0
               suggestedContent: !<regular>
-                value: -1
+                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -4947,9 +6351,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 2
               suggestedContent: !<regular>
-                value: 0
+                value: 2
               valueType: "int"
               uuid: "<init>_int2"
               fixed: false
@@ -4959,11 +6363,79 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "java.lang.Integer"
               uuid: "<init>_list1"
@@ -4977,7 +6449,22 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.util.Locale"
+                parameters:
+                - name: "language"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "language1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_locale1-language"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -4999,8 +6486,10 @@ methods:
           - name: "scale"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 0
               suggestedContent: !<regular>
-                value: -1
+                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -5009,8 +6498,10 @@ methods:
           - name: "minDecimals"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 2
               suggestedContent: !<regular>
-                value: 0
+                value: 2
               valueType: "int"
               uuid: "<init>_int2"
               fixed: false
@@ -5019,6 +6510,80 @@ methods:
           - name: "groups"
             value:
               sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "java.lang.Integer"
               uuid: "<init>_list1"
@@ -5082,7 +6647,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "B9A534114EB42AB39C9D204CE242341B"
+      modelFingerprint: "8E65D47E3C0602D60B2F22B827CB011E"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -5103,8 +6668,6 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: false
-            suggestedContent: !<regular>
-              value: false
             valueType: "boolean"
             uuid: "setSymbolAndCode_boolean1"
             fixed: false
@@ -5112,55 +6675,18 @@ methods:
             explicitCastNeeded: false
         signature: "checkState(boolean): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "setSymbolAndCode_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "60F4AB56A088909714BFE88747605281"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "<init>_void6"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalStateException"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -5169,8 +6695,8 @@ methods:
       filledByUser: false
     - type: "INTERNAL"
       name: "internalMethod"
-      modelFingerprint: "C2F3C3986483511BA425DFAFFA03F2C0"
-      index: 5
+      modelFingerprint: "AA20AA76211C2FD5EDBFD872253E165B"
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5182,9 +6708,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "B"
+            value: "A"
           suggestedContent: !<regular>
-            value: "B"
+            value: "A"
           valueType: "java.lang.String"
           uuid: "toString_string1"
           fixed: false
@@ -5195,17 +6721,17 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "030BF96554C50CC9A46D60DA54EDB4AE"
-      index: 6
+      modelFingerprint: "5A7FF67A646FC8E989CDF47D8E07C734"
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "Dekacoin-format B"
+          value: "Coin-format A"
         suggestedContent: !<regular>
-          value: "Dekacoin-format B"
+          value: "Coin-format A"
         valueType: "java.lang.String"
         uuid: "toString_string2"
         fixed: false
@@ -5229,12 +6755,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "78D707D4142D52F79B5CF52371827B94"
+    modelFingerprint: "EEEE0ABFAF394B83B74FD31FD3F5A0E5"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "F4951E6643A18C3972250F12DB87DF54"
+      modelFingerprint: "E9EB989EA717CE0F57726AC943204284"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -5284,9 +6810,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 2
+                value: 3
               suggestedContent: !<regular>
-                value: 2
+                value: 3
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -5296,9 +6822,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 2
               suggestedContent: !<regular>
-                value: 0
+                value: 2
               valueType: "int"
               uuid: "<init>_int2"
               fixed: false
@@ -5308,11 +6834,57 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "java.lang.Integer"
               uuid: "<init>_list1"
@@ -5326,7 +6898,22 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.util.Locale"
+                parameters:
+                - name: "language"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "language1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_locale1-language"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -5348,8 +6935,10 @@ methods:
           - name: "scale"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 3
               suggestedContent: !<regular>
-                value: 2
+                value: 3
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -5358,8 +6947,10 @@ methods:
           - name: "minDecimals"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 2
               suggestedContent: !<regular>
-                value: 0
+                value: 2
               valueType: "int"
               uuid: "<init>_int2"
               fixed: false
@@ -5368,6 +6959,58 @@ methods:
           - name: "groups"
             value:
               sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "java.lang.Integer"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "java.lang.Integer"
               uuid: "<init>_list1"
@@ -5431,7 +7074,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "B9A534114EB42AB39C9D204CE242341B"
+      modelFingerprint: "8E65D47E3C0602D60B2F22B827CB011E"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -5452,8 +7095,6 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: false
-            suggestedContent: !<regular>
-              value: false
             valueType: "boolean"
             uuid: "setSymbolAndCode_boolean1"
             fixed: false
@@ -5461,55 +7102,18 @@ methods:
             explicitCastNeeded: false
         signature: "checkState(boolean): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "setSymbolAndCode_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "60F4AB56A088909714BFE88747605281"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "<init>_void6"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalStateException"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -5519,7 +7123,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "AA20AA76211C2FD5EDBFD872253E165B"
-      index: 5
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5544,17 +7148,17 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "0708BB246CBD83F1F377287973E2FB85"
-      index: 6
+      modelFingerprint: "5A7FF67A646FC8E989CDF47D8E07C734"
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "Fixed (2) format A"
+          value: "Coin-format A"
         suggestedContent: !<regular>
-          value: "Fixed (2) format A"
+          value: "Coin-format A"
         valueType: "java.lang.String"
         uuid: "toString_string2"
         fixed: false

@@ -16,12 +16,12 @@ public class UnknownMessageSapientGeneratedJunit4Test {
     @Test()
     public void toStringTest() throws ProtocolException {
         //Arrange Statement(s)
-        UnknownMessage target = new UnknownMessage("A");
+        UnknownMessage target = new UnknownMessage("testName");
 
         //Act Statement(s)
         String result = target.toString();
 
         //Assert statement(s)
-        assertThat(result, equalTo("Unknown message [A]"));
+        assertThat(result, equalTo("Unknown message [testName]"));
     }
 }

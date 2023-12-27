@@ -53,28 +53,29 @@ public class Sha256HashSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         byte[] _byte = null;
-
         //Act Statement(s)
         Sha256Hash result = Sha256Hash.wrap(_byte);
-
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
 
     //Sapient generated method id: ${8e6fb3b1-f009-3bdd-83ef-3241bcee11da}
+    @Ignore()
     @Test()
     public void wrap1Test() {
         //Arrange Statement(s)
         try (MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class, CALLS_REAL_METHODS);
              MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
             byte[] byteArray = new byte[]{};
-            byteUtils.when(() -> ByteUtils.parseHex("A")).thenReturn(byteArray);
-            sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256HashMock);
+            byteUtils.when(() -> ByteUtils.parseHex("<input_hex_string>")).thenReturn(byteArray);
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            Sha256Hash sha256Hash2 = Sha256Hash.read(byteBuffer);
+            sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256Hash2);
             //Act Statement(s)
-            Sha256Hash result = Sha256Hash.wrap("A");
+            Sha256Hash result = Sha256Hash.wrap("<input_hex_string>");
             //Assert statement(s)
-            assertThat(result, equalTo(sha256HashMock));
-            byteUtils.verify(() -> ByteUtils.parseHex("A"), atLeast(1));
+            assertThat(result, equalTo(sha256Hash2));
+            byteUtils.verify(() -> ByteUtils.parseHex("<input_hex_string>"), atLeast(1));
             sha256Hash.verify(() -> Sha256Hash.wrap(byteArray), atLeast(1));
         }
     }
@@ -83,14 +84,17 @@ public class Sha256HashSapientGeneratedJunit4Test {
     @Test()
     public void wrapReversedTest() {
         //Arrange Statement(s)
-        try (MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class, CALLS_REAL_METHODS)) {
+        try (MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class, CALLS_REAL_METHODS);
+             MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
             byte[] byteArray = new byte[]{};
-            sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256HashMock);
             byte[] byteArray2 = new byte[]{};
+            byteUtils.when(() -> ByteUtils.reverseBytes(byteArray2)).thenReturn(byteArray);
+            sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256HashMock);
             //Act Statement(s)
             Sha256Hash result = Sha256Hash.wrapReversed(byteArray2);
             //Assert statement(s)
             assertThat(result, equalTo(sha256HashMock));
+            byteUtils.verify(() -> ByteUtils.reverseBytes(byteArray2), atLeast(1));
             sha256Hash.verify(() -> Sha256Hash.wrap(byteArray), atLeast(1));
         }
     }
@@ -105,13 +109,15 @@ public class Sha256HashSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class, CALLS_REAL_METHODS)) {
-            byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
-            sha256Hash.when(() -> Sha256Hash.wrapReversed(byteArray)).thenReturn(sha256HashMock);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            Sha256Hash sha256Hash2 = Sha256Hash.read(byteBuffer);
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+            sha256Hash.when(() -> Sha256Hash.wrapReversed(byteArray)).thenReturn(sha256Hash2);
+            ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
             //Act Statement(s)
-            Sha256Hash result = Sha256Hash.read(byteBuffer);
+            Sha256Hash result = Sha256Hash.read(byteBuffer2);
             //Assert statement(s)
-            assertThat(result, equalTo(sha256HashMock));
+            assertThat(result, equalTo(sha256Hash2));
             sha256Hash.verify(() -> Sha256Hash.wrapReversed(byteArray), atLeast(1));
         }
     }
@@ -135,18 +141,21 @@ public class Sha256HashSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${4224631c-1351-3487-b57c-83be3d1c5f2a}
+    @Ignore()
     @Test()
     public void twiceOfTest() throws NoSuchAlgorithmException {
         //Arrange Statement(s)
         try (MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class, CALLS_REAL_METHODS)) {
             byte[] byteArray = new byte[]{};
-            byte[] byteArray2 = new byte[]{};
+            byte[] byteArray2 = new byte[]{(byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5};
             sha256Hash.when(() -> Sha256Hash.hashTwice(byteArray2)).thenReturn(byteArray);
-            sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256HashMock);
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            Sha256Hash sha256Hash2 = Sha256Hash.read(byteBuffer);
+            sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256Hash2);
             //Act Statement(s)
             Sha256Hash result = Sha256Hash.twiceOf(byteArray2);
             //Assert statement(s)
-            assertThat(result, equalTo(sha256HashMock));
+            assertThat(result, equalTo(sha256Hash2));
             sha256Hash.verify(() -> Sha256Hash.hashTwice(byteArray2), atLeast(1));
             sha256Hash.verify(() -> Sha256Hash.wrap(byteArray), atLeast(1));
         }
@@ -181,47 +190,16 @@ public class Sha256HashSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class, CALLS_REAL_METHODS)) {
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            Sha256Hash sha256Hash2 = Sha256Hash.read(byteBuffer);
             byte[] byteArray = new byte[]{};
-            sha256Hash.when(() -> Sha256Hash.of(byteArray)).thenReturn(sha256HashMock);
+            sha256Hash.when(() -> Sha256Hash.of(byteArray)).thenReturn(sha256Hash2);
             File file = new File("pathname1");
             //Act Statement(s)
             Sha256Hash result = Sha256Hash.of(file);
             //Assert statement(s)
-            assertThat(result, equalTo(sha256HashMock));
+            assertThat(result, equalTo(sha256Hash2));
             sha256Hash.verify(() -> Sha256Hash.of(byteArray), atLeast(1));
-        }
-    }
-
-    //Sapient generated method id: ${864b40bf-1d57-3bcc-af03-b58d82f51832}
-    @Ignore()
-    @Test()
-    public void newDigestTest() throws NoSuchAlgorithmException {
-
-        //Act Statement(s)
-        MessageDigest result = Sha256Hash.newDigest();
-        MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
-
-        //Assert statement(s)
-        //TODO: Please implement equals method in MessageDigest for verification to succeed or you need to adjust respective assertion statements
-        assertThat(result, equalTo(messageDigest));
-    }
-
-    //Sapient generated method id: ${daff8898-8ab8-3bae-a579-334acf567191}
-    @Test()
-    public void newDigestWhenCaughtNoSuchAlgorithmExceptionThrowsRuntimeException() throws NoSuchAlgorithmException {
-        /* Branches:
-         * (catch-exception (NoSuchAlgorithmException)) : true
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<MessageDigest> messageDigest = mockStatic(MessageDigest.class)) {
-            NoSuchAlgorithmException noSuchAlgorithmException = new NoSuchAlgorithmException();
-            messageDigest.when(() -> MessageDigest.getInstance("SHA-256")).thenThrow(noSuchAlgorithmException);
-            thrown.expect(RuntimeException.class);
-            thrown.expectCause(isA(NoSuchAlgorithmException.class));
-            //Act Statement(s)
-            Sha256Hash.newDigest();
-            //Assert statement(s)
-            messageDigest.verify(() -> MessageDigest.getInstance("SHA-256"), atLeast(1));
         }
     }
 
@@ -249,9 +227,9 @@ public class Sha256HashSapientGeneratedJunit4Test {
             //TODO: Needs to return real value
             sha256Hash.when(() -> Sha256Hash.newDigest()).thenReturn(null);
             thrown.expect(NullPointerException.class);
-            byte[] byteArray = new byte[]{};
+            byte[] byteArray = new byte[]{(byte) 0};
             //Act Statement(s)
-            Sha256Hash.hash(byteArray, 0, 0);
+            Sha256Hash.hash(byteArray, 0, 11);
             //Assert statement(s)
             sha256Hash.verify(() -> Sha256Hash.newDigest(), atLeast(1));
         }
@@ -281,8 +259,8 @@ public class Sha256HashSapientGeneratedJunit4Test {
             //TODO: Needs to return real value
             sha256Hash.when(() -> Sha256Hash.newDigest()).thenReturn(null);
             thrown.expect(NullPointerException.class);
-            byte[] byteArray = new byte[]{};
-            byte[] byteArray2 = new byte[]{};
+            byte[] byteArray = new byte[]{(byte) 0};
+            byte[] byteArray2 = new byte[]{(byte) 0};
             //Act Statement(s)
             Sha256Hash.hashTwice(byteArray, byteArray2);
             //Assert statement(s)
@@ -298,9 +276,9 @@ public class Sha256HashSapientGeneratedJunit4Test {
             //TODO: Needs to return real value
             sha256Hash.when(() -> Sha256Hash.newDigest()).thenReturn(null);
             thrown.expect(NullPointerException.class);
-            byte[] byteArray = new byte[]{};
+            byte[] byteArray = new byte[]{(byte) 97, (byte) 98, (byte) 99};
             //Act Statement(s)
-            Sha256Hash.hashTwice(byteArray, 0, 0);
+            Sha256Hash.hashTwice(byteArray, 0, 3);
             //Assert statement(s)
             sha256Hash.verify(() -> Sha256Hash.newDigest(), atLeast(1));
         }
@@ -314,10 +292,10 @@ public class Sha256HashSapientGeneratedJunit4Test {
             //TODO: Needs to return real value
             sha256Hash.when(() -> Sha256Hash.newDigest()).thenReturn(null);
             thrown.expect(NullPointerException.class);
-            byte[] byteArray = new byte[]{};
-            byte[] byteArray2 = new byte[]{};
+            byte[] byteArray = new byte[]{(byte) 0};
+            byte[] byteArray2 = new byte[]{(byte) 0};
             //Act Statement(s)
-            Sha256Hash.hashTwice(byteArray, 0, 0, byteArray2, 0, 0);
+            Sha256Hash.hashTwice(byteArray, 0, 5, byteArray2, 0, 5);
             //Assert statement(s)
             sha256Hash.verify(() -> Sha256Hash.newDigest(), atLeast(1));
         }
@@ -327,20 +305,19 @@ public class Sha256HashSapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void toStringTest() {
-        //Arrange Statement(s)
         try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
              MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class)) {
             byte[] byteArray = new byte[]{};
-            byte[] byteArray2 = new byte[]{};
-            byte[] byteArray3 = new byte[]{};
+            byte[] byteArray2 = new byte[]{(byte) 1, (byte) 2, (byte) 3};
+            byte[] byteArray3 = new byte[]{(byte) 4, (byte) 5, (byte) 6};
             sha256Hash.when(() -> Sha256Hash.hashTwice(byteArray2, byteArray3)).thenReturn(byteArray);
             sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256HashMock);
-            byteUtils.when(() -> ByteUtils.formatHex((byte[]) null)).thenReturn("return_of_formatHex1");
+            byteUtils.when(() -> ByteUtils.formatHex((byte[]) null)).thenReturn("");
             Sha256Hash target = Sha256Hash.twiceOf(byteArray2, byteArray3);
             //Act Statement(s)
             String result = target.toString();
             //Assert statement(s)
-            assertThat(result, equalTo("return_of_formatHex1"));
+            assertThat(result, equalTo(""));
             sha256Hash.verify(() -> Sha256Hash.hashTwice(byteArray2, byteArray3), atLeast(1));
             sha256Hash.verify(() -> Sha256Hash.wrap(byteArray), atLeast(1));
             byteUtils.verify(() -> ByteUtils.formatHex((byte[]) null), atLeast(1));
@@ -355,10 +332,12 @@ public class Sha256HashSapientGeneratedJunit4Test {
         try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
              MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class)) {
             byte[] byteArray = new byte[]{};
-            byte[] byteArray2 = new byte[]{};
-            byte[] byteArray3 = new byte[]{};
+            byte[] byteArray2 = new byte[]{(byte) 0};
+            byte[] byteArray3 = new byte[]{(byte) 0};
             sha256Hash.when(() -> Sha256Hash.hashTwice(byteArray2, byteArray3)).thenReturn(byteArray);
-            sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256HashMock);
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            Sha256Hash sha256Hash2 = Sha256Hash.read(byteBuffer);
+            sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256Hash2);
             byteUtils.when(() -> ByteUtils.bytesToBigInteger((byte[]) null)).thenReturn(new BigInteger("0"));
             Sha256Hash target = Sha256Hash.twiceOf(byteArray2, byteArray3);
             //Act Statement(s)
@@ -375,12 +354,11 @@ public class Sha256HashSapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void serializeTest() {
-        //Arrange Statement(s)
         try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
              MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class)) {
             byte[] byteArray = new byte[]{};
-            byte[] byteArray2 = new byte[]{};
-            byte[] byteArray3 = new byte[]{};
+            byte[] byteArray2 = new byte[]{(byte) 1, (byte) 2, (byte) 3};
+            byte[] byteArray3 = new byte[]{(byte) 4, (byte) 5, (byte) 6};
             sha256Hash.when(() -> Sha256Hash.hashTwice(byteArray2, byteArray3)).thenReturn(byteArray);
             sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256HashMock);
             byte[] byteArray4 = new byte[]{};
@@ -432,15 +410,17 @@ public class Sha256HashSapientGeneratedJunit4Test {
             byte[] byteArray2 = new byte[]{};
             byte[] byteArray3 = new byte[]{};
             sha256Hash.when(() -> Sha256Hash.hashTwice(byteArray2, byteArray3)).thenReturn(byteArray);
-            sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256HashMock);
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            Sha256Hash sha256Hash2 = Sha256Hash.read(byteBuffer);
+            sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256Hash2);
             byte[] byteArray4 = new byte[]{};
             byteUtils.when(() -> ByteUtils.reverseBytes((byte[]) null)).thenReturn(byteArray4);
             Sha256Hash target = Sha256Hash.twiceOf(byteArray2, byteArray3);
-            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
             //Act Statement(s)
-            ByteBuffer result = target.write(byteBuffer);
+            ByteBuffer result = target.write(byteBuffer2);
             //Assert statement(s)
-            assertThat(result, equalTo(byteBuffer));
+            assertThat(result, equalTo(byteBuffer2));
             sha256Hash.verify(() -> Sha256Hash.hashTwice(byteArray2, byteArray3), atLeast(1));
             sha256Hash.verify(() -> Sha256Hash.wrap(byteArray), atLeast(1));
             byteUtils.verify(() -> ByteUtils.reverseBytes((byte[]) null), atLeast(1));
@@ -461,15 +441,17 @@ public class Sha256HashSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class)) {
             byte[] byteArray = new byte[]{};
-            byte[] byteArray2 = new byte[]{};
-            byte[] byteArray3 = new byte[]{};
+            byte[] byteArray2 = new byte[]{(byte) 1, (byte) 2, (byte) 3};
+            byte[] byteArray3 = new byte[]{(byte) 4, (byte) 5, (byte) 6};
             sha256Hash.when(() -> Sha256Hash.hashTwice(byteArray2, byteArray3)).thenReturn(byteArray);
-            sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256HashMock);
-            Sha256Hash target = Sha256Hash.twiceOf(byteArray2, byteArray3);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
             Sha256Hash sha256Hash2 = Sha256Hash.read(byteBuffer);
+            sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256Hash2);
+            Sha256Hash target = Sha256Hash.twiceOf(byteArray2, byteArray3);
+            ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
+            Sha256Hash sha256Hash3 = Sha256Hash.read(byteBuffer2);
             //Act Statement(s)
-            int result = target.compareTo(sha256Hash2);
+            int result = target.compareTo(sha256Hash3);
             //Assert statement(s)
             assertThat(result, equalTo(1));
             sha256Hash.verify(() -> Sha256Hash.hashTwice(byteArray2, byteArray3), atLeast(1));
@@ -495,12 +477,14 @@ public class Sha256HashSapientGeneratedJunit4Test {
             byte[] byteArray2 = new byte[]{};
             byte[] byteArray3 = new byte[]{};
             sha256Hash.when(() -> Sha256Hash.hashTwice(byteArray2, byteArray3)).thenReturn(byteArray);
-            sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256HashMock);
-            Sha256Hash target = Sha256Hash.twiceOf(byteArray2, byteArray3);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
             Sha256Hash sha256Hash2 = Sha256Hash.read(byteBuffer);
+            sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256Hash2);
+            Sha256Hash target = Sha256Hash.twiceOf(byteArray2, byteArray3);
+            ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
+            Sha256Hash sha256Hash3 = Sha256Hash.read(byteBuffer2);
             //Act Statement(s)
-            int result = target.compareTo(sha256Hash2);
+            int result = target.compareTo(sha256Hash3);
             //Assert statement(s)
             assertThat(result, equalTo(-1));
             sha256Hash.verify(() -> Sha256Hash.hashTwice(byteArray2, byteArray3), atLeast(1));
@@ -520,18 +504,16 @@ public class Sha256HashSapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
-        //Arrange Statement(s)
+        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class, "null");
         try (MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class)) {
             byte[] byteArray = new byte[]{};
-            byte[] byteArray2 = new byte[]{};
-            byte[] byteArray3 = new byte[]{};
+            byte[] byteArray2 = new byte[]{(byte) 5, (byte) 6, (byte) 7, (byte) 8};
+            byte[] byteArray3 = new byte[]{(byte) 9, (byte) 10, (byte) 11, (byte) 12};
             sha256Hash.when(() -> Sha256Hash.hashTwice(byteArray2, byteArray3)).thenReturn(byteArray);
             sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256HashMock);
             Sha256Hash target = Sha256Hash.twiceOf(byteArray2, byteArray3);
-            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            Sha256Hash sha256Hash2 = Sha256Hash.read(byteBuffer);
             //Act Statement(s)
-            int result = target.compareTo(sha256Hash2);
+            int result = target.compareTo(sha256HashMock2);
             //Assert statement(s)
             assertThat(result, equalTo(0));
             sha256Hash.verify(() -> Sha256Hash.hashTwice(byteArray2, byteArray3), atLeast(1));

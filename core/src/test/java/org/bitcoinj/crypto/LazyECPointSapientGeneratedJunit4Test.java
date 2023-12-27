@@ -27,15 +27,15 @@ public class LazyECPointSapientGeneratedJunit4Test {
     @Rule()
     public Timeout timeoutRule = Timeout.seconds(5);
 
-    private final ECCurve curveMock = mock(ECCurve.class, "curve");
+    private final ECCurve curveMock = mock(ECCurve.class, "<value of curve>");
 
-    private final ECFieldElement eCFieldElementMock = mock(ECFieldElement.class);
+    private final ECFieldElement eCFieldElementMock = mock(ECFieldElement.class, "UnknownObjectContent{target='org.bouncycastle.math.ec.ECFieldElement', onlyPojoFunctions=false, builderPattern=false}");
 
     private final ECPoint eCPointMock = mock(ECPoint.class);
 
-    private final ECPoint eCPointMock2 = mock(ECPoint.class);
+    private final ECPoint eCPointMock2 = mock(ECPoint.class, "UnknownObjectContent{target='org.bouncycastle.math.ec.ECPoint', onlyPojoFunctions=false, builderPattern=false}");
 
-    private final ECPoint eCPointMock3 = mock(ECPoint.class);
+    private final ECPoint eCPointMock3 = mock(ECPoint.class, "{}");
 
     //Sapient generated method id: ${4e9c8ce1-7355-3002-8426-1f382a161439}
     @Test()
@@ -44,15 +44,21 @@ public class LazyECPointSapientGeneratedJunit4Test {
          * (compressed) : true
          */
         //Arrange Statement(s)
+        ECPoint eCPointMock2 = mock(ECPoint.class);
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
-            byte[] byteArray = new byte[]{};
-            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(true);
-            LazyECPoint target = new LazyECPoint(curveMock, byteArray);
+            byte[] byteArray = new byte[]{(byte) 0};
+            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(false);
+            LazyECPoint target = spy(new LazyECPoint(curveMock, byteArray));
+            doReturn(eCPointMock).when(target).get();
+            doReturn(eCPointMock2).when(eCPointMock).normalize();
             //Act Statement(s)
             LazyECPoint result = target.compress();
+            LazyECPoint lazyECPoint = new LazyECPoint(eCPointMock, true);
             //Assert statement(s)
-            assertThat(result, equalTo(target));
+            assertThat(result, equalTo(lazyECPoint));
             eCKey.verify(() -> ECKey.isPubKeyCompressed(byteArray), atLeast(1));
+            verify(target).get();
+            verify(eCPointMock).normalize();
         }
     }
 
@@ -64,6 +70,7 @@ public class LazyECPointSapientGeneratedJunit4Test {
          * (compressed) : false
          */
         //Arrange Statement(s)
+        ECPoint eCPointMock2 = mock(ECPoint.class);
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
             byte[] byteArray = new byte[]{};
             eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(false);
@@ -89,7 +96,7 @@ public class LazyECPointSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
-            byte[] byteArray = new byte[]{};
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
             eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(false);
             LazyECPoint target = new LazyECPoint(curveMock, byteArray);
             //Act Statement(s)
@@ -108,8 +115,9 @@ public class LazyECPointSapientGeneratedJunit4Test {
          * (!compressed) : false
          */
         //Arrange Statement(s)
+        ECPoint eCPointMock2 = mock(ECPoint.class);
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
-            byte[] byteArray = new byte[]{};
+            byte[] byteArray = new byte[]{(byte) 2, (byte) 121, (byte) 0, (byte) 102, (byte) 126, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 85, (byte) 0, (byte) 98, (byte) 0, (byte) 0, (byte) 0, (byte) 11, (byte) 7, (byte) 2, (byte) 0, (byte) 0, (byte) 0, (byte) 45, (byte) 0, (byte) 40, (byte) 0, (byte) 89, (byte) 0, (byte) 0, (byte) 91, (byte) 22, (byte) 0, (byte) 23, (byte) 0};
             eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(true);
             LazyECPoint target = spy(new LazyECPoint(curveMock, byteArray));
             doReturn(eCPointMock).when(target).get();
@@ -132,9 +140,10 @@ public class LazyECPointSapientGeneratedJunit4Test {
          * (point == null) : true
          */
         //Arrange Statement(s)
+        ECPoint eCPointMock = mock(ECPoint.class, "UnknownObjectContent{target='org.bouncycastle.math.ec.ECPoint', onlyPojoFunctions=false, builderPattern=false}");
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
-            byte[] byteArray = new byte[]{};
-            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(false);
+            byte[] byteArray = new byte[]{(byte) 3, (byte) 77, (byte) 94, (byte) 0, (byte) 63, (byte) 44, (byte) 93, (byte) 60, (byte) 61, (byte) 61, (byte) 61, (byte) 61, (byte) 61, (byte) 61, (byte) 61, (byte) 61, (byte) 61, (byte) 61, (byte) 61, (byte) 61, (byte) 61, (byte) 61, (byte) 61, (byte) 61, (byte) 61, (byte) 61, (byte) 61, (byte) 61, (byte) 61, (byte) 61, (byte) 61, (byte) 61};
+            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(true);
             LazyECPoint target = new LazyECPoint(curveMock, byteArray);
             doReturn(eCPointMock).when(curveMock).decodePoint(byteArray);
             //Act Statement(s)
@@ -174,18 +183,18 @@ public class LazyECPointSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
-            eCKey.when(() -> ECKey.isPubKeyCompressed((byte[]) null)).thenReturn(false);
+            eCKey.when(() -> ECKey.isPubKeyCompressed((byte[]) null)).thenReturn(true);
             LazyECPoint target = spy(new LazyECPoint(curveMock, (byte[]) null));
             doReturn(eCPointMock).when(target).get();
             byte[] byteArray = new byte[]{};
-            doReturn(byteArray).when(eCPointMock).getEncoded(false);
+            doReturn(byteArray).when(eCPointMock).getEncoded(true);
             //Act Statement(s)
             byte[] result = target.getEncoded();
             //Assert statement(s)
             assertThat(result, equalTo(byteArray));
             eCKey.verify(() -> ECKey.isPubKeyCompressed((byte[]) null), atLeast(1));
             verify(target).get();
-            verify(eCPointMock).getEncoded(false);
+            verify(eCPointMock).getEncoded(true);
         }
     }
 
@@ -194,8 +203,8 @@ public class LazyECPointSapientGeneratedJunit4Test {
     public void getDetachedPointTest() {
         //Arrange Statement(s)
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
-            byte[] byteArray = new byte[]{};
-            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(false);
+            byte[] byteArray = new byte[]{(byte) 3, (byte) 127, (byte) 33, (byte) 93, (byte) 0, (byte) 0, (byte) 127, (byte) 0, (byte) 0, (byte) 77, (byte) 109, (byte) 94, (byte) 13, (byte) 60, (byte) 46, (byte) 31, (byte) 29, (byte) 45, (byte) 93, (byte) 95};
+            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(true);
             LazyECPoint target = spy(new LazyECPoint(curveMock, byteArray));
             doReturn(eCPointMock).when(target).get();
             doReturn(eCPointMock2).when(eCPointMock).getDetachedPoint();
@@ -217,8 +226,8 @@ public class LazyECPointSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
-            byte[] byteArray = new byte[]{};
-            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(false);
+            byte[] byteArray = new byte[]{(byte) 2, (byte) 121, (byte) 0, (byte) 102, (byte) 126, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 85, (byte) 0, (byte) 98, (byte) 0, (byte) 0, (byte) 0, (byte) 11, (byte) 7, (byte) 2, (byte) 0, (byte) 0, (byte) 0, (byte) 45, (byte) 0, (byte) 40, (byte) 0, (byte) 89, (byte) 0, (byte) 0, (byte) 91, (byte) 22, (byte) 0, (byte) 23, (byte) 0};
+            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(true);
             LazyECPoint target = spy(new LazyECPoint(curveMock, byteArray));
             doReturn(eCPointMock).when(target).get();
             doReturn(true).when(eCPointMock).isInfinity();
@@ -260,18 +269,18 @@ public class LazyECPointSapientGeneratedJunit4Test {
     public void timesPow2Test() {
         //Arrange Statement(s)
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
-            byte[] byteArray = new byte[]{};
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3};
             eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(false);
             LazyECPoint target = spy(new LazyECPoint(curveMock, byteArray));
             doReturn(eCPointMock).when(target).get();
-            doReturn(eCPointMock2).when(eCPointMock).timesPow2(0);
+            doReturn(eCPointMock2).when(eCPointMock).timesPow2(2);
             //Act Statement(s)
-            ECPoint result = target.timesPow2(0);
+            ECPoint result = target.timesPow2(2);
             //Assert statement(s)
             assertThat(result, equalTo(eCPointMock2));
             eCKey.verify(() -> ECKey.isPubKeyCompressed(byteArray), atLeast(1));
             verify(target).get();
-            verify(eCPointMock).timesPow2(0);
+            verify(eCPointMock).timesPow2(2);
         }
     }
 
@@ -280,8 +289,8 @@ public class LazyECPointSapientGeneratedJunit4Test {
     public void getYCoordTest() {
         //Arrange Statement(s)
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
-            byte[] byteArray = new byte[]{};
-            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(false);
+            byte[] byteArray = new byte[]{(byte) 2, (byte) -117, (byte) -127, (byte) -99, (byte) 127, (byte) -113, (byte) 92, (byte) -99, (byte) 79, (byte) 94, (byte) 107, (byte) 31, (byte) 43, (byte) -114, (byte) -102, (byte) -99, (byte) 47, (byte) 61, (byte) 111, (byte) 95, (byte) 86, (byte) 109, (byte) 93, (byte) 15, (byte) 15, (byte) 63, (byte) -115, (byte) 93, (byte) -116, (byte) -99, (byte) 93};
+            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(true);
             LazyECPoint target = spy(new LazyECPoint(curveMock, byteArray));
             doReturn(eCPointMock).when(target).get();
             doReturn(eCFieldElementMock).when(eCPointMock).getYCoord();
@@ -300,7 +309,7 @@ public class LazyECPointSapientGeneratedJunit4Test {
     public void getZCoordsTest() {
         //Arrange Statement(s)
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
-            byte[] byteArray = new byte[]{};
+            byte[] byteArray = new byte[]{(byte) 4, (byte) 90, (byte) 63, (byte) 42, (byte) 27, (byte) 12, (byte) 125, (byte) 110, (byte) 95, (byte) 74, (byte) 59, (byte) 44, (byte) 29, (byte) 14, (byte) 127, (byte) 112, (byte) 97, (byte) 82, (byte) 67, (byte) 52, (byte) 37, (byte) 22, (byte) 7, (byte) 120, (byte) 105, (byte) 90, (byte) 75, (byte) 60, (byte) 45, (byte) 30, (byte) 15};
             eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(false);
             LazyECPoint target = spy(new LazyECPoint(curveMock, byteArray));
             doReturn(eCPointMock).when(target).get();
@@ -324,8 +333,8 @@ public class LazyECPointSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
-            byte[] byteArray = new byte[]{};
-            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(false);
+            byte[] byteArray = new byte[]{(byte) 0};
+            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(true);
             LazyECPoint target = spy(new LazyECPoint(curveMock, byteArray));
             doReturn(eCPointMock).when(target).get();
             doReturn(true).when(eCPointMock).isNormalized();
@@ -367,18 +376,18 @@ public class LazyECPointSapientGeneratedJunit4Test {
     public void multiplyTest() {
         //Arrange Statement(s)
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
-            byte[] byteArray = new byte[]{};
-            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(false);
+            byte[] byteArray = new byte[]{(byte) 2, (byte) -118, (byte) 124, (byte) 111, (byte) -89, (byte) -115, (byte) 58, (byte) 122, (byte) 125, (byte) 62, (byte) 126, (byte) 125, (byte) 57, (byte) 30, (byte) 31, (byte) 28, (byte) 61, (byte) 60, (byte) 61, (byte) 60};
+            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(true);
             LazyECPoint target = spy(new LazyECPoint(curveMock, byteArray));
             doReturn(eCPointMock).when(target).get();
-            doReturn(eCPointMock2).when(eCPointMock).multiply(new BigInteger("0"));
+            doReturn(eCPointMock2).when(eCPointMock).multiply(new BigInteger("2"));
             //Act Statement(s)
-            ECPoint result = target.multiply(new BigInteger("0"));
+            ECPoint result = target.multiply(new BigInteger("2"));
             //Assert statement(s)
             assertThat(result, equalTo(eCPointMock2));
             eCKey.verify(() -> ECKey.isPubKeyCompressed(byteArray), atLeast(1));
             verify(target).get();
-            verify(eCPointMock).multiply(new BigInteger("0"));
+            verify(eCPointMock).multiply(new BigInteger("2"));
         }
     }
 
@@ -387,8 +396,8 @@ public class LazyECPointSapientGeneratedJunit4Test {
     public void subtractTest() {
         //Arrange Statement(s)
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
-            byte[] byteArray = new byte[]{};
-            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(false);
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4};
+            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(true);
             LazyECPoint target = spy(new LazyECPoint(curveMock, byteArray));
             doReturn(eCPointMock).when(target).get();
             doReturn(eCPointMock2).when(eCPointMock).subtract(eCPointMock3);
@@ -433,8 +442,8 @@ public class LazyECPointSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
-            byte[] byteArray = new byte[]{};
-            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(false);
+            byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3};
+            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(true);
             LazyECPoint target = spy(new LazyECPoint(curveMock, byteArray));
             doReturn(eCPointMock).when(target).get();
             doReturn(false).when(eCPointMock).isValid();
@@ -452,8 +461,9 @@ public class LazyECPointSapientGeneratedJunit4Test {
     @Test()
     public void scaleYTest() {
         //Arrange Statement(s)
+        ECFieldElement eCFieldElementMock = mock(ECFieldElement.class, "null");
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
-            byte[] byteArray = new byte[]{};
+            byte[] byteArray = new byte[]{(byte) 0};
             eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(false);
             LazyECPoint target = spy(new LazyECPoint(curveMock, byteArray));
             doReturn(eCPointMock).when(target).get();
@@ -474,7 +484,7 @@ public class LazyECPointSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
             byte[] byteArray = new byte[]{};
-            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(false);
+            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(true);
             LazyECPoint target = spy(new LazyECPoint(curveMock, byteArray));
             doReturn(eCPointMock).when(target).get();
             doReturn(eCFieldElementMock).when(eCPointMock).getXCoord();
@@ -492,8 +502,9 @@ public class LazyECPointSapientGeneratedJunit4Test {
     @Test()
     public void scaleXTest() {
         //Arrange Statement(s)
+        ECFieldElement eCFieldElementMock = mock(ECFieldElement.class, "null");
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
-            byte[] byteArray = new byte[]{};
+            byte[] byteArray = new byte[]{(byte) 0};
             eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(false);
             LazyECPoint target = spy(new LazyECPoint(curveMock, byteArray));
             doReturn(eCPointMock).when(target).get();
@@ -514,7 +525,7 @@ public class LazyECPointSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
             byte[] byteArray = new byte[]{};
-            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(false);
+            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(true);
             LazyECPoint target = spy(new LazyECPoint(curveMock, byteArray));
             doReturn(eCPointMock).when(target).get();
             doReturn(eCPointMock2).when(eCPointMock).negate();
@@ -532,6 +543,7 @@ public class LazyECPointSapientGeneratedJunit4Test {
     @Test()
     public void threeTimesTest() {
         //Arrange Statement(s)
+        ECPoint eCPointMock2 = mock(ECPoint.class);
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
             byte[] byteArray = new byte[]{};
             eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(false);
@@ -553,7 +565,7 @@ public class LazyECPointSapientGeneratedJunit4Test {
     public void getZCoordTest() {
         //Arrange Statement(s)
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
-            byte[] byteArray = new byte[]{};
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3};
             eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(false);
             LazyECPoint target = spy(new LazyECPoint(curveMock, byteArray));
             doReturn(eCPointMock).when(target).get();
@@ -577,13 +589,13 @@ public class LazyECPointSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
-            byte[] byteArray = new byte[]{};
+            byte[] byteArray = new byte[]{(byte) 2, (byte) 3, (byte) 4};
             eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(false);
             LazyECPoint target = spy(new LazyECPoint(curveMock, byteArray));
-            doReturn(false).when(target).isCompressed();
+            doReturn(true).when(target).isCompressed();
             //Act Statement(s)
-            byte[] result = target.getEncoded(false);
-            byte[] byteResultArray = new byte[]{};
+            byte[] result = target.getEncoded(true);
+            byte[] byteResultArray = new byte[]{(byte) 2, (byte) 3, (byte) 4};
             //Assert statement(s)
             assertThat(result, equalTo(byteResultArray));
             eCKey.verify(() -> ECKey.isPubKeyCompressed(byteArray), atLeast(1));
@@ -600,20 +612,20 @@ public class LazyECPointSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
-            eCKey.when(() -> ECKey.isPubKeyCompressed((byte[]) null)).thenReturn(false);
+            eCKey.when(() -> ECKey.isPubKeyCompressed((byte[]) null)).thenReturn(true);
             LazyECPoint target = spy(new LazyECPoint(curveMock, (byte[]) null));
-            doReturn(false).when(target).isCompressed();
+            doReturn(true).when(target).isCompressed();
             doReturn(eCPointMock).when(target).get();
             byte[] byteArray = new byte[]{};
-            doReturn(byteArray).when(eCPointMock).getEncoded(false);
+            doReturn(byteArray).when(eCPointMock).getEncoded(true);
             //Act Statement(s)
-            byte[] result = target.getEncoded(false);
+            byte[] result = target.getEncoded(true);
             //Assert statement(s)
             assertThat(result, equalTo(byteArray));
             eCKey.verify(() -> ECKey.isPubKeyCompressed((byte[]) null), atLeast(1));
             verify(target).isCompressed();
             verify(target).get();
-            verify(eCPointMock).getEncoded(false);
+            verify(eCPointMock).getEncoded(true);
         }
     }
 
@@ -623,7 +635,7 @@ public class LazyECPointSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
             byte[] byteArray = new byte[]{};
-            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(false);
+            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(true);
             LazyECPoint target = spy(new LazyECPoint(curveMock, byteArray));
             doReturn(eCPointMock).when(target).get();
             doReturn(eCPointMock2).when(eCPointMock).add(eCPointMock3);
@@ -642,7 +654,7 @@ public class LazyECPointSapientGeneratedJunit4Test {
     public void twicePlusTest() {
         //Arrange Statement(s)
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
-            byte[] byteArray = new byte[]{};
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3};
             eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(false);
             LazyECPoint target = spy(new LazyECPoint(curveMock, byteArray));
             doReturn(eCPointMock).when(target).get();
@@ -661,10 +673,10 @@ public class LazyECPointSapientGeneratedJunit4Test {
     @Test()
     public void getCurveTest() {
         //Arrange Statement(s)
-        ECCurve eCCurveMock = mock(ECCurve.class);
+        ECCurve eCCurveMock = mock(ECCurve.class, "UnknownObjectContent{target='org.bouncycastle.math.ec.ECCurve', onlyPojoFunctions=false, builderPattern=false}");
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
-            byte[] byteArray = new byte[]{};
-            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(false);
+            byte[] byteArray = new byte[]{(byte) 2, (byte) -118, (byte) -124, (byte) 65, (byte) -101, (byte) 111, (byte) -71, (byte) 61, (byte) -106, (byte) -121, (byte) 14, (byte) 90, (byte) 56, (byte) 95, (byte) 22, (byte) -113, (byte) 28, (byte) 62, (byte) 11, (byte) 86};
+            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(true);
             LazyECPoint target = spy(new LazyECPoint(curveMock, byteArray));
             doReturn(eCPointMock).when(target).get();
             doReturn(eCCurveMock).when(eCPointMock).getCurve();
@@ -683,8 +695,8 @@ public class LazyECPointSapientGeneratedJunit4Test {
     public void normalizeTest() {
         //Arrange Statement(s)
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
-            byte[] byteArray = new byte[]{};
-            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(false);
+            byte[] byteArray = new byte[]{(byte) 2, (byte) 121, (byte) 0, (byte) 102, (byte) 126, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 85, (byte) 0, (byte) 98, (byte) 0, (byte) 0, (byte) 0, (byte) 11, (byte) 7, (byte) 2, (byte) 0, (byte) 0, (byte) 0, (byte) 45, (byte) 0, (byte) 40, (byte) 0, (byte) 89, (byte) 0, (byte) 0, (byte) 91, (byte) 22, (byte) 0, (byte) 23};
+            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(true);
             LazyECPoint target = spy(new LazyECPoint(curveMock, byteArray));
             doReturn(eCPointMock).when(target).get();
             doReturn(eCPointMock2).when(eCPointMock).normalize();
@@ -704,7 +716,7 @@ public class LazyECPointSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
             byte[] byteArray = new byte[]{};
-            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(false);
+            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(true);
             LazyECPoint target = spy(new LazyECPoint(curveMock, byteArray));
             doReturn(eCPointMock).when(target).normalize();
             doReturn(eCFieldElementMock).when(eCPointMock).getYCoord();
@@ -722,6 +734,7 @@ public class LazyECPointSapientGeneratedJunit4Test {
     @Test()
     public void twiceTest() {
         //Arrange Statement(s)
+        ECPoint eCPointMock2 = mock(ECPoint.class);
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
             byte[] byteArray = new byte[]{};
             eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(false);
@@ -743,8 +756,8 @@ public class LazyECPointSapientGeneratedJunit4Test {
     public void getAffineYCoordTest() {
         //Arrange Statement(s)
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
-            byte[] byteArray = new byte[]{};
-            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(false);
+            byte[] byteArray = new byte[]{(byte) 0};
+            eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(true);
             LazyECPoint target = spy(new LazyECPoint(curveMock, byteArray));
             doReturn(eCPointMock).when(target).get();
             doReturn(eCFieldElementMock).when(eCPointMock).getAffineYCoord();
@@ -762,6 +775,7 @@ public class LazyECPointSapientGeneratedJunit4Test {
     @Test()
     public void getAffineXCoordTest() {
         //Arrange Statement(s)
+        ECFieldElement eCFieldElementMock = mock(ECFieldElement.class);
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
             byte[] byteArray = new byte[]{};
             eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(false);
@@ -782,6 +796,7 @@ public class LazyECPointSapientGeneratedJunit4Test {
     @Test()
     public void getXTest() {
         //Arrange Statement(s)
+        ECFieldElement eCFieldElementMock = mock(ECFieldElement.class);
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
             byte[] byteArray = new byte[]{};
             eCKey.when(() -> ECKey.isPubKeyCompressed(byteArray)).thenReturn(false);

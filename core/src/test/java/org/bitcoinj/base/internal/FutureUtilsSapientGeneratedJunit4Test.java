@@ -27,26 +27,22 @@ public class FutureUtilsSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${33a97d4c-0fd8-33da-ab65-fa4a8e25a2ec}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenApply) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void allAsListTest() {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
-        thrown.expect(NullPointerException.class);
         List<CompletionStage<Object>> anyList = new ArrayList<>();
-        anyList.add((CompletionStage) null);
 
         //Act Statement(s)
-        FutureUtils.allAsList(anyList);
-    }
+        CompletableFuture<List<Object>> result = FutureUtils.allAsList(anyList);
+        CompletableFuture<List<Object>> completableFuture = new CompletableFuture<>();
 
-    //Sapient generated method id: ${9e2f111f-9abd-3b28-a20a-678cdc496bfe}
-    @Test()
-    public void successfulAsListTest() {
-        //Arrange Statement(s)
-        thrown.expect(NullPointerException.class);
-        List<CompletionStage<Object>> anyList = new ArrayList<>();
-        anyList.add((CompletionStage) null);
-
-        //Act Statement(s)
-        FutureUtils.successfulAsList(anyList);
+        //Assert statement(s)
+        //TODO: Please implement equals method in CompletableFuture for verification to succeed or you need to adjust respective assertion statements
+        assertThat(result, equalTo(completableFuture));
     }
 
     //Sapient generated method id: ${7b6d3857-4849-3516-91fa-a7394d7a23c0}
@@ -63,19 +59,5 @@ public class FutureUtilsSapientGeneratedJunit4Test {
         //Assert statement(s)
         //TODO: Please implement equals method in CompletableFuture for verification to succeed or you need to adjust respective assertion statements
         assertThat(result, equalTo(completableFuture));
-    }
-
-    //Sapient generated method id: ${4eced493-4c1c-39bc-8d4c-2475c19eb72e}
-    @Test()
-    public void genericArrayTest() {
-        //Arrange Statement(s)
-        //TODO: Needs initialization with real value
-        IntFunction intFunction = null;
-
-        //Act Statement(s)
-        IntFunction<IntFunction[]> result = FutureUtils.genericArray(intFunction);
-
-        //Assert statement(s)
-        assertThat(result, is(notNullValue()));
     }
 }

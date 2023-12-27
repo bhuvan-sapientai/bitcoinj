@@ -63,52 +63,424 @@ public class TestNet3ParamsSapientGeneratedJunit4Test {
     @Rule()
     public ExpectedException thrown = ExpectedException.none();
 
+    private final Block blockMock = mock(Block.class);
+
+    private final BlockStore blockStoreMock = mock(BlockStore.class);
+
+    private final Block nextBlockMock = mock(Block.class);
+
+    private final Block prevMock = mock(Block.class);
+
+    private final Sha256Hash sha256HashMock = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock10 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock100 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock101 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock102 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock103 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock104 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock105 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock106 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock107 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock108 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock109 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock11 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock110 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock111 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock112 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock113 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock114 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock115 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock116 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock117 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock118 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock119 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock12 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock120 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock121 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock122 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock123 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock124 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock125 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock126 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock127 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock128 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock129 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock13 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock130 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock131 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock132 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock133 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock134 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock135 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock136 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock137 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock138 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock139 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock14 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock140 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock141 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock142 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock143 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock144 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock145 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock146 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock147 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock148 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock149 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock15 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock150 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock151 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock152 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock153 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock154 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock155 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock156 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock157 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock158 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock159 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock16 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock160 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock161 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock162 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock163 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock164 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock165 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock166 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock167 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock168 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock169 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock17 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock170 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock171 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock172 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock173 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock174 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock175 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock176 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock177 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock178 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock179 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock18 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock180 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock181 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock182 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock183 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock184 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock185 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock186 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock187 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock188 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock189 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock19 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock190 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock191 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock192 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock193 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock194 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock195 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock196 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock197 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock198 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock199 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock20 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock200 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock201 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock202 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock203 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock21 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock22 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock23 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock24 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock25 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock26 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock27 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock28 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock29 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock3 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock30 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock31 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock32 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock33 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock34 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock35 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock36 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock37 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock38 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock39 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock4 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock40 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock41 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock42 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock43 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock44 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock45 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock46 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock47 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock48 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock49 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock5 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock50 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock51 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock52 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock53 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock54 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock55 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock56 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock57 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock58 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock59 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock6 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock60 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock61 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock62 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock63 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock64 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock65 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock66 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock67 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock68 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock69 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock7 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock70 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock71 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock72 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock73 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock74 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock75 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock76 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock77 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock78 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock79 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock8 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock80 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock81 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock82 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock83 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock84 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock85 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock86 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock87 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock88 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock89 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock9 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock90 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock91 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock92 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock93 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock94 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock95 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock96 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock97 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock98 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock99 = mock(Sha256Hash.class);
+
     @After()
     public void afterTest() throws Exception {
         if (autoCloseableMocks != null)
             autoCloseableMocks.close();
-    }
-
-    //Sapient generated method id: ${32a8d14c-b4e9-37a4-9736-3367f8ecb089}
-    @Test()
-    public void getWhenInstanceIsNull() {
-        /* Branches:
-         * (instance == null) : true
-         */
-        //Act Statement(s)
-        TestNet3Params result = TestNet3Params.get();
-        TestNet3Params testNet3Params = new TestNet3Params();
-        //Assert statement(s)
-        assertThat(result, equalTo(testNet3Params));
-    }
-
-    //Sapient generated method id: ${6af115c8-0813-3ff3-9b71-4c6682fe756c}
-    @Ignore()
-    @Test()
-    public void getGenesisBlockWhenGenesisBlockIsNull() {
-        /* Branches:
-         * (genesisBlock == null) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<Block> block = mockStatic(Block.class)) {
-            block.when(() -> Block.createGenesis((Instant) any(), eq(486604799L), eq(414098458L))).thenReturn(genesisBlockMock);
-            preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            target = new TestNet3Params();
-            autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(sha256HashMock).when(genesisBlockMock).getHash();
-            //Act Statement(s)
-            Block result = target.getGenesisBlock();
-            //Assert statement(s)
-            assertThat(result, equalTo(genesisBlockMock));
-            block.verify(() -> Block.createGenesis((Instant) any(), eq(486604799L), eq(414098458L)));
-            preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
-            verify(genesisBlockMock).getHash();
-        }
     }
 
     //Sapient generated method id: ${5018bc86-ab5b-396f-9b20-9e36225ba334}
@@ -125,33 +497,22 @@ public class TestNet3ParamsSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Block nextBlockMock = mock(Block.class);
-        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
-        BlockStore blockStoreMock = mock(BlockStore.class);
-        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
-            Instant instant = Instant.now();
-            doReturn(instant).when(nextBlockMock).time();
-            doReturn(3L, 2L).when(nextBlockMock).getDifficultyTarget();
-            byteUtils.when(() -> ByteUtils.decodeCompactBits(486604799L)).thenReturn(new BigInteger("26959535291011309493156476344723991336010898738574164086137773096960"));
-            target = spy(new TestNet3Params());
-            autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(false).when(target).isDifficultyTransitionPoint(2);
-            doReturn(false).when(target).isDifficultyTransitionPoint(0);
-            thrown.expect(VerificationException.class);
-            Instant instant2 = Instant.now();
-            List list = new ArrayList<>();
-            Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant2, 0L, 3L, list);
-            StoredBlock storedBlock = new StoredBlock(block, new BigInteger("0"), 2);
-            //Act Statement(s)
-            target.checkDifficultyTransitions(storedBlock, nextBlockMock, blockStoreMock);
-            //Assert statement(s)
-            verify(nextBlockMock).time();
-            verify(nextBlockMock, times(2)).getDifficultyTarget();
-            byteUtils.verify(() -> ByteUtils.decodeCompactBits(486604799L), atLeast(1));
-            verify(target).isDifficultyTransitionPoint(2);
-            verify(target).isDifficultyTransitionPoint(0);
-        }
+        TestNet3Params target = spy(new TestNet3Params());
+        doReturn(false).when(target).isDifficultyTransitionPoint(8);
+        thrown.expect(VerificationException.class);
+        Instant instant = Instant.now();
+        List list = new ArrayList<>();
+        Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, -1L, list);
+        StoredBlock storedBlock = new StoredBlock(block, new BigInteger("0"), 8);
+        Instant instant2 = Instant.now();
+        Block block2 = Block.createGenesis(instant2, 0L);
+        BlockStore blockStoreMock = mock(BlockStore.class, "int");
+
+        //Act Statement(s)
+        target.checkDifficultyTransitions(storedBlock, block2, blockStoreMock);
+
+        //Assert statement(s)
+        verify(target, times(2)).isDifficultyTransitionPoint(8);
     }
 
     //Sapient generated method id: ${ecc3e692-0795-3ff9-8f53-327f5e73c919}
@@ -168,17 +529,12 @@ public class TestNet3ParamsSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Block nextBlockMock = mock(Block.class);
-        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
-        BlockStore blockStoreMock = mock(BlockStore.class);
         try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
             Instant instant = Instant.now();
             doReturn(instant).when(nextBlockMock).time();
             doReturn(1L).when(nextBlockMock).getDifficultyTarget();
             byteUtils.when(() -> ByteUtils.decodeCompactBits(486604799L)).thenReturn(new BigInteger("26959535291011309493156476344723991336010898738574164086137773096960"));
-            target = spy(new TestNet3Params());
-            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            TestNet3Params target = spy(new TestNet3Params());
             doReturn(false).when(target).isDifficultyTransitionPoint(0);
             Instant instant2 = Instant.now();
             List list = new ArrayList<>();
@@ -209,33 +565,25 @@ public class TestNet3ParamsSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Block prevMock = mock(Block.class);
-        Sha256Hash sha256HashMock = mock(Sha256Hash.class, "checkDifficultyTransitions_sha256Hash1");
-        Block nextBlockMock = mock(Block.class);
-        BlockStore blockStoreMock = mock(BlockStore.class);
-        try (MockedStatic<Stopwatch> stopwatch = mockStatic(Stopwatch.class);
-             MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
-            doReturn(sha256HashMock).when(prevMock).getHash();
+        try (MockedStatic<Stopwatch> stopwatch = mockStatic(Stopwatch.class)) {
             Instant instant = Instant.now();
             doReturn(instant).when(nextBlockMock).time();
-            doReturn(null).when(blockStoreMock).get(sha256HashMock);
-            byteUtils.when(() -> ByteUtils.decodeCompactBits(486604799L)).thenReturn(new BigInteger("26959535291011309493156476344723991336010898738574164086137773096960"));
+            doReturn(null).when(blockStoreMock).get((Sha256Hash) any());
             Stopwatch stopwatch2 = Stopwatch.start();
             stopwatch.when(() -> Stopwatch.start()).thenReturn(stopwatch2);
-            target = spy(new TestNet3Params());
-            autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(false, true).when(target).isDifficultyTransitionPoint(0);
+            TestNet3Params target = spy(new TestNet3Params());
+            doReturn(false).when(target).isDifficultyTransitionPoint(1);
+            doReturn(true).when(target).isDifficultyTransitionPoint(0);
             thrown.expect(VerificationException.class);
-            StoredBlock storedBlock = new StoredBlock(prevMock, new BigInteger("0"), 0);
+            StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
             //Act Statement(s)
             target.checkDifficultyTransitions(storedBlock, nextBlockMock, blockStoreMock);
             //Assert statement(s)
-            verify(prevMock).getHash();
             verify(nextBlockMock).time();
-            verify(blockStoreMock).get(sha256HashMock);
-            byteUtils.verify(() -> ByteUtils.decodeCompactBits(486604799L), atLeast(1));
+            verify(blockStoreMock).get((Sha256Hash) any());
             stopwatch.verify(() -> Stopwatch.start(), atLeast(1));
-            verify(target, times(2)).isDifficultyTransitionPoint(0);
+            verify(target).isDifficultyTransitionPoint(1);
+            verify(target).isDifficultyTransitionPoint(0);
         }
     }
 
@@ -256,212 +604,6 @@ public class TestNet3ParamsSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Block prevMock = mock(Block.class);
-        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
-        Block nextBlockMock = mock(Block.class);
-        BlockStore blockStoreMock = mock(BlockStore.class);
-        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock3 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock4 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock5 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock6 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock7 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock8 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock9 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock10 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock11 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock12 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock13 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock14 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock15 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock16 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock17 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock18 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock19 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock20 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock21 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock22 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock23 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock24 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock25 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock26 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock27 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock28 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock29 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock30 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock31 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock32 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock33 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock34 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock35 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock36 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock37 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock38 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock39 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock40 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock41 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock42 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock43 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock44 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock45 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock46 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock47 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock48 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock49 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock50 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock51 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock52 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock53 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock54 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock55 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock56 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock57 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock58 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock59 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock60 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock61 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock62 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock63 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock64 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock65 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock66 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock67 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock68 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock69 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock70 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock71 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock72 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock73 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock74 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock75 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock76 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock77 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock78 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock79 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock80 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock81 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock82 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock83 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock84 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock85 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock86 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock87 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock88 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock89 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock90 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock91 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock92 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock93 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock94 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock95 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock96 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock97 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock98 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock99 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock100 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock101 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock102 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock103 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock104 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock105 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock106 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock107 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock108 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock109 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock110 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock111 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock112 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock113 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock114 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock115 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock116 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock117 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock118 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock119 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock120 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock121 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock122 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock123 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock124 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock125 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock126 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock127 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock128 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock129 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock130 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock131 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock132 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock133 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock134 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock135 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock136 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock137 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock138 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock139 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock140 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock141 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock142 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock143 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock144 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock145 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock146 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock147 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock148 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock149 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock150 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock151 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock152 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock153 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock154 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock155 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock156 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock157 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock158 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock159 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock160 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock161 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock162 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock163 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock164 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock165 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock166 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock167 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock168 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock169 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock170 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock171 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock172 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock173 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock174 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock175 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock176 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock177 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock178 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock179 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock180 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock181 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock182 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock183 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock184 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock185 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock186 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock187 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock188 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock189 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock190 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock191 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock192 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock193 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock194 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock195 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock196 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock197 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock198 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock199 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock200 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock201 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock202 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock203 = mock(Sha256Hash.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Stopwatch> stopwatch = mockStatic(Stopwatch.class);
              MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
@@ -971,15 +1113,14 @@ public class TestNet3ParamsSapientGeneratedJunit4Test {
             Instant instant102 = Instant.now();
             List list101 = new ArrayList<>();
             Block block101 = new Block(0L, sha256HashMock202, sha256HashMock203, instant102, 0L, 0L, list101);
-            StoredBlock storedBlock101 = new StoredBlock(block101, new BigInteger("0"), 1);
+            StoredBlock storedBlock101 = new StoredBlock(block101, new BigInteger("0"), 2);
             doReturn(storedBlock101).when(blockStoreMock).get(sha256HashMock201);
             byteUtils.when(() -> ByteUtils.decodeCompactBits(486604799L)).thenReturn(new BigInteger("26959535291011309493156476344723991336010898738574164086137773096960"));
             Stopwatch stopwatch2 = Stopwatch.start();
             stopwatch.when(() -> Stopwatch.start()).thenReturn(stopwatch2);
             IllegalStateException illegalStateException = new IllegalStateException();
             preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
-            target = spy(new TestNet3Params());
-            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            TestNet3Params target = spy(new TestNet3Params());
             doReturn(false, true, true).when(target).isDifficultyTransitionPoint(0);
             thrown.expect(IllegalStateException.class);
             StoredBlock storedBlock102 = new StoredBlock(prevMock, new BigInteger("0"), 0);
@@ -1113,212 +1254,6 @@ public class TestNet3ParamsSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Block prevMock = mock(Block.class);
-        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
-        Block nextBlockMock = mock(Block.class);
-        BlockStore blockStoreMock = mock(BlockStore.class);
-        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock3 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock4 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock5 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock6 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock7 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock8 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock9 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock10 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock11 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock12 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock13 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock14 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock15 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock16 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock17 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock18 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock19 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock20 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock21 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock22 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock23 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock24 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock25 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock26 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock27 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock28 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock29 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock30 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock31 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock32 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock33 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock34 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock35 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock36 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock37 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock38 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock39 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock40 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock41 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock42 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock43 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock44 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock45 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock46 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock47 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock48 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock49 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock50 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock51 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock52 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock53 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock54 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock55 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock56 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock57 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock58 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock59 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock60 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock61 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock62 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock63 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock64 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock65 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock66 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock67 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock68 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock69 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock70 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock71 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock72 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock73 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock74 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock75 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock76 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock77 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock78 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock79 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock80 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock81 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock82 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock83 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock84 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock85 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock86 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock87 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock88 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock89 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock90 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock91 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock92 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock93 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock94 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock95 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock96 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock97 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock98 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock99 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock100 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock101 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock102 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock103 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock104 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock105 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock106 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock107 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock108 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock109 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock110 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock111 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock112 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock113 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock114 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock115 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock116 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock117 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock118 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock119 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock120 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock121 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock122 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock123 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock124 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock125 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock126 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock127 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock128 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock129 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock130 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock131 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock132 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock133 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock134 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock135 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock136 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock137 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock138 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock139 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock140 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock141 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock142 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock143 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock144 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock145 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock146 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock147 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock148 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock149 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock150 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock151 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock152 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock153 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock154 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock155 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock156 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock157 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock158 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock159 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock160 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock161 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock162 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock163 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock164 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock165 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock166 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock167 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock168 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock169 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock170 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock171 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock172 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock173 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock174 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock175 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock176 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock177 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock178 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock179 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock180 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock181 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock182 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock183 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock184 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock185 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock186 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock187 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock188 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock189 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock190 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock191 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock192 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock193 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock194 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock195 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock196 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock197 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock198 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock199 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock200 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock201 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock202 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock203 = mock(Sha256Hash.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Stopwatch> stopwatch = mockStatic(Stopwatch.class);
              MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
@@ -1828,15 +1763,14 @@ public class TestNet3ParamsSapientGeneratedJunit4Test {
             Instant instant102 = Instant.now();
             List list101 = new ArrayList<>();
             Block block101 = new Block(0L, sha256HashMock202, sha256HashMock203, instant102, 0L, 0L, list101);
-            StoredBlock storedBlock101 = new StoredBlock(block101, new BigInteger("0"), 1);
+            StoredBlock storedBlock101 = new StoredBlock(block101, new BigInteger("0"), 2);
             doReturn(storedBlock101).when(blockStoreMock).get(sha256HashMock201);
             byteUtils.when(() -> ByteUtils.decodeCompactBits(486604799L)).thenReturn(new BigInteger("26959535291011309493156476344723991336010898738574164086137773096960"));
             Stopwatch stopwatch2 = Stopwatch.start();
             stopwatch.when(() -> Stopwatch.start()).thenReturn(stopwatch2);
             IllegalStateException illegalStateException = new IllegalStateException();
             preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
-            target = spy(new TestNet3Params());
-            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            TestNet3Params target = spy(new TestNet3Params());
             doReturn(false, true, false).when(target).isDifficultyTransitionPoint(0);
             thrown.expect(IllegalStateException.class);
             StoredBlock storedBlock102 = new StoredBlock(prevMock, new BigInteger("0"), 0);
@@ -1971,47 +1905,28 @@ public class TestNet3ParamsSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        StoredBlock storedPrevMock = mock(StoredBlock.class);
-        doReturn(0).when(storedPrevMock).getHeight();
-        Block blockMock = mock(Block.class);
-        doReturn(blockMock).when(storedPrevMock).getHeader();
-        doReturn(0L).when(blockMock).getTimeSeconds();
-        doReturn(new BigInteger("0")).when(blockMock).getDifficultyTargetAsInteger();
-        Block blockMock2 = mock(Block.class);
-        StoredBlock storedBlock = new StoredBlock(blockMock2, new BigInteger("0"), 0);
-        BlockStore blockStoreMock = mock(BlockStore.class);
-        doReturn(storedBlock).when(storedPrevMock).getPrev(blockStoreMock);
-        doReturn(new BigInteger("0")).when(blockMock2).getDifficultyTargetAsInteger();
-        doReturn(0L).when(blockMock2).getDifficultyTarget();
-        Block nextBlockMock = mock(Block.class);
-        Instant instant = Instant.now();
-        doReturn(instant).when(nextBlockMock).time();
-        doReturn(0L).when(nextBlockMock).getTimeSeconds();
-        doReturn(new BigInteger("0")).when(nextBlockMock).getDifficultyTargetAsInteger();
-        doReturn(0L).when(nextBlockMock).getDifficultyTarget();
-        target = spy(new TestNet3Params());
-        autoCloseableMocks = MockitoAnnotations.openMocks(this);
+        doReturn(1703677799L).when(prevMock).getTimeSeconds();
+        doReturn(new BigInteger("1703676600")).when(prevMock).getDifficultyTargetAsInteger();
+        doReturn(1703676600L).when(prevMock).getDifficultyTarget();
+        TestNet3Params target = spy(new TestNet3Params());
         doReturn(false).when(target).isDifficultyTransitionPoint(0);
-        Block blockMock3 = mock(Block.class);
-        Block blockMock4 = mock(Block.class);
-        doReturn(blockMock3, blockMock4).when(target).getGenesisBlock();
+        doReturn(blockMock).when(target).getGenesisBlock();
         thrown.expect(VerificationException.class);
+        StoredBlock storedBlock = new StoredBlock(prevMock, new BigInteger("0"), 0);
+        Instant instant = Instant.now();
+        List list = new ArrayList<>();
+        Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 1703676600L, list);
+        BlockStore blockStoreMock = mock(BlockStore.class, "null");
+
         //Act Statement(s)
-        target.checkDifficultyTransitions(storedPrevMock, nextBlockMock, blockStoreMock);
+        target.checkDifficultyTransitions(storedBlock, block, blockStoreMock);
+
         //Assert statement(s)
-        verify(storedPrevMock, times(2)).getHeight();
-        verify(storedPrevMock, times(3)).getHeader();
-        verify(blockMock).getTimeSeconds();
-        verify(blockMock).getDifficultyTargetAsInteger();
-        verify(storedPrevMock).getPrev(blockStoreMock);
-        verify(blockMock2).getDifficultyTargetAsInteger();
-        verify(blockMock2).getDifficultyTarget();
-        verify(nextBlockMock).time();
-        verify(nextBlockMock).getTimeSeconds();
-        verify(nextBlockMock).getDifficultyTargetAsInteger();
-        verify(nextBlockMock).getDifficultyTarget();
+        verify(prevMock).getTimeSeconds();
+        verify(prevMock).getDifficultyTargetAsInteger();
+        verify(prevMock).getDifficultyTarget();
         verify(target).isDifficultyTransitionPoint(0);
-        verify(target, times(2)).getGenesisBlock();
+        verify(target).getGenesisBlock();
     }
 
     //Sapient generated method id: ${f7e5b438-9a95-3a95-9689-67f812196cdc}
@@ -2031,48 +1946,25 @@ public class TestNet3ParamsSapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
-        //Arrange Statement(s)
-        StoredBlock storedPrevMock = mock(StoredBlock.class);
-        Block blockMock = mock(Block.class);
-        Block blockMock2 = mock(Block.class);
-        Block blockMock3 = mock(Block.class);
-        Block blockMock4 = mock(Block.class);
-        BlockStore blockStoreMock = mock(BlockStore.class);
-        Block nextBlockMock = mock(Block.class);
-        Block blockMock5 = mock(Block.class);
-        Block blockMock6 = mock(Block.class);
+        Block nextBlockMock = mock(Block.class, "000000000933ea01ad0ee984209779baaec3ced90fa3f408719526f8d77f4943");
+        BlockStore blockStoreMock = mock(BlockStore.class, "{}");
         try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
-            doReturn(0).when(storedPrevMock).getHeight();
-            doReturn(0L).when(blockMock).getTimeSeconds();
-            doReturn(blockMock, blockMock2, blockMock3).when(storedPrevMock).getHeader();
-            doReturn(new BigInteger("0")).when(blockMock3).getDifficultyTargetAsInteger();
-            StoredBlock storedBlock = new StoredBlock(blockMock4, new BigInteger("0"), 0);
-            doReturn(storedBlock).when(storedPrevMock).getPrev(blockStoreMock);
-            doReturn(new BigInteger("0")).when(blockMock4).getDifficultyTargetAsInteger();
+            doReturn(1640995200L).when(prevMock).getTimeSeconds();
             Instant instant = Instant.now();
             doReturn(instant).when(nextBlockMock).time();
             doReturn(0L).when(nextBlockMock).getTimeSeconds();
-            doReturn(new BigInteger("0")).when(nextBlockMock).getDifficultyTargetAsInteger();
-            byteUtils.when(() -> ByteUtils.decodeCompactBits(486604799L)).thenReturn(new BigInteger("26959535291011309493156476344723991336010898738574164086137773096960"));
-            target = spy(new TestNet3Params());
-            autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(false).when(target).isDifficultyTransitionPoint(0);
-            doReturn(blockMock5, blockMock6).when(target).getGenesisBlock();
+            byteUtils.when(() -> ByteUtils.decodeCompactBits(486604799L)).thenReturn(new BigInteger("486604799"));
+            TestNet3Params target = spy(new TestNet3Params());
+            doReturn(false).when(target).isDifficultyTransitionPoint(1000);
+            StoredBlock storedBlock = new StoredBlock(prevMock, new BigInteger("0"), 1000);
             //Act Statement(s)
-            target.checkDifficultyTransitions(storedPrevMock, nextBlockMock, blockStoreMock);
+            target.checkDifficultyTransitions(storedBlock, nextBlockMock, blockStoreMock);
             //Assert statement(s)
-            verify(storedPrevMock, times(2)).getHeight();
-            verify(storedPrevMock, times(3)).getHeader();
-            verify(blockMock).getTimeSeconds();
-            verify(blockMock3).getDifficultyTargetAsInteger();
-            verify(storedPrevMock).getPrev(blockStoreMock);
-            verify(blockMock4).getDifficultyTargetAsInteger();
+            verify(prevMock).getTimeSeconds();
             verify(nextBlockMock).time();
             verify(nextBlockMock).getTimeSeconds();
-            verify(nextBlockMock).getDifficultyTargetAsInteger();
             byteUtils.verify(() -> ByteUtils.decodeCompactBits(486604799L), atLeast(1));
-            verify(target).isDifficultyTransitionPoint(0);
-            verify(target, times(2)).getGenesisBlock();
+            verify(target).isDifficultyTransitionPoint(1000);
         }
     }
 }

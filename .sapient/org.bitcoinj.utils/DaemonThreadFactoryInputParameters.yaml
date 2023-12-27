@@ -17,12 +17,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "D4A7B2093A9EEE121BBEE08D974560E0"
+    modelFingerprint: "93B6491D31007EABA04422D99937DB4A"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "C5AA1AE099D98DE853C93C74963D3C8E"
+      modelFingerprint: "C410650FEA37499DC51695B502A28CF8"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -36,7 +36,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "name1"
+                value: "Thread name"
+              suggestedContent: !<regular>
+                value: "Thread name"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -50,6 +52,10 @@ methods:
           - name: "name"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: "Thread name"
+              suggestedContent: !<regular>
+                value: "Thread name"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -66,13 +72,17 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "runnable"
-      modelFingerprint: "290CCB8247553C9EC1AC4D15EF665462"
+      modelFingerprint: "BBE96A80D0C07B407693184409F9FA9B"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "NULL"
+        content: !<unknown_object>
+          target: "java.lang.Runnable"
+          onlyPojoFunctions: false
+          builderPattern: false
         suggestedContent: !<unknown_object>
           target: "java.lang.Runnable"
           onlyPojoFunctions: false
@@ -86,7 +96,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "6552197F7D70D13953BB1B90B87A36EA"
+      modelFingerprint: "096170627278A2AA42823D0F8521C91A"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -114,6 +124,10 @@ methods:
           - name: "arg0"
             value:
               sapientType: "NULL"
+              content: !<unknown_object>
+                target: "java.lang.Runnable"
+                onlyPojoFunctions: false
+                builderPattern: false
               suggestedContent: !<unknown_object>
                 target: "java.lang.Runnable"
                 onlyPojoFunctions: false
@@ -140,7 +154,7 @@ methods:
           methodParameters:
           - name: "arg0"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "NULL"
               suggestedContent: !<unknown_object>
                 target: "java.lang.Runnable"
                 onlyPojoFunctions: false

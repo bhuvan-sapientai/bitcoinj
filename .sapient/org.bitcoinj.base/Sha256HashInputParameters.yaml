@@ -1372,7 +1372,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -1390,13 +1390,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "38A238092C6D086AEFDE2F81E94EA2A3"
+    modelFingerprint: "C1679EA9F91C65A41EB4BD1A64E095D8"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "hexString"
-      modelFingerprint: "20C50CF44E6FD1E3D9A0A6858FC3DAF5"
+      modelFingerprint: "F66C0FF2E36FF89095230FF8815E176C"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1404,9 +1404,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "A"
+          value: "<input_hex_string>"
         suggestedContent: !<regular>
-          value: "A"
+          value: "<input_hex_string>"
         valueType: "java.lang.String"
         uuid: "wrap_string1"
         fixed: false
@@ -1416,7 +1416,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ByteUtils"
-      modelFingerprint: "8DF576773E02A5B41413AB96E7673A12"
+      modelFingerprint: "BDC618D580667598347ECF07C1A560DA"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1436,9 +1436,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "A"
+              value: "<input_hex_string>"
             suggestedContent: !<regular>
-              value: "A"
+              value: "<input_hex_string>"
             valueType: "java.lang.String"
             uuid: "wrap_string1"
             fixed: false
@@ -1461,7 +1461,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "33B6FF417092E0DA2389537A8F9656D4"
+      modelFingerprint: "2562EAFD76EEA0E04326CBDD967BB9A8"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1491,7 +1491,69 @@ methods:
             explicitCastNeeded: false
         signature: "wrap(byte[]): Sha256Hash"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.base.Sha256Hash"
+            method: "read"
+            methodParameters:
+            - name: "buf"
+              value:
+                sapientType: "OBJECT"
+                content: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 0
+                      valueType: "int"
+                      uuid: "wrap_sha256Hash2-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                suggestedContent: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      valueType: "int"
+                      uuid: "wrap_sha256Hash2-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "java.nio.ByteBuffer"
+                uuid: "wrap_sha256Hash2-buf"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.Sha256Hash"
+            method: "read"
+            methodParameters:
+            - name: "buf"
+              value:
+                sapientType: "UNKNOWN"
+                suggestedContent: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      valueType: "int"
+                      uuid: "wrap_sha256Hash2-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "java.nio.ByteBuffer"
+                uuid: "wrap_sha256Hash2-buf"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "org.bitcoinj.base.Sha256Hash"
           uuid: "wrap_sha256Hash2"
           fixed: false
@@ -1502,13 +1564,75 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "D5F995FF16038F8C8CEB6ED663606C67"
+      modelFingerprint: "FD38736EFDB93214429E62ED519DE421"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.Sha256Hash"
+          method: "read"
+          methodParameters:
+          - name: "buf"
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "int"
+                    uuid: "wrap_sha256Hash2-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "int"
+                    uuid: "wrap_sha256Hash2-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.nio.ByteBuffer"
+              uuid: "wrap_sha256Hash2-buf"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.Sha256Hash"
+          method: "read"
+          methodParameters:
+          - name: "buf"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "int"
+                    uuid: "wrap_sha256Hash2-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.nio.ByteBuffer"
+              uuid: "wrap_sha256Hash2-buf"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.base.Sha256Hash"
         uuid: "wrap_sha256Hash2"
         fixed: false
@@ -1518,11 +1642,11 @@ methods:
       filledByUser: false
     uuid: "8e6fb3b1-f009-3bdd-83ef-3241bcee11da"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "wrapReversed"
     returnType: "org.bitcoinj.base.Sha256Hash"
@@ -1570,7 +1694,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "REAL"
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.base.internal.ByteUtils"
         uuid: "org.bitcoinj.base.internal.ByteUtils"
         fixed: false
@@ -1668,7 +1792,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -1688,13 +1812,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "9376C8307FEE1FC47E7F093080EC9197"
+    modelFingerprint: "00420241769DAA411A2529AE147994CF"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "buf"
-      modelFingerprint: "1252C11318E77FDAA9B366ABFB220D79"
+      modelFingerprint: "CCC4F5E2F111BBF0D20E46EF5CA68BC3"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1736,7 +1860,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "5CB0F741162E9DEBCD6BB1F360E3F6EE"
+      modelFingerprint: "BE938DD82C50ACD5A511F73386581BBE"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -2278,7 +2402,69 @@ methods:
             explicitCastNeeded: false
         signature: "wrapReversed(byte[]): Sha256Hash"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.base.Sha256Hash"
+            method: "read"
+            methodParameters:
+            - name: "buf"
+              value:
+                sapientType: "OBJECT"
+                content: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 0
+                      valueType: "int"
+                      uuid: "read_sha256Hash1-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                suggestedContent: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      valueType: "int"
+                      uuid: "read_sha256Hash1-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "java.nio.ByteBuffer"
+                uuid: "read_sha256Hash1-buf"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.Sha256Hash"
+            method: "read"
+            methodParameters:
+            - name: "buf"
+              value:
+                sapientType: "UNKNOWN"
+                suggestedContent: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      valueType: "int"
+                      uuid: "read_sha256Hash1-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "java.nio.ByteBuffer"
+                uuid: "read_sha256Hash1-buf"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "org.bitcoinj.base.Sha256Hash"
           uuid: "read_sha256Hash1"
           fixed: false
@@ -2289,13 +2475,75 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "D5F995FF16038F8C8CEB6ED663606C67"
+      modelFingerprint: "FD38736EFDB93214429E62ED519DE421"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.Sha256Hash"
+          method: "read"
+          methodParameters:
+          - name: "buf"
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "int"
+                    uuid: "read_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "int"
+                    uuid: "read_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.nio.ByteBuffer"
+              uuid: "read_sha256Hash1-buf"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.Sha256Hash"
+          method: "read"
+          methodParameters:
+          - name: "buf"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "int"
+                    uuid: "read_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.nio.ByteBuffer"
+              uuid: "read_sha256Hash1-buf"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.base.Sha256Hash"
         uuid: "read_sha256Hash1"
         fixed: false
@@ -2330,13 +2578,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "9697A7BA767031BC9EEBF5830FAB66A4"
+    modelFingerprint: "89BBAC6157CF4878582DA165A55803C2"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "contents"
-      modelFingerprint: "BE5763FC2DC1BD52F7135282F507B225"
+      modelFingerprint: "D83BD895EC0EFCCBB69F901F5477CEFA"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2356,7 +2604,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "EB3D159357FB4F85F302114DFC9C614C"
+      modelFingerprint: "3B64F8ABD708DA591C0484AF332B28A9"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -2460,7 +2708,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -2483,13 +2731,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "67CAD3C9F693033036C2453ADB602211"
+    modelFingerprint: "4A628296F439B45D6DE003E2DA9A7905"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "contents"
-      modelFingerprint: "BE5763FC2DC1BD52F7135282F507B225"
+      modelFingerprint: "3E03D184B442BEB3B6A1F5DC0AD1A90F"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2497,9 +2745,109 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values: {}
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 1
+              suggestedContent: !<regular>
+                value: 1
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            1:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 2
+              suggestedContent: !<regular>
+                value: 2
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            2:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 3
+              suggestedContent: !<regular>
+                value: 3
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            3:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 4
+              suggestedContent: !<regular>
+                value: 4
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            4:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 5
+              suggestedContent: !<regular>
+                value: 5
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         suggestedContent: !<array>
-          values: {}
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 1
+              suggestedContent: !<regular>
+                value: 1
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            1:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 2
+              suggestedContent: !<regular>
+                value: 2
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            2:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 3
+              suggestedContent: !<regular>
+                value: 3
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            3:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 4
+              suggestedContent: !<regular>
+                value: 4
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            4:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 5
+              suggestedContent: !<regular>
+                value: 5
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "byte[]"
         uuid: "twiceOf_byte[]1"
         fixed: false
@@ -2509,7 +2857,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "E04FC5531F5A705A24AF5B2292221258"
+      modelFingerprint: "55E9CE12B8DBAAE96B360AD22A893CBA"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -2529,9 +2877,109 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  suggestedContent: !<regular>
+                    value: 1
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  suggestedContent: !<regular>
+                    value: 2
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                3:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 4
+                  suggestedContent: !<regular>
+                    value: 4
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                4:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 5
+                  suggestedContent: !<regular>
+                    value: 5
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             suggestedContent: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  suggestedContent: !<regular>
+                    value: 1
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  suggestedContent: !<regular>
+                    value: 2
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                3:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 4
+                  suggestedContent: !<regular>
+                    value: 4
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                4:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 5
+                  suggestedContent: !<regular>
+                    value: 5
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "byte[]"
             uuid: "twiceOf_byte[]1"
             fixed: false
@@ -2554,7 +3002,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "33B6FF417092E0DA2389537A8F9656D4"
+      modelFingerprint: "2562EAFD76EEA0E04326CBDD967BB9A8"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -2584,7 +3032,69 @@ methods:
             explicitCastNeeded: false
         signature: "wrap(byte[]): Sha256Hash"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.base.Sha256Hash"
+            method: "read"
+            methodParameters:
+            - name: "buf"
+              value:
+                sapientType: "OBJECT"
+                content: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 0
+                      valueType: "int"
+                      uuid: "twiceOf_sha256Hash1-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                suggestedContent: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      valueType: "int"
+                      uuid: "twiceOf_sha256Hash1-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "java.nio.ByteBuffer"
+                uuid: "twiceOf_sha256Hash1-buf"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.Sha256Hash"
+            method: "read"
+            methodParameters:
+            - name: "buf"
+              value:
+                sapientType: "UNKNOWN"
+                suggestedContent: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      valueType: "int"
+                      uuid: "twiceOf_sha256Hash1-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "java.nio.ByteBuffer"
+                uuid: "twiceOf_sha256Hash1-buf"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "org.bitcoinj.base.Sha256Hash"
           uuid: "twiceOf_sha256Hash1"
           fixed: false
@@ -2595,13 +3105,75 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "D5F995FF16038F8C8CEB6ED663606C67"
+      modelFingerprint: "FD38736EFDB93214429E62ED519DE421"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.Sha256Hash"
+          method: "read"
+          methodParameters:
+          - name: "buf"
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "int"
+                    uuid: "twiceOf_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "int"
+                    uuid: "twiceOf_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.nio.ByteBuffer"
+              uuid: "twiceOf_sha256Hash1-buf"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.Sha256Hash"
+          method: "read"
+          methodParameters:
+          - name: "buf"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "int"
+                    uuid: "twiceOf_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.nio.ByteBuffer"
+              uuid: "twiceOf_sha256Hash1-buf"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.base.Sha256Hash"
         uuid: "twiceOf_sha256Hash1"
         fixed: false
@@ -2611,11 +3183,11 @@ methods:
       filledByUser: false
     uuid: "4224631c-1351-3487-b57c-83be3d1c5f2a"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "twiceOf"
     returnType: "org.bitcoinj.base.Sha256Hash"
@@ -2799,7 +3371,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -2824,13 +3396,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "AE2996D215928E693ABDA8052604F9A8"
+    modelFingerprint: "A4CDC36AD218F61F4C38ED02D7B05989"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "file"
-      modelFingerprint: "8A5A0F22DD9C1795C4DF7630ED5A969D"
+      modelFingerprint: "03F891C65DE698FEC5B4CA633C72E8D1"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2874,7 +3446,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "8F1237432E263601D827E8CAD2D5D568"
+      modelFingerprint: "5FB4397831E9FA732EA9ED8B68B4F8A1"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -2904,7 +3476,69 @@ methods:
             explicitCastNeeded: false
         signature: "of(byte[]): Sha256Hash"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.base.Sha256Hash"
+            method: "read"
+            methodParameters:
+            - name: "buf"
+              value:
+                sapientType: "OBJECT"
+                content: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 0
+                      valueType: "int"
+                      uuid: "of_sha256Hash1-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                suggestedContent: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      valueType: "int"
+                      uuid: "of_sha256Hash1-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "java.nio.ByteBuffer"
+                uuid: "of_sha256Hash1-buf"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.Sha256Hash"
+            method: "read"
+            methodParameters:
+            - name: "buf"
+              value:
+                sapientType: "UNKNOWN"
+                suggestedContent: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      valueType: "int"
+                      uuid: "of_sha256Hash1-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "java.nio.ByteBuffer"
+                uuid: "of_sha256Hash1-buf"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "org.bitcoinj.base.Sha256Hash"
           uuid: "of_sha256Hash1"
           fixed: false
@@ -2915,13 +3549,75 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "D5F995FF16038F8C8CEB6ED663606C67"
+      modelFingerprint: "FD38736EFDB93214429E62ED519DE421"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.Sha256Hash"
+          method: "read"
+          methodParameters:
+          - name: "buf"
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "int"
+                    uuid: "of_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "int"
+                    uuid: "of_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.nio.ByteBuffer"
+              uuid: "of_sha256Hash1-buf"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.Sha256Hash"
+          method: "read"
+          methodParameters:
+          - name: "buf"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<static_method_return>
+                target: "java.nio.ByteBuffer"
+                method: "allocateDirect"
+                methodParameters:
+                - name: "capacity"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "int"
+                    uuid: "of_sha256Hash1-buf-capacity"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.nio.ByteBuffer"
+              uuid: "of_sha256Hash1-buf"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.base.Sha256Hash"
         uuid: "of_sha256Hash1"
         fixed: false
@@ -2933,6 +3629,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -2955,7 +3652,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "1311F76846F948196A1DFA03AD0FFE35"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "RESULT"
@@ -2967,18 +3664,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "java.security.MessageDigest"
-          method: "getInstance"
-          methodParameters:
-          - value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "SHA-256"
-              valueType: "java.lang.String"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
         suggestedContent: !<static_method_return>
           target: "java.security.MessageDigest"
           method: "getInstance"
@@ -3012,8 +3697,8 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "16186D378EB1C1FF63EB0DA4DEE1CA83"
-    problemWasSolvedByProver: true
+    modelFingerprint: "EC45BDA39DD7E663FBC15F1CDD93EA04"
+    problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
       id: 1
@@ -3023,7 +3708,7 @@ methods:
     inputParameters:
     - type: "STATIC"
       name: "MessageDigest"
-      modelFingerprint: "A16E34A993B2770011E9DE51885D997F"
+      modelFingerprint: "385D1DCC534EDFEC266FD4C91B2E5F81"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -3031,7 +3716,7 @@ methods:
       idsTryCatchBlockSurrounding:
       - 1
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         valueType: "java.security.MessageDigest"
         uuid: "java.security.MessageDigest"
         fixed: false
@@ -3054,18 +3739,20 @@ methods:
         - "java.security.NoSuchAlgorithmException"
         signature: "getInstance(String): MessageDigest throws java.security.NoSuchAlgorithmException"
         returnValue:
-          sapientType: "EXCEPTION"
-          content: !<new>
-            target: "java.security.NoSuchAlgorithmException"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
-            target: "java.security.NoSuchAlgorithmException"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
-          valueType: "java.security.NoSuchAlgorithmException"
+          sapientType: "OBJECT"
+          suggestedContent: !<static_method_return>
+            target: "java.security.MessageDigest"
+            method: "getInstance"
+            methodParameters:
+            - value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "SHA-256"
+                valueType: "java.lang.String"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "java.security.MessageDigest"
           uuid: "newDigest_messageDigest1"
           fixed: false
           equalsMethodPresent: false
@@ -3075,49 +3762,26 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "201035FFDDACCAB018FA392F27046821"
+      modelFingerprint: "F47C1DF276622DDE48FC25088E1E3913"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "EXCEPTION"
-        content: !<new>
-          target: "java.lang.RuntimeException"
-          parameters:
-          - name: "cause"
-            value:
-              sapientType: "EXCEPTION"
-              content: !<new>
-                target: "java.security.NoSuchAlgorithmException"
-                parameters: []
-                privateConstructor: false
-                createdByTargetCode: false
-              suggestedContent: !<new>
-                target: "java.security.NoSuchAlgorithmException"
-                parameters: []
-                privateConstructor: false
-                createdByTargetCode: false
-              valueType: "java.security.NoSuchAlgorithmException"
-              uuid: "newDigest_messageDigest1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
         suggestedContent: !<new>
           target: "java.lang.RuntimeException"
           parameters:
           - name: "cause"
             value:
-              sapientType: "EXCEPTION"
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
                 target: "java.security.NoSuchAlgorithmException"
                 parameters: []
                 privateConstructor: false
                 createdByTargetCode: false
               valueType: "java.security.NoSuchAlgorithmException"
-              uuid: "newDigest_messageDigest1"
+              uuid: "newDigest_noSuchAlgorithmException1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -3157,7 +3821,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "86DA6032BB7879394A4EDE89B355E855"
+    modelFingerprint: "BDACA04D75AEAFADB0262A7DA43181C8"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -3183,7 +3847,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "E234C8FA209EDE5B90E5F98942DBE5CC"
+      modelFingerprint: "6C76BC6D211651E4359A7BBAD8CD3E93"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -3224,8 +3888,6 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 0
-            suggestedContent: !<regular>
               value: 0
             valueType: "int"
             uuid: "hash_int1"
@@ -3271,7 +3933,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -3296,13 +3958,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "358838006C5C9455B9D93E588F1D42D1"
+    modelFingerprint: "4A7912F0CD55F52638F86DDA4523BBA5"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "input"
-      modelFingerprint: "31E764E38B187D23082B82C51F361082"
+      modelFingerprint: "160285FD932AED38E895D47DDFA16A26"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -3310,9 +3972,25 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values: {}
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         suggestedContent: !<array>
-          values: {}
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "byte[]"
         uuid: "hash_byte[]1"
         fixed: false
@@ -3322,7 +4000,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "offset"
-      modelFingerprint: "CE54242AD935D48AF0BA03B577FAB81E"
+      modelFingerprint: "50F3967790793FB32EEE755BEBABA84A"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -3330,6 +4008,8 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
+          value: 0
+        suggestedContent: !<regular>
           value: 0
         valueType: "int"
         uuid: "hash_int1"
@@ -3340,7 +4020,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "length"
-      modelFingerprint: "8AE05FEFB40801A952622E806B6936F2"
+      modelFingerprint: "87115E6F5D4DF9F2E249F367B2F77104"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -3348,7 +4028,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
+          value: 11
+        suggestedContent: !<regular>
+          value: 11
         valueType: "int"
         uuid: "hash_int2"
         fixed: false
@@ -3445,7 +4127,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "2DA7BC32D558AF8A44B2916A35827D21"
+    modelFingerprint: "87BB26E8BCC0407AB477293D78562168"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -3471,7 +4153,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "F8167ED652399425B4405369DE4F0B05"
+      modelFingerprint: "AB4E373B76EB66982EDB7BFA8E0767CC"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -3512,8 +4194,6 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 0
-            suggestedContent: !<regular>
               value: 0
             valueType: "int"
             uuid: "hashTwice_int1"
@@ -3559,7 +4239,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -3583,13 +4263,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "BAA48B11952448886C1980882110B59C"
+    modelFingerprint: "308B0EEA7A9BBEA8CE1EA41E3D87E02E"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "input1"
-      modelFingerprint: "330A72684610EF60529A6E8171CD0E42"
+      modelFingerprint: "464854875F83A5595D9434A385921079"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -3597,9 +4277,25 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values: {}
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         suggestedContent: !<array>
-          values: {}
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "byte[]"
         uuid: "hashTwice_byte[]1"
         fixed: false
@@ -3609,7 +4305,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "input2"
-      modelFingerprint: "0091245B0ECAFFDAFA01681C06FAEE78"
+      modelFingerprint: "F4339D86A6ACB2075E9851429C43658D"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -3617,9 +4313,25 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values: {}
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         suggestedContent: !<array>
-          values: {}
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "byte[]"
         uuid: "hashTwice_byte[]2"
         fixed: false
@@ -3718,13 +4430,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "358838006C5C9455B9D93E588F1D42D1"
+    modelFingerprint: "92B9F066404E4110386E5FE7AC54BE7D"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "input"
-      modelFingerprint: "31E764E38B187D23082B82C51F361082"
+      modelFingerprint: "865CD012B484D85257928E6CBCF37193"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -3732,9 +4444,69 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values: {}
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 97
+              suggestedContent: !<regular>
+                value: 97
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            1:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 98
+              suggestedContent: !<regular>
+                value: 98
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            2:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 99
+              suggestedContent: !<regular>
+                value: 99
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         suggestedContent: !<array>
-          values: {}
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 97
+              suggestedContent: !<regular>
+                value: 97
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            1:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 98
+              suggestedContent: !<regular>
+                value: 98
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            2:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 99
+              suggestedContent: !<regular>
+                value: 99
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "byte[]"
         uuid: "hashTwice_byte[]1"
         fixed: false
@@ -3744,7 +4516,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "offset"
-      modelFingerprint: "CE54242AD935D48AF0BA03B577FAB81E"
+      modelFingerprint: "50F3967790793FB32EEE755BEBABA84A"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -3752,6 +4524,8 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
+          value: 0
+        suggestedContent: !<regular>
           value: 0
         valueType: "int"
         uuid: "hashTwice_int1"
@@ -3762,7 +4536,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "length"
-      modelFingerprint: "8AE05FEFB40801A952622E806B6936F2"
+      modelFingerprint: "FEC9BB033983DE69E2304CA416D60F06"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -3770,7 +4544,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
+          value: 3
+        suggestedContent: !<regular>
+          value: 3
         valueType: "int"
         uuid: "hashTwice_int2"
         fixed: false
@@ -3872,13 +4648,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "9BBA47186C43B95451B8E51D6C559FB1"
+    modelFingerprint: "1031E4AE54E98E367231AA8217382137"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "input1"
-      modelFingerprint: "330A72684610EF60529A6E8171CD0E42"
+      modelFingerprint: "464854875F83A5595D9434A385921079"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -3886,9 +4662,25 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values: {}
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         suggestedContent: !<array>
-          values: {}
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "byte[]"
         uuid: "hashTwice_byte[]1"
         fixed: false
@@ -3898,7 +4690,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "offset1"
-      modelFingerprint: "48B4BFF20ED5A49795B33166D207C944"
+      modelFingerprint: "FAA79CB5705DC9A2E7750782C095AD7F"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -3906,6 +4698,8 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
+          value: 0
+        suggestedContent: !<regular>
           value: 0
         valueType: "int"
         uuid: "hashTwice_int1"
@@ -3916,7 +4710,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "length1"
-      modelFingerprint: "F049D25154C851B61661945A16C40E4D"
+      modelFingerprint: "962A09FCE0260E86A2CD703D5ACC7F93"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -3924,7 +4718,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
+          value: 5
+        suggestedContent: !<regular>
+          value: 5
         valueType: "int"
         uuid: "hashTwice_int2"
         fixed: false
@@ -3934,7 +4730,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "input2"
-      modelFingerprint: "0091245B0ECAFFDAFA01681C06FAEE78"
+      modelFingerprint: "F4339D86A6ACB2075E9851429C43658D"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -3942,9 +4738,25 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values: {}
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         suggestedContent: !<array>
-          values: {}
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "byte[]"
         uuid: "hashTwice_byte[]2"
         fixed: false
@@ -3954,7 +4766,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "offset2"
-      modelFingerprint: "D30F7F8F817AF72BE443CD91BFDC6228"
+      modelFingerprint: "35709A1646679B188ACD1E44C4132E77"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -3962,6 +4774,8 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
+          value: 0
+        suggestedContent: !<regular>
           value: 0
         valueType: "int"
         uuid: "hashTwice_int3"
@@ -3972,7 +4786,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "length2"
-      modelFingerprint: "76D8FA2E78003E1DCC0B4FF0B65AFA78"
+      modelFingerprint: "FA59493D2165A629A7D9E4AC7DA62B73"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -3980,7 +4794,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
+          value: 5
+        suggestedContent: !<regular>
+          value: 5
         valueType: "int"
         uuid: "hashTwice_int4"
         fixed: false
@@ -4156,12 +4972,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "FE1BC3F23D76100A33BD98B71A493DB6"
+    modelFingerprint: "F5362CBC59F206879F57266EFDE32653"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "85919D51E192945581D7926963927784"
+      modelFingerprint: "75F32BE0C7548DEAEF41BB1DB66A71AC"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -4176,9 +4992,69 @@ methods:
             value:
               sapientType: "ARRAY"
               content: !<array>
-                values: {}
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    suggestedContent: !<regular>
+                      value: 1
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 2
+                    suggestedContent: !<regular>
+                      value: 2
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 3
+                    suggestedContent: !<regular>
+                      value: 3
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               suggestedContent: !<array>
-                values: {}
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    suggestedContent: !<regular>
+                      value: 1
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 2
+                    suggestedContent: !<regular>
+                      value: 2
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 3
+                    suggestedContent: !<regular>
+                      value: 3
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "byte[]"
               uuid: "twiceOf_byte[]1"
               fixed: false
@@ -4188,9 +5064,69 @@ methods:
             value:
               sapientType: "ARRAY"
               content: !<array>
-                values: {}
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 4
+                    suggestedContent: !<regular>
+                      value: 4
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 5
+                    suggestedContent: !<regular>
+                      value: 5
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 6
+                    suggestedContent: !<regular>
+                      value: 6
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               suggestedContent: !<array>
-                values: {}
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 4
+                    suggestedContent: !<regular>
+                      value: 4
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 5
+                    suggestedContent: !<regular>
+                      value: 5
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 6
+                    suggestedContent: !<regular>
+                      value: 6
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "byte[]"
               uuid: "twiceOf_byte[]2"
               fixed: false
@@ -4203,6 +5139,70 @@ methods:
           - name: "content1"
             value:
               sapientType: "ARRAY"
+              content: !<array>
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    suggestedContent: !<regular>
+                      value: 1
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 2
+                    suggestedContent: !<regular>
+                      value: 2
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 3
+                    suggestedContent: !<regular>
+                      value: 3
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<array>
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    suggestedContent: !<regular>
+                      value: 1
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 2
+                    suggestedContent: !<regular>
+                      value: 2
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 3
+                    suggestedContent: !<regular>
+                      value: 3
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "byte[]"
               uuid: "twiceOf_byte[]1"
               fixed: false
@@ -4211,6 +5211,70 @@ methods:
           - name: "content2"
             value:
               sapientType: "ARRAY"
+              content: !<array>
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 4
+                    suggestedContent: !<regular>
+                      value: 4
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 5
+                    suggestedContent: !<regular>
+                      value: 5
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 6
+                    suggestedContent: !<regular>
+                      value: 6
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<array>
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 4
+                    suggestedContent: !<regular>
+                      value: 4
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 5
+                    suggestedContent: !<regular>
+                      value: 5
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 6
+                    suggestedContent: !<regular>
+                      value: 6
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "byte[]"
               uuid: "twiceOf_byte[]2"
               fixed: false
@@ -4225,7 +5289,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "7AE243ECFCBBB2D4F1748957860A09D4"
+      modelFingerprint: "4148ECF09387C0E49A63DC904FBF5EEB"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -4245,9 +5309,69 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  suggestedContent: !<regular>
+                    value: 1
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  suggestedContent: !<regular>
+                    value: 2
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             suggestedContent: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  suggestedContent: !<regular>
+                    value: 1
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  suggestedContent: !<regular>
+                    value: 2
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "byte[]"
             uuid: "twiceOf_byte[]1"
             fixed: false
@@ -4257,9 +5381,69 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 4
+                  suggestedContent: !<regular>
+                    value: 4
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 5
+                  suggestedContent: !<regular>
+                    value: 5
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 6
+                  suggestedContent: !<regular>
+                    value: 6
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             suggestedContent: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 4
+                  suggestedContent: !<regular>
+                    value: 4
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 5
+                  suggestedContent: !<regular>
+                    value: 5
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 6
+                  suggestedContent: !<regular>
+                    value: 6
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "byte[]"
             uuid: "twiceOf_byte[]2"
             fixed: false
@@ -4282,7 +5466,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "CEBE22911E18CAB985D94F461E798AED"
+      modelFingerprint: "D47B0EDCAD5762202422F53A105549F4"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -4313,9 +5497,15 @@ methods:
         signature: "wrap(byte[]): Sha256Hash"
         returnValue:
           sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.base.Sha256Hash"
+            onlyPojoFunctions: false
+            builderPattern: false
           valueType: "org.bitcoinj.base.Sha256Hash"
           uuid: "twiceOf_sha256Hash1"
           fixed: false
+          nameForMock: "{\\\"hashTwice\\\":{\\\"value\\\":\\\"false\\\"},\\\"bytes\\\
+            \":{\\\"resultList\\\":[]}}"
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 9
@@ -4867,7 +6057,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "return_of_formatHex1"
+            value: ""
+          suggestedContent: !<regular>
+            value: ""
           valueType: "java.lang.String"
           uuid: "toString_string1"
           fixed: false
@@ -4886,7 +6078,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "return_of_formatHex1"
+          value: ""
+        suggestedContent: !<regular>
+          value: ""
         valueType: "java.lang.String"
         uuid: "toString_string1"
         fixed: false
@@ -4898,7 +6092,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -4916,12 +6110,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "C06D44B0CA6FD98253B349F050DF763B"
+    modelFingerprint: "78240BDE6DA872A872822675D5E98567"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "85919D51E192945581D7926963927784"
+      modelFingerprint: "69DAB8AD8C8FFACD65DD24762A2D41AF"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -4936,9 +6130,25 @@ methods:
             value:
               sapientType: "ARRAY"
               content: !<array>
-                values: {}
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               suggestedContent: !<array>
-                values: {}
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "byte[]"
               uuid: "twiceOf_byte[]1"
               fixed: false
@@ -4948,9 +6158,25 @@ methods:
             value:
               sapientType: "ARRAY"
               content: !<array>
-                values: {}
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               suggestedContent: !<array>
-                values: {}
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "byte[]"
               uuid: "twiceOf_byte[]2"
               fixed: false
@@ -4963,6 +6189,22 @@ methods:
           - name: "content1"
             value:
               sapientType: "ARRAY"
+              content: !<array>
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<array>
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "byte[]"
               uuid: "twiceOf_byte[]1"
               fixed: false
@@ -4971,6 +6213,22 @@ methods:
           - name: "content2"
             value:
               sapientType: "ARRAY"
+              content: !<array>
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<array>
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "byte[]"
               uuid: "twiceOf_byte[]2"
               fixed: false
@@ -4985,7 +6243,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "7AE243ECFCBBB2D4F1748957860A09D4"
+      modelFingerprint: "E0DA9873D6A74CA05227562337D5D096"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -5005,9 +6263,25 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             suggestedContent: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "byte[]"
             uuid: "twiceOf_byte[]1"
             fixed: false
@@ -5017,9 +6291,25 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             suggestedContent: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "byte[]"
             uuid: "twiceOf_byte[]2"
             fixed: false
@@ -5042,7 +6332,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "CEBE22911E18CAB985D94F461E798AED"
+      modelFingerprint: "D7CF0ED8BBE1BD36849774FA14EE9463"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -5072,7 +6362,69 @@ methods:
             explicitCastNeeded: false
         signature: "wrap(byte[]): Sha256Hash"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.base.Sha256Hash"
+            method: "read"
+            methodParameters:
+            - name: "buf"
+              value:
+                sapientType: "OBJECT"
+                content: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 0
+                      valueType: "int"
+                      uuid: "twiceOf_sha256Hash1-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                suggestedContent: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      valueType: "int"
+                      uuid: "twiceOf_sha256Hash1-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "java.nio.ByteBuffer"
+                uuid: "twiceOf_sha256Hash1-buf"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.Sha256Hash"
+            method: "read"
+            methodParameters:
+            - name: "buf"
+              value:
+                sapientType: "UNKNOWN"
+                suggestedContent: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      valueType: "int"
+                      uuid: "twiceOf_sha256Hash1-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "java.nio.ByteBuffer"
+                uuid: "twiceOf_sha256Hash1-buf"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "org.bitcoinj.base.Sha256Hash"
           uuid: "twiceOf_sha256Hash1"
           fixed: false
@@ -5658,7 +7010,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -5702,12 +7054,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "223673F522D3346E43688374C47D3753"
+    modelFingerprint: "426B0E6B9B2EE4AF57602B8C2731AC25"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "85919D51E192945581D7926963927784"
+      modelFingerprint: "75F32BE0C7548DEAEF41BB1DB66A71AC"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -5722,9 +7074,69 @@ methods:
             value:
               sapientType: "ARRAY"
               content: !<array>
-                values: {}
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    suggestedContent: !<regular>
+                      value: 1
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 2
+                    suggestedContent: !<regular>
+                      value: 2
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 3
+                    suggestedContent: !<regular>
+                      value: 3
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               suggestedContent: !<array>
-                values: {}
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    suggestedContent: !<regular>
+                      value: 1
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 2
+                    suggestedContent: !<regular>
+                      value: 2
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 3
+                    suggestedContent: !<regular>
+                      value: 3
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "byte[]"
               uuid: "twiceOf_byte[]1"
               fixed: false
@@ -5734,9 +7146,69 @@ methods:
             value:
               sapientType: "ARRAY"
               content: !<array>
-                values: {}
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 4
+                    suggestedContent: !<regular>
+                      value: 4
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 5
+                    suggestedContent: !<regular>
+                      value: 5
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 6
+                    suggestedContent: !<regular>
+                      value: 6
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               suggestedContent: !<array>
-                values: {}
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 4
+                    suggestedContent: !<regular>
+                      value: 4
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 5
+                    suggestedContent: !<regular>
+                      value: 5
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 6
+                    suggestedContent: !<regular>
+                      value: 6
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "byte[]"
               uuid: "twiceOf_byte[]2"
               fixed: false
@@ -5749,6 +7221,70 @@ methods:
           - name: "content1"
             value:
               sapientType: "ARRAY"
+              content: !<array>
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    suggestedContent: !<regular>
+                      value: 1
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 2
+                    suggestedContent: !<regular>
+                      value: 2
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 3
+                    suggestedContent: !<regular>
+                      value: 3
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<array>
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    suggestedContent: !<regular>
+                      value: 1
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 2
+                    suggestedContent: !<regular>
+                      value: 2
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 3
+                    suggestedContent: !<regular>
+                      value: 3
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "byte[]"
               uuid: "twiceOf_byte[]1"
               fixed: false
@@ -5757,6 +7293,70 @@ methods:
           - name: "content2"
             value:
               sapientType: "ARRAY"
+              content: !<array>
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 4
+                    suggestedContent: !<regular>
+                      value: 4
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 5
+                    suggestedContent: !<regular>
+                      value: 5
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 6
+                    suggestedContent: !<regular>
+                      value: 6
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<array>
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 4
+                    suggestedContent: !<regular>
+                      value: 4
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 5
+                    suggestedContent: !<regular>
+                      value: 5
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 6
+                    suggestedContent: !<regular>
+                      value: 6
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "byte[]"
               uuid: "twiceOf_byte[]2"
               fixed: false
@@ -5771,7 +7371,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "7AE243ECFCBBB2D4F1748957860A09D4"
+      modelFingerprint: "4148ECF09387C0E49A63DC904FBF5EEB"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -5791,9 +7391,69 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  suggestedContent: !<regular>
+                    value: 1
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  suggestedContent: !<regular>
+                    value: 2
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             suggestedContent: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  suggestedContent: !<regular>
+                    value: 1
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  suggestedContent: !<regular>
+                    value: 2
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "byte[]"
             uuid: "twiceOf_byte[]1"
             fixed: false
@@ -5803,9 +7463,69 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 4
+                  suggestedContent: !<regular>
+                    value: 4
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 5
+                  suggestedContent: !<regular>
+                    value: 5
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 6
+                  suggestedContent: !<regular>
+                    value: 6
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             suggestedContent: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 4
+                  suggestedContent: !<regular>
+                    value: 4
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 5
+                  suggestedContent: !<regular>
+                    value: 5
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 6
+                  suggestedContent: !<regular>
+                    value: 6
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "byte[]"
             uuid: "twiceOf_byte[]2"
             fixed: false
@@ -5828,7 +7548,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "CEBE22911E18CAB985D94F461E798AED"
+      modelFingerprint: "D47B0EDCAD5762202422F53A105549F4"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -5859,9 +7579,14 @@ methods:
         signature: "wrap(byte[]): Sha256Hash"
         returnValue:
           sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.base.Sha256Hash"
+            onlyPojoFunctions: false
+            builderPattern: false
           valueType: "org.bitcoinj.base.Sha256Hash"
           uuid: "twiceOf_sha256Hash1"
           fixed: false
+          nameForMock: "{\\\"bytes\\\":{\\\"value\\\":\\\"null\\\"}}"
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 9
@@ -5869,7 +7594,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ByteUtils"
-      modelFingerprint: "82D3BF1AFAA81311D450BA503778B127"
+      modelFingerprint: "2E1E9CA66E51563FCEFF59B916569256"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -6426,7 +8151,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "740324D8AEEA83F5639543B37CAABC19"
+      modelFingerprint: "2230D5F90E8EBC18AD26F4DEEEAC7D11"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -6448,7 +8173,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -7212,7 +8937,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -7233,7 +8958,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "1D86D396494175FA03FDE726B036A20C"
+    modelFingerprint: "E646B97A9E89470BC3C00924D61CF3B4"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -7310,7 +9035,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "buf"
-      modelFingerprint: "52D9F62F7E2F3F0592F0D8A9C5837F4C"
+      modelFingerprint: "D9502874ABE1CA67297A590F5B7E0FB1"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -7326,8 +9051,6 @@ methods:
               sapientType: "BASIC"
               content: !<regular>
                 value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "int"
               uuid: "write_byteBuffer1-capacity"
               fixed: false
@@ -7340,10 +9063,6 @@ methods:
           - name: "capacity"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "int"
               uuid: "write_byteBuffer1-capacity"
               fixed: false
@@ -7358,7 +9077,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "73DAC19CC23DB0296B83BEF2B236DC49"
+      modelFingerprint: "97E970BC297018DBF1550635AC60E8E3"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -7415,7 +9134,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "CEBE22911E18CAB985D94F461E798AED"
+      modelFingerprint: "D7CF0ED8BBE1BD36849774FA14EE9463"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -7445,7 +9164,69 @@ methods:
             explicitCastNeeded: false
         signature: "wrap(byte[]): Sha256Hash"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.base.Sha256Hash"
+            method: "read"
+            methodParameters:
+            - name: "buf"
+              value:
+                sapientType: "OBJECT"
+                content: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 0
+                      valueType: "int"
+                      uuid: "twiceOf_sha256Hash1-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                suggestedContent: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      valueType: "int"
+                      uuid: "twiceOf_sha256Hash1-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "java.nio.ByteBuffer"
+                uuid: "twiceOf_sha256Hash1-buf"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.Sha256Hash"
+            method: "read"
+            methodParameters:
+            - name: "buf"
+              value:
+                sapientType: "UNKNOWN"
+                suggestedContent: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      valueType: "int"
+                      uuid: "twiceOf_sha256Hash1-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "java.nio.ByteBuffer"
+                uuid: "twiceOf_sha256Hash1-buf"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "org.bitcoinj.base.Sha256Hash"
           uuid: "twiceOf_sha256Hash1"
           fixed: false
@@ -7456,7 +9237,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ByteUtils"
-      modelFingerprint: "2447BB01D9919F97CB2A6AC968E619E3"
+      modelFingerprint: "3A946FC59CC4F49607A7A8B3CB8B573E"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -8013,7 +9794,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "B33EA9889BCF50E2D48D614D654D0347"
+      modelFingerprint: "D443FCA5982459A6B11BB072DD2161AA"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -8029,8 +9810,6 @@ methods:
               sapientType: "BASIC"
               content: !<regular>
                 value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "int"
               uuid: "write_byteBuffer1-capacity"
               fixed: false
@@ -8043,10 +9822,6 @@ methods:
           - name: "capacity"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "int"
               uuid: "write_byteBuffer1-capacity"
               fixed: false
@@ -8063,7 +9838,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -8082,12 +9857,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "672253211CFD066D298C63A05D60C530"
+    modelFingerprint: "41B33B5A60A44EA8371F4FBB4B0747B8"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "85919D51E192945581D7926963927784"
+      modelFingerprint: "75F32BE0C7548DEAEF41BB1DB66A71AC"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -8102,9 +9877,69 @@ methods:
             value:
               sapientType: "ARRAY"
               content: !<array>
-                values: {}
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    suggestedContent: !<regular>
+                      value: 1
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 2
+                    suggestedContent: !<regular>
+                      value: 2
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 3
+                    suggestedContent: !<regular>
+                      value: 3
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               suggestedContent: !<array>
-                values: {}
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    suggestedContent: !<regular>
+                      value: 1
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 2
+                    suggestedContent: !<regular>
+                      value: 2
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 3
+                    suggestedContent: !<regular>
+                      value: 3
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "byte[]"
               uuid: "twiceOf_byte[]1"
               fixed: false
@@ -8114,9 +9949,69 @@ methods:
             value:
               sapientType: "ARRAY"
               content: !<array>
-                values: {}
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 4
+                    suggestedContent: !<regular>
+                      value: 4
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 5
+                    suggestedContent: !<regular>
+                      value: 5
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 6
+                    suggestedContent: !<regular>
+                      value: 6
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               suggestedContent: !<array>
-                values: {}
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 4
+                    suggestedContent: !<regular>
+                      value: 4
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 5
+                    suggestedContent: !<regular>
+                      value: 5
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 6
+                    suggestedContent: !<regular>
+                      value: 6
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "byte[]"
               uuid: "twiceOf_byte[]2"
               fixed: false
@@ -8129,6 +10024,70 @@ methods:
           - name: "content1"
             value:
               sapientType: "ARRAY"
+              content: !<array>
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    suggestedContent: !<regular>
+                      value: 1
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 2
+                    suggestedContent: !<regular>
+                      value: 2
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 3
+                    suggestedContent: !<regular>
+                      value: 3
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<array>
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    suggestedContent: !<regular>
+                      value: 1
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 2
+                    suggestedContent: !<regular>
+                      value: 2
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 3
+                    suggestedContent: !<regular>
+                      value: 3
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "byte[]"
               uuid: "twiceOf_byte[]1"
               fixed: false
@@ -8137,6 +10096,70 @@ methods:
           - name: "content2"
             value:
               sapientType: "ARRAY"
+              content: !<array>
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 4
+                    suggestedContent: !<regular>
+                      value: 4
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 5
+                    suggestedContent: !<regular>
+                      value: 5
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 6
+                    suggestedContent: !<regular>
+                      value: 6
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<array>
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 4
+                    suggestedContent: !<regular>
+                      value: 4
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 5
+                    suggestedContent: !<regular>
+                      value: 5
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 6
+                    suggestedContent: !<regular>
+                      value: 6
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "byte[]"
               uuid: "twiceOf_byte[]2"
               fixed: false
@@ -8151,7 +10174,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "other"
-      modelFingerprint: "92DE1BDBFE5E6E7E40AF1CCC62B9C663"
+      modelFingerprint: "373847478A581662F992E58017A885A1"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -8229,7 +10252,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "356CB6A5174F0B7CF8AB623C920B57FF"
+      modelFingerprint: "4148ECF09387C0E49A63DC904FBF5EEB"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -8249,9 +10272,69 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  suggestedContent: !<regular>
+                    value: 1
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  suggestedContent: !<regular>
+                    value: 2
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             suggestedContent: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  suggestedContent: !<regular>
+                    value: 1
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  suggestedContent: !<regular>
+                    value: 2
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  suggestedContent: !<regular>
+                    value: 3
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "byte[]"
             uuid: "twiceOf_byte[]1"
             fixed: false
@@ -8261,9 +10344,69 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 4
+                  suggestedContent: !<regular>
+                    value: 4
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 5
+                  suggestedContent: !<regular>
+                    value: 5
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 6
+                  suggestedContent: !<regular>
+                    value: 6
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             suggestedContent: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 4
+                  suggestedContent: !<regular>
+                    value: 4
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 5
+                  suggestedContent: !<regular>
+                    value: 5
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 6
+                  suggestedContent: !<regular>
+                    value: 6
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "byte[]"
             uuid: "twiceOf_byte[]2"
             fixed: false
@@ -8286,7 +10429,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "4705AF2665CE98206DC40695B007F04D"
+      modelFingerprint: "D7CF0ED8BBE1BD36849774FA14EE9463"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -8316,7 +10459,69 @@ methods:
             explicitCastNeeded: false
         signature: "wrap(byte[]): Sha256Hash"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.base.Sha256Hash"
+            method: "read"
+            methodParameters:
+            - name: "buf"
+              value:
+                sapientType: "OBJECT"
+                content: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 0
+                      valueType: "int"
+                      uuid: "twiceOf_sha256Hash1-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                suggestedContent: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      valueType: "int"
+                      uuid: "twiceOf_sha256Hash1-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "java.nio.ByteBuffer"
+                uuid: "twiceOf_sha256Hash1-buf"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.Sha256Hash"
+            method: "read"
+            methodParameters:
+            - name: "buf"
+              value:
+                sapientType: "UNKNOWN"
+                suggestedContent: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      valueType: "int"
+                      uuid: "twiceOf_sha256Hash1-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "java.nio.ByteBuffer"
+                uuid: "twiceOf_sha256Hash1-buf"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "org.bitcoinj.base.Sha256Hash"
           uuid: "twiceOf_sha256Hash1"
           fixed: false
@@ -8357,7 +10562,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "F57A43F327755D2C1716D6F813487340"
+    modelFingerprint: "3021FD21AF64F740080329F8998FC9F3"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -8561,7 +10766,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "4705AF2665CE98206DC40695B007F04D"
+      modelFingerprint: "D7CF0ED8BBE1BD36849774FA14EE9463"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -8591,7 +10796,69 @@ methods:
             explicitCastNeeded: false
         signature: "wrap(byte[]): Sha256Hash"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.base.Sha256Hash"
+            method: "read"
+            methodParameters:
+            - name: "buf"
+              value:
+                sapientType: "OBJECT"
+                content: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 0
+                      valueType: "int"
+                      uuid: "twiceOf_sha256Hash1-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                suggestedContent: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      valueType: "int"
+                      uuid: "twiceOf_sha256Hash1-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "java.nio.ByteBuffer"
+                uuid: "twiceOf_sha256Hash1-buf"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.Sha256Hash"
+            method: "read"
+            methodParameters:
+            - name: "buf"
+              value:
+                sapientType: "UNKNOWN"
+                suggestedContent: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      valueType: "int"
+                      uuid: "twiceOf_sha256Hash1-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "java.nio.ByteBuffer"
+                uuid: "twiceOf_sha256Hash1-buf"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "org.bitcoinj.base.Sha256Hash"
           uuid: "twiceOf_sha256Hash1"
           fixed: false
@@ -8632,12 +10899,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "93C4DA425A2865F9B75873509FB9C3B0"
+    modelFingerprint: "E2F2E4D95F7CC3A4CD3A2D7BAA30287D"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "85919D51E192945581D7926963927784"
+      modelFingerprint: "A35E5E9FC34514865CCB23345A5038AF"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -8652,9 +10919,89 @@ methods:
             value:
               sapientType: "ARRAY"
               content: !<array>
-                values: {}
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 5
+                    suggestedContent: !<regular>
+                      value: 5
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 6
+                    suggestedContent: !<regular>
+                      value: 6
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 7
+                    suggestedContent: !<regular>
+                      value: 7
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  3:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 8
+                    suggestedContent: !<regular>
+                      value: 8
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               suggestedContent: !<array>
-                values: {}
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 5
+                    suggestedContent: !<regular>
+                      value: 5
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 6
+                    suggestedContent: !<regular>
+                      value: 6
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 7
+                    suggestedContent: !<regular>
+                      value: 7
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  3:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 8
+                    suggestedContent: !<regular>
+                      value: 8
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "byte[]"
               uuid: "twiceOf_byte[]1"
               fixed: false
@@ -8664,9 +11011,89 @@ methods:
             value:
               sapientType: "ARRAY"
               content: !<array>
-                values: {}
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 9
+                    suggestedContent: !<regular>
+                      value: 9
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 10
+                    suggestedContent: !<regular>
+                      value: 10
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 11
+                    suggestedContent: !<regular>
+                      value: 11
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  3:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 12
+                    suggestedContent: !<regular>
+                      value: 12
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               suggestedContent: !<array>
-                values: {}
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 9
+                    suggestedContent: !<regular>
+                      value: 9
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 10
+                    suggestedContent: !<regular>
+                      value: 10
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 11
+                    suggestedContent: !<regular>
+                      value: 11
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  3:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 12
+                    suggestedContent: !<regular>
+                      value: 12
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "byte[]"
               uuid: "twiceOf_byte[]2"
               fixed: false
@@ -8679,6 +11106,90 @@ methods:
           - name: "content1"
             value:
               sapientType: "ARRAY"
+              content: !<array>
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 5
+                    suggestedContent: !<regular>
+                      value: 5
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 6
+                    suggestedContent: !<regular>
+                      value: 6
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 7
+                    suggestedContent: !<regular>
+                      value: 7
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  3:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 8
+                    suggestedContent: !<regular>
+                      value: 8
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<array>
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 5
+                    suggestedContent: !<regular>
+                      value: 5
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 6
+                    suggestedContent: !<regular>
+                      value: 6
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 7
+                    suggestedContent: !<regular>
+                      value: 7
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  3:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 8
+                    suggestedContent: !<regular>
+                      value: 8
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "byte[]"
               uuid: "twiceOf_byte[]1"
               fixed: false
@@ -8687,6 +11198,90 @@ methods:
           - name: "content2"
             value:
               sapientType: "ARRAY"
+              content: !<array>
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 9
+                    suggestedContent: !<regular>
+                      value: 9
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 10
+                    suggestedContent: !<regular>
+                      value: 10
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 11
+                    suggestedContent: !<regular>
+                      value: 11
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  3:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 12
+                    suggestedContent: !<regular>
+                      value: 12
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<array>
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 9
+                    suggestedContent: !<regular>
+                      value: 9
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  1:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 10
+                    suggestedContent: !<regular>
+                      value: 10
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  2:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 11
+                    suggestedContent: !<regular>
+                      value: 11
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                  3:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 12
+                    suggestedContent: !<regular>
+                      value: 12
+                    valueType: "byte"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "byte[]"
               uuid: "twiceOf_byte[]2"
               fixed: false
@@ -8701,85 +11296,28 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "other"
-      modelFingerprint: "92DE1BDBFE5E6E7E40AF1CCC62B9C663"
+      modelFingerprint: "CBBC641541FB2ACC1BF6E70FD5F8ABBD"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.base.Sha256Hash"
-          method: "read"
-          methodParameters:
-          - name: "buf"
-            value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "java.nio.ByteBuffer"
-                method: "allocateDirect"
-                methodParameters:
-                - name: "capacity"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    valueType: "int"
-                    uuid: "compareTo_sha256Hash1-buf-capacity"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "java.nio.ByteBuffer"
-                method: "allocateDirect"
-                methodParameters:
-                - name: "capacity"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "int"
-                    uuid: "compareTo_sha256Hash1-buf-capacity"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              valueType: "java.nio.ByteBuffer"
-              uuid: "compareTo_sha256Hash1-buf"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.base.Sha256Hash"
-          method: "read"
-          methodParameters:
-          - name: "buf"
-            value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<static_method_return>
-                target: "java.nio.ByteBuffer"
-                method: "allocateDirect"
-                methodParameters:
-                - name: "capacity"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "int"
-                    uuid: "compareTo_sha256Hash1-buf-capacity"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              valueType: "java.nio.ByteBuffer"
-              uuid: "compareTo_sha256Hash1-buf"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.base.Sha256Hash"
         uuid: "compareTo_sha256Hash1"
         fixed: false
+        nameForMock: "null"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "356CB6A5174F0B7CF8AB623C920B57FF"
+      modelFingerprint: "6EC5942BA290F3ECCA66BAF1C391A55C"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -8799,9 +11337,89 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 5
+                  suggestedContent: !<regular>
+                    value: 5
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 6
+                  suggestedContent: !<regular>
+                    value: 6
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 7
+                  suggestedContent: !<regular>
+                    value: 7
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                3:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 8
+                  suggestedContent: !<regular>
+                    value: 8
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             suggestedContent: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 5
+                  suggestedContent: !<regular>
+                    value: 5
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 6
+                  suggestedContent: !<regular>
+                    value: 6
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 7
+                  suggestedContent: !<regular>
+                    value: 7
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                3:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 8
+                  suggestedContent: !<regular>
+                    value: 8
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "byte[]"
             uuid: "twiceOf_byte[]1"
             fixed: false
@@ -8811,9 +11429,89 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 9
+                  suggestedContent: !<regular>
+                    value: 9
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 10
+                  suggestedContent: !<regular>
+                    value: 10
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 11
+                  suggestedContent: !<regular>
+                    value: 11
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                3:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 12
+                  suggestedContent: !<regular>
+                    value: 12
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             suggestedContent: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 9
+                  suggestedContent: !<regular>
+                    value: 9
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 10
+                  suggestedContent: !<regular>
+                    value: 10
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 11
+                  suggestedContent: !<regular>
+                    value: 11
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                3:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 12
+                  suggestedContent: !<regular>
+                    value: 12
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "byte[]"
             uuid: "twiceOf_byte[]2"
             fixed: false
@@ -8836,7 +11534,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "4705AF2665CE98206DC40695B007F04D"
+      modelFingerprint: "D47B0EDCAD5762202422F53A105549F4"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -8867,9 +11565,15 @@ methods:
         signature: "wrap(byte[]): Sha256Hash"
         returnValue:
           sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.base.Sha256Hash"
+            onlyPojoFunctions: false
+            builderPattern: false
           valueType: "org.bitcoinj.base.Sha256Hash"
           uuid: "twiceOf_sha256Hash1"
           fixed: false
+          nameForMock: "{\\\"bytes\\\":{\\\"resultList\\\":[\\\"1\\\",\\\"2\\\",\\\
+            \"3\\\",\\\"4\\\"]}}"
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 9

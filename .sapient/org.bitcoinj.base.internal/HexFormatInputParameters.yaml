@@ -17,7 +17,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "75796763209D6BD700FA0A34E1FC72C8"
+    modelFingerprint: "FE30223B493B380EC8BE8F6C111F6CFD"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -48,7 +48,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "bytes"
-      modelFingerprint: "2F1EAF8FF70A2512E1D6FE1905E2B8EB"
+      modelFingerprint: "602C6DB037E35634C9CEEAA55436D69E"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -60,11 +60,10 @@ methods:
             0:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 1
               suggestedContent: !<regular>
-                value: 0
+                value: 1
               valueType: "byte"
-              uuid: "formatHex_byte1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -73,11 +72,10 @@ methods:
             0:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 1
               suggestedContent: !<regular>
-                value: 0
+                value: 1
               valueType: "byte"
-              uuid: "formatHex_byte1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -112,7 +110,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -149,8 +147,8 @@ methods:
     constructorSignature: "<init>() : void"
     priorityDefinedByUser: false
     filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "58BA99846408665390FA528CD6FB9125"
+    priority: "MODERATE"
+    modelFingerprint: "F6EA09E693ADC5A7C6E279CDFC4EC97D"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -181,7 +179,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "hexString"
-      modelFingerprint: "20C50CF44E6FD1E3D9A0A6858FC3DAF5"
+      modelFingerprint: "E8F2213311E1BF06500C3C220639BF29"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -189,9 +187,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "A"
+          value: "abcdef"
         suggestedContent: !<regular>
-          value: "A"
+          value: "abcdef"
         valueType: "java.lang.String"
         uuid: "parseHex_string1"
         fixed: false
@@ -201,45 +199,75 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "D0E8EDD3CF6873926270D47CA9BDFB05"
+      modelFingerprint: "443C61B7DD8D72C45254B3E3DF3AF0B2"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "EXCEPTION"
-        content: !<new>
-          target: "java.lang.IllegalArgumentException"
-          parameters:
-          - name: "s"
-            value:
+        sapientType: "ARRAY"
+        content: !<array>
+          values:
+            0:
               sapientType: "BASIC"
               content: !<regular>
-                value: "Invalid hexadecimal String supplied."
-              valueType: "java.lang.String"
+                value: -85
+              valueType: "byte"
+              originalValueType: "int"
               fixed: true
               equalsMethodPresent: false
               explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "java.lang.IllegalArgumentException"
-          parameters:
-          - name: "s"
-            value:
+            1:
               sapientType: "BASIC"
               content: !<regular>
-                value: "Invalid hexadecimal String supplied."
-              valueType: "java.lang.String"
+                value: -51
+              valueType: "byte"
+              originalValueType: "int"
               fixed: true
               equalsMethodPresent: false
               explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        valueType: "java.lang.IllegalArgumentException"
-        uuid: "parseHex_illegalArgumentException1"
-        fixed: true
-        equalsMethodPresent: false
+            2:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: -17
+              valueType: "byte"
+              originalValueType: "int"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<array>
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: -85
+              valueType: "byte"
+              originalValueType: "int"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            1:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: -51
+              valueType: "byte"
+              originalValueType: "int"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            2:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: -17
+              valueType: "byte"
+              originalValueType: "int"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "byte[]"
+        uuid: "parseHex_byte[]1"
+        fixed: false
+        equalsMethodPresent: true
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
@@ -247,7 +275,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path5"
@@ -276,8 +304,8 @@ methods:
     constructorSignature: "<init>() : void"
     priorityDefinedByUser: false
     filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "7411FD655E53B3AB20AAF505006CC6E7"
+    priority: "MODERATE"
+    modelFingerprint: "3B253E45D135D12E3BB9C4AD104C840C"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -308,7 +336,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "hexString"
-      modelFingerprint: "4EF3142189EBF33C97A49229B6C3AB4A"
+      modelFingerprint: "D718E13DA5D776D5078DF315A648C3E1"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -316,9 +344,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "hexString1"
+          value: "1F2A"
         suggestedContent: !<regular>
-          value: "hexString1"
+          value: "1F2A"
         valueType: "java.lang.String"
         uuid: "parseHex_string1"
         fixed: false
@@ -328,121 +356,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "B48523417770E85C4714D7E85ABA53C3"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "EXCEPTION"
-        content: !<new>
-          target: "java.lang.IllegalArgumentException"
-          parameters:
-          - name: "s"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "Invalid Hexadecimal Character: h"
-              suggestedContent: !<regular>
-                value: "Invalid Hexadecimal Character: h"
-              valueType: "java.lang.String"
-              uuid: "toDigit_string1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "java.lang.IllegalArgumentException"
-          parameters:
-          - name: "s"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "Invalid Hexadecimal Character: h"
-              suggestedContent: !<regular>
-                value: "Invalid Hexadecimal Character: h"
-              valueType: "java.lang.String"
-              uuid: "toDigit_string1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        valueType: "java.lang.IllegalArgumentException"
-        uuid: "toDigit_illegalArgumentException1"
-        fixed: true
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    uuid: "54602f71-0d40-36da-b499-ce62ba6f2488"
-    deleted: false
-    disabled: false
-    ignoredBySystem: false
-    prover: "DEFAULT"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path4"
-    pathIdForUser: "path4"
-    testPathName: "parseHexWhenDigitNotEqualsMinus1"
-    nameDefinedByUser: false
-    constructorSignature: "<init>() : void"
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "D331313A553FC00FD1FB8C673E4CC7CB"
-    problemWasSolvedByProver: true
-    truncated: false
-    inputParameters:
-    - type: "CONSTRUCTOR"
-      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.base.internal.HexFormat"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.base.internal.HexFormat"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "org.bitcoinj.base.internal.HexFormat"
-        uuid: "target"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "hexString"
-      modelFingerprint: "B87CB097F4066E98C33E1DEB204DDCE0"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: "AB"
-        suggestedContent: !<regular>
-          value: "AB"
-        valueType: "java.lang.String"
-        uuid: "parseHex_string1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "D8714EC51DB6D83D06E99D13E58888AA"
+      modelFingerprint: "5B7374EC1B03F324CE48690590309192"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -454,7 +368,16 @@ methods:
             0:
               sapientType: "BASIC"
               content: !<regular>
-                value: -85
+                value: 31
+              valueType: "byte"
+              originalValueType: "int"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            1:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 42
               valueType: "byte"
               originalValueType: "int"
               fixed: true
@@ -465,7 +388,118 @@ methods:
             0:
               sapientType: "BASIC"
               content: !<regular>
-                value: -85
+                value: 31
+              valueType: "byte"
+              originalValueType: "int"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            1:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 42
+              valueType: "byte"
+              originalValueType: "int"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "byte[]"
+        uuid: "parseHex_byte[]1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "54602f71-0d40-36da-b499-ce62ba6f2488"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path4"
+    pathIdForUser: "path4"
+    testPathName: "parseHexWhenDigitNotEqualsMinus1"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "F5C5306BE9332113FFFB68B8CADF7DA5"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.base.internal.HexFormat"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.base.internal.HexFormat"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.base.internal.HexFormat"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "hexString"
+      modelFingerprint: "0D229B8B867D262F1E04A7888C53CDB5"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "1F"
+        suggestedContent: !<regular>
+          value: "1F"
+        valueType: "java.lang.String"
+        uuid: "parseHex_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "DF9E4C13E8352CA173287B74EC5E2685"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ARRAY"
+        content: !<array>
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 31
+              valueType: "byte"
+              originalValueType: "int"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<array>
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 31
               valueType: "byte"
               originalValueType: "int"
               fixed: true
@@ -482,7 +516,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path3"
@@ -492,9 +526,9 @@ methods:
     constructorSignature: "<init>() : void"
     priorityDefinedByUser: false
     filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "23DCC46C8D8AA8BDB207306B0C932D9F"
-    problemWasSolvedByProver: false
+    priority: "MODERATE"
+    modelFingerprint: "E7E318DB530D73F2D22EB287BC6B11E5"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -524,7 +558,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "hexString"
-      modelFingerprint: "3639838A810522EA34916D28DD51ACA1"
+      modelFingerprint: "D2278AC70E525B4586C773E0F2AF3775"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -532,7 +566,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "hexString1"
+          value: "1A2B3C"
+        suggestedContent: !<regular>
+          value: "1A2B3C"
         valueType: "java.lang.String"
         uuid: "parseHex_string1"
         fixed: false
@@ -542,52 +578,82 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "B6F4E421083EF3778FEA1644A8BA9751"
+      modelFingerprint: "D8329903E065FCA74D08BD9C39A6A545"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "EXCEPTION"
-        content: !<new>
-          target: "java.lang.IllegalArgumentException"
-          parameters:
-          - name: "s"
-            value:
+        sapientType: "ARRAY"
+        content: !<array>
+          values:
+            0:
               sapientType: "BASIC"
               content: !<regular>
-                value: "s1"
-              valueType: "java.lang.String"
-              uuid: "toDigit_string1"
-              fixed: false
+                value: 26
+              valueType: "byte"
+              originalValueType: "int"
+              fixed: true
               equalsMethodPresent: false
               explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "java.lang.IllegalArgumentException"
-          parameters:
-          - name: "s"
-            value:
+            1:
               sapientType: "BASIC"
-              valueType: "java.lang.String"
-              uuid: "toDigit_string1"
-              fixed: false
+              content: !<regular>
+                value: 43
+              valueType: "byte"
+              originalValueType: "int"
+              fixed: true
               equalsMethodPresent: false
               explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        valueType: "java.lang.IllegalArgumentException"
-        uuid: "toDigit_illegalArgumentException1"
-        fixed: true
-        equalsMethodPresent: false
+            2:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 60
+              valueType: "byte"
+              originalValueType: "int"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<array>
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 26
+              valueType: "byte"
+              originalValueType: "int"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            1:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 43
+              valueType: "byte"
+              originalValueType: "int"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            2:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 60
+              valueType: "byte"
+              originalValueType: "int"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "byte[]"
+        uuid: "parseHex_byte[]1"
+        fixed: false
+        equalsMethodPresent: true
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     uuid: "9964fa33-e815-336b-82d2-f30602c027a5"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false

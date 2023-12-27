@@ -16,12 +16,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "24A40D1D6517E17BF3546AE5925CA3BB"
+    modelFingerprint: "54AAA03EF70D89CE0D4B4029C57B103F"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "B35F492ED6A50C55408626D900A6BD02"
+      modelFingerprint: "94794FE9CD21E76B7C9BD220B7907794"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -35,9 +35,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "A"
+                value: "testName"
               suggestedContent: !<regular>
-                value: "A"
+                value: "testName"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -51,8 +51,10 @@ methods:
           - name: "name"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: "testName"
               suggestedContent: !<regular>
-                value: "A"
+                value: "testName"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -69,7 +71,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "0EDC8992A47270CB045E94DA4AEC2CC9"
+      modelFingerprint: "172DD38DBD7FBEA0762673E9E5B00D77"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -77,9 +79,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "Unknown message [A]"
+          value: "Unknown message [testName]"
         suggestedContent: !<regular>
-          value: "Unknown message [A]"
+          value: "Unknown message [testName]"
         valueType: "java.lang.String"
         uuid: "toString_string1"
         fixed: false
@@ -91,6 +93,6 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

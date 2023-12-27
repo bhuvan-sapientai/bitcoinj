@@ -17,7 +17,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "808F85D0C84488AE53A71AC6D6804A8F"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -85,7 +85,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "297131563528FA0A70B0BD61B0EE1330"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -153,7 +153,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "4B6D8C848D0D03F87AD73332F16ABA14"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -221,7 +221,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "BB93825987C600214DDA433C3E9FB671"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -289,7 +289,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "DB8CE1264BD17964C9A980BE3E370D9B"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -357,7 +357,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "33521C9B146406B39EC8E09B1422AEC5"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -425,7 +425,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "B7C4538C2BD217508DB4FDBA34EEF845"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -483,18 +483,6 @@ methods:
         signature: "valueOf(long): Coin"
         returnValue:
           sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.Coin"
-            method: "valueOf"
-            methodParameters:
-            - value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 9223372036854775807
-                valueType: "long"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.base.Coin"
             method: "valueOf"
@@ -524,18 +512,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "org.bitcoinj.base.Coin"
-          method: "valueOf"
-          methodParameters:
-          - value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 9223372036854775807
-              valueType: "long"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
         suggestedContent: !<static_method_return>
           target: "org.bitcoinj.base.Coin"
           method: "valueOf"
@@ -578,7 +554,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "31B257822C75D65CC7BA8051A9018BFB"
+    modelFingerprint: "B0385F3D64EEA6E04B81911701D6D6C0"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -609,16 +585,21 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "monetary"
-      modelFingerprint: "D680C9F0E13E459F24FFC14799D2D580"
+      modelFingerprint: "4A2EED0B250A734B517C70D0CD025925"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Monetary"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.base.Monetary"
         uuid: "exceedsMaxMoney_monetary1"
         fixed: false
+        nameForMock: "{}"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
@@ -644,6 +625,6 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

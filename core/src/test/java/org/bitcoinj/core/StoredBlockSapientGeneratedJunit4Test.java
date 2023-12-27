@@ -57,6 +57,10 @@ public class StoredBlockSapientGeneratedJunit4Test {
     @Rule()
     public ExpectedException thrown = ExpectedException.none();
 
+    private final Sha256Hash sha256HashMock3 = mock(Sha256Hash.class);
+
+    private final Sha256Hash sha256HashMock4 = mock(Sha256Hash.class);
+
     //Sapient generated method id: ${1895f326-80dd-3b71-8d06-214d95cf3335}
     @Test()
     public void moreWorkThanWhenChainWorkCompareToOtherChainWorkGreaterThan0() {
@@ -64,8 +68,14 @@ public class StoredBlockSapientGeneratedJunit4Test {
          * (chainWork.compareTo(other.chainWork) > 0) : true
          */
         //Arrange Statement(s)
-        StoredBlock target = new StoredBlock(blockMock, new BigInteger("2"), 0);
-        StoredBlock storedBlock = new StoredBlock(blockMock2, new BigInteger("1"), 0);
+        Instant instant = Instant.now();
+        List list = new ArrayList<>();
+        Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
+        StoredBlock target = new StoredBlock(block, new BigInteger("1000"), 10);
+        Instant instant2 = Instant.now();
+        List list2 = new ArrayList<>();
+        Block block2 = new Block(0L, sha256HashMock3, sha256HashMock4, instant2, 0L, 0L, list2);
+        StoredBlock storedBlock = new StoredBlock(block2, new BigInteger("500"), 5);
 
         //Act Statement(s)
         boolean result = target.moreWorkThan(storedBlock);
@@ -81,30 +91,40 @@ public class StoredBlockSapientGeneratedJunit4Test {
          * (chainWork.compareTo(other.chainWork) > 0) : false
          */
         //Arrange Statement(s)
-        StoredBlock target = new StoredBlock(blockMock, new BigInteger("0"), 0);
-        StoredBlock storedBlock = new StoredBlock(blockMock2, new BigInteger("0"), 0);
+        Instant instant = Instant.now();
+        List list = new ArrayList<>();
+        Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
+        StoredBlock target = new StoredBlock(block, new BigInteger("200"), 1);
+        Instant instant2 = Instant.now();
+        List list2 = new ArrayList<>();
+        Block block2 = new Block(0L, sha256HashMock3, sha256HashMock4, instant2, 0L, 0L, list2);
+        StoredBlock storedBlock = new StoredBlock(block2, new BigInteger("100"), 0);
 
         //Act Statement(s)
         boolean result = target.moreWorkThan(storedBlock);
 
         //Assert statement(s)
-        assertThat(result, equalTo(Boolean.FALSE));
+        assertThat(result, equalTo(Boolean.TRUE));
     }
 
     //Sapient generated method id: ${c319ea97-f8d0-37c4-a5dd-88e142a90c6d}
     @Test()
     public void buildTest() throws VerificationException {
         //Arrange Statement(s)
-        doReturn(new BigInteger("1")).when(blockMock).getWork();
-        StoredBlock target = new StoredBlock(blockMock2, new BigInteger("1"), 1);
+        Instant instant = Instant.now();
+        List list = new ArrayList<>();
+        Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
+        StoredBlock target = new StoredBlock(block, new BigInteger("1000"), 11);
+        Instant instant2 = Instant.now();
+        List list2 = new ArrayList<>();
+        Block block2 = new Block(0L, sha256HashMock3, sha256HashMock4, instant2, 0L, 0L, list2);
 
         //Act Statement(s)
-        StoredBlock result = target.build(blockMock);
-        StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("2"), 2);
+        StoredBlock result = target.build(block2);
+        StoredBlock storedBlock = new StoredBlock(block2, new BigInteger("115792089237316195423570985008687907853269984665640564039457584007913129640936"), 12);
 
         //Assert statement(s)
         assertThat(result, equalTo(storedBlock));
-        verify(blockMock).getWork();
     }
 
     //Sapient generated method id: ${2aed458e-cc71-3e23-bca0-59021b817f3e}
@@ -112,87 +132,42 @@ public class StoredBlockSapientGeneratedJunit4Test {
     @Test()
     public void getPrevTest() throws BlockStoreException {
         //Arrange Statement(s)
-        BlockStore storeMock = mock(BlockStore.class);
-        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
-        doReturn(storedBlockMock).when(storeMock).get(sha256HashMock);
-        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
+        BlockStore storeMock = mock(BlockStore.class, "BlockStore");
+        StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
+        doReturn(storedBlock).when(storeMock).get((Sha256Hash) any());
         Instant instant = Instant.now();
         List list = new ArrayList<>();
-        Block block = new Block(0L, sha256HashMock2, sha256HashMock, instant, 0L, 0L, list);
-        StoredBlock target = new StoredBlock(block, new BigInteger("0"), 0);
+        Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
+        StoredBlock target = spy(new StoredBlock(block, new BigInteger("0"), 0));
+        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+        Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
+        Instant instant2 = Instant.now();
+        List list2 = new ArrayList<>();
+        Block block2 = new Block(0L, sha256HashMock3, sha256Hash, instant2, 0L, 0L, list2);
+        doReturn(block2).when(target).getHeader();
 
         //Act Statement(s)
         StoredBlock result = target.getPrev(storeMock);
 
         //Assert statement(s)
-        assertThat(result, equalTo(storedBlockMock));
-        verify(storeMock).get(sha256HashMock);
-    }
-
-    //Sapient generated method id: ${35a13cc0-ea02-3b06-8245-df97532dc68e}
-    @Ignore()
-    @Test()
-    public void serializeCompactWhenChainWorkBytesLengthLessThanOrEqualsToCHAIN_WORK_BYTESThrowsIllegalStateException() {
-        /* Branches:
-         * (chainWorkBytes.length <= CHAIN_WORK_BYTES) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            IllegalStateException illegalStateException = new IllegalStateException();
-            preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
-            StoredBlock target = new StoredBlock(blockMock, new BigInteger("1"), 0);
-            thrown.expect(IllegalStateException.class);
-            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            //Act Statement(s)
-            target.serializeCompact(byteBuffer);
-            //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
-        }
-    }
-
-    //Sapient generated method id: ${cc28ebf7-9302-350f-a1ed-0f2c86e30da6}
-    @Ignore()
-    @Test()
-    public void deserializeCompactTest() throws ProtocolException {
-        /**
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<Block> block = mockStatic(Block.class);
-             MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
-            byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
-            byteUtils.when(() -> ByteUtils.bytesToBigInteger(byteArray)).thenReturn(new BigInteger("0"));
-            byte[] byteArray2 = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
-            ByteBuffer byteBuffer = ByteBuffer.wrap(byteArray2);
-            Block block2 = Block.read(byteBuffer);
-            block.when(() -> Block.read((ByteBuffer) any())).thenReturn(block2);
-            ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
-            //Act Statement(s)
-            StoredBlock result = StoredBlock.deserializeCompact(byteBuffer2);
-            StoredBlock storedBlock = new StoredBlock(block2, new BigInteger("0"), 0);
-            //Assert statement(s)
-            assertThat(result, equalTo(storedBlock));
-            byteUtils.verify(() -> ByteUtils.bytesToBigInteger(byteArray), atLeast(1));
-            block.verify(() -> Block.read((ByteBuffer) any()));
-        }
+        assertThat(result, equalTo(storedBlock));
+        verify(storeMock).get((Sha256Hash) any());
+        verify(target).getHeader();
     }
 
     //Sapient generated method id: ${6c2d1366-1370-3259-91d2-4247d0acb395}
     @Test()
     public void deserializeCompact1Test() throws ProtocolException {
         //Arrange Statement(s)
-        MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
+        MessageSerializer messageSerializerMock = mock(MessageSerializer.class, "{}");
         try (MockedStatic<StoredBlock> storedBlock = mockStatic(StoredBlock.class, CALLS_REAL_METHODS)) {
-            storedBlock.when(() -> StoredBlock.deserializeCompact((ByteBuffer) any())).thenReturn(storedBlockMock);
+            StoredBlock storedBlock2 = new StoredBlock(blockMock, new BigInteger("0"), 0);
+            storedBlock.when(() -> StoredBlock.deserializeCompact((ByteBuffer) any())).thenReturn(storedBlock2);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
             //Act Statement(s)
             StoredBlock result = StoredBlock.deserializeCompact(messageSerializerMock, byteBuffer);
             //Assert statement(s)
-            assertThat(result, equalTo(storedBlockMock));
+            assertThat(result, equalTo(storedBlock2));
             storedBlock.verify(() -> StoredBlock.deserializeCompact((ByteBuffer) any()), atLeast(1));
         }
     }
@@ -206,15 +181,20 @@ public class StoredBlockSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Block blockMock = mock(Block.class, "<init>_block1");
+        Instant instant = Instant.now();
+        List list = new ArrayList<>();
+        Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
+        StoredBlock target = spy(new StoredBlock(block, new BigInteger("1000000"), 10));
         doReturn("return_of_getHashAsString1").when(blockMock).getHashAsString();
-        StoredBlock target = new StoredBlock(blockMock, new BigInteger("0"), 1);
+        Block blockMock2 = mock(Block.class, "toString_block2");
+        doReturn(blockMock, blockMock2).when(target).getHeader();
 
         //Act Statement(s)
         String result = target.toString();
 
         //Assert statement(s)
         assertThat(result, equalTo("result1"));
+        verify(target, times(2)).getHeader();
         verify(blockMock).getHashAsString();
     }
 }

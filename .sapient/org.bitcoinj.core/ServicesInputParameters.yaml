@@ -86,7 +86,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -104,7 +104,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "DB186F3D0DC4D1429D0B133764396E87"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "RESULT"
@@ -116,20 +116,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.core.Services"
-          parameters:
-          - name: "bits"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "long"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: true
-          createdByTargetCode: true
         suggestedContent: !<new>
           target: "org.bitcoinj.core.Services"
           parameters:
@@ -287,12 +273,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "E8307844C6BAA8735D8FE56DB2B091CF"
+    modelFingerprint: "C0EE8150CA142722FB81A7DA8D9BE71B"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "8CADD6C5892D810668F6EA57F528C4AD"
+      modelFingerprint: "CAE8C439665570B59D3DD781750E4202"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -307,7 +293,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 123456789
+              suggestedContent: !<regular>
+                value: 123456789
               valueType: "long"
               uuid: "of_long1"
               fixed: false
@@ -320,6 +308,10 @@ methods:
           - name: "bits"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 123456789
+              suggestedContent: !<regular>
+                value: 123456789
               valueType: "long"
               uuid: "of_long1"
               fixed: false
@@ -334,7 +326,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "804632FC35F3D360B4AE3373F0AFA52B"
+      modelFingerprint: "F06BD74B92BA4828B37B41CCAB1152AE"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -342,7 +334,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
+          value: 123456789
+        suggestedContent: !<regular>
+          value: 123456789
         valueType: "long"
         uuid: "of_long1"
         fixed: false
@@ -354,7 +348,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -372,12 +366,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "BAC82B4D825121364240F5153701BF45"
+    modelFingerprint: "DEC2415836B5EC9B7A2E912D55A57219"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "F473BC394C4774B83FDBB68C7C008A1B"
+      modelFingerprint: "9E53709BCB55460AB5BDA8713724B363"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -407,6 +401,8 @@ methods:
           - name: "bits"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 1
               suggestedContent: !<regular>
                 value: 1
               valueType: "long"
@@ -442,7 +438,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -453,12 +449,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "7FF8285630439BFE867C1F6C55082BBF"
+    modelFingerprint: "53E0B7121B65063F04F0C7D3D171C5BB"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "7940A68A3C039AD258C6CC2735023B60"
+      modelFingerprint: "72760FF360DD36BBB082282AA1DD3131"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -488,6 +484,8 @@ methods:
           - name: "bits"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 0
               suggestedContent: !<regular>
                 value: 0
               valueType: "long"
@@ -523,7 +521,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -542,221 +540,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "AFBBACBF0A50F6B13DCD9ED2A79ADEC7"
-    problemWasSolvedByProver: true
-    truncated: false
-    inputParameters:
-    - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "72760FF360DD36BBB082282AA1DD3131"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "org.bitcoinj.core.Services"
-          method: "of"
-          methodParameters:
-          - name: "bits"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "of_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.core.Services"
-          method: "of"
-          methodParameters:
-          - name: "bits"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "of_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        valueType: "org.bitcoinj.core.Services"
-        uuid: "target"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "bitmask"
-      modelFingerprint: "D84DD3F6A90295777152CFE215D5E360"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: 0
-        suggestedContent: !<regular>
-          value: 0
-        valueType: "long"
-        uuid: "has_long1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: true
-        valueType: "boolean"
-        fixed: true
-        equalsMethodPresent: true
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    uuid: "711c1202-be2f-3257-9a83-1334fa377a87"
-    deleted: false
-    disabled: false
-    ignoredBySystem: false
-    prover: "DEFAULT"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path2"
-    pathIdForUser: "path2"
-    testPathName: "hasWhenBitsAndBitmaskNotEqualsBitmask"
-    nameDefinedByUser: false
-    constructorSignature: "of(long) : org.bitcoinj.core.Services"
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "0D87E77F449F323DBAF66F65BCCD0F42"
-    problemWasSolvedByProver: true
-    truncated: false
-    inputParameters:
-    - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "72760FF360DD36BBB082282AA1DD3131"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "org.bitcoinj.core.Services"
-          method: "of"
-          methodParameters:
-          - name: "bits"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "of_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.core.Services"
-          method: "of"
-          methodParameters:
-          - name: "bits"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "of_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        valueType: "org.bitcoinj.core.Services"
-        uuid: "target"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "bitmask"
-      modelFingerprint: "ED1EDA8D930FD9769B912147F4B501C7"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: 2
-        suggestedContent: !<regular>
-          value: 2
-        valueType: "long"
-        uuid: "has_long1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: false
-        valueType: "boolean"
-        fixed: true
-        equalsMethodPresent: true
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    uuid: "587bc310-f3bc-3aae-9d37-59e189334df5"
-    deleted: false
-    disabled: false
-    ignoredBySystem: false
-    prover: "DEFAULT"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-- method:
-    name: "anyOf"
-    returnType: "boolean"
-    signature: "anyOf(long) : boolean"
-    instructionFingerprint: "D71EACB05AEE8D456BCE06CAF1EEC620"
-    parametersTypes:
-    - "long"
-  paths:
-  - pathId: "path1"
-    pathIdForUser: "path1"
-    testPathName: "anyOfWhenBitsAndBitmaskNotEquals0"
-    nameDefinedByUser: false
-    constructorSignature: "of(long) : org.bitcoinj.core.Services"
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "55C50F35192AB2DF149B9D7AA0D672CA"
+    modelFingerprint: "B1C48A6BF67FD307879629931298228C"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -803,7 +587,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "bitmask"
-      modelFingerprint: "890B6C5B24F45563B2DAB3356AF917FC"
+      modelFingerprint: "D5A3A3ED3D331AB2A9199DF2EC5D5643"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -811,7 +595,223 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
+          value: 1
+        suggestedContent: !<regular>
+          value: 1
+        valueType: "long"
+        uuid: "has_long1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: true
+        valueType: "boolean"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "711c1202-be2f-3257-9a83-1334fa377a87"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "hasWhenBitsAndBitmaskNotEqualsBitmask"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "984AD7670C7940AA17A5DC5A3D74CCA2"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "F97DEC2DBB49978F0A56494C796C65B3"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.core.Services"
+          method: "of"
+          methodParameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 2
+              suggestedContent: !<regular>
+                value: 2
+              valueType: "long"
+              uuid: "of_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.core.Services"
+          method: "of"
+          methodParameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 2
+              suggestedContent: !<regular>
+                value: 2
+              valueType: "long"
+              uuid: "of_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "org.bitcoinj.core.Services"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "bitmask"
+      modelFingerprint: "AA19A3BF7824109DB26FCD8B0CD00E7B"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: 10
+        suggestedContent: !<regular>
+          value: 10
+        valueType: "long"
+        uuid: "has_long1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: false
+        valueType: "boolean"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "587bc310-f3bc-3aae-9d37-59e189334df5"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "anyOf"
+    returnType: "boolean"
+    signature: "anyOf(long) : boolean"
+    instructionFingerprint: "D71EACB05AEE8D456BCE06CAF1EEC620"
+    parametersTypes:
+    - "long"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "anyOfWhenBitsAndBitmaskNotEquals0"
+    nameDefinedByUser: false
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "3886816B67F8F61EDD51F32A1A427BB5"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "22A56020BBD76739C1A4659DC43B40F7"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.core.Services"
+          method: "of"
+          methodParameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 5
+              suggestedContent: !<regular>
+                value: 5
+              valueType: "long"
+              uuid: "of_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.core.Services"
+          method: "of"
+          methodParameters:
+          - name: "bits"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 5
+              suggestedContent: !<regular>
+                value: 5
+              valueType: "long"
+              uuid: "of_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "org.bitcoinj.core.Services"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "bitmask"
+      modelFingerprint: "9BB67EA1C3538244AF02711947865421"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: 3
+        suggestedContent: !<regular>
+          value: 3
         valueType: "long"
         uuid: "anyOf_long1"
         fixed: false
@@ -851,12 +851,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "C2F944AE342259571700DE84A79DBFE2"
+    modelFingerprint: "1CF9BA0E5E7A7BFE80629E0545C960D6"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "72760FF360DD36BBB082282AA1DD3131"
+      modelFingerprint: "7EF9247E1D049F1B78E90CEA45CBC188"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -871,9 +871,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 170
               suggestedContent: !<regular>
-                value: 0
+                value: 170
               valueType: "long"
               uuid: "of_long1"
               fixed: false
@@ -887,9 +887,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 170
               suggestedContent: !<regular>
-                value: 0
+                value: 170
               valueType: "long"
               uuid: "of_long1"
               fixed: false
@@ -904,7 +904,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "bitmask"
-      modelFingerprint: "D84DD3F6A90295777152CFE215D5E360"
+      modelFingerprint: "820113756C645B595D92497F6CE83769"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -912,9 +912,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
+          value: 85
         suggestedContent: !<regular>
-          value: 0
+          value: 85
         valueType: "long"
         uuid: "anyOf_long1"
         fixed: false
@@ -943,7 +943,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -964,12 +964,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "E3E3F55EFA585746DCE50C0E2887A385"
+    modelFingerprint: "3B63E6E85C0ACF2D3A48DE17D55E56E4"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "BC8DA871DAA01DF161BF3CE87FC89FBB"
+      modelFingerprint: "6F72F967E3162BF5AC4B30BB72D78EE8"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -984,7 +984,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 123456789
+              suggestedContent: !<regular>
+                value: 123456789
               valueType: "long"
               uuid: "of_long1"
               fixed: false
@@ -997,6 +999,10 @@ methods:
           - name: "bits"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 123456789
+              suggestedContent: !<regular>
+                value: 123456789
               valueType: "long"
               uuid: "of_long1"
               fixed: false
@@ -1011,7 +1017,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "buf"
-      modelFingerprint: "E78EB9D5CB826E0A6A0C7C85F54F4F2A"
+      modelFingerprint: "D9502874ABE1CA67297A590F5B7E0FB1"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1053,7 +1059,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "7D316644F1B80F06BF95B6F66B39B36C"
+      modelFingerprint: "D443FCA5982459A6B11BB072DD2161AA"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1115,12 +1121,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "A87F69F5AEE3E45663B0CFA554543AAA"
+    modelFingerprint: "6A70EFA7C6352790668B2B16ABF28983"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "F473BC394C4774B83FDBB68C7C008A1B"
+      modelFingerprint: "6F72F967E3162BF5AC4B30BB72D78EE8"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1135,9 +1141,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 1
+                value: 123456789
               suggestedContent: !<regular>
-                value: 1
+                value: 123456789
               valueType: "long"
               uuid: "of_long1"
               fixed: false
@@ -1150,8 +1156,10 @@ methods:
           - name: "bits"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 123456789
               suggestedContent: !<regular>
-                value: 1
+                value: 123456789
               valueType: "long"
               uuid: "of_long1"
               fixed: false
@@ -1166,7 +1174,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "850A205E812E0C52C13403E663D22E64"
+      modelFingerprint: "AA3831747A67264DC8CF40D23F3926CE"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1178,7 +1186,7 @@ methods:
             0:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 21
               valueType: "byte"
               uuid: "serialize_byte[]1-item0"
               fixed: false
@@ -1187,7 +1195,7 @@ methods:
             1:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: -51
               valueType: "byte"
               uuid: "serialize_byte[]1-item1"
               fixed: false
@@ -1196,7 +1204,7 @@ methods:
             2:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 91
               valueType: "byte"
               uuid: "serialize_byte[]1-item2"
               fixed: false
@@ -1205,7 +1213,7 @@ methods:
             3:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 7
               valueType: "byte"
               uuid: "serialize_byte[]1-item3"
               fixed: false
@@ -1252,7 +1260,7 @@ methods:
             0:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 21
               valueType: "byte"
               uuid: "serialize_byte[]1-item0"
               fixed: false
@@ -1261,7 +1269,7 @@ methods:
             1:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: -51
               valueType: "byte"
               uuid: "serialize_byte[]1-item1"
               fixed: false
@@ -1270,7 +1278,7 @@ methods:
             2:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 91
               valueType: "byte"
               uuid: "serialize_byte[]1-item2"
               fixed: false
@@ -1279,7 +1287,7 @@ methods:
             3:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 7
               valueType: "byte"
               uuid: "serialize_byte[]1-item3"
               fixed: false
@@ -1332,7 +1340,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -1350,12 +1358,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "D8C7C8E4A8F8C84DCA0D87E613FE4353"
-    problemWasSolvedByProver: false
+    modelFingerprint: "AE03CBD17DC0EB4884E779D6BA2DFB06"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "BC8DA871DAA01DF161BF3CE87FC89FBB"
+      modelFingerprint: "49E6FC34BB724C53A53A6D8E44529DCD"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1370,7 +1378,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 1033
+              suggestedContent: !<regular>
+                value: 1033
               valueType: "long"
               uuid: "of_long1"
               fixed: false
@@ -1383,6 +1393,10 @@ methods:
           - name: "bits"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 1033
+              suggestedContent: !<regular>
+                value: 1033
               valueType: "long"
               uuid: "of_long1"
               fixed: false
@@ -1397,13 +1411,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "InternalUtils"
-      modelFingerprint: "E71BC7CB6D2A84DC5086CF05B37C57E4"
+      modelFingerprint: "C268AEB441D26E8290207A97B9F03597"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "REAL"
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.base.internal.InternalUtils"
         uuid: "org.bitcoinj.base.internal.InternalUtils"
         fixed: false
@@ -1424,74 +1438,38 @@ methods:
             explicitCastNeeded: false
         signature: "joiner(String): InternalUtils$Joiner"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.internal.InternalUtils"
-            method: "joiner"
-            methodParameters:
-            - value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: ", "
-                valueType: "java.lang.String"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.base.internal.InternalUtils"
-            method: "joiner"
-            methodParameters:
-            - value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: ", "
-                valueType: "java.lang.String"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.base.internal.InternalUtils$Joiner"
+            onlyPojoFunctions: false
+            builderPattern: false
           valueType: "org.bitcoinj.base.internal.InternalUtils$Joiner"
           uuid: "toString_internalUtils.Joiner1"
           fixed: false
+          nameForMock: "UnknownObjectContent{target='org.bitcoinj.base.internal.InternalUtils$Joiner',\
+            \ onlyPojoFunctions=false, builderPattern=false}"
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 9
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "0B0804412F097E612806ED3A0A4A109E"
+      modelFingerprint: "3B1AE7D77B020A46A57751FBF38BC0F6"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "org.bitcoinj.base.internal.InternalUtils"
-          method: "joiner"
-          methodParameters:
-          - value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: ", "
-              valueType: "java.lang.String"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.base.internal.InternalUtils"
-          method: "joiner"
-          methodParameters:
-          - value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: ", "
-              valueType: "java.lang.String"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.internal.InternalUtils$Joiner"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.base.internal.InternalUtils$Joiner"
         uuid: "toString_internalUtils.Joiner1"
         fixed: false
+        nameForMock: "UnknownObjectContent{target='org.bitcoinj.base.internal.InternalUtils$Joiner',\
+          \ onlyPojoFunctions=false, builderPattern=false}"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -1516,7 +1494,7 @@ methods:
                 explicitCastNeeded: false
               - sapientType: "BASIC"
                 content: !<regular>
-                  value: "BLOOM"
+                  value: "WITNESS"
                 valueType: "java.lang.String"
                 uuid: "toString_linkedList1-item1"
                 fixed: true
@@ -1525,30 +1503,11 @@ methods:
                 explicitCastNeeded: false
               - sapientType: "BASIC"
                 content: !<regular>
-                  value: "WITNESS"
+                  value: "NETWORK_LIMITED"
                 valueType: "java.lang.String"
                 uuid: "toString_linkedList1-item2"
                 fixed: true
                 collectionUuid: "toString_linkedList1"
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              - sapientType: "BASIC"
-                content: !<regular>
-                  value: "NETWORK_LIMITED"
-                valueType: "java.lang.String"
-                uuid: "toString_linkedList1-item3"
-                fixed: true
-                collectionUuid: "toString_linkedList1"
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              - sapientType: "BASIC"
-                content: !<regular>
-                  value: "remaining: 1111111111111111111111111111111111111111111111111111111111111111"
-                suggestedContent: !<regular>
-                  value: "remaining: 1111111111111111111111111111111111111111111111111111111111111111"
-                valueType: "java.lang.String"
-                uuid: "toString_string2"
-                fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
             suggestedContent: !<collection>
@@ -1566,7 +1525,7 @@ methods:
                 explicitCastNeeded: false
               - sapientType: "BASIC"
                 content: !<regular>
-                  value: "BLOOM"
+                  value: "WITNESS"
                 valueType: "java.lang.String"
                 uuid: "toString_linkedList1-item1"
                 fixed: true
@@ -1575,30 +1534,11 @@ methods:
                 explicitCastNeeded: false
               - sapientType: "BASIC"
                 content: !<regular>
-                  value: "WITNESS"
+                  value: "NETWORK_LIMITED"
                 valueType: "java.lang.String"
                 uuid: "toString_linkedList1-item2"
                 fixed: true
                 collectionUuid: "toString_linkedList1"
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              - sapientType: "BASIC"
-                content: !<regular>
-                  value: "NETWORK_LIMITED"
-                valueType: "java.lang.String"
-                uuid: "toString_linkedList1-item3"
-                fixed: true
-                collectionUuid: "toString_linkedList1"
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              - sapientType: "BASIC"
-                content: !<regular>
-                  value: "remaining: 1111111111111111111111111111111111111111111111111111111111111111"
-                suggestedContent: !<regular>
-                  value: "remaining: 1111111111111111111111111111111111111111111111111111111111111111"
-                valueType: "java.lang.String"
-                uuid: "toString_string2"
-                fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
             valueType: "java.util.List"
@@ -1609,11 +1549,9 @@ methods:
             explicitCastNeeded: false
         signature: "join(List): String"
         returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: "return_of_join1"
+          sapientType: "NULL"
           valueType: "java.lang.String"
-          uuid: "toString_string3"
+          uuid: "toString_string1"
           fixed: false
           equalsMethodPresent: true
           explicitCastNeeded: false
@@ -1622,17 +1560,15 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "A2384A070C8594AC9B4976B6E4923C6F"
+      modelFingerprint: "3560E61103D2C8F65AB5F43A62DB93A5"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: "return_of_join1"
+        sapientType: "NULL"
         valueType: "java.lang.String"
-        uuid: "toString_string3"
+        uuid: "toString_string1"
         fixed: false
         equalsMethodPresent: true
         explicitCastNeeded: false

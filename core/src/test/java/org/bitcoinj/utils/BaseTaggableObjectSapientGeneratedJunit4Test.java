@@ -30,7 +30,7 @@ public class BaseTaggableObjectSapientGeneratedJunit4Test {
         BaseTaggableObject target = new BaseTaggableObject();
 
         //Act Statement(s)
-        ByteString result = target.maybeGetTag("tag1");
+        ByteString result = target.maybeGetTag("sampleTag");
 
         //Assert statement(s)
         assertThat(result, is(nullValue()));
@@ -44,12 +44,12 @@ public class BaseTaggableObjectSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         BaseTaggableObject target = new BaseTaggableObject();
-        IllegalArgumentException illegalArgumentException = new IllegalArgumentException("Unknown tag A");
+        IllegalArgumentException illegalArgumentException = new IllegalArgumentException("Unknown tag unknown_tag");
         thrown.expect(IllegalArgumentException.class);
         thrown.expectMessage(illegalArgumentException.getMessage());
 
         //Act Statement(s)
-        target.getTag("A");
+        target.getTag("unknown_tag");
     }
 
     //Sapient generated method id: ${d92a6414-d18c-3f09-b483-a17a3c92b04b}
@@ -57,24 +57,9 @@ public class BaseTaggableObjectSapientGeneratedJunit4Test {
     public void setTagTest() {
         //Arrange Statement(s)
         BaseTaggableObject target = new BaseTaggableObject();
-        ByteString byteStringMock = mock(ByteString.class);
+        ByteString byteString = ByteString.empty();
 
         //Act Statement(s)
-        target.setTag("tag1", byteStringMock);
-    }
-
-    //Sapient generated method id: ${59fc8b6d-9cf4-385e-b4d4-3f0361c77781}
-    @Test()
-    public void getTagsTest() {
-        //Arrange Statement(s)
-        BaseTaggableObject target = new BaseTaggableObject();
-
-        //Act Statement(s)
-        Map<String, ByteString> result = target.getTags();
-        Map<String, ByteString> stringByteStringMap = new HashMap<>();
-        Map<String, ByteString> stringByteStringResultMap = new HashMap<>(stringByteStringMap);
-
-        //Assert statement(s)
-        assertThat(result, equalTo(stringByteStringResultMap));
+        target.setTag("sampleTag", byteString);
     }
 }

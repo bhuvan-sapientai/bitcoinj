@@ -29,11 +29,11 @@ public class PreconditionsSapientGeneratedJunit4Test {
     public void checkArgumentTest() {
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS)) {
-            preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            preconditions.when(() -> Preconditions.check(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             //Act Statement(s)
-            Preconditions.checkArgument(false);
+            Preconditions.checkArgument(true);
             //Assert statement(s)
-            preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()), atLeast(1));
+            preconditions.verify(() -> Preconditions.check(eq(true), (Supplier) any()), atLeast(1));
         }
     }
 
@@ -42,13 +42,13 @@ public class PreconditionsSapientGeneratedJunit4Test {
     public void checkArgument1Test() {
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS)) {
-            preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            preconditions.when(() -> Preconditions.check(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             //TODO: Needs initialization with real value
             Supplier supplier = null;
             //Act Statement(s)
-            Preconditions.checkArgument(false, supplier);
+            Preconditions.checkArgument(true, supplier);
             //Assert statement(s)
-            preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()), atLeast(1));
+            preconditions.verify(() -> Preconditions.check(eq(true), (Supplier) any()), atLeast(1));
         }
     }
 
@@ -57,11 +57,11 @@ public class PreconditionsSapientGeneratedJunit4Test {
     public void checkStateTest() {
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS)) {
-            preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            preconditions.when(() -> Preconditions.check(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             //Act Statement(s)
-            Preconditions.checkState(false);
+            Preconditions.checkState(true);
             //Assert statement(s)
-            preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()), atLeast(1));
+            preconditions.verify(() -> Preconditions.check(eq(true), (Supplier) any()), atLeast(1));
         }
     }
 
@@ -70,13 +70,13 @@ public class PreconditionsSapientGeneratedJunit4Test {
     public void checkState1Test() {
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS)) {
-            preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            preconditions.when(() -> Preconditions.check(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             //TODO: Needs initialization with real value
             Supplier supplier = null;
             //Act Statement(s)
-            Preconditions.checkState(false, supplier);
+            Preconditions.checkState(true, supplier);
             //Assert statement(s)
-            preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()), atLeast(1));
+            preconditions.verify(() -> Preconditions.check(eq(true), (Supplier) any()), atLeast(1));
         }
     }
 
@@ -88,6 +88,7 @@ public class PreconditionsSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         thrown.expect(Throwable.class);
+        //TODO: Needs initialization with real value
         Supplier supplier = null;
 
         //Act Statement(s)

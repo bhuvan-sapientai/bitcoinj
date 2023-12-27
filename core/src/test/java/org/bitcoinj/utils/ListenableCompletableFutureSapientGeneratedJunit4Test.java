@@ -41,17 +41,24 @@ public class ListenableCompletableFutureSapientGeneratedJunit4Test {
     @Test()
     public void failedFutureTest() {
         //Arrange Statement(s)
-        ListenableCompletableFuture listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
         try (MockedStatic<ListenableCompletableFuture> listenableCompletableFuture = mockStatic(ListenableCompletableFuture.class, CALLS_REAL_METHODS);
              MockedStatic<FutureUtils> futureUtils = mockStatic(FutureUtils.class)) {
             CompletableFuture completableFuture = new CompletableFuture();
+            StackTraceElement stackTraceElement = new StackTraceElement("declaringClass1", "methodName1", "fileName1", 0);
+            StackTraceElement stackTraceElement2 = new StackTraceElement("declaringClass1", "methodName1", "fileName1", 0);
+            StackTraceElement stackTraceElement3 = new StackTraceElement("declaringClass1", "methodName1", "fileName1", 0);
+            StackTraceElement stackTraceElement4 = new StackTraceElement("declaringClass1", "methodName1", "fileName1", 0);
+            StackTraceElement stackTraceElement5 = new StackTraceElement("declaringClass1", "methodName1", "fileName1", 0);
+            StackTraceElement[] stackTraceElementArray = new StackTraceElement[]{stackTraceElement, stackTraceElement2, stackTraceElement3, stackTraceElement4, stackTraceElement5};
             Throwable throwable = new Throwable();
+            throwable.setStackTrace(stackTraceElementArray);
             futureUtils.when(() -> FutureUtils.failedFuture(throwable)).thenReturn(completableFuture);
-            listenableCompletableFuture.when(() -> ListenableCompletableFuture.of(completableFuture)).thenReturn(listenableCompletableFutureMock);
+            ListenableCompletableFuture listenableCompletableFuture2 = new ListenableCompletableFuture();
+            listenableCompletableFuture.when(() -> ListenableCompletableFuture.of(completableFuture)).thenReturn(listenableCompletableFuture2);
             //Act Statement(s)
             ListenableCompletableFuture result = ListenableCompletableFuture.failedFuture(throwable);
             //Assert statement(s)
-            assertThat(result, equalTo(listenableCompletableFutureMock));
+            assertThat(result, equalTo(listenableCompletableFuture2));
             futureUtils.verify(() -> FutureUtils.failedFuture(throwable), atLeast(1));
             listenableCompletableFuture.verify(() -> ListenableCompletableFuture.of(completableFuture), atLeast(1));
         }
@@ -64,13 +71,13 @@ public class ListenableCompletableFutureSapientGeneratedJunit4Test {
          * (future instanceof ListenableCompletableFuture) : true
          */
         //Arrange Statement(s)
-        ListenableCompletableFuture<Object> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
+        ListenableCompletableFuture<Object> listenableCompletableFuture = new ListenableCompletableFuture<>();
 
         //Act Statement(s)
-        ListenableCompletableFuture result = ListenableCompletableFuture.of(listenableCompletableFutureMock);
+        ListenableCompletableFuture result = ListenableCompletableFuture.of(listenableCompletableFuture);
 
         //Assert statement(s)
-        assertThat(result, equalTo(listenableCompletableFutureMock));
+        assertThat(result, equalTo(listenableCompletableFuture));
     }
 
     //Sapient generated method id: ${35a4cd9d-f207-3e44-ba1a-909ba8fe1555}
