@@ -30,6 +30,7 @@ import static org.mockito.Mockito.doReturn;
 import static org.hamcrest.Matchers.is;
 
 import org.junit.Ignore;
+import org.junit.rules.ExpectedException;
 
 public class VersionTallySapientGeneratedJunit4Test {
 
@@ -46,6 +47,9 @@ public class VersionTallySapientGeneratedJunit4Test {
 
     private final StoredBlock versionBlockMock = mock(StoredBlock.class);
 
+    @Rule()
+    public ExpectedException thrown = ExpectedException.none();
+
     //Sapient generated method id: ${a7db2f47-9b73-3a8d-a89d-4c6c9d13f9dd}
     @Ignore()
     @Test()
@@ -54,10 +58,12 @@ public class VersionTallySapientGeneratedJunit4Test {
          * (versionWriteHead == versionWindow.length) : true
          */
         //Arrange Statement(s)
-        NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-        VersionTally target = new VersionTally(networkParameters);
-        //Act Statement(s)
-        target.add(123456789L);
+        doReturn(0).when(paramsMock).getMajorityWindow();
+        VersionTally target = new VersionTally(paramsMock);
+        thrown.expect(ArrayIndexOutOfBoundsException.class);
+
+        //Assert statement(s)
+        verify(paramsMock).getMajorityWindow();
     }
 
     //Sapient generated method id: ${72afaac6-6b8d-3140-a393-129d3ab94b70}
@@ -69,8 +75,10 @@ public class VersionTallySapientGeneratedJunit4Test {
         //Arrange Statement(s)
         doReturn(1).when(paramsMock).getMajorityWindow();
         VersionTally target = new VersionTally(paramsMock);
+
         //Act Statement(s)
         Integer result = target.getCountAtOrAbove(0L);
+
         //Assert statement(s)
         assertThat(result, is(nullValue()));
         verify(paramsMock).getMajorityWindow();
@@ -86,12 +94,15 @@ public class VersionTallySapientGeneratedJunit4Test {
          * (l >= version) : true
          */
         //Arrange Statement(s)
-        NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-        VersionTally target = new VersionTally(networkParameters);
+        doReturn(0).when(paramsMock).getMajorityWindow();
+        VersionTally target = new VersionTally(paramsMock);
+
         //Act Statement(s)
         Integer result = target.getCountAtOrAbove(0L);
+
         //Assert statement(s)
-        assertThat(result, is(nullValue()));
+        assertThat(result, equalTo(0));
+        verify(paramsMock).getMajorityWindow();
     }
 
     //Sapient generated method id: ${7abf920a-ee3d-3750-9987-43dd0f85013a}
@@ -111,8 +122,10 @@ public class VersionTallySapientGeneratedJunit4Test {
         doReturn(1).when(paramsMock).getMajorityWindow();
         VersionTally target = spy(new VersionTally(paramsMock));
         doNothing().when(target).add(1L);
+
         //Act Statement(s)
         target.initialize(blockStoreMock, versionBlockMock);
+
         //Assert statement(s)
         verify(versionBlockMock).getHeader();
         verify(versionBlockMock).getPrev(blockStoreMock);
@@ -144,8 +157,10 @@ public class VersionTallySapientGeneratedJunit4Test {
         doReturn(1).when(paramsMock).getMajorityWindow();
         VersionTally target = spy(new VersionTally(paramsMock));
         doNothing().when(target).add(1L);
+
         //Act Statement(s)
         target.initialize(blockStoreMock, versionBlockMock);
+
         //Assert statement(s)
         verify(versionBlockMock).getHeader();
         verify(versionBlockMock).getPrev(blockStoreMock);
@@ -159,8 +174,10 @@ public class VersionTallySapientGeneratedJunit4Test {
         //Arrange Statement(s)
         doReturn(0).when(paramsMock).getMajorityWindow();
         VersionTally target = new VersionTally(paramsMock);
+
         //Act Statement(s)
         int result = target.size();
+
         //Assert statement(s)
         assertThat(result, equalTo(0));
         verify(paramsMock).getMajorityWindow();

@@ -30,13 +30,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "51E61EF4457AF5478B5396CC7D6BFB16"
+    modelFingerprint: "3A5233C8E22815629A2BD6A5278ABAB0"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "address"
-      modelFingerprint: "84D7E2B882EBE9008963A20519AA25DD"
+      modelFingerprint: "B3554E7B5D140B8255167CF462095427"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -56,7 +56,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "message"
-      modelFingerprint: "23F3770A98F8C5EE53CDF27D470D905E"
+      modelFingerprint: "0B8E5FD898B52E41C214F737F153CC10"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -64,9 +64,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "Hello World"
-        suggestedContent: !<regular>
-          value: "Hello World"
+          value: "message1"
         valueType: "java.lang.String"
         uuid: "verifyMessage_string1"
         fixed: false
@@ -76,7 +74,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "signatureBase64"
-      modelFingerprint: "9FA9415581BA367C11200322A1E1A7F4"
+      modelFingerprint: "593FD6A4FF39FD0D2D80FD3365AA8BFC"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -84,9 +82,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "abc123"
-        suggestedContent: !<regular>
-          value: "abc123"
+          value: "signatureBase64"
         valueType: "java.lang.String"
         uuid: "verifyMessage_string2"
         fixed: false
@@ -96,7 +92,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "address"
-      modelFingerprint: "43B05A78D11345A3C6F5C31C09F5067B"
+      modelFingerprint: "A325F10FDEA7D7830BA9DBCCF207D657"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -123,9 +119,9 @@ methods:
         returnValue:
           sapientType: "ENUM"
           content: !<regular>
-            value: "P2WSH"
+            value: "P2TR"
           suggestedContent: !<regular>
-            value: "P2WSH"
+            value: "P2TR"
           valueType: "org.bitcoinj.base.ScriptType"
           uuid: "verifyMessage_scriptType1"
           fixed: false
@@ -1038,7 +1034,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "4CA75BF21C5CE91A43E0BE3033DEB315"
+    modelFingerprint: "527E5281F44DC004E0917948B484D221"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -1100,7 +1096,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "address"
-      modelFingerprint: "CD8C237233BBF84825C9FE80A53B00FF"
+      modelFingerprint: "B551B6F3C341E5950CC8C93D195E6B88"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -1127,9 +1123,7 @@ methods:
         returnValue:
           sapientType: "ENUM"
           content: !<regular>
-            value: "P2SH"
-          suggestedContent: !<regular>
-            value: "P2SH"
+            value: "P2PKH"
           valueType: "org.bitcoinj.base.ScriptType"
           uuid: "verifyMessage_scriptType1"
           fixed: false
@@ -1140,7 +1134,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ECKey"
-      modelFingerprint: "48FF8FDE8613E260CF50386DEDC6A650"
+      modelFingerprint: "D7D674C30C5DDEF488A37DB004AC0DDE"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -1183,19 +1177,13 @@ methods:
         - "java.security.SignatureException"
         signature: "signedMessageToKey(String,String): ECKey throws java.security.SignatureException"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<new>
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
             target: "org.bitcoinj.crypto.ECKey"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
-            target: "org.bitcoinj.crypto.ECKey"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
+            onlyPojoFunctions: false
+            builderPattern: false
           valueType: "org.bitcoinj.crypto.ECKey"
-          uuid: "compareP2SHScriptHashDerivedFromPubKey_eCKey1"
+          uuid: "comparePubKeyHash_eCKey1"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -1203,7 +1191,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "EF2928AE24C4DE76DD40C101FF3FB92B"
+      modelFingerprint: "E13CA5D459A540639243527AA649B576"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -1212,19 +1200,13 @@ methods:
       - 1
       - 2
       value:
-        sapientType: "OBJECT"
-        content: !<new>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.crypto.ECKey"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.crypto.ECKey"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.crypto.ECKey"
-        uuid: "compareP2SHScriptHashDerivedFromPubKey_eCKey1"
+        uuid: "comparePubKeyHash_eCKey1"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -1240,7 +1222,7 @@ methods:
           suggestedContent: !<array>
             values: {}
           valueType: "byte[]"
-          uuid: "compareP2SHScriptHashDerivedFromPubKey_byte[]1"
+          uuid: "comparePubKeyHash_byte[]1"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -1249,7 +1231,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "address"
-      modelFingerprint: "ADED45BD4E59C417B4B559D8D7CB47FB"
+      modelFingerprint: "37C2BD17305DB1F6BD9E92DB6A4E3A77"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -1276,190 +1258,21 @@ methods:
         returnValue:
           sapientType: "ARRAY"
           content: !<array>
-            values:
-              0:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<array>
-            values:
-              0:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          valueType: "byte[]"
-          uuid: "compareP2SHScriptHashDerivedFromPubKey_byte[]2"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "ByteUtils"
-      modelFingerprint: "DC7DCD4C7386AE4944BDA04E554019A4"
-      index: 8
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.ByteUtils"
-        uuid: "org.bitcoinj.base.internal.ByteUtils"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.ByteUtils"
-        name: "concat"
-        parameters:
-        - name: "b1"
-          value:
-            sapientType: "ARRAY"
-            content: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  valueType: "byte"
-                  fixed: true
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 20
-                  valueType: "byte"
-                  fixed: true
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            suggestedContent: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  valueType: "byte"
-                  fixed: true
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 20
-                  valueType: "byte"
-                  fixed: true
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            valueType: "byte[]"
-            uuid: "wrapPubKeyHashInSegwitScript_byte[]1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "b2"
-          value:
-            sapientType: "ARRAY"
-            content: !<array>
-              values: {}
-            suggestedContent: !<array>
-              values: {}
-            valueType: "byte[]"
-            uuid: "compareP2SHScriptHashDerivedFromPubKey_byte[]1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "concat(byte[],byte[]): byte[]"
-        returnValue:
-          sapientType: "ARRAY"
-          content: !<array>
             values: {}
           suggestedContent: !<array>
             values: {}
           valueType: "byte[]"
-          uuid: "wrapPubKeyHashInSegwitScript_byte[]2"
+          uuid: "comparePubKeyHash_byte[]2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "CryptoUtils"
-      modelFingerprint: "5AB0430EC31B2FC7757564D439505428"
-      index: 9
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 1
-      - 2
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.crypto.internal.CryptoUtils"
-        uuid: "org.bitcoinj.crypto.internal.CryptoUtils"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.crypto.internal.CryptoUtils"
-        name: "sha256hash160"
-        parameters:
-        - name: "input"
-          value:
-            sapientType: "ARRAY"
-            content: !<array>
-              values: {}
-            suggestedContent: !<array>
-              values: {}
-            valueType: "byte[]"
-            uuid: "wrapPubKeyHashInSegwitScript_byte[]2"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "sha256hash160(byte[]): byte[]"
-        returnValue:
-          sapientType: "ARRAY"
-          content: !<array>
-            values:
-              0:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<array>
-            values:
-              0:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          valueType: "byte[]"
-          uuid: "compareP2SHScriptHashDerivedFromPubKey_byte[]3"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
+        access: 1025
       staticReadMethodForField: false
       filledByUser: false
     - type: "RESULT"
       name: "result"
       modelFingerprint: "68041019986276EDF5D420282D883A57"
-      index: 10
+      index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -1472,11 +1285,11 @@ methods:
       filledByUser: false
     uuid: "4f619559-8d95-348c-aee2-1ec663b810a8"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path8"
     pathIdForUser: "path4"
     testPathName: "verifyMessageWhenCaughtExceptionThrowsSignatureException"
@@ -1484,7 +1297,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "D5C4D7533CBC04A8FEB7A3367FFF6A8E"
+    modelFingerprint: "31E3A111CED66112F6D586B43A3646D2"
     problemWasSolvedByProver: true
     catchBlockExercised:
       idExternalInstruction: 0
@@ -1495,7 +1308,7 @@ methods:
     inputParameters:
     - type: "INPUT"
       name: "address"
-      modelFingerprint: "84D7E2B882EBE9008963A20519AA25DD"
+      modelFingerprint: "B3554E7B5D140B8255167CF462095427"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1515,7 +1328,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "message"
-      modelFingerprint: "B057AA51EF09299CCA0950C3C966B075"
+      modelFingerprint: "0B8E5FD898B52E41C214F737F153CC10"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1523,9 +1336,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "Hello, world!"
-        suggestedContent: !<regular>
-          value: "Hello, world!"
+          value: "message1"
         valueType: "java.lang.String"
         uuid: "verifyMessage_string1"
         fixed: false
@@ -1535,7 +1346,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "signatureBase64"
-      modelFingerprint: "E70D2D8AFD83E53D4C813406EEC09DA0"
+      modelFingerprint: "593FD6A4FF39FD0D2D80FD3365AA8BFC"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1543,9 +1354,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "c2lnbmF0dXJlQmFzZTY0"
-        suggestedContent: !<regular>
-          value: "c2lnbmF0dXJlQmFzZTY0"
+          value: "signatureBase64"
         valueType: "java.lang.String"
         uuid: "verifyMessage_string2"
         fixed: false
@@ -1555,7 +1364,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "address"
-      modelFingerprint: "43B05A78D11345A3C6F5C31C09F5067B"
+      modelFingerprint: "A325F10FDEA7D7830BA9DBCCF207D657"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -1647,13 +1456,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "8B5B6649B2D86CE8E86F40B15E0AAE42"
+    modelFingerprint: "02FF5EEA234D5634A967CF8BED3278BD"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "address"
-      modelFingerprint: "84D7E2B882EBE9008963A20519AA25DD"
+      modelFingerprint: "B3554E7B5D140B8255167CF462095427"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1673,7 +1482,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "message"
-      modelFingerprint: "DDCC59E28AEE1BD0461E30BDE87732F5"
+      modelFingerprint: "0B8E5FD898B52E41C214F737F153CC10"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1681,9 +1490,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "Hello, World!"
-        suggestedContent: !<regular>
-          value: "Hello, World!"
+          value: "message1"
         valueType: "java.lang.String"
         uuid: "verifyMessage_string1"
         fixed: false
@@ -1693,7 +1500,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "signatureBase64"
-      modelFingerprint: "1F5D377396AAF5C7DEAA70C7B3E99DB1"
+      modelFingerprint: "593FD6A4FF39FD0D2D80FD3365AA8BFC"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1701,9 +1508,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "Hw+G4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZg=="
-        suggestedContent: !<regular>
-          value: "Hw+G4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZg=="
+          value: "signatureBase64"
         valueType: "java.lang.String"
         uuid: "verifyMessage_string2"
         fixed: false
@@ -1713,7 +1518,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "address"
-      modelFingerprint: "DDA7436CEDFDFE760F9BC1AB2F6E0858"
+      modelFingerprint: "889E87FC9C0767CAD0F47CD4C5184302"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -1741,8 +1546,6 @@ methods:
           sapientType: "ENUM"
           content: !<regular>
             value: "P2PKH"
-          suggestedContent: !<regular>
-            value: "P2PKH"
           valueType: "org.bitcoinj.base.ScriptType"
           uuid: "verifyMessage_scriptType1"
           fixed: false
@@ -1753,7 +1556,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ECKey"
-      modelFingerprint: "1B3FAEAA4076385212EB7831AB092255"
+      modelFingerprint: "EEB65A238EB2EA8893AEC9F52F5626EA"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -1776,9 +1579,7 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "Hello, World!"
-            suggestedContent: !<regular>
-              value: "Hello, World!"
+              value: "message1"
             valueType: "java.lang.String"
             uuid: "verifyMessage_string1"
             fixed: false
@@ -1788,9 +1589,7 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "Hw+G4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZg=="
-            suggestedContent: !<regular>
-              value: "Hw+G4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZl+JzJzvJv4zvZg=="
+              value: "signatureBase64"
             valueType: "java.lang.String"
             uuid: "verifyMessage_string2"
             fixed: false
@@ -1800,17 +1599,11 @@ methods:
         - "java.security.SignatureException"
         signature: "signedMessageToKey(String,String): ECKey throws java.security.SignatureException"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<new>
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
             target: "org.bitcoinj.crypto.ECKey"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
-            target: "org.bitcoinj.crypto.ECKey"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
+            onlyPojoFunctions: false
+            builderPattern: false
           valueType: "org.bitcoinj.crypto.ECKey"
           uuid: "comparePubKeyHash_eCKey1"
           fixed: false
@@ -1820,7 +1613,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "0404AD9A7AB0B58248F568C04E86EC0C"
+      modelFingerprint: "2C0414D9B8C4C4FFA271B7FBF8345C54"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -1829,17 +1622,11 @@ methods:
       - 1
       - 2
       value:
-        sapientType: "OBJECT"
-        content: !<new>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.crypto.ECKey"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.crypto.ECKey"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.crypto.ECKey"
         uuid: "comparePubKeyHash_eCKey1"
         fixed: false
@@ -1853,25 +1640,9 @@ methods:
         returnValue:
           sapientType: "ARRAY"
           content: !<array>
-            values:
-              0:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+            values: {}
           suggestedContent: !<array>
-            values:
-              0:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+            values: {}
           valueType: "byte[]"
           uuid: "comparePubKeyHash_byte[]1"
           fixed: false
@@ -1882,7 +1653,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "address"
-      modelFingerprint: "CE817A849B45F8DDAC960E3D6921E307"
+      modelFingerprint: "6DA71FA7BAFB02B642A77D1C8356853A"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -1909,25 +1680,9 @@ methods:
         returnValue:
           sapientType: "ARRAY"
           content: !<array>
-            values:
-              0:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+            values: {}
           suggestedContent: !<array>
-            values:
-              0:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+            values: {}
           valueType: "byte[]"
           uuid: "comparePubKeyHash_byte[]2"
           fixed: false
@@ -1938,26 +1693,14 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "35B47CD4230EA006D31EE4CA35595B01"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
       index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "EXCEPTION"
-        content: !<new>
-          target: "java.security.SignatureException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "java.security.SignatureException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "java.security.SignatureException"
-        uuid: "verifyMessage_signatureException1"
-        fixed: false
+        sapientType: "VOID"
+        fixed: true
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
@@ -2756,8 +2499,8 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "1F5AD3414BF63C11D587D6504446DB91"
-    problemWasSolvedByProver: false
+    modelFingerprint: "F6962AF855D547868AFE723D1CFACDA1"
+    problemWasSolvedByProver: true
     catchBlockExercised:
       idExternalInstruction: 0
       id: 2
@@ -2823,7 +2566,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "address"
-      modelFingerprint: "70601C67C2891264749EACC941EA5D31"
+      modelFingerprint: "889E87FC9C0767CAD0F47CD4C5184302"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -2861,7 +2604,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ECKey"
-      modelFingerprint: "D7D674C30C5DDEF488A37DB004AC0DDE"
+      modelFingerprint: "EEB65A238EB2EA8893AEC9F52F5626EA"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -2918,7 +2661,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "E13CA5D459A540639243527AA649B576"
+      modelFingerprint: "2C0414D9B8C4C4FFA271B7FBF8345C54"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -2958,7 +2701,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "address"
-      modelFingerprint: "3E1DE9C421C0BA90F773FA24E72ADB9C"
+      modelFingerprint: "6DA71FA7BAFB02B642A77D1C8356853A"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -2983,12 +2726,8 @@ methods:
         parameters: []
         signature: "getHash(): byte[]"
         returnValue:
-          sapientType: "ARRAY"
-          content: !<array>
-            values: {}
-          suggestedContent: !<array>
-            values: {}
-          valueType: "byte[]"
+          sapientType: "EXCEPTION"
+          valueType: "java.lang.RuntimeException"
           uuid: "comparePubKeyHash_byte[]2"
           fixed: false
           equalsMethodPresent: false
@@ -3042,7 +2781,8 @@ methods:
       filledByUser: false
     uuid: "5ea295ff-ce6c-3238-bfb9-d29fc2301da5"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false

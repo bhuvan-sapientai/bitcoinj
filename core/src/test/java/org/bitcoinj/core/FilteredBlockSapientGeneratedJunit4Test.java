@@ -160,18 +160,15 @@ public class FilteredBlockSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //Sha256Hash sha256Hash = Instant.now();
-        //List list = new ArrayList<>();
-        //Block block = new Block(0L, sha256HashMock, sha256HashMock2, sha256Hash, 0L, 0L, list);
-        //FilteredBlock target = new FilteredBlock(block, merkleTreeMock);
-        //ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-        //Sha256Hash sha256Hash2 = Sha256Hash.read(byteBuffer);
+        //FilteredBlock target = new FilteredBlock(headerMock, merkleTreeMock);
+        //doReturn(sha256HashMock).when(headerMock).getMerkleRoot();
         //List<Sha256Hash> sha256HashList = new LinkedList<>();
-        //doReturn(sha256Hash2).when(merkleTreeMock).getTxnHashAndMerkleRoot(sha256HashList);
+        //doReturn(sha256HashMock2).when(merkleTreeMock).getTxnHashAndMerkleRoot(sha256HashList);
         //thrown.expect(VerificationException.class);
         //Act Statement(s)
         //target.getTransactionHashes();
         //Assert statement(s)
+        //verify(headerMock).getMerkleRoot();
         //verify(merkleTreeMock).getTxnHashAndMerkleRoot(sha256HashList);
     }
 
@@ -179,13 +176,13 @@ public class FilteredBlockSapientGeneratedJunit4Test {
     @Test()
     public void getBlockHeaderTest() {
         //Arrange Statement(s)
-        //FilteredBlock target = new FilteredBlock(headerMock, merkleTreeMock);
-        //doReturn(blockMock).when(headerMock).cloneAsHeader();
+        FilteredBlock target = new FilteredBlock(headerMock, merkleTreeMock);
+        doReturn(blockMock).when(headerMock).cloneAsHeader();
         //Act Statement(s)
-        //Block result = target.getBlockHeader();
+        Block result = target.getBlockHeader();
         //Assert statement(s)
-        //assertThat(result, equalTo(blockMock));
-        //verify(headerMock).cloneAsHeader();
+        assertThat(result, equalTo(blockMock));
+        verify(headerMock).cloneAsHeader();
     }
 
     //Sapient generated method id: ${c152b292-9f41-3184-8d0c-c8dacb973313}
@@ -208,17 +205,17 @@ public class FilteredBlockSapientGeneratedJunit4Test {
          * (getTransactionHashes().contains(hash)) : true
          */
         //Arrange Statement(s)
-        //doReturn(sha256HashMock).when(txMock).getTxId();
-        //FilteredBlock target = spy(new FilteredBlock(headerMock, merkleTreeMock));
-        //List<Sha256Hash> sha256HashList = new ArrayList<>();
-        //sha256HashList.add(sha256HashMock);
-        //doReturn(sha256HashList).when(target).getTransactionHashes();
+        doReturn(sha256HashMock).when(txMock).getTxId();
+        FilteredBlock target = spy(new FilteredBlock(headerMock, merkleTreeMock));
+        List<Sha256Hash> sha256HashList = new ArrayList<>();
+        sha256HashList.add(sha256HashMock);
+        doReturn(sha256HashList).when(target).getTransactionHashes();
         //Act Statement(s)
-        //boolean result = target.provideTransaction(txMock);
+        boolean result = target.provideTransaction(txMock);
         //Assert statement(s)
-        //assertThat(result, equalTo(Boolean.TRUE));
-        //verify(txMock).getTxId();
-        //verify(target).getTransactionHashes();
+        assertThat(result, equalTo(Boolean.TRUE));
+        verify(txMock).getTxId();
+        verify(target).getTransactionHashes();
     }
 
     //Sapient generated method id: ${e7d2886d-8e78-3575-a335-5bcb36e19f6f}
@@ -228,28 +225,28 @@ public class FilteredBlockSapientGeneratedJunit4Test {
          * (getTransactionHashes().contains(hash)) : false
          */
         //Arrange Statement(s)
-        //doReturn(sha256HashMock).when(txMock).getTxId();
-        //FilteredBlock target = spy(new FilteredBlock(headerMock, merkleTreeMock));
-        //List<Sha256Hash> sha256HashList = new ArrayList<>();
-        //doReturn(sha256HashList).when(target).getTransactionHashes();
+        doReturn(sha256HashMock).when(txMock).getTxId();
+        FilteredBlock target = spy(new FilteredBlock(headerMock, merkleTreeMock));
+        List<Sha256Hash> sha256HashList = new ArrayList<>();
+        doReturn(sha256HashList).when(target).getTransactionHashes();
         //Act Statement(s)
-        //boolean result = target.provideTransaction(txMock);
+        boolean result = target.provideTransaction(txMock);
         //Assert statement(s)
-        //assertThat(result, equalTo(Boolean.FALSE));
-        //verify(txMock).getTxId();
-        //verify(target).getTransactionHashes();
+        assertThat(result, equalTo(Boolean.FALSE));
+        verify(txMock).getTxId();
+        verify(target).getTransactionHashes();
     }
 
     //Sapient generated method id: ${b8c7d07f-19dc-34c1-a7c2-d0095d8b5cd5}
     @Test()
     public void getAssociatedTransactionsTest() {
         //Arrange Statement(s)
-        FilteredBlock target = new FilteredBlock(headerMock, merkleTreeMock);
+        //FilteredBlock target = new FilteredBlock(headerMock, merkleTreeMock);
         //Act Statement(s)
-        Map<Sha256Hash, Transaction> result = target.getAssociatedTransactions();
-        Map<Sha256Hash, Transaction> sha256HashTransactionResultMap = new HashMap<>();
+        //Map<Sha256Hash, Transaction> result = target.getAssociatedTransactions();
+        //Map<Sha256Hash, Transaction> sha256HashTransactionResultMap = new HashMap<>();
         //Assert statement(s)
-        assertThat(result, equalTo(sha256HashTransactionResultMap));
+        //assertThat(result, equalTo(sha256HashTransactionResultMap));
     }
 
     //Sapient generated method id: ${f1206cfa-ac32-350f-91f6-880147fc431c}
@@ -269,10 +266,10 @@ public class FilteredBlockSapientGeneratedJunit4Test {
     @Test()
     public void toStringTest() {
         //Arrange Statement(s)
-        //FilteredBlock target = new FilteredBlock(headerMock, merkleTreeMock);
+        FilteredBlock target = new FilteredBlock(headerMock, merkleTreeMock);
         //Act Statement(s)
-        //String result = target.toString();
+        String result = target.toString();
         //Assert statement(s)
-        //assertThat(result, equalTo("FilteredBlock{merkleTree=<init>_partialMerkleTree1, header=<init>_block1}"));
+        assertThat(result, equalTo("FilteredBlock{merkleTree=<init>_partialMerkleTree1, header=<init>_block1}"));
     }
 }

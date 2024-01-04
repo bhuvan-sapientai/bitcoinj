@@ -56,9 +56,11 @@ public class KeyCrypterScryptSapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
+
         //Act Statement(s)
         byte[] result = KeyCrypterScrypt.randomSalt();
         byte[] byteResultArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+
         //Assert statement(s)
         assertThat(result, equalTo(byteResultArray));
     }
@@ -75,48 +77,31 @@ public class KeyCrypterScryptSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<SCrypt> sCrypt = mockStatic(SCrypt.class);
-    MockedStatic<Stopwatch> stopwatch = mockStatic(Stopwatch.class);
-    MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
-    MockedStatic<Protos.ScryptParameters> protosScryptParameters = mockStatic(Protos.ScryptParameters.class)) {
-    protosScryptParameters.when(() -> Protos.ScryptParameters.newBuilder()).thenReturn(protosScryptParametersBuilderMock);
-    doReturn(protosScryptParametersBuilderMock2).when(protosScryptParametersBuilderMock).setSalt((ByteString) any());
-    doReturn(protosScryptParametersBuilderMock3).when(protosScryptParametersBuilderMock2).setN(1000L);
-    doReturn(scryptParametersMock).when(protosScryptParametersBuilderMock3).build();
-    ByteString byteString2 = ByteString.empty();
-    byte[] byteArray = new byte[] { (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0 };
-    byteString.when(() -> ByteString.copyFrom(byteArray)).thenReturn(byteString2);
-    Stopwatch stopwatch2 = Stopwatch.start();
-    stopwatch.when(() -> Stopwatch.start()).thenReturn(stopwatch2);
-    byte[] byteArray2 = new byte[] { (byte) 0 };
-    byte[] byteArray3 = new byte[] { (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1 };
-    byte[] byteArray4 = new byte[] {};
-    sCrypt.when(() -> SCrypt.generate(byteArray3, byteArray4, 1, 0, 0, 32)).thenReturn(byteArray2);
-    KeyCrypterScrypt target = new KeyCrypterScrypt(1000);
-    doReturn(byteStringMock, byteStringMock2).when(scryptParametersMock).getSalt();
-    doReturn(byteArray4).when(byteStringMock2).toByteArray();
-    doReturn(1L, 2L).when(scryptParametersMock).getN();
-    doReturn(0, 2).when(scryptParametersMock).getR();
-    doReturn(0, 2).when(scryptParametersMock).getP();
-    KeyCrypterException keyCrypterException = new KeyCrypterException("Could not generate key from password and salt.", byteString2);
-    thrown.expect(KeyCrypterException.class);
-    thrown.expectMessage(keyCrypterException.getMessage());
-    //Act Statement(s)
-    target.deriveKey("deriveKey_charSequence1");
-    //Assert statement(s)
-    protosScryptParameters.verify(() -> Protos.ScryptParameters.newBuilder(), atLeast(1));
-    verify(protosScryptParametersBuilderMock).setSalt((ByteString) any());
-    verify(protosScryptParametersBuilderMock2).setN(1000L);
-    verify(protosScryptParametersBuilderMock3).build();
-    byteString.verify(() -> ByteString.copyFrom(byteArray), atLeast(1));
-    stopwatch.verify(() -> Stopwatch.start(), atLeast(1));
-    sCrypt.verify(() -> SCrypt.generate(byteArray3, byteArray4, 1, 0, 0, 32), atLeast(1));
-    verify(scryptParametersMock, times(2)).getSalt();
-    verify(byteStringMock2).toByteArray();
-    verify(scryptParametersMock, times(2)).getN();
-    verify(scryptParametersMock, times(2)).getR();
-    verify(scryptParametersMock, times(2)).getP();
-}*/
+        Protos.ScryptParameters.Builder protosScryptParametersBuilderMock = mock(Protos.ScryptParameters.Builder.class);
+        Protos.ScryptParameters.Builder protosScryptParametersBuilderMock2 = mock(Protos.ScryptParameters.Builder.class);
+        try (MockedStatic<SCrypt> sCrypt = mockStatic(SCrypt.class);
+             MockedStatic<Protos.ScryptParameters> protosScryptParameters = mockStatic(Protos.ScryptParameters.class)) {
+            protosScryptParameters.when(() -> Protos.ScryptParameters.newBuilder()).thenReturn(protosScryptParametersBuilderMock);
+            doReturn(protosScryptParametersBuilderMock2).when(protosScryptParametersBuilderMock).setSalt((ByteString) any());
+            Protos.ScryptParameters.Builder builder = protosScryptParametersBuilderMock2.setN(1L);
+            doReturn(builder).when(protosScryptParametersBuilderMock2).setN(1L);
+            byte[] byteArray = new byte[]{};
+            byte[] byteArray2 = new byte[]{(byte) 1, (byte) 1};
+            byte[] byteArray3 = new byte[]{};
+            sCrypt.when(() -> SCrypt.generate(byteArray2, byteArray3, 1, 8, 1, 32)).thenReturn(byteArray);
+            KeyCrypterScrypt target = new KeyCrypterScrypt(1);
+            Exception exception = new Exception();
+            KeyCrypterException keyCrypterException = new KeyCrypterException("Could not generate key from password and salt.", exception);
+            thrown.expect(KeyCrypterException.class);
+            thrown.expectMessage(keyCrypterException.getMessage());
+            //Act Statement(s)
+            target.deriveKey("deriveKey_charSequence1");
+            //Assert statement(s)
+            protosScryptParameters.verify(() -> Protos.ScryptParameters.newBuilder(), atLeast(1));
+            verify(protosScryptParametersBuilderMock).setSalt((ByteString) any());
+            verify(protosScryptParametersBuilderMock2).setN(1L);
+            sCrypt.verify(() -> SCrypt.generate(byteArray2, byteArray3, 1, 8, 1, 32), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${baad55b0-0ff3-3df7-9eee-6738fae6b611}
@@ -131,47 +116,28 @@ public class KeyCrypterScryptSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<SCrypt> sCrypt = mockStatic(SCrypt.class);
-    MockedStatic<Stopwatch> stopwatch = mockStatic(Stopwatch.class);
-    MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
-    MockedStatic<Protos.ScryptParameters> protosScryptParameters = mockStatic(Protos.ScryptParameters.class)) {
-    protosScryptParameters.when(() -> Protos.ScryptParameters.newBuilder()).thenReturn(protosScryptParametersBuilderMock);
-    doReturn(protosScryptParametersBuilderMock2).when(protosScryptParametersBuilderMock).setSalt((ByteString) any());
-    doReturn(protosScryptParametersBuilderMock3).when(protosScryptParametersBuilderMock2).setN(16384L);
-    doReturn(scryptParametersMock).when(protosScryptParametersBuilderMock3).build();
-    ByteString byteString2 = ByteString.empty();
-    byte[] byteArray = new byte[] { (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0 };
-    byteString.when(() -> ByteString.copyFrom(byteArray)).thenReturn(byteString2);
-    Stopwatch stopwatch2 = Stopwatch.start();
-    stopwatch.when(() -> Stopwatch.start()).thenReturn(stopwatch2);
-    byte[] byteArray2 = new byte[] {};
-    byte[] byteArray3 = new byte[] { (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1 };
-    byte[] byteArray4 = new byte[] {};
-    sCrypt.when(() -> SCrypt.generate(byteArray3, byteArray4, 1, 0, 0, 32)).thenReturn(byteArray2);
-    KeyCrypterScrypt target = new KeyCrypterScrypt(16384);
-    doReturn(byteStringMock, byteStringMock2).when(scryptParametersMock).getSalt();
-    doReturn(byteArray4).when(byteStringMock2).toByteArray();
-    doReturn(1L, 2L).when(scryptParametersMock).getN();
-    doReturn(0, 2).when(scryptParametersMock).getR();
-    doReturn(0, 2).when(scryptParametersMock).getP();
-    //Act Statement(s)
-    AesKey result = target.deriveKey("deriveKey_charSequence1");
-    AesKey aesKey = new AesKey(byteArray2);
-    //Assert statement(s)
-    assertThat(result, equalTo(aesKey));
-    protosScryptParameters.verify(() -> Protos.ScryptParameters.newBuilder(), atLeast(1));
-    verify(protosScryptParametersBuilderMock).setSalt((ByteString) any());
-    verify(protosScryptParametersBuilderMock2).setN(16384L);
-    verify(protosScryptParametersBuilderMock3).build();
-    byteString.verify(() -> ByteString.copyFrom(byteArray), atLeast(1));
-    stopwatch.verify(() -> Stopwatch.start(), atLeast(1));
-    sCrypt.verify(() -> SCrypt.generate(byteArray3, byteArray4, 1, 0, 0, 32), atLeast(1));
-    verify(scryptParametersMock, times(2)).getSalt();
-    verify(byteStringMock2).toByteArray();
-    verify(scryptParametersMock, times(2)).getN();
-    verify(scryptParametersMock, times(2)).getR();
-    verify(scryptParametersMock, times(2)).getP();
-}*/
+        try (MockedStatic<SCrypt> sCrypt = mockStatic(SCrypt.class);
+             MockedStatic<Stopwatch> stopwatch = mockStatic(Stopwatch.class);
+             MockedStatic<ByteString> byteString = mockStatic(ByteString.class)) {
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+            ByteString byteString2 = ByteString.copyFrom(byteArray);
+            byteString.when(() -> ByteString.copyFrom(byteArray)).thenReturn(byteString2);
+            Stopwatch stopwatch2 = Stopwatch.start();
+            stopwatch.when(() -> Stopwatch.start()).thenReturn(stopwatch2);
+            byte[] byteArray2 = new byte[]{};
+            byte[] byteArray3 = new byte[]{(byte) 1, (byte) 1};
+            byte[] byteArray4 = new byte[]{};
+            sCrypt.when(() -> SCrypt.generate(byteArray3, byteArray4, 1, 8, 1, 32)).thenReturn(byteArray2);
+            KeyCrypterScrypt target = new KeyCrypterScrypt(1);
+            //Act Statement(s)
+            AesKey result = target.deriveKey("deriveKey_charSequence1");
+            AesKey aesKey = new AesKey(byteArray2);
+            //Assert statement(s)
+            assertThat(result, equalTo(aesKey));
+            byteString.verify(() -> ByteString.copyFrom(byteArray), atLeast(1));
+            stopwatch.verify(() -> Stopwatch.start(), atLeast(1));
+            sCrypt.verify(() -> SCrypt.generate(byteArray3, byteArray4, 1, 8, 1, 32), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${76902325-0fc0-3630-b1ca-79270b5bf07b}
@@ -186,46 +152,30 @@ public class KeyCrypterScryptSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<SCrypt> sCrypt = mockStatic(SCrypt.class);
-    MockedStatic<Stopwatch> stopwatch = mockStatic(Stopwatch.class);
-    MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
-    MockedStatic<Protos.ScryptParameters> protosScryptParameters = mockStatic(Protos.ScryptParameters.class)) {
-    protosScryptParameters.when(() -> Protos.ScryptParameters.newBuilder()).thenReturn(protosScryptParametersBuilderMock);
-    doReturn(protosScryptParametersBuilderMock2).when(protosScryptParametersBuilderMock).setSalt((ByteString) any());
-    doReturn(protosScryptParametersBuilderMock3).when(protosScryptParametersBuilderMock2).setN(16384L);
-    doReturn(scryptParametersMock).when(protosScryptParametersBuilderMock3).build();
-    ByteString byteString2 = ByteString.empty();
-    byte[] byteArray = new byte[] { (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0 };
-    byteString.when(() -> ByteString.copyFrom(byteArray)).thenReturn(byteString2);
-    Stopwatch stopwatch2 = Stopwatch.start();
-    stopwatch.when(() -> Stopwatch.start()).thenReturn(stopwatch2);
-    byte[] byteArray2 = new byte[] { (byte) 0 };
-    byte[] byteArray3 = new byte[] { (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1 };
-    byte[] byteArray4 = new byte[] {};
-    sCrypt.when(() -> SCrypt.generate(byteArray3, byteArray4, 1, 0, 0, 32)).thenReturn(byteArray2);
-    KeyCrypterScrypt target = new KeyCrypterScrypt(16384);
-    doReturn(null).when(scryptParametersMock).getSalt();
-    doReturn(1L, 2L).when(scryptParametersMock).getN();
-    doReturn(0, 2).when(scryptParametersMock).getR();
-    doReturn(0, 2).when(scryptParametersMock).getP();
-    KeyCrypterException keyCrypterException = new KeyCrypterException("Could not generate key from password and salt.", byteString2);
-    thrown.expect(KeyCrypterException.class);
-    thrown.expectMessage(keyCrypterException.getMessage());
-    //Act Statement(s)
-    target.deriveKey("deriveKey_charSequence1");
-    //Assert statement(s)
-    protosScryptParameters.verify(() -> Protos.ScryptParameters.newBuilder(), atLeast(1));
-    verify(protosScryptParametersBuilderMock).setSalt((ByteString) any());
-    verify(protosScryptParametersBuilderMock2).setN(16384L);
-    verify(protosScryptParametersBuilderMock3).build();
-    byteString.verify(() -> ByteString.copyFrom(byteArray), atLeast(1));
-    stopwatch.verify(() -> Stopwatch.start(), atLeast(1));
-    sCrypt.verify(() -> SCrypt.generate(byteArray3, byteArray4, 1, 0, 0, 32), atLeast(1));
-    verify(scryptParametersMock).getSalt();
-    verify(scryptParametersMock, times(2)).getN();
-    verify(scryptParametersMock, times(2)).getR();
-    verify(scryptParametersMock, times(2)).getP();
-}*/
+        try (MockedStatic<SCrypt> sCrypt = mockStatic(SCrypt.class);
+             MockedStatic<Stopwatch> stopwatch = mockStatic(Stopwatch.class);
+             MockedStatic<ByteString> byteString = mockStatic(ByteString.class)) {
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+            ByteString byteString2 = ByteString.copyFrom(byteArray);
+            byteString.when(() -> ByteString.copyFrom(byteArray)).thenReturn(byteString2);
+            Stopwatch stopwatch2 = Stopwatch.start();
+            stopwatch.when(() -> Stopwatch.start()).thenReturn(stopwatch2);
+            byte[] byteArray2 = new byte[]{};
+            byte[] byteArray3 = new byte[]{(byte) 1, (byte) 1};
+            byte[] byteArray4 = new byte[]{};
+            sCrypt.when(() -> SCrypt.generate(byteArray3, byteArray4, 1, 8, 1, 32)).thenReturn(byteArray2);
+            KeyCrypterScrypt target = new KeyCrypterScrypt(1);
+            Exception exception = new Exception();
+            KeyCrypterException keyCrypterException = new KeyCrypterException("Could not generate key from password and salt.", exception);
+            thrown.expect(KeyCrypterException.class);
+            thrown.expectMessage(keyCrypterException.getMessage());
+            //Act Statement(s)
+            target.deriveKey("deriveKey_charSequence1");
+            //Assert statement(s)
+            byteString.verify(() -> ByteString.copyFrom(byteArray), atLeast(1));
+            stopwatch.verify(() -> Stopwatch.start(), atLeast(1));
+            sCrypt.verify(() -> SCrypt.generate(byteArray3, byteArray4, 1, 8, 1, 32), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${0d8ed7e6-b847-39b1-a65d-e9e00678ec99}
@@ -240,45 +190,28 @@ public class KeyCrypterScryptSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<SCrypt> sCrypt = mockStatic(SCrypt.class);
-    MockedStatic<Stopwatch> stopwatch = mockStatic(Stopwatch.class);
-    MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
-    MockedStatic<Protos.ScryptParameters> protosScryptParameters = mockStatic(Protos.ScryptParameters.class)) {
-    protosScryptParameters.when(() -> Protos.ScryptParameters.newBuilder()).thenReturn(protosScryptParametersBuilderMock);
-    doReturn(protosScryptParametersBuilderMock2).when(protosScryptParametersBuilderMock).setSalt((ByteString) any());
-    doReturn(protosScryptParametersBuilderMock3).when(protosScryptParametersBuilderMock2).setN(1000L);
-    doReturn(scryptParametersMock).when(protosScryptParametersBuilderMock3).build();
-    ByteString byteString2 = ByteString.empty();
-    byte[] byteArray = new byte[] { (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0 };
-    byteString.when(() -> ByteString.copyFrom(byteArray)).thenReturn(byteString2);
-    Stopwatch stopwatch2 = Stopwatch.start();
-    stopwatch.when(() -> Stopwatch.start()).thenReturn(stopwatch2);
-    byte[] byteArray2 = new byte[] {};
-    byte[] byteArray3 = new byte[] { (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1 };
-    byte[] byteArray4 = new byte[] {};
-    sCrypt.when(() -> SCrypt.generate(byteArray3, byteArray4, 1, 0, 0, 32)).thenReturn(byteArray2);
-    KeyCrypterScrypt target = new KeyCrypterScrypt(1000);
-    doReturn(null).when(scryptParametersMock).getSalt();
-    doReturn(1L, 2L).when(scryptParametersMock).getN();
-    doReturn(0, 2).when(scryptParametersMock).getR();
-    doReturn(0, 2).when(scryptParametersMock).getP();
-    //Act Statement(s)
-    AesKey result = target.deriveKey("deriveKey_charSequence1");
-    AesKey aesKey = new AesKey(byteArray2);
-    //Assert statement(s)
-    assertThat(result, equalTo(aesKey));
-    protosScryptParameters.verify(() -> Protos.ScryptParameters.newBuilder(), atLeast(1));
-    verify(protosScryptParametersBuilderMock).setSalt((ByteString) any());
-    verify(protosScryptParametersBuilderMock2).setN(1000L);
-    verify(protosScryptParametersBuilderMock3).build();
-    byteString.verify(() -> ByteString.copyFrom(byteArray), atLeast(1));
-    stopwatch.verify(() -> Stopwatch.start(), atLeast(1));
-    sCrypt.verify(() -> SCrypt.generate(byteArray3, byteArray4, 1, 0, 0, 32), atLeast(1));
-    verify(scryptParametersMock).getSalt();
-    verify(scryptParametersMock, times(2)).getN();
-    verify(scryptParametersMock, times(2)).getR();
-    verify(scryptParametersMock, times(2)).getP();
-}*/
+        try (MockedStatic<SCrypt> sCrypt = mockStatic(SCrypt.class);
+             MockedStatic<Stopwatch> stopwatch = mockStatic(Stopwatch.class);
+             MockedStatic<ByteString> byteString = mockStatic(ByteString.class)) {
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+            ByteString byteString2 = ByteString.copyFrom(byteArray);
+            byteString.when(() -> ByteString.copyFrom(byteArray)).thenReturn(byteString2);
+            Stopwatch stopwatch2 = Stopwatch.start();
+            stopwatch.when(() -> Stopwatch.start()).thenReturn(stopwatch2);
+            byte[] byteArray2 = new byte[]{};
+            byte[] byteArray3 = new byte[]{(byte) 1, (byte) 1};
+            byte[] byteArray4 = new byte[]{};
+            sCrypt.when(() -> SCrypt.generate(byteArray3, byteArray4, 1, 8, 1, 32)).thenReturn(byteArray2);
+            KeyCrypterScrypt target = new KeyCrypterScrypt(1);
+            //Act Statement(s)
+            AesKey result = target.deriveKey("deriveKey_charSequence1");
+            AesKey aesKey = new AesKey(byteArray2);
+            //Assert statement(s)
+            assertThat(result, equalTo(aesKey));
+            byteString.verify(() -> ByteString.copyFrom(byteArray), atLeast(1));
+            stopwatch.verify(() -> Stopwatch.start(), atLeast(1));
+            sCrypt.verify(() -> SCrypt.generate(byteArray3, byteArray4, 1, 8, 1, 32), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${1b8819ab-29ce-3ea9-8d0c-17aec2d6595c}
@@ -293,33 +226,28 @@ public class KeyCrypterScryptSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
-    MockedStatic<Protos.ScryptParameters> protosScryptParameters = mockStatic(Protos.ScryptParameters.class)) {
-    byte[] byteArray = new byte[] {};
-    doReturn(byteArray).when(aesKeyMock).bytes();
-    protosScryptParameters.when(() -> Protos.ScryptParameters.newBuilder()).thenReturn(protosScryptParametersBuilderMock);
-    doReturn(protosScryptParametersBuilderMock2).when(protosScryptParametersBuilderMock).setSalt((ByteString) any());
-    doReturn(protosScryptParametersBuilderMock3).when(protosScryptParametersBuilderMock2).setN(1000L);
-    doReturn(scryptParametersMock).when(protosScryptParametersBuilderMock3).build();
-    ByteString byteString2 = ByteString.empty();
-    byte[] byteArray2 = new byte[] { (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0 };
-    byteString.when(() -> ByteString.copyFrom(byteArray2)).thenReturn(byteString2);
-    KeyCrypterScrypt target = new KeyCrypterScrypt(1000);
-    byte[] byteArray3 = new byte[] { (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5 };
-    //Act Statement(s)
-    EncryptedData result = target.encrypt(byteArray3, aesKeyMock);
-    byte[] byteArray4 = new byte[] { (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0 };
-    byte[] byteArray5 = new byte[] {};
-    EncryptedData encryptedData = new EncryptedData(byteArray4, byteArray5);
-    //Assert statement(s)
-    assertThat(result, equalTo(encryptedData));
-    verify(aesKeyMock).bytes();
-    protosScryptParameters.verify(() -> Protos.ScryptParameters.newBuilder(), atLeast(1));
-    verify(protosScryptParametersBuilderMock).setSalt((ByteString) any());
-    verify(protosScryptParametersBuilderMock2).setN(1000L);
-    verify(protosScryptParametersBuilderMock3).build();
-    byteString.verify(() -> ByteString.copyFrom(byteArray2), atLeast(1));
-}*/
+        try (MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
+             MockedStatic<Protos.ScryptParameters> protosScryptParameters = mockStatic(Protos.ScryptParameters.class)) {
+            byte[] byteArray = new byte[]{};
+            doReturn(byteArray).when(aesKeyMock).bytes();
+            Protos.ScryptParameters.Builder builder = Protos.ScryptParameters.newBuilder();
+            protosScryptParameters.when(() -> Protos.ScryptParameters.newBuilder()).thenReturn(builder);
+            byte[] byteArray2 = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+            ByteString byteString2 = ByteString.copyFrom(byteArray2);
+            byteString.when(() -> ByteString.copyFrom(byteArray2)).thenReturn(byteString2);
+            KeyCrypterScrypt target = new KeyCrypterScrypt(1);
+            byte[] byteArray3 = new byte[]{};
+            //Act Statement(s)
+            EncryptedData result = target.encrypt(byteArray3, aesKeyMock);
+            byte[] byteArray4 = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+            byte[] byteArray5 = new byte[]{};
+            EncryptedData encryptedData = new EncryptedData(byteArray4, byteArray5);
+            //Assert statement(s)
+            assertThat(result, equalTo(encryptedData));
+            verify(aesKeyMock).bytes();
+            protosScryptParameters.verify(() -> Protos.ScryptParameters.newBuilder(), atLeast(1));
+            byteString.verify(() -> ByteString.copyFrom(byteArray2), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${40787a12-d2c9-3424-9699-ccf0f753bae9}
@@ -336,32 +264,28 @@ public class KeyCrypterScryptSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
-    MockedStatic<Protos.ScryptParameters> protosScryptParameters = mockStatic(Protos.ScryptParameters.class)) {
-    byte[] byteArray = new byte[] {};
-    doReturn(byteArray).when(aesKeyMock).bytes();
-    protosScryptParameters.when(() -> Protos.ScryptParameters.newBuilder()).thenReturn(protosScryptParametersBuilderMock);
-    doReturn(protosScryptParametersBuilderMock2).when(protosScryptParametersBuilderMock).setSalt((ByteString) any());
-    doReturn(protosScryptParametersBuilderMock3).when(protosScryptParametersBuilderMock2).setN(1000L);
-    doReturn(scryptParametersMock).when(protosScryptParametersBuilderMock3).build();
-    ByteString byteString2 = ByteString.empty();
-    byte[] byteArray2 = new byte[] { (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0 };
-    byteString.when(() -> ByteString.copyFrom(byteArray2)).thenReturn(byteString2);
-    KeyCrypterScrypt target = new KeyCrypterScrypt(1000);
-    KeyCrypterException keyCrypterException = new KeyCrypterException("Could not encrypt bytes.", byteString2);
-    thrown.expect(KeyCrypterException.class);
-    thrown.expectMessage(keyCrypterException.getMessage());
-    byte[] byteArray3 = new byte[] { (byte) 0 };
-    //Act Statement(s)
-    target.encrypt(byteArray3, aesKeyMock);
-    //Assert statement(s)
-    verify(aesKeyMock).bytes();
-    protosScryptParameters.verify(() -> Protos.ScryptParameters.newBuilder(), atLeast(1));
-    verify(protosScryptParametersBuilderMock).setSalt((ByteString) any());
-    verify(protosScryptParametersBuilderMock2).setN(1000L);
-    verify(protosScryptParametersBuilderMock3).build();
-    byteString.verify(() -> ByteString.copyFrom(byteArray2), atLeast(1));
-}*/
+        try (MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
+             MockedStatic<Protos.ScryptParameters> protosScryptParameters = mockStatic(Protos.ScryptParameters.class)) {
+            byte[] byteArray = new byte[]{};
+            doReturn(byteArray).when(aesKeyMock).bytes();
+            Protos.ScryptParameters.Builder builder = Protos.ScryptParameters.newBuilder();
+            protosScryptParameters.when(() -> Protos.ScryptParameters.newBuilder()).thenReturn(builder);
+            byte[] byteArray2 = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+            ByteString byteString2 = ByteString.copyFrom(byteArray2);
+            byteString.when(() -> ByteString.copyFrom(byteArray2)).thenReturn(byteString2);
+            KeyCrypterScrypt target = new KeyCrypterScrypt(1);
+            Exception exception = new Exception();
+            KeyCrypterException keyCrypterException = new KeyCrypterException("Could not encrypt bytes.", exception);
+            thrown.expect(KeyCrypterException.class);
+            thrown.expectMessage(keyCrypterException.getMessage());
+            byte[] byteArray3 = new byte[]{};
+            //Act Statement(s)
+            target.encrypt(byteArray3, aesKeyMock);
+            //Assert statement(s)
+            verify(aesKeyMock).bytes();
+            protosScryptParameters.verify(() -> Protos.ScryptParameters.newBuilder(), atLeast(1));
+            byteString.verify(() -> ByteString.copyFrom(byteArray2), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${b02563ea-7952-35db-a26b-96043074b454}
@@ -381,14 +305,12 @@ public class KeyCrypterScryptSapientGeneratedJunit4Test {
              MockedStatic<Protos.ScryptParameters> protosScryptParameters = mockStatic(Protos.ScryptParameters.class)) {
             byte[] byteArray = new byte[]{};
             doReturn(byteArray).when(aesKeyMock).bytes();
-            protosScryptParameters.when(() -> Protos.ScryptParameters.newBuilder()).thenReturn(protosScryptParametersBuilderMock);
-            doReturn(protosScryptParametersBuilderMock2).when(protosScryptParametersBuilderMock).setSalt((ByteString) any());
-            doReturn(protosScryptParametersBuilderMock3).when(protosScryptParametersBuilderMock2).setN(1000L);
-            doReturn(scryptParametersMock).when(protosScryptParametersBuilderMock3).build();
-            ByteString byteString2 = ByteString.empty();
+            Protos.ScryptParameters.Builder builder = Protos.ScryptParameters.newBuilder();
+            protosScryptParameters.when(() -> Protos.ScryptParameters.newBuilder()).thenReturn(builder);
             byte[] byteArray2 = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+            ByteString byteString2 = ByteString.copyFrom(byteArray2);
             byteString.when(() -> ByteString.copyFrom(byteArray2)).thenReturn(byteString2);
-            KeyCrypterScrypt target = new KeyCrypterScrypt(1000);
+            KeyCrypterScrypt target = new KeyCrypterScrypt(0);
             //Act Statement(s)
             byte[] result = target.decrypt(encryptedDataMock, aesKeyMock);
             byte[] byteResultArray = new byte[]{};
@@ -396,9 +318,6 @@ public class KeyCrypterScryptSapientGeneratedJunit4Test {
             assertThat(result, equalTo(byteResultArray));
             verify(aesKeyMock).bytes();
             protosScryptParameters.verify(() -> Protos.ScryptParameters.newBuilder(), atLeast(1));
-            verify(protosScryptParametersBuilderMock).setSalt((ByteString) any());
-            verify(protosScryptParametersBuilderMock2).setN(1000L);
-            verify(protosScryptParametersBuilderMock3).build();
             byteString.verify(() -> ByteString.copyFrom(byteArray2), atLeast(1));
         }
     }
@@ -417,26 +336,27 @@ public class KeyCrypterScryptSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
-    MockedStatic<Protos.ScryptParameters> protosScryptParameters = mockStatic(Protos.ScryptParameters.class)) {
-    byte[] byteArray = new byte[] {};
-    doReturn(byteArray).when(aesKeyMock).bytes();
-    Protos.ScryptParameters.Builder builder = Protos.ScryptParameters.newBuilder();
-    protosScryptParameters.when(() -> Protos.ScryptParameters.newBuilder()).thenReturn(builder);
-    byte[] byteArray2 = new byte[] { (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0 };
-    ByteString byteString2 = ByteString.copyFrom(byteArray2);
-    byteString.when(() -> ByteString.copyFrom(byteArray2)).thenReturn(byteString2);
-    KeyCrypterScrypt target = new KeyCrypterScrypt(1000);
-    KeyCrypterException.InvalidCipherText keyCrypterExceptionInvalidCipherText = new KeyCrypterException.InvalidCipherText("Could not decrypt bytes", byteString2);
-    thrown.expect(KeyCrypterException.InvalidCipherText.class);
-    thrown.expectMessage(keyCrypterExceptionInvalidCipherText.getMessage());
-    //Act Statement(s)
-    target.decrypt(encryptedDataMock, aesKeyMock);
-    //Assert statement(s)
-    verify(aesKeyMock).bytes();
-    protosScryptParameters.verify(() -> Protos.ScryptParameters.newBuilder(), atLeast(1));
-    byteString.verify(() -> ByteString.copyFrom(byteArray2), atLeast(1));
-}*/
+        InvalidCipherTextException invalidCipherTextExceptionMock = mock(InvalidCipherTextException.class);
+        try (MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
+             MockedStatic<Protos.ScryptParameters> protosScryptParameters = mockStatic(Protos.ScryptParameters.class)) {
+            byte[] byteArray = new byte[]{};
+            doReturn(byteArray).when(aesKeyMock).bytes();
+            Protos.ScryptParameters.Builder builder = Protos.ScryptParameters.newBuilder();
+            protosScryptParameters.when(() -> Protos.ScryptParameters.newBuilder()).thenReturn(builder);
+            byte[] byteArray2 = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+            ByteString byteString2 = ByteString.copyFrom(byteArray2);
+            byteString.when(() -> ByteString.copyFrom(byteArray2)).thenReturn(byteString2);
+            KeyCrypterScrypt target = new KeyCrypterScrypt(0);
+            KeyCrypterException.InvalidCipherText keyCrypterExceptionInvalidCipherText = new KeyCrypterException.InvalidCipherText("Could not decrypt bytes", invalidCipherTextExceptionMock);
+            thrown.expect(KeyCrypterException.InvalidCipherText.class);
+            thrown.expectMessage(keyCrypterExceptionInvalidCipherText.getMessage());
+            //Act Statement(s)
+            target.decrypt(encryptedDataMock, aesKeyMock);
+            //Assert statement(s)
+            verify(aesKeyMock).bytes();
+            protosScryptParameters.verify(() -> Protos.ScryptParameters.newBuilder(), atLeast(1));
+            byteString.verify(() -> ByteString.copyFrom(byteArray2), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${51273030-c9d4-3dd2-a62d-f42a368dd9bb}
@@ -453,31 +373,27 @@ public class KeyCrypterScryptSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
-    MockedStatic<Protos.ScryptParameters> protosScryptParameters = mockStatic(Protos.ScryptParameters.class)) {
-    byte[] byteArray = new byte[] {};
-    doReturn(byteArray).when(aesKeyMock).bytes();
-    protosScryptParameters.when(() -> Protos.ScryptParameters.newBuilder()).thenReturn(protosScryptParametersBuilderMock);
-    doReturn(protosScryptParametersBuilderMock2).when(protosScryptParametersBuilderMock).setSalt((ByteString) any());
-    doReturn(protosScryptParametersBuilderMock3).when(protosScryptParametersBuilderMock2).setN(1000L);
-    doReturn(scryptParametersMock).when(protosScryptParametersBuilderMock3).build();
-    ByteString byteString2 = ByteString.empty();
-    byte[] byteArray2 = new byte[] { (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0 };
-    byteString.when(() -> ByteString.copyFrom(byteArray2)).thenReturn(byteString2);
-    KeyCrypterScrypt target = new KeyCrypterScrypt(1000);
-    KeyCrypterException keyCrypterException = new KeyCrypterException("Could not decrypt bytes", byteString2);
-    thrown.expect(KeyCrypterException.class);
-    thrown.expectMessage(keyCrypterException.getMessage());
-    //Act Statement(s)
-    target.decrypt(encryptedDataMock, aesKeyMock);
-    //Assert statement(s)
-    verify(aesKeyMock).bytes();
-    protosScryptParameters.verify(() -> Protos.ScryptParameters.newBuilder(), atLeast(1));
-    verify(protosScryptParametersBuilderMock).setSalt((ByteString) any());
-    verify(protosScryptParametersBuilderMock2).setN(1000L);
-    verify(protosScryptParametersBuilderMock3).build();
-    byteString.verify(() -> ByteString.copyFrom(byteArray2), atLeast(1));
-}*/
+        try (MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
+             MockedStatic<Protos.ScryptParameters> protosScryptParameters = mockStatic(Protos.ScryptParameters.class)) {
+            byte[] byteArray = new byte[]{};
+            doReturn(byteArray).when(aesKeyMock).bytes();
+            Protos.ScryptParameters.Builder builder = Protos.ScryptParameters.newBuilder();
+            protosScryptParameters.when(() -> Protos.ScryptParameters.newBuilder()).thenReturn(builder);
+            byte[] byteArray2 = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+            ByteString byteString2 = ByteString.copyFrom(byteArray2);
+            byteString.when(() -> ByteString.copyFrom(byteArray2)).thenReturn(byteString2);
+            KeyCrypterScrypt target = new KeyCrypterScrypt(0);
+            RuntimeException runtimeException = new RuntimeException();
+            KeyCrypterException keyCrypterException = new KeyCrypterException("Could not decrypt bytes", runtimeException);
+            thrown.expect(KeyCrypterException.class);
+            thrown.expectMessage(keyCrypterException.getMessage());
+            //Act Statement(s)
+            target.decrypt(encryptedDataMock, aesKeyMock);
+            //Assert statement(s)
+            verify(aesKeyMock).bytes();
+            protosScryptParameters.verify(() -> Protos.ScryptParameters.newBuilder(), atLeast(1));
+            byteString.verify(() -> ByteString.copyFrom(byteArray2), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${706a028a-ba94-35e6-bc50-a74a7895fb1e}
@@ -488,26 +404,21 @@ public class KeyCrypterScryptSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
-    MockedStatic<Protos.ScryptParameters> protosScryptParameters = mockStatic(Protos.ScryptParameters.class)) {
-    protosScryptParameters.when(() -> Protos.ScryptParameters.newBuilder()).thenReturn(protosScryptParametersBuilderMock);
-    doReturn(protosScryptParametersBuilderMock2).when(protosScryptParametersBuilderMock).setSalt((ByteString) any());
-    doReturn(protosScryptParametersBuilderMock3).when(protosScryptParametersBuilderMock2).setN(10000L);
-    doReturn(scryptParametersMock).when(protosScryptParametersBuilderMock3).build();
-    ByteString byteString2 = ByteString.empty();
-    byte[] byteArray = new byte[] { (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0 };
-    byteString.when(() -> ByteString.copyFrom(byteArray)).thenReturn(byteString2);
-    KeyCrypterScrypt target = new KeyCrypterScrypt(10000);
-    //Act Statement(s)
-    Protos.Wallet.EncryptionType result = target.getUnderstoodEncryptionType();
-    //Assert statement(s)
-    assertThat(result, equalTo(Protos.Wallet.EncryptionType.ENCRYPTED_SCRYPT_AES));
-    protosScryptParameters.verify(() -> Protos.ScryptParameters.newBuilder(), atLeast(1));
-    verify(protosScryptParametersBuilderMock).setSalt((ByteString) any());
-    verify(protosScryptParametersBuilderMock2).setN(10000L);
-    verify(protosScryptParametersBuilderMock3).build();
-    byteString.verify(() -> ByteString.copyFrom(byteArray), atLeast(1));
-}*/
+        try (MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
+             MockedStatic<Protos.ScryptParameters> protosScryptParameters = mockStatic(Protos.ScryptParameters.class)) {
+            Protos.ScryptParameters.Builder builder = Protos.ScryptParameters.newBuilder();
+            protosScryptParameters.when(() -> Protos.ScryptParameters.newBuilder()).thenReturn(builder);
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+            ByteString byteString2 = ByteString.copyFrom(byteArray);
+            byteString.when(() -> ByteString.copyFrom(byteArray)).thenReturn(byteString2);
+            KeyCrypterScrypt target = new KeyCrypterScrypt(1);
+            //Act Statement(s)
+            Protos.Wallet.EncryptionType result = target.getUnderstoodEncryptionType();
+            //Assert statement(s)
+            assertThat(result, equalTo(Protos.Wallet.EncryptionType.ENCRYPTED_SCRYPT_AES));
+            protosScryptParameters.verify(() -> Protos.ScryptParameters.newBuilder(), atLeast(1));
+            byteString.verify(() -> ByteString.copyFrom(byteArray), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${363d3698-f34c-39ad-914f-376a19498023}
@@ -518,31 +429,20 @@ public class KeyCrypterScryptSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
-    MockedStatic<Protos.ScryptParameters> protosScryptParameters = mockStatic(Protos.ScryptParameters.class)) {
-    protosScryptParameters.when(() -> Protos.ScryptParameters.newBuilder()).thenReturn(protosScryptParametersBuilderMock);
-    doReturn(protosScryptParametersBuilderMock2).when(protosScryptParametersBuilderMock).setSalt((ByteString) any());
-    doReturn(protosScryptParametersBuilderMock3).when(protosScryptParametersBuilderMock2).setN(1000L);
-    doReturn(scryptParametersMock).when(protosScryptParametersBuilderMock3).build();
-    ByteString byteString2 = ByteString.empty();
-    byte[] byteArray = new byte[] { (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0 };
-    byteString.when(() -> ByteString.copyFrom(byteArray)).thenReturn(byteString2);
-    KeyCrypterScrypt target = new KeyCrypterScrypt(1000);
-    doReturn(2L).when(scryptParametersMock).getN();
-    doReturn(2).when(scryptParametersMock).getR();
-    doReturn(2).when(scryptParametersMock).getP();
-    //Act Statement(s)
-    String result = target.toString();
-    //Assert statement(s)
-    assertThat(result, equalTo("AES-256-CBC, Scrypt (N=2, r=2, p=2)"));
-    protosScryptParameters.verify(() -> Protos.ScryptParameters.newBuilder(), atLeast(1));
-    verify(protosScryptParametersBuilderMock).setSalt((ByteString) any());
-    verify(protosScryptParametersBuilderMock2).setN(1000L);
-    verify(protosScryptParametersBuilderMock3).build();
-    byteString.verify(() -> ByteString.copyFrom(byteArray), atLeast(1));
-    verify(scryptParametersMock).getN();
-    verify(scryptParametersMock).getR();
-    verify(scryptParametersMock).getP();
-}*/
+        try (MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
+             MockedStatic<Protos.ScryptParameters> protosScryptParameters = mockStatic(Protos.ScryptParameters.class)) {
+            Protos.ScryptParameters.Builder builder = Protos.ScryptParameters.newBuilder();
+            protosScryptParameters.when(() -> Protos.ScryptParameters.newBuilder()).thenReturn(builder);
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+            ByteString byteString2 = ByteString.copyFrom(byteArray);
+            byteString.when(() -> ByteString.copyFrom(byteArray)).thenReturn(byteString2);
+            KeyCrypterScrypt target = new KeyCrypterScrypt(1);
+            //Act Statement(s)
+            String result = target.toString();
+            //Assert statement(s)
+            assertThat(result, equalTo("AES-256-CBC, Scrypt (N=1, r=8, p=1)"));
+            protosScryptParameters.verify(() -> Protos.ScryptParameters.newBuilder(), atLeast(1));
+            byteString.verify(() -> ByteString.copyFrom(byteArray), atLeast(1));
+        }
     }
 }

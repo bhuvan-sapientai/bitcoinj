@@ -55,10 +55,16 @@ public class VersionMessageSapientGeneratedJunit4Test {
     @Rule()
     public ExpectedException thrown = ExpectedException.none();
 
+    private final NetworkParameters paramsMock = mock(NetworkParameters.class);
+
+    private final Services servicesMock = mock(Services.class);
+
+    private final Services servicesMock2 = mock(Services.class);
+
     @After()
     public void afterTest() throws Exception {
-        if (autoCloseableMocks != null)
-            autoCloseableMocks.close();
+        /*if (autoCloseableMocks != null)
+    autoCloseableMocks.close();*/
     }
 
     //Sapient generated method id: ${f1e14644-5a19-33bd-8a3a-d366f7b62777}
@@ -69,8 +75,6 @@ public class VersionMessageSapientGeneratedJunit4Test {
          * (clientVersion >= ProtocolVersion.BLOOM_FILTER.intValue()) : false
          */
         //Arrange Statement(s)
-        //Services servicesMock = mock(Services.class);
-        //Services servicesMock2 = mock(Services.class);
         /*try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
     MockedStatic<Buffers> buffers = mockStatic(Buffers.class);
     MockedStatic<PeerAddress> peerAddress = mockStatic(PeerAddress.class);
@@ -120,7 +124,6 @@ public class VersionMessageSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //Services servicesMock = mock(Services.class);
         /*try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
     MockedStatic<Buffers> buffers = mockStatic(Buffers.class);
     MockedStatic<PeerAddress> peerAddress = mockStatic(PeerAddress.class);
@@ -128,22 +131,21 @@ public class VersionMessageSapientGeneratedJunit4Test {
     MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
     preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
     byteUtils.when(() -> ByteUtils.readInt64((ByteBuffer) any())).thenReturn(-1L);
-    Services services2 = Services.of(0L);
-    services.when(() -> Services.read((ByteBuffer) any())).thenReturn(servicesMock).thenReturn(services2);
+    services.when(() -> Services.read((ByteBuffer) any())).thenReturn(servicesMock).thenReturn(servicesMock2);
     byte[] byteArray = new byte[] {};
     buffers.when(() -> Buffers.readBytes((ByteBuffer) any(), eq(16))).thenReturn(byteArray);
-    //TODO: Needs to return real value
-    peerAddress.when(() -> PeerAddress.getByAddress(byteArray)).thenReturn(null);
+    InetAddress inetAddress = InetAddress.getLoopbackAddress();
+    peerAddress.when(() -> PeerAddress.getByAddress(byteArray)).thenReturn(inetAddress);
     byteUtils.when(() -> ByteUtils.readUint16BE((ByteBuffer) any())).thenReturn(0);
     ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
     buffers.when(() -> Buffers.skipBytes((ByteBuffer) any(), eq(26))).thenReturn(byteBuffer);
-    //TODO: Needs to return real value
-    buffers.when(() -> Buffers.skipBytes((ByteBuffer) any(), eq(8))).thenReturn(null);
-    buffers.when(() -> Buffers.readLengthPrefixedString((ByteBuffer) any())).thenReturn("String");
-    byteUtils.when(() -> ByteUtils.readUint32((ByteBuffer) any())).thenReturn(70001L).thenReturn(0L);
     ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
+    buffers.when(() -> Buffers.skipBytes((ByteBuffer) any(), eq(8))).thenReturn(byteBuffer2);
+    buffers.when(() -> Buffers.readLengthPrefixedString((ByteBuffer) any())).thenReturn("return_of_readLengthPrefixedString1");
+    byteUtils.when(() -> ByteUtils.readUint32((ByteBuffer) any())).thenReturn(70001L).thenReturn(0L);
+    ByteBuffer byteBuffer3 = ByteBuffer.allocateDirect(0);
     //Act Statement(s)
-    VersionMessage result = VersionMessage.read(byteBuffer2);
+    VersionMessage result = VersionMessage.read(byteBuffer3);
     //Assert statement(s)
     assertThat(result, is(notNullValue()));
     byteUtils.verify(() -> ByteUtils.readUint32((ByteBuffer) any()), atLeast(2));
@@ -171,7 +173,6 @@ public class VersionMessageSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //Services servicesMock = mock(Services.class);
         /*try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
     MockedStatic<Buffers> buffers = mockStatic(Buffers.class);
     MockedStatic<PeerAddress> peerAddress = mockStatic(PeerAddress.class);
@@ -179,22 +180,21 @@ public class VersionMessageSapientGeneratedJunit4Test {
     MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
     preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
     byteUtils.when(() -> ByteUtils.readInt64((ByteBuffer) any())).thenReturn(0L);
-    Services services2 = Services.of(0L);
-    services.when(() -> Services.read((ByteBuffer) any())).thenReturn(servicesMock).thenReturn(services2);
+    services.when(() -> Services.read((ByteBuffer) any())).thenReturn(servicesMock).thenReturn(servicesMock2);
     byte[] byteArray = new byte[] {};
     buffers.when(() -> Buffers.readBytes((ByteBuffer) any(), eq(16))).thenReturn(byteArray);
-    //TODO: Needs to return real value
-    peerAddress.when(() -> PeerAddress.getByAddress(byteArray)).thenReturn(null);
+    InetAddress inetAddress = InetAddress.getLoopbackAddress();
+    peerAddress.when(() -> PeerAddress.getByAddress(byteArray)).thenReturn(inetAddress);
     byteUtils.when(() -> ByteUtils.readUint16BE((ByteBuffer) any())).thenReturn(0);
     ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
     buffers.when(() -> Buffers.skipBytes((ByteBuffer) any(), eq(26))).thenReturn(byteBuffer);
-    //TODO: Needs to return real value
-    buffers.when(() -> Buffers.skipBytes((ByteBuffer) any(), eq(8))).thenReturn(null);
-    buffers.when(() -> Buffers.readLengthPrefixedString((ByteBuffer) any())).thenReturn("String");
-    byteUtils.when(() -> ByteUtils.readUint32((ByteBuffer) any())).thenReturn(70001L).thenReturn(0L);
     ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
+    buffers.when(() -> Buffers.skipBytes((ByteBuffer) any(), eq(8))).thenReturn(byteBuffer2);
+    buffers.when(() -> Buffers.readLengthPrefixedString((ByteBuffer) any())).thenReturn("return_of_readLengthPrefixedString1");
+    byteUtils.when(() -> ByteUtils.readUint32((ByteBuffer) any())).thenReturn(70001L).thenReturn(0L);
+    ByteBuffer byteBuffer3 = ByteBuffer.allocateDirect(0);
     //Act Statement(s)
-    VersionMessage result = VersionMessage.read(byteBuffer2);
+    VersionMessage result = VersionMessage.read(byteBuffer3);
     //Assert statement(s)
     assertThat(result, is(notNullValue()));
     byteUtils.verify(() -> ByteUtils.readUint32((ByteBuffer) any()), atLeast(2));
@@ -214,10 +214,8 @@ public class VersionMessageSapientGeneratedJunit4Test {
     @Test()
     public void clientVersionTest() {
         //Arrange Statement(s)
-        NetworkParameters paramsMock = mock(NetworkParameters.class);
         doReturn(0).when(paramsMock).getPort();
-        target = new VersionMessage(paramsMock, 1);
-        autoCloseableMocks = MockitoAnnotations.openMocks(this);
+        VersionMessage target = new VersionMessage(paramsMock, 1);
         //Act Statement(s)
         int result = target.clientVersion();
         //Assert statement(s)
@@ -229,16 +227,14 @@ public class VersionMessageSapientGeneratedJunit4Test {
     @Test()
     public void servicesTest() {
         //Arrange Statement(s)
-        //NetworkParameters paramsMock = mock(NetworkParameters.class);
-        //doReturn(0).when(paramsMock).getPort();
-        //target = new VersionMessage(paramsMock, 1);
-        //autoCloseableMocks = MockitoAnnotations.openMocks(this);
+        doReturn(0).when(paramsMock).getPort();
+        VersionMessage target = new VersionMessage(paramsMock, 1);
         //Act Statement(s)
-        //Services result = target.services();
-        //Services services = Services.none();
+        Services result = target.services();
+        Services services = Services.none();
         //Assert statement(s)
-        //assertThat(result, equalTo(services));
-        //verify(paramsMock).getPort();
+        assertThat(result, equalTo(services));
+        verify(paramsMock).getPort();
     }
 
     //Sapient generated method id: ${6fe58293-6ecb-365b-9a21-75d60574bea7}
@@ -246,45 +242,44 @@ public class VersionMessageSapientGeneratedJunit4Test {
     public void bitcoinSerializeToStreamWhenRelayTxesBeforeFilter() throws IOException {
         /* Branches:
          * (relayTxesBeforeFilter) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //NetworkParameters networkParametersMock = mock(NetworkParameters.class);
         /*try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
     MockedStatic<VarInt> varInt = mockStatic(VarInt.class);
     MockedStatic<PeerAddress> peerAddress = mockStatic(PeerAddress.class);
+    MockedStatic<Services> services = mockStatic(Services.class);
     MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
-    //TODO: Needs to return real value
-    timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(null);
+    doReturn(0).when(paramsMock).getPort();
+    Services services2 = Services.none();
+    Instant instant = TimeUtils.currentTime();
+    timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(instant);
+    Services services3 = Services.none();
+    services.when(() -> Services.none()).thenReturn(services2).thenReturn(services3);
     byteUtils.when(() -> ByteUtils.writeInt32LE(eq(70013), (OutputStream) any())).thenAnswer((Answer<Void>) invocation -> null);
-    byteUtils.when(() -> ByteUtils.writeInt64LE(eq(0L), (OutputStream) any())).thenAnswer((Answer<Void>) invocation -> null);
-    byte[] byteArray = new byte[] { (byte) 0 };
-    byte[] byteArray2 = new byte[] {};
+    byteUtils.when(() -> ByteUtils.writeInt64LE(eq(1704367514L), (OutputStream) any())).thenAnswer((Answer<Void>) invocation -> null);
+    byte[] byteArray = new byte[] {};
+    byte[] byteArray2 = new byte[] { (byte) 127, (byte) 0, (byte) 0, (byte) 1 };
     peerAddress.when(() -> PeerAddress.mapIntoIPv6(byteArray2)).thenReturn(byteArray);
     byteUtils.when(() -> ByteUtils.writeInt16BE(eq(0), (OutputStream) any())).thenAnswer((Answer<Void>) invocation -> null);
     byteUtils.when(() -> ByteUtils.writeInt32LE(eq(0), (OutputStream) any())).thenAnswer((Answer<Void>) invocation -> null);
-    VarInt varInt2 = new VarInt(0L);
-    varInt.when(() -> VarInt.of(0L)).thenReturn(varInt2);
+    VarInt varInt2 = VarInt.of(24L);
+    varInt.when(() -> VarInt.of(24L)).thenReturn(varInt2);
     byteUtils.when(() -> ByteUtils.writeInt32LE(eq(0L), (OutputStream) any())).thenAnswer((Answer<Void>) invocation -> null);
-    target = new VersionMessage(networkParametersMock, 1);
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    byte[] byteArray3 = new byte[] {};
-    doReturn(byteArray3).when(receivingServicesMock).serialize();
+    VersionMessage target = new VersionMessage(paramsMock, 0);
     OutputStream outputStream = OutputStream.nullOutputStream();
     //Act Statement(s)
     target.bitcoinSerializeToStream(outputStream);
     //Assert statement(s)
+    verify(paramsMock).getPort();
+    services.verify(() -> Services.none(), atLeast(2));
     timeUtils.verify(() -> TimeUtils.currentTime(), atLeast(1));
     byteUtils.verify(() -> ByteUtils.writeInt32LE(eq(70013), (OutputStream) any()));
-    byteUtils.verify(() -> ByteUtils.writeInt64LE(eq(0L), (OutputStream) any()));
+    byteUtils.verify(() -> ByteUtils.writeInt64LE(eq(1704367514L), (OutputStream) any()));
     peerAddress.verify(() -> PeerAddress.mapIntoIPv6(byteArray2), atLeast(1));
     byteUtils.verify(() -> ByteUtils.writeInt16BE(eq(0), (OutputStream) any()));
     byteUtils.verify(() -> ByteUtils.writeInt32LE(eq(0), (OutputStream) any()), atLeast(2));
-    varInt.verify(() -> VarInt.of(0L), atLeast(1));
+    varInt.verify(() -> VarInt.of(24L), atLeast(1));
     byteUtils.verify(() -> ByteUtils.writeInt32LE(eq(0L), (OutputStream) any()));
-    verify(receivingServicesMock).serialize();
 }*/
     }
 
@@ -294,24 +289,26 @@ public class VersionMessageSapientGeneratedJunit4Test {
         /* Branches:
          * (localServices.hasAny()) : false
          * (!relayTxesBeforeFilter) : false
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
-    //TODO: Needs to return real value
-    timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(null);
-    timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) null)).thenReturn("<current time in custom date-time format>");
-    NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-    target = new VersionMessage(networkParameters, 100);
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
+        /*try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class);
+    MockedStatic<Services> services = mockStatic(Services.class)) {
+    doReturn(0).when(paramsMock).getPort();
+    Services services2 = Services.none();
+    Instant instant = TimeUtils.currentTime();
+    timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(instant);
+    Services services3 = Services.none();
+    services.when(() -> Services.none()).thenReturn(services2).thenReturn(services3);
+    timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("2024-01-04T11:25:14Z");
+    VersionMessage target = new VersionMessage(paramsMock, 2);
     //Act Statement(s)
     String result = target.toString();
     //Assert statement(s)
-    assertThat(result, equalTo("\nclient version: 70013\n\ntime:           <current time in custom date-time format>\nreceiving svc:  null\nreceiving addr: null\nsub version:    null\nbest height:    0\ndelay tx relay: true\n"));
+    assertThat(result, equalTo("\nclient version: 70013\n\ntime:           2024-01-04T11:25:14Z\nreceiving svc:  \nreceiving addr: /127.0.0.1:0\nsub version:    /bitcoinj:0.17-SNAPSHOT/\nbest height:    2\ndelay tx relay: false\n"));
+    verify(paramsMock).getPort();
+    services.verify(() -> Services.none(), atLeast(2));
     timeUtils.verify(() -> TimeUtils.currentTime(), atLeast(1));
-    timeUtils.verify(() -> TimeUtils.dateTimeFormat((Instant) null), atLeast(1));
+    timeUtils.verify(() -> TimeUtils.dateTimeFormat((Instant) any()));
 }*/
     }
 
@@ -319,10 +316,8 @@ public class VersionMessageSapientGeneratedJunit4Test {
     @Test()
     public void duplicateTest() {
         //Arrange Statement(s)
-        NetworkParameters paramsMock = mock(NetworkParameters.class);
         doReturn(0).when(paramsMock).getPort();
-        target = new VersionMessage(paramsMock, 1);
-        autoCloseableMocks = MockitoAnnotations.openMocks(this);
+        VersionMessage target = new VersionMessage(paramsMock, 1);
         //Act Statement(s)
         VersionMessage result = target.duplicate();
         //Assert statement(s)
@@ -339,17 +334,15 @@ public class VersionMessageSapientGeneratedJunit4Test {
          * (component.contains(")")) : true  #  inside checkSubVerComponent method
          */
         //Arrange Statement(s)
-        //NetworkParameters paramsMock = mock(NetworkParameters.class);
-        //doReturn(0).when(paramsMock).getPort();
-        //target = new VersionMessage(paramsMock, 1);
-        //autoCloseableMocks = MockitoAnnotations.openMocks(this);
-        //IllegalArgumentException illegalArgumentException = new IllegalArgumentException("name contains invalid characters");
-        //thrown.expect(IllegalArgumentException.class);
-        //thrown.expectMessage(illegalArgumentException.getMessage());
+        doReturn(0).when(paramsMock).getPort();
+        VersionMessage target = new VersionMessage(paramsMock, 1);
+        IllegalArgumentException illegalArgumentException = new IllegalArgumentException("name contains invalid characters");
+        thrown.expect(IllegalArgumentException.class);
+        thrown.expectMessage(illegalArgumentException.getMessage());
         //Act Statement(s)
-        //target.appendToSubVer(")", "version1", "comments1");
+        target.appendToSubVer(")", "version1", "comments1");
         //Assert statement(s)
-        //verify(paramsMock).getPort();
+        verify(paramsMock).getPort();
     }
 
     //Sapient generated method id: ${f9a94092-d738-3d71-b150-0ac3bbe2dbc5}
@@ -361,10 +354,8 @@ public class VersionMessageSapientGeneratedJunit4Test {
          * (component.contains(")")) : false  #  inside checkSubVerComponent method
          */
         //Arrange Statement(s)
-        NetworkParameters paramsMock = mock(NetworkParameters.class);
         doReturn(0).when(paramsMock).getPort();
-        target = new VersionMessage(paramsMock, 1);
-        autoCloseableMocks = MockitoAnnotations.openMocks(this);
+        VersionMessage target = new VersionMessage(paramsMock, 1);
         IllegalArgumentException illegalArgumentException = new IllegalArgumentException("name contains invalid characters");
         thrown.expect(IllegalArgumentException.class);
         thrown.expectMessage(illegalArgumentException.getMessage());
@@ -384,10 +375,8 @@ public class VersionMessageSapientGeneratedJunit4Test {
          * (comments != null) : true
          */
         //Arrange Statement(s)
-        NetworkParameters paramsMock = mock(NetworkParameters.class);
         doReturn(0).when(paramsMock).getPort();
-        target = new VersionMessage(paramsMock, 1);
-        autoCloseableMocks = MockitoAnnotations.openMocks(this);
+        VersionMessage target = new VersionMessage(paramsMock, 1);
         //Act Statement(s)
         target.appendToSubVer("C", "B", "A");
         //Assert statement(s)
@@ -404,17 +393,15 @@ public class VersionMessageSapientGeneratedJunit4Test {
          * (comments != null) : true
          */
         //Arrange Statement(s)
-        //NetworkParameters paramsMock = mock(NetworkParameters.class);
-        //doReturn(0).when(paramsMock).getPort();
-        //target = new VersionMessage(paramsMock, 1);
-        //autoCloseableMocks = MockitoAnnotations.openMocks(this);
-        //IllegalArgumentException illegalArgumentException = new IllegalArgumentException("name contains invalid characters");
-        //thrown.expect(IllegalArgumentException.class);
-        //thrown.expectMessage(illegalArgumentException.getMessage());
+        doReturn(0).when(paramsMock).getPort();
+        VersionMessage target = new VersionMessage(paramsMock, 1);
+        IllegalArgumentException illegalArgumentException = new IllegalArgumentException("name contains invalid characters");
+        thrown.expect(IllegalArgumentException.class);
+        thrown.expectMessage(illegalArgumentException.getMessage());
         //Act Statement(s)
-        //target.appendToSubVer("A", "B", ")");
+        target.appendToSubVer("A", "B", ")");
         //Assert statement(s)
-        //verify(paramsMock).getPort();
+        verify(paramsMock).getPort();
     }
 
     //Sapient generated method id: ${761cf6fa-1520-3ff5-8c53-855ee388bdee}
@@ -427,43 +414,39 @@ public class VersionMessageSapientGeneratedJunit4Test {
          * (comments != null) : false
          */
         //Arrange Statement(s)
-        //NetworkParameters paramsMock = mock(NetworkParameters.class);
-        //doReturn(0).when(paramsMock).getPort();
-        //target = new VersionMessage(paramsMock, 1);
-        //autoCloseableMocks = MockitoAnnotations.openMocks(this);
+        doReturn(0).when(paramsMock).getPort();
+        VersionMessage target = new VersionMessage(paramsMock, 1);
         //Act Statement(s)
-        //target.appendToSubVer("B", "A", (String) null);
+        target.appendToSubVer("B", "A", (String) null);
         //Assert statement(s)
-        //verify(paramsMock).getPort();
+        verify(paramsMock).getPort();
     }
 
     //Sapient generated method id: ${0c994290-e94b-35b1-a267-e7fe4838bd49}
     @Test()
     public void isPingPongSupportedTest() {
         //Arrange Statement(s)
-        //NetworkParameters paramsMock = mock(NetworkParameters.class);
-        //doReturn(0).when(paramsMock).getPort();
-        //target = new VersionMessage(paramsMock, 1);
-        //autoCloseableMocks = MockitoAnnotations.openMocks(this);
+        doReturn(0).when(paramsMock).getPort();
+        VersionMessage target = new VersionMessage(paramsMock, 1);
         //Act Statement(s)
-        //boolean result = target.isPingPongSupported();
+        boolean result = target.isPingPongSupported();
         //Assert statement(s)
-        //assertThat(result, equalTo(Boolean.TRUE));
-        //verify(paramsMock).getPort();
+        assertThat(result, equalTo(Boolean.TRUE));
+        verify(paramsMock).getPort();
     }
 
     //Sapient generated method id: ${2337c104-de1f-364d-8ce3-57eec55420af}
     @Test()
     public void toStringServicesTest() {
         //Arrange Statement(s)
-        //Services servicesMock = mock(Services.class, "toStringServices_services1");
-        /*try (MockedStatic<Services> services = mockStatic(Services.class)) {
-    services.when(() -> Services.of(0L)).thenReturn(servicesMock);
-    //Act Statement(s)
-    String result = VersionMessage.toStringServices(0L);
-    //Assert statement(s)
-    assertThat(result, equalTo("toStringServices_services1"));
-    services.verify(() -> Services.of(0L), atLeast(1));
-}*/
+        Services servicesMock = mock(Services.class, "toStringServices_services1");
+        try (MockedStatic<Services> services = mockStatic(Services.class)) {
+            services.when(() -> Services.of(0L)).thenReturn(servicesMock);
+            //Act Statement(s)
+            String result = VersionMessage.toStringServices(0L);
+            //Assert statement(s)
+            assertThat(result, equalTo("toStringServices_services1"));
+            services.verify(() -> Services.of(0L), atLeast(1));
+        }
     }
 }

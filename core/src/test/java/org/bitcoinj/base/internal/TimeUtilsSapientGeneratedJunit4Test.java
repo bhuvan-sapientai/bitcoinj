@@ -28,6 +28,7 @@ public class TimeUtilsSapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
+
         //Act Statement(s)
         TimeUtils.setMockClock();
     }
@@ -37,6 +38,7 @@ public class TimeUtilsSapientGeneratedJunit4Test {
     public void setMockClock1Test() {
         //Arrange Statement(s)
         Instant instant = Instant.now();
+
         //Act Statement(s)
         TimeUtils.setMockClock(instant);
     }
@@ -53,6 +55,7 @@ public class TimeUtilsSapientGeneratedJunit4Test {
         thrown.expect(IllegalStateException.class);
         thrown.expectMessage(illegalStateException.getMessage());
         Duration duration = Duration.ofDays(0L);
+
         //Act Statement(s)
         TimeUtils.rollMockClock(duration);
     }
@@ -60,6 +63,7 @@ public class TimeUtilsSapientGeneratedJunit4Test {
     //Sapient generated method id: ${0d541f49-3c59-374b-8b6b-f659640f0943}
     @Test()
     public void clearMockClockTest() {
+
         //Act Statement(s)
         TimeUtils.clearMockClock();
     }
@@ -72,9 +76,11 @@ public class TimeUtilsSapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
+
         //Act Statement(s)
         Instant result = TimeUtils.currentTime();
         Instant instant = Instant.now();
+
         //Assert statement(s)
         assertThat(result, equalTo(instant));
     }
@@ -89,9 +95,11 @@ public class TimeUtilsSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Instant instant = Instant.now();
+
         //Act Statement(s)
         Duration result = TimeUtils.elapsedTime(instant);
         Duration duration = Duration.ofDays(0L);
+
         //Assert statement(s)
         assertThat(result, equalTo(duration));
     }
@@ -105,8 +113,10 @@ public class TimeUtilsSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         Instant instant = Instant.now();
         Instant instant2 = Instant.now();
+
         //Act Statement(s)
         Instant result = TimeUtils.earlier(instant, instant2);
+
         //Assert statement(s)
         assertThat(result, equalTo(instant));
     }
@@ -120,8 +130,10 @@ public class TimeUtilsSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         Instant instant = Instant.now();
         Instant instant2 = Instant.now();
+
         //Act Statement(s)
         Instant result = TimeUtils.earlier(instant, instant2);
+
         //Assert statement(s)
         assertThat(result, equalTo(instant));
     }
@@ -135,8 +147,10 @@ public class TimeUtilsSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         Instant instant = Instant.now();
         Instant instant2 = Instant.now();
+
         //Act Statement(s)
         Instant result = TimeUtils.later(instant, instant2);
+
         //Assert statement(s)
         assertThat(result, equalTo(instant2));
     }
@@ -150,8 +164,10 @@ public class TimeUtilsSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         Instant instant = Instant.now();
         Instant instant2 = Instant.now();
+
         //Act Statement(s)
         Instant result = TimeUtils.later(instant, instant2);
+
         //Assert statement(s)
         assertThat(result, equalTo(instant2));
     }
@@ -165,8 +181,10 @@ public class TimeUtilsSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         Duration duration = Duration.ofDays(0L);
         Duration duration2 = Duration.ofDays(0L);
+
         //Act Statement(s)
         Duration result = TimeUtils.longest(duration, duration2);
+
         //Assert statement(s)
         assertThat(result, equalTo(duration2));
     }
@@ -180,8 +198,10 @@ public class TimeUtilsSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         Duration duration = Duration.ofDays(0L);
         Duration duration2 = Duration.ofDays(0L);
+
         //Act Statement(s)
         Duration result = TimeUtils.longest(duration, duration2);
+
         //Assert statement(s)
         assertThat(result, equalTo(duration2));
     }
@@ -192,9 +212,11 @@ public class TimeUtilsSapientGeneratedJunit4Test {
     public void dateTimeFormatTest() {
         //Arrange Statement(s)
         Instant instant = Instant.now();
+
         //Act Statement(s)
         String result = TimeUtils.dateTimeFormat(instant);
+
         //Assert statement(s)
-        assertThat(result, equalTo("2023-12-22T04:44:13.306758Z"));
+        assertThat(result, equalTo("2024-01-04T11:21:05.663725Z"));
     }
 }

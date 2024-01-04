@@ -800,11 +800,11 @@ methods:
       filledByUser: false
     uuid: "d2931715-ecaa-3ff6-ba6d-b16bac9265ab"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "decode"
     returnType: "byte[]"
@@ -938,9 +938,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\uD83F"
+                value: "\ud83f"
               suggestedContent: !<regular>
-                value: "\\uD83F"
+                value: "\ud83f"
               valueType: "char"
               uuid: "decode_char1"
               fixed: false
@@ -965,7 +965,7 @@ methods:
             value:
               sapientType: "BASIC"
               suggestedContent: !<regular>
-                value: "\\uD83F"
+                value: "\ud83f"
               valueType: "char"
               uuid: "decode_char1"
               fixed: false
@@ -1158,11 +1158,11 @@ methods:
       filledByUser: false
     uuid: "6132aca1-469e-3b26-86e7-fd52897896b4"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path7"
     pathIdForUser: "path11"
     testPathName: "decodeWhenOutputStartIndexOfDecodedEquals0"
@@ -1221,11 +1221,11 @@ methods:
       filledByUser: false
     uuid: "7d7d8b16-f133-3e8e-8d2c-e1dc068400dc"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path8"
     pathIdForUser: "path12"
     testPathName: "decodeWhenILessThanNumberLengthAndInputStartIndexOfInput58Equals0AndOutputStartLessThanDecodedLengthAndOutputStartIndex"
@@ -3119,8 +3119,8 @@ methods:
       filledByUser: false
     uuid: "ab7cc08b-23ae-3052-b5d1-7c4401f7ae8e"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false

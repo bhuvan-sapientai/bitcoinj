@@ -47,6 +47,8 @@ public class CoinSapientGeneratedJunit4Test {
     @Rule()
     public ExpectedException thrown = ExpectedException.none();
 
+    private final Coin coinMock2 = mock(Coin.class);
+
     //Sapient generated method id: ${5ea5a577-e5ba-3b6a-a291-7463b128c1f2}
     @Test()
     public void valueOfWhenSatoshisNotEquals0() {
@@ -69,13 +71,12 @@ public class CoinSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<Coin> coin = mockStatic(Coin.class, CALLS_REAL_METHODS)) {
-            Coin coin2 = Coin.valueOf(0L);
-            coin.when(() -> Coin.valueOf(0L)).thenReturn(coin2);
+            coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
             //Act Statement(s)
             Coin result = Coin.read(byteBuffer);
             //Assert statement(s)
-            assertThat(result, equalTo(coin2));
+            assertThat(result, equalTo(coinMock));
             coin.verify(() -> Coin.valueOf(0L), atLeast(1));
         }
     }
@@ -91,7 +92,7 @@ public class CoinSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Coin target = Coin.valueOf(10, 100);
+            Coin target = Coin.valueOf(0, 0);
             //Act Statement(s)
             int result = target.smallestUnitExponent();
             //Assert statement(s)
@@ -121,9 +122,8 @@ public class CoinSapientGeneratedJunit4Test {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             //Act Statement(s)
             Coin result = Coin.valueOf(0, 0);
-            Coin coin = Coin.valueOf(0L);
             //Assert statement(s)
-            assertThat(result, equalTo(coin));
+            assertThat(result, is(notNullValue()));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(3));
         }
     }
@@ -148,10 +148,9 @@ public class CoinSapientGeneratedJunit4Test {
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             //Act Statement(s)
-            Coin result = Coin.valueOf(10, 25);
-            Coin coin = Coin.valueOf(0L);
+            Coin result = Coin.valueOf(-1, -1);
             //Assert statement(s)
-            assertThat(result, equalTo(coin));
+            assertThat(result, is(notNullValue()));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(3));
         }
     }
@@ -184,12 +183,17 @@ public class CoinSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${269e54e0-9262-3a73-972c-c74301f44098}
+    @Ignore()
     @Test()
     public void btcToSatoshiTest() throws ArithmeticException {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Act Statement(s)
-        long result = Coin.btcToSatoshi(new BigDecimal("1.23456789"));
+        long result = Coin.btcToSatoshi(new BigDecimal("1.0"));
         //Assert statement(s)
-        assertThat(result, equalTo(123456789L));
+        assertThat(result, equalTo(0L));
     }
 
     //Sapient generated method id: ${cee20860-ba60-3360-81d3-3b82489d7b0d}
@@ -201,23 +205,27 @@ public class CoinSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Act Statement(s)
-        BigDecimal result = Coin.satoshiToBtc(1000000000L);
+        BigDecimal result = Coin.satoshiToBtc(0L);
         //Assert statement(s)
         assertThat(result.stripTrailingZeros(), equalTo(new BigDecimal("0").stripTrailingZeros()));
     }
 
     //Sapient generated method id: ${7cbc8d3a-aa7f-39b7-a15a-48dc3915045c}
+    @Ignore()
     @Test()
     public void ofBtcTest() throws ArithmeticException {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
         try (MockedStatic<Coin> coin = mockStatic(Coin.class, CALLS_REAL_METHODS)) {
-            Coin coin2 = Coin.valueOf(0L);
-            coin.when(() -> Coin.valueOf(100000000L)).thenReturn(coin2);
+            coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
             //Act Statement(s)
             Coin result = Coin.ofBtc(new BigDecimal("1.0"));
             //Assert statement(s)
-            assertThat(result, equalTo(coin2));
-            coin.verify(() -> Coin.valueOf(100000000L), atLeast(1));
+            assertThat(result, equalTo(coinMock));
+            coin.verify(() -> Coin.valueOf(0L), atLeast(1));
         }
     }
 
@@ -245,12 +253,11 @@ public class CoinSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<Coin> coin = mockStatic(Coin.class, CALLS_REAL_METHODS)) {
-            Coin coin2 = Coin.valueOf(0L);
-            coin.when(() -> Coin.valueOf(0L)).thenReturn(coin2);
+            coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
             //Act Statement(s)
-            Coin result = Coin.parseCoin("0.001");
+            Coin result = Coin.parseCoin("1.0");
             //Assert statement(s)
-            assertThat(result, equalTo(coin2));
+            assertThat(result, equalTo(coinMock));
             coin.verify(() -> Coin.valueOf(0L), atLeast(1));
         }
     }
@@ -287,12 +294,11 @@ public class CoinSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<Coin> coin = mockStatic(Coin.class, CALLS_REAL_METHODS)) {
-            Coin coin2 = Coin.valueOf(0L);
-            coin.when(() -> Coin.valueOf(0L)).thenReturn(coin2);
+            coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
             //Act Statement(s)
-            Coin result = Coin.parseCoinInexact("0.00000001");
+            Coin result = Coin.parseCoinInexact("0.0");
             //Assert statement(s)
-            assertThat(result, equalTo(coin2));
+            assertThat(result, equalTo(coinMock));
             coin.verify(() -> Coin.valueOf(0L), atLeast(1));
         }
     }
@@ -309,12 +315,11 @@ public class CoinSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<Coin> coin = mockStatic(Coin.class, CALLS_REAL_METHODS)) {
-            Coin coin2 = Coin.valueOf(0L);
-            coin.when(() -> Coin.valueOf(0L)).thenReturn(coin2);
+            coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
             thrown.expect(IllegalArgumentException.class);
-            thrown.expectCause(isA(Coin.class));
+            thrown.expectCause(isA(ArithmeticException.class));
             //Act Statement(s)
-            Coin.parseCoinInexact("0.00000001");
+            Coin.parseCoinInexact("0.0");
             //Assert statement(s)
             coin.verify(() -> Coin.valueOf(0L), atLeast(1));
         }
@@ -332,14 +337,13 @@ public class CoinSapientGeneratedJunit4Test {
         try (MockedStatic<Coin> coin = mockStatic(Coin.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
+            Coin target = Coin.valueOf(0, 0);
             Coin coin2 = Coin.valueOf(0L);
-            coin.when(() -> Coin.valueOf(0L)).thenReturn(coin2);
-            Coin target = Coin.valueOf(2, 50);
-            Coin coin3 = Coin.valueOf(0L);
             //Act Statement(s)
-            Coin result = target.add(coin3);
+            Coin result = target.add(coin2);
             //Assert statement(s)
-            assertThat(result, equalTo(coin2));
+            assertThat(result, equalTo(coinMock));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(3));
             coin.verify(() -> Coin.valueOf(0L), atLeast(1));
         }
@@ -357,14 +361,13 @@ public class CoinSapientGeneratedJunit4Test {
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             Coin target = spy(Coin.valueOf(0, 0));
-            doReturn(coinMock).when(target).add((Coin) any());
-            Coin coin = Coin.valueOf(0L);
+            doReturn(coinMock).when(target).add(coinMock2);
             //Act Statement(s)
-            Coin result = target.plus(coin);
+            Coin result = target.plus(coinMock2);
             //Assert statement(s)
             assertThat(result, equalTo(coinMock));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(3));
-            verify(target).add((Coin) any());
+            verify(target).add(coinMock2);
         }
     }
 
@@ -380,15 +383,15 @@ public class CoinSapientGeneratedJunit4Test {
         try (MockedStatic<Coin> coin = mockStatic(Coin.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Coin coin2 = Coin.valueOf(0L);
-            coin.when(() -> Coin.valueOf(-1L)).thenReturn(coin2);
+            coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
             Coin target = Coin.valueOf(0, 0);
+            Coin coin2 = Coin.valueOf(0L);
             //Act Statement(s)
-            Coin result = target.subtract(coinMock);
+            Coin result = target.subtract(coin2);
             //Assert statement(s)
-            assertThat(result, equalTo(coin2));
+            assertThat(result, equalTo(coinMock));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(3));
-            coin.verify(() -> Coin.valueOf(-1L), atLeast(1));
+            coin.verify(() -> Coin.valueOf(0L), atLeast(1));
         }
     }
 
@@ -404,14 +407,13 @@ public class CoinSapientGeneratedJunit4Test {
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             Coin target = spy(Coin.valueOf(0, 0));
-            doReturn(coinMock).when(target).subtract((Coin) any());
-            Coin coin = Coin.valueOf(0L);
+            doReturn(coinMock).when(target).subtract(coinMock2);
             //Act Statement(s)
-            Coin result = target.minus(coin);
+            Coin result = target.minus(coinMock2);
             //Assert statement(s)
             assertThat(result, equalTo(coinMock));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(3));
-            verify(target).subtract((Coin) any());
+            verify(target).subtract(coinMock2);
         }
     }
 
@@ -427,13 +429,12 @@ public class CoinSapientGeneratedJunit4Test {
         try (MockedStatic<Coin> coin = mockStatic(Coin.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Coin coin2 = Coin.valueOf(0L);
-            coin.when(() -> Coin.valueOf(0L)).thenReturn(coin2);
-            Coin target = Coin.valueOf(10, 50);
+            coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
+            Coin target = Coin.valueOf(0, 1);
             //Act Statement(s)
-            Coin result = target.multiply(2L);
+            Coin result = target.multiply(1L);
             //Assert statement(s)
-            assertThat(result, equalTo(coin2));
+            assertThat(result, equalTo(coinMock));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(3));
             coin.verify(() -> Coin.valueOf(0L), atLeast(1));
         }
@@ -450,14 +451,14 @@ public class CoinSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Coin target = spy(Coin.valueOf(10, 50));
-            doReturn(coinMock).when(target).multiply(2L);
+            Coin target = spy(Coin.valueOf(1, 1));
+            doReturn(coinMock).when(target).multiply(0L);
             //Act Statement(s)
-            Coin result = target.times(2L);
+            Coin result = target.times(0L);
             //Assert statement(s)
             assertThat(result, equalTo(coinMock));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(3));
-            verify(target).multiply(2L);
+            verify(target).multiply(0L);
         }
     }
 
@@ -472,14 +473,14 @@ public class CoinSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Coin target = spy(Coin.valueOf(10, 50));
-            doReturn(coinMock).when(target).multiply(2L);
+            Coin target = spy(Coin.valueOf(1, 1));
+            doReturn(coinMock).when(target).multiply(1L);
             //Act Statement(s)
-            Coin result = target.times(2);
+            Coin result = target.times(1);
             //Assert statement(s)
             assertThat(result, equalTo(coinMock));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(3));
-            verify(target).multiply(2L);
+            verify(target).multiply(1L);
         }
     }
 
@@ -495,13 +496,12 @@ public class CoinSapientGeneratedJunit4Test {
         try (MockedStatic<Coin> coin = mockStatic(Coin.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Coin coin2 = Coin.valueOf(0L);
-            coin.when(() -> Coin.valueOf(0L)).thenReturn(coin2);
-            Coin target = Coin.valueOf(5, 50);
+            coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
+            Coin target = Coin.valueOf(0, 0);
             //Act Statement(s)
-            Coin result = target.divide(2L);
+            Coin result = target.divide(-1L);
             //Assert statement(s)
-            assertThat(result, equalTo(coin2));
+            assertThat(result, equalTo(coinMock));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(3));
             coin.verify(() -> Coin.valueOf(0L), atLeast(1));
         }
@@ -518,14 +518,14 @@ public class CoinSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Coin target = spy(Coin.valueOf(0, 0));
-            doReturn(coinMock).when(target).divide(1L);
+            Coin target = spy(Coin.valueOf(1, 1));
+            doReturn(coinMock).when(target).divide(0L);
             //Act Statement(s)
-            Coin result = target.div(1L);
+            Coin result = target.div(0L);
             //Assert statement(s)
             assertThat(result, equalTo(coinMock));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(3));
-            verify(target).divide(1L);
+            verify(target).divide(0L);
         }
     }
 
@@ -540,7 +540,7 @@ public class CoinSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Coin target = spy(Coin.valueOf(0, 0));
+            Coin target = spy(Coin.valueOf(1, 1));
             doReturn(coinMock).when(target).divide(1L);
             //Act Statement(s)
             Coin result = target.div(1);
@@ -563,12 +563,11 @@ public class CoinSapientGeneratedJunit4Test {
         try (MockedStatic<Coin> coin = mockStatic(Coin.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Coin coin2 = Coin.valueOf(0L);
-            coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock).thenReturn(coin2);
-            Coin target = Coin.valueOf(10, 50);
+            coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock).thenReturn(coinMock2);
+            Coin target = Coin.valueOf(0, 0);
             //Act Statement(s)
-            Coin[] result = target.divideAndRemainder(2L);
-            Coin[] coinResultArray = new Coin[]{coinMock, coin2};
+            Coin[] result = target.divideAndRemainder(-1L);
+            Coin[] coinResultArray = new Coin[]{coinMock, coinMock2};
             //Assert statement(s)
             assertThat(result, equalTo(coinResultArray));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(3));
@@ -587,9 +586,10 @@ public class CoinSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Coin target = Coin.valueOf(10, 50);
+            Coin target = Coin.valueOf(0, 0);
+            Coin coin = Coin.valueOf(0L);
             //Act Statement(s)
-            long result = target.divide(coinMock);
+            long result = target.divide(coin);
             //Assert statement(s)
             assertThat(result, equalTo(0L));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(3));
@@ -609,7 +609,7 @@ public class CoinSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Coin target = spy(Coin.valueOf(10, 50));
+            Coin target = spy(Coin.valueOf(0, 0));
             doReturn(1).when(target).signum();
             //Act Statement(s)
             boolean result = target.isPositive();
@@ -657,7 +657,7 @@ public class CoinSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Coin target = spy(Coin.valueOf(-1, 0));
+            Coin target = spy(Coin.valueOf(0, 0));
             doReturn(-1).when(target).signum();
             //Act Statement(s)
             boolean result = target.isNegative();
@@ -729,7 +729,7 @@ public class CoinSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Coin target = spy(Coin.valueOf(1, 1));
+            Coin target = spy(Coin.valueOf(0, 0));
             doReturn(1).when(target).signum();
             //Act Statement(s)
             boolean result = target.isZero();
@@ -753,11 +753,12 @@ public class CoinSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Coin target = Coin.valueOf(4, 25);
+            Coin target = Coin.valueOf(0, 0);
+            Coin coin = Coin.valueOf(0L);
             //Act Statement(s)
-            boolean result = target.isGreaterThan(coinMock);
+            boolean result = target.isGreaterThan(coin);
             //Assert statement(s)
-            assertThat(result, equalTo(Boolean.TRUE));
+            assertThat(result, equalTo(Boolean.FALSE));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(3));
         }
     }
@@ -775,11 +776,12 @@ public class CoinSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Coin target = Coin.valueOf(0, 1);
+            Coin target = Coin.valueOf(0, 0);
+            Coin coin = Coin.valueOf(0L);
             //Act Statement(s)
-            boolean result = target.isLessThan(coinMock);
+            boolean result = target.isLessThan(coin);
             //Assert statement(s)
-            assertThat(result, equalTo(Boolean.TRUE));
+            assertThat(result, equalTo(Boolean.FALSE));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(3));
         }
     }
@@ -796,13 +798,12 @@ public class CoinSapientGeneratedJunit4Test {
         try (MockedStatic<Coin> coin = mockStatic(Coin.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Coin coin2 = Coin.valueOf(0L);
-            coin.when(() -> Coin.valueOf(0L)).thenReturn(coin2);
-            Coin target = Coin.valueOf(10, 50);
+            coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
+            Coin target = Coin.valueOf(1, 1);
             //Act Statement(s)
-            Coin result = target.shiftLeft(2);
+            Coin result = target.shiftLeft(0);
             //Assert statement(s)
-            assertThat(result, equalTo(coin2));
+            assertThat(result, equalTo(coinMock));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(3));
             coin.verify(() -> Coin.valueOf(0L), atLeast(1));
         }
@@ -820,13 +821,12 @@ public class CoinSapientGeneratedJunit4Test {
         try (MockedStatic<Coin> coin = mockStatic(Coin.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Coin coin2 = Coin.valueOf(0L);
-            coin.when(() -> Coin.valueOf(0L)).thenReturn(coin2);
-            Coin target = Coin.valueOf(10, 50);
+            coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
+            Coin target = Coin.valueOf(1, 1);
             //Act Statement(s)
-            Coin result = target.shiftRight(2);
+            Coin result = target.shiftRight(0);
             //Assert statement(s)
-            assertThat(result, equalTo(coin2));
+            assertThat(result, equalTo(coinMock));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(3));
             coin.verify(() -> Coin.valueOf(0L), atLeast(1));
         }
@@ -866,13 +866,12 @@ public class CoinSapientGeneratedJunit4Test {
         try (MockedStatic<Coin> coin = mockStatic(Coin.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Coin coin2 = Coin.valueOf(0L);
-            coin.when(() -> Coin.valueOf(0L)).thenReturn(coin2);
-            Coin target = Coin.valueOf(10, 50);
+            coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
+            Coin target = Coin.valueOf(0, 0);
             //Act Statement(s)
             Coin result = target.negate();
             //Assert statement(s)
-            assertThat(result, equalTo(coin2));
+            assertThat(result, equalTo(coinMock));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(3));
             coin.verify(() -> Coin.valueOf(0L), atLeast(1));
         }
@@ -889,7 +888,7 @@ public class CoinSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Coin target = Coin.valueOf(10, 50);
+            Coin target = Coin.valueOf(0, 0);
             //Act Statement(s)
             long result = target.longValue();
             //Assert statement(s)
@@ -909,7 +908,7 @@ public class CoinSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Coin target = Coin.valueOf(10, 50);
+            Coin target = Coin.valueOf(0, 0);
             //Act Statement(s)
             long result = target.toSat();
             //Assert statement(s)
@@ -931,7 +930,7 @@ public class CoinSapientGeneratedJunit4Test {
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             coin.when(() -> Coin.satoshiToBtc(0L)).thenReturn(new BigDecimal("0"));
-            Coin target = Coin.valueOf(100, 50);
+            Coin target = Coin.valueOf(0, 0);
             //Act Statement(s)
             BigDecimal result = target.toBtc();
             //Assert statement(s)
@@ -974,7 +973,7 @@ public class CoinSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Coin target = Coin.valueOf(10, 50);
+            Coin target = Coin.valueOf(0, 0);
             //Act Statement(s)
             byte[] result = target.serialize();
             byte[] byteResultArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
@@ -995,11 +994,11 @@ public class CoinSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Coin target = Coin.valueOf(10, 50);
+            Coin target = Coin.valueOf(0, 0);
             //Act Statement(s)
             String result = target.toFriendlyString();
             //Assert statement(s)
-            assertThat(result, equalTo("toFriendlyString_charSequence1"));
+            assertThat(result, equalTo("result1"));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(3));
         }
     }
@@ -1019,7 +1018,7 @@ public class CoinSapientGeneratedJunit4Test {
             //Act Statement(s)
             String result = target.toPlainString();
             //Assert statement(s)
-            assertThat(result, equalTo("toPlainString_charSequence1"));
+            assertThat(result, equalTo("result1"));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(3));
         }
     }
@@ -1035,7 +1034,7 @@ public class CoinSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Coin target = Coin.valueOf(10, 50);
+            Coin target = Coin.valueOf(0, 0);
             //Act Statement(s)
             String result = target.toString();
             //Assert statement(s)
@@ -1055,7 +1054,7 @@ public class CoinSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Coin target = Coin.valueOf(10, 50);
+            Coin target = Coin.valueOf(0, 0);
             Coin coin = Coin.valueOf(0L);
             //Act Statement(s)
             int result = target.compareTo(coin);

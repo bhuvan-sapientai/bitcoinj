@@ -44,8 +44,10 @@ public class RedeemDataSapientGeneratedJunit4Test {
     public void ofTest() {
         //Arrange Statement(s)
         List<ECKey> eCKeyList = new ArrayList<>();
+
         //Act Statement(s)
         RedeemData result = RedeemData.of(eCKeyList, scriptMock);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -64,19 +66,17 @@ public class RedeemDataSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class)) {
-            scriptPattern.when(() -> ScriptPattern.isP2PKH((Script) any())).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2WPKH((Script) any())).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2PK((Script) any())).thenReturn(true);
+            scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(false);
+            scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(false);
+            scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(true);
             ECKey eCKey = new ECKey();
-            List list = new ArrayList<>();
-            Script script = Script.of(list);
             //Act Statement(s)
-            RedeemData result = RedeemData.of(eCKey, script);
+            RedeemData result = RedeemData.of(eCKey, scriptMock);
             //Assert statement(s)
             assertThat(result, is(notNullValue()));
-            scriptPattern.verify(() -> ScriptPattern.isP2PKH((Script) any()));
-            scriptPattern.verify(() -> ScriptPattern.isP2WPKH((Script) any()));
-            scriptPattern.verify(() -> ScriptPattern.isP2PK((Script) any()));
+            scriptPattern.verify(() -> ScriptPattern.isP2PKH(scriptMock), atLeast(1));
+            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock), atLeast(1));
+            scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
         }
     }
 
@@ -120,8 +120,10 @@ public class RedeemDataSapientGeneratedJunit4Test {
         List<ECKey> eCKeyList = new ArrayList<>();
         eCKeyList.add(keyMock);
         RedeemData target = RedeemData.of(eCKeyList, scriptMock);
+
         //Act Statement(s)
         ECKey result = target.getFullKey();
+
         //Assert statement(s)
         assertThat(result, equalTo(keyMock));
         verify(keyMock).hasPrivKey();
@@ -139,8 +141,10 @@ public class RedeemDataSapientGeneratedJunit4Test {
         List<ECKey> eCKeyList = new ArrayList<>();
         eCKeyList.add(keyMock);
         RedeemData target = RedeemData.of(eCKeyList, scriptMock);
+
         //Act Statement(s)
         ECKey result = target.getFullKey();
+
         //Assert statement(s)
         assertThat(result, is(nullValue()));
         verify(keyMock).hasPrivKey();
@@ -155,16 +159,12 @@ public class RedeemDataSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        ECKey eCKeyMock = mock(ECKey.class);
-        ECKey eCKeyMock2 = mock(ECKey.class);
         List<ECKey> eCKeyList = new ArrayList<>();
-        eCKeyList.add(eCKeyMock);
-        eCKeyList.add(eCKeyMock2);
-        List list = new ArrayList<>();
-        Script script = Script.of(list);
-        RedeemData target = RedeemData.of(eCKeyList, script);
+        RedeemData target = RedeemData.of(eCKeyList, scriptMock);
+
         //Act Statement(s)
         String result = target.toString();
+
         //Assert statement(s)
         assertThat(result, equalTo("toString_moreObjects.ToStringHelper2"));
     }

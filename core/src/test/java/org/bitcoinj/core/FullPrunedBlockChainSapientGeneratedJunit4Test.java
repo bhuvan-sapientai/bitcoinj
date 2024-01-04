@@ -65,6 +65,8 @@ public class FullPrunedBlockChainSapientGeneratedJunit4Test {
     @Rule()
     public ExpectedException thrown = ExpectedException.none();
 
+    private final StoredBlock storedPrevMock = mock(StoredBlock.class);
+
     //Sapient generated method id: ${bc04315e-267a-3fb2-a511-9c50ca882015}
     @Ignore()
     @Test()
@@ -74,25 +76,29 @@ public class FullPrunedBlockChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        StoredBlock storedPrevMock = mock(StoredBlock.class);
-        StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
-        doReturn(storedBlock).when(storedPrevMock).build(blockMock2);
-        doReturn(sha256HashMock).when(blockMock).getHash();
-        StoredBlock storedBlock2 = new StoredBlock(blockMock3, new BigInteger("0"), 0);
-        doReturn(storedBlock2).when(blockStoreMock).getChainHead();
-        doReturn(storedBlockMock).when(blockStoreMock).getVerifiedChainHead();
-        FullPrunedBlockChain target = new FullPrunedBlockChain(networkParametersMock, walletMock, blockStoreMock);
-        doNothing().when(blockStoreMock).put(eq(storedBlock), (StoredUndoableBlock) any());
         TransactionOutputChanges transactionOutputChangesMock = mock(TransactionOutputChanges.class);
-        //Act Statement(s)
-        StoredBlock result = target.addToBlockStore(storedPrevMock, blockMock2, transactionOutputChangesMock);
-        //Assert statement(s)
-        assertThat(result, equalTo(storedBlock));
-        verify(storedPrevMock).build(blockMock2);
-        verify(blockMock).getHash();
-        verify(blockStoreMock).getChainHead();
-        verify(blockStoreMock).getVerifiedChainHead();
-        verify(blockStoreMock).put(eq(storedBlock), (StoredUndoableBlock) any());
+        try (MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+            StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
+            doReturn(storedBlock).when(storedPrevMock).build(blockMock2);
+            doReturn(sha256HashMock).when(blockMock).getHash();
+            StoredBlock storedBlock2 = new StoredBlock(blockMock3, new BigInteger("0"), 0);
+            doReturn(storedBlock2).when(blockStoreMock).getChainHead();
+            doReturn(storedBlockMock).when(blockStoreMock).getVerifiedChainHead();
+            ReentrantLock reentrantLock = Threading.lock(AbstractBlockChain.class);
+            threading.when(() -> Threading.lock(AbstractBlockChain.class)).thenReturn(reentrantLock);
+            FullPrunedBlockChain target = new FullPrunedBlockChain(networkParametersMock, walletMock, blockStoreMock);
+            doNothing().when(blockStoreMock).put(eq(storedBlock), (StoredUndoableBlock) any());
+            //Act Statement(s)
+            StoredBlock result = target.addToBlockStore(storedPrevMock, blockMock2, transactionOutputChangesMock);
+            //Assert statement(s)
+            assertThat(result, equalTo(storedBlock));
+            verify(storedPrevMock).build(blockMock2);
+            verify(blockMock).getHash();
+            verify(blockStoreMock).getChainHead();
+            verify(blockStoreMock).getVerifiedChainHead();
+            threading.verify(() -> Threading.lock(AbstractBlockChain.class), atLeast(1));
+            verify(blockStoreMock).put(eq(storedBlock), (StoredUndoableBlock) any());
+        }
     }
 
     //Sapient generated method id: ${35082fa7-0a80-32e3-be99-db25ad779ca9}
@@ -104,31 +110,30 @@ public class FullPrunedBlockChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Block blockMock4 = mock(Block.class);
-        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
         try (MockedStatic<Threading> threading = mockStatic(Threading.class)) {
             StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
-            doReturn(storedBlock).when(blockStoreMock).getChainHead();
-            StoredBlock storedBlock2 = new StoredBlock(blockMock2, new BigInteger("0"), 0);
-            doReturn(storedBlock2).when(blockStoreMock).getVerifiedChainHead();
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(AbstractBlockChain.class)).thenReturn(null);
-            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-            FullPrunedBlockChain target = new FullPrunedBlockChain(networkParameters, walletMock, blockStoreMock);
-            StoredBlock storedBlock3 = new StoredBlock(blockMock3, new BigInteger("0"), 0);
-            doNothing().when(blockStoreMock).put(eq(storedBlock3), (StoredUndoableBlock) any());
-            StoredBlock storedBlock4 = new StoredBlock(blockMock4, new BigInteger("0"), 0);
-            Instant instant = Instant.now();
-            List list = new ArrayList<>();
-            Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
+            doReturn(storedBlock).when(storedPrevMock).build(blockMock2);
+            doReturn(sha256HashMock).when(blockMock).getHash();
+            List<Transaction> transactionList = new ArrayList<>();
+            doReturn(transactionList).when(blockMock2).getTransactions();
+            StoredBlock storedBlock2 = new StoredBlock(blockMock3, new BigInteger("0"), 0);
+            doReturn(storedBlock2).when(blockStoreMock).getChainHead();
+            doReturn(storedBlockMock).when(blockStoreMock).getVerifiedChainHead();
+            ReentrantLock reentrantLock = Threading.lock(AbstractBlockChain.class);
+            threading.when(() -> Threading.lock(AbstractBlockChain.class)).thenReturn(reentrantLock);
+            FullPrunedBlockChain target = new FullPrunedBlockChain(networkParametersMock, walletMock, blockStoreMock);
+            doNothing().when(blockStoreMock).put(eq(storedBlock), (StoredUndoableBlock) any());
             //Act Statement(s)
-            StoredBlock result = target.addToBlockStore(storedBlock4, block);
+            StoredBlock result = target.addToBlockStore(storedPrevMock, blockMock2);
             //Assert statement(s)
-            assertThat(result, equalTo(storedBlock3));
+            assertThat(result, equalTo(storedBlock));
+            verify(storedPrevMock).build(blockMock2);
+            verify(blockMock).getHash();
+            verify(blockMock2).getTransactions();
             verify(blockStoreMock).getChainHead();
             verify(blockStoreMock).getVerifiedChainHead();
             threading.verify(() -> Threading.lock(AbstractBlockChain.class), atLeast(1));
-            verify(blockStoreMock).put(eq(storedBlock3), (StoredUndoableBlock) any());
+            verify(blockStoreMock).put(eq(storedBlock), (StoredUndoableBlock) any());
         }
     }
 
@@ -147,13 +152,12 @@ public class FullPrunedBlockChainSapientGeneratedJunit4Test {
             doReturn(storedBlockMock).when(blockStoreMock).getVerifiedChainHead();
             ReentrantLock reentrantLock = Threading.lock(AbstractBlockChain.class);
             threading.when(() -> Threading.lock(AbstractBlockChain.class)).thenReturn(reentrantLock);
-            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-            FullPrunedBlockChain target = new FullPrunedBlockChain(networkParameters, walletMock, blockStoreMock);
+            FullPrunedBlockChain target = new FullPrunedBlockChain(networkParametersMock, walletMock, blockStoreMock);
             BlockStoreException blockStoreException = new BlockStoreException("Unsupported");
             thrown.expect(BlockStoreException.class);
             thrown.expectMessage(blockStoreException.getMessage());
             //Act Statement(s)
-            target.rollbackBlockStore(10);
+            target.rollbackBlockStore(0);
             //Assert statement(s)
             verify(blockStoreMock).getChainHead();
             verify(blockStoreMock).getVerifiedChainHead();
@@ -173,12 +177,10 @@ public class FullPrunedBlockChainSapientGeneratedJunit4Test {
         try (MockedStatic<Threading> threading = mockStatic(Threading.class)) {
             StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
             doReturn(storedBlock).when(blockStoreMock).getChainHead();
-            StoredBlock storedBlock2 = new StoredBlock(blockMock2, new BigInteger("0"), 0);
-            doReturn(storedBlock2).when(blockStoreMock).getVerifiedChainHead();
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(AbstractBlockChain.class)).thenReturn(null);
-            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-            FullPrunedBlockChain target = new FullPrunedBlockChain(networkParameters, walletMock, blockStoreMock);
+            doReturn(storedBlockMock).when(blockStoreMock).getVerifiedChainHead();
+            ReentrantLock reentrantLock = Threading.lock(AbstractBlockChain.class);
+            threading.when(() -> Threading.lock(AbstractBlockChain.class)).thenReturn(reentrantLock);
+            FullPrunedBlockChain target = new FullPrunedBlockChain(networkParametersMock, walletMock, blockStoreMock);
             //Act Statement(s)
             boolean result = target.shouldVerifyTransactions();
             //Assert statement(s)
@@ -280,25 +282,20 @@ public class FullPrunedBlockChainSapientGeneratedJunit4Test {
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
             StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
             doReturn(storedBlock).when(blockStoreMock).getChainHead();
-            StoredBlock storedBlock2 = new StoredBlock(blockMock2, new BigInteger("0"), 0);
-            doReturn(storedBlock2).when(blockStoreMock).getVerifiedChainHead();
-            ReentrantLock reentrantLock = new ReentrantLock();
+            doReturn(storedBlockMock).when(blockStoreMock).getVerifiedChainHead();
+            ReentrantLock reentrantLock = Threading.lock(AbstractBlockChain.class);
             threading.when(() -> Threading.lock(AbstractBlockChain.class)).thenReturn(reentrantLock);
-            preconditions.when(() -> Preconditions.checkState(false)).thenAnswer((Answer<Void>) invocation -> null);
-            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-            FullPrunedBlockChain target = new FullPrunedBlockChain(networkParameters, walletMock, blockStoreMock);
-            StoredBlock storedBlock3 = new StoredBlock(blockMock3, new BigInteger("0"), 0);
-            doNothing().when(blockStoreMock).setVerifiedChainHead(storedBlock3);
-            doNothing().when(blockStoreMock).commitDatabaseBatchWrite();
+            IllegalStateException illegalStateException = new IllegalStateException();
+            preconditions.when(() -> Preconditions.checkState(false)).thenThrow(illegalStateException);
+            FullPrunedBlockChain target = new FullPrunedBlockChain(networkParametersMock, walletMock, blockStoreMock);
+            thrown.expect(IllegalStateException.class);
             //Act Statement(s)
-            target.doSetChainHead(storedBlock3);
+            target.doSetChainHead(storedBlockMock2);
             //Assert statement(s)
             verify(blockStoreMock).getChainHead();
             verify(blockStoreMock).getVerifiedChainHead();
             threading.verify(() -> Threading.lock(AbstractBlockChain.class), atLeast(1));
             preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
-            verify(blockStoreMock).setVerifiedChainHead(storedBlock3);
-            verify(blockStoreMock).commitDatabaseBatchWrite();
         }
     }
 
@@ -347,13 +344,10 @@ public class FullPrunedBlockChainSapientGeneratedJunit4Test {
             threading.when(() -> Threading.lock(AbstractBlockChain.class)).thenReturn(reentrantLock);
             IllegalStateException illegalStateException = new IllegalStateException();
             preconditions.when(() -> Preconditions.checkState(false)).thenThrow(illegalStateException);
-            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-            FullPrunedBlockChain target = new FullPrunedBlockChain(networkParameters, walletMock, blockStoreMock);
+            FullPrunedBlockChain target = new FullPrunedBlockChain(networkParametersMock, walletMock, blockStoreMock);
             thrown.expect(IllegalStateException.class);
-            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
             //Act Statement(s)
-            target.getStoredBlockInCurrentScope(sha256Hash);
+            target.getStoredBlockInCurrentScope(sha256HashMock);
             //Assert statement(s)
             verify(blockStoreMock).getChainHead();
             verify(blockStoreMock).getVerifiedChainHead();

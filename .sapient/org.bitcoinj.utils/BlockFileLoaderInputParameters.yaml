@@ -612,12 +612,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "B2CE467194CD818701F59F5C2B6095B2"
+    modelFingerprint: "D6549984AFE66A7B1F6223D7B8B0413A"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "516B3D16E8606E5876F0CA4517530B63"
+      modelFingerprint: "8F6587C4E4E2E110B88333AD9E2A1BCB"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -630,10 +630,6 @@ methods:
           - name: "network"
             value:
               sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.base.Network"
-                onlyPojoFunctions: false
-                builderPattern: false
               valueType: "org.bitcoinj.base.Network"
               uuid: "<init>_network1"
               fixed: false
@@ -682,11 +678,7 @@ methods:
           parameters:
           - name: "network"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.base.Network"
-                onlyPojoFunctions: false
-                builderPattern: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.base.Network"
               uuid: "<init>_network1"
               fixed: false
@@ -694,22 +686,7 @@ methods:
               explicitCastNeeded: false
           - name: "blocksDir"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.io.File"
-                parameters:
-                - name: "pathname"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "pathname1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_file1-pathname"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
                 target: "java.io.File"
                 parameters:
@@ -739,7 +716,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "99964A573EB113838EB667BFC45C5B1B"
+      modelFingerprint: "A3C9A66787E8779386C502876A29BDCE"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -786,7 +763,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "NetworkParameters"
-      modelFingerprint: "98E77E294AD5D87051680D99CD207378"
+      modelFingerprint: "B73070C46AE7B63EC8C3F19BB523D99E"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -805,10 +782,6 @@ methods:
         - name: "network"
           value:
             sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.base.Network"
-              onlyPojoFunctions: false
-              builderPattern: false
             valueType: "org.bitcoinj.base.Network"
             uuid: "<init>_network1"
             fixed: false
@@ -819,20 +792,8 @@ methods:
           sapientType: "MOCK"
           suggestedContent: !<unknown_object>
             target: "org.bitcoinj.core.NetworkParameters"
-            onlyPojoFunctions: true
+            onlyPojoFunctions: false
             builderPattern: false
-            propertiesMap:
-              defaultSerializer:
-                sapientType: "MOCK"
-                suggestedContent: !<unknown_object>
-                  target: "org.bitcoinj.core.MessageSerializer"
-                  onlyPojoFunctions: false
-                  builderPattern: false
-                valueType: "org.bitcoinj.core.MessageSerializer"
-                uuid: "<init>_messageSerializer1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
           valueType: "org.bitcoinj.core.NetworkParameters"
           uuid: "<init>_networkParameters1"
           fixed: false
@@ -843,7 +804,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "params"
-      modelFingerprint: "009B686E2B277086BAB10D3584DAEEA9"
+      modelFingerprint: "012390E97CE25BEF91BA440B7992DA63"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -852,20 +813,8 @@ methods:
         sapientType: "MOCK"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.NetworkParameters"
-          onlyPojoFunctions: true
+          onlyPojoFunctions: false
           builderPattern: false
-          propertiesMap:
-            defaultSerializer:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.MessageSerializer"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.MessageSerializer"
-              uuid: "<init>_messageSerializer1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "<init>_networkParameters1"
         fixed: false
@@ -892,7 +841,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "params"
-      modelFingerprint: "3821D826CCC04A524B0360CD712CD1EF"
+      modelFingerprint: "54E815663F88264073AB821D0543F907"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -901,20 +850,8 @@ methods:
         sapientType: "MOCK"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.NetworkParameters"
-          onlyPojoFunctions: true
+          onlyPojoFunctions: false
           builderPattern: false
-          propertiesMap:
-            defaultSerializer:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.MessageSerializer"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.MessageSerializer"
-              uuid: "<init>_messageSerializer1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "<init>_networkParameters1"
         fixed: false
@@ -927,10 +864,6 @@ methods:
         signature: "getDefaultSerializer(): MessageSerializer"
         returnValue:
           sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
-            target: "org.bitcoinj.core.MessageSerializer"
-            onlyPojoFunctions: false
-            builderPattern: false
           valueType: "org.bitcoinj.core.MessageSerializer"
           uuid: "<init>_messageSerializer1"
           fixed: false
@@ -1324,11 +1257,11 @@ methods:
       filledByUser: false
     uuid: "b4af2388-e781-3800-820a-b8ede09bd914"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "streamBuffers"
     returnType: "java.util.stream.Stream"
@@ -1650,11 +1583,11 @@ methods:
       filledByUser: false
     uuid: "3e917d90-34e0-3792-88c5-f9e7ccb945d0"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "fileBlockStream"
     returnType: "java.util.stream.Stream"
@@ -1676,12 +1609,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "D44EDDE5FB1D150BC82FD4D6FDDBCA1F"
+    modelFingerprint: "57A7AF61E8BF7C7BBB041E63882FEDB5"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "516B3D16E8606E5876F0CA4517530B63"
+      modelFingerprint: "8F6587C4E4E2E110B88333AD9E2A1BCB"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1694,10 +1627,6 @@ methods:
           - name: "network"
             value:
               sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.base.Network"
-                onlyPojoFunctions: false
-                builderPattern: false
               valueType: "org.bitcoinj.base.Network"
               uuid: "<init>_network1"
               fixed: false
@@ -1746,11 +1675,7 @@ methods:
           parameters:
           - name: "network"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.base.Network"
-                onlyPojoFunctions: false
-                builderPattern: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.base.Network"
               uuid: "<init>_network1"
               fixed: false
@@ -1758,22 +1683,7 @@ methods:
               explicitCastNeeded: false
           - name: "blocksDir"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.io.File"
-                parameters:
-                - name: "pathname"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "pathname1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_file1-pathname"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
                 target: "java.io.File"
                 parameters:
@@ -1803,7 +1713,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "file"
-      modelFingerprint: "03F891C65DE698FEC5B4CA633C72E8D1"
+      modelFingerprint: "8A5A0F22DD9C1795C4DF7630ED5A969D"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1847,7 +1757,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "99964A573EB113838EB667BFC45C5B1B"
+      modelFingerprint: "A3C9A66787E8779386C502876A29BDCE"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1894,7 +1804,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "NetworkParameters"
-      modelFingerprint: "98E77E294AD5D87051680D99CD207378"
+      modelFingerprint: "B73070C46AE7B63EC8C3F19BB523D99E"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -1913,10 +1823,6 @@ methods:
         - name: "network"
           value:
             sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.base.Network"
-              onlyPojoFunctions: false
-              builderPattern: false
             valueType: "org.bitcoinj.base.Network"
             uuid: "<init>_network1"
             fixed: false
@@ -1927,20 +1833,8 @@ methods:
           sapientType: "MOCK"
           suggestedContent: !<unknown_object>
             target: "org.bitcoinj.core.NetworkParameters"
-            onlyPojoFunctions: true
+            onlyPojoFunctions: false
             builderPattern: false
-            propertiesMap:
-              defaultSerializer:
-                sapientType: "MOCK"
-                suggestedContent: !<unknown_object>
-                  target: "org.bitcoinj.core.MessageSerializer"
-                  onlyPojoFunctions: false
-                  builderPattern: false
-                valueType: "org.bitcoinj.core.MessageSerializer"
-                uuid: "<init>_messageSerializer1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
           valueType: "org.bitcoinj.core.NetworkParameters"
           uuid: "<init>_networkParameters1"
           fixed: false
@@ -1951,7 +1845,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "params"
-      modelFingerprint: "009B686E2B277086BAB10D3584DAEEA9"
+      modelFingerprint: "012390E97CE25BEF91BA440B7992DA63"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -1960,20 +1854,8 @@ methods:
         sapientType: "MOCK"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.NetworkParameters"
-          onlyPojoFunctions: true
+          onlyPojoFunctions: false
           builderPattern: false
-          propertiesMap:
-            defaultSerializer:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.MessageSerializer"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.MessageSerializer"
-              uuid: "<init>_messageSerializer1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "<init>_networkParameters1"
         fixed: false
@@ -2000,7 +1882,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "params"
-      modelFingerprint: "3821D826CCC04A524B0360CD712CD1EF"
+      modelFingerprint: "54E815663F88264073AB821D0543F907"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -2009,20 +1891,8 @@ methods:
         sapientType: "MOCK"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.NetworkParameters"
-          onlyPojoFunctions: true
+          onlyPojoFunctions: false
           builderPattern: false
-          propertiesMap:
-            defaultSerializer:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.MessageSerializer"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.MessageSerializer"
-              uuid: "<init>_messageSerializer1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "<init>_networkParameters1"
         fixed: false
@@ -2035,10 +1905,6 @@ methods:
         signature: "getDefaultSerializer(): MessageSerializer"
         returnValue:
           sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
-            target: "org.bitcoinj.core.MessageSerializer"
-            onlyPojoFunctions: false
-            builderPattern: false
           valueType: "org.bitcoinj.core.MessageSerializer"
           uuid: "<init>_messageSerializer1"
           fixed: false
@@ -2049,7 +1915,7 @@ methods:
       filledByUser: false
     - type: "INTERNAL"
       name: "internalMethod"
-      modelFingerprint: "54F7B1548AE41315823A650B3B9420B8"
+      modelFingerprint: "AE605BCAB692DFD0A6A89E275A27EA73"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -2135,11 +2001,11 @@ methods:
       filledByUser: false
     uuid: "e7371402-39fb-3b8c-a2b7-40c698f1f1a1"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "fileBlockSpliterator"
     returnType: "java.util.Spliterator"
@@ -2161,12 +2027,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "8D1BED6130B1707E53C01C04C1242719"
+    modelFingerprint: "A326B2D9558579109CF1BECF91AE18EF"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "516B3D16E8606E5876F0CA4517530B63"
+      modelFingerprint: "8F6587C4E4E2E110B88333AD9E2A1BCB"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2179,10 +2045,6 @@ methods:
           - name: "network"
             value:
               sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.base.Network"
-                onlyPojoFunctions: false
-                builderPattern: false
               valueType: "org.bitcoinj.base.Network"
               uuid: "<init>_network1"
               fixed: false
@@ -2231,11 +2093,7 @@ methods:
           parameters:
           - name: "network"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.base.Network"
-                onlyPojoFunctions: false
-                builderPattern: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.base.Network"
               uuid: "<init>_network1"
               fixed: false
@@ -2243,22 +2101,7 @@ methods:
               explicitCastNeeded: false
           - name: "blocksDir"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.io.File"
-                parameters:
-                - name: "pathname"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "pathname1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_file1-pathname"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
                 target: "java.io.File"
                 parameters:
@@ -2288,7 +2131,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "file"
-      modelFingerprint: "03F891C65DE698FEC5B4CA633C72E8D1"
+      modelFingerprint: "8A5A0F22DD9C1795C4DF7630ED5A969D"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -2332,7 +2175,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "99964A573EB113838EB667BFC45C5B1B"
+      modelFingerprint: "A3C9A66787E8779386C502876A29BDCE"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -2379,7 +2222,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "NetworkParameters"
-      modelFingerprint: "98E77E294AD5D87051680D99CD207378"
+      modelFingerprint: "B73070C46AE7B63EC8C3F19BB523D99E"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -2398,10 +2241,6 @@ methods:
         - name: "network"
           value:
             sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.base.Network"
-              onlyPojoFunctions: false
-              builderPattern: false
             valueType: "org.bitcoinj.base.Network"
             uuid: "<init>_network1"
             fixed: false
@@ -2412,20 +2251,8 @@ methods:
           sapientType: "MOCK"
           suggestedContent: !<unknown_object>
             target: "org.bitcoinj.core.NetworkParameters"
-            onlyPojoFunctions: true
+            onlyPojoFunctions: false
             builderPattern: false
-            propertiesMap:
-              defaultSerializer:
-                sapientType: "MOCK"
-                suggestedContent: !<unknown_object>
-                  target: "org.bitcoinj.core.MessageSerializer"
-                  onlyPojoFunctions: false
-                  builderPattern: false
-                valueType: "org.bitcoinj.core.MessageSerializer"
-                uuid: "<init>_messageSerializer1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
           valueType: "org.bitcoinj.core.NetworkParameters"
           uuid: "<init>_networkParameters1"
           fixed: false
@@ -2436,7 +2263,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "params"
-      modelFingerprint: "009B686E2B277086BAB10D3584DAEEA9"
+      modelFingerprint: "012390E97CE25BEF91BA440B7992DA63"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -2445,20 +2272,8 @@ methods:
         sapientType: "MOCK"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.NetworkParameters"
-          onlyPojoFunctions: true
+          onlyPojoFunctions: false
           builderPattern: false
-          propertiesMap:
-            defaultSerializer:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.MessageSerializer"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.MessageSerializer"
-              uuid: "<init>_messageSerializer1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "<init>_networkParameters1"
         fixed: false
@@ -2485,7 +2300,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "params"
-      modelFingerprint: "3821D826CCC04A524B0360CD712CD1EF"
+      modelFingerprint: "54E815663F88264073AB821D0543F907"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -2494,20 +2309,8 @@ methods:
         sapientType: "MOCK"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.NetworkParameters"
-          onlyPojoFunctions: true
+          onlyPojoFunctions: false
           builderPattern: false
-          propertiesMap:
-            defaultSerializer:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.MessageSerializer"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.MessageSerializer"
-              uuid: "<init>_messageSerializer1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "<init>_networkParameters1"
         fixed: false
@@ -2520,10 +2323,6 @@ methods:
         signature: "getDefaultSerializer(): MessageSerializer"
         returnValue:
           sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
-            target: "org.bitcoinj.core.MessageSerializer"
-            onlyPojoFunctions: false
-            builderPattern: false
           valueType: "org.bitcoinj.core.MessageSerializer"
           uuid: "<init>_messageSerializer1"
           fixed: false
@@ -2554,11 +2353,11 @@ methods:
       filledByUser: false
     uuid: "068381fa-c8ce-32df-8cb7-791fd56199fe"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "fileBlockSpliteratorWhenCaughtFileNotFoundExceptionThrowsRuntimeException"
@@ -2567,7 +2366,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "EEDFFAED691C1AF3FDB5355C350A8F17"
+    modelFingerprint: "A98754D509D3F0B7835A1F3FFB865990"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -2577,7 +2376,7 @@ methods:
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "516B3D16E8606E5876F0CA4517530B63"
+      modelFingerprint: "8F6587C4E4E2E110B88333AD9E2A1BCB"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2590,10 +2389,6 @@ methods:
           - name: "network"
             value:
               sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.base.Network"
-                onlyPojoFunctions: false
-                builderPattern: false
               valueType: "org.bitcoinj.base.Network"
               uuid: "<init>_network1"
               fixed: false
@@ -2642,11 +2437,7 @@ methods:
           parameters:
           - name: "network"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.base.Network"
-                onlyPojoFunctions: false
-                builderPattern: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.base.Network"
               uuid: "<init>_network1"
               fixed: false
@@ -2654,22 +2445,7 @@ methods:
               explicitCastNeeded: false
           - name: "blocksDir"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.io.File"
-                parameters:
-                - name: "pathname"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "pathname1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_file1-pathname"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
                 target: "java.io.File"
                 parameters:
@@ -2699,7 +2475,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "file"
-      modelFingerprint: "03F891C65DE698FEC5B4CA633C72E8D1"
+      modelFingerprint: "8A5A0F22DD9C1795C4DF7630ED5A969D"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -2743,7 +2519,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "99964A573EB113838EB667BFC45C5B1B"
+      modelFingerprint: "A3C9A66787E8779386C502876A29BDCE"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -2790,7 +2566,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "NetworkParameters"
-      modelFingerprint: "98E77E294AD5D87051680D99CD207378"
+      modelFingerprint: "B73070C46AE7B63EC8C3F19BB523D99E"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -2809,10 +2585,6 @@ methods:
         - name: "network"
           value:
             sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.base.Network"
-              onlyPojoFunctions: false
-              builderPattern: false
             valueType: "org.bitcoinj.base.Network"
             uuid: "<init>_network1"
             fixed: false
@@ -2823,20 +2595,8 @@ methods:
           sapientType: "MOCK"
           suggestedContent: !<unknown_object>
             target: "org.bitcoinj.core.NetworkParameters"
-            onlyPojoFunctions: true
+            onlyPojoFunctions: false
             builderPattern: false
-            propertiesMap:
-              defaultSerializer:
-                sapientType: "MOCK"
-                suggestedContent: !<unknown_object>
-                  target: "org.bitcoinj.core.MessageSerializer"
-                  onlyPojoFunctions: false
-                  builderPattern: false
-                valueType: "org.bitcoinj.core.MessageSerializer"
-                uuid: "<init>_messageSerializer1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
           valueType: "org.bitcoinj.core.NetworkParameters"
           uuid: "<init>_networkParameters1"
           fixed: false
@@ -2847,7 +2607,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "params"
-      modelFingerprint: "009B686E2B277086BAB10D3584DAEEA9"
+      modelFingerprint: "012390E97CE25BEF91BA440B7992DA63"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -2856,20 +2616,8 @@ methods:
         sapientType: "MOCK"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.NetworkParameters"
-          onlyPojoFunctions: true
+          onlyPojoFunctions: false
           builderPattern: false
-          propertiesMap:
-            defaultSerializer:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.MessageSerializer"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.MessageSerializer"
-              uuid: "<init>_messageSerializer1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "<init>_networkParameters1"
         fixed: false
@@ -2896,7 +2644,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "params"
-      modelFingerprint: "3821D826CCC04A524B0360CD712CD1EF"
+      modelFingerprint: "54E815663F88264073AB821D0543F907"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -2905,20 +2653,8 @@ methods:
         sapientType: "MOCK"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.NetworkParameters"
-          onlyPojoFunctions: true
+          onlyPojoFunctions: false
           builderPattern: false
-          propertiesMap:
-            defaultSerializer:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.MessageSerializer"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.MessageSerializer"
-              uuid: "<init>_messageSerializer1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "<init>_networkParameters1"
         fixed: false
@@ -2931,10 +2667,6 @@ methods:
         signature: "getDefaultSerializer(): MessageSerializer"
         returnValue:
           sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
-            target: "org.bitcoinj.core.MessageSerializer"
-            onlyPojoFunctions: false
-            builderPattern: false
           valueType: "org.bitcoinj.core.MessageSerializer"
           uuid: "<init>_messageSerializer1"
           fixed: false
@@ -2945,7 +2677,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "60BDCD48563C0847B33A747B4B0CFF67"
+      modelFingerprint: "4513B850E6E9DA7DA856021169AB6E06"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -2957,13 +2689,19 @@ methods:
           parameters:
           - name: "cause"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.MessageSerializer"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.MessageSerializer"
-              uuid: "<init>_messageSerializer1"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.io.FileNotFoundException"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "java.io.FileNotFoundException"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "java.io.FileNotFoundException"
+              uuid: "fileBlockSpliterator_fileNotFoundException1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -2974,13 +2712,14 @@ methods:
           parameters:
           - name: "cause"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.MessageSerializer"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.MessageSerializer"
-              uuid: "<init>_messageSerializer1"
+              sapientType: "UNKNOWN"
+              suggestedContent: !<new>
+                target: "java.io.FileNotFoundException"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "java.io.FileNotFoundException"
+              uuid: "fileBlockSpliterator_fileNotFoundException1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -2995,8 +2734,8 @@ methods:
       filledByUser: false
     uuid: "d86a23e3-c244-33f3-b317-b2c8e501f35f"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false

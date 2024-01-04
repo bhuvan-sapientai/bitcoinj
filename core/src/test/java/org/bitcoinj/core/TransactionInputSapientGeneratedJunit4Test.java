@@ -69,7 +69,7 @@ public class TransactionInputSapientGeneratedJunit4Test {
 
     private final TransactionOutput outputMock = mock(TransactionOutput.class);
 
-    private final Script scriptMock = mock(Script.class, "toString_script1");
+    private final Script scriptMock = mock(Script.class);
 
     private final Script scriptMock2 = mock(Script.class);
 
@@ -277,17 +277,14 @@ public class TransactionInputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Transaction transaction = new Transaction();
-        byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3};
-        TransactionInput target = new TransactionInput(transaction, byteArray, outpointMock, coinMock);
-        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-        Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
-        doReturn(sha256Hash).when(outpointMock).hash();
-        doReturn(4294967295L).when(outpointMock).index();
+        byte[] byteArray = new byte[]{};
+        TransactionInput target = new TransactionInput(transactionMock, byteArray, outpointMock, coinMock);
+        doReturn(sha256HashMock).when(outpointMock).hash();
+        doReturn(0L).when(outpointMock).index();
         //Act Statement(s)
         boolean result = target.isCoinBase();
         //Assert statement(s)
-        assertThat(result, equalTo(Boolean.TRUE));
+        assertThat(result, equalTo(Boolean.FALSE));
         verify(outpointMock).hash();
         verify(outpointMock).index();
     }
@@ -304,12 +301,9 @@ public class TransactionInputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Transaction transaction = new Transaction();
-        byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2};
-        TransactionInput target = new TransactionInput(transaction, byteArray, outpointMock, coinMock);
-        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-        Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
-        doReturn(sha256Hash).when(outpointMock).hash();
+        byte[] byteArray = new byte[]{};
+        TransactionInput target = new TransactionInput(transactionMock, byteArray, outpointMock, coinMock);
+        doReturn(sha256HashMock).when(outpointMock).hash();
         doReturn(0L).when(outpointMock).index();
         //Act Statement(s)
         boolean result = target.isCoinBase();
@@ -327,7 +321,6 @@ public class TransactionInputSapientGeneratedJunit4Test {
          * (script == null) : true
          */
         //Arrange Statement(s)
-        Script scriptMock = mock(Script.class);
         try (MockedStatic<Script> script = mockStatic(Script.class)) {
             byte[] byteArray = new byte[]{};
             script.when(() -> Script.parse(byteArray)).thenReturn(scriptMock);
@@ -637,11 +630,14 @@ public class TransactionInputSapientGeneratedJunit4Test {
     //Sapient generated method id: ${643f20a7-23a0-3bf8-b652-405708f718e7}
     @Test()
     public void verifyThrowsNullPointerException() throws VerificationException {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{};
         TransactionOutPoint transactionOutPoint = new TransactionOutPoint(0L, sha256HashMock);
-        Coin coin = Coin.valueOf(0L);
-        TransactionInput target = new TransactionInput(transactionMock, byteArray, transactionOutPoint, coin);
+        TransactionInput target = new TransactionInput(transactionMock, byteArray, transactionOutPoint, coinMock);
         thrown.expect(NullPointerException.class);
         //Act Statement(s)
         target.verify();
@@ -650,62 +646,16 @@ public class TransactionInputSapientGeneratedJunit4Test {
     //Sapient generated method id: ${7086c2bb-1138-33d5-9d30-cdce3f151a4e}
     @Ignore()
     @Test()
-    public void verify1WhenGetOutpointHashNotEqualsOutputGetParentTransactionGetTxIdThrowsVerificationException() throws VerificationException {
+    public void verify1WhenGetOutpointHashNotEqualsOutputGetParentTransactionGetTxIdThrowsVerificationException() throws VerificationException, ScriptException {
         /* Branches:
          * (output.parent != null) : true
          * (!getOutpoint().hash().equals(output.getParentTransaction().getTxId())) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        doReturn(transactionMock).when(outputMock).getParentTransaction();
-        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-        Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
-        doReturn(sha256Hash).when(transactionMock).getTxId();
-        ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
-        Sha256Hash sha256Hash2 = Sha256Hash.read(byteBuffer2);
-        doReturn(sha256Hash2).when(outpointMock).hash();
-        byte[] byteArray = new byte[]{};
-        TransactionInput target = new TransactionInput(transactionMock2, byteArray, outpointMock, coinMock);
-        thrown.expect(VerificationException.class);
-        //Act Statement(s)
-        target.verify(outputMock);
-        //Assert statement(s)
-        verify(outputMock).getParentTransaction();
-        verify(transactionMock).getTxId();
-        verify(outpointMock).hash();
-    }
-
-    //Sapient generated method id: ${e7be2fa7-ac34-3238-9556-19b995b089fa}
-    @Ignore()
-    @Test()
-    public void verify1WhenGetOutpointIndexNotEqualsOutputGetIndexThrowsVerificationException() throws VerificationException, ScriptException {
-        /* Branches:
-         * (output.parent != null) : true
-         * (!getOutpoint().hash().equals(output.getParentTransaction().getTxId())) : false
-         * (getOutpoint().index() != output.getIndex()) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        doReturn(transactionMock).when(outputMock).getParentTransaction();
-        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-        Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
-        doReturn(sha256Hash).when(transactionMock).getTxId();
-        doReturn(0).when(outputMock).getIndex();
-        Script scriptMock = mock(Script.class);
         doReturn(scriptMock).when(outputMock).getScriptPubKey();
-        ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
-        Sha256Hash sha256Hash2 = Sha256Hash.read(byteBuffer2);
-        doReturn(sha256Hash2).when(outpointMock).hash();
-        doReturn(0L).when(outpointMock).index();
-        Transaction transaction = new Transaction();
-        byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3};
-        TransactionInput target = spy(new TransactionInput(transaction, byteArray, outpointMock, coinMock));
+        byte[] byteArray = new byte[]{};
+        TransactionInput target = spy(new TransactionInput(transactionMock, byteArray, outpointMock, coinMock));
         doReturn(scriptMock2).when(target).getScriptSig();
-        Transaction transaction2 = new Transaction();
         TransactionWitness transactionWitness = TransactionWitness.EMPTY;
         EnumSet<Script.VerifyFlag> scriptVerifyFlagSet = EnumSet.noneOf(Script.VerifyFlag.class);
         scriptVerifyFlagSet.add(Script.VerifyFlag.P2SH);
@@ -719,8 +669,93 @@ public class TransactionInputSapientGeneratedJunit4Test {
         scriptVerifyFlagSet.add(Script.VerifyFlag.CLEANSTACK);
         scriptVerifyFlagSet.add(Script.VerifyFlag.CHECKLOCKTIMEVERIFY);
         scriptVerifyFlagSet.add(Script.VerifyFlag.CHECKSEQUENCEVERIFY);
-        doNothing().when(scriptMock2).correctlySpends(transaction2, 0, transactionWitness, coinMock, scriptMock, scriptVerifyFlagSet);
-        doReturn(transaction2).when(target).getParentTransaction();
+        doNothing().when(scriptMock2).correctlySpends(transactionMock, 0, transactionWitness, coinMock, scriptMock, scriptVerifyFlagSet);
+        doReturn(0).when(target).getIndex();
+        //Act Statement(s)
+        target.verify(outputMock);
+        //Assert statement(s)
+        verify(outputMock).getScriptPubKey();
+        verify(target).getScriptSig();
+        verify(scriptMock2).correctlySpends(transactionMock, 0, transactionWitness, coinMock, scriptMock, scriptVerifyFlagSet);
+        verify(target).getIndex();
+    }
+
+    //Sapient generated method id: ${e7be2fa7-ac34-3238-9556-19b995b089fa}
+    @Ignore()
+    @Test()
+    public void verify1WhenGetOutpointIndexNotEqualsOutputGetIndexThrowsVerificationException() throws VerificationException, ScriptException {
+        /* Branches:
+         * (output.parent != null) : true
+         * (!getOutpoint().hash().equals(output.getParentTransaction().getTxId())) : false
+         * (getOutpoint().index() != output.getIndex()) : true
+         */
+        //Arrange Statement(s)
+        doReturn(scriptMock).when(outputMock).getScriptPubKey();
+        byte[] byteArray = new byte[]{};
+        TransactionInput target = spy(new TransactionInput(transactionMock, byteArray, outpointMock, coinMock));
+        doReturn(scriptMock2).when(target).getScriptSig();
+        TransactionWitness transactionWitness = TransactionWitness.EMPTY;
+        EnumSet<Script.VerifyFlag> scriptVerifyFlagSet = EnumSet.noneOf(Script.VerifyFlag.class);
+        scriptVerifyFlagSet.add(Script.VerifyFlag.P2SH);
+        scriptVerifyFlagSet.add(Script.VerifyFlag.STRICTENC);
+        scriptVerifyFlagSet.add(Script.VerifyFlag.DERSIG);
+        scriptVerifyFlagSet.add(Script.VerifyFlag.LOW_S);
+        scriptVerifyFlagSet.add(Script.VerifyFlag.NULLDUMMY);
+        scriptVerifyFlagSet.add(Script.VerifyFlag.SIGPUSHONLY);
+        scriptVerifyFlagSet.add(Script.VerifyFlag.MINIMALDATA);
+        scriptVerifyFlagSet.add(Script.VerifyFlag.DISCOURAGE_UPGRADABLE_NOPS);
+        scriptVerifyFlagSet.add(Script.VerifyFlag.CLEANSTACK);
+        scriptVerifyFlagSet.add(Script.VerifyFlag.CHECKLOCKTIMEVERIFY);
+        scriptVerifyFlagSet.add(Script.VerifyFlag.CHECKSEQUENCEVERIFY);
+        doNothing().when(scriptMock2).correctlySpends(transactionMock, 2, transactionWitness, coinMock, scriptMock, scriptVerifyFlagSet);
+        doReturn(2).when(target).getIndex();
+        //Act Statement(s)
+        target.verify(outputMock);
+        //Assert statement(s)
+        verify(outputMock).getScriptPubKey();
+        verify(target).getScriptSig();
+        verify(scriptMock2).correctlySpends(transactionMock, 2, transactionWitness, coinMock, scriptMock, scriptVerifyFlagSet);
+        verify(target).getIndex();
+    }
+
+    //Sapient generated method id: ${112e73a9-dd4b-38b8-81a5-fe6b3afad428}
+    @Ignore()
+    @Test()
+    public void verify1WhenGetOutpointIndexEqualsOutputGetIndexAndWitnessIsNull() throws VerificationException, ScriptException {
+        /* Branches:
+         * (output.parent != null) : true
+         * (!getOutpoint().hash().equals(output.getParentTransaction().getTxId())) : false
+         * (getOutpoint().index() != output.getIndex()) : false
+         * (witness != null) : false  #  inside getWitness method
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        doReturn(transactionMock).when(outputMock).getParentTransaction();
+        doReturn(sha256HashMock).when(transactionMock).getTxId();
+        doReturn(1).when(outputMock).getIndex();
+        doReturn(scriptMock).when(outputMock).getScriptPubKey();
+        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
+        doReturn(sha256HashMock2).when(outpointMock).hash();
+        doReturn(1L).when(outpointMock).index();
+        byte[] byteArray = new byte[]{};
+        TransactionInput target = spy(new TransactionInput(transactionMock2, byteArray, outpointMock, coinMock));
+        doReturn(scriptMock2).when(target).getScriptSig();
+        TransactionWitness transactionWitness = TransactionWitness.EMPTY;
+        EnumSet<Script.VerifyFlag> scriptVerifyFlagSet = EnumSet.noneOf(Script.VerifyFlag.class);
+        scriptVerifyFlagSet.add(Script.VerifyFlag.P2SH);
+        scriptVerifyFlagSet.add(Script.VerifyFlag.STRICTENC);
+        scriptVerifyFlagSet.add(Script.VerifyFlag.DERSIG);
+        scriptVerifyFlagSet.add(Script.VerifyFlag.LOW_S);
+        scriptVerifyFlagSet.add(Script.VerifyFlag.NULLDUMMY);
+        scriptVerifyFlagSet.add(Script.VerifyFlag.SIGPUSHONLY);
+        scriptVerifyFlagSet.add(Script.VerifyFlag.MINIMALDATA);
+        scriptVerifyFlagSet.add(Script.VerifyFlag.DISCOURAGE_UPGRADABLE_NOPS);
+        scriptVerifyFlagSet.add(Script.VerifyFlag.CLEANSTACK);
+        scriptVerifyFlagSet.add(Script.VerifyFlag.CHECKLOCKTIMEVERIFY);
+        scriptVerifyFlagSet.add(Script.VerifyFlag.CHECKSEQUENCEVERIFY);
+        doNothing().when(scriptMock2).correctlySpends(transactionMock2, 0, transactionWitness, coinMock, scriptMock, scriptVerifyFlagSet);
         doReturn(0).when(target).getIndex();
         //Act Statement(s)
         target.verify(outputMock);
@@ -732,51 +767,8 @@ public class TransactionInputSapientGeneratedJunit4Test {
         verify(outpointMock).hash();
         verify(outpointMock).index();
         verify(target).getScriptSig();
-        verify(scriptMock2).correctlySpends(transaction2, 0, transactionWitness, coinMock, scriptMock, scriptVerifyFlagSet);
-        verify(target).getParentTransaction();
+        verify(scriptMock2).correctlySpends(transactionMock2, 0, transactionWitness, coinMock, scriptMock, scriptVerifyFlagSet);
         verify(target).getIndex();
-    }
-
-    //Sapient generated method id: ${112e73a9-dd4b-38b8-81a5-fe6b3afad428}
-    @Test()
-    public void verify1WhenGetOutpointIndexEqualsOutputGetIndexAndWitnessIsNull() throws VerificationException, ScriptException {
-        /* Branches:
-         * (output.parent != null) : true
-         * (!getOutpoint().hash().equals(output.getParentTransaction().getTxId())) : false
-         * (getOutpoint().index() != output.getIndex()) : false
-         * (witness != null) : false  #  inside getWitness method
-         */
-        //Arrange Statement(s)
-        Script scriptMock = mock(Script.class);
-        doReturn(scriptMock).when(outputMock).getScriptPubKey();
-        byte[] byteArray = new byte[]{};
-        Coin coin = Coin.valueOf(0L);
-        TransactionInput target = spy(new TransactionInput(transactionMock, byteArray, outpointMock, coin));
-        doReturn(scriptMock2).when(target).getScriptSig();
-        TransactionWitness transactionWitness = TransactionWitness.EMPTY;
-        EnumSet<Script.VerifyFlag> scriptVerifyFlagSet = EnumSet.noneOf(Script.VerifyFlag.class);
-        scriptVerifyFlagSet.add(Script.VerifyFlag.P2SH);
-        scriptVerifyFlagSet.add(Script.VerifyFlag.STRICTENC);
-        scriptVerifyFlagSet.add(Script.VerifyFlag.DERSIG);
-        scriptVerifyFlagSet.add(Script.VerifyFlag.LOW_S);
-        scriptVerifyFlagSet.add(Script.VerifyFlag.NULLDUMMY);
-        scriptVerifyFlagSet.add(Script.VerifyFlag.SIGPUSHONLY);
-        scriptVerifyFlagSet.add(Script.VerifyFlag.MINIMALDATA);
-        scriptVerifyFlagSet.add(Script.VerifyFlag.DISCOURAGE_UPGRADABLE_NOPS);
-        scriptVerifyFlagSet.add(Script.VerifyFlag.CLEANSTACK);
-        scriptVerifyFlagSet.add(Script.VerifyFlag.CHECKLOCKTIMEVERIFY);
-        scriptVerifyFlagSet.add(Script.VerifyFlag.CHECKSEQUENCEVERIFY);
-        doNothing().when(scriptMock2).correctlySpends(transactionMock, 1, transactionWitness, coinMock, scriptMock, scriptVerifyFlagSet);
-        doReturn(1).when(target).getIndex();
-        doReturn(coinMock).when(target).getValue();
-        //Act Statement(s)
-        target.verify(outputMock);
-        //Assert statement(s)
-        verify(outputMock).getScriptPubKey();
-        verify(target).getScriptSig();
-        verify(scriptMock2).correctlySpends(transactionMock, 1, transactionWitness, coinMock, scriptMock, scriptVerifyFlagSet);
-        verify(target).getIndex();
-        verify(target).getValue();
     }
 
     //Sapient generated method id: ${c85a4b56-cb78-3780-9c35-027971cb545f}
@@ -853,6 +845,7 @@ public class TransactionInputSapientGeneratedJunit4Test {
         byte[] byteArray = new byte[]{};
         TransactionInput target = spy(new TransactionInput(transactionMock, byteArray, outpointMock, coinMock));
         doReturn(false).when(target).isCoinBase();
+        Script scriptMock = mock(Script.class, "toString_script1");
         doReturn(scriptMock).when(target).getScriptSig();
         doReturn(true).when(target).hasWitness();
         doReturn(true).when(target).hasSequence();
@@ -882,6 +875,7 @@ public class TransactionInputSapientGeneratedJunit4Test {
         byte[] byteArray = new byte[]{};
         TransactionInput target = spy(new TransactionInput(transactionMock, byteArray, outpointMock, coinMock));
         doReturn(false).when(target).isCoinBase();
+        Script scriptMock = mock(Script.class, "toString_script1");
         doReturn(scriptMock).when(target).getScriptSig();
         doReturn(false).when(target).hasWitness();
         doReturn(false).when(target).hasSequence();

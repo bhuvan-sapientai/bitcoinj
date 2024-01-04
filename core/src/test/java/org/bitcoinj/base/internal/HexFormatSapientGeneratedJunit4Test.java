@@ -28,8 +28,10 @@ public class HexFormatSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         HexFormat target = new HexFormat();
         byte[] byteArray = new byte[]{(byte) 0};
+
         //Act Statement(s)
         String result = target.formatHex(byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo("A"));
     }
@@ -45,6 +47,7 @@ public class HexFormatSapientGeneratedJunit4Test {
         IllegalArgumentException illegalArgumentException = new IllegalArgumentException("Invalid hexadecimal String supplied.");
         thrown.expect(IllegalArgumentException.class);
         thrown.expectMessage(illegalArgumentException.getMessage());
+
         //Act Statement(s)
         target.parseHex("A");
     }
@@ -62,6 +65,7 @@ public class HexFormatSapientGeneratedJunit4Test {
         IllegalArgumentException illegalArgumentException = new IllegalArgumentException("Invalid Hexadecimal Character: h");
         thrown.expect(IllegalArgumentException.class);
         thrown.expectMessage(illegalArgumentException.getMessage());
+
         //Act Statement(s)
         target.parseHex("hexString1");
     }
@@ -76,9 +80,11 @@ public class HexFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         HexFormat target = new HexFormat();
+
         //Act Statement(s)
         byte[] result = target.parseHex("AB");
         byte[] byteResultArray = new byte[]{(byte) -85};
+
         //Assert statement(s)
         assertThat(result, equalTo(byteResultArray));
     }
@@ -96,6 +102,7 @@ public class HexFormatSapientGeneratedJunit4Test {
         IllegalArgumentException illegalArgumentException = new IllegalArgumentException("Invalid Hexadecimal Character: h");
         thrown.expect(IllegalArgumentException.class);
         thrown.expectMessage(illegalArgumentException.getMessage());
+
         //Act Statement(s)
         target.parseHex("hexString1");
     }

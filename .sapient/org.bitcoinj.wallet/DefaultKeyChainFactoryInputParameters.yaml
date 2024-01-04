@@ -21,8 +21,8 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "55025C5EC8A207616C958AD45371AEA9"
-    problemWasSolvedByProver: true
+    modelFingerprint: "E640D7721B5844075093D6C0F4FA1C3C"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -52,73 +52,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "seed"
-      modelFingerprint: "841B9E11A8590BFA54C5AF8C2C1ACB56"
+      modelFingerprint: "6D95675195317F741FDA63D3E0EFA2DA"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.wallet.DeterministicSeed"
-          parameters:
-          - name: "encryptedMnemonic"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.crypto.EncryptedData"
-              uuid: "makeKeyChain_deterministicSeed1-encryptedMnemonic"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "encryptedSeed"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.crypto.EncryptedData"
-              uuid: "makeKeyChain_deterministicSeed1-encryptedSeed"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "creationTimeSecs"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "makeKeyChain_deterministicSeed1-creationTimeSecs"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.wallet.DeterministicSeed"
-          parameters:
-          - name: "encryptedMnemonic"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.crypto.EncryptedData"
-              uuid: "makeKeyChain_deterministicSeed1-encryptedMnemonic"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "encryptedSeed"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.crypto.EncryptedData"
-              uuid: "makeKeyChain_deterministicSeed1-encryptedSeed"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "creationTimeSecs"
-            value:
-              sapientType: "BASIC"
-              valueType: "long"
-              uuid: "makeKeyChain_deterministicSeed1-creationTimeSecs"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.wallet.DeterministicSeed"
         uuid: "makeKeyChain_deterministicSeed1"
         fixed: false
@@ -128,17 +68,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "crypter"
-      modelFingerprint: "745B2FE0EB74A91913C92410643B1E51"
+      modelFingerprint: "54D82D350B26481CFBCE9AF2863B26DE"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.crypto.KeyCrypter"
-          onlyPojoFunctions: false
-          builderPattern: false
         valueType: "org.bitcoinj.crypto.KeyCrypter"
         uuid: "makeKeyChain_keyCrypter1"
         fixed: false
@@ -148,7 +84,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "outputScriptType"
-      modelFingerprint: "C5CF75BDEE01025CD6BDB6F567B13690"
+      modelFingerprint: "3262D3D7AA38C31827496D23D9B0F158"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -156,8 +92,6 @@ methods:
       value:
         sapientType: "ENUM"
         content: !<regular>
-          value: "P2PKH"
-        suggestedContent: !<regular>
           value: "P2PKH"
         valueType: "org.bitcoinj.base.ScriptType"
         uuid: "makeKeyChain_scriptType1"
@@ -168,7 +102,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "accountPath"
-      modelFingerprint: "52D7621AEBAEAE256A5F205062591F9C"
+      modelFingerprint: "486CB8D8543C355065FCD7D8BF588197"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -176,95 +110,11 @@ methods:
       value:
         sapientType: "COLLECTION"
         content: !<collection>
-          collectionClass: "java.util.ArrayList"
           parameters: []
-          values:
-          - sapientType: "OBJECT"
-            content: !<new>
-              target: "org.bitcoinj.crypto.ChildNumber"
-              parameters:
-              - name: "i"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  suggestedContent: !<regular>
-                    value: 0
-                  valueType: "int"
-                  uuid: "makeKeyChain_list1-0-i"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
-            suggestedContent: !<new>
-              target: "org.bitcoinj.crypto.ChildNumber"
-              parameters:
-              - name: "i"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  suggestedContent: !<regular>
-                    value: 0
-                  valueType: "int"
-                  uuid: "makeKeyChain_list1-0-i"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
-            valueType: "org.bitcoinj.crypto.ChildNumber"
-            uuid: "makeKeyChain_list1-0"
-            fixed: false
-            collectionUuid: "makeKeyChain_list1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
+          values: []
         suggestedContent: !<collection>
-          collectionClass: "java.util.ArrayList"
           parameters: []
-          values:
-          - sapientType: "OBJECT"
-            content: !<new>
-              target: "org.bitcoinj.crypto.ChildNumber"
-              parameters:
-              - name: "i"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  suggestedContent: !<regular>
-                    value: 0
-                  valueType: "int"
-                  uuid: "makeKeyChain_list1-0-i"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
-            suggestedContent: !<new>
-              target: "org.bitcoinj.crypto.ChildNumber"
-              parameters:
-              - name: "i"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  suggestedContent: !<regular>
-                    value: 0
-                  valueType: "int"
-                  uuid: "makeKeyChain_list1-0-i"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
-            valueType: "org.bitcoinj.crypto.ChildNumber"
-            uuid: "makeKeyChain_list1-0"
-            fixed: false
-            collectionUuid: "makeKeyChain_list1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
+          values: []
         valueType: "java.util.List"
         genericValueType: "org.bitcoinj.crypto.ChildNumber"
         uuid: "makeKeyChain_list1"
@@ -275,7 +125,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "28C2ED17DA6D9D3CB473043F36F6DC9B"
+      modelFingerprint: "30C4F9F644E2B0BB6FD0C9DC18CA553B"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -287,67 +137,7 @@ methods:
           parameters:
           - name: "seed"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "org.bitcoinj.wallet.DeterministicSeed"
-                parameters:
-                - name: "encryptedMnemonic"
-                  value:
-                    sapientType: "MOCK"
-                    valueType: "org.bitcoinj.crypto.EncryptedData"
-                    uuid: "makeKeyChain_deterministicSeed1-encryptedMnemonic"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "encryptedSeed"
-                  value:
-                    sapientType: "MOCK"
-                    valueType: "org.bitcoinj.crypto.EncryptedData"
-                    uuid: "makeKeyChain_deterministicSeed1-encryptedSeed"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "creationTimeSecs"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    valueType: "long"
-                    uuid: "makeKeyChain_deterministicSeed1-creationTimeSecs"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
-              suggestedContent: !<new>
-                target: "org.bitcoinj.wallet.DeterministicSeed"
-                parameters:
-                - name: "encryptedMnemonic"
-                  value:
-                    sapientType: "UNKNOWN"
-                    valueType: "org.bitcoinj.crypto.EncryptedData"
-                    uuid: "makeKeyChain_deterministicSeed1-encryptedMnemonic"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "encryptedSeed"
-                  value:
-                    sapientType: "UNKNOWN"
-                    valueType: "org.bitcoinj.crypto.EncryptedData"
-                    uuid: "makeKeyChain_deterministicSeed1-encryptedSeed"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "creationTimeSecs"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "long"
-                    uuid: "makeKeyChain_deterministicSeed1-creationTimeSecs"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "MOCK"
               valueType: "org.bitcoinj.wallet.DeterministicSeed"
               uuid: "makeKeyChain_deterministicSeed1"
               fixed: false
@@ -356,10 +146,6 @@ methods:
           - name: "crypter"
             value:
               sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.crypto.KeyCrypter"
-                onlyPojoFunctions: false
-                builderPattern: false
               valueType: "org.bitcoinj.crypto.KeyCrypter"
               uuid: "makeKeyChain_keyCrypter1"
               fixed: false
@@ -370,8 +156,6 @@ methods:
               sapientType: "ENUM"
               content: !<regular>
                 value: "P2PKH"
-              suggestedContent: !<regular>
-                value: "P2PKH"
               valueType: "org.bitcoinj.base.ScriptType"
               uuid: "makeKeyChain_scriptType1"
               fixed: false
@@ -381,95 +165,11 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
-                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values:
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 0
-                        suggestedContent: !<regular>
-                          value: 0
-                        valueType: "int"
-                        uuid: "makeKeyChain_list1-0-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 0
-                        suggestedContent: !<regular>
-                          value: 0
-                        valueType: "int"
-                        uuid: "makeKeyChain_list1-0-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "makeKeyChain_list1-0"
-                  fixed: false
-                  collectionUuid: "makeKeyChain_list1"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+                values: []
               suggestedContent: !<collection>
-                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values:
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 0
-                        suggestedContent: !<regular>
-                          value: 0
-                        valueType: "int"
-                        uuid: "makeKeyChain_list1-0-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 0
-                        suggestedContent: !<regular>
-                          value: 0
-                        valueType: "int"
-                        uuid: "makeKeyChain_list1-0-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "makeKeyChain_list1-0"
-                  fixed: false
-                  collectionUuid: "makeKeyChain_list1"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+                values: []
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.crypto.ChildNumber"
               uuid: "makeKeyChain_list1"
@@ -483,67 +183,7 @@ methods:
           parameters:
           - name: "seed"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "org.bitcoinj.wallet.DeterministicSeed"
-                parameters:
-                - name: "encryptedMnemonic"
-                  value:
-                    sapientType: "MOCK"
-                    valueType: "org.bitcoinj.crypto.EncryptedData"
-                    uuid: "makeKeyChain_deterministicSeed1-encryptedMnemonic"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "encryptedSeed"
-                  value:
-                    sapientType: "MOCK"
-                    valueType: "org.bitcoinj.crypto.EncryptedData"
-                    uuid: "makeKeyChain_deterministicSeed1-encryptedSeed"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "creationTimeSecs"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    valueType: "long"
-                    uuid: "makeKeyChain_deterministicSeed1-creationTimeSecs"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
-              suggestedContent: !<new>
-                target: "org.bitcoinj.wallet.DeterministicSeed"
-                parameters:
-                - name: "encryptedMnemonic"
-                  value:
-                    sapientType: "UNKNOWN"
-                    valueType: "org.bitcoinj.crypto.EncryptedData"
-                    uuid: "makeKeyChain_deterministicSeed1-encryptedMnemonic"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "encryptedSeed"
-                  value:
-                    sapientType: "UNKNOWN"
-                    valueType: "org.bitcoinj.crypto.EncryptedData"
-                    uuid: "makeKeyChain_deterministicSeed1-encryptedSeed"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "creationTimeSecs"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "long"
-                    uuid: "makeKeyChain_deterministicSeed1-creationTimeSecs"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.wallet.DeterministicSeed"
               uuid: "makeKeyChain_deterministicSeed1"
               fixed: false
@@ -551,11 +191,7 @@ methods:
               explicitCastNeeded: false
           - name: "crypter"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.crypto.KeyCrypter"
-                onlyPojoFunctions: false
-                builderPattern: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.crypto.KeyCrypter"
               uuid: "makeKeyChain_keyCrypter1"
               fixed: false
@@ -564,10 +200,6 @@ methods:
           - name: "outputScriptType"
             value:
               sapientType: "ENUM"
-              content: !<regular>
-                value: "P2PKH"
-              suggestedContent: !<regular>
-                value: "P2PKH"
               valueType: "org.bitcoinj.base.ScriptType"
               uuid: "makeKeyChain_scriptType1"
               fixed: false
@@ -576,96 +208,6 @@ methods:
           - name: "accountPath"
             value:
               sapientType: "COLLECTION"
-              content: !<collection>
-                collectionClass: "java.util.ArrayList"
-                parameters: []
-                values:
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 0
-                        suggestedContent: !<regular>
-                          value: 0
-                        valueType: "int"
-                        uuid: "makeKeyChain_list1-0-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 0
-                        suggestedContent: !<regular>
-                          value: 0
-                        valueType: "int"
-                        uuid: "makeKeyChain_list1-0-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "makeKeyChain_list1-0"
-                  fixed: false
-                  collectionUuid: "makeKeyChain_list1"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              suggestedContent: !<collection>
-                collectionClass: "java.util.ArrayList"
-                parameters: []
-                values:
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 0
-                        suggestedContent: !<regular>
-                          value: 0
-                        valueType: "int"
-                        uuid: "makeKeyChain_list1-0-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 0
-                        suggestedContent: !<regular>
-                          value: 0
-                        valueType: "int"
-                        uuid: "makeKeyChain_list1-0-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "makeKeyChain_list1-0"
-                  fixed: false
-                  collectionUuid: "makeKeyChain_list1"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.crypto.ChildNumber"
               uuid: "makeKeyChain_list1"
@@ -683,11 +225,11 @@ methods:
       filledByUser: false
     uuid: "6b7e2ac9-05c9-36dd-96dd-7b84572202cd"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "makeWatchingKeyChain"
     returnType: "org.bitcoinj.wallet.DeterministicKeyChain"
@@ -912,11 +454,11 @@ methods:
       filledByUser: false
     uuid: "2f9277e5-88d1-3f0a-bd59-43bc0e17ceda"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "makeSpendingKeyChain"
     returnType: "org.bitcoinj.wallet.DeterministicKeyChain"
@@ -937,7 +479,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "3573CCCEA0DF8BF458656C4D70FB900D"
+    modelFingerprint: "ECA2AE7E14E1E623C73A64223B846DE3"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -968,17 +510,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "accountKey"
-      modelFingerprint: "506346887CA11F521064F027101F4019"
+      modelFingerprint: "D3AB171AD444E2F4D71C70E30124F97A"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.crypto.DeterministicKey"
-          onlyPojoFunctions: false
-          builderPattern: false
         valueType: "org.bitcoinj.crypto.DeterministicKey"
         uuid: "makeSpendingKeyChain_deterministicKey1"
         fixed: false
@@ -1005,7 +543,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "D35D5F369F0194957D95DF40AB147163"
+      modelFingerprint: "A98397B5656933AD90128F5569177211"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -1029,10 +567,6 @@ methods:
         - name: "accountKey"
           value:
             sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.crypto.DeterministicKey"
-              onlyPojoFunctions: false
-              builderPattern: false
             valueType: "org.bitcoinj.crypto.DeterministicKey"
             uuid: "makeSpendingKeyChain_deterministicKey1"
             fixed: false
@@ -1149,8 +683,8 @@ methods:
       filledByUser: false
     uuid: "41593bf9-76fa-3d22-b0d1-ebe2f4bf9ac3"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false

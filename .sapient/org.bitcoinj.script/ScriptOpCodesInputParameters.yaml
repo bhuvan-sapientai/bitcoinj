@@ -60,11 +60,11 @@ methods:
       filledByUser: false
     uuid: "30d5902b-94ed-3293-b781-8d63e65c6e22"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "getOpCodeNameWhenOpCodeMapNotContainsKeyOpcode"
@@ -72,13 +72,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "183C9278FF9731DB6C00B39AAD7B1C77"
+    modelFingerprint: "7EA9B68728E455882F5A02E0B375CAC1"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "opcode"
-      modelFingerprint: "A14496C2D479BA9A4B769D0DE1180F7B"
+      modelFingerprint: "66A26AEC2ECE837758702C03369DABAE"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -86,9 +86,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 100
+          value: 2
         suggestedContent: !<regular>
-          value: 100
+          value: 2
         valueType: "int"
         uuid: "getOpCodeName_int1"
         fixed: false
@@ -98,7 +98,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "97516FDF1DE9ABB94992E5AE3C8AC827"
+      modelFingerprint: "BAD607FFDFBBB89CB851D47BF9AED555"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -106,9 +106,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "NON_OP(100)"
+          value: "NON_OP(2)"
         suggestedContent: !<regular>
-          value: "NON_OP(100)"
+          value: "NON_OP(2)"
         valueType: "java.lang.String"
         uuid: "getOpCodeName_string1"
         fixed: false
@@ -118,11 +118,11 @@ methods:
       filledByUser: false
     uuid: "2aa90f3b-f3a1-32db-9c54-b9d4fe395a83"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getPushDataName"
     returnType: "java.lang.String"
@@ -138,13 +138,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "51BCC2F40762857C6D2910EA48CC6D2E"
+    modelFingerprint: "C634E5F9AF6DEE1FE41B0E54E9748F3E"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "opcode"
-      modelFingerprint: "9EC5FFDB027954E89937740D070598BB"
+      modelFingerprint: "5FD67A31D22A966826ABC78776B9E01E"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -152,9 +152,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
+          value: 1
         suggestedContent: !<regular>
-          value: 0
+          value: 1
         valueType: "int"
         uuid: "getPushDataName_int1"
         fixed: false
@@ -182,11 +182,11 @@ methods:
       filledByUser: false
     uuid: "2085f4ca-53bf-3a20-bd24-b2d70ca47c0a"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "getPushDataNameWhenOpCodeMapNotContainsKeyOpcode"
@@ -194,13 +194,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "0118AA53877DFED8A0E0AB9A9B813C5C"
+    modelFingerprint: "E5E7F8D722C55B98A8FD8C919B170846"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "opcode"
-      modelFingerprint: "A14496C2D479BA9A4B769D0DE1180F7B"
+      modelFingerprint: "66A26AEC2ECE837758702C03369DABAE"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -208,9 +208,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 100
+          value: 2
         suggestedContent: !<regular>
-          value: 100
+          value: 2
         valueType: "int"
         uuid: "getPushDataName_int1"
         fixed: false
@@ -220,7 +220,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "8FF27B4A62CB05D49DC571E368B5D4F3"
+      modelFingerprint: "241B6FB3F222E7D063226568DFE8F128"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -228,9 +228,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "PUSHDATA(100)"
+          value: "PUSHDATA(2)"
         suggestedContent: !<regular>
-          value: "PUSHDATA(100)"
+          value: "PUSHDATA(2)"
         valueType: "java.lang.String"
         uuid: "getPushDataName_string1"
         fixed: false
@@ -240,11 +240,11 @@ methods:
       filledByUser: false
     uuid: "85c350a7-2bb3-3cca-8669-ccbfa2236fd6"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getOpCode"
     returnType: "int"

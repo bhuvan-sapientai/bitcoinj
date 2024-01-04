@@ -23,8 +23,10 @@ public class ServicesSapientGeneratedJunit4Test {
     //Sapient generated method id: ${3155f475-158f-3510-8516-db6562387204}
     @Test()
     public void ofTest() {
+
         //Act Statement(s)
         Services result = Services.of(0L);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -32,8 +34,10 @@ public class ServicesSapientGeneratedJunit4Test {
     //Sapient generated method id: ${7ef024fb-dd14-348c-bb93-ea4260fa7df5}
     @Test()
     public void noneTest() {
+
         //Act Statement(s)
         Services result = Services.none();
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -48,8 +52,10 @@ public class ServicesSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+
         //Act Statement(s)
         Services result = Services.read(byteBuffer);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -59,8 +65,10 @@ public class ServicesSapientGeneratedJunit4Test {
     public void bitsTest() {
         //Arrange Statement(s)
         Services target = Services.of(0L);
+
         //Act Statement(s)
         long result = target.bits();
+
         //Assert statement(s)
         assertThat(result, equalTo(0L));
     }
@@ -73,8 +81,10 @@ public class ServicesSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Services target = Services.of(1L);
+
         //Act Statement(s)
         boolean result = target.hasAny();
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
     }
@@ -87,8 +97,10 @@ public class ServicesSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Services target = Services.of(0L);
+
         //Act Statement(s)
         boolean result = target.hasAny();
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }
@@ -101,8 +113,10 @@ public class ServicesSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Services target = Services.of(0L);
+
         //Act Statement(s)
         boolean result = target.has(0L);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
     }
@@ -115,8 +129,10 @@ public class ServicesSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Services target = Services.of(0L);
+
         //Act Statement(s)
         boolean result = target.has(2L);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }
@@ -129,8 +145,10 @@ public class ServicesSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Services target = Services.of(0L);
+
         //Act Statement(s)
         boolean result = target.anyOf(0L);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }
@@ -143,8 +161,10 @@ public class ServicesSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Services target = Services.of(0L);
+
         //Act Statement(s)
         boolean result = target.anyOf(0L);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }
@@ -158,10 +178,12 @@ public class ServicesSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Services target = Services.of(123456789L);
+        Services target = Services.of(0L);
         ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+
         //Act Statement(s)
         ByteBuffer result = target.write(byteBuffer);
+
         //Assert statement(s)
         assertThat(result, equalTo(byteBuffer));
     }
@@ -172,9 +194,11 @@ public class ServicesSapientGeneratedJunit4Test {
     public void serializeTest() {
         //Arrange Statement(s)
         Services target = Services.of(1L);
+
         //Act Statement(s)
         byte[] result = target.serialize();
         byte[] byteResultArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+
         //Assert statement(s)
         assertThat(result, equalTo(byteResultArray));
     }
@@ -191,8 +215,10 @@ public class ServicesSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Services target = Services.of(0L);
+
         //Act Statement(s)
         String result = target.toString();
+
         //Assert statement(s)
         assertThat(result, equalTo(""));
     }

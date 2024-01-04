@@ -74,9 +74,11 @@ public class TestNet3ParamsSapientGeneratedJunit4Test {
         /* Branches:
          * (instance == null) : true
          */
+
         //Act Statement(s)
         TestNet3Params result = TestNet3Params.get();
         TestNet3Params testNet3Params = new TestNet3Params();
+
         //Assert statement(s)
         assertThat(result, equalTo(testNet3Params));
     }
@@ -1318,7 +1320,9 @@ public class TestNet3ParamsSapientGeneratedJunit4Test {
         Sha256Hash sha256HashMock201 = mock(Sha256Hash.class);
         Sha256Hash sha256HashMock202 = mock(Sha256Hash.class);
         Sha256Hash sha256HashMock203 = mock(Sha256Hash.class);
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<Stopwatch> stopwatch = mockStatic(Stopwatch.class);
+             MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
             doReturn(sha256HashMock).when(prevMock).getHash();
             Instant instant = Instant.now();
             doReturn(instant).when(nextBlockMock).time();
@@ -1825,14 +1829,16 @@ public class TestNet3ParamsSapientGeneratedJunit4Test {
             Instant instant102 = Instant.now();
             List list101 = new ArrayList<>();
             Block block101 = new Block(0L, sha256HashMock202, sha256HashMock203, instant102, 0L, 0L, list101);
-            StoredBlock storedBlock101 = new StoredBlock(block101, new BigInteger("0"), 2);
+            StoredBlock storedBlock101 = new StoredBlock(block101, new BigInteger("0"), 1);
             doReturn(storedBlock101).when(blockStoreMock).get(sha256HashMock201);
+            byteUtils.when(() -> ByteUtils.decodeCompactBits(486604799L)).thenReturn(new BigInteger("26959535291011309493156476344723991336010898738574164086137773096960"));
+            Stopwatch stopwatch2 = Stopwatch.start();
+            stopwatch.when(() -> Stopwatch.start()).thenReturn(stopwatch2);
             IllegalStateException illegalStateException = new IllegalStateException();
             preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
             target = spy(new TestNet3Params());
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(false, true).when(target).isDifficultyTransitionPoint(0);
-            doReturn(false).when(target).isDifficultyTransitionPoint(1);
+            doReturn(false, true, false).when(target).isDifficultyTransitionPoint(0);
             thrown.expect(IllegalStateException.class);
             StoredBlock storedBlock102 = new StoredBlock(prevMock, new BigInteger("0"), 0);
             //Act Statement(s)
@@ -1941,9 +1947,10 @@ public class TestNet3ParamsSapientGeneratedJunit4Test {
             verify(blockStoreMock).get(sha256HashMock197);
             verify(blockStoreMock).get(sha256HashMock199);
             verify(blockStoreMock).get(sha256HashMock201);
+            byteUtils.verify(() -> ByteUtils.decodeCompactBits(486604799L), atLeast(1));
+            stopwatch.verify(() -> Stopwatch.start(), atLeast(1));
             preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
-            verify(target, times(2)).isDifficultyTransitionPoint(0);
-            verify(target).isDifficultyTransitionPoint(1);
+            verify(target, times(3)).isDifficultyTransitionPoint(0);
         }
     }
 

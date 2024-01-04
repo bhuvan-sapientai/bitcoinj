@@ -22,8 +22,10 @@ public class AllowUnconfirmedCoinSelectorSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         AllowUnconfirmedCoinSelector target = new AllowUnconfirmedCoinSelector();
         Transaction transactionMock = mock(Transaction.class);
+
         //Act Statement(s)
         boolean result = target.shouldSelect(transactionMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
     }
@@ -32,9 +34,11 @@ public class AllowUnconfirmedCoinSelectorSapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void get1Test() {
+
         //Act Statement(s)
         CoinSelector result = AllowUnconfirmedCoinSelector.get();
         AllowUnconfirmedCoinSelector allowUnconfirmedCoinSelector = new AllowUnconfirmedCoinSelector();
+
         //Assert statement(s)
         //TODO: Please implement equals method in AllowUnconfirmedCoinSelector for verification to succeed or you need to adjust respective assertion statements
         assertThat(result, equalTo(allowUnconfirmedCoinSelector));

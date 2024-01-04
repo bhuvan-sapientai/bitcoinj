@@ -55,6 +55,7 @@ public class X509UtilsSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         thrown.expect(NullPointerException.class);
         X509Certificate x509Certificate = null;
+
         //Act Statement(s)
         X509Utils.getDisplayNameFromCertificate(x509Certificate, false);
     }
@@ -83,8 +84,10 @@ public class X509UtilsSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         //TODO: Needs initialization with real value
         X509Certificate x509Certificate = null;
+
         //Act Statement(s)
         String result = X509Utils.getDisplayNameFromCertificate(x509Certificate, false);
+
         //Assert statement(s)
         assertThat(result, equalTo("return_of_getString1"));
     }
@@ -113,10 +116,12 @@ public class X509UtilsSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         //TODO: Needs initialization with real value
         X509Certificate x509Certificate = null;
+
         //Act Statement(s)
         String result = X509Utils.getDisplayNameFromCertificate(x509Certificate, false);
+
         //Assert statement(s)
-        assertThat(result, equalTo("return_of_getSubjectAlternativeNamesItem1Item2"));
+        assertThat(result, equalTo("return_of_getString1"));
     }
 
     //Sapient generated method id: ${9b126afb-4ecf-320d-8ce7-bca2184ac8f1}
@@ -135,6 +140,7 @@ public class X509UtilsSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         thrown.expect(NullPointerException.class);
         X509Certificate x509Certificate = null;
+
         //Act Statement(s)
         X509Utils.getDisplayNameFromCertificate(x509Certificate, true);
     }
@@ -155,6 +161,7 @@ public class X509UtilsSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         thrown.expect(NullPointerException.class);
         X509Certificate x509Certificate = null;
+
         //Act Statement(s)
         X509Utils.getDisplayNameFromCertificate(x509Certificate, false);
     }
@@ -184,10 +191,12 @@ public class X509UtilsSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         //TODO: Needs initialization with real value
         X509Certificate x509Certificate = null;
+
         //Act Statement(s)
         String result = X509Utils.getDisplayNameFromCertificate(x509Certificate, true);
+
         //Assert statement(s)
-        assertThat(result, equalTo("result1"));
+        assertThat(result, equalTo("return_of_getString1"));
     }
 
     //Sapient generated method id: ${d6b0cd47-df61-3f50-a735-1d3c5c7e8b9f}
@@ -215,8 +224,10 @@ public class X509UtilsSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         //TODO: Needs initialization with real value
         X509Certificate x509Certificate = null;
+
         //Act Statement(s)
-        String result = X509Utils.getDisplayNameFromCertificate(x509Certificate, false);
+        String result = X509Utils.getDisplayNameFromCertificate(x509Certificate, true);
+
         //Assert statement(s)
         assertThat(result, equalTo("return_of_getString1"));
     }
@@ -238,6 +249,7 @@ public class X509UtilsSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         thrown.expect(NullPointerException.class);
         X509Certificate x509Certificate = null;
+
         //Act Statement(s)
         X509Utils.getDisplayNameFromCertificate(x509Certificate, false);
     }
@@ -260,6 +272,7 @@ public class X509UtilsSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         thrown.expect(NullPointerException.class);
         X509Certificate x509Certificate = null;
+
         //Act Statement(s)
         X509Utils.getDisplayNameFromCertificate(x509Certificate, false);
     }
@@ -277,8 +290,10 @@ public class X509UtilsSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         InputStream inputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
+
         //Act Statement(s)
         KeyStore result = X509Utils.loadKeyStore("A", "B", inputStream);
+
         //Assert statement(s)
         assertThat(result, is(nullValue()));
     }
@@ -296,8 +311,10 @@ public class X509UtilsSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         InputStream inputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
+
         //Act Statement(s)
         KeyStore result = X509Utils.loadKeyStore("A", (String) null, inputStream);
+
         //Assert statement(s)
         assertThat(result, is(nullValue()));
     }

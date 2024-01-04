@@ -42,9 +42,11 @@ public class CryptoUtilsSapientGeneratedJunit4Test {
     public void digestRipeMd160Test() {
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{};
+
         //Act Statement(s)
         byte[] result = CryptoUtils.digestRipeMd160(byteArray);
         byte[] byteResultArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+
         //Assert statement(s)
         assertThat(result, equalTo(byteResultArray));
     }

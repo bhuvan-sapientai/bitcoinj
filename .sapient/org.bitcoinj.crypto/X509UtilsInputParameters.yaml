@@ -502,7 +502,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "D80DACA316814CA0EABCAD5662166A09"
+    modelFingerprint: "E167342514DB22CAEC1DE50DCEEF3EC7"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -634,7 +634,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "rdn"
-      modelFingerprint: "9721CD15C1B884EE74D662C537446858"
+      modelFingerprint: "F69DEAC697D5678B3DD3D116241D1B4F"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -671,7 +671,1013 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "pair"
-      modelFingerprint: "F1515DFA23D0C880672B7182A5BC997C"
+      modelFingerprint: "D23500840699EBFDC58061A0020C007E"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bouncycastle.asn1.x500.AttributeTypeAndValue"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bouncycastle.asn1.x500.AttributeTypeAndValue"
+        uuid: "getDisplayNameFromCertificate_attributeTypeAndValue1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "pair"
+        name: "getValue"
+        parameters: []
+        signature: "getValue(): ASN1Encodable"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bouncycastle.asn1.ASN1Encodable"
+          uuid: "getDisplayNameFromCertificate_aSN1Encodable1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "9792A10D4A7F211B66D366208AF9C9D6"
+      index: 6
+      ignored: false
+      nestedInLoop: true
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bouncycastle.asn1.ASN1String"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bouncycastle.asn1.ASN1String"
+        uuid: "getDisplayNameFromCertificate_aSN1Encodable1checkCast"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bouncycastle.asn1.ASN1String"
+        name: "getString"
+        parameters: []
+        signature: "getString(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "return_of_getString1"
+          valueType: "java.lang.String"
+          uuid: "getDisplayNameFromCertificate_string2"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "pair"
+      modelFingerprint: "EE7B4FCDC4A0A2D5FEBAB4A304BA1651"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bouncycastle.asn1.x500.AttributeTypeAndValue"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bouncycastle.asn1.x500.AttributeTypeAndValue"
+        uuid: "getDisplayNameFromCertificate_attributeTypeAndValue1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "pair"
+        name: "getType"
+        parameters: []
+        signature: "getType(): ASN1ObjectIdentifier"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bouncycastle.asn1.ASN1ObjectIdentifier"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bouncycastle.asn1.ASN1ObjectIdentifier"
+          uuid: "getDisplayNameFromCertificate_aSN1ObjectIdentifier1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "certificate"
+      modelFingerprint: "6E4570126747A45826E33B9FAF338727"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "NULL"
+        suggestedContent: !<unknown_object>
+          target: "java.security.cert.X509Certificate"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "java.security.cert.X509Certificate"
+        uuid: "getDisplayNameFromCertificate_x509Certificate1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "certificate"
+        name: "getSubjectAlternativeNames"
+        parameters: []
+        throwsExceptions:
+        - "java.security.cert.CertificateParsingException"
+        signature: "getSubjectAlternativeNames(): Collection throws java.security.cert.CertificateParsingException"
+        returnValue:
+          sapientType: "COLLECTION"
+          content: !<collection>
+            collectionClass: "java.util.ArrayList"
+            parameters: []
+            values:
+            - sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  suggestedContent: !<regular>
+                    value: 1
+                  valueType: "java.lang.Integer"
+                  uuid: "getDisplayNameFromCertificate_object2"
+                  fixed: false
+                  collectionUuid: "getDisplayNameFromCertificate_object1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: true
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: "return_of_getSubjectAlternativeNamesItem1Item2"
+                  valueType: "java.lang.String"
+                  uuid: "getDisplayNameFromCertificate_object3"
+                  fixed: false
+                  collectionUuid: "getDisplayNameFromCertificate_object1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: true
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  suggestedContent: !<regular>
+                    value: 1
+                  valueType: "java.lang.Integer"
+                  uuid: "getDisplayNameFromCertificate_object2"
+                  fixed: false
+                  collectionUuid: "getDisplayNameFromCertificate_object1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: true
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: "return_of_getSubjectAlternativeNamesItem1Item2"
+                  valueType: "java.lang.String"
+                  uuid: "getDisplayNameFromCertificate_object3"
+                  fixed: false
+                  collectionUuid: "getDisplayNameFromCertificate_object1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: true
+              valueType: "java.util.List"
+              genericValueType: "?"
+              uuid: "getDisplayNameFromCertificate_object1"
+              fixed: false
+              collectionUuid: "getDisplayNameFromCertificate_collection1"
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          suggestedContent: !<collection>
+            collectionClass: "java.util.ArrayList"
+            parameters: []
+            values:
+            - sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  suggestedContent: !<regular>
+                    value: 1
+                  valueType: "java.lang.Integer"
+                  uuid: "getDisplayNameFromCertificate_object2"
+                  fixed: false
+                  collectionUuid: "getDisplayNameFromCertificate_object1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: true
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: "return_of_getSubjectAlternativeNamesItem1Item2"
+                  valueType: "java.lang.String"
+                  uuid: "getDisplayNameFromCertificate_object3"
+                  fixed: false
+                  collectionUuid: "getDisplayNameFromCertificate_object1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: true
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  suggestedContent: !<regular>
+                    value: 1
+                  valueType: "java.lang.Integer"
+                  uuid: "getDisplayNameFromCertificate_object2"
+                  fixed: false
+                  collectionUuid: "getDisplayNameFromCertificate_object1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: true
+                - sapientType: "BASIC"
+                  content: !<regular>
+                    value: "return_of_getSubjectAlternativeNamesItem1Item2"
+                  valueType: "java.lang.String"
+                  uuid: "getDisplayNameFromCertificate_object3"
+                  fixed: false
+                  collectionUuid: "getDisplayNameFromCertificate_object1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: true
+              valueType: "java.util.List"
+              genericValueType: "?"
+              uuid: "getDisplayNameFromCertificate_object1"
+              fixed: false
+              collectionUuid: "getDisplayNameFromCertificate_collection1"
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          valueType: "java.util.Collection"
+          genericValueType: "java.util.List<?>"
+          uuid: "getDisplayNameFromCertificate_collection1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "var9"
+      modelFingerprint: "9CCF0B1C5895B3E368DCADA479AB7DBB"
+      index: 9
+      ignored: false
+      nestedInLoop: true
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "ITERATOR"
+        content: !<iterator>
+          collectionValue:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "COLLECTION"
+                content: !<collection>
+                  collectionClass: "java.util.ArrayList"
+                  parameters: []
+                  values:
+                  - sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    suggestedContent: !<regular>
+                      value: 1
+                    valueType: "java.lang.Integer"
+                    uuid: "getDisplayNameFromCertificate_object2"
+                    fixed: false
+                    collectionUuid: "getDisplayNameFromCertificate_object1"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                  - sapientType: "BASIC"
+                    content: !<regular>
+                      value: "return_of_getSubjectAlternativeNamesItem1Item2"
+                    valueType: "java.lang.String"
+                    uuid: "getDisplayNameFromCertificate_object3"
+                    fixed: false
+                    collectionUuid: "getDisplayNameFromCertificate_object1"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                suggestedContent: !<collection>
+                  collectionClass: "java.util.ArrayList"
+                  parameters: []
+                  values:
+                  - sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    suggestedContent: !<regular>
+                      value: 1
+                    valueType: "java.lang.Integer"
+                    uuid: "getDisplayNameFromCertificate_object2"
+                    fixed: false
+                    collectionUuid: "getDisplayNameFromCertificate_object1"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                  - sapientType: "BASIC"
+                    content: !<regular>
+                      value: "return_of_getSubjectAlternativeNamesItem1Item2"
+                    valueType: "java.lang.String"
+                    uuid: "getDisplayNameFromCertificate_object3"
+                    fixed: false
+                    collectionUuid: "getDisplayNameFromCertificate_object1"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                valueType: "java.util.List"
+                genericValueType: "?"
+                uuid: "getDisplayNameFromCertificate_object1"
+                fixed: false
+                collectionUuid: "getDisplayNameFromCertificate_collection1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            suggestedContent: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "COLLECTION"
+                content: !<collection>
+                  collectionClass: "java.util.ArrayList"
+                  parameters: []
+                  values:
+                  - sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    suggestedContent: !<regular>
+                      value: 1
+                    valueType: "java.lang.Integer"
+                    uuid: "getDisplayNameFromCertificate_object2"
+                    fixed: false
+                    collectionUuid: "getDisplayNameFromCertificate_object1"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                  - sapientType: "BASIC"
+                    content: !<regular>
+                      value: "return_of_getSubjectAlternativeNamesItem1Item2"
+                    valueType: "java.lang.String"
+                    uuid: "getDisplayNameFromCertificate_object3"
+                    fixed: false
+                    collectionUuid: "getDisplayNameFromCertificate_object1"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                suggestedContent: !<collection>
+                  collectionClass: "java.util.ArrayList"
+                  parameters: []
+                  values:
+                  - sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    suggestedContent: !<regular>
+                      value: 1
+                    valueType: "java.lang.Integer"
+                    uuid: "getDisplayNameFromCertificate_object2"
+                    fixed: false
+                    collectionUuid: "getDisplayNameFromCertificate_object1"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                  - sapientType: "BASIC"
+                    content: !<regular>
+                      value: "return_of_getSubjectAlternativeNamesItem1Item2"
+                    valueType: "java.lang.String"
+                    uuid: "getDisplayNameFromCertificate_object3"
+                    fixed: false
+                    collectionUuid: "getDisplayNameFromCertificate_object1"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                valueType: "java.util.List"
+                genericValueType: "?"
+                uuid: "getDisplayNameFromCertificate_object1"
+                fixed: false
+                collectionUuid: "getDisplayNameFromCertificate_collection1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            valueType: "java.util.Collection"
+            genericValueType: "java.util.List<?>"
+            uuid: "getDisplayNameFromCertificate_collection1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        valueType: "java.util.Iterator"
+        genericValueType: "java.util.List<?>"
+        uuid: "getDisplayNameFromCertificate_iterator1"
+        fixed: false
+        collectionUuid: "getDisplayNameFromCertificate_collection1"
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "var9"
+        name: "hasNext"
+        parameters: []
+        signature: "hasNext(): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: true
+          valueType: "boolean"
+          uuid: "getDisplayNameFromCertificate_boolean3"
+          fixed: false
+          collectionUuid: "getDisplayNameFromCertificate_collection1"
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "var9"
+      modelFingerprint: "BDCF2544B3EE3F534943AA08718AFF35"
+      index: 10
+      ignored: false
+      nestedInLoop: true
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "ITERATOR"
+        content: !<iterator>
+          collectionValue:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "COLLECTION"
+                content: !<collection>
+                  collectionClass: "java.util.ArrayList"
+                  parameters: []
+                  values:
+                  - sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    suggestedContent: !<regular>
+                      value: 1
+                    valueType: "java.lang.Integer"
+                    uuid: "getDisplayNameFromCertificate_object2"
+                    fixed: false
+                    collectionUuid: "getDisplayNameFromCertificate_object1"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                  - sapientType: "BASIC"
+                    content: !<regular>
+                      value: "return_of_getSubjectAlternativeNamesItem1Item2"
+                    valueType: "java.lang.String"
+                    uuid: "getDisplayNameFromCertificate_object3"
+                    fixed: false
+                    collectionUuid: "getDisplayNameFromCertificate_object1"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                suggestedContent: !<collection>
+                  collectionClass: "java.util.ArrayList"
+                  parameters: []
+                  values:
+                  - sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    suggestedContent: !<regular>
+                      value: 1
+                    valueType: "java.lang.Integer"
+                    uuid: "getDisplayNameFromCertificate_object2"
+                    fixed: false
+                    collectionUuid: "getDisplayNameFromCertificate_object1"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                  - sapientType: "BASIC"
+                    content: !<regular>
+                      value: "return_of_getSubjectAlternativeNamesItem1Item2"
+                    valueType: "java.lang.String"
+                    uuid: "getDisplayNameFromCertificate_object3"
+                    fixed: false
+                    collectionUuid: "getDisplayNameFromCertificate_object1"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                valueType: "java.util.List"
+                genericValueType: "?"
+                uuid: "getDisplayNameFromCertificate_object1"
+                fixed: false
+                collectionUuid: "getDisplayNameFromCertificate_collection1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            suggestedContent: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "COLLECTION"
+                content: !<collection>
+                  collectionClass: "java.util.ArrayList"
+                  parameters: []
+                  values:
+                  - sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    suggestedContent: !<regular>
+                      value: 1
+                    valueType: "java.lang.Integer"
+                    uuid: "getDisplayNameFromCertificate_object2"
+                    fixed: false
+                    collectionUuid: "getDisplayNameFromCertificate_object1"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                  - sapientType: "BASIC"
+                    content: !<regular>
+                      value: "return_of_getSubjectAlternativeNamesItem1Item2"
+                    valueType: "java.lang.String"
+                    uuid: "getDisplayNameFromCertificate_object3"
+                    fixed: false
+                    collectionUuid: "getDisplayNameFromCertificate_object1"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                suggestedContent: !<collection>
+                  collectionClass: "java.util.ArrayList"
+                  parameters: []
+                  values:
+                  - sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    suggestedContent: !<regular>
+                      value: 1
+                    valueType: "java.lang.Integer"
+                    uuid: "getDisplayNameFromCertificate_object2"
+                    fixed: false
+                    collectionUuid: "getDisplayNameFromCertificate_object1"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                  - sapientType: "BASIC"
+                    content: !<regular>
+                      value: "return_of_getSubjectAlternativeNamesItem1Item2"
+                    valueType: "java.lang.String"
+                    uuid: "getDisplayNameFromCertificate_object3"
+                    fixed: false
+                    collectionUuid: "getDisplayNameFromCertificate_object1"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                valueType: "java.util.List"
+                genericValueType: "?"
+                uuid: "getDisplayNameFromCertificate_object1"
+                fixed: false
+                collectionUuid: "getDisplayNameFromCertificate_collection1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            valueType: "java.util.Collection"
+            genericValueType: "java.util.List<?>"
+            uuid: "getDisplayNameFromCertificate_collection1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        valueType: "java.util.Iterator"
+        genericValueType: "java.util.List<?>"
+        uuid: "getDisplayNameFromCertificate_iterator1"
+        fixed: false
+        collectionUuid: "getDisplayNameFromCertificate_collection1"
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "var9"
+        name: "next"
+        parameters: []
+        signature: "next(): Object"
+        returnValue:
+          sapientType: "COLLECTION"
+          content: !<collection>
+            collectionClass: "java.util.ArrayList"
+            parameters: []
+            values:
+            - sapientType: "BASIC"
+              content: !<regular>
+                value: 1
+              suggestedContent: !<regular>
+                value: 1
+              valueType: "java.lang.Integer"
+              uuid: "getDisplayNameFromCertificate_object2"
+              fixed: false
+              collectionUuid: "getDisplayNameFromCertificate_object1"
+              equalsMethodPresent: false
+              explicitCastNeeded: true
+            - sapientType: "BASIC"
+              content: !<regular>
+                value: "return_of_getSubjectAlternativeNamesItem1Item2"
+              valueType: "java.lang.String"
+              uuid: "getDisplayNameFromCertificate_object3"
+              fixed: false
+              collectionUuid: "getDisplayNameFromCertificate_object1"
+              equalsMethodPresent: false
+              explicitCastNeeded: true
+          suggestedContent: !<collection>
+            collectionClass: "java.util.ArrayList"
+            parameters: []
+            values:
+            - sapientType: "BASIC"
+              content: !<regular>
+                value: 1
+              suggestedContent: !<regular>
+                value: 1
+              valueType: "java.lang.Integer"
+              uuid: "getDisplayNameFromCertificate_object2"
+              fixed: false
+              collectionUuid: "getDisplayNameFromCertificate_object1"
+              equalsMethodPresent: false
+              explicitCastNeeded: true
+            - sapientType: "BASIC"
+              content: !<regular>
+                value: "return_of_getSubjectAlternativeNamesItem1Item2"
+              valueType: "java.lang.String"
+              uuid: "getDisplayNameFromCertificate_object3"
+              fixed: false
+              collectionUuid: "getDisplayNameFromCertificate_object1"
+              equalsMethodPresent: false
+              explicitCastNeeded: true
+          valueType: "java.util.List"
+          genericValueType: "?"
+          uuid: "getDisplayNameFromCertificate_object1"
+          fixed: false
+          collectionUuid: "getDisplayNameFromCertificate_collection1"
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "var9"
+      modelFingerprint: "6CD53588DC6C53CCD97ACBB463967D78"
+      index: 11
+      ignored: false
+      nestedInLoop: true
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "ITERATOR"
+        content: !<iterator>
+          collectionValue:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "COLLECTION"
+                content: !<collection>
+                  collectionClass: "java.util.ArrayList"
+                  parameters: []
+                  values:
+                  - sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    suggestedContent: !<regular>
+                      value: 1
+                    valueType: "java.lang.Integer"
+                    uuid: "getDisplayNameFromCertificate_object2"
+                    fixed: false
+                    collectionUuid: "getDisplayNameFromCertificate_object1"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                  - sapientType: "BASIC"
+                    content: !<regular>
+                      value: "return_of_getSubjectAlternativeNamesItem1Item2"
+                    valueType: "java.lang.String"
+                    uuid: "getDisplayNameFromCertificate_object3"
+                    fixed: false
+                    collectionUuid: "getDisplayNameFromCertificate_object1"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                suggestedContent: !<collection>
+                  collectionClass: "java.util.ArrayList"
+                  parameters: []
+                  values:
+                  - sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    suggestedContent: !<regular>
+                      value: 1
+                    valueType: "java.lang.Integer"
+                    uuid: "getDisplayNameFromCertificate_object2"
+                    fixed: false
+                    collectionUuid: "getDisplayNameFromCertificate_object1"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                  - sapientType: "BASIC"
+                    content: !<regular>
+                      value: "return_of_getSubjectAlternativeNamesItem1Item2"
+                    valueType: "java.lang.String"
+                    uuid: "getDisplayNameFromCertificate_object3"
+                    fixed: false
+                    collectionUuid: "getDisplayNameFromCertificate_object1"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                valueType: "java.util.List"
+                genericValueType: "?"
+                uuid: "getDisplayNameFromCertificate_object1"
+                fixed: false
+                collectionUuid: "getDisplayNameFromCertificate_collection1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            suggestedContent: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "COLLECTION"
+                content: !<collection>
+                  collectionClass: "java.util.ArrayList"
+                  parameters: []
+                  values:
+                  - sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    suggestedContent: !<regular>
+                      value: 1
+                    valueType: "java.lang.Integer"
+                    uuid: "getDisplayNameFromCertificate_object2"
+                    fixed: false
+                    collectionUuid: "getDisplayNameFromCertificate_object1"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                  - sapientType: "BASIC"
+                    content: !<regular>
+                      value: "return_of_getSubjectAlternativeNamesItem1Item2"
+                    valueType: "java.lang.String"
+                    uuid: "getDisplayNameFromCertificate_object3"
+                    fixed: false
+                    collectionUuid: "getDisplayNameFromCertificate_object1"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                suggestedContent: !<collection>
+                  collectionClass: "java.util.ArrayList"
+                  parameters: []
+                  values:
+                  - sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    suggestedContent: !<regular>
+                      value: 1
+                    valueType: "java.lang.Integer"
+                    uuid: "getDisplayNameFromCertificate_object2"
+                    fixed: false
+                    collectionUuid: "getDisplayNameFromCertificate_object1"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                  - sapientType: "BASIC"
+                    content: !<regular>
+                      value: "return_of_getSubjectAlternativeNamesItem1Item2"
+                    valueType: "java.lang.String"
+                    uuid: "getDisplayNameFromCertificate_object3"
+                    fixed: false
+                    collectionUuid: "getDisplayNameFromCertificate_object1"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                valueType: "java.util.List"
+                genericValueType: "?"
+                uuid: "getDisplayNameFromCertificate_object1"
+                fixed: false
+                collectionUuid: "getDisplayNameFromCertificate_collection1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            valueType: "java.util.Collection"
+            genericValueType: "java.util.List<?>"
+            uuid: "getDisplayNameFromCertificate_collection1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        valueType: "java.util.Iterator"
+        genericValueType: "java.util.List<?>"
+        uuid: "getDisplayNameFromCertificate_iterator1"
+        fixed: false
+        collectionUuid: "getDisplayNameFromCertificate_collection1"
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "var9"
+        name: "hasNext"
+        parameters: []
+        signature: "hasNext(): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: false
+          suggestedContent: !<regular>
+            value: false
+          valueType: "boolean"
+          uuid: "getDisplayNameFromCertificate_boolean4"
+          fixed: false
+          collectionUuid: "getDisplayNameFromCertificate_collection1"
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "FF22E18EEBDF66F3A4CFE59A0E75C07E"
+      index: 12
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "return_of_getString1"
+        valueType: "java.lang.String"
+        uuid: "getDisplayNameFromCertificate_string2"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "722fb798-075e-33cc-a6ae-b5fa34045336"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    variablesCouldNotBeIsolated: "name"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path32"
+    pathIdForUser: "path24"
+    testPathName: "getDisplayNameFromCertificateWhenCaughtCertificateParsingExceptionAndOrgIsNullAndCommonNameIsNull3"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "DB04EB615E7956540B87A79587161DDA"
+    problemWasSolvedByProver: false
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.security.cert.CertificateParsingException"
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "certificate"
+      modelFingerprint: "DBDCFF0DDD8031E8D812FA6146AAF829"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        suggestedContent: !<unknown_object>
+          target: "java.security.cert.X509Certificate"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "java.security.cert.X509Certificate"
+        uuid: "getDisplayNameFromCertificate_x509Certificate1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "withLocation"
+      modelFingerprint: "C2D534C8D5567151F37B9D1A5764EBC8"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: false
+        valueType: "boolean"
+        uuid: "getDisplayNameFromCertificate_boolean1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "name"
+      modelFingerprint: "AF013A3D9F75BAEE4BA10D6EDAD23778"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bouncycastle.asn1.x500.X500Name"
+          parameters:
+          - name: "arg0"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "arg0"
+              valueType: "java.lang.String"
+              uuid: "getDisplayNameFromCertificate_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bouncycastle.asn1.x500.X500Name"
+          parameters:
+          - name: "arg0"
+            value:
+              sapientType: "BASIC"
+              valueType: "java.lang.String"
+              uuid: "getDisplayNameFromCertificate_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bouncycastle.asn1.x500.X500Name"
+        uuid: "getDisplayNameFromCertificate_x500Name1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "name"
+        name: "getRDNs"
+        parameters: []
+        signature: "getRDNs(): RDN[]"
+        returnValue:
+          sapientType: "ARRAY"
+          content: !<array>
+            values:
+              0:
+                sapientType: "MOCK"
+                suggestedContent: !<unknown_object>
+                  target: "org.bouncycastle.asn1.x500.RDN"
+                  onlyPojoFunctions: false
+                  builderPattern: false
+                valueType: "org.bouncycastle.asn1.x500.RDN"
+                uuid: "getDisplayNameFromCertificate_rDN1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<array>
+            values:
+              0:
+                sapientType: "MOCK"
+                suggestedContent: !<unknown_object>
+                  target: "org.bouncycastle.asn1.x500.RDN"
+                  onlyPojoFunctions: false
+                  builderPattern: false
+                valueType: "org.bouncycastle.asn1.x500.RDN"
+                uuid: "getDisplayNameFromCertificate_rDN1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "org.bouncycastle.asn1.x500.RDN[]"
+          uuid: "getDisplayNameFromCertificate_rDN[]1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "rdn"
+      modelFingerprint: "F69DEAC697D5678B3DD3D116241D1B4F"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bouncycastle.asn1.x500.RDN"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bouncycastle.asn1.x500.RDN"
+        uuid: "getDisplayNameFromCertificate_rDN1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "rdn"
+        name: "getFirst"
+        parameters: []
+        signature: "getFirst(): AttributeTypeAndValue"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bouncycastle.asn1.x500.AttributeTypeAndValue"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bouncycastle.asn1.x500.AttributeTypeAndValue"
+          uuid: "getDisplayNameFromCertificate_attributeTypeAndValue1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "pair"
+      modelFingerprint: "D23500840699EBFDC58061A0020C007E"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -738,7 +1744,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "pair"
-      modelFingerprint: "44B2323397E92CE2994E701FF205A4FB"
+      modelFingerprint: "EE7B4FCDC4A0A2D5FEBAB4A304BA1651"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -775,7 +1781,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "certificate"
-      modelFingerprint: "FE66396F2520B71174D1905D680E3142"
+      modelFingerprint: "A6D1D4B3E999A79B90353B50EED92292"
       index: 8
       ignored: false
       nestedInLoop: false
@@ -829,7 +1835,7 @@ methods:
                   uuid: "getDisplayNameFromCertificate_object3"
                   fixed: false
                   collectionUuid: "getDisplayNameFromCertificate_object1"
-                  equalsMethodPresent: false
+                  equalsMethodPresent: true
                   explicitCastNeeded: true
               suggestedContent: !<collection>
                 collectionClass: "java.util.ArrayList"
@@ -853,7 +1859,7 @@ methods:
                   uuid: "getDisplayNameFromCertificate_object3"
                   fixed: false
                   collectionUuid: "getDisplayNameFromCertificate_object1"
-                  equalsMethodPresent: false
+                  equalsMethodPresent: true
                   explicitCastNeeded: true
               valueType: "java.util.List"
               genericValueType: "?"
@@ -889,7 +1895,7 @@ methods:
                   uuid: "getDisplayNameFromCertificate_object3"
                   fixed: false
                   collectionUuid: "getDisplayNameFromCertificate_object1"
-                  equalsMethodPresent: false
+                  equalsMethodPresent: true
                   explicitCastNeeded: true
               suggestedContent: !<collection>
                 collectionClass: "java.util.ArrayList"
@@ -913,7 +1919,7 @@ methods:
                   uuid: "getDisplayNameFromCertificate_object3"
                   fixed: false
                   collectionUuid: "getDisplayNameFromCertificate_object1"
-                  equalsMethodPresent: false
+                  equalsMethodPresent: true
                   explicitCastNeeded: true
               valueType: "java.util.List"
               genericValueType: "?"
@@ -933,7 +1939,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "var9"
-      modelFingerprint: "D19009C03FC63CDFE2A0615538177222"
+      modelFingerprint: "5BD132D9D0D9F5DC7751D7E42E71122B"
       index: 9
       ignored: false
       nestedInLoop: true
@@ -972,7 +1978,7 @@ methods:
                     uuid: "getDisplayNameFromCertificate_object3"
                     fixed: false
                     collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: false
+                    equalsMethodPresent: true
                     explicitCastNeeded: true
                 suggestedContent: !<collection>
                   collectionClass: "java.util.ArrayList"
@@ -996,7 +2002,7 @@ methods:
                     uuid: "getDisplayNameFromCertificate_object3"
                     fixed: false
                     collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: false
+                    equalsMethodPresent: true
                     explicitCastNeeded: true
                 valueType: "java.util.List"
                 genericValueType: "?"
@@ -1032,7 +2038,7 @@ methods:
                     uuid: "getDisplayNameFromCertificate_object3"
                     fixed: false
                     collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: false
+                    equalsMethodPresent: true
                     explicitCastNeeded: true
                 suggestedContent: !<collection>
                   collectionClass: "java.util.ArrayList"
@@ -1056,7 +2062,7 @@ methods:
                     uuid: "getDisplayNameFromCertificate_object3"
                     fixed: false
                     collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: false
+                    equalsMethodPresent: true
                     explicitCastNeeded: true
                 valueType: "java.util.List"
                 genericValueType: "?"
@@ -1087,8 +2093,6 @@ methods:
           sapientType: "BASIC"
           content: !<regular>
             value: true
-          suggestedContent: !<regular>
-            value: true
           valueType: "boolean"
           uuid: "getDisplayNameFromCertificate_boolean3"
           fixed: false
@@ -1100,7 +2104,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "var9"
-      modelFingerprint: "92C26F644506DB8DC19F493515B71AA9"
+      modelFingerprint: "5ECAF96A3DBB472FD8EE94A4D060E59F"
       index: 10
       ignored: false
       nestedInLoop: true
@@ -1139,7 +2143,7 @@ methods:
                     uuid: "getDisplayNameFromCertificate_object3"
                     fixed: false
                     collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: false
+                    equalsMethodPresent: true
                     explicitCastNeeded: true
                 suggestedContent: !<collection>
                   collectionClass: "java.util.ArrayList"
@@ -1163,7 +2167,7 @@ methods:
                     uuid: "getDisplayNameFromCertificate_object3"
                     fixed: false
                     collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: false
+                    equalsMethodPresent: true
                     explicitCastNeeded: true
                 valueType: "java.util.List"
                 genericValueType: "?"
@@ -1199,7 +2203,7 @@ methods:
                     uuid: "getDisplayNameFromCertificate_object3"
                     fixed: false
                     collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: false
+                    equalsMethodPresent: true
                     explicitCastNeeded: true
                 suggestedContent: !<collection>
                   collectionClass: "java.util.ArrayList"
@@ -1223,7 +2227,7 @@ methods:
                     uuid: "getDisplayNameFromCertificate_object3"
                     fixed: false
                     collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: false
+                    equalsMethodPresent: true
                     explicitCastNeeded: true
                 valueType: "java.util.List"
                 genericValueType: "?"
@@ -1274,7 +2278,7 @@ methods:
               uuid: "getDisplayNameFromCertificate_object3"
               fixed: false
               collectionUuid: "getDisplayNameFromCertificate_object1"
-              equalsMethodPresent: false
+              equalsMethodPresent: true
               explicitCastNeeded: true
           suggestedContent: !<collection>
             collectionClass: "java.util.ArrayList"
@@ -1298,7 +2302,7 @@ methods:
               uuid: "getDisplayNameFromCertificate_object3"
               fixed: false
               collectionUuid: "getDisplayNameFromCertificate_object1"
-              equalsMethodPresent: false
+              equalsMethodPresent: true
               explicitCastNeeded: true
           valueType: "java.util.List"
           genericValueType: "?"
@@ -1312,7 +2316,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "var9"
-      modelFingerprint: "D394C76917006A687D18E7C1BB9C73B0"
+      modelFingerprint: "19A71F657A033E56689A7B47BE449310"
       index: 11
       ignored: false
       nestedInLoop: true
@@ -1351,7 +2355,7 @@ methods:
                     uuid: "getDisplayNameFromCertificate_object3"
                     fixed: false
                     collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: false
+                    equalsMethodPresent: true
                     explicitCastNeeded: true
                 suggestedContent: !<collection>
                   collectionClass: "java.util.ArrayList"
@@ -1375,7 +2379,7 @@ methods:
                     uuid: "getDisplayNameFromCertificate_object3"
                     fixed: false
                     collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: false
+                    equalsMethodPresent: true
                     explicitCastNeeded: true
                 valueType: "java.util.List"
                 genericValueType: "?"
@@ -1411,7 +2415,7 @@ methods:
                     uuid: "getDisplayNameFromCertificate_object3"
                     fixed: false
                     collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: false
+                    equalsMethodPresent: true
                     explicitCastNeeded: true
                 suggestedContent: !<collection>
                   collectionClass: "java.util.ArrayList"
@@ -1435,7 +2439,7 @@ methods:
                     uuid: "getDisplayNameFromCertificate_object3"
                     fixed: false
                     collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: false
+                    equalsMethodPresent: true
                     explicitCastNeeded: true
                 valueType: "java.util.List"
                 genericValueType: "?"
@@ -1495,1019 +2499,14 @@ methods:
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
-    uuid: "722fb798-075e-33cc-a6ae-b5fa34045336"
-    deleted: false
-    disabled: true
-    ignoredBySystem: false
-    variablesCouldNotBeIsolated: "name"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
-  - pathId: "path32"
-    pathIdForUser: "path24"
-    testPathName: "getDisplayNameFromCertificateWhenCaughtCertificateParsingExceptionAndOrgIsNullAndCommonNameIsNull3"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "1F15B7D2871B2C69929A3292F632E8F7"
-    problemWasSolvedByProver: false
-    catchBlockExercised:
-      idExternalInstruction: 0
-      id: 1
-      catchExceptions:
-      - "java.security.cert.CertificateParsingException"
-    truncated: false
-    inputParameters:
-    - type: "INPUT"
-      name: "certificate"
-      modelFingerprint: "DBDCFF0DDD8031E8D812FA6146AAF829"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "NULL"
-        suggestedContent: !<unknown_object>
-          target: "java.security.cert.X509Certificate"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "java.security.cert.X509Certificate"
-        uuid: "getDisplayNameFromCertificate_x509Certificate1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "withLocation"
-      modelFingerprint: "C2D534C8D5567151F37B9D1A5764EBC8"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: false
-        valueType: "boolean"
-        uuid: "getDisplayNameFromCertificate_boolean1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "name"
-      modelFingerprint: "AF013A3D9F75BAEE4BA10D6EDAD23778"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bouncycastle.asn1.x500.X500Name"
-          parameters:
-          - name: "arg0"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "arg0"
-              valueType: "java.lang.String"
-              uuid: "getDisplayNameFromCertificate_string1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "org.bouncycastle.asn1.x500.X500Name"
-          parameters:
-          - name: "arg0"
-            value:
-              sapientType: "BASIC"
-              valueType: "java.lang.String"
-              uuid: "getDisplayNameFromCertificate_string1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        valueType: "org.bouncycastle.asn1.x500.X500Name"
-        uuid: "getDisplayNameFromCertificate_x500Name1"
-        fixed: true
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "name"
-        name: "getRDNs"
-        parameters: []
-        signature: "getRDNs(): RDN[]"
-        returnValue:
-          sapientType: "ARRAY"
-          content: !<array>
-            values:
-              0:
-                sapientType: "MOCK"
-                suggestedContent: !<unknown_object>
-                  target: "org.bouncycastle.asn1.x500.RDN"
-                  onlyPojoFunctions: false
-                  builderPattern: false
-                valueType: "org.bouncycastle.asn1.x500.RDN"
-                uuid: "getDisplayNameFromCertificate_rDN1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<array>
-            values:
-              0:
-                sapientType: "MOCK"
-                suggestedContent: !<unknown_object>
-                  target: "org.bouncycastle.asn1.x500.RDN"
-                  onlyPojoFunctions: false
-                  builderPattern: false
-                valueType: "org.bouncycastle.asn1.x500.RDN"
-                uuid: "getDisplayNameFromCertificate_rDN1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          valueType: "org.bouncycastle.asn1.x500.RDN[]"
-          uuid: "getDisplayNameFromCertificate_rDN[]1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "rdn"
-      modelFingerprint: "9721CD15C1B884EE74D662C537446858"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bouncycastle.asn1.x500.RDN"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bouncycastle.asn1.x500.RDN"
-        uuid: "getDisplayNameFromCertificate_rDN1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "rdn"
-        name: "getFirst"
-        parameters: []
-        signature: "getFirst(): AttributeTypeAndValue"
-        returnValue:
-          sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
-            target: "org.bouncycastle.asn1.x500.AttributeTypeAndValue"
-            onlyPojoFunctions: false
-            builderPattern: false
-          valueType: "org.bouncycastle.asn1.x500.AttributeTypeAndValue"
-          uuid: "getDisplayNameFromCertificate_attributeTypeAndValue1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "pair"
-      modelFingerprint: "F1515DFA23D0C880672B7182A5BC997C"
-      index: 5
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bouncycastle.asn1.x500.AttributeTypeAndValue"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bouncycastle.asn1.x500.AttributeTypeAndValue"
-        uuid: "getDisplayNameFromCertificate_attributeTypeAndValue1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "pair"
-        name: "getValue"
-        parameters: []
-        signature: "getValue(): ASN1Encodable"
-        returnValue:
-          sapientType: "MOCK"
-          valueType: "org.bouncycastle.asn1.ASN1Encodable"
-          uuid: "getDisplayNameFromCertificate_aSN1Encodable1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      modelFingerprint: "399AA6E6252C1342866B1A3B017538F6"
-      index: 6
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bouncycastle.asn1.ASN1String"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bouncycastle.asn1.ASN1String"
-        uuid: "getDisplayNameFromCertificate_aSN1Encodable1checkCast"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bouncycastle.asn1.ASN1String"
-        name: "getString"
-        parameters: []
-        signature: "getString(): String"
-        returnValue:
-          sapientType: "NULL"
-          valueType: "java.lang.String"
-          uuid: "getDisplayNameFromCertificate_string2"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1025
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "pair"
-      modelFingerprint: "44B2323397E92CE2994E701FF205A4FB"
-      index: 7
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bouncycastle.asn1.x500.AttributeTypeAndValue"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bouncycastle.asn1.x500.AttributeTypeAndValue"
-        uuid: "getDisplayNameFromCertificate_attributeTypeAndValue1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "pair"
-        name: "getType"
-        parameters: []
-        signature: "getType(): ASN1ObjectIdentifier"
-        returnValue:
-          sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
-            target: "org.bouncycastle.asn1.ASN1ObjectIdentifier"
-            onlyPojoFunctions: false
-            builderPattern: false
-          valueType: "org.bouncycastle.asn1.ASN1ObjectIdentifier"
-          uuid: "getDisplayNameFromCertificate_aSN1ObjectIdentifier1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "certificate"
-      modelFingerprint: "D6711EA36A5E5E78CD34B9404FA86E48"
-      index: 8
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 1
-      value:
-        sapientType: "NULL"
-        suggestedContent: !<unknown_object>
-          target: "java.security.cert.X509Certificate"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "java.security.cert.X509Certificate"
-        uuid: "getDisplayNameFromCertificate_x509Certificate1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "certificate"
-        name: "getSubjectAlternativeNames"
-        parameters: []
-        throwsExceptions:
-        - "java.security.cert.CertificateParsingException"
-        signature: "getSubjectAlternativeNames(): Collection throws java.security.cert.CertificateParsingException"
-        returnValue:
-          sapientType: "COLLECTION"
-          content: !<collection>
-            collectionClass: "java.util.ArrayList"
-            parameters: []
-            values:
-            - sapientType: "COLLECTION"
-              content: !<collection>
-                collectionClass: "java.util.ArrayList"
-                parameters: []
-                values:
-                - sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
-                  suggestedContent: !<regular>
-                    value: 1
-                  valueType: "java.lang.Integer"
-                  uuid: "getDisplayNameFromCertificate_object2"
-                  fixed: false
-                  collectionUuid: "getDisplayNameFromCertificate_object1"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: true
-                - sapientType: "BASIC"
-                  content: !<regular>
-                    value: "return_of_getSubjectAlternativeNamesItem1Item2"
-                  valueType: "java.lang.String"
-                  uuid: "getDisplayNameFromCertificate_object3"
-                  fixed: false
-                  collectionUuid: "getDisplayNameFromCertificate_object1"
-                  equalsMethodPresent: true
-                  explicitCastNeeded: true
-              suggestedContent: !<collection>
-                collectionClass: "java.util.ArrayList"
-                parameters: []
-                values:
-                - sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
-                  suggestedContent: !<regular>
-                    value: 1
-                  valueType: "java.lang.Integer"
-                  uuid: "getDisplayNameFromCertificate_object2"
-                  fixed: false
-                  collectionUuid: "getDisplayNameFromCertificate_object1"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: true
-                - sapientType: "BASIC"
-                  content: !<regular>
-                    value: "return_of_getSubjectAlternativeNamesItem1Item2"
-                  valueType: "java.lang.String"
-                  uuid: "getDisplayNameFromCertificate_object3"
-                  fixed: false
-                  collectionUuid: "getDisplayNameFromCertificate_object1"
-                  equalsMethodPresent: true
-                  explicitCastNeeded: true
-              valueType: "java.util.List"
-              genericValueType: "?"
-              uuid: "getDisplayNameFromCertificate_object1"
-              fixed: false
-              collectionUuid: "getDisplayNameFromCertificate_collection1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          suggestedContent: !<collection>
-            collectionClass: "java.util.ArrayList"
-            parameters: []
-            values:
-            - sapientType: "COLLECTION"
-              content: !<collection>
-                collectionClass: "java.util.ArrayList"
-                parameters: []
-                values:
-                - sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
-                  suggestedContent: !<regular>
-                    value: 1
-                  valueType: "java.lang.Integer"
-                  uuid: "getDisplayNameFromCertificate_object2"
-                  fixed: false
-                  collectionUuid: "getDisplayNameFromCertificate_object1"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: true
-                - sapientType: "BASIC"
-                  content: !<regular>
-                    value: "return_of_getSubjectAlternativeNamesItem1Item2"
-                  valueType: "java.lang.String"
-                  uuid: "getDisplayNameFromCertificate_object3"
-                  fixed: false
-                  collectionUuid: "getDisplayNameFromCertificate_object1"
-                  equalsMethodPresent: true
-                  explicitCastNeeded: true
-              suggestedContent: !<collection>
-                collectionClass: "java.util.ArrayList"
-                parameters: []
-                values:
-                - sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
-                  suggestedContent: !<regular>
-                    value: 1
-                  valueType: "java.lang.Integer"
-                  uuid: "getDisplayNameFromCertificate_object2"
-                  fixed: false
-                  collectionUuid: "getDisplayNameFromCertificate_object1"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: true
-                - sapientType: "BASIC"
-                  content: !<regular>
-                    value: "return_of_getSubjectAlternativeNamesItem1Item2"
-                  valueType: "java.lang.String"
-                  uuid: "getDisplayNameFromCertificate_object3"
-                  fixed: false
-                  collectionUuid: "getDisplayNameFromCertificate_object1"
-                  equalsMethodPresent: true
-                  explicitCastNeeded: true
-              valueType: "java.util.List"
-              genericValueType: "?"
-              uuid: "getDisplayNameFromCertificate_object1"
-              fixed: false
-              collectionUuid: "getDisplayNameFromCertificate_collection1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          valueType: "java.util.Collection"
-          genericValueType: "java.util.List<?>"
-          uuid: "getDisplayNameFromCertificate_collection1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "var9"
-      modelFingerprint: "FED3DEDADCB87809D43AD3CD874BA30C"
-      index: 9
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 1
-      value:
-        sapientType: "ITERATOR"
-        content: !<iterator>
-          collectionValue:
-            sapientType: "COLLECTION"
-            content: !<collection>
-              collectionClass: "java.util.ArrayList"
-              parameters: []
-              values:
-              - sapientType: "COLLECTION"
-                content: !<collection>
-                  collectionClass: "java.util.ArrayList"
-                  parameters: []
-                  values:
-                  - sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "java.lang.Integer"
-                    uuid: "getDisplayNameFromCertificate_object2"
-                    fixed: false
-                    collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: false
-                    explicitCastNeeded: true
-                  - sapientType: "BASIC"
-                    content: !<regular>
-                      value: "return_of_getSubjectAlternativeNamesItem1Item2"
-                    valueType: "java.lang.String"
-                    uuid: "getDisplayNameFromCertificate_object3"
-                    fixed: false
-                    collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: true
-                    explicitCastNeeded: true
-                suggestedContent: !<collection>
-                  collectionClass: "java.util.ArrayList"
-                  parameters: []
-                  values:
-                  - sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "java.lang.Integer"
-                    uuid: "getDisplayNameFromCertificate_object2"
-                    fixed: false
-                    collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: false
-                    explicitCastNeeded: true
-                  - sapientType: "BASIC"
-                    content: !<regular>
-                      value: "return_of_getSubjectAlternativeNamesItem1Item2"
-                    valueType: "java.lang.String"
-                    uuid: "getDisplayNameFromCertificate_object3"
-                    fixed: false
-                    collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: true
-                    explicitCastNeeded: true
-                valueType: "java.util.List"
-                genericValueType: "?"
-                uuid: "getDisplayNameFromCertificate_object1"
-                fixed: false
-                collectionUuid: "getDisplayNameFromCertificate_collection1"
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            suggestedContent: !<collection>
-              collectionClass: "java.util.ArrayList"
-              parameters: []
-              values:
-              - sapientType: "COLLECTION"
-                content: !<collection>
-                  collectionClass: "java.util.ArrayList"
-                  parameters: []
-                  values:
-                  - sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "java.lang.Integer"
-                    uuid: "getDisplayNameFromCertificate_object2"
-                    fixed: false
-                    collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: false
-                    explicitCastNeeded: true
-                  - sapientType: "BASIC"
-                    content: !<regular>
-                      value: "return_of_getSubjectAlternativeNamesItem1Item2"
-                    valueType: "java.lang.String"
-                    uuid: "getDisplayNameFromCertificate_object3"
-                    fixed: false
-                    collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: true
-                    explicitCastNeeded: true
-                suggestedContent: !<collection>
-                  collectionClass: "java.util.ArrayList"
-                  parameters: []
-                  values:
-                  - sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "java.lang.Integer"
-                    uuid: "getDisplayNameFromCertificate_object2"
-                    fixed: false
-                    collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: false
-                    explicitCastNeeded: true
-                  - sapientType: "BASIC"
-                    content: !<regular>
-                      value: "return_of_getSubjectAlternativeNamesItem1Item2"
-                    valueType: "java.lang.String"
-                    uuid: "getDisplayNameFromCertificate_object3"
-                    fixed: false
-                    collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: true
-                    explicitCastNeeded: true
-                valueType: "java.util.List"
-                genericValueType: "?"
-                uuid: "getDisplayNameFromCertificate_object1"
-                fixed: false
-                collectionUuid: "getDisplayNameFromCertificate_collection1"
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            valueType: "java.util.Collection"
-            genericValueType: "java.util.List<?>"
-            uuid: "getDisplayNameFromCertificate_collection1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        valueType: "java.util.Iterator"
-        genericValueType: "java.util.List<?>"
-        uuid: "getDisplayNameFromCertificate_iterator1"
-        fixed: false
-        collectionUuid: "getDisplayNameFromCertificate_collection1"
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "var9"
-        name: "hasNext"
-        parameters: []
-        signature: "hasNext(): boolean"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: true
-          suggestedContent: !<regular>
-            value: true
-          valueType: "boolean"
-          uuid: "getDisplayNameFromCertificate_boolean3"
-          fixed: false
-          collectionUuid: "getDisplayNameFromCertificate_collection1"
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1025
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "var9"
-      modelFingerprint: "BA2378CDCBC2D4D26B126A27E8E3D5D8"
-      index: 10
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 1
-      value:
-        sapientType: "ITERATOR"
-        content: !<iterator>
-          collectionValue:
-            sapientType: "COLLECTION"
-            content: !<collection>
-              collectionClass: "java.util.ArrayList"
-              parameters: []
-              values:
-              - sapientType: "COLLECTION"
-                content: !<collection>
-                  collectionClass: "java.util.ArrayList"
-                  parameters: []
-                  values:
-                  - sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "java.lang.Integer"
-                    uuid: "getDisplayNameFromCertificate_object2"
-                    fixed: false
-                    collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: false
-                    explicitCastNeeded: true
-                  - sapientType: "BASIC"
-                    content: !<regular>
-                      value: "return_of_getSubjectAlternativeNamesItem1Item2"
-                    valueType: "java.lang.String"
-                    uuid: "getDisplayNameFromCertificate_object3"
-                    fixed: false
-                    collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: true
-                    explicitCastNeeded: true
-                suggestedContent: !<collection>
-                  collectionClass: "java.util.ArrayList"
-                  parameters: []
-                  values:
-                  - sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "java.lang.Integer"
-                    uuid: "getDisplayNameFromCertificate_object2"
-                    fixed: false
-                    collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: false
-                    explicitCastNeeded: true
-                  - sapientType: "BASIC"
-                    content: !<regular>
-                      value: "return_of_getSubjectAlternativeNamesItem1Item2"
-                    valueType: "java.lang.String"
-                    uuid: "getDisplayNameFromCertificate_object3"
-                    fixed: false
-                    collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: true
-                    explicitCastNeeded: true
-                valueType: "java.util.List"
-                genericValueType: "?"
-                uuid: "getDisplayNameFromCertificate_object1"
-                fixed: false
-                collectionUuid: "getDisplayNameFromCertificate_collection1"
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            suggestedContent: !<collection>
-              collectionClass: "java.util.ArrayList"
-              parameters: []
-              values:
-              - sapientType: "COLLECTION"
-                content: !<collection>
-                  collectionClass: "java.util.ArrayList"
-                  parameters: []
-                  values:
-                  - sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "java.lang.Integer"
-                    uuid: "getDisplayNameFromCertificate_object2"
-                    fixed: false
-                    collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: false
-                    explicitCastNeeded: true
-                  - sapientType: "BASIC"
-                    content: !<regular>
-                      value: "return_of_getSubjectAlternativeNamesItem1Item2"
-                    valueType: "java.lang.String"
-                    uuid: "getDisplayNameFromCertificate_object3"
-                    fixed: false
-                    collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: true
-                    explicitCastNeeded: true
-                suggestedContent: !<collection>
-                  collectionClass: "java.util.ArrayList"
-                  parameters: []
-                  values:
-                  - sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "java.lang.Integer"
-                    uuid: "getDisplayNameFromCertificate_object2"
-                    fixed: false
-                    collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: false
-                    explicitCastNeeded: true
-                  - sapientType: "BASIC"
-                    content: !<regular>
-                      value: "return_of_getSubjectAlternativeNamesItem1Item2"
-                    valueType: "java.lang.String"
-                    uuid: "getDisplayNameFromCertificate_object3"
-                    fixed: false
-                    collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: true
-                    explicitCastNeeded: true
-                valueType: "java.util.List"
-                genericValueType: "?"
-                uuid: "getDisplayNameFromCertificate_object1"
-                fixed: false
-                collectionUuid: "getDisplayNameFromCertificate_collection1"
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            valueType: "java.util.Collection"
-            genericValueType: "java.util.List<?>"
-            uuid: "getDisplayNameFromCertificate_collection1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        valueType: "java.util.Iterator"
-        genericValueType: "java.util.List<?>"
-        uuid: "getDisplayNameFromCertificate_iterator1"
-        fixed: false
-        collectionUuid: "getDisplayNameFromCertificate_collection1"
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "var9"
-        name: "next"
-        parameters: []
-        signature: "next(): Object"
-        returnValue:
-          sapientType: "COLLECTION"
-          content: !<collection>
-            collectionClass: "java.util.ArrayList"
-            parameters: []
-            values:
-            - sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "java.lang.Integer"
-              uuid: "getDisplayNameFromCertificate_object2"
-              fixed: false
-              collectionUuid: "getDisplayNameFromCertificate_object1"
-              equalsMethodPresent: false
-              explicitCastNeeded: true
-            - sapientType: "BASIC"
-              content: !<regular>
-                value: "return_of_getSubjectAlternativeNamesItem1Item2"
-              valueType: "java.lang.String"
-              uuid: "getDisplayNameFromCertificate_object3"
-              fixed: false
-              collectionUuid: "getDisplayNameFromCertificate_object1"
-              equalsMethodPresent: true
-              explicitCastNeeded: true
-          suggestedContent: !<collection>
-            collectionClass: "java.util.ArrayList"
-            parameters: []
-            values:
-            - sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "java.lang.Integer"
-              uuid: "getDisplayNameFromCertificate_object2"
-              fixed: false
-              collectionUuid: "getDisplayNameFromCertificate_object1"
-              equalsMethodPresent: false
-              explicitCastNeeded: true
-            - sapientType: "BASIC"
-              content: !<regular>
-                value: "return_of_getSubjectAlternativeNamesItem1Item2"
-              valueType: "java.lang.String"
-              uuid: "getDisplayNameFromCertificate_object3"
-              fixed: false
-              collectionUuid: "getDisplayNameFromCertificate_object1"
-              equalsMethodPresent: true
-              explicitCastNeeded: true
-          valueType: "java.util.List"
-          genericValueType: "?"
-          uuid: "getDisplayNameFromCertificate_object1"
-          fixed: false
-          collectionUuid: "getDisplayNameFromCertificate_collection1"
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1025
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "var9"
-      modelFingerprint: "B94C018197DB6ED4DA63D538EDB6E806"
-      index: 11
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 1
-      value:
-        sapientType: "ITERATOR"
-        content: !<iterator>
-          collectionValue:
-            sapientType: "COLLECTION"
-            content: !<collection>
-              collectionClass: "java.util.ArrayList"
-              parameters: []
-              values:
-              - sapientType: "COLLECTION"
-                content: !<collection>
-                  collectionClass: "java.util.ArrayList"
-                  parameters: []
-                  values:
-                  - sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "java.lang.Integer"
-                    uuid: "getDisplayNameFromCertificate_object2"
-                    fixed: false
-                    collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: false
-                    explicitCastNeeded: true
-                  - sapientType: "BASIC"
-                    content: !<regular>
-                      value: "return_of_getSubjectAlternativeNamesItem1Item2"
-                    valueType: "java.lang.String"
-                    uuid: "getDisplayNameFromCertificate_object3"
-                    fixed: false
-                    collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: true
-                    explicitCastNeeded: true
-                suggestedContent: !<collection>
-                  collectionClass: "java.util.ArrayList"
-                  parameters: []
-                  values:
-                  - sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "java.lang.Integer"
-                    uuid: "getDisplayNameFromCertificate_object2"
-                    fixed: false
-                    collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: false
-                    explicitCastNeeded: true
-                  - sapientType: "BASIC"
-                    content: !<regular>
-                      value: "return_of_getSubjectAlternativeNamesItem1Item2"
-                    valueType: "java.lang.String"
-                    uuid: "getDisplayNameFromCertificate_object3"
-                    fixed: false
-                    collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: true
-                    explicitCastNeeded: true
-                valueType: "java.util.List"
-                genericValueType: "?"
-                uuid: "getDisplayNameFromCertificate_object1"
-                fixed: false
-                collectionUuid: "getDisplayNameFromCertificate_collection1"
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            suggestedContent: !<collection>
-              collectionClass: "java.util.ArrayList"
-              parameters: []
-              values:
-              - sapientType: "COLLECTION"
-                content: !<collection>
-                  collectionClass: "java.util.ArrayList"
-                  parameters: []
-                  values:
-                  - sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "java.lang.Integer"
-                    uuid: "getDisplayNameFromCertificate_object2"
-                    fixed: false
-                    collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: false
-                    explicitCastNeeded: true
-                  - sapientType: "BASIC"
-                    content: !<regular>
-                      value: "return_of_getSubjectAlternativeNamesItem1Item2"
-                    valueType: "java.lang.String"
-                    uuid: "getDisplayNameFromCertificate_object3"
-                    fixed: false
-                    collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: true
-                    explicitCastNeeded: true
-                suggestedContent: !<collection>
-                  collectionClass: "java.util.ArrayList"
-                  parameters: []
-                  values:
-                  - sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "java.lang.Integer"
-                    uuid: "getDisplayNameFromCertificate_object2"
-                    fixed: false
-                    collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: false
-                    explicitCastNeeded: true
-                  - sapientType: "BASIC"
-                    content: !<regular>
-                      value: "return_of_getSubjectAlternativeNamesItem1Item2"
-                    valueType: "java.lang.String"
-                    uuid: "getDisplayNameFromCertificate_object3"
-                    fixed: false
-                    collectionUuid: "getDisplayNameFromCertificate_object1"
-                    equalsMethodPresent: true
-                    explicitCastNeeded: true
-                valueType: "java.util.List"
-                genericValueType: "?"
-                uuid: "getDisplayNameFromCertificate_object1"
-                fixed: false
-                collectionUuid: "getDisplayNameFromCertificate_collection1"
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            valueType: "java.util.Collection"
-            genericValueType: "java.util.List<?>"
-            uuid: "getDisplayNameFromCertificate_collection1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        valueType: "java.util.Iterator"
-        genericValueType: "java.util.List<?>"
-        uuid: "getDisplayNameFromCertificate_iterator1"
-        fixed: false
-        collectionUuid: "getDisplayNameFromCertificate_collection1"
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "var9"
-        name: "hasNext"
-        parameters: []
-        signature: "hasNext(): boolean"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: false
-          suggestedContent: !<regular>
-            value: false
-          valueType: "boolean"
-          uuid: "getDisplayNameFromCertificate_boolean4"
-          fixed: false
-          collectionUuid: "getDisplayNameFromCertificate_collection1"
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1025
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
-      index: 12
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: "return_of_getSubjectAlternativeNamesItem1Item2"
-        valueType: "java.lang.String"
-        uuid: "getDisplayNameFromCertificate_object3"
-        fixed: false
-        collectionUuid: "getDisplayNameFromCertificate_object1"
-        equalsMethodPresent: true
-        explicitCastNeeded: true
-      staticReadMethodForField: false
-      filledByUser: false
     uuid: "d8013215-cc85-3759-a685-56efad6e3827"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     variablesCouldNotBeIsolated: "name"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path33"
     pathIdForUser: "path25"
     testPathName: "getDisplayNameFromCertificateWhenSubjectAlternativeNameGet0NotEquals1AndCaughtCertificateParsingExceptionAndOrgIsNullAn"
@@ -2786,7 +2785,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "2A5045BDFAE41C714627414ACF418923"
+    modelFingerprint: "A064BF34C3EE7FCA9B220F525BF52472"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -2920,7 +2919,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "rdn"
-      modelFingerprint: "9721CD15C1B884EE74D662C537446858"
+      modelFingerprint: "F69DEAC697D5678B3DD3D116241D1B4F"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -2957,7 +2956,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "pair"
-      modelFingerprint: "F1515DFA23D0C880672B7182A5BC997C"
+      modelFingerprint: "D23500840699EBFDC58061A0020C007E"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -2989,7 +2988,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "D6DBE64C951C8A54980812F566A53043"
+      modelFingerprint: "0F8F89D34EDB1088E1C6654B96A9551F"
       index: 6
       ignored: false
       nestedInLoop: true
@@ -3024,7 +3023,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "pair"
-      modelFingerprint: "44B2323397E92CE2994E701FF205A4FB"
+      modelFingerprint: "EE7B4FCDC4A0A2D5FEBAB4A304BA1651"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -3061,7 +3060,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "certificate"
-      modelFingerprint: "FE66396F2520B71174D1905D680E3142"
+      modelFingerprint: "6E4570126747A45826E33B9FAF338727"
       index: 8
       ignored: false
       nestedInLoop: false
@@ -3219,7 +3218,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "var9"
-      modelFingerprint: "D19009C03FC63CDFE2A0615538177222"
+      modelFingerprint: "9CCF0B1C5895B3E368DCADA479AB7DBB"
       index: 9
       ignored: false
       nestedInLoop: true
@@ -3373,8 +3372,6 @@ methods:
           sapientType: "BASIC"
           content: !<regular>
             value: true
-          suggestedContent: !<regular>
-            value: true
           valueType: "boolean"
           uuid: "getDisplayNameFromCertificate_boolean4"
           fixed: false
@@ -3386,7 +3383,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "var9"
-      modelFingerprint: "92C26F644506DB8DC19F493515B71AA9"
+      modelFingerprint: "BDCF2544B3EE3F534943AA08718AFF35"
       index: 10
       ignored: false
       nestedInLoop: true
@@ -3598,7 +3595,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "var9"
-      modelFingerprint: "D394C76917006A687D18E7C1BB9C73B0"
+      modelFingerprint: "6CD53588DC6C53CCD97ACBB463967D78"
       index: 11
       ignored: false
       nestedInLoop: true
@@ -3765,7 +3762,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      modelFingerprint: "FF22E18EEBDF66F3A4CFE59A0E75C07E"
       index: 12
       ignored: false
       nestedInLoop: false
@@ -3773,7 +3770,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "result1"
+          value: "return_of_getString1"
         valueType: "java.lang.String"
         uuid: "getDisplayNameFromCertificate_object4"
         fixed: false
@@ -3784,11 +3781,12 @@ methods:
       filledByUser: false
     uuid: "7ef183af-fd44-3d97-9888-8c11c10023e6"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     variablesCouldNotBeIsolated: "name"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path39"
     pathIdForUser: "path34"
     testPathName: "getDisplayNameFromCertificateWhenCaughtCertificateParsingExceptionAndOrgIsNotNullAndNotWithLocation"
@@ -3796,7 +3794,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "284CE24E9CA11CE3523F2E99D7D133D6"
+    modelFingerprint: "5E168C14460D3EFECA0850D0E4987F1F"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -3827,7 +3825,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "withLocation"
-      modelFingerprint: "51CEC06C0223E6BC6136269E88E213BC"
+      modelFingerprint: "C5ECEDE35CFA6A5DB46E0283497FE3A6"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -3835,9 +3833,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: false
+          value: true
         suggestedContent: !<regular>
-          value: false
+          value: true
         valueType: "boolean"
         uuid: "getDisplayNameFromCertificate_boolean1"
         fixed: false
@@ -3930,7 +3928,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "rdn"
-      modelFingerprint: "9721CD15C1B884EE74D662C537446858"
+      modelFingerprint: "F69DEAC697D5678B3DD3D116241D1B4F"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -3967,7 +3965,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "pair"
-      modelFingerprint: "F1515DFA23D0C880672B7182A5BC997C"
+      modelFingerprint: "D23500840699EBFDC58061A0020C007E"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -3999,7 +3997,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "3E781DD8112C2943B8A8F0BAC11651F4"
+      modelFingerprint: "9792A10D4A7F211B66D366208AF9C9D6"
       index: 6
       ignored: false
       nestedInLoop: true
@@ -4034,7 +4032,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "pair"
-      modelFingerprint: "44B2323397E92CE2994E701FF205A4FB"
+      modelFingerprint: "EE7B4FCDC4A0A2D5FEBAB4A304BA1651"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -4071,7 +4069,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "certificate"
-      modelFingerprint: "FE66396F2520B71174D1905D680E3142"
+      modelFingerprint: "6E4570126747A45826E33B9FAF338727"
       index: 8
       ignored: false
       nestedInLoop: false
@@ -4229,7 +4227,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "var9"
-      modelFingerprint: "D19009C03FC63CDFE2A0615538177222"
+      modelFingerprint: "9CCF0B1C5895B3E368DCADA479AB7DBB"
       index: 9
       ignored: false
       nestedInLoop: true
@@ -4383,8 +4381,6 @@ methods:
           sapientType: "BASIC"
           content: !<regular>
             value: true
-          suggestedContent: !<regular>
-            value: true
           valueType: "boolean"
           uuid: "getDisplayNameFromCertificate_boolean4"
           fixed: false
@@ -4396,7 +4392,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "var9"
-      modelFingerprint: "92C26F644506DB8DC19F493515B71AA9"
+      modelFingerprint: "BDCF2544B3EE3F534943AA08718AFF35"
       index: 10
       ignored: false
       nestedInLoop: true
@@ -4608,7 +4604,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "var9"
-      modelFingerprint: "D394C76917006A687D18E7C1BB9C73B0"
+      modelFingerprint: "6CD53588DC6C53CCD97ACBB463967D78"
       index: 11
       ignored: false
       nestedInLoop: true
@@ -4775,7 +4771,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      modelFingerprint: "FF22E18EEBDF66F3A4CFE59A0E75C07E"
       index: 12
       ignored: false
       nestedInLoop: false
@@ -4785,19 +4781,21 @@ methods:
         content: !<regular>
           value: "return_of_getString1"
         valueType: "java.lang.String"
-        uuid: "getDisplayNameFromCertificate_string2"
+        uuid: "getDisplayNameFromCertificate_object4"
         fixed: false
+        collectionUuid: "getDisplayNameFromCertificate_list1"
         equalsMethodPresent: true
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     uuid: "d6b0cd47-df61-3f50-a735-1d3c5c7e8b9f"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     variablesCouldNotBeIsolated: "name"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path40"
     pathIdForUser: "path35"
     testPathName: "getDisplayNameFromCertificateWhenSubjectAlternativeNameGet0NotEquals1AndCaughtCertificateParsingExceptionAndOrgIsNotNul"
@@ -5151,10 +5149,10 @@ methods:
       filledByUser: false
     uuid: "35d016a0-3c7d-33f3-b548-d9fc0510bc0d"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "loadKeyStoreWhenKeystorePasswordIsNull"
@@ -5242,10 +5240,10 @@ methods:
       filledByUser: false
     uuid: "85a902d1-23ca-3d00-9a51-8b5328cf477b"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path5"
     pathIdForUser: "path3"
     testPathName: "loadKeyStoreWhenCaughtIOExceptionOrGeneralSecurityExceptionThrowsKeyStoreException"
@@ -5528,10 +5526,10 @@ methods:
       filledByUser: false
     uuid: "8d373036-7da5-3e2e-b4d6-2bfe866fbd36"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path6"
     pathIdForUser: "path5"
     testPathName: "loadKeyStoreWhenKeystorePasswordIsNullAndCaughtIOExceptionOrGeneralSecurityExceptionThrowsKeyStoreException"
@@ -5766,10 +5764,10 @@ methods:
       filledByUser: false
     uuid: "420b4466-523a-3024-bb2d-6860e3e3e4e4"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path4"
     pathIdForUser: "path6"
     testPathName: "loadKeyStoreWhenKeystorePasswordIsNullAndCaughtIOException"

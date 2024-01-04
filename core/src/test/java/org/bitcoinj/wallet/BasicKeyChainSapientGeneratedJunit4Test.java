@@ -109,13 +109,17 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
     @Rule()
     public ExpectedException thrown = ExpectedException.none();
 
+    private final ByteString byteString2Mock = mock(ByteString.class);
+
     //Sapient generated method id: ${5263e1c8-6ee4-3528-9e17-7641d8067bcf}
     @Test()
     public void getKeyCrypterTest() {
         //Arrange Statement(s)
         BasicKeyChain target = new BasicKeyChain(keyCrypterMock);
+
         //Act Statement(s)
         KeyCrypter result = target.getKeyCrypter();
+
         //Assert statement(s)
         assertThat(result, equalTo(keyCrypterMock));
     }
@@ -252,8 +256,10 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
     public void getKeys1Test() {
         //Arrange Statement(s)
         BasicKeyChain target = new BasicKeyChain(keyCrypterMock);
+
         //Act Statement(s)
         List<ECKey> result = target.getKeys();
+
         //Assert statement(s)
         assertThat(result.size(), equalTo(0));
     }
@@ -266,8 +272,10 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
         List list = new ArrayList<>();
         doReturn(0).when(target).importKeys(list);
         ECKey[] eCKeyArray = new ECKey[]{};
+
         //Act Statement(s)
         int result = target.importKeys(eCKeyArray);
+
         //Assert statement(s)
         assertThat(result, equalTo(0));
         verify(target).importKeys(list);
@@ -289,8 +297,10 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
         thrown.expectMessage(keyCrypterException.getMessage());
         List<ECKey> anyList = new ArrayList<>();
         anyList.add(keyMock);
+
         //Act Statement(s)
         target.importKeys(anyList);
+
         //Assert statement(s)
         verify(keyMock).isEncrypted();
     }
@@ -312,8 +322,10 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
         thrown.expectMessage(keyCrypterException.getMessage());
         List<ECKey> anyList = new ArrayList<>();
         anyList.add(keyMock);
+
         //Act Statement(s)
         target.importKeys(anyList);
+
         //Assert statement(s)
         verify(keyMock).isEncrypted();
     }
@@ -342,8 +354,10 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
         thrown.expectMessage(keyCrypterException.getMessage());
         List<ECKey> anyList = new ArrayList<>();
         anyList.add(keyMock);
+
         //Act Statement(s)
         target.importKeys(anyList);
+
         //Assert statement(s)
         verify(keyMock).isEncrypted();
         verify(keyMock, times(2)).getKeyCrypter();
@@ -366,8 +380,10 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         BasicKeyChain target = new BasicKeyChain(keyCrypterMock);
         List<ECKey> anyList = new ArrayList<>();
+
         //Act Statement(s)
         int result = target.importKeys(anyList);
+
         //Assert statement(s)
         assertThat(result, equalTo(0));
     }
@@ -390,8 +406,10 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         BasicKeyChain target = new BasicKeyChain(keyCrypterMock);
         List<ECKey> anyList = new ArrayList<>();
+
         //Act Statement(s)
         int result = target.importKeys(anyList);
+
         //Assert statement(s)
         assertThat(result, equalTo(0));
     }
@@ -409,8 +427,10 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
         KeyCrypterException keyCrypterException = new KeyCrypterException("Key is encrypted but chain is not");
         thrown.expect(KeyCrypterException.class);
         thrown.expectMessage(keyCrypterException.getMessage());
+
         //Act Statement(s)
         target.importKey(keyMock);
+
         //Assert statement(s)
         verify(keyMock).isEncrypted();
     }
@@ -429,8 +449,10 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
         KeyCrypterException keyCrypterException = new KeyCrypterException("Key is not encrypted but chain is");
         thrown.expect(KeyCrypterException.class);
         thrown.expectMessage(keyCrypterException.getMessage());
+
         //Act Statement(s)
         target.importKey(keyMock);
+
         //Assert statement(s)
         verify(keyMock).isEncrypted();
     }
@@ -449,8 +471,10 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
         doReturn(false).when(keyMock).isEncrypted();
         BasicKeyChain target = spy(new BasicKeyChain((KeyCrypter) null));
         doReturn(true).when(target).hasKey(keyMock);
+
         //Act Statement(s)
         target.importKey(keyMock);
+
         //Assert statement(s)
         verify(keyMock).isEncrypted();
         verify(target).hasKey(keyMock);
@@ -477,8 +501,10 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
         KeyCrypterException keyCrypterException = new KeyCrypterException("Key encrypted under different parameters to chain");
         thrown.expect(KeyCrypterException.class);
         thrown.expectMessage(keyCrypterException.getMessage());
+
         //Act Statement(s)
         target.importKey(keyMock);
+
         //Assert statement(s)
         verify(keyMock).isEncrypted();
         verify(keyMock, times(2)).getKeyCrypter();
@@ -594,8 +620,10 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
     public void numKeysTest() {
         //Arrange Statement(s)
         BasicKeyChain target = new BasicKeyChain(keyCrypterMock);
+
         //Act Statement(s)
         int result = target.numKeys();
+
         //Assert statement(s)
         assertThat(result, equalTo(0));
     }
@@ -608,8 +636,10 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         BasicKeyChain target = new BasicKeyChain(keyCrypterMock);
+
         //Act Statement(s)
         BasicKeyChain.State result = target.isWatching();
+
         //Assert statement(s)
         assertThat(result, equalTo(BasicKeyChain.State.EMPTY));
     }
@@ -647,11 +677,13 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
     public void earliestKeyCreationTimeTest() {
         //Arrange Statement(s)
         BasicKeyChain target = new BasicKeyChain(keyCrypterMock);
+
         //Act Statement(s)
         Instant result = target.earliestKeyCreationTime();
         Optional optional = Optional.empty();
         Instant instant2 = Instant.MAX;
         Instant instant = (Instant) optional.orElse(instant2);
+
         //Assert statement(s)
         assertThat(result, equalTo(instant));
     }
@@ -661,8 +693,10 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
     public void getListenersTest() {
         //Arrange Statement(s)
         BasicKeyChain target = new BasicKeyChain(keyCrypterMock);
+
         //Act Statement(s)
         List<ListenerRegistration<KeyChainEventListener>> result = target.getListeners();
+
         //Assert statement(s)
         assertThat(result.size(), equalTo(0));
     }
@@ -676,8 +710,8 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(BasicKeyChain.class)).thenReturn(null);
+            ReentrantLock reentrantLock = Threading.lock(BasicKeyChain.class);
+            threading.when(() -> Threading.lock(BasicKeyChain.class)).thenReturn(reentrantLock);
             BasicKeyChain target = new BasicKeyChain(keyCrypterMock);
             //Act Statement(s)
             Map<ECKey, Protos.Key.Builder> result = target.serializeToEditableProtobufs();
@@ -697,14 +731,14 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Protos.Key keyMock = mock(Protos.Key.class);
         try (MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(BasicKeyChain.class)).thenReturn(null);
+            ReentrantLock reentrantLock = Threading.lock(BasicKeyChain.class);
+            threading.when(() -> Threading.lock(BasicKeyChain.class)).thenReturn(reentrantLock);
             BasicKeyChain target = new BasicKeyChain(keyCrypterMock);
             //Act Statement(s)
             List<Protos.Key> result = target.serializeToProtobuf();
-            Protos.Key key = Protos.Key.getDefaultInstance();
-            List<Protos.Key> protosKeyResultList = new ArrayList<>(Arrays.asList(key));
+            List<Protos.Key> protosKeyResultList = new ArrayList<>(Arrays.asList(keyMock));
             //Assert statement(s)
             assertThat(result.size(), equalTo(protosKeyResultList.size()));
             assertThat(result, containsInRelativeOrder(protosKeyResultList.toArray()));
@@ -733,16 +767,18 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
             doReturn(encryptedDataMock, encryptedDataMock2).when(itemMock).getEncryptedData();
             doReturn(Protos.Wallet.EncryptionType.ENCRYPTED_SCRYPT_AES).when(itemMock).getEncryptionType();
             protosKey.when(() -> Protos.Key.newBuilder()).thenReturn(protosKeyBuilderMock);
-            doReturn(protosKeyBuilderMock2).when(protosKeyBuilderMock).setCreationTimestamp(1703223913238L);
-            Protos.EncryptedData encryptedData = Protos.EncryptedData.getDefaultInstance();
+            Protos.Key.Builder builder = protosKeyBuilderMock.setCreationTimestamp(1L);
+            doReturn(builder).when(protosKeyBuilderMock).setCreationTimestamp(1704369246637L);
+            Protos.EncryptedData encryptedData = protosKeyBuilderMock.getEncryptedData();
             doReturn(encryptedData).when(protosKeyBuilderMock).getEncryptedData();
-            doReturn(protosKeyBuilderMock3).when(protosKeyBuilderMock).setEncryptedData(protosEncryptedDataBuilderMock);
-            doReturn(protosKeyBuilderMock4).when(protosKeyBuilderMock).setType(Protos.Key.Type.ENCRYPTED_SCRYPT_AES);
+            doReturn(protosKeyBuilderMock2).when(protosKeyBuilderMock).setEncryptedData((Protos.EncryptedData.Builder) any());
+            Protos.EncryptedData.Builder builder2 = protosEncryptedDataBuilderMock.setInitialisationVector(byteString2Mock);
+            doReturn(builder2).when(protosEncryptedDataBuilderMock).setInitialisationVector(byteString2Mock);
+            doReturn(protosKeyBuilderMock3).when(protosKeyBuilderMock).setType(Protos.Key.Type.ENCRYPTED_SCRYPT_AES);
             byte[] byteArray = new byte[]{};
             byteString.when(() -> ByteString.copyFrom(byteArray)).thenReturn(byteStringMock);
-            ByteString byteString2 = ByteString.empty();
             byte[] byteArray2 = new byte[]{};
-            byteString.when(() -> ByteString.copyFrom(byteArray2)).thenReturn(byteString2);
+            byteString.when(() -> ByteString.copyFrom(byteArray2)).thenReturn(byteString2Mock);
             //Act Statement(s)
             Protos.Key.Builder result = BasicKeyChain.serializeEncryptableItem(itemMock);
             //Assert statement(s)
@@ -752,9 +788,10 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
             verify(itemMock, times(2)).getEncryptedData();
             verify(itemMock).getEncryptionType();
             protosKey.verify(() -> Protos.Key.newBuilder(), atLeast(1));
-            verify(protosKeyBuilderMock).setCreationTimestamp(1703223913238L);
+            verify(protosKeyBuilderMock).setCreationTimestamp(1704369246637L);
             verify(protosKeyBuilderMock).getEncryptedData();
-            verify(protosKeyBuilderMock).setEncryptedData(protosEncryptedDataBuilderMock);
+            verify(protosKeyBuilderMock).setEncryptedData((Protos.EncryptedData.Builder) any());
+            verify(protosEncryptedDataBuilderMock).setInitialisationVector(byteString2Mock);
             verify(protosKeyBuilderMock).setType(Protos.Key.Type.ENCRYPTED_SCRYPT_AES);
             byteString.verify(() -> ByteString.copyFrom(byteArray), atLeast(1));
             byteString.verify(() -> ByteString.copyFrom(byteArray2), atLeast(1));
@@ -774,39 +811,44 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
              MockedStatic<Protos.Key> protosKey = mockStatic(Protos.Key.class)) {
             Instant instant = Instant.now();
             doReturn(Optional.of(instant)).when(itemMock).creationTime();
             doReturn(true).when(itemMock).isEncrypted();
             doReturn(encryptedDataMock, encryptedDataMock2).when(itemMock).getEncryptedData();
-            doReturn(Protos.Wallet.EncryptionType.ENCRYPTED_SCRYPT_AES).when(itemMock).getEncryptionType();
+            doReturn(Protos.Wallet.EncryptionType.UNENCRYPTED).when(itemMock).getEncryptionType();
             protosKey.when(() -> Protos.Key.newBuilder()).thenReturn(protosKeyBuilderMock);
-            doReturn(protosKeyBuilderMock2).when(protosKeyBuilderMock).setCreationTimestamp(1703223913504L);
-            Protos.EncryptedData encryptedData = Protos.EncryptedData.getDefaultInstance();
+            Protos.Key.Builder builder = protosKeyBuilderMock.setCreationTimestamp(1L);
+            doReturn(builder).when(protosKeyBuilderMock).setCreationTimestamp(1704369246938L);
+            Protos.EncryptedData encryptedData = protosKeyBuilderMock.getEncryptedData();
             doReturn(encryptedData).when(protosKeyBuilderMock).getEncryptedData();
-            doReturn(protosKeyBuilderMock3).when(protosKeyBuilderMock).setEncryptedData(protosEncryptedDataBuilderMock);
-            doReturn(protosKeyBuilderMock4).when(protosKeyBuilderMock).setType(Protos.Key.Type.ENCRYPTED_SCRYPT_AES);
+            doReturn(protosKeyBuilderMock2).when(protosKeyBuilderMock).setEncryptedData((Protos.EncryptedData.Builder) any());
+            Protos.EncryptedData.Builder builder2 = protosEncryptedDataBuilderMock.setInitialisationVector(byteString2Mock);
+            doReturn(builder2).when(protosEncryptedDataBuilderMock).setInitialisationVector(byteString2Mock);
             byte[] byteArray = new byte[]{};
             byteString.when(() -> ByteString.copyFrom(byteArray)).thenReturn(byteStringMock);
-            ByteString byteString2 = ByteString.empty();
             byte[] byteArray2 = new byte[]{};
-            byteString.when(() -> ByteString.copyFrom(byteArray2)).thenReturn(byteString2);
+            byteString.when(() -> ByteString.copyFrom(byteArray2)).thenReturn(byteString2Mock);
+            IllegalStateException illegalStateException = new IllegalStateException();
+            preconditions.when(() -> Preconditions.checkState(false)).thenThrow(illegalStateException);
+            thrown.expect(IllegalStateException.class);
             //Act Statement(s)
-            Protos.Key.Builder result = BasicKeyChain.serializeEncryptableItem(itemMock);
+            BasicKeyChain.serializeEncryptableItem(itemMock);
             //Assert statement(s)
-            assertThat(result, equalTo(protosKeyBuilderMock));
             verify(itemMock).creationTime();
             verify(itemMock).isEncrypted();
             verify(itemMock, times(2)).getEncryptedData();
             verify(itemMock).getEncryptionType();
             protosKey.verify(() -> Protos.Key.newBuilder(), atLeast(1));
-            verify(protosKeyBuilderMock).setCreationTimestamp(1703223913504L);
+            verify(protosKeyBuilderMock).setCreationTimestamp(1704369246938L);
             verify(protosKeyBuilderMock).getEncryptedData();
-            verify(protosKeyBuilderMock).setEncryptedData(protosEncryptedDataBuilderMock);
-            verify(protosKeyBuilderMock).setType(Protos.Key.Type.ENCRYPTED_SCRYPT_AES);
+            verify(protosKeyBuilderMock).setEncryptedData((Protos.EncryptedData.Builder) any());
+            verify(protosEncryptedDataBuilderMock).setInitialisationVector(byteString2Mock);
             byteString.verify(() -> ByteString.copyFrom(byteArray), atLeast(1));
             byteString.verify(() -> ByteString.copyFrom(byteArray2), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
         }
     }
 
@@ -818,33 +860,53 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
          * (item.isEncrypted()) : true
          * (item.getEncryptedData() != null) : false
          * (secret != null) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Protos.EncryptedData protosEncryptedDataMock = mock(Protos.EncryptedData.class);
+        Protos.EncryptedData.Builder protosEncryptedDataBuilderMock2 = mock(Protos.EncryptedData.Builder.class);
+        Protos.EncryptedData.Builder protosEncryptedDataBuilderMock3 = mock(Protos.EncryptedData.Builder.class);
         try (MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
              MockedStatic<Protos.Key> protosKey = mockStatic(Protos.Key.class)) {
             Instant instant = Instant.now();
             doReturn(Optional.of(instant)).when(itemMock).creationTime();
-            doReturn(false).when(itemMock).isEncrypted();
-            byte[] byteArray = new byte[]{};
-            doReturn(byteArray).when(itemMock).getSecretBytes();
+            doReturn(true).when(itemMock).isEncrypted();
+            doReturn(encryptedDataMock, encryptedDataMock2).when(itemMock).getEncryptedData();
+            doReturn(Protos.Wallet.EncryptionType.ENCRYPTED_SCRYPT_AES).when(itemMock).getEncryptionType();
             protosKey.when(() -> Protos.Key.newBuilder()).thenReturn(protosKeyBuilderMock);
-            doReturn(protosKeyBuilderMock2).when(protosKeyBuilderMock).setCreationTimestamp(1703223914143L);
-            doReturn(protosKeyBuilderMock3).when(protosKeyBuilderMock).setSecretBytes((ByteString) any());
-            doReturn(protosKeyBuilderMock4).when(protosKeyBuilderMock).setType(Protos.Key.Type.ORIGINAL);
-            ByteString byteString2 = ByteString.empty();
+            Protos.Key.Builder builder = protosKeyBuilderMock.setCreationTimestamp(1L);
+            doReturn(builder).when(protosKeyBuilderMock).setCreationTimestamp(1704369247295L);
+            doReturn(protosEncryptedDataMock).when(protosKeyBuilderMock).getEncryptedData();
+            doReturn(protosEncryptedDataBuilderMock).when(protosEncryptedDataMock).toBuilder();
+            doReturn(protosEncryptedDataBuilderMock2).when(protosEncryptedDataBuilderMock).setEncryptedPrivateKey((ByteString) any());
+            doReturn(protosEncryptedDataBuilderMock3).when(protosEncryptedDataBuilderMock2).setInitialisationVector(byteStringMock);
+            doReturn(protosKeyBuilderMock2).when(protosKeyBuilderMock).setEncryptedData(protosEncryptedDataBuilderMock3);
+            doReturn(protosKeyBuilderMock3).when(protosKeyBuilderMock).setType(Protos.Key.Type.ENCRYPTED_SCRYPT_AES);
+            byte[] byteArray = new byte[]{};
+            ByteString byteString2 = ByteString.copyFrom(byteArray);
             byteString.when(() -> ByteString.copyFrom(byteArray)).thenReturn(byteString2);
+            byte[] byteArray2 = new byte[]{};
+            byteString.when(() -> ByteString.copyFrom(byteArray2)).thenReturn(byteStringMock);
             //Act Statement(s)
             Protos.Key.Builder result = BasicKeyChain.serializeEncryptableItem(itemMock);
             //Assert statement(s)
             assertThat(result, equalTo(protosKeyBuilderMock));
             verify(itemMock).creationTime();
             verify(itemMock).isEncrypted();
-            verify(itemMock).getSecretBytes();
+            verify(itemMock, times(2)).getEncryptedData();
+            verify(itemMock).getEncryptionType();
             protosKey.verify(() -> Protos.Key.newBuilder(), atLeast(1));
-            verify(protosKeyBuilderMock).setCreationTimestamp(1703223914143L);
-            verify(protosKeyBuilderMock).setSecretBytes((ByteString) any());
-            verify(protosKeyBuilderMock).setType(Protos.Key.Type.ORIGINAL);
+            verify(protosKeyBuilderMock).setCreationTimestamp(1704369247295L);
+            verify(protosKeyBuilderMock).getEncryptedData();
+            verify(protosEncryptedDataMock).toBuilder();
+            verify(protosEncryptedDataBuilderMock).setEncryptedPrivateKey((ByteString) any());
+            verify(protosEncryptedDataBuilderMock2).setInitialisationVector(byteStringMock);
+            verify(protosKeyBuilderMock).setEncryptedData(protosEncryptedDataBuilderMock3);
+            verify(protosKeyBuilderMock).setType(Protos.Key.Type.ENCRYPTED_SCRYPT_AES);
             byteString.verify(() -> ByteString.copyFrom(byteArray), atLeast(1));
+            byteString.verify(() -> ByteString.copyFrom(byteArray2), atLeast(1));
         }
     }
 
@@ -862,8 +924,8 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(BasicKeyChain.class)).thenReturn(null);
+            ReentrantLock reentrantLock = Threading.lock(BasicKeyChain.class);
+            threading.when(() -> Threading.lock(BasicKeyChain.class)).thenReturn(reentrantLock);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             //Act Statement(s)
             BasicKeyChain result = BasicKeyChain.fromProtobufUnencrypted(protosKeyList);
@@ -889,8 +951,8 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(BasicKeyChain.class)).thenReturn(null);
+            ReentrantLock reentrantLock = Threading.lock(BasicKeyChain.class);
+            threading.when(() -> Threading.lock(BasicKeyChain.class)).thenReturn(reentrantLock);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             //Act Statement(s)
             BasicKeyChain result = BasicKeyChain.fromProtobufEncrypted(protosKeyList, keyCrypterMock2);
@@ -909,8 +971,10 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         BasicKeyChain target = spy(new BasicKeyChain(keyCrypterMock));
         doNothing().when(target).addEventListener(keyChainEventListenerMock, (Executor) null);
+
         //Act Statement(s)
         target.addEventListener(keyChainEventListenerMock);
+
         //Assert statement(s)
         verify(target).addEventListener(keyChainEventListenerMock, (Executor) null);
     }
@@ -923,6 +987,7 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
         BasicKeyChain target = new BasicKeyChain(keyCrypterMock);
         //TODO: Needs initialization with real value
         Executor executor = null;
+
         //Act Statement(s)
         target.addEventListener(keyChainEventListenerMock, executor);
     }
@@ -933,6 +998,7 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         BasicKeyChain target = new BasicKeyChain(keyCrypterMock);
         ListenerRegistration<KeyChainEventListener> listenerRegistrationMock = mock(ListenerRegistration.class);
+
         //Act Statement(s)
         target.addEventListener(listenerRegistrationMock);
     }
@@ -982,8 +1048,10 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         BasicKeyChain target = spy(new BasicKeyChain(keyCrypterMock));
         doReturn(basicKeyChainMock).when(target).toEncrypted((KeyCrypterScrypt) any(), (AesKey) any());
+
         //Act Statement(s)
         BasicKeyChain result = target.toEncrypted((CharSequence) "toEncrypted_charSequence1");
+
         //Assert statement(s)
         assertThat(result, equalTo(basicKeyChainMock));
         verify(target).toEncrypted((KeyCrypterScrypt) any(), (AesKey) any());
@@ -998,8 +1066,10 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         BasicKeyChain target = spy(new BasicKeyChain(keyCrypterMock));
         doReturn(basicKeyChainMock).when(target).toEncrypted((KeyCrypterScrypt) any(), (AesKey) any());
+
         //Act Statement(s)
         BasicKeyChain result = target.toEncrypted((CharSequence) "toEncrypted_charSequence1");
+
         //Assert statement(s)
         assertThat(result, equalTo(basicKeyChainMock));
         verify(target).toEncrypted((KeyCrypterScrypt) any(), (AesKey) any());
@@ -1032,8 +1102,10 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
         BasicKeyChain target = spy(new BasicKeyChain(keyCrypterMock));
         doReturn(aesKeyMock).when(keyCrypterMock).deriveKey("toDecrypted_charSequence1");
         doReturn(basicKeyChainMock).when(target).toDecrypted(aesKeyMock);
+
         //Act Statement(s)
         BasicKeyChain result = target.toDecrypted("toDecrypted_charSequence1");
+
         //Assert statement(s)
         assertThat(result, equalTo(basicKeyChainMock));
         verify(keyCrypterMock).deriveKey("toDecrypted_charSequence1");
@@ -1088,8 +1160,10 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         BasicKeyChain target = new BasicKeyChain(keyCrypterMock);
+
         //Act Statement(s)
         boolean result = target.checkAESKey(aesKeyMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }
@@ -1102,9 +1176,11 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         BasicKeyChain target = new BasicKeyChain(keyCrypterMock);
+
         //Act Statement(s)
         BloomFilter result = target.getFilter(0, Double.parseDouble("0.0"), 0);
         BloomFilter bloomFilter = new BloomFilter(0, Double.parseDouble("0.0"), 0);
+
         //Assert statement(s)
         assertThat(result, equalTo(bloomFilter));
     }
@@ -1114,8 +1190,10 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
     public void numBloomFilterEntriesTest() {
         //Arrange Statement(s)
         BasicKeyChain target = new BasicKeyChain(keyCrypterMock);
+
         //Act Statement(s)
         int result = target.numBloomFilterEntries();
+
         //Assert statement(s)
         assertThat(result, equalTo(0));
     }
@@ -1129,9 +1207,11 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         BasicKeyChain target = new BasicKeyChain(keyCrypterMock);
         Instant instant = Instant.now();
+
         //Act Statement(s)
         Optional<ECKey> result = target.findOldestKeyAfter(instant);
         Optional<ECKey> eCKeyOptional = Optional.empty();
+
         //Assert statement(s)
         assertThat(result, equalTo(eCKeyOptional));
     }
@@ -1142,8 +1222,10 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         BasicKeyChain target = spy(new BasicKeyChain(keyCrypterMock));
         doReturn(Optional.empty()).when(target).findOldestKeyAfter((Instant) any());
+
         //Act Statement(s)
         ECKey result = target.findOldestKeyAfter(1L);
+
         //Assert statement(s)
         assertThat(result, is(nullValue()));
         verify(target).findOldestKeyAfter((Instant) any());
@@ -1158,8 +1240,10 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         BasicKeyChain target = new BasicKeyChain(keyCrypterMock);
         Instant instant = Instant.now();
+
         //Act Statement(s)
         List<ECKey> result = target.findKeysBefore(instant);
+
         //Assert statement(s)
         assertThat(result.size(), equalTo(0));
     }
@@ -1171,8 +1255,10 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
         BasicKeyChain target = spy(new BasicKeyChain(keyCrypterMock));
         List<ECKey> eCKeyList = new ArrayList<>();
         doReturn(eCKeyList).when(target).findKeysBefore((Instant) any());
+
         //Act Statement(s)
         List<ECKey> result = target.findKeysBefore(1L);
+
         //Assert statement(s)
         assertThat(result, equalTo(eCKeyList));
         verify(target).findKeysBefore((Instant) any());
@@ -1198,14 +1284,14 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
             eCKeyList.add(eCKeyMock);
             doReturn(eCKeyList).when(target).getKeys();
             StringBuilder stringBuilder = new StringBuilder();
-            doNothing().when(eCKeyMock).formatKeyWithAddress(true, aesKeyMock, stringBuilder, networkMock, null, "imported");
+            doNothing().when(eCKeyMock).formatKeyWithAddress(false, aesKeyMock, stringBuilder, networkMock, null, "imported");
             //Act Statement(s)
-            String result = target.toString(true, aesKeyMock, networkMock);
+            String result = target.toString(false, aesKeyMock, networkMock);
             //Assert statement(s)
             assertThat(result, equalTo(""));
             threading.verify(() -> Threading.lock(BasicKeyChain.class), atLeast(1));
             verify(target).getKeys();
-            verify(eCKeyMock).formatKeyWithAddress(true, aesKeyMock, stringBuilder, networkMock, null, "imported");
+            verify(eCKeyMock).formatKeyWithAddress(false, aesKeyMock, stringBuilder, networkMock, null, "imported");
         }
     }
 
@@ -1217,8 +1303,10 @@ public class BasicKeyChainSapientGeneratedJunit4Test {
         doReturn(networkMock).when(paramsMock).network();
         BasicKeyChain target = spy(new BasicKeyChain(keyCrypterMock));
         doReturn("return_of_toString1").when(target).toString(false, aesKeyMock, networkMock);
+
         //Act Statement(s)
         String result = target.toString(false, aesKeyMock, paramsMock);
+
         //Assert statement(s)
         assertThat(result, equalTo("return_of_toString1"));
         verify(paramsMock).network();

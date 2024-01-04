@@ -16,13 +16,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "8AC1419ECE671BC55B335E44B65D5870"
+    modelFingerprint: "0E1568F2E6DD1953EBCB1D1B6BE68864"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "params"
-      modelFingerprint: "E0EF88BA87AFA7038E4ECBB65610119E"
+      modelFingerprint: "63D09E7DFEAB15F7E65DCACCC8B23152"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -37,11 +37,11 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "test"
+                value: "A"
               suggestedContent: !<regular>
-                value: "test"
+                value: "A"
               valueType: "java.lang.String"
-              uuid: "openStream_networkParameters1-id"
+              uuid: "openStream_string1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -52,12 +52,10 @@ methods:
           - name: "id"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "test"
               suggestedContent: !<regular>
-                value: "test"
+                value: "A"
               valueType: "java.lang.String"
-              uuid: "openStream_networkParameters1-id"
+              uuid: "openStream_string1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -70,7 +68,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "params"
-      modelFingerprint: "8C1275DCDB4C4F8B7598306D442977A4"
+      modelFingerprint: "6AD23DAF401195BF91795739596D9AF5"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -85,11 +83,11 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "test"
+                value: "A"
               suggestedContent: !<regular>
-                value: "test"
+                value: "A"
               valueType: "java.lang.String"
-              uuid: "openStream_networkParameters1-id"
+              uuid: "openStream_string1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -100,12 +98,10 @@ methods:
           - name: "id"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "test"
               suggestedContent: !<regular>
-                value: "test"
+                value: "A"
               valueType: "java.lang.String"
-              uuid: "openStream_networkParameters1-id"
+              uuid: "openStream_string1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -122,9 +118,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "test"
+            value: "A"
           suggestedContent: !<regular>
-            value: "test"
+            value: "A"
           valueType: "java.lang.String"
           uuid: "openStream_string1"
           fixed: false
@@ -151,11 +147,11 @@ methods:
       filledByUser: false
     uuid: "1357c875-a8e5-369a-b570-474f9b7f3e31"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getCheckpointBefore"
     returnType: "org.bitcoinj.core.StoredBlock"
@@ -868,10 +864,10 @@ methods:
       filledByUser: false
     uuid: "0fe979c8-f2cf-36cf-b76b-50a9fc2d193f"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "getCheckpointBeforeWhenEntryIsNull"
@@ -1753,10 +1749,10 @@ methods:
       filledByUser: false
     uuid: "9d890a48-63b3-38a9-a52a-bd9634be8341"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path3"
     testPathName: "getCheckpointBeforeWhenCaughtVerificationExceptionThrowsRuntimeException"
@@ -2483,10 +2479,10 @@ methods:
       filledByUser: false
     uuid: "3f40c0d0-507d-3f89-8efa-99f285ca7d5c"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path4"
     pathIdForUser: "path4"
     testPathName: "getCheckpointBeforeWhenEntryIsNullAndCaughtVerificationExceptionThrowsRuntimeException"
@@ -3329,10 +3325,10 @@ methods:
       filledByUser: false
     uuid: "7fb8506f-ec3e-3aa0-8f64-9e09e66a9b0d"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getCheckpointBefore"
     returnType: "org.bitcoinj.core.StoredBlock"
@@ -4035,10 +4031,10 @@ methods:
       filledByUser: false
     uuid: "6f6250dc-6ac8-3030-a416-c656001ef4a6"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "numCheckpoints"
     returnType: "int"
@@ -4658,10 +4654,10 @@ methods:
       filledByUser: false
     uuid: "b34c1b6b-9796-3cbc-898b-b19e439950e0"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getDataHash"
     returnType: "org.bitcoinj.base.Sha256Hash"
@@ -4996,10 +4992,10 @@ methods:
       filledByUser: false
     uuid: "074db5cd-ec19-335c-bbc6-afb8b0270ce1"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path7"
     pathIdForUser: "path3"
     testPathName: "checkpointWhenDefaultBranchAndDefaultBranchThrowsIOException"
@@ -5007,7 +5003,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "3FCD8C31F678EB02270A987FFACA3699"
+    modelFingerprint: "F9EF933CBD0BD340F8010E662ED41292"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -5136,7 +5132,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "TimeUtils"
-      modelFingerprint: "438D41FE7713BDBD393099B6205955C3"
+      modelFingerprint: "718FD812B2D032CEFE701A0057C676F2"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -5240,7 +5236,7 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "2023-12-15T04:49:01.796362Z"
+            value: "2023-12-28T11:22:16.413083Z"
           valueType: "java.lang.String"
           uuid: "checkpoint_string1"
           fixed: false
@@ -5528,10 +5524,10 @@ methods:
       filledByUser: false
     uuid: "9ec088d2-8183-3fc2-b875-fa137e005887"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path8"
     pathIdForUser: "path5"
     testPathName: "checkpointWhenTEXTUAL_MAGICNotEqualsMagicAndDefaultBranchThrowsIOException"
@@ -6229,10 +6225,10 @@ methods:
       filledByUser: false
     uuid: "b7104d2c-7226-3a2e-a881-0b43e6957b1a"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path4"
     pathIdForUser: "path6"
     testPathName: "checkpointWhenNumCheckpointsNotGreaterThan0ThrowsIOException"
@@ -6510,10 +6506,10 @@ methods:
       filledByUser: false
     uuid: "e3a46af6-86fa-3a85-b424-e81a4fb05e10"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path7"
     testPathName: "checkpointWhenILessThanNumCheckpoints"
@@ -7840,11 +7836,11 @@ methods:
       filledByUser: false
     uuid: "734bd72b-a3c1-32cd-93f2-3d0cbf55b4f4"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     variablesCouldNotBeIsolated: "manager"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path5"
     pathIdForUser: "path8"
     testPathName: "checkpointWhenNumCheckpointsGreaterThan0AndILessThanNumCheckpoints"

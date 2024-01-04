@@ -63,8 +63,10 @@ public class DecryptingKeyBagSapientGeneratedJunit4Test {
         DecryptingKeyBag target = new DecryptingKeyBag(targetMock, aesKeyMock);
         byte[] byteArray = new byte[]{};
         doReturn(null).when(targetMock).findKeyFromPubKeyHash(byteArray, ScriptType.P2PKH);
+
         //Act Statement(s)
         ECKey result = target.findKeyFromPubKeyHash(byteArray, ScriptType.P2PKH);
+
         //Assert statement(s)
         assertThat(result, is(nullValue()));
         verify(targetMock).findKeyFromPubKeyHash(byteArray, ScriptType.P2PKH);
@@ -82,8 +84,10 @@ public class DecryptingKeyBagSapientGeneratedJunit4Test {
         byte[] byteArray = new byte[]{};
         doReturn(eCKeyMock).when(targetMock).findKeyFromPubKeyHash(byteArray, ScriptType.P2PKH);
         doReturn(false).when(eCKeyMock).isEncrypted();
+
         //Act Statement(s)
         ECKey result = target.findKeyFromPubKeyHash(byteArray, ScriptType.P2PKH);
+
         //Assert statement(s)
         assertThat(result, equalTo(eCKeyMock));
         verify(targetMock).findKeyFromPubKeyHash(byteArray, ScriptType.P2PKH);
@@ -104,8 +108,10 @@ public class DecryptingKeyBagSapientGeneratedJunit4Test {
         doReturn(eCKeyMock).when(targetMock).findKeyFromPubKeyHash(byteArray, ScriptType.P2PKH);
         doReturn(true).when(eCKeyMock).isEncrypted();
         thrown.expect(ECKey.KeyIsEncryptedException.class);
+
         //Act Statement(s)
         target.findKeyFromPubKeyHash(byteArray, ScriptType.P2PKH);
+
         //Assert statement(s)
         verify(targetMock).findKeyFromPubKeyHash(byteArray, ScriptType.P2PKH);
         verify(eCKeyMock).isEncrypted();
@@ -125,8 +131,10 @@ public class DecryptingKeyBagSapientGeneratedJunit4Test {
         doReturn(eCKeyMock).when(targetMock).findKeyFromPubKeyHash(byteArray, ScriptType.P2PKH);
         doReturn(true).when(eCKeyMock).isEncrypted();
         doReturn(eCKeyMock2).when(eCKeyMock).decrypt(aesKeyMock);
+
         //Act Statement(s)
         ECKey result = target.findKeyFromPubKeyHash(byteArray, ScriptType.P2PKH);
+
         //Assert statement(s)
         assertThat(result, equalTo(eCKeyMock2));
         verify(targetMock).findKeyFromPubKeyHash(byteArray, ScriptType.P2PKH);
@@ -144,8 +152,10 @@ public class DecryptingKeyBagSapientGeneratedJunit4Test {
         DecryptingKeyBag target = new DecryptingKeyBag(targetMock, aesKeyMock);
         byte[] byteArray = new byte[]{};
         doReturn(null).when(targetMock).findKeyFromPubKey(byteArray);
+
         //Act Statement(s)
         ECKey result = target.findKeyFromPubKey(byteArray);
+
         //Assert statement(s)
         assertThat(result, is(nullValue()));
         verify(targetMock).findKeyFromPubKey(byteArray);
@@ -163,8 +173,10 @@ public class DecryptingKeyBagSapientGeneratedJunit4Test {
         byte[] byteArray = new byte[]{};
         doReturn(eCKeyMock).when(targetMock).findKeyFromPubKey(byteArray);
         doReturn(false).when(eCKeyMock).isEncrypted();
+
         //Act Statement(s)
         ECKey result = target.findKeyFromPubKey(byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo(eCKeyMock));
         verify(targetMock).findKeyFromPubKey(byteArray);
@@ -185,8 +197,10 @@ public class DecryptingKeyBagSapientGeneratedJunit4Test {
         doReturn(eCKeyMock).when(targetMock).findKeyFromPubKey(byteArray);
         doReturn(true).when(eCKeyMock).isEncrypted();
         thrown.expect(ECKey.KeyIsEncryptedException.class);
+
         //Act Statement(s)
         target.findKeyFromPubKey(byteArray);
+
         //Assert statement(s)
         verify(targetMock).findKeyFromPubKey(byteArray);
         verify(eCKeyMock).isEncrypted();
@@ -206,8 +220,10 @@ public class DecryptingKeyBagSapientGeneratedJunit4Test {
         doReturn(eCKeyMock).when(targetMock).findKeyFromPubKey(byteArray);
         doReturn(true).when(eCKeyMock).isEncrypted();
         doReturn(eCKeyMock2).when(eCKeyMock).decrypt(aesKeyMock);
+
         //Act Statement(s)
         ECKey result = target.findKeyFromPubKey(byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo(eCKeyMock2));
         verify(targetMock).findKeyFromPubKey(byteArray);
@@ -230,7 +246,7 @@ public class DecryptingKeyBagSapientGeneratedJunit4Test {
         try (MockedStatic<RedeemData> redeemData = mockStatic(RedeemData.class)) {
             redeemData.when(() -> RedeemData.of(anyList(), eq(scriptMock))).thenReturn(redeemDataMock);
             DecryptingKeyBag target = new DecryptingKeyBag(targetMock, aesKeyMock);
-            byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3};
+            byte[] byteArray = new byte[]{};
             doReturn(redeemDataMock2).when(targetMock).findRedeemDataFromScriptHash(byteArray);
             //Act Statement(s)
             RedeemData result = target.findRedeemDataFromScriptHash(byteArray);
@@ -259,7 +275,7 @@ public class DecryptingKeyBagSapientGeneratedJunit4Test {
             redeemData.when(() -> RedeemData.of(anyList(), eq(scriptMock))).thenReturn(redeemDataMock);
             doReturn(false).when(keyMock).isEncrypted();
             DecryptingKeyBag target = new DecryptingKeyBag(targetMock, aesKeyMock);
-            byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3};
+            byte[] byteArray = new byte[]{};
             doReturn(redeemDataMock2).when(targetMock).findRedeemDataFromScriptHash(byteArray);
             //Act Statement(s)
             RedeemData result = target.findRedeemDataFromScriptHash(byteArray);
@@ -286,13 +302,13 @@ public class DecryptingKeyBagSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DecryptingKeyBag target = new DecryptingKeyBag(targetMock, (AesKey) null);
-        List list = new ArrayList<>();
-        RedeemData redeemData = RedeemData.of(list, scriptMock);
-        byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3};
-        doReturn(redeemData).when(targetMock).findRedeemDataFromScriptHash(byteArray);
+        byte[] byteArray = new byte[]{};
+        doReturn(redeemDataMock).when(targetMock).findRedeemDataFromScriptHash(byteArray);
         thrown.expect(ECKey.KeyIsEncryptedException.class);
+
         //Act Statement(s)
         target.findRedeemDataFromScriptHash(byteArray);
+
         //Assert statement(s)
         verify(targetMock).findRedeemDataFromScriptHash(byteArray);
     }
@@ -315,8 +331,10 @@ public class DecryptingKeyBagSapientGeneratedJunit4Test {
         byte[] byteArray = new byte[]{};
         doReturn(redeemDataMock).when(targetMock).findRedeemDataFromScriptHash(byteArray);
         thrown.expect(ECKey.KeyIsEncryptedException.class);
+
         //Act Statement(s)
         target.findRedeemDataFromScriptHash(byteArray);
+
         //Assert statement(s)
         verify(targetMock).findRedeemDataFromScriptHash(byteArray);
     }

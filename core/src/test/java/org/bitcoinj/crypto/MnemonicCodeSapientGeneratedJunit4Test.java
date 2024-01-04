@@ -62,9 +62,11 @@ public class MnemonicCodeSapientGeneratedJunit4Test {
         InternalUtils.Joiner SPACE_JOINERMock = mock(InternalUtils.Joiner.class);
         List<String> stringList = new ArrayList<>();
         doReturn("B").when(SPACE_JOINERMock).join(stringList);
+
         //Act Statement(s)
         byte[] result = MnemonicCode.toSeed(stringList, "A");
         byte[] byteResultArray = new byte[]{(byte) 102, (byte) 64, (byte) -79, (byte) -70, (byte) -21, (byte) 103, (byte) -127, (byte) -29, (byte) -112, (byte) 37, (byte) -101, (byte) -50, (byte) 91, (byte) 82, (byte) 102, (byte) -52, (byte) -86, (byte) -57, (byte) 93, (byte) -29, (byte) 4, (byte) 15, (byte) 63, (byte) -57, (byte) -53, (byte) 114, (byte) -61, (byte) 64, (byte) 97, (byte) 58, (byte) 9, (byte) 60, (byte) -92, (byte) 38, (byte) 73, (byte) -21, (byte) 116, (byte) -4, (byte) 54, (byte) 10, (byte) -9, (byte) 26, (byte) -61, (byte) 58, (byte) 126, (byte) -56, (byte) -66, (byte) -91, (byte) -21, (byte) 127, (byte) 113, (byte) -120, (byte) -64, (byte) -85, (byte) 120, (byte) -1, (byte) -32, (byte) 24, (byte) 40, (byte) 20, (byte) 102, (byte) 66, (byte) -128, (byte) -95};
+
         //Assert statement(s)
         assertThat(result, equalTo(byteResultArray));
         verify(SPACE_JOINERMock).join(stringList);
@@ -86,6 +88,7 @@ public class MnemonicCodeSapientGeneratedJunit4Test {
         MnemonicCode target = new MnemonicCode(inputStream, "wordListDigest1");
         thrown.expect(MnemonicException.MnemonicLengthException.class);
         List<String> stringList = new ArrayList<>();
+
         //Act Statement(s)
         target.toEntropy(stringList);
     }
@@ -107,6 +110,7 @@ public class MnemonicCodeSapientGeneratedJunit4Test {
         MnemonicCode target = new MnemonicCode(inputStream, "wordListDigest1");
         thrown.expect(MnemonicException.MnemonicLengthException.class);
         List<String> stringList = new ArrayList<>();
+
         //Act Statement(s)
         target.toEntropy(stringList);
     }
@@ -130,6 +134,7 @@ public class MnemonicCodeSapientGeneratedJunit4Test {
         MnemonicCode target = new MnemonicCode(inputStream, "wordListDigest1");
         thrown.expect(MnemonicException.MnemonicWordException.class);
         List<String> stringList = new ArrayList<>();
+
         //Act Statement(s)
         target.toEntropy(stringList);
     }
@@ -267,8 +272,10 @@ public class MnemonicCodeSapientGeneratedJunit4Test {
         byte[] byteArray = new byte[]{};
         List<String> stringList = new ArrayList<>();
         doReturn(byteArray).when(target).toEntropy(stringList);
+
         //Act Statement(s)
         target.check(stringList);
+
         //Assert statement(s)
         verify(target).toEntropy(stringList);
     }

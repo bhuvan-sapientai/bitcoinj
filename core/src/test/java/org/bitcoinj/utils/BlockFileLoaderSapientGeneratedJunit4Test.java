@@ -129,6 +129,7 @@ public class BlockFileLoaderSapientGeneratedJunit4Test {
         RuntimeException runtimeException = new RuntimeException("Default blocks directory not found");
         thrown.expect(RuntimeException.class);
         thrown.expectMessage(runtimeException.getMessage());
+
         //Act Statement(s)
         BlockFileLoader.defaultBlocksDir();
     }
@@ -296,7 +297,7 @@ public class BlockFileLoaderSapientGeneratedJunit4Test {
             File file = new File("pathname1");
             BlockFileLoader target = new BlockFileLoader(networkMock, file);
             thrown.expect(RuntimeException.class);
-            thrown.expectCause(isA(MessageSerializer.class));
+            thrown.expectCause(isA(FileNotFoundException.class));
             File file2 = new File("pathname1");
             //Act Statement(s)
             target.fileBlockSpliterator(file2);

@@ -97,6 +97,8 @@ public class WalletAppKitSapientGeneratedJunit4Test {
 
     @After()
     public void afterTest() throws Exception {
+        if (autoCloseableMocks != null)
+            autoCloseableMocks.close();
         /*if (autoCloseableMocks != null)
     autoCloseableMocks.close();*/
     }
@@ -105,34 +107,34 @@ public class WalletAppKitSapientGeneratedJunit4Test {
     @Test()
     public void launchTest() {
         //Arrange Statement(s)
-        //WalletAppKit walletAppKitMock = mock(WalletAppKit.class);
-        /*try (MockedStatic<WalletAppKit> walletAppKit = mockStatic(WalletAppKit.class, CALLS_REAL_METHODS)) {
-    File file = new File("pathname1");
-    walletAppKit.when(() -> WalletAppKit.launch(BitcoinNetwork.MAINNET, file, "filePrefix1", 0)).thenReturn(walletAppKitMock);
-    //Act Statement(s)
-    WalletAppKit result = WalletAppKit.launch(BitcoinNetwork.MAINNET, file, "filePrefix1");
-    //Assert statement(s)
-    assertThat(result, equalTo(walletAppKitMock));
-    walletAppKit.verify(() -> WalletAppKit.launch(BitcoinNetwork.MAINNET, file, "filePrefix1", 0), atLeast(1));
-}*/
+        WalletAppKit walletAppKitMock = mock(WalletAppKit.class);
+        try (MockedStatic<WalletAppKit> walletAppKit = mockStatic(WalletAppKit.class, CALLS_REAL_METHODS)) {
+            File file = new File("pathname1");
+            walletAppKit.when(() -> WalletAppKit.launch(BitcoinNetwork.MAINNET, file, "filePrefix1", 0)).thenReturn(walletAppKitMock);
+            //Act Statement(s)
+            WalletAppKit result = WalletAppKit.launch(BitcoinNetwork.MAINNET, file, "filePrefix1");
+            //Assert statement(s)
+            assertThat(result, equalTo(walletAppKitMock));
+            walletAppKit.verify(() -> WalletAppKit.launch(BitcoinNetwork.MAINNET, file, "filePrefix1", 0), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${366756c9-a66c-3984-84be-12a2e1c252bf}
     @Test()
     public void launch1Test() {
         //Arrange Statement(s)
-        //WalletAppKit walletAppKitMock = mock(WalletAppKit.class);
-        /*try (MockedStatic<WalletAppKit> walletAppKit = mockStatic(WalletAppKit.class, CALLS_REAL_METHODS)) {
-    File file = new File("pathname1");
-    walletAppKit.when(() -> WalletAppKit.launch(BitcoinNetwork.MAINNET, file, "filePrefix1", (Consumer) null, 0)).thenReturn(walletAppKitMock);
-    //TODO: Needs initialization with real value
-    Consumer consumer = null;
-    //Act Statement(s)
-    WalletAppKit result = WalletAppKit.launch(BitcoinNetwork.MAINNET, file, "filePrefix1", consumer);
-    //Assert statement(s)
-    assertThat(result, equalTo(walletAppKitMock));
-    walletAppKit.verify(() -> WalletAppKit.launch(BitcoinNetwork.MAINNET, file, "filePrefix1", (Consumer) null, 0), atLeast(1));
-}*/
+        WalletAppKit walletAppKitMock = mock(WalletAppKit.class);
+        try (MockedStatic<WalletAppKit> walletAppKit = mockStatic(WalletAppKit.class, CALLS_REAL_METHODS)) {
+            File file = new File("pathname1");
+            walletAppKit.when(() -> WalletAppKit.launch(BitcoinNetwork.MAINNET, file, "filePrefix1", (Consumer) null, 0)).thenReturn(walletAppKitMock);
+            //TODO: Needs initialization with real value
+            Consumer consumer = null;
+            //Act Statement(s)
+            WalletAppKit result = WalletAppKit.launch(BitcoinNetwork.MAINNET, file, "filePrefix1", consumer);
+            //Assert statement(s)
+            assertThat(result, equalTo(walletAppKitMock));
+            walletAppKit.verify(() -> WalletAppKit.launch(BitcoinNetwork.MAINNET, file, "filePrefix1", (Consumer) null, 0), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${e5b004ca-d3aa-3dd2-b3e6-07a5267d5abc}
@@ -159,11 +161,12 @@ public class WalletAppKitSapientGeneratedJunit4Test {
          * (maxConnections > 0) : true
          */
         //Arrange Statement(s)
-        //thrown.expect(NullPointerException.class);
-        //File file = new File("pathname1");
-        //Consumer consumer = null;
+        thrown.expect(NullPointerException.class);
+        File file = new File("pathname1");
+        Consumer consumer = null;
+
         //Act Statement(s)
-        //WalletAppKit.launch(BitcoinNetwork.REGTEST, file, "filePrefix1", consumer, 1);
+        WalletAppKit.launch(BitcoinNetwork.REGTEST, file, "filePrefix1", consumer, 1);
     }
 
     //Sapient generated method id: ${dbf7e57d-25b2-3b5c-a0aa-2edbecc71a75}
@@ -176,27 +179,23 @@ public class WalletAppKitSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
-        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-    IllegalStateException illegalStateException = new IllegalStateException();
-    preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
-    NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-    File file = new File("pathname1");
-    target = new WalletAppKit(networkParameters, ScriptType.P2PKH, keyChainGroupStructureMock, file, "prefix");
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    thrown.expect(IllegalStateException.class);
-    InetAddress inetAddress = InetAddress.getLoopbackAddress();
-    PeerAddress peerAddress = PeerAddress.simple(inetAddress, 0);
-    PeerAddress[][] peerAddressArray3 = new PeerAddress[][] { peerAddress };
-    PeerAddress peerAddress2 = PeerAddress.simple(inetAddress, 0);
-    PeerAddress[][] peerAddressArray4 = new PeerAddress[][] { peerAddress2 };
-    PeerAddress[] peerAddressArray2 = new PeerAddress[] { peerAddressArray3, peerAddressArray4 };
-    PeerAddress[] peerAddressArray = new PeerAddress[] { peerAddressArray2 };
-    //Act Statement(s)
-    target.setPeerNodes(peerAddressArray);
-    //Assert statement(s)
-    preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
-}*/
+        NetworkParameters paramsMock = mock(NetworkParameters.class);
+        KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
+            IllegalStateException illegalStateException = new IllegalStateException();
+            preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
+            File file = new File("pathname1");
+            target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1");
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            thrown.expect(IllegalStateException.class);
+            PeerAddress[] peerAddressArray = new PeerAddress[]{};
+            //Act Statement(s)
+            target.setPeerNodes(peerAddressArray);
+            //Assert statement(s)
+            verify(paramsMock).network();
+            preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
+        }
     }
 
     //Sapient generated method id: ${ca932129-6290-34d4-89ae-e65900f0bf1a}
@@ -209,63 +208,53 @@ public class WalletAppKitSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //NetworkParameters paramsMock = mock(NetworkParameters.class);
-        //KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
-        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-    MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-    doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
-    NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-    networkParameters.when(() -> NetworkParameters.of(BitcoinNetwork.MAINNET)).thenReturn(networkParameters2);
-    IllegalStateException illegalStateException = new IllegalStateException();
-    preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
-    File file = new File("pathname1");
-    target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "wallet");
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    thrown.expect(IllegalStateException.class);
-    InetAddress inetAddress = InetAddress.getLoopbackAddress();
-    PeerAddress peerAddress = PeerAddress.simple(inetAddress, 0);
-    PeerAddress[][] peerAddressArray3 = new PeerAddress[][] { peerAddress };
-    PeerAddress peerAddress2 = PeerAddress.simple(inetAddress, 0);
-    PeerAddress[][] peerAddressArray4 = new PeerAddress[][] { peerAddress2 };
-    PeerAddress[] peerAddressArray2 = new PeerAddress[] { peerAddressArray3, peerAddressArray4 };
-    PeerAddress[] peerAddressArray = new PeerAddress[] { peerAddressArray2 };
-    //Act Statement(s)
-    target.setPeerNodes(peerAddressArray);
-    //Assert statement(s)
-    verify(paramsMock).network();
-    networkParameters.verify(() -> NetworkParameters.of(BitcoinNetwork.MAINNET), atLeast(1));
-    preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
-}*/
+        NetworkParameters paramsMock = mock(NetworkParameters.class);
+        KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
+            IllegalStateException illegalStateException = new IllegalStateException();
+            preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
+            File file = new File("pathname1");
+            target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1");
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            thrown.expect(IllegalStateException.class);
+            PeerAddress[] peerAddressArray = new PeerAddress[]{};
+            //Act Statement(s)
+            target.setPeerNodes(peerAddressArray);
+            //Assert statement(s)
+            verify(paramsMock).network();
+            preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
+        }
     }
 
     //Sapient generated method id: ${c842249d-095e-37ed-9870-47f67538ad7c}
     @Test()
     public void connectToLocalHostTest() {
         //Arrange Statement(s)
-        //NetworkParameters paramsMock = mock(NetworkParameters.class);
-        //NetworkParameters networkParametersMock = mock(NetworkParameters.class);
-        //PeerAddress peerAddressMock = mock(PeerAddress.class);
-        //KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
-        //WalletAppKit walletAppKitMock = mock(WalletAppKit.class);
-        /*try (MockedStatic<PeerAddress> peerAddress = mockStatic(PeerAddress.class);
-    MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-    doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
-    networkParameters.when(() -> NetworkParameters.of(BitcoinNetwork.MAINNET)).thenReturn(networkParametersMock);
-    peerAddress.when(() -> PeerAddress.localhost(networkParametersMock)).thenReturn(peerAddressMock);
-    File file = new File("pathname1");
-    target = spy(new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1"));
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    PeerAddress[] peerAddressArray = new PeerAddress[] { peerAddressMock };
-    doReturn(walletAppKitMock).when(target).setPeerNodes(peerAddressArray);
-    //Act Statement(s)
-    WalletAppKit result = target.connectToLocalHost();
-    //Assert statement(s)
-    assertThat(result, equalTo(walletAppKitMock));
-    verify(paramsMock).network();
-    networkParameters.verify(() -> NetworkParameters.of(BitcoinNetwork.MAINNET), atLeast(1));
-    peerAddress.verify(() -> PeerAddress.localhost(networkParametersMock), atLeast(1));
-    verify(target).setPeerNodes(peerAddressArray);
-}*/
+        NetworkParameters paramsMock = mock(NetworkParameters.class);
+        NetworkParameters networkParametersMock = mock(NetworkParameters.class);
+        PeerAddress peerAddressMock = mock(PeerAddress.class);
+        KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
+        WalletAppKit walletAppKitMock = mock(WalletAppKit.class);
+        try (MockedStatic<PeerAddress> peerAddress = mockStatic(PeerAddress.class);
+             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
+            networkParameters.when(() -> NetworkParameters.of(BitcoinNetwork.MAINNET)).thenReturn(networkParametersMock);
+            peerAddress.when(() -> PeerAddress.localhost(networkParametersMock)).thenReturn(peerAddressMock);
+            File file = new File("pathname1");
+            target = spy(new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1"));
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            PeerAddress[] peerAddressArray = new PeerAddress[]{peerAddressMock};
+            doReturn(walletAppKitMock).when(target).setPeerNodes(peerAddressArray);
+            //Act Statement(s)
+            WalletAppKit result = target.connectToLocalHost();
+            //Assert statement(s)
+            assertThat(result, equalTo(walletAppKitMock));
+            verify(paramsMock).network();
+            networkParameters.verify(() -> NetworkParameters.of(BitcoinNetwork.MAINNET), atLeast(1));
+            peerAddress.verify(() -> PeerAddress.localhost(networkParametersMock), atLeast(1));
+            verify(target).setPeerNodes(peerAddressArray);
+        }
     }
 
     //Sapient generated method id: ${c091d87f-8785-3269-8907-22306d33428e}
@@ -278,20 +267,22 @@ public class WalletAppKitSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
-        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-    IllegalStateException illegalStateException = new IllegalStateException();
-    preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
-    NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-    File file = new File("pathname1");
-    target = new WalletAppKit(networkParameters, ScriptType.P2PKH, keyChainGroupStructureMock, file, "test");
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    thrown.expect(IllegalStateException.class);
-    //Act Statement(s)
-    target.setAutoSave(true);
-    //Assert statement(s)
-    preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
-}*/
+        NetworkParameters paramsMock = mock(NetworkParameters.class);
+        KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
+            IllegalStateException illegalStateException = new IllegalStateException();
+            preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
+            File file = new File("pathname1");
+            target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1");
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            thrown.expect(IllegalStateException.class);
+            //Act Statement(s)
+            target.setAutoSave(false);
+            //Assert statement(s)
+            verify(paramsMock).network();
+            preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
+        }
     }
 
     //Sapient generated method id: ${f89f9051-61a8-3ca8-81d0-c35a95594ddc}
@@ -304,18 +295,20 @@ public class WalletAppKitSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        NetworkParameters paramsMock = mock(NetworkParameters.class);
         KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
             IllegalStateException illegalStateException = new IllegalStateException();
             preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
-            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
             File file = new File("pathname1");
-            target = new WalletAppKit(networkParameters, ScriptType.P2PKH, keyChainGroupStructureMock, file, "");
+            target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1");
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             thrown.expect(IllegalStateException.class);
             //Act Statement(s)
-            target.setAutoSave(true);
+            target.setAutoSave(false);
             //Assert statement(s)
+            verify(paramsMock).network();
             preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
         }
     }
@@ -347,22 +340,22 @@ public class WalletAppKitSapientGeneratedJunit4Test {
     @Test()
     public void setAutoStopTest() {
         //Arrange Statement(s)
-        //NetworkParameters paramsMock = mock(NetworkParameters.class);
-        //NetworkParameters networkParametersMock = mock(NetworkParameters.class);
-        //KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
-        /*try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-    doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
-    networkParameters.when(() -> NetworkParameters.of(BitcoinNetwork.MAINNET)).thenReturn(networkParametersMock);
-    File file = new File("pathname1");
-    target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1");
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    //Act Statement(s)
-    WalletAppKit result = target.setAutoStop(false);
-    //Assert statement(s)
-    assertThat(result, equalTo(target));
-    verify(paramsMock).network();
-    networkParameters.verify(() -> NetworkParameters.of(BitcoinNetwork.MAINNET), atLeast(1));
-}*/
+        NetworkParameters paramsMock = mock(NetworkParameters.class);
+        NetworkParameters networkParametersMock = mock(NetworkParameters.class);
+        KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
+            networkParameters.when(() -> NetworkParameters.of(BitcoinNetwork.MAINNET)).thenReturn(networkParametersMock);
+            File file = new File("pathname1");
+            target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1");
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            //Act Statement(s)
+            WalletAppKit result = target.setAutoStop(false);
+            //Assert statement(s)
+            assertThat(result, equalTo(target));
+            verify(paramsMock).network();
+            networkParameters.verify(() -> NetworkParameters.of(BitcoinNetwork.MAINNET), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${5c8f94de-8136-324c-bb24-e3714ebaca1f}
@@ -418,114 +411,114 @@ public class WalletAppKitSapientGeneratedJunit4Test {
     @Test()
     public void setUserAgentTest() {
         //Arrange Statement(s)
-        //NetworkParameters paramsMock = mock(NetworkParameters.class);
-        //NetworkParameters networkParametersMock = mock(NetworkParameters.class);
-        //KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
-        /*try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-    doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
-    networkParameters.when(() -> NetworkParameters.of(BitcoinNetwork.MAINNET)).thenReturn(networkParametersMock);
-    File file = new File("pathname1");
-    target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1");
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    //Act Statement(s)
-    WalletAppKit result = target.setUserAgent("userAgent1", "version1");
-    //Assert statement(s)
-    assertThat(result, equalTo(target));
-    verify(paramsMock).network();
-    networkParameters.verify(() -> NetworkParameters.of(BitcoinNetwork.MAINNET), atLeast(1));
-}*/
+        NetworkParameters paramsMock = mock(NetworkParameters.class);
+        NetworkParameters networkParametersMock = mock(NetworkParameters.class);
+        KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
+            networkParameters.when(() -> NetworkParameters.of(BitcoinNetwork.MAINNET)).thenReturn(networkParametersMock);
+            File file = new File("pathname1");
+            target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1");
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            //Act Statement(s)
+            WalletAppKit result = target.setUserAgent("userAgent1", "version1");
+            //Assert statement(s)
+            assertThat(result, equalTo(target));
+            verify(paramsMock).network();
+            networkParameters.verify(() -> NetworkParameters.of(BitcoinNetwork.MAINNET), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${25f38753-bba6-3d8c-a396-67a94d422f15}
     @Test()
     public void setWalletFactoryTest() {
         //Arrange Statement(s)
-        //NetworkParameters paramsMock = mock(NetworkParameters.class);
-        //NetworkParameters networkParametersMock = mock(NetworkParameters.class);
-        //KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
-        //WalletProtobufSerializer.WalletFactory walletProtobufSerializerWalletFactoryMock = mock(WalletProtobufSerializer.WalletFactory.class);
-        /*try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-    doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
-    networkParameters.when(() -> NetworkParameters.of(BitcoinNetwork.MAINNET)).thenReturn(networkParametersMock);
-    File file = new File("pathname1");
-    target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1");
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    //Act Statement(s)
-    WalletAppKit result = target.setWalletFactory(walletProtobufSerializerWalletFactoryMock);
-    //Assert statement(s)
-    assertThat(result, equalTo(target));
-    verify(paramsMock).network();
-    networkParameters.verify(() -> NetworkParameters.of(BitcoinNetwork.MAINNET), atLeast(1));
-}*/
+        NetworkParameters paramsMock = mock(NetworkParameters.class);
+        NetworkParameters networkParametersMock = mock(NetworkParameters.class);
+        KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
+        WalletProtobufSerializer.WalletFactory walletProtobufSerializerWalletFactoryMock = mock(WalletProtobufSerializer.WalletFactory.class);
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
+            networkParameters.when(() -> NetworkParameters.of(BitcoinNetwork.MAINNET)).thenReturn(networkParametersMock);
+            File file = new File("pathname1");
+            target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1");
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            //Act Statement(s)
+            WalletAppKit result = target.setWalletFactory(walletProtobufSerializerWalletFactoryMock);
+            //Assert statement(s)
+            assertThat(result, equalTo(target));
+            verify(paramsMock).network();
+            networkParameters.verify(() -> NetworkParameters.of(BitcoinNetwork.MAINNET), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${93f7d66f-c329-3263-97e6-01603d4eaa2f}
     @Test()
     public void restoreWalletFromSeedTest() {
         //Arrange Statement(s)
-        //NetworkParameters paramsMock = mock(NetworkParameters.class);
-        //NetworkParameters networkParametersMock = mock(NetworkParameters.class);
-        //KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
-        //DeterministicSeed deterministicSeedMock = mock(DeterministicSeed.class);
-        /*try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-    doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
-    networkParameters.when(() -> NetworkParameters.of(BitcoinNetwork.MAINNET)).thenReturn(networkParametersMock);
-    File file = new File("pathname1");
-    target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1");
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    //Act Statement(s)
-    WalletAppKit result = target.restoreWalletFromSeed(deterministicSeedMock);
-    //Assert statement(s)
-    assertThat(result, equalTo(target));
-    verify(paramsMock).network();
-    networkParameters.verify(() -> NetworkParameters.of(BitcoinNetwork.MAINNET), atLeast(1));
-}*/
+        NetworkParameters paramsMock = mock(NetworkParameters.class);
+        NetworkParameters networkParametersMock = mock(NetworkParameters.class);
+        KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
+        DeterministicSeed deterministicSeedMock = mock(DeterministicSeed.class);
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
+            networkParameters.when(() -> NetworkParameters.of(BitcoinNetwork.MAINNET)).thenReturn(networkParametersMock);
+            File file = new File("pathname1");
+            target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1");
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            //Act Statement(s)
+            WalletAppKit result = target.restoreWalletFromSeed(deterministicSeedMock);
+            //Assert statement(s)
+            assertThat(result, equalTo(target));
+            verify(paramsMock).network();
+            networkParameters.verify(() -> NetworkParameters.of(BitcoinNetwork.MAINNET), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${6d67e434-7075-3f80-bcb9-83af1b53c2aa}
     @Test()
     public void restoreWalletFromKeyTest() {
         //Arrange Statement(s)
-        //NetworkParameters paramsMock = mock(NetworkParameters.class);
-        //NetworkParameters networkParametersMock = mock(NetworkParameters.class);
-        //KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
-        //DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
-        /*try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-    doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
-    networkParameters.when(() -> NetworkParameters.of(BitcoinNetwork.MAINNET)).thenReturn(networkParametersMock);
-    File file = new File("pathname1");
-    target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1");
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    //Act Statement(s)
-    WalletAppKit result = target.restoreWalletFromKey(deterministicKeyMock);
-    //Assert statement(s)
-    assertThat(result, equalTo(target));
-    verify(paramsMock).network();
-    networkParameters.verify(() -> NetworkParameters.of(BitcoinNetwork.MAINNET), atLeast(1));
-}*/
+        NetworkParameters paramsMock = mock(NetworkParameters.class);
+        NetworkParameters networkParametersMock = mock(NetworkParameters.class);
+        KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
+        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
+            networkParameters.when(() -> NetworkParameters.of(BitcoinNetwork.MAINNET)).thenReturn(networkParametersMock);
+            File file = new File("pathname1");
+            target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1");
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            //Act Statement(s)
+            WalletAppKit result = target.restoreWalletFromKey(deterministicKeyMock);
+            //Assert statement(s)
+            assertThat(result, equalTo(target));
+            verify(paramsMock).network();
+            networkParameters.verify(() -> NetworkParameters.of(BitcoinNetwork.MAINNET), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${480b0f0e-c1ed-312f-a8ed-8924117c7cb8}
     @Test()
     public void setDiscoveryTest() {
         //Arrange Statement(s)
-        //NetworkParameters paramsMock = mock(NetworkParameters.class);
-        //NetworkParameters networkParametersMock = mock(NetworkParameters.class);
-        //KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
-        //PeerDiscovery peerDiscoveryMock = mock(PeerDiscovery.class);
-        /*try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-    doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
-    networkParameters.when(() -> NetworkParameters.of(BitcoinNetwork.MAINNET)).thenReturn(networkParametersMock);
-    File file = new File("pathname1");
-    target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1");
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    //Act Statement(s)
-    WalletAppKit result = target.setDiscovery(peerDiscoveryMock);
-    //Assert statement(s)
-    assertThat(result, equalTo(target));
-    verify(paramsMock).network();
-    networkParameters.verify(() -> NetworkParameters.of(BitcoinNetwork.MAINNET), atLeast(1));
-}*/
+        NetworkParameters paramsMock = mock(NetworkParameters.class);
+        NetworkParameters networkParametersMock = mock(NetworkParameters.class);
+        KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
+        PeerDiscovery peerDiscoveryMock = mock(PeerDiscovery.class);
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
+            networkParameters.when(() -> NetworkParameters.of(BitcoinNetwork.MAINNET)).thenReturn(networkParametersMock);
+            File file = new File("pathname1");
+            target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1");
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            //Act Statement(s)
+            WalletAppKit result = target.setDiscovery(peerDiscoveryMock);
+            //Assert statement(s)
+            assertThat(result, equalTo(target));
+            verify(paramsMock).network();
+            networkParameters.verify(() -> NetworkParameters.of(BitcoinNetwork.MAINNET), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${8e6399c5-490e-39a2-a5c0-f94d5a4047d5}
@@ -853,63 +846,56 @@ public class WalletAppKitSapientGeneratedJunit4Test {
          * (restoreFromKey != null) : false
          */
         //Arrange Statement(s)
-        //NetworkParameters paramsMock = mock(NetworkParameters.class);
-        //NetworkParameters networkParametersMock = mock(NetworkParameters.class);
-        //KeyChainGroup.Builder keyChainGroupBuilderMock = mock(KeyChainGroup.Builder.class);
-        //KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
-        //KeyChainGroup.Builder keyChainGroupBuilderMock2 = mock(KeyChainGroup.Builder.class);
-        //KeyChainGroup keyChainGroupMock = mock(KeyChainGroup.class);
-        /*try (MockedStatic<KeyChainGroup> keyChainGroup = mockStatic(KeyChainGroup.class);
-    MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-    doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
-    networkParameters.when(() -> NetworkParameters.of(BitcoinNetwork.MAINNET)).thenReturn(networkParametersMock);
-    keyChainGroup.when(() -> KeyChainGroup.builder(BitcoinNetwork.MAINNET, keyChainGroupStructureMock)).thenReturn(keyChainGroupBuilderMock);
-    doReturn(keyChainGroupBuilderMock2).when(keyChainGroupBuilderMock).fromRandom(ScriptType.P2PKH);
-    doReturn(keyChainGroupMock).when(keyChainGroupBuilderMock).build();
-    File file = new File("pathname1");
-    target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1");
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    Wallet wallet = walletFactoryMock.create(BitcoinNetwork.MAINNET, keyChainGroupMock);
-    doReturn(wallet).when(walletFactoryMock).create(BitcoinNetwork.MAINNET, keyChainGroupMock);
-    //Act Statement(s)
-    Wallet result = target.createWallet();
-    //Assert statement(s)
-    assertThat(result, equalTo(wallet));
-    verify(paramsMock).network();
-    networkParameters.verify(() -> NetworkParameters.of(BitcoinNetwork.MAINNET), atLeast(1));
-    keyChainGroup.verify(() -> KeyChainGroup.builder(BitcoinNetwork.MAINNET, keyChainGroupStructureMock), atLeast(1));
-    verify(keyChainGroupBuilderMock).fromRandom(ScriptType.P2PKH);
-    verify(keyChainGroupBuilderMock).build();
-    verify(walletFactoryMock).create(BitcoinNetwork.MAINNET, keyChainGroupMock);
-}*/
+        NetworkParameters paramsMock = mock(NetworkParameters.class);
+        NetworkParameters networkParametersMock = mock(NetworkParameters.class);
+        KeyChainGroup.Builder keyChainGroupBuilderMock = mock(KeyChainGroup.Builder.class);
+        KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
+        KeyChainGroup.Builder keyChainGroupBuilderMock2 = mock(KeyChainGroup.Builder.class);
+        KeyChainGroup keyChainGroupMock = mock(KeyChainGroup.class);
+        try (MockedStatic<KeyChainGroup> keyChainGroup = mockStatic(KeyChainGroup.class);
+             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
+            networkParameters.when(() -> NetworkParameters.of(BitcoinNetwork.MAINNET)).thenReturn(networkParametersMock);
+            keyChainGroup.when(() -> KeyChainGroup.builder(BitcoinNetwork.MAINNET, keyChainGroupStructureMock)).thenReturn(keyChainGroupBuilderMock);
+            doReturn(keyChainGroupBuilderMock2).when(keyChainGroupBuilderMock).fromRandom(ScriptType.P2PKH);
+            doReturn(keyChainGroupMock).when(keyChainGroupBuilderMock).build();
+            File file = new File("pathname1");
+            target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1");
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            Wallet wallet = walletFactoryMock.create(BitcoinNetwork.MAINNET, keyChainGroupMock);
+            doReturn(wallet).when(walletFactoryMock).create(BitcoinNetwork.MAINNET, keyChainGroupMock);
+            //Act Statement(s)
+            Wallet result = target.createWallet();
+            //Assert statement(s)
+            assertThat(result, equalTo(wallet));
+            verify(paramsMock).network();
+            networkParameters.verify(() -> NetworkParameters.of(BitcoinNetwork.MAINNET), atLeast(1));
+            keyChainGroup.verify(() -> KeyChainGroup.builder(BitcoinNetwork.MAINNET, keyChainGroupStructureMock), atLeast(1));
+            verify(keyChainGroupBuilderMock).fromRandom(ScriptType.P2PKH);
+            verify(keyChainGroupBuilderMock).build();
+            verify(walletFactoryMock).create(BitcoinNetwork.MAINNET, keyChainGroupMock);
+        }
     }
 
     //Sapient generated method id: ${af519e4e-683c-3c51-a5fc-838bc39982be}
     @Test()
     public void createPeerGroupTest() {
-        /**
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
         //Arrange Statement(s)
         NetworkParameters paramsMock = mock(NetworkParameters.class);
-        NetworkParameters networkParametersMock = mock(NetworkParameters.class);
+        doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
         KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
-        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
-            networkParameters.when(() -> NetworkParameters.of(BitcoinNetwork.MAINNET)).thenReturn(networkParametersMock);
-            File file = new File("pathname1");
-            target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "walletappkit");
-            autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            //Act Statement(s)
-            PeerGroup result = target.createPeerGroup();
-            PeerGroup peerGroup = new PeerGroup(BitcoinNetwork.MAINNET, (BlockChain) null);
-            //Assert statement(s)
-            //TODO: Please implement equals method in PeerGroup for verification to succeed or you need to adjust respective assertion statements
-            assertThat(result, equalTo(peerGroup));
-            verify(paramsMock).network();
-            networkParameters.verify(() -> NetworkParameters.of(BitcoinNetwork.MAINNET), atLeast(1));
-        }
+        File file = new File("pathname1");
+        target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1");
+        autoCloseableMocks = MockitoAnnotations.openMocks(this);
+
+        //Act Statement(s)
+        PeerGroup result = target.createPeerGroup();
+        PeerGroup peerGroup = new PeerGroup(BitcoinNetwork.MAINNET, (BlockChain) null);
+
+        //Assert statement(s)
+        //TODO: Please implement equals method in PeerGroup for verification to succeed or you need to adjust respective assertion statements
+        assertThat(result, equalTo(peerGroup));
+        verify(paramsMock).network();
     }
 
     //Sapient generated method id: ${a2a8a624-69f6-3bc6-9a6d-bb9e5c14dc6c}
@@ -980,13 +966,18 @@ public class WalletAppKitSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+        NetworkParameters paramsMock = mock(NetworkParameters.class);
+        doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
         KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
         File file = new File("pathname1");
-        target = new WalletAppKit(networkParameters, ScriptType.P2PKH, keyChainGroupStructureMock, file, "String");
+        target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1");
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
+
         //Act Statement(s)
         target.close();
+
+        //Assert statement(s)
+        verify(paramsMock).network();
     }
 
     //Sapient generated method id: ${b444423d-8062-3e94-803b-01f5c4c4e2cc}
@@ -1044,17 +1035,19 @@ public class WalletAppKitSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        NetworkParameters paramsMock = mock(NetworkParameters.class);
         KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
             preconditions.when(() -> Preconditions.checkState(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
             File file = new File("pathname1");
-            target = new WalletAppKit(networkParameters, ScriptType.P2PKH, keyChainGroupStructureMock, file, "prefix");
+            target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1");
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             BlockChain result = target.chain();
             //Assert statement(s)
             assertThat(result, is(nullValue()));
+            verify(paramsMock).network();
             preconditions.verify(() -> Preconditions.checkState(eq(true), (Supplier) any()));
         }
     }
@@ -1070,21 +1063,19 @@ public class WalletAppKitSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        NetworkParameters paramsMock = mock(NetworkParameters.class);
         KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(BitcoinNetwork.MAINNET)).thenReturn(networkParameters2);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
             preconditions.when(() -> Preconditions.checkState(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            NetworkParameters networkParameters3 = NetworkParameters.fromID("id1");
             File file = new File("pathname1");
-            target = new WalletAppKit(networkParameters3, ScriptType.P2PKH, keyChainGroupStructureMock, file, "String");
+            target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1");
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             BlockChain result = target.chain();
             //Assert statement(s)
             assertThat(result, is(nullValue()));
-            networkParameters.verify(() -> NetworkParameters.of(BitcoinNetwork.MAINNET), atLeast(1));
+            verify(paramsMock).network();
             preconditions.verify(() -> Preconditions.checkState(eq(true), (Supplier) any()));
         }
     }
@@ -1100,17 +1091,19 @@ public class WalletAppKitSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        NetworkParameters paramsMock = mock(NetworkParameters.class);
         KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
             preconditions.when(() -> Preconditions.checkState(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
             File file = new File("pathname1");
-            target = new WalletAppKit(networkParameters, ScriptType.P2PKH, keyChainGroupStructureMock, file, "");
+            target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1");
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             BlockStore result = target.store();
             //Assert statement(s)
             assertThat(result, equalTo(vStoreMock));
+            verify(paramsMock).network();
             preconditions.verify(() -> Preconditions.checkState(eq(true), (Supplier) any()));
         }
     }
@@ -1126,17 +1119,19 @@ public class WalletAppKitSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        NetworkParameters paramsMock = mock(NetworkParameters.class);
         KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
             preconditions.when(() -> Preconditions.checkState(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
             File file = new File("pathname1");
-            target = new WalletAppKit(networkParameters, ScriptType.P2PKH, keyChainGroupStructureMock, file, "\"wallet\"");
+            target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1");
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             BlockStore result = target.store();
             //Assert statement(s)
             assertThat(result, equalTo(vStoreMock));
+            verify(paramsMock).network();
             preconditions.verify(() -> Preconditions.checkState(eq(true), (Supplier) any()));
         }
     }
@@ -1152,21 +1147,19 @@ public class WalletAppKitSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        NetworkParameters paramsMock = mock(NetworkParameters.class);
         KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(BitcoinNetwork.MAINNET)).thenReturn(networkParameters2);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
             preconditions.when(() -> Preconditions.checkState(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            NetworkParameters networkParameters3 = NetworkParameters.fromID("id1");
             File file = new File("pathname1");
-            target = new WalletAppKit(networkParameters3, ScriptType.P2PKH, keyChainGroupStructureMock, file, "test");
+            target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1");
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             Wallet result = target.wallet();
             //Assert statement(s)
             assertThat(result, equalTo(vWalletMock));
-            networkParameters.verify(() -> NetworkParameters.of(BitcoinNetwork.MAINNET), atLeast(1));
+            verify(paramsMock).network();
             preconditions.verify(() -> Preconditions.checkState(eq(true), (Supplier) any()));
         }
     }
@@ -1182,21 +1175,19 @@ public class WalletAppKitSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        NetworkParameters paramsMock = mock(NetworkParameters.class);
         KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(BitcoinNetwork.MAINNET)).thenReturn(networkParameters2);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
             preconditions.when(() -> Preconditions.checkState(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            NetworkParameters networkParameters3 = NetworkParameters.fromID("id1");
             File file = new File("pathname1");
-            target = new WalletAppKit(networkParameters3, ScriptType.P2PKH, keyChainGroupStructureMock, file, "\"test\"");
+            target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1");
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             Wallet result = target.wallet();
             //Assert statement(s)
             assertThat(result, equalTo(vWalletMock));
-            networkParameters.verify(() -> NetworkParameters.of(BitcoinNetwork.MAINNET), atLeast(1));
+            verify(paramsMock).network();
             preconditions.verify(() -> Preconditions.checkState(eq(true), (Supplier) any()));
         }
     }
@@ -1213,12 +1204,9 @@ public class WalletAppKitSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         NetworkParameters paramsMock = mock(NetworkParameters.class);
-        NetworkParameters networkParametersMock = mock(NetworkParameters.class);
         KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
-            networkParameters.when(() -> NetworkParameters.of(BitcoinNetwork.MAINNET)).thenReturn(networkParametersMock);
             preconditions.when(() -> Preconditions.checkState(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             File file = new File("pathname1");
             target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1");
@@ -1228,7 +1216,6 @@ public class WalletAppKitSapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(result, equalTo(vPeerGroupMock));
             verify(paramsMock).network();
-            networkParameters.verify(() -> NetworkParameters.of(BitcoinNetwork.MAINNET), atLeast(1));
             preconditions.verify(() -> Preconditions.checkState(eq(true), (Supplier) any()));
         }
     }
@@ -1246,11 +1233,8 @@ public class WalletAppKitSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         NetworkParameters paramsMock = mock(NetworkParameters.class);
         KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(BitcoinNetwork.MAINNET)).thenReturn(networkParameters2);
             preconditions.when(() -> Preconditions.checkState(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             File file = new File("pathname1");
             target = new WalletAppKit(paramsMock, ScriptType.P2PKH, keyChainGroupStructureMock, file, "filePrefix1");
@@ -1260,7 +1244,6 @@ public class WalletAppKitSapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(result, equalTo(vPeerGroupMock));
             verify(paramsMock).network();
-            networkParameters.verify(() -> NetworkParameters.of(BitcoinNetwork.MAINNET), atLeast(1));
             preconditions.verify(() -> Preconditions.checkState(eq(true), (Supplier) any()));
         }
     }

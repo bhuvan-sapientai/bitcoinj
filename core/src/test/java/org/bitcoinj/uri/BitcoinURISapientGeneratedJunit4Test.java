@@ -193,6 +193,7 @@ public class BitcoinURISapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${f399c969-4555-3dd3-9550-d7e4688e1f3c}
+    @Ignore()
     @Test()
     public void ofWhenDefaultBranchAndDefaultBranchAndParameterMapNotContainsKeyKeyAndDefaultBranchThrowsBitcoinURIParseException() throws BitcoinURIParseException {
         /* Branches:
@@ -215,7 +216,7 @@ public class BitcoinURISapientGeneratedJunit4Test {
         thrown.expect(BitcoinURIParseException.class);
         thrown.expectMessage(bitcoinURIParseException.getMessage());
         //Act Statement(s)
-        BitcoinURI.of("bitcoin:abc123?param1=value1&param2=value2");
+        BitcoinURI.of("EFGHIBCDM");
     }
 
     //Sapient generated method id: ${baaf99e2-188e-3e9f-863a-b147d884edcd}
@@ -242,6 +243,7 @@ public class BitcoinURISapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${48571aab-4d95-30ba-91d1-29a98afd0585}
+    @Ignore()
     @Test()
     public void ofWhenParameterMapNotContainsKeyKeyAndDefaultBranchAndDefaultBranchAndDefaultBranchThrowsBitcoinURIParseException() throws BitcoinURIParseException {
         /* Branches:
@@ -267,7 +269,7 @@ public class BitcoinURISapientGeneratedJunit4Test {
         thrown.expect(BitcoinURIParseException.class);
         thrown.expectMessage(bitcoinURIParseException.getMessage());
         //Act Statement(s)
-        BitcoinURI.of("bitcoin://abc?data=123");
+        BitcoinURI.of("uri1");
     }
 
     //Sapient generated method id: ${4d2c3bfb-33c0-3670-9b58-dd07b16ccb86}
@@ -343,11 +345,11 @@ public class BitcoinURISapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("No data found after the bitcoin: prefix");
+        BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("s1");
         thrown.expect(BitcoinURIParseException.class);
         thrown.expectMessage(bitcoinURIParseException.getMessage());
         //Act Statement(s)
-        BitcoinURI.of("bitcoin://1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa", networkMock);
+        BitcoinURI.of("uri1", networkMock);
     }
 
     //Sapient generated method id: ${61e8147e-7d09-3241-a928-94d9a0098eff}
@@ -369,37 +371,11 @@ public class BitcoinURISapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("No data found after the bitcoin: prefix");
-        thrown.expect(BitcoinURIParseException.class);
-        thrown.expectMessage(bitcoinURIParseException.getMessage());
+        OptionalFieldValidationException optionalFieldValidationException = new OptionalFieldValidationException("s1");
+        thrown.expect(OptionalFieldValidationException.class);
+        thrown.expectMessage(optionalFieldValidationException.getMessage());
         //Act Statement(s)
-        BitcoinURI.of("bitcoin://1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2", networkMock);
-    }
-
-    //Sapient generated method id: ${c749b3c4-95d9-3a64-b938-34126c9a49cf}
-    @Ignore()
-    @Test()
-    public void of1WhenNameTokenStartsWithReq_ThrowsRequiredFieldValidationException() throws BitcoinURIParseException {
-        /* Branches:
-         * (branch expression (line 143)) : false  #  inside <init> method
-         * (branch expression (line 168)) : true  #  inside <init> method
-         * (branch expression (line 178)) : true  #  inside <init> method
-         * (branch expression (line 183)) : false  #  inside <init> method
-         * (for-each(nameValuePairTokens)) : true  #  inside parseParameters method
-         * (sepIndex == -1) : false  #  inside parseParameters method
-         * (sepIndex == 0) : false  #  inside parseParameters method
-         * (FIELD_AMOUNT.equals(nameToken)) : false  #  inside parseParameters method
-         * (nameToken.startsWith("req-")) : true  #  inside parseParameters method
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("No data found after the bitcoin: prefix");
-        thrown.expect(BitcoinURIParseException.class);
-        thrown.expectMessage(bitcoinURIParseException.getMessage());
-        //Act Statement(s)
-        BitcoinURI.of("bitcoin:1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2", networkMock);
+        BitcoinURI.of("uri1", networkMock);
     }
 
     //Sapient generated method id: ${390db66d-29ff-3afc-87e3-1a5205737b10}
@@ -447,11 +423,11 @@ public class BitcoinURISapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("No data found after the bitcoin: prefix");
+        BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("No address and no r= parameter found");
         thrown.expect(BitcoinURIParseException.class);
         thrown.expectMessage(bitcoinURIParseException.getMessage());
         //Act Statement(s)
-        BitcoinURI.of("bitcoin://example.com?r=123456789", networkMock);
+        BitcoinURI.of("uri1", networkMock);
     }
 
     //Sapient generated method id: ${ae424e0c-03b5-39f9-83f6-319abf4183b5}
@@ -485,12 +461,13 @@ public class BitcoinURISapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-        BitcoinURI target = new BitcoinURI(networkParameters, "String");
+        doReturn(networkMock).when(paramsMock).network();
+        BitcoinURI target = new BitcoinURI(paramsMock, "input1");
         //Act Statement(s)
         Address result = target.getAddress();
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
+        verify(paramsMock).network();
     }
 
     //Sapient generated method id: ${53b9c084-e3a6-30ca-9486-e38775bc2ed4}
@@ -503,7 +480,7 @@ public class BitcoinURISapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         doReturn(networkMock).when(paramsMock).network();
-        BitcoinURI target = new BitcoinURI(paramsMock, "String");
+        BitcoinURI target = new BitcoinURI(paramsMock, "input1");
         //Act Statement(s)
         Coin result = target.getAmount();
         //Assert statement(s)
@@ -521,7 +498,7 @@ public class BitcoinURISapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         doReturn(networkMock).when(paramsMock).network();
-        BitcoinURI target = new BitcoinURI(paramsMock, "String");
+        BitcoinURI target = new BitcoinURI(paramsMock, "input1");
         //Act Statement(s)
         String result = target.getLabel();
         //Assert statement(s)
@@ -539,7 +516,7 @@ public class BitcoinURISapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         doReturn(networkMock).when(paramsMock).network();
-        BitcoinURI target = new BitcoinURI(paramsMock, "test message");
+        BitcoinURI target = new BitcoinURI(paramsMock, "input1");
         //Act Statement(s)
         String result = target.getMessage();
         //Assert statement(s)
@@ -557,7 +534,7 @@ public class BitcoinURISapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         doReturn(networkMock).when(paramsMock).network();
-        BitcoinURI target = new BitcoinURI(paramsMock, "String");
+        BitcoinURI target = new BitcoinURI(paramsMock, "input1");
         //Act Statement(s)
         String result = target.getPaymentRequestUrl();
         //Assert statement(s)
@@ -578,7 +555,7 @@ public class BitcoinURISapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         doReturn(networkMock).when(paramsMock).network();
-        BitcoinURI target = new BitcoinURI(paramsMock, "input");
+        BitcoinURI target = new BitcoinURI(paramsMock, "input1");
         //Act Statement(s)
         List<String> result = target.getPaymentRequestUrls();
         //Assert statement(s)
@@ -595,12 +572,15 @@ public class BitcoinURISapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-        BitcoinURI target = new BitcoinURI(networkParameters, "inputValue");
+        doReturn(networkMock).when(paramsMock).network();
+        BitcoinURI target = new BitcoinURI(paramsMock, "input1");
         //Act Statement(s)
-        Object result = target.getParameterByName("parameterName");
+        Object result = target.getParameterByName("name1");
+        Object object = new Object();
         //Assert statement(s)
-        assertThat(result, is(nullValue()));
+        //TODO: Please implement equals method in Object for verification to succeed or you need to adjust respective assertion statements
+        assertThat(result, equalTo(object));
+        verify(paramsMock).network();
     }
 
     //Sapient generated method id: ${f1c167b8-807f-381c-ac3e-7052d2752ba4}

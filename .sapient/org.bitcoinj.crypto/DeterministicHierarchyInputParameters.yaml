@@ -819,7 +819,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "578004E2C8FB92C2A13E0087A1430C60"
+    modelFingerprint: "E964CD0AD7999B7117DF6AB5C96958F4"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -970,7 +970,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "key"
-      modelFingerprint: "6AB3F14B754F0B016D82F767D95A40F1"
+      modelFingerprint: "0520C4489903633F49B5A83B265896C9"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -1007,7 +1007,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "parent"
-      modelFingerprint: "30088FBF9879077A030CAF911039F910"
+      modelFingerprint: "C485488925FF525F4D830ED99DD2298C"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -1073,7 +1073,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "rootKey"
-      modelFingerprint: "F10996EE8E82602DAD0CC7AC2DB6E3CB"
+      modelFingerprint: "92FC5C9D5547F812D7AF29347695635F"
       index: 9
       ignored: false
       nestedInLoop: false
@@ -1110,7 +1110,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "HDPath"
-      modelFingerprint: "6390CF5D15074280C492FD4E064EB3CC"
+      modelFingerprint: "F48F8DC2DD898A0536FB35DCE9761969"
       index: 10
       ignored: false
       nestedInLoop: false
@@ -1159,7 +1159,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "rootPath"
-      modelFingerprint: "E5331F91924DB1F229F204C51D2D8BF4"
+      modelFingerprint: "0C6DBEBF35B7850323ED7F43ED1870A4"
       index: 11
       ignored: false
       nestedInLoop: false
@@ -1207,7 +1207,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "B6F4E421083EF3778FEA1644A8BA9751"
+      modelFingerprint: "5C475441D2F6190DE96C1A5CF8841335"
       index: 12
       ignored: false
       nestedInLoop: false
@@ -1221,7 +1221,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "s1"
+                value: "No key found for relative path get_hDPath1."
               valueType: "java.lang.String"
               uuid: "get_string2"
               fixed: false
@@ -1235,6 +1235,8 @@ methods:
           - name: "s"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: "No key found for relative path get_hDPath1."
               valueType: "java.lang.String"
               uuid: "get_string2"
               fixed: false
@@ -1251,10 +1253,11 @@ methods:
       filledByUser: false
     uuid: "2bafa839-995b-3253-b961-8ad2c1102276"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path4"
     testPathName: "getWhenAbsolutePathSizeGreaterThan0"
@@ -1263,7 +1266,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "416B71374A0B3A0726DB3087447A6758"
+    modelFingerprint: "75F8EAC33F1406D706F3F2A0A83A68EE"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -1414,7 +1417,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "key"
-      modelFingerprint: "6AB3F14B754F0B016D82F767D95A40F1"
+      modelFingerprint: "0520C4489903633F49B5A83B265896C9"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -1451,7 +1454,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "parent"
-      modelFingerprint: "30088FBF9879077A030CAF911039F910"
+      modelFingerprint: "C485488925FF525F4D830ED99DD2298C"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -1517,7 +1520,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "rootKey"
-      modelFingerprint: "F10996EE8E82602DAD0CC7AC2DB6E3CB"
+      modelFingerprint: "92FC5C9D5547F812D7AF29347695635F"
       index: 9
       ignored: false
       nestedInLoop: false
@@ -1558,7 +1561,7 @@ methods:
       index: 10
       ignored: false
       nestedInLoop: false
-      nestedInRecursion: true
+      nestedInRecursion: false
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.crypto.HDPath"
@@ -1598,11 +1601,11 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "rootPath"
-      modelFingerprint: "E5331F91924DB1F229F204C51D2D8BF4"
+      modelFingerprint: "0C6DBEBF35B7850323ED7F43ED1870A4"
       index: 11
       ignored: false
       nestedInLoop: false
-      nestedInRecursion: true
+      nestedInRecursion: false
       value:
         sapientType: "MOCK"
         suggestedContent: !<unknown_object>
@@ -1646,11 +1649,11 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "absolutePath"
-      modelFingerprint: "5A3E4EE6EA4644E8D2BBBFD733BBDFF9"
+      modelFingerprint: "864657DC6CC3F8FE93EFD4C777FAC159"
       index: 12
       ignored: false
       nestedInLoop: false
-      nestedInRecursion: true
+      nestedInRecursion: false
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.crypto.HDPath"
@@ -1666,9 +1669,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 2147483647
+            value: 1
           suggestedContent: !<regular>
-            value: 2147483647
+            value: 1
           valueType: "int"
           uuid: "get_int1"
           fixed: false
@@ -1683,7 +1686,7 @@ methods:
       index: 13
       ignored: false
       nestedInLoop: false
-      nestedInRecursion: true
+      nestedInRecursion: false
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.base.internal.Preconditions"
@@ -1725,11 +1728,11 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "absolutePath"
-      modelFingerprint: "5A3E4EE6EA4644E8D2BBBFD733BBDFF9"
+      modelFingerprint: "864657DC6CC3F8FE93EFD4C777FAC159"
       index: 14
       ignored: false
       nestedInLoop: false
-      nestedInRecursion: true
+      nestedInRecursion: false
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.crypto.HDPath"
@@ -1745,9 +1748,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 2147483647
+            value: 1
           suggestedContent: !<regular>
-            value: 2147483647
+            value: 1
           valueType: "int"
           uuid: "get_int2"
           fixed: false
@@ -1758,11 +1761,11 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "absolutePath"
-      modelFingerprint: "3960203156C3D31050D23472DDE7B858"
+      modelFingerprint: "A1CC59E351FC3A6A51A837E77D579F16"
       index: 15
       ignored: false
       nestedInLoop: false
-      nestedInRecursion: true
+      nestedInRecursion: false
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.crypto.HDPath"
@@ -1787,9 +1790,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 2147483646
+              value: 0
             suggestedContent: !<regular>
-              value: 2147483646
+              value: 0
             valueType: "int"
             uuid: "get_int3"
             fixed: false
@@ -1812,10 +1815,64 @@ methods:
         access: 1
       staticReadMethodForField: false
       filledByUser: false
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "8ED6148267A6D8C4A135ADD805494591"
+      index: 16
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters:
+        - name: "path"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            suggestedContent: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            uuid: "get_list2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "relativePath"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "create"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: true
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "get(List,boolean,boolean): DeterministicKey"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.crypto.DeterministicKey"
+          uuid: "get_deterministicKey1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "absolutePath"
-      modelFingerprint: "5A3E4EE6EA4644E8D2BBBFD733BBDFF9"
-      index: 16
+      modelFingerprint: "2592C81DB59849848D880CE9FB33E2BF"
+      index: 17
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -1847,8 +1904,8 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "absolutePath"
-      modelFingerprint: "9841C22C29D130960C74A98F63711409"
-      index: 17
+      modelFingerprint: "9C70E12805B9F9531943D1E2D1EBCE36"
+      index: 18
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -1868,11 +1925,8 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: 2147483646
-            suggestedContent: !<regular>
-              value: 2147483646
             valueType: "int"
-            uuid: "get_int5"
-            fixed: false
+            fixed: true
             equalsMethodPresent: false
             explicitCastNeeded: false
         signature: "get(int): ChildNumber"
@@ -1889,7 +1943,7 @@ methods:
     - type: "STATIC"
       name: "HDKeyDerivation"
       modelFingerprint: "4D2C2EEDA09BD4A2C0354187F8D234A0"
-      index: 18
+      index: 19
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -1937,7 +1991,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "76E53C0FEE4CFD53D8EA55A7845E9D67"
-      index: 19
+      index: 20
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -1967,7 +2021,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "A4E96664AFBED7B7CCA8C992EA1E22E5"
-      index: 20
+      index: 21
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -1987,10 +2041,11 @@ methods:
       filledByUser: false
     uuid: "f00a1a9a-b0c1-375f-9aa4-bb9ffe58a3f2"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path5"
     testPathName: "getWhenAbsolutePathSizeNotGreaterThan0"
@@ -1999,7 +2054,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "6F9F5D98C6FEBDFD1DBE0378F110078D"
+    modelFingerprint: "97641BE4EC1A572B02465CDB1A9800E7"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -2150,7 +2205,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "key"
-      modelFingerprint: "6AB3F14B754F0B016D82F767D95A40F1"
+      modelFingerprint: "0520C4489903633F49B5A83B265896C9"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -2187,7 +2242,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "parent"
-      modelFingerprint: "30088FBF9879077A030CAF911039F910"
+      modelFingerprint: "C485488925FF525F4D830ED99DD2298C"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -2253,7 +2308,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "rootKey"
-      modelFingerprint: "F10996EE8E82602DAD0CC7AC2DB6E3CB"
+      modelFingerprint: "92FC5C9D5547F812D7AF29347695635F"
       index: 9
       ignored: false
       nestedInLoop: false
@@ -2294,7 +2349,7 @@ methods:
       index: 10
       ignored: false
       nestedInLoop: false
-      nestedInRecursion: true
+      nestedInRecursion: false
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.crypto.HDPath"
@@ -2334,11 +2389,11 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "rootPath"
-      modelFingerprint: "E5331F91924DB1F229F204C51D2D8BF4"
+      modelFingerprint: "0C6DBEBF35B7850323ED7F43ED1870A4"
       index: 11
       ignored: false
       nestedInLoop: false
-      nestedInRecursion: true
+      nestedInRecursion: false
       value:
         sapientType: "MOCK"
         suggestedContent: !<unknown_object>
@@ -2382,11 +2437,11 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "absolutePath"
-      modelFingerprint: "84418B6CB44098AF17908C11391316FD"
+      modelFingerprint: "D7EAE085FDB6F6B7FB8374C661D61AE2"
       index: 12
       ignored: false
       nestedInLoop: false
-      nestedInRecursion: true
+      nestedInRecursion: false
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.crypto.HDPath"
@@ -2402,9 +2457,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: -1
+            value: 0
           suggestedContent: !<regular>
-            value: -1
+            value: 0
           valueType: "int"
           uuid: "get_int1"
           fixed: false
@@ -2419,7 +2474,7 @@ methods:
       index: 13
       ignored: false
       nestedInLoop: false
-      nestedInRecursion: true
+      nestedInRecursion: false
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.base.internal.Preconditions"
@@ -2461,11 +2516,11 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "absolutePath"
-      modelFingerprint: "84418B6CB44098AF17908C11391316FD"
+      modelFingerprint: "D7EAE085FDB6F6B7FB8374C661D61AE2"
       index: 14
       ignored: false
       nestedInLoop: false
-      nestedInRecursion: true
+      nestedInRecursion: false
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.crypto.HDPath"
@@ -2481,9 +2536,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: -1
+            value: 0
           suggestedContent: !<regular>
-            value: -1
+            value: 0
           valueType: "int"
           uuid: "get_int2"
           fixed: false
@@ -2494,11 +2549,11 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "absolutePath"
-      modelFingerprint: "E45D151F09FEBD02606B11AB66514731"
+      modelFingerprint: "1596334895A47BC77A7C390A2CB91217"
       index: 15
       ignored: false
       nestedInLoop: false
-      nestedInRecursion: true
+      nestedInRecursion: false
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.crypto.HDPath"
@@ -2523,9 +2578,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: -2
+              value: -1
             suggestedContent: !<regular>
-              value: -2
+              value: -1
             valueType: "int"
             uuid: "get_int3"
             fixed: false
@@ -2548,10 +2603,64 @@ methods:
         access: 1
       staticReadMethodForField: false
       filledByUser: false
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "8ED6148267A6D8C4A135ADD805494591"
+      index: 16
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters:
+        - name: "path"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            suggestedContent: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            uuid: "get_list2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "relativePath"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "create"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: true
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "get(List,boolean,boolean): DeterministicKey"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.crypto.DeterministicKey"
+          uuid: "get_deterministicKey1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "absolutePath"
-      modelFingerprint: "84418B6CB44098AF17908C11391316FD"
-      index: 16
+      modelFingerprint: "839E04C2059DA79B0B99CBF1F127BF2A"
+      index: 17
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -2583,8 +2692,8 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "absolutePath"
-      modelFingerprint: "BD0590AD91E9DF459B486B65EE6AC2EB"
-      index: 17
+      modelFingerprint: "5F9235AB2A1133AF4679854F7CE70D2B"
+      index: 18
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -2604,11 +2713,8 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: -2
-            suggestedContent: !<regular>
-              value: -2
             valueType: "int"
-            uuid: "get_int5"
-            fixed: false
+            fixed: true
             equalsMethodPresent: false
             explicitCastNeeded: false
         signature: "get(int): ChildNumber"
@@ -2625,7 +2731,7 @@ methods:
     - type: "STATIC"
       name: "HDKeyDerivation"
       modelFingerprint: "4D2C2EEDA09BD4A2C0354187F8D234A0"
-      index: 18
+      index: 19
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -2673,7 +2779,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "76E53C0FEE4CFD53D8EA55A7845E9D67"
-      index: 19
+      index: 20
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -2703,7 +2809,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "A4E96664AFBED7B7CCA8C992EA1E22E5"
-      index: 20
+      index: 21
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -2723,10 +2829,11 @@ methods:
       filledByUser: false
     uuid: "c57545b6-20b7-3fce-98f7-65c6823f2391"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path5"
     pathIdForUser: "path6"
     testPathName: "getWhenNotRelativePathThrowsIllegalArgumentException"
@@ -2735,12 +2842,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "F0C56E00F41812D8E282A19327D6A71B"
+    modelFingerprint: "776821C56994E9A7B7E618C3B3F233B0"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "9BA05D0569CA9511E7C1F3B51E298D88"
+      modelFingerprint: "5833D33605B25DE637C598CCAF4E48CB"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2769,7 +2876,7 @@ methods:
           parameters:
           - name: "rootKey"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.crypto.DeterministicKey"
                 onlyPojoFunctions: false
@@ -2790,7 +2897,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "path"
-      modelFingerprint: "000891133BEC54857DA5B5D16D4D602B"
+      modelFingerprint: "539E898306CE4684E71D4729789C33FC"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -2798,11 +2905,9 @@ methods:
       value:
         sapientType: "COLLECTION"
         content: !<collection>
-          collectionClass: "java.util.ArrayList"
           parameters: []
           values: []
         suggestedContent: !<collection>
-          collectionClass: "java.util.ArrayList"
           parameters: []
           values: []
         valueType: "java.util.List"
@@ -2815,7 +2920,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "relativePath"
-      modelFingerprint: "BD556197868E58FF398795A16E6FA4A0"
+      modelFingerprint: "66963F1EF770FD4EDB74AC3A4444DD36"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -2835,7 +2940,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "create"
-      modelFingerprint: "8963827D080A08509D3150B9C7ECDA2B"
+      modelFingerprint: "2DE9B705E42DE2A5482EB82C8D985829"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -2855,7 +2960,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "key"
-      modelFingerprint: "C485488925FF525F4D830ED99DD2298C"
+      modelFingerprint: "30088FBF9879077A030CAF911039F910"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -2888,7 +2993,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "key"
-      modelFingerprint: "927428AC0D43D246647A9CF382089D27"
+      modelFingerprint: "0520C4489903633F49B5A83B265896C9"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -2958,7 +3063,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "key"
-      modelFingerprint: "14DCDC6E54FF1C0128597A3A10B9AB7C"
+      modelFingerprint: "40E0FF477AEDA5544C955A8483552F87"
       index: 8
       ignored: false
       nestedInLoop: false
@@ -2980,53 +3085,7 @@ methods:
         parameters: []
         signature: "getChildNumber(): ChildNumber"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<new>
-            target: "org.bitcoinj.crypto.ChildNumber"
-            parameters:
-            - name: "childNumber"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "int"
-                uuid: "putKey_childNumber1-childNumber"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "isHardened"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: false
-                valueType: "boolean"
-                uuid: "putKey_childNumber1-isHardened"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
-            target: "org.bitcoinj.crypto.ChildNumber"
-            parameters:
-            - name: "childNumber"
-              value:
-                sapientType: "BASIC"
-                valueType: "int"
-                uuid: "putKey_childNumber1-childNumber"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "isHardened"
-              value:
-                sapientType: "BASIC"
-                valueType: "boolean"
-                uuid: "putKey_childNumber1-isHardened"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.crypto.ChildNumber"
           uuid: "putKey_childNumber1"
           fixed: false
@@ -3037,7 +3096,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "rootKey"
-      modelFingerprint: "9F448823C7FA4E17AACE4DB6D4856BA0"
+      modelFingerprint: "30088FBF9879077A030CAF911039F910"
       index: 9
       ignored: false
       nestedInLoop: false
@@ -3059,57 +3118,7 @@ methods:
         parameters: []
         signature: "getPath(): HDPath"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<new>
-            target: "org.bitcoinj.crypto.HDPath"
-            parameters:
-            - name: "hasPrivateKey"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: false
-                valueType: "boolean"
-                uuid: "<init>_hDPath1-hasPrivateKey"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "list"
-              value:
-                sapientType: "COLLECTION"
-                content: !<collection>
-                  parameters: []
-                  values: []
-                suggestedContent: !<collection>
-                  parameters: []
-                  values: []
-                valueType: "java.util.List"
-                uuid: "<init>_hDPath1-list"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
-            target: "org.bitcoinj.crypto.HDPath"
-            parameters:
-            - name: "hasPrivateKey"
-              value:
-                sapientType: "BASIC"
-                valueType: "boolean"
-                uuid: "<init>_hDPath1-hasPrivateKey"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "list"
-              value:
-                sapientType: "COLLECTION"
-                valueType: "java.util.List"
-                uuid: "<init>_hDPath1-list"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.crypto.HDPath"
           uuid: "<init>_hDPath1"
           fixed: false
@@ -3120,7 +3129,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "HDPath"
-      modelFingerprint: "429F4E7C2966409D8E41B17903B3ED31"
+      modelFingerprint: "F48F8DC2DD898A0536FB35DCE9761969"
       index: 10
       ignored: false
       nestedInLoop: false
@@ -3140,11 +3149,9 @@ methods:
           value:
             sapientType: "COLLECTION"
             content: !<collection>
-              collectionClass: "java.util.ArrayList"
               parameters: []
               values: []
             suggestedContent: !<collection>
-              collectionClass: "java.util.ArrayList"
               parameters: []
               values: []
             valueType: "java.util.List"
@@ -3155,57 +3162,11 @@ methods:
             explicitCastNeeded: false
         signature: "M(List): HDPath"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<new>
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
             target: "org.bitcoinj.crypto.HDPath"
-            parameters:
-            - name: "hasPrivateKey"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: false
-                valueType: "boolean"
-                uuid: "get_hDPath1-hasPrivateKey"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "list"
-              value:
-                sapientType: "COLLECTION"
-                content: !<collection>
-                  parameters: []
-                  values: []
-                suggestedContent: !<collection>
-                  parameters: []
-                  values: []
-                valueType: "java.util.List"
-                uuid: "get_hDPath1-list"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
-            target: "org.bitcoinj.crypto.HDPath"
-            parameters:
-            - name: "hasPrivateKey"
-              value:
-                sapientType: "BASIC"
-                valueType: "boolean"
-                uuid: "get_hDPath1-hasPrivateKey"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "list"
-              value:
-                sapientType: "COLLECTION"
-                valueType: "java.util.List"
-                uuid: "get_hDPath1-list"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
+            onlyPojoFunctions: false
+            builderPattern: false
           valueType: "org.bitcoinj.crypto.HDPath"
           uuid: "get_hDPath1"
           fixed: false
@@ -3217,7 +3178,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "58A4812EB46C97F1A36C3BFCD92D6161"
+      modelFingerprint: "7432692C108543B7DC5F80D555B89614"
       index: 11
       ignored: false
       nestedInLoop: false
@@ -3231,7 +3192,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "No key found for absolute path M."
+                value: "No key found for absolute path get_hDPath1."
               valueType: "java.lang.String"
               uuid: "get_string2"
               fixed: false
@@ -3246,7 +3207,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "No key found for absolute path M."
+                value: "No key found for absolute path get_hDPath1."
               valueType: "java.lang.String"
               uuid: "get_string2"
               fixed: false
@@ -21416,11 +21377,11 @@ methods:
       filledByUser: false
     uuid: "1383cac1-67e1-3da3-9e08-583a63944d1e"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getNumChildren"
     returnType: "int"

@@ -118,7 +118,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "07A7283506E4F06A22E46B220D9F801C"
+    modelFingerprint: "5EC73881A428A052C9048015BD634BB4"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -149,47 +149,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "propTx"
-      modelFingerprint: "F33B8A5E463AC5028ED46796D0D7F6BD"
+      modelFingerprint: "351C755F4BB7A847D4EB62FD870CAE1F"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.signers.TransactionSigner$ProposedTransaction"
-          parameters:
-          - name: "partialTx"
-            value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.Transaction"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "signInputs_transactionSigner.ProposedTransaction1-partialTx"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.signers.TransactionSigner$ProposedTransaction"
-          parameters:
-          - name: "partialTx"
-            value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.Transaction"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "signInputs_transactionSigner.ProposedTransaction1-partialTx"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.signers.TransactionSigner$ProposedTransaction"
         uuid: "signInputs_transactionSigner.ProposedTransaction1"
         fixed: false
@@ -199,17 +165,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "keyBag"
-      modelFingerprint: "22DD37B6710769AAEF1D81444C9DACC0"
+      modelFingerprint: "8BFD576A5E76C86D0655342334B887AA"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.wallet.KeyBag"
-          onlyPojoFunctions: false
-          builderPattern: false
         valueType: "org.bitcoinj.wallet.KeyBag"
         uuid: "signInputs_keyBag1"
         fixed: false
@@ -383,7 +345,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "03BAF0ACB627F676C45BF2017F65E32E"
+    modelFingerprint: "BA0FFD6D9E75FB902052848FF9014E0F"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -414,39 +376,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "propTx"
-      modelFingerprint: "160A3D7787BD64C60A670AFA938FB841"
+      modelFingerprint: "351C755F4BB7A847D4EB62FD870CAE1F"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.signers.TransactionSigner$ProposedTransaction"
-          parameters:
-          - name: "partialTx"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "signInputs_transactionSigner.ProposedTransaction1-partialTx"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.signers.TransactionSigner$ProposedTransaction"
-          parameters:
-          - name: "partialTx"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "signInputs_transactionSigner.ProposedTransaction1-partialTx"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.signers.TransactionSigner$ProposedTransaction"
         uuid: "signInputs_transactionSigner.ProposedTransaction1"
         fixed: false
@@ -456,17 +392,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "keyBag"
-      modelFingerprint: "22DD37B6710769AAEF1D81444C9DACC0"
+      modelFingerprint: "8BFD576A5E76C86D0655342334B887AA"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.wallet.KeyBag"
-          onlyPojoFunctions: false
-          builderPattern: false
         valueType: "org.bitcoinj.wallet.KeyBag"
         uuid: "signInputs_keyBag1"
         fixed: false
@@ -476,7 +408,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "tx"
-      modelFingerprint: "B2DD129C622866E28E5C574D8099FD34"
+      modelFingerprint: "BD4A010915B59A4C0575EF65A337F9EE"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -502,11 +434,23 @@ methods:
           content: !<collection>
             collectionClass: "java.util.ArrayList"
             parameters: []
-            values: []
+            values:
+            - sapientType: "MOCK"
+              valueType: "org.bitcoinj.core.TransactionInput"
+              uuid: "signInputs_list1Item0"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
           suggestedContent: !<collection>
             collectionClass: "java.util.ArrayList"
             parameters: []
-            values: []
+            values:
+            - sapientType: "MOCK"
+              valueType: "org.bitcoinj.core.TransactionInput"
+              uuid: "signInputs_list1Item0"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
           valueType: "java.util.List"
           genericValueType: "org.bitcoinj.core.TransactionInput"
           uuid: "signInputs_list1"
@@ -516,10 +460,403 @@ methods:
         access: 1
       staticReadMethodForField: false
       filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "tx"
+      modelFingerprint: "A323B48C71E47218EA4AAC9744AA381A"
+      index: 5
+      ignored: false
+      nestedInLoop: true
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.Transaction"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.Transaction"
+        uuid: "signInputs_transaction1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "tx"
+        name: "getInput"
+        parameters:
+        - name: "index"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            originalValueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "getInput(long): TransactionInput"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.core.TransactionInput"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.core.TransactionInput"
+          uuid: "signInputs_transactionInput1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "txIn"
+      modelFingerprint: "7E9EA542E60F5C82EC12A9FDDF91641E"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionInput"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionInput"
+        uuid: "signInputs_transactionInput1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "txIn"
+        name: "getConnectedOutput"
+        parameters: []
+        signature: "getConnectedOutput(): TransactionOutput"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.core.TransactionOutput"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.core.TransactionOutput"
+          uuid: "signInputs_transactionOutput1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "connectedOutput"
+      modelFingerprint: "886E7CD262584146F8F36F0D705F6C2B"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionOutput"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionOutput"
+        uuid: "signInputs_transactionOutput1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "connectedOutput"
+        name: "getScriptPubKey"
+        parameters: []
+        throwsExceptions:
+        - "org.bitcoinj.script.ScriptException"
+        signature: "getScriptPubKey(): Script throws org.bitcoinj.script.ScriptException"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.script.Script"
+          uuid: "signInputs_script1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "txIn"
+      modelFingerprint: "C40BEF47A1A85BC857964E00CB76C4E8"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionInput"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionInput"
+        uuid: "signInputs_transactionInput1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "txIn"
+        name: "getScriptSig"
+        parameters: []
+        throwsExceptions:
+        - "org.bitcoinj.script.ScriptException"
+        signature: "getScriptSig(): Script throws org.bitcoinj.script.ScriptException"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.script.Script"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.script.Script"
+          uuid: "signInputs_script2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "txIn"
+      modelFingerprint: "04DC6E10A20D619B50C17408096047C0"
+      index: 9
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionInput"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionInput"
+        uuid: "signInputs_transactionInput1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "txIn"
+        name: "getWitness"
+        parameters: []
+        signature: "getWitness(): TransactionWitness"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.core.TransactionWitness"
+          uuid: "signInputs_transactionWitness1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "connectedOutput"
+      modelFingerprint: "E75DBAD3C943DDE59FB1061424037DC1"
+      index: 10
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionOutput"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionOutput"
+        uuid: "signInputs_transactionOutput1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "connectedOutput"
+        name: "getValue"
+        parameters: []
+        signature: "getValue(): Coin"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.base.Coin"
+          uuid: "signInputs_coin1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "connectedOutput"
+      modelFingerprint: "886E7CD262584146F8F36F0D705F6C2B"
+      index: 11
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionOutput"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionOutput"
+        uuid: "signInputs_transactionOutput1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "connectedOutput"
+        name: "getScriptPubKey"
+        parameters: []
+        throwsExceptions:
+        - "org.bitcoinj.script.ScriptException"
+        signature: "getScriptPubKey(): Script throws org.bitcoinj.script.ScriptException"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.script.Script"
+          uuid: "signInputs_script3"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "801CC9082D93D3A2B32E26100C742E7B"
+      index: 12
+      ignored: false
+      nestedInLoop: true
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.script.Script"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.script.Script"
+        uuid: "signInputs_script2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.script.Script"
+        name: "correctlySpends"
+        parameters:
+        - name: "txContainingThis"
+          value:
+            sapientType: "MOCK"
+            suggestedContent: !<unknown_object>
+              target: "org.bitcoinj.core.Transaction"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "org.bitcoinj.core.Transaction"
+            uuid: "signInputs_transaction1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "scriptSigIndex"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "signInputs_int2"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "witness"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.TransactionWitness"
+            uuid: "signInputs_transactionWitness1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Coin"
+            uuid: "signInputs_coin1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "scriptPubKey"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.script.Script"
+            uuid: "signInputs_script3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "verifyFlags"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values:
+              - sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2SH"
+                valueType: "org.bitcoinj.script.Script$VerifyFlag"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              - sapientType: "ENUM"
+                content: !<regular>
+                  value: "NULLDUMMY"
+                valueType: "org.bitcoinj.script.Script$VerifyFlag"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            suggestedContent: !<collection>
+              parameters: []
+              values:
+              - sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2SH"
+                valueType: "org.bitcoinj.script.Script$VerifyFlag"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              - sapientType: "ENUM"
+                content: !<regular>
+                  value: "NULLDUMMY"
+                valueType: "org.bitcoinj.script.Script$VerifyFlag"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            valueType: "java.util.EnumSet"
+            genericValueType: "org.bitcoinj.script.Script$VerifyFlag"
+            uuid: "<clinit>_enumSet1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "org.bitcoinj.script.ScriptException"
+        signature: "correctlySpends(Transaction,int,TransactionWitness,Coin,Script,EnumSet):\
+          \ void throws org.bitcoinj.script.ScriptException"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "signInputs_void1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
     - type: "RESULT"
       name: "result"
       modelFingerprint: "753659628F1B3F179A2EF0629F555437"
-      index: 5
+      index: 13
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -548,7 +885,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "8155161FC6FE7F943B05AD02AA8A1E5C"
+    modelFingerprint: "4CD9A331E65AC96EC30F52A006530E80"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -616,7 +953,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "tx"
-      modelFingerprint: "353D4886F7A44269AB2BBDCDD5018AF6"
+      modelFingerprint: "BD4A010915B59A4C0575EF65A337F9EE"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -670,7 +1007,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "tx"
-      modelFingerprint: "A85EACE3C7D7682FDA0A6EE4DB252462"
+      modelFingerprint: "A323B48C71E47218EA4AAC9744AA381A"
       index: 5
       ignored: false
       nestedInLoop: true
@@ -717,7 +1054,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "txIn"
-      modelFingerprint: "78F32E1D087161EC25DDD06628A5FCF1"
+      modelFingerprint: "7E9EA542E60F5C82EC12A9FDDF91641E"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -754,7 +1091,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "connectedOutput"
-      modelFingerprint: "8D93E030EECFEDEE24741197FE6EEEBC"
+      modelFingerprint: "886E7CD262584146F8F36F0D705F6C2B"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -789,7 +1126,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "txIn"
-      modelFingerprint: "BDAB4A98962AA28DD82792E447F92EE1"
+      modelFingerprint: "C40BEF47A1A85BC857964E00CB76C4E8"
       index: 8
       ignored: false
       nestedInLoop: false
@@ -830,7 +1167,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "txIn"
-      modelFingerprint: "E77CBCDC9CB32683C0EF95D73CB4DB08"
+      modelFingerprint: "04DC6E10A20D619B50C17408096047C0"
       index: 9
       ignored: false
       nestedInLoop: false
@@ -865,7 +1202,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "connectedOutput"
-      modelFingerprint: "D6357E98FA778A7CDF21014AA78CC1E4"
+      modelFingerprint: "E75DBAD3C943DDE59FB1061424037DC1"
       index: 10
       ignored: false
       nestedInLoop: false
@@ -900,7 +1237,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "connectedOutput"
-      modelFingerprint: "8D93E030EECFEDEE24741197FE6EEEBC"
+      modelFingerprint: "886E7CD262584146F8F36F0D705F6C2B"
       index: 11
       ignored: false
       nestedInLoop: false
@@ -936,7 +1273,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "59B028A67C64817010660999E635F4A0"
+      modelFingerprint: "801CC9082D93D3A2B32E26100C742E7B"
       index: 12
       ignored: false
       nestedInLoop: true
@@ -1080,10 +1417,11 @@ methods:
       filledByUser: false
     uuid: "f485cbe3-0d04-3897-958b-a72978891214"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path15"
     pathIdForUser: "path5"
     testPathName: "signInputsWhenCaughtECKeyMissingPrivateKeyException"
@@ -1115,7 +1453,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "8CA6DFE3C2F6EF69D99B4EE475B97D44"
+    modelFingerprint: "F9007BCD634CC918803D7490CD5AF282"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -1151,47 +1489,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "propTx"
-      modelFingerprint: "F33B8A5E463AC5028ED46796D0D7F6BD"
+      modelFingerprint: "351C755F4BB7A847D4EB62FD870CAE1F"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.signers.TransactionSigner$ProposedTransaction"
-          parameters:
-          - name: "partialTx"
-            value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.Transaction"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "signInputs_transactionSigner.ProposedTransaction1-partialTx"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.signers.TransactionSigner$ProposedTransaction"
-          parameters:
-          - name: "partialTx"
-            value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.Transaction"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "signInputs_transactionSigner.ProposedTransaction1-partialTx"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.signers.TransactionSigner$ProposedTransaction"
         uuid: "signInputs_transactionSigner.ProposedTransaction1"
         fixed: false
@@ -1201,17 +1505,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "keyBag"
-      modelFingerprint: "22DD37B6710769AAEF1D81444C9DACC0"
+      modelFingerprint: "8BFD576A5E76C86D0655342334B887AA"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.wallet.KeyBag"
-          onlyPojoFunctions: false
-          builderPattern: false
         valueType: "org.bitcoinj.wallet.KeyBag"
         uuid: "signInputs_keyBag1"
         fixed: false
@@ -1668,7 +1968,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "txIn"
-      modelFingerprint: "5724B92AD7B5B31FA1FCCB606188D9E8"
+      modelFingerprint: "BF6A084FB9F2274211DCEA80833F03D6"
       index: 13
       ignored: false
       nestedInLoop: false
@@ -1691,10 +1991,6 @@ methods:
         - name: "keyBag"
           value:
             sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.wallet.KeyBag"
-              onlyPojoFunctions: false
-              builderPattern: false
             valueType: "org.bitcoinj.wallet.KeyBag"
             uuid: "signInputs_keyBag1"
             fixed: false
@@ -1906,8 +2202,8 @@ methods:
     constructorSignature: "<init>() : void"
     priorityDefinedByUser: false
     filledByUser: false
-    priority: "MODERATE"
-    modelFingerprint: "7FE9CD2E5EE41B3D0687EEA4E2661508"
+    priority: "LOW"
+    modelFingerprint: "AF77046066A9E99509CCC780203CDF7F"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -1975,7 +2271,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "tx"
-      modelFingerprint: "7D8E6357DAE82BBA237C837F3D151D6E"
+      modelFingerprint: "BD4A010915B59A4C0575EF65A337F9EE"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -2003,14 +2299,9 @@ methods:
             parameters: []
             values:
             - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.TransactionInput"
-                onlyPojoFunctions: false
-                builderPattern: false
               valueType: "org.bitcoinj.core.TransactionInput"
-              uuid: "signInputs_list1-0"
+              uuid: "signInputs_list1Item0"
               fixed: false
-              collectionUuid: "signInputs_list1"
               equalsMethodPresent: false
               explicitCastNeeded: false
           suggestedContent: !<collection>
@@ -2018,14 +2309,9 @@ methods:
             parameters: []
             values:
             - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.TransactionInput"
-                onlyPojoFunctions: false
-                builderPattern: false
               valueType: "org.bitcoinj.core.TransactionInput"
-              uuid: "signInputs_list1-0"
+              uuid: "signInputs_list1Item0"
               fixed: false
-              collectionUuid: "signInputs_list1"
               equalsMethodPresent: false
               explicitCastNeeded: false
           valueType: "java.util.List"
@@ -2199,7 +2485,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "txIn"
-      modelFingerprint: "8E2ED7240509A6C8C65AC0330A95A4F0"
+      modelFingerprint: "04DC6E10A20D619B50C17408096047C0"
       index: 9
       ignored: false
       nestedInLoop: false
@@ -2223,2127 +2509,7 @@ methods:
         parameters: []
         signature: "getWitness(): TransactionWitness"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.core.TransactionWitness"
-            method: "of"
-            methodParameters:
-            - name: "pushes"
-              value:
-                sapientType: "COLLECTION"
-                content: !<collection>
-                  parameters: []
-                  values: []
-                suggestedContent: !<collection>
-                  parameters: []
-                  values: []
-                valueType: "java.util.List"
-                uuid: "signInputs_transactionWitness1-pushes"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.core.TransactionWitness"
-            method: "of"
-            methodParameters:
-            - name: "pushes"
-              value:
-                sapientType: "COLLECTION"
-                valueType: "java.util.List"
-                uuid: "signInputs_transactionWitness1-pushes"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          valueType: "org.bitcoinj.core.TransactionWitness"
-          uuid: "signInputs_transactionWitness1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "connectedOutput"
-      modelFingerprint: "614C5150D187057055B6CF8C89895240"
-      index: 10
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 1
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.TransactionOutput"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.TransactionOutput"
-        uuid: "signInputs_transactionOutput1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "connectedOutput"
-        name: "getValue"
-        parameters: []
-        signature: "getValue(): Coin"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.Coin"
-            method: "valueOf"
-            methodParameters:
-            - name: "satoshis"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "long"
-                uuid: "signInputs_coin1-satoshis"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.base.Coin"
-            method: "valueOf"
-            methodParameters:
-            - name: "satoshis"
-              value:
-                sapientType: "BASIC"
-                valueType: "long"
-                uuid: "signInputs_coin1-satoshis"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          valueType: "org.bitcoinj.base.Coin"
-          uuid: "signInputs_coin1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "connectedOutput"
-      modelFingerprint: "1DDDE833EF1E047A33838FECA9CDF3E1"
-      index: 11
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 1
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.TransactionOutput"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.TransactionOutput"
-        uuid: "signInputs_transactionOutput1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "connectedOutput"
-        name: "getScriptPubKey"
-        parameters: []
-        throwsExceptions:
-        - "org.bitcoinj.script.ScriptException"
-        signature: "getScriptPubKey(): Script throws org.bitcoinj.script.ScriptException"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.script.Script"
-            method: "of"
-            methodParameters:
-            - name: "chunks"
-              value:
-                sapientType: "COLLECTION"
-                content: !<collection>
-                  parameters: []
-                  values: []
-                suggestedContent: !<collection>
-                  parameters: []
-                  values: []
-                valueType: "java.util.List"
-                uuid: "signInputs_script3-chunks"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.script.Script"
-            method: "of"
-            methodParameters:
-            - name: "chunks"
-              value:
-                sapientType: "COLLECTION"
-                valueType: "java.util.List"
-                uuid: "signInputs_script3-chunks"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          valueType: "org.bitcoinj.script.Script"
-          uuid: "signInputs_script3"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      modelFingerprint: "960BDC6661A5A4070E94D03FD73C0C7B"
-      index: 12
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 1
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.script.Script"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.script.Script"
-        uuid: "signInputs_script2"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.script.Script"
-        name: "correctlySpends"
-        parameters:
-        - name: "txContainingThis"
-          value:
-            sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.core.Transaction"
-              onlyPojoFunctions: false
-              builderPattern: false
-            valueType: "org.bitcoinj.core.Transaction"
-            uuid: "signInputs_transaction1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "scriptSigIndex"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: 0
-            valueType: "int"
-            uuid: "signInputs_int2"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "witness"
-          value:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "org.bitcoinj.core.TransactionWitness"
-              method: "of"
-              methodParameters:
-              - name: "pushes"
-                value:
-                  sapientType: "COLLECTION"
-                  content: !<collection>
-                    parameters: []
-                    values: []
-                  suggestedContent: !<collection>
-                    parameters: []
-                    values: []
-                  valueType: "java.util.List"
-                  uuid: "signInputs_transactionWitness1-pushes"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            suggestedContent: !<static_method_return>
-              target: "org.bitcoinj.core.TransactionWitness"
-              method: "of"
-              methodParameters:
-              - name: "pushes"
-                value:
-                  sapientType: "COLLECTION"
-                  valueType: "java.util.List"
-                  uuid: "signInputs_transactionWitness1-pushes"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            valueType: "org.bitcoinj.core.TransactionWitness"
-            uuid: "signInputs_transactionWitness1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "value"
-          value:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "org.bitcoinj.base.Coin"
-              method: "valueOf"
-              methodParameters:
-              - name: "satoshis"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  valueType: "long"
-                  uuid: "signInputs_coin1-satoshis"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            suggestedContent: !<static_method_return>
-              target: "org.bitcoinj.base.Coin"
-              method: "valueOf"
-              methodParameters:
-              - name: "satoshis"
-                value:
-                  sapientType: "BASIC"
-                  valueType: "long"
-                  uuid: "signInputs_coin1-satoshis"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            valueType: "org.bitcoinj.base.Coin"
-            uuid: "signInputs_coin1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "scriptPubKey"
-          value:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "org.bitcoinj.script.Script"
-              method: "of"
-              methodParameters:
-              - name: "chunks"
-                value:
-                  sapientType: "COLLECTION"
-                  content: !<collection>
-                    parameters: []
-                    values: []
-                  suggestedContent: !<collection>
-                    parameters: []
-                    values: []
-                  valueType: "java.util.List"
-                  uuid: "signInputs_script3-chunks"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            suggestedContent: !<static_method_return>
-              target: "org.bitcoinj.script.Script"
-              method: "of"
-              methodParameters:
-              - name: "chunks"
-                value:
-                  sapientType: "COLLECTION"
-                  valueType: "java.util.List"
-                  uuid: "signInputs_script3-chunks"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            valueType: "org.bitcoinj.script.Script"
-            uuid: "signInputs_script3"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "verifyFlags"
-          value:
-            sapientType: "COLLECTION"
-            content: !<collection>
-              parameters: []
-              values:
-              - sapientType: "ENUM"
-                content: !<regular>
-                  value: "P2SH"
-                valueType: "org.bitcoinj.script.Script$VerifyFlag"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              - sapientType: "ENUM"
-                content: !<regular>
-                  value: "NULLDUMMY"
-                valueType: "org.bitcoinj.script.Script$VerifyFlag"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            suggestedContent: !<collection>
-              parameters: []
-              values:
-              - sapientType: "ENUM"
-                content: !<regular>
-                  value: "P2SH"
-                valueType: "org.bitcoinj.script.Script$VerifyFlag"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              - sapientType: "ENUM"
-                content: !<regular>
-                  value: "NULLDUMMY"
-                valueType: "org.bitcoinj.script.Script$VerifyFlag"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            valueType: "java.util.EnumSet"
-            genericValueType: "org.bitcoinj.script.Script$VerifyFlag"
-            uuid: "<clinit>_enumSet1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        throwsExceptions:
-        - "org.bitcoinj.script.ScriptException"
-        signature: "correctlySpends(Transaction,int,TransactionWitness,Coin,Script,EnumSet):\
-          \ void throws org.bitcoinj.script.ScriptException"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "signInputs_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "txIn"
-      modelFingerprint: "9A08419AE87C51601F6A94998D187CEB"
-      index: 13
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.TransactionInput"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.TransactionInput"
-        uuid: "signInputs_transactionInput1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "txIn"
-        name: "getConnectedRedeemData"
-        parameters:
-        - name: "keyBag"
-          value:
-            sapientType: "MOCK"
-            valueType: "org.bitcoinj.wallet.KeyBag"
-            uuid: "signInputs_keyBag1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        throwsExceptions:
-        - "org.bitcoinj.script.ScriptException"
-        signature: "getConnectedRedeemData(KeyBag): RedeemData throws org.bitcoinj.script.ScriptException"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.wallet.RedeemData"
-            method: "of"
-            methodParameters:
-            - name: "keys"
-              value:
-                sapientType: "COLLECTION"
-                content: !<collection>
-                  parameters: []
-                  values: []
-                suggestedContent: !<collection>
-                  parameters: []
-                  values: []
-                valueType: "java.util.List"
-                uuid: "signInputs_redeemData1-keys"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "redeemScript"
-              value:
-                sapientType: "MOCK"
-                valueType: "org.bitcoinj.script.Script"
-                uuid: "signInputs_redeemData1-redeemScript"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.wallet.RedeemData"
-            method: "of"
-            methodParameters:
-            - name: "keys"
-              value:
-                sapientType: "COLLECTION"
-                valueType: "java.util.List"
-                uuid: "signInputs_redeemData1-keys"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "redeemScript"
-              value:
-                sapientType: "UNKNOWN"
-                valueType: "org.bitcoinj.script.Script"
-                uuid: "signInputs_redeemData1-redeemScript"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          valueType: "org.bitcoinj.wallet.RedeemData"
-          uuid: "signInputs_redeemData1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      modelFingerprint: "145B7BC7FE248FDD993B51C356F742D3"
-      index: 14
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.crypto.DeterministicKey"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.crypto.DeterministicKey"
-        uuid: "signInputs_object1"
-        fixed: false
-        collectionUuid: "signInputs_list2"
-        equalsMethodPresent: false
-        explicitCastNeeded: true
-      methodExercised:
-        target: "org.bitcoinj.crypto.DeterministicKey"
-        name: "getPath"
-        parameters: []
-        signature: "getPath(): HDPath"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<new>
-            target: "org.bitcoinj.crypto.HDPath"
-            parameters:
-            - name: "hasPrivateKey"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: false
-                valueType: "boolean"
-                uuid: "signInputs_hDPath1-hasPrivateKey"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "list"
-              value:
-                sapientType: "COLLECTION"
-                content: !<collection>
-                  parameters: []
-                  values: []
-                suggestedContent: !<collection>
-                  parameters: []
-                  values: []
-                valueType: "java.util.List"
-                uuid: "signInputs_hDPath1-list"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
-            target: "org.bitcoinj.crypto.HDPath"
-            parameters:
-            - name: "hasPrivateKey"
-              value:
-                sapientType: "BASIC"
-                valueType: "boolean"
-                uuid: "signInputs_hDPath1-hasPrivateKey"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "list"
-              value:
-                sapientType: "COLLECTION"
-                valueType: "java.util.List"
-                uuid: "signInputs_hDPath1-list"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
-          valueType: "org.bitcoinj.crypto.HDPath"
-          uuid: "signInputs_hDPath1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "redeemData"
-      modelFingerprint: "1339E44D9C67E56989EB6FD049502B3E"
-      index: 15
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "org.bitcoinj.wallet.RedeemData"
-          method: "of"
-          methodParameters:
-          - name: "keys"
-            value:
-              sapientType: "COLLECTION"
-              content: !<collection>
-                parameters: []
-                values: []
-              suggestedContent: !<collection>
-                parameters: []
-                values: []
-              valueType: "java.util.List"
-              uuid: "signInputs_redeemData1-keys"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "redeemScript"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.script.Script"
-              uuid: "signInputs_redeemData1-redeemScript"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.wallet.RedeemData"
-          method: "of"
-          methodParameters:
-          - name: "keys"
-            value:
-              sapientType: "COLLECTION"
-              valueType: "java.util.List"
-              uuid: "signInputs_redeemData1-keys"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "redeemScript"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.script.Script"
-              uuid: "signInputs_redeemData1-redeemScript"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        valueType: "org.bitcoinj.wallet.RedeemData"
-        uuid: "signInputs_redeemData1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "redeemData"
-        name: "getFullKey"
-        parameters: []
-        signature: "getFullKey(): ECKey"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<new>
-            target: "org.bitcoinj.crypto.ECKey"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
-            target: "org.bitcoinj.crypto.ECKey"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
-          valueType: "org.bitcoinj.crypto.ECKey"
-          uuid: "signInputs_eCKey1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "txIn"
-      modelFingerprint: "8644E8F8EC22326F260142FF23319D64"
-      index: 16
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.TransactionInput"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.TransactionInput"
-        uuid: "signInputs_transactionInput1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "txIn"
-        name: "getScriptSig"
-        parameters: []
-        throwsExceptions:
-        - "org.bitcoinj.script.ScriptException"
-        signature: "getScriptSig(): Script throws org.bitcoinj.script.ScriptException"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.script.Script"
-            method: "of"
-            methodParameters:
-            - name: "chunks"
-              value:
-                sapientType: "COLLECTION"
-                content: !<collection>
-                  parameters: []
-                  values: []
-                suggestedContent: !<collection>
-                  parameters: []
-                  values: []
-                valueType: "java.util.List"
-                uuid: "signInputs_script4-chunks"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.script.Script"
-            method: "of"
-            methodParameters:
-            - name: "chunks"
-              value:
-                sapientType: "COLLECTION"
-                valueType: "java.util.List"
-                uuid: "signInputs_script4-chunks"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          valueType: "org.bitcoinj.script.Script"
-          uuid: "signInputs_script4"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "FIELD"
-      name: "redeemScript"
-      modelFingerprint: "6212615ACE92E5B21D1E47ACDB803FB0"
-      index: 17
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.script.Script"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.script.Script"
-        uuid: "signInputs_script5"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "this.redeemScript"
-        name: "program"
-        parameters: []
-        signature: "program(): byte[]"
-        returnValue:
-          sapientType: "ARRAY"
-          content: !<array>
-            values: {}
-          suggestedContent: !<array>
-            values: {}
-          valueType: "byte[]"
-          uuid: "signInputs_byte[]1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "ScriptPattern"
-      modelFingerprint: "F7726F9F81C0BFAFA1C37E74776B494B"
-      index: 18
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 2
-      - 3
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.script.ScriptPattern"
-        uuid: "org.bitcoinj.script.ScriptPattern"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.script.ScriptPattern"
-        name: "isP2PK"
-        parameters:
-        - name: "script"
-          value:
-            sapientType: "MOCK"
-            valueType: "org.bitcoinj.script.Script"
-            uuid: "signInputs_script1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "isP2PK(Script): boolean"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: false
-          suggestedContent: !<regular>
-            value: false
-          valueType: "boolean"
-          uuid: "signInputs_boolean2"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "ScriptPattern"
-      modelFingerprint: "AFAFD398E6F0C95BDAB79E80A5CB9A4B"
-      index: 19
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 2
-      - 3
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.script.ScriptPattern"
-        uuid: "org.bitcoinj.script.ScriptPattern"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.script.ScriptPattern"
-        name: "isP2PKH"
-        parameters:
-        - name: "script"
-          value:
-            sapientType: "MOCK"
-            valueType: "org.bitcoinj.script.Script"
-            uuid: "signInputs_script1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "isP2PKH(Script): boolean"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: false
-          suggestedContent: !<regular>
-            value: false
-          valueType: "boolean"
-          uuid: "signInputs_boolean3"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "ScriptPattern"
-      modelFingerprint: "61F3D700A07B81997174C83157B8B4B1"
-      index: 20
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 2
-      - 3
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.script.ScriptPattern"
-        uuid: "org.bitcoinj.script.ScriptPattern"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.script.ScriptPattern"
-        name: "isP2SH"
-        parameters:
-        - name: "script"
-          value:
-            sapientType: "MOCK"
-            valueType: "org.bitcoinj.script.Script"
-            uuid: "signInputs_script1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "isP2SH(Script): boolean"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: false
-          suggestedContent: !<regular>
-            value: false
-          valueType: "boolean"
-          uuid: "signInputs_boolean4"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "ScriptPattern"
-      modelFingerprint: "249616B5BB80E8FAD10C0F896D803029"
-      index: 21
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 2
-      - 3
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.script.ScriptPattern"
-        uuid: "org.bitcoinj.script.ScriptPattern"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.script.ScriptPattern"
-        name: "isP2WPKH"
-        parameters:
-        - name: "script"
-          value:
-            sapientType: "MOCK"
-            valueType: "org.bitcoinj.script.Script"
-            uuid: "signInputs_script1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "isP2WPKH(Script): boolean"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: true
-          suggestedContent: !<regular>
-            value: true
-          valueType: "boolean"
-          uuid: "signInputs_boolean5"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "ScriptBuilder"
-      modelFingerprint: "00E7891FB7FD4E30E93905A3BE86418B"
-      index: 22
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 2
-      - 3
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.script.ScriptBuilder"
-        uuid: "org.bitcoinj.script.ScriptBuilder"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.script.ScriptBuilder"
-        name: "createP2PKHOutputScript"
-        parameters:
-        - name: "key"
-          value:
-            sapientType: "OBJECT"
-            content: !<new>
-              target: "org.bitcoinj.crypto.ECKey"
-              parameters: []
-              privateConstructor: false
-              createdByTargetCode: false
-            suggestedContent: !<new>
-              target: "org.bitcoinj.crypto.ECKey"
-              parameters: []
-              privateConstructor: false
-              createdByTargetCode: false
-            valueType: "org.bitcoinj.crypto.ECKey"
-            uuid: "signInputs_eCKey1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "createP2PKHOutputScript(ECKey): Script"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.script.Script"
-            method: "of"
-            methodParameters:
-            - name: "chunks"
-              value:
-                sapientType: "COLLECTION"
-                content: !<collection>
-                  parameters: []
-                  values: []
-                suggestedContent: !<collection>
-                  parameters: []
-                  values: []
-                valueType: "java.util.List"
-                uuid: "signInputs_script6-chunks"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.script.Script"
-            method: "of"
-            methodParameters:
-            - name: "chunks"
-              value:
-                sapientType: "COLLECTION"
-                valueType: "java.util.List"
-                uuid: "signInputs_script6-chunks"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          valueType: "org.bitcoinj.script.Script"
-          uuid: "signInputs_script6"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "txIn"
-      modelFingerprint: "6C9C8FCB6942C70ECF9DBF303DCEBCF1"
-      index: 23
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 2
-      - 3
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.TransactionInput"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.TransactionInput"
-        uuid: "signInputs_transactionInput1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "txIn"
-        name: "getValue"
-        parameters: []
-        signature: "getValue(): Coin"
-        returnValue:
           sapientType: "MOCK"
-          valueType: "org.bitcoinj.base.Coin"
-          uuid: "signInputs_coin2"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "tx"
-      modelFingerprint: "11FA8E74B29970E5FFF3A0ACB6E9F470"
-      index: 24
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 2
-      - 3
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.Transaction"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.Transaction"
-        uuid: "signInputs_transaction1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "tx"
-        name: "calculateWitnessSignature"
-        parameters:
-        - name: "inputIndex"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: 0
-            valueType: "int"
-            uuid: "signInputs_int2"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "key"
-          value:
-            sapientType: "OBJECT"
-            content: !<new>
-              target: "org.bitcoinj.crypto.ECKey"
-              parameters: []
-              privateConstructor: false
-              createdByTargetCode: false
-            suggestedContent: !<new>
-              target: "org.bitcoinj.crypto.ECKey"
-              parameters: []
-              privateConstructor: false
-              createdByTargetCode: false
-            valueType: "org.bitcoinj.crypto.ECKey"
-            uuid: "signInputs_eCKey1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "scriptCode"
-          value:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "org.bitcoinj.script.Script"
-              method: "of"
-              methodParameters:
-              - name: "chunks"
-                value:
-                  sapientType: "COLLECTION"
-                  content: !<collection>
-                    parameters: []
-                    values: []
-                  suggestedContent: !<collection>
-                    parameters: []
-                    values: []
-                  valueType: "java.util.List"
-                  uuid: "signInputs_script6-chunks"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            suggestedContent: !<static_method_return>
-              target: "org.bitcoinj.script.Script"
-              method: "of"
-              methodParameters:
-              - name: "chunks"
-                value:
-                  sapientType: "COLLECTION"
-                  valueType: "java.util.List"
-                  uuid: "signInputs_script6-chunks"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            valueType: "org.bitcoinj.script.Script"
-            uuid: "signInputs_script6"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "value"
-          value:
-            sapientType: "MOCK"
-            valueType: "org.bitcoinj.base.Coin"
-            uuid: "signInputs_coin2"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "hashType"
-          value:
-            sapientType: "ENUM"
-            content: !<regular>
-              value: "ALL"
-            valueType: "org.bitcoinj.core.Transaction$SigHash"
-            uuid: "Enum-org.bitcoinj.core.Transaction$SigHash-ALL"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "anyoneCanPay"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "calculateWitnessSignature(int,ECKey,Script,Coin,Transaction$SigHash,boolean):\
-          \ TransactionSignature"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<new>
-            target: "org.bitcoinj.crypto.TransactionSignature"
-            parameters:
-            - name: "r"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "java.math.BigInteger"
-                uuid: "signInputs_transactionSignature1-r"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "s"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "java.math.BigInteger"
-                uuid: "signInputs_transactionSignature1-s"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
-            target: "org.bitcoinj.crypto.TransactionSignature"
-            parameters:
-            - name: "r"
-              value:
-                sapientType: "BASIC"
-                valueType: "java.math.BigInteger"
-                uuid: "signInputs_transactionSignature1-r"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "s"
-              value:
-                sapientType: "BASIC"
-                valueType: "java.math.BigInteger"
-                uuid: "signInputs_transactionSignature1-s"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
-          valueType: "org.bitcoinj.crypto.TransactionSignature"
-          uuid: "signInputs_transactionSignature1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "ScriptBuilder"
-      modelFingerprint: "064811F3E21EB1FBB59B545F914E460B"
-      index: 25
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 2
-      - 3
-      value:
-        sapientType: "REAL"
-        valueType: "org.bitcoinj.script.ScriptBuilder"
-        uuid: "org.bitcoinj.script.ScriptBuilder"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.script.ScriptBuilder"
-        name: "createEmpty"
-        parameters: []
-        signature: "createEmpty(): Script"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.script.ScriptBuilder"
-            method: "createEmpty"
-            methodParameters: []
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.script.ScriptBuilder"
-            method: "createEmpty"
-            methodParameters: []
-          valueType: "org.bitcoinj.script.Script"
-          uuid: "signInputs_script7"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "txIn"
-      modelFingerprint: "8D6B814E5B92F89ABA660498707EA899"
-      index: 26
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 2
-      - 3
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.TransactionInput"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.TransactionInput"
-        uuid: "signInputs_transactionInput1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "txIn"
-        name: "setScriptSig"
-        parameters:
-        - name: "scriptSig"
-          value:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "org.bitcoinj.script.ScriptBuilder"
-              method: "createEmpty"
-              methodParameters: []
-            suggestedContent: !<static_method_return>
-              target: "org.bitcoinj.script.ScriptBuilder"
-              method: "createEmpty"
-              methodParameters: []
-            valueType: "org.bitcoinj.script.Script"
-            uuid: "signInputs_script7"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "setScriptSig(Script): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "signInputs_void3"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "TransactionWitness"
-      modelFingerprint: "3ECD431DC6DF0CAC438BCAA986CDBCE0"
-      index: 27
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 2
-      - 3
-      value:
-        sapientType: "REAL"
-        valueType: "org.bitcoinj.core.TransactionWitness"
-        uuid: "org.bitcoinj.core.TransactionWitness"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.core.TransactionWitness"
-        name: "redeemP2WPKH"
-        parameters:
-        - name: "signature"
-          value:
-            sapientType: "OBJECT"
-            content: !<new>
-              target: "org.bitcoinj.crypto.TransactionSignature"
-              parameters:
-              - name: "r"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  valueType: "java.math.BigInteger"
-                  uuid: "signInputs_transactionSignature1-r"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "s"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  valueType: "java.math.BigInteger"
-                  uuid: "signInputs_transactionSignature1-s"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
-            suggestedContent: !<new>
-              target: "org.bitcoinj.crypto.TransactionSignature"
-              parameters:
-              - name: "r"
-                value:
-                  sapientType: "BASIC"
-                  valueType: "java.math.BigInteger"
-                  uuid: "signInputs_transactionSignature1-r"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "s"
-                value:
-                  sapientType: "BASIC"
-                  valueType: "java.math.BigInteger"
-                  uuid: "signInputs_transactionSignature1-s"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
-            valueType: "org.bitcoinj.crypto.TransactionSignature"
-            uuid: "signInputs_transactionSignature1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "pubKey"
-          value:
-            sapientType: "OBJECT"
-            content: !<new>
-              target: "org.bitcoinj.crypto.ECKey"
-              parameters: []
-              privateConstructor: false
-              createdByTargetCode: false
-            suggestedContent: !<new>
-              target: "org.bitcoinj.crypto.ECKey"
-              parameters: []
-              privateConstructor: false
-              createdByTargetCode: false
-            valueType: "org.bitcoinj.crypto.ECKey"
-            uuid: "signInputs_eCKey1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "redeemP2WPKH(TransactionSignature,ECKey): TransactionWitness"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.core.TransactionWitness"
-            method: "redeemP2WPKH"
-            methodParameters:
-            - value:
-                sapientType: "OBJECT"
-                content: !<new>
-                  target: "org.bitcoinj.crypto.TransactionSignature"
-                  parameters:
-                  - name: "r"
-                    value:
-                      sapientType: "BASIC"
-                      content: !<regular>
-                        value: 0
-                      valueType: "java.math.BigInteger"
-                      uuid: "signInputs_transactionSignature1-r"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  - name: "s"
-                    value:
-                      sapientType: "BASIC"
-                      content: !<regular>
-                        value: 0
-                      valueType: "java.math.BigInteger"
-                      uuid: "signInputs_transactionSignature1-s"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  privateConstructor: false
-                  createdByTargetCode: false
-                suggestedContent: !<new>
-                  target: "org.bitcoinj.crypto.TransactionSignature"
-                  parameters:
-                  - name: "r"
-                    value:
-                      sapientType: "BASIC"
-                      valueType: "java.math.BigInteger"
-                      uuid: "signInputs_transactionSignature1-r"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  - name: "s"
-                    value:
-                      sapientType: "BASIC"
-                      valueType: "java.math.BigInteger"
-                      uuid: "signInputs_transactionSignature1-s"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  privateConstructor: false
-                  createdByTargetCode: false
-                valueType: "org.bitcoinj.crypto.TransactionSignature"
-                uuid: "signInputs_transactionSignature1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - value:
-                sapientType: "OBJECT"
-                content: !<new>
-                  target: "org.bitcoinj.crypto.ECKey"
-                  parameters: []
-                  privateConstructor: false
-                  createdByTargetCode: false
-                suggestedContent: !<new>
-                  target: "org.bitcoinj.crypto.ECKey"
-                  parameters: []
-                  privateConstructor: false
-                  createdByTargetCode: false
-                valueType: "org.bitcoinj.crypto.ECKey"
-                uuid: "signInputs_eCKey1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.core.TransactionWitness"
-            method: "redeemP2WPKH"
-            methodParameters:
-            - value:
-                sapientType: "OBJECT"
-                content: !<new>
-                  target: "org.bitcoinj.crypto.TransactionSignature"
-                  parameters:
-                  - name: "r"
-                    value:
-                      sapientType: "BASIC"
-                      content: !<regular>
-                        value: 0
-                      valueType: "java.math.BigInteger"
-                      uuid: "signInputs_transactionSignature1-r"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  - name: "s"
-                    value:
-                      sapientType: "BASIC"
-                      content: !<regular>
-                        value: 0
-                      valueType: "java.math.BigInteger"
-                      uuid: "signInputs_transactionSignature1-s"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  privateConstructor: false
-                  createdByTargetCode: false
-                suggestedContent: !<new>
-                  target: "org.bitcoinj.crypto.TransactionSignature"
-                  parameters:
-                  - name: "r"
-                    value:
-                      sapientType: "BASIC"
-                      valueType: "java.math.BigInteger"
-                      uuid: "signInputs_transactionSignature1-r"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  - name: "s"
-                    value:
-                      sapientType: "BASIC"
-                      valueType: "java.math.BigInteger"
-                      uuid: "signInputs_transactionSignature1-s"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  privateConstructor: false
-                  createdByTargetCode: false
-                valueType: "org.bitcoinj.crypto.TransactionSignature"
-                uuid: "signInputs_transactionSignature1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - value:
-                sapientType: "OBJECT"
-                content: !<new>
-                  target: "org.bitcoinj.crypto.ECKey"
-                  parameters: []
-                  privateConstructor: false
-                  createdByTargetCode: false
-                suggestedContent: !<new>
-                  target: "org.bitcoinj.crypto.ECKey"
-                  parameters: []
-                  privateConstructor: false
-                  createdByTargetCode: false
-                valueType: "org.bitcoinj.crypto.ECKey"
-                uuid: "signInputs_eCKey1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          valueType: "org.bitcoinj.core.TransactionWitness"
-          uuid: "signInputs_transactionWitness2"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "txIn"
-      modelFingerprint: "0F19E9EB991C4EF388A721F6C43DC3B0"
-      index: 28
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 2
-      - 3
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.TransactionInput"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.TransactionInput"
-        uuid: "signInputs_transactionInput1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "txIn"
-        name: "setWitness"
-        parameters:
-        - name: "witness"
-          value:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "org.bitcoinj.core.TransactionWitness"
-              method: "redeemP2WPKH"
-              methodParameters:
-              - value:
-                  sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.TransactionSignature"
-                    parameters:
-                    - name: "r"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 0
-                        valueType: "java.math.BigInteger"
-                        uuid: "signInputs_transactionSignature1-r"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "s"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 0
-                        valueType: "java.math.BigInteger"
-                        uuid: "signInputs_transactionSignature1-s"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.TransactionSignature"
-                    parameters:
-                    - name: "r"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "java.math.BigInteger"
-                        uuid: "signInputs_transactionSignature1-r"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "s"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "java.math.BigInteger"
-                        uuid: "signInputs_transactionSignature1-s"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.TransactionSignature"
-                  uuid: "signInputs_transactionSignature1"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - value:
-                  sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ECKey"
-                    parameters: []
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ECKey"
-                    parameters: []
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ECKey"
-                  uuid: "signInputs_eCKey1"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            suggestedContent: !<static_method_return>
-              target: "org.bitcoinj.core.TransactionWitness"
-              method: "redeemP2WPKH"
-              methodParameters:
-              - value:
-                  sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.TransactionSignature"
-                    parameters:
-                    - name: "r"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 0
-                        valueType: "java.math.BigInteger"
-                        uuid: "signInputs_transactionSignature1-r"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "s"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 0
-                        valueType: "java.math.BigInteger"
-                        uuid: "signInputs_transactionSignature1-s"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.TransactionSignature"
-                    parameters:
-                    - name: "r"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "java.math.BigInteger"
-                        uuid: "signInputs_transactionSignature1-r"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "s"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "java.math.BigInteger"
-                        uuid: "signInputs_transactionSignature1-s"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.TransactionSignature"
-                  uuid: "signInputs_transactionSignature1"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - value:
-                  sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ECKey"
-                    parameters: []
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ECKey"
-                    parameters: []
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ECKey"
-                  uuid: "signInputs_eCKey1"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            valueType: "org.bitcoinj.core.TransactionWitness"
-            uuid: "signInputs_transactionWitness2"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "setWitness(TransactionWitness): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "signInputs_void4"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
-      index: 29
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: true
-        valueType: "boolean"
-        fixed: true
-        equalsMethodPresent: true
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    uuid: "951ea5e3-3861-3283-8f62-4545c29a363c"
-    deleted: false
-    disabled: true
-    ignoredBySystem: false
-    prover: "LLM"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
-  - pathId: "path6"
-    pathIdForUser: "path12"
-    testPathName: "signInputsWhenScriptPatternIsP2WPKHScriptPubKey"
-    nameDefinedByUser: false
-    constructorSignature: "<init>() : void"
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "MODERATE"
-    modelFingerprint: "DF2D1140DA1EAF5135BA47C8C16017BA"
-    problemWasSolvedByProver: false
-    catchBlockExercised:
-      idExternalInstruction: 0
-      id: 1
-      catchExceptions:
-      - "org.bitcoinj.script.ScriptException"
-    truncated: false
-    inputParameters:
-    - type: "CONSTRUCTOR"
-      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.signers.LocalTransactionSigner"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.signers.LocalTransactionSigner"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "org.bitcoinj.signers.LocalTransactionSigner"
-        uuid: "target"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "propTx"
-      modelFingerprint: "351C755F4BB7A847D4EB62FD870CAE1F"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.signers.TransactionSigner$ProposedTransaction"
-        uuid: "signInputs_transactionSigner.ProposedTransaction1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "keyBag"
-      modelFingerprint: "8BFD576A5E76C86D0655342334B887AA"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.wallet.KeyBag"
-        uuid: "signInputs_keyBag1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "tx"
-      modelFingerprint: "7D8E6357DAE82BBA237C837F3D151D6E"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.Transaction"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.Transaction"
-        uuid: "signInputs_transaction1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "tx"
-        name: "getInputs"
-        parameters: []
-        signature: "getInputs(): List"
-        returnValue:
-          sapientType: "COLLECTION"
-          content: !<collection>
-            collectionClass: "java.util.ArrayList"
-            parameters: []
-            values:
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.TransactionInput"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.TransactionInput"
-              uuid: "signInputs_list1-0"
-              fixed: false
-              collectionUuid: "signInputs_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          suggestedContent: !<collection>
-            collectionClass: "java.util.ArrayList"
-            parameters: []
-            values:
-            - sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.TransactionInput"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.TransactionInput"
-              uuid: "signInputs_list1-0"
-              fixed: false
-              collectionUuid: "signInputs_list1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          valueType: "java.util.List"
-          genericValueType: "org.bitcoinj.core.TransactionInput"
-          uuid: "signInputs_list1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "tx"
-      modelFingerprint: "A323B48C71E47218EA4AAC9744AA381A"
-      index: 5
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.Transaction"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.Transaction"
-        uuid: "signInputs_transaction1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "tx"
-        name: "getInput"
-        parameters:
-        - name: "index"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: 0
-            valueType: "long"
-            originalValueType: "int"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "getInput(long): TransactionInput"
-        returnValue:
-          sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
-            target: "org.bitcoinj.core.TransactionInput"
-            onlyPojoFunctions: false
-            builderPattern: false
-          valueType: "org.bitcoinj.core.TransactionInput"
-          uuid: "signInputs_transactionInput1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "txIn"
-      modelFingerprint: "7E9EA542E60F5C82EC12A9FDDF91641E"
-      index: 6
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.TransactionInput"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.TransactionInput"
-        uuid: "signInputs_transactionInput1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "txIn"
-        name: "getConnectedOutput"
-        parameters: []
-        signature: "getConnectedOutput(): TransactionOutput"
-        returnValue:
-          sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
-            target: "org.bitcoinj.core.TransactionOutput"
-            onlyPojoFunctions: false
-            builderPattern: false
-          valueType: "org.bitcoinj.core.TransactionOutput"
-          uuid: "signInputs_transactionOutput1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "connectedOutput"
-      modelFingerprint: "886E7CD262584146F8F36F0D705F6C2B"
-      index: 7
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.TransactionOutput"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.TransactionOutput"
-        uuid: "signInputs_transactionOutput1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "connectedOutput"
-        name: "getScriptPubKey"
-        parameters: []
-        throwsExceptions:
-        - "org.bitcoinj.script.ScriptException"
-        signature: "getScriptPubKey(): Script throws org.bitcoinj.script.ScriptException"
-        returnValue:
-          sapientType: "MOCK"
-          valueType: "org.bitcoinj.script.Script"
-          uuid: "signInputs_script1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "txIn"
-      modelFingerprint: "13E60B914A802583CBF6B60F9E4F0170"
-      index: 8
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 1
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.TransactionInput"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.TransactionInput"
-        uuid: "signInputs_transactionInput1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "txIn"
-        name: "getScriptSig"
-        parameters: []
-        throwsExceptions:
-        - "org.bitcoinj.script.ScriptException"
-        signature: "getScriptSig(): Script throws org.bitcoinj.script.ScriptException"
-        returnValue:
-          sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
-            target: "org.bitcoinj.script.Script"
-            onlyPojoFunctions: false
-            builderPattern: false
-          valueType: "org.bitcoinj.script.Script"
-          uuid: "signInputs_script2"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "txIn"
-      modelFingerprint: "8E2ED7240509A6C8C65AC0330A95A4F0"
-      index: 9
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 1
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.TransactionInput"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.TransactionInput"
-        uuid: "signInputs_transactionInput1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "txIn"
-        name: "getWitness"
-        parameters: []
-        signature: "getWitness(): TransactionWitness"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.core.TransactionWitness"
-            method: "of"
-            methodParameters:
-            - name: "pushes"
-              value:
-                sapientType: "COLLECTION"
-                content: !<collection>
-                  parameters: []
-                  values: []
-                suggestedContent: !<collection>
-                  parameters: []
-                  values: []
-                valueType: "java.util.List"
-                uuid: "signInputs_transactionWitness1-pushes"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.core.TransactionWitness"
-            method: "of"
-            methodParameters:
-            - name: "pushes"
-              value:
-                sapientType: "COLLECTION"
-                valueType: "java.util.List"
-                uuid: "signInputs_transactionWitness1-pushes"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
           valueType: "org.bitcoinj.core.TransactionWitness"
           uuid: "signInputs_transactionWitness1"
           fixed: false
@@ -4389,7 +2555,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "connectedOutput"
-      modelFingerprint: "1DDDE833EF1E047A33838FECA9CDF3E1"
+      modelFingerprint: "886E7CD262584146F8F36F0D705F6C2B"
       index: 11
       ignored: false
       nestedInLoop: false
@@ -4415,37 +2581,7 @@ methods:
         - "org.bitcoinj.script.ScriptException"
         signature: "getScriptPubKey(): Script throws org.bitcoinj.script.ScriptException"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.script.Script"
-            method: "of"
-            methodParameters:
-            - name: "chunks"
-              value:
-                sapientType: "COLLECTION"
-                content: !<collection>
-                  parameters: []
-                  values: []
-                suggestedContent: !<collection>
-                  parameters: []
-                  values: []
-                valueType: "java.util.List"
-                uuid: "signInputs_script3-chunks"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.script.Script"
-            method: "of"
-            methodParameters:
-            - name: "chunks"
-              value:
-                sapientType: "COLLECTION"
-                valueType: "java.util.List"
-                uuid: "signInputs_script3-chunks"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.script.Script"
           uuid: "signInputs_script3"
           fixed: false
@@ -4455,7 +2591,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "8D9013CD45E77A052749393997F4F464"
+      modelFingerprint: "59B028A67C64817010660999E635F4A0"
       index: 12
       ignored: false
       nestedInLoop: true
@@ -4501,37 +2637,7 @@ methods:
             explicitCastNeeded: false
         - name: "witness"
           value:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "org.bitcoinj.core.TransactionWitness"
-              method: "of"
-              methodParameters:
-              - name: "pushes"
-                value:
-                  sapientType: "COLLECTION"
-                  content: !<collection>
-                    parameters: []
-                    values: []
-                  suggestedContent: !<collection>
-                    parameters: []
-                    values: []
-                  valueType: "java.util.List"
-                  uuid: "signInputs_transactionWitness1-pushes"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            suggestedContent: !<static_method_return>
-              target: "org.bitcoinj.core.TransactionWitness"
-              method: "of"
-              methodParameters:
-              - name: "pushes"
-                value:
-                  sapientType: "COLLECTION"
-                  valueType: "java.util.List"
-                  uuid: "signInputs_transactionWitness1-pushes"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+            sapientType: "MOCK"
             valueType: "org.bitcoinj.core.TransactionWitness"
             uuid: "signInputs_transactionWitness1"
             fixed: false
@@ -4547,37 +2653,7 @@ methods:
             explicitCastNeeded: false
         - name: "scriptPubKey"
           value:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "org.bitcoinj.script.Script"
-              method: "of"
-              methodParameters:
-              - name: "chunks"
-                value:
-                  sapientType: "COLLECTION"
-                  content: !<collection>
-                    parameters: []
-                    values: []
-                  suggestedContent: !<collection>
-                    parameters: []
-                    values: []
-                  valueType: "java.util.List"
-                  uuid: "signInputs_script3-chunks"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            suggestedContent: !<static_method_return>
-              target: "org.bitcoinj.script.Script"
-              method: "of"
-              methodParameters:
-              - name: "chunks"
-                value:
-                  sapientType: "COLLECTION"
-                  valueType: "java.util.List"
-                  uuid: "signInputs_script3-chunks"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+            sapientType: "MOCK"
             valueType: "org.bitcoinj.script.Script"
             uuid: "signInputs_script3"
             fixed: false
@@ -4642,7 +2718,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "txIn"
-      modelFingerprint: "9A08419AE87C51601F6A94998D187CEB"
+      modelFingerprint: "BF6A084FB9F2274211DCEA80833F03D6"
       index: 13
       ignored: false
       nestedInLoop: false
@@ -4674,53 +2750,11 @@ methods:
         - "org.bitcoinj.script.ScriptException"
         signature: "getConnectedRedeemData(KeyBag): RedeemData throws org.bitcoinj.script.ScriptException"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
             target: "org.bitcoinj.wallet.RedeemData"
-            method: "of"
-            methodParameters:
-            - name: "keys"
-              value:
-                sapientType: "COLLECTION"
-                content: !<collection>
-                  parameters: []
-                  values: []
-                suggestedContent: !<collection>
-                  parameters: []
-                  values: []
-                valueType: "java.util.List"
-                uuid: "signInputs_redeemData1-keys"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "redeemScript"
-              value:
-                sapientType: "MOCK"
-                valueType: "org.bitcoinj.script.Script"
-                uuid: "signInputs_redeemData1-redeemScript"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.wallet.RedeemData"
-            method: "of"
-            methodParameters:
-            - name: "keys"
-              value:
-                sapientType: "COLLECTION"
-                valueType: "java.util.List"
-                uuid: "signInputs_redeemData1-keys"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "redeemScript"
-              value:
-                sapientType: "UNKNOWN"
-                valueType: "org.bitcoinj.script.Script"
-                uuid: "signInputs_redeemData1-redeemScript"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+            onlyPojoFunctions: false
+            builderPattern: false
           valueType: "org.bitcoinj.wallet.RedeemData"
           uuid: "signInputs_redeemData1"
           fixed: false
@@ -4730,7 +2764,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "145B7BC7FE248FDD993B51C356F742D3"
+      modelFingerprint: "30088FBF9879077A030CAF911039F910"
       index: 14
       ignored: false
       nestedInLoop: true
@@ -4753,57 +2787,7 @@ methods:
         parameters: []
         signature: "getPath(): HDPath"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<new>
-            target: "org.bitcoinj.crypto.HDPath"
-            parameters:
-            - name: "hasPrivateKey"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: false
-                valueType: "boolean"
-                uuid: "signInputs_hDPath1-hasPrivateKey"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "list"
-              value:
-                sapientType: "COLLECTION"
-                content: !<collection>
-                  parameters: []
-                  values: []
-                suggestedContent: !<collection>
-                  parameters: []
-                  values: []
-                valueType: "java.util.List"
-                uuid: "signInputs_hDPath1-list"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
-            target: "org.bitcoinj.crypto.HDPath"
-            parameters:
-            - name: "hasPrivateKey"
-              value:
-                sapientType: "BASIC"
-                valueType: "boolean"
-                uuid: "signInputs_hDPath1-hasPrivateKey"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "list"
-              value:
-                sapientType: "COLLECTION"
-                valueType: "java.util.List"
-                uuid: "signInputs_hDPath1-list"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.crypto.HDPath"
           uuid: "signInputs_hDPath1"
           fixed: false
@@ -4814,59 +2798,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "redeemData"
-      modelFingerprint: "1339E44D9C67E56989EB6FD049502B3E"
+      modelFingerprint: "0A2C5132EFB99B63BCFD61AD07F6E12E"
       index: 15
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.wallet.RedeemData"
-          method: "of"
-          methodParameters:
-          - name: "keys"
-            value:
-              sapientType: "COLLECTION"
-              content: !<collection>
-                parameters: []
-                values: []
-              suggestedContent: !<collection>
-                parameters: []
-                values: []
-              valueType: "java.util.List"
-              uuid: "signInputs_redeemData1-keys"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "redeemScript"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.script.Script"
-              uuid: "signInputs_redeemData1-redeemScript"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.wallet.RedeemData"
-          method: "of"
-          methodParameters:
-          - name: "keys"
-            value:
-              sapientType: "COLLECTION"
-              valueType: "java.util.List"
-              uuid: "signInputs_redeemData1-keys"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "redeemScript"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.script.Script"
-              uuid: "signInputs_redeemData1-redeemScript"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.wallet.RedeemData"
         uuid: "signInputs_redeemData1"
         fixed: false
@@ -4878,385 +2820,48 @@ methods:
         parameters: []
         signature: "getFullKey(): ECKey"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<new>
-            target: "org.bitcoinj.crypto.ECKey"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
-            target: "org.bitcoinj.crypto.ECKey"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
+          sapientType: "NULL"
           valueType: "org.bitcoinj.crypto.ECKey"
           uuid: "signInputs_eCKey1"
-          fixed: false
+          fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 1
       staticReadMethodForField: false
       filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "txIn"
-      modelFingerprint: "8644E8F8EC22326F260142FF23319D64"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
       index: 16
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.TransactionInput"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.TransactionInput"
-        uuid: "signInputs_transactionInput1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "txIn"
-        name: "getScriptSig"
-        parameters: []
-        throwsExceptions:
-        - "org.bitcoinj.script.ScriptException"
-        signature: "getScriptSig(): Script throws org.bitcoinj.script.ScriptException"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.script.Script"
-            method: "of"
-            methodParameters:
-            - name: "chunks"
-              value:
-                sapientType: "COLLECTION"
-                content: !<collection>
-                  parameters: []
-                  values: []
-                suggestedContent: !<collection>
-                  parameters: []
-                  values: []
-                valueType: "java.util.List"
-                uuid: "signInputs_script4-chunks"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.script.Script"
-            method: "of"
-            methodParameters:
-            - name: "chunks"
-              value:
-                sapientType: "COLLECTION"
-                valueType: "java.util.List"
-                uuid: "signInputs_script4-chunks"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          valueType: "org.bitcoinj.script.Script"
-          uuid: "signInputs_script4"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "FIELD"
-      name: "redeemScript"
-      modelFingerprint: "98337C20380A36F819939663E12B6498"
-      index: 17
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.script.Script"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.script.Script"
-        uuid: "signInputs_script5"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "this.redeemScript"
-        name: "program"
-        parameters: []
-        signature: "program(): byte[]"
-        returnValue:
-          sapientType: "ARRAY"
-          content: !<array>
-            values:
-              0:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<array>
-            values:
-              0:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          valueType: "byte[]"
-          uuid: "signInputs_byte[]1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "ScriptPattern"
-      modelFingerprint: "F7726F9F81C0BFAFA1C37E74776B494B"
-      index: 18
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 2
-      - 3
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.script.ScriptPattern"
-        uuid: "org.bitcoinj.script.ScriptPattern"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.script.ScriptPattern"
-        name: "isP2PK"
-        parameters:
-        - name: "script"
-          value:
-            sapientType: "MOCK"
-            valueType: "org.bitcoinj.script.Script"
-            uuid: "signInputs_script1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "isP2PK(Script): boolean"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: false
-          suggestedContent: !<regular>
-            value: false
-          valueType: "boolean"
-          uuid: "signInputs_boolean2"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "ScriptPattern"
-      modelFingerprint: "AFAFD398E6F0C95BDAB79E80A5CB9A4B"
-      index: 19
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 2
-      - 3
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.script.ScriptPattern"
-        uuid: "org.bitcoinj.script.ScriptPattern"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.script.ScriptPattern"
-        name: "isP2PKH"
-        parameters:
-        - name: "script"
-          value:
-            sapientType: "MOCK"
-            valueType: "org.bitcoinj.script.Script"
-            uuid: "signInputs_script1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "isP2PKH(Script): boolean"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: false
-          suggestedContent: !<regular>
-            value: false
-          valueType: "boolean"
-          uuid: "signInputs_boolean3"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "ScriptPattern"
-      modelFingerprint: "61F3D700A07B81997174C83157B8B4B1"
-      index: 20
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 2
-      - 3
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.script.ScriptPattern"
-        uuid: "org.bitcoinj.script.ScriptPattern"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.script.ScriptPattern"
-        name: "isP2SH"
-        parameters:
-        - name: "script"
-          value:
-            sapientType: "MOCK"
-            valueType: "org.bitcoinj.script.Script"
-            uuid: "signInputs_script1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "isP2SH(Script): boolean"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: false
-          suggestedContent: !<regular>
-            value: false
-          valueType: "boolean"
-          uuid: "signInputs_boolean4"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "ScriptPattern"
-      modelFingerprint: "B43B303F11D823830DD0AF807854D776"
-      index: 21
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 2
-      - 3
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.script.ScriptPattern"
-        uuid: "org.bitcoinj.script.ScriptPattern"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.script.ScriptPattern"
-        name: "isP2WPKH"
-        parameters:
-        - name: "script"
-          value:
-            sapientType: "MOCK"
-            valueType: "org.bitcoinj.script.Script"
-            uuid: "signInputs_script1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "isP2WPKH(Script): boolean"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: false
-          suggestedContent: !<regular>
-            value: false
-          valueType: "boolean"
-          uuid: "signInputs_boolean5"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "37214AC8767550F96CAE84DB8DDA18C7"
-      index: 22
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "EXCEPTION"
-        content: !<new>
-          target: "java.lang.IllegalStateException"
-          parameters:
-          - name: "s"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "[-]"
-              suggestedContent: !<regular>
-                value: "[-]"
-              valueType: "java.lang.String"
-              uuid: "signInputs_string1"
-              fixed: false
-              collectionUuid: "signInputs_byte[]1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "java.lang.IllegalStateException"
-          parameters:
-          - name: "s"
-            value:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: "[-]"
-              valueType: "java.lang.String"
-              uuid: "signInputs_string1"
-              fixed: false
-              collectionUuid: "signInputs_byte[]1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        valueType: "java.lang.IllegalStateException"
-        uuid: "signInputs_illegalStateException1"
+        sapientType: "BASIC"
+        content: !<regular>
+          value: true
+        valueType: "boolean"
         fixed: true
-        equalsMethodPresent: false
+        equalsMethodPresent: true
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
-    uuid: "39ebdb8f-3c95-380c-bed7-3e2b9f53ac26"
+    uuid: "951ea5e3-3861-3283-8f62-4545c29a363c"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
-  - pathId: "path7"
-    pathIdForUser: "path13"
-    testPathName: "signInputsWhenScriptPatternNotIsP2WPKHScriptPubKeyThrowsIllegalStateException"
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path6"
+    pathIdForUser: "path12"
+    testPathName: "signInputsWhenScriptPatternIsP2WPKHScriptPubKey"
     nameDefinedByUser: false
     constructorSignature: "<init>() : void"
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "313501EB13B802CD20BAC95D1392BC2B"
+    modelFingerprint: "AF77046066A9E99509CCC780203CDF7F"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -5292,47 +2897,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "propTx"
-      modelFingerprint: "F33B8A5E463AC5028ED46796D0D7F6BD"
+      modelFingerprint: "351C755F4BB7A847D4EB62FD870CAE1F"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.signers.TransactionSigner$ProposedTransaction"
-          parameters:
-          - name: "partialTx"
-            value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.Transaction"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "signInputs_transactionSigner.ProposedTransaction1-partialTx"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.signers.TransactionSigner$ProposedTransaction"
-          parameters:
-          - name: "partialTx"
-            value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.Transaction"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "signInputs_transactionSigner.ProposedTransaction1-partialTx"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.signers.TransactionSigner$ProposedTransaction"
         uuid: "signInputs_transactionSigner.ProposedTransaction1"
         fixed: false
@@ -5342,17 +2913,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "keyBag"
-      modelFingerprint: "22DD37B6710769AAEF1D81444C9DACC0"
+      modelFingerprint: "8BFD576A5E76C86D0655342334B887AA"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.wallet.KeyBag"
-          onlyPojoFunctions: false
-          builderPattern: false
         valueType: "org.bitcoinj.wallet.KeyBag"
         uuid: "signInputs_keyBag1"
         fixed: false
@@ -5362,7 +2929,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "tx"
-      modelFingerprint: "B2DD129C622866E28E5C574D8099FD34"
+      modelFingerprint: "BD4A010915B59A4C0575EF65A337F9EE"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -5388,11 +2955,23 @@ methods:
           content: !<collection>
             collectionClass: "java.util.ArrayList"
             parameters: []
-            values: []
+            values:
+            - sapientType: "MOCK"
+              valueType: "org.bitcoinj.core.TransactionInput"
+              uuid: "signInputs_list1Item0"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
           suggestedContent: !<collection>
             collectionClass: "java.util.ArrayList"
             parameters: []
-            values: []
+            values:
+            - sapientType: "MOCK"
+              valueType: "org.bitcoinj.core.TransactionInput"
+              uuid: "signInputs_list1Item0"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
           valueType: "java.util.List"
           genericValueType: "org.bitcoinj.core.TransactionInput"
           uuid: "signInputs_list1"
@@ -5402,10 +2981,1174 @@ methods:
         access: 1
       staticReadMethodForField: false
       filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "tx"
+      modelFingerprint: "A323B48C71E47218EA4AAC9744AA381A"
+      index: 5
+      ignored: false
+      nestedInLoop: true
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.Transaction"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.Transaction"
+        uuid: "signInputs_transaction1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "tx"
+        name: "getInput"
+        parameters:
+        - name: "index"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            originalValueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "getInput(long): TransactionInput"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.core.TransactionInput"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.core.TransactionInput"
+          uuid: "signInputs_transactionInput1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "txIn"
+      modelFingerprint: "7E9EA542E60F5C82EC12A9FDDF91641E"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionInput"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionInput"
+        uuid: "signInputs_transactionInput1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "txIn"
+        name: "getConnectedOutput"
+        parameters: []
+        signature: "getConnectedOutput(): TransactionOutput"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.core.TransactionOutput"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.core.TransactionOutput"
+          uuid: "signInputs_transactionOutput1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "connectedOutput"
+      modelFingerprint: "886E7CD262584146F8F36F0D705F6C2B"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionOutput"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionOutput"
+        uuid: "signInputs_transactionOutput1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "connectedOutput"
+        name: "getScriptPubKey"
+        parameters: []
+        throwsExceptions:
+        - "org.bitcoinj.script.ScriptException"
+        signature: "getScriptPubKey(): Script throws org.bitcoinj.script.ScriptException"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.script.Script"
+          uuid: "signInputs_script1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "txIn"
+      modelFingerprint: "13E60B914A802583CBF6B60F9E4F0170"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionInput"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionInput"
+        uuid: "signInputs_transactionInput1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "txIn"
+        name: "getScriptSig"
+        parameters: []
+        throwsExceptions:
+        - "org.bitcoinj.script.ScriptException"
+        signature: "getScriptSig(): Script throws org.bitcoinj.script.ScriptException"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.script.Script"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.script.Script"
+          uuid: "signInputs_script2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "txIn"
+      modelFingerprint: "04DC6E10A20D619B50C17408096047C0"
+      index: 9
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionInput"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionInput"
+        uuid: "signInputs_transactionInput1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "txIn"
+        name: "getWitness"
+        parameters: []
+        signature: "getWitness(): TransactionWitness"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.core.TransactionWitness"
+          uuid: "signInputs_transactionWitness1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "connectedOutput"
+      modelFingerprint: "E75DBAD3C943DDE59FB1061424037DC1"
+      index: 10
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionOutput"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionOutput"
+        uuid: "signInputs_transactionOutput1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "connectedOutput"
+        name: "getValue"
+        parameters: []
+        signature: "getValue(): Coin"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.base.Coin"
+          uuid: "signInputs_coin1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "connectedOutput"
+      modelFingerprint: "886E7CD262584146F8F36F0D705F6C2B"
+      index: 11
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionOutput"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionOutput"
+        uuid: "signInputs_transactionOutput1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "connectedOutput"
+        name: "getScriptPubKey"
+        parameters: []
+        throwsExceptions:
+        - "org.bitcoinj.script.ScriptException"
+        signature: "getScriptPubKey(): Script throws org.bitcoinj.script.ScriptException"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.script.Script"
+          uuid: "signInputs_script3"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "59B028A67C64817010660999E635F4A0"
+      index: 12
+      ignored: false
+      nestedInLoop: true
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.script.Script"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.script.Script"
+        uuid: "signInputs_script2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.script.Script"
+        name: "correctlySpends"
+        parameters:
+        - name: "txContainingThis"
+          value:
+            sapientType: "MOCK"
+            suggestedContent: !<unknown_object>
+              target: "org.bitcoinj.core.Transaction"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "org.bitcoinj.core.Transaction"
+            uuid: "signInputs_transaction1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "scriptSigIndex"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "signInputs_int2"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "witness"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.TransactionWitness"
+            uuid: "signInputs_transactionWitness1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Coin"
+            uuid: "signInputs_coin1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "scriptPubKey"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.script.Script"
+            uuid: "signInputs_script3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "verifyFlags"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values:
+              - sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2SH"
+                valueType: "org.bitcoinj.script.Script$VerifyFlag"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              - sapientType: "ENUM"
+                content: !<regular>
+                  value: "NULLDUMMY"
+                valueType: "org.bitcoinj.script.Script$VerifyFlag"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            suggestedContent: !<collection>
+              parameters: []
+              values:
+              - sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2SH"
+                valueType: "org.bitcoinj.script.Script$VerifyFlag"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              - sapientType: "ENUM"
+                content: !<regular>
+                  value: "NULLDUMMY"
+                valueType: "org.bitcoinj.script.Script$VerifyFlag"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            valueType: "java.util.EnumSet"
+            genericValueType: "org.bitcoinj.script.Script$VerifyFlag"
+            uuid: "<clinit>_enumSet1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "org.bitcoinj.script.ScriptException"
+        signature: "correctlySpends(Transaction,int,TransactionWitness,Coin,Script,EnumSet):\
+          \ void throws org.bitcoinj.script.ScriptException"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "signInputs_void1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "txIn"
+      modelFingerprint: "BF6A084FB9F2274211DCEA80833F03D6"
+      index: 13
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionInput"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionInput"
+        uuid: "signInputs_transactionInput1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "txIn"
+        name: "getConnectedRedeemData"
+        parameters:
+        - name: "keyBag"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.wallet.KeyBag"
+            uuid: "signInputs_keyBag1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "org.bitcoinj.script.ScriptException"
+        signature: "getConnectedRedeemData(KeyBag): RedeemData throws org.bitcoinj.script.ScriptException"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.wallet.RedeemData"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.wallet.RedeemData"
+          uuid: "signInputs_redeemData1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "30088FBF9879077A030CAF911039F910"
+      index: 14
+      ignored: false
+      nestedInLoop: true
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.crypto.DeterministicKey"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.crypto.DeterministicKey"
+        uuid: "signInputs_object1"
+        fixed: false
+        collectionUuid: "signInputs_list2"
+        equalsMethodPresent: false
+        explicitCastNeeded: true
+      methodExercised:
+        target: "org.bitcoinj.crypto.DeterministicKey"
+        name: "getPath"
+        parameters: []
+        signature: "getPath(): HDPath"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.crypto.HDPath"
+          uuid: "signInputs_hDPath1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "redeemData"
+      modelFingerprint: "0A2C5132EFB99B63BCFD61AD07F6E12E"
+      index: 15
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.RedeemData"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.RedeemData"
+        uuid: "signInputs_redeemData1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "redeemData"
+        name: "getFullKey"
+        parameters: []
+        signature: "getFullKey(): ECKey"
+        returnValue:
+          sapientType: "NULL"
+          valueType: "org.bitcoinj.crypto.ECKey"
+          uuid: "signInputs_eCKey1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
     - type: "RESULT"
       name: "result"
       modelFingerprint: "753659628F1B3F179A2EF0629F555437"
+      index: 16
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: true
+        valueType: "boolean"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "39ebdb8f-3c95-380c-bed7-3e2b9f53ac26"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path7"
+    pathIdForUser: "path13"
+    testPathName: "signInputsWhenScriptPatternNotIsP2WPKHScriptPubKeyThrowsIllegalStateException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "AF77046066A9E99509CCC780203CDF7F"
+    problemWasSolvedByProver: false
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "org.bitcoinj.script.ScriptException"
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.signers.LocalTransactionSigner"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.signers.LocalTransactionSigner"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.signers.LocalTransactionSigner"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "propTx"
+      modelFingerprint: "351C755F4BB7A847D4EB62FD870CAE1F"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.signers.TransactionSigner$ProposedTransaction"
+        uuid: "signInputs_transactionSigner.ProposedTransaction1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "keyBag"
+      modelFingerprint: "8BFD576A5E76C86D0655342334B887AA"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.wallet.KeyBag"
+        uuid: "signInputs_keyBag1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "tx"
+      modelFingerprint: "BD4A010915B59A4C0575EF65A337F9EE"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.Transaction"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.Transaction"
+        uuid: "signInputs_transaction1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "tx"
+        name: "getInputs"
+        parameters: []
+        signature: "getInputs(): List"
+        returnValue:
+          sapientType: "COLLECTION"
+          content: !<collection>
+            collectionClass: "java.util.ArrayList"
+            parameters: []
+            values:
+            - sapientType: "MOCK"
+              valueType: "org.bitcoinj.core.TransactionInput"
+              uuid: "signInputs_list1Item0"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          suggestedContent: !<collection>
+            collectionClass: "java.util.ArrayList"
+            parameters: []
+            values:
+            - sapientType: "MOCK"
+              valueType: "org.bitcoinj.core.TransactionInput"
+              uuid: "signInputs_list1Item0"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          valueType: "java.util.List"
+          genericValueType: "org.bitcoinj.core.TransactionInput"
+          uuid: "signInputs_list1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "tx"
+      modelFingerprint: "A323B48C71E47218EA4AAC9744AA381A"
       index: 5
+      ignored: false
+      nestedInLoop: true
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.Transaction"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.Transaction"
+        uuid: "signInputs_transaction1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "tx"
+        name: "getInput"
+        parameters:
+        - name: "index"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            originalValueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "getInput(long): TransactionInput"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.core.TransactionInput"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.core.TransactionInput"
+          uuid: "signInputs_transactionInput1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "txIn"
+      modelFingerprint: "7E9EA542E60F5C82EC12A9FDDF91641E"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionInput"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionInput"
+        uuid: "signInputs_transactionInput1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "txIn"
+        name: "getConnectedOutput"
+        parameters: []
+        signature: "getConnectedOutput(): TransactionOutput"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.core.TransactionOutput"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.core.TransactionOutput"
+          uuid: "signInputs_transactionOutput1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "connectedOutput"
+      modelFingerprint: "886E7CD262584146F8F36F0D705F6C2B"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionOutput"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionOutput"
+        uuid: "signInputs_transactionOutput1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "connectedOutput"
+        name: "getScriptPubKey"
+        parameters: []
+        throwsExceptions:
+        - "org.bitcoinj.script.ScriptException"
+        signature: "getScriptPubKey(): Script throws org.bitcoinj.script.ScriptException"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.script.Script"
+          uuid: "signInputs_script1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "txIn"
+      modelFingerprint: "13E60B914A802583CBF6B60F9E4F0170"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionInput"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionInput"
+        uuid: "signInputs_transactionInput1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "txIn"
+        name: "getScriptSig"
+        parameters: []
+        throwsExceptions:
+        - "org.bitcoinj.script.ScriptException"
+        signature: "getScriptSig(): Script throws org.bitcoinj.script.ScriptException"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.script.Script"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.script.Script"
+          uuid: "signInputs_script2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "txIn"
+      modelFingerprint: "04DC6E10A20D619B50C17408096047C0"
+      index: 9
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionInput"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionInput"
+        uuid: "signInputs_transactionInput1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "txIn"
+        name: "getWitness"
+        parameters: []
+        signature: "getWitness(): TransactionWitness"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.core.TransactionWitness"
+          uuid: "signInputs_transactionWitness1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "connectedOutput"
+      modelFingerprint: "E75DBAD3C943DDE59FB1061424037DC1"
+      index: 10
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionOutput"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionOutput"
+        uuid: "signInputs_transactionOutput1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "connectedOutput"
+        name: "getValue"
+        parameters: []
+        signature: "getValue(): Coin"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.base.Coin"
+          uuid: "signInputs_coin1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "connectedOutput"
+      modelFingerprint: "886E7CD262584146F8F36F0D705F6C2B"
+      index: 11
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionOutput"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionOutput"
+        uuid: "signInputs_transactionOutput1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "connectedOutput"
+        name: "getScriptPubKey"
+        parameters: []
+        throwsExceptions:
+        - "org.bitcoinj.script.ScriptException"
+        signature: "getScriptPubKey(): Script throws org.bitcoinj.script.ScriptException"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.script.Script"
+          uuid: "signInputs_script3"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "59B028A67C64817010660999E635F4A0"
+      index: 12
+      ignored: false
+      nestedInLoop: true
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.script.Script"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.script.Script"
+        uuid: "signInputs_script2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.script.Script"
+        name: "correctlySpends"
+        parameters:
+        - name: "txContainingThis"
+          value:
+            sapientType: "MOCK"
+            suggestedContent: !<unknown_object>
+              target: "org.bitcoinj.core.Transaction"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "org.bitcoinj.core.Transaction"
+            uuid: "signInputs_transaction1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "scriptSigIndex"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "signInputs_int2"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "witness"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.TransactionWitness"
+            uuid: "signInputs_transactionWitness1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Coin"
+            uuid: "signInputs_coin1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "scriptPubKey"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.script.Script"
+            uuid: "signInputs_script3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "verifyFlags"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values:
+              - sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2SH"
+                valueType: "org.bitcoinj.script.Script$VerifyFlag"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              - sapientType: "ENUM"
+                content: !<regular>
+                  value: "NULLDUMMY"
+                valueType: "org.bitcoinj.script.Script$VerifyFlag"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            suggestedContent: !<collection>
+              parameters: []
+              values:
+              - sapientType: "ENUM"
+                content: !<regular>
+                  value: "P2SH"
+                valueType: "org.bitcoinj.script.Script$VerifyFlag"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              - sapientType: "ENUM"
+                content: !<regular>
+                  value: "NULLDUMMY"
+                valueType: "org.bitcoinj.script.Script$VerifyFlag"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            valueType: "java.util.EnumSet"
+            genericValueType: "org.bitcoinj.script.Script$VerifyFlag"
+            uuid: "<clinit>_enumSet1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "org.bitcoinj.script.ScriptException"
+        signature: "correctlySpends(Transaction,int,TransactionWitness,Coin,Script,EnumSet):\
+          \ void throws org.bitcoinj.script.ScriptException"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "signInputs_void1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "txIn"
+      modelFingerprint: "BF6A084FB9F2274211DCEA80833F03D6"
+      index: 13
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionInput"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.TransactionInput"
+        uuid: "signInputs_transactionInput1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "txIn"
+        name: "getConnectedRedeemData"
+        parameters:
+        - name: "keyBag"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.wallet.KeyBag"
+            uuid: "signInputs_keyBag1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "org.bitcoinj.script.ScriptException"
+        signature: "getConnectedRedeemData(KeyBag): RedeemData throws org.bitcoinj.script.ScriptException"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.wallet.RedeemData"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.wallet.RedeemData"
+          uuid: "signInputs_redeemData1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "30088FBF9879077A030CAF911039F910"
+      index: 14
+      ignored: false
+      nestedInLoop: true
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.crypto.DeterministicKey"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.crypto.DeterministicKey"
+        uuid: "signInputs_object1"
+        fixed: false
+        collectionUuid: "signInputs_list2"
+        equalsMethodPresent: false
+        explicitCastNeeded: true
+      methodExercised:
+        target: "org.bitcoinj.crypto.DeterministicKey"
+        name: "getPath"
+        parameters: []
+        signature: "getPath(): HDPath"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.crypto.HDPath"
+          uuid: "signInputs_hDPath1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "redeemData"
+      modelFingerprint: "0A2C5132EFB99B63BCFD61AD07F6E12E"
+      index: 15
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.RedeemData"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.RedeemData"
+        uuid: "signInputs_redeemData1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "redeemData"
+        name: "getFullKey"
+        parameters: []
+        signature: "getFullKey(): ECKey"
+        returnValue:
+          sapientType: "NULL"
+          valueType: "org.bitcoinj.crypto.ECKey"
+          uuid: "signInputs_eCKey1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
+      index: 16
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false

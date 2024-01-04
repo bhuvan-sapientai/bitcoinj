@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "030CC2E024A801C819C5FC835088973C"
+modelFingerprint: "72FFA2D7617E3974F87D7DF1E84E7748"
 methods:
 - method:
     name: "createPaymentRequest"
@@ -22,45 +22,19 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "294E5F9E7C4639C715830ACD1B0ECEBC"
+    modelFingerprint: "3E7CEECF8A961D76AEF343D41D8D448B"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "params"
-      modelFingerprint: "909FCB8DCA6367523087485A7F6E5496"
+      modelFingerprint: "B668779CA341827ABE80AF8E4B98FDFF"
       index: 1
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "org.bitcoinj.core.NetworkParameters"
-          method: "fromID"
-          methodParameters:
-          - name: "id"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "id1"
-              valueType: "java.lang.String"
-              uuid: "createPaymentRequest_networkParameters1-id"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.core.NetworkParameters"
-          method: "fromID"
-          methodParameters:
-          - name: "id"
-            value:
-              sapientType: "BASIC"
-              valueType: "java.lang.String"
-              uuid: "createPaymentRequest_networkParameters1-id"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "createPaymentRequest_networkParameters1"
         fixed: false
@@ -70,17 +44,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "amount"
-      modelFingerprint: "7FE4344EFF141F9C2CBEF9BA037536DE"
+      modelFingerprint: "A7B4CEEBBD6DD719AA99C95FB830C952"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.base.Coin"
-          onlyPojoFunctions: false
-          builderPattern: false
         valueType: "org.bitcoinj.base.Coin"
         uuid: "createPaymentRequest_coin1"
         fixed: false
@@ -90,17 +60,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "toAddress"
-      modelFingerprint: "B40D67C8F3DAD18BFB7F6FB27F45EC8C"
+      modelFingerprint: "3013F9AC0423B8ABC16974C9BB43F777"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.base.Address"
-          onlyPojoFunctions: false
-          builderPattern: false
         valueType: "org.bitcoinj.base.Address"
         uuid: "createPaymentRequest_address1"
         fixed: false
@@ -110,7 +76,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "memo"
-      modelFingerprint: "444ADB94C9568A20FA6EE19D57922AEC"
+      modelFingerprint: "E9D0EE401D085AE68A42F9814A0C187F"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -118,9 +84,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "Test Memo"
-        suggestedContent: !<regular>
-          value: "Test Memo"
+          value: "memo1"
         valueType: "java.lang.String"
         uuid: "createPaymentRequest_string1"
         fixed: false
@@ -130,7 +94,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "paymentUrl"
-      modelFingerprint: "21D2C8B490BF8ECE771BCC042F167207"
+      modelFingerprint: "276800141461AD7194E214ADCD9268A0"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -138,9 +102,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "https://testpaymenturl.com"
-        suggestedContent: !<regular>
-          value: "https://testpaymenturl.com"
+          value: "paymentUrl1"
         valueType: "java.lang.String"
         uuid: "createPaymentRequest_string2"
         fixed: false
@@ -150,7 +112,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "merchantData"
-      modelFingerprint: "0039C95718DF0A65730D3746BD8DAB1D"
+      modelFingerprint: "70D0EB9EAD104AD021E3AED73DFCC6DF"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -158,69 +120,9 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         suggestedContent: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         valueType: "byte[]"
         uuid: "createPaymentRequest_byte[]1"
         fixed: false
@@ -230,7 +132,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "PaymentProtocol"
-      modelFingerprint: "B5BDE987139FE48132BF004C97F12615"
+      modelFingerprint: "61561FC3447AB01DFCE862AC5732A322"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -249,10 +151,6 @@ methods:
         - name: "amount"
           value:
             sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.base.Coin"
-              onlyPojoFunctions: false
-              builderPattern: false
             valueType: "org.bitcoinj.base.Coin"
             uuid: "createPaymentRequest_coin1"
             fixed: false
@@ -261,10 +159,6 @@ methods:
         - name: "address"
           value:
             sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.base.Address"
-              onlyPojoFunctions: false
-              builderPattern: false
             valueType: "org.bitcoinj.base.Address"
             uuid: "createPaymentRequest_address1"
             fixed: false
@@ -291,7 +185,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "PaymentProtocol"
-      modelFingerprint: "D3FB9546E77E0A113A6C81BF4A38ABAD"
+      modelFingerprint: "3CE6BEC58A18FB448E9D33757D62C9F3"
       index: 8
       ignored: false
       nestedInLoop: false
@@ -309,33 +203,7 @@ methods:
         parameters:
         - name: "params"
           value:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "org.bitcoinj.core.NetworkParameters"
-              method: "fromID"
-              methodParameters:
-              - name: "id"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: "id1"
-                  valueType: "java.lang.String"
-                  uuid: "createPaymentRequest_networkParameters1-id"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            suggestedContent: !<static_method_return>
-              target: "org.bitcoinj.core.NetworkParameters"
-              method: "fromID"
-              methodParameters:
-              - name: "id"
-                value:
-                  sapientType: "BASIC"
-                  valueType: "java.lang.String"
-                  uuid: "createPaymentRequest_networkParameters1-id"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+            sapientType: "MOCK"
             valueType: "org.bitcoinj.core.NetworkParameters"
             uuid: "createPaymentRequest_networkParameters1"
             fixed: false
@@ -360,9 +228,7 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "Test Memo"
-            suggestedContent: !<regular>
-              value: "Test Memo"
+              value: "memo1"
             valueType: "java.lang.String"
             uuid: "createPaymentRequest_string1"
             fixed: false
@@ -372,9 +238,7 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "https://testpaymenturl.com"
-            suggestedContent: !<regular>
-              value: "https://testpaymenturl.com"
+              value: "paymentUrl1"
             valueType: "java.lang.String"
             uuid: "createPaymentRequest_string2"
             fixed: false
@@ -384,69 +248,9 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  suggestedContent: !<regular>
-                    value: 0
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
-                  suggestedContent: !<regular>
-                    value: 1
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                2:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 2
-                  suggestedContent: !<regular>
-                    value: 2
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+              values: {}
             suggestedContent: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  suggestedContent: !<regular>
-                    value: 0
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
-                  suggestedContent: !<regular>
-                    value: 1
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                2:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 2
-                  suggestedContent: !<regular>
-                    value: 2
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+              values: {}
             valueType: "byte[]"
             uuid: "createPaymentRequest_byte[]1"
             fixed: false
@@ -456,10 +260,6 @@ methods:
           \ Protos$PaymentRequest$Builder"
         returnValue:
           sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
-            target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest$Builder"
-            onlyPojoFunctions: false
-            builderPattern: false
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest$Builder"
           uuid: "createPaymentRequest_protos.PaymentRequest.Builder1"
           fixed: false
@@ -470,17 +270,13 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "BC9AC35D6A68EFB6F2D505E20D3DB85F"
+      modelFingerprint: "B3AE2DEA597CECC6B1E2797E4DA4C2E7"
       index: 9
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest$Builder"
-          onlyPojoFunctions: false
-          builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest$Builder"
         uuid: "createPaymentRequest_protos.PaymentRequest.Builder1"
         fixed: false
@@ -515,7 +311,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "03567E62CF701867D05E50CEDD1C4349"
+    modelFingerprint: "5FDA4E10BB3126F50296A000D4971418"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -1118,7 +914,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "paymentDetails"
-      modelFingerprint: "7E744E276497F16ACACAB5E73A6AD038"
+      modelFingerprint: "5EDC1D618FDBD01734E68337444F8958"
       index: 15
       ignored: false
       nestedInLoop: false
@@ -1142,7 +938,7 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 1703223106
+              value: 1704368222
             valueType: "long"
             uuid: "createPaymentRequest_long1"
             fixed: false
@@ -1312,11 +1108,11 @@ methods:
       filledByUser: false
     uuid: "facb57f4-41e0-34d7-987e-22c3347a27a8"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "createPaymentRequest1WhenMerchantDataIsNull"
@@ -1324,7 +1120,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "4BF4CA9767AD970D224A769756BDE12D"
+    modelFingerprint: "C5C8B4C001E83D1A715C99DA2018BAB6"
     problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
@@ -1342,7 +1138,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "F68E8FA4821D3EF4E5AE82CFB60D35DB"
+    modelFingerprint: "8B98B13FACEEF4B9A71D8DBEFCB22F44"
     problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
@@ -1360,7 +1156,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "2609303CB004EB2AD21C71B0173403DB"
+    modelFingerprint: "7F4D09FE998458BD71001219CC6353DB"
     problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
@@ -1378,7 +1174,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "E0477768D66FB503D3B764CC09B90CE9"
+    modelFingerprint: "AE403E77F968B41979586753B92AFFBA"
     problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
@@ -1396,7 +1192,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "783B35FC96F6EE1E85763E908BE1BF57"
+    modelFingerprint: "B9F445B1456CA6EA47D49EB64C6FFD07"
     problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
@@ -1414,7 +1210,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "BC5780CC826926E6D48805B224BFB5D6"
+    modelFingerprint: "BBDDB5CDDD5FDB9FB5AE2C2AE4800E3E"
     problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
@@ -1432,7 +1228,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "9B3C705F183CF03B614526767421753A"
+    modelFingerprint: "24346BFC781878B155C3EDD66BC8F63E"
     problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
@@ -1450,7 +1246,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "0E11EA4D33FCA4417CD5AF832FAC0945"
+    modelFingerprint: "04E2369B2E022BD4F549C157F8C1E3EE"
     problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
@@ -1468,7 +1264,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "F80885BFAA1795A228979DD4C9D7D7EC"
+    modelFingerprint: "0C63E64FB696121CC962A7E00B331527"
     problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
@@ -1486,7 +1282,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "87FCF3F863E4EE116685315F84B60CD7"
+    modelFingerprint: "868185FD4C5B206E6DFBD8AD83BF4070"
     problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
@@ -1504,7 +1300,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "A09C1CE07718601F36F7518E326FD945"
+    modelFingerprint: "904D35893C21C1AAD91A11BCF5B7FED4"
     problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
@@ -1522,7 +1318,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "DFAF2691E39DEAC78EC40D64B90F81CC"
+    modelFingerprint: "4B062BD33C56B7E1E3C7079475E92D4B"
     problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
@@ -1540,7 +1336,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "433E93F5C2F1EA1251604994A09D0BC2"
+    modelFingerprint: "E4651CC7FC19EFE4C9CC5D220974958B"
     problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
@@ -1558,7 +1354,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "E50F40C655553C19A2365C6575AEC772"
+    modelFingerprint: "7F3D9C37C9AE07E22C33E026BE8995C7"
     problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
@@ -1576,7 +1372,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "4EE7C48221C9E84CA1D3E6FEE2CEB35A"
+    modelFingerprint: "1E47A43DC2662631F7AA886E9D2A3F11"
     problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
@@ -1605,27 +1401,19 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "C77482000C24E9A59980C078D454C514"
-    problemWasSolvedByProver: true
+    modelFingerprint: "45A7C130151A43D882169EDD330A382C"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "paymentRequest"
-      modelFingerprint: "077AAC2EB16B2DC5B6FB2230F50B7150"
+      modelFingerprint: "02F15725E47B4B1E04DCFF175785F22D"
       index: 1
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
         uuid: "parsePaymentRequest_protos.PaymentRequest1"
         fixed: false
@@ -1635,7 +1423,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "84E4AB823F59B14AA76CE16A2577518A"
+      modelFingerprint: "00F4F81E9DCCF4A3856CFAC04E87370A"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1647,15 +1435,7 @@ methods:
           parameters:
           - name: "request"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-                method: "getDefaultInstance"
-                methodParameters: []
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-                method: "getDefaultInstance"
-                methodParameters: []
+              sapientType: "MOCK"
               valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
               uuid: "parsePaymentRequest_protos.PaymentRequest1"
               fixed: false
@@ -1686,15 +1466,7 @@ methods:
           parameters:
           - name: "request"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-                method: "getDefaultInstance"
-                methodParameters: []
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-                method: "getDefaultInstance"
-                methodParameters: []
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
               uuid: "parsePaymentRequest_protos.PaymentRequest1"
               fixed: false
@@ -1729,11 +1501,11 @@ methods:
       filledByUser: false
     uuid: "2d93a84e-04b7-301b-a1cd-7f3dd583fd50"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "signPaymentRequest"
     returnType: "void"
@@ -2087,7 +1859,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "70A6428837E17F450B1D19AF28D570D1"
+    modelFingerprint: "0EC2E7B7669D440103D4C9AE793B0F99"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -2180,7 +1952,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Protos.X509Certificates"
-      modelFingerprint: "C6CAD037E5BF0640A834960EA5B79F63"
+      modelFingerprint: "6EC60C6D3ACAB8F1482F2F6D94852895"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -2215,7 +1987,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "certificate"
-      modelFingerprint: "CB59E1945050CE9202277A0427D616AC"
+      modelFingerprint: "69717B0810D5BD972F1249F472E0F80D"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -2256,7 +2028,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ByteString"
-      modelFingerprint: "2684DE1377B0A6D3657E2DDFE316973F"
+      modelFingerprint: "2C24BB6B0B638C465FF199CD8FBBF4E9"
       index: 6
       ignored: false
       nestedInLoop: true
@@ -2288,7 +2060,37 @@ methods:
             explicitCastNeeded: false
         signature: "copyFrom(byte[]): ByteString"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "com.google.protobuf.ByteString"
+            method: "copyFrom"
+            methodParameters:
+            - value:
+                sapientType: "ARRAY"
+                content: !<array>
+                  values: {}
+                suggestedContent: !<array>
+                  values: {}
+                valueType: "byte[]"
+                uuid: "signPaymentRequest_byte[]1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "com.google.protobuf.ByteString"
+            method: "copyFrom"
+            methodParameters:
+            - value:
+                sapientType: "ARRAY"
+                content: !<array>
+                  values: {}
+                suggestedContent: !<array>
+                  values: {}
+                valueType: "byte[]"
+                uuid: "signPaymentRequest_byte[]1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "com.google.protobuf.ByteString"
           uuid: "signPaymentRequest_byteString1"
           fixed: false
@@ -2299,7 +2101,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "certificates"
-      modelFingerprint: "EF6C4E087846DEA1E774A100A0A317C0"
+      modelFingerprint: "40DD32AE2E657E3B969255D650576ED3"
       index: 7
       ignored: false
       nestedInLoop: true
@@ -2323,7 +2125,37 @@ methods:
         parameters:
         - name: "value"
           value:
-            sapientType: "MOCK"
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "com.google.protobuf.ByteString"
+              method: "copyFrom"
+              methodParameters:
+              - value:
+                  sapientType: "ARRAY"
+                  content: !<array>
+                    values: {}
+                  suggestedContent: !<array>
+                    values: {}
+                  valueType: "byte[]"
+                  uuid: "signPaymentRequest_byte[]1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<static_method_return>
+              target: "com.google.protobuf.ByteString"
+              method: "copyFrom"
+              methodParameters:
+              - value:
+                  sapientType: "ARRAY"
+                  content: !<array>
+                    values: {}
+                  suggestedContent: !<array>
+                    values: {}
+                  valueType: "byte[]"
+                  uuid: "signPaymentRequest_byte[]1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "com.google.protobuf.ByteString"
             uuid: "signPaymentRequest_byteString1"
             fixed: false
@@ -2331,7 +2163,96 @@ methods:
             explicitCastNeeded: false
         signature: "addCertificate(ByteString): Protos$X509Certificates$Builder"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "org.bitcoinj.protobuf.payments.Protos$X509Certificates$Builder"
+            localVariableValue:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.protobuf.payments.Protos$X509Certificates$Builder"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.protobuf.payments.Protos$X509Certificates$Builder"
+              uuid: "signPaymentRequest_protos.X509Certificates.Builder1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - value:
+                sapientType: "OBJECT"
+                content: !<static_method_return>
+                  target: "com.google.protobuf.ByteString"
+                  method: "copyFrom"
+                  methodParameters:
+                  - value:
+                      sapientType: "ARRAY"
+                      content: !<array>
+                        values: {}
+                      suggestedContent: !<array>
+                        values: {}
+                      valueType: "byte[]"
+                      uuid: "signPaymentRequest_byte[]1"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                suggestedContent: !<static_method_return>
+                  target: "com.google.protobuf.ByteString"
+                  method: "copyFrom"
+                  methodParameters:
+                  - value:
+                      sapientType: "ARRAY"
+                      content: !<array>
+                        values: {}
+                      suggestedContent: !<array>
+                        values: {}
+                      valueType: "byte[]"
+                      uuid: "signPaymentRequest_byte[]1"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "com.google.protobuf.ByteString"
+                uuid: "signPaymentRequest_byteString1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "addCertificate"
+          suggestedContent: !<method_return_from_value>
+            target: "org.bitcoinj.protobuf.payments.Protos$X509Certificates$Builder"
+            localVariableValue:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.protobuf.payments.Protos$X509Certificates$Builder"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.protobuf.payments.Protos$X509Certificates$Builder"
+              uuid: "signPaymentRequest_protos.X509Certificates.Builder1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - value:
+                sapientType: "OBJECT"
+                suggestedContent: !<static_method_return>
+                  target: "com.google.protobuf.ByteString"
+                  method: "copyFrom"
+                  methodParameters:
+                  - value:
+                      sapientType: "ARRAY"
+                      content: !<array>
+                        values: {}
+                      suggestedContent: !<array>
+                        values: {}
+                      valueType: "byte[]"
+                      uuid: "signPaymentRequest_byte[]1"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "com.google.protobuf.ByteString"
+                uuid: "signPaymentRequest_byteString1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "addCertificate"
           valueType: "org.bitcoinj.protobuf.payments.Protos$X509Certificates$Builder"
           uuid: "signPaymentRequest_protos.X509Certificates.Builder2"
           fixed: false
@@ -2386,7 +2307,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "certificates"
-      modelFingerprint: "DD42994FCC3F33F62BEE6FA3294662AF"
+      modelFingerprint: "B93B16300D521A0746A6F48D286627CF"
       index: 9
       ignored: false
       nestedInLoop: false
@@ -2429,7 +2350,7 @@ methods:
           suggestedContent: !<method_return_from_value>
             target: "com.google.protobuf.GeneratedMessageLite"
             localVariableValue:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.protobuf.payments.Protos$X509Certificates$Builder"
                 onlyPojoFunctions: false
@@ -2450,7 +2371,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "134A81E44C5FB41A85C7F0E16946DC9E"
+      modelFingerprint: "9892493BBB525F5581C5BC07D2748F7B"
       index: 10
       ignored: false
       nestedInLoop: false
@@ -2477,7 +2398,7 @@ methods:
         suggestedContent: !<method_return_from_value>
           target: "com.google.protobuf.GeneratedMessageLite"
           localVariableValue:
-            sapientType: "UNKNOWN"
+            sapientType: "MOCK"
             suggestedContent: !<unknown_object>
               target: "org.bitcoinj.protobuf.payments.Protos$X509Certificates$Builder"
               onlyPojoFunctions: false
@@ -2523,7 +2444,7 @@ methods:
               suggestedContent: !<method_return_from_value>
                 target: "com.google.protobuf.GeneratedMessageLite"
                 localVariableValue:
-                  sapientType: "UNKNOWN"
+                  sapientType: "MOCK"
                   suggestedContent: !<unknown_object>
                     target: "org.bitcoinj.protobuf.payments.Protos$X509Certificates$Builder"
                     onlyPojoFunctions: false
@@ -2549,7 +2470,7 @@ methods:
               suggestedContent: !<method_return_from_value>
                 target: "com.google.protobuf.GeneratedMessageLite"
                 localVariableValue:
-                  sapientType: "UNKNOWN"
+                  sapientType: "MOCK"
                   suggestedContent: !<unknown_object>
                     target: "org.bitcoinj.protobuf.payments.Protos$X509Certificates$Builder"
                     onlyPojoFunctions: false
@@ -2578,7 +2499,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "paymentRequest"
-      modelFingerprint: "5AD7471620EA36FBCCDEECEDDEBDF309"
+      modelFingerprint: "0C8663C9A4E0D3D27B120ED9631A41BA"
       index: 11
       ignored: false
       nestedInLoop: false
@@ -2625,7 +2546,7 @@ methods:
                 suggestedContent: !<method_return_from_value>
                   target: "com.google.protobuf.GeneratedMessageLite"
                   localVariableValue:
-                    sapientType: "UNKNOWN"
+                    sapientType: "MOCK"
                     suggestedContent: !<unknown_object>
                       target: "org.bitcoinj.protobuf.payments.Protos$X509Certificates$Builder"
                       onlyPojoFunctions: false
@@ -2651,7 +2572,7 @@ methods:
                 suggestedContent: !<method_return_from_value>
                   target: "com.google.protobuf.GeneratedMessageLite"
                   localVariableValue:
-                    sapientType: "UNKNOWN"
+                    sapientType: "MOCK"
                     suggestedContent: !<unknown_object>
                       target: "org.bitcoinj.protobuf.payments.Protos$X509Certificates$Builder"
                       onlyPojoFunctions: false
@@ -2737,7 +2658,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "paymentRequest"
-      modelFingerprint: "CCF5550AECB70104DC210FA90054465D"
+      modelFingerprint: "C5CBD8AA7808845978EB987CCCC3B4E2"
       index: 13
       ignored: false
       nestedInLoop: false
@@ -2776,7 +2697,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Signature"
-      modelFingerprint: "3A2A4BEF146A6610DEAD6310C2D4477D"
+      modelFingerprint: "31171C03C4A889E3433E6C4E48AC107E"
       index: 14
       ignored: false
       nestedInLoop: false
@@ -2845,7 +2766,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "signature"
-      modelFingerprint: "68141F85B2908888861BFE968267D059"
+      modelFingerprint: "39ACD761A9E6E55994C6908589E93499"
       index: 15
       ignored: false
       nestedInLoop: false
@@ -2916,7 +2837,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "paymentRequestToSign"
-      modelFingerprint: "24E0A518F933E36707BE5F0949EF0169"
+      modelFingerprint: "046152AE66686F92C24E9C6FD2882DA1"
       index: 16
       ignored: false
       nestedInLoop: false
@@ -2955,7 +2876,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "signature"
-      modelFingerprint: "F686CE0D48F00C14821A90F085F7DDCA"
+      modelFingerprint: "2B49C8481AF4E035D4CE3A26A5C73F81"
       index: 17
       ignored: false
       nestedInLoop: false
@@ -3026,7 +2947,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "signature"
-      modelFingerprint: "B0E6BD51266A7E2F1028BD011F251FA3"
+      modelFingerprint: "2FD9ABB2BDD033FDC9464046B9F1227F"
       index: 18
       ignored: false
       nestedInLoop: false
@@ -3232,10 +3153,11 @@ methods:
       filledByUser: false
     uuid: "0c90fcb3-e444-33da-9220-8976c86d742b"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path6"
     pathIdForUser: "path6"
     testPathName: "signPaymentRequestWhenRSAEqualsIgnoreCasePrivateKeyGetAlgorithmAndCaughtGeneralSecurityExceptionThrowsRuntimeException"
@@ -3457,7 +3379,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "C2532CB0C9FD21589CE12E572760C735"
+    modelFingerprint: "849618BA3C5E856C5D219A45FF1B4925"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -3470,21 +3392,17 @@ methods:
     inputParameters:
     - type: "INPUT"
       name: "paymentRequest"
-      modelFingerprint: "077AAC2EB16B2DC5B6FB2230F50B7150"
+      modelFingerprint: "4772091B73EB9466579A348A0DE294D6"
       index: 1
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
         uuid: "verifyPaymentRequestPki_protos.PaymentRequest1"
         fixed: false
@@ -3494,17 +3412,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "trustStore"
-      modelFingerprint: "8711069403E5FA514E3B506BB5E62E07"
+      modelFingerprint: "DAFE8C06A0A1CBEA01D4807B0321F196"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "NULL"
-        content: !<unknown_object>
-          target: "java.security.KeyStore"
-          onlyPojoFunctions: false
-          builderPattern: false
         suggestedContent: !<unknown_object>
           target: "java.security.KeyStore"
           onlyPojoFunctions: false
@@ -3518,7 +3432,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "paymentRequest"
-      modelFingerprint: "F180E48C5093628FDEB072519926D900"
+      modelFingerprint: "35C9265F73FDBCCC333404631709C1B7"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -3529,15 +3443,11 @@ methods:
       - 6
       - 8
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
         uuid: "verifyPaymentRequestPki_protos.PaymentRequest1"
         fixed: false
@@ -3564,7 +3474,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "797881D7B7DC6E37AA9FC5CE3F3122C5"
+      modelFingerprint: "9E43EAB5F348EDEC60A484A2963012BE"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -3576,13 +3486,19 @@ methods:
           parameters:
           - name: "e"
             value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "none"
-              suggestedContent: !<regular>
-                value: "none"
-              valueType: "java.lang.String"
-              uuid: "verifyPaymentRequestPki_string1"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.security.GeneralSecurityException"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "java.security.GeneralSecurityException"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "java.security.GeneralSecurityException"
+              uuid: "verifyPaymentRequestPki_generalSecurityException1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -3593,13 +3509,14 @@ methods:
           parameters:
           - name: "e"
             value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "none"
-              suggestedContent: !<regular>
-                value: "none"
-              valueType: "java.lang.String"
-              uuid: "verifyPaymentRequestPki_string1"
+              sapientType: "UNKNOWN"
+              suggestedContent: !<new>
+                target: "java.security.GeneralSecurityException"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "java.security.GeneralSecurityException"
+              uuid: "verifyPaymentRequestPki_generalSecurityException1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -3614,11 +3531,11 @@ methods:
       filledByUser: false
     uuid: "13c90664-adaa-3c87-906c-12e676c59af3"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path19"
     pathIdForUser: "path4"
     testPathName: "verifyPaymentRequestPkiWhenCaughtNoSuchAlgorithmExceptionOrKeyStoreExceptionOrInvalidAlgorithmParThrowsRuntimeException"
@@ -3626,7 +3543,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "A899A2F147621F098A67AA1404A489B2"
+    modelFingerprint: "3085A31DC51F4A69687E5811113B7EEC"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -3639,21 +3556,17 @@ methods:
     inputParameters:
     - type: "INPUT"
       name: "paymentRequest"
-      modelFingerprint: "077AAC2EB16B2DC5B6FB2230F50B7150"
+      modelFingerprint: "4772091B73EB9466579A348A0DE294D6"
       index: 1
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
         uuid: "verifyPaymentRequestPki_protos.PaymentRequest1"
         fixed: false
@@ -3663,17 +3576,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "trustStore"
-      modelFingerprint: "8711069403E5FA514E3B506BB5E62E07"
+      modelFingerprint: "DAFE8C06A0A1CBEA01D4807B0321F196"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "NULL"
-        content: !<unknown_object>
-          target: "java.security.KeyStore"
-          onlyPojoFunctions: false
-          builderPattern: false
         suggestedContent: !<unknown_object>
           target: "java.security.KeyStore"
           onlyPojoFunctions: false
@@ -3687,7 +3596,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "paymentRequest"
-      modelFingerprint: "F180E48C5093628FDEB072519926D900"
+      modelFingerprint: "35C9265F73FDBCCC333404631709C1B7"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -3698,15 +3607,11 @@ methods:
       - 6
       - 8
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
         uuid: "verifyPaymentRequestPki_protos.PaymentRequest1"
         fixed: false
@@ -3733,7 +3638,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "218A1485495FC4AAEF820BF10FA66341"
+      modelFingerprint: "817BF3289E9517BA1C32192E9E64730B"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -3745,13 +3650,19 @@ methods:
           parameters:
           - name: "cause"
             value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "none"
-              suggestedContent: !<regular>
-                value: "none"
-              valueType: "java.lang.String"
-              uuid: "verifyPaymentRequestPki_string1"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.security.GeneralSecurityException"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "java.security.GeneralSecurityException"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "java.security.GeneralSecurityException"
+              uuid: "verifyPaymentRequestPki_generalSecurityException1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -3762,13 +3673,14 @@ methods:
           parameters:
           - name: "cause"
             value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "none"
-              suggestedContent: !<regular>
-                value: "none"
-              valueType: "java.lang.String"
-              uuid: "verifyPaymentRequestPki_string1"
+              sapientType: "UNKNOWN"
+              suggestedContent: !<new>
+                target: "java.security.GeneralSecurityException"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "java.security.GeneralSecurityException"
+              uuid: "verifyPaymentRequestPki_generalSecurityException1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -3783,11 +3695,11 @@ methods:
       filledByUser: false
     uuid: "b01f2889-7f3f-3725-a054-68e3897478fe"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path5"
     testPathName: "verifyPaymentRequestPkiWhenProtoCertsGetCertificateCountEquals0ThrowsPaymentProtocolExceptionInvalidPkiData"
@@ -4232,28 +4144,24 @@ methods:
     nameDefinedByUser: false
     priorityDefinedByUser: false
     filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "95CEF08B981F40FF7C9E7FCAADC70C6D"
-    problemWasSolvedByProver: true
+    priority: "MODERATE"
+    modelFingerprint: "A69F22A308DD992D6E1D653D5D35B53E"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "paymentRequest"
-      modelFingerprint: "077AAC2EB16B2DC5B6FB2230F50B7150"
+      modelFingerprint: "4772091B73EB9466579A348A0DE294D6"
       index: 1
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
         uuid: "verifyPaymentRequestPki_protos.PaymentRequest1"
         fixed: false
@@ -4263,17 +4171,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "trustStore"
-      modelFingerprint: "8711069403E5FA514E3B506BB5E62E07"
+      modelFingerprint: "DAFE8C06A0A1CBEA01D4807B0321F196"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "NULL"
-        content: !<unknown_object>
-          target: "java.security.KeyStore"
-          onlyPojoFunctions: false
-          builderPattern: false
         suggestedContent: !<unknown_object>
           target: "java.security.KeyStore"
           onlyPojoFunctions: false
@@ -4287,7 +4191,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "paymentRequest"
-      modelFingerprint: "D580A49063DEC1C6079E62C9D4D47D58"
+      modelFingerprint: "B4A515A58CD2C8A97DFB55D9573E2199"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -4298,15 +4202,11 @@ methods:
       - 6
       - 8
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
         uuid: "verifyPaymentRequestPki_protos.PaymentRequest1"
         fixed: false
@@ -4333,7 +4233,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "paymentRequest"
-      modelFingerprint: "07FA2A7081CB5AB48F980A584A323943"
+      modelFingerprint: "F785C1F851017D2248A3DE749513ADDA"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -4344,15 +4244,11 @@ methods:
       - 7
       - 9
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
         uuid: "verifyPaymentRequestPki_protos.PaymentRequest1"
         fixed: false
@@ -4364,15 +4260,7 @@ methods:
         parameters: []
         signature: "getPkiData(): ByteString"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "com.google.protobuf.ByteString"
-            method: "empty"
-            methodParameters: []
-          suggestedContent: !<static_method_return>
-            target: "com.google.protobuf.ByteString"
-            method: "empty"
-            methodParameters: []
+          sapientType: "MOCK"
           valueType: "com.google.protobuf.ByteString"
           uuid: "verifyPaymentRequestPki_byteString1"
           fixed: false
@@ -4383,7 +4271,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Protos.X509Certificates"
-      modelFingerprint: "7C13E0F7224BE5AD45EC7401F6F94092"
+      modelFingerprint: "4A9B489A150C31685D987E71316A41AD"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -4406,15 +4294,7 @@ methods:
         parameters:
         - name: "data"
           value:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "com.google.protobuf.ByteString"
-              method: "empty"
-              methodParameters: []
-            suggestedContent: !<static_method_return>
-              target: "com.google.protobuf.ByteString"
-              method: "empty"
-              methodParameters: []
+            sapientType: "MOCK"
             valueType: "com.google.protobuf.ByteString"
             uuid: "verifyPaymentRequestPki_byteString1"
             fixed: false
@@ -4424,15 +4304,11 @@ methods:
         - "com.google.protobuf.InvalidProtocolBufferException"
         signature: "parseFrom(ByteString): Protos$X509Certificates throws com.google.protobuf.InvalidProtocolBufferException"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
             target: "org.bitcoinj.protobuf.payments.Protos$X509Certificates"
-            method: "getDefaultInstance"
-            methodParameters: []
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.protobuf.payments.Protos$X509Certificates"
-            method: "getDefaultInstance"
-            methodParameters: []
+            onlyPojoFunctions: false
+            builderPattern: false
           valueType: "org.bitcoinj.protobuf.payments.Protos$X509Certificates"
           uuid: "verifyPaymentRequestPki_protos.X509Certificates1"
           fixed: false
@@ -4443,7 +4319,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "protoCerts"
-      modelFingerprint: "E2C5DEF686051AEA14AB6F8C0A264AB8"
+      modelFingerprint: "5EFF53BED3F8CF47B38085A68A58854F"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -4454,15 +4330,11 @@ methods:
       - 7
       - 9
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.protobuf.payments.Protos$X509Certificates"
-          method: "getDefaultInstance"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.payments.Protos$X509Certificates"
-          method: "getDefaultInstance"
-          methodParameters: []
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$X509Certificates"
         uuid: "verifyPaymentRequestPki_protos.X509Certificates1"
         fixed: false
@@ -4476,7 +4348,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 0
+            value: 1
+          suggestedContent: !<regular>
+            value: 1
           valueType: "int"
           uuid: "verifyPaymentRequestPki_int1"
           fixed: false
@@ -4485,23 +4359,393 @@ methods:
         access: 1
       staticReadMethodForField: false
       filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "protoCerts"
+      modelFingerprint: "CA10C03A06FF7360FD2AF56803D42B3E"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 3
+      - 5
+      - 7
+      - 9
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.protobuf.payments.Protos$X509Certificates"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.protobuf.payments.Protos$X509Certificates"
+        uuid: "verifyPaymentRequestPki_protos.X509Certificates1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "protoCerts"
+        name: "getCertificateList"
+        parameters: []
+        signature: "getCertificateList(): List"
+        returnValue:
+          sapientType: "COLLECTION"
+          content: !<collection>
+            collectionClass: "java.util.ArrayList"
+            parameters: []
+            values:
+            - sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.google.protobuf.ByteString"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.google.protobuf.ByteString"
+              uuid: "verifyPaymentRequestPki_object1"
+              fixed: false
+              collectionUuid: "verifyPaymentRequestPki_list1"
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          suggestedContent: !<collection>
+            collectionClass: "java.util.ArrayList"
+            parameters: []
+            values:
+            - sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.google.protobuf.ByteString"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.google.protobuf.ByteString"
+              uuid: "verifyPaymentRequestPki_object1"
+              fixed: false
+              collectionUuid: "verifyPaymentRequestPki_list1"
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          valueType: "java.util.List"
+          genericValueType: "com.google.protobuf.ByteString"
+          uuid: "verifyPaymentRequestPki_list1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "bytes"
+      modelFingerprint: "09AC506E23CFAEDF4759546EDD579CC7"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 3
+      - 5
+      - 7
+      - 9
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.google.protobuf.ByteString"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.google.protobuf.ByteString"
+        uuid: "verifyPaymentRequestPki_object1"
+        fixed: false
+        collectionUuid: "verifyPaymentRequestPki_list1"
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "bytes"
+        name: "newInput"
+        parameters: []
+        signature: "newInput(): InputStream"
+        returnValue:
+          sapientType: "INPUT_STREAM"
+          content: !<inputStream>
+            values: []
+          valueType: "java.io.InputStream"
+          uuid: "verifyPaymentRequestPki_inputStream1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "paymentRequest"
+      modelFingerprint: "ED332612A93688ADF0AD26B03EDB0C89"
+      index: 9
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 3
+      - 5
+      - 7
+      - 9
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
+        uuid: "verifyPaymentRequestPki_protos.PaymentRequest1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "paymentRequest"
+        name: "toBuilder"
+        parameters: []
+        signature: "toBuilder(): GeneratedMessageLite$Builder"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest$Builder"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest$Builder"
+          uuid: "verifyPaymentRequestPki_generatedMessageLite.Builder1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: true
+        access: 17
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "reqToCheck"
+      modelFingerprint: "E81AFA63983C127760265A5CFA2939E6"
+      index: 10
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 3
+      - 5
+      - 7
+      - 9
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest$Builder"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest$Builder"
+        uuid: "verifyPaymentRequestPki_generatedMessageLite.Builder1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: true
+      methodExercised:
+        target: "reqToCheck"
+        name: "setSignature"
+        parameters:
+        - name: "value"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_field_return>
+              target: "com.google.protobuf.ByteString"
+              fieldName: "EMPTY"
+            suggestedContent: !<static_field_return>
+              target: "com.google.protobuf.ByteString"
+              fieldName: "EMPTY"
+            valueType: "com.google.protobuf.ByteString"
+            uuid: "verifyPaymentRequestPki_byteString2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "setSignature(ByteString): Protos$PaymentRequest$Builder"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest$Builder"
+          uuid: "verifyPaymentRequestPki_protos.PaymentRequest.Builder1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "reqToCheck"
+      modelFingerprint: "7889102F99F29B5C9A9AC1A2D4659F3C"
+      index: 11
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 3
+      - 5
+      - 7
+      - 9
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest$Builder"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest$Builder"
+        uuid: "verifyPaymentRequestPki_generatedMessageLite.Builder1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: true
+      methodExercised:
+        target: "reqToCheck"
+        name: "build"
+        parameters: []
+        signature: "build(): GeneratedMessageLite"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
+          uuid: "verifyPaymentRequestPki_generatedMessageLite1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: true
+        access: 17
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "4D47345D6739B611DE7733046537E015"
+      index: 12
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 3
+      - 5
+      - 7
+      - 9
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
+        uuid: "verifyPaymentRequestPki_generatedMessageLite1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: true
+      methodExercised:
+        target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
+        name: "toByteArray"
+        parameters: []
+        signature: "toByteArray(): byte[]"
+        returnValue:
+          sapientType: "ARRAY"
+          content: !<array>
+            values: {}
+          suggestedContent: !<array>
+            values: {}
+          valueType: "byte[]"
+          uuid: "verifyPaymentRequestPki_byte[]1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "paymentRequest"
+      modelFingerprint: "4E3BD92F47B99A05207282B3ED3835D5"
+      index: 13
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 3
+      - 5
+      - 7
+      - 9
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
+        uuid: "verifyPaymentRequestPki_protos.PaymentRequest1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "paymentRequest"
+        name: "getSignature"
+        parameters: []
+        signature: "getSignature(): ByteString"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "com.google.protobuf.ByteString"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "com.google.protobuf.ByteString"
+          uuid: "verifyPaymentRequestPki_byteString3"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "7F7DA64301CA1E4A861754FDC58A51FD"
+      index: 14
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 3
+      - 5
+      - 7
+      - 9
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.google.protobuf.ByteString"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.google.protobuf.ByteString"
+        uuid: "verifyPaymentRequestPki_byteString3"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "com.google.protobuf.ByteString"
+        name: "toByteArray"
+        parameters: []
+        signature: "toByteArray(): byte[]"
+        returnValue:
+          sapientType: "ARRAY"
+          content: !<array>
+            values: {}
+          suggestedContent: !<array>
+            values: {}
+          valueType: "byte[]"
+          uuid: "verifyPaymentRequestPki_byte[]2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 17
+      staticReadMethodForField: false
+      filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "4D059AB01A09E53A08EF78C8D5AF4514"
-      index: 7
+      modelFingerprint: "67BF5BDB7AE1A8961D9AF670A24097FE"
+      index: 15
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "EXCEPTION"
         content: !<new>
-          target: "org.bitcoinj.protocols.payments.PaymentProtocolException$InvalidPkiData"
+          target: "org.bitcoinj.protocols.payments.PaymentProtocolException$PkiVerificationException"
           parameters:
           - name: "msg"
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "No certificates provided in message: server config error"
+                value: "Invalid signature, this payment request is not valid."
               valueType: "java.lang.String"
               fixed: true
               equalsMethodPresent: false
@@ -4509,21 +4753,21 @@ methods:
           privateConstructor: false
           createdByTargetCode: true
         suggestedContent: !<new>
-          target: "org.bitcoinj.protocols.payments.PaymentProtocolException$InvalidPkiData"
+          target: "org.bitcoinj.protocols.payments.PaymentProtocolException$PkiVerificationException"
           parameters:
           - name: "msg"
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "No certificates provided in message: server config error"
+                value: "Invalid signature, this payment request is not valid."
               valueType: "java.lang.String"
               fixed: true
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
           createdByTargetCode: true
-        valueType: "org.bitcoinj.protocols.payments.PaymentProtocolException$InvalidPkiData"
-        uuid: "verifyPaymentRequestPki_paymentProtocolException.InvalidPkiData1"
+        valueType: "org.bitcoinj.protocols.payments.PaymentProtocolException$PkiVerificationException"
+        uuid: "verifyPaymentRequestPki_paymentProtocolException.PkiVerificationException1"
         fixed: true
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -4531,11 +4775,11 @@ methods:
       filledByUser: false
     uuid: "6b94a25c-1be9-369b-ba74-f5d47bb566fc"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path6"
     pathIdForUser: "path9"
     testPathName: "verifyPaymentRequestPkiWhenSignatureNotVerifyPaymentRequestGetSig2ThrowsPaymentProtocolExceptionPkiVerificationException"
@@ -4577,27 +4821,23 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "C5101F50C50EF86DC1A66225F6850A24"
+    modelFingerprint: "A69F22A308DD992D6E1D653D5D35B53E"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "paymentRequest"
-      modelFingerprint: "077AAC2EB16B2DC5B6FB2230F50B7150"
+      modelFingerprint: "4772091B73EB9466579A348A0DE294D6"
       index: 1
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
         uuid: "verifyPaymentRequestPki_protos.PaymentRequest1"
         fixed: false
@@ -4607,17 +4847,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "trustStore"
-      modelFingerprint: "8711069403E5FA514E3B506BB5E62E07"
+      modelFingerprint: "DAFE8C06A0A1CBEA01D4807B0321F196"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "NULL"
-        content: !<unknown_object>
-          target: "java.security.KeyStore"
-          onlyPojoFunctions: false
-          builderPattern: false
         suggestedContent: !<unknown_object>
           target: "java.security.KeyStore"
           onlyPojoFunctions: false
@@ -4631,7 +4867,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "paymentRequest"
-      modelFingerprint: "D580A49063DEC1C6079E62C9D4D47D58"
+      modelFingerprint: "B4A515A58CD2C8A97DFB55D9573E2199"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -4642,15 +4878,11 @@ methods:
       - 6
       - 8
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
         uuid: "verifyPaymentRequestPki_protos.PaymentRequest1"
         fixed: false
@@ -4677,7 +4909,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "paymentRequest"
-      modelFingerprint: "07FA2A7081CB5AB48F980A584A323943"
+      modelFingerprint: "F785C1F851017D2248A3DE749513ADDA"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -4688,15 +4920,11 @@ methods:
       - 7
       - 9
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
         uuid: "verifyPaymentRequestPki_protos.PaymentRequest1"
         fixed: false
@@ -4708,15 +4936,7 @@ methods:
         parameters: []
         signature: "getPkiData(): ByteString"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "com.google.protobuf.ByteString"
-            method: "empty"
-            methodParameters: []
-          suggestedContent: !<static_method_return>
-            target: "com.google.protobuf.ByteString"
-            method: "empty"
-            methodParameters: []
+          sapientType: "MOCK"
           valueType: "com.google.protobuf.ByteString"
           uuid: "verifyPaymentRequestPki_byteString1"
           fixed: false
@@ -4727,7 +4947,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Protos.X509Certificates"
-      modelFingerprint: "7C13E0F7224BE5AD45EC7401F6F94092"
+      modelFingerprint: "4A9B489A150C31685D987E71316A41AD"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -4750,15 +4970,7 @@ methods:
         parameters:
         - name: "data"
           value:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "com.google.protobuf.ByteString"
-              method: "empty"
-              methodParameters: []
-            suggestedContent: !<static_method_return>
-              target: "com.google.protobuf.ByteString"
-              method: "empty"
-              methodParameters: []
+            sapientType: "MOCK"
             valueType: "com.google.protobuf.ByteString"
             uuid: "verifyPaymentRequestPki_byteString1"
             fixed: false
@@ -4768,15 +4980,11 @@ methods:
         - "com.google.protobuf.InvalidProtocolBufferException"
         signature: "parseFrom(ByteString): Protos$X509Certificates throws com.google.protobuf.InvalidProtocolBufferException"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
             target: "org.bitcoinj.protobuf.payments.Protos$X509Certificates"
-            method: "getDefaultInstance"
-            methodParameters: []
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.protobuf.payments.Protos$X509Certificates"
-            method: "getDefaultInstance"
-            methodParameters: []
+            onlyPojoFunctions: false
+            builderPattern: false
           valueType: "org.bitcoinj.protobuf.payments.Protos$X509Certificates"
           uuid: "verifyPaymentRequestPki_protos.X509Certificates1"
           fixed: false
@@ -4787,7 +4995,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "protoCerts"
-      modelFingerprint: "744E23E5EF0B1EC4753834C43AC00238"
+      modelFingerprint: "5EFF53BED3F8CF47B38085A68A58854F"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -4798,15 +5006,11 @@ methods:
       - 7
       - 9
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.protobuf.payments.Protos$X509Certificates"
-          method: "getDefaultInstance"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.payments.Protos$X509Certificates"
-          method: "getDefaultInstance"
-          methodParameters: []
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$X509Certificates"
         uuid: "verifyPaymentRequestPki_protos.X509Certificates1"
         fixed: false
@@ -4833,7 +5037,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "protoCerts"
-      modelFingerprint: "9641EBC9034FEA7DAB4D5E1066D8662B"
+      modelFingerprint: "CA10C03A06FF7360FD2AF56803D42B3E"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -4844,15 +5048,11 @@ methods:
       - 7
       - 9
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.protobuf.payments.Protos$X509Certificates"
-          method: "getDefaultInstance"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.payments.Protos$X509Certificates"
-          method: "getDefaultInstance"
-          methodParameters: []
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$X509Certificates"
         uuid: "verifyPaymentRequestPki_protos.X509Certificates1"
         fixed: false
@@ -4868,11 +5068,33 @@ methods:
           content: !<collection>
             collectionClass: "java.util.ArrayList"
             parameters: []
-            values: []
+            values:
+            - sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.google.protobuf.ByteString"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.google.protobuf.ByteString"
+              uuid: "verifyPaymentRequestPki_object1"
+              fixed: false
+              collectionUuid: "verifyPaymentRequestPki_list1"
+              equalsMethodPresent: false
+              explicitCastNeeded: false
           suggestedContent: !<collection>
             collectionClass: "java.util.ArrayList"
             parameters: []
-            values: []
+            values:
+            - sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.google.protobuf.ByteString"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.google.protobuf.ByteString"
+              uuid: "verifyPaymentRequestPki_object1"
+              fixed: false
+              collectionUuid: "verifyPaymentRequestPki_list1"
+              equalsMethodPresent: false
+              explicitCastNeeded: false
           valueType: "java.util.List"
           genericValueType: "com.google.protobuf.ByteString"
           uuid: "verifyPaymentRequestPki_list1"
@@ -4883,8 +5105,8 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      name: "paymentRequest"
-      modelFingerprint: "D312D4CF6C00BA739BF7014544DDE3B0"
+      name: "bytes"
+      modelFingerprint: "09AC506E23CFAEDF4759546EDD579CC7"
       index: 8
       ignored: false
       nestedInLoop: false
@@ -4895,15 +5117,52 @@ methods:
       - 7
       - 9
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.google.protobuf.ByteString"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.google.protobuf.ByteString"
+        uuid: "verifyPaymentRequestPki_object1"
+        fixed: false
+        collectionUuid: "verifyPaymentRequestPki_list1"
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "bytes"
+        name: "newInput"
+        parameters: []
+        signature: "newInput(): InputStream"
+        returnValue:
+          sapientType: "INPUT_STREAM"
+          content: !<inputStream>
+            values: []
+          valueType: "java.io.InputStream"
+          uuid: "verifyPaymentRequestPki_inputStream1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "paymentRequest"
+      modelFingerprint: "ED332612A93688ADF0AD26B03EDB0C89"
+      index: 9
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 3
+      - 5
+      - 7
+      - 9
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
         uuid: "verifyPaymentRequestPki_protos.PaymentRequest1"
         fixed: false
@@ -4930,8 +5189,8 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "reqToCheck"
-      modelFingerprint: "AE936546D75C472234373FA8867CBD06"
-      index: 9
+      modelFingerprint: "E81AFA63983C127760265A5CFA2939E6"
+      index: 10
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4972,10 +5231,6 @@ methods:
         signature: "setSignature(ByteString): Protos$PaymentRequest$Builder"
         returnValue:
           sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
-            target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest$Builder"
-            onlyPojoFunctions: false
-            builderPattern: false
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest$Builder"
           uuid: "verifyPaymentRequestPki_protos.PaymentRequest.Builder1"
           fixed: false
@@ -4986,8 +5241,8 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "reqToCheck"
-      modelFingerprint: "BF648C9474AE0BC9FAFD7E10FE8A547A"
-      index: 10
+      modelFingerprint: "7889102F99F29B5C9A9AC1A2D4659F3C"
+      index: 11
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5013,15 +5268,11 @@ methods:
         parameters: []
         signature: "build(): GeneratedMessageLite"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
             target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-            method: "getDefaultInstance"
-            methodParameters: []
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-            method: "getDefaultInstance"
-            methodParameters: []
+            onlyPojoFunctions: false
+            builderPattern: false
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
           uuid: "verifyPaymentRequestPki_generatedMessageLite1"
           fixed: false
@@ -5031,8 +5282,8 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "B9330AF5A14557D8EEC4D87C43E5764A"
-      index: 11
+      modelFingerprint: "4D47345D6739B611DE7733046537E015"
+      index: 12
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5042,15 +5293,11 @@ methods:
       - 7
       - 9
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
         uuid: "verifyPaymentRequestPki_generatedMessageLite1"
         fixed: false
@@ -5077,8 +5324,8 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "paymentRequest"
-      modelFingerprint: "3A4654FFEA7F43EAA70B7BDACAF56BAA"
-      index: 12
+      modelFingerprint: "4E3BD92F47B99A05207282B3ED3835D5"
+      index: 13
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5088,15 +5335,11 @@ methods:
       - 7
       - 9
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
         uuid: "verifyPaymentRequestPki_protos.PaymentRequest1"
         fixed: false
@@ -5108,15 +5351,11 @@ methods:
         parameters: []
         signature: "getSignature(): ByteString"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
             target: "com.google.protobuf.ByteString"
-            method: "empty"
-            methodParameters: []
-          suggestedContent: !<static_method_return>
-            target: "com.google.protobuf.ByteString"
-            method: "empty"
-            methodParameters: []
+            onlyPojoFunctions: false
+            builderPattern: false
           valueType: "com.google.protobuf.ByteString"
           uuid: "verifyPaymentRequestPki_byteString3"
           fixed: false
@@ -5126,8 +5365,8 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "84795AA6FD1E2F628DCDB7F467ABEFDD"
-      index: 13
+      modelFingerprint: "7F7DA64301CA1E4A861754FDC58A51FD"
+      index: 14
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5137,15 +5376,11 @@ methods:
       - 7
       - 9
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "com.google.protobuf.ByteString"
-          method: "empty"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "com.google.protobuf.ByteString"
-          method: "empty"
-          methodParameters: []
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "com.google.protobuf.ByteString"
         uuid: "verifyPaymentRequestPki_byteString3"
         fixed: false
@@ -5173,7 +5408,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "67BF5BDB7AE1A8961D9AF670A24097FE"
-      index: 14
+      index: 15
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5216,11 +5451,11 @@ methods:
       filledByUser: false
     uuid: "8f2d6f33-06b6-318b-b175-e01a4957d7d4"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path5"
     pathIdForUser: "path12"
     testPathName: "verifyPaymentRequestPkiWhenDisplayNameIsNotNull"
@@ -8755,10 +8990,10 @@ methods:
       filledByUser: false
     uuid: "85c163a3-c732-31c6-b407-e2178571cfa1"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path18"
     pathIdForUser: "path17"
     testPathName: "verifyPaymentRequestPkiWhenCaughtCertificateExceptionOrSignatureE2ThrowsPaymentProtocolExceptionPkiVerificationException"
@@ -8806,28 +9041,24 @@ methods:
     nameDefinedByUser: false
     priorityDefinedByUser: false
     filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "41D57F83A9778C989BE0EBE0A29C2342"
-    problemWasSolvedByProver: true
+    priority: "MODERATE"
+    modelFingerprint: "720D3FF06745E4743A0DD2210337C884"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "paymentRequest"
-      modelFingerprint: "077AAC2EB16B2DC5B6FB2230F50B7150"
+      modelFingerprint: "4772091B73EB9466579A348A0DE294D6"
       index: 1
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
         uuid: "verifyPaymentRequestPki_protos.PaymentRequest1"
         fixed: false
@@ -8837,17 +9068,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "trustStore"
-      modelFingerprint: "8711069403E5FA514E3B506BB5E62E07"
+      modelFingerprint: "DAFE8C06A0A1CBEA01D4807B0321F196"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "NULL"
-        content: !<unknown_object>
-          target: "java.security.KeyStore"
-          onlyPojoFunctions: false
-          builderPattern: false
         suggestedContent: !<unknown_object>
           target: "java.security.KeyStore"
           onlyPojoFunctions: false
@@ -8861,7 +9088,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "paymentRequest"
-      modelFingerprint: "09831780C65A71E221B6529128F7078F"
+      modelFingerprint: "D34F1C6B0006D7E341E4DCC62BECB5AF"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -8872,15 +9099,11 @@ methods:
       - 6
       - 8
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
         uuid: "verifyPaymentRequestPki_protos.PaymentRequest1"
         fixed: false
@@ -8907,7 +9130,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "paymentRequest"
-      modelFingerprint: "07FA2A7081CB5AB48F980A584A323943"
+      modelFingerprint: "F785C1F851017D2248A3DE749513ADDA"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -8918,15 +9141,11 @@ methods:
       - 7
       - 9
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
-          method: "getDefaultInstance"
-          methodParameters: []
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
         uuid: "verifyPaymentRequestPki_protos.PaymentRequest1"
         fixed: false
@@ -8938,15 +9157,7 @@ methods:
         parameters: []
         signature: "getPkiData(): ByteString"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "com.google.protobuf.ByteString"
-            method: "empty"
-            methodParameters: []
-          suggestedContent: !<static_method_return>
-            target: "com.google.protobuf.ByteString"
-            method: "empty"
-            methodParameters: []
+          sapientType: "MOCK"
           valueType: "com.google.protobuf.ByteString"
           uuid: "verifyPaymentRequestPki_byteString1"
           fixed: false
@@ -8957,7 +9168,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Protos.X509Certificates"
-      modelFingerprint: "7C13E0F7224BE5AD45EC7401F6F94092"
+      modelFingerprint: "4A9B489A150C31685D987E71316A41AD"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -8980,15 +9191,7 @@ methods:
         parameters:
         - name: "data"
           value:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "com.google.protobuf.ByteString"
-              method: "empty"
-              methodParameters: []
-            suggestedContent: !<static_method_return>
-              target: "com.google.protobuf.ByteString"
-              method: "empty"
-              methodParameters: []
+            sapientType: "MOCK"
             valueType: "com.google.protobuf.ByteString"
             uuid: "verifyPaymentRequestPki_byteString1"
             fixed: false
@@ -8998,15 +9201,11 @@ methods:
         - "com.google.protobuf.InvalidProtocolBufferException"
         signature: "parseFrom(ByteString): Protos$X509Certificates throws com.google.protobuf.InvalidProtocolBufferException"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
             target: "org.bitcoinj.protobuf.payments.Protos$X509Certificates"
-            method: "getDefaultInstance"
-            methodParameters: []
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.protobuf.payments.Protos$X509Certificates"
-            method: "getDefaultInstance"
-            methodParameters: []
+            onlyPojoFunctions: false
+            builderPattern: false
           valueType: "org.bitcoinj.protobuf.payments.Protos$X509Certificates"
           uuid: "verifyPaymentRequestPki_protos.X509Certificates1"
           fixed: false
@@ -9017,7 +9216,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "protoCerts"
-      modelFingerprint: "A6B882CF2F099C4D2AE8F2F2C0D171AD"
+      modelFingerprint: "5EFF53BED3F8CF47B38085A68A58854F"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -9028,15 +9227,11 @@ methods:
       - 7
       - 9
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.protobuf.payments.Protos$X509Certificates"
-          method: "getDefaultInstance"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.payments.Protos$X509Certificates"
-          method: "getDefaultInstance"
-          methodParameters: []
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$X509Certificates"
         uuid: "verifyPaymentRequestPki_protos.X509Certificates1"
         fixed: false
@@ -9050,9 +9245,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 0
+            value: 1
           suggestedContent: !<regular>
-            value: 0
+            value: 1
           valueType: "int"
           uuid: "verifyPaymentRequestPki_int1"
           fixed: false
@@ -9061,23 +9256,393 @@ methods:
         access: 1
       staticReadMethodForField: false
       filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "protoCerts"
+      modelFingerprint: "CA10C03A06FF7360FD2AF56803D42B3E"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 3
+      - 5
+      - 7
+      - 9
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.protobuf.payments.Protos$X509Certificates"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.protobuf.payments.Protos$X509Certificates"
+        uuid: "verifyPaymentRequestPki_protos.X509Certificates1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "protoCerts"
+        name: "getCertificateList"
+        parameters: []
+        signature: "getCertificateList(): List"
+        returnValue:
+          sapientType: "COLLECTION"
+          content: !<collection>
+            collectionClass: "java.util.ArrayList"
+            parameters: []
+            values:
+            - sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.google.protobuf.ByteString"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.google.protobuf.ByteString"
+              uuid: "verifyPaymentRequestPki_object1"
+              fixed: false
+              collectionUuid: "verifyPaymentRequestPki_list1"
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          suggestedContent: !<collection>
+            collectionClass: "java.util.ArrayList"
+            parameters: []
+            values:
+            - sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.google.protobuf.ByteString"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.google.protobuf.ByteString"
+              uuid: "verifyPaymentRequestPki_object1"
+              fixed: false
+              collectionUuid: "verifyPaymentRequestPki_list1"
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          valueType: "java.util.List"
+          genericValueType: "com.google.protobuf.ByteString"
+          uuid: "verifyPaymentRequestPki_list1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "bytes"
+      modelFingerprint: "09AC506E23CFAEDF4759546EDD579CC7"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 3
+      - 5
+      - 7
+      - 9
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.google.protobuf.ByteString"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.google.protobuf.ByteString"
+        uuid: "verifyPaymentRequestPki_object1"
+        fixed: false
+        collectionUuid: "verifyPaymentRequestPki_list1"
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "bytes"
+        name: "newInput"
+        parameters: []
+        signature: "newInput(): InputStream"
+        returnValue:
+          sapientType: "INPUT_STREAM"
+          content: !<inputStream>
+            values: []
+          valueType: "java.io.InputStream"
+          uuid: "verifyPaymentRequestPki_inputStream1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "paymentRequest"
+      modelFingerprint: "ED332612A93688ADF0AD26B03EDB0C89"
+      index: 9
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 3
+      - 5
+      - 7
+      - 9
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
+        uuid: "verifyPaymentRequestPki_protos.PaymentRequest1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "paymentRequest"
+        name: "toBuilder"
+        parameters: []
+        signature: "toBuilder(): GeneratedMessageLite$Builder"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest$Builder"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest$Builder"
+          uuid: "verifyPaymentRequestPki_generatedMessageLite.Builder1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: true
+        access: 17
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "reqToCheck"
+      modelFingerprint: "E81AFA63983C127760265A5CFA2939E6"
+      index: 10
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 3
+      - 5
+      - 7
+      - 9
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest$Builder"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest$Builder"
+        uuid: "verifyPaymentRequestPki_generatedMessageLite.Builder1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: true
+      methodExercised:
+        target: "reqToCheck"
+        name: "setSignature"
+        parameters:
+        - name: "value"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_field_return>
+              target: "com.google.protobuf.ByteString"
+              fieldName: "EMPTY"
+            suggestedContent: !<static_field_return>
+              target: "com.google.protobuf.ByteString"
+              fieldName: "EMPTY"
+            valueType: "com.google.protobuf.ByteString"
+            uuid: "verifyPaymentRequestPki_byteString2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "setSignature(ByteString): Protos$PaymentRequest$Builder"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest$Builder"
+          uuid: "verifyPaymentRequestPki_protos.PaymentRequest.Builder1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "reqToCheck"
+      modelFingerprint: "7889102F99F29B5C9A9AC1A2D4659F3C"
+      index: 11
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 3
+      - 5
+      - 7
+      - 9
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest$Builder"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest$Builder"
+        uuid: "verifyPaymentRequestPki_generatedMessageLite.Builder1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: true
+      methodExercised:
+        target: "reqToCheck"
+        name: "build"
+        parameters: []
+        signature: "build(): GeneratedMessageLite"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
+          uuid: "verifyPaymentRequestPki_generatedMessageLite1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: true
+        access: 17
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "4D47345D6739B611DE7733046537E015"
+      index: 12
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 3
+      - 5
+      - 7
+      - 9
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
+        uuid: "verifyPaymentRequestPki_generatedMessageLite1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: true
+      methodExercised:
+        target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
+        name: "toByteArray"
+        parameters: []
+        signature: "toByteArray(): byte[]"
+        returnValue:
+          sapientType: "ARRAY"
+          content: !<array>
+            values: {}
+          suggestedContent: !<array>
+            values: {}
+          valueType: "byte[]"
+          uuid: "verifyPaymentRequestPki_byte[]1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "paymentRequest"
+      modelFingerprint: "4E3BD92F47B99A05207282B3ED3835D5"
+      index: 13
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 3
+      - 5
+      - 7
+      - 9
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentRequest"
+        uuid: "verifyPaymentRequestPki_protos.PaymentRequest1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "paymentRequest"
+        name: "getSignature"
+        parameters: []
+        signature: "getSignature(): ByteString"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "com.google.protobuf.ByteString"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "com.google.protobuf.ByteString"
+          uuid: "verifyPaymentRequestPki_byteString3"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "7F7DA64301CA1E4A861754FDC58A51FD"
+      index: 14
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 3
+      - 5
+      - 7
+      - 9
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.google.protobuf.ByteString"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.google.protobuf.ByteString"
+        uuid: "verifyPaymentRequestPki_byteString3"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "com.google.protobuf.ByteString"
+        name: "toByteArray"
+        parameters: []
+        signature: "toByteArray(): byte[]"
+        returnValue:
+          sapientType: "ARRAY"
+          content: !<array>
+            values: {}
+          suggestedContent: !<array>
+            values: {}
+          valueType: "byte[]"
+          uuid: "verifyPaymentRequestPki_byte[]2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 17
+      staticReadMethodForField: false
+      filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "4D059AB01A09E53A08EF78C8D5AF4514"
-      index: 7
+      modelFingerprint: "67BF5BDB7AE1A8961D9AF670A24097FE"
+      index: 15
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "EXCEPTION"
         content: !<new>
-          target: "org.bitcoinj.protocols.payments.PaymentProtocolException$InvalidPkiData"
+          target: "org.bitcoinj.protocols.payments.PaymentProtocolException$PkiVerificationException"
           parameters:
           - name: "msg"
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "No certificates provided in message: server config error"
+                value: "Invalid signature, this payment request is not valid."
               valueType: "java.lang.String"
               fixed: true
               equalsMethodPresent: false
@@ -9085,21 +9650,21 @@ methods:
           privateConstructor: false
           createdByTargetCode: true
         suggestedContent: !<new>
-          target: "org.bitcoinj.protocols.payments.PaymentProtocolException$InvalidPkiData"
+          target: "org.bitcoinj.protocols.payments.PaymentProtocolException$PkiVerificationException"
           parameters:
           - name: "msg"
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "No certificates provided in message: server config error"
+                value: "Invalid signature, this payment request is not valid."
               valueType: "java.lang.String"
               fixed: true
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
           createdByTargetCode: true
-        valueType: "org.bitcoinj.protocols.payments.PaymentProtocolException$InvalidPkiData"
-        uuid: "verifyPaymentRequestPki_paymentProtocolException.InvalidPkiData1"
+        valueType: "org.bitcoinj.protocols.payments.PaymentProtocolException$PkiVerificationException"
+        uuid: "verifyPaymentRequestPki_paymentProtocolException.PkiVerificationException1"
         fixed: true
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -9107,11 +9672,11 @@ methods:
       filledByUser: false
     uuid: "f0f7fadc-3bc3-3edd-85a1-9fbad1d24630"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "createPaymentMessage"
     returnType: "org.bitcoinj.protobuf.payments.Protos$Payment"
@@ -9487,13 +10052,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "17A8358F3002682BB380ECB07B2324BE"
+    modelFingerprint: "D91A68BBFAA98C229690955ECC4BEF18"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "transactions"
-      modelFingerprint: "0AE4E68D57EC754701C438C403C4F05C"
+      modelFingerprint: "5719A11CF4B37E24842E391EE5CB21B6"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -9501,35 +10066,11 @@ methods:
       value:
         sapientType: "COLLECTION"
         content: !<collection>
-          collectionClass: "java.util.ArrayList"
           parameters: []
-          values:
-          - sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.core.Transaction"
-              onlyPojoFunctions: false
-              builderPattern: false
-            valueType: "org.bitcoinj.core.Transaction"
-            uuid: "createPaymentMessage_list1-0"
-            fixed: false
-            collectionUuid: "createPaymentMessage_list1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
+          values: []
         suggestedContent: !<collection>
-          collectionClass: "java.util.ArrayList"
           parameters: []
-          values:
-          - sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.core.Transaction"
-              onlyPojoFunctions: false
-              builderPattern: false
-            valueType: "org.bitcoinj.core.Transaction"
-            uuid: "createPaymentMessage_list1-0"
-            fixed: false
-            collectionUuid: "createPaymentMessage_list1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
+          values: []
         valueType: "java.util.List"
         genericValueType: "org.bitcoinj.core.Transaction"
         uuid: "createPaymentMessage_list1"
@@ -9540,17 +10081,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "refundAmount"
-      modelFingerprint: "58AFE7851D5D47C4999314B9764F3067"
+      modelFingerprint: "CC798B4C5ECA0D5785241EFD4926126E"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.base.Coin"
-          onlyPojoFunctions: false
-          builderPattern: false
         valueType: "org.bitcoinj.base.Coin"
         uuid: "createPaymentMessage_coin1"
         fixed: false
@@ -9560,17 +10097,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "refundAddress"
-      modelFingerprint: "DC08B1A68B0741010A0BBC51013A2BC5"
+      modelFingerprint: "8006DCEEC75363889DD7B7BEC48D8E42"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.base.Address"
-          onlyPojoFunctions: false
-          builderPattern: false
         valueType: "org.bitcoinj.base.Address"
         uuid: "createPaymentMessage_address1"
         fixed: false
@@ -9580,7 +10113,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "memo"
-      modelFingerprint: "444ADB94C9568A20FA6EE19D57922AEC"
+      modelFingerprint: "E9D0EE401D085AE68A42F9814A0C187F"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -9588,9 +10121,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "Test Memo"
-        suggestedContent: !<regular>
-          value: "Test Memo"
+          value: "memo1"
         valueType: "java.lang.String"
         uuid: "createPaymentMessage_string1"
         fixed: false
@@ -9600,7 +10131,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "merchantData"
-      modelFingerprint: "DBF707ACAF6936F891D5B98F4EE71F69"
+      modelFingerprint: "70D0EB9EAD104AD021E3AED73DFCC6DF"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -9608,69 +10139,9 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 3
-              suggestedContent: !<regular>
-                value: 3
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         suggestedContent: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 3
-              suggestedContent: !<regular>
-                value: 3
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         valueType: "byte[]"
         uuid: "createPaymentMessage_byte[]1"
         fixed: false
@@ -9680,7 +10151,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "PaymentProtocol"
-      modelFingerprint: "B5BDE987139FE48132BF004C97F12615"
+      modelFingerprint: "61561FC3447AB01DFCE862AC5732A322"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -9699,10 +10170,6 @@ methods:
         - name: "amount"
           value:
             sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.base.Coin"
-              onlyPojoFunctions: false
-              builderPattern: false
             valueType: "org.bitcoinj.base.Coin"
             uuid: "createPaymentMessage_coin1"
             fixed: false
@@ -9711,10 +10178,6 @@ methods:
         - name: "address"
           value:
             sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.base.Address"
-              onlyPojoFunctions: false
-              builderPattern: false
             valueType: "org.bitcoinj.base.Address"
             uuid: "createPaymentMessage_address1"
             fixed: false
@@ -9741,7 +10204,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "PaymentProtocol"
-      modelFingerprint: "51DA83A66DA97E9F69D706066750E8D9"
+      modelFingerprint: "248E72735B40313B9E36AB219792B9F4"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -9761,35 +10224,11 @@ methods:
           value:
             sapientType: "COLLECTION"
             content: !<collection>
-              collectionClass: "java.util.ArrayList"
               parameters: []
-              values:
-              - sapientType: "MOCK"
-                suggestedContent: !<unknown_object>
-                  target: "org.bitcoinj.core.Transaction"
-                  onlyPojoFunctions: false
-                  builderPattern: false
-                valueType: "org.bitcoinj.core.Transaction"
-                uuid: "createPaymentMessage_list1-0"
-                fixed: false
-                collectionUuid: "createPaymentMessage_list1"
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+              values: []
             suggestedContent: !<collection>
-              collectionClass: "java.util.ArrayList"
               parameters: []
-              values:
-              - sapientType: "MOCK"
-                suggestedContent: !<unknown_object>
-                  target: "org.bitcoinj.core.Transaction"
-                  onlyPojoFunctions: false
-                  builderPattern: false
-                valueType: "org.bitcoinj.core.Transaction"
-                uuid: "createPaymentMessage_list1-0"
-                fixed: false
-                collectionUuid: "createPaymentMessage_list1"
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+              values: []
             valueType: "java.util.List"
             genericValueType: "org.bitcoinj.core.Transaction"
             uuid: "createPaymentMessage_list1"
@@ -9815,9 +10254,7 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "Test Memo"
-            suggestedContent: !<regular>
-              value: "Test Memo"
+              value: "memo1"
             valueType: "java.lang.String"
             uuid: "createPaymentMessage_string1"
             fixed: false
@@ -9827,69 +10264,9 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
-                  suggestedContent: !<regular>
-                    value: 1
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 2
-                  suggestedContent: !<regular>
-                    value: 2
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                2:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 3
-                  suggestedContent: !<regular>
-                    value: 3
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+              values: {}
             suggestedContent: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
-                  suggestedContent: !<regular>
-                    value: 1
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 2
-                  suggestedContent: !<regular>
-                    value: 2
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                2:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 3
-                  suggestedContent: !<regular>
-                    value: 3
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+              values: {}
             valueType: "byte[]"
             uuid: "createPaymentMessage_byte[]1"
             fixed: false
@@ -9897,15 +10274,7 @@ methods:
             explicitCastNeeded: false
         signature: "createPaymentMessage(List,List,String,byte[]): Protos$Payment"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.protobuf.payments.Protos$Payment"
-            method: "getDefaultInstance"
-            methodParameters: []
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.protobuf.payments.Protos$Payment"
-            method: "getDefaultInstance"
-            methodParameters: []
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.protobuf.payments.Protos$Payment"
           uuid: "createPaymentMessage_protos.Payment1"
           fixed: false
@@ -9916,21 +10285,13 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "2822B2F0CB9EE344A41E8284E01F3976"
+      modelFingerprint: "97246FC9C16BFB759459634616FC7BFC"
       index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "org.bitcoinj.protobuf.payments.Protos$Payment"
-          method: "getDefaultInstance"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.payments.Protos$Payment"
-          method: "getDefaultInstance"
-          methodParameters: []
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.protobuf.payments.Protos$Payment"
         uuid: "createPaymentMessage_protos.Payment1"
         fixed: false
@@ -10911,11 +11272,11 @@ methods:
       filledByUser: false
     uuid: "e55007f8-66a1-3dfe-955b-77cffb0366ba"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path10"
     testPathName: "createPaymentMessage1WhenRefundOutputsIsNotEmptyAndMemoIsNotNullAndMerchantDataIsNull"
@@ -11834,27 +12195,23 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "11D8774543FD408D7250E56D2D0CEB1A"
+    modelFingerprint: "E42F465D70D0A1E7CCB0B3A8CBA4F52D"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "paymentAck"
-      modelFingerprint: "F8B4D27057F64E9575B16B6DE6D9EB9A"
+      modelFingerprint: "87D0BAADE9C879A9A04F303503D728A2"
       index: 1
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.protobuf.payments.Protos$PaymentACK"
-          method: "getDefaultInstance"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.payments.Protos$PaymentACK"
-          method: "getDefaultInstance"
-          methodParameters: []
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentACK"
         uuid: "parsePaymentAck_protos.PaymentACK1"
         fixed: false
@@ -11864,21 +12221,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "paymentAck"
-      modelFingerprint: "2D9B1BD1302692C1A281970DCCB59A92"
+      modelFingerprint: "66DD99065CCDC3011B853E8268AE8B08"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.protobuf.payments.Protos$PaymentACK"
-          method: "getDefaultInstance"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.payments.Protos$PaymentACK"
-          method: "getDefaultInstance"
-          methodParameters: []
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentACK"
         uuid: "parsePaymentAck_protos.PaymentACK1"
         fixed: false
@@ -11905,21 +12258,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "paymentAck"
-      modelFingerprint: "2F62D94BBBECD3F6ACD4FA4EDBE307B4"
+      modelFingerprint: "5D77CEE299B4975F90B63D8D5CE659C4"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.protobuf.payments.Protos$PaymentACK"
-          method: "getDefaultInstance"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.payments.Protos$PaymentACK"
-          method: "getDefaultInstance"
-          methodParameters: []
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentACK"
         uuid: "parsePaymentAck_protos.PaymentACK1"
         fixed: false
@@ -11933,9 +12282,7 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "Payment received"
-          suggestedContent: !<regular>
-            value: "Payment received"
+            value: "return_of_getMemo1"
           valueType: "java.lang.String"
           uuid: "parsePaymentAck_string1"
           fixed: false
@@ -11946,7 +12293,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "D46DF016B285BF9959937719F9B690E8"
+      modelFingerprint: "B259D29267B94B5FD3DC32440ACFC3FE"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -11960,9 +12307,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "Payment received"
-              suggestedContent: !<regular>
-                value: "Payment received"
+                value: "return_of_getMemo1"
               valueType: "java.lang.String"
               uuid: "parsePaymentAck_string1"
               fixed: false
@@ -11977,9 +12322,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "Payment received"
-              suggestedContent: !<regular>
-                value: "Payment received"
+                value: "return_of_getMemo1"
               valueType: "java.lang.String"
               uuid: "parsePaymentAck_string1"
               fixed: false
@@ -11996,11 +12339,11 @@ methods:
       filledByUser: false
     uuid: "cf01a93f-900d-37d4-843c-9168b63ac7b1"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "parsePaymentAckWhenPaymentAckNotHasMemo"
@@ -12111,11 +12454,11 @@ methods:
       filledByUser: false
     uuid: "67d6ef03-d28f-3150-9321-85ea810ac766"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "createPayToAddressOutput"
     returnType: "org.bitcoinj.protobuf.payments.Protos$Output"
@@ -12502,11 +12845,11 @@ methods:
       filledByUser: false
     uuid: "3f2d4c49-693e-345a-a2f9-a97605644fed"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path1"
     pathIdForUser: "path2"
     testPathName: "createPayToAddressOutputWhenParamsNetworkExceedsMaxMoneyAmountThrowsIllegalArgumentException"
@@ -12810,23 +13153,19 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "F881331A293A9EA4A67B9AB3AC601535"
+    modelFingerprint: "CB4189DD6F91051C73742430611D3179"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "amount"
-      modelFingerprint: "7FE4344EFF141F9C2CBEF9BA037536DE"
+      modelFingerprint: "A7B4CEEBBD6DD719AA99C95FB830C952"
       index: 1
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.base.Coin"
-          onlyPojoFunctions: false
-          builderPattern: false
         valueType: "org.bitcoinj.base.Coin"
         uuid: "createPayToAddressOutput_coin1"
         fixed: false
@@ -12836,7 +13175,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "address"
-      modelFingerprint: "84D7E2B882EBE9008963A20519AA25DD"
+      modelFingerprint: "B3554E7B5D140B8255167CF462095427"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -12889,7 +13228,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "address"
-      modelFingerprint: "2989A3B77937B1475950FEEA32A517D7"
+      modelFingerprint: "9B69FA56B7AD6856D7FA389457B9ED0F"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -12922,7 +13261,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "NetworkParameters"
-      modelFingerprint: "29515CED7E7130081C1DB457BE14DB5B"
+      modelFingerprint: "B73070C46AE7B63EC8C3F19BB523D99E"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -12948,33 +13287,11 @@ methods:
             explicitCastNeeded: false
         signature: "of(Network): NetworkParameters"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
             target: "org.bitcoinj.core.NetworkParameters"
-            method: "fromID"
-            methodParameters:
-            - name: "id"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: "id1"
-                valueType: "java.lang.String"
-                uuid: "createPayToAddressOutput_networkParameters1-id"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.core.NetworkParameters"
-            method: "fromID"
-            methodParameters:
-            - name: "id"
-              value:
-                sapientType: "BASIC"
-                valueType: "java.lang.String"
-                uuid: "createPayToAddressOutput_networkParameters1-id"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+            onlyPojoFunctions: false
+            builderPattern: false
           valueType: "org.bitcoinj.core.NetworkParameters"
           uuid: "createPayToAddressOutput_networkParameters1"
           fixed: false
@@ -12985,39 +13302,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "params"
-      modelFingerprint: "00B8C3645FFA89E0C274DE04337743C5"
+      modelFingerprint: "FE126965178E55A6A667172D91B2D474"
       index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.NetworkParameters"
-          method: "fromID"
-          methodParameters:
-          - name: "id"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "id1"
-              valueType: "java.lang.String"
-              uuid: "createPayToAddressOutput_networkParameters1-id"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.core.NetworkParameters"
-          method: "fromID"
-          methodParameters:
-          - name: "id"
-            value:
-              sapientType: "BASIC"
-              valueType: "java.lang.String"
-              uuid: "createPayToAddressOutput_networkParameters1-id"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "createPayToAddressOutput_networkParameters1"
         fixed: false
@@ -13043,7 +13338,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "D989BCDB469F794CFDB5E29FD11DB48B"
+      modelFingerprint: "B785154C1855E957F6C9A16F8374F67B"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -13066,10 +13361,6 @@ methods:
         - name: "arg0"
           value:
             sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.base.Coin"
-              onlyPojoFunctions: false
-              builderPattern: false
             valueType: "org.bitcoinj.base.Coin"
             uuid: "createPayToAddressOutput_coin1"
             fixed: false
@@ -13092,7 +13383,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "output"
-      modelFingerprint: "C677AA28396C9DDC066E56D3E582EFC0"
+      modelFingerprint: "EA3149E1844CFF778BC92BE966932ACB"
       index: 8
       ignored: false
       nestedInLoop: false
@@ -13124,11 +13415,59 @@ methods:
             explicitCastNeeded: false
         signature: "setAmount(long): Protos$Output$Builder"
         returnValue:
-          sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
             target: "org.bitcoinj.protobuf.payments.Protos$Output$Builder"
-            onlyPojoFunctions: false
-            builderPattern: false
+            localVariableValue:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.protobuf.payments.Protos$Output$Builder"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.protobuf.payments.Protos$Output$Builder"
+              uuid: "createPayToAddressOutput_protos.Output.Builder1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "value"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 1
+                suggestedContent: !<regular>
+                  value: 1
+                valueType: "long"
+                uuid: "createPayToAddressOutput_long1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "setAmount"
+          suggestedContent: !<method_return_from_value>
+            target: "org.bitcoinj.protobuf.payments.Protos$Output$Builder"
+            localVariableValue:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.protobuf.payments.Protos$Output$Builder"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.protobuf.payments.Protos$Output$Builder"
+              uuid: "createPayToAddressOutput_protos.Output.Builder1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "value"
+              value:
+                sapientType: "BASIC"
+                suggestedContent: !<regular>
+                  value: 1
+                valueType: "long"
+                uuid: "createPayToAddressOutput_long1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "setAmount"
           valueType: "org.bitcoinj.protobuf.payments.Protos$Output$Builder"
           uuid: "createPayToAddressOutput_protos.Output.Builder2"
           fixed: false
@@ -13139,7 +13478,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ScriptBuilder"
-      modelFingerprint: "330898F2AFA5DC725B7DEF4CA4B7EFF7"
+      modelFingerprint: "0AE7BFB81CB8D19DB329EBA41F0E9A2D"
       index: 9
       ignored: false
       nestedInLoop: false
@@ -13169,37 +13508,11 @@ methods:
             explicitCastNeeded: false
         signature: "createOutputScript(Address): Script"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
             target: "org.bitcoinj.script.Script"
-            method: "of"
-            methodParameters:
-            - name: "chunks"
-              value:
-                sapientType: "COLLECTION"
-                content: !<collection>
-                  parameters: []
-                  values: []
-                suggestedContent: !<collection>
-                  parameters: []
-                  values: []
-                valueType: "java.util.List"
-                uuid: "createPayToAddressOutput_script1-chunks"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.script.Script"
-            method: "of"
-            methodParameters:
-            - name: "chunks"
-              value:
-                sapientType: "COLLECTION"
-                valueType: "java.util.List"
-                uuid: "createPayToAddressOutput_script1-chunks"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+            onlyPojoFunctions: false
+            builderPattern: false
           valueType: "org.bitcoinj.script.Script"
           uuid: "createPayToAddressOutput_script1"
           fixed: false
@@ -13209,43 +13522,17 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "FEDF9BF3CBB2A9282737C5E23174566C"
+      modelFingerprint: "E3A9B9E8E6C5F528B2F4049FBF6EE4EC"
       index: 10
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.script.Script"
-          method: "of"
-          methodParameters:
-          - name: "chunks"
-            value:
-              sapientType: "COLLECTION"
-              content: !<collection>
-                parameters: []
-                values: []
-              suggestedContent: !<collection>
-                parameters: []
-                values: []
-              valueType: "java.util.List"
-              uuid: "createPayToAddressOutput_script1-chunks"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.script.Script"
-          method: "of"
-          methodParameters:
-          - name: "chunks"
-            value:
-              sapientType: "COLLECTION"
-              valueType: "java.util.List"
-              uuid: "createPayToAddressOutput_script1-chunks"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.script.Script"
         uuid: "createPayToAddressOutput_script1"
         fixed: false
@@ -13272,13 +13559,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ByteString"
-      modelFingerprint: "CC86FEC8BAEFED1CD48A46419FABD5DA"
+      modelFingerprint: "2C24BB6B0B638C465FF199CD8FBBF4E9"
       index: 11
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "REAL"
         valueType: "com.google.protobuf.ByteString"
         uuid: "com.google.protobuf.ByteString"
         fixed: false
@@ -13305,12 +13592,34 @@ methods:
           sapientType: "OBJECT"
           content: !<static_method_return>
             target: "com.google.protobuf.ByteString"
-            method: "empty"
-            methodParameters: []
+            method: "copyFrom"
+            methodParameters:
+            - value:
+                sapientType: "ARRAY"
+                content: !<array>
+                  values: {}
+                suggestedContent: !<array>
+                  values: {}
+                valueType: "byte[]"
+                uuid: "createPayToAddressOutput_byte[]1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           suggestedContent: !<static_method_return>
             target: "com.google.protobuf.ByteString"
-            method: "empty"
-            methodParameters: []
+            method: "copyFrom"
+            methodParameters:
+            - value:
+                sapientType: "ARRAY"
+                content: !<array>
+                  values: {}
+                suggestedContent: !<array>
+                  values: {}
+                valueType: "byte[]"
+                uuid: "createPayToAddressOutput_byte[]1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "com.google.protobuf.ByteString"
           uuid: "createPayToAddressOutput_byteString1"
           fixed: false
@@ -13321,7 +13630,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "output"
-      modelFingerprint: "65F14779674CCBAD43035162E845600E"
+      modelFingerprint: "9EC3AFA3D3630EC1184FDF60FC1F4F4F"
       index: 12
       ignored: false
       nestedInLoop: false
@@ -13346,12 +13655,34 @@ methods:
             sapientType: "OBJECT"
             content: !<static_method_return>
               target: "com.google.protobuf.ByteString"
-              method: "empty"
-              methodParameters: []
+              method: "copyFrom"
+              methodParameters:
+              - value:
+                  sapientType: "ARRAY"
+                  content: !<array>
+                    values: {}
+                  suggestedContent: !<array>
+                    values: {}
+                  valueType: "byte[]"
+                  uuid: "createPayToAddressOutput_byte[]1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             suggestedContent: !<static_method_return>
               target: "com.google.protobuf.ByteString"
-              method: "empty"
-              methodParameters: []
+              method: "copyFrom"
+              methodParameters:
+              - value:
+                  sapientType: "ARRAY"
+                  content: !<array>
+                    values: {}
+                  suggestedContent: !<array>
+                    values: {}
+                  valueType: "byte[]"
+                  uuid: "createPayToAddressOutput_byte[]1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "com.google.protobuf.ByteString"
             uuid: "createPayToAddressOutput_byteString1"
             fixed: false
@@ -13360,10 +13691,6 @@ methods:
         signature: "setScript(ByteString): Protos$Output$Builder"
         returnValue:
           sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
-            target: "org.bitcoinj.protobuf.payments.Protos$Output$Builder"
-            onlyPojoFunctions: false
-            builderPattern: false
           valueType: "org.bitcoinj.protobuf.payments.Protos$Output$Builder"
           uuid: "createPayToAddressOutput_protos.Output.Builder3"
           fixed: false
@@ -13374,7 +13701,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "output"
-      modelFingerprint: "0DCB1F2DF9A624F62C6E2FA25DA2B9CA"
+      modelFingerprint: "6C2D72CB11D640F9BEC34AC9BB6AD541"
       index: 13
       ignored: false
       nestedInLoop: false
@@ -13396,15 +13723,7 @@ methods:
         parameters: []
         signature: "build(): GeneratedMessageLite"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.protobuf.payments.Protos$Output"
-            method: "getDefaultInstance"
-            methodParameters: []
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.protobuf.payments.Protos$Output"
-            method: "getDefaultInstance"
-            methodParameters: []
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.protobuf.payments.Protos$Output"
           uuid: "createPayToAddressOutput_generatedMessageLite1"
           fixed: false
@@ -13415,21 +13734,13 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "1EF9C9218A5ED72DFBE979C393AF71C8"
+      modelFingerprint: "C1069EBC48A1659E2A86A40B80D671EF"
       index: 14
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "org.bitcoinj.protobuf.payments.Protos$Output"
-          method: "getDefaultInstance"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.protobuf.payments.Protos$Output"
-          method: "getDefaultInstance"
-          methodParameters: []
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.protobuf.payments.Protos$Output"
         uuid: "createPayToAddressOutput_generatedMessageLite1"
         fixed: false
@@ -13439,11 +13750,11 @@ methods:
       filledByUser: false
     uuid: "f4a78796-6cec-3423-bb7b-e7d5127aefff"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "paramsFromPmtProtocolID"
     returnType: "org.bitcoinj.params.BitcoinNetworkParams"

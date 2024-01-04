@@ -51,8 +51,10 @@ public class BlockingClientManagerSapientGeneratedJunit4Test {
         thrown.expect(IllegalStateException.class);
         //TODO: Needs initialization with real value
         SocketAddress socketAddress = null;
+
         //Act Statement(s)
         target.openConnection(socketAddress, streamConnectionMock);
+
         //Assert statement(s)
         verify(target).isRunning();
     }
@@ -77,13 +79,14 @@ public class BlockingClientManagerSapientGeneratedJunit4Test {
         doReturn(true).when(target).isRunning();
         //TODO: Needs initialization with real value
         SocketAddress socketAddress = null;
+
         //Act Statement(s)
         ListenableCompletableFuture<SocketAddress> result = target.openConnection(socketAddress, streamConnectionMock);
         Duration duration = Duration.ofSeconds(1L);
-        SocketFactory socketFactory2 = Objects.requireNonNull(socketFactory);
         Set<BlockingClient> blockingClientSet = new HashSet<>();
-        BlockingClient blockingClient = new BlockingClient((SocketAddress) null, streamConnectionMock, duration, socketFactory2, blockingClientSet);
+        BlockingClient blockingClient = new BlockingClient((SocketAddress) null, streamConnectionMock, duration, socketFactory, blockingClientSet);
         ListenableCompletableFuture<SocketAddress> listenableCompletableFuture = blockingClient.getConnectFuture();
+
         //Assert statement(s)
         //TODO: Please implement equals method in ListenableCompletableFuture for verification to succeed or you need to adjust respective assertion statements
         assertThat(result, equalTo(listenableCompletableFuture));
@@ -113,8 +116,10 @@ public class BlockingClientManagerSapientGeneratedJunit4Test {
         thrown.expectCause(isA(IOException.class));
         //TODO: Needs initialization with real value
         SocketAddress socketAddress = null;
+
         //Act Statement(s)
         target.openConnection(socketAddress, streamConnectionMock);
+
         //Assert statement(s)
         verify(target).isRunning();
     }
@@ -125,6 +130,7 @@ public class BlockingClientManagerSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         SocketFactory socketFactory = SocketFactory.getDefault();
         BlockingClientManager target = new BlockingClientManager(socketFactory);
+
         //Act Statement(s)
         target.setConnectTimeoutMillis(1);
     }
@@ -138,6 +144,7 @@ public class BlockingClientManagerSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         SocketFactory socketFactory = SocketFactory.getDefault();
         BlockingClientManager target = new BlockingClientManager(socketFactory);
+
         //Act Statement(s)
         target.shutDown();
     }
@@ -148,8 +155,10 @@ public class BlockingClientManagerSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         SocketFactory socketFactory = SocketFactory.getDefault();
         BlockingClientManager target = new BlockingClientManager(socketFactory);
+
         //Act Statement(s)
         int result = target.getConnectedClientCount();
+
         //Assert statement(s)
         assertThat(result, equalTo(0));
     }
@@ -165,8 +174,10 @@ public class BlockingClientManagerSapientGeneratedJunit4Test {
         BlockingClientManager target = spy(new BlockingClientManager(socketFactory));
         doReturn(false).when(target).isRunning();
         thrown.expect(IllegalStateException.class);
+
         //Act Statement(s)
         target.closeConnections(0);
+
         //Assert statement(s)
         verify(target).isRunning();
     }
@@ -183,8 +194,10 @@ public class BlockingClientManagerSapientGeneratedJunit4Test {
         SocketFactory socketFactory = SocketFactory.getDefault();
         BlockingClientManager target = spy(new BlockingClientManager(socketFactory));
         doReturn(true).when(target).isRunning();
+
         //Act Statement(s)
         target.closeConnections(1);
+
         //Assert statement(s)
         verify(target).isRunning();
     }

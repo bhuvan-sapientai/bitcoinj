@@ -44,8 +44,10 @@ public class DefaultAddressParserProviderSapientGeneratedJunit4Test {
         List<Network> networkList = new ArrayList<>();
         List<Network> networkList2 = new ArrayList<>();
         DefaultAddressParserProvider target = new DefaultAddressParserProvider(networkList, networkList2);
+
         //Act Statement(s)
         AddressParser result = target.forKnownNetworks();
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -57,8 +59,10 @@ public class DefaultAddressParserProviderSapientGeneratedJunit4Test {
         List<Network> networkList = new ArrayList<>();
         List<Network> networkList2 = new ArrayList<>();
         DefaultAddressParserProvider target = new DefaultAddressParserProvider(networkList, networkList2);
+
         //Act Statement(s)
         AddressParser result = target.forNetwork(networkMock);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }

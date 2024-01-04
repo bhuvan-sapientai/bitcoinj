@@ -1854,12 +1854,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "9EE6C6D08FE05F9312181ED3E017BBA7"
+    modelFingerprint: "B6CF053C3FD33C92998D94EBFC361F33"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "B7AFCED141C7FC73157F46B0A05CAD3E"
+      modelFingerprint: "5F30E18AAC3E8FB97DA8DD2327D941A1"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1884,10 +1884,6 @@ methods:
           - name: "aesKey"
             value:
               sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.crypto.AesKey"
-                onlyPojoFunctions: false
-                builderPattern: false
               valueType: "org.bitcoinj.crypto.AesKey"
               uuid: "<init>_aesKey1"
               fixed: false
@@ -1900,7 +1896,7 @@ methods:
           parameters:
           - name: "target"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.wallet.KeyBag"
                 onlyPojoFunctions: false
@@ -1912,11 +1908,7 @@ methods:
               explicitCastNeeded: false
           - name: "aesKey"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.crypto.AesKey"
-                onlyPojoFunctions: false
-                builderPattern: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.crypto.AesKey"
               uuid: "<init>_aesKey1"
               fixed: false
@@ -1933,7 +1925,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "scriptHash"
-      modelFingerprint: "4AF85B676E859F9C4261DC3174E13F4A"
+      modelFingerprint: "F6F3BC8BE56743B0468E3580C74339A8"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1941,69 +1933,9 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 3
-              suggestedContent: !<regular>
-                value: 3
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         suggestedContent: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 3
-              suggestedContent: !<regular>
-                value: 3
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         valueType: "byte[]"
         uuid: "findRedeemDataFromScriptHash_byte[]1"
         fixed: false
@@ -2013,7 +1945,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "target"
-      modelFingerprint: "6D487EB465765AF27E732779BC5B83E9"
+      modelFingerprint: "9032125F99299E80062EE445D5054A09"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -2037,69 +1969,9 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
-                  suggestedContent: !<regular>
-                    value: 1
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 2
-                  suggestedContent: !<regular>
-                    value: 2
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                2:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 3
-                  suggestedContent: !<regular>
-                    value: 3
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+              values: {}
             suggestedContent: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
-                  suggestedContent: !<regular>
-                    value: 1
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 2
-                  suggestedContent: !<regular>
-                    value: 2
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                2:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 3
-                  suggestedContent: !<regular>
-                    value: 3
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+              values: {}
             valueType: "byte[]"
             uuid: "findRedeemDataFromScriptHash_byte[]1"
             fixed: false
@@ -2200,11 +2072,11 @@ methods:
       filledByUser: false
     uuid: "0fb967ea-5cf9-3b00-b91a-83e3da7223c3"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path4"
     pathIdForUser: "path3"
     testPathName: "findRedeemDataFromScriptHashWhenKeyNotIsEncrypted"
@@ -2214,12 +2086,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "2E4FECE35BB60F3A1F43EB261E3C6E21"
+    modelFingerprint: "9EE7BC9F8FB5243B2A5BA5CD949CC7D3"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "B7AFCED141C7FC73157F46B0A05CAD3E"
+      modelFingerprint: "5F30E18AAC3E8FB97DA8DD2327D941A1"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2244,10 +2116,6 @@ methods:
           - name: "aesKey"
             value:
               sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.crypto.AesKey"
-                onlyPojoFunctions: false
-                builderPattern: false
               valueType: "org.bitcoinj.crypto.AesKey"
               uuid: "<init>_aesKey1"
               fixed: false
@@ -2260,7 +2128,7 @@ methods:
           parameters:
           - name: "target"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.wallet.KeyBag"
                 onlyPojoFunctions: false
@@ -2272,11 +2140,7 @@ methods:
               explicitCastNeeded: false
           - name: "aesKey"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.crypto.AesKey"
-                onlyPojoFunctions: false
-                builderPattern: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.crypto.AesKey"
               uuid: "<init>_aesKey1"
               fixed: false
@@ -2293,7 +2157,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "scriptHash"
-      modelFingerprint: "4AF85B676E859F9C4261DC3174E13F4A"
+      modelFingerprint: "F6F3BC8BE56743B0468E3580C74339A8"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -2301,69 +2165,9 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 3
-              suggestedContent: !<regular>
-                value: 3
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         suggestedContent: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 3
-              suggestedContent: !<regular>
-                value: 3
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         valueType: "byte[]"
         uuid: "findRedeemDataFromScriptHash_byte[]1"
         fixed: false
@@ -2373,7 +2177,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "target"
-      modelFingerprint: "6D487EB465765AF27E732779BC5B83E9"
+      modelFingerprint: "9032125F99299E80062EE445D5054A09"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -2397,69 +2201,9 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
-                  suggestedContent: !<regular>
-                    value: 1
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 2
-                  suggestedContent: !<regular>
-                    value: 2
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                2:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 3
-                  suggestedContent: !<regular>
-                    value: 3
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+              values: {}
             suggestedContent: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
-                  suggestedContent: !<regular>
-                    value: 1
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 2
-                  suggestedContent: !<regular>
-                    value: 2
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                2:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 3
-                  suggestedContent: !<regular>
-                    value: 3
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+              values: {}
             valueType: "byte[]"
             uuid: "findRedeemDataFromScriptHash_byte[]1"
             fixed: false
@@ -2608,11 +2352,11 @@ methods:
       filledByUser: false
     uuid: "e32c1ee9-0c0e-3c15-8bcc-1afa0d2f3717"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path4"
     testPathName: "findRedeemDataFromScriptHashWhenAesKeyIsNullThrowsECKeyKeyIsEncryptedException"
@@ -2622,12 +2366,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "96FC7BE323BC52E5C40A88B462EE242B"
+    modelFingerprint: "8F77AC8C01D4C5B53B14E87FD90D8F02"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "1C6A89CFC4BF909CA3F02C2CB2517918"
+      modelFingerprint: "D9CB3381764E6D2B8286119D40647259"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2652,14 +2396,6 @@ methods:
           - name: "aesKey"
             value:
               sapientType: "NULL"
-              content: !<unknown_object>
-                target: "org.bitcoinj.crypto.AesKey"
-                onlyPojoFunctions: true
-                builderPattern: false
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.crypto.AesKey"
-                onlyPojoFunctions: true
-                builderPattern: false
               valueType: "org.bitcoinj.crypto.AesKey"
               uuid: "<init>_aesKey1"
               fixed: true
@@ -2672,7 +2408,7 @@ methods:
           parameters:
           - name: "target"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.wallet.KeyBag"
                 onlyPojoFunctions: false
@@ -2685,14 +2421,6 @@ methods:
           - name: "aesKey"
             value:
               sapientType: "NULL"
-              content: !<unknown_object>
-                target: "org.bitcoinj.crypto.AesKey"
-                onlyPojoFunctions: true
-                builderPattern: false
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.crypto.AesKey"
-                onlyPojoFunctions: true
-                builderPattern: false
               valueType: "org.bitcoinj.crypto.AesKey"
               uuid: "<init>_aesKey1"
               fixed: true
@@ -2709,7 +2437,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "scriptHash"
-      modelFingerprint: "4AF85B676E859F9C4261DC3174E13F4A"
+      modelFingerprint: "F6F3BC8BE56743B0468E3580C74339A8"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -2717,69 +2445,9 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 3
-              suggestedContent: !<regular>
-                value: 3
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         suggestedContent: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 3
-              suggestedContent: !<regular>
-                value: 3
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         valueType: "byte[]"
         uuid: "findRedeemDataFromScriptHash_byte[]1"
         fixed: false
@@ -2789,7 +2457,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "target"
-      modelFingerprint: "31C78DBB1340D5C3158C5902F99347B7"
+      modelFingerprint: "9032125F99299E80062EE445D5054A09"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -2813,69 +2481,9 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
-                  suggestedContent: !<regular>
-                    value: 1
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 2
-                  suggestedContent: !<regular>
-                    value: 2
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                2:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 3
-                  suggestedContent: !<regular>
-                    value: 3
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+              values: {}
             suggestedContent: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
-                  suggestedContent: !<regular>
-                    value: 1
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 2
-                  suggestedContent: !<regular>
-                    value: 2
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                2:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 3
-                  suggestedContent: !<regular>
-                    value: 3
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+              values: {}
             valueType: "byte[]"
             uuid: "findRedeemDataFromScriptHash_byte[]1"
             fixed: false
@@ -2883,53 +2491,7 @@ methods:
             explicitCastNeeded: false
         signature: "findRedeemDataFromScriptHash(byte[]): RedeemData"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.wallet.RedeemData"
-            method: "of"
-            methodParameters:
-            - name: "keys"
-              value:
-                sapientType: "COLLECTION"
-                content: !<collection>
-                  parameters: []
-                  values: []
-                suggestedContent: !<collection>
-                  parameters: []
-                  values: []
-                valueType: "java.util.List"
-                uuid: "findRedeemDataFromScriptHash_redeemData1-keys"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "redeemScript"
-              value:
-                sapientType: "MOCK"
-                valueType: "org.bitcoinj.script.Script"
-                uuid: "findRedeemDataFromScriptHash_redeemData1-redeemScript"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.wallet.RedeemData"
-            method: "of"
-            methodParameters:
-            - name: "keys"
-              value:
-                sapientType: "COLLECTION"
-                valueType: "java.util.List"
-                uuid: "findRedeemDataFromScriptHash_redeemData1-keys"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "redeemScript"
-              value:
-                sapientType: "UNKNOWN"
-                valueType: "org.bitcoinj.script.Script"
-                uuid: "findRedeemDataFromScriptHash_redeemData1-redeemScript"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.wallet.RedeemData"
           uuid: "findRedeemDataFromScriptHash_redeemData1"
           fixed: false
@@ -3004,11 +2566,11 @@ methods:
       filledByUser: false
     uuid: "3c1f3b56-8350-39d8-a8d3-99a55c0bd742"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path5"
     testPathName: "findRedeemDataFromScriptHashWhenAesKeyIsNotNull"
@@ -3218,8 +2780,8 @@ methods:
       filledByUser: false
     uuid: "a6d40181-ac68-3236-a9df-d3031ae980dc"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false

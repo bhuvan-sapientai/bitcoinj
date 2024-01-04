@@ -142,13 +142,13 @@ public class Bech32SapientGeneratedJunit4Test {
             byte[] byteArray2 = new byte[]{};
             byte[] byteArray3 = new byte[]{};
             byte[] byteArray4 = new byte[]{};
-            byte[] byteArray5 = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+            byte[] byteArray5 = new byte[]{};
             doReturn(byteArray, byteArray2, byteArray3, byteArray4, byteArray5).when(valuesMock).bytes();
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             //Act Statement(s)
-            String result = Bech32.encode(Bech32.Encoding.BECH32, "bc", valuesMock);
+            String result = Bech32.encode(Bech32.Encoding.BECH32, "F", valuesMock);
             //Assert statement(s)
-            assertThat(result, equalTo("bc1q"));
+            assertThat(result, equalTo("D1q"));
             verify(valuesMock, times(5)).bytes();
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
         }
@@ -181,13 +181,13 @@ public class Bech32SapientGeneratedJunit4Test {
             byte[] byteArray2 = new byte[]{};
             byte[] byteArray3 = new byte[]{};
             byte[] byteArray4 = new byte[]{};
-            byte[] byteArray5 = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0};
+            byte[] byteArray5 = new byte[]{};
             doReturn(byteArray, byteArray2, byteArray3, byteArray4, byteArray5).when(valuesMock).bytes();
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             //Act Statement(s)
-            String result = Bech32.encode(Bech32.Encoding.BECH32, "bc", valuesMock);
+            String result = Bech32.encode(Bech32.Encoding.BECH32, "hrp1", valuesMock);
             //Assert statement(s)
-            assertThat(result, equalTo("bc1q"));
+            assertThat(result, equalTo("result1"));
             verify(valuesMock, times(5)).bytes();
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
         }
@@ -203,6 +203,7 @@ public class Bech32SapientGeneratedJunit4Test {
         AddressFormatException.InvalidDataLength addressFormatExceptionInvalidDataLength = new AddressFormatException.InvalidDataLength("Input too short: 1");
         thrown.expect(AddressFormatException.InvalidDataLength.class);
         thrown.expectMessage(addressFormatExceptionInvalidDataLength.getMessage());
+
         //Act Statement(s)
         Bech32.decode("A");
     }
@@ -218,6 +219,7 @@ public class Bech32SapientGeneratedJunit4Test {
         AddressFormatException.InvalidDataLength addressFormatExceptionInvalidDataLength = new AddressFormatException.InvalidDataLength("Input too long: 91");
         thrown.expect(AddressFormatException.InvalidDataLength.class);
         thrown.expectMessage(addressFormatExceptionInvalidDataLength.getMessage());
+
         //Act Statement(s)
         Bech32.decode("ABCDEFGHJKLMNOPQRSTUVWXYZ[\\]^_`abcdefhijkmqrsvwxyz{|}~\u0080\u0081\u0082\u0083\u0084\u0085\u0086\u0087\u0088\u0089\u008A\u008B\u008C\u008D\u008E\u008F\u0090\u0091\u0092\u0093\u0094\u0095\u0096\u0097\u0098\u0099\u009A\u009B\u009C\u009D\u009E\u009F\u00A0\u00A1\u00A2\u00A3");
     }
@@ -234,6 +236,7 @@ public class Bech32SapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         thrown.expect(AddressFormatException.InvalidCharacter.class);
+
         //Act Statement(s)
         Bech32.decode("\uFFFFBCDEFGH");
     }
@@ -257,6 +260,7 @@ public class Bech32SapientGeneratedJunit4Test {
         AddressFormatException.InvalidPrefix addressFormatExceptionInvalidPrefix = new AddressFormatException.InvalidPrefix("Missing human-readable part");
         thrown.expect(AddressFormatException.InvalidPrefix.class);
         thrown.expectMessage(addressFormatExceptionInvalidPrefix.getMessage());
+
         //Act Statement(s)
         Bech32.decode("OEFGBCDH");
     }
@@ -282,6 +286,7 @@ public class Bech32SapientGeneratedJunit4Test {
         AddressFormatException.InvalidDataLength addressFormatExceptionInvalidDataLength = new AddressFormatException.InvalidDataLength("Input too short: 4");
         thrown.expect(AddressFormatException.InvalidDataLength.class);
         thrown.expectMessage(addressFormatExceptionInvalidDataLength.getMessage());
+
         //Act Statement(s)
         Bech32.decode("str1");
     }
@@ -309,6 +314,7 @@ public class Bech32SapientGeneratedJunit4Test {
         AddressFormatException.InvalidDataLength addressFormatExceptionInvalidDataLength = new AddressFormatException.InvalidDataLength("Input too short: 4");
         thrown.expect(AddressFormatException.InvalidDataLength.class);
         thrown.expectMessage(addressFormatExceptionInvalidDataLength.getMessage());
+
         //Act Statement(s)
         Bech32.decode("str1");
     }
@@ -340,6 +346,7 @@ public class Bech32SapientGeneratedJunit4Test {
         AddressFormatException.InvalidDataLength addressFormatExceptionInvalidDataLength = new AddressFormatException.InvalidDataLength("Input too short: 4");
         thrown.expect(AddressFormatException.InvalidDataLength.class);
         thrown.expectMessage(addressFormatExceptionInvalidDataLength.getMessage());
+
         //Act Statement(s)
         Bech32.decode("str1");
     }
@@ -377,6 +384,7 @@ public class Bech32SapientGeneratedJunit4Test {
         AddressFormatException.InvalidDataLength addressFormatExceptionInvalidDataLength = new AddressFormatException.InvalidDataLength("Input too short: 4");
         thrown.expect(AddressFormatException.InvalidDataLength.class);
         thrown.expectMessage(addressFormatExceptionInvalidDataLength.getMessage());
+
         //Act Statement(s)
         Bech32.decode("str1");
     }

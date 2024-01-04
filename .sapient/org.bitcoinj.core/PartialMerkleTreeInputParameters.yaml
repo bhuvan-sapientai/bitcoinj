@@ -2276,11 +2276,11 @@ methods:
       filledByUser: false
     uuid: "6af4be85-76ec-3b30-8035-df3d22289847"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "writeWhenHashesIsEmpty"
@@ -2317,12 +2317,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "45A7371238840179DCD77B34B0726257"
+    modelFingerprint: "27D7E44291AB051FFAD377AB86F1A5F3"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "DDE5F805FF5813E4E0CCFED71246D4B4"
+      modelFingerprint: "FA06257386CF4D5271BDA61D140E0397"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2336,9 +2336,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 10
-              suggestedContent: !<regular>
-                value: 10
+                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -2348,289 +2346,11 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
-                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values:
-                - sapientType: "OBJECT"
-                  content: !<static_method_return>
-                    target: "org.bitcoinj.base.Sha256Hash"
-                    method: "read"
-                    methodParameters:
-                    - name: "buf"
-                      value:
-                        sapientType: "OBJECT"
-                        content: !<static_method_return>
-                          target: "java.nio.ByteBuffer"
-                          method: "allocateDirect"
-                          methodParameters:
-                          - name: "capacity"
-                            value:
-                              sapientType: "BASIC"
-                              content: !<regular>
-                                value: 0
-                              valueType: "int"
-                              uuid: "<init>_list1-0-buf-capacity"
-                              fixed: false
-                              equalsMethodPresent: false
-                              explicitCastNeeded: false
-                        suggestedContent: !<static_method_return>
-                          target: "java.nio.ByteBuffer"
-                          method: "allocateDirect"
-                          methodParameters:
-                          - name: "capacity"
-                            value:
-                              sapientType: "BASIC"
-                              valueType: "int"
-                              uuid: "<init>_list1-0-buf-capacity"
-                              fixed: false
-                              equalsMethodPresent: false
-                              explicitCastNeeded: false
-                        valueType: "java.nio.ByteBuffer"
-                        uuid: "<init>_list1-0-buf"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                  suggestedContent: !<static_method_return>
-                    target: "org.bitcoinj.base.Sha256Hash"
-                    method: "read"
-                    methodParameters:
-                    - name: "buf"
-                      value:
-                        sapientType: "UNKNOWN"
-                        suggestedContent: !<static_method_return>
-                          target: "java.nio.ByteBuffer"
-                          method: "allocateDirect"
-                          methodParameters:
-                          - name: "capacity"
-                            value:
-                              sapientType: "BASIC"
-                              valueType: "int"
-                              uuid: "<init>_list1-0-buf-capacity"
-                              fixed: false
-                              equalsMethodPresent: false
-                              explicitCastNeeded: false
-                        valueType: "java.nio.ByteBuffer"
-                        uuid: "<init>_list1-0-buf"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                  valueType: "org.bitcoinj.base.Sha256Hash"
-                  uuid: "<init>_list1-0"
-                  fixed: false
-                  collectionUuid: "<init>_list1"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                - sapientType: "OBJECT"
-                  content: !<static_method_return>
-                    target: "org.bitcoinj.base.Sha256Hash"
-                    method: "read"
-                    methodParameters:
-                    - name: "buf"
-                      value:
-                        sapientType: "OBJECT"
-                        content: !<static_method_return>
-                          target: "java.nio.ByteBuffer"
-                          method: "allocateDirect"
-                          methodParameters:
-                          - name: "capacity"
-                            value:
-                              sapientType: "BASIC"
-                              content: !<regular>
-                                value: 0
-                              valueType: "int"
-                              uuid: "<init>_list1-1-buf-capacity"
-                              fixed: false
-                              equalsMethodPresent: false
-                              explicitCastNeeded: false
-                        suggestedContent: !<static_method_return>
-                          target: "java.nio.ByteBuffer"
-                          method: "allocateDirect"
-                          methodParameters:
-                          - name: "capacity"
-                            value:
-                              sapientType: "BASIC"
-                              valueType: "int"
-                              uuid: "<init>_list1-1-buf-capacity"
-                              fixed: false
-                              equalsMethodPresent: false
-                              explicitCastNeeded: false
-                        valueType: "java.nio.ByteBuffer"
-                        uuid: "<init>_list1-1-buf"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                  suggestedContent: !<static_method_return>
-                    target: "org.bitcoinj.base.Sha256Hash"
-                    method: "read"
-                    methodParameters:
-                    - name: "buf"
-                      value:
-                        sapientType: "UNKNOWN"
-                        suggestedContent: !<static_method_return>
-                          target: "java.nio.ByteBuffer"
-                          method: "allocateDirect"
-                          methodParameters:
-                          - name: "capacity"
-                            value:
-                              sapientType: "BASIC"
-                              valueType: "int"
-                              uuid: "<init>_list1-1-buf-capacity"
-                              fixed: false
-                              equalsMethodPresent: false
-                              explicitCastNeeded: false
-                        valueType: "java.nio.ByteBuffer"
-                        uuid: "<init>_list1-1-buf"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                  valueType: "org.bitcoinj.base.Sha256Hash"
-                  uuid: "<init>_list1-1"
-                  fixed: false
-                  collectionUuid: "<init>_list1"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+                values: []
               suggestedContent: !<collection>
-                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values:
-                - sapientType: "OBJECT"
-                  content: !<static_method_return>
-                    target: "org.bitcoinj.base.Sha256Hash"
-                    method: "read"
-                    methodParameters:
-                    - name: "buf"
-                      value:
-                        sapientType: "OBJECT"
-                        content: !<static_method_return>
-                          target: "java.nio.ByteBuffer"
-                          method: "allocateDirect"
-                          methodParameters:
-                          - name: "capacity"
-                            value:
-                              sapientType: "BASIC"
-                              content: !<regular>
-                                value: 0
-                              valueType: "int"
-                              uuid: "<init>_list1-0-buf-capacity"
-                              fixed: false
-                              equalsMethodPresent: false
-                              explicitCastNeeded: false
-                        suggestedContent: !<static_method_return>
-                          target: "java.nio.ByteBuffer"
-                          method: "allocateDirect"
-                          methodParameters:
-                          - name: "capacity"
-                            value:
-                              sapientType: "BASIC"
-                              valueType: "int"
-                              uuid: "<init>_list1-0-buf-capacity"
-                              fixed: false
-                              equalsMethodPresent: false
-                              explicitCastNeeded: false
-                        valueType: "java.nio.ByteBuffer"
-                        uuid: "<init>_list1-0-buf"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                  suggestedContent: !<static_method_return>
-                    target: "org.bitcoinj.base.Sha256Hash"
-                    method: "read"
-                    methodParameters:
-                    - name: "buf"
-                      value:
-                        sapientType: "UNKNOWN"
-                        suggestedContent: !<static_method_return>
-                          target: "java.nio.ByteBuffer"
-                          method: "allocateDirect"
-                          methodParameters:
-                          - name: "capacity"
-                            value:
-                              sapientType: "BASIC"
-                              valueType: "int"
-                              uuid: "<init>_list1-0-buf-capacity"
-                              fixed: false
-                              equalsMethodPresent: false
-                              explicitCastNeeded: false
-                        valueType: "java.nio.ByteBuffer"
-                        uuid: "<init>_list1-0-buf"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                  valueType: "org.bitcoinj.base.Sha256Hash"
-                  uuid: "<init>_list1-0"
-                  fixed: false
-                  collectionUuid: "<init>_list1"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                - sapientType: "OBJECT"
-                  content: !<static_method_return>
-                    target: "org.bitcoinj.base.Sha256Hash"
-                    method: "read"
-                    methodParameters:
-                    - name: "buf"
-                      value:
-                        sapientType: "OBJECT"
-                        content: !<static_method_return>
-                          target: "java.nio.ByteBuffer"
-                          method: "allocateDirect"
-                          methodParameters:
-                          - name: "capacity"
-                            value:
-                              sapientType: "BASIC"
-                              content: !<regular>
-                                value: 0
-                              valueType: "int"
-                              uuid: "<init>_list1-1-buf-capacity"
-                              fixed: false
-                              equalsMethodPresent: false
-                              explicitCastNeeded: false
-                        suggestedContent: !<static_method_return>
-                          target: "java.nio.ByteBuffer"
-                          method: "allocateDirect"
-                          methodParameters:
-                          - name: "capacity"
-                            value:
-                              sapientType: "BASIC"
-                              valueType: "int"
-                              uuid: "<init>_list1-1-buf-capacity"
-                              fixed: false
-                              equalsMethodPresent: false
-                              explicitCastNeeded: false
-                        valueType: "java.nio.ByteBuffer"
-                        uuid: "<init>_list1-1-buf"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                  suggestedContent: !<static_method_return>
-                    target: "org.bitcoinj.base.Sha256Hash"
-                    method: "read"
-                    methodParameters:
-                    - name: "buf"
-                      value:
-                        sapientType: "UNKNOWN"
-                        suggestedContent: !<static_method_return>
-                          target: "java.nio.ByteBuffer"
-                          method: "allocateDirect"
-                          methodParameters:
-                          - name: "capacity"
-                            value:
-                              sapientType: "BASIC"
-                              valueType: "int"
-                              uuid: "<init>_list1-1-buf-capacity"
-                              fixed: false
-                              equalsMethodPresent: false
-                              explicitCastNeeded: false
-                        valueType: "java.nio.ByteBuffer"
-                        uuid: "<init>_list1-1-buf"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                  valueType: "org.bitcoinj.base.Sha256Hash"
-                  uuid: "<init>_list1-1"
-                  fixed: false
-                  collectionUuid: "<init>_list1"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+                values: []
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.base.Sha256Hash"
               uuid: "<init>_list1"
@@ -2641,89 +2361,9 @@ methods:
             value:
               sapientType: "ARRAY"
               content: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    suggestedContent: !<regular>
-                      value: 0
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  2:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    suggestedContent: !<regular>
-                      value: 0
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  3:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                values: {}
               suggestedContent: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    suggestedContent: !<regular>
-                      value: 0
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  2:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    suggestedContent: !<regular>
-                      value: 0
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  3:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                values: {}
               valueType: "byte[]"
               uuid: "<init>_byte[]1"
               fixed: false
@@ -2737,10 +2377,6 @@ methods:
           - name: "origTxCount"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 10
-              suggestedContent: !<regular>
-                value: 10
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -2749,234 +2385,9 @@ methods:
           - name: "hashes"
             value:
               sapientType: "COLLECTION"
-              content: !<collection>
-                collectionClass: "java.util.ArrayList"
-                parameters: []
-                values:
-                - sapientType: "OBJECT"
-                  content: !<static_method_return>
-                    target: "org.bitcoinj.base.Sha256Hash"
-                    method: "read"
-                    methodParameters:
-                    - name: "buf"
-                      value:
-                        sapientType: "UNKNOWN"
-                        suggestedContent: !<static_method_return>
-                          target: "java.nio.ByteBuffer"
-                          method: "allocateDirect"
-                          methodParameters:
-                          - name: "capacity"
-                            value:
-                              sapientType: "BASIC"
-                              valueType: "int"
-                              uuid: "<init>_list1-0-buf-capacity"
-                              fixed: false
-                              equalsMethodPresent: false
-                              explicitCastNeeded: false
-                        valueType: "java.nio.ByteBuffer"
-                        uuid: "<init>_list1-0-buf"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                  suggestedContent: !<static_method_return>
-                    target: "org.bitcoinj.base.Sha256Hash"
-                    method: "read"
-                    methodParameters:
-                    - name: "buf"
-                      value:
-                        sapientType: "UNKNOWN"
-                        suggestedContent: !<static_method_return>
-                          target: "java.nio.ByteBuffer"
-                          method: "allocateDirect"
-                          methodParameters:
-                          - name: "capacity"
-                            value:
-                              sapientType: "BASIC"
-                              valueType: "int"
-                              uuid: "<init>_list1-0-buf-capacity"
-                              fixed: false
-                              equalsMethodPresent: false
-                              explicitCastNeeded: false
-                        valueType: "java.nio.ByteBuffer"
-                        uuid: "<init>_list1-0-buf"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                  valueType: "org.bitcoinj.base.Sha256Hash"
-                  uuid: "<init>_list1-0"
-                  fixed: false
-                  collectionUuid: "<init>_list1"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                - sapientType: "OBJECT"
-                  content: !<static_method_return>
-                    target: "org.bitcoinj.base.Sha256Hash"
-                    method: "read"
-                    methodParameters:
-                    - name: "buf"
-                      value:
-                        sapientType: "UNKNOWN"
-                        suggestedContent: !<static_method_return>
-                          target: "java.nio.ByteBuffer"
-                          method: "allocateDirect"
-                          methodParameters:
-                          - name: "capacity"
-                            value:
-                              sapientType: "BASIC"
-                              valueType: "int"
-                              uuid: "<init>_list1-1-buf-capacity"
-                              fixed: false
-                              equalsMethodPresent: false
-                              explicitCastNeeded: false
-                        valueType: "java.nio.ByteBuffer"
-                        uuid: "<init>_list1-1-buf"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                  suggestedContent: !<static_method_return>
-                    target: "org.bitcoinj.base.Sha256Hash"
-                    method: "read"
-                    methodParameters:
-                    - name: "buf"
-                      value:
-                        sapientType: "UNKNOWN"
-                        suggestedContent: !<static_method_return>
-                          target: "java.nio.ByteBuffer"
-                          method: "allocateDirect"
-                          methodParameters:
-                          - name: "capacity"
-                            value:
-                              sapientType: "BASIC"
-                              valueType: "int"
-                              uuid: "<init>_list1-1-buf-capacity"
-                              fixed: false
-                              equalsMethodPresent: false
-                              explicitCastNeeded: false
-                        valueType: "java.nio.ByteBuffer"
-                        uuid: "<init>_list1-1-buf"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                  valueType: "org.bitcoinj.base.Sha256Hash"
-                  uuid: "<init>_list1-1"
-                  fixed: false
-                  collectionUuid: "<init>_list1"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
               suggestedContent: !<collection>
-                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values:
-                - sapientType: "OBJECT"
-                  content: !<static_method_return>
-                    target: "org.bitcoinj.base.Sha256Hash"
-                    method: "read"
-                    methodParameters:
-                    - name: "buf"
-                      value:
-                        sapientType: "UNKNOWN"
-                        suggestedContent: !<static_method_return>
-                          target: "java.nio.ByteBuffer"
-                          method: "allocateDirect"
-                          methodParameters:
-                          - name: "capacity"
-                            value:
-                              sapientType: "BASIC"
-                              valueType: "int"
-                              uuid: "<init>_list1-0-buf-capacity"
-                              fixed: false
-                              equalsMethodPresent: false
-                              explicitCastNeeded: false
-                        valueType: "java.nio.ByteBuffer"
-                        uuid: "<init>_list1-0-buf"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                  suggestedContent: !<static_method_return>
-                    target: "org.bitcoinj.base.Sha256Hash"
-                    method: "read"
-                    methodParameters:
-                    - name: "buf"
-                      value:
-                        sapientType: "UNKNOWN"
-                        suggestedContent: !<static_method_return>
-                          target: "java.nio.ByteBuffer"
-                          method: "allocateDirect"
-                          methodParameters:
-                          - name: "capacity"
-                            value:
-                              sapientType: "BASIC"
-                              valueType: "int"
-                              uuid: "<init>_list1-0-buf-capacity"
-                              fixed: false
-                              equalsMethodPresent: false
-                              explicitCastNeeded: false
-                        valueType: "java.nio.ByteBuffer"
-                        uuid: "<init>_list1-0-buf"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                  valueType: "org.bitcoinj.base.Sha256Hash"
-                  uuid: "<init>_list1-0"
-                  fixed: false
-                  collectionUuid: "<init>_list1"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                - sapientType: "OBJECT"
-                  content: !<static_method_return>
-                    target: "org.bitcoinj.base.Sha256Hash"
-                    method: "read"
-                    methodParameters:
-                    - name: "buf"
-                      value:
-                        sapientType: "UNKNOWN"
-                        suggestedContent: !<static_method_return>
-                          target: "java.nio.ByteBuffer"
-                          method: "allocateDirect"
-                          methodParameters:
-                          - name: "capacity"
-                            value:
-                              sapientType: "BASIC"
-                              valueType: "int"
-                              uuid: "<init>_list1-1-buf-capacity"
-                              fixed: false
-                              equalsMethodPresent: false
-                              explicitCastNeeded: false
-                        valueType: "java.nio.ByteBuffer"
-                        uuid: "<init>_list1-1-buf"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                  suggestedContent: !<static_method_return>
-                    target: "org.bitcoinj.base.Sha256Hash"
-                    method: "read"
-                    methodParameters:
-                    - name: "buf"
-                      value:
-                        sapientType: "UNKNOWN"
-                        suggestedContent: !<static_method_return>
-                          target: "java.nio.ByteBuffer"
-                          method: "allocateDirect"
-                          methodParameters:
-                          - name: "capacity"
-                            value:
-                              sapientType: "BASIC"
-                              valueType: "int"
-                              uuid: "<init>_list1-1-buf-capacity"
-                              fixed: false
-                              equalsMethodPresent: false
-                              explicitCastNeeded: false
-                        valueType: "java.nio.ByteBuffer"
-                        uuid: "<init>_list1-1-buf"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                  valueType: "org.bitcoinj.base.Sha256Hash"
-                  uuid: "<init>_list1-1"
-                  fixed: false
-                  collectionUuid: "<init>_list1"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+                values: []
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.base.Sha256Hash"
               uuid: "<init>_list1"
@@ -2986,90 +2397,8 @@ methods:
           - name: "bits"
             value:
               sapientType: "ARRAY"
-              content: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    suggestedContent: !<regular>
-                      value: 0
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  2:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    suggestedContent: !<regular>
-                      value: 0
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  3:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
               suggestedContent: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    suggestedContent: !<regular>
-                      value: 0
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  2:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    suggestedContent: !<regular>
-                      value: 0
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  3:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1
-                    suggestedContent: !<regular>
-                      value: 1
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                values: {}
               valueType: "byte[]"
               uuid: "<init>_byte[]1"
               fixed: false
@@ -3086,7 +2415,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "VarInt"
-      modelFingerprint: "4457E1706557DCB9CA186934C1E3665A"
+      modelFingerprint: "BF62D1C960725D735411CB7A6B118FA4"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -3106,7 +2435,7 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 2
+              value: 0
             valueType: "long"
             originalValueType: "int"
             fixed: true
@@ -3127,7 +2456,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "VarInt"
-      modelFingerprint: "42D5A3943C9100A85E26696FD393DA58"
+      modelFingerprint: "BF62D1C960725D735411CB7A6B118FA4"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -3147,7 +2476,7 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 4
+              value: 0
             valueType: "long"
             originalValueType: "int"
             fixed: true
@@ -3168,7 +2497,7 @@ methods:
       filledByUser: false
     - type: "INTERNAL"
       name: "internalMethod"
-      modelFingerprint: "E4AF5770BD1844B45149B4F258D05994"
+      modelFingerprint: "498839A5D9A12C6DEA0E2803AC4D4F72"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -3187,7 +2516,7 @@ methods:
               - value:
                   sapientType: "BASIC"
                   content: !<regular>
-                    value: 74
+                    value: 6
                   valueType: "int"
                   uuid: "messageSize_int15"
                   fixed: true
@@ -3200,7 +2529,7 @@ methods:
               - value:
                   sapientType: "BASIC"
                   content: !<regular>
-                    value: 74
+                    value: 6
                   valueType: "int"
                   uuid: "messageSize_int15"
                   fixed: true
@@ -3272,11 +2601,11 @@ methods:
       filledByUser: false
     uuid: "9d328af1-2293-3544-bbbc-a0683c1f9fbe"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "messageSize"
     returnType: "int"
@@ -6149,11 +5478,11 @@ methods:
       filledByUser: false
     uuid: "23427d43-9a70-3ccf-b5d0-d6ec7915e143"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getTransactionCount"
     returnType: "int"

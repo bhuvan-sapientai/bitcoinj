@@ -17,12 +17,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "DEB624CF5FF3CDE695CF282C4EB1D849"
+    modelFingerprint: "A6EC1DD60C7F338C0BE03515BA4A8BC1"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "D725A5A13A20BE2D631F8F2EF804A1AE"
+      modelFingerprint: "F992F37F1CE9530AA4CC1D83C521A98D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -36,9 +36,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "MyThread"
-              suggestedContent: !<regular>
-                value: "MyThread"
+                value: "name1"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -48,9 +46,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 10
-              suggestedContent: !<regular>
-                value: 10
+                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -64,10 +60,6 @@ methods:
           - name: "name"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "MyThread"
-              suggestedContent: !<regular>
-                value: "MyThread"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -76,10 +68,6 @@ methods:
           - name: "priority"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 10
-              suggestedContent: !<regular>
-                value: 10
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -96,17 +84,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "r"
-      modelFingerprint: "141953A8D4501F319A47C4CC1CF03F91"
+      modelFingerprint: "E19F7DDCD869EDBB675FEEDF46089F9F"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "NULL"
-        content: !<unknown_object>
-          target: "java.lang.Runnable"
-          onlyPojoFunctions: false
-          builderPattern: false
         suggestedContent: !<unknown_object>
           target: "java.lang.Runnable"
           onlyPojoFunctions: false
@@ -120,7 +104,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Context"
-      modelFingerprint: "5F24CCB82A591202D5784F2C1CC00F11"
+      modelFingerprint: "48D221517E861357B3439FCF8D5FC88D"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -138,17 +122,7 @@ methods:
         parameters: []
         signature: "get(): Context"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<new>
-            target: "org.bitcoinj.core.Context"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
-            target: "org.bitcoinj.core.Context"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.core.Context"
           uuid: "newThread_context1"
           fixed: false
@@ -159,7 +133,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "2415AF1ABECD69D9A1C0ECBB9A4147CF"
+      modelFingerprint: "70319B4504DBF8DD1AE03242AE00A184"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -175,8 +149,8 @@ methods:
       filledByUser: false
     uuid: "581615ec-fb96-3fea-b947-52c6c3049d90"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true

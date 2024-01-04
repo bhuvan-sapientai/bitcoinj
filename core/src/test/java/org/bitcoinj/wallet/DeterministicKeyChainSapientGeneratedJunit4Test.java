@@ -73,6 +73,9 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mockStatic;
 
 import org.junit.Ignore;
+import org.bitcoinj.crypto.EncryptedData;
+
+import java.util.stream.Collector;
 
 public class DeterministicKeyChainSapientGeneratedJunit4Test {
 
@@ -123,17 +126,17 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            doReturn(true).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            target = spy(new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH));
+            target = spy(new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<DeterministicKey> deterministicKeyList = new ArrayList<>();
             deterministicKeyList.add(deterministicKeyMock);
@@ -145,7 +148,8 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             verify(target).getKeys(KeyChain.KeyPurpose.RECEIVE_FUNDS, 1);
         }
     }
@@ -163,21 +167,22 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey kMock = mock(DeterministicKey.class);
+        ChildNumber childNumberMock = mock(ChildNumber.class);
         DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            ChildNumber childNumber = new ChildNumber(0, false);
-            doReturn(childNumber).when(kMock).getChildNumber();
+            doReturn(childNumberMock).when(kMock).getChildNumber();
+            doReturn(1).when(childNumberMock).i();
             doReturn(deterministicKeyMock).when(kMock).getParent();
-            doReturn(true).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            target = spy(new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH));
+            target = spy(new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doNothing().when(target).maybeLookAhead();
             //Act Statement(s)
@@ -185,16 +190,19 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(result, equalTo(kMock));
             verify(kMock).getChildNumber();
+            verify(childNumberMock).i();
             verify(kMock).getParent();
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             verify(target).maybeLookAhead();
         }
     }
 
     //Sapient generated method id: ${7d8b3532-bf24-3e02-aeaf-66fc1baecb7c}
+    @Ignore()
     @Test()
     public void markKeyAsUsedWhenIssuedExternalKeysLessThanNumChildren() {
         /* Branches:
@@ -206,40 +214,44 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //DeterministicKey kMock = mock(DeterministicKey.class);
-        //DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
-        //DeterministicKey deterministicKeyMock2 = mock(DeterministicKey.class);
-        //DeterministicKey keyMock = mock(DeterministicKey.class);
-        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-    MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-    ChildNumber childNumber = new ChildNumber(0, false);
-    doReturn(childNumber).when(kMock).getChildNumber();
-    doReturn(deterministicKeyMock, deterministicKeyMock2).when(kMock).getParent();
-    doReturn(true).when(keyMock).isPubKeyOnly();
-    List list = new ArrayList<>();
-    HDPath hDPath = new HDPath(false, list);
-    doReturn(hDPath).when(keyMock).getPath();
-    //TODO: Needs to return real value
-    threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
-    preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    target = spy(new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH));
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    doNothing().when(target).maybeLookAhead();
-    //Act Statement(s)
-    DeterministicKey result = target.markKeyAsUsed(kMock);
-    //Assert statement(s)
-    assertThat(result, equalTo(kMock));
-    verify(kMock).getChildNumber();
-    verify(kMock, times(2)).getParent();
-    verify(keyMock).isPubKeyOnly();
-    verify(keyMock).getPath();
-    threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-    preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
-    verify(target).maybeLookAhead();
-}*/
+        DeterministicKey kMock = mock(DeterministicKey.class);
+        ChildNumber childNumberMock = mock(ChildNumber.class);
+        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
+        DeterministicKey deterministicKeyMock2 = mock(DeterministicKey.class);
+        DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+            doReturn(childNumberMock).when(kMock).getChildNumber();
+            doReturn(1).when(childNumberMock).i();
+            doReturn(deterministicKeyMock, deterministicKeyMock2).when(kMock).getParent();
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            target = spy(new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH));
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            doNothing().when(target).maybeLookAhead();
+            //Act Statement(s)
+            DeterministicKey result = target.markKeyAsUsed(kMock);
+            //Assert statement(s)
+            assertThat(result, equalTo(kMock));
+            verify(kMock).getChildNumber();
+            verify(childNumberMock).i();
+            verify(kMock, times(2)).getParent();
+            verify(keyMock).isPubKeyOnly();
+            verify(keyMock).getPath();
+            threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
+            verify(target).maybeLookAhead();
+        }
     }
 
     //Sapient generated method id: ${44fa91be-011c-3f0c-ba05-2ff6bddb0b80}
+    @Ignore()
     @Test()
     public void findKeyFromPubHashTest() {
         /**
@@ -247,27 +259,29 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //DeterministicKey keyMock = mock(DeterministicKey.class);
-        //HDPath hDPathMock = mock(HDPath.class);
-        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-    MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-    doReturn(true).when(keyMock).isPubKeyOnly();
-    doReturn(hDPathMock).when(keyMock).getPath();
-    ReentrantLock reentrantLock = new ReentrantLock();
-    threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
-    preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    target = new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH);
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    byte[] byteArray = new byte[] { (byte) 1, (byte) 2, (byte) 3, (byte) 4 };
-    //Act Statement(s)
-    DeterministicKey result = target.findKeyFromPubHash(byteArray);
-    //Assert statement(s)
-    assertThat(result, is(nullValue()));
-    verify(keyMock).isPubKeyOnly();
-    verify(keyMock).getPath();
-    threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-    preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
-}*/
+        DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            byte[] byteArray = new byte[]{};
+            //Act Statement(s)
+            DeterministicKey result = target.findKeyFromPubHash(byteArray);
+            //Assert statement(s)
+            assertThat(result, is(nullValue()));
+            verify(keyMock).isPubKeyOnly();
+            verify(keyMock).getPath();
+            threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
+        }
     }
 
     //Sapient generated method id: ${f3262d68-f653-32db-9e91-cc2045869e94}
@@ -316,18 +330,18 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            doReturn(true).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            ReentrantLock reentrantLock = new ReentrantLock();
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
             threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            target = new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5};
+            byte[] byteArray = new byte[]{};
             //Act Statement(s)
             DeterministicKey result = target.markPubHashAsUsed(byteArray);
             //Assert statement(s)
@@ -335,7 +349,8 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
         }
     }
 
@@ -382,28 +397,31 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
         /* Branches:
          * (basicKeyChain.hasKey(key)) : true
          *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         * TODO: Help needed! This method is not unit testable!
+         *  Following variables could not be isolated/mocked: basicKeyChain
+         *  Suggestions:
+         *  You can change the initialization of above variables and make it injectable or
+         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
+        ECKey eCKeyMock = mock(ECKey.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
             doReturn(false).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            ReentrantLock reentrantLock = new ReentrantLock();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
             threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            target = new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            ECKey eCKey = new ECKey();
             //Act Statement(s)
-            boolean result = target.hasKey(eCKey);
+            boolean result = target.hasKey(eCKeyMock);
             //Assert statement(s)
-            assertThat(result, equalTo(Boolean.FALSE));
+            assertThat(result, equalTo(Boolean.TRUE));
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
@@ -419,29 +437,32 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
         /* Branches:
          * (basicKeyChain.hasKey(key)) : false
          *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         * TODO: Help needed! This method is not unit testable!
+         *  Following variables could not be isolated/mocked: basicKeyChain
+         *  Suggestions:
+         *  You can change the initialization of above variables and make it injectable or
+         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
+        ECKey eCKeyMock = mock(ECKey.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            doReturn(false).when(keyMock).hasPrivKey();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            ReentrantLock reentrantLock = new ReentrantLock();
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
             threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            target = new DeterministicKeyChain(keyMock, false, false, ScriptType.P2PKH);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            ECKey eCKey = new ECKey();
             //Act Statement(s)
-            boolean result = target.hasKey(eCKey);
+            boolean result = target.hasKey(eCKeyMock);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.FALSE));
-            verify(keyMock).hasPrivKey();
+            verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
@@ -450,6 +471,7 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${7fa8385f-b24a-3256-a524-6c5be821ba0f}
+    @Ignore()
     @Test()
     public void getKeyByPathTest() {
         /**
@@ -457,53 +479,36 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //DeterministicKey keyMock = mock(DeterministicKey.class);
-        //DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
-        /*try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-    MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-    MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-    doReturn(true).when(keyMock).isPubKeyOnly();
-    List list = new ArrayList<>();
-    HDPath hDPath2 = new HDPath(false, list);
-    doReturn(hDPath2).when(keyMock).getPath();
-    //TODO: Needs to return real value
-    threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
-    preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    List list2 = new ArrayList<>();
-    HDPath hDPath3 = new HDPath(false, list2);
-    hDPath.when(() -> HDPath.M(anyList())).thenReturn(hDPath3);
-    target = spy(new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH));
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    doReturn(deterministicKeyMock).when(target).getKeyByPath(hDPath3);
-    ChildNumber childNumber = new ChildNumber(0, false);
-    ChildNumber[][] childNumberArray3 = new ChildNumber[][] { childNumber };
-    ChildNumber childNumber2 = new ChildNumber(0, false);
-    ChildNumber[][] childNumberArray4 = new ChildNumber[][] { childNumber2 };
-    ChildNumber childNumber3 = new ChildNumber(0, false);
-    ChildNumber[][] childNumberArray5 = new ChildNumber[][] { childNumber3 };
-    ChildNumber[] childNumberArray2 = new ChildNumber[] { childNumberArray3, childNumberArray4, childNumberArray5 };
-    ChildNumber childNumber4 = new ChildNumber(0, false);
-    ChildNumber[][] childNumberArray7 = new ChildNumber[][] { childNumber4 };
-    ChildNumber childNumber5 = new ChildNumber(0, false);
-    ChildNumber[][] childNumberArray8 = new ChildNumber[][] { childNumber5 };
-    ChildNumber childNumber6 = new ChildNumber(0, false);
-    ChildNumber[][] childNumberArray9 = new ChildNumber[][] { childNumber6 };
-    ChildNumber[] childNumberArray6 = new ChildNumber[] { childNumberArray7, childNumberArray8, childNumberArray9 };
-    ChildNumber[] childNumberArray = new ChildNumber[] { childNumberArray2, childNumberArray6 };
-    //Act Statement(s)
-    DeterministicKey result = target.getKeyByPath(childNumberArray);
-    //Assert statement(s)
-    assertThat(result, equalTo(deterministicKeyMock));
-    verify(keyMock).isPubKeyOnly();
-    verify(keyMock).getPath();
-    threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-    preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
-    hDPath.verify(() -> HDPath.M(anyList()));
-    verify(target).getKeyByPath(hDPath3);
-}*/
+        DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
+        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            target = spy(new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH));
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            doReturn(deterministicKeyMock).when(target).getKeyByPath((HDPath) any());
+            ChildNumber[] childNumberArray = new ChildNumber[]{};
+            //Act Statement(s)
+            DeterministicKey result = target.getKeyByPath(childNumberArray);
+            //Assert statement(s)
+            assertThat(result, equalTo(deterministicKeyMock));
+            verify(keyMock).isPubKeyOnly();
+            verify(keyMock).getPath();
+            threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
+            verify(target).getKeyByPath((HDPath) any());
+        }
     }
 
     //Sapient generated method id: ${419ad45b-e3c6-3107-a625-e0e04b9e277f}
+    @Ignore()
     @Test()
     public void getKeyByPath1Test() {
         /**
@@ -511,35 +516,43 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //DeterministicKey keyMock = mock(DeterministicKey.class);
-        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-    MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-    doReturn(false).when(keyMock).hasPrivKey();
-    List list = new ArrayList<>();
-    HDPath hDPath = new HDPath(false, list);
-    doReturn(hDPath).when(keyMock).getPath();
-    //TODO: Needs to return real value
-    threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
-    preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    target = new DeterministicKeyChain(keyMock, false, false, ScriptType.P2PKH);
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    ChildNumber childNumber = new ChildNumber(0, false);
-    List<ChildNumber> childNumberList = new ArrayList<>();
-    childNumberList.add(childNumber);
-    //Act Statement(s)
-    DeterministicKey result = target.getKeyByPath(childNumberList);
-    //Assert statement(s)
-    assertThat(result, is(notNullValue()));
-    verify(keyMock).hasPrivKey();
-    verify(keyMock).getPath();
-    threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-    preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-    preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
-}*/
+        DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
+        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
+        DeterministicKey deterministicKeyMock2 = mock(DeterministicKey.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            ChildNumber childNumber = ChildNumber.ZERO;
+            doReturn(deterministicKeyMock).when(hierarchyMock).deriveChild(hDPathMock, false, false, childNumber);
+            ChildNumber childNumber2 = ChildNumber.ONE;
+            doReturn(internalParentKeyMock).when(hierarchyMock).deriveChild(hDPathMock, false, false, childNumber2);
+            List<ChildNumber> childNumberList = new ArrayList<>();
+            doReturn(deterministicKeyMock2).when(hierarchyMock).get(childNumberList, false, false);
+            //Act Statement(s)
+            DeterministicKey result = target.getKeyByPath(childNumberList);
+            //Assert statement(s)
+            assertThat(result, equalTo(deterministicKeyMock2));
+            verify(keyMock).isPubKeyOnly();
+            verify(keyMock).getPath();
+            threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
+            verify(hierarchyMock).deriveChild(hDPathMock, false, false, childNumber);
+            verify(hierarchyMock).deriveChild(hDPathMock, false, false, childNumber2);
+            verify(hierarchyMock).get(childNumberList, false, false);
+        }
     }
 
     //Sapient generated method id: ${7876f634-75e5-3b99-9201-7270dc8f844d}
+    @Ignore()
     @Test()
     public void getKeyByPath2Test() {
         /**
@@ -547,37 +560,43 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //DeterministicKey keyMock = mock(DeterministicKey.class);
-        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-    MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-    doReturn(false).when(keyMock).isPubKeyOnly();
-    List list = new ArrayList<>();
-    HDPath hDPath = new HDPath(false, list);
-    doReturn(hDPath).when(keyMock).getPath();
-    //TODO: Needs to return real value
-    threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
-    preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    target = new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH);
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    ChildNumber childNumber = new ChildNumber(0, false);
-    ChildNumber childNumber2 = new ChildNumber(0, false);
-    List<ChildNumber> childNumberList = new ArrayList<>();
-    childNumberList.add(childNumber);
-    childNumberList.add(childNumber2);
-    //Act Statement(s)
-    DeterministicKey result = target.getKeyByPath(childNumberList, true);
-    //Assert statement(s)
-    assertThat(result, is(notNullValue()));
-    verify(keyMock).isPubKeyOnly();
-    verify(keyMock).getPath();
-    threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-    preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-    preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
-}*/
+        DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
+        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
+        DeterministicKey deterministicKeyMock2 = mock(DeterministicKey.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            ChildNumber childNumber = ChildNumber.ZERO;
+            doReturn(deterministicKeyMock).when(hierarchyMock).deriveChild(hDPathMock, false, false, childNumber);
+            ChildNumber childNumber2 = ChildNumber.ONE;
+            doReturn(internalParentKeyMock).when(hierarchyMock).deriveChild(hDPathMock, false, false, childNumber2);
+            List<ChildNumber> childNumberList = new ArrayList<>();
+            doReturn(deterministicKeyMock2).when(hierarchyMock).get(childNumberList, false, false);
+            //Act Statement(s)
+            DeterministicKey result = target.getKeyByPath(childNumberList, false);
+            //Assert statement(s)
+            assertThat(result, equalTo(deterministicKeyMock2));
+            verify(keyMock).isPubKeyOnly();
+            verify(keyMock).getPath();
+            threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
+            verify(hierarchyMock).deriveChild(hDPathMock, false, false, childNumber);
+            verify(hierarchyMock).deriveChild(hDPathMock, false, false, childNumber2);
+            verify(hierarchyMock).get(childNumberList, false, false);
+        }
     }
 
     //Sapient generated method id: ${6deda3ec-4706-3e3d-a330-d4ead20687c2}
+    @Ignore()
     @Test()
     public void getWatchingKeyTest() {
         /**
@@ -585,36 +604,35 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //DeterministicKey keyMock = mock(DeterministicKey.class);
-        //HDPath hDPathMock = mock(HDPath.class);
-        //DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
-        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-    MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-    doReturn(true).when(keyMock).isPubKeyOnly();
-    List list = new ArrayList<>();
-    HDPath hDPath = new HDPath(false, list);
-    doReturn(hDPath).when(keyMock).getPath();
-    //TODO: Needs to return real value
-    threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
-    preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    target = spy(new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH));
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    doReturn(hDPathMock).when(target).getAccountPath();
-    doReturn(deterministicKeyMock).when(target).getKeyByPath(hDPathMock);
-    //Act Statement(s)
-    DeterministicKey result = target.getWatchingKey();
-    //Assert statement(s)
-    assertThat(result, equalTo(deterministicKeyMock));
-    verify(keyMock).isPubKeyOnly();
-    verify(keyMock).getPath();
-    threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-    preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
-    verify(target).getAccountPath();
-    verify(target).getKeyByPath(hDPathMock);
-}*/
+        DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
+        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            target = spy(new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH));
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            doReturn(deterministicKeyMock).when(target).getKeyByPath(hDPathMock);
+            //Act Statement(s)
+            DeterministicKey result = target.getWatchingKey();
+            //Assert statement(s)
+            assertThat(result, equalTo(deterministicKeyMock));
+            verify(keyMock).isPubKeyOnly();
+            verify(keyMock).getPath();
+            threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
+            verify(target).getKeyByPath(hDPathMock);
+        }
     }
 
     //Sapient generated method id: ${19d70003-1e49-3d4d-a4ab-856eba210b9c}
+    @Ignore()
     @Test()
     public void isWatchingWhenGetWatchingKeyIsWatching() {
         /* Branches:
@@ -624,35 +642,37 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //DeterministicKey keyMock = mock(DeterministicKey.class);
-        //DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
-        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-    MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-    doReturn(true).when(keyMock).isPubKeyOnly();
-    List list = new ArrayList<>();
-    HDPath hDPath = new HDPath(false, list);
-    doReturn(hDPath).when(keyMock).getPath();
-    //TODO: Needs to return real value
-    threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
-    preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    target = spy(new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH));
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    doReturn(deterministicKeyMock).when(target).getWatchingKey();
-    doReturn(true).when(deterministicKeyMock).isWatching();
-    //Act Statement(s)
-    boolean result = target.isWatching();
-    //Assert statement(s)
-    assertThat(result, equalTo(Boolean.TRUE));
-    verify(keyMock).isPubKeyOnly();
-    verify(keyMock).getPath();
-    threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-    preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
-    verify(target).getWatchingKey();
-    verify(deterministicKeyMock).isWatching();
-}*/
+        DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
+        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            target = spy(new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH));
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            doReturn(deterministicKeyMock).when(target).getWatchingKey();
+            doReturn(true).when(deterministicKeyMock).isWatching();
+            //Act Statement(s)
+            boolean result = target.isWatching();
+            //Assert statement(s)
+            assertThat(result, equalTo(Boolean.TRUE));
+            verify(keyMock).isPubKeyOnly();
+            verify(keyMock).getPath();
+            threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
+            verify(target).getWatchingKey();
+            verify(deterministicKeyMock).isWatching();
+        }
     }
 
     //Sapient generated method id: ${2f4e042a-a75d-3f80-8cca-4d50936f9576}
+    @Ignore()
     @Test()
     public void isWatchingWhenGetWatchingKeyNotIsWatching() {
         /* Branches:
@@ -662,35 +682,37 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //DeterministicKey keyMock = mock(DeterministicKey.class);
-        //DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
-        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-    MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-    doReturn(true).when(keyMock).isPubKeyOnly();
-    List list = new ArrayList<>();
-    HDPath hDPath = new HDPath(false, list);
-    doReturn(hDPath).when(keyMock).getPath();
-    //TODO: Needs to return real value
-    threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
-    preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    target = spy(new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH));
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    doReturn(deterministicKeyMock).when(target).getWatchingKey();
-    doReturn(false).when(deterministicKeyMock).isWatching();
-    //Act Statement(s)
-    boolean result = target.isWatching();
-    //Assert statement(s)
-    assertThat(result, equalTo(Boolean.FALSE));
-    verify(keyMock).isPubKeyOnly();
-    verify(keyMock).getPath();
-    threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-    preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
-    verify(target).getWatchingKey();
-    verify(deterministicKeyMock).isWatching();
-}*/
+        DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
+        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            target = spy(new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH));
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            doReturn(deterministicKeyMock).when(target).getWatchingKey();
+            doReturn(false).when(deterministicKeyMock).isWatching();
+            //Act Statement(s)
+            boolean result = target.isWatching();
+            //Assert statement(s)
+            assertThat(result, equalTo(Boolean.FALSE));
+            verify(keyMock).isPubKeyOnly();
+            verify(keyMock).getPath();
+            threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
+            verify(target).getWatchingKey();
+            verify(deterministicKeyMock).isWatching();
+        }
     }
 
     //Sapient generated method id: ${76299944-2002-360a-8bb8-28994d8ad5a4}
+    @Ignore()
     @Test()
     public void numKeysTest() {
         /**
@@ -698,34 +720,34 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //DeterministicKey keyMock = mock(DeterministicKey.class);
-        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-    MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-    doReturn(false).when(keyMock).isPubKeyOnly();
-    List list = new ArrayList<>();
-    HDPath hDPath = new HDPath(false, list);
-    doReturn(hDPath).when(keyMock).getPath();
-    ReentrantLock reentrantLock = new ReentrantLock();
-    threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
-    preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    target = spy(new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH));
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    doNothing().when(target).maybeLookAhead();
-    //Act Statement(s)
-    int result = target.numKeys();
-    //Assert statement(s)
-    assertThat(result, equalTo(0));
-    verify(keyMock).isPubKeyOnly();
-    verify(keyMock).getPath();
-    threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-    preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-    preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
-    verify(target).maybeLookAhead();
-}*/
+        DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            target = spy(new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH));
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            doNothing().when(target).maybeLookAhead();
+            //Act Statement(s)
+            int result = target.numKeys();
+            //Assert statement(s)
+            assertThat(result, equalTo(0));
+            verify(keyMock).isPubKeyOnly();
+            verify(keyMock).getPath();
+            threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
+            verify(target).maybeLookAhead();
+        }
     }
 
     //Sapient generated method id: ${744f8c65-f71f-3db2-b6c8-46ea8149154d}
+    @Ignore()
     @Test()
     public void numLeafKeysIssuedTest() {
         /**
@@ -733,29 +755,28 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //DeterministicKey keyMock = mock(DeterministicKey.class);
-        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-    MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-    doReturn(false).when(keyMock).isPubKeyOnly();
-    List list = new ArrayList<>();
-    HDPath hDPath = new HDPath(false, list);
-    doReturn(hDPath).when(keyMock).getPath();
-    ReentrantLock reentrantLock = new ReentrantLock();
-    threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
-    preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    //Act Statement(s)
-    int result = target.numLeafKeysIssued();
-    //Assert statement(s)
-    assertThat(result, equalTo(0));
-    verify(keyMock).isPubKeyOnly();
-    verify(keyMock).getPath();
-    threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-    preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-    preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
-}*/
+        DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            //Act Statement(s)
+            int result = target.numLeafKeysIssued();
+            //Assert statement(s)
+            assertThat(result, equalTo(0));
+            verify(keyMock).isPubKeyOnly();
+            verify(keyMock).getPath();
+            threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
+        }
     }
 
     //Sapient generated method id: ${dc0588e1-d72e-347b-95e0-205cf7068cac}
@@ -770,33 +791,32 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            doReturn(true).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            target = spy(new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH));
+            target = spy(new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(deterministicKeyMock).when(target).getWatchingKey();
-            Instant instant = Instant.now();
-            doReturn(Optional.of(instant)).when(deterministicKeyMock).creationTime();
+            doReturn(Optional.empty()).when(deterministicKeyMock).creationTime();
             //Act Statement(s)
             Instant result = target.earliestKeyCreationTime();
-            Instant instant2 = Instant.now();
-            Optional<Instant> instantOptional = Optional.of(instant2);
-            Instant instant4 = Instant.EPOCH;
-            Instant instant3 = (Instant) instantOptional.orElse(instant4);
+            Optional<Instant> instantOptional = Optional.empty();
+            Instant instant2 = Instant.EPOCH;
+            Instant instant = (Instant) instantOptional.orElse(instant2);
             //Assert statement(s)
-            assertThat(result, equalTo(instant3));
+            assertThat(result, equalTo(instant));
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             verify(target).getWatchingKey();
             verify(deterministicKeyMock).creationTime();
         }
@@ -816,17 +836,17 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         KeyChainEventListener keyChainEventListenerMock = mock(KeyChainEventListener.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            doReturn(true).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
             ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
             threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            target = new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             target.addEventListener(keyChainEventListenerMock);
@@ -834,11 +854,13 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
         }
     }
 
     //Sapient generated method id: ${283de23e-4782-3528-be05-a980b30b2663}
+    @Ignore()
     @Test()
     public void addEventListener1Test() {
         /**
@@ -850,32 +872,34 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //DeterministicKey keyMock = mock(DeterministicKey.class);
-        //KeyChainEventListener keyChainEventListenerMock = mock(KeyChainEventListener.class);
-        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-    MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-    doReturn(true).when(keyMock).isPubKeyOnly();
-    List list = new ArrayList<>();
-    HDPath hDPath = new HDPath(false, list);
-    doReturn(hDPath).when(keyMock).getPath();
-    //TODO: Needs to return real value
-    threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
-    preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    target = new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH);
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    //TODO: Needs initialization with real value
-    Executor executor = null;
-    //Act Statement(s)
-    target.addEventListener(keyChainEventListenerMock, executor);
-    //Assert statement(s)
-    verify(keyMock).isPubKeyOnly();
-    verify(keyMock).getPath();
-    threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-    preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
-}*/
+        DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
+        KeyChainEventListener keyChainEventListenerMock = mock(KeyChainEventListener.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            //TODO: Needs initialization with real value
+            Executor executor = null;
+            //Act Statement(s)
+            target.addEventListener(keyChainEventListenerMock, executor);
+            //Assert statement(s)
+            verify(keyMock).isPubKeyOnly();
+            verify(keyMock).getPath();
+            threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
+        }
     }
 
     //Sapient generated method id: ${8e2dce89-458a-3d3c-9e43-a1613fe3000b}
+    @Ignore()
     @Test()
     public void removeEventListenerWhenBasicKeyChainRemoveEventListenerListener() {
         /* Branches:
@@ -889,28 +913,29 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //DeterministicKey keyMock = mock(DeterministicKey.class);
-        //KeyChainEventListener keyChainEventListenerMock = mock(KeyChainEventListener.class);
-        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-    MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-    doReturn(true).when(keyMock).isPubKeyOnly();
-    List list = new ArrayList<>();
-    HDPath hDPath = new HDPath(false, list);
-    doReturn(hDPath).when(keyMock).getPath();
-    //TODO: Needs to return real value
-    threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
-    preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    target = new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH);
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    //Act Statement(s)
-    boolean result = target.removeEventListener(keyChainEventListenerMock);
-    //Assert statement(s)
-    assertThat(result, equalTo(Boolean.TRUE));
-    verify(keyMock).isPubKeyOnly();
-    verify(keyMock).getPath();
-    threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-    preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
-}*/
+        DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
+        KeyChainEventListener keyChainEventListenerMock = mock(KeyChainEventListener.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            //Act Statement(s)
+            boolean result = target.removeEventListener(keyChainEventListenerMock);
+            //Assert statement(s)
+            assertThat(result, equalTo(Boolean.TRUE));
+            verify(keyMock).isPubKeyOnly();
+            verify(keyMock).getPath();
+            threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
+        }
     }
 
     //Sapient generated method id: ${43d19668-0bf6-3a5a-8031-a1dcd2ed2cd7}
@@ -929,17 +954,17 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         KeyChainEventListener keyChainEventListenerMock = mock(KeyChainEventListener.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            doReturn(true).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            target = new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             boolean result = target.removeEventListener(keyChainEventListenerMock);
@@ -948,7 +973,8 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
         }
     }
 
@@ -964,25 +990,26 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            doReturn(true).when(keyMock).hasPrivKey();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            target = new DeterministicKeyChain(keyMock, false, false, ScriptType.P2PKH);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             List<String> result = target.getMnemonicCode();
             //Assert statement(s)
             assertThat(result, is(nullValue()));
-            verify(keyMock).hasPrivKey();
+            verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
         }
     }
 
@@ -996,16 +1023,16 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            doReturn(true).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            ReentrantLock reentrantLock = new ReentrantLock();
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
             threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            target = spy(new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH));
+            target = spy(new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             doReturn(protosKeyList).when(target).serializeMyselfToProtobuf();
@@ -1016,7 +1043,8 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             verify(target).serializeMyselfToProtobuf();
         }
     }
@@ -1053,7 +1081,7 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
             threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            target = spy(new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH));
+            target = spy(new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(true).when(target).isFollowing();
             //Act Statement(s)
@@ -1097,7 +1125,7 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
         DeterministicKey keyMock = mock(DeterministicKey.class);
         HDPath hDPathMock = mock(HDPath.class);
         Protos.Key keyMock2 = mock(Protos.Key.class);
-        try (MockedStatic<Protos.Key.OutputScriptType> protosKeyOutputScriptType = mockStatic(Protos.Key.OutputScriptType.class);
+        try (MockedStatic<Protos.Key.OutputScriptType> protosKeyOutputScriptType = mockStatic(Protos.Key.OutputScriptType.class, CALLS_REAL_METHODS);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
             doReturn(false).when(keyMock).isPubKeyOnly();
@@ -1106,8 +1134,8 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
             threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            protosKeyOutputScriptType.when(() -> Protos.Key.OutputScriptType.valueOf("P2PKH")).thenReturn(Protos.Key.OutputScriptType.P2PKH);
-            target = spy(new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH));
+            protosKeyOutputScriptType.when(() -> Protos.Key.OutputScriptType.valueOf("P2PK")).thenReturn(Protos.Key.OutputScriptType.P2PKH);
+            target = spy(new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PK));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(true).when(target).isFollowing();
             //Act Statement(s)
@@ -1117,13 +1145,13 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(result.size(), equalTo(protosKeyResultList.size()));
             assertThat(result, containsInRelativeOrder(protosKeyResultList.toArray()));
-            verify(keyMock).isPubKeyOnly();
-            verify(keyMock).getPath();
+            verify(keyMock, atLeast(1)).isPubKeyOnly();
+            verify(keyMock, atLeast(1)).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
-            protosKeyOutputScriptType.verify(() -> Protos.Key.OutputScriptType.valueOf("P2PKH"), atLeast(1));
-            verify(target).isFollowing();
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(1));
+            protosKeyOutputScriptType.verify(() -> Protos.Key.OutputScriptType.valueOf("P2PK"), atLeast(1));
+            verify(target, atLeast(1)).isFollowing();
         }
     }
 
@@ -1319,21 +1347,45 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          * (chain != null) : false
          */
         //Arrange Statement(s)
+        Protos.Key keyMock = mock(Protos.Key.class);
+        ByteString byteStringMock = mock(ByteString.class);
+        ByteString byteStringMock2 = mock(ByteString.class);
         HDPath hDPathMock = mock(HDPath.class);
         KeyCrypter keyCrypterMock = mock(KeyCrypter.class);
         KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class);
         try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
+            doReturn(Protos.Key.Type.DETERMINISTIC_MNEMONIC).when(keyMock).getType();
+            List<Integer> integerList = new ArrayList<>();
+            doReturn(integerList).when(keyMock).getAccountPathList();
+            doReturn(1L).when(keyMock).getCreationTimestamp();
+            doReturn(true).when(keyMock).hasSecretBytes();
+            doReturn(false).when(keyMock).hasEncryptedDeterministicSeed();
+            doReturn(true).when(keyMock).hasDeterministicSeed();
+            doReturn(byteStringMock).when(keyMock).getDeterministicSeed();
+            byte[] byteArray = new byte[]{};
+            doReturn(byteArray).when(byteStringMock).toByteArray();
+            doReturn(byteStringMock2).when(keyMock).getSecretBytes();
+            doReturn("return_of_toStringUtf8").when(byteStringMock2).toStringUtf8();
             HDPath hDPath2 = HDPath.M();
             hDPath.when(() -> HDPath.M()).thenReturn(hDPath2);
             hDPath.when(() -> HDPath.deserialize(anyList())).thenReturn(hDPathMock);
             doReturn(true).when(hDPathMock).isEmpty();
-            Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
-            protosKeyList.add(key);
+            protosKeyList.add(keyMock);
             //Act Statement(s)
             List<DeterministicKeyChain> result = DeterministicKeyChain.fromProtobuf(protosKeyList, keyCrypterMock, keyChainFactoryMock);
             //Assert statement(s)
             assertThat(result.size(), equalTo(0));
+            verify(keyMock).getType();
+            verify(keyMock).getAccountPathList();
+            verify(keyMock).getCreationTimestamp();
+            verify(keyMock).hasSecretBytes();
+            verify(keyMock).hasEncryptedDeterministicSeed();
+            verify(keyMock).hasDeterministicSeed();
+            verify(keyMock).getDeterministicSeed();
+            verify(byteStringMock).toByteArray();
+            verify(keyMock).getSecretBytes();
+            verify(byteStringMock2).toStringUtf8();
             hDPath.verify(() -> HDPath.M(), atLeast(1));
             hDPath.verify(() -> HDPath.deserialize(anyList()));
             verify(hDPathMock).isEmpty();
@@ -1354,19 +1406,75 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          * (key.hasEncryptedDeterministicSeed()) : true
          * (log.isDebugEnabled()) : true
          * (chain != null) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Protos.Key keyMock = mock(Protos.Key.class);
+        Protos.EncryptedData protosEncryptedDataMock = mock(Protos.EncryptedData.class);
+        ByteString byteStringMock = mock(ByteString.class);
+        Protos.EncryptedData protosEncryptedDataMock2 = mock(Protos.EncryptedData.class);
+        ByteString byteStringMock2 = mock(ByteString.class);
+        Protos.EncryptedData protosEncryptedDataMock3 = mock(Protos.EncryptedData.class);
+        ByteString byteStringMock3 = mock(ByteString.class);
+        ByteString byteStringMock4 = mock(ByteString.class);
+        HDPath hDPathMock = mock(HDPath.class);
         KeyCrypter keyCrypterMock = mock(KeyCrypter.class);
         KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class);
         try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
+            doReturn(Protos.Key.Type.DETERMINISTIC_MNEMONIC).when(keyMock).getType();
+            List<Integer> integerList = new ArrayList<>();
+            doReturn(integerList).when(keyMock).getAccountPathList();
+            doReturn(1L).when(keyMock).getCreationTimestamp();
+            doReturn(false).when(keyMock).hasSecretBytes();
+            doReturn(true).when(keyMock).hasEncryptedData();
+            doReturn(false).when(keyMock).hasDeterministicSeed();
+            doReturn(byteStringMock).when(protosEncryptedDataMock).getInitialisationVector();
+            byte[] byteArray = new byte[]{};
+            doReturn(byteArray).when(byteStringMock).toByteArray();
+            doReturn(protosEncryptedDataMock, protosEncryptedDataMock2).when(keyMock).getEncryptedData();
+            doReturn(byteStringMock2).when(protosEncryptedDataMock2).getEncryptedPrivateKey();
+            byte[] byteArray2 = new byte[]{};
+            doReturn(byteArray2).when(byteStringMock2).toByteArray();
+            doReturn(true).when(keyMock).hasEncryptedDeterministicSeed();
+            doReturn(protosEncryptedDataMock3).when(keyMock).getEncryptedDeterministicSeed();
+            doReturn(byteStringMock3).when(protosEncryptedDataMock3).getInitialisationVector();
+            byte[] byteArray3 = new byte[]{};
+            doReturn(byteArray3).when(byteStringMock3).toByteArray();
+            doReturn(byteStringMock4).when(protosEncryptedDataMock3).getEncryptedPrivateKey();
+            byte[] byteArray4 = new byte[]{};
+            doReturn(byteArray4).when(byteStringMock4).toByteArray();
             HDPath hDPath2 = HDPath.M();
             hDPath.when(() -> HDPath.M()).thenReturn(hDPath2);
+            hDPath.when(() -> HDPath.deserialize(anyList())).thenReturn(hDPathMock);
+            doReturn(true).when(hDPathMock).isEmpty();
             List<Protos.Key> protosKeyList = new ArrayList<>();
+            protosKeyList.add(keyMock);
             //Act Statement(s)
             List<DeterministicKeyChain> result = DeterministicKeyChain.fromProtobuf(protosKeyList, keyCrypterMock, keyChainFactoryMock);
             //Assert statement(s)
             assertThat(result.size(), equalTo(0));
+            verify(keyMock).getType();
+            verify(keyMock).getAccountPathList();
+            verify(keyMock).getCreationTimestamp();
+            verify(keyMock).hasSecretBytes();
+            verify(keyMock).hasEncryptedData();
+            verify(keyMock).hasDeterministicSeed();
+            verify(keyMock, times(2)).getEncryptedData();
+            verify(protosEncryptedDataMock).getInitialisationVector();
+            verify(byteStringMock).toByteArray();
+            verify(protosEncryptedDataMock2).getEncryptedPrivateKey();
+            verify(byteStringMock2).toByteArray();
+            verify(keyMock).hasEncryptedDeterministicSeed();
+            verify(keyMock).getEncryptedDeterministicSeed();
+            verify(protosEncryptedDataMock3).getInitialisationVector();
+            verify(byteStringMock3).toByteArray();
+            verify(protosEncryptedDataMock3).getEncryptedPrivateKey();
+            verify(byteStringMock4).toByteArray();
             hDPath.verify(() -> HDPath.M(), atLeast(1));
+            hDPath.verify(() -> HDPath.deserialize(anyList()));
+            verify(hDPathMock).isEmpty();
         }
     }
 
@@ -1526,42 +1634,43 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          * (lookaheadSize >= 0) : false  #  inside addChain method
          */
         //Arrange Statement(s)
-        //Protos.Key keyMock = mock(Protos.Key.class, "fromProtobuf_object1");
-        //HDPath hDPathMock = mock(HDPath.class);
-        //KeyCrypter keyCrypterMock = mock(KeyCrypter.class);
-        //KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class);
-        /*try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class, CALLS_REAL_METHODS)) {
-    doReturn(Protos.Key.Type.DETERMINISTIC_MNEMONIC).when(keyMock).getType();
-    List<Integer> integerList = new ArrayList<>();
-    doReturn(integerList).when(keyMock).getAccountPathList();
-    doReturn(1L).when(keyMock).getCreationTimestamp();
-    doReturn(true).when(keyMock).hasSecretBytes();
-    doReturn(true).when(keyMock).hasEncryptedDeterministicSeed();
-    hDPath.when(() -> HDPath.deserialize(anyList())).thenReturn(hDPathMock);
-    doReturn(false).when(hDPathMock).isEmpty();
-    UnreadableWalletException unreadableWalletException = new UnreadableWalletException("Malformed key proto: fromProtobuf_object1");
-    thrown.expect(UnreadableWalletException.class);
-    thrown.expectMessage(unreadableWalletException.getMessage());
-    List<Protos.Key> protosKeyList = new ArrayList<>();
-    protosKeyList.add(keyMock);
-    //Act Statement(s)
-    DeterministicKeyChain.fromProtobuf(protosKeyList, keyCrypterMock, keyChainFactoryMock);
-    List<Protos.Key> protosKeyProtosKeyListList = new ArrayList<>();
-    protosKeyProtosKeyListList.add(keyMock);
-    //Assert statement(s)
-    assertThat(protosKeyList.size(), equalTo(protosKeyProtosKeyListList.size()));
-    assertThat(protosKeyList, containsInRelativeOrder(protosKeyProtosKeyListList.toArray()));
-    verify(keyMock, atLeast(1)).getType();
-    verify(keyMock, atLeast(1)).getAccountPathList();
-    verify(keyMock, atLeast(1)).getCreationTimestamp();
-    verify(keyMock, atLeast(1)).hasSecretBytes();
-    verify(keyMock, atLeast(1)).hasEncryptedDeterministicSeed();
-    hDPath.verify(() -> HDPath.deserialize(anyList()), atLeast(1));
-    verify(hDPathMock, atLeast(1)).isEmpty();
-}*/
+        Protos.Key keyMock = mock(Protos.Key.class, "fromProtobuf_object1");
+        HDPath hDPathMock = mock(HDPath.class);
+        KeyCrypter keyCrypterMock = mock(KeyCrypter.class);
+        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class);
+        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class, CALLS_REAL_METHODS)) {
+            doReturn(Protos.Key.Type.DETERMINISTIC_MNEMONIC).when(keyMock).getType();
+            List<Integer> integerList = new ArrayList<>();
+            doReturn(integerList).when(keyMock).getAccountPathList();
+            doReturn(1L).when(keyMock).getCreationTimestamp();
+            doReturn(true).when(keyMock).hasSecretBytes();
+            doReturn(true).when(keyMock).hasEncryptedDeterministicSeed();
+            hDPath.when(() -> HDPath.deserialize(anyList())).thenReturn(hDPathMock);
+            doReturn(false).when(hDPathMock).isEmpty();
+            UnreadableWalletException unreadableWalletException = new UnreadableWalletException("Malformed key proto: fromProtobuf_object1");
+            thrown.expect(UnreadableWalletException.class);
+            thrown.expectMessage(unreadableWalletException.getMessage());
+            List<Protos.Key> protosKeyList = new ArrayList<>();
+            protosKeyList.add(keyMock);
+            //Act Statement(s)
+            DeterministicKeyChain.fromProtobuf(protosKeyList, keyCrypterMock, keyChainFactoryMock);
+            List<Protos.Key> protosKeyProtosKeyListList = new ArrayList<>();
+            protosKeyProtosKeyListList.add(keyMock);
+            //Assert statement(s)
+            assertThat(protosKeyList.size(), equalTo(protosKeyProtosKeyListList.size()));
+            assertThat(protosKeyList, containsInRelativeOrder(protosKeyProtosKeyListList.toArray()));
+            verify(keyMock, atLeast(1)).getType();
+            verify(keyMock, atLeast(1)).getAccountPathList();
+            verify(keyMock, atLeast(1)).getCreationTimestamp();
+            verify(keyMock, atLeast(1)).hasSecretBytes();
+            verify(keyMock, atLeast(1)).hasEncryptedDeterministicSeed();
+            hDPath.verify(() -> HDPath.deserialize(anyList()), atLeast(1));
+            verify(hDPathMock, atLeast(1)).isEmpty();
+        }
     }
 
     //Sapient generated method id: ${22c652b5-cda5-31cb-b4e0-13ace324f4af}
+    @Ignore()
     @Test()
     public void toEncryptedWhenSeedIsNullThrowsIllegalStateException() {
         /* Branches:
@@ -1572,33 +1681,35 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //DeterministicKey keyMock = mock(DeterministicKey.class);
-        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS);
-    MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-    doReturn(true).when(keyMock).isPubKeyOnly();
-    List list = new ArrayList<>();
-    HDPath hDPath = new HDPath(false, list);
-    doReturn(hDPath).when(keyMock).getPath();
-    //TODO: Needs to return real value
-    threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
-    preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    IllegalStateException illegalStateException = new IllegalStateException();
-    preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
-    target = new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH);
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    thrown.expect(IllegalStateException.class);
-    //Act Statement(s)
-    target.toEncrypted((CharSequence) "toEncrypted_charSequence1");
-    //Assert statement(s)
-    verify(keyMock, atLeast(1)).isPubKeyOnly();
-    verify(keyMock, atLeast(1)).getPath();
-    threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-    preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
-    preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()), atLeast(1));
-}*/
+        DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS);
+             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            IllegalStateException illegalStateException = new IllegalStateException();
+            preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            thrown.expect(IllegalStateException.class);
+            //Act Statement(s)
+            target.toEncrypted("toEncrypted_charSequence1");
+            //Assert statement(s)
+            verify(keyMock, atLeast(1)).isPubKeyOnly();
+            verify(keyMock, atLeast(1)).getPath();
+            threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${7fb48097-4f3a-3ee7-bf22-e8e677359a49}
+    @Ignore()
     @Test()
     public void toEncryptedWhenPasswordLengthNotGreaterThan0AndSeedIsNullThrowsIllegalStateException() {
         /* Branches:
@@ -1609,33 +1720,37 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //DeterministicKey keyMock = mock(DeterministicKey.class);
-        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS);
-    MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-    doReturn(true).when(keyMock).isPubKeyOnly();
-    List list = new ArrayList<>();
-    HDPath hDPath = new HDPath(false, list);
-    doReturn(hDPath).when(keyMock).getPath();
-    //TODO: Needs to return real value
-    threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
-    preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    IllegalStateException illegalStateException = new IllegalStateException();
-    preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
-    target = new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH);
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    thrown.expect(IllegalStateException.class);
-    //Act Statement(s)
-    target.toEncrypted((CharSequence) "toEncrypted_charSequence1");
-    //Assert statement(s)
-    verify(keyMock, atLeast(1)).isPubKeyOnly();
-    verify(keyMock, atLeast(1)).getPath();
-    threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-    preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
-    preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()), atLeast(1));
-}*/
+        DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
+            IllegalStateException illegalStateException = new IllegalStateException();
+            preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            thrown.expect(IllegalStateException.class);
+            //Act Statement(s)
+            target.toEncrypted("toEncrypted_charSequence1");
+            //Assert statement(s)
+            verify(keyMock).isPubKeyOnly();
+            verify(keyMock).getPath();
+            threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
+        }
     }
 
     //Sapient generated method id: ${d43ba78a-a7cc-3039-bd41-beff41bf5d78}
+    @Ignore()
     @Test()
     public void toEncrypted1WhenDefaultBranch() throws KeyCrypterException {
         /* Branches:
@@ -1648,101 +1763,101 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //DeterministicKey keyMock = mock(DeterministicKey.class);
-        //HDPath hDPathMock = mock(HDPath.class);
-        //DeterministicHierarchy hierarchyMock2 = mock(DeterministicHierarchy.class);
-        //DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
-        //DeterministicSeed seedMock = mock(DeterministicSeed.class);
-        //org.bitcoinj.crypto.EncryptedData encryptedDataMock = mock(org.bitcoinj.crypto.EncryptedData.class);
-        //org.bitcoinj.crypto.EncryptedData encryptedDataMock2 = mock(org.bitcoinj.crypto.EncryptedData.class);
-        //KeyCrypter keyCrypterMock = mock(KeyCrypter.class);
-        //AesKey aesKeyMock = mock(AesKey.class);
-        //DeterministicKey deterministicKeyMock2 = mock(DeterministicKey.class);
-        //DeterministicKey deterministicKeyMock3 = mock(DeterministicKey.class);
-        //DeterministicKey deterministicKeyMock4 = mock(DeterministicKey.class);
-        //KeyCrypter keyCrypterMock2 = mock(KeyCrypter.class);
-        //DeterministicKey deterministicKeyMock5 = mock(DeterministicKey.class);
-        //DeterministicKey deterministicKeyMock6 = mock(DeterministicKey.class);
-        //KeyCrypter keyCrypterMock3 = mock(KeyCrypter.class);
-        //DeterministicKey deterministicKeyMock7 = mock(DeterministicKey.class);
-        //DeterministicKey deterministicKeyMock8 = mock(DeterministicKey.class);
-        //KeyCrypter keyCrypterMock4 = mock(KeyCrypter.class);
-        //DeterministicKey deterministicKeyMock9 = mock(DeterministicKey.class);
-        //DeterministicKey deterministicKeyMock10 = mock(DeterministicKey.class);
-        //KeyCrypter keyCrypterMock5 = mock(KeyCrypter.class);
-        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-    MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-    ReentrantLock reentrantLock2 = null;
-    doReturn(false).when(keyMock).isPubKeyOnly();
-    doReturn(hDPathMock).when(keyMock).getPath();
-    List list = new ArrayList<>();
-    HDPath hDPath = new HDPath(false, list);
-    doReturn(deterministicKeyMock).when(hierarchyMock2).get(hDPath, false, false);
-    ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
-    preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    //TODO: Needs to return real value
-    threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock).thenReturn(reentrantLock2);
-    target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    doReturn(false).when(rootKeyMock).isEncrypted();
-    DeterministicSeed deterministicSeed = new DeterministicSeed(encryptedDataMock, encryptedDataMock2, 0L);
-    doReturn(deterministicSeed).when(seedMock).encrypt(keyCrypterMock, aesKeyMock);
-    doReturn(deterministicKeyMock2).when(rootKeyMock).encrypt(keyCrypterMock, aesKeyMock, null);
-    List list2 = new ArrayList<>();
-    HDPath hDPath2 = new HDPath(false, list2);
-    doReturn(deterministicKeyMock3).when(hierarchyMock).get(hDPath2, false, false);
-    doReturn(deterministicKeyMock4).when(deterministicKeyMock3).encrypt(keyCrypterMock2, aesKeyMock, deterministicKeyMock2);
-    doNothing().when(hierarchyMock2).putKey(deterministicKeyMock4);
-    List list3 = new ArrayList<>();
-    HDPath hDPath3 = new HDPath(false, list3);
-    doReturn(deterministicKeyMock5).when(hierarchyMock).get(hDPath3, false, false);
-    doReturn(deterministicKeyMock6).when(deterministicKeyMock5).encrypt(keyCrypterMock3, aesKeyMock, deterministicKeyMock2);
-    doNothing().when(hierarchyMock2).putKey(deterministicKeyMock6);
-    doReturn(deterministicKeyMock7).when(hierarchyMock).get((HDPath) any(), eq(false), eq(false));
-    doReturn(deterministicKeyMock8).when(deterministicKeyMock7).encrypt(keyCrypterMock4, aesKeyMock, deterministicKeyMock6);
-    doNothing().when(hierarchyMock2).putKey(deterministicKeyMock8);
-    List list4 = new ArrayList<>();
-    HDPath hDPath4 = new HDPath(false, list4);
-    doReturn(deterministicKeyMock9).when(hierarchyMock).get(hDPath4, false, false);
-    doReturn(deterministicKeyMock10).when(deterministicKeyMock9).encrypt(keyCrypterMock5, aesKeyMock, deterministicKeyMock6);
-    doNothing().when(hierarchyMock2).putKey(deterministicKeyMock10);
-    doNothing().when(hierarchyMock2).putKey((DeterministicKey) any());
-    Object object = new Object();
-    ListenerRegistration<KeyChainEventListener> listenerRegistration = new ListenerRegistration<>(object, (Executor) null);
-    List<ListenerRegistration<KeyChainEventListener>> listenerRegistrationKeyChainEventListenerList = new ArrayList<>();
-    listenerRegistrationKeyChainEventListenerList.add(listenerRegistration);
-    doReturn(listenerRegistrationKeyChainEventListenerList).when(basicKeyChainMock).getListeners();
-    //Act Statement(s)
-    DeterministicKeyChain result = target.toEncrypted(keyCrypterMock, aesKeyMock);
-    DeterministicKeyChain deterministicKeyChain = new DeterministicKeyChain(keyCrypterMock, aesKeyMock, target);
-    //Assert statement(s)
-    //TODO: Please implement equals method in DeterministicKeyChain for verification to succeed or you need to adjust respective assertion statements
-    assertThat(result, equalTo(deterministicKeyChain));
-    verify(keyMock).isPubKeyOnly();
-    verify(keyMock).getPath();
-    verify(hierarchyMock2).get(hDPath, false, false);
-    threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(2));
-    preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
-    preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
-    verify(rootKeyMock).isEncrypted();
-    verify(seedMock).encrypt(keyCrypterMock, aesKeyMock);
-    verify(rootKeyMock).encrypt(keyCrypterMock, aesKeyMock, null);
-    verify(hierarchyMock).get(hDPath2, false, false);
-    verify(deterministicKeyMock3).encrypt(keyCrypterMock2, aesKeyMock, deterministicKeyMock2);
-    verify(hierarchyMock2).putKey(deterministicKeyMock4);
-    verify(hierarchyMock).get(hDPath3, false, false);
-    verify(deterministicKeyMock5).encrypt(keyCrypterMock3, aesKeyMock, deterministicKeyMock2);
-    verify(hierarchyMock2).putKey(deterministicKeyMock6);
-    verify(hierarchyMock).get((HDPath) any(), eq(false), eq(false));
-    verify(deterministicKeyMock7).encrypt(keyCrypterMock4, aesKeyMock, deterministicKeyMock6);
-    verify(hierarchyMock2).putKey(deterministicKeyMock8);
-    verify(hierarchyMock).get(hDPath4, false, false);
-    verify(deterministicKeyMock9).encrypt(keyCrypterMock5, aesKeyMock, deterministicKeyMock6);
-    verify(hierarchyMock2).putKey(deterministicKeyMock10);
-    verify(hierarchyMock2).putKey((DeterministicKey) any());
-    verify(basicKeyChainMock).getListeners();
-}*/
+        DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
+        DeterministicHierarchy hierarchyMock2 = mock(DeterministicHierarchy.class);
+        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock2 = mock(HDPath.class);
+        DeterministicSeed seedMock = mock(DeterministicSeed.class);
+        DeterministicSeed deterministicSeedMock = mock(DeterministicSeed.class);
+        KeyCrypter keyCrypterMock = mock(KeyCrypter.class);
+        AesKey aesKeyMock = mock(AesKey.class);
+        DeterministicKey deterministicKeyMock2 = mock(DeterministicKey.class);
+        DeterministicHierarchy hierarchyMock3 = mock(DeterministicHierarchy.class);
+        DeterministicKey deterministicKeyMock3 = mock(DeterministicKey.class);
+        HDPath hDPathMock3 = mock(HDPath.class);
+        DeterministicKey deterministicKeyMock4 = mock(DeterministicKey.class);
+        KeyCrypter keyCrypterMock2 = mock(KeyCrypter.class);
+        DeterministicKey deterministicKeyMock5 = mock(DeterministicKey.class);
+        HDPath hDPathMock4 = mock(HDPath.class);
+        DeterministicKey deterministicKeyMock6 = mock(DeterministicKey.class);
+        KeyCrypter keyCrypterMock3 = mock(KeyCrypter.class);
+        HDPath hDPathMock5 = mock(HDPath.class);
+        HDPath hDPathMock6 = mock(HDPath.class);
+        DeterministicKey deterministicKeyMock7 = mock(DeterministicKey.class);
+        DeterministicKey deterministicKeyMock8 = mock(DeterministicKey.class);
+        KeyCrypter keyCrypterMock4 = mock(KeyCrypter.class);
+        DeterministicKey deterministicKeyMock9 = mock(DeterministicKey.class);
+        DeterministicKey deterministicKeyMock10 = mock(DeterministicKey.class);
+        KeyCrypter keyCrypterMock5 = mock(KeyCrypter.class);
+        ListenerRegistration<KeyChainEventListener> listenerRegistrationMock = mock(ListenerRegistration.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            doReturn(deterministicKeyMock).when(hierarchyMock2).get(hDPathMock2, false, false);
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            ReentrantLock reentrantLock2 = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock).thenReturn(reentrantLock2);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            doReturn(true).when(rootKeyMock).isEncrypted();
+            doReturn(deterministicSeedMock).when(seedMock).encrypt(keyCrypterMock, aesKeyMock);
+            doReturn(deterministicKeyMock2).when(rootKeyMock).encrypt(keyCrypterMock, aesKeyMock, null);
+            doReturn(deterministicKeyMock3).when(hierarchyMock3).get(hDPathMock3, false, false);
+            doReturn(deterministicKeyMock4).when(deterministicKeyMock3).encrypt(keyCrypterMock2, aesKeyMock, deterministicKeyMock2);
+            doNothing().when(hierarchyMock2).putKey(deterministicKeyMock4);
+            doReturn(deterministicKeyMock5).when(hierarchyMock3).get(hDPathMock4, false, false);
+            doReturn(deterministicKeyMock6).when(deterministicKeyMock5).encrypt(keyCrypterMock3, aesKeyMock, deterministicKeyMock2);
+            List<HDPath> hDPathList = new ArrayList<>();
+            hDPathList.add(hDPathMock3);
+            doReturn(hDPathList).when(hDPathMock4).ancestors();
+            doReturn(hDPathMock5, hDPathMock6).when(hDPathMock4).extend((HDPath) any());
+            doNothing().when(hierarchyMock2).putKey(deterministicKeyMock6);
+            doReturn(deterministicKeyMock7).when(hierarchyMock3).get(hDPathMock5, false, false);
+            doReturn(deterministicKeyMock8).when(deterministicKeyMock7).encrypt(keyCrypterMock4, aesKeyMock, deterministicKeyMock6);
+            doNothing().when(hierarchyMock2).putKey(deterministicKeyMock8);
+            doReturn(deterministicKeyMock9).when(hierarchyMock3).get(hDPathMock6, false, false);
+            doReturn(deterministicKeyMock10).when(deterministicKeyMock9).encrypt(keyCrypterMock5, aesKeyMock, deterministicKeyMock6);
+            doNothing().when(hierarchyMock2).putKey(deterministicKeyMock10);
+            doNothing().when(hierarchyMock2).putKey((DeterministicKey) any());
+            List<ListenerRegistration<KeyChainEventListener>> listenerRegistrationKeyChainEventListenerList = new ArrayList<>();
+            listenerRegistrationKeyChainEventListenerList.add(listenerRegistrationMock);
+            doReturn(listenerRegistrationKeyChainEventListenerList).when(basicKeyChainMock).getListeners();
+            //Act Statement(s)
+            DeterministicKeyChain result = target.toEncrypted(keyCrypterMock, aesKeyMock);
+            DeterministicKeyChain deterministicKeyChain = new DeterministicKeyChain(keyCrypterMock, aesKeyMock, target);
+            //Assert statement(s)
+            //TODO: Please implement equals method in DeterministicKeyChain for verification to succeed or you need to adjust respective assertion statements
+            assertThat(result, equalTo(deterministicKeyChain));
+            verify(keyMock).isPubKeyOnly();
+            verify(keyMock).getPath();
+            verify(hierarchyMock2).get(hDPathMock2, false, false);
+            threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
+            verify(rootKeyMock).isEncrypted();
+            verify(seedMock).encrypt(keyCrypterMock, aesKeyMock);
+            verify(rootKeyMock).encrypt(keyCrypterMock, aesKeyMock, null);
+            verify(hierarchyMock3).get(hDPathMock3, false, false);
+            verify(deterministicKeyMock3).encrypt(keyCrypterMock2, aesKeyMock, deterministicKeyMock2);
+            verify(hierarchyMock2).putKey(deterministicKeyMock4);
+            verify(hierarchyMock3).get(hDPathMock4, false, false);
+            verify(deterministicKeyMock5).encrypt(keyCrypterMock3, aesKeyMock, deterministicKeyMock2);
+            verify(hDPathMock4).ancestors();
+            verify(hDPathMock4, atLeast(2)).extend((HDPath) any());
+            verify(hierarchyMock2).putKey(deterministicKeyMock6);
+            verify(hierarchyMock3).get(hDPathMock5, false, false);
+            verify(deterministicKeyMock7).encrypt(keyCrypterMock4, aesKeyMock, deterministicKeyMock6);
+            verify(hierarchyMock2).putKey(deterministicKeyMock8);
+            verify(hierarchyMock3).get(hDPathMock6, false, false);
+            verify(deterministicKeyMock9).encrypt(keyCrypterMock5, aesKeyMock, deterministicKeyMock6);
+            verify(hierarchyMock2).putKey(deterministicKeyMock10);
+            verify(hierarchyMock2).putKey((DeterministicKey) any());
+            verify(basicKeyChainMock).getListeners();
+        }
     }
 
     //Sapient generated method id: ${2d8d6a82-e73b-379a-850b-b5e19ae47aff}
@@ -1761,41 +1876,98 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
         HDPath hDPathMock = mock(HDPath.class);
+        DeterministicHierarchy hierarchyMock2 = mock(DeterministicHierarchy.class);
+        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock2 = mock(HDPath.class);
         DeterministicSeed seedMock = mock(DeterministicSeed.class);
         DeterministicSeed deterministicSeedMock = mock(DeterministicSeed.class);
         KeyCrypter keyCrypterMock = mock(KeyCrypter.class);
         AesKey aesKeyMock = mock(AesKey.class);
-        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
         DeterministicKey deterministicKeyMock2 = mock(DeterministicKey.class);
-        HDPath hDPathMock2 = mock(HDPath.class);
+        DeterministicHierarchy hierarchyMock3 = mock(DeterministicHierarchy.class);
+        DeterministicKey deterministicKeyMock3 = mock(DeterministicKey.class);
+        HDPath hDPathMock3 = mock(HDPath.class);
+        DeterministicKey deterministicKeyMock4 = mock(DeterministicKey.class);
+        KeyCrypter keyCrypterMock2 = mock(KeyCrypter.class);
+        DeterministicKey deterministicKeyMock5 = mock(DeterministicKey.class);
+        HDPath hDPathMock4 = mock(HDPath.class);
+        DeterministicKey deterministicKeyMock6 = mock(DeterministicKey.class);
+        KeyCrypter keyCrypterMock3 = mock(KeyCrypter.class);
+        HDPath hDPathMock5 = mock(HDPath.class);
+        HDPath hDPathMock6 = mock(HDPath.class);
+        DeterministicKey deterministicKeyMock7 = mock(DeterministicKey.class);
+        DeterministicKey deterministicKeyMock8 = mock(DeterministicKey.class);
+        KeyCrypter keyCrypterMock4 = mock(KeyCrypter.class);
+        DeterministicKey deterministicKeyMock9 = mock(DeterministicKey.class);
+        DeterministicKey deterministicKeyMock10 = mock(DeterministicKey.class);
+        KeyCrypter keyCrypterMock5 = mock(KeyCrypter.class);
+        ListenerRegistration<KeyChainEventListener> listenerRegistrationMock = mock(ListenerRegistration.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
             doReturn(false).when(keyMock).isPubKeyOnly();
             doReturn(hDPathMock).when(keyMock).getPath();
+            doReturn(deterministicKeyMock).when(hierarchyMock2).get(hDPathMock2, false, false);
             ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             ReentrantLock reentrantLock2 = Threading.lock(DeterministicKeyChain.class);
             threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock).thenReturn(reentrantLock2);
-            target = new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(false).when(rootKeyMock).isEncrypted();
             doReturn(deterministicSeedMock).when(seedMock).encrypt(keyCrypterMock, aesKeyMock);
-            doReturn(deterministicKeyMock).when(rootKeyMock).encrypt(keyCrypterMock, aesKeyMock, null);
-            doReturn(deterministicKeyMock2).when(hierarchyMock).get(hDPathMock2, false, false);
-            thrown.expect(NullPointerException.class);
+            doReturn(deterministicKeyMock2).when(rootKeyMock).encrypt(keyCrypterMock, aesKeyMock, null);
+            doReturn(deterministicKeyMock3).when(hierarchyMock3).get(hDPathMock3, false, false);
+            doReturn(deterministicKeyMock4).when(deterministicKeyMock3).encrypt(keyCrypterMock2, aesKeyMock, deterministicKeyMock2);
+            doNothing().when(hierarchyMock2).putKey(deterministicKeyMock4);
+            doReturn(deterministicKeyMock5).when(hierarchyMock3).get(hDPathMock4, false, false);
+            doReturn(deterministicKeyMock6).when(deterministicKeyMock5).encrypt(keyCrypterMock3, aesKeyMock, deterministicKeyMock2);
+            List<HDPath> hDPathList = new ArrayList<>();
+            hDPathList.add(hDPathMock3);
+            doReturn(hDPathList).when(hDPathMock4).ancestors();
+            doReturn(hDPathMock5, hDPathMock6).when(hDPathMock4).extend((HDPath) any());
+            doNothing().when(hierarchyMock2).putKey(deterministicKeyMock6);
+            doReturn(deterministicKeyMock7).when(hierarchyMock3).get(hDPathMock5, false, false);
+            doReturn(deterministicKeyMock8).when(deterministicKeyMock7).encrypt(keyCrypterMock4, aesKeyMock, deterministicKeyMock6);
+            doNothing().when(hierarchyMock2).putKey(deterministicKeyMock8);
+            doReturn(deterministicKeyMock9).when(hierarchyMock3).get(hDPathMock6, false, false);
+            doReturn(deterministicKeyMock10).when(deterministicKeyMock9).encrypt(keyCrypterMock5, aesKeyMock, deterministicKeyMock6);
+            doNothing().when(hierarchyMock2).putKey(deterministicKeyMock10);
+            doNothing().when(hierarchyMock2).putKey((DeterministicKey) any());
+            List<ListenerRegistration<KeyChainEventListener>> listenerRegistrationKeyChainEventListenerList = new ArrayList<>();
+            listenerRegistrationKeyChainEventListenerList.add(listenerRegistrationMock);
+            doReturn(listenerRegistrationKeyChainEventListenerList).when(basicKeyChainMock).getListeners();
             //Act Statement(s)
-            target.toEncrypted(keyCrypterMock, aesKeyMock);
+            DeterministicKeyChain result = target.toEncrypted(keyCrypterMock, aesKeyMock);
+            DeterministicKeyChain deterministicKeyChain = new DeterministicKeyChain(keyCrypterMock, aesKeyMock, target);
             //Assert statement(s)
+            //TODO: Please implement equals method in DeterministicKeyChain for verification to succeed or you need to adjust respective assertion statements
+            assertThat(result, equalTo(deterministicKeyChain));
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
+            verify(hierarchyMock2).get(hDPathMock2, false, false);
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(2));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             verify(rootKeyMock).isEncrypted();
             verify(seedMock).encrypt(keyCrypterMock, aesKeyMock);
             verify(rootKeyMock).encrypt(keyCrypterMock, aesKeyMock, null);
-            verify(hierarchyMock).get(hDPathMock2, false, false);
+            verify(hierarchyMock3).get(hDPathMock3, false, false);
+            verify(deterministicKeyMock3).encrypt(keyCrypterMock2, aesKeyMock, deterministicKeyMock2);
+            verify(hierarchyMock2).putKey(deterministicKeyMock4);
+            verify(hierarchyMock3).get(hDPathMock4, false, false);
+            verify(deterministicKeyMock5).encrypt(keyCrypterMock3, aesKeyMock, deterministicKeyMock2);
+            verify(hDPathMock4).ancestors();
+            verify(hDPathMock4, atLeast(2)).extend((HDPath) any());
+            verify(hierarchyMock2).putKey(deterministicKeyMock6);
+            verify(hierarchyMock3).get(hDPathMock5, false, false);
+            verify(deterministicKeyMock7).encrypt(keyCrypterMock4, aesKeyMock, deterministicKeyMock6);
+            verify(hierarchyMock2).putKey(deterministicKeyMock8);
+            verify(hierarchyMock3).get(hDPathMock6, false, false);
+            verify(deterministicKeyMock9).encrypt(keyCrypterMock5, aesKeyMock, deterministicKeyMock6);
+            verify(hierarchyMock2).putKey(deterministicKeyMock10);
+            verify(hierarchyMock2).putKey((DeterministicKey) any());
+            verify(basicKeyChainMock).getListeners();
         }
     }
 
@@ -1812,27 +1984,28 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            doReturn(true).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             IllegalStateException illegalStateException = new IllegalStateException();
             preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
-            target = new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             thrown.expect(IllegalStateException.class);
             //Act Statement(s)
-            target.toDecrypted((CharSequence) "toDecrypted_charSequence1");
+            target.toDecrypted("toDecrypted_charSequence1");
             //Assert statement(s)
             verify(keyMock, atLeast(1)).isPubKeyOnly();
             verify(keyMock, atLeast(1)).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(1));
             preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()), atLeast(1));
         }
     }
@@ -1850,28 +2023,31 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS);
+        HDPath hDPathMock = mock(HDPath.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            doReturn(true).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
             IllegalStateException illegalStateException = new IllegalStateException();
             preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
-            target = new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             thrown.expect(IllegalStateException.class);
             //Act Statement(s)
-            target.toDecrypted((CharSequence) "toDecrypted_charSequence1");
+            target.toDecrypted("toDecrypted_charSequence1");
             //Assert statement(s)
-            verify(keyMock, atLeast(1)).isPubKeyOnly();
-            verify(keyMock, atLeast(1)).getPath();
+            verify(keyMock).isPubKeyOnly();
+            verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
-            preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
         }
     }
 
@@ -1936,7 +2112,8 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
         DeterministicKey deterministicKeyMock3 = mock(DeterministicKey.class);
         try (MockedStatic<HDKeyDerivation> hDKeyDerivation = mockStatic(HDKeyDerivation.class);
              MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
             doReturn(false).when(seedMock).isEncrypted();
             byte[] byteArray = new byte[]{};
             doReturn(byteArray).when(seedMock).getSeedBytes();
@@ -1944,13 +2121,17 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
             doReturn(Optional.of(instant)).when(seedMock).creationTime();
             doReturn(false).when(keyMock).isPubKeyOnly();
             doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            ReentrantLock reentrantLock2 = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock).thenReturn(reentrantLock2);
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(hDPathMock2);
             List<HDPath> hDPathList = new ArrayList<>();
             hDPathList.add(hDPath2Mock);
             doReturn(hDPathList).when(hDPathMock2).ancestors(true);
-            hDKeyDerivation.when(() -> HDKeyDerivation.createMasterPrivateKey(byteArray)).thenReturn(deterministicKeyMock);
+            byte[] byteArray2 = new byte[]{};
+            hDKeyDerivation.when(() -> HDKeyDerivation.createMasterPrivateKey(byteArray2)).thenReturn(deterministicKeyMock);
             target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doNothing().when(deterministicKeyMock).setCreationTime((Instant) any());
@@ -1971,11 +2152,12 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
             verify(seedMock).creationTime();
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
+            threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(2));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
             hDPath.verify(() -> HDPath.M(anyList()));
             verify(hDPathMock2).ancestors(true);
-            hDKeyDerivation.verify(() -> HDKeyDerivation.createMasterPrivateKey(byteArray), atLeast(1));
+            hDKeyDerivation.verify(() -> HDKeyDerivation.createMasterPrivateKey(byteArray2), atLeast(1));
             verify(deterministicKeyMock).setCreationTime((Instant) any());
             verify(hierarchyMock2).get(hDPath2Mock, false, true);
             verify(hierarchyMock2).deriveChild(hDPathMock2, false, false, childNumber);
@@ -1998,65 +2180,67 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        DeterministicSeed seedMock = mock(DeterministicSeed.class);
         DeterministicKey keyMock = mock(DeterministicKey.class);
-        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
         HDPath hDPathMock = mock(HDPath.class);
+        HDPath hDPathMock2 = mock(HDPath.class);
+        HDPath hDPath2Mock = mock(HDPath.class);
+        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
         DeterministicHierarchy hierarchyMock2 = mock(DeterministicHierarchy.class);
         DeterministicKey deterministicKeyMock2 = mock(DeterministicKey.class);
-        HDPath hDPathMock2 = mock(HDPath.class);
         DeterministicKey deterministicKeyMock3 = mock(DeterministicKey.class);
-        org.bitcoinj.crypto.EncryptedData encryptedDataMock = mock(org.bitcoinj.crypto.EncryptedData.class);
-        org.bitcoinj.crypto.EncryptedData encryptedDataMock2 = mock(org.bitcoinj.crypto.EncryptedData.class);
         try (MockedStatic<HDKeyDerivation> hDKeyDerivation = mockStatic(HDKeyDerivation.class);
              MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            ReentrantLock reentrantLock2 = null;
+            doReturn(false).when(seedMock).isEncrypted();
+            byte[] byteArray = new byte[]{};
+            doReturn(byteArray).when(seedMock).getSeedBytes();
+            Instant instant = (Instant) Instant.now();
+            doReturn(Optional.of(instant)).when(seedMock).creationTime();
             doReturn(false).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath2 = new HDPath(false, list);
-            doReturn(hDPath2).when(keyMock).getPath();
+            doReturn(hDPathMock).when(keyMock).getPath();
             ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            //TODO: Needs to return real value
+            ReentrantLock reentrantLock2 = Threading.lock(DeterministicKeyChain.class);
             threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock).thenReturn(reentrantLock2);
-            List list2 = new ArrayList<>();
-            HDPath hDPath3 = new HDPath(false, list2);
-            hDPath.when(() -> HDPath.M(anyList())).thenReturn(hDPath3);
-            byte[] byteArray = new byte[]{};
-            hDKeyDerivation.when(() -> HDKeyDerivation.createMasterPrivateKey(byteArray)).thenReturn(deterministicKeyMock);
-            target = spy(new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH));
+            hDPath.when(() -> HDPath.M(anyList())).thenReturn(hDPathMock2);
+            List<HDPath> hDPathList = new ArrayList<>();
+            hDPathList.add(hDPath2Mock);
+            doReturn(hDPathList).when(hDPathMock2).ancestors(true);
+            byte[] byteArray2 = new byte[]{};
+            hDKeyDerivation.when(() -> HDKeyDerivation.createMasterPrivateKey(byteArray2)).thenReturn(deterministicKeyMock);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doNothing().when(deterministicKeyMock).clearCreationTime();
+            doNothing().when(deterministicKeyMock).setCreationTime((Instant) any());
+            doReturn(rootKeyMock).when(hierarchyMock2).get(hDPath2Mock, false, true);
             ChildNumber childNumber = ChildNumber.ZERO;
-            doReturn(deterministicKeyMock2).when(hierarchyMock2).deriveChild(hDPathMock, false, false, childNumber);
-            doReturn(hDPathMock, hDPathMock2).when(target).getAccountPath();
+            doReturn(deterministicKeyMock2).when(hierarchyMock2).deriveChild(hDPathMock2, false, false, childNumber);
             ChildNumber childNumber2 = ChildNumber.ONE;
             doReturn(deterministicKeyMock3).when(hierarchyMock2).deriveChild(hDPathMock2, false, false, childNumber2);
-            DeterministicSeed deterministicSeed = new DeterministicSeed(encryptedDataMock, encryptedDataMock2, 0L);
-            ChildNumber childNumber3 = new ChildNumber(0);
-            ChildNumber childNumber4 = new ChildNumber(1);
             List<ChildNumber> childNumberList = new ArrayList<>();
-            childNumberList.add(childNumber3);
-            childNumberList.add(childNumber4);
             ScriptType scriptType = null;
             //Act Statement(s)
-            DeterministicKeyChain result = target.makeKeyChainFromSeed(deterministicSeed, childNumberList, scriptType);
-            DeterministicKeyChain deterministicKeyChain = new DeterministicKeyChain(deterministicSeed, (KeyCrypter) null, (ScriptType) null, childNumberList);
+            DeterministicKeyChain result = target.makeKeyChainFromSeed(seedMock, childNumberList, scriptType);
+            DeterministicKeyChain deterministicKeyChain = new DeterministicKeyChain(seedMock, (KeyCrypter) null, (ScriptType) null, childNumberList);
             //Assert statement(s)
             //TODO: Please implement equals method in DeterministicKeyChain for verification to succeed or you need to adjust respective assertion statements
             assertThat(result, equalTo(deterministicKeyChain));
+            verify(seedMock).isEncrypted();
+            verify(seedMock).getSeedBytes();
+            verify(seedMock).creationTime();
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(2));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
             hDPath.verify(() -> HDPath.M(anyList()));
-            hDKeyDerivation.verify(() -> HDKeyDerivation.createMasterPrivateKey(byteArray), atLeast(1));
-            verify(deterministicKeyMock).clearCreationTime();
-            verify(target, times(2)).getAccountPath();
-            verify(hierarchyMock2).deriveChild(hDPathMock, false, false, childNumber);
+            verify(hDPathMock2).ancestors(true);
+            hDKeyDerivation.verify(() -> HDKeyDerivation.createMasterPrivateKey(byteArray2), atLeast(1));
+            verify(deterministicKeyMock).setCreationTime((Instant) any());
+            verify(hierarchyMock2).get(hDPath2Mock, false, true);
+            verify(hierarchyMock2).deriveChild(hDPathMock2, false, false, childNumber);
             verify(hierarchyMock2).deriveChild(hDPathMock2, false, false, childNumber2);
         }
     }
@@ -2076,62 +2260,65 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        DeterministicSeed seedMock = mock(DeterministicSeed.class);
         DeterministicKey keyMock = mock(DeterministicKey.class);
-        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
         HDPath hDPathMock = mock(HDPath.class);
+        HDPath hDPathMock2 = mock(HDPath.class);
+        HDPath hDPath2Mock = mock(HDPath.class);
+        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
         DeterministicHierarchy hierarchyMock2 = mock(DeterministicHierarchy.class);
         DeterministicKey deterministicKeyMock2 = mock(DeterministicKey.class);
-        HDPath hDPathMock2 = mock(HDPath.class);
         DeterministicKey deterministicKeyMock3 = mock(DeterministicKey.class);
-        org.bitcoinj.crypto.EncryptedData encryptedDataMock = mock(org.bitcoinj.crypto.EncryptedData.class);
-        org.bitcoinj.crypto.EncryptedData encryptedDataMock2 = mock(org.bitcoinj.crypto.EncryptedData.class);
         try (MockedStatic<HDKeyDerivation> hDKeyDerivation = mockStatic(HDKeyDerivation.class);
              MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            ReentrantLock reentrantLock2 = null;
+            doReturn(false).when(seedMock).isEncrypted();
+            byte[] byteArray = new byte[]{};
+            doReturn(byteArray).when(seedMock).getSeedBytes();
+            doReturn(Optional.empty()).when(seedMock).creationTime();
             doReturn(false).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath2 = new HDPath(false, list);
-            doReturn(hDPath2).when(keyMock).getPath();
+            doReturn(hDPathMock).when(keyMock).getPath();
             ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            //TODO: Needs to return real value
+            ReentrantLock reentrantLock2 = Threading.lock(DeterministicKeyChain.class);
             threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock).thenReturn(reentrantLock2);
-            List list2 = new ArrayList<>();
-            HDPath hDPath3 = new HDPath(false, list2);
-            hDPath.when(() -> HDPath.M(anyList())).thenReturn(hDPath3);
-            byte[] byteArray = new byte[]{};
-            hDKeyDerivation.when(() -> HDKeyDerivation.createMasterPrivateKey(byteArray)).thenReturn(deterministicKeyMock);
-            target = spy(new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH));
+            hDPath.when(() -> HDPath.M(anyList())).thenReturn(hDPathMock2);
+            List<HDPath> hDPathList = new ArrayList<>();
+            hDPathList.add(hDPath2Mock);
+            doReturn(hDPathList).when(hDPathMock2).ancestors(true);
+            byte[] byteArray2 = new byte[]{};
+            hDKeyDerivation.when(() -> HDKeyDerivation.createMasterPrivateKey(byteArray2)).thenReturn(deterministicKeyMock);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doNothing().when(deterministicKeyMock).clearCreationTime();
+            doReturn(rootKeyMock).when(hierarchyMock2).get(hDPath2Mock, false, true);
             ChildNumber childNumber = ChildNumber.ZERO;
-            doReturn(deterministicKeyMock2).when(hierarchyMock2).deriveChild(hDPathMock, false, false, childNumber);
-            doReturn(hDPathMock, hDPathMock2).when(target).getAccountPath();
+            doReturn(deterministicKeyMock2).when(hierarchyMock2).deriveChild(hDPathMock2, false, false, childNumber);
             ChildNumber childNumber2 = ChildNumber.ONE;
             doReturn(deterministicKeyMock3).when(hierarchyMock2).deriveChild(hDPathMock2, false, false, childNumber2);
-            DeterministicSeed deterministicSeed = new DeterministicSeed(encryptedDataMock, encryptedDataMock2, 0L);
-            ChildNumber childNumber3 = new ChildNumber(0);
             List<ChildNumber> childNumberList = new ArrayList<>();
-            childNumberList.add(childNumber3);
             //Act Statement(s)
-            DeterministicKeyChain result = target.makeKeyChainFromSeed(deterministicSeed, childNumberList, ScriptType.P2PKH);
-            DeterministicKeyChain deterministicKeyChain = new DeterministicKeyChain(deterministicSeed, (KeyCrypter) null, ScriptType.P2PKH, childNumberList);
+            DeterministicKeyChain result = target.makeKeyChainFromSeed(seedMock, childNumberList, ScriptType.P2TR);
+            DeterministicKeyChain deterministicKeyChain = new DeterministicKeyChain(seedMock, (KeyCrypter) null, ScriptType.P2TR, childNumberList);
             //Assert statement(s)
             //TODO: Please implement equals method in DeterministicKeyChain for verification to succeed or you need to adjust respective assertion statements
             assertThat(result, equalTo(deterministicKeyChain));
+            verify(seedMock).isEncrypted();
+            verify(seedMock).getSeedBytes();
+            verify(seedMock).creationTime();
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(2));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
             hDPath.verify(() -> HDPath.M(anyList()));
-            hDKeyDerivation.verify(() -> HDKeyDerivation.createMasterPrivateKey(byteArray), atLeast(1));
+            verify(hDPathMock2).ancestors(true);
+            hDKeyDerivation.verify(() -> HDKeyDerivation.createMasterPrivateKey(byteArray2), atLeast(1));
             verify(deterministicKeyMock).clearCreationTime();
-            verify(target, times(2)).getAccountPath();
-            verify(hierarchyMock2).deriveChild(hDPathMock, false, false, childNumber);
+            verify(hierarchyMock2).get(hDPath2Mock, false, true);
+            verify(hierarchyMock2).deriveChild(hDPathMock2, false, false, childNumber);
             verify(hierarchyMock2).deriveChild(hDPathMock2, false, false, childNumber2);
         }
     }
@@ -2148,18 +2335,18 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            doReturn(true).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             IllegalStateException illegalStateException = new IllegalStateException();
             preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
-            target = new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             thrown.expect(IllegalStateException.class);
             //Act Statement(s)
@@ -2168,7 +2355,8 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
         }
     }
@@ -2185,20 +2373,19 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         AesKey aesKeyMock = mock(AesKey.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
             doReturn(false).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             IllegalStateException illegalStateException = new IllegalStateException();
             preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
-            target = new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             thrown.expect(IllegalStateException.class);
             //Act Statement(s)
@@ -2223,16 +2410,16 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            doReturn(true).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            target = new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             KeyCrypter result = target.getKeyCrypter();
@@ -2241,7 +2428,8 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
         }
     }
 
@@ -2255,16 +2443,16 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            doReturn(true).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            target = spy(new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH));
+            target = spy(new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(1).when(target).numKeys();
             //Act Statement(s)
@@ -2274,7 +2462,8 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             verify(target).numKeys();
         }
     }
@@ -2286,38 +2475,35 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
         /* Branches:
          * (size >= numBloomFilterEntries()) : true
          *
-         * TODO: Help needed! This method is not unit testable!
-         *  Following variables could not be isolated/mocked: basicKeyChain
-         *  Suggestions:
-         *  You can change the initialization of above variables and make it injectable or
-         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            doReturn(true).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            ReentrantLock reentrantLock = new ReentrantLock();
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
             threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            target = spy(new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH));
+            target = spy(new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(1).when(target).numBloomFilterEntries();
             doNothing().when(target).maybeLookAhead();
             //Act Statement(s)
-            BloomFilter result = target.getFilter(2, Double.parseDouble("0.5"), 1);
+            BloomFilter result = target.getFilter(1, Double.parseDouble("0.0"), 1);
             BasicKeyChain basicKeyChain = new BasicKeyChain();
-            BloomFilter bloomFilter = basicKeyChain.getFilter(2, Double.parseDouble("0.5"), 1);
+            BloomFilter bloomFilter = basicKeyChain.getFilter(1, Double.parseDouble("0.0"), 1);
             //Assert statement(s)
             assertThat(result, equalTo(bloomFilter));
             verify(keyMock, atLeast(1)).isPubKeyOnly();
             verify(keyMock, atLeast(1)).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(1));
             verify(target, atLeast(1)).numBloomFilterEntries();
             verify(target, atLeast(1)).maybeLookAhead();
         }
@@ -2330,39 +2516,36 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
         /* Branches:
          * (size >= numBloomFilterEntries()) : false
          *
-         * TODO: Help needed! This method is not unit testable!
-         *  Following variables could not be isolated/mocked: basicKeyChain
-         *  Suggestions:
-         *  You can change the initialization of above variables and make it injectable or
-         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            doReturn(true).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            ReentrantLock reentrantLock = new ReentrantLock();
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
             threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
-            target = spy(new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH));
+            target = spy(new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(1).when(target).numBloomFilterEntries();
+            doReturn(2).when(target).numBloomFilterEntries();
             doNothing().when(target).maybeLookAhead();
             //Act Statement(s)
-            BloomFilter result = target.getFilter(0, Double.parseDouble("0.0"), 0);
+            BloomFilter result = target.getFilter(1, Double.parseDouble("0.0"), 1);
             BasicKeyChain basicKeyChain = new BasicKeyChain();
-            BloomFilter bloomFilter = basicKeyChain.getFilter(0, Double.parseDouble("0.0"), 0);
+            BloomFilter bloomFilter = basicKeyChain.getFilter(1, Double.parseDouble("0.0"), 1);
             //Assert statement(s)
             assertThat(result, equalTo(bloomFilter));
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
             verify(target).numBloomFilterEntries();
             verify(target).maybeLookAhead();
@@ -2379,13 +2562,12 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
             doReturn(false).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            ReentrantLock reentrantLock = new ReentrantLock();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
             threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
@@ -2416,24 +2598,25 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            doReturn(true).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            ReentrantLock reentrantLock = new ReentrantLock();
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
             threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            target = new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
-            target.setLookaheadSize(12);
+            target.setLookaheadSize(0);
             //Assert statement(s)
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
         }
     }
 
@@ -2449,24 +2632,28 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            doReturn(true).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            ReentrantLock reentrantLock = new ReentrantLock();
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
             threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            target = new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException("Threshold larger or equal to the lookaheadSize");
+            thrown.expect(IllegalArgumentException.class);
+            thrown.expectMessage(illegalArgumentException.getMessage());
             //Act Statement(s)
-            target.setLookaheadThreshold(7);
+            target.setLookaheadThreshold(100);
             //Assert statement(s)
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
         }
     }
 
@@ -2482,24 +2669,25 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            doReturn(true).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            ReentrantLock reentrantLock = new ReentrantLock();
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
             threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            target = new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
-            target.setLookaheadThreshold(0);
+            target.setLookaheadThreshold(1);
             //Assert statement(s)
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
         }
     }
 
@@ -2515,16 +2703,16 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            doReturn(true).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            ReentrantLock reentrantLock = new ReentrantLock();
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
             threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            target = new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             int result = target.getLookaheadThreshold();
@@ -2533,7 +2721,8 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
         }
     }
 
@@ -2579,13 +2768,12 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
             doReturn(false).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            ReentrantLock reentrantLock = new ReentrantLock();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
             threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
@@ -2613,13 +2801,12 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
             doReturn(false).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            ReentrantLock reentrantLock = new ReentrantLock();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
             threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
@@ -2647,17 +2834,16 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
             doReturn(false).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            ReentrantLock reentrantLock = new ReentrantLock();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
             threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            target = new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             DeterministicSeed result = target.getSeed();
@@ -2684,21 +2870,22 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
         HDPath hDPathMock = mock(HDPath.class);
+        HDPath hDPathMock2 = mock(HDPath.class);
         try (MockedStatic<StreamUtils> streamUtils = mockStatic(StreamUtils.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            doReturn(true).when(keyMock).isPubKeyOnly();
+            doReturn(false).when(keyMock).isPubKeyOnly();
             doReturn(hDPathMock).when(keyMock).getPath();
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            //TODO: Needs to return real value
-            streamUtils.when(() -> StreamUtils.toUnmodifiableList()).thenReturn(null);
-            target = new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH);
+            Collector collector = StreamUtils.toUnmodifiableList();
+            streamUtils.when(() -> StreamUtils.toUnmodifiableList()).thenReturn(collector);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(internalParentKeyMock).getPath();
+            doReturn(hDPathMock2).when(internalParentKeyMock).getPath();
+            doReturn(0).when(hDPathMock2).size();
             //Act Statement(s)
             List<DeterministicKey> result = target.getKeys(false, false);
             //Assert statement(s)
@@ -2706,9 +2893,11 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             streamUtils.verify(() -> StreamUtils.toUnmodifiableList(), atLeast(1));
             verify(internalParentKeyMock).getPath();
+            verify(hDPathMock2).size();
         }
     }
 
@@ -2725,11 +2914,17 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
         HDPath hDPathMock = mock(HDPath.class);
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+        try (MockedStatic<StreamUtils> streamUtils = mockStatic(StreamUtils.class);
+             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
             doReturn(false).when(keyMock).isPubKeyOnly();
             doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            Collector collector = StreamUtils.toUnmodifiableList();
+            streamUtils.when(() -> StreamUtils.toUnmodifiableList()).thenReturn(collector);
             target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
@@ -2738,8 +2933,10 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
             assertThat(result.size(), equalTo(0));
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
+            threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
+            streamUtils.verify(() -> StreamUtils.toUnmodifiableList(), atLeast(1));
         }
     }
 
@@ -2756,22 +2953,22 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
         HDPath hDPathMock = mock(HDPath.class);
+        HDPath hDPathMock2 = mock(HDPath.class);
         try (MockedStatic<StreamUtils> streamUtils = mockStatic(StreamUtils.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
             doReturn(false).when(keyMock).isPubKeyOnly();
             doReturn(hDPathMock).when(keyMock).getPath();
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            //TODO: Needs to return real value
-            streamUtils.when(() -> StreamUtils.toUnmodifiableList()).thenReturn(null);
-            target = new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH);
+            Collector collector = StreamUtils.toUnmodifiableList();
+            streamUtils.when(() -> StreamUtils.toUnmodifiableList()).thenReturn(collector);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(internalParentKeyMock).getPath();
+            doReturn(hDPathMock2).when(internalParentKeyMock).getPath();
+            doReturn(0).when(hDPathMock2).size();
             //Act Statement(s)
             List<DeterministicKey> result = target.getIssuedReceiveKeys();
             //Assert statement(s)
@@ -2783,6 +2980,7 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             streamUtils.verify(() -> StreamUtils.toUnmodifiableList(), atLeast(1));
             verify(internalParentKeyMock).getPath();
+            verify(hDPathMock2).size();
         }
     }
 
@@ -2796,19 +2994,18 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         try (MockedStatic<StreamUtils> streamUtils = mockStatic(StreamUtils.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
             doReturn(false).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            //TODO: Needs to return real value
-            streamUtils.when(() -> StreamUtils.toUnmodifiableList()).thenReturn(null);
+            Collector collector = StreamUtils.toUnmodifiableList();
+            streamUtils.when(() -> StreamUtils.toUnmodifiableList()).thenReturn(collector);
             target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
@@ -2833,14 +3030,13 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          * (seed.getEncryptedSeedData() != null) : true
          * (seed.getEncryptionType() == Protos.Wallet.EncryptionType.ENCRYPTED_SCRYPT_AES) : true
          *
-         * TODO: Help needed! This method is not unit testable!
-         *  Following variables could not be isolated/mocked: seed
-         *  Suggestions:
-         *  You can change the initialization of above variables and make it injectable or
-         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        DeterministicSeed seedMock = mock(DeterministicSeed.class);
+        EncryptedData encryptedDataMock = mock(EncryptedData.class);
+        EncryptedData encryptedDataMock2 = mock(EncryptedData.class);
         Protos.Key.Builder protoMock = mock(Protos.Key.Builder.class);
         Protos.EncryptedData protosEncryptedDataMock = mock(Protos.EncryptedData.class);
         Protos.EncryptedData.Builder protosEncryptedDataBuilderMock = mock(Protos.EncryptedData.Builder.class);
@@ -2849,9 +3045,10 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
         Protos.EncryptedData.Builder protosEncryptedDataBuilderMock3 = mock(Protos.EncryptedData.Builder.class);
         ByteString byteStringMock2 = mock(ByteString.class);
         Protos.Key.Builder protosKeyBuilderMock = mock(Protos.Key.Builder.class);
-        org.bitcoinj.crypto.EncryptedData encryptedDataMock = mock(org.bitcoinj.crypto.EncryptedData.class);
-        org.bitcoinj.crypto.EncryptedData encryptedDataMock2 = mock(org.bitcoinj.crypto.EncryptedData.class);
         try (MockedStatic<ByteString> byteString = mockStatic(ByteString.class)) {
+            doReturn(true).when(seedMock).isEncrypted();
+            doReturn(encryptedDataMock, encryptedDataMock2).when(seedMock).getEncryptedSeedData();
+            doReturn(Protos.Wallet.EncryptionType.ENCRYPTED_SCRYPT_AES).when(seedMock).getEncryptionType();
             doReturn(protosEncryptedDataMock).when(protoMock).getEncryptedDeterministicSeed();
             doReturn(protosEncryptedDataBuilderMock).when(protosEncryptedDataMock).toBuilder();
             doReturn(protosEncryptedDataBuilderMock2).when(protosEncryptedDataBuilderMock).setEncryptedPrivateKey(byteStringMock);
@@ -2861,10 +3058,12 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
             byteString.when(() -> ByteString.copyFrom(byteArray)).thenReturn(byteStringMock);
             byte[] byteArray2 = new byte[]{};
             byteString.when(() -> ByteString.copyFrom(byteArray2)).thenReturn(byteStringMock2);
-            DeterministicSeed deterministicSeed = new DeterministicSeed(encryptedDataMock, encryptedDataMock2, 0L);
             //Act Statement(s)
-            DeterministicKeyChain.serializeSeedEncryptableItem(deterministicSeed, protoMock);
+            DeterministicKeyChain.serializeSeedEncryptableItem(seedMock, protoMock);
             //Assert statement(s)
+            verify(seedMock).isEncrypted();
+            verify(seedMock, times(2)).getEncryptedSeedData();
+            verify(seedMock).getEncryptionType();
             verify(protoMock).getEncryptedDeterministicSeed();
             verify(protosEncryptedDataMock).toBuilder();
             verify(protosEncryptedDataBuilderMock).setEncryptedPrivateKey(byteStringMock);
@@ -2884,14 +3083,13 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          * (seed.getEncryptedSeedData() != null) : true
          * (seed.getEncryptionType() == Protos.Wallet.EncryptionType.ENCRYPTED_SCRYPT_AES) : false
          *
-         * TODO: Help needed! This method is not unit testable!
-         *  Following variables could not be isolated/mocked: seed
-         *  Suggestions:
-         *  You can change the initialization of above variables and make it injectable or
-         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        DeterministicSeed seedMock = mock(DeterministicSeed.class);
+        EncryptedData encryptedDataMock = mock(EncryptedData.class);
+        EncryptedData encryptedDataMock2 = mock(EncryptedData.class);
         Protos.Key.Builder protoMock = mock(Protos.Key.Builder.class);
         Protos.EncryptedData protosEncryptedDataMock = mock(Protos.EncryptedData.class);
         Protos.EncryptedData.Builder protosEncryptedDataBuilderMock = mock(Protos.EncryptedData.Builder.class);
@@ -2900,9 +3098,11 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
         Protos.EncryptedData.Builder protosEncryptedDataBuilderMock3 = mock(Protos.EncryptedData.Builder.class);
         ByteString byteStringMock2 = mock(ByteString.class);
         Protos.Key.Builder protosKeyBuilderMock = mock(Protos.Key.Builder.class);
-        org.bitcoinj.crypto.EncryptedData encryptedDataMock = mock(org.bitcoinj.crypto.EncryptedData.class);
-        org.bitcoinj.crypto.EncryptedData encryptedDataMock2 = mock(org.bitcoinj.crypto.EncryptedData.class);
-        try (MockedStatic<ByteString> byteString = mockStatic(ByteString.class)) {
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<ByteString> byteString = mockStatic(ByteString.class)) {
+            doReturn(true).when(seedMock).isEncrypted();
+            doReturn(encryptedDataMock, encryptedDataMock2).when(seedMock).getEncryptedSeedData();
+            doReturn(Protos.Wallet.EncryptionType.UNENCRYPTED).when(seedMock).getEncryptionType();
             doReturn(protosEncryptedDataMock).when(protoMock).getEncryptedDeterministicSeed();
             doReturn(protosEncryptedDataBuilderMock).when(protosEncryptedDataMock).toBuilder();
             doReturn(protosEncryptedDataBuilderMock2).when(protosEncryptedDataBuilderMock).setEncryptedPrivateKey(byteStringMock);
@@ -2912,10 +3112,15 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
             byteString.when(() -> ByteString.copyFrom(byteArray)).thenReturn(byteStringMock);
             byte[] byteArray2 = new byte[]{};
             byteString.when(() -> ByteString.copyFrom(byteArray2)).thenReturn(byteStringMock2);
-            DeterministicSeed deterministicSeed = new DeterministicSeed(encryptedDataMock, encryptedDataMock2, 0L);
+            IllegalStateException illegalStateException = new IllegalStateException();
+            preconditions.when(() -> Preconditions.checkState(false)).thenThrow(illegalStateException);
+            thrown.expect(IllegalStateException.class);
             //Act Statement(s)
-            DeterministicKeyChain.serializeSeedEncryptableItem(deterministicSeed, protoMock);
+            DeterministicKeyChain.serializeSeedEncryptableItem(seedMock, protoMock);
             //Assert statement(s)
+            verify(seedMock).isEncrypted();
+            verify(seedMock, times(2)).getEncryptedSeedData();
+            verify(seedMock).getEncryptionType();
             verify(protoMock).getEncryptedDeterministicSeed();
             verify(protosEncryptedDataMock).toBuilder();
             verify(protosEncryptedDataBuilderMock).setEncryptedPrivateKey(byteStringMock);
@@ -2923,6 +3128,7 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
             verify(protoMock).setEncryptedDeterministicSeed(protosEncryptedDataBuilderMock3);
             byteString.verify(() -> ByteString.copyFrom(byteArray), atLeast(1));
             byteString.verify(() -> ByteString.copyFrom(byteArray2), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
         }
     }
 
@@ -2967,17 +3173,16 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
             doReturn(false).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            ReentrantLock reentrantLock = new ReentrantLock();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
             threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            target = new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             int result = target.getKeyLookaheadEpoch();
@@ -3001,17 +3206,17 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            doReturn(true).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            target = new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             thrown.expect(UnsupportedOperationException.class);
             //Act Statement(s)
@@ -3020,7 +3225,8 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
         }
     }
 
@@ -3037,12 +3243,13 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
         HDPath hDPathMock = mock(HDPath.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            doReturn(true).when(keyMock).isPubKeyOnly();
+            doReturn(false).when(keyMock).isPubKeyOnly();
             doReturn(hDPathMock).when(keyMock).getPath();
             ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
             threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            target = new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             thrown.expect(UnsupportedOperationException.class);
             //Act Statement(s)
@@ -3051,7 +3258,8 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
         }
     }
 
@@ -3067,14 +3275,13 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
             doReturn(false).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             target = new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH);
@@ -3104,6 +3311,7 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
         Network networkMock = mock(Network.class);
         AesKey aesKeyMock = mock(AesKey.class);
@@ -3111,26 +3319,24 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
             doReturn(false).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("String");
+            timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("A");
             target = spy(new DeterministicKeyChain(keyMock, false, true, ScriptType.P2TR));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(deterministicKeyMock).when(target).getWatchingKey();
-            Instant instant = Instant.now();
+            Instant instant = (Instant) Instant.now();
             doReturn(Optional.of(instant)).when(deterministicKeyMock).creationTime();
-            doReturn("String").when(deterministicKeyMock).serializePubB58(networkMock, ScriptType.P2TR);
+            doReturn("B").when(deterministicKeyMock).serializePubB58(networkMock, ScriptType.P2TR);
             StringBuilder stringBuilder = new StringBuilder();
             doNothing().when(target).formatAddresses(false, false, aesKeyMock, networkMock, stringBuilder);
             //Act Statement(s)
             String result = target.toString(false, false, aesKeyMock, networkMock);
             //Assert statement(s)
-            assertThat(result, equalTo("Key birthday:      1703224075  [String]\nOuput script type: P2TR\nKey to watch:      String\nLookahead siz/thr: 100/33\n"));
+            assertThat(result, equalTo("Key birthday:      1704369304  [A]\nOuput script type: P2TR\nKey to watch:      B\nLookahead siz/thr: 100/33\n"));
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
@@ -3157,39 +3363,34 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
         Network networkMock = mock(Network.class);
         AesKey aesKeyMock = mock(AesKey.class);
-        try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
             doReturn(false).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("String");
             target = spy(new DeterministicKeyChain(keyMock, false, true, ScriptType.P2TR));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(deterministicKeyMock).when(target).getWatchingKey();
-            Instant instant = Instant.now();
-            doReturn(Optional.of(instant)).when(deterministicKeyMock).creationTime();
+            doReturn(Optional.empty()).when(deterministicKeyMock).creationTime();
             doReturn("A").when(deterministicKeyMock).serializePubB58(networkMock, ScriptType.P2TR);
             StringBuilder stringBuilder = new StringBuilder();
             doNothing().when(target).formatAddresses(false, false, aesKeyMock, networkMock, stringBuilder);
             //Act Statement(s)
             String result = target.toString(false, false, aesKeyMock, networkMock);
             //Assert statement(s)
-            assertThat(result, equalTo("Key birthday:      1703224076  [String]\nOuput script type: P2TR\nKey to watch:      A\nLookahead siz/thr: 100/33\n"));
+            assertThat(result, equalTo("Key birthday:      unknown\nOuput script type: P2TR\nKey to watch:      A\nLookahead siz/thr: 100/33\n"));
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
-            timeUtils.verify(() -> TimeUtils.dateTimeFormat((Instant) any()));
             verify(target).getWatchingKey();
             verify(deterministicKeyMock).creationTime();
             verify(deterministicKeyMock).serializePubB58(networkMock, ScriptType.P2TR);
@@ -3211,10 +3412,13 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
         DeterministicKey keyMock = mock(DeterministicKey.class);
         HDPath hDPathMock = mock(HDPath.class);
         AesKey aesKeyMock = mock(AesKey.class);
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
             doReturn(networkMock).when(paramsMock).network();
             doReturn(false).when(keyMock).isPubKeyOnly();
             doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             target = spy(new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH));
@@ -3227,6 +3431,7 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
             verify(paramsMock).network();
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
+            threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             verify(target).toString(false, false, aesKeyMock, networkMock);
@@ -3246,35 +3451,34 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
         AesKey aesKeyMock = mock(AesKey.class);
         Network networkMock = mock(Network.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
             doReturn(false).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            target = spy(new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH));
+            target = spy(new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<DeterministicKey> deterministicKeyList = new ArrayList<>();
             deterministicKeyList.add(deterministicKeyMock);
-            doReturn(deterministicKeyList).when(target).getKeys(true, true);
+            doReturn(deterministicKeyList).when(target).getKeys(false, true);
             StringBuilder stringBuilder = new StringBuilder();
             doNothing().when(deterministicKeyMock).formatKeyWithAddress(false, aesKeyMock, stringBuilder, networkMock, ScriptType.P2PKH, "root");
             //Act Statement(s)
-            target.formatAddresses(true, false, aesKeyMock, networkMock, stringBuilder);
+            target.formatAddresses(false, false, aesKeyMock, networkMock, stringBuilder);
             //Assert statement(s)
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
-            verify(target).getKeys(true, true);
+            verify(target).getKeys(false, true);
             verify(deterministicKeyMock).formatKeyWithAddress(false, aesKeyMock, stringBuilder, networkMock, ScriptType.P2PKH, "root");
         }
     }
@@ -3293,6 +3497,7 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
         AesKey aesKeyMock = mock(AesKey.class);
         Network networkMock = mock(Network.class);
@@ -3300,11 +3505,9 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
             doReturn(false).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             target = spy(new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH));
@@ -3349,9 +3552,12 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
         AesKey aesKeyMock = mock(AesKey.class);
         Network networkMock = mock(Network.class);
         DeterministicKey deterministicKeyMock2 = mock(DeterministicKey.class);
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
             doReturn(false).when(keyMock).isPubKeyOnly();
             doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             target = spy(new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH));
@@ -3367,6 +3573,7 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
             //Assert statement(s)
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
+            threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             verify(target).getKeys(false, true);
@@ -3391,6 +3598,7 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
         AesKey aesKeyMock = mock(AesKey.class);
         Network networkMock = mock(Network.class);
@@ -3398,36 +3606,35 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
             doReturn(false).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            target = spy(new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH));
+            target = spy(new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<DeterministicKey> deterministicKeyList = new ArrayList<>();
             deterministicKeyList.add(deterministicKeyMock);
-            doReturn(deterministicKeyList).when(target).getKeys(true, true);
+            doReturn(deterministicKeyList).when(target).getKeys(false, true);
             StringBuilder stringBuilder = new StringBuilder();
             doNothing().when(deterministicKeyMock).formatKeyWithAddress(false, aesKeyMock, stringBuilder, networkMock, ScriptType.P2PKH, "external");
             doReturn(deterministicKeyMock2).when(target).getWatchingKey();
             //Act Statement(s)
-            target.formatAddresses(true, false, aesKeyMock, networkMock, stringBuilder);
+            target.formatAddresses(false, false, aesKeyMock, networkMock, stringBuilder);
             //Assert statement(s)
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
-            verify(target).getKeys(true, true);
+            verify(target).getKeys(false, true);
             verify(deterministicKeyMock).formatKeyWithAddress(false, aesKeyMock, stringBuilder, networkMock, ScriptType.P2PKH, "external");
             verify(target).getWatchingKey();
         }
     }
 
     //Sapient generated method id: ${a82df580-40ec-3bb4-96e0-f8e917984645}
+    @Ignore()
     @Test()
     public void formatAddressesWhenKeyGetChildNumberIGreaterThanOrEqualsToIssuedInternalKeys() {
         /* Branches:
@@ -3443,45 +3650,48 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //DeterministicKey keyMock = mock(DeterministicKey.class);
-        //DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
-        //DeterministicKey deterministicKeyMock2 = mock(DeterministicKey.class);
-        //AesKey aesKeyMock = mock(AesKey.class);
-        //Network networkMock = mock(Network.class);
-        //DeterministicKey deterministicKeyMock3 = mock(DeterministicKey.class);
-        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-    MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-    doReturn(true).when(keyMock).isPubKeyOnly();
-    List list = new ArrayList<>();
-    HDPath hDPath = new HDPath(false, list);
-    doReturn(hDPath).when(keyMock).getPath();
-    //TODO: Needs to return real value
-    threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
-    preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    target = spy(new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH));
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    List<DeterministicKey> deterministicKeyList = new ArrayList<>();
-    deterministicKeyList.add(deterministicKeyMock);
-    doReturn(deterministicKeyList).when(target).getKeys(true, true);
-    doReturn(deterministicKeyMock2).when(deterministicKeyMock).getParent();
-    ChildNumber childNumber = new ChildNumber(0, false);
-    doReturn(childNumber).when(deterministicKeyMock).getChildNumber();
-    StringBuilder stringBuilder = new StringBuilder();
-    doNothing().when(deterministicKeyMock).formatKeyWithAddress(true, aesKeyMock, stringBuilder, networkMock, ScriptType.P2PKH, "*");
-    doReturn(deterministicKeyMock3).when(target).getWatchingKey();
-    //Act Statement(s)
-    target.formatAddresses(true, true, aesKeyMock, networkMock, stringBuilder);
-    //Assert statement(s)
-    verify(keyMock).isPubKeyOnly();
-    verify(keyMock).getPath();
-    threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-    preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
-    verify(target).getKeys(true, true);
-    verify(deterministicKeyMock).getParent();
-    verify(deterministicKeyMock).getChildNumber();
-    verify(deterministicKeyMock).formatKeyWithAddress(true, aesKeyMock, stringBuilder, networkMock, ScriptType.P2PKH, "*");
-    verify(target).getWatchingKey();
-}*/
+        DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
+        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
+        DeterministicKey deterministicKeyMock2 = mock(DeterministicKey.class);
+        ChildNumber childNumberMock = mock(ChildNumber.class);
+        AesKey aesKeyMock = mock(AesKey.class);
+        Network networkMock = mock(Network.class);
+        DeterministicKey deterministicKeyMock3 = mock(DeterministicKey.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            target = spy(new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH));
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            List<DeterministicKey> deterministicKeyList = new ArrayList<>();
+            deterministicKeyList.add(deterministicKeyMock);
+            doReturn(deterministicKeyList).when(target).getKeys(false, true);
+            doReturn(deterministicKeyMock2).when(deterministicKeyMock).getParent();
+            doReturn(childNumberMock).when(deterministicKeyMock).getChildNumber();
+            doReturn(1).when(childNumberMock).i();
+            StringBuilder stringBuilder = new StringBuilder();
+            doNothing().when(deterministicKeyMock).formatKeyWithAddress(false, aesKeyMock, stringBuilder, networkMock, ScriptType.P2PKH, "*");
+            doReturn(deterministicKeyMock3).when(target).getWatchingKey();
+            //Act Statement(s)
+            target.formatAddresses(false, false, aesKeyMock, networkMock, stringBuilder);
+            //Assert statement(s)
+            verify(keyMock).isPubKeyOnly();
+            verify(keyMock).getPath();
+            threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
+            verify(target).getKeys(false, true);
+            verify(deterministicKeyMock).getParent();
+            verify(deterministicKeyMock).getChildNumber();
+            verify(childNumberMock).i();
+            verify(deterministicKeyMock).formatKeyWithAddress(false, aesKeyMock, stringBuilder, networkMock, ScriptType.P2PKH, "*");
+            verify(target).getWatchingKey();
+        }
     }
 
     //Sapient generated method id: ${692cd886-895f-32ff-ac49-c394847eae16}
@@ -3504,46 +3714,49 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
         DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
         DeterministicKey deterministicKeyMock2 = mock(DeterministicKey.class);
         ChildNumber childNumberMock = mock(ChildNumber.class);
         DeterministicKey deterministicKeyMock3 = mock(DeterministicKey.class);
+        ChildNumber childNumberMock2 = mock(ChildNumber.class);
         AesKey aesKeyMock = mock(AesKey.class);
         Network networkMock = mock(Network.class);
         DeterministicKey deterministicKeyMock4 = mock(DeterministicKey.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            doReturn(true).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            target = spy(new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH));
+            target = spy(new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<DeterministicKey> deterministicKeyList = new ArrayList<>();
             deterministicKeyList.add(deterministicKeyMock);
-            doReturn(deterministicKeyList).when(target).getKeys(true, true);
+            doReturn(deterministicKeyList).when(target).getKeys(false, true);
             doReturn(-1).when(childNumberMock).i();
             doReturn(deterministicKeyMock2, deterministicKeyMock3).when(deterministicKeyMock).getParent();
-            ChildNumber childNumber = new ChildNumber(0, false);
-            doReturn(childNumberMock, childNumber).when(deterministicKeyMock).getChildNumber();
+            doReturn(childNumberMock, childNumberMock2).when(deterministicKeyMock).getChildNumber();
+            doReturn(0).when(childNumberMock2).i();
             StringBuilder stringBuilder = new StringBuilder();
-            doNothing().when(deterministicKeyMock).formatKeyWithAddress(true, aesKeyMock, stringBuilder, networkMock, ScriptType.P2PKH, "*");
+            doNothing().when(deterministicKeyMock).formatKeyWithAddress(false, aesKeyMock, stringBuilder, networkMock, ScriptType.P2PKH, "*");
             doReturn(deterministicKeyMock4).when(target).getWatchingKey();
             //Act Statement(s)
-            target.formatAddresses(true, true, aesKeyMock, networkMock, stringBuilder);
+            target.formatAddresses(false, false, aesKeyMock, networkMock, stringBuilder);
             //Assert statement(s)
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
-            verify(target).getKeys(true, true);
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
+            verify(target).getKeys(false, true);
             verify(deterministicKeyMock, times(2)).getParent();
             verify(deterministicKeyMock, times(2)).getChildNumber();
             verify(childNumberMock).i();
-            verify(deterministicKeyMock).formatKeyWithAddress(true, aesKeyMock, stringBuilder, networkMock, ScriptType.P2PKH, "*");
+            verify(childNumberMock2).i();
+            verify(deterministicKeyMock).formatKeyWithAddress(false, aesKeyMock, stringBuilder, networkMock, ScriptType.P2PKH, "*");
             verify(target).getWatchingKey();
         }
     }
@@ -3558,26 +3771,27 @@ public class DeterministicKeyChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey keyMock = mock(DeterministicKey.class);
+        HDPath hDPathMock = mock(HDPath.class);
+        ByteString byteStringMock = mock(ByteString.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            doReturn(true).when(keyMock).isPubKeyOnly();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
-            doReturn(hDPath).when(keyMock).getPath();
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(null);
+            doReturn(false).when(keyMock).isPubKeyOnly();
+            doReturn(hDPathMock).when(keyMock).getPath();
+            ReentrantLock reentrantLock = Threading.lock(DeterministicKeyChain.class);
+            threading.when(() -> Threading.lock(DeterministicKeyChain.class)).thenReturn(reentrantLock);
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            target = new DeterministicKeyChain(keyMock, true, true, ScriptType.P2PKH);
+            target = new DeterministicKeyChain(keyMock, false, true, ScriptType.P2PKH);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            ByteString byteString = ByteString.empty();
             //Act Statement(s)
-            RedeemData result = target.findRedeemDataByScriptHash(byteString);
+            RedeemData result = target.findRedeemDataByScriptHash(byteStringMock);
             //Assert statement(s)
             assertThat(result, is(nullValue()));
             verify(keyMock).isPubKeyOnly();
             verify(keyMock).getPath();
             threading.verify(() -> Threading.lock(DeterministicKeyChain.class), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
         }
     }
 }

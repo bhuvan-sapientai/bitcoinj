@@ -31,10 +31,12 @@ public class DaemonThreadFactorySapientGeneratedJunit4Test {
         DaemonThreadFactory target = new DaemonThreadFactory("name1");
         //TODO: Needs initialization with real value
         Runnable runnable = null;
+
         //Act Statement(s)
         Thread result = target.newThread(runnable);
         ThreadFactory threadFactory = Executors.defaultThreadFactory();
         Thread thread = threadFactory.newThread((Runnable) null);
+
         //Assert statement(s)
         //TODO: Please implement equals method in Thread for verification to succeed or you need to adjust respective assertion statements
         assertThat(result, equalTo(thread));

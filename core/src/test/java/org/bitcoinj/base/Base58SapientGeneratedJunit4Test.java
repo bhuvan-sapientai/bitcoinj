@@ -35,8 +35,10 @@ public class Base58SapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{};
+
         //Act Statement(s)
         String result = Base58.encode(byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo(""));
     }
@@ -57,8 +59,10 @@ public class Base58SapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{(byte) 0};
+
         //Act Statement(s)
         String result = Base58.encode(byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo("1"));
     }
@@ -75,6 +79,7 @@ public class Base58SapientGeneratedJunit4Test {
         thrown.expect(IllegalArgumentException.class);
         thrown.expectMessage(illegalArgumentException.getMessage());
         byte[] byteArray = new byte[]{};
+
         //Act Statement(s)
         Base58.encodeChecked(256, byteArray);
     }
@@ -110,9 +115,11 @@ public class Base58SapientGeneratedJunit4Test {
         /* Branches:
          * (input.length() == 0) : true
          */
+
         //Act Statement(s)
         byte[] result = Base58.decode("");
         byte[] byteResultArray = new byte[]{};
+
         //Assert statement(s)
         assertThat(result, equalTo(byteResultArray));
     }
@@ -128,6 +135,7 @@ public class Base58SapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         thrown.expect(AddressFormatException.InvalidCharacter.class);
+
         //Act Statement(s)
         Base58.decode("\uFFFF");
     }
@@ -151,6 +159,7 @@ public class Base58SapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         thrown.expect(ArrayIndexOutOfBoundsException.class);
+
         //Act Statement(s)
         Base58.decode("1A");
     }
@@ -174,6 +183,7 @@ public class Base58SapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         thrown.expect(ArrayIndexOutOfBoundsException.class);
+
         //Act Statement(s)
         Base58.decode("P");
     }

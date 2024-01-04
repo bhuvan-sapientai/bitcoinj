@@ -267,11 +267,11 @@ methods:
       filledByUser: false
     uuid: "db344e3b-696d-3b02-8e35-1aaa5300bde6"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "bits"
     returnType: "long"
@@ -972,12 +972,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "3B63E6E85C0ACF2D3A48DE17D55E56E4"
+    modelFingerprint: "E3E3F55EFA585746DCE50C0E2887A385"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "6F72F967E3162BF5AC4B30BB72D78EE8"
+      modelFingerprint: "BC8DA871DAA01DF161BF3CE87FC89FBB"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -992,9 +992,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 123456789
-              suggestedContent: !<regular>
-                value: 123456789
+                value: 0
               valueType: "long"
               uuid: "of_long1"
               fixed: false
@@ -1007,10 +1005,6 @@ methods:
           - name: "bits"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 123456789
-              suggestedContent: !<regular>
-                value: 123456789
               valueType: "long"
               uuid: "of_long1"
               fixed: false
@@ -1025,7 +1019,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "buf"
-      modelFingerprint: "D9502874ABE1CA67297A590F5B7E0FB1"
+      modelFingerprint: "E78EB9D5CB826E0A6A0C7C85F54F4F2A"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1067,7 +1061,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "D443FCA5982459A6B11BB072DD2161AA"
+      modelFingerprint: "7D316644F1B80F06BF95B6F66B39B36C"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1109,11 +1103,11 @@ methods:
       filledByUser: false
     uuid: "74367ac6-67d1-3ba8-9bdd-4aafa43d4139"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "serialize"
     returnType: "byte[]"
@@ -1344,11 +1338,11 @@ methods:
       filledByUser: false
     uuid: "9d328af1-2293-3544-bbbc-a0683c1f9fbe"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "toString"
     returnType: "java.lang.String"

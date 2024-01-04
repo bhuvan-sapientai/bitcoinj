@@ -21,9 +21,11 @@ public class ByteArraySapientGeneratedJunit4Test {
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{};
         ByteArray target = new ByteArray(byteArray);
+
         //Act Statement(s)
         byte[] result = target.bytes();
         byte[] byteResultArray = new byte[]{};
+
         //Assert statement(s)
         assertThat(result, equalTo(byteResultArray));
     }
@@ -34,8 +36,10 @@ public class ByteArraySapientGeneratedJunit4Test {
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{};
         ByteArray target = new ByteArray(byteArray);
+
         //Act Statement(s)
         String result = target.formatHex();
+
         //Assert statement(s)
         assertThat(result, equalTo(""));
     }
@@ -48,8 +52,10 @@ public class ByteArraySapientGeneratedJunit4Test {
         byte[] byteArray = new byte[]{};
         ByteArray target = new ByteArray(byteArray);
         ByteArray byteArrayMock = mock(ByteArray.class);
+
         //Act Statement(s)
         int result = target.compareTo(byteArrayMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(0));
     }

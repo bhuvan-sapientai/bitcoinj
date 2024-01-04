@@ -20,9 +20,11 @@ public class BitcoinNetworkSapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void fromStringTest() {
+
         //Act Statement(s)
         Optional<BitcoinNetwork> result = BitcoinNetwork.fromString("nameString1");
         Optional<BitcoinNetwork> bitcoinNetworkOptional = Optional.of(BitcoinNetwork.MAINNET);
+
         //Assert statement(s)
         assertThat(result, equalTo(bitcoinNetworkOptional));
     }
@@ -33,9 +35,11 @@ public class BitcoinNetworkSapientGeneratedJunit4Test {
         /* Branches:
          * (branch expression (line 201)) : true
          */
+
         //Act Statement(s)
         Optional<BitcoinNetwork> result = BitcoinNetwork.fromIdString("idString1");
         Optional<BitcoinNetwork> bitcoinNetworkOptional = Optional.empty();
+
         //Assert statement(s)
         assertThat(result, equalTo(bitcoinNetworkOptional));
     }

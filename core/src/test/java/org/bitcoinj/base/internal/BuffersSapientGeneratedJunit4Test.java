@@ -35,6 +35,8 @@ public class BuffersSapientGeneratedJunit4Test {
     @Rule()
     public Timeout timeoutRule = Timeout.seconds(5);
 
+    private final VarInt varIntMock = mock(VarInt.class);
+
     //Sapient generated method id: ${53004c16-0c3e-3d32-a417-c11d744f0919}
     @Ignore()
     @Test()
@@ -59,7 +61,6 @@ public class BuffersSapientGeneratedJunit4Test {
     @Test()
     public void readLengthPrefixedBytesTest() throws Throwable {
         //Arrange Statement(s)
-        VarInt varIntMock = mock(VarInt.class);
         try (MockedStatic<Buffers> buffers = mockStatic(Buffers.class, CALLS_REAL_METHODS);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<VarInt> varInt = mockStatic(VarInt.class)) {
@@ -86,20 +87,24 @@ public class BuffersSapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void writeLengthPrefixedBytesTest() throws BufferOverflowException {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
         try (MockedStatic<VarInt> varInt = mockStatic(VarInt.class)) {
-            VarInt varInt2 = new VarInt(0L);
-            varInt.when(() -> VarInt.of(1L)).thenReturn(varInt2);
+            varInt.when(() -> VarInt.of(0L)).thenReturn(varIntMock);
+            byte[] byteArray = new byte[]{};
+            doReturn(byteArray).when(varIntMock).serialize();
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            byte[] byteArray = new byte[]{(byte) 0};
+            byte[] byteArray2 = new byte[]{};
             //Act Statement(s)
-            ByteBuffer result = Buffers.writeLengthPrefixedBytes(byteBuffer, byteArray);
-            byte[] byteArray2 = new byte[]{(byte) 0};
-            ByteBuffer byteBuffer2 = byteBuffer.put(byteArray2);
-            ByteBuffer byteBuffer3 = byteBuffer2.put(byteArray);
+            ByteBuffer result = Buffers.writeLengthPrefixedBytes(byteBuffer, byteArray2);
+            ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
             //Assert statement(s)
-            assertThat(result, equalTo(byteBuffer3));
-            varInt.verify(() -> VarInt.of(1L), atLeast(1));
+            assertThat(result, equalTo(byteBuffer2));
+            varInt.verify(() -> VarInt.of(0L), atLeast(1));
+            verify(varIntMock).serialize();
         }
     }
 
@@ -130,18 +135,17 @@ public class BuffersSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<VarInt> varInt = mockStatic(VarInt.class)) {
-            VarInt varInt2 = new VarInt(0L);
-            varInt.when(() -> VarInt.of(13L)).thenReturn(varInt2);
+            varInt.when(() -> VarInt.of(0L)).thenReturn(varIntMock);
+            byte[] byteArray = new byte[]{};
+            doReturn(byteArray).when(varIntMock).serialize();
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
             //Act Statement(s)
-            ByteBuffer result = Buffers.writeLengthPrefixedString(byteBuffer, "Hello, World!");
-            byte[] byteArray = new byte[]{};
-            ByteBuffer byteBuffer2 = byteBuffer.put(byteArray);
-            byte[] byteArray2 = new byte[]{(byte) 72, (byte) 101, (byte) 108, (byte) 108, (byte) 111, (byte) 44, (byte) 32, (byte) 87, (byte) 111, (byte) 114, (byte) 108, (byte) 100, (byte) 33};
-            ByteBuffer byteBuffer3 = byteBuffer2.put(byteArray2);
+            ByteBuffer result = Buffers.writeLengthPrefixedString(byteBuffer, "str1");
+            ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
             //Assert statement(s)
-            assertThat(result, equalTo(byteBuffer3));
-            varInt.verify(() -> VarInt.of(13L), atLeast(1));
+            assertThat(result, equalTo(byteBuffer2));
+            varInt.verify(() -> VarInt.of(0L), atLeast(1));
+            verify(varIntMock).serialize();
         }
     }
 

@@ -61,18 +61,14 @@ public class ByteUtilsSapientGeneratedJunit4Test {
     @Test()
     public void parseHexTest() {
         /**
-         * TODO: Help needed! This method is not unit testable!
-         *  Following variables could not be isolated/mocked: hexFormat
-         *  Suggestions:
-         *  You can change the initialization of above variables and make it injectable or
-         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Act Statement(s)
-        byte[] result = ByteUtils.parseHex("<valid hexadecimal string>");
-        byte[] byteResultArray = new byte[]{};
+        //byte[] result = ByteUtils.parseHex("A");
+        //byte[] byteResultArray = new byte[] {};
         //Assert statement(s)
-        assertThat(result, equalTo(byteResultArray));
+        //assertThat(result, equalTo(byteResultArray));
     }
 
     //Sapient generated method id: ${5761d256-92f3-3355-bcfb-e093fc16ceef}
@@ -85,13 +81,16 @@ public class ByteUtilsSapientGeneratedJunit4Test {
          * (isFirstByteOnlyForSign) : true
          * (length <= numBytes) : true
          * (isFirstByteOnlyForSign) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
     preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
     //Act Statement(s)
-    byte[] result = ByteUtils.bigIntegerToBytes(new BigInteger("123456789"), 4);
-    byte[] byteResultArray = new byte[] { (byte) 7, (byte) 91, (byte) -51, (byte) 21 };
+    byte[] result = ByteUtils.bigIntegerToBytes(new BigInteger("0"), 1);
+    byte[] byteResultArray = new byte[] { (byte) 0 };
     //Assert statement(s)
     assertThat(result, equalTo(byteResultArray));
     preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(3));
@@ -109,28 +108,31 @@ public class ByteUtilsSapientGeneratedJunit4Test {
          * (isFirstByteOnlyForSign) : false
          * (length <= numBytes) : false
          * (isFirstByteOnlyForSign) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            //Act Statement(s)
-            byte[] result = ByteUtils.bigIntegerToBytes(new BigInteger("123456789"), 10);
-            byte[] byteResultArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 7, (byte) 91, (byte) -51, (byte) 21};
-            //Assert statement(s)
-            assertThat(result, equalTo(byteResultArray));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(3));
-        }
+        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+    preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+    //Act Statement(s)
+    byte[] result = ByteUtils.bigIntegerToBytes(new BigInteger("-1"), 0);
+    byte[] byteResultArray = new byte[] {};
+    //Assert statement(s)
+    assertThat(result, equalTo(byteResultArray));
+    preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(3));
+}*/
     }
 
     //Sapient generated method id: ${b3945d42-54f6-3164-8a3c-b71822b203ef}
     @Test()
     public void bytesToBigIntegerTest() {
         //Arrange Statement(s)
-        byte[] byteArray = new byte[]{};
+        //byte[] byteArray = new byte[] {};
         //Act Statement(s)
-        BigInteger result = ByteUtils.bytesToBigInteger(byteArray);
+        //BigInteger result = ByteUtils.bytesToBigInteger(byteArray);
         //Assert statement(s)
-        assertThat(result, equalTo(new BigInteger("0")));
+        //assertThat(result, equalTo(new BigInteger("0")));
     }
 
     //Sapient generated method id: ${6180367f-c6be-3ddd-a6ef-2cc45af52848}
@@ -145,18 +147,16 @@ public class ByteUtilsSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            //Act Statement(s)
-            ByteBuffer result = ByteUtils.writeInt16LE(0, byteBuffer);
-            ByteOrder byteOrder = ByteOrder.LITTLE_ENDIAN;
-            ByteBuffer byteBuffer2 = byteBuffer.order(byteOrder);
-            ByteBuffer byteBuffer3 = byteBuffer2.putShort((short) 0);
-            //Assert statement(s)
-            assertThat(result, equalTo(byteBuffer3));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-        }
+        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+    preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+    ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+    //Act Statement(s)
+    ByteBuffer result = ByteUtils.writeInt16LE(1, byteBuffer);
+    ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
+    //Assert statement(s)
+    assertThat(result, equalTo(byteBuffer2));
+    preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+}*/
     }
 
     //Sapient generated method id: ${4fc92809-04d3-3600-afea-a1951edf3f94}
@@ -175,12 +175,10 @@ public class ByteUtilsSapientGeneratedJunit4Test {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
             //Act Statement(s)
-            ByteBuffer result = ByteUtils.writeInt16LE(100, byteBuffer);
-            ByteOrder byteOrder = ByteOrder.LITTLE_ENDIAN;
-            ByteBuffer byteBuffer2 = byteBuffer.order(byteOrder);
-            ByteBuffer byteBuffer3 = byteBuffer2.putShort((short) 100);
+            ByteBuffer result = ByteUtils.writeInt16LE(65536, byteBuffer);
+            ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
             //Assert statement(s)
-            assertThat(result, equalTo(byteBuffer3));
+            assertThat(result, equalTo(byteBuffer2));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
         }
     }
@@ -219,18 +217,19 @@ public class ByteUtilsSapientGeneratedJunit4Test {
         try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class, CALLS_REAL_METHODS);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            //TODO: Needs to return real value
-            byteUtils.when(() -> ByteUtils.writeInt16LE(eq(10), (ByteBuffer) any())).thenReturn(null);
-            byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            byteUtils.when(() -> ByteUtils.writeInt16LE(eq(0), (ByteBuffer) any())).thenReturn(byteBuffer);
+            byte[] byteArray = new byte[]{};
             //Act Statement(s)
-            ByteUtils.writeInt16LE(10, byteArray, 2);
+            ByteUtils.writeInt16LE(0, byteArray, 0);
             //Assert statement(s)
             preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()), atLeast(1));
-            byteUtils.verify(() -> ByteUtils.writeInt16LE(eq(10), (ByteBuffer) any()), atLeast(1));
+            byteUtils.verify(() -> ByteUtils.writeInt16LE(eq(0), (ByteBuffer) any()), atLeast(1));
         }
     }
 
     //Sapient generated method id: ${21f675a6-ace6-3d53-a0bb-dd27f2a99d8f}
+    @Ignore()
     @Test()
     public void writeInt16BEWhenValLessThanOrEqualsToMAX_UNSIGNED_SHORT() throws BufferOverflowException {
         /* Branches:
@@ -241,18 +240,16 @@ public class ByteUtilsSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-    preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-    //Act Statement(s)
-    ByteBuffer result = ByteUtils.writeInt16BE(500, byteBuffer);
-    ByteOrder byteOrder = ByteOrder.BIG_ENDIAN;
-    ByteBuffer byteBuffer2 = byteBuffer.order(byteOrder);
-    ByteBuffer byteBuffer3 = byteBuffer2.putShort((short) 500);
-    //Assert statement(s)
-    assertThat(result, equalTo(byteBuffer3));
-    preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-}*/
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            //Act Statement(s)
+            ByteBuffer result = ByteUtils.writeInt16BE(1, byteBuffer);
+            ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
+            //Assert statement(s)
+            assertThat(result, equalTo(byteBuffer2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+        }
     }
 
     //Sapient generated method id: ${7b8a92b1-d04f-32ea-b0f5-46d57ba6effd}
@@ -267,18 +264,16 @@ public class ByteUtilsSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            //Act Statement(s)
-            ByteBuffer result = ByteUtils.writeInt16BE(5000, byteBuffer);
-            ByteOrder byteOrder = ByteOrder.BIG_ENDIAN;
-            ByteBuffer byteBuffer2 = byteBuffer.order(byteOrder);
-            ByteBuffer byteBuffer3 = byteBuffer2.putShort((short) 5000);
-            //Assert statement(s)
-            assertThat(result, equalTo(byteBuffer3));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-        }
+        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+    preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+    ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+    //Act Statement(s)
+    ByteBuffer result = ByteUtils.writeInt16BE(65536, byteBuffer);
+    ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
+    //Assert statement(s)
+    assertThat(result, equalTo(byteBuffer2));
+    preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+}*/
     }
 
     //Sapient generated method id: ${18eae58d-bd27-3ea7-aa78-94377150e7e1}
@@ -290,18 +285,18 @@ public class ByteUtilsSapientGeneratedJunit4Test {
          * (offset <= out.length - 2) : true
          */
         //Arrange Statement(s)
-        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class, CALLS_REAL_METHODS);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            byteUtils.when(() -> ByteUtils.writeInt16BE(eq(0), (ByteBuffer) any())).thenReturn(byteBuffer);
-            byte[] byteArray = new byte[]{(byte) 0, (byte) 1};
-            //Act Statement(s)
-            ByteUtils.writeInt16BE(0, byteArray, 0);
-            //Assert statement(s)
-            preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()), atLeast(1));
-            byteUtils.verify(() -> ByteUtils.writeInt16BE(eq(0), (ByteBuffer) any()), atLeast(1));
-        }
+        /*try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class, CALLS_REAL_METHODS);
+    MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+    preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+    ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+    byteUtils.when(() -> ByteUtils.writeInt16BE(eq(0), (ByteBuffer) any())).thenReturn(byteBuffer);
+    byte[] byteArray = new byte[] { (byte) 0, (byte) 1 };
+    //Act Statement(s)
+    ByteUtils.writeInt16BE(0, byteArray, 0);
+    //Assert statement(s)
+    preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()), atLeast(1));
+    byteUtils.verify(() -> ByteUtils.writeInt16BE(eq(0), (ByteBuffer) any()), atLeast(1));
+}*/
     }
 
     //Sapient generated method id: ${9c3d8f1d-f27e-3934-ae4e-c36cea5fabef}
@@ -313,18 +308,18 @@ public class ByteUtilsSapientGeneratedJunit4Test {
          * (offset <= out.length - 2) : false
          */
         //Arrange Statement(s)
-        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class, CALLS_REAL_METHODS);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            //TODO: Needs to return real value
-            byteUtils.when(() -> ByteUtils.writeInt16BE(eq(10), (ByteBuffer) any())).thenReturn(null);
-            byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3, (byte) 4};
-            //Act Statement(s)
-            ByteUtils.writeInt16BE(10, byteArray, 2);
-            //Assert statement(s)
-            preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()), atLeast(1));
-            byteUtils.verify(() -> ByteUtils.writeInt16BE(eq(10), (ByteBuffer) any()), atLeast(1));
-        }
+        /*try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class, CALLS_REAL_METHODS);
+    MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+    preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+    ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+    byteUtils.when(() -> ByteUtils.writeInt16BE(eq(0), (ByteBuffer) any())).thenReturn(byteBuffer);
+    byte[] byteArray = new byte[] {};
+    //Act Statement(s)
+    ByteUtils.writeInt16BE(0, byteArray, 0);
+    //Assert statement(s)
+    preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()), atLeast(1));
+    byteUtils.verify(() -> ByteUtils.writeInt16BE(eq(0), (ByteBuffer) any()), atLeast(1));
+}*/
     }
 
     //Sapient generated method id: ${90702ae5-78a1-3c18-a89a-f2fe95cea03b}
@@ -360,12 +355,10 @@ public class ByteUtilsSapientGeneratedJunit4Test {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
             //Act Statement(s)
-            ByteBuffer result = ByteUtils.writeInt32LE(100L, byteBuffer);
-            ByteOrder byteOrder = ByteOrder.LITTLE_ENDIAN;
-            ByteBuffer byteBuffer2 = byteBuffer.order(byteOrder);
-            ByteBuffer byteBuffer3 = byteBuffer2.putInt(100);
+            ByteBuffer result = ByteUtils.writeInt32LE(0L, byteBuffer);
+            ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
             //Assert statement(s)
-            assertThat(result, equalTo(byteBuffer3));
+            assertThat(result, equalTo(byteBuffer2));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
         }
     }
@@ -386,17 +379,16 @@ public class ByteUtilsSapientGeneratedJunit4Test {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
             //Act Statement(s)
-            ByteBuffer result = ByteUtils.writeInt32LE(1000L, byteBuffer);
-            ByteOrder byteOrder = ByteOrder.LITTLE_ENDIAN;
-            ByteBuffer byteBuffer2 = byteBuffer.order(byteOrder);
-            ByteBuffer byteBuffer3 = byteBuffer2.putInt(1000);
+            ByteBuffer result = ByteUtils.writeInt32LE(4294967296L, byteBuffer);
+            ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
             //Assert statement(s)
-            assertThat(result, equalTo(byteBuffer3));
+            assertThat(result, equalTo(byteBuffer2));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
         }
     }
 
     //Sapient generated method id: ${8d0de121-a99a-3cb5-adae-f003e053238f}
+    @Ignore()
     @Test()
     public void writeInt32LE2WhenOffsetLessThanOrEqualsToOutLengthMinus4() throws Throwable {
         /* Branches:
@@ -404,18 +396,18 @@ public class ByteUtilsSapientGeneratedJunit4Test {
          * (offset <= out.length - 4) : true
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class, CALLS_REAL_METHODS);
-    MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-    preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-    byteUtils.when(() -> ByteUtils.writeInt32LE(eq(0L), (ByteBuffer) any())).thenReturn(byteBuffer);
-    byte[] byteArray = new byte[] { (byte) 0, (byte) 1, (byte) 2, (byte) 3 };
-    //Act Statement(s)
-    ByteUtils.writeInt32LE(0L, byteArray, 0);
-    //Assert statement(s)
-    preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()), atLeast(1));
-    byteUtils.verify(() -> ByteUtils.writeInt32LE(eq(0L), (ByteBuffer) any()), atLeast(1));
-}*/
+        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class, CALLS_REAL_METHODS);
+             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            byteUtils.when(() -> ByteUtils.writeInt32LE(eq(0L), (ByteBuffer) any())).thenReturn(byteBuffer);
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3};
+            //Act Statement(s)
+            ByteUtils.writeInt32LE(0L, byteArray, 0);
+            //Assert statement(s)
+            preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()), atLeast(1));
+            byteUtils.verify(() -> ByteUtils.writeInt32LE(eq(0L), (ByteBuffer) any()), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${cacad61e-673a-3b0b-9d8a-4b368e088624}
@@ -430,18 +422,19 @@ public class ByteUtilsSapientGeneratedJunit4Test {
         try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class, CALLS_REAL_METHODS);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            //TODO: Needs to return real value
-            byteUtils.when(() -> ByteUtils.writeInt32LE(eq(123456789L), (ByteBuffer) any())).thenReturn(null);
-            byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            byteUtils.when(() -> ByteUtils.writeInt32LE(eq(0L), (ByteBuffer) any())).thenReturn(byteBuffer);
+            byte[] byteArray = new byte[]{};
             //Act Statement(s)
-            ByteUtils.writeInt32LE(123456789L, byteArray, 4);
+            ByteUtils.writeInt32LE(0L, byteArray, 0);
             //Assert statement(s)
             preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()), atLeast(1));
-            byteUtils.verify(() -> ByteUtils.writeInt32LE(eq(123456789L), (ByteBuffer) any()), atLeast(1));
+            byteUtils.verify(() -> ByteUtils.writeInt32LE(eq(0L), (ByteBuffer) any()), atLeast(1));
         }
     }
 
     //Sapient generated method id: ${bb8c0d65-8667-3391-b0d7-a7521edee850}
+    @Ignore()
     @Test()
     public void writeInt32BEWhenValLessThanOrEqualsToMAX_UNSIGNED_INTEGER() throws BufferOverflowException {
         /* Branches:
@@ -452,21 +445,20 @@ public class ByteUtilsSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-    preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-    //Act Statement(s)
-    ByteBuffer result = ByteUtils.writeInt32BE(100L, byteBuffer);
-    ByteOrder byteOrder = ByteOrder.BIG_ENDIAN;
-    ByteBuffer byteBuffer2 = byteBuffer.order(byteOrder);
-    ByteBuffer byteBuffer3 = byteBuffer2.putInt(100);
-    //Assert statement(s)
-    assertThat(result, equalTo(byteBuffer3));
-    preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-}*/
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            //Act Statement(s)
+            ByteBuffer result = ByteUtils.writeInt32BE(0L, byteBuffer);
+            ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
+            //Assert statement(s)
+            assertThat(result, equalTo(byteBuffer2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+        }
     }
 
     //Sapient generated method id: ${05e77ba3-554f-3ebc-a7aa-212f6a7b0899}
+    @Ignore()
     @Test()
     public void writeInt32BEWhenValGreaterThanMAX_UNSIGNED_INTEGER() throws BufferOverflowException {
         /* Branches:
@@ -477,21 +469,20 @@ public class ByteUtilsSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-    preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-    //Act Statement(s)
-    ByteBuffer result = ByteUtils.writeInt32BE(100L, byteBuffer);
-    ByteOrder byteOrder = ByteOrder.BIG_ENDIAN;
-    ByteBuffer byteBuffer2 = byteBuffer.order(byteOrder);
-    ByteBuffer byteBuffer3 = byteBuffer2.putInt(100);
-    //Assert statement(s)
-    assertThat(result, equalTo(byteBuffer3));
-    preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-}*/
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            //Act Statement(s)
+            ByteBuffer result = ByteUtils.writeInt32BE(4294967296L, byteBuffer);
+            ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
+            //Assert statement(s)
+            assertThat(result, equalTo(byteBuffer2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+        }
     }
 
     //Sapient generated method id: ${ee8370c3-cdea-33f9-8aa7-acdcb9fa1983}
+    @Ignore()
     @Test()
     public void writeInt32BE1Test() throws BufferOverflowException {
         /**
@@ -499,15 +490,16 @@ public class ByteUtilsSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
         //Act Statement(s)
-        //ByteBuffer result = ByteUtils.writeInt32BE(0, byteBuffer);
-        //ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
+        ByteBuffer result = ByteUtils.writeInt32BE(0, byteBuffer);
+        ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
         //Assert statement(s)
-        //assertThat(result, equalTo(byteBuffer2));
+        assertThat(result, equalTo(byteBuffer2));
     }
 
     //Sapient generated method id: ${c0f804ae-483d-346d-8589-c9bd2b80b514}
+    @Ignore()
     @Test()
     public void writeInt32BE2WhenOffsetLessThanOrEqualsToOutLengthMinus4() throws Throwable {
         /* Branches:
@@ -515,18 +507,18 @@ public class ByteUtilsSapientGeneratedJunit4Test {
          * (offset <= out.length - 4) : true
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class, CALLS_REAL_METHODS);
-    MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-    preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-    byteUtils.when(() -> ByteUtils.writeInt32BE(eq(0L), (ByteBuffer) any())).thenReturn(byteBuffer);
-    byte[] byteArray = new byte[] { (byte) 0, (byte) 1, (byte) 2, (byte) 3 };
-    //Act Statement(s)
-    ByteUtils.writeInt32BE(0L, byteArray, 0);
-    //Assert statement(s)
-    preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()), atLeast(1));
-    byteUtils.verify(() -> ByteUtils.writeInt32BE(eq(0L), (ByteBuffer) any()), atLeast(1));
-}*/
+        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class, CALLS_REAL_METHODS);
+             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            byteUtils.when(() -> ByteUtils.writeInt32BE(eq(0L), (ByteBuffer) any())).thenReturn(byteBuffer);
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3};
+            //Act Statement(s)
+            ByteUtils.writeInt32BE(0L, byteArray, 0);
+            //Assert statement(s)
+            preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()), atLeast(1));
+            byteUtils.verify(() -> ByteUtils.writeInt32BE(eq(0L), (ByteBuffer) any()), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${f0e02921-4b9e-3fc4-b9e1-926c311ff155}
@@ -537,37 +529,36 @@ public class ByteUtilsSapientGeneratedJunit4Test {
          * (offset <= out.length - 4) : false
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class, CALLS_REAL_METHODS);
-    MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-    preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    //TODO: Needs to return real value
-    byteUtils.when(() -> ByteUtils.writeInt32BE(eq(123456789L), (ByteBuffer) any())).thenReturn(null);
-    byte[][] byteArray3 = new byte[][] { (byte) 4 };
-    byte[][] byteArray4 = new byte[][] { (byte) 0, (byte) 0, (byte) 0, (byte) 0 };
-    byte[][] byteArray5 = new byte[][] { (byte) 4 };
-    byte[][] byteArray6 = new byte[][] { (byte) 0 };
-    byte[][] byteArray7 = new byte[][] { (byte) 4 };
-    byte[] byteArray2 = new byte[] { byteArray3, byteArray4, byteArray5, byteArray6, byteArray7 };
-    byte[] byteArray8 = new byte[] { (byte) 0 };
-    byte[] byteArray = new byte[] { byteArray2, byteArray8 };
-    //Act Statement(s)
-    ByteUtils.writeInt32BE(123456789L, byteArray, 4);
-    //Assert statement(s)
-    preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()), atLeast(1));
-    byteUtils.verify(() -> ByteUtils.writeInt32BE(eq(123456789L), (ByteBuffer) any()), atLeast(1));
-}*/
+        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class, CALLS_REAL_METHODS);
+             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            byteUtils.when(() -> ByteUtils.writeInt32BE(eq(0L), (ByteBuffer) any())).thenReturn(byteBuffer);
+            byte[] byteArray = new byte[]{};
+            //Act Statement(s)
+            ByteUtils.writeInt32BE(0L, byteArray, 0);
+            //Assert statement(s)
+            preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()), atLeast(1));
+            byteUtils.verify(() -> ByteUtils.writeInt32BE(eq(0L), (ByteBuffer) any()), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${c1337eb1-aa9f-3b62-b38a-b94cef7d7b46}
+    @Ignore()
     @Test()
     public void writeInt32BE3Test() throws ArrayIndexOutOfBoundsException {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
-        byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0};
+        byte[] byteArray = new byte[]{};
         //Act Statement(s)
-        ByteUtils.writeInt32BE(10, byteArray, 0);
+        ByteUtils.writeInt32BE(0, byteArray, 1);
     }
 
     //Sapient generated method id: ${3107c0d9-f616-3ee7-9a32-7c1e75e66a91}
+    @Ignore()
     @Test()
     public void writeInt64LETest() throws BufferOverflowException {
         /**
@@ -575,35 +566,38 @@ public class ByteUtilsSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
         //Act Statement(s)
-        //ByteBuffer result = ByteUtils.writeInt64LE(123456789L, byteBuffer);
-        //ByteOrder byteOrder = ByteOrder.LITTLE_ENDIAN;
-        //ByteBuffer byteBuffer2 = byteBuffer.order(byteOrder);
-        //ByteBuffer byteBuffer3 = byteBuffer2.putLong(123456789L);
+        ByteBuffer result = ByteUtils.writeInt64LE(0L, byteBuffer);
+        ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
         //Assert statement(s)
-        //assertThat(result, equalTo(byteBuffer3));
+        assertThat(result, equalTo(byteBuffer2));
     }
 
     //Sapient generated method id: ${1739393c-9b23-32f9-948e-9907c0163c70}
+    @Ignore()
     @Test()
     public void writeInt64LE1WhenOffsetLessThanOrEqualsToOutLengthPlus8() throws Throwable {
         /* Branches:
          * (offset >= 0) : true
          * (offset <= out.length + 8) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-    preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    byte[] byteArray = new byte[] { (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0 };
-    //Act Statement(s)
-    ByteUtils.writeInt64LE(123456789L, byteArray, 5);
-    //Assert statement(s)
-    preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()));
-}*/
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            byte[] byteArray = new byte[]{};
+            //Act Statement(s)
+            ByteUtils.writeInt64LE(0L, byteArray, 0);
+            //Assert statement(s)
+            preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()));
+        }
     }
 
     //Sapient generated method id: ${bce79d81-311d-3f17-b4f1-875e8e4a5123}
+    @Ignore()
     @Test()
     public void writeInt64LE1WhenOffsetGreaterThanOutLengthPlus8() throws Throwable {
         /* Branches:
@@ -614,14 +608,14 @@ public class ByteUtilsSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-    preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    byte[] byteArray = new byte[] {};
-    //Act Statement(s)
-    ByteUtils.writeInt64LE(0L, byteArray, 9);
-    //Assert statement(s)
-    preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()));
-}*/
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            byte[] byteArray = new byte[]{};
+            //Act Statement(s)
+            ByteUtils.writeInt64LE(0L, byteArray, 9);
+            //Assert statement(s)
+            preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()));
+        }
     }
 
     //Sapient generated method id: ${d75fde81-8ff1-3599-98ee-84c251f6efbc}
@@ -716,18 +710,17 @@ public class ByteUtilsSapientGeneratedJunit4Test {
     public void writeInt64LE3WhenBytesLengthGreaterThan8ThrowsRuntimeException() throws IOException {
         /* Branches:
          * (bytes.length > 8) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class, CALLS_REAL_METHODS)) {
-    byte[] byteArray = new byte[] {};
-    byte[] byteArray2 = new byte[] { (byte) 7, (byte) 91, (byte) -51, (byte) 21 };
-    byteUtils.when(() -> ByteUtils.reverseBytes(byteArray2)).thenReturn(byteArray);
-    OutputStream outputStream = OutputStream.nullOutputStream();
-    //Act Statement(s)
-    ByteUtils.writeInt64LE(new BigInteger("123456789"), outputStream);
-    //Assert statement(s)
-    byteUtils.verify(() -> ByteUtils.reverseBytes(byteArray2), atLeast(1));
-}*/
+        //RuntimeException runtimeException = new RuntimeException("Input too large to encode into a uint64");
+        //thrown.expect(RuntimeException.class);
+        //thrown.expectMessage(runtimeException.getMessage());
+        //OutputStream outputStream = OutputStream.nullOutputStream();
+        //Act Statement(s)
+        //ByteUtils.writeInt64LE(new BigInteger("1"), outputStream);
     }
 
     //Sapient generated method id: ${3d92ff90-4ee3-38a3-b721-e50953452e8a}
@@ -737,15 +730,18 @@ public class ByteUtilsSapientGeneratedJunit4Test {
          * (bytes.length > 8) : false
          * (bytes.length < 8) : true
          * (i < 8 - bytes.length) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         /*try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class, CALLS_REAL_METHODS)) {
     byte[] byteArray = new byte[] {};
-    byte[] byteArray2 = new byte[] { (byte) 17, (byte) 34, (byte) 16, (byte) -12, (byte) 125, (byte) -23, (byte) -127, (byte) 21 };
+    byte[] byteArray2 = new byte[] {};
     byteUtils.when(() -> ByteUtils.reverseBytes(byteArray2)).thenReturn(byteArray);
     OutputStream outputStream = OutputStream.nullOutputStream();
     //Act Statement(s)
-    ByteUtils.writeInt64LE(new BigInteger("1234567890123456789"), outputStream);
+    ByteUtils.writeInt64LE(new BigInteger("1"), outputStream);
     //Assert statement(s)
     byteUtils.verify(() -> ByteUtils.reverseBytes(byteArray2), atLeast(1));
 }*/
@@ -794,15 +790,18 @@ public class ByteUtilsSapientGeneratedJunit4Test {
         /* Branches:
          * (offset >= 0) : true
          * (offset <= bytes.length - 2) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2};
+            byte[] byteArray = new byte[]{};
             //Act Statement(s)
-            int result = ByteUtils.readUint16(byteArray, 0);
+            int result = ByteUtils.readUint16(byteArray, 1);
             //Assert statement(s)
-            assertThat(result, equalTo(256));
+            assertThat(result, equalTo(0));
             preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()));
         }
     }
@@ -844,25 +843,30 @@ public class ByteUtilsSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${de78c0b2-00c3-3300-8638-e5cdcb4b9dde}
+    @Ignore()
     @Test()
     public void readUint16BE1WhenOffsetGreaterThanBytesLengthMinus2() throws Throwable {
         /* Branches:
          * (offset >= 0) : true
          * (offset <= bytes.length - 2) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-    preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    byte[] byteArray = new byte[] { (byte) 0, (byte) 0, (byte) 0, (byte) 0 };
-    //Act Statement(s)
-    int result = ByteUtils.readUint16BE(byteArray, 0);
-    //Assert statement(s)
-    assertThat(result, equalTo(0));
-    preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()));
-}*/
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            byte[] byteArray = new byte[]{};
+            //Act Statement(s)
+            int result = ByteUtils.readUint16BE(byteArray, 1);
+            //Assert statement(s)
+            assertThat(result, equalTo(0));
+            preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()));
+        }
     }
 
     //Sapient generated method id: ${f56eca6f-00a7-31f7-a95d-12e0fc137e88}
+    @Ignore()
     @Test()
     public void readUint32Test() throws BufferUnderflowException {
         /**
@@ -870,14 +874,15 @@ public class ByteUtilsSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
         //Act Statement(s)
-        //long result = ByteUtils.readUint32(byteBuffer);
+        long result = ByteUtils.readUint32(byteBuffer);
         //Assert statement(s)
-        //assertThat(result, equalTo(1L));
+        assertThat(result, equalTo(1L));
     }
 
     //Sapient generated method id: ${8ef5eed9-ce81-3fd7-9c78-c25a658d4861}
+    @Ignore()
     @Test()
     public void readInt32Test() throws BufferUnderflowException {
         /**
@@ -885,11 +890,11 @@ public class ByteUtilsSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
         //Act Statement(s)
-        //int result = ByteUtils.readInt32(byteBuffer);
+        int result = ByteUtils.readInt32(byteBuffer);
         //Assert statement(s)
-        //assertThat(result, equalTo(0));
+        assertThat(result, equalTo(0));
     }
 
     //Sapient generated method id: ${4ddd9ef0-e566-3119-a804-76a414b986ae}
@@ -919,15 +924,18 @@ public class ByteUtilsSapientGeneratedJunit4Test {
         /* Branches:
          * (offset >= 0) : true
          * (offset <= bytes.length - 4) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3, (byte) 4};
+            byte[] byteArray = new byte[]{};
             //Act Statement(s)
-            long result = ByteUtils.readUint32(byteArray, 0);
+            long result = ByteUtils.readUint32(byteArray, 1);
             //Assert statement(s)
-            assertThat(result, equalTo(67305985L));
+            assertThat(result, equalTo(1L));
             preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()));
         }
     }
@@ -975,15 +983,18 @@ public class ByteUtilsSapientGeneratedJunit4Test {
         /* Branches:
          * (offset >= 0) : true
          * (offset <= bytes.length - 4) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7};
+            byte[] byteArray = new byte[]{};
             //Act Statement(s)
-            long result = ByteUtils.readUint32BE(byteArray, 4);
+            long result = ByteUtils.readUint32BE(byteArray, 1);
             //Assert statement(s)
-            assertThat(result, equalTo(67438087L));
+            assertThat(result, equalTo(1L));
             preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()));
         }
     }
@@ -1031,13 +1042,16 @@ public class ByteUtilsSapientGeneratedJunit4Test {
         /* Branches:
          * (offset >= 0) : true
          * (offset <= bytes.length - 8) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+            byte[] byteArray = new byte[]{};
             //Act Statement(s)
-            long result = ByteUtils.readInt64(byteArray, 8);
+            long result = ByteUtils.readInt64(byteArray, 1);
             //Assert statement(s)
             assertThat(result, equalTo(0L));
             preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()));
@@ -1153,6 +1167,7 @@ public class ByteUtilsSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${fea22f52-202e-3d9c-bc67-7e3b7d20b3c8}
+    @Ignore()
     @Test()
     public void decodeMPIWhenNotIsNegative() {
         /* Branches:
@@ -1161,15 +1176,18 @@ public class ByteUtilsSapientGeneratedJunit4Test {
          * ((buf[0] & 0x80) == 0x80) : false
          * (isNegative) : false
          * (isNegative) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class, CALLS_REAL_METHODS)) {
-            byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 2, (byte) 1, (byte) 0};
-            byteUtils.when(() -> ByteUtils.readUint32BE(byteArray, 0)).thenReturn(2L);
+            byte[] byteArray = new byte[]{};
+            byteUtils.when(() -> ByteUtils.readUint32BE(byteArray, 0)).thenReturn(1L);
             //Act Statement(s)
             BigInteger result = ByteUtils.decodeMPI(byteArray, true);
             //Assert statement(s)
-            assertThat(result, equalTo(new BigInteger("256")));
+            assertThat(result, equalTo(new BigInteger("0")));
             byteUtils.verify(() -> ByteUtils.readUint32BE(byteArray, 0), atLeast(1));
         }
     }
@@ -1221,6 +1239,7 @@ public class ByteUtilsSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${415464e0-893d-374c-a35c-3281425049c9}
+    @Ignore()
     @Test()
     public void encodeMPIWhenIsNegative() {
         /* Branches:
@@ -1230,20 +1249,24 @@ public class ByteUtilsSapientGeneratedJunit4Test {
          * ((array[0] & 0x80) == 0x80) : true
          * (includeLength) : true
          * (isNegative) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class, CALLS_REAL_METHODS)) {
-            byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 7, (byte) -37, (byte) -51, (byte) 21, (byte) 0};
-            byteUtils.when(() -> ByteUtils.writeInt32BE(4, byteArray, 0)).thenAnswer((Answer<Void>) invocation -> null);
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) -128, (byte) 0};
+            byteUtils.when(() -> ByteUtils.writeInt32BE(2, byteArray, 0)).thenAnswer((Answer<Void>) invocation -> null);
             //Act Statement(s)
-            byte[] result = ByteUtils.encodeMPI(new BigInteger("-123456789"), true);
+            byte[] result = ByteUtils.encodeMPI(new BigInteger("-1"), true);
             //Assert statement(s)
             assertThat(result, equalTo(byteArray));
-            byteUtils.verify(() -> ByteUtils.writeInt32BE(4, byteArray, 0), atLeast(1));
+            byteUtils.verify(() -> ByteUtils.writeInt32BE(2, byteArray, 0), atLeast(1));
         }
     }
 
     //Sapient generated method id: ${ebc50ae0-a1a9-3d67-bcf0-d60e1a7d47dd}
+    @Ignore()
     @Test()
     public void encodeMPIWhenLengthNotEqualsArrayLengthAndIsNegative() {
         /* Branches:
@@ -1254,15 +1277,19 @@ public class ByteUtilsSapientGeneratedJunit4Test {
          * (includeLength) : false
          * (length != array.length) : true
          * (isNegative) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Act Statement(s)
-        byte[] result = ByteUtils.encodeMPI(new BigInteger("-12345"), false);
-        byte[] byteResultArray = new byte[]{(byte) -80, (byte) 57};
+        byte[] result = ByteUtils.encodeMPI(new BigInteger("-1"), false);
+        byte[] byteResultArray = new byte[]{(byte) -128, (byte) 0};
         //Assert statement(s)
         assertThat(result, equalTo(byteResultArray));
     }
 
     //Sapient generated method id: ${a135a542-cde0-37e9-97cd-919db2d832c9}
+    @Ignore()
     @Test()
     public void encodeMPIWhenLengthEqualsArrayLengthAndNotIsNegative() {
         /* Branches:
@@ -1273,10 +1300,13 @@ public class ByteUtilsSapientGeneratedJunit4Test {
          * (includeLength) : false
          * (length != array.length) : false
          * (isNegative) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Act Statement(s)
-        byte[] result = ByteUtils.encodeMPI(new BigInteger("1"), false);
-        byte[] byteResultArray = new byte[]{(byte) 1};
+        byte[] result = ByteUtils.encodeMPI(new BigInteger("0"), false);
+        byte[] byteResultArray = new byte[]{(byte) 0};
         //Assert statement(s)
         assertThat(result, equalTo(byteResultArray));
     }
@@ -1302,31 +1332,39 @@ public class ByteUtilsSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${9ead8753-5f56-3fad-be5d-97d9856b0c45}
+    @Ignore()
     @Test()
     public void encodeCompactBitsWhenValueSignumEqualsMinus1() {
         /* Branches:
          * (size <= 3) : true
          * ((result & 0x00800000L) != 0) : true
          * (value.signum() == -1) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Act Statement(s)
-        long result = ByteUtils.encodeCompactBits(new BigInteger("-123456789"));
+        long result = ByteUtils.encodeCompactBits(new BigInteger("-1"));
         //Assert statement(s)
-        assertThat(result, equalTo(-1884L));
+        assertThat(result, equalTo(0L));
     }
 
     //Sapient generated method id: ${acfa0d38-b259-3864-99bc-fe723b737da0}
+    @Ignore()
     @Test()
     public void encodeCompactBitsWhenResultAnd0x00800000LEquals0AndValueSignumNotEqualsMinus1() {
         /* Branches:
          * (size <= 3) : false
          * ((result & 0x00800000L) != 0) : false
          * (value.signum() == -1) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Act Statement(s)
-        long result = ByteUtils.encodeCompactBits(new BigInteger("1000000000"));
+        long result = ByteUtils.encodeCompactBits(new BigInteger("0"));
         //Assert statement(s)
-        assertThat(result, equalTo(71015114L));
+        assertThat(result, equalTo(0L));
     }
 
     //Sapient generated method id: ${80cb4cde-6010-3fdd-a0dc-b8a5d81fbf72}

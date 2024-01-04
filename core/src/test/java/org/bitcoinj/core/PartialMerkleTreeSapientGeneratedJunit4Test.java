@@ -106,6 +106,7 @@ public class PartialMerkleTreeSapientGeneratedJunit4Test {
         thrown.expect(IndexOutOfBoundsException.class);
         byte[] byteArray = new byte[]{};
         List<Sha256Hash> sha256HashList = new ArrayList<>();
+
         //Act Statement(s)
         PartialMerkleTree.buildFromLeaves(byteArray, sha256HashList);
     }
@@ -251,20 +252,16 @@ public class PartialMerkleTreeSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-        Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
-        ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
-        Sha256Hash sha256Hash2 = Sha256Hash.read(byteBuffer2);
         List<Sha256Hash> sha256HashList = new ArrayList<>();
-        sha256HashList.add(sha256Hash);
-        sha256HashList.add(sha256Hash2);
-        byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 0, (byte) 1};
-        PartialMerkleTree target = spy(new PartialMerkleTree(10, sha256HashList, byteArray));
-        ByteBuffer byteBuffer3 = ByteBuffer.allocateDirect(0);
-        doReturn(byteBuffer3).when(target).write((ByteBuffer) any());
+        byte[] byteArray = new byte[]{};
+        PartialMerkleTree target = spy(new PartialMerkleTree(0, sha256HashList, byteArray));
+        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+        doReturn(byteBuffer).when(target).write((ByteBuffer) any());
+
         //Act Statement(s)
         byte[] result = target.serialize();
         byte[] byteResultArray = new byte[]{};
+
         //Assert statement(s)
         assertThat(result, equalTo(byteResultArray));
         verify(target).write((ByteBuffer) any());
@@ -277,8 +274,10 @@ public class PartialMerkleTreeSapientGeneratedJunit4Test {
         List<Sha256Hash> sha256HashList = new ArrayList<>();
         byte[] byteArray = new byte[]{};
         PartialMerkleTree target = new PartialMerkleTree(0, sha256HashList, byteArray);
+
         //Act Statement(s)
         int result = target.messageSize();
+
         //Assert statement(s)
         assertThat(result, equalTo(6));
     }
@@ -290,8 +289,10 @@ public class PartialMerkleTreeSapientGeneratedJunit4Test {
         List<Sha256Hash> sha256HashList = new ArrayList<>();
         byte[] byteArray = new byte[]{};
         PartialMerkleTree target = new PartialMerkleTree(0, sha256HashList, byteArray);
+
         //Act Statement(s)
         int result = target.getMessageSize();
+
         //Assert statement(s)
         assertThat(result, equalTo(6));
     }
@@ -308,8 +309,10 @@ public class PartialMerkleTreeSapientGeneratedJunit4Test {
         PartialMerkleTree target = new PartialMerkleTree(0, sha256HashList, byteArray);
         thrown.expect(VerificationException.class);
         List<Sha256Hash> sha256HashList2 = new ArrayList<>();
+
         //Act Statement(s)
         target.getTxnHashAndMerkleRoot(sha256HashList2);
+
         //Assert statement(s)
         assertThat(sha256HashList2.size(), equalTo(0));
     }
@@ -327,8 +330,10 @@ public class PartialMerkleTreeSapientGeneratedJunit4Test {
         PartialMerkleTree target = new PartialMerkleTree(16667, sha256HashList, byteArray);
         thrown.expect(VerificationException.class);
         List<Sha256Hash> sha256HashList2 = new ArrayList<>();
+
         //Act Statement(s)
         target.getTxnHashAndMerkleRoot(sha256HashList2);
+
         //Assert statement(s)
         assertThat(sha256HashList2.size(), equalTo(0));
     }
@@ -347,8 +352,10 @@ public class PartialMerkleTreeSapientGeneratedJunit4Test {
         PartialMerkleTree target = new PartialMerkleTree(-1, sha256HashList, byteArray);
         thrown.expect(VerificationException.class);
         List<Sha256Hash> sha256HashList2 = new ArrayList<>();
+
         //Act Statement(s)
         target.getTxnHashAndMerkleRoot(sha256HashList2);
+
         //Assert statement(s)
         assertThat(sha256HashList2.size(), equalTo(0));
     }
@@ -369,8 +376,10 @@ public class PartialMerkleTreeSapientGeneratedJunit4Test {
         PartialMerkleTree target = new PartialMerkleTree(1, sha256HashList, byteArray);
         thrown.expect(VerificationException.class);
         List<Sha256Hash> sha256HashList2 = new ArrayList<>();
+
         //Act Statement(s)
         target.getTxnHashAndMerkleRoot(sha256HashList2);
+
         //Assert statement(s)
         assertThat(sha256HashList2.size(), equalTo(0));
     }
@@ -392,6 +401,7 @@ public class PartialMerkleTreeSapientGeneratedJunit4Test {
         PartialMerkleTree target = new PartialMerkleTree(1, sha256HashList, byteArray);
         thrown.expect(VerificationException.class);
         List<Sha256Hash> sha256HashList2 = new ArrayList<>();
+
         //Act Statement(s)
         target.getTxnHashAndMerkleRoot(sha256HashList2);
     }
@@ -510,6 +520,7 @@ public class PartialMerkleTreeSapientGeneratedJunit4Test {
         PartialMerkleTree target = new PartialMerkleTree(0, sha256HashList, byteArray);
         thrown.expect(VerificationException.class);
         List<Sha256Hash> sha256HashList2 = new ArrayList<>();
+
         //Act Statement(s)
         target.getTxnHashAndMerkleRoot(sha256HashList2);
     }
@@ -556,8 +567,10 @@ public class PartialMerkleTreeSapientGeneratedJunit4Test {
         List<Sha256Hash> sha256HashList = new ArrayList<>();
         byte[] byteArray = new byte[]{};
         PartialMerkleTree target = new PartialMerkleTree(2, sha256HashList, byteArray);
+
         //Act Statement(s)
         String result = target.toString();
+
         //Assert statement(s)
         assertThat(result, equalTo("PartialMerkleTree{transactionCount=2, matchedChildBits=[], hashes=[]}"));
     }

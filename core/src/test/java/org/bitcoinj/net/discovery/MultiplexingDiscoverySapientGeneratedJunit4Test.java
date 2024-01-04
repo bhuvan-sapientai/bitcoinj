@@ -36,6 +36,7 @@ import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.mockStatic;
 import static org.mockito.Mockito.doReturn;
 import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.nullValue;
 
 public class MultiplexingDiscoverySapientGeneratedJunit4Test {
 
@@ -50,6 +51,8 @@ public class MultiplexingDiscoverySapientGeneratedJunit4Test {
 
     @Rule()
     public ExpectedException thrown = ExpectedException.none();
+
+    private final NetworkParameters networkParametersMock = mock(NetworkParameters.class);
 
     //Sapient generated method id: ${bf6499da-0a80-393c-ae42-5f5d2ea9d6f4}
     @Test()
@@ -73,16 +76,21 @@ public class MultiplexingDiscoverySapientGeneratedJunit4Test {
          * (dnsSeeds != null) : true
          * (for-each(dnsSeeds)) : true
          * (branch expression (line 123)) : false  #  inside <init> method
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
+            String[] stringArray = new String[]{"return_of_getDnsSeedsItem1"};
+            doReturn(stringArray).when(networkParametersMock).getDnsSeeds();
             //Act Statement(s)
-            MultiplexingDiscovery result = MultiplexingDiscovery.forServices(networkMock, 1L, true, false);
+            MultiplexingDiscovery result = MultiplexingDiscovery.forServices(networkMock, 0L, false, false);
             //Assert statement(s)
             assertThat(result, is(notNullValue()));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            verify(networkParametersMock).getDnsSeeds();
         }
     }
 
@@ -96,7 +104,6 @@ public class MultiplexingDiscoverySapientGeneratedJunit4Test {
          * (branch expression (line 123)) : true  #  inside <init> method
          */
         //Arrange Statement(s)
-        NetworkParameters networkParametersMock = mock(NetworkParameters.class);
         try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
             String[] stringArray = new String[]{};
@@ -161,8 +168,10 @@ public class MultiplexingDiscoverySapientGeneratedJunit4Test {
         doReturn(null).when(target).createExecutor();
         thrown.expect(IndexOutOfBoundsException.class);
         Duration duration = Duration.ofDays(0L);
+
         //Act Statement(s)
         target.getPeers(0L, duration);
+
         //Assert statement(s)
         verify(target).createExecutor();
     }
@@ -186,8 +195,10 @@ public class MultiplexingDiscoverySapientGeneratedJunit4Test {
         doReturn(null).when(target).createExecutor();
         thrown.expect(IndexOutOfBoundsException.class);
         Duration duration = Duration.ofDays(0L);
+
         //Act Statement(s)
         target.getPeers(0L, duration);
+
         //Assert statement(s)
         verify(target).createExecutor();
     }
@@ -217,8 +228,10 @@ public class MultiplexingDiscoverySapientGeneratedJunit4Test {
         thrown.expect(PeerDiscoveryException.class);
         thrown.expectMessage(peerDiscoveryException.getMessage());
         Duration duration = Duration.ofDays(0L);
+
         //Act Statement(s)
         target.getPeers(0L, duration);
+
         //Assert statement(s)
         verify(target).createExecutor();
     }
@@ -226,7 +239,7 @@ public class MultiplexingDiscoverySapientGeneratedJunit4Test {
     //Sapient generated method id: ${465ee7d3-758b-3ef4-b38b-1eb319998f3d}
     @Ignore(value = "Potential harmful system call (Future.isCancelled, Future.get, ExecutorService.invokeAll) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
-    public void getPeersWhenCaughtExecutionExceptionAndParallelQueriesAndAddrsSizeEquals0ThrowsPeerDiscoveryException() throws PeerDiscoveryException, InterruptedException, ExecutionException {
+    public void getPeersWhenCaughtExecutionExceptionAndParallelQueriesAndAddrsSizeEquals0ThrowsPeerDiscoveryException() throws PeerDiscoveryException, InterruptedException {
         /* Branches:
          * (parallelQueries) : true
          * (for-each(seeds)) : true
@@ -248,8 +261,10 @@ public class MultiplexingDiscoverySapientGeneratedJunit4Test {
         thrown.expect(PeerDiscoveryException.class);
         thrown.expectMessage(peerDiscoveryException.getMessage());
         Duration duration = Duration.ofDays(0L);
+
         //Act Statement(s)
         target.getPeers(0L, duration);
+
         //Assert statement(s)
         verify(target).createExecutor();
     }
@@ -277,8 +292,10 @@ public class MultiplexingDiscoverySapientGeneratedJunit4Test {
         doReturn(null).when(target).createExecutor();
         thrown.expect(PeerDiscoveryException.class);
         Duration duration = Duration.ofDays(0L);
+
         //Act Statement(s)
         target.getPeers(0L, duration);
+
         //Assert statement(s)
         verify(target).createExecutor();
     }
@@ -287,20 +304,19 @@ public class MultiplexingDiscoverySapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void createExecutorTest() {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
-        PeerDiscovery peerDiscoveryMock = mock(PeerDiscovery.class);
-        PeerDiscovery peerDiscoveryMock2 = mock(PeerDiscovery.class);
         List<PeerDiscovery> peerDiscoveryList = new ArrayList<>();
-        peerDiscoveryList.add(peerDiscoveryMock);
-        peerDiscoveryList.add(peerDiscoveryMock2);
-        MultiplexingDiscovery target = new MultiplexingDiscovery(networkMock, peerDiscoveryList);
+        MultiplexingDiscovery target = new MultiplexingDiscovery(BitcoinNetwork.REGTEST, peerDiscoveryList);
+
         //Act Statement(s)
         ExecutorService result = target.createExecutor();
-        ContextPropagatingThreadFactory contextPropagatingThreadFactory = new ContextPropagatingThreadFactory("Multiplexing discovery");
-        ExecutorService executorService = Executors.newFixedThreadPool(2, contextPropagatingThreadFactory);
+
         //Assert statement(s)
-        //TODO: Please implement equals method in ExecutorService for verification to succeed or you need to adjust respective assertion statements
-        assertThat(result, equalTo(executorService));
+        assertThat(result, is(nullValue()));
     }
 
     //Sapient generated method id: ${a73e8e99-f065-3aff-99c3-19a7c22917cd}
@@ -312,6 +328,7 @@ public class MultiplexingDiscoverySapientGeneratedJunit4Test {
         //Arrange Statement(s)
         List<PeerDiscovery> peerDiscoveryList = new ArrayList<>();
         MultiplexingDiscovery target = new MultiplexingDiscovery(BitcoinNetwork.REGTEST, peerDiscoveryList);
+
         //Act Statement(s)
         target.shutdown();
     }

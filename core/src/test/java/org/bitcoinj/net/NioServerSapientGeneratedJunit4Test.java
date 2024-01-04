@@ -221,8 +221,8 @@ public class NioServerSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         InetSocketAddress inetSocketAddress = new InetSocketAddress(0);
         NioServer target = spy(new NioServer(streamConnectionFactoryMock, inetSocketAddress));
+        doReturn(false).when(target).isRunning();
         doNothing().when(connectionMock).connectionOpened();
-        doReturn(true, false).when(target).isRunning();
 
         //Act Statement(s)
         target.run();

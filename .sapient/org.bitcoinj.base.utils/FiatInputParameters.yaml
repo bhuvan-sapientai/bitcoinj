@@ -301,13 +301,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "4726DCE726A0C2943093406A8A17B719"
+    modelFingerprint: "8F3EAA845F183BF910785EC2E1B3E142"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "currencyCode"
-      modelFingerprint: "B0B4072A9E95426CD39DDE39235033B5"
+      modelFingerprint: "C81BE410A0DEDCFD5F73783107214F8B"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -315,9 +315,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "USD"
-        suggestedContent: !<regular>
-          value: "USD"
+          value: "currencyCode1"
         valueType: "java.lang.String"
         uuid: "parseFiat_string1"
         fixed: false
@@ -327,7 +325,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "str"
-      modelFingerprint: "C366794427A56863A5A0D39505218191"
+      modelFingerprint: "974147C7FBB6270F867FBBE0E8899C99"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -335,9 +333,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "100.00"
+          value: "1.0"
         suggestedContent: !<regular>
-          value: "100.00"
+          value: "1.0"
         valueType: "java.lang.String"
         uuid: "parseFiat_string2"
         fixed: false
@@ -347,7 +345,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Fiat"
-      modelFingerprint: "64ADDE8DBFA8591C6456AE0EDDE76C69"
+      modelFingerprint: "8DA926F72BB2355C3054721CB5D48F62"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -369,9 +367,7 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "USD"
-            suggestedContent: !<regular>
-              value: "USD"
+              value: "currencyCode1"
             valueType: "java.lang.String"
             uuid: "parseFiat_string1"
             fixed: false
@@ -389,51 +385,7 @@ methods:
             explicitCastNeeded: false
         signature: "valueOf(String,long): Fiat"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.utils.Fiat"
-            method: "valueOf"
-            methodParameters:
-            - name: "currencyCode"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: "currencyCode1"
-                valueType: "java.lang.String"
-                uuid: "parseFiat_fiat1-currencyCode"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "value"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "long"
-                uuid: "parseFiat_fiat1-value"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.base.utils.Fiat"
-            method: "valueOf"
-            methodParameters:
-            - name: "currencyCode"
-              value:
-                sapientType: "BASIC"
-                valueType: "java.lang.String"
-                uuid: "parseFiat_fiat1-currencyCode"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "value"
-              value:
-                sapientType: "BASIC"
-                valueType: "long"
-                uuid: "parseFiat_fiat1-value"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.base.utils.Fiat"
           uuid: "parseFiat_fiat1"
           fixed: false
@@ -444,57 +396,13 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "9FE9A02AC7C2707C185F3D8D29B1F63E"
+      modelFingerprint: "D1BD64D689FD46C0D0A45873738164B8"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "org.bitcoinj.base.utils.Fiat"
-          method: "valueOf"
-          methodParameters:
-          - name: "currencyCode"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "currencyCode1"
-              valueType: "java.lang.String"
-              uuid: "parseFiat_fiat1-currencyCode"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "parseFiat_fiat1-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.base.utils.Fiat"
-          method: "valueOf"
-          methodParameters:
-          - name: "currencyCode"
-            value:
-              sapientType: "BASIC"
-              valueType: "java.lang.String"
-              uuid: "parseFiat_fiat1-currencyCode"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "BASIC"
-              valueType: "long"
-              uuid: "parseFiat_fiat1-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.base.utils.Fiat"
         uuid: "parseFiat_fiat1"
         fixed: false
@@ -504,11 +412,11 @@ methods:
       filledByUser: false
     uuid: "3a29f388-fbb5-361e-bb99-089b671da624"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "parseFiatWhenCaughtArithmeticExceptionThrowsIllegalArgumentException"
@@ -516,7 +424,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "7F7F760748F4952026F48D9D92660E79"
+    modelFingerprint: "D0DEE6D00EA448F299DA0407C63EDAEB"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -527,7 +435,7 @@ methods:
     inputParameters:
     - type: "INPUT"
       name: "currencyCode"
-      modelFingerprint: "B0B4072A9E95426CD39DDE39235033B5"
+      modelFingerprint: "C81BE410A0DEDCFD5F73783107214F8B"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -535,9 +443,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "USD"
-        suggestedContent: !<regular>
-          value: "USD"
+          value: "currencyCode1"
         valueType: "java.lang.String"
         uuid: "parseFiat_string1"
         fixed: false
@@ -547,7 +453,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "str"
-      modelFingerprint: "C366794427A56863A5A0D39505218191"
+      modelFingerprint: "974147C7FBB6270F867FBBE0E8899C99"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -555,9 +461,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "100.00"
+          value: "1.0"
         suggestedContent: !<regular>
-          value: "100.00"
+          value: "1.0"
         valueType: "java.lang.String"
         uuid: "parseFiat_string2"
         fixed: false
@@ -567,7 +473,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Fiat"
-      modelFingerprint: "FDFAB02D2A33FB19480DD057E46741E7"
+      modelFingerprint: "44E8A3913FBF231A0DE4020A35544E3F"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -589,9 +495,7 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "USD"
-            suggestedContent: !<regular>
-              value: "USD"
+              value: "currencyCode1"
             valueType: "java.lang.String"
             uuid: "parseFiat_string1"
             fixed: false
@@ -609,63 +513,7 @@ methods:
             explicitCastNeeded: false
         signature: "valueOf(String,long): Fiat"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.utils.Fiat"
-            method: "valueOf"
-            methodParameters:
-            - name: "currencyCode"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: "USD"
-                suggestedContent: !<regular>
-                  value: "USD"
-                valueType: "java.lang.String"
-                uuid: "parseFiat_fiat1-currencyCode"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "value"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 1000000
-                suggestedContent: !<regular>
-                  value: 1000000
-                valueType: "long"
-                uuid: "parseFiat_fiat1-value"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.base.utils.Fiat"
-            method: "valueOf"
-            methodParameters:
-            - name: "currencyCode"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: "USD"
-                suggestedContent: !<regular>
-                  value: "USD"
-                valueType: "java.lang.String"
-                uuid: "parseFiat_fiat1-currencyCode"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "value"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 1000000
-                suggestedContent: !<regular>
-                  value: 1000000
-                valueType: "long"
-                uuid: "parseFiat_fiat1-value"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.base.utils.Fiat"
           uuid: "parseFiat_fiat1"
           fixed: false
@@ -676,7 +524,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "DD24193BAD6298F2A40BDDA90B1E326A"
+      modelFingerprint: "1B2659AC3615CAF779146BD1E5C76245"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -689,64 +537,18 @@ methods:
           - name: "cause"
             value:
               sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "org.bitcoinj.base.utils.Fiat"
-                method: "valueOf"
-                methodParameters:
-                - name: "currencyCode"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "USD"
-                    suggestedContent: !<regular>
-                      value: "USD"
-                    valueType: "java.lang.String"
-                    uuid: "parseFiat_fiat1-currencyCode"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "value"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1000000
-                    suggestedContent: !<regular>
-                      value: 1000000
-                    valueType: "long"
-                    uuid: "parseFiat_fiat1-value"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.base.utils.Fiat"
-                method: "valueOf"
-                methodParameters:
-                - name: "currencyCode"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "USD"
-                    suggestedContent: !<regular>
-                      value: "USD"
-                    valueType: "java.lang.String"
-                    uuid: "parseFiat_fiat1-currencyCode"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "value"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1000000
-                    suggestedContent: !<regular>
-                      value: 1000000
-                    valueType: "long"
-                    uuid: "parseFiat_fiat1-value"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              valueType: "org.bitcoinj.base.utils.Fiat"
-              uuid: "parseFiat_fiat1"
+              content: !<new>
+                target: "java.lang.ArithmeticException"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "java.lang.ArithmeticException"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "java.lang.ArithmeticException"
+              uuid: "parseFiat_arithmeticException1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -757,65 +559,14 @@ methods:
           parameters:
           - name: "cause"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "org.bitcoinj.base.utils.Fiat"
-                method: "valueOf"
-                methodParameters:
-                - name: "currencyCode"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "USD"
-                    suggestedContent: !<regular>
-                      value: "USD"
-                    valueType: "java.lang.String"
-                    uuid: "parseFiat_fiat1-currencyCode"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "value"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1000000
-                    suggestedContent: !<regular>
-                      value: 1000000
-                    valueType: "long"
-                    uuid: "parseFiat_fiat1-value"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.base.utils.Fiat"
-                method: "valueOf"
-                methodParameters:
-                - name: "currencyCode"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "USD"
-                    suggestedContent: !<regular>
-                      value: "USD"
-                    valueType: "java.lang.String"
-                    uuid: "parseFiat_fiat1-currencyCode"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "value"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 1000000
-                    suggestedContent: !<regular>
-                      value: 1000000
-                    valueType: "long"
-                    uuid: "parseFiat_fiat1-value"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              valueType: "org.bitcoinj.base.utils.Fiat"
-              uuid: "parseFiat_fiat1"
+              sapientType: "UNKNOWN"
+              suggestedContent: !<new>
+                target: "java.lang.ArithmeticException"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "java.lang.ArithmeticException"
+              uuid: "parseFiat_arithmeticException1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -830,11 +581,11 @@ methods:
       filledByUser: false
     uuid: "7dec7cab-e382-33ae-b8a5-90e49107a5e0"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "parseFiatInexact"
     returnType: "org.bitcoinj.base.utils.Fiat"
@@ -856,13 +607,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "86B14D22920E704B5EEA43AA8E5569E2"
+    modelFingerprint: "540A8E6C5F0A4BF815939E0787974119"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "currencyCode"
-      modelFingerprint: "B0B4072A9E95426CD39DDE39235033B5"
+      modelFingerprint: "C81BE410A0DEDCFD5F73783107214F8B"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -870,9 +621,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "USD"
-        suggestedContent: !<regular>
-          value: "USD"
+          value: "currencyCode1"
         valueType: "java.lang.String"
         uuid: "parseFiatInexact_string1"
         fixed: false
@@ -882,7 +631,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "str"
-      modelFingerprint: "28F709B11B353875AB1300E36254A8EB"
+      modelFingerprint: "2EAAE85ED9267C76AD94955AE7569F14"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -890,9 +639,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "123.45"
+          value: "0.0"
         suggestedContent: !<regular>
-          value: "123.45"
+          value: "0.0"
         valueType: "java.lang.String"
         uuid: "parseFiatInexact_string2"
         fixed: false
@@ -902,7 +651,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Fiat"
-      modelFingerprint: "ED42C2D6E1BF4A42F22A8A6A2BAF8D85"
+      modelFingerprint: "4A12350BA1D3B038AEBE368399D3CA08"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -924,9 +673,7 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "USD"
-            suggestedContent: !<regular>
-              value: "USD"
+              value: "currencyCode1"
             valueType: "java.lang.String"
             uuid: "parseFiatInexact_string1"
             fixed: false
@@ -946,51 +693,7 @@ methods:
             explicitCastNeeded: false
         signature: "valueOf(String,long): Fiat"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.utils.Fiat"
-            method: "valueOf"
-            methodParameters:
-            - name: "currencyCode"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: "currencyCode1"
-                valueType: "java.lang.String"
-                uuid: "parseFiatInexact_fiat1-currencyCode"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "value"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "long"
-                uuid: "parseFiatInexact_fiat1-value"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.base.utils.Fiat"
-            method: "valueOf"
-            methodParameters:
-            - name: "currencyCode"
-              value:
-                sapientType: "BASIC"
-                valueType: "java.lang.String"
-                uuid: "parseFiatInexact_fiat1-currencyCode"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "value"
-              value:
-                sapientType: "BASIC"
-                valueType: "long"
-                uuid: "parseFiatInexact_fiat1-value"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.base.utils.Fiat"
           uuid: "parseFiatInexact_fiat1"
           fixed: false
@@ -1001,57 +704,13 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "9FE9A02AC7C2707C185F3D8D29B1F63E"
+      modelFingerprint: "D1BD64D689FD46C0D0A45873738164B8"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "org.bitcoinj.base.utils.Fiat"
-          method: "valueOf"
-          methodParameters:
-          - name: "currencyCode"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "currencyCode1"
-              valueType: "java.lang.String"
-              uuid: "parseFiatInexact_fiat1-currencyCode"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "parseFiatInexact_fiat1-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.base.utils.Fiat"
-          method: "valueOf"
-          methodParameters:
-          - name: "currencyCode"
-            value:
-              sapientType: "BASIC"
-              valueType: "java.lang.String"
-              uuid: "parseFiatInexact_fiat1-currencyCode"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "BASIC"
-              valueType: "long"
-              uuid: "parseFiatInexact_fiat1-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.base.utils.Fiat"
         uuid: "parseFiatInexact_fiat1"
         fixed: false
@@ -1061,11 +720,11 @@ methods:
       filledByUser: false
     uuid: "8d4cc770-1398-3f6f-bc16-f65e59403548"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "parseFiatInexactWhenCaughtArithmeticExceptionThrowsIllegalArgumentException"
@@ -1073,7 +732,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "4E68EC193E4E359D5EC56D7A69539DED"
+    modelFingerprint: "43738A0D9B54C1B402D1C71909FEFB93"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -1084,7 +743,7 @@ methods:
     inputParameters:
     - type: "INPUT"
       name: "currencyCode"
-      modelFingerprint: "B0B4072A9E95426CD39DDE39235033B5"
+      modelFingerprint: "C81BE410A0DEDCFD5F73783107214F8B"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1092,9 +751,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "USD"
-        suggestedContent: !<regular>
-          value: "USD"
+          value: "currencyCode1"
         valueType: "java.lang.String"
         uuid: "parseFiatInexact_string1"
         fixed: false
@@ -1104,7 +761,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "str"
-      modelFingerprint: "28F709B11B353875AB1300E36254A8EB"
+      modelFingerprint: "2EAAE85ED9267C76AD94955AE7569F14"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1112,9 +769,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "123.45"
+          value: "0.0"
         suggestedContent: !<regular>
-          value: "123.45"
+          value: "0.0"
         valueType: "java.lang.String"
         uuid: "parseFiatInexact_string2"
         fixed: false
@@ -1124,7 +781,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Fiat"
-      modelFingerprint: "0848E4EF088827F6C33BAEC15FEE7FB4"
+      modelFingerprint: "79D6E8EEA09171E93F7CF462E87DE6D8"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1146,9 +803,7 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "USD"
-            suggestedContent: !<regular>
-              value: "USD"
+              value: "currencyCode1"
             valueType: "java.lang.String"
             uuid: "parseFiatInexact_string1"
             fixed: false
@@ -1168,51 +823,7 @@ methods:
             explicitCastNeeded: false
         signature: "valueOf(String,long): Fiat"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.utils.Fiat"
-            method: "valueOf"
-            methodParameters:
-            - name: "currencyCode"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: "currencyCode1"
-                valueType: "java.lang.String"
-                uuid: "parseFiatInexact_fiat1-currencyCode"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "value"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "long"
-                uuid: "parseFiatInexact_fiat1-value"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.base.utils.Fiat"
-            method: "valueOf"
-            methodParameters:
-            - name: "currencyCode"
-              value:
-                sapientType: "BASIC"
-                valueType: "java.lang.String"
-                uuid: "parseFiatInexact_fiat1-currencyCode"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "value"
-              value:
-                sapientType: "BASIC"
-                valueType: "long"
-                uuid: "parseFiatInexact_fiat1-value"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.base.utils.Fiat"
           uuid: "parseFiatInexact_fiat1"
           fixed: false
@@ -1223,7 +834,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "9BE5D4216D6F2FFF5013921A7A5254D9"
+      modelFingerprint: "1B2659AC3615CAF779146BD1E5C76245"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -1236,52 +847,18 @@ methods:
           - name: "cause"
             value:
               sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "org.bitcoinj.base.utils.Fiat"
-                method: "valueOf"
-                methodParameters:
-                - name: "currencyCode"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "currencyCode1"
-                    valueType: "java.lang.String"
-                    uuid: "parseFiatInexact_fiat1-currencyCode"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "value"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    valueType: "long"
-                    uuid: "parseFiatInexact_fiat1-value"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.base.utils.Fiat"
-                method: "valueOf"
-                methodParameters:
-                - name: "currencyCode"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "java.lang.String"
-                    uuid: "parseFiatInexact_fiat1-currencyCode"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "value"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "long"
-                    uuid: "parseFiatInexact_fiat1-value"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              valueType: "org.bitcoinj.base.utils.Fiat"
-              uuid: "parseFiatInexact_fiat1"
+              content: !<new>
+                target: "java.lang.ArithmeticException"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "java.lang.ArithmeticException"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "java.lang.ArithmeticException"
+              uuid: "parseFiatInexact_arithmeticException1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1292,53 +869,14 @@ methods:
           parameters:
           - name: "cause"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "org.bitcoinj.base.utils.Fiat"
-                method: "valueOf"
-                methodParameters:
-                - name: "currencyCode"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "currencyCode1"
-                    valueType: "java.lang.String"
-                    uuid: "parseFiatInexact_fiat1-currencyCode"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "value"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    valueType: "long"
-                    uuid: "parseFiatInexact_fiat1-value"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.base.utils.Fiat"
-                method: "valueOf"
-                methodParameters:
-                - name: "currencyCode"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "java.lang.String"
-                    uuid: "parseFiatInexact_fiat1-currencyCode"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "value"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "long"
-                    uuid: "parseFiatInexact_fiat1-value"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              valueType: "org.bitcoinj.base.utils.Fiat"
-              uuid: "parseFiatInexact_fiat1"
+              sapientType: "UNKNOWN"
+              suggestedContent: !<new>
+                target: "java.lang.ArithmeticException"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "java.lang.ArithmeticException"
+              uuid: "parseFiatInexact_arithmeticException1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1353,11 +891,11 @@ methods:
       filledByUser: false
     uuid: "7562d76a-bbdc-346d-8087-9b764344f1fc"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "add"
     returnType: "org.bitcoinj.base.utils.Fiat"
@@ -4781,12 +4319,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "F9B117860A40B0E5E8DCE3C8F05418BC"
+    modelFingerprint: "DFA8ACCFC27852E0785FBCBA05524B59"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "0380DC3AE2ADFA517C6148B3D9CEE990"
+      modelFingerprint: "4C7B398F1166D2AD998F68EA99D17913"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -4801,9 +4339,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "USD"
+                value: "A"
               suggestedContent: !<regular>
-                value: "USD"
+                value: "A"
               valueType: "java.lang.String"
               uuid: "valueOf_string1"
               fixed: false
@@ -4813,9 +4351,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 1000
-              suggestedContent: !<regular>
-                value: 1000
+                value: 0
               valueType: "long"
               uuid: "valueOf_long1"
               fixed: false
@@ -4828,10 +4364,8 @@ methods:
           - name: "currencyCode"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "USD"
               suggestedContent: !<regular>
-                value: "USD"
+                value: "A"
               valueType: "java.lang.String"
               uuid: "valueOf_string1"
               fixed: false
@@ -4840,10 +4374,6 @@ methods:
           - name: "value"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 1000
-              suggestedContent: !<regular>
-                value: 1000
               valueType: "long"
               uuid: "valueOf_long1"
               fixed: false
@@ -4858,7 +4388,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "FRIENDLY_FORMAT"
-      modelFingerprint: "CE89EA7744BDF018D6BB8F71A3344E90"
+      modelFingerprint: "FCB07615A9A045A27A3992F285230726"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -4918,9 +4448,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "USD"
+              value: "A"
             suggestedContent: !<regular>
-              value: "USD"
+              value: "A"
             valueType: "java.lang.String"
             uuid: "valueOf_string1"
             fixed: false
@@ -4966,7 +4496,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "C767C7D94AB111B83EF890528858E127"
+      modelFingerprint: "056B1FD13537E0EDD6BA046386BAF53E"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -5020,10 +4550,8 @@ methods:
               - name: "currencyCode"
                 value:
                   sapientType: "BASIC"
-                  content: !<regular>
-                    value: "USD"
                   suggestedContent: !<regular>
-                    value: "USD"
+                    value: "A"
                   valueType: "java.lang.String"
                   uuid: "valueOf_string1"
                   fixed: false
@@ -5032,10 +4560,6 @@ methods:
               - name: "value"
                 value:
                   sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1000
-                  suggestedContent: !<regular>
-                    value: 1000
                   valueType: "long"
                   uuid: "valueOf_long1"
                   fixed: false
@@ -5097,10 +4621,8 @@ methods:
                   - name: "currencyCode"
                     value:
                       sapientType: "BASIC"
-                      content: !<regular>
-                        value: "USD"
                       suggestedContent: !<regular>
-                        value: "USD"
+                        value: "A"
                       valueType: "java.lang.String"
                       uuid: "valueOf_string1"
                       fixed: false
@@ -5109,10 +4631,6 @@ methods:
                   - name: "value"
                     value:
                       sapientType: "BASIC"
-                      content: !<regular>
-                        value: 1000
-                      suggestedContent: !<regular>
-                        value: 1000
                       valueType: "long"
                       uuid: "valueOf_long1"
                       fixed: false
@@ -5172,10 +4690,8 @@ methods:
                   - name: "currencyCode"
                     value:
                       sapientType: "BASIC"
-                      content: !<regular>
-                        value: "USD"
                       suggestedContent: !<regular>
-                        value: "USD"
+                        value: "A"
                       valueType: "java.lang.String"
                       uuid: "valueOf_string1"
                       fixed: false
@@ -5184,10 +4700,6 @@ methods:
                   - name: "value"
                     value:
                       sapientType: "BASIC"
-                      content: !<regular>
-                        value: 1000
-                      suggestedContent: !<regular>
-                        value: 1000
                       valueType: "long"
                       uuid: "valueOf_long1"
                       fixed: false
@@ -5227,11 +4739,11 @@ methods:
       filledByUser: false
     uuid: "f6218ce4-99b5-3766-9111-6c631ded6b5a"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "toPlainString"
     returnType: "java.lang.String"
@@ -5247,12 +4759,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "3578BC196DBDE12E5DF8E87CEE8E1384"
-    problemWasSolvedByProver: true
+    modelFingerprint: "B81EF5EEFAAF6A46D719077BCA4170DC"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "F7D64595D0C003310E595DFCF1D6A5F2"
+      modelFingerprint: "85356920EE9210832436EAEC66BDF9F8"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -5267,9 +4779,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "CharSequence"
-              suggestedContent: !<regular>
-                value: "CharSequence"
+                value: "currencyCode1"
               valueType: "java.lang.String"
               uuid: "valueOf_string1"
               fixed: false
@@ -5292,10 +4802,6 @@ methods:
           - name: "currencyCode"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "CharSequence"
-              suggestedContent: !<regular>
-                value: "CharSequence"
               valueType: "java.lang.String"
               uuid: "valueOf_string1"
               fixed: false
@@ -5318,7 +4824,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "PLAIN_FORMAT"
-      modelFingerprint: "D304367ED9B266E67315695334DC4929"
+      modelFingerprint: "BE34D9A3DB52812533BB71247C67E199"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -5548,10 +5054,6 @@ methods:
               - name: "currencyCode"
                 value:
                   sapientType: "BASIC"
-                  content: !<regular>
-                    value: "CharSequence"
-                  suggestedContent: !<regular>
-                    value: "CharSequence"
                   valueType: "java.lang.String"
                   uuid: "valueOf_string1"
                   fixed: false
@@ -5573,11 +5075,85 @@ methods:
         signature: "format(Fiat): CharSequence"
         returnValue:
           sapientType: "OBJECT"
-          content: !<regular>
-            value: "toPlainString_charSequence1"
-          suggestedContent: !<regular>
-            value: "toPlainString_charSequence1"
-          valueType: "java.lang.String"
+          content: !<method_return_from_value>
+            target: "java.lang.CharSequence"
+            localVariableValue:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.base.utils.MonetaryFormat"
+              uuid: "<clinit>_monetaryFormat5"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "monetary"
+              value:
+                sapientType: "THIS"
+                content: !<static_method_return>
+                  target: "org.bitcoinj.base.utils.Fiat"
+                  method: "valueOf"
+                  methodParameters:
+                  - name: "currencyCode"
+                    value:
+                      sapientType: "BASIC"
+                      valueType: "java.lang.String"
+                      uuid: "valueOf_string1"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                  - name: "value"
+                    value:
+                      sapientType: "BASIC"
+                      valueType: "long"
+                      uuid: "valueOf_long1"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "org.bitcoinj.base.utils.Fiat"
+                uuid: "targetClassObject"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "format"
+          suggestedContent: !<method_return_from_value>
+            target: "java.lang.CharSequence"
+            localVariableValue:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.base.utils.MonetaryFormat"
+              uuid: "<clinit>_monetaryFormat5"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "monetary"
+              value:
+                sapientType: "THIS"
+                content: !<static_method_return>
+                  target: "org.bitcoinj.base.utils.Fiat"
+                  method: "valueOf"
+                  methodParameters:
+                  - name: "currencyCode"
+                    value:
+                      sapientType: "BASIC"
+                      valueType: "java.lang.String"
+                      uuid: "valueOf_string1"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                  - name: "value"
+                    value:
+                      sapientType: "BASIC"
+                      valueType: "long"
+                      uuid: "valueOf_long1"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "org.bitcoinj.base.utils.Fiat"
+                uuid: "targetClassObject"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "format"
+          valueType: "java.lang.CharSequence"
           uuid: "toPlainString_charSequence1"
           fixed: false
           equalsMethodPresent: false
@@ -5587,7 +5163,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "1D3A9CA0483E1E168DCB11CF337562B3"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -5595,7 +5171,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "toPlainString_charSequence1"
+          value: "result1"
         valueType: "java.lang.String"
         uuid: "toPlainString_string1"
         fixed: false
@@ -5605,11 +5181,11 @@ methods:
       filledByUser: false
     uuid: "cfd14524-d2de-392f-ab18-9c1817ef92cc"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "toString"
     returnType: "java.lang.String"

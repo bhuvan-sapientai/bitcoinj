@@ -50,8 +50,10 @@ public class MissingSigResolutionSignerSapientGeneratedJunit4Test {
     public void isReadyTest() {
         //Arrange Statement(s)
         MissingSigResolutionSigner target = new MissingSigResolutionSigner(Wallet.MissingSigsMode.USE_OP_ZERO);
+
         //Act Statement(s)
         boolean result = target.isReady();
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
     }
@@ -64,8 +66,10 @@ public class MissingSigResolutionSignerSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         MissingSigResolutionSigner target = new MissingSigResolutionSigner(Wallet.MissingSigsMode.USE_OP_ZERO);
+
         //Act Statement(s)
         boolean result = target.signInputs(transactionSignerProposedTransactionMock, keyBagMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
     }
@@ -84,7 +88,7 @@ public class MissingSigResolutionSignerSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<TransactionSignature> transactionSignature = mockStatic(TransactionSignature.class)) {
-            TransactionSignature transactionSignature2 = new TransactionSignature(new BigInteger("0"), new BigInteger("0"));
+            TransactionSignature transactionSignature2 = TransactionSignature.dummy();
             transactionSignature.when(() -> TransactionSignature.dummy()).thenReturn(transactionSignature2);
             MissingSigResolutionSigner target = new MissingSigResolutionSigner(Wallet.MissingSigsMode.USE_DUMMY_SIG);
             List<TransactionInput> transactionInputList = new ArrayList<>();
@@ -92,9 +96,8 @@ public class MissingSigResolutionSignerSapientGeneratedJunit4Test {
             doReturn(transactionInputList).when(partialTxMock).getInputs();
             doReturn(transactionInputMock2).when(partialTxMock).getInput(0L);
             doReturn(null).when(transactionInputMock2).getConnectedOutput();
-            TransactionSigner.ProposedTransaction transactionSignerProposedTransaction = new TransactionSigner.ProposedTransaction(transactionMock);
             //Act Statement(s)
-            boolean result = target.signInputs(transactionSignerProposedTransaction, keyBagMock);
+            boolean result = target.signInputs(transactionSignerProposedTransactionMock, keyBagMock);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.TRUE));
             transactionSignature.verify(() -> TransactionSignature.dummy(), atLeast(1));
@@ -123,18 +126,22 @@ public class MissingSigResolutionSignerSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<TransactionSignature> transactionSignature = mockStatic(TransactionSignature.class)) {
-            TransactionSignature transactionSignature2 = new TransactionSignature(new BigInteger("0"), new BigInteger("0"));
+            TransactionSignature transactionSignature2 = TransactionSignature.dummy();
             transactionSignature.when(() -> TransactionSignature.dummy()).thenReturn(transactionSignature2);
             MissingSigResolutionSigner target = new MissingSigResolutionSigner(Wallet.MissingSigsMode.USE_DUMMY_SIG);
             List<TransactionInput> transactionInputList = new ArrayList<>();
+            transactionInputList.add(transactionInputMock);
             doReturn(transactionInputList).when(partialTxMock).getInputs();
-            TransactionSigner.ProposedTransaction transactionSignerProposedTransaction = new TransactionSigner.ProposedTransaction(transactionMock);
+            doReturn(transactionInputMock2).when(partialTxMock).getInput(0L);
+            doReturn(null).when(transactionInputMock2).getConnectedOutput();
             //Act Statement(s)
-            boolean result = target.signInputs(transactionSignerProposedTransaction, keyBagMock);
+            boolean result = target.signInputs(transactionSignerProposedTransactionMock, keyBagMock);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.TRUE));
             transactionSignature.verify(() -> TransactionSignature.dummy(), atLeast(1));
             verify(partialTxMock).getInputs();
+            verify(partialTxMock).getInput(0L);
+            verify(transactionInputMock2).getConnectedOutput();
         }
     }
 
@@ -158,18 +165,22 @@ public class MissingSigResolutionSignerSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<TransactionSignature> transactionSignature = mockStatic(TransactionSignature.class)) {
-            TransactionSignature transactionSignature2 = new TransactionSignature(new BigInteger("0"), new BigInteger("0"));
+            TransactionSignature transactionSignature2 = TransactionSignature.dummy();
             transactionSignature.when(() -> TransactionSignature.dummy()).thenReturn(transactionSignature2);
-            MissingSigResolutionSigner target = new MissingSigResolutionSigner(Wallet.MissingSigsMode.THROW);
+            MissingSigResolutionSigner target = new MissingSigResolutionSigner(Wallet.MissingSigsMode.USE_DUMMY_SIG);
             List<TransactionInput> transactionInputList = new ArrayList<>();
+            transactionInputList.add(transactionInputMock);
             doReturn(transactionInputList).when(partialTxMock).getInputs();
-            TransactionSigner.ProposedTransaction transactionSignerProposedTransaction = new TransactionSigner.ProposedTransaction(transactionMock);
+            doReturn(transactionInputMock2).when(partialTxMock).getInput(0L);
+            doReturn(null).when(transactionInputMock2).getConnectedOutput();
             //Act Statement(s)
-            boolean result = target.signInputs(transactionSignerProposedTransaction, keyBagMock);
+            boolean result = target.signInputs(transactionSignerProposedTransactionMock, keyBagMock);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.TRUE));
             transactionSignature.verify(() -> TransactionSignature.dummy(), atLeast(1));
             verify(partialTxMock).getInputs();
+            verify(partialTxMock).getInput(0L);
+            verify(transactionInputMock2).getConnectedOutput();
         }
     }
 
@@ -193,18 +204,22 @@ public class MissingSigResolutionSignerSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<TransactionSignature> transactionSignature = mockStatic(TransactionSignature.class)) {
-            TransactionSignature transactionSignature2 = new TransactionSignature(new BigInteger("0"), new BigInteger("0"));
+            TransactionSignature transactionSignature2 = TransactionSignature.dummy();
             transactionSignature.when(() -> TransactionSignature.dummy()).thenReturn(transactionSignature2);
             MissingSigResolutionSigner target = new MissingSigResolutionSigner(Wallet.MissingSigsMode.USE_DUMMY_SIG);
             List<TransactionInput> transactionInputList = new ArrayList<>();
+            transactionInputList.add(transactionInputMock);
             doReturn(transactionInputList).when(partialTxMock).getInputs();
-            TransactionSigner.ProposedTransaction transactionSignerProposedTransaction = new TransactionSigner.ProposedTransaction(transactionMock);
+            doReturn(transactionInputMock2).when(partialTxMock).getInput(0L);
+            doReturn(null).when(transactionInputMock2).getConnectedOutput();
             //Act Statement(s)
-            boolean result = target.signInputs(transactionSignerProposedTransaction, keyBagMock);
+            boolean result = target.signInputs(transactionSignerProposedTransactionMock, keyBagMock);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.TRUE));
             transactionSignature.verify(() -> TransactionSignature.dummy(), atLeast(1));
             verify(partialTxMock).getInputs();
+            verify(partialTxMock).getInput(0L);
+            verify(transactionInputMock2).getConnectedOutput();
         }
     }
 
@@ -229,7 +244,7 @@ public class MissingSigResolutionSignerSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<TransactionSignature> transactionSignature = mockStatic(TransactionSignature.class)) {
-            TransactionSignature transactionSignature2 = new TransactionSignature(new BigInteger("0"), new BigInteger("0"));
+            TransactionSignature transactionSignature2 = TransactionSignature.dummy();
             transactionSignature.when(() -> TransactionSignature.dummy()).thenReturn(transactionSignature2);
             MissingSigResolutionSigner target = new MissingSigResolutionSigner(Wallet.MissingSigsMode.USE_DUMMY_SIG);
             List<TransactionInput> transactionInputList = new ArrayList<>();
@@ -237,9 +252,8 @@ public class MissingSigResolutionSignerSapientGeneratedJunit4Test {
             doReturn(transactionInputList).when(partialTxMock).getInputs();
             doReturn(transactionInputMock2).when(partialTxMock).getInput(0L);
             doReturn(null).when(transactionInputMock2).getConnectedOutput();
-            TransactionSigner.ProposedTransaction transactionSignerProposedTransaction = new TransactionSigner.ProposedTransaction(transactionMock);
             //Act Statement(s)
-            boolean result = target.signInputs(transactionSignerProposedTransaction, keyBagMock);
+            boolean result = target.signInputs(transactionSignerProposedTransactionMock, keyBagMock);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.TRUE));
             transactionSignature.verify(() -> TransactionSignature.dummy(), atLeast(1));
@@ -270,18 +284,22 @@ public class MissingSigResolutionSignerSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<TransactionSignature> transactionSignature = mockStatic(TransactionSignature.class)) {
-            TransactionSignature transactionSignature2 = new TransactionSignature(new BigInteger("0"), new BigInteger("0"));
+            TransactionSignature transactionSignature2 = TransactionSignature.dummy();
             transactionSignature.when(() -> TransactionSignature.dummy()).thenReturn(transactionSignature2);
             MissingSigResolutionSigner target = new MissingSigResolutionSigner(Wallet.MissingSigsMode.USE_DUMMY_SIG);
             List<TransactionInput> transactionInputList = new ArrayList<>();
+            transactionInputList.add(transactionInputMock);
             doReturn(transactionInputList).when(partialTxMock).getInputs();
-            TransactionSigner.ProposedTransaction transactionSignerProposedTransaction = new TransactionSigner.ProposedTransaction(transactionMock);
+            doReturn(transactionInputMock2).when(partialTxMock).getInput(0L);
+            doReturn(null).when(transactionInputMock2).getConnectedOutput();
             //Act Statement(s)
-            boolean result = target.signInputs(transactionSignerProposedTransaction, keyBagMock);
+            boolean result = target.signInputs(transactionSignerProposedTransactionMock, keyBagMock);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.TRUE));
             transactionSignature.verify(() -> TransactionSignature.dummy(), atLeast(1));
             verify(partialTxMock).getInputs();
+            verify(partialTxMock).getInput(0L);
+            verify(transactionInputMock2).getConnectedOutput();
         }
     }
 
@@ -308,18 +326,22 @@ public class MissingSigResolutionSignerSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<TransactionSignature> transactionSignature = mockStatic(TransactionSignature.class)) {
-            TransactionSignature transactionSignature2 = new TransactionSignature(new BigInteger("0"), new BigInteger("0"));
+            TransactionSignature transactionSignature2 = TransactionSignature.dummy();
             transactionSignature.when(() -> TransactionSignature.dummy()).thenReturn(transactionSignature2);
-            MissingSigResolutionSigner target = new MissingSigResolutionSigner(Wallet.MissingSigsMode.THROW);
+            MissingSigResolutionSigner target = new MissingSigResolutionSigner(Wallet.MissingSigsMode.USE_DUMMY_SIG);
             List<TransactionInput> transactionInputList = new ArrayList<>();
+            transactionInputList.add(transactionInputMock);
             doReturn(transactionInputList).when(partialTxMock).getInputs();
-            TransactionSigner.ProposedTransaction transactionSignerProposedTransaction = new TransactionSigner.ProposedTransaction(transactionMock);
+            doReturn(transactionInputMock2).when(partialTxMock).getInput(0L);
+            doReturn(null).when(transactionInputMock2).getConnectedOutput();
             //Act Statement(s)
-            boolean result = target.signInputs(transactionSignerProposedTransaction, keyBagMock);
+            boolean result = target.signInputs(transactionSignerProposedTransactionMock, keyBagMock);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.TRUE));
             transactionSignature.verify(() -> TransactionSignature.dummy(), atLeast(1));
             verify(partialTxMock).getInputs();
+            verify(partialTxMock).getInput(0L);
+            verify(transactionInputMock2).getConnectedOutput();
         }
     }
 
@@ -352,8 +374,10 @@ public class MissingSigResolutionSignerSapientGeneratedJunit4Test {
         doReturn(transactionInputList).when(partialTxMock).getInputs();
         doReturn(transactionInputMock2).when(partialTxMock).getInput(0L);
         doReturn(null).when(transactionInputMock2).getConnectedOutput();
+
         //Act Statement(s)
         boolean result = target.signInputs(transactionSignerProposedTransactionMock, keyBagMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
         verify(partialTxMock).getInputs();

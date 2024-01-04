@@ -389,11 +389,11 @@ methods:
       filledByUser: false
     uuid: "7d42dd02-a07c-33bf-b536-f0188bc26a83"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path3"
     testPathName: "decodeBytesWhenDecodedEncodingEqualsExpectedEncoding"
@@ -561,11 +561,11 @@ methods:
       filledByUser: false
     uuid: "cbd7285d-6f27-3a36-900d-07a5cc0cf8a7"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "encode"
     returnType: "java.lang.String"
@@ -741,13 +741,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "180B9CA660D2D0867A8355BDD083097B"
+    modelFingerprint: "CDC53E64F3A58F2556A2020EE4203501"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "encoding"
-      modelFingerprint: "C0D933299E9B36EEEA9378A31BC2D01D"
+      modelFingerprint: "202E944F290AE36E86C50A655A971F39"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -767,7 +767,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "hrp"
-      modelFingerprint: "FEE12CF59C9130ABBFA80243FAA4C44E"
+      modelFingerprint: "3B1DE1FBCFDD3CD8889A06B75759B248"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -775,9 +775,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "bc"
+          value: "F"
         suggestedContent: !<regular>
-          value: "bc"
+          value: "F"
         valueType: "java.lang.String"
         uuid: "encode_string1"
         fixed: false
@@ -787,7 +787,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "values"
-      modelFingerprint: "81FD692D7496978D60BBB5FA1BF253E0"
+      modelFingerprint: "2E03633FE82469B9653A7ABEED154B01"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -899,7 +899,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "values"
-      modelFingerprint: "7DCB6ECF64B3E9BA0D17A9B5769D5DAB"
+      modelFingerprint: "070AE9505C94FC4B1765206A32A360D9"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -936,7 +936,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "values"
-      modelFingerprint: "7DCB6ECF64B3E9BA0D17A9B5769D5DAB"
+      modelFingerprint: "070AE9505C94FC4B1765206A32A360D9"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -973,7 +973,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "values"
-      modelFingerprint: "7DCB6ECF64B3E9BA0D17A9B5769D5DAB"
+      modelFingerprint: "070AE9505C94FC4B1765206A32A360D9"
       index: 8
       ignored: false
       nestedInLoop: false
@@ -1010,7 +1010,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "values"
-      modelFingerprint: "7DCB6ECF64B3E9BA0D17A9B5769D5DAB"
+      modelFingerprint: "070AE9505C94FC4B1765206A32A360D9"
       index: 9
       ignored: false
       nestedInLoop: false
@@ -1047,7 +1047,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "values"
-      modelFingerprint: "504BC9839FA187ACE05974A7863C81B8"
+      modelFingerprint: "6D079BD3A8894B2BF0E9A497372534B1"
       index: 10
       ignored: false
       nestedInLoop: false
@@ -1071,105 +1071,9 @@ methods:
         returnValue:
           sapientType: "ARRAY"
           content: !<array>
-            values:
-              0:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              1:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              2:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              3:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              4:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              5:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+            values: {}
           suggestedContent: !<array>
-            values:
-              0:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              1:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              2:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              3:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              4:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              5:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+            values: {}
           valueType: "byte[]"
           uuid: "encode_byte[]6"
           fixed: false
@@ -1180,7 +1084,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "67A933573A922740D365D493B944BE55"
+      modelFingerprint: "1878249B36C0F2DF3C948120E430E7D1"
       index: 11
       ignored: false
       nestedInLoop: false
@@ -1188,9 +1092,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "bc1q"
+          value: "D1q"
         suggestedContent: !<regular>
-          value: "bc1q"
+          value: "D1q"
         valueType: "java.lang.String"
         uuid: "encode_string3"
         fixed: false
@@ -1200,11 +1104,11 @@ methods:
       filledByUser: false
     uuid: "de8b9fa0-b2fd-39f3-b03e-d9eae989c305"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path4"
     testPathName: "encode1WhenEncodingEqualsEncodingBECH32AndILessThan6AndCombinedIsEmpty"
@@ -1229,13 +1133,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "7C56F09E93831BED8C4D112006517B24"
+    modelFingerprint: "283CAC840380158159B68A87419B1002"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "encoding"
-      modelFingerprint: "C0D933299E9B36EEEA9378A31BC2D01D"
+      modelFingerprint: "3830FBBD47A52BE006EAC083331FFD42"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1243,8 +1147,6 @@ methods:
       value:
         sapientType: "ENUM"
         content: !<regular>
-          value: "BECH32"
-        suggestedContent: !<regular>
           value: "BECH32"
         valueType: "org.bitcoinj.base.Bech32$Encoding"
         uuid: "encode_bech32.Encoding1"
@@ -1255,7 +1157,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "hrp"
-      modelFingerprint: "FEE12CF59C9130ABBFA80243FAA4C44E"
+      modelFingerprint: "FFEEDCD00A02F47C98B13B6655897FEC"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1263,9 +1165,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "bc"
-        suggestedContent: !<regular>
-          value: "bc"
+          value: "hrp1"
         valueType: "java.lang.String"
         uuid: "encode_string1"
         fixed: false
@@ -1275,7 +1175,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "values"
-      modelFingerprint: "81FD692D7496978D60BBB5FA1BF253E0"
+      modelFingerprint: "2E03633FE82469B9653A7ABEED154B01"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1387,7 +1287,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "values"
-      modelFingerprint: "7DCB6ECF64B3E9BA0D17A9B5769D5DAB"
+      modelFingerprint: "AD1626536F7025AD93D619F083CA18FB"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -1424,7 +1324,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "values"
-      modelFingerprint: "7DCB6ECF64B3E9BA0D17A9B5769D5DAB"
+      modelFingerprint: "AD1626536F7025AD93D619F083CA18FB"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -1461,7 +1361,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "values"
-      modelFingerprint: "7DCB6ECF64B3E9BA0D17A9B5769D5DAB"
+      modelFingerprint: "AD1626536F7025AD93D619F083CA18FB"
       index: 8
       ignored: false
       nestedInLoop: false
@@ -1498,7 +1398,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "values"
-      modelFingerprint: "7DCB6ECF64B3E9BA0D17A9B5769D5DAB"
+      modelFingerprint: "AD1626536F7025AD93D619F083CA18FB"
       index: 9
       ignored: false
       nestedInLoop: false
@@ -1535,7 +1435,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "values"
-      modelFingerprint: "A557C45F04F19635A1EA29E6BF4A6DE4"
+      modelFingerprint: "6D079BD3A8894B2BF0E9A497372534B1"
       index: 10
       ignored: false
       nestedInLoop: false
@@ -1559,73 +1459,9 @@ methods:
         returnValue:
           sapientType: "ARRAY"
           content: !<array>
-            values:
-              0:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              1:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              2:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              3:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+            values: {}
           suggestedContent: !<array>
-            values:
-              0:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              1:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              2:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              3:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+            values: {}
           valueType: "byte[]"
           uuid: "encode_byte[]6"
           fixed: false
@@ -1636,7 +1472,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "67A933573A922740D365D493B944BE55"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
       index: 11
       ignored: false
       nestedInLoop: false
@@ -1644,9 +1480,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "bc1q"
-        suggestedContent: !<regular>
-          value: "bc1q"
+          value: "result1"
         valueType: "java.lang.String"
         uuid: "encode_string3"
         fixed: false
@@ -1656,11 +1490,11 @@ methods:
       filledByUser: false
     uuid: "a9050d6a-16a6-3523-938f-67f081d71b1d"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "decode"
     returnType: "org.bitcoinj.base.Bech32$Bech32Data"
@@ -1933,9 +1767,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\uD87F"
+                value: "\ud87f"
               suggestedContent: !<regular>
-                value: "\\uD87F"
+                value: "\ud87f"
               valueType: "char"
               uuid: "decode_char1"
               fixed: false
@@ -1960,7 +1794,7 @@ methods:
             value:
               sapientType: "BASIC"
               suggestedContent: !<regular>
-                value: "\\uD87F"
+                value: "\ud87f"
               valueType: "char"
               uuid: "decode_char1"
               fixed: false

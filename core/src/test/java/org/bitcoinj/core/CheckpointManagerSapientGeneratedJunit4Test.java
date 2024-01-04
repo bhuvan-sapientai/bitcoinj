@@ -81,9 +81,11 @@ public class CheckpointManagerSapientGeneratedJunit4Test {
     @Test()
     public void openStreamTest() {
         //Arrange Statement(s)
-        NetworkParameters networkParameters = NetworkParameters.fromID("test");
+        NetworkParameters networkParameters = NetworkParameters.fromID("A");
+
         //Act Statement(s)
         InputStream result = CheckpointManager.openStream(networkParameters);
+
         //Assert statement(s)
         assertThat(result, is(nullValue()));
     }

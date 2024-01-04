@@ -20,8 +20,10 @@ public class PlatformUtilsSapientGeneratedJunit4Test {
         /* Branches:
          * (runtime == Runtime.ANDROID) : false
          */
+
         //Act Statement(s)
         boolean result = PlatformUtils.isAndroidRuntime();
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }
@@ -33,8 +35,10 @@ public class PlatformUtilsSapientGeneratedJunit4Test {
         /* Branches:
          * (runtime == Runtime.OPENJDK) : false
          */
+
         //Act Statement(s)
         boolean result = PlatformUtils.isOpenJDKRuntime();
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }
@@ -45,8 +49,10 @@ public class PlatformUtilsSapientGeneratedJunit4Test {
         /* Branches:
          * (runtime == Runtime.ORACLE_JAVA) : false
          */
+
         //Act Statement(s)
         boolean result = PlatformUtils.isOracleJavaRuntime();
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }
@@ -57,8 +63,10 @@ public class PlatformUtilsSapientGeneratedJunit4Test {
         /* Branches:
          * (os == OS.LINUX) : false
          */
+
         //Act Statement(s)
         boolean result = PlatformUtils.isLinux();
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }
@@ -69,8 +77,10 @@ public class PlatformUtilsSapientGeneratedJunit4Test {
         /* Branches:
          * (os == OS.WINDOWS) : false
          */
+
         //Act Statement(s)
         boolean result = PlatformUtils.isWindows();
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }
@@ -82,8 +92,10 @@ public class PlatformUtilsSapientGeneratedJunit4Test {
         /* Branches:
          * (os == OS.MAC_OS) : false
          */
+
         //Act Statement(s)
         boolean result = PlatformUtils.isMac();
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }

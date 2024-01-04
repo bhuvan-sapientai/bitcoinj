@@ -161,8 +161,10 @@ public class TransactionOutPointSapientGeneratedJunit4Test {
         TransactionOutPoint target = spy(new TransactionOutPoint(0L, fromTxMock));
         byte[] byteArray = new byte[]{};
         doReturn(byteArray).when(target).serialize();
+
         //Act Statement(s)
         byte[] result = target.bitcoinSerialize();
+
         //Assert statement(s)
         assertThat(result, equalTo(byteArray));
         verify(fromTxMock).getTxId();
@@ -179,8 +181,10 @@ public class TransactionOutPointSapientGeneratedJunit4Test {
         doReturn(hashMock).when(fromTxMock).getTxId();
         TransactionOutPoint target = new TransactionOutPoint(0L, fromTxMock);
         doReturn(transactionOutputMock).when(fromTxMock).getOutput(0L);
+
         //Act Statement(s)
         TransactionOutput result = target.getConnectedOutput();
+
         //Assert statement(s)
         assertThat(result, equalTo(transactionOutputMock));
         verify(fromTxMock).getTxId();
@@ -197,8 +201,10 @@ public class TransactionOutPointSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         TransactionOutPoint target = new TransactionOutPoint(0L, (Transaction) null);
+
         //Act Statement(s)
         TransactionOutput result = target.getConnectedOutput();
+
         //Assert statement(s)
         assertThat(result, is(nullValue()));
     }
@@ -215,8 +221,10 @@ public class TransactionOutPointSapientGeneratedJunit4Test {
         doReturn(transactionOutputMock).when(target).getConnectedOutput();
         byte[] byteArray = new byte[]{(byte) 0};
         doReturn(byteArray).when(transactionOutputMock).getScriptBytes();
+
         //Act Statement(s)
         byte[] result = target.getConnectedPubKeyScript();
+
         //Assert statement(s)
         assertThat(result, equalTo(byteArray));
         verify(fromTxMock).getTxId();
@@ -563,8 +571,10 @@ public class TransactionOutPointSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         doReturn(hashMock).when(fromTxMock).getTxId();
         TransactionOutPoint target = new TransactionOutPoint(0L, fromTxMock);
+
         //Act Statement(s)
         TransactionOutPoint result = target.disconnectOutput();
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
         verify(fromTxMock).getTxId();
@@ -579,8 +589,10 @@ public class TransactionOutPointSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         doReturn(hashMock).when(fromTxMock).getTxId();
         TransactionOutPoint target = new TransactionOutPoint(0L, fromTxMock);
+
         //Act Statement(s)
         TransactionOutPoint result = target.disconnectOutput();
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
         verify(fromTxMock).getTxId();
@@ -595,8 +607,10 @@ public class TransactionOutPointSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         doReturn(hashMock).when(fromTxMock).getTxId();
         TransactionOutPoint target = new TransactionOutPoint(0L, fromTxMock);
+
         //Act Statement(s)
         TransactionOutPoint result = target.connectTransaction(transactionMock);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
         verify(fromTxMock).getTxId();
@@ -611,8 +625,10 @@ public class TransactionOutPointSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         doReturn(hashMock).when(fromTxMock).getTxId();
         TransactionOutPoint target = new TransactionOutPoint(0L, fromTxMock);
+
         //Act Statement(s)
         TransactionOutPoint result = target.connectTransaction(transactionMock);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
         verify(fromTxMock).getTxId();
@@ -627,8 +643,10 @@ public class TransactionOutPointSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         doReturn(hashMock).when(fromTxMock).getTxId();
         TransactionOutPoint target = new TransactionOutPoint(0L, fromTxMock);
+
         //Act Statement(s)
         TransactionOutPoint result = target.disconnectTransaction();
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
         verify(fromTxMock).getTxId();
@@ -643,8 +661,10 @@ public class TransactionOutPointSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         doReturn(hashMock).when(fromTxMock).getTxId();
         TransactionOutPoint target = new TransactionOutPoint(0L, fromTxMock);
+
         //Act Statement(s)
         TransactionOutPoint result = target.disconnectTransaction();
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
         verify(fromTxMock).getTxId();
@@ -657,8 +677,10 @@ public class TransactionOutPointSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         doReturn(hashMock).when(fromTxMock).getTxId();
         TransactionOutPoint target = new TransactionOutPoint(0L, fromTxMock);
+
         //Act Statement(s)
         String result = target.toString();
+
         //Assert statement(s)
         assertThat(result, equalTo("<init>_sha256Hash2:0"));
         verify(fromTxMock).getTxId();
@@ -670,8 +692,10 @@ public class TransactionOutPointSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         doReturn(hashMock).when(fromTxMock).getTxId();
         TransactionOutPoint target = new TransactionOutPoint(0L, fromTxMock);
+
         //Act Statement(s)
         Sha256Hash result = target.hash();
+
         //Assert statement(s)
         assertThat(result, equalTo(hashMock));
         verify(fromTxMock).getTxId();
@@ -683,8 +707,10 @@ public class TransactionOutPointSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         doReturn(hashMock).when(fromTxMock).getTxId();
         TransactionOutPoint target = new TransactionOutPoint(0L, fromTxMock);
+
         //Act Statement(s)
         long result = target.index();
+
         //Assert statement(s)
         assertThat(result, equalTo(0L));
         verify(fromTxMock).getTxId();
@@ -696,8 +722,10 @@ public class TransactionOutPointSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         doReturn(hashMock).when(fromTxMock).getTxId();
         TransactionOutPoint target = new TransactionOutPoint(0L, fromTxMock);
+
         //Act Statement(s)
         Sha256Hash result = target.getHash();
+
         //Assert statement(s)
         assertThat(result, equalTo(hashMock));
         verify(fromTxMock).getTxId();
@@ -709,8 +737,10 @@ public class TransactionOutPointSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         doReturn(hashMock).when(fromTxMock).getTxId();
         TransactionOutPoint target = new TransactionOutPoint(0L, fromTxMock);
+
         //Act Statement(s)
         long result = target.getIndex();
+
         //Assert statement(s)
         assertThat(result, equalTo(0L));
         verify(fromTxMock).getTxId();

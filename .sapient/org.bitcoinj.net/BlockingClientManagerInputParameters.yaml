@@ -186,12 +186,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "582D7F6AF79679D9FBB2FA479993D6D4"
+    modelFingerprint: "727B2BF9BB04D2FDA13783B5E1DA6EF4"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "13DB4A6822BEA30D3547194570E898E4"
+      modelFingerprint: "2FB0D460CCDC61545EB2356A073EADC8"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -224,11 +224,7 @@ methods:
           parameters:
           - name: "socketFactory"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "javax.net.SocketFactory"
-                method: "getDefault"
-                methodParameters: []
+              sapientType: "UNKNOWN"
               suggestedContent: !<static_method_return>
                 target: "javax.net.SocketFactory"
                 method: "getDefault"
@@ -249,17 +245,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "serverAddress"
-      modelFingerprint: "27A5E9DEBCCD63D4A5D14B0EC36BBC7A"
+      modelFingerprint: "CF0EB3DEA07F1171B2E1DFD1E85D42CB"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "NULL"
-        content: !<unknown_object>
-          target: "java.net.SocketAddress"
-          onlyPojoFunctions: false
-          builderPattern: false
         suggestedContent: !<unknown_object>
           target: "java.net.SocketAddress"
           onlyPojoFunctions: false
@@ -273,17 +265,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "connection"
-      modelFingerprint: "E240B08557456B8245A8AF209F29B3D5"
+      modelFingerprint: "C453A5F8EB06108289088AA7A602A9A1"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.net.StreamConnection"
-          onlyPojoFunctions: false
-          builderPattern: false
         valueType: "org.bitcoinj.net.StreamConnection"
         uuid: "openConnection_streamConnection1"
         fixed: false
@@ -320,7 +308,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "7265A707675DFE7FD51CC82BC14F7229"
+      modelFingerprint: "4816A6B25CB854B22DA5497CD6484E37"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -335,10 +323,6 @@ methods:
           - name: "serverAddress"
             value:
               sapientType: "NULL"
-              content: !<unknown_object>
-                target: "java.net.SocketAddress"
-                onlyPojoFunctions: false
-                builderPattern: false
               suggestedContent: !<unknown_object>
                 target: "java.net.SocketAddress"
                 onlyPojoFunctions: false
@@ -351,10 +335,6 @@ methods:
           - name: "connection"
             value:
               sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.net.StreamConnection"
-                onlyPojoFunctions: false
-                builderPattern: false
               valueType: "org.bitcoinj.net.StreamConnection"
               uuid: "openConnection_streamConnection1"
               fixed: false
@@ -396,45 +376,15 @@ methods:
             value:
               sapientType: "OBJECT"
               content: !<static_method_return>
-                target: "java.util.Objects"
-                method: "requireNonNull"
-                methodParameters:
-                - value:
-                    sapientType: "OBJECT"
-                    content: !<static_method_return>
-                      target: "javax.net.SocketFactory"
-                      method: "getDefault"
-                      methodParameters: []
-                    suggestedContent: !<static_method_return>
-                      target: "javax.net.SocketFactory"
-                      method: "getDefault"
-                      methodParameters: []
-                    valueType: "javax.net.SocketFactory"
-                    uuid: "<init>_socketFactory1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                target: "javax.net.SocketFactory"
+                method: "getDefault"
+                methodParameters: []
               suggestedContent: !<static_method_return>
-                target: "java.util.Objects"
-                method: "requireNonNull"
-                methodParameters:
-                - value:
-                    sapientType: "OBJECT"
-                    content: !<static_method_return>
-                      target: "javax.net.SocketFactory"
-                      method: "getDefault"
-                      methodParameters: []
-                    suggestedContent: !<static_method_return>
-                      target: "javax.net.SocketFactory"
-                      method: "getDefault"
-                      methodParameters: []
-                    valueType: "javax.net.SocketFactory"
-                    uuid: "<init>_socketFactory1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                target: "javax.net.SocketFactory"
+                method: "getDefault"
+                methodParameters: []
               valueType: "javax.net.SocketFactory"
-              uuid: "<init>_socketFactory2"
+              uuid: "<init>_socketFactory1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -462,7 +412,7 @@ methods:
           parameters:
           - name: "serverAddress"
             value:
-              sapientType: "NULL"
+              sapientType: "UNKNOWN"
               suggestedContent: !<unknown_object>
                 target: "java.net.SocketAddress"
                 onlyPojoFunctions: false
@@ -474,11 +424,7 @@ methods:
               explicitCastNeeded: false
           - name: "connection"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.net.StreamConnection"
-                onlyPojoFunctions: false
-                builderPattern: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.net.StreamConnection"
               uuid: "openConnection_streamConnection1"
               fixed: false
@@ -506,28 +452,13 @@ methods:
               explicitCastNeeded: false
           - name: "socketFactory"
             value:
-              sapientType: "OBJECT"
+              sapientType: "UNKNOWN"
               suggestedContent: !<static_method_return>
-                target: "java.util.Objects"
-                method: "requireNonNull"
-                methodParameters:
-                - value:
-                    sapientType: "OBJECT"
-                    content: !<static_method_return>
-                      target: "javax.net.SocketFactory"
-                      method: "getDefault"
-                      methodParameters: []
-                    suggestedContent: !<static_method_return>
-                      target: "javax.net.SocketFactory"
-                      method: "getDefault"
-                      methodParameters: []
-                    valueType: "javax.net.SocketFactory"
-                    uuid: "<init>_socketFactory1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                target: "javax.net.SocketFactory"
+                method: "getDefault"
+                methodParameters: []
               valueType: "javax.net.SocketFactory"
-              uuid: "<init>_socketFactory2"
+              uuid: "<init>_socketFactory1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -569,10 +500,6 @@ methods:
                 - name: "serverAddress"
                   value:
                     sapientType: "NULL"
-                    content: !<unknown_object>
-                      target: "java.net.SocketAddress"
-                      onlyPojoFunctions: false
-                      builderPattern: false
                     suggestedContent: !<unknown_object>
                       target: "java.net.SocketAddress"
                       onlyPojoFunctions: false
@@ -585,10 +512,6 @@ methods:
                 - name: "connection"
                   value:
                     sapientType: "MOCK"
-                    suggestedContent: !<unknown_object>
-                      target: "org.bitcoinj.net.StreamConnection"
-                      onlyPojoFunctions: false
-                      builderPattern: false
                     valueType: "org.bitcoinj.net.StreamConnection"
                     uuid: "openConnection_streamConnection1"
                     fixed: false
@@ -630,45 +553,15 @@ methods:
                   value:
                     sapientType: "OBJECT"
                     content: !<static_method_return>
-                      target: "java.util.Objects"
-                      method: "requireNonNull"
-                      methodParameters:
-                      - value:
-                          sapientType: "OBJECT"
-                          content: !<static_method_return>
-                            target: "javax.net.SocketFactory"
-                            method: "getDefault"
-                            methodParameters: []
-                          suggestedContent: !<static_method_return>
-                            target: "javax.net.SocketFactory"
-                            method: "getDefault"
-                            methodParameters: []
-                          valueType: "javax.net.SocketFactory"
-                          uuid: "<init>_socketFactory1"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
+                      target: "javax.net.SocketFactory"
+                      method: "getDefault"
+                      methodParameters: []
                     suggestedContent: !<static_method_return>
-                      target: "java.util.Objects"
-                      method: "requireNonNull"
-                      methodParameters:
-                      - value:
-                          sapientType: "OBJECT"
-                          content: !<static_method_return>
-                            target: "javax.net.SocketFactory"
-                            method: "getDefault"
-                            methodParameters: []
-                          suggestedContent: !<static_method_return>
-                            target: "javax.net.SocketFactory"
-                            method: "getDefault"
-                            methodParameters: []
-                          valueType: "javax.net.SocketFactory"
-                          uuid: "<init>_socketFactory1"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
+                      target: "javax.net.SocketFactory"
+                      method: "getDefault"
+                      methodParameters: []
                     valueType: "javax.net.SocketFactory"
-                    uuid: "<init>_socketFactory2"
+                    uuid: "<init>_socketFactory1"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -696,7 +589,7 @@ methods:
                 parameters:
                 - name: "serverAddress"
                   value:
-                    sapientType: "NULL"
+                    sapientType: "UNKNOWN"
                     suggestedContent: !<unknown_object>
                       target: "java.net.SocketAddress"
                       onlyPojoFunctions: false
@@ -708,11 +601,7 @@ methods:
                     explicitCastNeeded: false
                 - name: "connection"
                   value:
-                    sapientType: "MOCK"
-                    suggestedContent: !<unknown_object>
-                      target: "org.bitcoinj.net.StreamConnection"
-                      onlyPojoFunctions: false
-                      builderPattern: false
+                    sapientType: "UNKNOWN"
                     valueType: "org.bitcoinj.net.StreamConnection"
                     uuid: "openConnection_streamConnection1"
                     fixed: false
@@ -740,28 +629,13 @@ methods:
                     explicitCastNeeded: false
                 - name: "socketFactory"
                   value:
-                    sapientType: "OBJECT"
+                    sapientType: "UNKNOWN"
                     suggestedContent: !<static_method_return>
-                      target: "java.util.Objects"
-                      method: "requireNonNull"
-                      methodParameters:
-                      - value:
-                          sapientType: "OBJECT"
-                          content: !<static_method_return>
-                            target: "javax.net.SocketFactory"
-                            method: "getDefault"
-                            methodParameters: []
-                          suggestedContent: !<static_method_return>
-                            target: "javax.net.SocketFactory"
-                            method: "getDefault"
-                            methodParameters: []
-                          valueType: "javax.net.SocketFactory"
-                          uuid: "<init>_socketFactory1"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
+                      target: "javax.net.SocketFactory"
+                      method: "getDefault"
+                      methodParameters: []
                     valueType: "javax.net.SocketFactory"
-                    uuid: "<init>_socketFactory2"
+                    uuid: "<init>_socketFactory1"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -797,7 +671,7 @@ methods:
                 parameters:
                 - name: "serverAddress"
                   value:
-                    sapientType: "NULL"
+                    sapientType: "UNKNOWN"
                     suggestedContent: !<unknown_object>
                       target: "java.net.SocketAddress"
                       onlyPojoFunctions: false
@@ -809,11 +683,7 @@ methods:
                     explicitCastNeeded: false
                 - name: "connection"
                   value:
-                    sapientType: "MOCK"
-                    suggestedContent: !<unknown_object>
-                      target: "org.bitcoinj.net.StreamConnection"
-                      onlyPojoFunctions: false
-                      builderPattern: false
+                    sapientType: "UNKNOWN"
                     valueType: "org.bitcoinj.net.StreamConnection"
                     uuid: "openConnection_streamConnection1"
                     fixed: false
@@ -841,28 +711,13 @@ methods:
                     explicitCastNeeded: false
                 - name: "socketFactory"
                   value:
-                    sapientType: "OBJECT"
+                    sapientType: "UNKNOWN"
                     suggestedContent: !<static_method_return>
-                      target: "java.util.Objects"
-                      method: "requireNonNull"
-                      methodParameters:
-                      - value:
-                          sapientType: "OBJECT"
-                          content: !<static_method_return>
-                            target: "javax.net.SocketFactory"
-                            method: "getDefault"
-                            methodParameters: []
-                          suggestedContent: !<static_method_return>
-                            target: "javax.net.SocketFactory"
-                            method: "getDefault"
-                            methodParameters: []
-                          valueType: "javax.net.SocketFactory"
-                          uuid: "<init>_socketFactory1"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
+                      target: "javax.net.SocketFactory"
+                      method: "getDefault"
+                      methodParameters: []
                     valueType: "javax.net.SocketFactory"
-                    uuid: "<init>_socketFactory2"
+                    uuid: "<init>_socketFactory1"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -900,7 +755,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "016CC6889ADA2A0622AA1136380C2B97"
+      modelFingerprint: "DEFB0D4F3747C0A15397EE79A0D80C37"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -917,10 +772,6 @@ methods:
               - name: "serverAddress"
                 value:
                   sapientType: "NULL"
-                  content: !<unknown_object>
-                    target: "java.net.SocketAddress"
-                    onlyPojoFunctions: false
-                    builderPattern: false
                   suggestedContent: !<unknown_object>
                     target: "java.net.SocketAddress"
                     onlyPojoFunctions: false
@@ -933,10 +784,6 @@ methods:
               - name: "connection"
                 value:
                   sapientType: "MOCK"
-                  suggestedContent: !<unknown_object>
-                    target: "org.bitcoinj.net.StreamConnection"
-                    onlyPojoFunctions: false
-                    builderPattern: false
                   valueType: "org.bitcoinj.net.StreamConnection"
                   uuid: "openConnection_streamConnection1"
                   fixed: false
@@ -978,45 +825,15 @@ methods:
                 value:
                   sapientType: "OBJECT"
                   content: !<static_method_return>
-                    target: "java.util.Objects"
-                    method: "requireNonNull"
-                    methodParameters:
-                    - value:
-                        sapientType: "OBJECT"
-                        content: !<static_method_return>
-                          target: "javax.net.SocketFactory"
-                          method: "getDefault"
-                          methodParameters: []
-                        suggestedContent: !<static_method_return>
-                          target: "javax.net.SocketFactory"
-                          method: "getDefault"
-                          methodParameters: []
-                        valueType: "javax.net.SocketFactory"
-                        uuid: "<init>_socketFactory1"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
+                    target: "javax.net.SocketFactory"
+                    method: "getDefault"
+                    methodParameters: []
                   suggestedContent: !<static_method_return>
-                    target: "java.util.Objects"
-                    method: "requireNonNull"
-                    methodParameters:
-                    - value:
-                        sapientType: "OBJECT"
-                        content: !<static_method_return>
-                          target: "javax.net.SocketFactory"
-                          method: "getDefault"
-                          methodParameters: []
-                        suggestedContent: !<static_method_return>
-                          target: "javax.net.SocketFactory"
-                          method: "getDefault"
-                          methodParameters: []
-                        valueType: "javax.net.SocketFactory"
-                        uuid: "<init>_socketFactory1"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
+                    target: "javax.net.SocketFactory"
+                    method: "getDefault"
+                    methodParameters: []
                   valueType: "javax.net.SocketFactory"
-                  uuid: "<init>_socketFactory2"
+                  uuid: "<init>_socketFactory1"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -1044,7 +861,7 @@ methods:
               parameters:
               - name: "serverAddress"
                 value:
-                  sapientType: "NULL"
+                  sapientType: "UNKNOWN"
                   suggestedContent: !<unknown_object>
                     target: "java.net.SocketAddress"
                     onlyPojoFunctions: false
@@ -1056,11 +873,7 @@ methods:
                   explicitCastNeeded: false
               - name: "connection"
                 value:
-                  sapientType: "MOCK"
-                  suggestedContent: !<unknown_object>
-                    target: "org.bitcoinj.net.StreamConnection"
-                    onlyPojoFunctions: false
-                    builderPattern: false
+                  sapientType: "UNKNOWN"
                   valueType: "org.bitcoinj.net.StreamConnection"
                   uuid: "openConnection_streamConnection1"
                   fixed: false
@@ -1088,28 +901,13 @@ methods:
                   explicitCastNeeded: false
               - name: "socketFactory"
                 value:
-                  sapientType: "OBJECT"
+                  sapientType: "UNKNOWN"
                   suggestedContent: !<static_method_return>
-                    target: "java.util.Objects"
-                    method: "requireNonNull"
-                    methodParameters:
-                    - value:
-                        sapientType: "OBJECT"
-                        content: !<static_method_return>
-                          target: "javax.net.SocketFactory"
-                          method: "getDefault"
-                          methodParameters: []
-                        suggestedContent: !<static_method_return>
-                          target: "javax.net.SocketFactory"
-                          method: "getDefault"
-                          methodParameters: []
-                        valueType: "javax.net.SocketFactory"
-                        uuid: "<init>_socketFactory1"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
+                    target: "javax.net.SocketFactory"
+                    method: "getDefault"
+                    methodParameters: []
                   valueType: "javax.net.SocketFactory"
-                  uuid: "<init>_socketFactory2"
+                  uuid: "<init>_socketFactory1"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -1145,7 +943,7 @@ methods:
               parameters:
               - name: "serverAddress"
                 value:
-                  sapientType: "NULL"
+                  sapientType: "UNKNOWN"
                   suggestedContent: !<unknown_object>
                     target: "java.net.SocketAddress"
                     onlyPojoFunctions: false
@@ -1157,11 +955,7 @@ methods:
                   explicitCastNeeded: false
               - name: "connection"
                 value:
-                  sapientType: "MOCK"
-                  suggestedContent: !<unknown_object>
-                    target: "org.bitcoinj.net.StreamConnection"
-                    onlyPojoFunctions: false
-                    builderPattern: false
+                  sapientType: "UNKNOWN"
                   valueType: "org.bitcoinj.net.StreamConnection"
                   uuid: "openConnection_streamConnection1"
                   fixed: false
@@ -1189,28 +983,13 @@ methods:
                   explicitCastNeeded: false
               - name: "socketFactory"
                 value:
-                  sapientType: "OBJECT"
+                  sapientType: "UNKNOWN"
                   suggestedContent: !<static_method_return>
-                    target: "java.util.Objects"
-                    method: "requireNonNull"
-                    methodParameters:
-                    - value:
-                        sapientType: "OBJECT"
-                        content: !<static_method_return>
-                          target: "javax.net.SocketFactory"
-                          method: "getDefault"
-                          methodParameters: []
-                        suggestedContent: !<static_method_return>
-                          target: "javax.net.SocketFactory"
-                          method: "getDefault"
-                          methodParameters: []
-                        valueType: "javax.net.SocketFactory"
-                        uuid: "<init>_socketFactory1"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
+                    target: "javax.net.SocketFactory"
+                    method: "getDefault"
+                    methodParameters: []
                   valueType: "javax.net.SocketFactory"
-                  uuid: "<init>_socketFactory2"
+                  uuid: "<init>_socketFactory1"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -1247,12 +1026,12 @@ methods:
       filledByUser: false
     uuid: "78ebb428-2cae-3916-9c06-f91746d86a49"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     variablesCouldNotBeIsolated: "org.bitcoinj.net.BlockingClient"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path3"
     testPathName: "openConnectionWhenCaughtIOExceptionThrowsRuntimeException"
@@ -1261,7 +1040,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "605D41945481726425DC114ABB552766"
+    modelFingerprint: "D3C921DCAD54B1DE3EC002D7C3B2DDB9"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -1271,7 +1050,7 @@ methods:
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "13DB4A6822BEA30D3547194570E898E4"
+      modelFingerprint: "2FB0D460CCDC61545EB2356A073EADC8"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1304,11 +1083,7 @@ methods:
           parameters:
           - name: "socketFactory"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "javax.net.SocketFactory"
-                method: "getDefault"
-                methodParameters: []
+              sapientType: "UNKNOWN"
               suggestedContent: !<static_method_return>
                 target: "javax.net.SocketFactory"
                 method: "getDefault"
@@ -1329,17 +1104,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "serverAddress"
-      modelFingerprint: "27A5E9DEBCCD63D4A5D14B0EC36BBC7A"
+      modelFingerprint: "CF0EB3DEA07F1171B2E1DFD1E85D42CB"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "NULL"
-        content: !<unknown_object>
-          target: "java.net.SocketAddress"
-          onlyPojoFunctions: false
-          builderPattern: false
         suggestedContent: !<unknown_object>
           target: "java.net.SocketAddress"
           onlyPojoFunctions: false
@@ -1353,17 +1124,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "connection"
-      modelFingerprint: "E240B08557456B8245A8AF209F29B3D5"
+      modelFingerprint: "C453A5F8EB06108289088AA7A602A9A1"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.net.StreamConnection"
-          onlyPojoFunctions: false
-          builderPattern: false
         valueType: "org.bitcoinj.net.StreamConnection"
         uuid: "openConnection_streamConnection1"
         fixed: false
@@ -1400,7 +1167,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "7265A707675DFE7FD51CC82BC14F7229"
+      modelFingerprint: "4816A6B25CB854B22DA5497CD6484E37"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -1415,10 +1182,6 @@ methods:
           - name: "serverAddress"
             value:
               sapientType: "NULL"
-              content: !<unknown_object>
-                target: "java.net.SocketAddress"
-                onlyPojoFunctions: false
-                builderPattern: false
               suggestedContent: !<unknown_object>
                 target: "java.net.SocketAddress"
                 onlyPojoFunctions: false
@@ -1431,10 +1194,6 @@ methods:
           - name: "connection"
             value:
               sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.net.StreamConnection"
-                onlyPojoFunctions: false
-                builderPattern: false
               valueType: "org.bitcoinj.net.StreamConnection"
               uuid: "openConnection_streamConnection1"
               fixed: false
@@ -1476,45 +1235,15 @@ methods:
             value:
               sapientType: "OBJECT"
               content: !<static_method_return>
-                target: "java.util.Objects"
-                method: "requireNonNull"
-                methodParameters:
-                - value:
-                    sapientType: "OBJECT"
-                    content: !<static_method_return>
-                      target: "javax.net.SocketFactory"
-                      method: "getDefault"
-                      methodParameters: []
-                    suggestedContent: !<static_method_return>
-                      target: "javax.net.SocketFactory"
-                      method: "getDefault"
-                      methodParameters: []
-                    valueType: "javax.net.SocketFactory"
-                    uuid: "<init>_socketFactory1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                target: "javax.net.SocketFactory"
+                method: "getDefault"
+                methodParameters: []
               suggestedContent: !<static_method_return>
-                target: "java.util.Objects"
-                method: "requireNonNull"
-                methodParameters:
-                - value:
-                    sapientType: "OBJECT"
-                    content: !<static_method_return>
-                      target: "javax.net.SocketFactory"
-                      method: "getDefault"
-                      methodParameters: []
-                    suggestedContent: !<static_method_return>
-                      target: "javax.net.SocketFactory"
-                      method: "getDefault"
-                      methodParameters: []
-                    valueType: "javax.net.SocketFactory"
-                    uuid: "<init>_socketFactory1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                target: "javax.net.SocketFactory"
+                method: "getDefault"
+                methodParameters: []
               valueType: "javax.net.SocketFactory"
-              uuid: "<init>_socketFactory2"
+              uuid: "<init>_socketFactory1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1542,7 +1271,7 @@ methods:
           parameters:
           - name: "serverAddress"
             value:
-              sapientType: "NULL"
+              sapientType: "UNKNOWN"
               suggestedContent: !<unknown_object>
                 target: "java.net.SocketAddress"
                 onlyPojoFunctions: false
@@ -1554,11 +1283,7 @@ methods:
               explicitCastNeeded: false
           - name: "connection"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.net.StreamConnection"
-                onlyPojoFunctions: false
-                builderPattern: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.net.StreamConnection"
               uuid: "openConnection_streamConnection1"
               fixed: false
@@ -1586,28 +1311,13 @@ methods:
               explicitCastNeeded: false
           - name: "socketFactory"
             value:
-              sapientType: "OBJECT"
+              sapientType: "UNKNOWN"
               suggestedContent: !<static_method_return>
-                target: "java.util.Objects"
-                method: "requireNonNull"
-                methodParameters:
-                - value:
-                    sapientType: "OBJECT"
-                    content: !<static_method_return>
-                      target: "javax.net.SocketFactory"
-                      method: "getDefault"
-                      methodParameters: []
-                    suggestedContent: !<static_method_return>
-                      target: "javax.net.SocketFactory"
-                      method: "getDefault"
-                      methodParameters: []
-                    valueType: "javax.net.SocketFactory"
-                    uuid: "<init>_socketFactory1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                target: "javax.net.SocketFactory"
+                method: "getDefault"
+                methodParameters: []
               valueType: "javax.net.SocketFactory"
-              uuid: "<init>_socketFactory2"
+              uuid: "<init>_socketFactory1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1649,10 +1359,6 @@ methods:
                 - name: "serverAddress"
                   value:
                     sapientType: "NULL"
-                    content: !<unknown_object>
-                      target: "java.net.SocketAddress"
-                      onlyPojoFunctions: false
-                      builderPattern: false
                     suggestedContent: !<unknown_object>
                       target: "java.net.SocketAddress"
                       onlyPojoFunctions: false
@@ -1665,10 +1371,6 @@ methods:
                 - name: "connection"
                   value:
                     sapientType: "MOCK"
-                    suggestedContent: !<unknown_object>
-                      target: "org.bitcoinj.net.StreamConnection"
-                      onlyPojoFunctions: false
-                      builderPattern: false
                     valueType: "org.bitcoinj.net.StreamConnection"
                     uuid: "openConnection_streamConnection1"
                     fixed: false
@@ -1710,45 +1412,15 @@ methods:
                   value:
                     sapientType: "OBJECT"
                     content: !<static_method_return>
-                      target: "java.util.Objects"
-                      method: "requireNonNull"
-                      methodParameters:
-                      - value:
-                          sapientType: "OBJECT"
-                          content: !<static_method_return>
-                            target: "javax.net.SocketFactory"
-                            method: "getDefault"
-                            methodParameters: []
-                          suggestedContent: !<static_method_return>
-                            target: "javax.net.SocketFactory"
-                            method: "getDefault"
-                            methodParameters: []
-                          valueType: "javax.net.SocketFactory"
-                          uuid: "<init>_socketFactory1"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
+                      target: "javax.net.SocketFactory"
+                      method: "getDefault"
+                      methodParameters: []
                     suggestedContent: !<static_method_return>
-                      target: "java.util.Objects"
-                      method: "requireNonNull"
-                      methodParameters:
-                      - value:
-                          sapientType: "OBJECT"
-                          content: !<static_method_return>
-                            target: "javax.net.SocketFactory"
-                            method: "getDefault"
-                            methodParameters: []
-                          suggestedContent: !<static_method_return>
-                            target: "javax.net.SocketFactory"
-                            method: "getDefault"
-                            methodParameters: []
-                          valueType: "javax.net.SocketFactory"
-                          uuid: "<init>_socketFactory1"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
+                      target: "javax.net.SocketFactory"
+                      method: "getDefault"
+                      methodParameters: []
                     valueType: "javax.net.SocketFactory"
-                    uuid: "<init>_socketFactory2"
+                    uuid: "<init>_socketFactory1"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -1776,7 +1448,7 @@ methods:
                 parameters:
                 - name: "serverAddress"
                   value:
-                    sapientType: "NULL"
+                    sapientType: "UNKNOWN"
                     suggestedContent: !<unknown_object>
                       target: "java.net.SocketAddress"
                       onlyPojoFunctions: false
@@ -1788,11 +1460,7 @@ methods:
                     explicitCastNeeded: false
                 - name: "connection"
                   value:
-                    sapientType: "MOCK"
-                    suggestedContent: !<unknown_object>
-                      target: "org.bitcoinj.net.StreamConnection"
-                      onlyPojoFunctions: false
-                      builderPattern: false
+                    sapientType: "UNKNOWN"
                     valueType: "org.bitcoinj.net.StreamConnection"
                     uuid: "openConnection_streamConnection1"
                     fixed: false
@@ -1820,28 +1488,13 @@ methods:
                     explicitCastNeeded: false
                 - name: "socketFactory"
                   value:
-                    sapientType: "OBJECT"
+                    sapientType: "UNKNOWN"
                     suggestedContent: !<static_method_return>
-                      target: "java.util.Objects"
-                      method: "requireNonNull"
-                      methodParameters:
-                      - value:
-                          sapientType: "OBJECT"
-                          content: !<static_method_return>
-                            target: "javax.net.SocketFactory"
-                            method: "getDefault"
-                            methodParameters: []
-                          suggestedContent: !<static_method_return>
-                            target: "javax.net.SocketFactory"
-                            method: "getDefault"
-                            methodParameters: []
-                          valueType: "javax.net.SocketFactory"
-                          uuid: "<init>_socketFactory1"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
+                      target: "javax.net.SocketFactory"
+                      method: "getDefault"
+                      methodParameters: []
                     valueType: "javax.net.SocketFactory"
-                    uuid: "<init>_socketFactory2"
+                    uuid: "<init>_socketFactory1"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -1877,7 +1530,7 @@ methods:
                 parameters:
                 - name: "serverAddress"
                   value:
-                    sapientType: "NULL"
+                    sapientType: "UNKNOWN"
                     suggestedContent: !<unknown_object>
                       target: "java.net.SocketAddress"
                       onlyPojoFunctions: false
@@ -1889,11 +1542,7 @@ methods:
                     explicitCastNeeded: false
                 - name: "connection"
                   value:
-                    sapientType: "MOCK"
-                    suggestedContent: !<unknown_object>
-                      target: "org.bitcoinj.net.StreamConnection"
-                      onlyPojoFunctions: false
-                      builderPattern: false
+                    sapientType: "UNKNOWN"
                     valueType: "org.bitcoinj.net.StreamConnection"
                     uuid: "openConnection_streamConnection1"
                     fixed: false
@@ -1921,28 +1570,13 @@ methods:
                     explicitCastNeeded: false
                 - name: "socketFactory"
                   value:
-                    sapientType: "OBJECT"
+                    sapientType: "UNKNOWN"
                     suggestedContent: !<static_method_return>
-                      target: "java.util.Objects"
-                      method: "requireNonNull"
-                      methodParameters:
-                      - value:
-                          sapientType: "OBJECT"
-                          content: !<static_method_return>
-                            target: "javax.net.SocketFactory"
-                            method: "getDefault"
-                            methodParameters: []
-                          suggestedContent: !<static_method_return>
-                            target: "javax.net.SocketFactory"
-                            method: "getDefault"
-                            methodParameters: []
-                          valueType: "javax.net.SocketFactory"
-                          uuid: "<init>_socketFactory1"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
+                      target: "javax.net.SocketFactory"
+                      method: "getDefault"
+                      methodParameters: []
                     valueType: "javax.net.SocketFactory"
-                    uuid: "<init>_socketFactory2"
+                    uuid: "<init>_socketFactory1"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -2037,12 +1671,12 @@ methods:
       filledByUser: false
     uuid: "2848bd70-59ca-38e3-af92-ac1e0b5d6268"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     variablesCouldNotBeIsolated: "org.bitcoinj.net.BlockingClient"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "setConnectTimeout"
     returnType: "void"

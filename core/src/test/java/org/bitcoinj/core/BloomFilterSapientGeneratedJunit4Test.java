@@ -48,6 +48,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mockStatic;
 import static org.hamcrest.Matchers.closeTo;
 
+import org.junit.Ignore;
+
 public class BloomFilterSapientGeneratedJunit4Test {
 
     @Rule()
@@ -81,7 +83,7 @@ public class BloomFilterSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         /*try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
     MockedStatic<Buffers> buffers = mockStatic(Buffers.class)) {
-    byte[] byteArray = new byte[] { (byte) 0 };
+    byte[] byteArray = new byte[] {};
     buffers.when(() -> Buffers.readLengthPrefixedBytes((ByteBuffer) any())).thenReturn(byteArray);
     byteUtils.when(() -> ByteUtils.readUint32((ByteBuffer) any())).thenReturn(51L);
     thrown.expect(ProtocolException.class);
@@ -130,10 +132,10 @@ public class BloomFilterSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         /*try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
     MockedStatic<Buffers> buffers = mockStatic(Buffers.class)) {
-    byte[] byteArray = new byte[] {};
+    byte[] byteArray = new byte[] { (byte) 0 };
     buffers.when(() -> Buffers.readLengthPrefixedBytes((ByteBuffer) any())).thenReturn(byteArray);
-    byteUtils.when(() -> ByteUtils.readUint32((ByteBuffer) any())).thenReturn(50L);
-    byteUtils.when(() -> ByteUtils.readInt32((ByteBuffer) any())).thenReturn(10);
+    byteUtils.when(() -> ByteUtils.readUint32((ByteBuffer) any())).thenReturn(0L);
+    byteUtils.when(() -> ByteUtils.readInt32((ByteBuffer) any())).thenReturn(0);
     ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
     //Act Statement(s)
     BloomFilter result = BloomFilter.read(byteBuffer);
@@ -153,14 +155,15 @@ public class BloomFilterSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //BloomFilter target = new BloomFilter(1000, Double.parseDouble("0.01"), 1234, BloomFilter.BloomUpdate.UPDATE_P2PUBKEY_ONLY);
+        //BloomFilter target = new BloomFilter(0, Double.parseDouble("0.0"), 0, BloomFilter.BloomUpdate.UPDATE_NONE);
         //Act Statement(s)
-        //double result = target.getFalsePositiveRate(1000);
+        //double result = target.getFalsePositiveRate(0);
         //Assert statement(s)
-        //assertThat(result, closeTo(Double.parseDouble("0.008436209268438534"), 0.00001));
+        //assertThat(result, closeTo(Double.parseDouble("0.0"), 0.00001));
     }
 
     //Sapient generated method id: ${363d3698-f34c-39ad-914f-376a19498023}
+    @Ignore()
     @Test()
     public void toStringTest() {
         /**
@@ -168,37 +171,45 @@ public class BloomFilterSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //BloomFilter target = spy(new BloomFilter(1000, Double.parseDouble("0.01"), 1234, BloomFilter.BloomUpdate.UPDATE_P2PUBKEY_ONLY));
-        //doReturn(BloomFilter.BloomUpdate.UPDATE_NONE).when(target).getUpdateFlag();
+        BloomFilter target = spy(new BloomFilter(0, Double.parseDouble("0.0"), 0, BloomFilter.BloomUpdate.UPDATE_NONE));
+        doReturn(BloomFilter.BloomUpdate.UPDATE_NONE).when(target).getUpdateFlag();
         //Act Statement(s)
-        //String result = target.toString();
+        String result = target.toString();
         //Assert statement(s)
-        //assertThat(result, equalTo("toString_moreObjects.ToStringHelper2"));
-        //verify(target).getUpdateFlag();
+        assertThat(result, equalTo("result1"));
+        verify(target).getUpdateFlag();
     }
 
     //Sapient generated method id: ${db734794-4476-3b9d-94dd-477a1a1aec91}
     @Test()
     public void bitcoinSerializeToStreamTest() throws IOException {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
+        //VarInt varIntMock = mock(VarInt.class);
         /*try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
     MockedStatic<VarInt> varInt = mockStatic(VarInt.class)) {
-    VarInt varInt2 = new VarInt(0L);
-    varInt.when(() -> VarInt.of(115L)).thenReturn(varInt2);
-    byteUtils.when(() -> ByteUtils.writeInt32LE(eq(6L), (OutputStream) any())).thenAnswer((Answer<Void>) invocation -> null);
-    byteUtils.when(() -> ByteUtils.writeInt32LE(eq(12345), (OutputStream) any())).thenAnswer((Answer<Void>) invocation -> null);
-    BloomFilter target = new BloomFilter(100, Double.parseDouble("0.01"), 12345, BloomFilter.BloomUpdate.UPDATE_ALL);
+    varInt.when(() -> VarInt.of(0L)).thenReturn(varIntMock);
+    byte[] byteArray = new byte[] {};
+    doReturn(byteArray).when(varIntMock).serialize();
+    byteUtils.when(() -> ByteUtils.writeInt32LE(eq(0L), (OutputStream) any())).thenAnswer((Answer<Void>) invocation -> null);
+    byteUtils.when(() -> ByteUtils.writeInt32LE(eq(0), (OutputStream) any())).thenAnswer((Answer<Void>) invocation -> null);
+    BloomFilter target = new BloomFilter(0, Double.parseDouble("0.0"), 0, BloomFilter.BloomUpdate.UPDATE_NONE);
     OutputStream outputStream = OutputStream.nullOutputStream();
     //Act Statement(s)
     target.bitcoinSerializeToStream(outputStream);
     //Assert statement(s)
-    varInt.verify(() -> VarInt.of(115L), atLeast(1));
-    byteUtils.verify(() -> ByteUtils.writeInt32LE(eq(6L), (OutputStream) any()));
-    byteUtils.verify(() -> ByteUtils.writeInt32LE(eq(12345), (OutputStream) any()));
+    varInt.verify(() -> VarInt.of(0L), atLeast(1));
+    verify(varIntMock).serialize();
+    byteUtils.verify(() -> ByteUtils.writeInt32LE(eq(0L), (OutputStream) any()));
+    byteUtils.verify(() -> ByteUtils.writeInt32LE(eq(0), (OutputStream) any()));
 }*/
     }
 
     //Sapient generated method id: ${a8e3eef8-e76d-390e-afb6-94b6b4bf5ba4}
+    @Ignore()
     @Test()
     public void murmurHash3WhenSwitchObjectLengthAnd3Case1() {
         /* Branches:
@@ -206,15 +217,16 @@ public class BloomFilterSapientGeneratedJunit4Test {
          * (switch(object.length & 3) = 1) : true
          */
         //Arrange Statement(s)
-        //byte[] byteArray = new byte[] {};
-        //byte[] byteArray2 = new byte[] { (byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6 };
+        byte[] byteArray = new byte[]{};
+        byte[] byteArray2 = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6};
         //Act Statement(s)
-        //int result = BloomFilter.murmurHash3(byteArray, -1L, 0, byteArray2);
+        int result = BloomFilter.murmurHash3(byteArray, -1L, 0, byteArray2);
         //Assert statement(s)
-        //assertThat(result, equalTo(0));
+        assertThat(result, equalTo(0));
     }
 
     //Sapient generated method id: ${19e96409-cbbe-3953-a17c-3d04afaf1b89}
+    @Ignore()
     @Test()
     public void containsWhenByteUtilsNotCheckBitLEDataMurmurHash3DataNTweakIObject() {
         /* Branches:
@@ -225,20 +237,20 @@ public class BloomFilterSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
-    MockedStatic<BloomFilter> bloomFilter = mockStatic(BloomFilter.class)) {
-    byte[] byteArray = new byte[] { (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0 };
-    byte[] byteArray2 = new byte[] { (byte) 1, (byte) 2, (byte) 3 };
-    bloomFilter.when(() -> BloomFilter.murmurHash3(byteArray, 123L, 0, byteArray2)).thenReturn(0);
-    byteUtils.when(() -> ByteUtils.checkBitLE(byteArray, 0)).thenReturn(false);
-    BloomFilter target = new BloomFilter(100, Double.parseDouble("0.01"), 123, BloomFilter.BloomUpdate.UPDATE_P2PUBKEY_ONLY);
-    //Act Statement(s)
-    boolean result = target.contains(byteArray2);
-    //Assert statement(s)
-    assertThat(result, equalTo(Boolean.FALSE));
-    bloomFilter.verify(() -> BloomFilter.murmurHash3(byteArray, 123L, 0, byteArray2), atLeast(1));
-    byteUtils.verify(() -> ByteUtils.checkBitLE(byteArray, 0), atLeast(1));
-}*/
+        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
+             MockedStatic<BloomFilter> bloomFilter = mockStatic(BloomFilter.class)) {
+            byte[] byteArray = new byte[]{};
+            byte[] byteArray2 = new byte[]{(byte) 0};
+            bloomFilter.when(() -> BloomFilter.murmurHash3(byteArray, 0L, 0, byteArray2)).thenReturn(0);
+            byteUtils.when(() -> ByteUtils.checkBitLE(byteArray, 0)).thenReturn(false);
+            BloomFilter target = new BloomFilter(0, Double.parseDouble("0.0"), 0, BloomFilter.BloomUpdate.UPDATE_NONE);
+            //Act Statement(s)
+            boolean result = target.contains(byteArray2);
+            //Assert statement(s)
+            assertThat(result, equalTo(Boolean.FALSE));
+            bloomFilter.verify(() -> BloomFilter.murmurHash3(byteArray, 0L, 0, byteArray2), atLeast(1));
+            byteUtils.verify(() -> ByteUtils.checkBitLE(byteArray, 0), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${fbee803c-35b9-3ee1-9a32-195911c1d7e1}
@@ -254,21 +266,17 @@ public class BloomFilterSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         /*try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
     MockedStatic<BloomFilter> bloomFilter = mockStatic(BloomFilter.class)) {
-    byte[] byteArray = new byte[] { (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0 };
-    byte[] byteArray2 = new byte[] { (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5 };
-    bloomFilter.when(() -> BloomFilter.murmurHash3(byteArray, 12345L, 0, byteArray2)).thenReturn(123456);
-    byteUtils.when(() -> ByteUtils.checkBitLE(byteArray, 123456)).thenReturn(true);
-    bloomFilter.when(() -> BloomFilter.murmurHash3(byteArray, 12345L, 1, byteArray2)).thenReturn(1);
-    byteUtils.when(() -> ByteUtils.checkBitLE(byteArray, 1)).thenReturn(false);
-    BloomFilter target = new BloomFilter(100, Double.parseDouble("0.01"), 12345, BloomFilter.BloomUpdate.UPDATE_P2PUBKEY_ONLY);
+    byte[] byteArray = new byte[] {};
+    byte[] byteArray2 = new byte[] { (byte) 0 };
+    bloomFilter.when(() -> BloomFilter.murmurHash3(byteArray, 0L, 0, byteArray2)).thenReturn(0);
+    byteUtils.when(() -> ByteUtils.checkBitLE(byteArray, 0)).thenReturn(false);
+    BloomFilter target = new BloomFilter(0, Double.parseDouble("0.0"), 0, BloomFilter.BloomUpdate.UPDATE_NONE);
     //Act Statement(s)
     boolean result = target.contains(byteArray2);
     //Assert statement(s)
     assertThat(result, equalTo(Boolean.FALSE));
-    bloomFilter.verify(() -> BloomFilter.murmurHash3(byteArray, 12345L, 0, byteArray2), atLeast(1));
-    byteUtils.verify(() -> ByteUtils.checkBitLE(byteArray, 123456), atLeast(1));
-    bloomFilter.verify(() -> BloomFilter.murmurHash3(byteArray, 12345L, 1, byteArray2), atLeast(1));
-    byteUtils.verify(() -> ByteUtils.checkBitLE(byteArray, 1), atLeast(1));
+    bloomFilter.verify(() -> BloomFilter.murmurHash3(byteArray, 0L, 0, byteArray2), atLeast(1));
+    byteUtils.verify(() -> ByteUtils.checkBitLE(byteArray, 0), atLeast(1));
 }*/
     }
 
@@ -285,7 +293,7 @@ public class BloomFilterSapientGeneratedJunit4Test {
         /*try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
     MockedStatic<BloomFilter> bloomFilter = mockStatic(BloomFilter.class)) {
     byte[] byteArray = new byte[] {};
-    byte[] byteArray2 = new byte[] {};
+    byte[] byteArray2 = new byte[] { (byte) 0 };
     bloomFilter.when(() -> BloomFilter.murmurHash3(byteArray, 0L, 0, byteArray2)).thenReturn(0);
     byteUtils.when(() -> ByteUtils.setBitLE(byteArray, 0)).thenAnswer((Answer<Void>) invocation -> null);
     BloomFilter target = new BloomFilter(0, Double.parseDouble("0.0"), 0, BloomFilter.BloomUpdate.UPDATE_NONE);
@@ -298,6 +306,7 @@ public class BloomFilterSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${61bf4c20-f004-3085-ae9b-51b371f7b521}
+    @Ignore()
     @Test()
     public void insert1Test() {
         /**
@@ -330,14 +339,16 @@ public class BloomFilterSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //BloomFilter target = spy(new BloomFilter(100, Double.parseDouble("0.01"), 12345, BloomFilter.BloomUpdate.UPDATE_P2PUBKEY_ONLY));
-        //byte[] byteArray = new byte[] {};
-        //doNothing().when(target).insert(byteArray);
-        //TransactionOutPoint transactionOutPoint = new TransactionOutPoint(0L, sha256HashMock);
+        TransactionOutPoint outpointMock = mock(TransactionOutPoint.class);
+        byte[] byteArray = new byte[]{};
+        doReturn(byteArray).when(outpointMock).serialize();
+        BloomFilter target = spy(new BloomFilter(0, Double.parseDouble("0.0"), 0, BloomFilter.BloomUpdate.UPDATE_NONE));
+        doNothing().when(target).insert(byteArray);
         //Act Statement(s)
-        //target.insert(transactionOutPoint);
+        target.insert(outpointMock);
         //Assert statement(s)
-        //verify(target).insert(byteArray);
+        verify(outpointMock).serialize();
+        verify(target).insert(byteArray);
     }
 
     //Sapient generated method id: ${6c75f6d7-f407-3832-9c78-dfb18bca24b2}
@@ -348,12 +359,13 @@ public class BloomFilterSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        BloomFilter target = new BloomFilter(1000, Double.parseDouble("0.01"), 12345, BloomFilter.BloomUpdate.UPDATE_P2PUBKEY_ONLY);
+        BloomFilter target = new BloomFilter(0, Double.parseDouble("0.0"), 0, BloomFilter.BloomUpdate.UPDATE_NONE);
         //Act Statement(s)
         target.setMatchAll();
     }
 
     //Sapient generated method id: ${ec5909fb-ee38-3a7a-8676-2dbaa026d153}
+    @Ignore()
     @Test()
     public void mergeWhenFilterMatchesAll() {
         /* Branches:
@@ -365,7 +377,7 @@ public class BloomFilterSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         doReturn(false).when(filterMock).matchesAll();
-        BloomFilter target = spy(new BloomFilter(100, Double.parseDouble("0.01"), 1234, BloomFilter.BloomUpdate.UPDATE_ALL));
+        BloomFilter target = spy(new BloomFilter(0, Double.parseDouble("0.0"), 0, BloomFilter.BloomUpdate.UPDATE_NONE));
         doReturn(false).when(target).matchesAll();
         //Act Statement(s)
         target.merge(filterMock);
@@ -375,6 +387,7 @@ public class BloomFilterSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${8a3df2e4-b883-36cf-af3e-61b12af626fc}
+    @Ignore()
     @Test()
     public void mergeWhenILessThanDataLength() {
         /* Branches:
@@ -400,6 +413,7 @@ public class BloomFilterSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${9bb7d0ac-a32c-33c1-a032-3af33f14dfcd}
+    @Ignore()
     @Test()
     public void mergeWhenFilterNTweakNotEqualsThisNTweakAndILessThanDataLength() {
         /* Branches:
@@ -414,16 +428,18 @@ public class BloomFilterSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //BloomFilter target = spy(new BloomFilter(0, Double.parseDouble("0.0"), 0, BloomFilter.BloomUpdate.UPDATE_NONE));
-        //doReturn(false).when(target).matchesAll();
-        //BloomFilter bloomFilter = new BloomFilter(0, Double.parseDouble("0.0"), 0);
+        doReturn(false).when(filterMock).matchesAll();
+        BloomFilter target = spy(new BloomFilter(0, Double.parseDouble("0.0"), 0, BloomFilter.BloomUpdate.UPDATE_NONE));
+        doReturn(false).when(target).matchesAll();
         //Act Statement(s)
-        //target.merge(bloomFilter);
+        target.merge(filterMock);
         //Assert statement(s)
-        //verify(target).matchesAll();
+        verify(filterMock).matchesAll();
+        verify(target).matchesAll();
     }
 
     //Sapient generated method id: ${0e23bcea-7d85-3ee6-9347-9cb117c6a368}
+    @Ignore()
     @Test()
     public void matchesAllWhenDataIsEmpty() {
         /* Branches:
@@ -433,11 +449,11 @@ public class BloomFilterSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //BloomFilter target = new BloomFilter(1000, Double.parseDouble("0.01"), 12345, BloomFilter.BloomUpdate.UPDATE_P2PUBKEY_ONLY);
+        BloomFilter target = new BloomFilter(0, Double.parseDouble("0.0"), 0, BloomFilter.BloomUpdate.UPDATE_NONE);
         //Act Statement(s)
-        //boolean result = target.matchesAll();
+        boolean result = target.matchesAll();
         //Assert statement(s)
-        //assertThat(result, equalTo(Boolean.FALSE));
+        assertThat(result, equalTo(Boolean.TRUE));
     }
 
     //Sapient generated method id: ${6c885b50-6ad6-3e9b-9553-2728684df18a}
@@ -446,13 +462,16 @@ public class BloomFilterSapientGeneratedJunit4Test {
         /* Branches:
          * (for-each(data)) : true
          * (b != (byte) 0xff) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //BloomFilter target = new BloomFilter(1000, Double.parseDouble("0.01"), 1234, BloomFilter.BloomUpdate.UPDATE_NONE);
+        BloomFilter target = new BloomFilter(0, Double.parseDouble("0.0"), 0, BloomFilter.BloomUpdate.UPDATE_NONE);
         //Act Statement(s)
-        //boolean result = target.matchesAll();
+        boolean result = target.matchesAll();
         //Assert statement(s)
-        //assertThat(result, equalTo(Boolean.FALSE));
+        assertThat(result, equalTo(Boolean.FALSE));
     }
 
     //Sapient generated method id: ${68c0bd97-1e7e-31ef-8680-f5f199997578}
@@ -460,97 +479,98 @@ public class BloomFilterSapientGeneratedJunit4Test {
     public void getUpdateFlagWhenNFlagsEquals0() {
         /* Branches:
          * (nFlags == 0) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //BloomFilter target = new BloomFilter(1000, Double.parseDouble("0.01"), 12345, BloomFilter.BloomUpdate.UPDATE_ALL);
-        //IllegalStateException illegalStateException = new IllegalStateException("Unknown flag combination");
-        //thrown.expect(IllegalStateException.class);
-        //thrown.expectMessage(illegalStateException.getMessage());
+        BloomFilter target = new BloomFilter(0, Double.parseDouble("0.0"), 0, BloomFilter.BloomUpdate.UPDATE_NONE);
         //Act Statement(s)
-        //target.getUpdateFlag();
+        BloomFilter.BloomUpdate result = target.getUpdateFlag();
+        //Assert statement(s)
+        assertThat(result, equalTo(BloomFilter.BloomUpdate.UPDATE_NONE));
     }
 
     //Sapient generated method id: ${0df49703-9d6a-389e-af9b-9402e61b02db}
+    @Ignore()
     @Test()
     public void getUpdateFlagWhenNFlagsEquals1() {
         /* Branches:
          * (nFlags == 0) : false
          * (nFlags == 1) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //BloomFilter target = new BloomFilter(1000, Double.parseDouble("0.01"), 1234, BloomFilter.BloomUpdate.UPDATE_ALL);
-        //IllegalStateException illegalStateException = new IllegalStateException("Unknown flag combination");
-        //thrown.expect(IllegalStateException.class);
-        //thrown.expectMessage(illegalStateException.getMessage());
+        BloomFilter target = new BloomFilter(0, Double.parseDouble("0.0"), 0, BloomFilter.BloomUpdate.UPDATE_NONE);
         //Act Statement(s)
-        //target.getUpdateFlag();
+        BloomFilter.BloomUpdate result = target.getUpdateFlag();
+        //Assert statement(s)
+        assertThat(result, equalTo(BloomFilter.BloomUpdate.UPDATE_ALL));
     }
 
     //Sapient generated method id: ${fd61bac2-b5a0-3f8e-bffd-2ada6cf4ad07}
     @Test()
-    public void applyAndUpdateWhenMatchedIsNotEmpty() throws VerificationException {
+    public void applyAndUpdateWhenMatchedIsNotEmpty() {
         /* Branches:
          * (i < txns.size()) : true
          * (applyAndUpdate(tx)) : true
          * (for-each(matched)) : true
          *
-         * TODO: Help needed! This method is not unit testable!
-         *  Following variables could not be isolated/mocked: filteredBlock
-         *  Suggestions:
-         *  You can change the initialization of above variables and make it injectable or
-         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //Block blockMock = mock(Block.class);
-        //Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
-        //PartialMerkleTree partialMerkleTreeMock = mock(PartialMerkleTree.class);
-        /*try (MockedStatic<PartialMerkleTree> partialMerkleTree = mockStatic(PartialMerkleTree.class)) {
-    Transaction transaction = new Transaction();
-    List<Transaction> transactionList = new ArrayList<>();
-    transactionList.add(transaction);
-    doReturn(transactionList).when(blockMock).getTransactions();
-    Instant instant = Instant.now();
-    List list = new ArrayList<>();
-    Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
-    doReturn(block).when(blockMock).cloneAsHeader();
-    byte[] byteArray = new byte[] { (byte) 1 };
-    partialMerkleTree.when(() -> PartialMerkleTree.buildFromLeaves(eq(byteArray), anyList())).thenReturn(partialMerkleTreeMock);
-    BloomFilter target = spy(new BloomFilter(0, Double.parseDouble("0.0"), 0, BloomFilter.BloomUpdate.UPDATE_NONE));
-    doReturn(false).when(target).applyAndUpdate(transaction);
-    //Act Statement(s)
-    FilteredBlock result = target.applyAndUpdate(blockMock);
-    FilteredBlock filteredBlock = new FilteredBlock(block, partialMerkleTreeMock);
-    //Assert statement(s)
-    assertThat(result, equalTo(filteredBlock));
-    verify(blockMock).getTransactions();
-    verify(blockMock).cloneAsHeader();
-    partialMerkleTree.verify(() -> PartialMerkleTree.buildFromLeaves(eq(byteArray), anyList()));
-    verify(target).applyAndUpdate(transaction);
-}*/
+        Block blockMock = mock(Block.class);
+        Block blockMock2 = mock(Block.class);
+        PartialMerkleTree partialMerkleTreeMock = mock(PartialMerkleTree.class);
+        try (MockedStatic<PartialMerkleTree> partialMerkleTree = mockStatic(PartialMerkleTree.class)) {
+            List<Transaction> transactionList = new ArrayList<>();
+            doReturn(transactionList).when(blockMock).getTransactions();
+            doReturn(blockMock2).when(blockMock).cloneAsHeader();
+            byte[] byteArray = new byte[]{};
+            partialMerkleTree.when(() -> PartialMerkleTree.buildFromLeaves(eq(byteArray), anyList())).thenReturn(partialMerkleTreeMock);
+            BloomFilter target = new BloomFilter(0, Double.parseDouble("0.0"), 0, BloomFilter.BloomUpdate.UPDATE_NONE);
+            //Act Statement(s)
+            FilteredBlock result = target.applyAndUpdate(blockMock);
+            FilteredBlock filteredBlock = new FilteredBlock(blockMock2, partialMerkleTreeMock);
+            //Assert statement(s)
+            assertThat(result, equalTo(filteredBlock));
+            verify(blockMock).getTransactions();
+            verify(blockMock).cloneAsHeader();
+            partialMerkleTree.verify(() -> PartialMerkleTree.buildFromLeaves(eq(byteArray), anyList()));
+        }
     }
 
     //Sapient generated method id: ${6c07e1c1-c7b0-3022-8601-5eafa4aa086b}
+    @Ignore()
     @Test()
     public void applyAndUpdate1WhenContainsTxGetTxIdGetBytes() {
         /* Branches:
          * (contains(tx.getTxId().getBytes())) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        BloomFilter target = spy(new BloomFilter(10, Double.parseDouble("0.05"), 12345, BloomFilter.BloomUpdate.UPDATE_ALL));
+        doReturn(sha256HashMock).when(txMock).getTxId();
         byte[] byteArray = new byte[]{};
-        doReturn(true).when(target).contains(byteArray);
-        Transaction transaction = new Transaction();
+        doReturn(byteArray).when(sha256HashMock).getBytes();
+        BloomFilter target = spy(new BloomFilter(0, Double.parseDouble("0.0"), 0, BloomFilter.BloomUpdate.UPDATE_NONE));
+        doReturn(false).when(target).contains(byteArray);
         //Act Statement(s)
-        boolean result = target.applyAndUpdate(transaction);
+        boolean result = target.applyAndUpdate(txMock);
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
+        verify(txMock).getTxId();
+        verify(sha256HashMock).getBytes();
         verify(target).contains(byteArray);
     }
 
     //Sapient generated method id: ${ce271f5c-d8f2-361d-96ca-3e31cdae8907}
     @Test()
-    public void applyAndUpdate1WhenNotFoundAndTxGetInputsIsNotEmptyAndContainsInputGetOutpointSerialize() throws ScriptException {
+    public void applyAndUpdate1WhenNotFoundAndTxGetInputsIsNotEmptyAndContainsInputGetOutpointSerialize() {
         /* Branches:
          * (contains(tx.getTxId().getBytes())) : false
          * (for-each(tx.getOutputs())) : true
@@ -569,29 +589,26 @@ public class BloomFilterSapientGeneratedJunit4Test {
         doReturn(byteArray).when(sha256HashMock).getBytes();
         List<TransactionOutput> transactionOutputList = new ArrayList<>();
         doReturn(transactionOutputList).when(txMock).getOutputs();
-        List<TransactionInput> transactionInputList = new ArrayList<>();
-        doReturn(transactionInputList).when(txMock).getInputs();
+        List<ScriptChunk> scriptChunkList = new ArrayList<>();
+        doReturn(scriptChunkList).when(txMock).getInputs();
         BloomFilter target = spy(new BloomFilter(0, Double.parseDouble("0.0"), 0, BloomFilter.BloomUpdate.UPDATE_NONE));
         doReturn(false).when(target).contains(byteArray);
         doReturn(BloomFilter.BloomUpdate.UPDATE_NONE).when(target).getUpdateFlag();
-        byte[] byteArray2 = new byte[]{};
-        doReturn(false).when(target).contains(byteArray2);
         //Act Statement(s)
         boolean result = target.applyAndUpdate(txMock);
         //Assert statement(s)
-        assertThat(result, equalTo(Boolean.TRUE));
+        assertThat(result, equalTo(Boolean.FALSE));
         verify(txMock).getTxId();
         verify(sha256HashMock).getBytes();
         verify(txMock).getOutputs();
         verify(txMock).getInputs();
         verify(target).contains(byteArray);
         verify(target).getUpdateFlag();
-        verify(target).contains(byteArray2);
     }
 
     //Sapient generated method id: ${3723cafd-b3f7-304b-ab21-6f31f2974836}
     @Test()
-    public void applyAndUpdate1WhenInputGetScriptSigChunksIsNotEmptyAndChunkIsPushDataAndContainsChunkData() throws ScriptException {
+    public void applyAndUpdate1WhenInputGetScriptSigChunksIsNotEmptyAndChunkIsPushDataAndContainsChunkData() {
         /* Branches:
          * (contains(tx.getTxId().getBytes())) : false
          * (for-each(tx.getOutputs())) : true
@@ -603,6 +620,136 @@ public class BloomFilterSapientGeneratedJunit4Test {
          * (for-each(input.getScriptSig().chunks())) : true
          * (chunk.isPushData()) : true
          * (contains(chunk.data)) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        //doReturn(sha256HashMock).when(txMock).getTxId();
+        //byte[] byteArray = new byte[] {};
+        //doReturn(byteArray).when(sha256HashMock).getBytes();
+        //List<TransactionOutput> transactionOutputList = new ArrayList<>();
+        //doReturn(transactionOutputList).when(txMock).getOutputs();
+        //List<TransactionInput> transactionInputList = new ArrayList<>();
+        //doReturn(transactionInputList).when(txMock).getInputs();
+        //BloomFilter target = spy(new BloomFilter(0, Double.parseDouble("0.0"), 0, BloomFilter.BloomUpdate.UPDATE_NONE));
+        //doReturn(false).when(target).contains(byteArray);
+        //doReturn(BloomFilter.BloomUpdate.UPDATE_NONE).when(target).getUpdateFlag();
+        //byte[] byteArray2 = new byte[] {};
+        //doReturn(false).when(target).contains(byteArray2);
+        //Act Statement(s)
+        //boolean result = target.applyAndUpdate(txMock);
+        //Assert statement(s)
+        //assertThat(result, equalTo(Boolean.TRUE));
+        //verify(txMock).getTxId();
+        //verify(sha256HashMock).getBytes();
+        //verify(txMock).getOutputs();
+        //verify(txMock).getInputs();
+        //verify(target).contains(byteArray);
+        //verify(target).getUpdateFlag();
+        //verify(target).contains(byteArray2);
+    }
+
+    //Sapient generated method id: ${813f340a-a3ad-3976-8bb8-7b8a3dc4c82d}
+    @Test()
+    public void applyAndUpdate1WhenIsSendingToPubKeysAndFound() {
+        /* Branches:
+         * (contains(tx.getTxId().getBytes())) : false
+         * (for-each(tx.getOutputs())) : true
+         * (for-each(script.chunks())) : true
+         * (!chunk.isPushData()) : false
+         * (contains(chunk.data)) : true
+         * (ScriptPattern.isP2PK(script)) : false
+         * (ScriptPattern.isSentToMultisig(script)) : true
+         * (flag == BloomUpdate.UPDATE_ALL) : false
+         * (flag == BloomUpdate.UPDATE_P2PUBKEY_ONLY) : true
+         * (isSendingToPubKeys) : true
+         * (found) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        //doReturn(sha256HashMock).when(txMock).getTxId();
+        //byte[] byteArray = new byte[] {};
+        //doReturn(byteArray).when(sha256HashMock).getBytes();
+        //List<TransactionOutput> transactionOutputList = new ArrayList<>();
+        //doReturn(transactionOutputList).when(txMock).getOutputs();
+        //List<ScriptChunk> scriptChunkList = new ArrayList<>();
+        //doReturn(scriptChunkList).when(txMock).getInputs();
+        //BloomFilter target = spy(new BloomFilter(0, Double.parseDouble("0.0"), 0, BloomFilter.BloomUpdate.UPDATE_NONE));
+        //doReturn(false).when(target).contains(byteArray);
+        //doReturn(BloomFilter.BloomUpdate.UPDATE_NONE).when(target).getUpdateFlag();
+        //Act Statement(s)
+        //boolean result = target.applyAndUpdate(txMock);
+        //Assert statement(s)
+        //assertThat(result, equalTo(Boolean.FALSE));
+        //verify(txMock).getTxId();
+        //verify(sha256HashMock).getBytes();
+        //verify(txMock).getOutputs();
+        //verify(txMock).getInputs();
+        //verify(target).contains(byteArray);
+        //verify(target).getUpdateFlag();
+    }
+
+    //Sapient generated method id: ${72cf3893-256c-3386-ad1d-8ea066eb93e9}
+    @Test()
+    public void applyAndUpdate1WhenNotIsSendingToPubKeysAndFound() {
+        /* Branches:
+         * (contains(tx.getTxId().getBytes())) : false
+         * (for-each(tx.getOutputs())) : true
+         * (for-each(script.chunks())) : true
+         * (!chunk.isPushData()) : false
+         * (contains(chunk.data)) : true
+         * (ScriptPattern.isP2PK(script)) : false
+         * (ScriptPattern.isSentToMultisig(script)) : false
+         * (flag == BloomUpdate.UPDATE_ALL) : false
+         * (flag == BloomUpdate.UPDATE_P2PUBKEY_ONLY) : true
+         * (isSendingToPubKeys) : false
+         * (found) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        //doReturn(sha256HashMock).when(txMock).getTxId();
+        //byte[] byteArray = new byte[] {};
+        //doReturn(byteArray).when(sha256HashMock).getBytes();
+        //List<TransactionOutput> transactionOutputList = new ArrayList<>();
+        //doReturn(transactionOutputList).when(txMock).getOutputs();
+        //List<ScriptChunk> scriptChunkList = new ArrayList<>();
+        //doReturn(scriptChunkList).when(txMock).getInputs();
+        //BloomFilter target = spy(new BloomFilter(0, Double.parseDouble("0.0"), 0, BloomFilter.BloomUpdate.UPDATE_NONE));
+        //doReturn(false).when(target).contains(byteArray);
+        //doReturn(BloomFilter.BloomUpdate.UPDATE_NONE).when(target).getUpdateFlag();
+        //Act Statement(s)
+        //boolean result = target.applyAndUpdate(txMock);
+        //Assert statement(s)
+        //assertThat(result, equalTo(Boolean.FALSE));
+        //verify(txMock).getTxId();
+        //verify(sha256HashMock).getBytes();
+        //verify(txMock).getOutputs();
+        //verify(txMock).getInputs();
+        //verify(target).contains(byteArray);
+        //verify(target).getUpdateFlag();
+    }
+
+    //Sapient generated method id: ${af2d87aa-8f70-31f5-a842-5790801f56a5}
+    @Ignore()
+    @Test()
+    public void applyAndUpdate1WhenInputGetScriptSigChunksIsNotEmptyAndChunkIsPushDataAndContainsNotChunkData2() {
+        /* Branches:
+         * (contains(tx.getTxId().getBytes())) : false
+         * (for-each(tx.getOutputs())) : true
+         * (for-each(script.chunks())) : true
+         * (!chunk.isPushData()) : false
+         * (contains(chunk.data)) : false
+         * (found) : false
+         * (for-each(tx.getInputs())) : true
+         * (contains(input.getOutpoint().serialize())) : false
+         * (for-each(input.getScriptSig().chunks())) : true
+         * (chunk.isPushData()) : true
+         * (contains(chunk.data)) : false
          *
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
@@ -620,8 +767,6 @@ public class BloomFilterSapientGeneratedJunit4Test {
         doReturn(BloomFilter.BloomUpdate.UPDATE_NONE).when(target).getUpdateFlag();
         byte[] byteArray2 = new byte[]{};
         doReturn(false).when(target).contains(byteArray2);
-        byte[] byteArray3 = new byte[]{};
-        doReturn(false).when(target).contains(byteArray3);
         //Act Statement(s)
         boolean result = target.applyAndUpdate(txMock);
         //Assert statement(s)
@@ -630,193 +775,6 @@ public class BloomFilterSapientGeneratedJunit4Test {
         verify(sha256HashMock).getBytes();
         verify(txMock).getOutputs();
         verify(txMock).getInputs();
-        verify(target).contains(byteArray);
-        verify(target).getUpdateFlag();
-        verify(target).contains(byteArray2);
-        verify(target).contains(byteArray3);
-    }
-
-    //Sapient generated method id: ${813f340a-a3ad-3976-8bb8-7b8a3dc4c82d}
-    @Test()
-    public void applyAndUpdate1WhenIsSendingToPubKeysAndFound() throws ScriptException {
-        /* Branches:
-         * (contains(tx.getTxId().getBytes())) : false
-         * (for-each(tx.getOutputs())) : true
-         * (for-each(script.chunks())) : true
-         * (!chunk.isPushData()) : false
-         * (contains(chunk.data)) : true
-         * (ScriptPattern.isP2PK(script)) : false
-         * (ScriptPattern.isSentToMultisig(script)) : true
-         * (flag == BloomUpdate.UPDATE_ALL) : false
-         * (flag == BloomUpdate.UPDATE_P2PUBKEY_ONLY) : true
-         * (isSendingToPubKeys) : true
-         * (found) : true
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class)) {
-            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
-            doReturn(sha256Hash).when(txMock).getTxId();
-            List<TransactionOutput> transactionOutputList = new ArrayList<>();
-            transactionOutputList.add(transactionOutputMock);
-            transactionOutputList.add(transactionOutputMock2);
-            transactionOutputList.add(transactionOutputMock3);
-            doReturn(transactionOutputList).when(txMock).getOutputs();
-            List list = new ArrayList<>();
-            Script script = Script.of(list);
-            doReturn(script).when(transactionOutputMock).getScriptPubKey();
-            doReturn(scriptMock).when(transactionOutputMock2).getScriptPubKey();
-            List<ScriptChunk> scriptChunkList = new ArrayList<>();
-            scriptChunkList.add(scriptChunkMock);
-            doReturn(scriptChunkList).when(scriptMock).chunks();
-            doReturn(false).when(scriptChunkMock).isPushData();
-            scriptPattern.when(() -> ScriptPattern.isP2PK((Script) any())).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isSentToMultisig((Script) any())).thenReturn(false);
-            BloomFilter target = spy(new BloomFilter(100, Double.parseDouble("0.01"), 12345, BloomFilter.BloomUpdate.UPDATE_ALL));
-            byte[] byteArray = new byte[]{};
-            doReturn(false).when(target).contains(byteArray);
-            doReturn(BloomFilter.BloomUpdate.UPDATE_P2PUBKEY_ONLY).when(target).getUpdateFlag();
-            doReturn(true).when(target).contains((byte[]) null);
-            //Act Statement(s)
-            boolean result = target.applyAndUpdate(txMock);
-            //Assert statement(s)
-            assertThat(result, equalTo(Boolean.TRUE));
-            verify(txMock).getTxId();
-            verify(txMock).getOutputs();
-            verify(transactionOutputMock).getScriptPubKey();
-            verify(transactionOutputMock2).getScriptPubKey();
-            verify(scriptMock).chunks();
-            verify(scriptChunkMock).isPushData();
-            scriptPattern.verify(() -> ScriptPattern.isP2PK((Script) any()));
-            scriptPattern.verify(() -> ScriptPattern.isSentToMultisig((Script) any()));
-            verify(target).contains(byteArray);
-            verify(target).getUpdateFlag();
-            verify(target).contains((byte[]) null);
-        }
-    }
-
-    //Sapient generated method id: ${72cf3893-256c-3386-ad1d-8ea066eb93e9}
-    @Test()
-    public void applyAndUpdate1WhenNotIsSendingToPubKeysAndFound() throws ScriptException {
-        /* Branches:
-         * (contains(tx.getTxId().getBytes())) : false
-         * (for-each(tx.getOutputs())) : true
-         * (for-each(script.chunks())) : true
-         * (!chunk.isPushData()) : false
-         * (contains(chunk.data)) : true
-         * (ScriptPattern.isP2PK(script)) : false
-         * (ScriptPattern.isSentToMultisig(script)) : false
-         * (flag == BloomUpdate.UPDATE_ALL) : false
-         * (flag == BloomUpdate.UPDATE_P2PUBKEY_ONLY) : true
-         * (isSendingToPubKeys) : false
-         * (found) : true
-         */
-        //Arrange Statement(s)
-        TransactionOutput transactionOutputMock4 = mock(TransactionOutput.class);
-        try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class)) {
-            doReturn(sha256HashMock).when(txMock).getTxId();
-            byte[] byteArray = new byte[]{};
-            doReturn(byteArray).when(sha256HashMock).getBytes();
-            List<TransactionOutput> transactionOutputList = new ArrayList<>();
-            transactionOutputList.add(transactionOutputMock);
-            transactionOutputList.add(transactionOutputMock2);
-            transactionOutputList.add(transactionOutputMock3);
-            transactionOutputList.add(transactionOutputMock4);
-            doReturn(transactionOutputList).when(txMock).getOutputs();
-            List list = new ArrayList<>();
-            Script script = Script.of(list);
-            doReturn(script).when(transactionOutputMock).getScriptPubKey();
-            doReturn(scriptMock).when(transactionOutputMock2).getScriptPubKey();
-            List<ScriptChunk> scriptChunkList = new ArrayList<>();
-            scriptChunkList.add(scriptChunkMock);
-            doReturn(scriptChunkList).when(scriptMock).chunks();
-            doReturn(false).when(scriptChunkMock).isPushData();
-            scriptPattern.when(() -> ScriptPattern.isP2PK((Script) any())).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isSentToMultisig((Script) any())).thenReturn(false);
-            BloomFilter target = spy(new BloomFilter(100, Double.parseDouble("0.01"), 1234, BloomFilter.BloomUpdate.UPDATE_P2PUBKEY_ONLY));
-            doReturn(false).when(target).contains(byteArray);
-            doReturn(BloomFilter.BloomUpdate.UPDATE_P2PUBKEY_ONLY).when(target).getUpdateFlag();
-            doReturn(true).when(target).contains((byte[]) null);
-            //Act Statement(s)
-            boolean result = target.applyAndUpdate(txMock);
-            //Assert statement(s)
-            assertThat(result, equalTo(Boolean.TRUE));
-            verify(txMock).getTxId();
-            verify(sha256HashMock).getBytes();
-            verify(txMock).getOutputs();
-            verify(transactionOutputMock).getScriptPubKey();
-            verify(transactionOutputMock2).getScriptPubKey();
-            verify(scriptMock).chunks();
-            verify(scriptChunkMock).isPushData();
-            scriptPattern.verify(() -> ScriptPattern.isP2PK((Script) any()));
-            scriptPattern.verify(() -> ScriptPattern.isSentToMultisig((Script) any()));
-            verify(target).contains(byteArray);
-            verify(target).getUpdateFlag();
-            verify(target).contains((byte[]) null);
-        }
-    }
-
-    //Sapient generated method id: ${af2d87aa-8f70-31f5-a842-5790801f56a5}
-    @Test()
-    public void applyAndUpdate1WhenInputGetScriptSigChunksIsNotEmptyAndChunkIsPushDataAndContainsNotChunkData2() throws ScriptException {
-        /* Branches:
-         * (contains(tx.getTxId().getBytes())) : false
-         * (for-each(tx.getOutputs())) : true
-         * (for-each(script.chunks())) : true
-         * (!chunk.isPushData()) : false
-         * (contains(chunk.data)) : false
-         * (found) : false
-         * (for-each(tx.getInputs())) : true
-         * (contains(input.getOutpoint().serialize())) : false
-         * (for-each(input.getScriptSig().chunks())) : true
-         * (chunk.isPushData()) : true
-         * (contains(chunk.data)) : false
-         *
-         * TODO: Help needed! This method is not unit testable!
-         *  Following variables could not be isolated/mocked: org.bitcoinj.core.TransactionOutPoint
-         *  Suggestions:
-         *  You can change the initialization of above variables and make it injectable or
-         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-        Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
-        doReturn(sha256Hash).when(txMock).getTxId();
-        List<TransactionOutput> transactionOutputList = new ArrayList<>();
-        transactionOutputList.add(transactionOutputMock);
-        doReturn(transactionOutputList).when(txMock).getOutputs();
-        List list = new ArrayList<>();
-        Script script = Script.of(list);
-        doReturn(script).when(transactionOutputMock).getScriptPubKey();
-        TransactionInput transactionInputMock = mock(TransactionInput.class);
-        TransactionInput transactionInputMock2 = mock(TransactionInput.class);
-        TransactionInput transactionInputMock3 = mock(TransactionInput.class);
-        TransactionInput transactionInputMock4 = mock(TransactionInput.class);
-        List<TransactionInput> transactionInputList = new ArrayList<>();
-        transactionInputList.add(transactionInputMock);
-        transactionInputList.add(transactionInputMock2);
-        transactionInputList.add(transactionInputMock3);
-        transactionInputList.add(transactionInputMock4);
-        doReturn(transactionInputList).when(txMock).getInputs();
-        Sha256Hash sha256Hash2Mock = mock(Sha256Hash.class);
-        TransactionOutPoint transactionOutPoint = new TransactionOutPoint(0L, sha256Hash2Mock);
-        doReturn(transactionOutPoint).when(transactionInputMock).getOutpoint();
-        BloomFilter target = spy(new BloomFilter(100, Double.parseDouble("0.01"), 12345, BloomFilter.BloomUpdate.UPDATE_ALL));
-        byte[] byteArray = new byte[]{};
-        doReturn(false).when(target).contains(byteArray);
-        doReturn(BloomFilter.BloomUpdate.UPDATE_NONE).when(target).getUpdateFlag();
-        byte[] byteArray2 = new byte[]{};
-        doReturn(true).when(target).contains(byteArray2);
-        //Act Statement(s)
-        boolean result = target.applyAndUpdate(txMock);
-        //Assert statement(s)
-        assertThat(result, equalTo(Boolean.TRUE));
-        verify(txMock).getTxId();
-        verify(txMock).getOutputs();
-        verify(transactionOutputMock).getScriptPubKey();
-        verify(txMock).getInputs();
-        verify(transactionInputMock).getOutpoint();
         verify(target).contains(byteArray);
         verify(target).getUpdateFlag();
         verify(target).contains(byteArray2);

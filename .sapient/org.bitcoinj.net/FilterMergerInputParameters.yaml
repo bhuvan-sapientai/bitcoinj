@@ -53,8 +53,8 @@ methods:
     constructorSignature: "<init>(double) : void"
     priorityDefinedByUser: false
     filledByUser: false
-    priority: "MODERATE"
-    modelFingerprint: "927A6CDAC9AA64068A5350BCB45482E4"
+    priority: "LOW"
+    modelFingerprint: "DF92A1CA53451CE7759837AD0438DEE5"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -160,7 +160,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "p"
-      modelFingerprint: "F3B4C2B1DC9825B9A274DF3269B10CC8"
+      modelFingerprint: "DCF5AE5DE93C191CB9DE4C4085C30A60"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -202,7 +202,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "TimeUtils"
-      modelFingerprint: "3F8AA5AB3717B516959B3EBE73C72657"
+      modelFingerprint: "DF1E1073499732A9B0BA9E1AFE4CC632"
       index: 5
       ignored: false
       nestedInLoop: true
@@ -269,7 +269,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "p"
-      modelFingerprint: "88AF2034FDC2F83008F580E0FE5487D1"
+      modelFingerprint: "D096C0F110BCEA0E8AEF19D6DCEA2CCC"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -304,194 +304,9 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      name: "p"
-      modelFingerprint: "CA2D90E0309F5E9EBE7001CA1413EAE0"
-      index: 7
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.PeerFilterProvider"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.PeerFilterProvider"
-        uuid: "calculate_object3"
-        fixed: false
-        collectionUuid: "calculate_list2"
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "p"
-        name: "getBloomFilter"
-        parameters:
-        - name: "arg0"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: 0
-            valueType: "int"
-            uuid: "calculate_int4"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "arg1"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: 0.0
-            valueType: "double"
-            uuid: "<init>_double1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "arg2"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: 0
-            valueType: "int"
-            uuid: "<init>_int1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "getBloomFilter(int,double,int): BloomFilter"
-        returnValue:
-          sapientType: "MOCK"
-          valueType: "org.bitcoinj.core.BloomFilter"
-          uuid: "calculate_bloomFilter2"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1025
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "filter"
-      modelFingerprint: "AC2391EBBBCC96DC5D395EB7A8DE3715"
-      index: 8
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.core.BloomFilter"
-          parameters:
-          - name: "elements"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "int"
-              uuid: "calculate_int4"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "falsePositiveRate"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0.0
-              valueType: "double"
-              uuid: "<init>_double1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "arg2"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "int"
-              uuid: "<init>_int1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "randomNonce"
-            value:
-              sapientType: "ENUM"
-              content: !<regular>
-                value: "UPDATE_ALL"
-              valueType: "org.bitcoinj.core.BloomFilter$BloomUpdate"
-              uuid: "Enum-org.bitcoinj.core.BloomFilter$BloomUpdate-UPDATE_ALL"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.BloomFilter"
-          parameters:
-          - name: "elements"
-            value:
-              sapientType: "BASIC"
-              valueType: "int"
-              uuid: "calculate_int4"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "falsePositiveRate"
-            value:
-              sapientType: "BASIC"
-              valueType: "double"
-              uuid: "<init>_double1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "arg2"
-            value:
-              sapientType: "BASIC"
-              valueType: "int"
-              uuid: "<init>_int1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "randomNonce"
-            value:
-              sapientType: "ENUM"
-              content: !<regular>
-                value: "UPDATE_ALL"
-              valueType: "org.bitcoinj.core.BloomFilter$BloomUpdate"
-              uuid: "Enum-org.bitcoinj.core.BloomFilter$BloomUpdate-UPDATE_ALL"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        valueType: "org.bitcoinj.core.BloomFilter"
-        uuid: "calculate_bloomFilter1"
-        fixed: true
-        equalsMethodPresent: true
-        explicitCastNeeded: false
-      methodExercised:
-        target: "filter"
-        name: "merge"
-        parameters:
-        - name: "filter"
-          value:
-            sapientType: "MOCK"
-            valueType: "org.bitcoinj.core.BloomFilter"
-            uuid: "calculate_bloomFilter2"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "merge(BloomFilter): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "calculate_void2"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 33
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
       name: "provider"
       modelFingerprint: "B1109ACA92256777F3A5F4F9CAA54425"
-      index: 9
+      index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -515,7 +330,7 @@ methods:
         returnValue:
           sapientType: "VOID"
           valueType: "void"
-          uuid: "calculate_void3"
+          uuid: "calculate_void2"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -525,7 +340,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "D86D15F101A0BB1BDFD8C807B74067B6"
-      index: 10
+      index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -548,114 +363,13 @@ methods:
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
-    - type: "STATE_VERIFICATION_FIELD"
-      name: "lastFilter"
-      index: 11
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.core.BloomFilter"
-          parameters:
-          - name: "elements"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "int"
-              uuid: "calculate_int4"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "falsePositiveRate"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0.0
-              valueType: "double"
-              uuid: "<init>_double1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "arg2"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "int"
-              uuid: "<init>_int1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "randomNonce"
-            value:
-              sapientType: "ENUM"
-              content: !<regular>
-                value: "UPDATE_ALL"
-              valueType: "org.bitcoinj.core.BloomFilter$BloomUpdate"
-              uuid: "Enum-org.bitcoinj.core.BloomFilter$BloomUpdate-UPDATE_ALL"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.BloomFilter"
-          parameters:
-          - name: "elements"
-            value:
-              sapientType: "BASIC"
-              valueType: "int"
-              uuid: "calculate_int4"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "falsePositiveRate"
-            value:
-              sapientType: "BASIC"
-              valueType: "double"
-              uuid: "<init>_double1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "arg2"
-            value:
-              sapientType: "BASIC"
-              valueType: "int"
-              uuid: "<init>_int1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "randomNonce"
-            value:
-              sapientType: "ENUM"
-              content: !<regular>
-                value: "UPDATE_ALL"
-              valueType: "org.bitcoinj.core.BloomFilter$BloomUpdate"
-              uuid: "Enum-org.bitcoinj.core.BloomFilter$BloomUpdate-UPDATE_ALL"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        valueType: "org.bitcoinj.core.BloomFilter"
-        uuid: "calculate_bloomFilter1"
-        fixed: true
-        equalsMethodPresent: true
-        explicitCastNeeded: false
-      readMethodForField: "getLastFilter"
-      staticReadMethodForField: false
-      readMethodModifier: "PUBLIC"
-      filledByUser: false
     uuid: "974f6ce3-fb3d-379b-8bfb-4bedd1091387"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    variablesCouldNotBeIsolated: "filter"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path4"
     testPathName: "calculateWhenProvidersIsEmptyAndFilterNotEqualsLastFilterAndBegunProvidersIsNotEmpty"

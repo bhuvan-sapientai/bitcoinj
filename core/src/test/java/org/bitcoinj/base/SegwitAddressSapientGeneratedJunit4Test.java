@@ -181,6 +181,7 @@ public class SegwitAddressSapientGeneratedJunit4Test {
     public void fromBech32Test() throws AddressFormatException {
         //Arrange Statement(s)
         AddressParser addressParserMock = mock(AddressParser.class);
+        NetworkParameters networkParametersMock = mock(NetworkParameters.class);
         try (MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class)) {
             addressParser.when(() -> AddressParser.getLegacy(networkParametersMock)).thenReturn(addressParserMock);
             doReturn(segwitAddressMock).when(addressParserMock).parseAddress("bech32");
@@ -204,19 +205,17 @@ public class SegwitAddressSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        ECKey eCKeyMock = mock(ECKey.class);
         try (MockedStatic<SegwitAddress> segwitAddress = mockStatic(SegwitAddress.class, CALLS_REAL_METHODS);
              MockedStatic<Bech32> bech32 = mockStatic(Bech32.class)) {
-            doReturn("tb").when(networkMock2).segwitAddressHrp();
-            bech32.when(() -> Bech32.decode("tb1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4")).thenReturn(bech32Bech32DataMock);
-            SegwitAddress segwitAddress2 = SegwitAddress.fromKey(networkParametersMock, eCKeyMock);
-            segwitAddress.when(() -> SegwitAddress.fromBechData(networkMock2, bech32Bech32DataMock)).thenReturn(segwitAddress2);
+            doReturn("A").when(networkMock2).segwitAddressHrp();
+            bech32.when(() -> Bech32.decode("bech32")).thenReturn(bech32Bech32DataMock);
+            segwitAddress.when(() -> SegwitAddress.fromBechData(networkMock2, bech32Bech32DataMock)).thenReturn(segwitAddressMock);
             //Act Statement(s)
-            SegwitAddress result = SegwitAddress.fromBech32("tb1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4", networkMock2);
+            SegwitAddress result = SegwitAddress.fromBech32("bech32", networkMock2);
             //Assert statement(s)
-            assertThat(result, equalTo(segwitAddress2));
+            assertThat(result, equalTo(segwitAddressMock));
             verify(networkMock2, atLeast(1)).segwitAddressHrp();
-            bech32.verify(() -> Bech32.decode("tb1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4"), atLeast(1));
+            bech32.verify(() -> Bech32.decode("bech32"), atLeast(1));
             segwitAddress.verify(() -> SegwitAddress.fromBechData(networkMock2, bech32Bech32DataMock), atLeast(1));
         }
     }
@@ -256,8 +255,10 @@ public class SegwitAddressSapientGeneratedJunit4Test {
         AddressFormatException.InvalidDataLength addressFormatExceptionInvalidDataLength = new AddressFormatException.InvalidDataLength("invalid address length (0)");
         thrown.expect(AddressFormatException.InvalidDataLength.class);
         thrown.expectMessage(addressFormatExceptionInvalidDataLength.getMessage());
+
         //Act Statement(s)
         SegwitAddress.fromBechData(networkMock2, bechDataMock);
+
         //Assert statement(s)
         verify(bechDataMock).bytes();
     }
@@ -279,8 +280,10 @@ public class SegwitAddressSapientGeneratedJunit4Test {
         AddressFormatException addressFormatException = new AddressFormatException("Invalid script version: 22");
         thrown.expect(AddressFormatException.class);
         thrown.expectMessage(addressFormatException.getMessage());
+
         //Act Statement(s)
         SegwitAddress.fromBechData(networkMock2, bechDataMock);
+
         //Assert statement(s)
         verify(bechDataMock).bytes();
         verify(bechDataMock).witnessVersion();
@@ -305,8 +308,10 @@ public class SegwitAddressSapientGeneratedJunit4Test {
         AddressFormatException.InvalidDataLength addressFormatExceptionInvalidDataLength = new AddressFormatException.InvalidDataLength("Invalid length: 41");
         thrown.expect(AddressFormatException.InvalidDataLength.class);
         thrown.expectMessage(addressFormatExceptionInvalidDataLength.getMessage());
+
         //Act Statement(s)
         SegwitAddress.fromBechData(networkMock2, bechDataMock);
+
         //Assert statement(s)
         verify(bechDataMock).bytes();
         verify(bechDataMock).witnessVersion();
@@ -332,8 +337,10 @@ public class SegwitAddressSapientGeneratedJunit4Test {
         AddressFormatException.InvalidDataLength addressFormatExceptionInvalidDataLength = new AddressFormatException.InvalidDataLength("Invalid length for address version 0: 2");
         thrown.expect(AddressFormatException.InvalidDataLength.class);
         thrown.expectMessage(addressFormatExceptionInvalidDataLength.getMessage());
+
         //Act Statement(s)
         SegwitAddress.fromBechData(networkMock2, bechDataMock);
+
         //Assert statement(s)
         verify(bechDataMock).bytes();
         verify(bechDataMock).witnessVersion();
@@ -360,8 +367,10 @@ public class SegwitAddressSapientGeneratedJunit4Test {
         AddressFormatException.InvalidDataLength addressFormatExceptionInvalidDataLength = new AddressFormatException.InvalidDataLength("Invalid length for address version 1: 2");
         thrown.expect(AddressFormatException.InvalidDataLength.class);
         thrown.expectMessage(addressFormatExceptionInvalidDataLength.getMessage());
+
         //Act Statement(s)
         SegwitAddress.fromBechData(networkMock2, bechDataMock);
+
         //Assert statement(s)
         verify(bechDataMock).bytes();
         verify(bechDataMock).witnessVersion();
@@ -382,18 +391,23 @@ public class SegwitAddressSapientGeneratedJunit4Test {
          * (witnessVersion == 0) : false
          * (witnessVersion != 0) : true
          * (bechData.encoding != Bech32.Encoding.BECH32M) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0};
+        byte[] byteArray = new byte[]{(byte) 0};
         doReturn(byteArray).when(bechDataMock).bytes();
-        doReturn(0).when(bechDataMock).witnessVersion();
-        byte[] byteArray2 = new byte[]{};
+        doReturn(1).when(bechDataMock).witnessVersion();
+        byte[] byteArray2 = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
         doReturn(byteArray2).when(bechDataMock).witnessProgram();
-        AddressFormatException.InvalidDataLength addressFormatExceptionInvalidDataLength = new AddressFormatException.InvalidDataLength("Invalid length: 0");
-        thrown.expect(AddressFormatException.InvalidDataLength.class);
-        thrown.expectMessage(addressFormatExceptionInvalidDataLength.getMessage());
+        AddressFormatException.UnexpectedWitnessVersion addressFormatExceptionUnexpectedWitnessVersion = new AddressFormatException.UnexpectedWitnessVersion("Unexpected witness version: 1");
+        thrown.expect(AddressFormatException.UnexpectedWitnessVersion.class);
+        thrown.expectMessage(addressFormatExceptionUnexpectedWitnessVersion.getMessage());
+
         //Act Statement(s)
         SegwitAddress.fromBechData(networkMock2, bechDataMock);
+
         //Assert statement(s)
         verify(bechDataMock).bytes();
         verify(bechDataMock).witnessVersion();
@@ -424,8 +438,10 @@ public class SegwitAddressSapientGeneratedJunit4Test {
         AddressFormatException.UnexpectedWitnessVersion addressFormatExceptionUnexpectedWitnessVersion = new AddressFormatException.UnexpectedWitnessVersion("Unexpected witness version: 0");
         thrown.expect(AddressFormatException.UnexpectedWitnessVersion.class);
         thrown.expectMessage(addressFormatExceptionUnexpectedWitnessVersion.getMessage());
+
         //Act Statement(s)
         SegwitAddress.fromBechData(BitcoinNetwork.SIGNET, bechDataMock);
+
         //Assert statement(s)
         verify(bechDataMock).bytes();
         verify(bechDataMock).witnessVersion();
@@ -461,6 +477,7 @@ public class SegwitAddressSapientGeneratedJunit4Test {
         thrown.expect(AddressFormatException.InvalidDataLength.class);
         thrown.expectMessage(addressFormatExceptionInvalidDataLength.getMessage());
         byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31, (byte) 32, (byte) 33, (byte) 34, (byte) 35, (byte) 36, (byte) 37, (byte) 38, (byte) 39, (byte) 40, (byte) 41, (byte) 42, (byte) 43, (byte) 44, (byte) 45};
+
         //Act Statement(s)
         SegwitAddress.fromHash(networkMock2, byteArray);
     }
@@ -478,6 +495,7 @@ public class SegwitAddressSapientGeneratedJunit4Test {
         thrown.expect(AddressFormatException.InvalidDataLength.class);
         thrown.expectMessage(addressFormatExceptionInvalidDataLength.getMessage());
         byte[] byteArray = new byte[]{(byte) 0, (byte) 1};
+
         //Act Statement(s)
         SegwitAddress.fromHash(networkMock2, byteArray);
     }
@@ -495,8 +513,10 @@ public class SegwitAddressSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
+
         //Act Statement(s)
         SegwitAddress result = SegwitAddress.fromHash((Network) BitcoinNetwork.SIGNET, byteArray);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -514,8 +534,10 @@ public class SegwitAddressSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
+
         //Act Statement(s)
         SegwitAddress result = SegwitAddress.fromHash((Network) BitcoinNetwork.MAINNET, byteArray);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -548,6 +570,7 @@ public class SegwitAddressSapientGeneratedJunit4Test {
         thrown.expect(AddressFormatException.class);
         thrown.expectMessage(addressFormatException.getMessage());
         byte[] byteArray = new byte[]{};
+
         //Act Statement(s)
         SegwitAddress.fromProgram(networkMock2, 28, byteArray);
     }
@@ -564,6 +587,7 @@ public class SegwitAddressSapientGeneratedJunit4Test {
         thrown.expect(AddressFormatException.InvalidDataLength.class);
         thrown.expectMessage(addressFormatExceptionInvalidDataLength.getMessage());
         byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31, (byte) 32, (byte) 33, (byte) 34, (byte) 35, (byte) 36, (byte) 37, (byte) 38, (byte) 39, (byte) 40, (byte) 41};
+
         //Act Statement(s)
         SegwitAddress.fromProgram(networkMock2, 1, byteArray);
     }
@@ -581,6 +605,7 @@ public class SegwitAddressSapientGeneratedJunit4Test {
         thrown.expect(AddressFormatException.InvalidDataLength.class);
         thrown.expectMessage(addressFormatExceptionInvalidDataLength.getMessage());
         byte[] byteArray = new byte[]{(byte) 0, (byte) 1};
+
         //Act Statement(s)
         SegwitAddress.fromProgram(networkMock2, 0, byteArray);
     }
@@ -599,6 +624,7 @@ public class SegwitAddressSapientGeneratedJunit4Test {
         thrown.expect(AddressFormatException.InvalidDataLength.class);
         thrown.expectMessage(addressFormatExceptionInvalidDataLength.getMessage());
         byte[] byteArray = new byte[]{(byte) 0, (byte) 1};
+
         //Act Statement(s)
         SegwitAddress.fromProgram(networkMock2, 1, byteArray);
     }
@@ -616,8 +642,10 @@ public class SegwitAddressSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
+
         //Act Statement(s)
         SegwitAddress result = SegwitAddress.fromProgram((Network) BitcoinNetwork.SIGNET, 0, byteArray);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -635,8 +663,10 @@ public class SegwitAddressSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
+
         //Act Statement(s)
         SegwitAddress result = SegwitAddress.fromProgram((Network) BitcoinNetwork.REGTEST, 0, byteArray);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -648,8 +678,10 @@ public class SegwitAddressSapientGeneratedJunit4Test {
         doReturn(networkMock2).when(paramsMock).network();
         ECKey keyMock = mock(ECKey.class);
         doReturn(segwitAddressMock).when(keyMock).toAddress(ScriptType.P2WPKH, networkMock2);
+
         //Act Statement(s)
         SegwitAddress result = SegwitAddress.fromKey(paramsMock, keyMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(segwitAddressMock));
         verify(paramsMock).network();

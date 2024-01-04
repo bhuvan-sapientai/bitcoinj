@@ -41,6 +41,10 @@ public class MemoryBlockStoreSapientGeneratedJunit4Test {
 
     private final Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
 
+    private final Block blockMock = mock(Block.class);
+
+    private final Block genesisHeaderMock = mock(Block.class);
+
     //Sapient generated method id: ${93d4fa60-3e07-39db-9a2c-52b04a00e8b8}
     @Test()
     public void putWhenBlockMapIsNotNull() throws BlockStoreException, VerificationException {
@@ -51,14 +55,15 @@ public class MemoryBlockStoreSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Block genesisHeaderMock = mock(Block.class);
         doReturn(new BigInteger("0")).when(genesisHeaderMock).getWork();
         doReturn(sha256HashMock, sha256HashMock2).when(genesisHeaderMock).getHash();
         doReturn(genesisHeaderMock).when(genesisBlockMock).cloneAsHeader();
         MemoryBlockStore target = new MemoryBlockStore(genesisBlockMock);
         StoredBlock storedBlock = new StoredBlock(genesisHeaderMock, new BigInteger("0"), 0);
+
         //Act Statement(s)
         target.put(storedBlock);
+
         //Assert statement(s)
         verify(genesisHeaderMock).getWork();
         verify(genesisHeaderMock, times(2)).getHash();
@@ -76,18 +81,19 @@ public class MemoryBlockStoreSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Instant instant = Instant.now();
-        List list = new ArrayList<>();
-        Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
-        doReturn(block).when(genesisBlockMock).cloneAsHeader();
+        doReturn(blockMock).when(genesisBlockMock).cloneAsHeader();
+        doReturn(new BigInteger("0")).when(blockMock).getWork();
+        doReturn(sha256HashMock).when(blockMock).getHash();
         MemoryBlockStore target = new MemoryBlockStore(genesisBlockMock);
-        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-        Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
+
         //Act Statement(s)
-        StoredBlock result = target.get(sha256Hash);
+        StoredBlock result = target.get(sha256HashMock2);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
         verify(genesisBlockMock).cloneAsHeader();
+        verify(blockMock).getWork();
+        verify(blockMock).getHash();
     }
 
     //Sapient generated method id: ${21ed6da0-f82f-3eac-84ef-f7da4d646f7c}
@@ -101,17 +107,20 @@ public class MemoryBlockStoreSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Instant instant = Instant.now();
-        List list = new ArrayList<>();
-        Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
-        doReturn(block).when(genesisBlockMock).cloneAsHeader();
+        doReturn(blockMock).when(genesisBlockMock).cloneAsHeader();
+        doReturn(new BigInteger("0")).when(blockMock).getWork();
+        doReturn(sha256HashMock).when(blockMock).getHash();
         MemoryBlockStore target = new MemoryBlockStore(genesisBlockMock);
+
         //Act Statement(s)
         StoredBlock result = target.getChainHead();
-        StoredBlock storedBlock = new StoredBlock(block, new BigInteger("115792089237316195423570985008687907853269984665640564039457584007913129639936"), 0);
+        StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
+
         //Assert statement(s)
         assertThat(result, equalTo(storedBlock));
         verify(genesisBlockMock).cloneAsHeader();
+        verify(blockMock).getWork();
+        verify(blockMock).getHash();
     }
 
     //Sapient generated method id: ${7f46c20f-91a7-37c9-a337-f1d1de82a194}
@@ -125,15 +134,18 @@ public class MemoryBlockStoreSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Instant instant = Instant.now();
-        List list = new ArrayList<>();
-        Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
-        doReturn(block).when(genesisBlockMock).cloneAsHeader();
+        doReturn(new BigInteger("0")).when(genesisHeaderMock).getWork();
+        doReturn(sha256HashMock).when(genesisHeaderMock).getHash();
+        doReturn(genesisHeaderMock).when(genesisBlockMock).cloneAsHeader();
         MemoryBlockStore target = new MemoryBlockStore(genesisBlockMock);
-        StoredBlock storedBlock = new StoredBlock(block, new BigInteger("0"), 0);
+        StoredBlock storedBlock = new StoredBlock(genesisHeaderMock, new BigInteger("0"), 0);
+
         //Act Statement(s)
         target.setChainHead(storedBlock);
+
         //Assert statement(s)
+        verify(genesisHeaderMock).getWork();
+        verify(genesisHeaderMock).getHash();
         verify(genesisBlockMock).cloneAsHeader();
     }
 
@@ -146,14 +158,17 @@ public class MemoryBlockStoreSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Instant instant = Instant.now();
-        List list = new ArrayList<>();
-        Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
-        doReturn(block).when(genesisBlockMock).cloneAsHeader();
+        doReturn(blockMock).when(genesisBlockMock).cloneAsHeader();
+        doReturn(new BigInteger("0")).when(blockMock).getWork();
+        doReturn(sha256HashMock).when(blockMock).getHash();
         MemoryBlockStore target = new MemoryBlockStore(genesisBlockMock);
+
         //Act Statement(s)
         target.close();
+
         //Assert statement(s)
         verify(genesisBlockMock).cloneAsHeader();
+        verify(blockMock).getWork();
+        verify(blockMock).getHash();
     }
 }

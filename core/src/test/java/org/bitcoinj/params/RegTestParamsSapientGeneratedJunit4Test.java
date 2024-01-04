@@ -54,8 +54,10 @@ public class RegTestParamsSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         target = new RegTestParams();
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
+
         //Act Statement(s)
         boolean result = target.allowEmptyPeerChain();
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
     }
@@ -66,9 +68,11 @@ public class RegTestParamsSapientGeneratedJunit4Test {
         /* Branches:
          * (instance == null) : true
          */
+
         //Act Statement(s)
         RegTestParams result = RegTestParams.get();
         RegTestParams regTestParams = new RegTestParams();
+
         //Assert statement(s)
         assertThat(result, equalTo(regTestParams));
     }

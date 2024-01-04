@@ -48,9 +48,11 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
+
         //Act Statement(s)
         TransactionSignature result = TransactionSignature.dummy();
         TransactionSignature transactionSignature = new TransactionSignature(new BigInteger("57896044618658097711785492504343953926418782139537452191302581570759080747168"), new BigInteger("57896044618658097711785492504343953926418782139537452191302581570759080747168"));
+
         //Assert statement(s)
         assertThat(result, equalTo(transactionSignature));
     }
@@ -68,8 +70,10 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
+
         //Act Statement(s)
         int result = TransactionSignature.calcSigHashValue(Transaction.SigHash.SINGLE, true);
+
         //Assert statement(s)
         assertThat(result, equalTo(0));
     }
@@ -106,8 +110,10 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{};
+
         //Act Statement(s)
         boolean result = TransactionSignature.isEncodingCanonical(byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
     }
@@ -122,8 +128,10 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31, (byte) 32, (byte) 33, (byte) 34, (byte) 35, (byte) 36, (byte) 37, (byte) 38, (byte) 39, (byte) 40, (byte) 41, (byte) 42, (byte) 43, (byte) 44, (byte) 45, (byte) 46, (byte) 47, (byte) 48, (byte) 49, (byte) 50, (byte) 51, (byte) 52, (byte) 53, (byte) 54, (byte) 55, (byte) 56, (byte) 57, (byte) 58, (byte) 59, (byte) 60, (byte) 61, (byte) 62, (byte) 63, (byte) 64, (byte) 65, (byte) 66, (byte) 67, (byte) 68, (byte) 69, (byte) 70, (byte) 71, (byte) 72, (byte) 73};
+
         //Act Statement(s)
         boolean result = TransactionSignature.isEncodingCanonical(byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }
@@ -142,9 +150,11 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        byte[] byteArray = new byte[]{(byte) 48, (byte) 68, (byte) 2, (byte) 32, (byte) 124, (byte) 0, (byte) 122, (byte) 62, (byte) 58, (byte) 109, (byte) 0, (byte) 79, (byte) 0, (byte) 106, (byte) 47, (byte) 125, (byte) 0, (byte) 122, (byte) 93, (byte) 31, (byte) 94, (byte) 0, (byte) 0, (byte) 108, (byte) 93, (byte) 44, (byte) 77, (byte) 60, (byte) 0, (byte) 0, (byte) 60, (byte) 2, (byte) 32, (byte) 78, (byte) 0, (byte) 61, (byte) 76, (byte) 106, (byte) 127, (byte) 0, (byte) 122, (byte) 60, (byte) 93, (byte) 108, (byte) 0, (byte) 0, (byte) 94, (byte) 30, (byte) 93, (byte) 122, (byte) 0, (byte) 125, (byte) 47, (byte) 106, (byte) 0, (byte) 79, (byte) 0, (byte) 109, (byte) 58, (byte) 62, (byte) 122, (byte) 0, (byte) 124};
+        byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8};
+
         //Act Statement(s)
         boolean result = TransactionSignature.isEncodingCanonical(byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }
@@ -166,8 +176,10 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8};
+
         //Act Statement(s)
         boolean result = TransactionSignature.isEncodingCanonical(byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }
@@ -190,9 +202,11 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        byte[] byteArray = new byte[]{(byte) 48, (byte) 69, (byte) 2, (byte) 33, (byte) 0, (byte) 0, (byte) 92, (byte) 29, (byte) 79, (byte) 31, (byte) 60, (byte) 0, (byte) 28, (byte) 93, (byte) 95, (byte) 42, (byte) 44, (byte) 0, (byte) 111, (byte) 124, (byte) 95, (byte) 77, (byte) 31, (byte) 93, (byte) 95, (byte) 42, (byte) 44, (byte) 0, (byte) 111, (byte) 124, (byte) 95, (byte) 77, (byte) 31, (byte) 2, (byte) 32, (byte) 127, (byte) 29, (byte) 60, (byte) 79, (byte) 93, (byte) 95, (byte) 42, (byte) 44, (byte) 0, (byte) 111, (byte) 124, (byte) 95, (byte) 77, (byte) 31, (byte) 93, (byte) 95, (byte) 42, (byte) 44, (byte) 0, (byte) 111, (byte) 124, (byte) 95, (byte) 77, (byte) 31, (byte) 93, (byte) 95, (byte) 42, (byte) 44, (byte) 0, (byte) 111, (byte) 124, (byte) 95, (byte) 77, (byte) 31, (byte) 1};
+        byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8};
+
         //Act Statement(s)
         boolean result = TransactionSignature.isEncodingCanonical(byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }
@@ -212,11 +226,16 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
          * (lenR == 0) : false
          * (lenR + lenS + 7 != signature.length) : false
          * (lenS == 0) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        byte[] byteArray = new byte[]{(byte) 48, (byte) 68, (byte) 2, (byte) 32, (byte) 61, (byte) 0, (byte) 0, (byte) 60, (byte) 108, (byte) 0, (byte) 0, (byte) 108, (byte) 60, (byte) 0, (byte) 61, (byte) 32, (byte) 0, (byte) 61, (byte) 0, (byte) 108, (byte) 60, (byte) 0, (byte) 0, (byte) 108, (byte) 60, (byte) 0, (byte) 61, (byte) 32, (byte) 0, (byte) 61, (byte) 0, (byte) 108, (byte) 60, (byte) 0, (byte) 0, (byte) 108, (byte) 60, (byte) 0, (byte) 61, (byte) 32, (byte) 0, (byte) 61, (byte) 0, (byte) 108, (byte) 60, (byte) 0, (byte) 0, (byte) 108, (byte) 60, (byte) 0, (byte) 61, (byte) 2, (byte) 32, (byte) 61, (byte) 0, (byte) 0, (byte) 60, (byte) 108, (byte) 0, (byte) 0, (byte) 108, (byte) 60, (byte) 0, (byte) 61, (byte) 32, (byte) 0, (byte) 61, (byte) 0, (byte) 108, (byte) 60, (byte) 0, (byte) 0, (byte) 108, (byte) 60, (byte) 0, (byte) 61, (byte) 32, (byte) 0, (byte) 61, (byte) 0, (byte) 108, (byte) 60, (byte) 0, (byte) 0, (byte) 108, (byte) 60, (byte) 0, (byte) 61};
+        byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8};
+
         //Act Statement(s)
         boolean result = TransactionSignature.isEncodingCanonical(byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }
@@ -243,9 +262,11 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        byte[] byteArray = new byte[]{(byte) 48, (byte) 68, (byte) 2, (byte) 32, (byte) 125, (byte) 127, (byte) 0, (byte) 0, (byte) 90, (byte) 93, (byte) 45, (byte) 0, (byte) 125, (byte) 109, (byte) 0, (byte) 31, (byte) 29, (byte) 63, (byte) 0, (byte) 0, (byte) 0, (byte) 95, (byte) 122, (byte) 93, (byte) 0, (byte) 125, (byte) 109, (byte) 0, (byte) 31, (byte) 29, (byte) 63, (byte) 0, (byte) 0, (byte) 0, (byte) 95, (byte) 122, (byte) 2, (byte) 32, (byte) 125, (byte) 127, (byte) 0, (byte) 0, (byte) 90, (byte) 93, (byte) 45, (byte) 0, (byte) 125, (byte) 109, (byte) 0, (byte) 31, (byte) 29, (byte) 63, (byte) 0, (byte) 0, (byte) 0, (byte) 95, (byte) 122, (byte) 93, (byte) 0, (byte) 125, (byte) 109, (byte) 0, (byte) 31, (byte) 29, (byte) 63, (byte) 0, (byte) 0, (byte) 0, (byte) 95, (byte) 122, (byte) 0};
+        byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8};
+
         //Act Statement(s)
         boolean result = TransactionSignature.isEncodingCanonical(byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }
@@ -276,8 +297,10 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 0, (byte) 5, (byte) 6, (byte) 7, (byte) 8};
+
         //Act Statement(s)
         boolean result = TransactionSignature.isEncodingCanonical(byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }
@@ -309,9 +332,11 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        byte[] byteArray = new byte[]{(byte) 48, (byte) 7, (byte) 2, (byte) 0, (byte) 2, (byte) 0, (byte) 2, (byte) 0, (byte) 127, (byte) 2, (byte) -128, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) -128};
+        byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 0, (byte) 5, (byte) 2, (byte) 7, (byte) 8, (byte) 9};
+
         //Act Statement(s)
         boolean result = TransactionSignature.isEncodingCanonical(byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }
@@ -346,9 +371,11 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        byte[] byteArray = new byte[]{(byte) 48, (byte) 68, (byte) 2, (byte) 32, (byte) 124, (byte) 93, (byte) 90, (byte) 61, (byte) 95, (byte) 28, (byte) 125, (byte) 94, (byte) 0, (byte) 0, (byte) 0, (byte) 58, (byte) 92, (byte) 108, (byte) 93, (byte) 0, (byte) 63, (byte) 94, (byte) 0, (byte) 125, (byte) 94, (byte) 0, (byte) 0, (byte) 0, (byte) 58, (byte) 92, (byte) 108, (byte) 93, (byte) 0, (byte) 63, (byte) 2, (byte) 30, (byte) 110, (byte) 125, (byte) 94, (byte) 0, (byte) 0, (byte) 0, (byte) 58, (byte) 92, (byte) 108, (byte) 93, (byte) 0, (byte) 63, (byte) 94, (byte) 0, (byte) 125, (byte) 94, (byte) 0, (byte) 0, (byte) 0, (byte) 58, (byte) 92, (byte) 108, (byte) 93, (byte) 0, (byte) 63};
+        byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 0, (byte) 5, (byte) 2, (byte) 7, (byte) 0, (byte) 9, (byte) 10};
+
         //Act Statement(s)
         boolean result = TransactionSignature.isEncodingCanonical(byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }
@@ -383,9 +410,11 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        byte[] byteArray = new byte[]{(byte) 48, (byte) 69, (byte) 2, (byte) 33, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 87, (byte) 0, (byte) 57, (byte) 44, (byte) 92, (byte) 77, (byte) 38, (byte) 46, (byte) 87, (byte) 0, (byte) 35, (byte) 0, (byte) 67, (byte) 70, (byte) 52, (byte) 0, (byte) 38, (byte) 77, (byte) 68, (byte) 0, (byte) 122, (byte) 53, (byte) 0, (byte) 2, (byte) 32, (byte) 0, (byte) 0, (byte) 0, (byte) 75, (byte) 0, (byte) 98, (byte) 0, (byte) 0, (byte) 0, (byte) 56, (byte) 106, (byte) 83, (byte) 0, (byte) 97, (byte) 0, (byte) 0, (byte) 68, (byte) 0, (byte) 0, (byte) 98, (byte) 82, (byte) 97, (byte) 0, (byte) 46, (byte) 0, (byte) 0, (byte) 57, (byte) 41, (byte) 0, (byte) 98, (byte) 30, (byte) 1, (byte) 0, (byte) 1};
+        byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 0, (byte) 5, (byte) 2, (byte) 7, (byte) 0, (byte) 9, (byte) 10};
+
         //Act Statement(s)
         boolean result = TransactionSignature.isEncodingCanonical(byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }
@@ -402,8 +431,10 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         TransactionSignature target = new TransactionSignature(new BigInteger("0"), new BigInteger("0"), 0);
+
         //Act Statement(s)
         boolean result = target.anyoneCanPay();
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
     }
@@ -418,9 +449,11 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        TransactionSignature target = new TransactionSignature(new BigInteger("1234567890"), new BigInteger("9876543210"), 0);
+        TransactionSignature target = new TransactionSignature(new BigInteger("0"), new BigInteger("0"), 0);
+
         //Act Statement(s)
         boolean result = target.anyoneCanPay();
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }
@@ -436,9 +469,11 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        TransactionSignature target = new TransactionSignature(new BigInteger("1234567890"), new BigInteger("9876543210"), 0);
+        TransactionSignature target = new TransactionSignature(new BigInteger("0"), new BigInteger("0"), 0);
+
         //Act Statement(s)
         Transaction.SigHash result = target.sigHashMode();
+
         //Assert statement(s)
         assertThat(result, equalTo(Transaction.SigHash.NONE));
     }
@@ -454,9 +489,11 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        TransactionSignature target = new TransactionSignature(new BigInteger("1234567890"), new BigInteger("9876543210"), 515);
+        TransactionSignature target = new TransactionSignature(new BigInteger("0"), new BigInteger("0"), 0);
+
         //Act Statement(s)
         Transaction.SigHash result = target.sigHashMode();
+
         //Assert statement(s)
         assertThat(result, equalTo(Transaction.SigHash.SINGLE));
     }
@@ -472,9 +509,11 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        TransactionSignature target = new TransactionSignature(new BigInteger("12345678901234567890"), new BigInteger("98765432109876543210"), 31);
+        TransactionSignature target = new TransactionSignature(new BigInteger("0"), new BigInteger("0"), 0);
+
         //Act Statement(s)
         Transaction.SigHash result = target.sigHashMode();
+
         //Assert statement(s)
         assertThat(result, equalTo(Transaction.SigHash.ALL));
     }
@@ -488,12 +527,14 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        TransactionSignature target = spy(new TransactionSignature(new BigInteger("123456789"), new BigInteger("987654321"), 1));
+        TransactionSignature target = spy(new TransactionSignature(new BigInteger("0"), new BigInteger("0"), 0));
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         doReturn(byteArrayOutputStream).when(target).derByteStream();
+
         //Act Statement(s)
         byte[] result = target.encodeToBitcoin();
         byte[] byteResultArray = new byte[]{};
+
         //Assert statement(s)
         assertThat(result, equalTo(byteResultArray));
         verify(target).derByteStream();
@@ -510,13 +551,15 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        TransactionSignature target = spy(new TransactionSignature(new BigInteger("10"), new BigInteger("20"), 1));
+        TransactionSignature target = spy(new TransactionSignature(new BigInteger("0"), new BigInteger("0"), 0));
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         doReturn(byteArrayOutputStream).when(target).derByteStream();
         thrown.expect(RuntimeException.class);
         thrown.expectCause(isA(IOException.class));
+
         //Act Statement(s)
         target.encodeToBitcoin();
+
         //Assert statement(s)
         verify(target).derByteStream();
     }
@@ -561,13 +604,13 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<TransactionSignature> transactionSignature = mockStatic(TransactionSignature.class)) {
             transactionSignature.when(() -> TransactionSignature.calcSigHashValue(Transaction.SigHash.ALL, false)).thenReturn(0);
-            TransactionSignature target = spy(new TransactionSignature(new BigInteger("123456789"), new BigInteger("987654321"), 1));
+            TransactionSignature target = spy(new TransactionSignature(new BigInteger("0"), new BigInteger("1"), 0));
             doReturn(false).when(target).isCanonical();
             doReturn(Transaction.SigHash.ALL).when(target).sigHashMode();
             doReturn(false).when(target).anyoneCanPay();
             //Act Statement(s)
             ECKey.ECDSASignature result = target.toCanonicalised();
-            ECKey.ECDSASignature eCKeyECDSASignature = new ECKey.ECDSASignature(new BigInteger("123456789"), new BigInteger("115792089237316195423570985008687907852837564279074904382605163141517173840016"));
+            ECKey.ECDSASignature eCKeyECDSASignature = new ECKey.ECDSASignature(new BigInteger("0"), new BigInteger("115792089237316195423570985008687907852837564279074904382605163141518161494336"));
             TransactionSignature transactionSignature2 = new TransactionSignature(eCKeyECDSASignature, Transaction.SigHash.ALL, false);
             //Assert statement(s)
             assertThat(result, equalTo(transactionSignature2));

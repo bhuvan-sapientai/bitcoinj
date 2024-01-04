@@ -1956,11 +1956,11 @@ methods:
       filledByUser: false
     uuid: "86570818-8d4b-3aa8-b29e-b79ed980b8a8"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "createMasterPrivateKeyWhenILengthNotEquals64ThrowsIllegalStateException"
@@ -3026,13 +3026,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "6ABFEEA0CCF2E8F333ECAB2E265EA87A"
+    modelFingerprint: "6AB1CF03C5D899A89BEBA147630425F1"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "pubKeyBytes"
-      modelFingerprint: "6F6B50048A7AABA09A516E40E3C17293"
+      modelFingerprint: "C59A5B9DD1A915A52F38CAF4235898B2"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -3052,7 +3052,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "chainCode"
-      modelFingerprint: "73314B5F5FC9F6E0FC7A62B15FE80B68"
+      modelFingerprint: "874E1658D571A9DBCE18B7D13927B9FF"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -3072,7 +3072,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "HDPath"
-      modelFingerprint: "5FCEEB95272B8AA5C76D584B96D47063"
+      modelFingerprint: "0AAAF89CFFEB76E8E6701C6D661A955D"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -3091,56 +3091,14 @@ methods:
         signature: "M(): HDPath"
         returnValue:
           sapientType: "OBJECT"
-          content: !<new>
+          content: !<static_method_return>
             target: "org.bitcoinj.crypto.HDPath"
-            parameters:
-            - name: "hasPrivateKey"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: false
-                valueType: "boolean"
-                uuid: "createMasterPubKeyFromBytes_hDPath1-hasPrivateKey"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "list"
-              value:
-                sapientType: "COLLECTION"
-                content: !<collection>
-                  parameters: []
-                  values: []
-                suggestedContent: !<collection>
-                  parameters: []
-                  values: []
-                valueType: "java.util.List"
-                uuid: "createMasterPubKeyFromBytes_hDPath1-list"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
+            method: "M"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
             target: "org.bitcoinj.crypto.HDPath"
-            parameters:
-            - name: "hasPrivateKey"
-              value:
-                sapientType: "BASIC"
-                valueType: "boolean"
-                uuid: "createMasterPubKeyFromBytes_hDPath1-hasPrivateKey"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "list"
-              value:
-                sapientType: "COLLECTION"
-                valueType: "java.util.List"
-                uuid: "createMasterPubKeyFromBytes_hDPath1-list"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
+            method: "M"
+            methodParameters: []
           valueType: "org.bitcoinj.crypto.HDPath"
           uuid: "createMasterPubKeyFromBytes_hDPath1"
           fixed: false
@@ -3217,7 +3175,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "FB8154EA5DEA11A6CF6A5AC2C6957E73"
+      modelFingerprint: "31CD3F27F6CC12948BCDB1016E1A9445"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -3230,56 +3188,14 @@ methods:
           - name: "childNumberPath"
             value:
               sapientType: "OBJECT"
-              content: !<new>
+              content: !<static_method_return>
                 target: "org.bitcoinj.crypto.HDPath"
-                parameters:
-                - name: "hasPrivateKey"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: false
-                    valueType: "boolean"
-                    uuid: "createMasterPubKeyFromBytes_hDPath1-hasPrivateKey"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "list"
-                  value:
-                    sapientType: "COLLECTION"
-                    content: !<collection>
-                      parameters: []
-                      values: []
-                    suggestedContent: !<collection>
-                      parameters: []
-                      values: []
-                    valueType: "java.util.List"
-                    uuid: "createMasterPubKeyFromBytes_hDPath1-list"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
-              suggestedContent: !<new>
+                method: "M"
+                methodParameters: []
+              suggestedContent: !<static_method_return>
                 target: "org.bitcoinj.crypto.HDPath"
-                parameters:
-                - name: "hasPrivateKey"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "boolean"
-                    uuid: "createMasterPubKeyFromBytes_hDPath1-hasPrivateKey"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "list"
-                  value:
-                    sapientType: "COLLECTION"
-                    valueType: "java.util.List"
-                    uuid: "createMasterPubKeyFromBytes_hDPath1-list"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+                method: "M"
+                methodParameters: []
               valueType: "org.bitcoinj.crypto.HDPath"
               uuid: "createMasterPubKeyFromBytes_hDPath1"
               fixed: false
@@ -3384,10 +3300,6 @@ methods:
                 - name: "bits"
                   value:
                     sapientType: "ARRAY"
-                    content: !<array>
-                      values: {}
-                    suggestedContent: !<array>
-                      values: {}
                     valueType: "byte[]"
                     uuid: "createMasterPubKeyFromBytes_byte[]1"
                     fixed: false
@@ -3421,28 +3333,15 @@ methods:
           parameters:
           - name: "childNumberPath"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<new>
+              sapientType: "OBJECT"
+              content: !<static_method_return>
                 target: "org.bitcoinj.crypto.HDPath"
-                parameters:
-                - name: "hasPrivateKey"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "boolean"
-                    uuid: "createMasterPubKeyFromBytes_hDPath1-hasPrivateKey"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "list"
-                  value:
-                    sapientType: "COLLECTION"
-                    valueType: "java.util.List"
-                    uuid: "createMasterPubKeyFromBytes_hDPath1-list"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+                method: "M"
+                methodParameters: []
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.crypto.HDPath"
+                method: "M"
+                methodParameters: []
               valueType: "org.bitcoinj.crypto.HDPath"
               uuid: "createMasterPubKeyFromBytes_hDPath1"
               fixed: false
@@ -3451,10 +3350,6 @@ methods:
           - name: "chainCode"
             value:
               sapientType: "ARRAY"
-              content: !<array>
-                values: {}
-              suggestedContent: !<array>
-                values: {}
               valueType: "byte[]"
               uuid: "createMasterPubKeyFromBytes_byte[]2"
               fixed: false
@@ -3491,10 +3386,6 @@ methods:
                 - name: "bits"
                   value:
                     sapientType: "ARRAY"
-                    content: !<array>
-                      values: {}
-                    suggestedContent: !<array>
-                      values: {}
                     valueType: "byte[]"
                     uuid: "createMasterPubKeyFromBytes_byte[]1"
                     fixed: false
@@ -3532,11 +3423,11 @@ methods:
       filledByUser: false
     uuid: "3292e57a-1198-3307-912f-bcc8ec7db38e"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "deriveChildKey"
     returnType: "org.bitcoinj.crypto.DeterministicKey"
@@ -22334,12 +22225,12 @@ methods:
       filledByUser: false
     uuid: "6f52aab3-2070-3a62-bdd2-7d81073eee98"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     variablesCouldNotBeIsolated: "child"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "generate"
     returnType: "java.util.stream.Stream"
@@ -22356,23 +22247,19 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "D41A7CF0F7C178EF6A8EBFA3631F9BFC"
+    modelFingerprint: "46D25A06C2913753BDEC9E6E8113B025"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "parent"
-      modelFingerprint: "C88FB24AE4A7EBCED5FB5AE72E4F55C6"
+      modelFingerprint: "E0ED63C356E04BF490095DF37E8C1010"
       index: 1
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.crypto.DeterministicKey"
-          onlyPojoFunctions: false
-          builderPattern: false
         valueType: "org.bitcoinj.crypto.DeterministicKey"
         uuid: "generate_deterministicKey1"
         fixed: false
@@ -22382,7 +22269,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "childNumber"
-      modelFingerprint: "A0010149BCBE358F11CBA79C729198E7"
+      modelFingerprint: "9A64971B7CE93E88861706195FF4C4CF"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -22390,8 +22277,6 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
-        suggestedContent: !<regular>
           value: 0
         valueType: "int"
         uuid: "generate_int1"
@@ -22426,11 +22311,11 @@ methods:
       filledByUser: false
     uuid: "f5fa0828-5949-301b-8403-fc2d54d898e8"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "deriveChildKey"
     returnType: "org.bitcoinj.crypto.DeterministicKey"
@@ -22785,13 +22670,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "035E87371C457550947846F2666D667D"
+    modelFingerprint: "2C93A79D4579B5D9F5533085701DD7DB"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "parent"
-      modelFingerprint: "C88FB24AE4A7EBCED5FB5AE72E4F55C6"
+      modelFingerprint: "A7A7139DC74C45C711885412C5511B84"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -22811,47 +22696,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "childNumber"
-      modelFingerprint: "F9217D1D2C2AA9261D5BC0693BAB25FA"
+      modelFingerprint: "7CE38B98B9CFA73F5F103B7FB8B8B76C"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.crypto.ChildNumber"
-          parameters:
-          - name: "i"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "int"
-              uuid: "deriveChildKeyFromPrivate_childNumber1-i"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.crypto.ChildNumber"
-          parameters:
-          - name: "i"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "int"
-              uuid: "deriveChildKeyFromPrivate_childNumber1-i"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.crypto.ChildNumber"
         uuid: "deriveChildKeyFromPrivate_childNumber1"
         fixed: false
@@ -22861,7 +22712,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "HDKeyDerivation"
-      modelFingerprint: "1045A2044EF9AD6C49230D7330ACFED2"
+      modelFingerprint: "9B422CD794B60ABA1E8BEB2FF439DD57"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -22891,41 +22742,7 @@ methods:
             explicitCastNeeded: false
         - name: "childNumber"
           value:
-            sapientType: "OBJECT"
-            content: !<new>
-              target: "org.bitcoinj.crypto.ChildNumber"
-              parameters:
-              - name: "i"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
-                  suggestedContent: !<regular>
-                    value: 1
-                  valueType: "int"
-                  uuid: "deriveChildKeyFromPrivate_childNumber1-i"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
-            suggestedContent: !<new>
-              target: "org.bitcoinj.crypto.ChildNumber"
-              parameters:
-              - name: "i"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
-                  suggestedContent: !<regular>
-                    value: 1
-                  valueType: "int"
-                  uuid: "deriveChildKeyFromPrivate_childNumber1-i"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
+            sapientType: "MOCK"
             valueType: "org.bitcoinj.crypto.ChildNumber"
             uuid: "deriveChildKeyFromPrivate_childNumber1"
             fixed: false
@@ -22949,7 +22766,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "parent"
-      modelFingerprint: "9F448823C7FA4E17AACE4DB6D4856BA0"
+      modelFingerprint: "92FC5C9D5547F812D7AF29347695635F"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -22971,57 +22788,11 @@ methods:
         parameters: []
         signature: "getPath(): HDPath"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<new>
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
             target: "org.bitcoinj.crypto.HDPath"
-            parameters:
-            - name: "hasPrivateKey"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: false
-                valueType: "boolean"
-                uuid: "deriveChildKeyFromPrivate_hDPath1-hasPrivateKey"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "list"
-              value:
-                sapientType: "COLLECTION"
-                content: !<collection>
-                  parameters: []
-                  values: []
-                suggestedContent: !<collection>
-                  parameters: []
-                  values: []
-                valueType: "java.util.List"
-                uuid: "deriveChildKeyFromPrivate_hDPath1-list"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
-            target: "org.bitcoinj.crypto.HDPath"
-            parameters:
-            - name: "hasPrivateKey"
-              value:
-                sapientType: "BASIC"
-                valueType: "boolean"
-                uuid: "deriveChildKeyFromPrivate_hDPath1-hasPrivateKey"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "list"
-              value:
-                sapientType: "COLLECTION"
-                valueType: "java.util.List"
-                uuid: "deriveChildKeyFromPrivate_hDPath1-list"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
+            onlyPojoFunctions: false
+            builderPattern: false
           valueType: "org.bitcoinj.crypto.HDPath"
           uuid: "deriveChildKeyFromPrivate_hDPath1"
           fixed: false
@@ -23031,63 +22802,17 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "5E469EE6F6859296DFA99BDBBA0077D4"
+      modelFingerprint: "0234479754168ACA851D0EE8040EE5E2"
       index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<new>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.crypto.HDPath"
-          parameters:
-          - name: "hasPrivateKey"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: false
-              valueType: "boolean"
-              uuid: "deriveChildKeyFromPrivate_hDPath1-hasPrivateKey"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "list"
-            value:
-              sapientType: "COLLECTION"
-              content: !<collection>
-                parameters: []
-                values: []
-              suggestedContent: !<collection>
-                parameters: []
-                values: []
-              valueType: "java.util.List"
-              uuid: "deriveChildKeyFromPrivate_hDPath1-list"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.crypto.HDPath"
-          parameters:
-          - name: "hasPrivateKey"
-            value:
-              sapientType: "BASIC"
-              valueType: "boolean"
-              uuid: "deriveChildKeyFromPrivate_hDPath1-hasPrivateKey"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "list"
-            value:
-              sapientType: "COLLECTION"
-              valueType: "java.util.List"
-              uuid: "deriveChildKeyFromPrivate_hDPath1-list"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.crypto.HDPath"
         uuid: "deriveChildKeyFromPrivate_hDPath1"
         fixed: false
@@ -23099,41 +22824,7 @@ methods:
         parameters:
         - name: "child1"
           value:
-            sapientType: "OBJECT"
-            content: !<new>
-              target: "org.bitcoinj.crypto.ChildNumber"
-              parameters:
-              - name: "i"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
-                  suggestedContent: !<regular>
-                    value: 1
-                  valueType: "int"
-                  uuid: "deriveChildKeyFromPrivate_childNumber1-i"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
-            suggestedContent: !<new>
-              target: "org.bitcoinj.crypto.ChildNumber"
-              parameters:
-              - name: "i"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
-                  suggestedContent: !<regular>
-                    value: 1
-                  valueType: "int"
-                  uuid: "deriveChildKeyFromPrivate_childNumber1-i"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
+            sapientType: "MOCK"
             valueType: "org.bitcoinj.crypto.ChildNumber"
             uuid: "deriveChildKeyFromPrivate_childNumber1"
             fixed: false
@@ -23153,57 +22844,7 @@ methods:
             explicitCastNeeded: false
         signature: "extend(ChildNumber,ChildNumber[]): HDPath"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<new>
-            target: "org.bitcoinj.crypto.HDPath"
-            parameters:
-            - name: "hasPrivateKey"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: false
-                valueType: "boolean"
-                uuid: "deriveChildKeyFromPrivate_hDPath2-hasPrivateKey"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "list"
-              value:
-                sapientType: "COLLECTION"
-                content: !<collection>
-                  parameters: []
-                  values: []
-                suggestedContent: !<collection>
-                  parameters: []
-                  values: []
-                valueType: "java.util.List"
-                uuid: "deriveChildKeyFromPrivate_hDPath2-list"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
-            target: "org.bitcoinj.crypto.HDPath"
-            parameters:
-            - name: "hasPrivateKey"
-              value:
-                sapientType: "BASIC"
-                valueType: "boolean"
-                uuid: "deriveChildKeyFromPrivate_hDPath2-hasPrivateKey"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "list"
-              value:
-                sapientType: "COLLECTION"
-                valueType: "java.util.List"
-                uuid: "deriveChildKeyFromPrivate_hDPath2-list"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.crypto.HDPath"
           uuid: "deriveChildKeyFromPrivate_hDPath2"
           fixed: false
@@ -23214,7 +22855,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ByteUtils"
-      modelFingerprint: "0C66BCEA0047E17E1D8B6E8FA7D1EA9D"
+      modelFingerprint: "C03BC9F53FFFE0DD92499745DECA560E"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -23246,9 +22887,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 1234
+            value: 0
           suggestedContent: !<regular>
-            value: 1234
+            value: 0
           valueType: "java.math.BigInteger"
           uuid: "deriveChildKeyFromPrivate_bigInteger1"
           fixed: false
@@ -23259,7 +22900,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "9376B70BD6C0857AEC2CBCD8E4E7A5B9"
+      modelFingerprint: "7FAC0A983E82700593CC38C1A8BCC06F"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -23271,57 +22912,7 @@ methods:
           parameters:
           - name: "hdPath"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "org.bitcoinj.crypto.HDPath"
-                parameters:
-                - name: "hasPrivateKey"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: false
-                    valueType: "boolean"
-                    uuid: "deriveChildKeyFromPrivate_hDPath2-hasPrivateKey"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "list"
-                  value:
-                    sapientType: "COLLECTION"
-                    content: !<collection>
-                      parameters: []
-                      values: []
-                    suggestedContent: !<collection>
-                      parameters: []
-                      values: []
-                    valueType: "java.util.List"
-                    uuid: "deriveChildKeyFromPrivate_hDPath2-list"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
-              suggestedContent: !<new>
-                target: "org.bitcoinj.crypto.HDPath"
-                parameters:
-                - name: "hasPrivateKey"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "boolean"
-                    uuid: "deriveChildKeyFromPrivate_hDPath2-hasPrivateKey"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "list"
-                  value:
-                    sapientType: "COLLECTION"
-                    valueType: "java.util.List"
-                    uuid: "deriveChildKeyFromPrivate_hDPath2-list"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "MOCK"
               valueType: "org.bitcoinj.crypto.HDPath"
               uuid: "deriveChildKeyFromPrivate_hDPath2"
               fixed: false
@@ -23343,9 +22934,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 1234
+                value: 0
               suggestedContent: !<regular>
-                value: 1234
+                value: 0
               valueType: "java.math.BigInteger"
               uuid: "deriveChildKeyFromPrivate_bigInteger1"
               fixed: false
@@ -23370,57 +22961,7 @@ methods:
           parameters:
           - name: "hdPath"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "org.bitcoinj.crypto.HDPath"
-                parameters:
-                - name: "hasPrivateKey"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: false
-                    valueType: "boolean"
-                    uuid: "deriveChildKeyFromPrivate_hDPath2-hasPrivateKey"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "list"
-                  value:
-                    sapientType: "COLLECTION"
-                    content: !<collection>
-                      parameters: []
-                      values: []
-                    suggestedContent: !<collection>
-                      parameters: []
-                      values: []
-                    valueType: "java.util.List"
-                    uuid: "deriveChildKeyFromPrivate_hDPath2-list"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
-              suggestedContent: !<new>
-                target: "org.bitcoinj.crypto.HDPath"
-                parameters:
-                - name: "hasPrivateKey"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "boolean"
-                    uuid: "deriveChildKeyFromPrivate_hDPath2-hasPrivateKey"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "list"
-                  value:
-                    sapientType: "COLLECTION"
-                    valueType: "java.util.List"
-                    uuid: "deriveChildKeyFromPrivate_hDPath2-list"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.crypto.HDPath"
               uuid: "deriveChildKeyFromPrivate_hDPath2"
               fixed: false
@@ -23438,9 +22979,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 1234
+                value: 0
               suggestedContent: !<regular>
-                value: 1234
+                value: 0
               valueType: "java.math.BigInteger"
               uuid: "deriveChildKeyFromPrivate_bigInteger1"
               fixed: false
@@ -23448,7 +22989,7 @@ methods:
               explicitCastNeeded: false
           - name: "parent"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.crypto.DeterministicKey"
                 onlyPojoFunctions: false
@@ -23469,11 +23010,11 @@ methods:
       filledByUser: false
     uuid: "e3c04c0d-aa25-314f-8936-207fbd87f5c0"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "deriveChildKeyBytesFromPrivate"
     returnType: "org.bitcoinj.crypto.HDKeyDerivation$RawKeyBytes"
@@ -24373,11 +23914,11 @@ methods:
       filledByUser: false
     uuid: "be740420-be94-3e4d-aafd-39322b493932"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "deriveChildKeyBytesFromPrivateWhenParentPublicKeyLengthNotEquals33ThrowsIllegalStateException"
@@ -24714,13 +24255,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "9B6F05148F3B345AEFD427147ACF425C"
+    modelFingerprint: "B87C037991F484F80631F04C20634BCE"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "parent"
-      modelFingerprint: "C88FB24AE4A7EBCED5FB5AE72E4F55C6"
+      modelFingerprint: "A7A7139DC74C45C711885412C5511B84"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -24740,47 +24281,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "childNumber"
-      modelFingerprint: "F9217D1D2C2AA9261D5BC0693BAB25FA"
+      modelFingerprint: "7CE38B98B9CFA73F5F103B7FB8B8B76C"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.crypto.ChildNumber"
-          parameters:
-          - name: "i"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "int"
-              uuid: "deriveChildKeyFromPublic_childNumber1-i"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.crypto.ChildNumber"
-          parameters:
-          - name: "i"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "int"
-              uuid: "deriveChildKeyFromPublic_childNumber1-i"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.crypto.ChildNumber"
         uuid: "deriveChildKeyFromPublic_childNumber1"
         fixed: false
@@ -24790,7 +24297,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "mode"
-      modelFingerprint: "928F33F276A311C650C0DF0EEBDCD397"
+      modelFingerprint: "93C7F6F8D415B678EFE7C4D464073A89"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -24798,8 +24305,6 @@ methods:
       value:
         sapientType: "ENUM"
         content: !<regular>
-          value: "NORMAL"
-        suggestedContent: !<regular>
           value: "NORMAL"
         valueType: "org.bitcoinj.crypto.HDKeyDerivation$PublicDeriveMode"
         uuid: "deriveChildKeyFromPublic_hDKeyDerivation.PublicDeriveMode1"
@@ -24810,7 +24315,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "HDKeyDerivation"
-      modelFingerprint: "6D66D3672DA1C379EB78AA8258F8B004"
+      modelFingerprint: "F7BE72B33ECA7F1C428ACE96FD17D0CB"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -24840,41 +24345,7 @@ methods:
             explicitCastNeeded: false
         - name: "childNumber"
           value:
-            sapientType: "OBJECT"
-            content: !<new>
-              target: "org.bitcoinj.crypto.ChildNumber"
-              parameters:
-              - name: "i"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
-                  suggestedContent: !<regular>
-                    value: 1
-                  valueType: "int"
-                  uuid: "deriveChildKeyFromPublic_childNumber1-i"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
-            suggestedContent: !<new>
-              target: "org.bitcoinj.crypto.ChildNumber"
-              parameters:
-              - name: "i"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
-                  suggestedContent: !<regular>
-                    value: 1
-                  valueType: "int"
-                  uuid: "deriveChildKeyFromPublic_childNumber1-i"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
+            sapientType: "MOCK"
             valueType: "org.bitcoinj.crypto.ChildNumber"
             uuid: "deriveChildKeyFromPublic_childNumber1"
             fixed: false
@@ -24908,7 +24379,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "parent"
-      modelFingerprint: "9F448823C7FA4E17AACE4DB6D4856BA0"
+      modelFingerprint: "92FC5C9D5547F812D7AF29347695635F"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -24930,57 +24401,11 @@ methods:
         parameters: []
         signature: "getPath(): HDPath"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<new>
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
             target: "org.bitcoinj.crypto.HDPath"
-            parameters:
-            - name: "hasPrivateKey"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: false
-                valueType: "boolean"
-                uuid: "deriveChildKeyFromPublic_hDPath1-hasPrivateKey"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "list"
-              value:
-                sapientType: "COLLECTION"
-                content: !<collection>
-                  parameters: []
-                  values: []
-                suggestedContent: !<collection>
-                  parameters: []
-                  values: []
-                valueType: "java.util.List"
-                uuid: "deriveChildKeyFromPublic_hDPath1-list"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
-            target: "org.bitcoinj.crypto.HDPath"
-            parameters:
-            - name: "hasPrivateKey"
-              value:
-                sapientType: "BASIC"
-                valueType: "boolean"
-                uuid: "deriveChildKeyFromPublic_hDPath1-hasPrivateKey"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "list"
-              value:
-                sapientType: "COLLECTION"
-                valueType: "java.util.List"
-                uuid: "deriveChildKeyFromPublic_hDPath1-list"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
+            onlyPojoFunctions: false
+            builderPattern: false
           valueType: "org.bitcoinj.crypto.HDPath"
           uuid: "deriveChildKeyFromPublic_hDPath1"
           fixed: false
@@ -24990,63 +24415,17 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "5E469EE6F6859296DFA99BDBBA0077D4"
+      modelFingerprint: "0234479754168ACA851D0EE8040EE5E2"
       index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<new>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.crypto.HDPath"
-          parameters:
-          - name: "hasPrivateKey"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: false
-              valueType: "boolean"
-              uuid: "deriveChildKeyFromPublic_hDPath1-hasPrivateKey"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "list"
-            value:
-              sapientType: "COLLECTION"
-              content: !<collection>
-                parameters: []
-                values: []
-              suggestedContent: !<collection>
-                parameters: []
-                values: []
-              valueType: "java.util.List"
-              uuid: "deriveChildKeyFromPublic_hDPath1-list"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.crypto.HDPath"
-          parameters:
-          - name: "hasPrivateKey"
-            value:
-              sapientType: "BASIC"
-              valueType: "boolean"
-              uuid: "deriveChildKeyFromPublic_hDPath1-hasPrivateKey"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "list"
-            value:
-              sapientType: "COLLECTION"
-              valueType: "java.util.List"
-              uuid: "deriveChildKeyFromPublic_hDPath1-list"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.crypto.HDPath"
         uuid: "deriveChildKeyFromPublic_hDPath1"
         fixed: false
@@ -25058,41 +24437,7 @@ methods:
         parameters:
         - name: "child1"
           value:
-            sapientType: "OBJECT"
-            content: !<new>
-              target: "org.bitcoinj.crypto.ChildNumber"
-              parameters:
-              - name: "i"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
-                  suggestedContent: !<regular>
-                    value: 1
-                  valueType: "int"
-                  uuid: "deriveChildKeyFromPublic_childNumber1-i"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
-            suggestedContent: !<new>
-              target: "org.bitcoinj.crypto.ChildNumber"
-              parameters:
-              - name: "i"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
-                  suggestedContent: !<regular>
-                    value: 1
-                  valueType: "int"
-                  uuid: "deriveChildKeyFromPublic_childNumber1-i"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
+            sapientType: "MOCK"
             valueType: "org.bitcoinj.crypto.ChildNumber"
             uuid: "deriveChildKeyFromPublic_childNumber1"
             fixed: false
@@ -25112,57 +24457,7 @@ methods:
             explicitCastNeeded: false
         signature: "extend(ChildNumber,ChildNumber[]): HDPath"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<new>
-            target: "org.bitcoinj.crypto.HDPath"
-            parameters:
-            - name: "hasPrivateKey"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: false
-                valueType: "boolean"
-                uuid: "deriveChildKeyFromPublic_hDPath2-hasPrivateKey"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "list"
-              value:
-                sapientType: "COLLECTION"
-                content: !<collection>
-                  parameters: []
-                  values: []
-                suggestedContent: !<collection>
-                  parameters: []
-                  values: []
-                valueType: "java.util.List"
-                uuid: "deriveChildKeyFromPublic_hDPath2-list"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
-            target: "org.bitcoinj.crypto.HDPath"
-            parameters:
-            - name: "hasPrivateKey"
-              value:
-                sapientType: "BASIC"
-                valueType: "boolean"
-                uuid: "deriveChildKeyFromPublic_hDPath2-hasPrivateKey"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "list"
-              value:
-                sapientType: "COLLECTION"
-                valueType: "java.util.List"
-                uuid: "deriveChildKeyFromPublic_hDPath2-list"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.crypto.HDPath"
           uuid: "deriveChildKeyFromPublic_hDPath2"
           fixed: false
@@ -25239,7 +24534,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "CFAC77FA3074E8006E8E2E31E1DACA44"
+      modelFingerprint: "38FD98384EBAF034EF3DB4E5753C5293"
       index: 8
       ignored: false
       nestedInLoop: false
@@ -25251,57 +24546,7 @@ methods:
           parameters:
           - name: "childNumberPath"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "org.bitcoinj.crypto.HDPath"
-                parameters:
-                - name: "hasPrivateKey"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: false
-                    valueType: "boolean"
-                    uuid: "deriveChildKeyFromPublic_hDPath2-hasPrivateKey"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "list"
-                  value:
-                    sapientType: "COLLECTION"
-                    content: !<collection>
-                      parameters: []
-                      values: []
-                    suggestedContent: !<collection>
-                      parameters: []
-                      values: []
-                    valueType: "java.util.List"
-                    uuid: "deriveChildKeyFromPublic_hDPath2-list"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
-              suggestedContent: !<new>
-                target: "org.bitcoinj.crypto.HDPath"
-                parameters:
-                - name: "hasPrivateKey"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "boolean"
-                    uuid: "deriveChildKeyFromPublic_hDPath2-hasPrivateKey"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "list"
-                  value:
-                    sapientType: "COLLECTION"
-                    valueType: "java.util.List"
-                    uuid: "deriveChildKeyFromPublic_hDPath2-list"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "MOCK"
               valueType: "org.bitcoinj.crypto.HDPath"
               uuid: "deriveChildKeyFromPublic_hDPath2"
               fixed: false
@@ -25444,57 +24689,7 @@ methods:
           parameters:
           - name: "childNumberPath"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "org.bitcoinj.crypto.HDPath"
-                parameters:
-                - name: "hasPrivateKey"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: false
-                    valueType: "boolean"
-                    uuid: "deriveChildKeyFromPublic_hDPath2-hasPrivateKey"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "list"
-                  value:
-                    sapientType: "COLLECTION"
-                    content: !<collection>
-                      parameters: []
-                      values: []
-                    suggestedContent: !<collection>
-                      parameters: []
-                      values: []
-                    valueType: "java.util.List"
-                    uuid: "deriveChildKeyFromPublic_hDPath2-list"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
-              suggestedContent: !<new>
-                target: "org.bitcoinj.crypto.HDPath"
-                parameters:
-                - name: "hasPrivateKey"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "boolean"
-                    uuid: "deriveChildKeyFromPublic_hDPath2-hasPrivateKey"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "list"
-                  value:
-                    sapientType: "COLLECTION"
-                    valueType: "java.util.List"
-                    uuid: "deriveChildKeyFromPublic_hDPath2-list"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.crypto.HDPath"
               uuid: "deriveChildKeyFromPublic_hDPath2"
               fixed: false
@@ -25560,7 +24755,7 @@ methods:
               explicitCastNeeded: false
           - name: "parent"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.crypto.DeterministicKey"
                 onlyPojoFunctions: false
@@ -25581,11 +24776,11 @@ methods:
       filledByUser: false
     uuid: "785e12a0-4928-3829-98c7-9c9c05d4b35c"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "deriveChildKeyBytesFromPublic"
     returnType: "org.bitcoinj.crypto.HDKeyDerivation$RawKeyBytes"
@@ -26509,11 +25704,11 @@ methods:
       filledByUser: false
     uuid: "63f8c45b-3f1a-32bc-9913-efe6b63452d3"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "deriveChildKeyBytesFromPublicWhenParentPublicKeyLengthNotEquals33ThrowsIllegalStateException"

@@ -36,6 +36,7 @@ import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.mockStatic;
 import static org.hamcrest.Matchers.isA;
 import static org.mockito.Mockito.doReturn;
+import static org.mockito.ArgumentMatchers.any;
 
 public class DownloadProgressTrackerSapientGeneratedJunit4Test {
 
@@ -46,6 +47,10 @@ public class DownloadProgressTrackerSapientGeneratedJunit4Test {
 
     @Rule()
     public ExpectedException thrown = ExpectedException.none();
+
+    private final Block blockMock = mock(Block.class);
+
+    private final FilteredBlock filteredBlockMock = mock(FilteredBlock.class);
 
     //Sapient generated method id: ${c7705cdb-21b0-32b0-b24c-ddee486560ac}
     @Ignore(value = "Potential harmful system call (CompletableFuture.complete) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
@@ -59,8 +64,10 @@ public class DownloadProgressTrackerSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         doReturn(0L).when(peerMock).getBestHeight();
         DownloadProgressTracker target = new DownloadProgressTracker();
+
         //Act Statement(s)
         target.onChainDownloadStarted(peerMock, 0);
+
         //Assert statement(s)
         verify(peerMock).getBestHeight();
     }
@@ -77,8 +84,10 @@ public class DownloadProgressTrackerSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         DownloadProgressTracker target = spy(new DownloadProgressTracker());
         doNothing().when(target).startDownload(1);
+
         //Act Statement(s)
         target.onChainDownloadStarted(peerMock, 1);
+
         //Assert statement(s)
         verify(target).startDownload(1);
     }
@@ -91,25 +100,23 @@ public class DownloadProgressTrackerSapientGeneratedJunit4Test {
          * (caughtUp) : false
          * (blocksLeft == 0) : true
          * (lastPercent != 100) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
-        Block block2Mock = mock(Block.class);
-        PartialMerkleTree partialMerkleTreeMock = mock(PartialMerkleTree.class);
         try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
             doReturn(0L).when(peerMock).getBestHeight();
-            timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) null)).thenReturn("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
-            DownloadProgressTracker target = new DownloadProgressTracker();
             Instant instant = Instant.now();
-            List list = new ArrayList<>();
-            Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
-            FilteredBlock filteredBlock = new FilteredBlock(block2Mock, partialMerkleTreeMock);
+            doReturn(instant).when(blockMock).time();
+            timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("return_of_dateTimeFormat1");
+            DownloadProgressTracker target = new DownloadProgressTracker();
             //Act Statement(s)
-            target.onBlocksDownloaded(peerMock, block, filteredBlock, 0);
+            target.onBlocksDownloaded(peerMock, blockMock, filteredBlockMock, 0);
             //Assert statement(s)
             verify(peerMock).getBestHeight();
-            timeUtils.verify(() -> TimeUtils.dateTimeFormat((Instant) null), atLeast(1));
+            verify(blockMock).time();
+            timeUtils.verify(() -> TimeUtils.dateTimeFormat((Instant) any()));
         }
     }
 
@@ -124,8 +131,7 @@ public class DownloadProgressTrackerSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DownloadProgressTracker target = new DownloadProgressTracker();
-        Block blockMock = mock(Block.class);
-        FilteredBlock filteredBlockMock = mock(FilteredBlock.class);
+
         //Act Statement(s)
         target.onBlocksDownloaded(peerMock, blockMock, filteredBlockMock, 1);
     }
@@ -136,6 +142,7 @@ public class DownloadProgressTrackerSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         DownloadProgressTracker target = new DownloadProgressTracker();
         Instant instant = Instant.now();
+
         //Act Statement(s)
         target.progress(Double.parseDouble("1.0"), 1, instant);
     }
@@ -148,6 +155,7 @@ public class DownloadProgressTrackerSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DownloadProgressTracker target = new DownloadProgressTracker();
+
         //Act Statement(s)
         target.startDownload(2824);
     }
@@ -160,6 +168,7 @@ public class DownloadProgressTrackerSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DownloadProgressTracker target = new DownloadProgressTracker();
+
         //Act Statement(s)
         target.startDownload(2);
     }
@@ -170,6 +179,7 @@ public class DownloadProgressTrackerSapientGeneratedJunit4Test {
     public void awaitTest() throws InterruptedException, ExecutionException {
         //Arrange Statement(s)
         DownloadProgressTracker target = new DownloadProgressTracker();
+
         //Act Statement(s)
         target.await();
     }
@@ -188,6 +198,7 @@ public class DownloadProgressTrackerSapientGeneratedJunit4Test {
         DownloadProgressTracker target = new DownloadProgressTracker();
         thrown.expect(RuntimeException.class);
         thrown.expectCause(isA(ExecutionException.class));
+
         //Act Statement(s)
         target.await();
     }
@@ -198,10 +209,12 @@ public class DownloadProgressTrackerSapientGeneratedJunit4Test {
     public void getFutureTest() {
         //Arrange Statement(s)
         DownloadProgressTracker target = new DownloadProgressTracker();
+
         //Act Statement(s)
         ListenableCompletableFuture<Long> result = target.getFuture();
         CompletableFuture completableFuture = new CompletableFuture();
         ListenableCompletableFuture<Long> listenableCompletableFuture = ListenableCompletableFuture.of(completableFuture);
+
         //Assert statement(s)
         //TODO: Please implement equals method in ListenableCompletableFuture for verification to succeed or you need to adjust respective assertion statements
         assertThat(result, equalTo(listenableCompletableFuture));

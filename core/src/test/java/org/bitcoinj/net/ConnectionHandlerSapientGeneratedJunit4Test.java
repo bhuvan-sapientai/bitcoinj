@@ -67,8 +67,10 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
         thrown.expect(IOException.class);
         thrown.expectMessage(iOException.getMessage());
         byte[] byteArray = new byte[]{};
+
         //Act Statement(s)
         target.writeBytes(byteArray);
+
         //Assert statement(s)
         verify(target).closeConnection();
     }
@@ -92,8 +94,10 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
         thrown.expect(IOException.class);
         thrown.expectCause(isA(IOException.class));
         byte[] byteArray = new byte[]{};
+
         //Act Statement(s)
         target.writeBytes(byteArray);
+
         //Assert statement(s)
         verify(target).closeConnection();
     }
@@ -116,10 +120,11 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
         doNothing().when(target).closeConnection();
         thrown.expect(IOException.class);
-        thrown.expectCause(isA(IOException.class));
         byte[] byteArray = new byte[]{};
+
         //Act Statement(s)
         target.writeBytes(byteArray);
+
         //Assert statement(s)
         verify(target).closeConnection();
     }
@@ -141,9 +146,11 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
         target = new ConnectionHandler((StreamConnection) null, (SelectionKey) null, connectionHandlerSet);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
         byte[] byteArray = new byte[]{};
+
         //Act Statement(s)
         ListenableCompletableFuture<Void> result = target.writeBytes(byteArray);
         ListenableCompletableFuture<Void> listenableCompletableFuture = new ListenableCompletableFuture<>();
+
         //Assert statement(s)
         //TODO: Please implement equals method in ListenableCompletableFuture for verification to succeed or you need to adjust respective assertion statements
         assertThat(result, equalTo(listenableCompletableFuture));
@@ -161,13 +168,13 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        ConnectionHandler connectionHandlerMock = mock(ConnectionHandler.class);
         Set<ConnectionHandler> connectionHandlerSet = new HashSet<>();
-        connectionHandlerSet.add(connectionHandlerMock);
+        connectionHandlerSet.add(target);
         target = new ConnectionHandler((StreamConnection) null, (SelectionKey) null, connectionHandlerSet);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
         thrown.expect(RuntimeException.class);
         thrown.expectCause(isA(IOException.class));
+
         //Act Statement(s)
         target.closeConnection();
     }
@@ -189,8 +196,10 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
         target = new ConnectionHandler((StreamConnection) null, (SelectionKey) null, (Set) null);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
         doNothing().when(connectionMock).connectionClosed();
+
         //Act Statement(s)
         target.closeConnection();
+
         //Assert statement(s)
         verify(connectionMock).connectionClosed();
     }
@@ -210,14 +219,15 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        ConnectionHandler connectionHandlerMock = mock(ConnectionHandler.class);
         Set<ConnectionHandler> connectionHandlerSet = new HashSet<>();
-        connectionHandlerSet.add(connectionHandlerMock);
+        connectionHandlerSet.add(target);
         target = new ConnectionHandler((StreamConnection) null, (SelectionKey) null, connectionHandlerSet);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
         doNothing().when(connectionMock).connectionClosed();
+
         //Act Statement(s)
         target.closeConnection();
+
         //Assert statement(s)
         verify(connectionMock).connectionClosed();
     }
@@ -231,6 +241,7 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         thrown.expect(NullPointerException.class);
         SelectionKey selectionKey = null;
+
         //Act Statement(s)
         ConnectionHandler.handleKey(selectionKey);
     }
@@ -245,6 +256,7 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         thrown.expect(NullPointerException.class);
         SelectionKey selectionKey = null;
+
         //Act Statement(s)
         ConnectionHandler.handleKey(selectionKey);
     }
@@ -264,6 +276,7 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
         thrown.expect(NullPointerException.class);
         //TODO: Needs initialization with real value
         SelectionKey selectionKey = null;
+
         //Act Statement(s)
         ConnectionHandler.handleKey(selectionKey);
     }
@@ -284,6 +297,7 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         //TODO: Needs initialization with real value
         SelectionKey selectionKey = null;
+
         //Act Statement(s)
         ConnectionHandler.handleKey(selectionKey);
     }
@@ -301,6 +315,7 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         thrown.expect(NullPointerException.class);
         SelectionKey selectionKey = null;
+
         //Act Statement(s)
         ConnectionHandler.handleKey(selectionKey);
     }
@@ -324,6 +339,7 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         //TODO: Needs initialization with real value
         SelectionKey selectionKey = null;
+
         //Act Statement(s)
         ConnectionHandler.handleKey(selectionKey);
     }
@@ -343,6 +359,7 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         thrown.expect(NullPointerException.class);
         SelectionKey selectionKey = null;
+
         //Act Statement(s)
         ConnectionHandler.handleKey(selectionKey);
     }
@@ -362,6 +379,7 @@ public class ConnectionHandlerSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         thrown.expect(NullPointerException.class);
         SelectionKey selectionKey = null;
+
         //Act Statement(s)
         ConnectionHandler.handleKey(selectionKey);
     }

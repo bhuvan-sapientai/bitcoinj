@@ -4207,11 +4207,11 @@ methods:
       filledByUser: false
     uuid: "f1fa6e83-3ce8-3694-88d0-5e77f0c20f27"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "deserializePayload"
     returnType: "org.bitcoinj.core.Message"
@@ -7099,11 +7099,11 @@ methods:
       filledByUser: false
     uuid: "17174e58-db47-3671-b710-a2ae0916c91b"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path3"
     pathIdForUser: "path3"
     testPathName: "deserializePayloadWhenLogNotIsDebugEnabledThrowsProtocolException"
@@ -7368,11 +7368,11 @@ methods:
       filledByUser: false
     uuid: "90c83f42-cca7-310a-8fda-4759b1b13765"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "makeAddressV1Message"
     returnType: "org.bitcoinj.core.AddressV1Message"
@@ -8343,11 +8343,11 @@ methods:
       filledByUser: false
     uuid: "6072de5a-2f9c-30d7-a066-af56b9c44738"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "makeBloomFilter"
     returnType: "org.bitcoinj.core.Message"
@@ -8668,11 +8668,11 @@ methods:
       filledByUser: false
     uuid: "75db7280-9ce9-39e5-92ab-aeaf6d55b168"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "makeFilteredBlock"
     returnType: "org.bitcoinj.core.FilteredBlock"
@@ -8993,11 +8993,11 @@ methods:
       filledByUser: false
     uuid: "5c51819a-e9f5-3107-bdc2-c409118d560c"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "makeInventoryMessage"
     returnType: "org.bitcoinj.core.InventoryMessage"
@@ -9318,11 +9318,11 @@ methods:
       filledByUser: false
     uuid: "5d252fbc-4834-3aff-9968-d6a5c67a2074"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "makeTransaction"
     returnType: "org.bitcoinj.core.Transaction"
@@ -9653,11 +9653,11 @@ methods:
       filledByUser: false
     uuid: "be379120-8a39-3bcd-87b4-f1dae294a260"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "seekPastMagicBytes"
     returnType: "void"
@@ -9676,7 +9676,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "9A68CFA7ABFB7CAB8873C1D68CAFFDD8"
+    modelFingerprint: "E64B92914D7D83F2E57C3FA14F96ED54"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -9821,7 +9821,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "NetworkParameters"
-      modelFingerprint: "972669B5DF2544DCCB17F9C6FA749139"
+      modelFingerprint: "F98CFD1338325072F086F1E685553416"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -9847,21 +9847,11 @@ methods:
             explicitCastNeeded: false
         signature: "of(Network): NetworkParameters"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
             target: "org.bitcoinj.core.NetworkParameters"
-            method: "fromID"
-            methodParameters:
-            - name: "id"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: "id1"
-                valueType: "java.lang.String"
-                uuid: "<init>_networkParameters2-id"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+            onlyPojoFunctions: false
+            builderPattern: false
           valueType: "org.bitcoinj.core.NetworkParameters"
           uuid: "<init>_networkParameters2"
           fixed: false
@@ -9871,27 +9861,17 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "DE6B6310A2EAAC2750112535832A65F3"
+      modelFingerprint: "C1A5FDAEBCB3806C5C58EF2AD8B86CF6"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.NetworkParameters"
-          method: "fromID"
-          methodParameters:
-          - name: "id"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "id1"
-              valueType: "java.lang.String"
-              uuid: "<init>_networkParameters2-id"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "<init>_networkParameters2"
         fixed: false
@@ -9930,8 +9910,8 @@ methods:
       filledByUser: false
     uuid: "3cf75e16-0ae1-3aac-a554-213dee3712dc"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true

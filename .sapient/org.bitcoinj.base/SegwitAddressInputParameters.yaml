@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "8CEA133E774E622041216C179DD632A2"
+modelFingerprint: "41F434165B1AFC9EE32045775007F2BD"
 methods:
 - method:
     name: "getWitnessVersion"
@@ -218,11 +218,11 @@ methods:
       filledByUser: false
     uuid: "d65e732a-558f-3e8d-af9d-3b3f11a8dd65"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getWitnessProgram"
     returnType: "byte[]"
@@ -465,11 +465,11 @@ methods:
       filledByUser: false
     uuid: "c152b292-9f41-3184-8d0c-c8dacb973313"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getOutputScriptType"
     returnType: "org.bitcoinj.base.ScriptType"
@@ -687,11 +687,11 @@ methods:
       filledByUser: false
     uuid: "a692d7f0-dc47-3a18-8225-b89fa3c261a6"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "getOutputScriptTypeWhenProgramLengthEqualsWITNESS_PROGRAM_LENGTH_SH"
@@ -902,11 +902,11 @@ methods:
       filledByUser: false
     uuid: "5c374f49-747d-3cb2-93fb-1c8ea0f8d19f"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path3"
     testPathName: "getOutputScriptTypeWhenProgramLengthNotEqualsWITNESS_PROGRAM_LENGTH_SHThrowsIllegalStateException"
@@ -1125,11 +1125,11 @@ methods:
       filledByUser: false
     uuid: "722ec9f7-f329-3888-baca-7ec3ae8143ae"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "toString"
     returnType: "java.lang.String"
@@ -1371,11 +1371,11 @@ methods:
       filledByUser: false
     uuid: "363d3698-f34c-39ad-914f-376a19498023"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "fromBech32"
     returnType: "org.bitcoinj.base.SegwitAddress"
@@ -1559,298 +1559,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "99F875EA8A5DE7899B63608545923F33"
-    problemWasSolvedByProver: false
-    truncated: false
-    inputParameters:
-    - type: "INPUT"
-      name: "bech32"
-      modelFingerprint: "C7722E8C9B3BB72D9BD150832308ED36"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: "tb1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4"
-        suggestedContent: !<regular>
-          value: "tb1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4"
-        valueType: "java.lang.String"
-        uuid: "fromBech32_string1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "network"
-      modelFingerprint: "62D36D9D71CD6C8C1AEBB21D1EB5E1D6"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.base.Network"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.base.Network"
-        uuid: "fromBech32_network1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Bech32"
-      modelFingerprint: "2F267AD43D78B88EC66230F05E056D83"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.Bech32"
-        uuid: "org.bitcoinj.base.Bech32"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.Bech32"
-        name: "decode"
-        parameters:
-        - name: "str"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: "tb1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4"
-            suggestedContent: !<regular>
-              value: "tb1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4"
-            valueType: "java.lang.String"
-            uuid: "fromBech32_string1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        throwsExceptions:
-        - "org.bitcoinj.base.exceptions.AddressFormatException"
-        signature: "decode(String): Bech32$Bech32Data throws org.bitcoinj.base.exceptions.AddressFormatException"
-        returnValue:
-          sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
-            target: "org.bitcoinj.base.Bech32$Bech32Data"
-            onlyPojoFunctions: false
-            builderPattern: false
-          valueType: "org.bitcoinj.base.Bech32$Bech32Data"
-          uuid: "fromBech32_bech32.Bech32Data1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "network"
-      modelFingerprint: "EDE6AA9566961CC49030639F3E3C27F0"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.base.Network"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.base.Network"
-        uuid: "fromBech32_network1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "network"
-        name: "segwitAddressHrp"
-        parameters: []
-        signature: "segwitAddressHrp(): String"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: "tb"
-          suggestedContent: !<regular>
-            value: "tb"
-          valueType: "java.lang.String"
-          uuid: "fromBech32_string3"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1025
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "SegwitAddress"
-      modelFingerprint: "D30C9BCFD51D39E5A797A9EB11356B16"
-      index: 5
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.SegwitAddress"
-        uuid: "org.bitcoinj.base.SegwitAddress"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.SegwitAddress"
-        name: "fromBechData"
-        parameters:
-        - name: "network"
-          value:
-            sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.base.Network"
-              onlyPojoFunctions: false
-              builderPattern: false
-            valueType: "org.bitcoinj.base.Network"
-            uuid: "fromBech32_network1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "bechData"
-          value:
-            sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.base.Bech32$Bech32Data"
-              onlyPojoFunctions: false
-              builderPattern: false
-            valueType: "org.bitcoinj.base.Bech32$Bech32Data"
-            uuid: "fromBech32_bech32.Bech32Data1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "fromBechData(Network,Bech32$Bech32Data): SegwitAddress"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.SegwitAddress"
-            method: "fromKey"
-            methodParameters:
-            - name: "params"
-              value:
-                sapientType: "MOCK"
-                valueType: "org.bitcoinj.core.NetworkParameters"
-                uuid: "fromBech32_segwitAddress1-params"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "key"
-              value:
-                sapientType: "MOCK"
-                valueType: "org.bitcoinj.crypto.ECKey"
-                uuid: "fromBech32_segwitAddress1-key"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.base.SegwitAddress"
-            method: "fromKey"
-            methodParameters:
-            - name: "params"
-              value:
-                sapientType: "UNKNOWN"
-                valueType: "org.bitcoinj.core.NetworkParameters"
-                uuid: "fromBech32_segwitAddress1-params"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "key"
-              value:
-                sapientType: "UNKNOWN"
-                valueType: "org.bitcoinj.crypto.ECKey"
-                uuid: "fromBech32_segwitAddress1-key"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          valueType: "org.bitcoinj.base.SegwitAddress"
-          uuid: "fromBech32_segwitAddress1"
-          fixed: false
-          equalsMethodPresent: true
-          explicitCastNeeded: false
-        access: 8
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "9D97145BEAC2AB0BC53F0496DE9532FB"
-      index: 6
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "org.bitcoinj.base.SegwitAddress"
-          method: "fromKey"
-          methodParameters:
-          - name: "params"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.core.NetworkParameters"
-              uuid: "fromBech32_segwitAddress1-params"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "key"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.crypto.ECKey"
-              uuid: "fromBech32_segwitAddress1-key"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.base.SegwitAddress"
-          method: "fromKey"
-          methodParameters:
-          - name: "params"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.core.NetworkParameters"
-              uuid: "fromBech32_segwitAddress1-params"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "key"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.crypto.ECKey"
-              uuid: "fromBech32_segwitAddress1-key"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        valueType: "org.bitcoinj.base.SegwitAddress"
-        uuid: "fromBech32_segwitAddress1"
-        fixed: false
-        equalsMethodPresent: true
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    uuid: "d034a323-fe70-3d57-930f-d88d7f82f3b1"
-    deleted: false
-    disabled: true
-    ignoredBySystem: false
-    prover: "LLM"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
-  - pathId: "path2"
-    pathIdForUser: "path2"
-    testPathName: "fromBech321WhenBechDataHrpNotEqualsNetworkSegwitAddressHrpThrowsAddressFormatExceptionWrongNetwork"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "4B62890B0EB45413A0E5AB4A8539E914"
+    modelFingerprint: "9952CB560AFDD211415F628F416803DB"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -1935,7 +1644,206 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "network"
-      modelFingerprint: "9A0ECC83EC019036A6746573C51CEF5D"
+      modelFingerprint: "B90E9095305155CA72C3332194550696"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Network"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Network"
+        uuid: "fromBech32_network1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "network"
+        name: "segwitAddressHrp"
+        parameters: []
+        signature: "segwitAddressHrp(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "A"
+          suggestedContent: !<regular>
+            value: "A"
+          valueType: "java.lang.String"
+          uuid: "fromBech32_string3"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "SegwitAddress"
+      modelFingerprint: "A9C56E3059AE1EFE05EF7441B642AE89"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.SegwitAddress"
+        uuid: "org.bitcoinj.base.SegwitAddress"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.SegwitAddress"
+        name: "fromBechData"
+        parameters:
+        - name: "network"
+          value:
+            sapientType: "MOCK"
+            suggestedContent: !<unknown_object>
+              target: "org.bitcoinj.base.Network"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "org.bitcoinj.base.Network"
+            uuid: "fromBech32_network1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bechData"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Bech32$Bech32Data"
+            uuid: "fromBech32_bech32.Bech32Data1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "fromBechData(Network,Bech32$Bech32Data): SegwitAddress"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.base.SegwitAddress"
+          uuid: "fromBech32_segwitAddress1"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        access: 8
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "DBD3373C4076E873946F320F1499D915"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.SegwitAddress"
+        uuid: "fromBech32_segwitAddress1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "d034a323-fe70-3d57-930f-d88d7f82f3b1"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "fromBech321WhenBechDataHrpNotEqualsNetworkSegwitAddressHrpThrowsAddressFormatExceptionWrongNetwork"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "523DAAD99C962ACE44C5A63AE876FE36"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "bech32"
+      modelFingerprint: "C89F893223D91E9BC877C7B44F297943"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "bech32"
+        valueType: "java.lang.String"
+        uuid: "fromBech32_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "network"
+      modelFingerprint: "B6E55541B0F91512F3A59D4AD0BB37A3"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Network"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Network"
+        uuid: "fromBech32_network1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Bech32"
+      modelFingerprint: "BA5D5DAFF023DD4E76DC01DF16B9FF3D"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.Bech32"
+        uuid: "org.bitcoinj.base.Bech32"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.Bech32"
+        name: "decode"
+        parameters:
+        - name: "str"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "bech32"
+            valueType: "java.lang.String"
+            uuid: "fromBech32_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "org.bitcoinj.base.exceptions.AddressFormatException"
+        signature: "decode(String): Bech32$Bech32Data throws org.bitcoinj.base.exceptions.AddressFormatException"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.base.Bech32$Bech32Data"
+          uuid: "fromBech32_bech32.Bech32Data1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "network"
+      modelFingerprint: "7CCA8331B616AA33F0E848A91902AB49"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -2020,10 +1928,11 @@ methods:
       filledByUser: false
     uuid: "61bca67c-cffc-3512-88bb-0a75b094cedc"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "fromBechData"
     returnType: "org.bitcoinj.base.SegwitAddress"
@@ -2395,12 +2304,12 @@ methods:
       filledByUser: false
     uuid: "e4db5260-2723-3d7e-afb8-a71fca2eb3c1"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
-  - pathId: "path15"
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path14"
     pathIdForUser: "path3"
     testPathName: "fromBechDataWhenBechDataBytesLengthNotLessThan1AndDefaultBranchThrowsAddressFormatException"
     nameDefinedByUser: false
@@ -3381,12 +3290,12 @@ methods:
       filledByUser: false
     uuid: "cccd7257-3b24-3280-874b-167ce1f69e7f"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
-  - pathId: "path14"
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path13"
     pathIdForUser: "path5"
     testPathName: "fromBechDataWhenDefaultBranchAndDefaultBranchThrowsAddressFormatExceptionInvalidDataLength"
     nameDefinedByUser: false
@@ -3666,11 +3575,11 @@ methods:
       filledByUser: false
     uuid: "b64f0841-4ef5-3f4a-8c0c-710c549e6c98"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path9"
     pathIdForUser: "path7"
     testPathName: "fromBechDataWhenDefaultBranchAndDefaultBranchAndDefaultBranchAndDefaultBraThrowsAddressFormatExceptionInvalidDataLength"
@@ -3933,11 +3842,11 @@ methods:
       filledByUser: false
     uuid: "ab2442ff-aa2a-3ddb-b100-2f639a4f858b"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path7"
     pathIdForUser: "path8"
     testPathName: "fromBechDataWhenBechDataEncodingNotEqualsBech32EncodingBECH32ThrowsAddressFormatExceptionUnexpectedWitnessVersion"
@@ -3981,7 +3890,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "A688D516D9A7669C99149634D6ACA6CE"
+    modelFingerprint: "FD94A9C4A55706E06731F060DD5EB9C7"
     problemWasSolvedByProver: false
     truncated: true
     inputParameters: []
@@ -3991,47 +3900,26 @@ methods:
     ignoredBySystem: true
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
-  - pathId: "path12"
-    pathIdForUser: "path11"
-    testPathName: "fromBechDataWhenWitnessVersionNotEquals0AndBechDataEncodingNotEqualThrowsAddressFormatExceptionUnexpectedWitnessVersion"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "9C13089FE4B3BC392F780B5F68285B16"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "a1543a52-f26a-387b-8fdc-16b87d7300d9"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
   - pathId: "path11"
-    pathIdForUser: "path12"
+    pathIdForUser: "path11"
     testPathName: "fromBechDataWhenBechDataEncodingEqualsBech32EncodingBECH32M"
     nameDefinedByUser: false
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "8D0000D1B2E9E5E3D8DCCD97F08B0713"
-    problemWasSolvedByProver: true
+    modelFingerprint: "39F61FA3862BD7A7EFBB5FDA54BA4E15"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "network"
-      modelFingerprint: "62D36D9D71CD6C8C1AEBB21D1EB5E1D6"
+      modelFingerprint: "ECD5777B98096C66D018424DBD7F2C5A"
       index: 1
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.base.Network"
-          onlyPojoFunctions: false
-          builderPattern: false
         valueType: "org.bitcoinj.base.Network"
         uuid: "fromBechData_network1"
         fixed: false
@@ -4041,7 +3929,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "bechData"
-      modelFingerprint: "4B3000B6BFA5775798CDA10EDA482D5A"
+      modelFingerprint: "8979949507CE2E5CE84FF15E8F874EF8"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -4061,7 +3949,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "bechData"
-      modelFingerprint: "4D12E2A078800F0A16A47A2113CA1EBC"
+      modelFingerprint: "C51D70A8120499A2670B20A812F76A56"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -4091,22 +3979,7 @@ methods:
                 content: !<regular>
                   value: 0
                 valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              1:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              2:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
+                uuid: "fromBechData_byte[]1Item0"
                 fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
@@ -4117,22 +3990,7 @@ methods:
                 content: !<regular>
                   value: 0
                 valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              1:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              2:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
+                uuid: "fromBechData_byte[]1Item0"
                 fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
@@ -4146,7 +4004,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "bechData"
-      modelFingerprint: "FAAEC20675E51ED97A586F99EFD0D0E8"
+      modelFingerprint: "7BF40AB5CC87B08A7BDA3311669D8FE8"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -4170,9 +4028,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 0
+            value: 1
           suggestedContent: !<regular>
-            value: 0
+            value: 1
           valueType: "int"
           uuid: "fromBechData_short1"
           fixed: false
@@ -4183,7 +4041,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "bechData"
-      modelFingerprint: "F10C1A5BAC42D4C913585D4D5B0FED59"
+      modelFingerprint: "4AF06977C2B1972B4ACEC0116C24776F"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -4207,9 +4065,585 @@ methods:
         returnValue:
           sapientType: "ARRAY"
           content: !<array>
-            values: {}
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item0"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              1:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 1
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              2:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 2
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item2"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              3:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 3
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              4:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 4
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item4"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              5:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 5
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item5"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              6:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 6
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item6"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              7:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 7
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item7"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              8:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 8
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item8"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              9:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 9
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item9"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              10:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 10
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item10"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              11:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 11
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item11"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              12:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 12
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item12"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              13:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 13
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item13"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              14:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 14
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item14"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              15:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 15
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item15"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              16:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 16
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item16"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              17:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 17
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item17"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              18:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 18
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item18"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              19:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 19
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item19"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              20:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 20
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item20"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              21:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 21
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item21"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              22:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 22
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item22"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              23:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 23
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item23"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              24:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 24
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item24"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              25:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 25
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item25"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              26:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 26
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item26"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              27:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 27
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item27"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              28:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 28
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item28"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              29:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 29
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item29"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              30:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 30
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item30"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              31:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 31
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item31"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           suggestedContent: !<array>
-            values: {}
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item0"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              1:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 1
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              2:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 2
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item2"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              3:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 3
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              4:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 4
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item4"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              5:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 5
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item5"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              6:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 6
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item6"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              7:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 7
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item7"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              8:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 8
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item8"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              9:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 9
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item9"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              10:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 10
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item10"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              11:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 11
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item11"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              12:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 12
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item12"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              13:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 13
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item13"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              14:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 14
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item14"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              15:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 15
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item15"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              16:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 16
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item16"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              17:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 17
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item17"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              18:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 18
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item18"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              19:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 19
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item19"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              20:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 20
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item20"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              21:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 21
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item21"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              22:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 22
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item22"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              23:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 23
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item23"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              24:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 24
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item24"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              25:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 25
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item25"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              26:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 26
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item26"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              27:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 27
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item27"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              28:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 28
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item28"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              29:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 29
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item29"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              30:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 30
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item30"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              31:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 31
+                valueType: "byte"
+                uuid: "fromBechData_byte[]2Item31"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "byte[]"
           uuid: "fromBechData_byte[]2"
           fixed: false
@@ -4220,7 +4654,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "36BD0D66D451AF7E36994F2D7022BA02"
+      modelFingerprint: "6BCBCD33A43EFB76366BD02511D963F5"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -4228,41 +4662,41 @@ methods:
       value:
         sapientType: "EXCEPTION"
         content: !<new>
-          target: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidDataLength"
+          target: "org.bitcoinj.base.exceptions.AddressFormatException$UnexpectedWitnessVersion"
           parameters:
           - name: "message"
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "Invalid length: 0"
+                value: "Unexpected witness version: 1"
               suggestedContent: !<regular>
-                value: "Invalid length: 0"
+                value: "Unexpected witness version: 1"
               valueType: "java.lang.String"
-              uuid: "<init>_string1"
+              uuid: "fromBechData_string1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
           createdByTargetCode: true
         suggestedContent: !<new>
-          target: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidDataLength"
+          target: "org.bitcoinj.base.exceptions.AddressFormatException$UnexpectedWitnessVersion"
           parameters:
           - name: "message"
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "Invalid length: 0"
+                value: "Unexpected witness version: 1"
               suggestedContent: !<regular>
-                value: "Invalid length: 0"
+                value: "Unexpected witness version: 1"
               valueType: "java.lang.String"
-              uuid: "<init>_string1"
+              uuid: "fromBechData_string1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
           createdByTargetCode: true
-        valueType: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidDataLength"
-        uuid: "<init>_addressFormatException.InvalidDataLength1"
+        valueType: "org.bitcoinj.base.exceptions.AddressFormatException$UnexpectedWitnessVersion"
+        uuid: "fromBechData_addressFormatException.UnexpectedWitnessVersion1"
         fixed: true
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -4270,13 +4704,13 @@ methods:
       filledByUser: false
     uuid: "51ad6411-1dac-3c29-99aa-78df8c853675"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
-  - pathId: "path13"
-    pathIdForUser: "path13"
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path12"
+    pathIdForUser: "path12"
     testPathName: "fromBechDataWhenWitnessVersionNotEquals0AndBechDataEncodingEqualsBech32EncodingBECH32M"
     nameDefinedByUser: false
     priorityDefinedByUser: false
@@ -4293,7 +4727,7 @@ methods:
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path5"
-    pathIdForUser: "path14"
+    pathIdForUser: "path13"
     testPathName: "fromBechDataWhenWitnessVersionEquals0AndBechDataEncodingNotEqualsBe2ThrowsAddressFormatExceptionUnexpectedWitnessVersion"
     nameDefinedByUser: false
     priorityDefinedByUser: false
@@ -5098,13 +5532,13 @@ methods:
       filledByUser: false
     uuid: "646d8346-e90e-3bae-aa6b-e6b21d860fda"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path6"
-    pathIdForUser: "path15"
+    pathIdForUser: "path14"
     testPathName: "fromBechDataWhenWitnessVersionEquals0AndBechDataEncodingNotEqualsBe3ThrowsAddressFormatExceptionUnexpectedWitnessVersion"
     nameDefinedByUser: false
     priorityDefinedByUser: false
@@ -10827,14 +11261,15 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "03BB03CE42C7A6CA1727C9E8C9E88FBD"
-    problemWasSolvedByProver: false
+    modelFingerprint: "455B8228306E0C9153063D2FE59455BB"
+    problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
     uuid: "38405e79-bb09-3472-8de8-0ffb27bafcd7"
     deleted: true
     disabled: false
     ignoredBySystem: true
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path3"
@@ -14838,11 +15273,11 @@ methods:
       filledByUser: false
     uuid: "b444423d-8062-3e94-803b-01f5c4c4e2cc"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "equals"
     returnType: "boolean"
@@ -15308,11 +15743,11 @@ methods:
       filledByUser: false
     uuid: "47e11a0d-795c-3ba1-9d69-39455db34464"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "compareTo"
     returnType: "int"
@@ -15330,12 +15765,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "19113641E3E3A4946D4CF3BD0A0DA328"
+    modelFingerprint: "66D4B423F1B757DAEE5C0F70EEAC106B"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "986F2D6715324DEE319FACC05182A648"
+      modelFingerprint: "CFA1D83FB3658F64628004A65E2FDE0B"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -15363,8 +15798,6 @@ methods:
               sapientType: "BASIC"
               content: !<regular>
                 value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "int"
               uuid: "fromProgram_int1"
               fixed: false
@@ -15388,7 +15821,7 @@ methods:
           methodParameters:
           - name: "params"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.NetworkParameters"
                 onlyPojoFunctions: false
@@ -15401,10 +15834,6 @@ methods:
           - name: "witnessVersion"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "int"
               uuid: "fromProgram_int1"
               fixed: false
@@ -15413,10 +15842,6 @@ methods:
           - name: "witnessProgram"
             value:
               sapientType: "ARRAY"
-              content: !<array>
-                values: {}
-              suggestedContent: !<array>
-                values: {}
               valueType: "byte[]"
               uuid: "fromProgram_byte[]1"
               fixed: false
@@ -15431,17 +15856,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "o"
-      modelFingerprint: "4BBAA88BEFD77AFF94F318A534E9CF0C"
+      modelFingerprint: "6C0883FFFFDBDC87E766723D3AE8993A"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.base.Address"
-          onlyPojoFunctions: false
-          builderPattern: false
         valueType: "org.bitcoinj.base.Address"
         uuid: "compareTo_address1"
         fixed: false
@@ -15451,7 +15872,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "params"
-      modelFingerprint: "FE126965178E55A6A667172D91B2D474"
+      modelFingerprint: "D3F477F2203E38AED3675605B36AEDBC"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -15474,10 +15895,6 @@ methods:
         signature: "network(): Network"
         returnValue:
           sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
-            target: "org.bitcoinj.base.Network"
-            onlyPojoFunctions: false
-            builderPattern: false
           valueType: "org.bitcoinj.base.Network"
           uuid: "fromProgram_network1"
           fixed: false
@@ -15488,7 +15905,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "SegwitAddress"
-      modelFingerprint: "F579FA7D495CCF601F5758F0583D8035"
+      modelFingerprint: "409B8D040B6B6EE667238854A924C506"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -15507,10 +15924,6 @@ methods:
         - name: "network"
           value:
             sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.base.Network"
-              onlyPojoFunctions: false
-              builderPattern: false
             valueType: "org.bitcoinj.base.Network"
             uuid: "fromProgram_network1"
             fixed: false
@@ -15520,8 +15933,6 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 0
-            suggestedContent: !<regular>
               value: 0
             valueType: "int"
             uuid: "fromProgram_int1"
@@ -15571,8 +15982,8 @@ methods:
       filledByUser: false
     uuid: "af5f6332-26a2-3749-8f9a-ac87ce6fe7cf"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false

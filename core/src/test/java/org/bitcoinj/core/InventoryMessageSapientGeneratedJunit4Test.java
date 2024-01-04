@@ -65,10 +65,12 @@ public class InventoryMessageSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         List<Block> blockList = new ArrayList<>();
         blockList.add(blockMock);
+
         //Act Statement(s)
         InventoryMessage result = InventoryMessage.ofBlocks(blockList);
         List<InventoryItem> inventoryItemList = new ArrayList<>();
         InventoryMessage inventoryMessage = new InventoryMessage(inventoryItemList);
+
         //Assert statement(s)
         assertThat(result, equalTo(inventoryMessage));
     }
@@ -118,10 +120,12 @@ public class InventoryMessageSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         List<Transaction> transactionList = new ArrayList<>();
         transactionList.add(transactionMock);
+
         //Act Statement(s)
         InventoryMessage result = InventoryMessage.ofTransactions(transactionList);
         List<InventoryItem> inventoryItemList = new ArrayList<>();
         InventoryMessage inventoryMessage = new InventoryMessage(inventoryItemList);
+
         //Assert statement(s)
         assertThat(result, equalTo(inventoryMessage));
     }
@@ -169,6 +173,7 @@ public class InventoryMessageSapientGeneratedJunit4Test {
         List<InventoryItem> inventoryItemList = new ArrayList<>();
         inventoryItemList.add(inventoryItem);
         InventoryMessage target = new InventoryMessage(inventoryItemList);
+
         //Act Statement(s)
         target.addBlock(blockMock);
     }
@@ -181,6 +186,7 @@ public class InventoryMessageSapientGeneratedJunit4Test {
         List<InventoryItem> inventoryItemList = new ArrayList<>();
         inventoryItemList.add(inventoryItem);
         InventoryMessage target = new InventoryMessage(inventoryItemList);
+
         //Act Statement(s)
         target.addTransaction(transactionMock);
     }
