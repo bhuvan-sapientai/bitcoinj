@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "E417E038E76371CF9880A9BBE36F6FD6"
+modelFingerprint: "DF52C5308B3BA4140E1434995130BD9A"
 methods:
 - method:
     name: "bytes"
@@ -305,7 +305,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "766DDDBB075116E42CE34CB1B207EC93"
+    modelFingerprint: "5EAB151CE5A4D6AF1B3C8E3757DB4CD3"
     problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
@@ -324,7 +324,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "873806370D8AF30822FF8DD8CFB33E3F"
+    modelFingerprint: "20D4FAE62E72A3CE4B5060C43CE46D05"
     problemWasSolvedByProver: false
     truncated: true
     inputParameters: []
@@ -332,6 +332,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -350,7 +351,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "1D0BD79DAAF42ECF0F5F45C3E0D0D91F"
+    modelFingerprint: "27811325EB861F7DEEF53BBAADEC5EF9"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -403,17 +404,45 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "o"
-      modelFingerprint: "92F78147F61126F4A2CCBAC7B293E59A"
+      modelFingerprint: "969B6655EF474F27A6DE2B68141A666A"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
+        sapientType: "OBJECT"
+        content: !<new>
           target: "org.bitcoinj.base.internal.ByteArray"
-          onlyPojoFunctions: false
-          builderPattern: false
+          parameters:
+          - name: "bytes"
+            value:
+              sapientType: "ARRAY"
+              content: !<array>
+                values: {}
+              suggestedContent: !<array>
+                values: {}
+              valueType: "byte[]"
+              uuid: "compareTo_byte[]2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.base.internal.ByteArray"
+          parameters:
+          - name: "bytes"
+            value:
+              sapientType: "ARRAY"
+              suggestedContent: !<array>
+                values: {}
+              valueType: "byte[]"
+              uuid: "compareTo_byte[]2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
         valueType: "org.bitcoinj.base.internal.ByteArray"
         uuid: "compareTo_byteArray1"
         fixed: false

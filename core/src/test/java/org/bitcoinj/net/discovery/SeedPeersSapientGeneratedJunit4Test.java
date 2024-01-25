@@ -32,10 +32,8 @@ public class SeedPeersSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         SeedPeers target = new SeedPeers((int[]) null, networkParametersMock);
-
         //Act Statement(s)
         InetSocketAddress result = target.getPeer();
-
         //Assert statement(s)
         assertThat(result, is(nullValue()));
     }
@@ -46,16 +44,12 @@ public class SeedPeersSapientGeneratedJunit4Test {
         /* Branches:
          * (services != 0) : true
          *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
+         * */
         //Arrange Statement(s)
         SeedPeers target = new SeedPeers((int[]) null, networkParametersMock);
         Duration duration = Duration.ofDays(0L);
-
         //Act Statement(s)
         List<InetSocketAddress> result = target.getPeers(1L, duration);
-
         //Assert statement(s)
         assertThat(result.size(), equalTo(0));
     }

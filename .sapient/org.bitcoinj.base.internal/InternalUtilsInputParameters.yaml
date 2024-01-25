@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "7E7B3C4B81A26D744C605A3F84F76BDF"
+modelFingerprint: "A0520239EACD530E291C0333F8829A2D"
 methods:
 - method:
     name: "joiner"
@@ -208,7 +208,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "EF0E25AE2BB5AA1CC76DEB730927EE7A"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
@@ -261,6 +261,7 @@ methods:
     deleted: false
     disabled: true
     ignoredBySystem: false
+    firstFailureReason: "TODO_ADDED_BY_TEST_GENERATOR"
     disabledReason: "Potential harmful system call (Future.get) detected; Learn more:\
       \ https://github.com/Sapient-AI/docs#disabled-generated-tests"
     prover: "DEFAULT"
@@ -268,12 +269,12 @@ methods:
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
-    testPathName: "getUninterruptiblyWhenDefaultBranchThrowsThrowable"
+    testPathName: "getUninterruptiblyWhenInterruptedThrowsThrowable"
     nameDefinedByUser: false
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "78FC7038BE40C5304D0318A7D5C8CA58"
+    modelFingerprint: "262D4D319FB24CE9A12A6D6CDC6A50A4"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -304,7 +305,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "E09BDA1C2E07E5848B2E22BBB4E1A4A9"
+      modelFingerprint: "7C66E340C0F5EAAC7D97CB9C0818A07E"
       index: 103
       ignored: false
       nestedInLoop: false
@@ -328,12 +329,13 @@ methods:
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
-    uuid: "220bc626-a263-3643-bb4c-6ce9977f413b"
+    uuid: "a67de9d2-5d40-3245-aa13-b71d01084a76"
     deleted: false
     disabled: true
     ignoredBySystem: false
+    firstFailureReason: "DEPENDENCY_TO_THROW_EXCEPTION_NOT_FOUND"
     disabledReason: "Potential harmful system call (Future.get, Thread.interrupt)\
       \ detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
-    prover: "LLM"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

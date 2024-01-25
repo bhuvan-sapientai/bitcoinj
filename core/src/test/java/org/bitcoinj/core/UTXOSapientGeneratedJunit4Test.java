@@ -34,21 +34,18 @@ public class UTXOSapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void toStringTest() {
-        /**
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
         //Arrange Statement(s)
-        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
-        Script scriptMock = mock(Script.class);
-        UTXO target = new UTXO(sha256HashMock, 0L, valueMock, 0, false, scriptMock, "address1");
-        doReturn("return_of_toFriendlyString1").when(valueMock).toFriendlyString();
+        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+        Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
+        Coin coin = Coin.valueOf(0L);
+        List list = new ArrayList<>();
+        Script script = Script.of(list);
+        UTXO target = new UTXO(sha256Hash, 1234567890L, coin, 1000, true, script, "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa");
 
         //Act Statement(s)
         String result = target.toString();
 
         //Assert statement(s)
-        assertThat(result, equalTo("result1"));
-        verify(valueMock).toFriendlyString();
+        assertThat(result, equalTo("Stored TxOut of null (null:null)"));
     }
 }

@@ -34,10 +34,8 @@ public class NetworksSapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void getTest() {
-
         //Act Statement(s)
         Set<NetworkParameters> result = Networks.get();
-
         //Assert statement(s)
         assertThat(result.size(), equalTo(0));
     }
@@ -48,11 +46,9 @@ public class NetworksSapientGeneratedJunit4Test {
     public void findTest() {
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
-
         //Act Statement(s)
         Optional<NetworkParameters> result = Networks.find(networkMock);
         Optional<NetworkParameters> networkParametersOptional = Optional.empty();
-
         //Assert statement(s)
         assertThat(result, equalTo(networkParametersOptional));
     }
@@ -61,8 +57,6 @@ public class NetworksSapientGeneratedJunit4Test {
     @Test()
     public void registerTest() {
         /**
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<Networks> networks = mockStatic(Networks.class, CALLS_REAL_METHODS)) {
@@ -79,12 +73,11 @@ public class NetworksSapientGeneratedJunit4Test {
     @Test()
     public void register1Test() {
         /**
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        NetworkParameters networkParameters = NetworkParameters.fromID("id1");
         Collection<NetworkParameters> collection = new ArrayList<>();
-
+        collection.add(networkParameters);
         //Act Statement(s)
         Networks.register(collection);
     }
@@ -93,13 +86,10 @@ public class NetworksSapientGeneratedJunit4Test {
     @Test()
     public void unregisterTest() {
         /**
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        NetworkParameters networkParametersMock = mock(NetworkParameters.class);
-
+        NetworkParameters networkParameters = NetworkParameters.fromID("id1");
         //Act Statement(s)
-        Networks.unregister(networkParametersMock);
+        Networks.unregister(networkParameters);
     }
 }

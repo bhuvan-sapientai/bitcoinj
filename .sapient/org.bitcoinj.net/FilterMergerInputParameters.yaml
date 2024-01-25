@@ -26,6 +26,7 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path6"
@@ -44,6 +45,7 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path1"
@@ -53,13 +55,13 @@ methods:
     constructorSignature: "<init>(double) : void"
     priorityDefinedByUser: false
     filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "DF92A1CA53451CE7759837AD0438DEE5"
+    priority: "MODERATE"
+    modelFingerprint: "A0FC33B8FF64522ABEB54D69CDEFCB94"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "CBE4A20232FFDC05FE4D85502DBDFC4E"
+      modelFingerprint: "4949B0BDC08EC2ACE9B923BDA4049228"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -73,7 +75,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0.0
+                value: 0.01
+              suggestedContent: !<regular>
+                value: 0.01
               valueType: "double"
               uuid: "<init>_double1"
               fixed: false
@@ -87,6 +91,10 @@ methods:
           - name: "bloomFilterFPRate"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 0.01
+              suggestedContent: !<regular>
+                value: 0.01
               valueType: "double"
               uuid: "<init>_double1"
               fixed: false
@@ -103,7 +111,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "providerList"
-      modelFingerprint: "D576A87F7F30434B05084068122FAB8E"
+      modelFingerprint: "E8F977AF21F7867619632130655F5CF8"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -111,11 +119,37 @@ methods:
       value:
         sapientType: "COLLECTION"
         content: !<collection>
+          collectionClass: "java.util.ArrayList"
           parameters: []
-          values: []
+          values:
+          - sapientType: "MOCK"
+            suggestedContent: !<unknown_object>
+              target: "org.bitcoinj.core.PeerFilterProvider"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "org.bitcoinj.core.PeerFilterProvider"
+            uuid: "calculate_list1-0"
+            fixed: false
+            collectionUuid: "calculate_list1"
+            nameForMock: "{}"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
         suggestedContent: !<collection>
+          collectionClass: "java.util.ArrayList"
           parameters: []
-          values: []
+          values:
+          - sapientType: "MOCK"
+            suggestedContent: !<unknown_object>
+              target: "org.bitcoinj.core.PeerFilterProvider"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "org.bitcoinj.core.PeerFilterProvider"
+            uuid: "calculate_list1-0"
+            fixed: false
+            collectionUuid: "calculate_list1"
+            nameForMock: "{}"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
         valueType: "java.util.List"
         genericValueType: "org.bitcoinj.core.PeerFilterProvider"
         uuid: "calculate_list1"
@@ -202,7 +236,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "TimeUtils"
-      modelFingerprint: "DF1E1073499732A9B0BA9E1AFE4CC632"
+      modelFingerprint: "6E60C1B8A8D70C6DE08389B08B7F8A36"
       index: 5
       ignored: false
       nestedInLoop: true
@@ -269,7 +303,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "p"
-      modelFingerprint: "D096C0F110BCEA0E8AEF19D6DCEA2CCC"
+      modelFingerprint: "27CB2EEA9949E25F5C34901D03A95EE9"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -294,7 +328,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 0
+            value: 1
+          suggestedContent: !<regular>
+            value: 1
           valueType: "int"
           uuid: "calculate_int2"
           fixed: false
@@ -304,9 +340,332 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
+      name: "p"
+      modelFingerprint: "414F03383CB179D89EF19CFB46F20D19"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.PeerFilterProvider"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.core.PeerFilterProvider"
+        uuid: "calculate_object3"
+        fixed: false
+        collectionUuid: "calculate_list2"
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "p"
+        name: "getBloomFilter"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 101
+            valueType: "int"
+            uuid: "calculate_int6"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "arg1"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0.01
+            suggestedContent: !<regular>
+              value: 0.01
+            valueType: "double"
+            uuid: "<init>_double1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "arg2"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "<init>_int1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "getBloomFilter(int,double,int): BloomFilter"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<new>
+            target: "org.bitcoinj.core.BloomFilter"
+            parameters:
+            - name: "elements"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "int"
+                uuid: "calculate_bloomFilter2-elements"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "falsePositiveRate"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0.0
+                valueType: "double"
+                uuid: "calculate_bloomFilter2-falsePositiveRate"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "arg2"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "int"
+                uuid: "calculate_bloomFilter2-arg2"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "org.bitcoinj.core.BloomFilter"
+            parameters:
+            - name: "elements"
+              value:
+                sapientType: "BASIC"
+                valueType: "int"
+                uuid: "calculate_bloomFilter2-elements"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "falsePositiveRate"
+              value:
+                sapientType: "BASIC"
+                valueType: "double"
+                uuid: "calculate_bloomFilter2-falsePositiveRate"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "arg2"
+              value:
+                sapientType: "BASIC"
+                valueType: "int"
+                uuid: "calculate_bloomFilter2-arg2"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "org.bitcoinj.core.BloomFilter"
+          uuid: "calculate_bloomFilter2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "filter"
+      modelFingerprint: "12AA1A2239AD6CF5CB1F2E01B8DD2053"
+      index: 8
+      ignored: false
+      nestedInLoop: true
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.BloomFilter"
+          parameters:
+          - name: "elements"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 101
+              valueType: "int"
+              uuid: "calculate_int6"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "falsePositiveRate"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0.01
+              suggestedContent: !<regular>
+                value: 0.01
+              valueType: "double"
+              uuid: "<init>_double1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "arg2"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "<init>_int1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "randomNonce"
+            value:
+              sapientType: "ENUM"
+              content: !<regular>
+                value: "UPDATE_ALL"
+              valueType: "org.bitcoinj.core.BloomFilter$BloomUpdate"
+              uuid: "Enum-org.bitcoinj.core.BloomFilter$BloomUpdate-UPDATE_ALL"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.BloomFilter"
+          parameters:
+          - name: "elements"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 101
+              valueType: "int"
+              uuid: "calculate_int6"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "falsePositiveRate"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0.01
+              suggestedContent: !<regular>
+                value: 0.01
+              valueType: "double"
+              uuid: "<init>_double1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "arg2"
+            value:
+              sapientType: "BASIC"
+              valueType: "int"
+              uuid: "<init>_int1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "randomNonce"
+            value:
+              sapientType: "ENUM"
+              content: !<regular>
+                value: "UPDATE_ALL"
+              valueType: "org.bitcoinj.core.BloomFilter$BloomUpdate"
+              uuid: "Enum-org.bitcoinj.core.BloomFilter$BloomUpdate-UPDATE_ALL"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.core.BloomFilter"
+        uuid: "calculate_bloomFilter1"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      methodExercised:
+        target: "filter"
+        name: "merge"
+        parameters:
+        - name: "filter"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "org.bitcoinj.core.BloomFilter"
+              parameters:
+              - name: "elements"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "int"
+                  uuid: "calculate_bloomFilter2-elements"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "falsePositiveRate"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0.0
+                  valueType: "double"
+                  uuid: "calculate_bloomFilter2-falsePositiveRate"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "arg2"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "int"
+                  uuid: "calculate_bloomFilter2-arg2"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            suggestedContent: !<new>
+              target: "org.bitcoinj.core.BloomFilter"
+              parameters:
+              - name: "elements"
+                value:
+                  sapientType: "BASIC"
+                  valueType: "int"
+                  uuid: "calculate_bloomFilter2-elements"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "falsePositiveRate"
+                value:
+                  sapientType: "BASIC"
+                  valueType: "double"
+                  uuid: "calculate_bloomFilter2-falsePositiveRate"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "arg2"
+                value:
+                  sapientType: "BASIC"
+                  valueType: "int"
+                  uuid: "calculate_bloomFilter2-arg2"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "org.bitcoinj.core.BloomFilter"
+            uuid: "calculate_bloomFilter2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "merge(BloomFilter): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "calculate_void2"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 33
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
       name: "provider"
       modelFingerprint: "B1109ACA92256777F3A5F4F9CAA54425"
-      index: 7
+      index: 9
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -330,7 +689,7 @@ methods:
         returnValue:
           sapientType: "VOID"
           valueType: "void"
-          uuid: "calculate_void2"
+          uuid: "calculate_void3"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -340,7 +699,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "D86D15F101A0BB1BDFD8C807B74067B6"
-      index: 8
+      index: 10
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -363,10 +722,121 @@ methods:
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
+    - type: "STATE_VERIFICATION_FIELD"
+      name: "lastFilter"
+      index: 11
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.BloomFilter"
+          parameters:
+          - name: "elements"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 101
+              valueType: "int"
+              uuid: "calculate_int6"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "falsePositiveRate"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0.01
+              suggestedContent: !<regular>
+                value: 0.01
+              valueType: "double"
+              uuid: "<init>_double1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "arg2"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "<init>_int1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "randomNonce"
+            value:
+              sapientType: "ENUM"
+              content: !<regular>
+                value: "UPDATE_ALL"
+              valueType: "org.bitcoinj.core.BloomFilter$BloomUpdate"
+              uuid: "Enum-org.bitcoinj.core.BloomFilter$BloomUpdate-UPDATE_ALL"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.BloomFilter"
+          parameters:
+          - name: "elements"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 101
+              valueType: "int"
+              uuid: "calculate_int6"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "falsePositiveRate"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0.01
+              suggestedContent: !<regular>
+                value: 0.01
+              valueType: "double"
+              uuid: "<init>_double1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "arg2"
+            value:
+              sapientType: "BASIC"
+              valueType: "int"
+              uuid: "<init>_int1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "randomNonce"
+            value:
+              sapientType: "ENUM"
+              content: !<regular>
+                value: "UPDATE_ALL"
+              valueType: "org.bitcoinj.core.BloomFilter$BloomUpdate"
+              uuid: "Enum-org.bitcoinj.core.BloomFilter$BloomUpdate-UPDATE_ALL"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.core.BloomFilter"
+        uuid: "calculate_bloomFilter1"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      readMethodForField: "getLastFilter"
+      staticReadMethodForField: false
+      readMethodModifier: "PUBLIC"
+      filledByUser: false
     uuid: "974f6ce3-fb3d-379b-8bfb-4bedd1091387"
     deleted: false
     disabled: false
     ignoredBySystem: false
+    variablesCouldNotBeIsolated: "filter"
+    firstFailureReason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -386,6 +856,7 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path4"
@@ -405,6 +876,7 @@ methods:
     disabled: false
     ignoredBySystem: true
     variablesCouldNotBeIsolated: "filter"
+    firstFailureReason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path5"
@@ -423,6 +895,7 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -449,6 +922,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -474,6 +948,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -499,5 +974,6 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

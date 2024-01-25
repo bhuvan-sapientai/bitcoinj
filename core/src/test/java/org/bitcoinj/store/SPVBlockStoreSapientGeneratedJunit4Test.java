@@ -51,6 +51,7 @@ import static org.mockito.Mockito.mockStatic;
 import static org.hamcrest.Matchers.isA;
 
 import org.junit.Ignore;
+import org.bitcoinj.core.ProtocolException;
 
 public class SPVBlockStoreSapientGeneratedJunit4Test {
 
@@ -71,8 +72,10 @@ public class SPVBlockStoreSapientGeneratedJunit4Test {
     //Sapient generated method id: ${79eb62f2-07c9-3fb5-94b5-4bb37657ef6d}
     @Test()
     public void getFileSizeTest() {
+
         //Act Statement(s)
         int result = SPVBlockStore.getFileSize(1);
+
         //Assert statement(s)
         assertThat(result, equalTo(1152));
     }
@@ -88,12 +91,15 @@ public class SPVBlockStoreSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        SPVBlockStore target = new SPVBlockStore(paramsMock, (File) null, 100, true);
+        File file = new File("pathname1");
+        SPVBlockStore target = new SPVBlockStore(paramsMock, file, 0, false);
         BlockStoreException blockStoreException = new BlockStoreException("Store closed");
         thrown.expect(BlockStoreException.class);
         thrown.expectMessage(blockStoreException.getMessage());
+        StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
+
         //Act Statement(s)
-        target.put(storedBlockMock);
+        target.put(storedBlock);
     }
 
     //Sapient generated method id: ${198eefad-e2f8-349f-a7a8-605b26309b95}
@@ -108,10 +114,7 @@ public class SPVBlockStoreSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS);
-             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            ReentrantLock reentrantLock = Threading.lock(SPVBlockStore.class);
-            threading.when(() -> Threading.lock(SPVBlockStore.class)).thenReturn(reentrantLock);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS)) {
             IllegalStateException illegalStateException = new IllegalStateException();
             preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
             File file = new File("pathname1");
@@ -121,7 +124,6 @@ public class SPVBlockStoreSapientGeneratedJunit4Test {
             //Act Statement(s)
             target.put(storedBlock);
             //Assert statement(s)
-            threading.verify(() -> Threading.lock(SPVBlockStore.class), atLeast(1));
             preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()), atLeast(1));
         }
     }
@@ -138,14 +140,13 @@ public class SPVBlockStoreSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         File file = new File("pathname1");
-        SPVBlockStore target = new SPVBlockStore(paramsMock, file, 1024, true);
+        SPVBlockStore target = new SPVBlockStore(paramsMock, file, 0, false);
         BlockStoreException blockStoreException = new BlockStoreException("Store closed");
         thrown.expect(BlockStoreException.class);
         thrown.expectMessage(blockStoreException.getMessage());
-        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-        Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
+
         //Act Statement(s)
-        target.get(sha256Hash);
+        target.get(sha256HashMock);
     }
 
     //Sapient generated method id: ${4a7e0d64-7401-3ca3-8d48-3317c249958e}
@@ -160,13 +161,12 @@ public class SPVBlockStoreSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        NetworkParameters networkParameters = NetworkParameters.fromID("id1");
         File file = new File("pathname1");
-        SPVBlockStore target = new SPVBlockStore(networkParameters, file, 1024, true);
-        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-        Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
+        SPVBlockStore target = new SPVBlockStore(paramsMock, file, 0, false);
+
         //Act Statement(s)
-        StoredBlock result = target.get(sha256Hash);
+        StoredBlock result = target.get(sha256HashMock);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -185,13 +185,12 @@ public class SPVBlockStoreSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         File file = new File("pathname1");
-        SPVBlockStore target = new SPVBlockStore(paramsMock, file, 100, true);
+        SPVBlockStore target = new SPVBlockStore(paramsMock, file, 0, false);
         thrown.expect(RuntimeException.class);
-        thrown.expectCause(isA(ReentrantLock.class));
-        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-        Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
+        thrown.expectCause(isA(ProtocolException.class));
+
         //Act Statement(s)
-        target.get(sha256Hash);
+        target.get(sha256HashMock);
     }
 
     //Sapient generated method id: ${9e4b929b-017e-365e-b90f-fdb5f76a88a0}
@@ -208,11 +207,11 @@ public class SPVBlockStoreSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         File file = new File("pathname1");
-        SPVBlockStore target = new SPVBlockStore(paramsMock, file, 1024, true);
-        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-        Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
+        SPVBlockStore target = new SPVBlockStore(paramsMock, file, 0, false);
+
         //Act Statement(s)
-        StoredBlock result = target.get(sha256Hash);
+        StoredBlock result = target.get(sha256HashMock);
+
         //Assert statement(s)
         assertThat(result, is(nullValue()));
     }
@@ -255,12 +254,12 @@ public class SPVBlockStoreSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        NetworkParameters networkParameters = NetworkParameters.fromID("id1");
         File file = new File("pathname1");
-        SPVBlockStore target = new SPVBlockStore(networkParameters, file, 1000000, true);
+        SPVBlockStore target = new SPVBlockStore(paramsMock, file, 0, false);
         BlockStoreException blockStoreException = new BlockStoreException("Store closed");
         thrown.expect(BlockStoreException.class);
         thrown.expectMessage(blockStoreException.getMessage());
+
         //Act Statement(s)
         target.getChainHead();
     }
@@ -278,24 +277,18 @@ public class SPVBlockStoreSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class)) {
-            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            Sha256Hash sha256Hash2 = Sha256Hash.read(byteBuffer);
-            byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
-            sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256Hash2);
-            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-            File file = new File("pathname1");
-            SPVBlockStore target = spy(new SPVBlockStore(networkParameters, file, 1024, true));
-            doReturn(null).when(target).get((Sha256Hash) any());
-            BlockStoreException blockStoreException = new BlockStoreException("Corrupted block store: could not find chain head: ");
-            thrown.expect(BlockStoreException.class);
-            thrown.expectMessage(blockStoreException.getMessage());
-            //Act Statement(s)
-            target.getChainHead();
-            //Assert statement(s)
-            sha256Hash.verify(() -> Sha256Hash.wrap(byteArray), atLeast(1));
-            verify(target).get((Sha256Hash) any());
-        }
+        File file = new File("pathname1");
+        SPVBlockStore target = spy(new SPVBlockStore(paramsMock, file, 0, false));
+        doReturn(null).when(target).get((Sha256Hash) any());
+        BlockStoreException blockStoreException = new BlockStoreException("Corrupted block store: could not find chain head: 0000000000000000000000000000000000000000000000000000000000000000");
+        thrown.expect(BlockStoreException.class);
+        thrown.expectMessage(blockStoreException.getMessage());
+
+        //Act Statement(s)
+        target.getChainHead();
+
+        //Assert statement(s)
+        verify(target).get((Sha256Hash) any());
     }
 
     //Sapient generated method id: ${e4aa7cfd-7f36-36e9-be2a-82622c1d638f}
@@ -314,8 +307,10 @@ public class SPVBlockStoreSapientGeneratedJunit4Test {
         File file = new File("pathname1");
         SPVBlockStore target = spy(new SPVBlockStore(paramsMock, file, 0, false));
         doReturn(storedBlockMock).when(target).get((Sha256Hash) any());
+
         //Act Statement(s)
         StoredBlock result = target.getChainHead();
+
         //Assert statement(s)
         assertThat(result, equalTo(storedBlockMock));
         verify(target).get((Sha256Hash) any());
@@ -332,13 +327,14 @@ public class SPVBlockStoreSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        SPVBlockStore target = new SPVBlockStore(paramsMock, (File) null, 100, true);
+        File file = new File("pathname1");
+        SPVBlockStore target = new SPVBlockStore(paramsMock, file, 0, false);
         BlockStoreException blockStoreException = new BlockStoreException("Store closed");
         thrown.expect(BlockStoreException.class);
         thrown.expectMessage(blockStoreException.getMessage());
-        StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("100010001"), 0);
+
         //Act Statement(s)
-        target.setChainHead(storedBlock);
+        target.setChainHead(storedBlockMock);
     }
 
     //Sapient generated method id: ${4f05edba-7a8f-3e5a-8be9-5904c177544b}
@@ -352,16 +348,19 @@ public class SPVBlockStoreSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+        doReturn(sha256HashMock).when(blockMock).getHash();
+        byte[] byteArray = new byte[]{};
+        doReturn(byteArray).when(sha256HashMock).getBytes();
         File file = new File("pathname1");
-        SPVBlockStore target = new SPVBlockStore(networkParameters, file, 1, false);
-        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
-        Instant instant = Instant.now();
-        List list = new ArrayList<>();
-        Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
-        StoredBlock storedBlock = new StoredBlock(block, new BigInteger("0"), 0);
+        SPVBlockStore target = new SPVBlockStore(paramsMock, file, 0, false);
+        StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
+
         //Act Statement(s)
         target.setChainHead(storedBlock);
+
+        //Assert statement(s)
+        verify(blockMock).getHash();
+        verify(sha256HashMock).getBytes();
     }
 
     //Sapient generated method id: ${4338ea80-df41-3c09-b3eb-b0476a460c1f}
@@ -375,6 +374,7 @@ public class SPVBlockStoreSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         File file = new File("pathname1");
         SPVBlockStore target = new SPVBlockStore(paramsMock, file, 0, false);
+
         //Act Statement(s)
         target.close();
     }
@@ -393,6 +393,7 @@ public class SPVBlockStoreSapientGeneratedJunit4Test {
         File file = new File("pathname1");
         SPVBlockStore target = new SPVBlockStore(paramsMock, file, 0, false);
         thrown.expect(BlockStoreException.class);
+
         //Act Statement(s)
         target.close();
     }
@@ -417,8 +418,10 @@ public class SPVBlockStoreSapientGeneratedJunit4Test {
         doReturn(new BigInteger("0")).when(blockMock).getWork();
         doNothing().when(target).put((StoredBlock) any());
         doNothing().when(target).setChainHead((StoredBlock) any());
+
         //Act Statement(s)
         target.clear();
+
         //Assert statement(s)
         verify(paramsMock).getGenesisBlock();
         verify(blockMock).cloneAsHeader();

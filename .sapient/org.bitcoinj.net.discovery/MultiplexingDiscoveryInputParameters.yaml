@@ -179,29 +179,34 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "0BFD89C87471B365173D7FD411DD5634"
-    problemWasSolvedByProver: false
+    modelFingerprint: "4F7BDDB69C069EC13561464678A3A9D7"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "network"
-      modelFingerprint: "ECD5777B98096C66D018424DBD7F2C5A"
+      modelFingerprint: "62D36D9D71CD6C8C1AEBB21D1EB5E1D6"
       index: 1
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Network"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.base.Network"
         uuid: "forServices_network1"
         fixed: false
+        nameForMock: "MainNetParams.get()"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     - type: "INPUT"
       name: "services"
-      modelFingerprint: "909050AB7B1EF8A162245F33E8EE0D3E"
+      modelFingerprint: "F8877380B48E1EA586A3ED00B6298812"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -209,7 +214,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
+          value: 1
+        suggestedContent: !<regular>
+          value: 1
         valueType: "long"
         uuid: "forServices_long1"
         fixed: false
@@ -219,7 +226,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "parallelQueries"
-      modelFingerprint: "5F6ED7807F94A190BD74DB9C987969F3"
+      modelFingerprint: "2A8A0C4AFF02A8FA412B1AF1BF5E265D"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -227,7 +234,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: false
+          value: true
+        suggestedContent: !<regular>
+          value: true
         valueType: "boolean"
         uuid: "forServices_boolean1"
         fixed: false
@@ -237,7 +246,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "shufflePeers"
-      modelFingerprint: "51E55DD1055BFC76DF0319D2C71CEFF0"
+      modelFingerprint: "E3313545D7676BE0B262402419E60050"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -245,6 +254,8 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
+          value: false
+        suggestedContent: !<regular>
           value: false
         valueType: "boolean"
         uuid: "forServices_boolean2"
@@ -255,7 +266,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "NetworkParameters"
-      modelFingerprint: "B73070C46AE7B63EC8C3F19BB523D99E"
+      modelFingerprint: "F128B048AB3AAEAE335F62FCDCC8728D"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -274,9 +285,14 @@ methods:
         - name: "network"
           value:
             sapientType: "MOCK"
+            suggestedContent: !<unknown_object>
+              target: "org.bitcoinj.base.Network"
+              onlyPojoFunctions: false
+              builderPattern: false
             valueType: "org.bitcoinj.base.Network"
             uuid: "forServices_network1"
             fixed: false
+            nameForMock: "MainNetParams.get()"
             equalsMethodPresent: false
             explicitCastNeeded: false
         signature: "of(Network): NetworkParameters"
@@ -295,7 +311,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "9B99445D56873FB292250A99AFCA7EB8"
+      modelFingerprint: "8E76DBFBC361ED0AB53999EC5D647AB8"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -323,9 +339,80 @@ methods:
               0:
                 sapientType: "BASIC"
                 content: !<regular>
-                  value: "return_of_getDnsSeedsItem1"
+                  value: "\\\"seed.bitcoin.sipa.be\\\""
+                suggestedContent: !<regular>
+                  value: "\\\"seed.bitcoin.sipa.be\\\""
                 valueType: "java.lang.String"
-                uuid: "forServices_string1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              1:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "\\\"dnsseed.bluematt.me\\\""
+                suggestedContent: !<regular>
+                  value: "\\\"dnsseed.bluematt.me\\\""
+                valueType: "java.lang.String"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              2:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "\\\"dnsseed.bitcoin.dashjr.org\\\""
+                suggestedContent: !<regular>
+                  value: "\\\"dnsseed.bitcoin.dashjr.org\\\""
+                valueType: "java.lang.String"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              3:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "\\\"seed.bitcoinstats.com\\\""
+                suggestedContent: !<regular>
+                  value: "\\\"seed.bitcoinstats.com\\\""
+                valueType: "java.lang.String"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              4:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "\\\"seed.bitcoin.jonasschnelli.ch\\\""
+                suggestedContent: !<regular>
+                  value: "\\\"seed.bitcoin.jonasschnelli.ch\\\""
+                valueType: "java.lang.String"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              5:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "\\\"seed.btc.petertodd.org\\\""
+                suggestedContent: !<regular>
+                  value: "\\\"seed.btc.petertodd.org\\\""
+                valueType: "java.lang.String"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              6:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "\\\"seed.bitcoin.sprovoost.nl\\\""
+                suggestedContent: !<regular>
+                  value: "\\\"seed.bitcoin.sprovoost.nl\\\""
+                valueType: "java.lang.String"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              7:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "\\\"dnsseed.emzy.de\\\""
+                suggestedContent: !<regular>
+                  value: "\\\"dnsseed.emzy.de\\\""
+                valueType: "java.lang.String"
                 fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
@@ -334,9 +421,80 @@ methods:
               0:
                 sapientType: "BASIC"
                 content: !<regular>
-                  value: "return_of_getDnsSeedsItem1"
+                  value: "\\\"seed.bitcoin.sipa.be\\\""
+                suggestedContent: !<regular>
+                  value: "\\\"seed.bitcoin.sipa.be\\\""
                 valueType: "java.lang.String"
-                uuid: "forServices_string1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              1:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "\\\"dnsseed.bluematt.me\\\""
+                suggestedContent: !<regular>
+                  value: "\\\"dnsseed.bluematt.me\\\""
+                valueType: "java.lang.String"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              2:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "\\\"dnsseed.bitcoin.dashjr.org\\\""
+                suggestedContent: !<regular>
+                  value: "\\\"dnsseed.bitcoin.dashjr.org\\\""
+                valueType: "java.lang.String"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              3:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "\\\"seed.bitcoinstats.com\\\""
+                suggestedContent: !<regular>
+                  value: "\\\"seed.bitcoinstats.com\\\""
+                valueType: "java.lang.String"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              4:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "\\\"seed.bitcoin.jonasschnelli.ch\\\""
+                suggestedContent: !<regular>
+                  value: "\\\"seed.bitcoin.jonasschnelli.ch\\\""
+                valueType: "java.lang.String"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              5:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "\\\"seed.btc.petertodd.org\\\""
+                suggestedContent: !<regular>
+                  value: "\\\"seed.btc.petertodd.org\\\""
+                valueType: "java.lang.String"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              6:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "\\\"seed.bitcoin.sprovoost.nl\\\""
+                suggestedContent: !<regular>
+                  value: "\\\"seed.bitcoin.sprovoost.nl\\\""
+                valueType: "java.lang.String"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              7:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "\\\"dnsseed.emzy.de\\\""
+                suggestedContent: !<regular>
+                  value: "\\\"dnsseed.emzy.de\\\""
+                valueType: "java.lang.String"
                 fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
@@ -350,7 +508,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "E661AE7DA1AA5F1D72AFB2C2A998FF1C"
+      modelFingerprint: "7A8F45D7ECBAE987B51E701315ADA3AB"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -363,9 +521,14 @@ methods:
           - name: "network"
             value:
               sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.base.Network"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.base.Network"
               uuid: "forServices_network1"
               fixed: false
+              nameForMock: "MainNetParams.get()"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "seeds"
@@ -382,18 +545,25 @@ methods:
                     - name: "network"
                       value:
                         sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
                         valueType: "org.bitcoinj.base.Network"
                         uuid: "forServices_network1"
                         fixed: false
+                        nameForMock: "MainNetParams.get()"
                         equalsMethodPresent: false
                         explicitCastNeeded: false
                     - name: "hostname"
                       value:
                         sapientType: "BASIC"
                         content: !<regular>
-                          value: "return_of_getDnsSeedsItem1"
+                          value: "\\\"seed.bitcoin.sipa.be\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"seed.bitcoin.sipa.be\\\""
                         valueType: "java.lang.String"
-                        uuid: "forServices_string1"
+                        uuid: "forServices_string2"
                         fixed: false
                         equalsMethodPresent: false
                         explicitCastNeeded: false
@@ -404,19 +574,26 @@ methods:
                     parameters:
                     - name: "network"
                       value:
-                        sapientType: "UNKNOWN"
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
                         valueType: "org.bitcoinj.base.Network"
                         uuid: "forServices_network1"
                         fixed: false
+                        nameForMock: "MainNetParams.get()"
                         equalsMethodPresent: false
                         explicitCastNeeded: false
                     - name: "hostname"
                       value:
                         sapientType: "BASIC"
                         content: !<regular>
-                          value: "return_of_getDnsSeedsItem1"
+                          value: "\\\"seed.bitcoin.sipa.be\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"seed.bitcoin.sipa.be\\\""
                         valueType: "java.lang.String"
-                        uuid: "forServices_string1"
+                        uuid: "forServices_string2"
                         fixed: false
                         equalsMethodPresent: false
                         explicitCastNeeded: false
@@ -424,6 +601,468 @@ methods:
                     createdByTargetCode: true
                   valueType: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
                   uuid: "forServices_dnsDiscovery.DnsSeedDiscovery1"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"dnsseed.bluematt.me\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"dnsseed.bluematt.me\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string4"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"dnsseed.bluematt.me\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"dnsseed.bluematt.me\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string4"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                  uuid: "forServices_dnsDiscovery.DnsSeedDiscovery2"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"dnsseed.bitcoin.dashjr.org\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"dnsseed.bitcoin.dashjr.org\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string6"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"dnsseed.bitcoin.dashjr.org\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"dnsseed.bitcoin.dashjr.org\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string6"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                  uuid: "forServices_dnsDiscovery.DnsSeedDiscovery3"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"seed.bitcoinstats.com\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"seed.bitcoinstats.com\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string8"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"seed.bitcoinstats.com\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"seed.bitcoinstats.com\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string8"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                  uuid: "forServices_dnsDiscovery.DnsSeedDiscovery4"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"seed.bitcoin.jonasschnelli.ch\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"seed.bitcoin.jonasschnelli.ch\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string10"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"seed.bitcoin.jonasschnelli.ch\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"seed.bitcoin.jonasschnelli.ch\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string10"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                  uuid: "forServices_dnsDiscovery.DnsSeedDiscovery5"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"seed.btc.petertodd.org\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"seed.btc.petertodd.org\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string12"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"seed.btc.petertodd.org\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"seed.btc.petertodd.org\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string12"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                  uuid: "forServices_dnsDiscovery.DnsSeedDiscovery6"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"seed.bitcoin.sprovoost.nl\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"seed.bitcoin.sprovoost.nl\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string14"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"seed.bitcoin.sprovoost.nl\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"seed.bitcoin.sprovoost.nl\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string14"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                  uuid: "forServices_dnsDiscovery.DnsSeedDiscovery7"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"dnsseed.emzy.de\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"dnsseed.emzy.de\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string16"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"dnsseed.emzy.de\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"dnsseed.emzy.de\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string16"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                  uuid: "forServices_dnsDiscovery.DnsSeedDiscovery8"
                   fixed: true
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -438,18 +1077,25 @@ methods:
                     - name: "network"
                       value:
                         sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
                         valueType: "org.bitcoinj.base.Network"
                         uuid: "forServices_network1"
                         fixed: false
+                        nameForMock: "MainNetParams.get()"
                         equalsMethodPresent: false
                         explicitCastNeeded: false
                     - name: "hostname"
                       value:
                         sapientType: "BASIC"
                         content: !<regular>
-                          value: "return_of_getDnsSeedsItem1"
+                          value: "\\\"seed.bitcoin.sipa.be\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"seed.bitcoin.sipa.be\\\""
                         valueType: "java.lang.String"
-                        uuid: "forServices_string1"
+                        uuid: "forServices_string2"
                         fixed: false
                         equalsMethodPresent: false
                         explicitCastNeeded: false
@@ -460,19 +1106,26 @@ methods:
                     parameters:
                     - name: "network"
                       value:
-                        sapientType: "UNKNOWN"
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
                         valueType: "org.bitcoinj.base.Network"
                         uuid: "forServices_network1"
                         fixed: false
+                        nameForMock: "MainNetParams.get()"
                         equalsMethodPresent: false
                         explicitCastNeeded: false
                     - name: "hostname"
                       value:
                         sapientType: "BASIC"
                         content: !<regular>
-                          value: "return_of_getDnsSeedsItem1"
+                          value: "\\\"seed.bitcoin.sipa.be\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"seed.bitcoin.sipa.be\\\""
                         valueType: "java.lang.String"
-                        uuid: "forServices_string1"
+                        uuid: "forServices_string2"
                         fixed: false
                         equalsMethodPresent: false
                         explicitCastNeeded: false
@@ -480,6 +1133,468 @@ methods:
                     createdByTargetCode: true
                   valueType: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
                   uuid: "forServices_dnsDiscovery.DnsSeedDiscovery1"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"dnsseed.bluematt.me\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"dnsseed.bluematt.me\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string4"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"dnsseed.bluematt.me\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"dnsseed.bluematt.me\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string4"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                  uuid: "forServices_dnsDiscovery.DnsSeedDiscovery2"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"dnsseed.bitcoin.dashjr.org\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"dnsseed.bitcoin.dashjr.org\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string6"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"dnsseed.bitcoin.dashjr.org\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"dnsseed.bitcoin.dashjr.org\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string6"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                  uuid: "forServices_dnsDiscovery.DnsSeedDiscovery3"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"seed.bitcoinstats.com\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"seed.bitcoinstats.com\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string8"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"seed.bitcoinstats.com\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"seed.bitcoinstats.com\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string8"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                  uuid: "forServices_dnsDiscovery.DnsSeedDiscovery4"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"seed.bitcoin.jonasschnelli.ch\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"seed.bitcoin.jonasschnelli.ch\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string10"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"seed.bitcoin.jonasschnelli.ch\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"seed.bitcoin.jonasschnelli.ch\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string10"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                  uuid: "forServices_dnsDiscovery.DnsSeedDiscovery5"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"seed.btc.petertodd.org\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"seed.btc.petertodd.org\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string12"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"seed.btc.petertodd.org\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"seed.btc.petertodd.org\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string12"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                  uuid: "forServices_dnsDiscovery.DnsSeedDiscovery6"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"seed.bitcoin.sprovoost.nl\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"seed.bitcoin.sprovoost.nl\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string14"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"seed.bitcoin.sprovoost.nl\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"seed.bitcoin.sprovoost.nl\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string14"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                  uuid: "forServices_dnsDiscovery.DnsSeedDiscovery7"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"dnsseed.emzy.de\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"dnsseed.emzy.de\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string16"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"dnsseed.emzy.de\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"dnsseed.emzy.de\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string16"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                  uuid: "forServices_dnsDiscovery.DnsSeedDiscovery8"
                   fixed: true
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -493,7 +1608,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: false
+                value: true
+              suggestedContent: !<regular>
+                value: true
               valueType: "boolean"
               uuid: "forServices_boolean1"
               fixed: false
@@ -503,6 +1620,8 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
+                value: false
+              suggestedContent: !<regular>
                 value: false
               valueType: "boolean"
               uuid: "forServices_boolean2"
@@ -516,10 +1635,15 @@ methods:
           parameters:
           - name: "network"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.base.Network"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.base.Network"
               uuid: "forServices_network1"
               fixed: false
+              nameForMock: "MainNetParams.get()"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "seeds"
@@ -535,19 +1659,26 @@ methods:
                     parameters:
                     - name: "network"
                       value:
-                        sapientType: "UNKNOWN"
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
                         valueType: "org.bitcoinj.base.Network"
                         uuid: "forServices_network1"
                         fixed: false
+                        nameForMock: "MainNetParams.get()"
                         equalsMethodPresent: false
                         explicitCastNeeded: false
                     - name: "hostname"
                       value:
                         sapientType: "BASIC"
                         content: !<regular>
-                          value: "return_of_getDnsSeedsItem1"
+                          value: "\\\"seed.bitcoin.sipa.be\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"seed.bitcoin.sipa.be\\\""
                         valueType: "java.lang.String"
-                        uuid: "forServices_string1"
+                        uuid: "forServices_string2"
                         fixed: false
                         equalsMethodPresent: false
                         explicitCastNeeded: false
@@ -555,6 +1686,258 @@ methods:
                     createdByTargetCode: true
                   valueType: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
                   uuid: "forServices_dnsDiscovery.DnsSeedDiscovery1"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"dnsseed.bluematt.me\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"dnsseed.bluematt.me\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string4"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                  uuid: "forServices_dnsDiscovery.DnsSeedDiscovery2"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"dnsseed.bitcoin.dashjr.org\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"dnsseed.bitcoin.dashjr.org\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string6"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                  uuid: "forServices_dnsDiscovery.DnsSeedDiscovery3"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"seed.bitcoinstats.com\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"seed.bitcoinstats.com\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string8"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                  uuid: "forServices_dnsDiscovery.DnsSeedDiscovery4"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"seed.bitcoin.jonasschnelli.ch\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"seed.bitcoin.jonasschnelli.ch\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string10"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                  uuid: "forServices_dnsDiscovery.DnsSeedDiscovery5"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"seed.btc.petertodd.org\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"seed.btc.petertodd.org\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string12"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                  uuid: "forServices_dnsDiscovery.DnsSeedDiscovery6"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"seed.bitcoin.sprovoost.nl\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"seed.bitcoin.sprovoost.nl\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string14"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                  uuid: "forServices_dnsDiscovery.DnsSeedDiscovery7"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                    parameters:
+                    - name: "network"
+                      value:
+                        sapientType: "MOCK"
+                        suggestedContent: !<unknown_object>
+                          target: "org.bitcoinj.base.Network"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "org.bitcoinj.base.Network"
+                        uuid: "forServices_network1"
+                        fixed: false
+                        nameForMock: "MainNetParams.get()"
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    - name: "hostname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "\\\"dnsseed.emzy.de\\\""
+                        suggestedContent: !<regular>
+                          value: "\\\"dnsseed.emzy.de\\\""
+                        valueType: "java.lang.String"
+                        uuid: "forServices_string16"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: true
+                  valueType: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                  uuid: "forServices_dnsDiscovery.DnsSeedDiscovery8"
                   fixed: true
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -567,6 +1950,10 @@ methods:
           - name: "parallelQueries"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: true
+              suggestedContent: !<regular>
+                value: true
               valueType: "boolean"
               uuid: "forServices_boolean1"
               fixed: false
@@ -575,6 +1962,10 @@ methods:
           - name: "shufflePeers"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: false
+              suggestedContent: !<regular>
+                value: false
               valueType: "boolean"
               uuid: "forServices_boolean2"
               fixed: false
@@ -1305,6 +2696,7 @@ methods:
     deleted: true
     disabled: true
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledReason: "Potential harmful system call (Future.isCancelled, Future.get,\
       \ ExecutorService.invokeAll) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     disabledStatusUpdatedByUser: false
@@ -1331,6 +2723,7 @@ methods:
     deleted: true
     disabled: true
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledReason: "Potential harmful system call (ExecutorService.invokeAll) detected;\
       \ Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     disabledStatusUpdatedByUser: false
@@ -1345,7 +2738,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "42B5A7FFD54A2EB3CE3D8DC2C56C3DB8"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -1547,6 +2940,7 @@ methods:
     deleted: false
     disabled: true
     ignoredBySystem: false
+    firstFailureReason: "TODO_ADDED_BY_TEST_GENERATOR"
     disabledReason: "Potential harmful system call (Future.isCancelled, ExecutorService.invokeAll)\
       \ detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     prover: "DEFAULT"
@@ -1562,7 +2956,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "42B5A7FFD54A2EB3CE3D8DC2C56C3DB8"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -1764,6 +3158,7 @@ methods:
     deleted: false
     disabled: true
     ignoredBySystem: false
+    firstFailureReason: "TODO_ADDED_BY_TEST_GENERATOR"
     disabledReason: "Potential harmful system call (Future.isCancelled, ExecutorService.invokeAll)\
       \ detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     prover: "DEFAULT"
@@ -1786,6 +3181,7 @@ methods:
     deleted: true
     disabled: true
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledReason: "Potential harmful system call (Future.isCancelled, Future.get,\
       \ ExecutorService.shutdown, ExecutorService.invokeAll, ExecutorService.shutdownNow)\
       \ detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
@@ -1800,7 +3196,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "7983F16EC6A280FE4803DD1DE57C678C"
+    modelFingerprint: "BDF21F2BC869BF6C7E2D4E86F6F15E28"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -1990,7 +3386,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "vThreadPool"
-      modelFingerprint: "CB8080514EE98CCEA1508AC95541B947"
+      modelFingerprint: "511625242BF7BD1AED97BB38F57D42D6"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -2125,9 +3521,11 @@ methods:
       filledByUser: false
     uuid: "bedae1ab-56a9-386a-af42-c9a753de6250"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "LLM"
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    disabledReason: "Potential harmful system call (Future.isCancelled, ExecutorService.invokeAll)\
+      \ detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path6"
@@ -2139,7 +3537,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "7983F16EC6A280FE4803DD1DE57C678C"
+    modelFingerprint: "F02170E00B54EC5D8F0319D3D829FF1F"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -2149,7 +3547,7 @@ methods:
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "C3E8A5EC74BF850DCEDD5343B09A2028"
+      modelFingerprint: "54CA1ABE5ED8F5C0C6E4E4B9ADFD3CDD"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2161,11 +3559,9 @@ methods:
           parameters:
           - name: "network"
             value:
-              sapientType: "ENUM"
-              content: !<regular>
-                value: "REGTEST"
-              valueType: "org.bitcoinj.base.BitcoinNetwork"
-              uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.base.Network"
+              uuid: "<init>_network1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -2173,11 +3569,37 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "MOCK"
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.net.discovery.PeerDiscovery"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  nameForMock: "{}"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "MOCK"
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.net.discovery.PeerDiscovery"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  nameForMock: "{}"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.net.discovery.PeerDiscovery"
               uuid: "<init>_list1"
@@ -2203,17 +3625,55 @@ methods:
           parameters:
           - name: "network"
             value:
-              sapientType: "ENUM"
-              content: !<regular>
-                value: "REGTEST"
-              valueType: "org.bitcoinj.base.BitcoinNetwork"
-              uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.base.Network"
+              uuid: "<init>_network1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "seeds"
             value:
               sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "MOCK"
+                  content: !<unknown_object>
+                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.net.discovery.PeerDiscovery"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  nameForMock: "{}"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "MOCK"
+                  content: !<unknown_object>
+                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.net.discovery.PeerDiscovery"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  nameForMock: "{}"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.net.discovery.PeerDiscovery"
               uuid: "<init>_list1"
@@ -2243,7 +3703,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "services"
-      modelFingerprint: "909050AB7B1EF8A162245F33E8EE0D3E"
+      modelFingerprint: "F8877380B48E1EA586A3ED00B6298812"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -2251,7 +3711,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
+          value: 1
+        suggestedContent: !<regular>
+          value: 1
         valueType: "long"
         uuid: "getPeers_long1"
         fixed: false
@@ -2261,7 +3723,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "timeout"
-      modelFingerprint: "56FF28DDA68F2DB8B71AE2A0D84E5A0E"
+      modelFingerprint: "C304D31D903CF45A2122BD364F57A445"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -2327,100 +3789,9 @@ methods:
         access: 4
       staticReadMethodForField: false
       filledByUser: false
-    - type: "FIELD"
-      name: "vThreadPool"
-      modelFingerprint: "CB8080514EE98CCEA1508AC95541B947"
-      index: 5
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 2
-      value:
-        sapientType: "NULL"
-        suggestedContent: !<unknown_object>
-          target: "java.util.concurrent.ExecutorService"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "java.util.concurrent.ExecutorService"
-        uuid: "getPeers_executorService1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "this.vThreadPool"
-        name: "invokeAll"
-        parameters:
-        - name: "arg0"
-          value:
-            sapientType: "COLLECTION"
-            content: !<collection>
-              collectionClass: "java.util.ArrayList"
-              parameters: []
-              values:
-              - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-                valueType: "java.util.concurrent.Callable"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            suggestedContent: !<collection>
-              collectionClass: "java.util.ArrayList"
-              parameters: []
-              values:
-              - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-                valueType: "java.util.concurrent.Callable"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            valueType: "java.util.List"
-            genericValueType: "java.util.concurrent.Callable<java.util.List<java.net.InetSocketAddress>>"
-            uuid: "getPeers_arrayList1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "arg1"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: 0
-            valueType: "long"
-            uuid: "getPeers_long2"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "arg2"
-          value:
-            sapientType: "ENUM"
-            content: !<regular>
-              value: "MILLISECONDS"
-            valueType: "java.util.concurrent.TimeUnit"
-            uuid: "Enum-java.util.concurrent.TimeUnit-MILLISECONDS"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        throwsExceptions:
-        - "java.lang.InterruptedException"
-        signature: "invokeAll(List,long,TimeUnit): List throws java.lang.InterruptedException"
-        returnValue:
-          sapientType: "COLLECTION"
-          content: !<collection>
-            parameters: []
-            values: []
-          suggestedContent: !<collection>
-            parameters: []
-            values: []
-          valueType: "java.util.List"
-          genericValueType: "java.util.concurrent.Future<java.util.List<java.net.InetSocketAddress>>"
-          uuid: "getPeers_list1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1025
-      staticReadMethodForField: false
-      filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "B850A1E5D0D8F91559D5FC65910A279A"
+      modelFingerprint: "0B8AAA46A5F4F5FF8CD7BEE1957D49DF"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -2434,7 +3805,11 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "message1"
+                value: "No peer discovery returned any results in 0 ms. Check internet\
+                  \ connection?"
+              suggestedContent: !<regular>
+                value: "No peer discovery returned any results in 0 ms. Check internet\
+                  \ connection?"
               valueType: "java.lang.String"
               uuid: "getPeers_string1"
               fixed: false
@@ -2448,6 +3823,12 @@ methods:
           - name: "message"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: "No peer discovery returned any results in 0 ms. Check internet\
+                  \ connection?"
+              suggestedContent: !<regular>
+                value: "No peer discovery returned any results in 0 ms. Check internet\
+                  \ connection?"
               valueType: "java.lang.String"
               uuid: "getPeers_string1"
               fixed: false
@@ -2466,6 +3847,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "DEPENDENCY_TO_THROW_EXCEPTION_NOT_FOUND"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -2864,6 +4246,7 @@ methods:
     deleted: false
     disabled: true
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledReason: "Potential harmful system call (Future.isCancelled, Future.get,\
       \ ExecutorService.invokeAll, ExecutorService.shutdownNow) detected; Learn more:\
       \ https://github.com/Sapient-AI/docs#disabled-generated-tests"
@@ -2885,12 +4268,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "85DC516C9A75C511ACE008E99206DDE0"
-    problemWasSolvedByProver: false
+    modelFingerprint: "A895A6D3B74CC503CE8ACE608A930C8A"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "C51DCB929FB0FF2BE4FB49006A98E4BC"
+      modelFingerprint: "EFD445989E6009EA9C99327AE5A3498C"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2902,11 +4285,9 @@ methods:
           parameters:
           - name: "network"
             value:
-              sapientType: "ENUM"
-              content: !<regular>
-                value: "REGTEST"
-              valueType: "org.bitcoinj.base.BitcoinNetwork"
-              uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.base.Network"
+              uuid: "<init>_network1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -2914,11 +4295,61 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "MOCK"
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.net.discovery.PeerDiscovery"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  nameForMock: "seed1.testnet.com"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "MOCK"
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.net.discovery.PeerDiscovery"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  nameForMock: "seed2.testnet.com"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "MOCK"
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.net.discovery.PeerDiscovery"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  nameForMock: "seed1.testnet.com"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "MOCK"
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.net.discovery.PeerDiscovery"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  nameForMock: "seed2.testnet.com"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.net.discovery.PeerDiscovery"
               uuid: "<init>_list1"
@@ -2932,20 +4363,87 @@ methods:
           parameters:
           - name: "network"
             value:
-              sapientType: "ENUM"
-              content: !<regular>
-                value: "REGTEST"
-              valueType: "org.bitcoinj.base.BitcoinNetwork"
-              uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.base.Network"
+              uuid: "<init>_network1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "seeds"
             value:
               sapientType: "COLLECTION"
-              suggestedContent: !<collection>
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "MOCK"
+                  content: !<unknown_object>
+                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.net.discovery.PeerDiscovery"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  nameForMock: "seed1.testnet.com"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "MOCK"
+                  content: !<unknown_object>
+                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.net.discovery.PeerDiscovery"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  nameForMock: "seed2.testnet.com"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "MOCK"
+                  content: !<unknown_object>
+                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.net.discovery.PeerDiscovery"
+                  uuid: "<init>_list1-0"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  nameForMock: "seed1.testnet.com"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "MOCK"
+                  content: !<unknown_object>
+                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  suggestedContent: !<unknown_object>
+                    target: "org.bitcoinj.net.discovery.PeerDiscovery"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.bitcoinj.net.discovery.PeerDiscovery"
+                  uuid: "<init>_list1-1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  nameForMock: "seed2.testnet.com"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.net.discovery.PeerDiscovery"
               uuid: "<init>_list1"
@@ -2963,17 +4461,97 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "8ADA05C44EBA4547B9E98972A0609D18"
+      modelFingerprint: "D1FC6EACB037FAB506B5647F8FB45DC8"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "NULL"
-        suggestedContent: !<unknown_object>
-          target: "java.util.concurrent.ExecutorService"
-          onlyPojoFunctions: false
-          builderPattern: false
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.util.concurrent.Executors"
+          method: "newFixedThreadPool"
+          methodParameters:
+          - value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 2
+              valueType: "int"
+              uuid: "createExecutor_int1"
+              fixed: false
+              collectionUuid: "<init>_list1"
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - value:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.utils.ContextPropagatingThreadFactory"
+                parameters:
+                - name: "name"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "Multiplexing discovery"
+                    valueType: "java.lang.String"
+                    fixed: true
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: true
+              suggestedContent: !<new>
+                target: "org.bitcoinj.utils.ContextPropagatingThreadFactory"
+                parameters:
+                - name: "name"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "Multiplexing discovery"
+                    valueType: "java.lang.String"
+                    fixed: true
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.bitcoinj.utils.ContextPropagatingThreadFactory"
+              uuid: "createExecutor_contextPropagatingThreadFactory1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "java.util.concurrent.Executors"
+          method: "newFixedThreadPool"
+          methodParameters:
+          - value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 2
+              valueType: "int"
+              uuid: "createExecutor_int1"
+              fixed: false
+              collectionUuid: "<init>_list1"
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - value:
+              sapientType: "OBJECT"
+              suggestedContent: !<new>
+                target: "org.bitcoinj.utils.ContextPropagatingThreadFactory"
+                parameters:
+                - name: "name"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "Multiplexing discovery"
+                    valueType: "java.lang.String"
+                    fixed: true
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.bitcoinj.utils.ContextPropagatingThreadFactory"
+              uuid: "createExecutor_contextPropagatingThreadFactory1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "java.util.concurrent.ExecutorService"
         uuid: "createExecutor_executorService1"
         fixed: false

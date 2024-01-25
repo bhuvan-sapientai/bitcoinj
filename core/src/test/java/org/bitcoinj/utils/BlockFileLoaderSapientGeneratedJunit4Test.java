@@ -129,7 +129,6 @@ public class BlockFileLoaderSapientGeneratedJunit4Test {
         RuntimeException runtimeException = new RuntimeException("Default blocks directory not found");
         thrown.expect(RuntimeException.class);
         thrown.expectMessage(runtimeException.getMessage());
-
         //Act Statement(s)
         BlockFileLoader.defaultBlocksDir();
     }
@@ -138,10 +137,9 @@ public class BlockFileLoaderSapientGeneratedJunit4Test {
     @Test()
     public void iteratorTest() {
         /**
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Network networkMock = mock(Network.class, "NetworkParameters");
         try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
@@ -223,6 +221,7 @@ public class BlockFileLoaderSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Network networkMock = mock(Network.class, "NetworkParameters");
         try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
@@ -257,6 +256,8 @@ public class BlockFileLoaderSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Network networkMock = mock(Network.class, "<value>");
+        MessageSerializer messageSerializerMock = mock(MessageSerializer.class, "MessageSerializer");
         try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
@@ -288,6 +289,7 @@ public class BlockFileLoaderSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Network networkMock = mock(Network.class, "testNetwork");
         try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);

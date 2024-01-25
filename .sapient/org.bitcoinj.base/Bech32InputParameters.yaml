@@ -715,6 +715,7 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path5"
@@ -732,6 +733,7 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path1"
@@ -741,13 +743,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "CDC53E64F3A58F2556A2020EE4203501"
+    modelFingerprint: "A699876A4DF3B70D8BE7111D90E1AFA9"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "encoding"
-      modelFingerprint: "202E944F290AE36E86C50A655A971F39"
+      modelFingerprint: "C0D933299E9B36EEEA9378A31BC2D01D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -767,7 +769,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "hrp"
-      modelFingerprint: "3B1DE1FBCFDD3CD8889A06B75759B248"
+      modelFingerprint: "FEE12CF59C9130ABBFA80243FAA4C44E"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -775,9 +777,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "F"
+          value: "bc"
         suggestedContent: !<regular>
-          value: "F"
+          value: "bc"
         valueType: "java.lang.String"
         uuid: "encode_string1"
         fixed: false
@@ -787,7 +789,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "values"
-      modelFingerprint: "2E03633FE82469B9653A7ABEED154B01"
+      modelFingerprint: "81FD692D7496978D60BBB5FA1BF253E0"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -801,6 +803,7 @@ methods:
         valueType: "org.bitcoinj.base.Bech32$Bech32Bytes"
         uuid: "encode_bech32.Bech32Bytes1"
         fixed: false
+        nameForMock: "[3, 58, 0, 0, 2, 117, 110, 107, 110, 111, 119]"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
@@ -899,7 +902,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "values"
-      modelFingerprint: "070AE9505C94FC4B1765206A32A360D9"
+      modelFingerprint: "77901782F44C829CF50B32986250C2A7"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -913,6 +916,7 @@ methods:
         valueType: "org.bitcoinj.base.Bech32$Bech32Bytes"
         uuid: "encode_bech32.Bech32Bytes1"
         fixed: false
+        nameForMock: "[3, 58, 0, 0, 2, 117, 110, 107, 110, 111, 119]"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -921,11 +925,7 @@ methods:
         parameters: []
         signature: "bytes(): byte[]"
         returnValue:
-          sapientType: "ARRAY"
-          content: !<array>
-            values: {}
-          suggestedContent: !<array>
-            values: {}
+          sapientType: "NULL"
           valueType: "byte[]"
           uuid: "encode_byte[]1"
           fixed: false
@@ -936,7 +936,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "values"
-      modelFingerprint: "070AE9505C94FC4B1765206A32A360D9"
+      modelFingerprint: "77901782F44C829CF50B32986250C2A7"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -950,6 +950,7 @@ methods:
         valueType: "org.bitcoinj.base.Bech32$Bech32Bytes"
         uuid: "encode_bech32.Bech32Bytes1"
         fixed: false
+        nameForMock: "[3, 58, 0, 0, 2, 117, 110, 107, 110, 111, 119]"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -958,11 +959,7 @@ methods:
         parameters: []
         signature: "bytes(): byte[]"
         returnValue:
-          sapientType: "ARRAY"
-          content: !<array>
-            values: {}
-          suggestedContent: !<array>
-            values: {}
+          sapientType: "NULL"
           valueType: "byte[]"
           uuid: "encode_byte[]2"
           fixed: false
@@ -973,7 +970,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "values"
-      modelFingerprint: "070AE9505C94FC4B1765206A32A360D9"
+      modelFingerprint: "77901782F44C829CF50B32986250C2A7"
       index: 8
       ignored: false
       nestedInLoop: false
@@ -987,6 +984,7 @@ methods:
         valueType: "org.bitcoinj.base.Bech32$Bech32Bytes"
         uuid: "encode_bech32.Bech32Bytes1"
         fixed: false
+        nameForMock: "[3, 58, 0, 0, 2, 117, 110, 107, 110, 111, 119]"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -995,11 +993,7 @@ methods:
         parameters: []
         signature: "bytes(): byte[]"
         returnValue:
-          sapientType: "ARRAY"
-          content: !<array>
-            values: {}
-          suggestedContent: !<array>
-            values: {}
+          sapientType: "NULL"
           valueType: "byte[]"
           uuid: "encode_byte[]4"
           fixed: false
@@ -1010,7 +1004,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "values"
-      modelFingerprint: "070AE9505C94FC4B1765206A32A360D9"
+      modelFingerprint: "77901782F44C829CF50B32986250C2A7"
       index: 9
       ignored: false
       nestedInLoop: false
@@ -1024,6 +1018,7 @@ methods:
         valueType: "org.bitcoinj.base.Bech32$Bech32Bytes"
         uuid: "encode_bech32.Bech32Bytes1"
         fixed: false
+        nameForMock: "[3, 58, 0, 0, 2, 117, 110, 107, 110, 111, 119]"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -1032,11 +1027,7 @@ methods:
         parameters: []
         signature: "bytes(): byte[]"
         returnValue:
-          sapientType: "ARRAY"
-          content: !<array>
-            values: {}
-          suggestedContent: !<array>
-            values: {}
+          sapientType: "NULL"
           valueType: "byte[]"
           uuid: "encode_byte[]5"
           fixed: false
@@ -1047,7 +1038,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "values"
-      modelFingerprint: "6D079BD3A8894B2BF0E9A497372534B1"
+      modelFingerprint: "33A51B0D0B5E6FA427E339CC78F086D1"
       index: 10
       ignored: false
       nestedInLoop: false
@@ -1061,6 +1052,7 @@ methods:
         valueType: "org.bitcoinj.base.Bech32$Bech32Bytes"
         uuid: "encode_bech32.Bech32Bytes1"
         fixed: false
+        nameForMock: "[3, 58, 0, 0, 2, 117, 110, 107, 110, 111, 119]"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -1071,9 +1063,185 @@ methods:
         returnValue:
           sapientType: "ARRAY"
           content: !<array>
-            values: {}
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              1:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              2:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              3:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              4:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              5:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              6:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              7:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              8:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              9:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              10:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           suggestedContent: !<array>
-            values: {}
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              1:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              2:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              3:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              4:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              5:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              6:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              7:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              8:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              9:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              10:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "byte[]"
           uuid: "encode_byte[]6"
           fixed: false
@@ -1084,7 +1252,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "1878249B36C0F2DF3C948120E430E7D1"
+      modelFingerprint: "67A933573A922740D365D493B944BE55"
       index: 11
       ignored: false
       nestedInLoop: false
@@ -1092,9 +1260,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "D1q"
+          value: "bc1q"
         suggestedContent: !<regular>
-          value: "D1q"
+          value: "bc1q"
         valueType: "java.lang.String"
         uuid: "encode_string3"
         fixed: false
@@ -1106,6 +1274,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "BITWISE_NOT_SUPPORTED"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -1124,6 +1293,7 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path3"
@@ -1133,13 +1303,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "283CAC840380158159B68A87419B1002"
+    modelFingerprint: "A34BA2034AAB251E2F07397F67A4448C"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "encoding"
-      modelFingerprint: "3830FBBD47A52BE006EAC083331FFD42"
+      modelFingerprint: "AC05443E4C22ACA58F83F94FC67C0363"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1147,7 +1317,9 @@ methods:
       value:
         sapientType: "ENUM"
         content: !<regular>
-          value: "BECH32"
+          value: "BECH32M"
+        suggestedContent: !<regular>
+          value: "BECH32M"
         valueType: "org.bitcoinj.base.Bech32$Encoding"
         uuid: "encode_bech32.Encoding1"
         fixed: false
@@ -1157,7 +1329,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "hrp"
-      modelFingerprint: "FFEEDCD00A02F47C98B13B6655897FEC"
+      modelFingerprint: "FEE12CF59C9130ABBFA80243FAA4C44E"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1165,7 +1337,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "hrp1"
+          value: "bc"
+        suggestedContent: !<regular>
+          value: "bc"
         valueType: "java.lang.String"
         uuid: "encode_string1"
         fixed: false
@@ -1175,7 +1349,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "values"
-      modelFingerprint: "2E03633FE82469B9653A7ABEED154B01"
+      modelFingerprint: "81FD692D7496978D60BBB5FA1BF253E0"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1189,6 +1363,7 @@ methods:
         valueType: "org.bitcoinj.base.Bech32$Bech32Bytes"
         uuid: "encode_bech32.Bech32Bytes1"
         fixed: false
+        nameForMock: "[]"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
@@ -1287,7 +1462,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "values"
-      modelFingerprint: "AD1626536F7025AD93D619F083CA18FB"
+      modelFingerprint: "77901782F44C829CF50B32986250C2A7"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -1301,6 +1476,7 @@ methods:
         valueType: "org.bitcoinj.base.Bech32$Bech32Bytes"
         uuid: "encode_bech32.Bech32Bytes1"
         fixed: false
+        nameForMock: "[]"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -1309,11 +1485,7 @@ methods:
         parameters: []
         signature: "bytes(): byte[]"
         returnValue:
-          sapientType: "ARRAY"
-          content: !<array>
-            values: {}
-          suggestedContent: !<array>
-            values: {}
+          sapientType: "NULL"
           valueType: "byte[]"
           uuid: "encode_byte[]1"
           fixed: false
@@ -1324,7 +1496,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "values"
-      modelFingerprint: "AD1626536F7025AD93D619F083CA18FB"
+      modelFingerprint: "77901782F44C829CF50B32986250C2A7"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -1338,6 +1510,7 @@ methods:
         valueType: "org.bitcoinj.base.Bech32$Bech32Bytes"
         uuid: "encode_bech32.Bech32Bytes1"
         fixed: false
+        nameForMock: "[]"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -1346,11 +1519,7 @@ methods:
         parameters: []
         signature: "bytes(): byte[]"
         returnValue:
-          sapientType: "ARRAY"
-          content: !<array>
-            values: {}
-          suggestedContent: !<array>
-            values: {}
+          sapientType: "NULL"
           valueType: "byte[]"
           uuid: "encode_byte[]2"
           fixed: false
@@ -1361,7 +1530,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "values"
-      modelFingerprint: "AD1626536F7025AD93D619F083CA18FB"
+      modelFingerprint: "77901782F44C829CF50B32986250C2A7"
       index: 8
       ignored: false
       nestedInLoop: false
@@ -1375,6 +1544,7 @@ methods:
         valueType: "org.bitcoinj.base.Bech32$Bech32Bytes"
         uuid: "encode_bech32.Bech32Bytes1"
         fixed: false
+        nameForMock: "[]"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -1383,11 +1553,7 @@ methods:
         parameters: []
         signature: "bytes(): byte[]"
         returnValue:
-          sapientType: "ARRAY"
-          content: !<array>
-            values: {}
-          suggestedContent: !<array>
-            values: {}
+          sapientType: "NULL"
           valueType: "byte[]"
           uuid: "encode_byte[]4"
           fixed: false
@@ -1398,7 +1564,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "values"
-      modelFingerprint: "AD1626536F7025AD93D619F083CA18FB"
+      modelFingerprint: "77901782F44C829CF50B32986250C2A7"
       index: 9
       ignored: false
       nestedInLoop: false
@@ -1412,6 +1578,7 @@ methods:
         valueType: "org.bitcoinj.base.Bech32$Bech32Bytes"
         uuid: "encode_bech32.Bech32Bytes1"
         fixed: false
+        nameForMock: "[]"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -1420,11 +1587,7 @@ methods:
         parameters: []
         signature: "bytes(): byte[]"
         returnValue:
-          sapientType: "ARRAY"
-          content: !<array>
-            values: {}
-          suggestedContent: !<array>
-            values: {}
+          sapientType: "NULL"
           valueType: "byte[]"
           uuid: "encode_byte[]5"
           fixed: false
@@ -1435,7 +1598,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "values"
-      modelFingerprint: "6D079BD3A8894B2BF0E9A497372534B1"
+      modelFingerprint: "90FCF8941B23FB95F052A0329AE0136B"
       index: 10
       ignored: false
       nestedInLoop: false
@@ -1449,6 +1612,7 @@ methods:
         valueType: "org.bitcoinj.base.Bech32$Bech32Bytes"
         uuid: "encode_bech32.Bech32Bytes1"
         fixed: false
+        nameForMock: "[]"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -1472,7 +1636,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      modelFingerprint: "67A933573A922740D365D493B944BE55"
       index: 11
       ignored: false
       nestedInLoop: false
@@ -1480,7 +1644,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "result1"
+          value: "bc1q"
+        suggestedContent: !<regular>
+          value: "bc1q"
         valueType: "java.lang.String"
         uuid: "encode_string3"
         fixed: false
@@ -1492,6 +1658,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "BITWISE_NOT_SUPPORTED"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -1718,6 +1885,7 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path3"
@@ -2083,6 +2251,7 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path6"

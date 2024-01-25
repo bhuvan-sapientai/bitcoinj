@@ -1,6 +1,32 @@
 ---
-modelFingerprint: "2E4D47244328F31EDCBD3FED5D6780F6"
+modelFingerprint: "5C914E0FE010620EC5F20F1E61F5C812"
 methods:
+- method:
+    name: "getMnemonic"
+    returnType: "java.lang.String"
+    signature: "getMnemonic() : java.lang.String"
+    instructionFingerprint: "8B45978C54CEFBB1FBAA0554AD0CF0C2"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "getMnemonicTest"
+    nameDefinedByUser: false
+    constructorSignature: "valueOf(java.lang.String) : org.bitcoinj.script.ScriptError"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "1AC1DE43C66724A3C920AB9CADE30C84"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "fd820074-8915-37ce-90cf-7dec1a476a3e"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    firstFailureReason: "ENUM_SELF_FIELD_ACCESS"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "fromMnemonic"
     returnType: "org.bitcoinj.script.ScriptError"

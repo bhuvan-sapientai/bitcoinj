@@ -173,6 +173,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path1"
@@ -315,6 +316,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -566,6 +568,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path3"
@@ -837,6 +840,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -1133,7 +1137,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "LLM"
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -1540,7 +1544,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "LLM"
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -1571,7 +1575,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "DC2800556AC8C6FAF661CB6392FCE82A"
+    modelFingerprint: "EF2CA72EC5EDC1914A2C2A8FADE775BA"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -1758,7 +1762,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "message"
-      modelFingerprint: "690E223EF35FAB1C46FD5F7931CA6B82"
+      modelFingerprint: "54D9EEAEA514F5356DF5662A69D316E6"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1905,7 +1909,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "LLM"
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -1917,7 +1921,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "AF54366932875F8C500C2649416B0454"
+    modelFingerprint: "7525798314BC8FA7A454CB0D26E3A977"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -2140,7 +2144,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "message"
-      modelFingerprint: "690E223EF35FAB1C46FD5F7931CA6B82"
+      modelFingerprint: "54D9EEAEA514F5356DF5662A69D316E6"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -2230,7 +2234,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "socket"
-      modelFingerprint: "C848E4FC79B658BA8D5BB90DDA02083B"
+      modelFingerprint: "EC42C8D42CE5BCC6342E98FBCFA2B00F"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -2281,7 +2285,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "stream"
-      modelFingerprint: "2343184A0CD74CA2B8EEEB14C35B66F8"
+      modelFingerprint: "DC58720AA01ED701D6826FD398C086B6"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -2334,7 +2338,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "stream"
-      modelFingerprint: "45C714B6456FEF206DEF6F43081A49C0"
+      modelFingerprint: "85AACCCCF47C53D7EA0CE22934211188"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -2434,7 +2438,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "A2DC1F0DDC8354D53D1A3A99E9C93D9C"
+      modelFingerprint: "22F570B905D53D103225BA3749A834D6"
       index: 10
       ignored: false
       nestedInLoop: false
@@ -2462,7 +2466,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "LLM"
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -2481,7 +2485,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "C0DCA6BEF4BEA5B4BC34B77822753160"
+    modelFingerprint: "0AAA47BF732C73F6D92D69E3203CE193"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -2738,13 +2742,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ListenableCompletableFuture"
-      modelFingerprint: "9B0F84458816CD01A701FE3203003406"
+      modelFingerprint: "EAEE5E80D0FD1ED4C4CC64018089B480"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "REAL"
         valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
         uuid: "org.bitcoinj.utils.ListenableCompletableFuture"
         fixed: false
@@ -2826,7 +2830,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "C79E8F5B3E8FF6F50473E559AFF62337"
+      modelFingerprint: "F11C8EFFA2A01740A8F1DF725A7DC42A"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -2884,6 +2888,6 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "LLM"
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

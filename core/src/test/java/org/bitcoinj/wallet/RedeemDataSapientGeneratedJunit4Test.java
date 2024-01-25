@@ -44,10 +44,8 @@ public class RedeemDataSapientGeneratedJunit4Test {
     public void ofTest() {
         //Arrange Statement(s)
         List<ECKey> eCKeyList = new ArrayList<>();
-
         //Act Statement(s)
         RedeemData result = RedeemData.of(eCKeyList, scriptMock);
-
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -61,22 +59,22 @@ public class RedeemDataSapientGeneratedJunit4Test {
          * (ScriptPattern.isP2PK(redeemScript)) : true
          * (key != null) : true
          *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
+         * */
         //Arrange Statement(s)
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class)) {
-            scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(true);
+            scriptPattern.when(() -> ScriptPattern.isP2PKH((Script) any())).thenReturn(false);
+            scriptPattern.when(() -> ScriptPattern.isP2WPKH((Script) any())).thenReturn(false);
+            scriptPattern.when(() -> ScriptPattern.isP2PK((Script) any())).thenReturn(true);
             ECKey eCKey = new ECKey();
+            List list = new ArrayList<>();
+            Script script = Script.of(list);
             //Act Statement(s)
-            RedeemData result = RedeemData.of(eCKey, scriptMock);
+            RedeemData result = RedeemData.of(eCKey, script);
             //Assert statement(s)
             assertThat(result, is(notNullValue()));
-            scriptPattern.verify(() -> ScriptPattern.isP2PKH(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
+            scriptPattern.verify(() -> ScriptPattern.isP2PKH((Script) any()));
+            scriptPattern.verify(() -> ScriptPattern.isP2WPKH((Script) any()));
+            scriptPattern.verify(() -> ScriptPattern.isP2PK((Script) any()));
         }
     }
 
@@ -120,10 +118,8 @@ public class RedeemDataSapientGeneratedJunit4Test {
         List<ECKey> eCKeyList = new ArrayList<>();
         eCKeyList.add(keyMock);
         RedeemData target = RedeemData.of(eCKeyList, scriptMock);
-
         //Act Statement(s)
         ECKey result = target.getFullKey();
-
         //Assert statement(s)
         assertThat(result, equalTo(keyMock));
         verify(keyMock).hasPrivKey();
@@ -141,10 +137,8 @@ public class RedeemDataSapientGeneratedJunit4Test {
         List<ECKey> eCKeyList = new ArrayList<>();
         eCKeyList.add(keyMock);
         RedeemData target = RedeemData.of(eCKeyList, scriptMock);
-
         //Act Statement(s)
         ECKey result = target.getFullKey();
-
         //Assert statement(s)
         assertThat(result, is(nullValue()));
         verify(keyMock).hasPrivKey();
@@ -159,12 +153,16 @@ public class RedeemDataSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        ECKey eCKey = new ECKey();
+        ECKey eCKey2 = new ECKey();
         List<ECKey> eCKeyList = new ArrayList<>();
-        RedeemData target = RedeemData.of(eCKeyList, scriptMock);
-
+        eCKeyList.add(eCKey);
+        eCKeyList.add(eCKey2);
+        List list = new ArrayList<>();
+        Script script = Script.of(list);
+        RedeemData target = RedeemData.of(eCKeyList, script);
         //Act Statement(s)
         String result = target.toString();
-
         //Assert statement(s)
         assertThat(result, equalTo("toString_moreObjects.ToStringHelper2"));
     }

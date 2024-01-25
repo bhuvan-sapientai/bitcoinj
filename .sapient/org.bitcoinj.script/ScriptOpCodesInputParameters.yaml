@@ -16,13 +16,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "C634E5F9AF6DEE1FE41B0E54E9748F3E"
+    modelFingerprint: "51BCC2F40762857C6D2910EA48CC6D2E"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "opcode"
-      modelFingerprint: "5FD67A31D22A966826ABC78776B9E01E"
+      modelFingerprint: "9EC5FFDB027954E89937740D070598BB"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -30,9 +30,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 1
+          value: 0
         suggestedContent: !<regular>
-          value: 1
+          value: 0
         valueType: "int"
         uuid: "getOpCodeName_int1"
         fixed: false
@@ -62,6 +62,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -72,13 +73,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "7EA9B68728E455882F5A02E0B375CAC1"
+    modelFingerprint: "465F01CD076D17CECF12F24C8EF13387"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "opcode"
-      modelFingerprint: "66A26AEC2ECE837758702C03369DABAE"
+      modelFingerprint: "FA2C4FA66127577CBA969AFE98B675A5"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -86,9 +87,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 2
+          value: 1000
         suggestedContent: !<regular>
-          value: 2
+          value: 1000
         valueType: "int"
         uuid: "getOpCodeName_int1"
         fixed: false
@@ -98,7 +99,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "BAD607FFDFBBB89CB851D47BF9AED555"
+      modelFingerprint: "2D8100E83D2CAFE3F6465E8A545888D0"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -106,9 +107,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "NON_OP(2)"
+          value: "NON_OP(1000)"
         suggestedContent: !<regular>
-          value: "NON_OP(2)"
+          value: "NON_OP(1000)"
         valueType: "java.lang.String"
         uuid: "getOpCodeName_string1"
         fixed: false
@@ -120,6 +121,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -138,13 +140,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "C634E5F9AF6DEE1FE41B0E54E9748F3E"
+    modelFingerprint: "51BCC2F40762857C6D2910EA48CC6D2E"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "opcode"
-      modelFingerprint: "5FD67A31D22A966826ABC78776B9E01E"
+      modelFingerprint: "9EC5FFDB027954E89937740D070598BB"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -152,9 +154,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 1
+          value: 0
         suggestedContent: !<regular>
-          value: 1
+          value: 0
         valueType: "int"
         uuid: "getPushDataName_int1"
         fixed: false
@@ -184,6 +186,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -194,13 +197,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "E5E7F8D722C55B98A8FD8C919B170846"
+    modelFingerprint: "7BF387E2E1A5958BE473B439E48813BA"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "opcode"
-      modelFingerprint: "66A26AEC2ECE837758702C03369DABAE"
+      modelFingerprint: "1BC63E18EEA928E52FD08DE7607BB826"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -208,9 +211,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 2
+          value: 10
         suggestedContent: !<regular>
-          value: 2
+          value: 10
         valueType: "int"
         uuid: "getPushDataName_int1"
         fixed: false
@@ -220,7 +223,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "241B6FB3F222E7D063226568DFE8F128"
+      modelFingerprint: "DCF59253A9004F2F81DF219AD3DC9A0F"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -228,9 +231,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "PUSHDATA(2)"
+          value: "PUSHDATA(10)"
         suggestedContent: !<regular>
-          value: "PUSHDATA(2)"
+          value: "PUSHDATA(10)"
         valueType: "java.lang.String"
         uuid: "getPushDataName_string1"
         fixed: false
@@ -242,6 +245,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

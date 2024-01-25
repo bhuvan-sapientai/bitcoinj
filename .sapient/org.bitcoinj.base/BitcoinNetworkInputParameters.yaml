@@ -1,6 +1,279 @@
 ---
-modelFingerprint: "5D5352DC76AFE3407FEC9933735C9968"
+modelFingerprint: "41DAB2FE560503EE7C28E4AA225E625C"
 methods:
+- method:
+    name: "toString"
+    returnType: "java.lang.String"
+    signature: "toString() : java.lang.String"
+    instructionFingerprint: "B4F01CDEDABD3116916301093B2063BB"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "toStringTest"
+    nameDefinedByUser: false
+    constructorSignature: "valueOf(java.lang.String) : org.bitcoinj.base.BitcoinNetwork"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "8838FA64835124761E7420E4EFCD6259"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "363d3698-f34c-39ad-914f-376a19498023"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    firstFailureReason: "METHOD_CALL_INSTRUCTION_INTERNAL_METHOD_FAILURE"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "id"
+    returnType: "java.lang.String"
+    signature: "id() : java.lang.String"
+    instructionFingerprint: "309E61E529FD4221AD0DDFB05F071D5E"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "idTest"
+    nameDefinedByUser: false
+    constructorSignature: "valueOf(java.lang.String) : org.bitcoinj.base.BitcoinNetwork"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "5CF77DB298F2BDB74EA4E3B4F7CD2729"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "d8f9d8d4-318b-3adc-81df-199235eeefbb"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    firstFailureReason: "ENUM_SELF_FIELD_ACCESS"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "legacyAddressHeader"
+    returnType: "int"
+    signature: "legacyAddressHeader() : int"
+    instructionFingerprint: "C72E55D48BD4EC3E91FD71B86EACEABD"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "legacyAddressHeaderTest"
+    nameDefinedByUser: false
+    constructorSignature: "valueOf(java.lang.String) : org.bitcoinj.base.BitcoinNetwork"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "B9E7A7AEA712FC25B465324699A5E0A3"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "bed29fb3-d28f-3aba-af01-87d8234b2f32"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "legacyP2SHHeader"
+    returnType: "int"
+    signature: "legacyP2SHHeader() : int"
+    instructionFingerprint: "868133A52B02A1D714E7239F6814E5DB"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "legacyP2SHHeaderTest"
+    nameDefinedByUser: false
+    constructorSignature: "valueOf(java.lang.String) : org.bitcoinj.base.BitcoinNetwork"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "94770AF0C58FDCE5B233B8548CF55118"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "920daa2d-06d4-30bd-99f3-d6c5d6db14d5"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "segwitAddressHrp"
+    returnType: "java.lang.String"
+    signature: "segwitAddressHrp() : java.lang.String"
+    instructionFingerprint: "918E70900927932E8C0362D80D666143"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "segwitAddressHrpTest"
+    nameDefinedByUser: false
+    constructorSignature: "valueOf(java.lang.String) : org.bitcoinj.base.BitcoinNetwork"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "65633F6B9F37A0E214C440ED47B68D72"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "8a6a2dc3-de80-3259-ab06-cbf475965b36"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "uriScheme"
+    returnType: "java.lang.String"
+    signature: "uriScheme() : java.lang.String"
+    instructionFingerprint: "EA3005D8F33A7F33B76CA6AEF7CF962B"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "uriSchemeTest"
+    nameDefinedByUser: false
+    constructorSignature: "valueOf(java.lang.String) : org.bitcoinj.base.BitcoinNetwork"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "722EFA120D7CDDC7699F7C486C66D18B"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "00d238fa-3641-312b-81df-c13edf52dd9b"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "hasMaxMoney"
+    returnType: "boolean"
+    signature: "hasMaxMoney() : boolean"
+    instructionFingerprint: "6799262F7D12BA0231D9C68DDADFB0ED"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "hasMaxMoneyTest"
+    nameDefinedByUser: false
+    constructorSignature: "valueOf(java.lang.String) : org.bitcoinj.base.BitcoinNetwork"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "7293FAAEFD3012C5624FCCEE0A008F01"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "acf77967-ab44-395e-9113-4ce8808d0613"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "maxMoney"
+    returnType: "org.bitcoinj.base.Coin"
+    signature: "maxMoney() : org.bitcoinj.base.Coin"
+    instructionFingerprint: "671B884CBFB71906F872B4AAFFD66822"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "maxMoneyTest"
+    nameDefinedByUser: false
+    constructorSignature: "valueOf(java.lang.String) : org.bitcoinj.base.BitcoinNetwork"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "724E788BCB398F8CB9DD14113DC40623"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "d3428af3-0897-3925-8661-7b0f38766a24"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "exceedsMaxMoney"
+    returnType: "boolean"
+    signature: "exceedsMaxMoney(org.bitcoinj.base.Monetary) : boolean"
+    instructionFingerprint: "613723454D579C8FE2F059BEE99164AC"
+    parametersTypes:
+    - "org.bitcoinj.base.Monetary"
+  paths:
+  - pathId: "path3"
+    pathIdForUser: "path1"
+    testPathName: "exceedsMaxMoneyWhenAmountNotInstanceOfCoinThrowsIllegalArgumentException"
+    nameDefinedByUser: false
+    constructorSignature: "valueOf(java.lang.String) : org.bitcoinj.base.BitcoinNetwork"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "D1DABD61FC15D767A1A083F09C07E804"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "eea39352-1eb1-321d-a5e8-e9ce140c409a"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path1"
+    pathIdForUser: "path2"
+    testPathName: "exceedsMaxMoneyWhenAmountCompareToMAX_MONEYGreaterThan0"
+    nameDefinedByUser: false
+    constructorSignature: "valueOf(java.lang.String) : org.bitcoinj.base.BitcoinNetwork"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "AF125FD64A13A7531252CBFA906C2B31"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "10667e3d-e981-3a66-8eeb-3126d0766a7a"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path3"
+    testPathName: "exceedsMaxMoneyWhenAmountCompareToMAX_MONEYNotGreaterThan0"
+    nameDefinedByUser: false
+    constructorSignature: "valueOf(java.lang.String) : org.bitcoinj.base.BitcoinNetwork"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "884B4496B313BF7487405D676FA7548C"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "11a554e0-eece-3220-918c-e5d39ad40bcf"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "fromString"
     returnType: "java.util.Optional"

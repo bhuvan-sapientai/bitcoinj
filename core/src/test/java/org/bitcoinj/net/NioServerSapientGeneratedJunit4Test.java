@@ -29,7 +29,7 @@ public class NioServerSapientGeneratedJunit4Test {
 
     private final StreamConnection connectionMock = mock(StreamConnection.class);
 
-    private final StreamConnectionFactory streamConnectionFactoryMock = mock(StreamConnectionFactory.class);
+    private final StreamConnectionFactory streamConnectionFactoryMock = mock(StreamConnectionFactory.class, "MockStreamConnectionFactory");
 
     //Sapient generated method id: ${52e4a6f0-2f0c-3161-9a57-889c274878ab}
     @Ignore(value = "Potential harmful system call (Selector.select, Selector.close, Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
@@ -46,6 +46,7 @@ public class NioServerSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        StreamConnectionFactory streamConnectionFactoryMock = mock(StreamConnectionFactory.class, "mockStreamConnectionFactory");
         InetSocketAddress inetSocketAddress = new InetSocketAddress(0);
         NioServer target = spy(new NioServer(streamConnectionFactoryMock, inetSocketAddress));
         doNothing().when(connectionMock).connectionOpened();
@@ -74,6 +75,7 @@ public class NioServerSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        StreamConnectionFactory streamConnectionFactoryMock = mock(StreamConnectionFactory.class, "true");
         try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
             connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
             InetSocketAddress inetSocketAddress = new InetSocketAddress(0);
@@ -132,6 +134,7 @@ public class NioServerSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        StreamConnectionFactory streamConnectionFactoryMock = mock(StreamConnectionFactory.class, "<StreamConnectionFactory object>");
         try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
             connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
             InetSocketAddress inetSocketAddress = new InetSocketAddress(0);
@@ -161,6 +164,7 @@ public class NioServerSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        StreamConnectionFactory streamConnectionFactoryMock = mock(StreamConnectionFactory.class, "StreamConnectionFactory");
         InetSocketAddress inetSocketAddress = new InetSocketAddress(0);
         NioServer target = spy(new NioServer(streamConnectionFactoryMock, inetSocketAddress));
         doNothing().when(connectionMock).connectionOpened();
@@ -219,10 +223,11 @@ public class NioServerSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        StreamConnectionFactory streamConnectionFactoryMock = mock(StreamConnectionFactory.class, "{}");
         InetSocketAddress inetSocketAddress = new InetSocketAddress(0);
         NioServer target = spy(new NioServer(streamConnectionFactoryMock, inetSocketAddress));
-        doReturn(false).when(target).isRunning();
         doNothing().when(connectionMock).connectionOpened();
+        doReturn(true, false).when(target).isRunning();
 
         //Act Statement(s)
         target.run();
@@ -237,6 +242,7 @@ public class NioServerSapientGeneratedJunit4Test {
     @Test()
     public void triggerShutdownTest() throws IOException {
         //Arrange Statement(s)
+        StreamConnectionFactory streamConnectionFactoryMock = mock(StreamConnectionFactory.class);
         InetSocketAddress inetSocketAddress = new InetSocketAddress(0);
         NioServer target = new NioServer(streamConnectionFactoryMock, inetSocketAddress);
 

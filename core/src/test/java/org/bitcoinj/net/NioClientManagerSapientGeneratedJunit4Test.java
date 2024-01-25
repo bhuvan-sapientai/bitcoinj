@@ -127,10 +127,10 @@ public class NioClientManagerSapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${5ee56fb1-1efb-35fb-b1bb-d35d0790b8a8}
+    //Sapient generated method id: ${eb566ab1-87e8-371f-9e6f-3e9260b95322}
     @Ignore(value = "Potential harmful system call (Selector.select, CompletableFuture.completeExceptionally, Selector.close, Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
-    public void runWhenDefaultBranch() throws Exception {
+    public void runWhenCaughtExceptionAndSelectorKeysIsNotEmptyAndKeyAttachmentInstanceOfConnectionHandler() throws Exception {
         /* Branches:
          * (isRunning()) : true
          * ((conn = newConnectionChannels.poll()) != null) : false
@@ -140,7 +140,7 @@ public class NioClientManagerSapientGeneratedJunit4Test {
          * (sc.finishConnect()) : true  #  inside handleKey method
          * (catch-exception (Exception)) : true
          * (for-each(selector.keys())) : true
-         * (branch expression (line 147)) : true
+         * (key.attachment() instanceof ConnectionHandler) : true
          *
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
@@ -279,15 +279,15 @@ public class NioClientManagerSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        ListenableCompletableFuture listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
-        ListenableCompletableFuture<SocketAddress> listenableCompletableFutureMock2 = mock(ListenableCompletableFuture.class);
         try (MockedStatic<ListenableCompletableFuture> listenableCompletableFuture = mockStatic(ListenableCompletableFuture.class);
              MockedStatic<SocketChannel> socketChannel = mockStatic(SocketChannel.class)) {
             SocketChannel socketChannel2 = SocketChannel.open();
             socketChannel.when(() -> SocketChannel.open()).thenReturn(socketChannel2);
-            listenableCompletableFuture.when(() -> ListenableCompletableFuture.of((CompletableFuture) null)).thenReturn(listenableCompletableFutureMock);
+            ListenableCompletableFuture listenableCompletableFuture2 = new ListenableCompletableFuture();
+            listenableCompletableFuture.when(() -> ListenableCompletableFuture.of((CompletableFuture) null)).thenReturn(listenableCompletableFuture2);
+            ListenableCompletableFuture<SocketAddress> listenableCompletableFuture3 = new ListenableCompletableFuture<>();
             Throwable throwable = new Throwable();
-            listenableCompletableFuture.when(() -> ListenableCompletableFuture.failedFuture(throwable)).thenReturn(listenableCompletableFutureMock2);
+            listenableCompletableFuture.when(() -> ListenableCompletableFuture.failedFuture(throwable)).thenReturn(listenableCompletableFuture3);
             NioClientManager target = spy(new NioClientManager());
             doReturn(true).when(target).isRunning();
             //TODO: Needs initialization with real value
@@ -295,7 +295,7 @@ public class NioClientManagerSapientGeneratedJunit4Test {
             //Act Statement(s)
             ListenableCompletableFuture<SocketAddress> result = target.openConnection(socketAddress, streamConnectionMock);
             //Assert statement(s)
-            assertThat(result, equalTo(listenableCompletableFutureMock2));
+            assertThat(result, equalTo(listenableCompletableFuture3));
             socketChannel.verify(() -> SocketChannel.open(), atLeast(1));
             listenableCompletableFuture.verify(() -> ListenableCompletableFuture.of((CompletableFuture) null), atLeast(1));
             listenableCompletableFuture.verify(() -> ListenableCompletableFuture.failedFuture(throwable), atLeast(1));

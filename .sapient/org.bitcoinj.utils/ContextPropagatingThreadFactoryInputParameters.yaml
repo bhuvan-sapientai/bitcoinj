@@ -17,12 +17,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "A6EC1DD60C7F338C0BE03515BA4A8BC1"
+    modelFingerprint: "CCD961892C9C33ED306D779BD2DED0CB"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "F992F37F1CE9530AA4CC1D83C521A98D"
+      modelFingerprint: "F1E3898CECF1C2FEF34409D327904A40"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -36,7 +36,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "name1"
+                value: "Thread"
+              suggestedContent: !<regular>
+                value: "Thread"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -46,7 +48,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 5
+              suggestedContent: !<regular>
+                value: 5
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -60,6 +64,10 @@ methods:
           - name: "name"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: "Thread"
+              suggestedContent: !<regular>
+                value: "Thread"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -68,6 +76,10 @@ methods:
           - name: "priority"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 5
+              suggestedContent: !<regular>
+                value: 5
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -84,13 +96,17 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "r"
-      modelFingerprint: "E19F7DDCD869EDBB675FEEDF46089F9F"
+      modelFingerprint: "141953A8D4501F319A47C4CC1CF03F91"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "NULL"
+        content: !<unknown_object>
+          target: "java.lang.Runnable"
+          onlyPojoFunctions: false
+          builderPattern: false
         suggestedContent: !<unknown_object>
           target: "java.lang.Runnable"
           onlyPojoFunctions: false
@@ -133,7 +149,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "70319B4504DBF8DD1AE03242AE00A184"
+      modelFingerprint: "8BB21CDDF8F61791807EA27A6E332013"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -149,8 +165,9 @@ methods:
       filledByUser: false
     uuid: "581615ec-fb96-3fea-b947-52c6c3049d90"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false

@@ -488,6 +488,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -2786,13 +2787,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "F477D1656104C5B64D01193BECAAB5BE"
+    modelFingerprint: "84CE5C297CC1111DD58F1BE2A7860FDC"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "onionAddrBytes"
-      modelFingerprint: "449E3D5F0D950342E053B58C9DBE572E"
+      modelFingerprint: "FC64D67BB0013311AD68D01EEF472FB9"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2800,9 +2801,25 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values: {}
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         suggestedContent: !<array>
-          values: {}
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "byte[]"
         uuid: "encodeOnionUrlV3_byte[]1"
         fixed: false
@@ -2848,497 +2865,40 @@ methods:
         access: 9
       staticReadMethodForField: false
       filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "digest256"
-      modelFingerprint: "BF2F493589833F3EC545BAF90234D73B"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3E9C76AB51311DE97AE9C2294CD5E1D6"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
+        sapientType: "EXCEPTION"
         content: !<new>
-          target: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
+          target: "java.lang.IllegalArgumentException"
           parameters: []
           privateConstructor: false
           createdByTargetCode: true
         suggestedContent: !<new>
-          target: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
+          target: "java.lang.IllegalArgumentException"
           parameters: []
           privateConstructor: false
           createdByTargetCode: true
-        valueType: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
-        uuid: "onionChecksum_sHA3.Digest2561"
+        valueType: "java.lang.IllegalArgumentException"
+        uuid: "onionChecksum_illegalArgumentException1"
         fixed: true
         equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "digest256"
-        name: "update"
-        parameters:
-        - name: "input"
-          value:
-            sapientType: "ARRAY"
-            content: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 46
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item0"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 111
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item1"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                2:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 110
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item2"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                3:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 105
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item3"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                4:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 111
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item4"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                5:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 110
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item5"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                6:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 32
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item6"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                7:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 99
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item7"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                8:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 104
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item8"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                9:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 101
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item9"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                10:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 99
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item10"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                11:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 107
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item11"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                12:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 115
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item12"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                13:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 117
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item13"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                14:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 109
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item14"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            suggestedContent: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 46
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item0"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 111
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item1"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                2:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 110
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item2"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                3:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 105
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item3"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                4:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 111
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item4"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                5:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 110
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item5"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                6:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 32
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item6"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                7:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 99
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item7"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                8:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 104
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item8"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                9:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 101
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item9"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                10:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 99
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item10"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                11:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 107
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item11"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                12:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 115
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item12"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                13:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 117
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item13"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                14:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 109
-                  valueType: "byte"
-                  uuid: "onionChecksum_byte[]1-item14"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            valueType: "byte[]"
-            uuid: "onionChecksum_byte[]1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "update(byte[]): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "onionChecksum_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "digest256"
-      modelFingerprint: "D2C0735FAE5A58BFEC518D01316D4E96"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: true
-        valueType: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
-        uuid: "onionChecksum_sHA3.Digest2561"
-        fixed: true
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "digest256"
-        name: "update"
-        parameters:
-        - name: "input"
-          value:
-            sapientType: "ARRAY"
-            content: !<array>
-              values: {}
-            suggestedContent: !<array>
-              values: {}
-            valueType: "byte[]"
-            uuid: "encodeOnionUrlV3_byte[]1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "update(byte[]): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "onionChecksum_void2"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "digest256"
-      modelFingerprint: "446AFECE0AB5735B30AC536C321124CC"
-      index: 5
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: true
-        valueType: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
-        uuid: "onionChecksum_sHA3.Digest2561"
-        fixed: true
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "digest256"
-        name: "update"
-        parameters:
-        - name: "input"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: 3
-            valueType: "byte"
-            uuid: "encodeOnionUrlV3_int2"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "update(byte): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "onionChecksum_void3"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "digest256"
-      modelFingerprint: "0038D0855F42AE02397E3EF886B97CB4"
-      index: 6
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: true
-        valueType: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
-        uuid: "onionChecksum_sHA3.Digest2561"
-        fixed: true
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "digest256"
-        name: "digest"
-        parameters: []
-        signature: "digest(): byte[]"
-        returnValue:
-          sapientType: "ARRAY"
-          content: !<array>
-            values: {}
-          suggestedContent: !<array>
-            values: {}
-          valueType: "byte[]"
-          uuid: "onionChecksum_byte[]2"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "A84396B28DC39B97CEB940E32B3644BA"
-      index: 7
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaad.onion"
-        suggestedContent: !<regular>
-          value: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaad.onion"
-        valueType: "java.lang.String"
-        uuid: "encodeOnionUrlV3_string2"
-        fixed: false
-        equalsMethodPresent: true
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     uuid: "5856d451-e9da-3948-882f-0b6fac02117d"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
+    firstFailureReason: "UNKNOWN_REASON"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "decodeOnionUrl"
     returnType: "byte[]"

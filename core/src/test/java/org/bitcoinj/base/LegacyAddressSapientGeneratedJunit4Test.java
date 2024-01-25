@@ -77,6 +77,7 @@ public class LegacyAddressSapientGeneratedJunit4Test {
         thrown.expect(AddressFormatException.InvalidDataLength.class);
         thrown.expectMessage(addressFormatExceptionInvalidDataLength.getMessage());
         byte[] byteArray = new byte[]{};
+
         //Act Statement(s)
         LegacyAddress.fromPubKeyHash((Network) BitcoinNetwork.REGTEST, byteArray);
     }
@@ -92,8 +93,10 @@ public class LegacyAddressSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19};
+
         //Act Statement(s)
         LegacyAddress result = LegacyAddress.fromPubKeyHash((Network) BitcoinNetwork.TESTNET, byteArray);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -105,8 +108,10 @@ public class LegacyAddressSapientGeneratedJunit4Test {
         doReturn(networkMock2).when(paramsMock).network();
         ECKey keyMock = mock(ECKey.class);
         doReturn(legacyAddressMock).when(keyMock).toAddress(ScriptType.P2PKH, networkMock2);
+
         //Act Statement(s)
         LegacyAddress result = LegacyAddress.fromKey(paramsMock, keyMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(legacyAddressMock));
         verify(paramsMock).network();
@@ -144,6 +149,7 @@ public class LegacyAddressSapientGeneratedJunit4Test {
         thrown.expect(AddressFormatException.InvalidDataLength.class);
         thrown.expectMessage(addressFormatExceptionInvalidDataLength.getMessage());
         byte[] byteArray = new byte[]{};
+
         //Act Statement(s)
         LegacyAddress.fromScriptHash((Network) BitcoinNetwork.REGTEST, byteArray);
     }
@@ -159,8 +165,10 @@ public class LegacyAddressSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19};
+
         //Act Statement(s)
         LegacyAddress result = LegacyAddress.fromScriptHash((Network) BitcoinNetwork.TESTNET, byteArray);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -188,20 +196,24 @@ public class LegacyAddressSapientGeneratedJunit4Test {
         /* Branches:
          * (version == network.legacyAddressHeader()) : false
          * (version == network.legacyP2SHHeader()) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Network networkMock2 = mock(Network.class, "0");
         try (MockedStatic<Base58> base58 = mockStatic(Base58.class)) {
-            doReturn(2).when(networkMock2).legacyAddressHeader();
-            doReturn(-1).when(networkMock2).legacyP2SHHeader();
-            byte[] byteArray = new byte[]{(byte) 0};
-            base58.when(() -> Base58.decodeChecked("A")).thenReturn(byteArray);
+            doReturn(0).when(networkMock2).legacyAddressHeader();
+            doReturn(5).when(networkMock2).legacyP2SHHeader();
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+            base58.when(() -> Base58.decodeChecked("1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa")).thenReturn(byteArray);
             thrown.expect(AddressFormatException.WrongNetwork.class);
             //Act Statement(s)
-            LegacyAddress.fromBase58("A", networkMock2);
+            LegacyAddress.fromBase58("1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa", networkMock2);
             //Assert statement(s)
             verify(networkMock2).legacyAddressHeader();
             verify(networkMock2).legacyP2SHHeader();
-            base58.verify(() -> Base58.decodeChecked("A"), atLeast(1));
+            base58.verify(() -> Base58.decodeChecked("1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"), atLeast(1));
         }
     }
 
@@ -213,20 +225,24 @@ public class LegacyAddressSapientGeneratedJunit4Test {
          * (version == network.legacyAddressHeader()) : true
          * (network instanceof BitcoinNetwork) : false  #  inside normalizeNetwork method
          * (branch expression (line 73)) : false  #  inside <init> method
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Network networkMock2 = mock(Network.class, "0");
         try (MockedStatic<Base58> base58 = mockStatic(Base58.class)) {
             doReturn(0).when(networkMock2).legacyAddressHeader();
-            byte[] byteArray = new byte[]{(byte) 0};
-            base58.when(() -> Base58.decodeChecked("A")).thenReturn(byteArray);
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+            base58.when(() -> Base58.decodeChecked("3QJmV3qfvL9SuYo34YihAf3sRCW3qSinyC")).thenReturn(byteArray);
             AddressFormatException.InvalidDataLength addressFormatExceptionInvalidDataLength = new AddressFormatException.InvalidDataLength("Legacy addresses are 20 byte (160 bit) hashes, but got: 0");
             thrown.expect(AddressFormatException.InvalidDataLength.class);
             thrown.expectMessage(addressFormatExceptionInvalidDataLength.getMessage());
             //Act Statement(s)
-            LegacyAddress.fromBase58("A", networkMock2);
+            LegacyAddress.fromBase58("3QJmV3qfvL9SuYo34YihAf3sRCW3qSinyC", networkMock2);
             //Assert statement(s)
             verify(networkMock2).legacyAddressHeader();
-            base58.verify(() -> Base58.decodeChecked("A"), atLeast(1));
+            base58.verify(() -> Base58.decodeChecked("3QJmV3qfvL9SuYo34YihAf3sRCW3qSinyC"), atLeast(1));
         }
     }
 
@@ -238,21 +254,17 @@ public class LegacyAddressSapientGeneratedJunit4Test {
          * (version == network.legacyAddressHeader()) : true
          * (network instanceof BitcoinNetwork) : false  #  inside normalizeNetwork method
          * (branch expression (line 73)) : false  #  inside <init> method
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Network networkMock2 = mock(Network.class, "0");
         try (MockedStatic<Base58> base58 = mockStatic(Base58.class)) {
-            doReturn(0).when(networkMock2).legacyAddressHeader();
-            byte[] byteArray = new byte[]{(byte) 0};
-            base58.when(() -> Base58.decodeChecked("A")).thenReturn(byteArray);
+            byte[] byteArray = new byte[]{};
+            base58.when(() -> Base58.decodeChecked("3QJmV3qfvL9SuYo34YihAf3sRCW3qSinyC")).thenReturn(byteArray);
+            thrown.expect(ArrayIndexOutOfBoundsException.class);
             //Act Statement(s)
-            LegacyAddress result = LegacyAddress.fromBase58("A", networkMock2);
+            LegacyAddress.fromBase58("3QJmV3qfvL9SuYo34YihAf3sRCW3qSinyC", networkMock2);
             //Assert statement(s)
-            assertThat(result, is(notNullValue()));
-            verify(networkMock2).legacyAddressHeader();
-            base58.verify(() -> Base58.decodeChecked("A"), atLeast(1));
+            base58.verify(() -> Base58.decodeChecked("3QJmV3qfvL9SuYo34YihAf3sRCW3qSinyC"), atLeast(1));
         }
     }
 
@@ -265,22 +277,26 @@ public class LegacyAddressSapientGeneratedJunit4Test {
          * (version == network.legacyP2SHHeader()) : true
          * (network instanceof BitcoinNetwork) : false  #  inside normalizeNetwork method
          * (branch expression (line 73)) : false  #  inside <init> method
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Network networkMock2 = mock(Network.class, "0");
         try (MockedStatic<Base58> base58 = mockStatic(Base58.class)) {
-            doReturn(1).when(networkMock2).legacyAddressHeader();
-            doReturn(0).when(networkMock2).legacyP2SHHeader();
+            doReturn(0).when(networkMock2).legacyAddressHeader();
+            doReturn(5).when(networkMock2).legacyP2SHHeader();
             byte[] byteArray = new byte[]{(byte) 0};
-            base58.when(() -> Base58.decodeChecked("")).thenReturn(byteArray);
+            base58.when(() -> Base58.decodeChecked("KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qYjgd9M7rFU")).thenReturn(byteArray);
             AddressFormatException.InvalidDataLength addressFormatExceptionInvalidDataLength = new AddressFormatException.InvalidDataLength("Legacy addresses are 20 byte (160 bit) hashes, but got: 0");
             thrown.expect(AddressFormatException.InvalidDataLength.class);
             thrown.expectMessage(addressFormatExceptionInvalidDataLength.getMessage());
             //Act Statement(s)
-            LegacyAddress.fromBase58("", networkMock2);
+            LegacyAddress.fromBase58("KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qYjgd9M7rFU", networkMock2);
             //Assert statement(s)
             verify(networkMock2).legacyAddressHeader();
             verify(networkMock2).legacyP2SHHeader();
-            base58.verify(() -> Base58.decodeChecked(""), atLeast(1));
+            base58.verify(() -> Base58.decodeChecked("KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qYjgd9M7rFU"), atLeast(1));
         }
     }
 
@@ -293,23 +309,17 @@ public class LegacyAddressSapientGeneratedJunit4Test {
          * (version == network.legacyP2SHHeader()) : true
          * (network instanceof BitcoinNetwork) : false  #  inside normalizeNetwork method
          * (branch expression (line 73)) : false  #  inside <init> method
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Network networkMock2 = mock(Network.class, "0");
         try (MockedStatic<Base58> base58 = mockStatic(Base58.class)) {
-            doReturn(1).when(networkMock2).legacyAddressHeader();
-            doReturn(0).when(networkMock2).legacyP2SHHeader();
-            byte[] byteArray = new byte[]{(byte) 0};
-            base58.when(() -> Base58.decodeChecked("")).thenReturn(byteArray);
+            byte[] byteArray = new byte[]{};
+            base58.when(() -> Base58.decodeChecked("1abcdefg")).thenReturn(byteArray);
+            thrown.expect(ArrayIndexOutOfBoundsException.class);
             //Act Statement(s)
-            LegacyAddress result = LegacyAddress.fromBase58("", networkMock2);
+            LegacyAddress.fromBase58("1abcdefg", networkMock2);
             //Assert statement(s)
-            assertThat(result, is(notNullValue()));
-            verify(networkMock2).legacyAddressHeader();
-            verify(networkMock2).legacyP2SHHeader();
-            base58.verify(() -> Base58.decodeChecked(""), atLeast(1));
+            base58.verify(() -> Base58.decodeChecked("1abcdefg"), atLeast(1));
         }
     }
 
@@ -406,6 +416,7 @@ public class LegacyAddressSapientGeneratedJunit4Test {
     @Test()
     public void getParametersFromAddressTest() throws AddressFormatException {
         //Arrange Statement(s)
+        Address addressMock = mock(Address.class);
         try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
              MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class)) {
             addressParser.when(() -> AddressParser.getLegacy()).thenReturn(addressParserMock);
@@ -451,16 +462,19 @@ public class LegacyAddressSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        ECKey eCKeyMock = mock(ECKey.class);
+        Network networkMock2 = mock(Network.class, "{}");
+        Address addressMock = mock(Address.class, "");
         try (MockedStatic<LegacyAddress> legacyAddress = mockStatic(LegacyAddress.class)) {
-            doReturn(networkMock2).when(paramsMock).network();
-            byte[] byteArray = new byte[]{};
-            legacyAddress.when(() -> LegacyAddress.fromPubKeyHash(networkMock2, byteArray)).thenReturn(legacyAddressMock);
-            LegacyAddress target = LegacyAddress.fromPubKeyHash(paramsMock, byteArray);
+            LegacyAddress legacyAddress2 = LegacyAddress.fromKey(networkParametersMock, eCKeyMock);
+            byte[] byteArray = new byte[]{(byte) 0};
+            legacyAddress.when(() -> LegacyAddress.fromPubKeyHash(networkMock2, byteArray)).thenReturn(legacyAddress2);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            LegacyAddress target = LegacyAddress.fromPubKeyHash(networkParameters, byteArray);
             //Act Statement(s)
             int result = target.compareTo(addressMock);
             //Assert statement(s)
             assertThat(result, equalTo(0));
-            verify(paramsMock).network();
             legacyAddress.verify(() -> LegacyAddress.fromPubKeyHash(networkMock2, byteArray), atLeast(1));
         }
     }

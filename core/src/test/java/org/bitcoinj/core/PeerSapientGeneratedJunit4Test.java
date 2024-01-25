@@ -1149,16 +1149,11 @@ public class PeerSapientGeneratedJunit4Test {
         PeerAddress peerAddressMock = mock(PeerAddress.class);
         Services localServicesMock = mock(Services.class, "toString_services1");
         try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class);
-             MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+             MockedStatic<Context> context = mockStatic(Context.class)) {
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            ReentrantLock reentrantLock = Threading.lock(PeerSocketHandler.class);
-            threading.when(() -> Threading.lock(PeerSocketHandler.class)).thenReturn(reentrantLock);
-            ReentrantLock reentrantLock2 = Threading.lock(Peer.class);
-            threading.when(() -> Threading.lock(Peer.class)).thenReturn(reentrantLock2);
             context.when(() -> Context.get()).thenReturn(contextMock);
             timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("return_of_dateTimeFormat1");
             target = new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0);
@@ -1171,8 +1166,6 @@ public class PeerSapientGeneratedJunit4Test {
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerSocketHandler.class), atLeast(1));
-            threading.verify(() -> Threading.lock(Peer.class), atLeast(1));
             context.verify(() -> Context.get(), atLeast(1));
             timeUtils.verify(() -> TimeUtils.dateTimeFormat((Instant) any()));
             verify(localServicesMock).hasAny();
@@ -2005,7 +1998,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${ece6878e-afc0-3ce8-abef-70e1206fb9ae}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.isCancelled, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processMessageWhenParamsNotAllowEmptyPeerChain() throws Exception {
         /* Branches:
@@ -2042,18 +2035,13 @@ public class PeerSapientGeneratedJunit4Test {
         Block blockMock = mock(Block.class);
         VersionMessage versionMessageMock = mock(VersionMessage.class);
         PeerAddress peerAddressMock = mock(PeerAddress.class);
-        try (MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+        try (MockedStatic<Context> context = mockStatic(Context.class)) {
             doReturn(servicesMock).when(peerVersionMessageMock).services();
             doReturn(true).when(servicesMock).anyOf(1025L);
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            ReentrantLock reentrantLock = Threading.lock(PeerSocketHandler.class);
-            threading.when(() -> Threading.lock(PeerSocketHandler.class)).thenReturn(reentrantLock);
-            ReentrantLock reentrantLock2 = Threading.lock(Peer.class);
-            threading.when(() -> Threading.lock(Peer.class)).thenReturn(reentrantLock2);
             context.when(() -> Context.get()).thenReturn(contextMock);
             target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
@@ -2067,8 +2055,6 @@ public class PeerSapientGeneratedJunit4Test {
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerSocketHandler.class), atLeast(1));
-            threading.verify(() -> Threading.lock(Peer.class), atLeast(1));
             context.verify(() -> Context.get(), atLeast(1));
             verify(paramsMock).allowEmptyPeerChain();
             verify(target).close();
@@ -2128,7 +2114,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${5b3aea89-2bee-3358-bb5d-604b04151159}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.isCancelled, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processMessageWhenServicesNotHasRequiredServices() throws Exception {
         /* Branches:
@@ -2169,8 +2155,7 @@ public class PeerSapientGeneratedJunit4Test {
         VersionMessage versionMessageMock = mock(VersionMessage.class);
         PeerAddress peerAddressMock = mock(PeerAddress.class);
         try (MockedStatic<Services> services = mockStatic(Services.class);
-             MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+             MockedStatic<Context> context = mockStatic(Context.class)) {
             doReturn(servicesMock).when(peerVersionMessageMock).services();
             doReturn(true).when(servicesMock).anyOf(1025L);
             doReturn(false).when(servicesMock).has(0L);
@@ -2179,10 +2164,6 @@ public class PeerSapientGeneratedJunit4Test {
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            ReentrantLock reentrantLock = Threading.lock(PeerSocketHandler.class);
-            threading.when(() -> Threading.lock(PeerSocketHandler.class)).thenReturn(reentrantLock);
-            ReentrantLock reentrantLock2 = Threading.lock(Peer.class);
-            threading.when(() -> Threading.lock(Peer.class)).thenReturn(reentrantLock2);
             context.when(() -> Context.get()).thenReturn(contextMock);
             services.when(() -> Services.of(0L)).thenReturn(servicesMock3);
             target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
@@ -2199,8 +2180,6 @@ public class PeerSapientGeneratedJunit4Test {
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerSocketHandler.class), atLeast(1));
-            threading.verify(() -> Threading.lock(Peer.class), atLeast(1));
             context.verify(() -> Context.get(), atLeast(1));
             services.verify(() -> Services.of(0L), atLeast(1));
             verify(paramsMock).allowEmptyPeerChain();
@@ -2322,7 +2301,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${cd9615b4-d7ff-30bc-89a6-21f7ac1d1f80}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.isCancelled, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processMessageWhenServicesHasServicesNODE_BITCOIN_CASH() throws Exception {
         /* Branches:
@@ -2357,33 +2336,23 @@ public class PeerSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         VersionMessage peerVersionMessageMock = mock(VersionMessage.class);
         Services servicesMock = mock(Services.class);
-        Services servicesMock2 = mock(Services.class);
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
         Block blockMock = mock(Block.class);
-        Services servicesMock3 = mock(Services.class, "processVersionMessage_services3");
         VersionMessage versionMessageMock = mock(VersionMessage.class);
         PeerAddress peerAddressMock = mock(PeerAddress.class);
-        try (MockedStatic<Services> services = mockStatic(Services.class);
-             MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+        try (MockedStatic<Context> context = mockStatic(Context.class)) {
             doReturn(servicesMock).when(peerVersionMessageMock).services();
             doReturn(true).when(servicesMock).anyOf(1025L);
-            doReturn(false).when(servicesMock).has(0L);
-            peerVersionMessageMock.localServices = servicesMock2;
+            doReturn(true).when(servicesMock).has(0L);
+            doReturn(true).when(servicesMock).has(32L);
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            ReentrantLock reentrantLock = Threading.lock(PeerSocketHandler.class);
-            threading.when(() -> Threading.lock(PeerSocketHandler.class)).thenReturn(reentrantLock);
-            ReentrantLock reentrantLock2 = Threading.lock(Peer.class);
-            threading.when(() -> Threading.lock(Peer.class)).thenReturn(reentrantLock2);
             context.when(() -> Context.get()).thenReturn(contextMock);
-            services.when(() -> Services.of(0L)).thenReturn(servicesMock3);
             target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(true).when(paramsMock).allowEmptyPeerChain();
-            doReturn(0L).when(servicesMock2).bits();
             doNothing().when(target).close();
             //Act Statement(s)
             target.processMessage(peerVersionMessageMock);
@@ -2391,21 +2360,18 @@ public class PeerSapientGeneratedJunit4Test {
             verify(peerVersionMessageMock).services();
             verify(servicesMock).anyOf(1025L);
             verify(servicesMock).has(0L);
+            verify(servicesMock).has(32L);
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerSocketHandler.class), atLeast(1));
-            threading.verify(() -> Threading.lock(Peer.class), atLeast(1));
             context.verify(() -> Context.get(), atLeast(1));
-            services.verify(() -> Services.of(0L), atLeast(1));
             verify(paramsMock).allowEmptyPeerChain();
-            verify(servicesMock2).bits();
             verify(target).close();
         }
     }
 
     //Sapient generated method id: ${8ad35063-b1b2-3417-bead-2683c1e71970}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.isCancelled, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processMessageWhenPeerVersionMessageBestHeightLessThan0ThrowsProtocolException() throws Exception {
         /* Branches:
@@ -2445,39 +2411,38 @@ public class PeerSapientGeneratedJunit4Test {
         Block blockMock = mock(Block.class);
         VersionMessage versionMessageMock = mock(VersionMessage.class);
         PeerAddress peerAddressMock = mock(PeerAddress.class);
-        try (MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+        try (MockedStatic<Context> context = mockStatic(Context.class)) {
             doReturn(servicesMock).when(peerVersionMessageMock).services();
             doReturn(false).when(servicesMock).anyOf(1025L);
+            doReturn(false).when(servicesMock).has(0L);
+            doReturn(false).when(servicesMock).has(32L);
+            peerVersionMessageMock.bestHeight = 0L;
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            ReentrantLock reentrantLock = Threading.lock(PeerSocketHandler.class);
-            threading.when(() -> Threading.lock(PeerSocketHandler.class)).thenReturn(reentrantLock);
-            ReentrantLock reentrantLock2 = Threading.lock(Peer.class);
-            threading.when(() -> Threading.lock(Peer.class)).thenReturn(reentrantLock2);
             context.when(() -> Context.get()).thenReturn(contextMock);
-            target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
+            target = new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doNothing().when(target).close();
+            doReturn(false).when(paramsMock).allowEmptyPeerChain();
+            thrown.expect(ProtocolException.class);
             //Act Statement(s)
             target.processMessage(peerVersionMessageMock);
             //Assert statement(s)
             verify(peerVersionMessageMock).services();
             verify(servicesMock).anyOf(1025L);
+            verify(servicesMock).has(0L);
+            verify(servicesMock).has(32L);
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerSocketHandler.class), atLeast(1));
-            threading.verify(() -> Threading.lock(Peer.class), atLeast(1));
             context.verify(() -> Context.get(), atLeast(1));
-            verify(target).close();
+            verify(paramsMock).allowEmptyPeerChain();
         }
     }
 
     //Sapient generated method id: ${7f102a0b-567e-3678-a40e-b0b5121edb2b}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.isCancelled, CompletableFuture.isDone, CompletableFuture.complete) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processMessageWhenLogIsDebugEnabled() throws Exception {
         /* Branches:
@@ -2514,50 +2479,42 @@ public class PeerSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         VersionMessage peerVersionMessageMock = mock(VersionMessage.class);
         Services servicesMock = mock(Services.class);
-        Services servicesMock2 = mock(Services.class);
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
         Block blockMock = mock(Block.class);
-        Services servicesMock3 = mock(Services.class, "processVersionMessage_services3");
         VersionMessage versionMessageMock = mock(VersionMessage.class);
         PeerAddress peerAddressMock = mock(PeerAddress.class);
-        try (MockedStatic<Services> services = mockStatic(Services.class);
-             MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+        ListenableCompletableFuture<Void> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
+        ListenableCompletableFuture<Void> listenableCompletableFutureMock2 = mock(ListenableCompletableFuture.class);
+        try (MockedStatic<Context> context = mockStatic(Context.class)) {
             doReturn(servicesMock).when(peerVersionMessageMock).services();
             doReturn(true).when(servicesMock).anyOf(1025L);
-            doReturn(false).when(servicesMock).has(0L);
-            peerVersionMessageMock.localServices = servicesMock2;
+            doReturn(true).when(servicesMock).has(0L);
+            doReturn(false).when(servicesMock).has(32L);
+            peerVersionMessageMock.bestHeight = 1L;
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            ReentrantLock reentrantLock = Threading.lock(PeerSocketHandler.class);
-            threading.when(() -> Threading.lock(PeerSocketHandler.class)).thenReturn(reentrantLock);
-            ReentrantLock reentrantLock2 = Threading.lock(Peer.class);
-            threading.when(() -> Threading.lock(Peer.class)).thenReturn(reentrantLock2);
             context.when(() -> Context.get()).thenReturn(contextMock);
-            services.when(() -> Services.of(0L)).thenReturn(servicesMock3);
             target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(true).when(paramsMock).allowEmptyPeerChain();
-            doReturn(0L).when(servicesMock2).bits();
-            doNothing().when(target).close();
+            doReturn(listenableCompletableFutureMock).when(target).sendMessage((SendAddrV2Message) any());
+            doReturn(listenableCompletableFutureMock2).when(target).sendMessage((VersionAck) any());
             //Act Statement(s)
             target.processMessage(peerVersionMessageMock);
             //Assert statement(s)
             verify(peerVersionMessageMock).services();
             verify(servicesMock).anyOf(1025L);
             verify(servicesMock).has(0L);
+            verify(servicesMock).has(32L);
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerSocketHandler.class), atLeast(1));
-            threading.verify(() -> Threading.lock(Peer.class), atLeast(1));
             context.verify(() -> Context.get(), atLeast(1));
-            services.verify(() -> Services.of(0L), atLeast(1));
             verify(paramsMock).allowEmptyPeerChain();
-            verify(servicesMock2).bits();
-            verify(target).close();
+            verify(target).sendMessage((SendAddrV2Message) any());
+            verify(target).sendMessage((VersionAck) any());
         }
     }
 
@@ -2793,8 +2750,7 @@ public class PeerSapientGeneratedJunit4Test {
         VersionMessage versionMessageMock = mock(VersionMessage.class);
         PeerAddress peerAddressMock = mock(PeerAddress.class);
         try (MockedStatic<Transaction> transaction = mockStatic(Transaction.class);
-             MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+             MockedStatic<Context> context = mockStatic(Context.class)) {
             doReturn(transactionConfidenceMock).when(txMock).getConfidence();
             doNothing().when(transactionConfidenceMock).maybeSetSourceToNetwork();
             doReturn(sha256HashMock, sha256HashMock2).when(txMock).getTxId();
@@ -2802,10 +2758,6 @@ public class PeerSapientGeneratedJunit4Test {
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            ReentrantLock reentrantLock = Threading.lock(PeerSocketHandler.class);
-            threading.when(() -> Threading.lock(PeerSocketHandler.class)).thenReturn(reentrantLock);
-            ReentrantLock reentrantLock2 = Threading.lock(Peer.class);
-            threading.when(() -> Threading.lock(Peer.class)).thenReturn(reentrantLock2);
             context.when(() -> Context.get()).thenReturn(contextMock);
             transaction.when(() -> Transaction.verify(networkMock, txMock)).thenAnswer((Answer<Void>) invocation -> null);
             target = new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0);
@@ -2820,8 +2772,6 @@ public class PeerSapientGeneratedJunit4Test {
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerSocketHandler.class), atLeast(1));
-            threading.verify(() -> Threading.lock(Peer.class), atLeast(1));
             context.verify(() -> Context.get(), atLeast(1));
             transaction.verify(() -> Transaction.verify(networkMock, txMock), atLeast(1));
             verify(paramsMock).network();
@@ -2936,7 +2886,7 @@ public class PeerSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Transaction rootTxMock = mock(Transaction.class);
-        TransactionInput transactionInputMock = mock(TransactionInput.class);
+        Transaction transactionMock = mock(Transaction.class);
         TransactionOutPoint transactionOutPointMock = mock(TransactionOutPoint.class);
         Sha256Hash sha256HashMock = mock(Sha256Hash.class);
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
@@ -2947,10 +2897,11 @@ public class PeerSapientGeneratedJunit4Test {
         ListenableCompletableFuture<Void> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
         try (MockedStatic<FutureUtils> futureUtils = mockStatic(FutureUtils.class);
              MockedStatic<Context> context = mockStatic(Context.class)) {
+            byte[] byteArray = new byte[]{};
+            TransactionInput transactionInput = new TransactionInput(transactionMock, byteArray, transactionOutPointMock);
             List<TransactionInput> transactionInputList = new ArrayList<>();
-            transactionInputList.add(transactionInputMock);
+            transactionInputList.add(transactionInput);
             doReturn(transactionInputList).when(rootTxMock).getInputs();
-            doReturn(transactionOutPointMock).when(transactionInputMock).getOutpoint();
             doReturn(sha256HashMock).when(transactionOutPointMock).hash();
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
@@ -2971,7 +2922,6 @@ public class PeerSapientGeneratedJunit4Test {
             //TODO: Please implement equals method in CompletableFuture for verification to succeed or you need to adjust respective assertion statements
             assertThat(result, equalTo(completableFuture2));
             verify(rootTxMock).getInputs();
-            verify(transactionInputMock).getOutpoint();
             verify(transactionOutPointMock).hash();
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
@@ -2997,7 +2947,7 @@ public class PeerSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Transaction rootTxMock = mock(Transaction.class);
-        TransactionInput transactionInputMock = mock(TransactionInput.class);
+        Transaction transactionMock = mock(Transaction.class);
         TransactionOutPoint transactionOutPointMock = mock(TransactionOutPoint.class);
         Sha256Hash sha256HashMock = mock(Sha256Hash.class);
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
@@ -3008,10 +2958,11 @@ public class PeerSapientGeneratedJunit4Test {
         ListenableCompletableFuture<Void> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
         try (MockedStatic<FutureUtils> futureUtils = mockStatic(FutureUtils.class);
              MockedStatic<Context> context = mockStatic(Context.class)) {
+            byte[] byteArray = new byte[]{};
+            TransactionInput transactionInput = new TransactionInput(transactionMock, byteArray, transactionOutPointMock);
             List<TransactionInput> transactionInputList = new ArrayList<>();
-            transactionInputList.add(transactionInputMock);
+            transactionInputList.add(transactionInput);
             doReturn(transactionInputList).when(rootTxMock).getInputs();
-            doReturn(transactionOutPointMock).when(transactionInputMock).getOutpoint();
             doReturn(sha256HashMock).when(transactionOutPointMock).hash();
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
@@ -3032,7 +2983,6 @@ public class PeerSapientGeneratedJunit4Test {
             //TODO: Please implement equals method in CompletableFuture for verification to succeed or you need to adjust respective assertion statements
             assertThat(result, equalTo(completableFuture2));
             verify(rootTxMock).getInputs();
-            verify(transactionInputMock).getOutpoint();
             verify(transactionOutPointMock).hash();
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
@@ -3059,7 +3009,7 @@ public class PeerSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Transaction rootTxMock = mock(Transaction.class);
-        TransactionInput transactionInputMock = mock(TransactionInput.class);
+        Transaction transactionMock = mock(Transaction.class);
         TransactionOutPoint transactionOutPointMock = mock(TransactionOutPoint.class);
         Sha256Hash sha256HashMock = mock(Sha256Hash.class);
         Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
@@ -3071,10 +3021,11 @@ public class PeerSapientGeneratedJunit4Test {
         ListenableCompletableFuture<Void> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
         try (MockedStatic<FutureUtils> futureUtils = mockStatic(FutureUtils.class);
              MockedStatic<Context> context = mockStatic(Context.class)) {
+            byte[] byteArray = new byte[]{};
+            TransactionInput transactionInput = new TransactionInput(transactionMock, byteArray, transactionOutPointMock);
             List<TransactionInput> transactionInputList = new ArrayList<>();
-            transactionInputList.add(transactionInputMock);
+            transactionInputList.add(transactionInput);
             doReturn(transactionInputList).when(rootTxMock).getInputs();
-            doReturn(transactionOutPointMock).when(transactionInputMock).getOutpoint();
             doReturn(sha256HashMock).when(transactionOutPointMock).hash();
             doReturn(sha256HashMock2).when(rootTxMock).getTxId();
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
@@ -3096,7 +3047,6 @@ public class PeerSapientGeneratedJunit4Test {
             //TODO: Please implement equals method in CompletableFuture for verification to succeed or you need to adjust respective assertion statements
             assertThat(result, equalTo(completableFuture2));
             verify(rootTxMock).getInputs();
-            verify(transactionInputMock).getOutpoint();
             verify(transactionOutPointMock).hash();
             verify(rootTxMock).getTxId();
             verify(paramsMock).getDefaultSerializer();
@@ -3469,8 +3419,7 @@ public class PeerSapientGeneratedJunit4Test {
         Block blockMock2 = mock(Block.class);
         VersionMessage versionMessageMock = mock(VersionMessage.class);
         PeerAddress peerAddressMock = mock(PeerAddress.class);
-        try (MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+        try (MockedStatic<Context> context = mockStatic(Context.class)) {
             doReturn(sha256HashMock).when(mMock).getHash();
             doReturn(blockMock).when(mMock).getBlockHeader();
             doReturn(sha256HashMock2).when(blockMock).getHash();
@@ -3478,10 +3427,6 @@ public class PeerSapientGeneratedJunit4Test {
             doReturn(blockMock2).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock2).time();
-            ReentrantLock reentrantLock = Threading.lock(PeerSocketHandler.class);
-            threading.when(() -> Threading.lock(PeerSocketHandler.class)).thenReturn(reentrantLock);
-            ReentrantLock reentrantLock2 = Threading.lock(Peer.class);
-            threading.when(() -> Threading.lock(Peer.class)).thenReturn(reentrantLock2);
             context.when(() -> Context.get()).thenReturn(contextMock);
             target = new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
@@ -3496,8 +3441,6 @@ public class PeerSapientGeneratedJunit4Test {
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock2).time();
-            threading.verify(() -> Threading.lock(PeerSocketHandler.class), atLeast(1));
-            threading.verify(() -> Threading.lock(Peer.class), atLeast(1));
             context.verify(() -> Context.get(), atLeast(1));
         }
     }
@@ -3668,7 +3611,7 @@ public class PeerSapientGeneratedJunit4Test {
     //Sapient generated method id: ${5896ca6d-c10c-3cbb-8641-9d05c47a64c2}
     @Ignore()
     @Test()
-    public void processInvWhenSwitchItemTypeCaseDefaultThrowsIllegalStateException() throws BlockStoreException, IOException {
+    public void processInvWhenSwitchItemTypeCaseDefaultThrowsIllegalStateException() {
         /* Branches:
          * (for-each(items)) : true
          * (switch(item.type) = default) : true
@@ -3683,11 +3626,7 @@ public class PeerSapientGeneratedJunit4Test {
         Block blockMock = mock(Block.class);
         VersionMessage versionMessageMock = mock(VersionMessage.class);
         PeerAddress peerAddressMock = mock(PeerAddress.class);
-        Services servicesMock = mock(Services.class);
-        TxConfidenceTable txConfidenceTableMock = mock(TxConfidenceTable.class);
-        TransactionConfidence transactionConfidenceMock = mock(TransactionConfidence.class);
-        try (MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+        try (MockedStatic<Context> context = mockStatic(Context.class)) {
             List<InventoryItem> inventoryItemList = new ArrayList<>();
             inventoryItemList.add(inventoryItemMock);
             doReturn(inventoryItemList).when(invMock).getItems();
@@ -3695,18 +3634,12 @@ public class PeerSapientGeneratedJunit4Test {
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            ReentrantLock reentrantLock = Threading.lock(PeerSocketHandler.class);
-            threading.when(() -> Threading.lock(PeerSocketHandler.class)).thenReturn(reentrantLock);
-            ReentrantLock reentrantLock2 = Threading.lock(Peer.class);
-            threading.when(() -> Threading.lock(Peer.class)).thenReturn(reentrantLock2);
             context.when(() -> Context.get()).thenReturn(contextMock);
             target = new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(servicesMock).when(vPeerVersionMessageMock).services();
-            doReturn(true).when(servicesMock).has(8L);
-            doReturn(txConfidenceTableMock).when(contextMock).getConfidenceTable();
-            doReturn(transactionConfidenceMock).when(txConfidenceTableMock).seen((Sha256Hash) null, peerAddressMock);
-            doReturn(2).when(transactionConfidenceMock).numBroadcastPeers();
+            IllegalStateException illegalStateException = new IllegalStateException("Not implemented: WITNESS_FILTERED_BLOCK");
+            thrown.expect(IllegalStateException.class);
+            thrown.expectMessage(illegalStateException.getMessage());
             //Act Statement(s)
             target.processInv(invMock);
             //Assert statement(s)
@@ -3714,14 +3647,7 @@ public class PeerSapientGeneratedJunit4Test {
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerSocketHandler.class), atLeast(1));
-            threading.verify(() -> Threading.lock(Peer.class), atLeast(1));
             context.verify(() -> Context.get(), atLeast(1));
-            verify(vPeerVersionMessageMock).services();
-            verify(servicesMock).has(8L);
-            verify(contextMock).getConfidenceTable();
-            verify(txConfidenceTableMock).seen((Sha256Hash) null, peerAddressMock);
-            verify(transactionConfidenceMock).numBroadcastPeers();
         }
     }
 
@@ -3754,8 +3680,7 @@ public class PeerSapientGeneratedJunit4Test {
         Services servicesMock = mock(Services.class);
         TxConfidenceTable txConfidenceTableMock = mock(TxConfidenceTable.class);
         TransactionConfidence transactionConfidenceMock = mock(TransactionConfidence.class);
-        try (MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+        try (MockedStatic<Context> context = mockStatic(Context.class)) {
             List<InventoryItem> inventoryItemList = new ArrayList<>();
             inventoryItemList.add(inventoryItemMock);
             doReturn(inventoryItemList).when(invMock).getItems();
@@ -3763,10 +3688,6 @@ public class PeerSapientGeneratedJunit4Test {
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            ReentrantLock reentrantLock = Threading.lock(PeerSocketHandler.class);
-            threading.when(() -> Threading.lock(PeerSocketHandler.class)).thenReturn(reentrantLock);
-            ReentrantLock reentrantLock2 = Threading.lock(Peer.class);
-            threading.when(() -> Threading.lock(Peer.class)).thenReturn(reentrantLock2);
             context.when(() -> Context.get()).thenReturn(contextMock);
             target = new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
@@ -3782,8 +3703,6 @@ public class PeerSapientGeneratedJunit4Test {
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerSocketHandler.class), atLeast(1));
-            threading.verify(() -> Threading.lock(Peer.class), atLeast(1));
             context.verify(() -> Context.get(), atLeast(1));
             verify(vPeerVersionMessageMock).services();
             verify(servicesMock).has(8L);
@@ -3823,8 +3742,7 @@ public class PeerSapientGeneratedJunit4Test {
         Services servicesMock = mock(Services.class);
         TxConfidenceTable txConfidenceTableMock = mock(TxConfidenceTable.class);
         TransactionConfidence transactionConfidenceMock = mock(TransactionConfidence.class);
-        try (MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+        try (MockedStatic<Context> context = mockStatic(Context.class)) {
             List<InventoryItem> inventoryItemList = new ArrayList<>();
             inventoryItemList.add(inventoryItemMock);
             doReturn(inventoryItemList).when(invMock).getItems();
@@ -3832,10 +3750,6 @@ public class PeerSapientGeneratedJunit4Test {
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            ReentrantLock reentrantLock = Threading.lock(PeerSocketHandler.class);
-            threading.when(() -> Threading.lock(PeerSocketHandler.class)).thenReturn(reentrantLock);
-            ReentrantLock reentrantLock2 = Threading.lock(Peer.class);
-            threading.when(() -> Threading.lock(Peer.class)).thenReturn(reentrantLock2);
             context.when(() -> Context.get()).thenReturn(contextMock);
             target = new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
@@ -3852,8 +3766,6 @@ public class PeerSapientGeneratedJunit4Test {
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerSocketHandler.class), atLeast(1));
-            threading.verify(() -> Threading.lock(Peer.class), atLeast(1));
             context.verify(() -> Context.get(), atLeast(1));
             verify(vPeerVersionMessageMock).services();
             verify(servicesMock).has(8L);
@@ -3897,8 +3809,7 @@ public class PeerSapientGeneratedJunit4Test {
         TxConfidenceTable txConfidenceTableMock = mock(TxConfidenceTable.class);
         TransactionConfidence transactionConfidenceMock = mock(TransactionConfidence.class);
         ListenableCompletableFuture<Void> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
-        try (MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+        try (MockedStatic<Context> context = mockStatic(Context.class)) {
             List<InventoryItem> inventoryItemList = new ArrayList<>();
             inventoryItemList.add(inventoryItemMock);
             doReturn(inventoryItemList).when(invMock).getItems();
@@ -3906,10 +3817,6 @@ public class PeerSapientGeneratedJunit4Test {
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            ReentrantLock reentrantLock = Threading.lock(PeerSocketHandler.class);
-            threading.when(() -> Threading.lock(PeerSocketHandler.class)).thenReturn(reentrantLock);
-            ReentrantLock reentrantLock2 = Threading.lock(Peer.class);
-            threading.when(() -> Threading.lock(Peer.class)).thenReturn(reentrantLock2);
             context.when(() -> Context.get()).thenReturn(contextMock);
             target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
@@ -3927,8 +3834,6 @@ public class PeerSapientGeneratedJunit4Test {
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerSocketHandler.class), atLeast(1));
-            threading.verify(() -> Threading.lock(Peer.class), atLeast(1));
             context.verify(() -> Context.get(), atLeast(1));
             verify(vPeerVersionMessageMock).services();
             verify(servicesMock).has(8L);
@@ -3971,10 +3876,7 @@ public class PeerSapientGeneratedJunit4Test {
         VersionMessage versionMessageMock = mock(VersionMessage.class);
         PeerAddress peerAddressMock = mock(PeerAddress.class);
         Services servicesMock = mock(Services.class);
-        TxConfidenceTable txConfidenceTableMock = mock(TxConfidenceTable.class);
-        TransactionConfidence transactionConfidenceMock = mock(TransactionConfidence.class);
-        try (MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+        try (MockedStatic<Context> context = mockStatic(Context.class)) {
             List<InventoryItem> inventoryItemList = new ArrayList<>();
             inventoryItemList.add(inventoryItemMock);
             doReturn(inventoryItemList).when(invMock).getItems();
@@ -3982,18 +3884,11 @@ public class PeerSapientGeneratedJunit4Test {
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            ReentrantLock reentrantLock = Threading.lock(PeerSocketHandler.class);
-            threading.when(() -> Threading.lock(PeerSocketHandler.class)).thenReturn(reentrantLock);
-            ReentrantLock reentrantLock2 = Threading.lock(Peer.class);
-            threading.when(() -> Threading.lock(Peer.class)).thenReturn(reentrantLock2);
             context.when(() -> Context.get()).thenReturn(contextMock);
             target = new Peer(paramsMock, versionMessageMock, peerAddressMock, (AbstractBlockChain) null, 0L, 0);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(servicesMock).when(vPeerVersionMessageMock).services();
             doReturn(true).when(servicesMock).has(8L);
-            doReturn(txConfidenceTableMock).when(contextMock).getConfidenceTable();
-            doReturn(transactionConfidenceMock).when(txConfidenceTableMock).seen((Sha256Hash) null, peerAddressMock);
-            doReturn(2).when(transactionConfidenceMock).numBroadcastPeers();
             //Act Statement(s)
             target.processInv(invMock);
             //Assert statement(s)
@@ -4001,14 +3896,9 @@ public class PeerSapientGeneratedJunit4Test {
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerSocketHandler.class), atLeast(1));
-            threading.verify(() -> Threading.lock(Peer.class), atLeast(1));
             context.verify(() -> Context.get(), atLeast(1));
             verify(vPeerVersionMessageMock).services();
             verify(servicesMock).has(8L);
-            verify(contextMock).getConfidenceTable();
-            verify(txConfidenceTableMock).seen((Sha256Hash) null, peerAddressMock);
-            verify(transactionConfidenceMock).numBroadcastPeers();
         }
     }
 
@@ -4088,7 +3978,7 @@ public class PeerSapientGeneratedJunit4Test {
     //Sapient generated method id: ${06044dc8-999c-3e4b-9664-d01cc9e188e5}
     @Ignore()
     @Test()
-    public void processInvWhenNotUseFilteredBlocksAndGetDataItemsNotIsEmptyAndNotPingAfterGetData() throws BlockStoreException, IOException {
+    public void processInvWhenNotUseFilteredBlocksAndGetDataItemsNotIsEmptyAndNotPingAfterGetData() throws NotYetConnectedException, BlockStoreException, IOException {
         /* Branches:
          * (for-each(items)) : true
          * (switch(item.type) = BLOCK) : true
@@ -4123,11 +4013,10 @@ public class PeerSapientGeneratedJunit4Test {
         Block blockMock = mock(Block.class);
         VersionMessage versionMessageMock = mock(VersionMessage.class);
         PeerAddress peerAddressMock = mock(PeerAddress.class);
+        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
         Services servicesMock = mock(Services.class);
-        TxConfidenceTable txConfidenceTableMock = mock(TxConfidenceTable.class);
-        TransactionConfidence transactionConfidenceMock = mock(TransactionConfidence.class);
-        try (MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+        ListenableCompletableFuture<Void> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
+        try (MockedStatic<Context> context = mockStatic(Context.class)) {
             List<InventoryItem> inventoryItemList = new ArrayList<>();
             inventoryItemList.add(inventoryItemMock);
             doReturn(inventoryItemList).when(invMock).getItems();
@@ -4135,18 +4024,14 @@ public class PeerSapientGeneratedJunit4Test {
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            ReentrantLock reentrantLock = Threading.lock(PeerSocketHandler.class);
-            threading.when(() -> Threading.lock(PeerSocketHandler.class)).thenReturn(reentrantLock);
-            ReentrantLock reentrantLock2 = Threading.lock(Peer.class);
-            threading.when(() -> Threading.lock(Peer.class)).thenReturn(reentrantLock2);
+            doReturn(70001).when(vPeerVersionMessageMock).clientVersion();
             context.when(() -> Context.get()).thenReturn(contextMock);
-            target = new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0);
+            target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            doReturn(false).when(blockChainMock).isOrphan(sha256HashMock);
             doReturn(servicesMock).when(vPeerVersionMessageMock).services();
             doReturn(true).when(servicesMock).has(8L);
-            doReturn(txConfidenceTableMock).when(contextMock).getConfidenceTable();
-            doReturn(transactionConfidenceMock).when(txConfidenceTableMock).seen((Sha256Hash) null, peerAddressMock);
-            doReturn(2).when(transactionConfidenceMock).numBroadcastPeers();
+            doReturn(listenableCompletableFutureMock).when(target).sendMessage((GetDataMessage) any());
             //Act Statement(s)
             target.processInv(invMock);
             //Assert statement(s)
@@ -4154,21 +4039,19 @@ public class PeerSapientGeneratedJunit4Test {
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerSocketHandler.class), atLeast(1));
-            threading.verify(() -> Threading.lock(Peer.class), atLeast(1));
+            verify(vPeerVersionMessageMock).clientVersion();
             context.verify(() -> Context.get(), atLeast(1));
+            verify(blockChainMock, times(2)).isOrphan(sha256HashMock);
             verify(vPeerVersionMessageMock).services();
             verify(servicesMock).has(8L);
-            verify(contextMock).getConfidenceTable();
-            verify(txConfidenceTableMock).seen((Sha256Hash) null, peerAddressMock);
-            verify(transactionConfidenceMock).numBroadcastPeers();
+            verify(target).sendMessage((GetDataMessage) any());
         }
     }
 
     //Sapient generated method id: ${fc2449ac-d890-3384-8f69-1b444a0f7f91}
     @Ignore()
     @Test()
-    public void processInvWhenIsBloomFilteringSupportedNotVPeerVersionMessageAndGetDataItemsNotIsEmptyAndNotPingAfterGetData4() throws BlockStoreException, IOException {
+    public void processInvWhenIsBloomFilteringSupportedNotVPeerVersionMessageAndGetDataItemsNotIsEmptyAndNotPingAfterGetData4() throws NotYetConnectedException, BlockStoreException, IOException {
         /* Branches:
          * (for-each(items)) : true
          * (switch(item.type) = BLOCK) : true
@@ -4201,13 +4084,13 @@ public class PeerSapientGeneratedJunit4Test {
         InventoryItem inventoryItemMock = mock(InventoryItem.class);
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
         Block blockMock = mock(Block.class);
+        Services servicesMock = mock(Services.class);
         VersionMessage versionMessageMock = mock(VersionMessage.class);
         PeerAddress peerAddressMock = mock(PeerAddress.class);
-        Services servicesMock = mock(Services.class);
-        TxConfidenceTable txConfidenceTableMock = mock(TxConfidenceTable.class);
-        TransactionConfidence transactionConfidenceMock = mock(TransactionConfidence.class);
-        try (MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
+        Services servicesMock2 = mock(Services.class);
+        ListenableCompletableFuture<Void> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
+        try (MockedStatic<Context> context = mockStatic(Context.class)) {
             List<InventoryItem> inventoryItemList = new ArrayList<>();
             inventoryItemList.add(inventoryItemMock);
             doReturn(inventoryItemList).when(invMock).getItems();
@@ -4215,18 +4098,15 @@ public class PeerSapientGeneratedJunit4Test {
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            ReentrantLock reentrantLock = Threading.lock(PeerSocketHandler.class);
-            threading.when(() -> Threading.lock(PeerSocketHandler.class)).thenReturn(reentrantLock);
-            ReentrantLock reentrantLock2 = Threading.lock(Peer.class);
-            threading.when(() -> Threading.lock(Peer.class)).thenReturn(reentrantLock2);
+            doReturn(70011).when(vPeerVersionMessageMock).clientVersion();
+            doReturn(false).when(servicesMock).has(4L);
             context.when(() -> Context.get()).thenReturn(contextMock);
-            target = new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0);
+            target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(servicesMock).when(vPeerVersionMessageMock).services();
-            doReturn(true).when(servicesMock).has(8L);
-            doReturn(txConfidenceTableMock).when(contextMock).getConfidenceTable();
-            doReturn(transactionConfidenceMock).when(txConfidenceTableMock).seen((Sha256Hash) null, peerAddressMock);
-            doReturn(2).when(transactionConfidenceMock).numBroadcastPeers();
+            doReturn(false).when(blockChainMock).isOrphan(sha256HashMock);
+            doReturn(servicesMock2, servicesMock).when(vPeerVersionMessageMock).services();
+            doReturn(true).when(servicesMock2).has(8L);
+            doReturn(listenableCompletableFutureMock).when(target).sendMessage((GetDataMessage) any());
             //Act Statement(s)
             target.processInv(invMock);
             //Assert statement(s)
@@ -4234,21 +4114,20 @@ public class PeerSapientGeneratedJunit4Test {
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerSocketHandler.class), atLeast(1));
-            threading.verify(() -> Threading.lock(Peer.class), atLeast(1));
+            verify(vPeerVersionMessageMock).clientVersion();
+            verify(vPeerVersionMessageMock, times(2)).services();
+            verify(servicesMock).has(4L);
             context.verify(() -> Context.get(), atLeast(1));
-            verify(vPeerVersionMessageMock).services();
-            verify(servicesMock).has(8L);
-            verify(contextMock).getConfidenceTable();
-            verify(txConfidenceTableMock).seen((Sha256Hash) null, peerAddressMock);
-            verify(transactionConfidenceMock).numBroadcastPeers();
+            verify(blockChainMock, times(2)).isOrphan(sha256HashMock);
+            verify(servicesMock2).has(8L);
+            verify(target).sendMessage((GetDataMessage) any());
         }
     }
 
     //Sapient generated method id: ${59bbd185-6b35-3a42-8a43-f31fa3b5611b}
     @Ignore()
     @Test()
-    public void processInvWhenNotUseFilteredBlocksAndGetDataItemsNotIsEmptyAndNotPingAfterGetData2() throws BlockStoreException, IOException {
+    public void processInvWhenNotUseFilteredBlocksAndGetDataItemsNotIsEmptyAndNotPingAfterGetData2() throws NotYetConnectedException, BlockStoreException, IOException {
         /* Branches:
          * (for-each(items)) : true
          * (switch(item.type) = BLOCK) : true
@@ -4282,13 +4161,13 @@ public class PeerSapientGeneratedJunit4Test {
         InventoryItem inventoryItemMock = mock(InventoryItem.class);
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
         Block blockMock = mock(Block.class);
+        Services servicesMock = mock(Services.class);
         VersionMessage versionMessageMock = mock(VersionMessage.class);
         PeerAddress peerAddressMock = mock(PeerAddress.class);
-        Services servicesMock = mock(Services.class);
-        TxConfidenceTable txConfidenceTableMock = mock(TxConfidenceTable.class);
-        TransactionConfidence transactionConfidenceMock = mock(TransactionConfidence.class);
-        try (MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
+        Services servicesMock2 = mock(Services.class);
+        ListenableCompletableFuture<Void> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
+        try (MockedStatic<Context> context = mockStatic(Context.class)) {
             List<InventoryItem> inventoryItemList = new ArrayList<>();
             inventoryItemList.add(inventoryItemMock);
             doReturn(inventoryItemList).when(invMock).getItems();
@@ -4296,18 +4175,15 @@ public class PeerSapientGeneratedJunit4Test {
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            ReentrantLock reentrantLock = Threading.lock(PeerSocketHandler.class);
-            threading.when(() -> Threading.lock(PeerSocketHandler.class)).thenReturn(reentrantLock);
-            ReentrantLock reentrantLock2 = Threading.lock(Peer.class);
-            threading.when(() -> Threading.lock(Peer.class)).thenReturn(reentrantLock2);
+            doReturn(70011).when(vPeerVersionMessageMock).clientVersion();
+            doReturn(true).when(servicesMock).has(4L);
             context.when(() -> Context.get()).thenReturn(contextMock);
-            target = new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0);
+            target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(servicesMock).when(vPeerVersionMessageMock).services();
-            doReturn(true).when(servicesMock).has(8L);
-            doReturn(txConfidenceTableMock).when(contextMock).getConfidenceTable();
-            doReturn(transactionConfidenceMock).when(txConfidenceTableMock).seen((Sha256Hash) null, peerAddressMock);
-            doReturn(2).when(transactionConfidenceMock).numBroadcastPeers();
+            doReturn(false).when(blockChainMock).isOrphan(sha256HashMock);
+            doReturn(servicesMock2, servicesMock).when(vPeerVersionMessageMock).services();
+            doReturn(true).when(servicesMock2).has(8L);
+            doReturn(listenableCompletableFutureMock).when(target).sendMessage((GetDataMessage) any());
             //Act Statement(s)
             target.processInv(invMock);
             //Assert statement(s)
@@ -4315,14 +4191,13 @@ public class PeerSapientGeneratedJunit4Test {
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerSocketHandler.class), atLeast(1));
-            threading.verify(() -> Threading.lock(Peer.class), atLeast(1));
+            verify(vPeerVersionMessageMock).clientVersion();
+            verify(vPeerVersionMessageMock, times(2)).services();
+            verify(servicesMock).has(4L);
             context.verify(() -> Context.get(), atLeast(1));
-            verify(vPeerVersionMessageMock).services();
-            verify(servicesMock).has(8L);
-            verify(contextMock).getConfidenceTable();
-            verify(txConfidenceTableMock).seen((Sha256Hash) null, peerAddressMock);
-            verify(transactionConfidenceMock).numBroadcastPeers();
+            verify(blockChainMock, times(2)).isOrphan(sha256HashMock);
+            verify(servicesMock2).has(8L);
+            verify(target).sendMessage((GetDataMessage) any());
         }
     }
 
@@ -4348,23 +4223,16 @@ public class PeerSapientGeneratedJunit4Test {
         ListenableCompletableFuture<Void> listenableCompletableFutureMock2 = mock(ListenableCompletableFuture.class);
         try (MockedStatic<ListenableCompletableFuture> listenableCompletableFuture = mockStatic(ListenableCompletableFuture.class);
              MockedStatic<GetDataMessage> getDataMessage = mockStatic(GetDataMessage.class);
-             MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+             MockedStatic<Context> context = mockStatic(Context.class)) {
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            ReentrantLock reentrantLock = Threading.lock(PeerSocketHandler.class);
-            threading.when(() -> Threading.lock(PeerSocketHandler.class)).thenReturn(reentrantLock);
-            ReentrantLock reentrantLock2 = Threading.lock(Peer.class);
-            threading.when(() -> Threading.lock(Peer.class)).thenReturn(reentrantLock2);
             context.when(() -> Context.get()).thenReturn(contextMock);
             getDataMessage.when(() -> GetDataMessage.ofBlock(sha256HashMock, true)).thenReturn(getDataMessageMock);
             List<InventoryItem> inventoryItemList = new ArrayList<>();
             inventoryItemList.add(inventoryItemMock);
-            List<InventoryItem> inventoryItemList2 = new ArrayList<>();
-            inventoryItemList2.add(inventoryItemMock);
-            doReturn(inventoryItemList, inventoryItemList2).when(getDataMessageMock).getItems();
+            doReturn(inventoryItemList).when(getDataMessageMock).getItems();
             listenableCompletableFuture.when(() -> ListenableCompletableFuture.of((CompletableFuture) any())).thenReturn(listenableCompletableFutureMock);
             target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
@@ -4376,8 +4244,6 @@ public class PeerSapientGeneratedJunit4Test {
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerSocketHandler.class), atLeast(1));
-            threading.verify(() -> Threading.lock(Peer.class), atLeast(1));
             context.verify(() -> Context.get(), atLeast(1));
             getDataMessage.verify(() -> GetDataMessage.ofBlock(sha256HashMock, true), atLeast(1));
             verify(getDataMessageMock, times(2)).getItems();
@@ -4410,24 +4276,17 @@ public class PeerSapientGeneratedJunit4Test {
         try (MockedStatic<ListenableCompletableFuture> listenableCompletableFuture = mockStatic(ListenableCompletableFuture.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<GetDataMessage> getDataMessage = mockStatic(GetDataMessage.class);
-             MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+             MockedStatic<Context> context = mockStatic(Context.class)) {
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            ReentrantLock reentrantLock = Threading.lock(PeerSocketHandler.class);
-            threading.when(() -> Threading.lock(PeerSocketHandler.class)).thenReturn(reentrantLock);
-            ReentrantLock reentrantLock2 = Threading.lock(Peer.class);
-            threading.when(() -> Threading.lock(Peer.class)).thenReturn(reentrantLock2);
             context.when(() -> Context.get()).thenReturn(contextMock);
             getDataMessage.when(() -> GetDataMessage.ofBlock(sha256HashMock, true)).thenReturn(getDataMessageMock);
             List<InventoryItem> inventoryItemList = new ArrayList<>();
             inventoryItemList.add(inventoryItemMock);
             inventoryItemList.add(inventoryItemMock2);
-            List<InventoryItem> inventoryItemList2 = new ArrayList<>();
-            inventoryItemList2.add(inventoryItemMock);
-            doReturn(inventoryItemList, inventoryItemList2).when(getDataMessageMock).getItems();
+            doReturn(inventoryItemList).when(getDataMessageMock).getItems();
             preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
             listenableCompletableFuture.when(() -> ListenableCompletableFuture.of((CompletableFuture) any())).thenReturn(listenableCompletableFutureMock);
             target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
@@ -4440,8 +4299,6 @@ public class PeerSapientGeneratedJunit4Test {
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerSocketHandler.class), atLeast(1));
-            threading.verify(() -> Threading.lock(Peer.class), atLeast(1));
             context.verify(() -> Context.get(), atLeast(1));
             getDataMessage.verify(() -> GetDataMessage.ofBlock(sha256HashMock, true), atLeast(1));
             verify(getDataMessageMock, times(2)).getItems();
@@ -4474,23 +4331,16 @@ public class PeerSapientGeneratedJunit4Test {
         ListenableCompletableFuture<Void> listenableCompletableFutureMock2 = mock(ListenableCompletableFuture.class);
         try (MockedStatic<ListenableCompletableFuture> listenableCompletableFuture = mockStatic(ListenableCompletableFuture.class);
              MockedStatic<GetDataMessage> getDataMessage = mockStatic(GetDataMessage.class);
-             MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+             MockedStatic<Context> context = mockStatic(Context.class)) {
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            ReentrantLock reentrantLock = Threading.lock(PeerSocketHandler.class);
-            threading.when(() -> Threading.lock(PeerSocketHandler.class)).thenReturn(reentrantLock);
-            ReentrantLock reentrantLock2 = Threading.lock(Peer.class);
-            threading.when(() -> Threading.lock(Peer.class)).thenReturn(reentrantLock2);
             context.when(() -> Context.get()).thenReturn(contextMock);
             getDataMessage.when(() -> GetDataMessage.ofTransaction(sha256HashMock, false)).thenReturn(getDataMessageMock);
             List<InventoryItem> inventoryItemList = new ArrayList<>();
             inventoryItemList.add(inventoryItemMock);
-            List<InventoryItem> inventoryItemList2 = new ArrayList<>();
-            inventoryItemList2.add(inventoryItemMock);
-            doReturn(inventoryItemList, inventoryItemList2).when(getDataMessageMock).getItems();
+            doReturn(inventoryItemList).when(getDataMessageMock).getItems();
             listenableCompletableFuture.when(() -> ListenableCompletableFuture.of((CompletableFuture) any())).thenReturn(listenableCompletableFutureMock);
             target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
@@ -4504,8 +4354,6 @@ public class PeerSapientGeneratedJunit4Test {
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerSocketHandler.class), atLeast(1));
-            threading.verify(() -> Threading.lock(Peer.class), atLeast(1));
             context.verify(() -> Context.get(), atLeast(1));
             getDataMessage.verify(() -> GetDataMessage.ofTransaction(sha256HashMock, false), atLeast(1));
             verify(getDataMessageMock, times(2)).getItems();
@@ -4541,24 +4389,17 @@ public class PeerSapientGeneratedJunit4Test {
         try (MockedStatic<ListenableCompletableFuture> listenableCompletableFuture = mockStatic(ListenableCompletableFuture.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<GetDataMessage> getDataMessage = mockStatic(GetDataMessage.class);
-             MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+             MockedStatic<Context> context = mockStatic(Context.class)) {
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            ReentrantLock reentrantLock = Threading.lock(PeerSocketHandler.class);
-            threading.when(() -> Threading.lock(PeerSocketHandler.class)).thenReturn(reentrantLock);
-            ReentrantLock reentrantLock2 = Threading.lock(Peer.class);
-            threading.when(() -> Threading.lock(Peer.class)).thenReturn(reentrantLock2);
             context.when(() -> Context.get()).thenReturn(contextMock);
             getDataMessage.when(() -> GetDataMessage.ofTransaction(sha256HashMock, false)).thenReturn(getDataMessageMock);
             List<InventoryItem> inventoryItemList = new ArrayList<>();
             inventoryItemList.add(inventoryItemMock);
             inventoryItemList.add(inventoryItemMock2);
-            List<InventoryItem> inventoryItemList2 = new ArrayList<>();
-            inventoryItemList2.add(inventoryItemMock);
-            doReturn(inventoryItemList, inventoryItemList2).when(getDataMessageMock).getItems();
+            doReturn(inventoryItemList).when(getDataMessageMock).getItems();
             preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
             listenableCompletableFuture.when(() -> ListenableCompletableFuture.of((CompletableFuture) any())).thenReturn(listenableCompletableFutureMock);
             target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
@@ -4573,8 +4414,6 @@ public class PeerSapientGeneratedJunit4Test {
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerSocketHandler.class), atLeast(1));
-            threading.verify(() -> Threading.lock(Peer.class), atLeast(1));
             context.verify(() -> Context.get(), atLeast(1));
             getDataMessage.verify(() -> GetDataMessage.ofTransaction(sha256HashMock, false), atLeast(1));
             verify(getDataMessageMock, times(2)).getItems();
@@ -4636,16 +4475,11 @@ public class PeerSapientGeneratedJunit4Test {
         VersionMessage versionMessageMock = mock(VersionMessage.class);
         PeerAddress peerAddressMock = mock(PeerAddress.class);
         Block blockMock2 = mock(Block.class);
-        try (MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class)) {
+        try (MockedStatic<Context> context = mockStatic(Context.class)) {
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            ReentrantLock reentrantLock = Threading.lock(PeerSocketHandler.class);
-            threading.when(() -> Threading.lock(PeerSocketHandler.class)).thenReturn(reentrantLock);
-            ReentrantLock reentrantLock2 = Threading.lock(Peer.class);
-            threading.when(() -> Threading.lock(Peer.class)).thenReturn(reentrantLock2);
             context.when(() -> Context.get()).thenReturn(contextMock);
             target = new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
@@ -4660,8 +4494,6 @@ public class PeerSapientGeneratedJunit4Test {
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerSocketHandler.class), atLeast(1));
-            threading.verify(() -> Threading.lock(Peer.class), atLeast(1));
             context.verify(() -> Context.get(), atLeast(1));
             verify(blockChainMock).getChainHead();
             verify(blockMock2).time();
@@ -4905,7 +4737,7 @@ public class PeerSapientGeneratedJunit4Test {
             target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             CompletableFuture<Duration> completableFuture = new CompletableFuture<>();
-            doReturn(completableFuture).when(target).sendPing(9085018369579877376L);
+            doReturn(completableFuture).when(target).sendPing(8726154096886172672L);
             //Act Statement(s)
             CompletableFuture<Duration> result = target.sendPing();
             //Assert statement(s)
@@ -4914,7 +4746,7 @@ public class PeerSapientGeneratedJunit4Test {
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
             context.verify(() -> Context.get(), atLeast(1));
-            verify(target).sendPing(9085018369579877376L);
+            verify(target).sendPing(8726154096886172672L);
         }
     }
 

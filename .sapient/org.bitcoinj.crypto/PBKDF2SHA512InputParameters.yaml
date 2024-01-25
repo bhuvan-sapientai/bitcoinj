@@ -34,6 +34,7 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path5"
@@ -282,6 +283,7 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path4"
@@ -299,6 +301,7 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path12"
@@ -341,6 +344,7 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path14"
@@ -365,6 +369,7 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path15"
@@ -374,7 +379,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "53C97261A824758D1673FCC417F9E8AB"
+    modelFingerprint: "A6C7B7F45EC9FF77D6C6D8417364568D"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -387,7 +392,7 @@ methods:
     inputParameters:
     - type: "INPUT"
       name: "P"
-      modelFingerprint: "4D61F7501F6F10E86B40D61D47F87A8D"
+      modelFingerprint: "961412FEAAC083CDB5AEFF309FFBFD58"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -395,7 +400,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "P1"
+          value: "<string>"
+        suggestedContent: !<regular>
+          value: "<string>"
         valueType: "java.lang.String"
         uuid: "derive_string1"
         fixed: false
@@ -405,7 +412,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "S"
-      modelFingerprint: "AA5EF507B451A04146504BE7B4463B65"
+      modelFingerprint: "3CEFB97BB60611FE5C40B487EA44BD5C"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -413,7 +420,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "S1"
+          value: "<string>"
+        suggestedContent: !<regular>
+          value: "<string>"
         valueType: "java.lang.String"
         uuid: "derive_string2"
         fixed: false
@@ -614,6 +623,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "DEPENDENCY_TO_THROW_EXCEPTION_NOT_FOUND"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -632,6 +642,7 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path11"
@@ -656,6 +667,7 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path13"
@@ -680,6 +692,7 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path8"
@@ -704,6 +717,7 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -1216,7 +1230,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "3040CB8F0600F3FE719AC7E92FE329EF"
+    modelFingerprint: "5CF80C199FA9D39B92D636F2C6400563"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -1229,7 +1243,7 @@ methods:
     inputParameters:
     - type: "INPUT"
       name: "P"
-      modelFingerprint: "4D61F7501F6F10E86B40D61D47F87A8D"
+      modelFingerprint: "F988B12FBBECDF4F8B9F54C0449CDCE6"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1237,7 +1251,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "P1"
+          value: "password"
+        suggestedContent: !<regular>
+          value: "password"
         valueType: "java.lang.String"
         uuid: "derive_string1"
         fixed: false
@@ -1247,7 +1263,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "S"
-      modelFingerprint: "AA5EF507B451A04146504BE7B4463B65"
+      modelFingerprint: "451AF7AE9D36C28F1ED026557D6BAE5D"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1255,7 +1271,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "S1"
+          value: "salt"
+        suggestedContent: !<regular>
+          value: "salt"
         valueType: "java.lang.String"
         uuid: "derive_string2"
         fixed: false
@@ -1265,7 +1283,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "c"
-      modelFingerprint: "19B32D9D7C21BB17155BA8A7E869D098"
+      modelFingerprint: "383DA45DED240906D641A46A729760D1"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1273,9 +1291,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 2
+          value: 1
         suggestedContent: !<regular>
-          value: 2
+          value: 1
         valueType: "int"
         uuid: "derive_int1"
         fixed: false
@@ -1285,7 +1303,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "dkLen"
-      modelFingerprint: "A824BEBCFA18E6B481C894B3F921267B"
+      modelFingerprint: "2F389A63DC8B048A0D60156AF416E72F"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -1397,7 +1415,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ByteUtils"
-      modelFingerprint: "F59DE86ADE34028BA724544C5E5D5325"
+      modelFingerprint: "53678711E07263629940F298B3A165D9"
       index: 7
       ignored: false
       nestedInLoop: true
@@ -1419,9 +1437,81 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 115
+                  valueType: "byte"
+                  uuid: "F_byte[]2-item0"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 97
+                  valueType: "byte"
+                  uuid: "F_byte[]2-item1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 108
+                  valueType: "byte"
+                  uuid: "F_byte[]2-item2"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                3:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 116
+                  valueType: "byte"
+                  uuid: "F_byte[]2-item3"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             suggestedContent: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 115
+                  valueType: "byte"
+                  uuid: "F_byte[]2-item0"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 97
+                  valueType: "byte"
+                  uuid: "F_byte[]2-item1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 108
+                  valueType: "byte"
+                  uuid: "F_byte[]2-item2"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                3:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 116
+                  valueType: "byte"
+                  uuid: "F_byte[]2-item3"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "byte[]"
             uuid: "F_byte[]2"
             fixed: false
@@ -1521,34 +1611,6 @@ methods:
                 content: !<regular>
                   value: 0
                 valueType: "byte"
-                uuid: "F_byte[]3Item0"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              1:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 1
-                valueType: "byte"
-                uuid: "F_byte[]3Item1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              2:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 2
-                valueType: "byte"
-                uuid: "F_byte[]3Item2"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              3:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 3
-                valueType: "byte"
-                uuid: "F_byte[]3Item3"
                 fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
@@ -1559,34 +1621,6 @@ methods:
                 content: !<regular>
                   value: 0
                 valueType: "byte"
-                uuid: "F_byte[]3Item0"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              1:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 1
-                valueType: "byte"
-                uuid: "F_byte[]3Item1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              2:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 2
-                valueType: "byte"
-                uuid: "F_byte[]3Item2"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              3:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 3
-                valueType: "byte"
-                uuid: "F_byte[]3Item3"
                 fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
@@ -1600,7 +1634,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "baos"
-      modelFingerprint: "EA1900EF9F239A52F5827D5351ADE71A"
+      modelFingerprint: "75EC0F6044E2A2D27AC670304C8BFE28"
       index: 8
       ignored: false
       nestedInLoop: true
@@ -1632,33 +1666,9 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
-                  suggestedContent: !<regular>
-                    value: 1
-                  valueType: "byte"
-                  originalValueType: "int"
-                  uuid: "F_byte3"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+              values: {}
             suggestedContent: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
-                  suggestedContent: !<regular>
-                    value: 1
-                  valueType: "byte"
-                  originalValueType: "int"
-                  uuid: "F_byte3"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+              values: {}
             valueType: "byte[]"
             uuid: "F_byte[]4"
             fixed: false
@@ -1738,6 +1748,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "DEPENDENCY_TO_THROW_EXCEPTION_NOT_FOUND"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

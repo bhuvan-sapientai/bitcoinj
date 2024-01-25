@@ -46,6 +46,8 @@ import static org.mockito.Mockito.mockStatic;
 
 import org.junit.Ignore;
 
+import java.net.InetAddress;
+
 public class TransactionConfidenceSapientGeneratedJunit4Test {
 
     @Rule()
@@ -71,9 +73,12 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        TransactionConfidence target = new TransactionConfidence(sha256HashMock);
+        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+        Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
+        TransactionConfidence target = new TransactionConfidence(sha256Hash);
         //TODO: Needs initialization with real value
         Executor executor = null;
+        TransactionConfidence.Listener transactionConfidenceListenerMock = mock(TransactionConfidence.Listener.class, "null");
 
         //Act Statement(s)
         target.addEventListener(executor, transactionConfidenceListenerMock);
@@ -219,19 +224,21 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
     public void markBroadcastByWhenBroadcastByNotAddIfAbsentAddress() {
         /* Branches:
          * (!broadcastBy.addIfAbsent(address)) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
-            Instant instant = TimeUtils.currentTime();
-            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(instant);
-            TransactionConfidence target = new TransactionConfidence(sha256HashMock);
+            //TODO: Needs to return real value
+            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(null);
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
+            TransactionConfidence target = new TransactionConfidence(sha256Hash);
+            InetAddress inetAddress = InetAddress.getLoopbackAddress();
+            PeerAddress peerAddress = PeerAddress.simple(inetAddress, 0);
             //Act Statement(s)
-            boolean result = target.markBroadcastBy(peerAddressMock);
+            boolean result = target.markBroadcastBy(peerAddress);
             //Assert statement(s)
-            assertThat(result, equalTo(Boolean.FALSE));
+            assertThat(result, equalTo(Boolean.TRUE));
+            assertThat(target.getConfidenceType(), equalTo(TransactionConfidence.ConfidenceType.PENDING));
             timeUtils.verify(() -> TimeUtils.currentTime(), atLeast(1));
         }
     }
@@ -243,17 +250,18 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
         /* Branches:
          * (!broadcastBy.addIfAbsent(address)) : false
          * (getConfidenceType() == ConfidenceType.UNKNOWN) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
-            Instant instant = TimeUtils.currentTime();
-            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(instant);
-            TransactionConfidence target = new TransactionConfidence(sha256HashMock);
+            //TODO: Needs to return real value
+            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(null);
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
+            TransactionConfidence target = new TransactionConfidence(sha256Hash);
+            InetAddress inetAddress = InetAddress.getLoopbackAddress();
+            PeerAddress peerAddress = PeerAddress.simple(inetAddress, 0);
             //Act Statement(s)
-            boolean result = target.markBroadcastBy(peerAddressMock);
+            boolean result = target.markBroadcastBy(peerAddress);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.TRUE));
             assertThat(target.getConfidenceType(), equalTo(TransactionConfidence.ConfidenceType.PENDING));
@@ -292,6 +300,7 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
     public void wasBroadcastByTest() {
         //Arrange Statement(s)
         TransactionConfidence target = new TransactionConfidence(sha256HashMock);
+        PeerAddress peerAddressMock = mock(PeerAddress.class);
 
         //Act Statement(s)
         boolean result = target.wasBroadcastBy(peerAddressMock);
@@ -526,7 +535,9 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        TransactionConfidence target = spy(new TransactionConfidence(sha256HashMock));
+        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+        Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
+        TransactionConfidence target = spy(new TransactionConfidence(sha256Hash));
         doNothing().when(target).addEventListener(eq((Executor) null), (TransactionConfidence.Listener) any());
 
         //Act Statement(s)

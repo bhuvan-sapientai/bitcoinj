@@ -200,31 +200,22 @@ public class TransactionWitnessSapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${0638e125-c093-35a7-84b6-d0e54de8f380}
-    @Ignore()
+    //Sapient generated method id: ${91c4a99d-7a18-35fa-926f-93c6fa805429}
     @Test()
-    public void getPushThrowsIndexOutOfBoundsException() {
+    public void getPushTest() {
         //Arrange Statement(s)
-        try (MockedStatic<TransactionWitness> transactionWitness = mockStatic(TransactionWitness.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            byte[] byteArray = new byte[]{};
-            doReturn(byteArray).when(signatureMock).encodeToBitcoin();
-            doReturn(false).when(pubKeyMock).isCompressed();
-            byte[] byteArray2 = new byte[]{};
-            doReturn(byteArray2).when(pubKeyMock).getPubKey();
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            transactionWitness.when(() -> TransactionWitness.of(anyList())).thenReturn(transactionWitnessMock);
-            TransactionWitness target = TransactionWitness.redeemP2WPKH(signatureMock, pubKeyMock);
-            thrown.expect(IndexOutOfBoundsException.class);
-            //Act Statement(s)
-            target.getPush(0);
-            //Assert statement(s)
-            verify(signatureMock).encodeToBitcoin();
-            verify(pubKeyMock).isCompressed();
-            verify(pubKeyMock).getPubKey();
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            transactionWitness.verify(() -> TransactionWitness.of(anyList()));
-        }
+        byte[] byteArray = new byte[]{};
+        byte[] byteArray2 = new byte[]{};
+        List<byte[]> byteList = new ArrayList<>();
+        byteList.add(byteArray);
+        byteList.add(byteArray2);
+        TransactionWitness target = TransactionWitness.of(byteList);
+
+        //Act Statement(s)
+        byte[] result = target.getPush(1);
+
+        //Assert statement(s)
+        assertThat(result, equalTo(byteArray2));
     }
 
     //Sapient generated method id: ${a2bf3b9b-c78f-381f-a368-c4049790a3f0}
@@ -232,59 +223,35 @@ public class TransactionWitnessSapientGeneratedJunit4Test {
     @Test()
     public void getPushCountTest() {
         //Arrange Statement(s)
-        try (MockedStatic<TransactionWitness> transactionWitness = mockStatic(TransactionWitness.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            byte[] byteArray = new byte[]{};
-            doReturn(byteArray).when(signatureMock).encodeToBitcoin();
-            doReturn(false).when(pubKeyMock).isCompressed();
-            byte[] byteArray2 = new byte[]{};
-            doReturn(byteArray2).when(pubKeyMock).getPubKey();
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            transactionWitness.when(() -> TransactionWitness.of(anyList())).thenReturn(transactionWitnessMock);
-            TransactionWitness target = TransactionWitness.redeemP2WPKH(signatureMock, pubKeyMock);
-            //Act Statement(s)
-            int result = target.getPushCount();
-            //Assert statement(s)
-            assertThat(result, equalTo(0));
-            verify(signatureMock).encodeToBitcoin();
-            verify(pubKeyMock).isCompressed();
-            verify(pubKeyMock).getPubKey();
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            transactionWitness.verify(() -> TransactionWitness.of(anyList()));
-        }
+        byte[] byteArray = new byte[]{};
+        List<byte[]> byteList = new ArrayList<>();
+        byteList.add(byteArray);
+        TransactionWitness target = TransactionWitness.of(byteList);
+
+        //Act Statement(s)
+        int result = target.getPushCount();
+
+        //Assert statement(s)
+        assertThat(result, equalTo(1));
     }
 
-    //Sapient generated method id: ${77eab095-a4c8-34d9-9e51-066a5f4001e1}
-    @Ignore()
+    //Sapient generated method id: ${46390a57-25fa-372f-b5f9-33562d858327}
     @Test()
-    public void writeWhenPushesIsEmpty() throws BufferOverflowException {
+    public void writeWhenPushesIsNotEmpty() throws BufferOverflowException {
         /* Branches:
-         * (for-each(pushes)) : false
+         * (for-each(pushes)) : true
          */
         //Arrange Statement(s)
-        try (MockedStatic<VarInt> varInt = mockStatic(VarInt.class);
-             MockedStatic<TransactionWitness> transactionWitness = mockStatic(TransactionWitness.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            byte[] byteArray = new byte[]{};
-            doReturn(byteArray).when(signatureMock).encodeToBitcoin();
-            doReturn(false).when(pubKeyMock).isCompressed();
-            byte[] byteArray2 = new byte[]{};
-            doReturn(byteArray2).when(pubKeyMock).getPubKey();
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            transactionWitness.when(() -> TransactionWitness.of(anyList())).thenReturn(transactionWitnessMock);
+        try (MockedStatic<VarInt> varInt = mockStatic(VarInt.class)) {
             varInt.when(() -> VarInt.of(0L)).thenReturn(varIntMock);
             doReturn(null).when(varIntMock).write((ByteBuffer) any());
-            TransactionWitness target = TransactionWitness.redeemP2WPKH(signatureMock, pubKeyMock);
+            List<byte[]> byteList = new ArrayList<>();
+            TransactionWitness target = TransactionWitness.of(byteList);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
             //Act Statement(s)
             ByteBuffer result = target.write(byteBuffer);
             //Assert statement(s)
             assertThat(result, equalTo(byteBuffer));
-            verify(signatureMock).encodeToBitcoin();
-            verify(pubKeyMock).isCompressed();
-            verify(pubKeyMock).getPubKey();
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            transactionWitness.verify(() -> TransactionWitness.of(anyList()));
             varInt.verify(() -> VarInt.of(0L), atLeast(1));
             verify(varIntMock).write((ByteBuffer) any());
         }
@@ -299,62 +266,39 @@ public class TransactionWitnessSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<TransactionWitness> transactionWitness = mockStatic(TransactionWitness.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            byte[] byteArray = new byte[]{};
-            doReturn(byteArray).when(signatureMock).encodeToBitcoin();
-            doReturn(false).when(pubKeyMock).isCompressed();
-            byte[] byteArray2 = new byte[]{};
-            doReturn(byteArray2).when(pubKeyMock).getPubKey();
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            transactionWitness.when(() -> TransactionWitness.of(anyList())).thenReturn(transactionWitnessMock);
-            TransactionWitness target = spy(TransactionWitness.redeemP2WPKH(signatureMock, pubKeyMock));
-            doReturn(1).when(target).messageSize();
-            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            doReturn(byteBuffer).when(target).write((ByteBuffer) any());
-            //Act Statement(s)
-            byte[] result = target.serialize();
-            byte[] byteResultArray = new byte[]{};
-            //Assert statement(s)
-            assertThat(result, equalTo(byteResultArray));
-            verify(signatureMock).encodeToBitcoin();
-            verify(pubKeyMock).isCompressed();
-            verify(pubKeyMock).getPubKey();
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            transactionWitness.verify(() -> TransactionWitness.of(anyList()));
-            verify(target).messageSize();
-            verify(target).write((ByteBuffer) any());
-        }
+        byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3};
+        List<byte[]> byteList = new ArrayList<>();
+        byteList.add(byteArray);
+        TransactionWitness target = spy(TransactionWitness.of(byteList));
+        doReturn(1).when(target).messageSize();
+        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+        doReturn(byteBuffer).when(target).write((ByteBuffer) any());
+
+        //Act Statement(s)
+        byte[] result = target.serialize();
+        byte[] byteResultArray = new byte[]{};
+
+        //Assert statement(s)
+        assertThat(result, equalTo(byteResultArray));
+        verify(target).messageSize();
+        verify(target).write((ByteBuffer) any());
     }
 
-    //Sapient generated method id: ${e09fc3d2-21a1-396e-a8d9-14d666298824}
-    @Ignore()
+    //Sapient generated method id: ${198e0ef0-e6d5-3daa-9f95-2e02390f74a3}
     @Test()
-    public void messageSizeWhenPushesIsEmpty() {
+    public void messageSizeWhenPushesIsNotEmpty() {
         /* Branches:
-         * (for-each(pushes)) : false
+         * (for-each(pushes)) : true
          */
         //Arrange Statement(s)
-        try (MockedStatic<TransactionWitness> transactionWitness = mockStatic(TransactionWitness.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            byte[] byteArray = new byte[]{};
-            doReturn(byteArray).when(signatureMock).encodeToBitcoin();
-            doReturn(false).when(pubKeyMock).isCompressed();
-            byte[] byteArray2 = new byte[]{};
-            doReturn(byteArray2).when(pubKeyMock).getPubKey();
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            transactionWitness.when(() -> TransactionWitness.of(anyList())).thenReturn(transactionWitnessMock);
-            TransactionWitness target = TransactionWitness.redeemP2WPKH(signatureMock, pubKeyMock);
-            //Act Statement(s)
-            int result = target.messageSize();
-            //Assert statement(s)
-            assertThat(result, equalTo(1));
-            verify(signatureMock).encodeToBitcoin();
-            verify(pubKeyMock).isCompressed();
-            verify(pubKeyMock).getPubKey();
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            transactionWitness.verify(() -> TransactionWitness.of(anyList()));
-        }
+        List<byte[]> byteList = new ArrayList<>();
+        TransactionWitness target = TransactionWitness.of(byteList);
+
+        //Act Statement(s)
+        int result = target.messageSize();
+
+        //Assert statement(s)
+        assertThat(result, equalTo(1));
     }
 
     //Sapient generated method id: ${435d64f5-8fca-31bf-b014-13944bac4d4c}
@@ -362,57 +306,53 @@ public class TransactionWitnessSapientGeneratedJunit4Test {
     @Test()
     public void getMessageSizeTest() {
         //Arrange Statement(s)
-        try (MockedStatic<TransactionWitness> transactionWitness = mockStatic(TransactionWitness.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            byte[] byteArray = new byte[]{};
-            doReturn(byteArray).when(signatureMock).encodeToBitcoin();
-            doReturn(false).when(pubKeyMock).isCompressed();
-            byte[] byteArray2 = new byte[]{};
-            doReturn(byteArray2).when(pubKeyMock).getPubKey();
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            transactionWitness.when(() -> TransactionWitness.of(anyList())).thenReturn(transactionWitnessMock);
-            TransactionWitness target = spy(TransactionWitness.redeemP2WPKH(signatureMock, pubKeyMock));
-            doReturn(0).when(target).messageSize();
-            //Act Statement(s)
-            int result = target.getMessageSize();
-            //Assert statement(s)
-            assertThat(result, equalTo(0));
-            verify(signatureMock).encodeToBitcoin();
-            verify(pubKeyMock).isCompressed();
-            verify(pubKeyMock).getPubKey();
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            transactionWitness.verify(() -> TransactionWitness.of(anyList()));
-            verify(target).messageSize();
-        }
+        byte[] byteArray = new byte[]{};
+        List<byte[]> byteList = new ArrayList<>();
+        byteList.add(byteArray);
+        TransactionWitness target = spy(TransactionWitness.of(byteList));
+        doReturn(0).when(target).messageSize();
+
+        //Act Statement(s)
+        int result = target.getMessageSize();
+
+        //Assert statement(s)
+        assertThat(result, equalTo(0));
+        verify(target).messageSize();
     }
 
-    //Sapient generated method id: ${e6355e02-ffe7-36cf-882f-9b4527452410}
-    @Ignore()
+    //Sapient generated method id: ${6ecbda3c-3734-3c94-b31a-d398eb9ec8be}
     @Test()
-    public void toStringWhenPushesIsEmpty() {
+    public void toStringWhenPushLengthEquals0() {
         /* Branches:
-         * (for-each(pushes)) : false
+         * (for-each(pushes)) : true
+         * (push.length == 0) : true
          */
         //Arrange Statement(s)
-        try (MockedStatic<TransactionWitness> transactionWitness = mockStatic(TransactionWitness.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            byte[] byteArray = new byte[]{};
-            doReturn(byteArray).when(signatureMock).encodeToBitcoin();
-            doReturn(false).when(pubKeyMock).isCompressed();
-            byte[] byteArray2 = new byte[]{};
-            doReturn(byteArray2).when(pubKeyMock).getPubKey();
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            transactionWitness.when(() -> TransactionWitness.of(anyList())).thenReturn(transactionWitnessMock);
-            TransactionWitness target = TransactionWitness.redeemP2WPKH(signatureMock, pubKeyMock);
-            //Act Statement(s)
-            String result = target.toString();
-            //Assert statement(s)
-            assertThat(result, equalTo(""));
-            verify(signatureMock).encodeToBitcoin();
-            verify(pubKeyMock).isCompressed();
-            verify(pubKeyMock).getPubKey();
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            transactionWitness.verify(() -> TransactionWitness.of(anyList()));
-        }
+        List<byte[]> byteList = new ArrayList<>();
+        TransactionWitness target = TransactionWitness.of(byteList);
+
+        //Act Statement(s)
+        String result = target.toString();
+
+        //Assert statement(s)
+        assertThat(result, equalTo(""));
+    }
+
+    //Sapient generated method id: ${065a56d0-4ec0-38eb-a24f-b51c11ce350a}
+    @Test()
+    public void toStringWhenPushLengthNotEquals0() {
+        /* Branches:
+         * (for-each(pushes)) : true
+         * (push.length == 0) : false
+         */
+        //Arrange Statement(s)
+        List<byte[]> byteList = new ArrayList<>();
+        TransactionWitness target = TransactionWitness.of(byteList);
+
+        //Act Statement(s)
+        String result = target.toString();
+
+        //Assert statement(s)
+        assertThat(result, equalTo(""));
     }
 }

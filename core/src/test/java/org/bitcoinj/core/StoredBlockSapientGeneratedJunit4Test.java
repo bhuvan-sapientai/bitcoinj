@@ -113,9 +113,7 @@ public class StoredBlockSapientGeneratedJunit4Test {
     public void getPrevTest() throws BlockStoreException {
         //Arrange Statement(s)
         BlockStore storeMock = mock(BlockStore.class);
-        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
         doReturn(storedBlockMock).when(storeMock).get(sha256HashMock);
-        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
         Instant instant = Instant.now();
         List list = new ArrayList<>();
         Block block = new Block(0L, sha256HashMock2, sha256HashMock, instant, 0L, 0L, list);
@@ -162,12 +160,9 @@ public class StoredBlockSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<Block> block = mockStatic(Block.class);
-             MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
-            byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
-            byteUtils.when(() -> ByteUtils.bytesToBigInteger(byteArray)).thenReturn(new BigInteger("0"));
-            byte[] byteArray2 = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
-            ByteBuffer byteBuffer = ByteBuffer.wrap(byteArray2);
+        try (MockedStatic<Block> block = mockStatic(Block.class)) {
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+            ByteBuffer byteBuffer = ByteBuffer.wrap(byteArray);
             Block block2 = Block.read(byteBuffer);
             block.when(() -> Block.read((ByteBuffer) any())).thenReturn(block2);
             ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
@@ -176,7 +171,6 @@ public class StoredBlockSapientGeneratedJunit4Test {
             StoredBlock storedBlock = new StoredBlock(block2, new BigInteger("0"), 0);
             //Assert statement(s)
             assertThat(result, equalTo(storedBlock));
-            byteUtils.verify(() -> ByteUtils.bytesToBigInteger(byteArray), atLeast(1));
             block.verify(() -> Block.read((ByteBuffer) any()));
         }
     }
@@ -206,15 +200,20 @@ public class StoredBlockSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Block blockMock = mock(Block.class, "<init>_block1");
+        Instant instant = Instant.now();
+        List list = new ArrayList<>();
+        Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
+        StoredBlock target = spy(new StoredBlock(block, new BigInteger("1000"), 10));
         doReturn("return_of_getHashAsString1").when(blockMock).getHashAsString();
-        StoredBlock target = new StoredBlock(blockMock, new BigInteger("0"), 1);
+        Block blockMock2 = mock(Block.class, "toString_block2");
+        doReturn(blockMock, blockMock2).when(target).getHeader();
 
         //Act Statement(s)
         String result = target.toString();
 
         //Assert statement(s)
         assertThat(result, equalTo("result1"));
+        verify(target, times(2)).getHeader();
         verify(blockMock).getHashAsString();
     }
 }

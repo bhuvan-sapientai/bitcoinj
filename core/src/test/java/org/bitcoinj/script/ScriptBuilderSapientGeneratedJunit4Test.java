@@ -74,8 +74,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = new ScriptBuilder(templateMock);
         Instant instant = Instant.now();
+
         //Act Statement(s)
         ScriptBuilder result = target.creationTime(instant);
+
         //Assert statement(s)
         assertThat(result, equalTo(target));
         verify(templateMock).chunks();
@@ -88,8 +90,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = new ScriptBuilder(templateMock);
+
         //Act Statement(s)
         ScriptBuilder result = target.addChunk(scriptChunkMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(target));
         verify(templateMock).chunks();
@@ -102,8 +106,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = new ScriptBuilder(templateMock);
+
         //Act Statement(s)
         ScriptBuilder result = target.addChunk(0, scriptChunkMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(target));
         verify(templateMock).chunks();
@@ -117,8 +123,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = spy(new ScriptBuilder(templateMock));
         doReturn(scriptBuilderMock).when(target).op(0, 0);
+
         //Act Statement(s)
         ScriptBuilder result = target.op(0);
+
         //Assert statement(s)
         assertThat(result, equalTo(scriptBuilderMock));
         verify(templateMock).chunks();
@@ -135,8 +143,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = new ScriptBuilder(templateMock);
+
         //Act Statement(s)
         ScriptBuilder result = target.op(0, 79);
+
         //Assert statement(s)
         assertThat(result, equalTo(target));
         verify(templateMock).chunks();
@@ -175,8 +185,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         ScriptBuilder target = spy(new ScriptBuilder(templateMock));
         doReturn(scriptBuilderMock).when(target).smallNum(0);
         byte[] byteArray = new byte[]{};
+
         //Act Statement(s)
         ScriptBuilder result = target.data(byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo(scriptBuilderMock));
         verify(templateMock).chunks();
@@ -195,8 +207,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         ScriptBuilder target = spy(new ScriptBuilder(templateMock));
         byte[] byteArray = new byte[]{(byte) 0};
         doReturn(scriptBuilderMock).when(target).data(0, byteArray);
+
         //Act Statement(s)
         ScriptBuilder result = target.data(byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo(scriptBuilderMock));
         verify(templateMock).chunks();
@@ -214,8 +228,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = new ScriptBuilder(templateMock);
         byte[] byteArray = new byte[]{};
+
         //Act Statement(s)
         ScriptBuilder result = target.data(0, byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo(target));
         verify(templateMock).chunks();
@@ -234,8 +250,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = new ScriptBuilder(templateMock);
         byte[] byteArray = new byte[]{(byte) 0, (byte) 1};
+
         //Act Statement(s)
         ScriptBuilder result = target.data(0, byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo(target));
         verify(templateMock).chunks();
@@ -255,8 +273,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = new ScriptBuilder(templateMock);
         byte[] byteArray = new byte[]{(byte) 1};
+
         //Act Statement(s)
         ScriptBuilder result = target.data(0, byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo(target));
         verify(templateMock).chunks();
@@ -276,8 +296,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = new ScriptBuilder(templateMock);
         byte[] byteArray = new byte[]{(byte) 17};
+
         //Act Statement(s)
         ScriptBuilder result = target.data(0, byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo(target));
         verify(templateMock).chunks();
@@ -296,9 +318,11 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = new ScriptBuilder(templateMock);
-        byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31, (byte) 32, (byte) 33, (byte) 34, (byte) 35, (byte) 36, (byte) 37, (byte) 38, (byte) 39, (byte) 40, (byte) 41, (byte) 42, (byte) 43, (byte) 44, (byte) 45, (byte) 46, (byte) 47, (byte) 48, (byte) 49, (byte) 50, (byte) 51, (byte) 52, (byte) 53, (byte) 54, (byte) 55, (byte) 56, (byte) 57, (byte) 58, (byte) 59, (byte) 60, (byte) 61, (byte) 62, (byte) 63, (byte) 64, (byte) 65, (byte) 66, (byte) 67, (byte) 68, (byte) 69, (byte) 70, (byte) 71, (byte) 72, (byte) 73, (byte) 74, (byte) 75};
+        byte[] byteArray = new byte[]{};
+
         //Act Statement(s)
         ScriptBuilder result = target.data(0, byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo(target));
         verify(templateMock).chunks();
@@ -319,8 +343,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = new ScriptBuilder(templateMock);
         byte[] byteArray = new byte[]{};
+
         //Act Statement(s)
         ScriptBuilder result = target.data(0, byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo(target));
         verify(templateMock).chunks();
@@ -341,8 +367,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = new ScriptBuilder(templateMock);
         byte[] byteArray = new byte[]{};
+
         //Act Statement(s)
         ScriptBuilder result = target.data(0, byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo(target));
         verify(templateMock).chunks();
@@ -356,8 +384,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = spy(new ScriptBuilder(templateMock));
         doReturn(scriptBuilderMock).when(target).number(0, 0L);
+
         //Act Statement(s)
         ScriptBuilder result = target.number(0L);
+
         //Assert statement(s)
         assertThat(result, equalTo(scriptBuilderMock));
         verify(templateMock).chunks();
@@ -375,8 +405,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = spy(new ScriptBuilder(templateMock));
         doReturn(scriptBuilderMock).when(target).op(0, 79);
+
         //Act Statement(s)
         ScriptBuilder result = target.number(0, -1L);
+
         //Assert statement(s)
         assertThat(result, equalTo(scriptBuilderMock));
         verify(templateMock).chunks();
@@ -396,8 +428,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = spy(new ScriptBuilder(templateMock));
         doReturn(scriptBuilderMock).when(target).smallNum(0, 1);
+
         //Act Statement(s)
         ScriptBuilder result = target.number(0, 1L);
+
         //Assert statement(s)
         assertThat(result, equalTo(scriptBuilderMock));
         verify(templateMock).chunks();
@@ -417,8 +451,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = spy(new ScriptBuilder(templateMock));
         doReturn(scriptBuilderMock).when(target).bigNum(0, 17L);
+
         //Act Statement(s)
         ScriptBuilder result = target.number(0, 17L);
+
         //Assert statement(s)
         assertThat(result, equalTo(scriptBuilderMock));
         verify(templateMock).chunks();
@@ -433,8 +469,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = spy(new ScriptBuilder(templateMock));
         doReturn(scriptBuilderMock).when(target).smallNum(0, 0);
+
         //Act Statement(s)
         ScriptBuilder result = target.smallNum(0);
+
         //Assert statement(s)
         assertThat(result, equalTo(scriptBuilderMock));
         verify(templateMock).chunks();
@@ -449,8 +487,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = spy(new ScriptBuilder(templateMock));
         doReturn(scriptBuilderMock).when(target).bigNum(0, 0L);
+
         //Act Statement(s)
         ScriptBuilder result = target.bigNum(0L);
+
         //Assert statement(s)
         assertThat(result, equalTo(scriptBuilderMock));
         verify(templateMock).chunks();
@@ -489,21 +529,20 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          * (num <= 16) : false
          */
         //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
+        try (MockedStatic<Script> script = mockStatic(Script.class);
+             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             List<ScriptChunk> scriptChunkList = new ArrayList<>();
             doReturn(scriptChunkList).when(templateMock).chunks();
-            //TODO: Needs to return real value
-            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(null);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            script.when(() -> Script.encodeToOpN(17)).thenReturn(0);
             ScriptBuilder target = new ScriptBuilder(templateMock);
             //Act Statement(s)
-            ScriptBuilder result = target.smallNum(0, 0);
+            ScriptBuilder result = target.smallNum(0, 17);
             //Assert statement(s)
             assertThat(result, equalTo(target));
             verify(templateMock).chunks();
-            timeUtils.verify(() -> TimeUtils.currentTime(), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
+            script.verify(() -> Script.encodeToOpN(17), atLeast(1));
         }
     }
 
@@ -540,8 +579,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = new ScriptBuilder(templateMock);
+
         //Act Statement(s)
         ScriptBuilder result = target.bigNum(0, 0L);
+
         //Assert statement(s)
         assertThat(result, equalTo(target));
         verify(templateMock).chunks();
@@ -562,8 +603,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = new ScriptBuilder(templateMock);
+
         //Act Statement(s)
         ScriptBuilder result = target.bigNum(0, -1L);
+
         //Assert statement(s)
         assertThat(result, equalTo(target));
         verify(templateMock).chunks();
@@ -584,8 +627,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = new ScriptBuilder(templateMock);
+
         //Act Statement(s)
         ScriptBuilder result = target.bigNum(0, -1L);
+
         //Assert statement(s)
         assertThat(result, equalTo(target));
         verify(templateMock).chunks();
@@ -606,8 +651,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = new ScriptBuilder(templateMock);
+
         //Act Statement(s)
         ScriptBuilder result = target.bigNum(0, 1L);
+
         //Assert statement(s)
         assertThat(result, equalTo(target));
         verify(templateMock).chunks();
@@ -621,8 +668,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = spy(new ScriptBuilder(templateMock));
         doReturn(scriptBuilderMock).when(target).number(1L);
+
         //Act Statement(s)
         ScriptBuilder result = target.opTrue();
+
         //Assert statement(s)
         assertThat(result, equalTo(scriptBuilderMock));
         verify(templateMock).chunks();
@@ -637,8 +686,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = spy(new ScriptBuilder(templateMock));
         doReturn(scriptBuilderMock).when(target).number(0, 1L);
+
         //Act Statement(s)
         ScriptBuilder result = target.opTrue(0);
+
         //Assert statement(s)
         assertThat(result, equalTo(scriptBuilderMock));
         verify(templateMock).chunks();
@@ -653,8 +704,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = spy(new ScriptBuilder(templateMock));
         doReturn(scriptBuilderMock).when(target).number(0L);
+
         //Act Statement(s)
         ScriptBuilder result = target.opFalse();
+
         //Assert statement(s)
         assertThat(result, equalTo(scriptBuilderMock));
         verify(templateMock).chunks();
@@ -669,8 +722,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = spy(new ScriptBuilder(templateMock));
         doReturn(scriptBuilderMock).when(target).number(0, 0L);
+
         //Act Statement(s)
         ScriptBuilder result = target.opFalse(0);
+
         //Assert statement(s)
         assertThat(result, equalTo(scriptBuilderMock));
         verify(templateMock).chunks();
@@ -698,10 +753,12 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
     //Sapient generated method id: ${e882d384-697e-36fa-b92b-76223718d4c1}
     @Test()
     public void createEmptyTest() {
+
         //Act Statement(s)
         Script result = ScriptBuilder.createEmpty();
         ScriptBuilder scriptBuilder = new ScriptBuilder();
         Script script = scriptBuilder.build();
+
         //Assert statement(s)
         assertThat(result, equalTo(script));
     }
@@ -720,8 +777,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Instant instant = Instant.now();
+
         //Act Statement(s)
         Script result = ScriptBuilder.createOutputScript(addressMock, instant);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -738,8 +797,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
+
         //Act Statement(s)
         Script result = ScriptBuilder.createOutputScript(addressMock);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -755,12 +816,14 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(byteArray).when(signatureMock).encodeToBitcoin();
         byte[] byteArray2 = new byte[]{};
         doReturn(byteArray2).when(pubKeyMock).getPubKey();
+
         //Act Statement(s)
         Script result = ScriptBuilder.createInputScript(signatureMock, pubKeyMock);
         ScriptBuilder scriptBuilder = new ScriptBuilder();
         ScriptBuilder scriptBuilder2 = scriptBuilder.data(byteArray);
         ScriptBuilder scriptBuilder3 = scriptBuilder2.data(byteArray2);
         Script script = scriptBuilder3.build();
+
         //Assert statement(s)
         assertThat(result, equalTo(script));
         verify(signatureMock).encodeToBitcoin();
@@ -777,6 +840,7 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         byte[] byteArray = new byte[]{};
         doReturn(byteArray).when(pubKeyMock).getPubKey();
         TransactionSignature transactionSignature = null;
+
         //Act Statement(s)
         Script result = ScriptBuilder.createInputScript(transactionSignature, pubKeyMock);
         ScriptBuilder scriptBuilder = new ScriptBuilder();
@@ -784,6 +848,7 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         ScriptBuilder scriptBuilder2 = scriptBuilder.data(byteArray2);
         ScriptBuilder scriptBuilder3 = scriptBuilder2.data(byteArray);
         Script script = scriptBuilder3.build();
+
         //Assert statement(s)
         assertThat(result, equalTo(script));
         verify(pubKeyMock).getPubKey();
@@ -798,11 +863,13 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{};
         doReturn(byteArray).when(signatureMock).encodeToBitcoin();
+
         //Act Statement(s)
         Script result = ScriptBuilder.createInputScript(signatureMock);
         ScriptBuilder scriptBuilder = new ScriptBuilder();
         ScriptBuilder scriptBuilder2 = scriptBuilder.data(byteArray);
         Script script = scriptBuilder2.build();
+
         //Assert statement(s)
         assertThat(result, equalTo(script));
         verify(signatureMock).encodeToBitcoin();
@@ -816,12 +883,14 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         TransactionSignature transactionSignature = null;
+
         //Act Statement(s)
         Script result = ScriptBuilder.createInputScript(transactionSignature);
         ScriptBuilder scriptBuilder = new ScriptBuilder();
         byte[] byteArray = new byte[]{};
         ScriptBuilder scriptBuilder2 = scriptBuilder.data(byteArray);
         Script script = scriptBuilder2.build();
+
         //Assert statement(s)
         assertThat(result, equalTo(script));
     }
@@ -841,12 +910,14 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(byteArray).when(keyMock).getPubKey();
         List<ECKey> eCKeyList = new ArrayList<>();
         eCKeyList.add(keyMock);
+
         //Act Statement(s)
         Script result = ScriptBuilder.createMultiSigOutputScript(1, eCKeyList);
         ScriptBuilder scriptBuilder = new ScriptBuilder();
         Script script = scriptBuilder.build();
         List<ECKey> eCKeyECKeyListList = new ArrayList<>();
         eCKeyECKeyListList.add(keyMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(script));
         assertThat(eCKeyList.size(), equalTo(eCKeyECKeyListList.size()));
@@ -865,30 +936,20 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          * (for-each(pubkeys)) : true
          */
         //Arrange Statement(s)
-        ECKey keyMock2 = mock(ECKey.class);
-        ECKey keyMock3 = mock(ECKey.class);
         try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
-            byte[] byteArray = new byte[]{};
-            doReturn(byteArray).when(keyMock).getPubKey();
-            byte[] byteArray2 = new byte[]{};
-            doReturn(byteArray2).when(keyMock2).getPubKey();
-            byte[] byteArray3 = new byte[]{};
-            doReturn(byteArray3).when(keyMock3).getPubKey();
             //TODO: Needs to return real value
             timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(null);
+            ECKey eCKey = new ECKey();
+            ECKey eCKey2 = new ECKey();
             List<ECKey> eCKeyList = new ArrayList<>();
-            eCKeyList.add(keyMock);
-            eCKeyList.add(keyMock2);
-            eCKeyList.add(keyMock3);
+            eCKeyList.add(eCKey);
+            eCKeyList.add(eCKey2);
             //Act Statement(s)
-            Script result = ScriptBuilder.createMultiSigOutputScript(2, eCKeyList);
+            Script result = ScriptBuilder.createMultiSigOutputScript(1, eCKeyList);
             ScriptBuilder scriptBuilder = new ScriptBuilder();
             Script script = scriptBuilder.build();
             //Assert statement(s)
             assertThat(result, equalTo(script));
-            verify(keyMock).getPubKey();
-            verify(keyMock2).getPubKey();
-            verify(keyMock3).getPubKey();
             timeUtils.verify(() -> TimeUtils.currentTime(), atLeast(1));
         }
     }
@@ -1051,10 +1112,12 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         List<byte[]> byteList = new ArrayList<>();
         byteList.add(byteArray);
         byte[] byteArray2 = new byte[]{};
+
         //Act Statement(s)
         Script result = ScriptBuilder.createMultiSigInputScriptBytes(byteList, byteArray2);
         ScriptBuilder scriptBuilder = new ScriptBuilder();
         Script script = scriptBuilder.build();
+
         //Assert statement(s)
         assertThat(result, equalTo(script));
     }
@@ -1138,21 +1201,32 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS);
-             MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
-            //TODO: Needs to return real value
-            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(null);
+        Script scriptSigMock = mock(Script.class);
+        ScriptChunk scriptChunkMock2 = mock(ScriptChunk.class);
+        ScriptChunk scriptChunkMock3 = mock(ScriptChunk.class);
+        ScriptChunk scriptChunkMock4 = mock(ScriptChunk.class);
+        ScriptChunk scriptChunkMock5 = mock(ScriptChunk.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS)) {
+            List<ScriptChunk> scriptChunkList = new ArrayList<>();
+            scriptChunkList.add(scriptChunkMock);
+            scriptChunkList.add(scriptChunkMock2);
+            scriptChunkList.add(scriptChunkMock3);
+            scriptChunkList.add(scriptChunkMock4);
+            scriptChunkList.add(scriptChunkMock5);
+            doReturn(scriptChunkList).when(scriptSigMock).chunks();
+            doReturn(false).when(scriptChunkMock2).equalsOpCode(0);
+            doReturn(false).when(scriptChunkMock4).equalsOpCode(0);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            List list = new ArrayList<>();
-            Script script = Script.of(list);
-            byte[] byteArray = new byte[]{(byte) 0};
+            byte[] byteArray = new byte[]{};
             //Act Statement(s)
-            Script result = ScriptBuilder.updateScriptWithSignature(script, byteArray, 0, 0, 0);
+            Script result = ScriptBuilder.updateScriptWithSignature(scriptSigMock, byteArray, 0, 1, 1);
             ScriptBuilder scriptBuilder = new ScriptBuilder();
-            Script script2 = scriptBuilder.build();
+            Script script = scriptBuilder.build();
             //Assert statement(s)
-            assertThat(result, equalTo(script2));
-            timeUtils.verify(() -> TimeUtils.currentTime(), atLeast(1));
+            assertThat(result, equalTo(script));
+            verify(scriptSigMock, atLeast(1)).chunks();
+            verify(scriptChunkMock2, atLeast(1)).equalsOpCode(0);
+            verify(scriptChunkMock4, atLeast(1)).equalsOpCode(0);
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(1));
         }
     }
@@ -1171,7 +1245,7 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          * (for-each(inputChunks.subList(totalChunks - sigsSuffixCount, totalChunks))) : true
          *
          * TODO: Help needed! This method is not unit testable!
-         *  Following variables could not be isolated/mocked: builder
+         *  Following variables could not be isolated/mocked: org.bitcoinj.script.ScriptChunk, builder
          *  Suggestions:
          *  You can change the initialization of above variables and make it injectable or
          *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
@@ -1202,12 +1276,14 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
     public void createP2PKOutputScriptTest() {
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{};
+
         //Act Statement(s)
         Script result = ScriptBuilder.createP2PKOutputScript(byteArray);
         ScriptBuilder scriptBuilder = new ScriptBuilder();
         ScriptBuilder scriptBuilder2 = scriptBuilder.data(byteArray);
         ScriptBuilder scriptBuilder3 = scriptBuilder2.op(172);
         Script script = scriptBuilder3.build();
+
         //Assert statement(s)
         assertThat(result, equalTo(script));
     }
@@ -1243,13 +1319,15 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
-            Instant instant = TimeUtils.currentTime();
-            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(instant);
-            byte[] byteArray = new byte[]{};
+            //TODO: Needs to return real value
+            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(null);
+            byte[] byteArray = new byte[]{(byte) 0};
             //Act Statement(s)
             Script result = ScriptBuilder.createP2PKHOutputScript(byteArray);
+            List list = new ArrayList<>();
+            Script script = Script.of(list);
             //Assert statement(s)
-            assertThat(result, is(notNullValue()));
+            assertThat(result, equalTo(script));
             timeUtils.verify(() -> TimeUtils.currentTime(), atLeast(1));
         }
     }
@@ -1284,12 +1362,14 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19};
+
         //Act Statement(s)
         Script result = ScriptBuilder.createP2WPKHOutputScript(byteArray);
         ScriptBuilder scriptBuilder = new ScriptBuilder();
         ScriptBuilder scriptBuilder2 = scriptBuilder.smallNum(0);
         ScriptBuilder scriptBuilder3 = scriptBuilder2.data(byteArray);
         Script script = scriptBuilder3.build();
+
         //Assert statement(s)
         assertThat(result, equalTo(script));
     }
@@ -1354,7 +1434,7 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
             Instant instant = TimeUtils.currentTime();
             timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(instant);
-            byte[] byteArray = new byte[]{};
+            byte[] byteArray = new byte[]{(byte) 0};
             //Act Statement(s)
             Script result = ScriptBuilder.createP2SHOutputScript(byteArray);
             //Assert statement(s)
@@ -1389,12 +1469,14 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
+
         //Act Statement(s)
         Script result = ScriptBuilder.createP2WSHOutputScript(byteArray);
         ScriptBuilder scriptBuilder = new ScriptBuilder();
         ScriptBuilder scriptBuilder2 = scriptBuilder.smallNum(0);
         ScriptBuilder scriptBuilder3 = scriptBuilder2.data(byteArray);
         Script script = scriptBuilder3.build();
+
         //Assert statement(s)
         assertThat(result, equalTo(script));
     }
@@ -1480,12 +1562,14 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{};
+
         //Act Statement(s)
         Script result = ScriptBuilder.createOpReturnScript(byteArray);
         ScriptBuilder scriptBuilder = new ScriptBuilder();
         ScriptBuilder scriptBuilder2 = scriptBuilder.op(106);
         ScriptBuilder scriptBuilder3 = scriptBuilder2.data(byteArray);
         Script script = scriptBuilder3.build();
+
         //Assert statement(s)
         assertThat(result, equalTo(script));
     }
@@ -1497,18 +1581,16 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          * (data.length <= 80) : false
          */
         //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31, (byte) 32, (byte) 33, (byte) 34, (byte) 35, (byte) 36, (byte) 37, (byte) 38, (byte) 39, (byte) 40, (byte) 41, (byte) 42, (byte) 43, (byte) 44, (byte) 45, (byte) 46, (byte) 47, (byte) 48, (byte) 49, (byte) 50, (byte) 51, (byte) 52, (byte) 53, (byte) 54, (byte) 55, (byte) 56, (byte) 57, (byte) 58, (byte) 59, (byte) 60, (byte) 61, (byte) 62, (byte) 63, (byte) 64, (byte) 65, (byte) 66, (byte) 67, (byte) 68, (byte) 69, (byte) 70, (byte) 71, (byte) 72, (byte) 73, (byte) 74, (byte) 75, (byte) 76, (byte) 77, (byte) 78, (byte) 79, (byte) 80};
-            //Act Statement(s)
-            Script result = ScriptBuilder.createOpReturnScript(byteArray);
-            ScriptBuilder scriptBuilder = new ScriptBuilder();
-            ScriptBuilder scriptBuilder2 = scriptBuilder.op(106);
-            ScriptBuilder scriptBuilder3 = scriptBuilder2.data(byteArray);
-            Script script = scriptBuilder3.build();
-            //Assert statement(s)
-            assertThat(result, equalTo(script));
-            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
-        }
+        byte[] byteArray = new byte[]{};
+
+        //Act Statement(s)
+        Script result = ScriptBuilder.createOpReturnScript(byteArray);
+        ScriptBuilder scriptBuilder = new ScriptBuilder();
+        ScriptBuilder scriptBuilder2 = scriptBuilder.op(106);
+        ScriptBuilder scriptBuilder3 = scriptBuilder2.data(byteArray);
+        Script script = scriptBuilder3.build();
+
+        //Assert statement(s)
+        assertThat(result, equalTo(script));
     }
 }

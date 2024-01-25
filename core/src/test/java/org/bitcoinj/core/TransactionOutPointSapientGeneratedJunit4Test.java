@@ -38,6 +38,7 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mockStatic;
 
 import org.junit.Ignore;
+import org.bitcoinj.base.Coin;
 
 public class TransactionOutPointSapientGeneratedJunit4Test {
 
@@ -64,6 +65,8 @@ public class TransactionOutPointSapientGeneratedJunit4Test {
 
     @Rule()
     public ExpectedException thrown = ExpectedException.none();
+
+    private final Coin coinMock = mock(Coin.class);
 
     //Sapient generated method id: ${d7d7c181-85f8-3d2b-b5a1-c1ddd262297c}
     @Test()
@@ -218,9 +221,9 @@ public class TransactionOutPointSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         doReturn(hashMock).when(fromTxMock).getTxId();
         TransactionOutPoint target = spy(new TransactionOutPoint(0L, fromTxMock));
-        doReturn(transactionOutputMock).when(target).getConnectedOutput();
         byte[] byteArray = new byte[]{(byte) 0};
-        doReturn(byteArray).when(transactionOutputMock).getScriptBytes();
+        TransactionOutput transactionOutput = new TransactionOutput(transactionMock, coinMock, byteArray);
+        doReturn(transactionOutput).when(target).getConnectedOutput();
 
         //Act Statement(s)
         byte[] result = target.getConnectedPubKeyScript();
@@ -229,7 +232,6 @@ public class TransactionOutPointSapientGeneratedJunit4Test {
         assertThat(result, equalTo(byteArray));
         verify(fromTxMock).getTxId();
         verify(target).getConnectedOutput();
-        verify(transactionOutputMock).getScriptBytes();
     }
 
     //Sapient generated method id: ${51091f3d-de33-355b-afef-7ab78808dac3}
@@ -244,9 +246,9 @@ public class TransactionOutPointSapientGeneratedJunit4Test {
             IllegalStateException illegalStateException = new IllegalStateException();
             preconditions.when(() -> Preconditions.checkState(false)).thenThrow(illegalStateException);
             TransactionOutPoint target = spy(new TransactionOutPoint(0L, fromTxMock));
-            doReturn(transactionOutputMock).when(target).getConnectedOutput();
             byte[] byteArray = new byte[]{};
-            doReturn(byteArray).when(transactionOutputMock).getScriptBytes();
+            TransactionOutput transactionOutput = new TransactionOutput(transactionMock, coinMock, byteArray);
+            doReturn(transactionOutput).when(target).getConnectedOutput();
             thrown.expect(IllegalStateException.class);
             //Act Statement(s)
             target.getConnectedPubKeyScript();
@@ -254,7 +256,6 @@ public class TransactionOutPointSapientGeneratedJunit4Test {
             verify(fromTxMock).getTxId();
             preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
             verify(target).getConnectedOutput();
-            verify(transactionOutputMock).getScriptBytes();
         }
     }
 

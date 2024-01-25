@@ -164,6 +164,7 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path8"
@@ -199,6 +200,7 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path6"
@@ -226,13 +228,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "9F11E1717036BB0622B39C27E92E437B"
+    modelFingerprint: "505ABD3C4086AC33650E16414EF144DA"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "key"
-      modelFingerprint: "744D862152FEAE3B05D8241BC38E5FB6"
+      modelFingerprint: "62F0FEF1F311A7E75F978D169E33EE66"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -258,13 +260,43 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "redeemScript"
-      modelFingerprint: "E224839605F075F14EE2F9D73901D4A4"
+      modelFingerprint: "B81EC79723D1F0A464731572658DC723"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.script.Script"
+          method: "of"
+          methodParameters:
+          - name: "chunks"
+            value:
+              sapientType: "COLLECTION"
+              content: !<collection>
+                parameters: []
+                values: []
+              suggestedContent: !<collection>
+                parameters: []
+                values: []
+              valueType: "java.util.List"
+              uuid: "of_script1-chunks"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.script.Script"
+          method: "of"
+          methodParameters:
+          - name: "chunks"
+            value:
+              sapientType: "COLLECTION"
+              valueType: "java.util.List"
+              uuid: "of_script1-chunks"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.script.Script"
         uuid: "of_script1"
         fixed: false
@@ -274,7 +306,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ScriptPattern"
-      modelFingerprint: "AFAFD398E6F0C95BDAB79E80A5CB9A4B"
+      modelFingerprint: "0279B96D90889C3F5A5462B94C319F70"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -292,7 +324,37 @@ methods:
         parameters:
         - name: "script"
           value:
-            sapientType: "MOCK"
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "org.bitcoinj.script.Script"
+              method: "of"
+              methodParameters:
+              - name: "chunks"
+                value:
+                  sapientType: "COLLECTION"
+                  content: !<collection>
+                    parameters: []
+                    values: []
+                  suggestedContent: !<collection>
+                    parameters: []
+                    values: []
+                  valueType: "java.util.List"
+                  uuid: "of_script1-chunks"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<static_method_return>
+              target: "org.bitcoinj.script.Script"
+              method: "of"
+              methodParameters:
+              - name: "chunks"
+                value:
+                  sapientType: "COLLECTION"
+                  valueType: "java.util.List"
+                  uuid: "of_script1-chunks"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "org.bitcoinj.script.Script"
             uuid: "of_script1"
             fixed: false
@@ -315,7 +377,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ScriptPattern"
-      modelFingerprint: "B43B303F11D823830DD0AF807854D776"
+      modelFingerprint: "1611F212693FFF3B4296CEA52CB5D2CE"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -333,7 +395,37 @@ methods:
         parameters:
         - name: "script"
           value:
-            sapientType: "MOCK"
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "org.bitcoinj.script.Script"
+              method: "of"
+              methodParameters:
+              - name: "chunks"
+                value:
+                  sapientType: "COLLECTION"
+                  content: !<collection>
+                    parameters: []
+                    values: []
+                  suggestedContent: !<collection>
+                    parameters: []
+                    values: []
+                  valueType: "java.util.List"
+                  uuid: "of_script1-chunks"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<static_method_return>
+              target: "org.bitcoinj.script.Script"
+              method: "of"
+              methodParameters:
+              - name: "chunks"
+                value:
+                  sapientType: "COLLECTION"
+                  valueType: "java.util.List"
+                  uuid: "of_script1-chunks"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "org.bitcoinj.script.Script"
             uuid: "of_script1"
             fixed: false
@@ -356,7 +448,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ScriptPattern"
-      modelFingerprint: "A47265E1A8401B2211408DE0F6D0147C"
+      modelFingerprint: "BB15C8706C17EC088A68437C08C6964C"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -374,7 +466,37 @@ methods:
         parameters:
         - name: "script"
           value:
-            sapientType: "MOCK"
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "org.bitcoinj.script.Script"
+              method: "of"
+              methodParameters:
+              - name: "chunks"
+                value:
+                  sapientType: "COLLECTION"
+                  content: !<collection>
+                    parameters: []
+                    values: []
+                  suggestedContent: !<collection>
+                    parameters: []
+                    values: []
+                  valueType: "java.util.List"
+                  uuid: "of_script1-chunks"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<static_method_return>
+              target: "org.bitcoinj.script.Script"
+              method: "of"
+              methodParameters:
+              - name: "chunks"
+                value:
+                  sapientType: "COLLECTION"
+                  valueType: "java.util.List"
+                  uuid: "of_script1-chunks"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "org.bitcoinj.script.Script"
             uuid: "of_script1"
             fixed: false
@@ -435,7 +557,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "7D7B125D5D8D7F624314AAFB1902F27C"
+      modelFingerprint: "87BD951D95C28133AEA68BD80502BBC1"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -462,7 +584,37 @@ methods:
               explicitCastNeeded: false
           - name: "redeemScript"
             value:
-              sapientType: "MOCK"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.bitcoinj.script.Script"
+                method: "of"
+                methodParameters:
+                - name: "chunks"
+                  value:
+                    sapientType: "COLLECTION"
+                    content: !<collection>
+                      parameters: []
+                      values: []
+                    suggestedContent: !<collection>
+                      parameters: []
+                      values: []
+                    valueType: "java.util.List"
+                    uuid: "of_script1-chunks"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.script.Script"
+                method: "of"
+                methodParameters:
+                - name: "chunks"
+                  value:
+                    sapientType: "COLLECTION"
+                    valueType: "java.util.List"
+                    uuid: "of_script1-chunks"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.script.Script"
               uuid: "of_script1"
               fixed: false
@@ -487,7 +639,37 @@ methods:
               explicitCastNeeded: false
           - name: "redeemScript"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.bitcoinj.script.Script"
+                method: "of"
+                methodParameters:
+                - name: "chunks"
+                  value:
+                    sapientType: "COLLECTION"
+                    content: !<collection>
+                      parameters: []
+                      values: []
+                    suggestedContent: !<collection>
+                      parameters: []
+                      values: []
+                    valueType: "java.util.List"
+                    uuid: "of_script1-chunks"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.script.Script"
+                method: "of"
+                methodParameters:
+                - name: "chunks"
+                  value:
+                    sapientType: "COLLECTION"
+                    valueType: "java.util.List"
+                    uuid: "of_script1-chunks"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.script.Script"
               uuid: "of_script1"
               fixed: false
@@ -506,6 +688,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -542,6 +725,7 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path4"
@@ -795,6 +979,7 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path1"
@@ -1200,12 +1385,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "EAB1B2EE3EB69A2468F4914BB7B06DA8"
+    modelFingerprint: "0BB41334244D0F09301F83233A6912D8"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "A2C94F10F557303102ABEFE0A78F1DC8"
+      modelFingerprint: "CD59D86CAA4DF1192D9861814A7396A1"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1220,11 +1405,81 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.crypto.ECKey"
+                    parameters: []
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.crypto.ECKey"
+                    parameters: []
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "org.bitcoinj.crypto.ECKey"
+                  uuid: "of_list1-0"
+                  fixed: false
+                  collectionUuid: "of_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.crypto.ECKey"
+                    parameters: []
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.crypto.ECKey"
+                    parameters: []
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "org.bitcoinj.crypto.ECKey"
+                  uuid: "of_list1-1"
+                  fixed: false
+                  collectionUuid: "of_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.crypto.ECKey"
+                    parameters: []
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.crypto.ECKey"
+                    parameters: []
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "org.bitcoinj.crypto.ECKey"
+                  uuid: "of_list1-0"
+                  fixed: false
+                  collectionUuid: "of_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.crypto.ECKey"
+                    parameters: []
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.crypto.ECKey"
+                    parameters: []
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "org.bitcoinj.crypto.ECKey"
+                  uuid: "of_list1-1"
+                  fixed: false
+                  collectionUuid: "of_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.crypto.ECKey"
               uuid: "of_list1"
@@ -1233,7 +1488,37 @@ methods:
               explicitCastNeeded: false
           - name: "redeemScript"
             value:
-              sapientType: "MOCK"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.bitcoinj.script.Script"
+                method: "of"
+                methodParameters:
+                - name: "chunks"
+                  value:
+                    sapientType: "COLLECTION"
+                    content: !<collection>
+                      parameters: []
+                      values: []
+                    suggestedContent: !<collection>
+                      parameters: []
+                      values: []
+                    valueType: "java.util.List"
+                    uuid: "of_script1-chunks"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.script.Script"
+                method: "of"
+                methodParameters:
+                - name: "chunks"
+                  value:
+                    sapientType: "COLLECTION"
+                    valueType: "java.util.List"
+                    uuid: "of_script1-chunks"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.script.Script"
               uuid: "of_script1"
               fixed: false
@@ -1246,9 +1531,82 @@ methods:
           - name: "keys"
             value:
               sapientType: "COLLECTION"
-              suggestedContent: !<collection>
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values: []
+                values:
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.crypto.ECKey"
+                    parameters: []
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.crypto.ECKey"
+                    parameters: []
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "org.bitcoinj.crypto.ECKey"
+                  uuid: "of_list1-0"
+                  fixed: false
+                  collectionUuid: "of_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.crypto.ECKey"
+                    parameters: []
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.crypto.ECKey"
+                    parameters: []
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "org.bitcoinj.crypto.ECKey"
+                  uuid: "of_list1-1"
+                  fixed: false
+                  collectionUuid: "of_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values:
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.crypto.ECKey"
+                    parameters: []
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.crypto.ECKey"
+                    parameters: []
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "org.bitcoinj.crypto.ECKey"
+                  uuid: "of_list1-0"
+                  fixed: false
+                  collectionUuid: "of_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  content: !<new>
+                    target: "org.bitcoinj.crypto.ECKey"
+                    parameters: []
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "org.bitcoinj.crypto.ECKey"
+                    parameters: []
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "org.bitcoinj.crypto.ECKey"
+                  uuid: "of_list1-1"
+                  fixed: false
+                  collectionUuid: "of_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.crypto.ECKey"
               uuid: "of_list1"
@@ -1257,7 +1615,37 @@ methods:
               explicitCastNeeded: false
           - name: "redeemScript"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.bitcoinj.script.Script"
+                method: "of"
+                methodParameters:
+                - name: "chunks"
+                  value:
+                    sapientType: "COLLECTION"
+                    content: !<collection>
+                      parameters: []
+                      values: []
+                    suggestedContent: !<collection>
+                      parameters: []
+                      values: []
+                    valueType: "java.util.List"
+                    uuid: "of_script1-chunks"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.script.Script"
+                method: "of"
+                methodParameters:
+                - name: "chunks"
+                  value:
+                    sapientType: "COLLECTION"
+                    valueType: "java.util.List"
+                    uuid: "of_script1-chunks"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.script.Script"
               uuid: "of_script1"
               fixed: false
@@ -1294,6 +1682,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

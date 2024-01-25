@@ -38,6 +38,8 @@ public class FiatSapientGeneratedJunit4Test {
     @Rule()
     public ExpectedException thrown = ExpectedException.none();
 
+    private final ArithmeticException arithmeticExceptionMock = mock(ArithmeticException.class);
+
     //Sapient generated method id: ${3aeb0092-1c55-3557-8de4-613a23e110b0}
     @Test()
     public void valueOfTest() {
@@ -66,18 +68,14 @@ public class FiatSapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void parseFiatTest() {
-        /**
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
         //Arrange Statement(s)
         try (MockedStatic<Fiat> fiat = mockStatic(Fiat.class, CALLS_REAL_METHODS)) {
-            fiat.when(() -> Fiat.valueOf("currencyCode1", 0L)).thenReturn(fiatMock);
+            fiat.when(() -> Fiat.valueOf("currencyCode1", 10000L)).thenReturn(fiatMock);
             //Act Statement(s)
             Fiat result = Fiat.parseFiat("currencyCode1", "1.0");
             //Assert statement(s)
             assertThat(result, equalTo(fiatMock));
-            fiat.verify(() -> Fiat.valueOf("currencyCode1", 0L), atLeast(1));
+            fiat.verify(() -> Fiat.valueOf("currencyCode1", 10000L), atLeast(1));
         }
     }
 
@@ -87,19 +85,16 @@ public class FiatSapientGeneratedJunit4Test {
     public void parseFiatWhenCaughtArithmeticExceptionThrowsIllegalArgumentException() {
         /* Branches:
          * (catch-exception (ArithmeticException)) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<Fiat> fiat = mockStatic(Fiat.class, CALLS_REAL_METHODS)) {
-            fiat.when(() -> Fiat.valueOf("currencyCode1", 0L)).thenReturn(fiatMock);
+            fiat.when(() -> Fiat.valueOf("USD", 12300L)).thenThrow(arithmeticExceptionMock);
             thrown.expect(IllegalArgumentException.class);
             thrown.expectCause(isA(ArithmeticException.class));
             //Act Statement(s)
-            Fiat.parseFiat("currencyCode1", "1.0");
+            Fiat.parseFiat("USD", "1.23");
             //Assert statement(s)
-            fiat.verify(() -> Fiat.valueOf("currencyCode1", 0L), atLeast(1));
+            fiat.verify(() -> Fiat.valueOf("USD", 12300L), atLeast(1));
         }
     }
 
@@ -107,10 +102,6 @@ public class FiatSapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void parseFiatInexactTest() {
-        /**
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
         //Arrange Statement(s)
         try (MockedStatic<Fiat> fiat = mockStatic(Fiat.class, CALLS_REAL_METHODS)) {
             fiat.when(() -> Fiat.valueOf("currencyCode1", 0L)).thenReturn(fiatMock);
@@ -128,19 +119,16 @@ public class FiatSapientGeneratedJunit4Test {
     public void parseFiatInexactWhenCaughtArithmeticExceptionThrowsIllegalArgumentException() {
         /* Branches:
          * (catch-exception (ArithmeticException)) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<Fiat> fiat = mockStatic(Fiat.class, CALLS_REAL_METHODS)) {
-            fiat.when(() -> Fiat.valueOf("currencyCode1", 0L)).thenReturn(fiatMock);
+            fiat.when(() -> Fiat.valueOf("USD", 1234567L)).thenThrow(arithmeticExceptionMock);
             thrown.expect(IllegalArgumentException.class);
             thrown.expectCause(isA(ArithmeticException.class));
             //Act Statement(s)
-            Fiat.parseFiatInexact("currencyCode1", "0.0");
+            Fiat.parseFiatInexact("USD", "123.4567");
             //Assert statement(s)
-            fiat.verify(() -> Fiat.valueOf("currencyCode1", 0L), atLeast(1));
+            fiat.verify(() -> Fiat.valueOf("USD", 1234567L), atLeast(1));
         }
     }
 
@@ -501,7 +489,7 @@ public class FiatSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Fiat target = Fiat.valueOf("A", 0L);
+        Fiat target = Fiat.valueOf("<String>", 0L);
 
         //Act Statement(s)
         String result = target.toFriendlyString();
@@ -519,7 +507,7 @@ public class FiatSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Fiat target = Fiat.valueOf("currencyCode1", 0L);
+        Fiat target = Fiat.valueOf("<value>", 0L);
 
         //Act Statement(s)
         String result = target.toPlainString();

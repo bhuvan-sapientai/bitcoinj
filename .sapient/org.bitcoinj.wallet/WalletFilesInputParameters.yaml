@@ -246,12 +246,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "38E793759A10DE9C173358EBF23A79B1"
+    modelFingerprint: "2CF48E0EF2E0E6CA36CF064CD628A21A"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "BF736631046C4348636D1F9782316132"
+      modelFingerprint: "6AF11A4C983CCF6FFE35AD6ECE309C2D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -271,6 +271,7 @@ methods:
               valueType: "org.bitcoinj.wallet.Wallet"
               uuid: "<init>_wallet1"
               fixed: false
+              nameForMock: "valid_hash"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "file"
@@ -325,9 +326,9 @@ methods:
             value:
               sapientType: "ENUM"
               content: !<regular>
-                value: "NANOSECONDS"
+                value: "SECONDS"
               suggestedContent: !<regular>
-                value: "NANOSECONDS"
+                value: "SECONDS"
               valueType: "java.util.concurrent.TimeUnit"
               uuid: "<init>_timeUnit1"
               fixed: false
@@ -336,354 +337,6 @@ methods:
           privateConstructor: false
           createdByTargetCode: false
         suggestedContent: !<new>
-          target: "org.bitcoinj.wallet.WalletFiles"
-          parameters:
-          - name: "wallet"
-            value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.wallet.Wallet"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.wallet.Wallet"
-              uuid: "<init>_wallet1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "file"
-            value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<new>
-                target: "java.io.File"
-                parameters:
-                - name: "pathname"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_file1-pathname"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
-              valueType: "java.io.File"
-              uuid: "<init>_file1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "delayTime"
-            value:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "long"
-              uuid: "<init>_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "timeUnit"
-            value:
-              sapientType: "ENUM"
-              suggestedContent: !<regular>
-                value: "NANOSECONDS"
-              valueType: "java.util.concurrent.TimeUnit"
-              uuid: "<init>_timeUnit1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "org.bitcoinj.wallet.WalletFiles"
-        uuid: "target"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "FIELD"
-      name: "wallet"
-      modelFingerprint: "6AF09D3C8ADD0A90A1B29123B8EC4086"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.wallet.Wallet"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.wallet.Wallet"
-        uuid: "<init>_wallet1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "this.wallet"
-        name: "getLastBlockSeenHeight"
-        parameters: []
-        signature: "getLastBlockSeenHeight(): int"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: 0
-          suggestedContent: !<regular>
-            value: 0
-          valueType: "int"
-          uuid: "saveNow_int1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "FIELD"
-      name: "wallet"
-      modelFingerprint: "E68152C20ED7BBC94D9E9E7F0B15020F"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.wallet.Wallet"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.wallet.Wallet"
-        uuid: "<init>_wallet1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "this.wallet"
-        name: "lastBlockSeenTime"
-        parameters: []
-        signature: "lastBlockSeenTime(): Optional"
-        returnValue:
-          sapientType: "OPTIONAL"
-          content: !<optional>
-            value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "java.time.Instant"
-                method: "now"
-                methodParameters: []
-              suggestedContent: !<static_method_return>
-                target: "java.time.Instant"
-                method: "now"
-                methodParameters: []
-              valueType: "java.time.Instant"
-              uuid: "saveNow_instant1"
-              fixed: false
-              collectionUuid: "saveNow_optional1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            target: "java.util.Optional"
-          valueType: "java.util.Optional"
-          genericValueType: "java.time.Instant"
-          uuid: "saveNow_optional1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "TimeUtils"
-      modelFingerprint: "2B521838B7E7B9AD1A238E4858A87045"
-      index: 4
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.TimeUtils"
-        uuid: "org.bitcoinj.base.internal.TimeUtils"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.TimeUtils"
-        name: "dateTimeFormat"
-        parameters:
-        - name: "time"
-          value:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "java.time.Instant"
-              method: "now"
-              methodParameters: []
-            suggestedContent: !<static_method_return>
-              target: "java.time.Instant"
-              method: "now"
-              methodParameters: []
-            valueType: "java.time.Instant"
-            uuid: "saveNow_instant1"
-            fixed: false
-            collectionUuid: "saveNow_optional1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "dateTimeFormat(Instant): String"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: "return_of_dateTimeFormat1"
-          valueType: "java.lang.String"
-          uuid: "lambda$saveNow$2_string1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "FIELD"
-      name: "wallet"
-      modelFingerprint: "092211433F9450933214C5512F5174EB"
-      index: 5
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.wallet.Wallet"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.wallet.Wallet"
-        uuid: "<init>_wallet1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "this.wallet"
-        name: "getLastBlockSeenHash"
-        parameters: []
-        signature: "getLastBlockSeenHash(): Sha256Hash"
-        returnValue:
-          sapientType: "MOCK"
-          valueType: "org.bitcoinj.base.Sha256Hash"
-          uuid: "saveNow_sha256Hash1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Stopwatch"
-      modelFingerprint: "B55513491A37646FAC8FE6072D546C2C"
-      index: 6
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Stopwatch"
-        uuid: "org.bitcoinj.base.internal.Stopwatch"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Stopwatch"
-        name: "start"
-        parameters: []
-        signature: "start(): Stopwatch"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.internal.Stopwatch"
-            method: "start"
-            methodParameters: []
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.base.internal.Stopwatch"
-            method: "start"
-            methodParameters: []
-          valueType: "org.bitcoinj.base.internal.Stopwatch"
-          uuid: "saveNowInternal_stopwatch1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "A5EFBDA14C3F46FC15B48D851A67BF49"
-      index: 7
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "EXCEPTION"
-        content: !<new>
-          target: "java.io.FileNotFoundException"
-          parameters:
-          - name: "s"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: " (wallet directory not found)"
-              suggestedContent: !<regular>
-                value: " (wallet directory not found)"
-              valueType: "java.lang.String"
-              uuid: "saveNowInternal_string2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "java.io.FileNotFoundException"
-          parameters:
-          - name: "s"
-            value:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: " (wallet directory not found)"
-              valueType: "java.lang.String"
-              uuid: "saveNowInternal_string2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        valueType: "java.io.FileNotFoundException"
-        uuid: "saveNowInternal_fileNotFoundException1"
-        fixed: true
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    uuid: "64f96677-f12b-3bca-9163-3f25ee0bdc58"
-    deleted: false
-    disabled: false
-    ignoredBySystem: false
-    prover: "LLM"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path2"
-    pathIdForUser: "path2"
-    testPathName: "saveNowWhenListenerIsNull"
-    nameDefinedByUser: false
-    constructorSignature: "<init>(org.bitcoinj.wallet.Wallet,java.io.File,long,java.util.concurrent.TimeUnit)\
-      \ : void"
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "4C51FE7243A1B64EBAEC6B8F881E9812"
-    problemWasSolvedByProver: false
-    truncated: false
-    inputParameters:
-    - type: "CONSTRUCTOR"
-      modelFingerprint: "BF736631046C4348636D1F9782316132"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
           target: "org.bitcoinj.wallet.WalletFiles"
           parameters:
           - name: "wallet"
@@ -696,6 +349,7 @@ methods:
               valueType: "org.bitcoinj.wallet.Wallet"
               uuid: "<init>_wallet1"
               fixed: false
+              nameForMock: "valid_hash"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "file"
@@ -750,67 +404,9 @@ methods:
             value:
               sapientType: "ENUM"
               content: !<regular>
-                value: "NANOSECONDS"
+                value: "SECONDS"
               suggestedContent: !<regular>
-                value: "NANOSECONDS"
-              valueType: "java.util.concurrent.TimeUnit"
-              uuid: "<init>_timeUnit1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.wallet.WalletFiles"
-          parameters:
-          - name: "wallet"
-            value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.wallet.Wallet"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.wallet.Wallet"
-              uuid: "<init>_wallet1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "file"
-            value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<new>
-                target: "java.io.File"
-                parameters:
-                - name: "pathname"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_file1-pathname"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
-              valueType: "java.io.File"
-              uuid: "<init>_file1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "delayTime"
-            value:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "long"
-              uuid: "<init>_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "timeUnit"
-            value:
-              sapientType: "ENUM"
-              suggestedContent: !<regular>
-                value: "NANOSECONDS"
+                value: "SECONDS"
               valueType: "java.util.concurrent.TimeUnit"
               uuid: "<init>_timeUnit1"
               fixed: false
@@ -827,19 +423,15 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "wallet"
-      modelFingerprint: "6AF09D3C8ADD0A90A1B29123B8EC4086"
+      modelFingerprint: "7D7A0B727664F1C39310FC44EDF9F875"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.wallet.Wallet"
-          onlyPojoFunctions: false
-          builderPattern: false
         valueType: "org.bitcoinj.wallet.Wallet"
-        uuid: "<init>_wallet1"
+        uuid: "<init>_wallet2"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -851,9 +443,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 0
+            value: 100
           suggestedContent: !<regular>
-            value: 0
+            value: 100
           valueType: "int"
           uuid: "saveNow_int1"
           fixed: false
@@ -864,19 +456,15 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "wallet"
-      modelFingerprint: "E68152C20ED7BBC94D9E9E7F0B15020F"
+      modelFingerprint: "F1F98AC8685D9957B059ECBDF00D6BA3"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.wallet.Wallet"
-          onlyPojoFunctions: false
-          builderPattern: false
         valueType: "org.bitcoinj.wallet.Wallet"
-        uuid: "<init>_wallet1"
+        uuid: "<init>_wallet2"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -899,9 +487,23 @@ methods:
                 method: "now"
                 methodParameters: []
               valueType: "java.time.Instant"
-              uuid: "saveNow_instant1"
               fixed: false
-              collectionUuid: "saveNow_optional1"
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            target: "java.util.Optional"
+          suggestedContent: !<optional>
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.time.Instant"
+                method: "now"
+                methodParameters: []
+              suggestedContent: !<static_method_return>
+                target: "java.time.Instant"
+                method: "now"
+                methodParameters: []
+              valueType: "java.time.Instant"
+              fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
             target: "java.util.Optional"
@@ -916,7 +518,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "TimeUtils"
-      modelFingerprint: "2B521838B7E7B9AD1A238E4858A87045"
+      modelFingerprint: "92AC9F41B480FBEA10AF149180161AF5"
       index: 4
       ignored: false
       nestedInLoop: true
@@ -944,16 +546,16 @@ methods:
               method: "now"
               methodParameters: []
             valueType: "java.time.Instant"
-            uuid: "saveNow_instant1"
             fixed: false
-            collectionUuid: "saveNow_optional1"
             equalsMethodPresent: false
             explicitCastNeeded: false
         signature: "dateTimeFormat(Instant): String"
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "return_of_dateTimeFormat1"
+            value: "yyyy-MM-dd'T'HH:mm:ss'Z'"
+          suggestedContent: !<regular>
+            value: "yyyy-MM-dd'T'HH:mm:ss'Z'"
           valueType: "java.lang.String"
           uuid: "lambda$saveNow$2_string1"
           fixed: false
@@ -964,19 +566,15 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "wallet"
-      modelFingerprint: "092211433F9450933214C5512F5174EB"
+      modelFingerprint: "953AACF1FEEE48CB5718239DEA2DE64A"
       index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.wallet.Wallet"
-          onlyPojoFunctions: false
-          builderPattern: false
         valueType: "org.bitcoinj.wallet.Wallet"
-        uuid: "<init>_wallet1"
+        uuid: "<init>_wallet2"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -986,7 +584,69 @@ methods:
         parameters: []
         signature: "getLastBlockSeenHash(): Sha256Hash"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.base.Sha256Hash"
+            method: "read"
+            methodParameters:
+            - name: "buf"
+              value:
+                sapientType: "OBJECT"
+                content: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 0
+                      valueType: "int"
+                      uuid: "saveNow_sha256Hash1-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                suggestedContent: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      valueType: "int"
+                      uuid: "saveNow_sha256Hash1-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "java.nio.ByteBuffer"
+                uuid: "saveNow_sha256Hash1-buf"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.Sha256Hash"
+            method: "read"
+            methodParameters:
+            - name: "buf"
+              value:
+                sapientType: "UNKNOWN"
+                suggestedContent: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      valueType: "int"
+                      uuid: "saveNow_sha256Hash1-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "java.nio.ByteBuffer"
+                uuid: "saveNow_sha256Hash1-buf"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "org.bitcoinj.base.Sha256Hash"
           uuid: "saveNow_sha256Hash1"
           fixed: false
@@ -997,7 +657,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Stopwatch"
-      modelFingerprint: "B55513491A37646FAC8FE6072D546C2C"
+      modelFingerprint: "137F4C42149C884FA4701780108D6C85"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -1027,6 +687,7 @@ methods:
           valueType: "org.bitcoinj.base.internal.Stopwatch"
           uuid: "saveNowInternal_stopwatch1"
           fixed: false
+          nameForMock: "0 ns"
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 9
@@ -1034,19 +695,15 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "wallet"
-      modelFingerprint: "C3DEB6A9D8ECDDE13949C338D3139EB5"
+      modelFingerprint: "9E41978C5D59839674F02AB80BBF1E30"
       index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.wallet.Wallet"
-          onlyPojoFunctions: false
-          builderPattern: false
         valueType: "org.bitcoinj.wallet.Wallet"
-        uuid: "<init>_wallet1"
+        uuid: "<init>_wallet2"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -1093,6 +750,599 @@ methods:
         - name: "destFile"
           value:
             sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "java.util.Objects"
+              method: "requireNonNull"
+              methodParameters:
+              - value:
+                  sapientType: "OBJECT"
+                  content: !<new>
+                    target: "java.io.File"
+                    parameters:
+                    - name: "pathname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "pathname1"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_file1-pathname"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "java.io.File"
+                    parameters:
+                    - name: "pathname"
+                      value:
+                        sapientType: "BASIC"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_file1-pathname"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "java.io.File"
+                  uuid: "<init>_file1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<static_method_return>
+              target: "java.util.Objects"
+              method: "requireNonNull"
+              methodParameters:
+              - value:
+                  sapientType: "OBJECT"
+                  content: !<new>
+                    target: "java.io.File"
+                    parameters:
+                    - name: "pathname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "pathname1"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_file1-pathname"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "java.io.File"
+                    parameters:
+                    - name: "pathname"
+                      value:
+                        sapientType: "BASIC"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_file1-pathname"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "java.io.File"
+                  uuid: "<init>_file1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "java.io.File"
+            uuid: "<init>_file2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "java.io.IOException"
+        signature: "saveToFile(File,File): void throws java.io.IOException"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "saveNowInternal_void1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "VOID"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "64f96677-f12b-3bca-9163-3f25ee0bdc58"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "saveNowWhenListenerIsNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.wallet.Wallet,java.io.File,long,java.util.concurrent.TimeUnit)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "A19EEFE06104590D0D7EDCC68DD5E4BB"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "6AF11A4C983CCF6FFE35AD6ECE309C2D"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.wallet.WalletFiles"
+          parameters:
+          - name: "wallet"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.Wallet"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.wallet.Wallet"
+              uuid: "<init>_wallet1"
+              fixed: false
+              nameForMock: "new Wallet()"
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "file"
+            value:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.io.File"
+                parameters:
+                - name: "pathname"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "pathname1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_file1-pathname"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "java.io.File"
+                parameters:
+                - name: "pathname"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_file1-pathname"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "java.io.File"
+              uuid: "<init>_file1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "delayTime"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 1
+              suggestedContent: !<regular>
+                value: 1
+              valueType: "long"
+              uuid: "<init>_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "timeUnit"
+            value:
+              sapientType: "ENUM"
+              content: !<regular>
+                value: "SECONDS"
+              suggestedContent: !<regular>
+                value: "SECONDS"
+              valueType: "java.util.concurrent.TimeUnit"
+              uuid: "<init>_timeUnit1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.wallet.WalletFiles"
+          parameters:
+          - name: "wallet"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.Wallet"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.wallet.Wallet"
+              uuid: "<init>_wallet1"
+              fixed: false
+              nameForMock: "new Wallet()"
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "file"
+            value:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.io.File"
+                parameters:
+                - name: "pathname"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "pathname1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_file1-pathname"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "java.io.File"
+                parameters:
+                - name: "pathname"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_file1-pathname"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
+              valueType: "java.io.File"
+              uuid: "<init>_file1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "delayTime"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 1
+              suggestedContent: !<regular>
+                value: 1
+              valueType: "long"
+              uuid: "<init>_long1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "timeUnit"
+            value:
+              sapientType: "ENUM"
+              content: !<regular>
+                value: "SECONDS"
+              suggestedContent: !<regular>
+                value: "SECONDS"
+              valueType: "java.util.concurrent.TimeUnit"
+              uuid: "<init>_timeUnit1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.wallet.WalletFiles"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "wallet"
+      modelFingerprint: "DA04AF032ECE0ABD8E8FDBE768F19DFA"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.wallet.Wallet"
+        uuid: "<init>_wallet2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.wallet"
+        name: "getLastBlockSeenHeight"
+        parameters: []
+        signature: "getLastBlockSeenHeight(): int"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: 0
+          valueType: "int"
+          uuid: "saveNow_int1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "wallet"
+      modelFingerprint: "F1F98AC8685D9957B059ECBDF00D6BA3"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.wallet.Wallet"
+        uuid: "<init>_wallet2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.wallet"
+        name: "lastBlockSeenTime"
+        parameters: []
+        signature: "lastBlockSeenTime(): Optional"
+        returnValue:
+          sapientType: "OPTIONAL"
+          content: !<optional>
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.time.Instant"
+                method: "now"
+                methodParameters: []
+              suggestedContent: !<static_method_return>
+                target: "java.time.Instant"
+                method: "now"
+                methodParameters: []
+              valueType: "java.time.Instant"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            target: "java.util.Optional"
+          suggestedContent: !<optional>
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.time.Instant"
+                method: "now"
+                methodParameters: []
+              suggestedContent: !<static_method_return>
+                target: "java.time.Instant"
+                method: "now"
+                methodParameters: []
+              valueType: "java.time.Instant"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            target: "java.util.Optional"
+          valueType: "java.util.Optional"
+          genericValueType: "java.time.Instant"
+          uuid: "saveNow_optional1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "TimeUtils"
+      modelFingerprint: "5F24EF51416F4B1DCC0527D438F59EC5"
+      index: 4
+      ignored: false
+      nestedInLoop: true
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.TimeUtils"
+        uuid: "org.bitcoinj.base.internal.TimeUtils"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.TimeUtils"
+        name: "dateTimeFormat"
+        parameters:
+        - name: "time"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "java.time.Instant"
+              method: "now"
+              methodParameters: []
+            suggestedContent: !<static_method_return>
+              target: "java.time.Instant"
+              method: "now"
+              methodParameters: []
+            valueType: "java.time.Instant"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "dateTimeFormat(Instant): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "String"
+          suggestedContent: !<regular>
+            value: "String"
+          valueType: "java.lang.String"
+          uuid: "lambda$saveNow$2_string1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "wallet"
+      modelFingerprint: "953AACF1FEEE48CB5718239DEA2DE64A"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.wallet.Wallet"
+        uuid: "<init>_wallet2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.wallet"
+        name: "getLastBlockSeenHash"
+        parameters: []
+        signature: "getLastBlockSeenHash(): Sha256Hash"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.base.Sha256Hash"
+            method: "read"
+            methodParameters:
+            - name: "buf"
+              value:
+                sapientType: "OBJECT"
+                content: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 0
+                      valueType: "int"
+                      uuid: "saveNow_sha256Hash1-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                suggestedContent: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      valueType: "int"
+                      uuid: "saveNow_sha256Hash1-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "java.nio.ByteBuffer"
+                uuid: "saveNow_sha256Hash1-buf"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.Sha256Hash"
+            method: "read"
+            methodParameters:
+            - name: "buf"
+              value:
+                sapientType: "UNKNOWN"
+                suggestedContent: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      valueType: "int"
+                      uuid: "saveNow_sha256Hash1-buf-capacity"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "java.nio.ByteBuffer"
+                uuid: "saveNow_sha256Hash1-buf"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "org.bitcoinj.base.Sha256Hash"
+          uuid: "saveNow_sha256Hash1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Stopwatch"
+      modelFingerprint: "137F4C42149C884FA4701780108D6C85"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Stopwatch"
+        uuid: "org.bitcoinj.base.internal.Stopwatch"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Stopwatch"
+        name: "start"
+        parameters: []
+        signature: "start(): Stopwatch"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.base.internal.Stopwatch"
+            method: "start"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.internal.Stopwatch"
+            method: "start"
+            methodParameters: []
+          valueType: "org.bitcoinj.base.internal.Stopwatch"
+          uuid: "saveNowInternal_stopwatch1"
+          fixed: false
+          nameForMock: "Stopwatch"
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "wallet"
+      modelFingerprint: "9E41978C5D59839674F02AB80BBF1E30"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.wallet.Wallet"
+        uuid: "<init>_wallet2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.wallet"
+        name: "saveToFile"
+        parameters:
+        - name: "tempFile"
+          value:
+            sapientType: "OBJECT"
             content: !<new>
               target: "java.io.File"
               parameters:
@@ -1102,7 +1352,7 @@ methods:
                   content: !<regular>
                     value: "pathname1"
                   valueType: "java.lang.String"
-                  uuid: "<init>_file1-pathname"
+                  uuid: "saveNowInternal_file3-pathname"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -1115,14 +1365,100 @@ methods:
                 value:
                   sapientType: "BASIC"
                   valueType: "java.lang.String"
-                  uuid: "<init>_file1-pathname"
+                  uuid: "saveNowInternal_file3-pathname"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
               privateConstructor: false
               createdByTargetCode: false
             valueType: "java.io.File"
-            uuid: "<init>_file1"
+            uuid: "saveNowInternal_file3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "destFile"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "java.util.Objects"
+              method: "requireNonNull"
+              methodParameters:
+              - value:
+                  sapientType: "OBJECT"
+                  content: !<new>
+                    target: "java.io.File"
+                    parameters:
+                    - name: "pathname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "pathname1"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_file1-pathname"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "java.io.File"
+                    parameters:
+                    - name: "pathname"
+                      value:
+                        sapientType: "BASIC"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_file1-pathname"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "java.io.File"
+                  uuid: "<init>_file1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<static_method_return>
+              target: "java.util.Objects"
+              method: "requireNonNull"
+              methodParameters:
+              - value:
+                  sapientType: "OBJECT"
+                  content: !<new>
+                    target: "java.io.File"
+                    parameters:
+                    - name: "pathname"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "pathname1"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_file1-pathname"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "java.io.File"
+                    parameters:
+                    - name: "pathname"
+                      value:
+                        sapientType: "BASIC"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_file1-pathname"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "java.io.File"
+                  uuid: "<init>_file1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "java.io.File"
+            uuid: "<init>_file2"
             fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -1157,6 +1493,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -1176,12 +1513,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "073CED4B36ADC2577C4E7C3CF79CC938"
+    modelFingerprint: "E798F41007EBCC22C52C7172F153065F"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "2E1A2F7A209953DF201C6270AC9985A8"
+      modelFingerprint: "D61ED2FDB02371FC3939D64F55682EDC"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1194,9 +1531,14 @@ methods:
           - name: "wallet"
             value:
               sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.Wallet"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.wallet.Wallet"
               uuid: "<init>_wallet1"
               fixed: false
+              nameForMock: "<value>"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "file"
@@ -1266,15 +1608,35 @@ methods:
           parameters:
           - name: "wallet"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.Wallet"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.wallet.Wallet"
               uuid: "<init>_wallet1"
               fixed: false
+              nameForMock: "<value>"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "file"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.io.File"
+                parameters:
+                - name: "pathname"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "pathname1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_file1-pathname"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.io.File"
                 parameters:
@@ -1340,6 +1702,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -1365,7 +1728,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "FA56D8D46B77C8AA8F6298069003A72D"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -1528,6 +1891,7 @@ methods:
     deleted: false
     disabled: true
     ignoredBySystem: false
+    firstFailureReason: "TODO_ADDED_BY_TEST_GENERATOR"
     disabledReason: "Potential harmful system call (ScheduledThreadPoolExecutor.shutdown,\
       \ ScheduledThreadPoolExecutor.awaitTermination) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     prover: "DEFAULT"
@@ -1542,7 +1906,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "A39A9EFC2DCA0988743279AFD0BDFD76"
+    modelFingerprint: "AF5968E9508EE0E321DA04D1AF287B90"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -1552,7 +1916,7 @@ methods:
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "2E1A2F7A209953DF201C6270AC9985A8"
+      modelFingerprint: "BDA1160D1DF6785C076070FB501E9F7D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1565,9 +1929,14 @@ methods:
           - name: "wallet"
             value:
               sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.Wallet"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.wallet.Wallet"
               uuid: "<init>_wallet1"
               fixed: false
+              nameForMock: "<Wallet object>"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "file"
@@ -1610,9 +1979,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 1
+                value: 0
               suggestedContent: !<regular>
-                value: 1
+                value: 0
               valueType: "long"
               uuid: "<init>_long1"
               fixed: false
@@ -1622,9 +1991,9 @@ methods:
             value:
               sapientType: "ENUM"
               content: !<regular>
-                value: "NANOSECONDS"
+                value: "SECONDS"
               suggestedContent: !<regular>
-                value: "NANOSECONDS"
+                value: "SECONDS"
               valueType: "java.util.concurrent.TimeUnit"
               uuid: "<init>_timeUnit1"
               fixed: false
@@ -1637,15 +2006,35 @@ methods:
           parameters:
           - name: "wallet"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.Wallet"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.wallet.Wallet"
               uuid: "<init>_wallet1"
               fixed: false
+              nameForMock: "<Wallet object>"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "file"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.io.File"
+                parameters:
+                - name: "pathname"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "pathname1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_file1-pathname"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.io.File"
                 parameters:
@@ -1667,8 +2056,10 @@ methods:
           - name: "delayTime"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 0
               suggestedContent: !<regular>
-                value: 1
+                value: 0
               valueType: "long"
               uuid: "<init>_long1"
               fixed: false
@@ -1677,8 +2068,10 @@ methods:
           - name: "timeUnit"
             value:
               sapientType: "ENUM"
+              content: !<regular>
+                value: "SECONDS"
               suggestedContent: !<regular>
-                value: "NANOSECONDS"
+                value: "SECONDS"
               valueType: "java.util.concurrent.TimeUnit"
               uuid: "<init>_timeUnit1"
               fixed: false
@@ -1921,6 +2314,7 @@ methods:
     deleted: false
     disabled: true
     ignoredBySystem: false
+    firstFailureReason: "DEPENDENCY_TO_THROW_EXCEPTION_NOT_FOUND"
     disabledReason: "Potential harmful system call (ScheduledThreadPoolExecutor.shutdown,\
       \ ScheduledThreadPoolExecutor.awaitTermination) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     prover: "LLM"

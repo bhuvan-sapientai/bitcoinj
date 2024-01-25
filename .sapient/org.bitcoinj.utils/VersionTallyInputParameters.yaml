@@ -17,12 +17,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "3CC71D5C704B45935736B6CF6D5ACF2B"
+    modelFingerprint: "8D3B313B3E3E31E667D346036014148C"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "F60C8C90F059F9FDD85D6CEB76299DD3"
+      modelFingerprint: "F2CA09CAB938ABBFC97680566015ACC5"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -42,6 +42,7 @@ methods:
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
+              nameForMock: "10"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -51,7 +52,7 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.NetworkParameters"
                 onlyPojoFunctions: false
@@ -59,6 +60,7 @@ methods:
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
+              nameForMock: "10"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -72,24 +74,19 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "version"
-      modelFingerprint: "EA5A443312BBDF8C2B194A192CA19E72"
+      modelFingerprint: "8CE6457E0387FB017DD8EEB34CBEACB6"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "EXCEPTION"
-        content: !<new>
-          target: "java.lang.ArrayIndexOutOfBoundsException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "java.lang.ArrayIndexOutOfBoundsException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "java.lang.ArrayIndexOutOfBoundsException"
+        sapientType: "BASIC"
+        content: !<regular>
+          value: 1
+        suggestedContent: !<regular>
+          value: 1
+        valueType: "long"
+        uuid: "add_long1"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -97,7 +94,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "params"
-      modelFingerprint: "1113C10D54FF94A05963232E9EE1F45D"
+      modelFingerprint: "06527612B70E7435C061DDE71846FDC3"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -111,6 +108,7 @@ methods:
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "<init>_networkParameters1"
         fixed: false
+        nameForMock: "10"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -121,7 +119,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 0
+            value: 10
+          suggestedContent: !<regular>
+            value: 10
           valueType: "int"
           uuid: "<init>_int3"
           fixed: false
@@ -132,25 +132,14 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "399A42305DBAC95DB70E56205A7C45EE"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "EXCEPTION"
-        content: !<new>
-          target: "java.lang.ArrayIndexOutOfBoundsException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "java.lang.ArrayIndexOutOfBoundsException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "java.lang.ArrayIndexOutOfBoundsException"
-        fixed: false
+        sapientType: "VOID"
+        fixed: true
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
@@ -355,12 +344,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "A79BF0353C7B586B1C3BED6EDD8B1091"
+    modelFingerprint: "4877641BD7A758200834194BD6FBA854"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "F60C8C90F059F9FDD85D6CEB76299DD3"
+      modelFingerprint: "F2CA09CAB938ABBFC97680566015ACC5"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -380,6 +369,7 @@ methods:
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
+              nameForMock: "1"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -389,7 +379,7 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.NetworkParameters"
                 onlyPojoFunctions: false
@@ -397,6 +387,7 @@ methods:
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
+              nameForMock: "1"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -410,7 +401,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "version"
-      modelFingerprint: "460F215D1CFEF9E6314FF187BED37B8E"
+      modelFingerprint: "8F449636CBD58C949F4231783F2B1551"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -418,6 +409,8 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
+          value: 0
+        suggestedContent: !<regular>
           value: 0
         valueType: "long"
         uuid: "getCountAtOrAbove_long1"
@@ -428,7 +421,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "params"
-      modelFingerprint: "1113C10D54FF94A05963232E9EE1F45D"
+      modelFingerprint: "A1D4FFD09E64F1B75D8A26773323D995"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -442,6 +435,7 @@ methods:
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "<init>_networkParameters1"
         fixed: false
+        nameForMock: "1"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -452,7 +446,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 0
+            value: 1
+          suggestedContent: !<regular>
+            value: 1
           valueType: "int"
           uuid: "<init>_int3"
           fixed: false
@@ -463,18 +459,16 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "5997CAD00732478D5A8B2DC540BBE4B4"
+      modelFingerprint: "2FBF27F068D18A1F7C6A4BC221D154FB"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: 0
+        sapientType: "NULL"
         valueType: "java.lang.Integer"
         uuid: "getCountAtOrAbove_integer1"
-        fixed: false
+        fixed: true
         equalsMethodPresent: true
         explicitCastNeeded: false
       staticReadMethodForField: false
@@ -502,6 +496,7 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:

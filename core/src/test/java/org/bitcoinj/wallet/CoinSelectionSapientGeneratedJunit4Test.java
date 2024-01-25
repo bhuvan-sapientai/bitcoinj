@@ -20,27 +20,30 @@ import static org.hamcrest.Matchers.notNullValue;
 import static org.mockito.Mockito.mock;
 import static org.hamcrest.Matchers.is;
 
+import org.bitcoinj.core.Transaction;
+
 public class CoinSelectionSapientGeneratedJunit4Test {
 
     @Rule()
     public Timeout timeoutRule = Timeout.seconds(5);
 
-    private final Coin coinMock = mock(Coin.class);
+    private final Coin coinMock = mock(Coin.class, "10");
 
     //Sapient generated method id: ${59671bab-6f05-338a-800c-34fb3c21b2b7}
     @Test()
     public void totalValueTest() {
         /**
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Transaction transactionMock = mock(Transaction.class);
+        Coin coinMock2 = mock(Coin.class);
+        byte[] byteArray = new byte[]{};
+        TransactionOutput transactionOutput = new TransactionOutput(transactionMock, coinMock2, byteArray);
         Collection<TransactionOutput> collection = new ArrayList<>();
+        collection.add(transactionOutput);
         CoinSelection target = new CoinSelection(coinMock, collection);
-
         //Act Statement(s)
         Coin result = target.totalValue();
-
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -49,16 +52,12 @@ public class CoinSelectionSapientGeneratedJunit4Test {
     @Test()
     public void outputsTest() {
         /**
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         Collection<TransactionOutput> collection = new ArrayList<>();
         CoinSelection target = new CoinSelection(coinMock, collection);
-
         //Act Statement(s)
         List<TransactionOutput> result = target.outputs();
-
         //Assert statement(s)
         assertThat(result.size(), equalTo(0));
     }

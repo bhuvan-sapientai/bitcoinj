@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "B3653FFF33B221F0E79E965EA4B8CA82"
+modelFingerprint: "270030FA7C276755E268763DA9342487"
 methods:
 - method:
     name: "getWordList"
@@ -16,7 +16,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "ECD526AD65CC144DA7A867C847A6B023"
+    modelFingerprint: "7BFBA5890E39B168FB716D96F57E2282"
     problemWasSolvedByProver: false
     truncated: true
     inputParameters: []
@@ -24,6 +24,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_CALL_INSTRUCTION_CONSTRUCTION_FAILURE"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -2604,12 +2605,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "80FB03C6451C3BAADE67A4F79E7C196D"
+    modelFingerprint: "A4C04010D7BBC779475A55C4ED18243C"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "233D251DF1CC03DFFA703DCA4C3C6BDE"
+      modelFingerprint: "6188351D708705B2917CA4B01D731A5C"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2633,7 +2634,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "wordListDigest1"
+                value: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              suggestedContent: !<regular>
+                value: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
               valueType: "java.lang.String"
               uuid: "<init>_string5"
               fixed: false
@@ -2655,6 +2658,8 @@ methods:
           - name: "wordListDigest"
             value:
               sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
               valueType: "java.lang.String"
               uuid: "<init>_string5"
               fixed: false
@@ -2671,7 +2676,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "words"
-      modelFingerprint: "FDCA10C1017B9845D3F09241A63BEB70"
+      modelFingerprint: "2F6D2C81DC2E8EB21471F81BB08F08FA"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -2679,11 +2684,29 @@ methods:
       value:
         sapientType: "COLLECTION"
         content: !<collection>
+          collectionClass: "java.util.ArrayList"
           parameters: []
-          values: []
+          values:
+          - sapientType: "BASIC"
+            content: !<regular>
+              value: "wordsItem1"
+            valueType: "java.lang.String"
+            uuid: "toEntropy_list1Item0"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
         suggestedContent: !<collection>
+          collectionClass: "java.util.ArrayList"
           parameters: []
-          values: []
+          values:
+          - sapientType: "BASIC"
+            content: !<regular>
+              value: "wordsItem1"
+            valueType: "java.lang.String"
+            uuid: "toEntropy_list1Item0"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
         valueType: "java.util.List"
         genericValueType: "java.lang.String"
         uuid: "toEntropy_list1"
@@ -3435,6 +3458,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_CALL_INSTRUCTION_CONSTRUCTION_FAILURE"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -3445,12 +3469,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "65C58844C519ECF124BD07711A04F9A9"
+    modelFingerprint: "C3F2A551DF0521718366F59B4A145361"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "233D251DF1CC03DFFA703DCA4C3C6BDE"
+      modelFingerprint: "6188351D708705B2917CA4B01D731A5C"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -3474,7 +3498,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "wordListDigest1"
+                value: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              suggestedContent: !<regular>
+                value: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
               valueType: "java.lang.String"
               uuid: "<init>_string5"
               fixed: false
@@ -3496,6 +3522,8 @@ methods:
           - name: "wordListDigest"
             value:
               sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
               valueType: "java.lang.String"
               uuid: "<init>_string5"
               fixed: false
@@ -3512,7 +3540,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "words"
-      modelFingerprint: "FDCA10C1017B9845D3F09241A63BEB70"
+      modelFingerprint: "BFDEA532FD71F317A0DE49D6A92BC4DD"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -4276,6 +4304,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_CALL_INSTRUCTION_CONSTRUCTION_FAILURE"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path3"
@@ -4286,12 +4315,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "B9C00A37DEC3E7A5D7B225B4727A123F"
+    modelFingerprint: "64928CFCA8F405B1D55D31DD3D1504DB"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "233D251DF1CC03DFFA703DCA4C3C6BDE"
+      modelFingerprint: "6188351D708705B2917CA4B01D731A5C"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -4315,7 +4344,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "wordListDigest1"
+                value: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              suggestedContent: !<regular>
+                value: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
               valueType: "java.lang.String"
               uuid: "<init>_string5"
               fixed: false
@@ -4337,6 +4368,8 @@ methods:
           - name: "wordListDigest"
             value:
               sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
               valueType: "java.lang.String"
               uuid: "<init>_string5"
               fixed: false
@@ -4353,7 +4386,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "words"
-      modelFingerprint: "FDCA10C1017B9845D3F09241A63BEB70"
+      modelFingerprint: "3D30DD9D61EE36046996F23617E49BC5"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -4361,11 +4394,63 @@ methods:
       value:
         sapientType: "COLLECTION"
         content: !<collection>
+          collectionClass: "java.util.ArrayList"
           parameters: []
-          values: []
+          values:
+          - sapientType: "BASIC"
+            content: !<regular>
+              value: "wordsItem1"
+            valueType: "java.lang.String"
+            uuid: "toEntropy_object1"
+            fixed: false
+            collectionUuid: "toEntropy_list1"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          - sapientType: "BASIC"
+            content: !<regular>
+              value: "wordsItem2"
+            valueType: "java.lang.String"
+            uuid: "toEntropy_list1Item1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          - sapientType: "BASIC"
+            content: !<regular>
+              value: "wordsItem3"
+            valueType: "java.lang.String"
+            uuid: "toEntropy_list1Item2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
         suggestedContent: !<collection>
+          collectionClass: "java.util.ArrayList"
           parameters: []
-          values: []
+          values:
+          - sapientType: "BASIC"
+            content: !<regular>
+              value: "wordsItem1"
+            valueType: "java.lang.String"
+            uuid: "toEntropy_object1"
+            fixed: false
+            collectionUuid: "toEntropy_list1"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          - sapientType: "BASIC"
+            content: !<regular>
+              value: "wordsItem2"
+            valueType: "java.lang.String"
+            uuid: "toEntropy_list1Item1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          - sapientType: "BASIC"
+            content: !<regular>
+              value: "wordsItem3"
+            valueType: "java.lang.String"
+            uuid: "toEntropy_list1Item2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
         valueType: "java.util.List"
         genericValueType: "java.lang.String"
         uuid: "toEntropy_list1"
@@ -5085,7 +5170,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "badWord1"
+                value: "wordsItem1"
               valueType: "java.lang.String"
               uuid: "toEntropy_object1"
               fixed: false
@@ -5119,6 +5204,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_CALL_INSTRUCTION_CONSTRUCTION_FAILURE"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path5"
@@ -5981,6 +6067,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_CALL_INSTRUCTION_CONSTRUCTION_FAILURE"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path4"
@@ -5991,7 +6078,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "2C0EEF8A0F434BF8B60BDCE615E53F46"
+    modelFingerprint: "9C92FC51DBE2ED7DB79064B415ADA1CA"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -6776,7 +6863,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "EB3D159357FB4F85F302114DFC9C614C"
+      modelFingerprint: "7E66AB3FFA58A71184348777383F9F5A"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -6796,9 +6883,81 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -128
+                  valueType: "byte"
+                  originalValueType: "int"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  uuid: "toEntropy_byte[]1Item1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  uuid: "toEntropy_byte[]1Item2"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                3:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  uuid: "toEntropy_byte[]1Item3"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             suggestedContent: !<array>
-              values: {}
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -128
+                  valueType: "byte"
+                  originalValueType: "int"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  uuid: "toEntropy_byte[]1Item1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  uuid: "toEntropy_byte[]1Item2"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                3:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  uuid: "toEntropy_byte[]1Item3"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "byte[]"
             uuid: "toEntropy_byte[]1"
             fixed: false
@@ -6808,9 +6967,585 @@ methods:
         returnValue:
           sapientType: "ARRAY"
           content: !<array>
-            values: {}
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 80
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item0"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              1:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -56
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              2:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -70
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item2"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              3:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 58
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              4:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 97
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item4"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              5:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 112
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item5"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              6:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -16
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item6"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              7:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -94
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item7"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              8:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -5
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item8"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              9:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 103
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item9"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              10:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 54
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item10"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              11:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -20
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item11"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              12:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -24
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item12"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              13:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -90
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item13"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              14:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 3
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item14"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              15:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 87
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item15"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              16:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 110
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item16"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              17:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -10
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item17"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              18:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 48
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item18"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              19:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -102
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item19"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              20:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 53
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item20"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              21:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -24
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item21"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              22:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 16
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item22"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              23:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -111
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item23"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              24:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 21
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item24"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              25:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -103
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item25"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              26:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -68
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item26"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              27:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 98
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item27"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              28:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 17
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item28"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              29:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -75
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item29"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              30:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 84
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item30"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              31:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -87
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item31"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           suggestedContent: !<array>
-            values: {}
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 80
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item0"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              1:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -56
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              2:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -70
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item2"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              3:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 58
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              4:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 97
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item4"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              5:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 112
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item5"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              6:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -16
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item6"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              7:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -94
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item7"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              8:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -5
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item8"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              9:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 103
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item9"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              10:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 54
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item10"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              11:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -20
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item11"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              12:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -24
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item12"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              13:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -90
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item13"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              14:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 3
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item14"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              15:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 87
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item15"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              16:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 110
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item16"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              17:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -10
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item17"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              18:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 48
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item18"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              19:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -102
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item19"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              20:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 53
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item20"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              21:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -24
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item21"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              22:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 16
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item22"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              23:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -111
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item23"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              24:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 21
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item24"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              25:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -103
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item25"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              26:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -68
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item26"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              27:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 98
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item27"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              28:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 17
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item28"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              29:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -75
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item29"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              30:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 84
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item30"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              31:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -87
+                valueType: "byte"
+                uuid: "toEntropy_byte[]2-item31"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "byte[]"
           uuid: "toEntropy_byte[]2"
           fixed: false
@@ -6849,6 +7584,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_CALL_INSTRUCTION_CONSTRUCTION_FAILURE"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -6859,9 +7595,28 @@ methods:
     parametersTypes:
     - "byte[]"
   paths:
-  - pathId: "path2"
+  - pathId: "path4"
     pathIdForUser: "path1"
     testPathName: "toMnemonicWhenINotLessThanNwords"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(java.io.InputStream,java.lang.String) : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "39119373FB8C1721D75A6647D8279B88"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "2633e2e6-9985-3b21-9401-b053875ae2be"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    firstFailureReason: "METHOD_CALL_INSTRUCTION_CONSTRUCTION_FAILURE"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "toMnemonicWhenIMultipliedBy8PlusJAndINotLessThanNwords"
     nameDefinedByUser: false
     constructorSignature: "<init>(java.io.InputStream,java.lang.String) : void"
     priorityDefinedByUser: false
@@ -6871,21 +7626,22 @@ methods:
     problemWasSolvedByProver: false
     truncated: true
     inputParameters: []
-    uuid: "2633e2e6-9985-3b21-9401-b053875ae2be"
+    uuid: "3da18972-a9bc-3764-8466-85d7f94270f3"
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "METHOD_CALL_INSTRUCTION_CONSTRUCTION_FAILURE"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
-  - pathId: "path1"
-    pathIdForUser: "path2"
+  - pathId: "path3"
+    pathIdForUser: "path3"
     testPathName: "toMnemonicWhenIMultipliedBy11PlusJNotIndexOfConcatBits"
     nameDefinedByUser: false
     constructorSignature: "<init>(java.io.InputStream,java.lang.String) : void"
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "83EAAAEA0C612699BA1AE11D2795835D"
+    modelFingerprint: "7A58691C384D34A41ED2195DC36DA4F9"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -7847,32 +8603,23 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_CALL_INSTRUCTION_CONSTRUCTION_FAILURE"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
-- method:
-    name: "check"
-    returnType: "void"
-    signature: "check(java.util.List<java.lang.String>) : void"
-    throwsExceptions:
-    - "org.bitcoinj.crypto.MnemonicException"
-    instructionFingerprint: "C16365FA7E64B9A98A57EE5B3CD90FA0"
-    parametersTypes:
-    - "java.util.List"
-  paths:
   - pathId: "path1"
-    pathIdForUser: "path1"
-    testPathName: "checkTest"
+    pathIdForUser: "path4"
+    testPathName: "toMnemonicWhenJLessThan11AndIMultipliedBy11PlusJNotIndexOfConcatBits"
     nameDefinedByUser: false
     constructorSignature: "<init>(java.io.InputStream,java.lang.String) : void"
     priorityDefinedByUser: false
     filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "5A705F375702DDABF3A80F3855670DCA"
+    priority: "MODERATE"
+    modelFingerprint: "0F73E9163F2FB354AAF32F558BD6DC1F"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "233D251DF1CC03DFFA703DCA4C3C6BDE"
+      modelFingerprint: "6188351D708705B2917CA4B01D731A5C"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -7896,7 +8643,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "wordListDigest1"
+                value: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              suggestedContent: !<regular>
+                value: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
               valueType: "java.lang.String"
               uuid: "<init>_string5"
               fixed: false
@@ -7918,6 +8667,1169 @@ methods:
           - name: "wordListDigest"
             value:
               sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              valueType: "java.lang.String"
+              uuid: "<init>_string5"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.crypto.MnemonicCode"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "entropy"
+      modelFingerprint: "9B5D29A6CAF33C22D27BBA71F6F8C005"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ARRAY"
+        content: !<array>
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "byte"
+              uuid: "bytesToBits_byte9"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            1:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 1
+              valueType: "byte"
+              uuid: "toMnemonic_byte[]1Item1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            2:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 2
+              valueType: "byte"
+              uuid: "toMnemonic_byte[]1Item2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            3:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 3
+              valueType: "byte"
+              uuid: "toMnemonic_byte[]1Item3"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<array>
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              suggestedContent: !<regular>
+                value: 0
+              valueType: "byte"
+              uuid: "bytesToBits_byte9"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            1:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 1
+              valueType: "byte"
+              uuid: "toMnemonic_byte[]1Item1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            2:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 2
+              valueType: "byte"
+              uuid: "toMnemonic_byte[]1Item2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            3:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 3
+              valueType: "byte"
+              uuid: "toMnemonic_byte[]1Item3"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "byte[]"
+        uuid: "toMnemonic_byte[]1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "FC737F259ED881EA54F47094E6BB8C90"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "org.bitcoinj.base.Sha256Hash"
+        uuid: "org.bitcoinj.base.Sha256Hash"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "newDigest"
+        parameters: []
+        signature: "newDigest(): MessageDigest"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.base.Sha256Hash"
+            method: "newDigest"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.Sha256Hash"
+            method: "newDigest"
+            methodParameters: []
+          valueType: "java.security.MessageDigest"
+          uuid: "<init>_messageDigest10"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "StreamUtils"
+      modelFingerprint: "349E09A777804A0E302B8EC0AA3F351D"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "REAL"
+        valueType: "org.bitcoinj.base.internal.StreamUtils"
+        uuid: "org.bitcoinj.base.internal.StreamUtils"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.StreamUtils"
+        name: "toUnmodifiableList"
+        parameters: []
+        signature: "toUnmodifiableList(): Collector"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.base.internal.StreamUtils"
+            method: "toUnmodifiableList"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.internal.StreamUtils"
+            method: "toUnmodifiableList"
+            methodParameters: []
+          valueType: "java.util.stream.Collector"
+          uuid: "<init>_collector10"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "ByteUtils"
+      modelFingerprint: "DE8CB3872C11323449C249A23EB2D9D8"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "org.bitcoinj.base.internal.ByteUtils"
+        uuid: "org.bitcoinj.base.internal.ByteUtils"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.ByteUtils"
+        name: "formatHex"
+        parameters:
+        - name: "bytes"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -29
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item0"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -80
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -60
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item2"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                3:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 66
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item3"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                4:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -104
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item4"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                5:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -4
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item5"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                6:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 28
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item6"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                7:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 20
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item7"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                8:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -102
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item8"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                9:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -5
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item9"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                10:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -12
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item10"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                11:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -56
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item11"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                12:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -103
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item12"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                13:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 111
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item13"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                14:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -71
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item14"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                15:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 36
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item15"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                16:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 39
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item16"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                17:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -82
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item17"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                18:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 65
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item18"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                19:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -28
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item19"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                20:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 100
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item20"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                21:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -101
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item21"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                22:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -109
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item22"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                23:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 76
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item23"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                24:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -92
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item24"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                25:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -107
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item25"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                26:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -103
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item26"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                27:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 27
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item27"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                28:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 120
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item28"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                29:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 82
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item29"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                30:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -72
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item30"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                31:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 85
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item31"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<array>
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -29
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item0"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -80
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -60
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item2"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                3:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 66
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item3"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                4:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -104
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item4"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                5:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -4
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item5"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                6:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 28
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item6"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                7:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 20
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item7"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                8:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -102
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item8"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                9:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -5
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item9"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                10:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -12
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item10"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                11:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -56
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item11"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                12:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -103
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item12"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                13:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 111
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item13"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                14:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -71
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item14"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                15:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 36
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item15"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                16:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 39
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item16"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                17:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -82
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item17"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                18:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 65
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item18"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                19:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -28
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item19"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                20:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 100
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item20"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                21:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -101
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item21"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                22:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -109
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item22"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                23:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 76
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item23"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                24:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -92
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item24"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                25:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -107
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item25"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                26:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -103
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item26"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                27:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 27
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item27"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                28:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 120
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item28"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                29:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 82
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item29"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                30:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: -72
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item30"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                31:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 85
+                  valueType: "byte"
+                  uuid: "<init>_byte[]6-item31"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "byte[]"
+            uuid: "<init>_byte[]6"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "formatHex(byte[]): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          valueType: "java.lang.String"
+          uuid: "<init>_string7"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "60F4AB56A088909714BFE88747605281"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "toMnemonic_void1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "60F4AB56A088909714BFE88747605281"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "toMnemonic_void2"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "F790AB950B41AB120DFE91F9D562AB52"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.Sha256Hash"
+        uuid: "org.bitcoinj.base.Sha256Hash"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "hash"
+        parameters:
+        - name: "input"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  suggestedContent: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  uuid: "bytesToBits_byte9"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  valueType: "byte"
+                  uuid: "toMnemonic_byte[]1Item1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  valueType: "byte"
+                  uuid: "toMnemonic_byte[]1Item2"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                3:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  valueType: "byte"
+                  uuid: "toMnemonic_byte[]1Item3"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<array>
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  suggestedContent: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  uuid: "bytesToBits_byte9"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  valueType: "byte"
+                  uuid: "toMnemonic_byte[]1Item1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  valueType: "byte"
+                  uuid: "toMnemonic_byte[]1Item2"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                3:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  valueType: "byte"
+                  uuid: "toMnemonic_byte[]1Item3"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "byte[]"
+            uuid: "toMnemonic_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "hash(byte[]): byte[]"
+        returnValue:
+          sapientType: "ARRAY"
+          content: !<array>
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                suggestedContent: !<regular>
+                  value: 0
+                valueType: "byte"
+                uuid: "bytesToBits_byte1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<array>
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                suggestedContent: !<regular>
+                  value: 0
+                valueType: "byte"
+                uuid: "bytesToBits_byte1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "byte[]"
+          uuid: "toMnemonic_byte[]2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "97EF01D8C39137689668AD0C262BE9EC"
+      index: 9
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "COLLECTION"
+        content: !<collection>
+          collectionClass: "java.util.ArrayList"
+          parameters: []
+          values:
+          - sapientType: "BASIC"
+            content: !<regular>
+              value: "resultItem1"
+            valueType: "java.lang.String"
+            uuid: "toMnemonic_object1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: true
+        suggestedContent: !<collection>
+          collectionClass: "java.util.ArrayList"
+          parameters: []
+          values:
+          - sapientType: "BASIC"
+            content: !<regular>
+              value: "resultItem1"
+            valueType: "java.lang.String"
+            uuid: "toMnemonic_object1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: true
+        valueType: "java.util.List"
+        genericValueType: "java.lang.String"
+        uuid: "toMnemonic_arrayList1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "b060299f-1f5c-3e08-80b6-0fa475d1965b"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    firstFailureReason: "METHOD_CALL_INSTRUCTION_CONSTRUCTION_FAILURE"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+- method:
+    name: "check"
+    returnType: "void"
+    signature: "check(java.util.List<java.lang.String>) : void"
+    throwsExceptions:
+    - "org.bitcoinj.crypto.MnemonicException"
+    instructionFingerprint: "C16365FA7E64B9A98A57EE5B3CD90FA0"
+    parametersTypes:
+    - "java.util.List"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "checkTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(java.io.InputStream,java.lang.String) : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "A2160D260884ED55852BD505605BE9D1"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "6188351D708705B2917CA4B01D731A5C"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.crypto.MnemonicCode"
+          parameters:
+          - name: "wordstream"
+            value:
+              sapientType: "INPUT_STREAM"
+              content: !<inputStream>
+                values: []
+              valueType: "java.io.InputStream"
+              uuid: "<init>_inputStream1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "wordListDigest"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              suggestedContent: !<regular>
+                value: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              valueType: "java.lang.String"
+              uuid: "<init>_string5"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.crypto.MnemonicCode"
+          parameters:
+          - name: "wordstream"
+            value:
+              sapientType: "INPUT_STREAM"
+              valueType: "java.io.InputStream"
+              uuid: "<init>_inputStream1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "wordListDigest"
+            value:
+              sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
               valueType: "java.lang.String"
               uuid: "<init>_string5"
               fixed: false
@@ -8713,5 +10625,6 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_CALL_INSTRUCTION_CONSTRUCTION_FAILURE"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

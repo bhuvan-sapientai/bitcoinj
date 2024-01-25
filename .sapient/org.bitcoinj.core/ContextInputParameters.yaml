@@ -383,19 +383,29 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "DE630D30B2911844F410838A91B96B3D"
-    problemWasSolvedByProver: false
+    modelFingerprint: "F98257BF5AB98202A6DEC12895034ACA"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "context"
-      modelFingerprint: "138AC78139562F3BBAE8A79E63432BF3"
+      modelFingerprint: "CFC53EC57044F48335424AB6EE27A919"
       index: 1
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.Context"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.Context"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
         valueType: "org.bitcoinj.core.Context"
         uuid: "propagate_context1"
         fixed: false

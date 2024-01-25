@@ -51,6 +51,7 @@ public class BlockingClientManagerSapientGeneratedJunit4Test {
         thrown.expect(IllegalStateException.class);
         //TODO: Needs initialization with real value
         SocketAddress socketAddress = null;
+        StreamConnection streamConnectionMock = mock(StreamConnection.class);
 
         //Act Statement(s)
         target.openConnection(socketAddress, streamConnectionMock);
@@ -79,12 +80,14 @@ public class BlockingClientManagerSapientGeneratedJunit4Test {
         doReturn(true).when(target).isRunning();
         //TODO: Needs initialization with real value
         SocketAddress socketAddress = null;
+        StreamConnection streamConnectionMock = mock(StreamConnection.class, "{}");
 
         //Act Statement(s)
         ListenableCompletableFuture<SocketAddress> result = target.openConnection(socketAddress, streamConnectionMock);
         Duration duration = Duration.ofSeconds(1L);
+        SocketFactory socketFactory2 = Objects.requireNonNull(socketFactory);
         Set<BlockingClient> blockingClientSet = new HashSet<>();
-        BlockingClient blockingClient = new BlockingClient((SocketAddress) null, streamConnectionMock, duration, socketFactory, blockingClientSet);
+        BlockingClient blockingClient = new BlockingClient((SocketAddress) null, streamConnectionMock, duration, socketFactory2, blockingClientSet);
         ListenableCompletableFuture<SocketAddress> listenableCompletableFuture = blockingClient.getConnectFuture();
 
         //Assert statement(s)
@@ -116,6 +119,7 @@ public class BlockingClientManagerSapientGeneratedJunit4Test {
         thrown.expectCause(isA(IOException.class));
         //TODO: Needs initialization with real value
         SocketAddress socketAddress = null;
+        StreamConnection streamConnectionMock = mock(StreamConnection.class, "<value>");
 
         //Act Statement(s)
         target.openConnection(socketAddress, streamConnectionMock);

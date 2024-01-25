@@ -19,12 +19,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "52EF48137874F1613324924995F36477"
+    modelFingerprint: "6AB35EE94EE288EF4FB7FE2BBE8804CE"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "DE4A0AF0642E7B277D11AFED1AC4AD25"
+      modelFingerprint: "A64F23F445894C5034C9D235EA17DBF1"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -36,7 +36,69 @@ methods:
           parameters:
           - name: "hash"
             value:
-              sapientType: "MOCK"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "OBJECT"
+                    content: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          content: !<regular>
+                            value: 0
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "UNKNOWN"
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.base.Sha256Hash"
               uuid: "<init>_sha256Hash1"
               fixed: false
@@ -49,7 +111,69 @@ methods:
           parameters:
           - name: "hash"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "OBJECT"
+                    content: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          content: !<regular>
+                            value: 0
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "UNKNOWN"
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.base.Sha256Hash"
               uuid: "<init>_sha256Hash1"
               fixed: false
@@ -66,13 +190,17 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "executor"
-      modelFingerprint: "98E456839F40A27F98C7C36BBD1A9805"
+      modelFingerprint: "158E2E711D7250E169093A4FA2648FD8"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "NULL"
+        content: !<unknown_object>
+          target: "java.util.concurrent.Executor"
+          onlyPojoFunctions: false
+          builderPattern: false
         suggestedContent: !<unknown_object>
           target: "java.util.concurrent.Executor"
           onlyPojoFunctions: false
@@ -86,16 +214,21 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "listener"
-      modelFingerprint: "CEB4177B1D057F71DD07A3122E0CF4DF"
+      modelFingerprint: "38220D705527C1130018E2D0C90F6D72"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.core.TransactionConfidence$Listener"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.TransactionConfidence$Listener"
         uuid: "addEventListener_transactionConfidence.Listener1"
         fixed: false
+        nameForMock: "null"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
@@ -118,6 +251,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -1233,12 +1367,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "BAD7B97DAC7E492D5F6FC39067AF7259"
-    problemWasSolvedByProver: false
+    modelFingerprint: "B54A898471BC7AE717351067FD1B43DE"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "DE4A0AF0642E7B277D11AFED1AC4AD25"
+      modelFingerprint: "A64F23F445894C5034C9D235EA17DBF1"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1250,7 +1384,69 @@ methods:
           parameters:
           - name: "hash"
             value:
-              sapientType: "MOCK"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "OBJECT"
+                    content: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          content: !<regular>
+                            value: 0
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "UNKNOWN"
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.base.Sha256Hash"
               uuid: "<init>_sha256Hash1"
               fixed: false
@@ -1263,7 +1459,69 @@ methods:
           parameters:
           - name: "hash"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "OBJECT"
+                    content: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          content: !<regular>
+                            value: 0
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "UNKNOWN"
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.base.Sha256Hash"
               uuid: "<init>_sha256Hash1"
               fixed: false
@@ -1280,13 +1538,67 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "address"
-      modelFingerprint: "9976514D3804C50346CCDD3222444811"
+      modelFingerprint: "1FD476952A5F282F818B0AC7A20CC856"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.core.PeerAddress"
+          method: "simple"
+          methodParameters:
+          - name: "addr"
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.net.InetAddress"
+                method: "getLoopbackAddress"
+                methodParameters: []
+              suggestedContent: !<static_method_return>
+                target: "java.net.InetAddress"
+                method: "getLoopbackAddress"
+                methodParameters: []
+              valueType: "java.net.InetAddress"
+              uuid: "markBroadcastBy_peerAddress1-addr"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "port"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "markBroadcastBy_peerAddress1-port"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.core.PeerAddress"
+          method: "simple"
+          methodParameters:
+          - name: "addr"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<static_method_return>
+                target: "java.net.InetAddress"
+                method: "getLoopbackAddress"
+                methodParameters: []
+              valueType: "java.net.InetAddress"
+              uuid: "markBroadcastBy_peerAddress1-addr"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "port"
+            value:
+              sapientType: "BASIC"
+              valueType: "int"
+              uuid: "markBroadcastBy_peerAddress1-port"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.core.PeerAddress"
         uuid: "markBroadcastBy_peerAddress1"
         fixed: false
@@ -1296,7 +1608,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "TimeUtils"
-      modelFingerprint: "70F19286EF73B0A6DAAE99227E505874"
+      modelFingerprint: "BBF2EACB59BF38895BAA3445CD76CB39"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1314,15 +1626,15 @@ methods:
         parameters: []
         signature: "currentTime(): Instant"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.internal.TimeUtils"
-            method: "currentTime"
-            methodParameters: []
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.base.internal.TimeUtils"
-            method: "currentTime"
-            methodParameters: []
+          sapientType: "NULL"
+          content: !<unknown_object>
+            target: "java.time.Instant"
+            onlyPojoFunctions: true
+            builderPattern: false
+          suggestedContent: !<unknown_object>
+            target: "java.time.Instant"
+            onlyPojoFunctions: true
+            builderPattern: false
           valueType: "java.time.Instant"
           uuid: "markBroadcastBy_instant1"
           fixed: false
@@ -1333,7 +1645,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
+      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -1341,12 +1653,31 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: false
+          value: true
         valueType: "boolean"
         fixed: true
         equalsMethodPresent: true
         explicitCastNeeded: false
       staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATE_VERIFICATION_FIELD"
+      name: "confidenceType"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ENUM"
+        content: !<regular>
+          value: "PENDING"
+        valueType: "org.bitcoinj.core.TransactionConfidence$ConfidenceType"
+        uuid: "Enum-org.bitcoinj.core.TransactionConfidence$ConfidenceType-PENDING"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      readMethodForField: "getConfidenceType"
+      staticReadMethodForField: false
+      readMethodModifier: "PUBLIC"
       filledByUser: false
     uuid: "41c19a0e-21cf-3402-9459-2395763fde82"
     deleted: false
@@ -1363,12 +1694,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "0B1B17FDADC878E527C046E12F91E512"
-    problemWasSolvedByProver: false
+    modelFingerprint: "B54A898471BC7AE717351067FD1B43DE"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "DE4A0AF0642E7B277D11AFED1AC4AD25"
+      modelFingerprint: "A64F23F445894C5034C9D235EA17DBF1"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1380,7 +1711,69 @@ methods:
           parameters:
           - name: "hash"
             value:
-              sapientType: "MOCK"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "OBJECT"
+                    content: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          content: !<regular>
+                            value: 0
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "UNKNOWN"
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.base.Sha256Hash"
               uuid: "<init>_sha256Hash1"
               fixed: false
@@ -1393,7 +1786,69 @@ methods:
           parameters:
           - name: "hash"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "OBJECT"
+                    content: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          content: !<regular>
+                            value: 0
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "UNKNOWN"
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.base.Sha256Hash"
               uuid: "<init>_sha256Hash1"
               fixed: false
@@ -1410,13 +1865,67 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "address"
-      modelFingerprint: "9976514D3804C50346CCDD3222444811"
+      modelFingerprint: "1FD476952A5F282F818B0AC7A20CC856"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.core.PeerAddress"
+          method: "simple"
+          methodParameters:
+          - name: "addr"
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.net.InetAddress"
+                method: "getLoopbackAddress"
+                methodParameters: []
+              suggestedContent: !<static_method_return>
+                target: "java.net.InetAddress"
+                method: "getLoopbackAddress"
+                methodParameters: []
+              valueType: "java.net.InetAddress"
+              uuid: "markBroadcastBy_peerAddress1-addr"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "port"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "markBroadcastBy_peerAddress1-port"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.core.PeerAddress"
+          method: "simple"
+          methodParameters:
+          - name: "addr"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<static_method_return>
+                target: "java.net.InetAddress"
+                method: "getLoopbackAddress"
+                methodParameters: []
+              valueType: "java.net.InetAddress"
+              uuid: "markBroadcastBy_peerAddress1-addr"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "port"
+            value:
+              sapientType: "BASIC"
+              valueType: "int"
+              uuid: "markBroadcastBy_peerAddress1-port"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.core.PeerAddress"
         uuid: "markBroadcastBy_peerAddress1"
         fixed: false
@@ -1426,7 +1935,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "TimeUtils"
-      modelFingerprint: "70F19286EF73B0A6DAAE99227E505874"
+      modelFingerprint: "BBF2EACB59BF38895BAA3445CD76CB39"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1444,15 +1953,15 @@ methods:
         parameters: []
         signature: "currentTime(): Instant"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.internal.TimeUtils"
-            method: "currentTime"
-            methodParameters: []
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.base.internal.TimeUtils"
-            method: "currentTime"
-            methodParameters: []
+          sapientType: "NULL"
+          content: !<unknown_object>
+            target: "java.time.Instant"
+            onlyPojoFunctions: true
+            builderPattern: false
+          suggestedContent: !<unknown_object>
+            target: "java.time.Instant"
+            onlyPojoFunctions: true
+            builderPattern: false
           valueType: "java.time.Instant"
           uuid: "markBroadcastBy_instant1"
           fixed: false
@@ -3435,12 +3944,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "87D107DA5DA259077B47F2B0B8BE408D"
+    modelFingerprint: "C4ED8997CB6D8937891D8AB7404E8C50"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "DE4A0AF0642E7B277D11AFED1AC4AD25"
+      modelFingerprint: "A64F23F445894C5034C9D235EA17DBF1"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -3452,7 +3961,69 @@ methods:
           parameters:
           - name: "hash"
             value:
-              sapientType: "MOCK"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "OBJECT"
+                    content: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          content: !<regular>
+                            value: 0
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "UNKNOWN"
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.base.Sha256Hash"
               uuid: "<init>_sha256Hash1"
               fixed: false
@@ -3465,7 +4036,69 @@ methods:
           parameters:
           - name: "hash"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "OBJECT"
+                    content: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          content: !<regular>
+                            value: 0
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "UNKNOWN"
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.base.Sha256Hash"
               uuid: "<init>_sha256Hash1"
               fixed: false
@@ -3482,7 +4115,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "depth"
-      modelFingerprint: "076EB9A927500741040F6893E670FAF4"
+      modelFingerprint: "1376F09CF7D530A97C0EA32A294E29C8"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -3502,7 +4135,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "result"
-      modelFingerprint: "4AE168F88A9640FDBBD16597A06CBA59"
+      modelFingerprint: "2C0DE53F2EAA408066C281025D3EB87D"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -3537,7 +4170,69 @@ methods:
               parameters:
               - name: "hash"
                 value:
-                  sapientType: "UNKNOWN"
+                  sapientType: "OBJECT"
+                  content: !<static_method_return>
+                    target: "org.bitcoinj.base.Sha256Hash"
+                    method: "read"
+                    methodParameters:
+                    - name: "buf"
+                      value:
+                        sapientType: "OBJECT"
+                        content: !<static_method_return>
+                          target: "java.nio.ByteBuffer"
+                          method: "allocateDirect"
+                          methodParameters:
+                          - name: "capacity"
+                            value:
+                              sapientType: "BASIC"
+                              content: !<regular>
+                                value: 0
+                              valueType: "int"
+                              uuid: "<init>_sha256Hash1-buf-capacity"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        suggestedContent: !<static_method_return>
+                          target: "java.nio.ByteBuffer"
+                          method: "allocateDirect"
+                          methodParameters:
+                          - name: "capacity"
+                            value:
+                              sapientType: "BASIC"
+                              valueType: "int"
+                              uuid: "<init>_sha256Hash1-buf-capacity"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        valueType: "java.nio.ByteBuffer"
+                        uuid: "<init>_sha256Hash1-buf"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                  suggestedContent: !<static_method_return>
+                    target: "org.bitcoinj.base.Sha256Hash"
+                    method: "read"
+                    methodParameters:
+                    - name: "buf"
+                      value:
+                        sapientType: "UNKNOWN"
+                        suggestedContent: !<static_method_return>
+                          target: "java.nio.ByteBuffer"
+                          method: "allocateDirect"
+                          methodParameters:
+                          - name: "capacity"
+                            value:
+                              sapientType: "BASIC"
+                              valueType: "int"
+                              uuid: "<init>_sha256Hash1-buf-capacity"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        valueType: "java.nio.ByteBuffer"
+                        uuid: "<init>_sha256Hash1-buf"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
                   valueType: "org.bitcoinj.base.Sha256Hash"
                   uuid: "<init>_sha256Hash1"
                   fixed: false
@@ -3636,6 +4331,7 @@ methods:
     deleted: false
     disabled: true
     ignoredBySystem: false
+    firstFailureReason: "METHOD_CALL_INSTRUCTION_CONSTRUCTION_UNFILLED_PARAMS"
     disabledReason: "Potential harmful system call (ListenableCompletableFuture.complete)\
       \ detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     prover: "LLM"
@@ -3657,6 +4353,7 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "METHOD_CALL_INSTRUCTION_CONSTRUCTION_UNFILLED_PARAMS"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:

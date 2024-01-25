@@ -137,18 +137,16 @@ public class Bech32SapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Bech32.Bech32Bytes valuesMock = mock(Bech32.Bech32Bytes.class, "[3, 58, 0, 0, 2, 117, 110, 107, 110, 111, 119]");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            byte[] byteArray = new byte[]{};
-            byte[] byteArray2 = new byte[]{};
-            byte[] byteArray3 = new byte[]{};
-            byte[] byteArray4 = new byte[]{};
-            byte[] byteArray5 = new byte[]{};
-            doReturn(byteArray, byteArray2, byteArray3, byteArray4, byteArray5).when(valuesMock).bytes();
+            byte[] _byte = null;
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+            doReturn(null, _byte, _byte, _byte, byteArray).when(valuesMock).bytes();
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             //Act Statement(s)
-            String result = Bech32.encode(Bech32.Encoding.BECH32, "F", valuesMock);
+            String result = Bech32.encode(Bech32.Encoding.BECH32, "bc", valuesMock);
             //Assert statement(s)
-            assertThat(result, equalTo("D1q"));
+            assertThat(result, equalTo("bc1q"));
             verify(valuesMock, times(5)).bytes();
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
         }
@@ -176,18 +174,16 @@ public class Bech32SapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Bech32.Bech32Bytes valuesMock = mock(Bech32.Bech32Bytes.class, "[]");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            byte[] _byte = null;
             byte[] byteArray = new byte[]{};
-            byte[] byteArray2 = new byte[]{};
-            byte[] byteArray3 = new byte[]{};
-            byte[] byteArray4 = new byte[]{};
-            byte[] byteArray5 = new byte[]{};
-            doReturn(byteArray, byteArray2, byteArray3, byteArray4, byteArray5).when(valuesMock).bytes();
+            doReturn(null, _byte, _byte, _byte, byteArray).when(valuesMock).bytes();
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             //Act Statement(s)
-            String result = Bech32.encode(Bech32.Encoding.BECH32, "hrp1", valuesMock);
+            String result = Bech32.encode(Bech32.Encoding.BECH32M, "bc", valuesMock);
             //Assert statement(s)
-            assertThat(result, equalTo("result1"));
+            assertThat(result, equalTo("bc1q"));
             verify(valuesMock, times(5)).bytes();
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
         }

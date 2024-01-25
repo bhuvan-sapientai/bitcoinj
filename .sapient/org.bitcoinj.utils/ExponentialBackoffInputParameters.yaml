@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "E884D7B243146350FC7DBCCCAAC2D5B0"
+modelFingerprint: "69DBCEEF20CD3A19563D1780D237E1D3"
 methods:
 - method:
     name: "trackSuccess"
@@ -17,12 +17,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "B23EA5ECDB5CCF8E5CB030AB3D519A3C"
+    modelFingerprint: "68DB24B16A1CF523AFB02F5CF2241DBC"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "09804A2925F5260A27E65AC6F4F05FDE"
+      modelFingerprint: "5E3A9DD634D7FF9970088191AEEDFC6E"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -35,9 +35,14 @@ methods:
           - name: "params"
             value:
               sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.utils.ExponentialBackoff$Params"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.utils.ExponentialBackoff$Params"
               uuid: "<init>_exponentialBackoff.Params1"
               fixed: false
+              nameForMock: "1000"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -47,10 +52,15 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.utils.ExponentialBackoff$Params"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.utils.ExponentialBackoff$Params"
               uuid: "<init>_exponentialBackoff.Params1"
               fixed: false
+              nameForMock: "1000"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -154,6 +164,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_CALL_INSTRUCTION_ACCESS_IGNORE_DEPENDENCY_CALLS"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -173,12 +184,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "69C94096E1C3F8954A5E9D13D3665CF9"
+    modelFingerprint: "1A057CA22211EF12119D4CDBDE717C7E"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "09804A2925F5260A27E65AC6F4F05FDE"
+      modelFingerprint: "5E3A9DD634D7FF9970088191AEEDFC6E"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -191,9 +202,14 @@ methods:
           - name: "params"
             value:
               sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.utils.ExponentialBackoff$Params"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.utils.ExponentialBackoff$Params"
               uuid: "<init>_exponentialBackoff.Params1"
               fixed: false
+              nameForMock: "2.0"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -203,10 +219,15 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.utils.ExponentialBackoff$Params"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.utils.ExponentialBackoff$Params"
               uuid: "<init>_exponentialBackoff.Params1"
               fixed: false
+              nameForMock: "2.0"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -310,6 +331,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_CALL_INSTRUCTION_ACCESS_IGNORE_DEPENDENCY_CALLS"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -329,12 +351,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "645FEA3879B62432B05FA55A4EE78197"
+    modelFingerprint: "20945EE75C78CFED56E6692215841D2B"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "09804A2925F5260A27E65AC6F4F05FDE"
+      modelFingerprint: "7DF33CFFD301795E9E54E9EDC7DB4621"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -346,7 +368,17 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "MOCK"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.utils.ExponentialBackoff$Params"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "org.bitcoinj.utils.ExponentialBackoff$Params"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
               valueType: "org.bitcoinj.utils.ExponentialBackoff$Params"
               uuid: "<init>_exponentialBackoff.Params1"
               fixed: false
@@ -359,7 +391,17 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.utils.ExponentialBackoff$Params"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "org.bitcoinj.utils.ExponentialBackoff$Params"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
               valueType: "org.bitcoinj.utils.ExponentialBackoff$Params"
               uuid: "<init>_exponentialBackoff.Params1"
               fixed: false
@@ -439,6 +481,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_CALL_INSTRUCTION_ACCESS_IGNORE_DEPENDENCY_CALLS"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -458,12 +501,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "5CFA1A43EB8138789063BB0801016169"
+    modelFingerprint: "AEA3B462669D7503F11FC1B3E3150253"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "09804A2925F5260A27E65AC6F4F05FDE"
+      modelFingerprint: "7DF33CFFD301795E9E54E9EDC7DB4621"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -475,7 +518,17 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "MOCK"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.utils.ExponentialBackoff$Params"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "org.bitcoinj.utils.ExponentialBackoff$Params"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
               valueType: "org.bitcoinj.utils.ExponentialBackoff$Params"
               uuid: "<init>_exponentialBackoff.Params1"
               fixed: false
@@ -488,7 +541,17 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.utils.ExponentialBackoff$Params"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "org.bitcoinj.utils.ExponentialBackoff$Params"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
               valueType: "org.bitcoinj.utils.ExponentialBackoff$Params"
               uuid: "<init>_exponentialBackoff.Params1"
               fixed: false
@@ -505,7 +568,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "TimeUtils"
-      modelFingerprint: "19DE031B758E44392582012D4037D413"
+      modelFingerprint: "8BADC85B8C57AE80C12C4C6339D54E2E"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -525,12 +588,12 @@ methods:
         returnValue:
           sapientType: "OBJECT"
           content: !<static_method_return>
-            target: "org.bitcoinj.base.internal.TimeUtils"
-            method: "currentTime"
+            target: "java.time.Instant"
+            method: "now"
             methodParameters: []
           suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.base.internal.TimeUtils"
-            method: "currentTime"
+            target: "java.time.Instant"
+            method: "now"
             methodParameters: []
           valueType: "java.time.Instant"
           uuid: "trackSuccess_instant1"
@@ -542,7 +605,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "918004162FC8D6F765819CFEFCD7192F"
+      modelFingerprint: "804632FC35F3D360B4AE3373F0AFA52B"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -550,7 +613,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 1704369224582
+          value: 0
         valueType: "long"
         uuid: "getRetryTime_long1"
         fixed: false
@@ -562,6 +625,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_CALL_INSTRUCTION_ACCESS_IGNORE_DEPENDENCY_CALLS"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -582,12 +646,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "15E61290FDC9E8EF75261E06D87CBAA1"
+    modelFingerprint: "C125F824DE1AD3CB546E9A4733826139"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "09804A2925F5260A27E65AC6F4F05FDE"
+      modelFingerprint: "5E3A9DD634D7FF9970088191AEEDFC6E"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -600,9 +664,14 @@ methods:
           - name: "params"
             value:
               sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.utils.ExponentialBackoff$Params"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.utils.ExponentialBackoff$Params"
               uuid: "<init>_exponentialBackoff.Params1"
               fixed: false
+              nameForMock: "5"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -612,10 +681,15 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.utils.ExponentialBackoff$Params"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.utils.ExponentialBackoff$Params"
               uuid: "<init>_exponentialBackoff.Params1"
               fixed: false
+              nameForMock: "5"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -629,49 +703,28 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "other"
-      modelFingerprint: "640E46BBCF201F798B8CBB9F3195F28C"
+      modelFingerprint: "B311A76CC2FA4F7CC397948F7434C6B3"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<new>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.utils.ExponentialBackoff"
-          parameters:
-          - name: "params"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.utils.ExponentialBackoff$Params"
-              uuid: "compareTo_exponentialBackoff1-params"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.utils.ExponentialBackoff"
-          parameters:
-          - name: "params"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.utils.ExponentialBackoff$Params"
-              uuid: "compareTo_exponentialBackoff1-params"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.utils.ExponentialBackoff"
         uuid: "compareTo_exponentialBackoff1"
         fixed: false
+        nameForMock: "2022-10-20T10:00:00.000Z"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     - type: "STATIC"
       name: "TimeUtils"
-      modelFingerprint: "19DE031B758E44392582012D4037D413"
+      modelFingerprint: "8BADC85B8C57AE80C12C4C6339D54E2E"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -691,12 +744,12 @@ methods:
         returnValue:
           sapientType: "OBJECT"
           content: !<static_method_return>
-            target: "org.bitcoinj.base.internal.TimeUtils"
-            method: "currentTime"
+            target: "java.time.Instant"
+            method: "now"
             methodParameters: []
           suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.base.internal.TimeUtils"
-            method: "currentTime"
+            target: "java.time.Instant"
+            method: "now"
             methodParameters: []
           valueType: "java.time.Instant"
           uuid: "trackSuccess_instant1"
@@ -726,11 +779,12 @@ methods:
       filledByUser: false
     uuid: "af5f6332-26a2-3749-8f9a-ac87ce6fe7cf"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_CALL_INSTRUCTION_ACCESS_IGNORE_DEPENDENCY_CALLS"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "toString"
     returnType: "java.lang.String"
@@ -747,12 +801,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "FAAF13D7B7F286A11E144810D70D4E27"
+    modelFingerprint: "C0EAABE5F9394063EB56E35BD75A276F"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "09804A2925F5260A27E65AC6F4F05FDE"
+      modelFingerprint: "7DF33CFFD301795E9E54E9EDC7DB4621"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -764,7 +818,17 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "MOCK"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.utils.ExponentialBackoff$Params"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "org.bitcoinj.utils.ExponentialBackoff$Params"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
               valueType: "org.bitcoinj.utils.ExponentialBackoff$Params"
               uuid: "<init>_exponentialBackoff.Params1"
               fixed: false
@@ -777,7 +841,17 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.utils.ExponentialBackoff$Params"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "org.bitcoinj.utils.ExponentialBackoff$Params"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
               valueType: "org.bitcoinj.utils.ExponentialBackoff$Params"
               uuid: "<init>_exponentialBackoff.Params1"
               fixed: false
@@ -794,7 +868,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "TimeUtils"
-      modelFingerprint: "19DE031B758E44392582012D4037D413"
+      modelFingerprint: "F660D069B600E2BE34908534CFF49701"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -812,15 +886,15 @@ methods:
         parameters: []
         signature: "currentTime(): Instant"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.internal.TimeUtils"
-            method: "currentTime"
-            methodParameters: []
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.base.internal.TimeUtils"
-            method: "currentTime"
-            methodParameters: []
+          sapientType: "NULL"
+          content: !<unknown_object>
+            target: "java.time.Instant"
+            onlyPojoFunctions: true
+            builderPattern: false
+          suggestedContent: !<unknown_object>
+            target: "java.time.Instant"
+            onlyPojoFunctions: true
+            builderPattern: false
           valueType: "java.time.Instant"
           uuid: "trackSuccess_instant1"
           fixed: false
@@ -831,7 +905,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "4C5DDC077113F682593297C21EADB8DA"
+      modelFingerprint: "4CA2C7644CC7C4E590FCF6AE1EACE93D"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -839,9 +913,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "ExponentialBackoff retry=2024-01-04T11:53:44.604101Z backoff=2 ms"
+          value: "ExponentialBackoff retry=null backoff=2 ms"
         suggestedContent: !<regular>
-          value: "ExponentialBackoff retry=2024-01-04T11:53:44.604101Z backoff=2 ms"
+          value: "ExponentialBackoff retry=null backoff=2 ms"
         valueType: "java.lang.String"
         uuid: "toString_string1"
         fixed: false
@@ -853,6 +927,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_CALL_INSTRUCTION_ACCESS_IGNORE_DEPENDENCY_CALLS"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

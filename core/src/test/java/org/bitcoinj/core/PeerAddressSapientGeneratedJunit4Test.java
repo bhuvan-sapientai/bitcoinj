@@ -55,7 +55,7 @@ public class PeerAddressSapientGeneratedJunit4Test {
     @Rule()
     public Timeout timeoutRule = Timeout.seconds(5);
 
-    private final Services servicesMock = mock(Services.class, "services");
+    private final Services servicesMock = mock(Services.class);
 
     private final Services servicesMock2 = mock(Services.class);
 
@@ -69,8 +69,10 @@ public class PeerAddressSapientGeneratedJunit4Test {
     public void simpleTest() {
         //Arrange Statement(s)
         InetAddress inetAddress = InetAddress.getLoopbackAddress();
+
         //Act Statement(s)
         PeerAddress result = PeerAddress.simple(inetAddress, 0);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -80,8 +82,10 @@ public class PeerAddressSapientGeneratedJunit4Test {
     public void simple1Test() {
         //Arrange Statement(s)
         InetSocketAddress inetSocketAddress = new InetSocketAddress(0);
+
         //Act Statement(s)
         PeerAddress result = PeerAddress.simple(inetSocketAddress);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -92,8 +96,10 @@ public class PeerAddressSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         InetAddress inetAddress = InetAddress.getLoopbackAddress();
         Instant instant = Instant.now();
+
         //Act Statement(s)
         PeerAddress result = PeerAddress.inet(inetAddress, 0, servicesMock, instant);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -104,8 +110,10 @@ public class PeerAddressSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         InetSocketAddress inetSocketAddress = new InetSocketAddress(0);
         Instant instant = Instant.now();
+
         //Act Statement(s)
         PeerAddress result = PeerAddress.inet(inetSocketAddress, servicesMock, instant);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -122,6 +130,7 @@ public class PeerAddressSapientGeneratedJunit4Test {
         thrown.expect(IllegalStateException.class);
         thrown.expectMessage(illegalStateException.getMessage());
         ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+
         //Act Statement(s)
         PeerAddress.read(byteBuffer, 3);
     }
@@ -129,7 +138,7 @@ public class PeerAddressSapientGeneratedJunit4Test {
     //Sapient generated method id: ${5f2264f0-82f4-32a2-ad0f-9b6413447d7a}
     @Ignore()
     @Test()
-    public void readWhenIdNotIsPresent() throws BufferUnderflowException, ProtocolException, UnknownHostException {
+    public void readWhenIdNotIsPresent() throws BufferUnderflowException, ProtocolException {
         /* Branches:
          * (protocolVariant < 0) : false
          * (protocolVariant > 2) : false
@@ -140,25 +149,27 @@ public class PeerAddressSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
-             MockedStatic<Buffers> buffers = mockStatic(Buffers.class);
-             MockedStatic<VarInt> varInt = mockStatic(VarInt.class)) {
+        try (MockedStatic<Buffers> buffers = mockStatic(Buffers.class);
+             MockedStatic<Services> services = mockStatic(Services.class);
+             MockedStatic<VarInt> varInt = mockStatic(VarInt.class);
+             MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
             byteUtils.when(() -> ByteUtils.readUint32((ByteBuffer) any())).thenReturn(1L);
             varInt.when(() -> VarInt.read((ByteBuffer) any())).thenReturn(varIntMock);
             doReturn(0L).when(varIntMock).longValue();
+            Services services2 = Services.of(0L);
+            services.when(() -> Services.of(0L)).thenReturn(services2);
             byte[] byteArray = new byte[]{};
             buffers.when(() -> Buffers.readLengthPrefixedBytes((ByteBuffer) any())).thenReturn(byteArray);
-            byteUtils.when(() -> ByteUtils.readUint16BE((ByteBuffer) any())).thenReturn(0);
+            thrown.expect(ProtocolException.class);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
             //Act Statement(s)
-            PeerAddress result = PeerAddress.read(byteBuffer, 2);
+            PeerAddress.read(byteBuffer, 2);
             //Assert statement(s)
-            assertThat(result, is(notNullValue()));
             byteUtils.verify(() -> ByteUtils.readUint32((ByteBuffer) any()));
             varInt.verify(() -> VarInt.read((ByteBuffer) any()));
             verify(varIntMock).longValue();
+            services.verify(() -> Services.of(0L), atLeast(1));
             buffers.verify(() -> Buffers.readLengthPrefixedBytes((ByteBuffer) any()));
-            byteUtils.verify(() -> ByteUtils.readUint16BE((ByteBuffer) any()));
         }
     }
 
@@ -181,8 +192,9 @@ public class PeerAddressSapientGeneratedJunit4Test {
              MockedStatic<Buffers> buffers = mockStatic(Buffers.class);
              MockedStatic<Services> services = mockStatic(Services.class)) {
             byteUtils.when(() -> ByteUtils.readUint32((ByteBuffer) any())).thenReturn(0L);
-            services.when(() -> Services.read((ByteBuffer) any())).thenReturn(servicesMock2);
-            byte[] byteArray = new byte[]{};
+            Services services2 = Services.of(0L);
+            services.when(() -> Services.read((ByteBuffer) any())).thenReturn(services2);
+            byte[] byteArray = new byte[]{(byte) 0};
             buffers.when(() -> Buffers.readBytes((ByteBuffer) any(), eq(16))).thenReturn(byteArray);
             byte[] byteArray2 = new byte[]{};
             torUtils.when(() -> TorUtils.encodeOnionUrlV2(byteArray2)).thenReturn("return_of_encodeOnionUrlV2");
@@ -250,24 +262,32 @@ public class PeerAddressSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
+             MockedStatic<PeerAddress> peerAddress = mockStatic(PeerAddress.class, CALLS_REAL_METHODS);
              MockedStatic<Buffers> buffers = mockStatic(Buffers.class);
+             MockedStatic<Services> services = mockStatic(Services.class);
              MockedStatic<VarInt> varInt = mockStatic(VarInt.class)) {
             byteUtils.when(() -> ByteUtils.readUint32((ByteBuffer) any())).thenReturn(1L);
             varInt.when(() -> VarInt.read((ByteBuffer) any())).thenReturn(varIntMock);
             doReturn(0L).when(varIntMock).longValue();
-            byte[] byteArray = new byte[]{};
+            Services services2 = Services.of(0L);
+            services.when(() -> Services.of(0L)).thenReturn(services2);
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0};
             buffers.when(() -> Buffers.readLengthPrefixedBytes((ByteBuffer) any())).thenReturn(byteArray);
+            InetAddress inetAddress = InetAddress.getLoopbackAddress();
+            peerAddress.when(() -> PeerAddress.getByAddress(byteArray)).thenReturn(inetAddress);
             byteUtils.when(() -> ByteUtils.readUint16BE((ByteBuffer) any())).thenReturn(0);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
             //Act Statement(s)
             PeerAddress result = PeerAddress.read(byteBuffer, 2);
             //Assert statement(s)
             assertThat(result, is(notNullValue()));
-            byteUtils.verify(() -> ByteUtils.readUint32((ByteBuffer) any()));
-            varInt.verify(() -> VarInt.read((ByteBuffer) any()));
-            verify(varIntMock).longValue();
-            buffers.verify(() -> Buffers.readLengthPrefixedBytes((ByteBuffer) any()));
-            byteUtils.verify(() -> ByteUtils.readUint16BE((ByteBuffer) any()));
+            byteUtils.verify(() -> ByteUtils.readUint32((ByteBuffer) any()), atLeast(1));
+            varInt.verify(() -> VarInt.read((ByteBuffer) any()), atLeast(1));
+            verify(varIntMock, atLeast(1)).longValue();
+            services.verify(() -> Services.of(0L), atLeast(1));
+            buffers.verify(() -> Buffers.readLengthPrefixedBytes((ByteBuffer) any()), atLeast(1));
+            peerAddress.verify(() -> PeerAddress.getByAddress(byteArray), atLeast(1));
+            byteUtils.verify(() -> ByteUtils.readUint16BE((ByteBuffer) any()), atLeast(1));
         }
     }
 
@@ -288,11 +308,13 @@ public class PeerAddressSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<Buffers> buffers = mockStatic(Buffers.class);
+             MockedStatic<Services> services = mockStatic(Services.class);
              MockedStatic<VarInt> varInt = mockStatic(VarInt.class);
              MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
             byteUtils.when(() -> ByteUtils.readUint32((ByteBuffer) any())).thenReturn(0L);
             varInt.when(() -> VarInt.read((ByteBuffer) any())).thenReturn(varIntMock);
             doReturn(0L).when(varIntMock).longValue();
+            services.when(() -> Services.of(0L)).thenReturn(servicesMock2);
             byte[] byteArray = new byte[]{};
             buffers.when(() -> Buffers.readLengthPrefixedBytes((ByteBuffer) any())).thenReturn(byteArray);
             thrown.expect(ProtocolException.class);
@@ -303,6 +325,7 @@ public class PeerAddressSapientGeneratedJunit4Test {
             byteUtils.verify(() -> ByteUtils.readUint32((ByteBuffer) any()));
             varInt.verify(() -> VarInt.read((ByteBuffer) any()));
             verify(varIntMock).longValue();
+            services.verify(() -> Services.of(0L), atLeast(1));
             buffers.verify(() -> Buffers.readLengthPrefixedBytes((ByteBuffer) any()));
         }
     }
@@ -326,10 +349,13 @@ public class PeerAddressSapientGeneratedJunit4Test {
         try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
              MockedStatic<PeerAddress> peerAddress = mockStatic(PeerAddress.class, CALLS_REAL_METHODS);
              MockedStatic<Buffers> buffers = mockStatic(Buffers.class);
+             MockedStatic<Services> services = mockStatic(Services.class);
              MockedStatic<VarInt> varInt = mockStatic(VarInt.class)) {
             byteUtils.when(() -> ByteUtils.readUint32((ByteBuffer) any())).thenReturn(0L);
             varInt.when(() -> VarInt.read((ByteBuffer) any())).thenReturn(varIntMock);
             doReturn(0L).when(varIntMock).longValue();
+            Services services2 = Services.of(0L);
+            services.when(() -> Services.of(0L)).thenReturn(services2);
             byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3};
             buffers.when(() -> Buffers.readLengthPrefixedBytes((ByteBuffer) any())).thenReturn(byteArray);
             InetAddress inetAddress = InetAddress.getLoopbackAddress();
@@ -343,6 +369,7 @@ public class PeerAddressSapientGeneratedJunit4Test {
             byteUtils.verify(() -> ByteUtils.readUint32((ByteBuffer) any()), atLeast(1));
             varInt.verify(() -> VarInt.read((ByteBuffer) any()), atLeast(1));
             verify(varIntMock, atLeast(1)).longValue();
+            services.verify(() -> Services.of(0L), atLeast(1));
             buffers.verify(() -> Buffers.readLengthPrefixedBytes((ByteBuffer) any()), atLeast(1));
             peerAddress.verify(() -> PeerAddress.getByAddress(byteArray), atLeast(1));
             byteUtils.verify(() -> ByteUtils.readUint16BE((ByteBuffer) any()), atLeast(1));
@@ -366,12 +393,15 @@ public class PeerAddressSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<Buffers> buffers = mockStatic(Buffers.class);
+             MockedStatic<Services> services = mockStatic(Services.class);
              MockedStatic<VarInt> varInt = mockStatic(VarInt.class);
              MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
-            byteUtils.when(() -> ByteUtils.readUint32((ByteBuffer) any())).thenReturn(1L);
+            byteUtils.when(() -> ByteUtils.readUint32((ByteBuffer) any())).thenReturn(123456789L);
             varInt.when(() -> VarInt.read((ByteBuffer) any())).thenReturn(varIntMock);
             doReturn(0L).when(varIntMock).longValue();
-            byte[] byteArray = new byte[]{};
+            Services services2 = Services.of(0L);
+            services.when(() -> Services.of(0L)).thenReturn(services2);
+            byte[] byteArray = new byte[]{(byte) 0};
             buffers.when(() -> Buffers.readLengthPrefixedBytes((ByteBuffer) any())).thenReturn(byteArray);
             thrown.expect(ProtocolException.class);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
@@ -381,6 +411,7 @@ public class PeerAddressSapientGeneratedJunit4Test {
             byteUtils.verify(() -> ByteUtils.readUint32((ByteBuffer) any()));
             varInt.verify(() -> VarInt.read((ByteBuffer) any()));
             verify(varIntMock).longValue();
+            services.verify(() -> Services.of(0L), atLeast(1));
             buffers.verify(() -> Buffers.readLengthPrefixedBytes((ByteBuffer) any()));
         }
     }
@@ -388,7 +419,7 @@ public class PeerAddressSapientGeneratedJunit4Test {
     //Sapient generated method id: ${f6949cef-7181-305d-a857-39f617738109}
     @Ignore()
     @Test()
-    public void readWhenAddrLenEquals16() throws BufferUnderflowException, ProtocolException, UnknownHostException {
+    public void readWhenAddrLenEquals16() throws BufferUnderflowException, ProtocolException {
         /* Branches:
          * (protocolVariant < 0) : false
          * (protocolVariant > 2) : false
@@ -401,36 +432,34 @@ public class PeerAddressSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
-             MockedStatic<PeerAddress> peerAddress = mockStatic(PeerAddress.class, CALLS_REAL_METHODS);
-             MockedStatic<Buffers> buffers = mockStatic(Buffers.class);
-             MockedStatic<VarInt> varInt = mockStatic(VarInt.class)) {
+        try (MockedStatic<Buffers> buffers = mockStatic(Buffers.class);
+             MockedStatic<Services> services = mockStatic(Services.class);
+             MockedStatic<VarInt> varInt = mockStatic(VarInt.class);
+             MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
             byteUtils.when(() -> ByteUtils.readUint32((ByteBuffer) any())).thenReturn(1L);
             varInt.when(() -> VarInt.read((ByteBuffer) any())).thenReturn(varIntMock);
             doReturn(0L).when(varIntMock).longValue();
+            Services services2 = Services.of(0L);
+            services.when(() -> Services.of(0L)).thenReturn(services2);
             byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15};
             buffers.when(() -> Buffers.readLengthPrefixedBytes((ByteBuffer) any())).thenReturn(byteArray);
-            InetAddress inetAddress = InetAddress.getLoopbackAddress();
-            peerAddress.when(() -> PeerAddress.getByAddress(byteArray)).thenReturn(inetAddress);
-            byteUtils.when(() -> ByteUtils.readUint16BE((ByteBuffer) any())).thenReturn(0);
+            thrown.expect(ProtocolException.class);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
             //Act Statement(s)
-            PeerAddress result = PeerAddress.read(byteBuffer, 2);
+            PeerAddress.read(byteBuffer, 2);
             //Assert statement(s)
-            assertThat(result, is(notNullValue()));
-            byteUtils.verify(() -> ByteUtils.readUint32((ByteBuffer) any()), atLeast(1));
-            varInt.verify(() -> VarInt.read((ByteBuffer) any()), atLeast(1));
-            verify(varIntMock, atLeast(1)).longValue();
-            buffers.verify(() -> Buffers.readLengthPrefixedBytes((ByteBuffer) any()), atLeast(1));
-            peerAddress.verify(() -> PeerAddress.getByAddress(byteArray), atLeast(1));
-            byteUtils.verify(() -> ByteUtils.readUint16BE((ByteBuffer) any()), atLeast(1));
+            byteUtils.verify(() -> ByteUtils.readUint32((ByteBuffer) any()));
+            varInt.verify(() -> VarInt.read((ByteBuffer) any()));
+            verify(varIntMock).longValue();
+            services.verify(() -> Services.of(0L), atLeast(1));
+            buffers.verify(() -> Buffers.readLengthPrefixedBytes((ByteBuffer) any()));
         }
     }
 
     //Sapient generated method id: ${2db0b1a8-13e0-3171-950f-8f0b3f73e860}
     @Ignore()
     @Test()
-    public void readWhenAddrLenNotEquals10ThrowsProtocolException() throws BufferUnderflowException, ProtocolException {
+    public void readWhenAddrLenNotEquals10ThrowsProtocolException() throws BufferUnderflowException, ProtocolException, UnknownHostException {
         /* Branches:
          * (protocolVariant < 0) : false
          * (protocolVariant > 2) : false
@@ -443,30 +472,35 @@ public class PeerAddressSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<Buffers> buffers = mockStatic(Buffers.class);
-             MockedStatic<VarInt> varInt = mockStatic(VarInt.class);
-             MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
-            byteUtils.when(() -> ByteUtils.readUint32((ByteBuffer) any())).thenReturn(1L);
-            varInt.when(() -> VarInt.read((ByteBuffer) any())).thenReturn(varIntMock);
-            doReturn(0L).when(varIntMock).longValue();
-            byte[] byteArray = new byte[]{};
-            buffers.when(() -> Buffers.readLengthPrefixedBytes((ByteBuffer) any())).thenReturn(byteArray);
-            thrown.expect(ProtocolException.class);
+        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
+             MockedStatic<TorUtils> torUtils = mockStatic(TorUtils.class);
+             MockedStatic<Buffers> buffers = mockStatic(Buffers.class);
+             MockedStatic<Services> services = mockStatic(Services.class)) {
+            byteUtils.when(() -> ByteUtils.readUint32((ByteBuffer) any())).thenReturn(1619479569L);
+            Services services2 = Services.of(0L);
+            services.when(() -> Services.read((ByteBuffer) any())).thenReturn(services2);
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0};
+            buffers.when(() -> Buffers.readBytes((ByteBuffer) any(), eq(16))).thenReturn(byteArray);
+            byte[] byteArray2 = new byte[]{};
+            torUtils.when(() -> TorUtils.encodeOnionUrlV2(byteArray2)).thenReturn("return_of_encodeOnionUrlV2");
+            byteUtils.when(() -> ByteUtils.readUint16BE((ByteBuffer) any())).thenReturn(0);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
             //Act Statement(s)
-            PeerAddress.read(byteBuffer, 2);
+            PeerAddress result = PeerAddress.read(byteBuffer, 1);
             //Assert statement(s)
+            assertThat(result, is(notNullValue()));
             byteUtils.verify(() -> ByteUtils.readUint32((ByteBuffer) any()));
-            varInt.verify(() -> VarInt.read((ByteBuffer) any()));
-            verify(varIntMock).longValue();
-            buffers.verify(() -> Buffers.readLengthPrefixedBytes((ByteBuffer) any()));
+            services.verify(() -> Services.read((ByteBuffer) any()));
+            buffers.verify(() -> Buffers.readBytes((ByteBuffer) any(), eq(16)));
+            torUtils.verify(() -> TorUtils.encodeOnionUrlV2(byteArray2), atLeast(1));
+            byteUtils.verify(() -> ByteUtils.readUint16BE((ByteBuffer) any()));
         }
     }
 
     //Sapient generated method id: ${efec9101-bd23-3b0e-a50f-17663f8e0c6c}
     @Ignore()
     @Test()
-    public void readWhenAddrLenEquals10() throws BufferUnderflowException, ProtocolException, UnknownHostException {
+    public void readWhenAddrLenEquals10() throws BufferUnderflowException, ProtocolException {
         /* Branches:
          * (protocolVariant < 0) : false
          * (protocolVariant > 2) : false
@@ -479,28 +513,27 @@ public class PeerAddressSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
-             MockedStatic<TorUtils> torUtils = mockStatic(TorUtils.class);
-             MockedStatic<Buffers> buffers = mockStatic(Buffers.class);
-             MockedStatic<VarInt> varInt = mockStatic(VarInt.class)) {
-            byteUtils.when(() -> ByteUtils.readUint32((ByteBuffer) any())).thenReturn(1L);
+        try (MockedStatic<Buffers> buffers = mockStatic(Buffers.class);
+             MockedStatic<Services> services = mockStatic(Services.class);
+             MockedStatic<VarInt> varInt = mockStatic(VarInt.class);
+             MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
+            byteUtils.when(() -> ByteUtils.readUint32((ByteBuffer) any())).thenReturn(0L);
             varInt.when(() -> VarInt.read((ByteBuffer) any())).thenReturn(varIntMock);
             doReturn(0L).when(varIntMock).longValue();
+            Services services2 = Services.of(0L);
+            services.when(() -> Services.of(0L)).thenReturn(services2);
             byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9};
             buffers.when(() -> Buffers.readLengthPrefixedBytes((ByteBuffer) any())).thenReturn(byteArray);
-            torUtils.when(() -> TorUtils.encodeOnionUrlV2(byteArray)).thenReturn("aaaqeayeaudaocaj.onion");
-            byteUtils.when(() -> ByteUtils.readUint16BE((ByteBuffer) any())).thenReturn(0);
+            thrown.expect(ProtocolException.class);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
             //Act Statement(s)
-            PeerAddress result = PeerAddress.read(byteBuffer, 2);
+            PeerAddress.read(byteBuffer, 2);
             //Assert statement(s)
-            assertThat(result, is(notNullValue()));
             byteUtils.verify(() -> ByteUtils.readUint32((ByteBuffer) any()));
             varInt.verify(() -> VarInt.read((ByteBuffer) any()));
             verify(varIntMock).longValue();
+            services.verify(() -> Services.of(0L), atLeast(1));
             buffers.verify(() -> Buffers.readLengthPrefixedBytes((ByteBuffer) any()));
-            torUtils.verify(() -> TorUtils.encodeOnionUrlV2(byteArray), atLeast(1));
-            byteUtils.verify(() -> ByteUtils.readUint16BE((ByteBuffer) any()));
         }
     }
 
@@ -521,12 +554,15 @@ public class PeerAddressSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<Buffers> buffers = mockStatic(Buffers.class);
+             MockedStatic<Services> services = mockStatic(Services.class);
              MockedStatic<VarInt> varInt = mockStatic(VarInt.class);
              MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
-            byteUtils.when(() -> ByteUtils.readUint32((ByteBuffer) any())).thenReturn(1L);
+            byteUtils.when(() -> ByteUtils.readUint32((ByteBuffer) any())).thenReturn(161L);
             varInt.when(() -> VarInt.read((ByteBuffer) any())).thenReturn(varIntMock);
             doReturn(0L).when(varIntMock).longValue();
-            byte[] byteArray = new byte[]{};
+            Services services2 = Services.of(0L);
+            services.when(() -> Services.of(0L)).thenReturn(services2);
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
             buffers.when(() -> Buffers.readLengthPrefixedBytes((ByteBuffer) any())).thenReturn(byteArray);
             thrown.expect(ProtocolException.class);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
@@ -536,6 +572,7 @@ public class PeerAddressSapientGeneratedJunit4Test {
             byteUtils.verify(() -> ByteUtils.readUint32((ByteBuffer) any()));
             varInt.verify(() -> VarInt.read((ByteBuffer) any()));
             verify(varIntMock).longValue();
+            services.verify(() -> Services.of(0L), atLeast(1));
             buffers.verify(() -> Buffers.readLengthPrefixedBytes((ByteBuffer) any()));
         }
     }
@@ -543,7 +580,7 @@ public class PeerAddressSapientGeneratedJunit4Test {
     //Sapient generated method id: ${8b80c52d-4f7b-31f2-a343-dcba6c724a1c}
     @Ignore()
     @Test()
-    public void readWhenAddrLenEquals32() throws BufferUnderflowException, ProtocolException, UnknownHostException {
+    public void readWhenAddrLenEquals32() throws BufferUnderflowException, ProtocolException {
         /* Branches:
          * (protocolVariant < 0) : false
          * (protocolVariant > 2) : false
@@ -556,28 +593,27 @@ public class PeerAddressSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
-             MockedStatic<TorUtils> torUtils = mockStatic(TorUtils.class);
-             MockedStatic<Buffers> buffers = mockStatic(Buffers.class);
-             MockedStatic<VarInt> varInt = mockStatic(VarInt.class)) {
+        try (MockedStatic<Buffers> buffers = mockStatic(Buffers.class);
+             MockedStatic<Services> services = mockStatic(Services.class);
+             MockedStatic<VarInt> varInt = mockStatic(VarInt.class);
+             MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
             byteUtils.when(() -> ByteUtils.readUint32((ByteBuffer) any())).thenReturn(1L);
             varInt.when(() -> VarInt.read((ByteBuffer) any())).thenReturn(varIntMock);
             doReturn(0L).when(varIntMock).longValue();
+            Services services2 = Services.of(0L);
+            services.when(() -> Services.of(0L)).thenReturn(services2);
             byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
             buffers.when(() -> Buffers.readLengthPrefixedBytes((ByteBuffer) any())).thenReturn(byteArray);
-            torUtils.when(() -> TorUtils.encodeOnionUrlV3(byteArray)).thenReturn("aaaqeayeaudaocajbifqydiob4ibceqtcqkrmfyydenbwha5dyp3kead.onion");
-            byteUtils.when(() -> ByteUtils.readUint16BE((ByteBuffer) any())).thenReturn(0);
+            thrown.expect(ProtocolException.class);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
             //Act Statement(s)
-            PeerAddress result = PeerAddress.read(byteBuffer, 2);
+            PeerAddress.read(byteBuffer, 2);
             //Assert statement(s)
-            assertThat(result, is(notNullValue()));
             byteUtils.verify(() -> ByteUtils.readUint32((ByteBuffer) any()));
             varInt.verify(() -> VarInt.read((ByteBuffer) any()));
             verify(varIntMock).longValue();
+            services.verify(() -> Services.of(0L), atLeast(1));
             buffers.verify(() -> Buffers.readLengthPrefixedBytes((ByteBuffer) any()));
-            torUtils.verify(() -> TorUtils.encodeOnionUrlV3(byteArray), atLeast(1));
-            byteUtils.verify(() -> ByteUtils.readUint16BE((ByteBuffer) any()));
         }
     }
 
@@ -614,6 +650,7 @@ public class PeerAddressSapientGeneratedJunit4Test {
         thrown.expect(IllegalStateException.class);
         thrown.expectMessage(illegalStateException.getMessage());
         ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+
         //Act Statement(s)
         target.write(byteBuffer, 3);
     }
@@ -632,7 +669,7 @@ public class PeerAddressSapientGeneratedJunit4Test {
         try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
              MockedStatic<PeerAddress> peerAddress = mockStatic(PeerAddress.class)) {
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            byteUtils.when(() -> ByteUtils.writeInt32LE(eq(1704367386L), (ByteBuffer) any())).thenReturn(byteBuffer);
+            byteUtils.when(() -> ByteUtils.writeInt32LE(eq(1706163992L), (ByteBuffer) any())).thenReturn(byteBuffer);
             byte[] byteArray = new byte[]{};
             byte[] byteArray2 = new byte[]{(byte) 127, (byte) 0, (byte) 0, (byte) 1};
             peerAddress.when(() -> PeerAddress.mapIntoIPv6(byteArray2)).thenReturn(byteArray);
@@ -648,7 +685,7 @@ public class PeerAddressSapientGeneratedJunit4Test {
             ByteBuffer result = target.write(byteBuffer4, 1);
             //Assert statement(s)
             assertThat(result, equalTo(byteBuffer4));
-            byteUtils.verify(() -> ByteUtils.writeInt32LE(eq(1704367386L), (ByteBuffer) any()));
+            byteUtils.verify(() -> ByteUtils.writeInt32LE(eq(1706163992L), (ByteBuffer) any()));
             peerAddress.verify(() -> PeerAddress.mapIntoIPv6(byteArray2), atLeast(1));
             byteUtils.verify(() -> ByteUtils.writeInt16BE(eq(0), (ByteBuffer) any()));
             verify(servicesMock).write((ByteBuffer) any());
@@ -672,23 +709,24 @@ public class PeerAddressSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
              MockedStatic<VarInt> varInt = mockStatic(VarInt.class)) {
-            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            byteUtils.when(() -> ByteUtils.writeInt32LE(eq(1704367387L), (ByteBuffer) any())).thenReturn(byteBuffer);
+            //TODO: Needs to return real value
+            byteUtils.when(() -> ByteUtils.writeInt32LE(eq(1706164003L), (ByteBuffer) any())).thenReturn(null);
             varInt.when(() -> VarInt.of(0L)).thenReturn(varIntMock);
-            doReturn(null).when(varIntMock).write((ByteBuffer) any());
-            VarInt varInt2 = VarInt.of(4L);
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            doReturn(byteBuffer).when(varIntMock).write((ByteBuffer) any());
+            VarInt varInt2 = new VarInt(0L);
             varInt.when(() -> VarInt.of(4L)).thenReturn(varInt2);
-            ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
-            byteUtils.when(() -> ByteUtils.writeInt16BE(eq(0), (ByteBuffer) any())).thenReturn(byteBuffer2);
+            //TODO: Needs to return real value
+            byteUtils.when(() -> ByteUtils.writeInt16BE(eq(0), (ByteBuffer) any())).thenReturn(null);
             Instant instant = Instant.now();
             PeerAddress target = PeerAddress.inet((Inet4Address) null, 0, servicesMock, instant);
             doReturn(0L).when(servicesMock).bits();
-            ByteBuffer byteBuffer3 = ByteBuffer.allocateDirect(0);
+            ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
             //Act Statement(s)
-            ByteBuffer result = target.write(byteBuffer3, 2);
+            ByteBuffer result = target.write(byteBuffer2, 2);
             //Assert statement(s)
-            assertThat(result, equalTo(byteBuffer3));
-            byteUtils.verify(() -> ByteUtils.writeInt32LE(eq(1704367387L), (ByteBuffer) any()));
+            assertThat(result, equalTo(byteBuffer2));
+            byteUtils.verify(() -> ByteUtils.writeInt32LE(eq(1706164003L), (ByteBuffer) any()));
             varInt.verify(() -> VarInt.of(0L), atLeast(1));
             verify(varIntMock).write((ByteBuffer) any());
             varInt.verify(() -> VarInt.of(4L), atLeast(1));
@@ -715,8 +753,9 @@ public class PeerAddressSapientGeneratedJunit4Test {
         try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
             byteUtils.when(() -> ByteUtils.writeInt32LE(eq(0L), (ByteBuffer) any())).thenReturn(byteBuffer);
+            Services services = Services.of(0L);
             Instant instant = Instant.now();
-            PeerAddress target = PeerAddress.inet((InetAddress) null, 0, servicesMock, instant);
+            PeerAddress target = PeerAddress.inet((InetAddress) null, 0, services, instant);
             ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
             doReturn(byteBuffer2).when(servicesMock).write((ByteBuffer) any());
             thrown.expect(IllegalStateException.class);
@@ -745,29 +784,24 @@ public class PeerAddressSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
-             MockedStatic<VarInt> varInt = mockStatic(VarInt.class)) {
+        try (MockedStatic<VarInt> varInt = mockStatic(VarInt.class);
+             MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            byteUtils.when(() -> ByteUtils.writeInt32LE(eq(1704367387L), (ByteBuffer) any())).thenReturn(byteBuffer);
+            byteUtils.when(() -> ByteUtils.writeInt32LE(eq(0L), (ByteBuffer) any())).thenReturn(byteBuffer);
             varInt.when(() -> VarInt.of(0L)).thenReturn(varIntMock);
             doReturn(null).when(varIntMock).write((ByteBuffer) any());
-            VarInt varInt2 = VarInt.of(16L);
-            varInt.when(() -> VarInt.of(16L)).thenReturn(varInt2);
-            ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
-            byteUtils.when(() -> ByteUtils.writeInt16BE(eq(0), (ByteBuffer) any())).thenReturn(byteBuffer2);
+            Services services = Services.of(0L);
             Instant instant = Instant.now();
-            PeerAddress target = PeerAddress.inet((Inet6Address) null, 0, servicesMock, instant);
+            PeerAddress target = PeerAddress.inet((Inet6Address) null, 8080, services, instant);
             doReturn(0L).when(servicesMock).bits();
-            ByteBuffer byteBuffer3 = ByteBuffer.allocateDirect(0);
+            thrown.expect(IllegalStateException.class);
+            ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
             //Act Statement(s)
-            ByteBuffer result = target.write(byteBuffer3, 2);
+            target.write(byteBuffer2, 2);
             //Assert statement(s)
-            assertThat(result, equalTo(byteBuffer3));
-            byteUtils.verify(() -> ByteUtils.writeInt32LE(eq(1704367387L), (ByteBuffer) any()));
+            byteUtils.verify(() -> ByteUtils.writeInt32LE(eq(0L), (ByteBuffer) any()));
             varInt.verify(() -> VarInt.of(0L), atLeast(1));
             verify(varIntMock).write((ByteBuffer) any());
-            varInt.verify(() -> VarInt.of(16L), atLeast(1));
-            byteUtils.verify(() -> ByteUtils.writeInt16BE(eq(0), (ByteBuffer) any()));
             verify(servicesMock).bits();
         }
     }
@@ -788,7 +822,7 @@ public class PeerAddressSapientGeneratedJunit4Test {
         try (MockedStatic<VarInt> varInt = mockStatic(VarInt.class);
              MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            byteUtils.when(() -> ByteUtils.writeInt32LE(eq(1704367386L), (ByteBuffer) any())).thenReturn(byteBuffer);
+            byteUtils.when(() -> ByteUtils.writeInt32LE(eq(1706163992L), (ByteBuffer) any())).thenReturn(byteBuffer);
             varInt.when(() -> VarInt.of(0L)).thenReturn(varIntMock);
             ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
             doReturn(byteBuffer2).when(varIntMock).write((ByteBuffer) any());
@@ -801,7 +835,7 @@ public class PeerAddressSapientGeneratedJunit4Test {
             //Act Statement(s)
             target.write(byteBuffer3, 2);
             //Assert statement(s)
-            byteUtils.verify(() -> ByteUtils.writeInt32LE(eq(1704367386L), (ByteBuffer) any()));
+            byteUtils.verify(() -> ByteUtils.writeInt32LE(eq(1706163992L), (ByteBuffer) any()));
             varInt.verify(() -> VarInt.of(0L), atLeast(1));
             verify(varIntMock).write((ByteBuffer) any());
             verify(servicesMock).bits();
@@ -818,18 +852,21 @@ public class PeerAddressSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         InetAddress inetAddress = InetAddress.getLoopbackAddress();
+        Services services = Services.of(0L);
         Instant instant = Instant.now();
-        PeerAddress target = spy(PeerAddress.inet(inetAddress, 0, servicesMock, instant));
-        doReturn(1).when(target).getMessageSize(0);
+        PeerAddress target = spy(PeerAddress.inet(inetAddress, 8080, services, instant));
+        doReturn(1).when(target).getMessageSize(1);
         ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-        doReturn(byteBuffer).when(target).write((ByteBuffer) any(), eq(0));
+        doReturn(byteBuffer).when(target).write((ByteBuffer) any(), eq(1));
+
         //Act Statement(s)
-        byte[] result = target.serialize(0);
+        byte[] result = target.serialize(1);
         byte[] byteResultArray = new byte[]{};
+
         //Assert statement(s)
         assertThat(result, equalTo(byteResultArray));
-        verify(target).getMessageSize(0);
-        verify(target).write((ByteBuffer) any(), eq(0));
+        verify(target).getMessageSize(1);
+        verify(target).write((ByteBuffer) any(), eq(1));
     }
 
     //Sapient generated method id: ${af39f50b-3759-3ed1-9698-c6f0052233ac}
@@ -846,6 +883,7 @@ public class PeerAddressSapientGeneratedJunit4Test {
         IllegalStateException illegalStateException = new IllegalStateException("invalid protocolVariant: 3");
         thrown.expect(IllegalStateException.class);
         thrown.expectMessage(illegalStateException.getMessage());
+
         //Act Statement(s)
         target.getMessageSize(3);
     }
@@ -862,8 +900,10 @@ public class PeerAddressSapientGeneratedJunit4Test {
         InetAddress inetAddress = InetAddress.getLoopbackAddress();
         Instant instant = Instant.now();
         PeerAddress target = PeerAddress.inet(inetAddress, 0, servicesMock, instant);
+
         //Act Statement(s)
         int result = target.getMessageSize(1);
+
         //Assert statement(s)
         assertThat(result, equalTo(30));
     }
@@ -883,8 +923,10 @@ public class PeerAddressSapientGeneratedJunit4Test {
         Instant instant = Instant.now();
         PeerAddress target = PeerAddress.inet((Inet4Address) null, 0, servicesMock, instant);
         doReturn(1L).when(servicesMock).bits();
+
         //Act Statement(s)
         int result = target.getMessageSize(2);
+
         //Assert statement(s)
         assertThat(result, equalTo(13));
         verify(servicesMock).bits();
@@ -906,8 +948,10 @@ public class PeerAddressSapientGeneratedJunit4Test {
         Instant instant = Instant.now();
         PeerAddress target = PeerAddress.inet((Inet6Address) null, 0, servicesMock, instant);
         doReturn(1L).when(servicesMock).bits();
+
         //Act Statement(s)
         int result = target.getMessageSize(2);
+
         //Assert statement(s)
         assertThat(result, equalTo(25));
         verify(servicesMock).bits();
@@ -931,8 +975,10 @@ public class PeerAddressSapientGeneratedJunit4Test {
         PeerAddress target = PeerAddress.inet(inetAddress, 0, servicesMock, instant);
         doReturn(1L).when(servicesMock).bits();
         thrown.expect(IllegalStateException.class);
+
         //Act Statement(s)
         target.getMessageSize(2);
+
         //Assert statement(s)
         verify(servicesMock).bits();
     }
@@ -941,15 +987,13 @@ public class PeerAddressSapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void getByAddressTest() throws UnknownHostException {
-        /**
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
         //Arrange Statement(s)
-        byte[] byteArray = new byte[]{};
+        byte[] byteArray = new byte[]{(byte) 0};
+
         //Act Statement(s)
         InetAddress result = PeerAddress.getByAddress(byteArray);
         InetAddress inetAddress = InetAddress.getLoopbackAddress();
+
         //Assert statement(s)
         assertThat(result, equalTo(inetAddress));
     }
@@ -982,14 +1026,11 @@ public class PeerAddressSapientGeneratedJunit4Test {
          * (ip.length == 4) : false
          * (ip.length == 16) : true
          * (ip.length == 16) : false
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{};
+            byte[] byteArray = new byte[]{(byte) 0};
             //Act Statement(s)
             byte[] result = PeerAddress.mapIntoIPv6(byteArray);
             byte[] byteResultArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) -1, (byte) -1, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
@@ -1007,14 +1048,11 @@ public class PeerAddressSapientGeneratedJunit4Test {
          * (ip.length == 4) : false
          * (ip.length == 16) : false
          * (ip.length == 16) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{};
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15};
             //Act Statement(s)
             byte[] result = PeerAddress.mapIntoIPv6(byteArray);
             //Assert statement(s)
@@ -1030,9 +1068,11 @@ public class PeerAddressSapientGeneratedJunit4Test {
         InetAddress inetAddress = InetAddress.getLoopbackAddress();
         Instant instant = Instant.now();
         PeerAddress target = PeerAddress.inet(inetAddress, 0, servicesMock, instant);
+
         //Act Statement(s)
         InetSocketAddress result = target.getSocketAddress();
         InetSocketAddress inetSocketAddress = new InetSocketAddress(inetAddress, 0);
+
         //Assert statement(s)
         assertThat(result, equalTo(inetSocketAddress));
     }
@@ -1044,8 +1084,10 @@ public class PeerAddressSapientGeneratedJunit4Test {
         InetAddress inetAddress = InetAddress.getLoopbackAddress();
         Instant instant = Instant.now();
         PeerAddress target = PeerAddress.inet(inetAddress, 0, servicesMock, instant);
+
         //Act Statement(s)
         Instant result = target.time();
+
         //Assert statement(s)
         assertThat(result, equalTo(instant));
     }
@@ -1058,10 +1100,12 @@ public class PeerAddressSapientGeneratedJunit4Test {
         InetAddress inetAddress = InetAddress.getLoopbackAddress();
         Instant instant = Instant.now();
         PeerAddress target = PeerAddress.inet(inetAddress, 0, servicesMock, instant);
+
         //Act Statement(s)
         long result = target.getTime();
+
         //Assert statement(s)
-        assertThat(result, equalTo(1704367388L));
+        assertThat(result, equalTo(1706163993L));
     }
 
     //Sapient generated method id: ${95f6af8f-2efe-3edb-bb32-8b4aec91c38e}
@@ -1075,8 +1119,10 @@ public class PeerAddressSapientGeneratedJunit4Test {
         InetAddress inetAddress = InetAddress.getLoopbackAddress();
         Instant instant = Instant.now();
         PeerAddress target = PeerAddress.inet(inetAddress, 2, servicesMock, instant);
+
         //Act Statement(s)
         String result = target.toString();
+
         //Assert statement(s)
         assertThat(result, equalTo("[127.0.0.1]:2"));
     }
@@ -1093,12 +1139,15 @@ public class PeerAddressSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Services services = Services.of(0L);
         Instant instant = Instant.now();
-        PeerAddress target = PeerAddress.inet((InetAddress) null, 2, servicesMock, instant);
+        PeerAddress target = PeerAddress.inet((InetAddress) null, 8080, services, instant);
+
         //Act Statement(s)
         String result = target.toString();
+
         //Assert statement(s)
-        assertThat(result, equalTo("[ PeerAddress of unsupported type ]:2"));
+        assertThat(result, equalTo("[ PeerAddress of unsupported type ]:0"));
     }
 
     //Sapient generated method id: ${6d160ca4-2a1a-3ab8-a0c2-14da2d4e9144}
@@ -1111,9 +1160,11 @@ public class PeerAddressSapientGeneratedJunit4Test {
         InetAddress inetAddress = InetAddress.getLoopbackAddress();
         Instant instant = Instant.now();
         PeerAddress target = PeerAddress.inet(inetAddress, 0, servicesMock, instant);
+
         //Act Statement(s)
         InetSocketAddress result = target.toSocketAddress();
         InetSocketAddress inetSocketAddress = new InetSocketAddress(inetAddress, 0);
+
         //Assert statement(s)
         assertThat(result, equalTo(inetSocketAddress));
     }

@@ -18,12 +18,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "ADE84DD1C1085CAD4D3B5DBB5676F95B"
+    modelFingerprint: "2744D14EC39648566376E7A42D0AD558"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "DE096BF2FA0383A4B0BA8404B828E8F3"
+      modelFingerprint: "C2D68016E295BDD33436E10A92787E0A"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -43,15 +43,68 @@ methods:
               valueType: "org.bitcoinj.base.Coin"
               uuid: "<init>_coin1"
               fixed: false
+              nameForMock: "true"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "fiat"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
+              sapientType: "OBJECT"
+              content: !<static_method_return>
                 target: "org.bitcoinj.base.utils.Fiat"
-                onlyPojoFunctions: false
-                builderPattern: false
+                method: "valueOf"
+                methodParameters:
+                - name: "currencyCode"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "USD"
+                    suggestedContent: !<regular>
+                      value: "USD"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_fiat1-currencyCode"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "value"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 20
+                    suggestedContent: !<regular>
+                      value: 20
+                    valueType: "long"
+                    uuid: "<init>_fiat1-value"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.utils.Fiat"
+                method: "valueOf"
+                methodParameters:
+                - name: "currencyCode"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "USD"
+                    suggestedContent: !<regular>
+                      value: "USD"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_fiat1-currencyCode"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "value"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 20
+                    suggestedContent: !<regular>
+                      value: 20
+                    valueType: "long"
+                    uuid: "<init>_fiat1-value"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.base.utils.Fiat"
               uuid: "<init>_fiat1"
               fixed: false
@@ -64,7 +117,7 @@ methods:
           parameters:
           - name: "coin"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.base.Coin"
                 onlyPojoFunctions: false
@@ -72,15 +125,68 @@ methods:
               valueType: "org.bitcoinj.base.Coin"
               uuid: "<init>_coin1"
               fixed: false
+              nameForMock: "true"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "fiat"
             value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<unknown_object>
+              sapientType: "OBJECT"
+              content: !<static_method_return>
                 target: "org.bitcoinj.base.utils.Fiat"
-                onlyPojoFunctions: false
-                builderPattern: false
+                method: "valueOf"
+                methodParameters:
+                - name: "currencyCode"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "USD"
+                    suggestedContent: !<regular>
+                      value: "USD"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_fiat1-currencyCode"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "value"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 20
+                    suggestedContent: !<regular>
+                      value: 20
+                    valueType: "long"
+                    uuid: "<init>_fiat1-value"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.utils.Fiat"
+                method: "valueOf"
+                methodParameters:
+                - name: "currencyCode"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "USD"
+                    suggestedContent: !<regular>
+                      value: "USD"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_fiat1-currencyCode"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "value"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 20
+                    suggestedContent: !<regular>
+                      value: 20
+                    valueType: "long"
+                    uuid: "<init>_fiat1-value"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.base.utils.Fiat"
               uuid: "<init>_fiat1"
               fixed: false
@@ -97,23 +203,28 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "convertCoin"
-      modelFingerprint: "F092FA06A06BBC9DA530A88840CB4903"
+      modelFingerprint: "F822D09BFD947E57E7087C625CD0F674"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Coin"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.base.Coin"
         uuid: "coinToFiat_coin1"
         fixed: false
+        nameForMock: "5"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "coin"
-      modelFingerprint: "F667991EC6B504F535C09B67B1F3CCF2"
+      modelFingerprint: "269474F638E682C9441F5B569A1A3553"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -127,6 +238,7 @@ methods:
         valueType: "org.bitcoinj.base.Coin"
         uuid: "<init>_coin1"
         fixed: false
+        nameForMock: "true"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -138,8 +250,6 @@ methods:
           sapientType: "BASIC"
           content: !<regular>
             value: false
-          suggestedContent: !<regular>
-            value: false
           valueType: "boolean"
           uuid: "<init>_boolean1"
           fixed: false
@@ -150,7 +260,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "5CF4AA3E913235D44524C2D046BB7DB2"
+      modelFingerprint: "E57C3C1859ECBA02B751CD1F4962F701"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -171,8 +281,6 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: false
-            suggestedContent: !<regular>
-              value: false
             valueType: "boolean"
             uuid: "<init>_boolean1"
             fixed: false
@@ -191,17 +299,69 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "fiat"
-      modelFingerprint: "611162FF5E30AE4454917007E175DCFC"
+      modelFingerprint: "C90F10C42E54CA6CA63B7A601B5B9C77"
       index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
+        sapientType: "OBJECT"
+        content: !<static_method_return>
           target: "org.bitcoinj.base.utils.Fiat"
-          onlyPojoFunctions: false
-          builderPattern: false
+          method: "valueOf"
+          methodParameters:
+          - name: "currencyCode"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "USD"
+              suggestedContent: !<regular>
+                value: "USD"
+              valueType: "java.lang.String"
+              uuid: "<init>_fiat1-currencyCode"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "value"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 20
+              suggestedContent: !<regular>
+                value: 20
+              valueType: "long"
+              uuid: "<init>_fiat1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.utils.Fiat"
+          method: "valueOf"
+          methodParameters:
+          - name: "currencyCode"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "USD"
+              suggestedContent: !<regular>
+                value: "USD"
+              valueType: "java.lang.String"
+              uuid: "<init>_fiat1-currencyCode"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "value"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 20
+              suggestedContent: !<regular>
+                value: 20
+              valueType: "long"
+              uuid: "<init>_fiat1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.base.utils.Fiat"
         uuid: "<init>_fiat1"
         fixed: false
@@ -361,6 +521,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "EXTERNAL_FIELD_FINAL_MEMBER_ACCESS"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -373,12 +534,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "B1C5A2BDA46666191AD56B1D44066BD1"
+    modelFingerprint: "77662F9B6254408B495EAC17892418E8"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "DE096BF2FA0383A4B0BA8404B828E8F3"
+      modelFingerprint: "68916FC84A64881FBBF0E7CF89029581"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -398,15 +559,68 @@ methods:
               valueType: "org.bitcoinj.base.Coin"
               uuid: "<init>_coin1"
               fixed: false
+              nameForMock: "100"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "fiat"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
+              sapientType: "OBJECT"
+              content: !<static_method_return>
                 target: "org.bitcoinj.base.utils.Fiat"
-                onlyPojoFunctions: false
-                builderPattern: false
+                method: "valueOf"
+                methodParameters:
+                - name: "currencyCode"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "USD"
+                    suggestedContent: !<regular>
+                      value: "USD"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_fiat1-currencyCode"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "value"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 50
+                    suggestedContent: !<regular>
+                      value: 50
+                    valueType: "long"
+                    uuid: "<init>_fiat1-value"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.utils.Fiat"
+                method: "valueOf"
+                methodParameters:
+                - name: "currencyCode"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "USD"
+                    suggestedContent: !<regular>
+                      value: "USD"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_fiat1-currencyCode"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "value"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 50
+                    suggestedContent: !<regular>
+                      value: 50
+                    valueType: "long"
+                    uuid: "<init>_fiat1-value"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.base.utils.Fiat"
               uuid: "<init>_fiat1"
               fixed: false
@@ -419,7 +633,7 @@ methods:
           parameters:
           - name: "coin"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.base.Coin"
                 onlyPojoFunctions: false
@@ -427,15 +641,68 @@ methods:
               valueType: "org.bitcoinj.base.Coin"
               uuid: "<init>_coin1"
               fixed: false
+              nameForMock: "100"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "fiat"
             value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<unknown_object>
+              sapientType: "OBJECT"
+              content: !<static_method_return>
                 target: "org.bitcoinj.base.utils.Fiat"
-                onlyPojoFunctions: false
-                builderPattern: false
+                method: "valueOf"
+                methodParameters:
+                - name: "currencyCode"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "USD"
+                    suggestedContent: !<regular>
+                      value: "USD"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_fiat1-currencyCode"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "value"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 50
+                    suggestedContent: !<regular>
+                      value: 50
+                    valueType: "long"
+                    uuid: "<init>_fiat1-value"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.utils.Fiat"
+                method: "valueOf"
+                methodParameters:
+                - name: "currencyCode"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "USD"
+                    suggestedContent: !<regular>
+                      value: "USD"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_fiat1-currencyCode"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "value"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 50
+                    suggestedContent: !<regular>
+                      value: 50
+                    valueType: "long"
+                    uuid: "<init>_fiat1-value"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.base.utils.Fiat"
               uuid: "<init>_fiat1"
               fixed: false
@@ -452,23 +719,28 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "convertCoin"
-      modelFingerprint: "F092FA06A06BBC9DA530A88840CB4903"
+      modelFingerprint: "F822D09BFD947E57E7087C625CD0F674"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Coin"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.base.Coin"
         uuid: "coinToFiat_coin1"
         fixed: false
+        nameForMock: "10"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "coin"
-      modelFingerprint: "F667991EC6B504F535C09B67B1F3CCF2"
+      modelFingerprint: "269474F638E682C9441F5B569A1A3553"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -482,6 +754,7 @@ methods:
         valueType: "org.bitcoinj.base.Coin"
         uuid: "<init>_coin1"
         fixed: false
+        nameForMock: "100"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -493,8 +766,6 @@ methods:
           sapientType: "BASIC"
           content: !<regular>
             value: false
-          suggestedContent: !<regular>
-            value: false
           valueType: "boolean"
           uuid: "<init>_boolean1"
           fixed: false
@@ -505,7 +776,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "5CF4AA3E913235D44524C2D046BB7DB2"
+      modelFingerprint: "E57C3C1859ECBA02B751CD1F4962F701"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -526,8 +797,6 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: false
-            suggestedContent: !<regular>
-              value: false
             valueType: "boolean"
             uuid: "<init>_boolean1"
             fixed: false
@@ -546,17 +815,69 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "fiat"
-      modelFingerprint: "611162FF5E30AE4454917007E175DCFC"
+      modelFingerprint: "776636DC928E3305F8A0CA726986B1CE"
       index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
+        sapientType: "OBJECT"
+        content: !<static_method_return>
           target: "org.bitcoinj.base.utils.Fiat"
-          onlyPojoFunctions: false
-          builderPattern: false
+          method: "valueOf"
+          methodParameters:
+          - name: "currencyCode"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "USD"
+              suggestedContent: !<regular>
+                value: "USD"
+              valueType: "java.lang.String"
+              uuid: "<init>_fiat1-currencyCode"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "value"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 50
+              suggestedContent: !<regular>
+                value: 50
+              valueType: "long"
+              uuid: "<init>_fiat1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.utils.Fiat"
+          method: "valueOf"
+          methodParameters:
+          - name: "currencyCode"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "USD"
+              suggestedContent: !<regular>
+                value: "USD"
+              valueType: "java.lang.String"
+              uuid: "<init>_fiat1-currencyCode"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "value"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 50
+              suggestedContent: !<regular>
+                value: 50
+              valueType: "long"
+              uuid: "<init>_fiat1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.base.utils.Fiat"
         uuid: "<init>_fiat1"
         fixed: false
@@ -670,7 +991,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Fiat"
-      modelFingerprint: "2E5FCDFF086246E87F91B649B9D9807E"
+      modelFingerprint: "45D84E3B488767CEC4DE7485B6EC91AE"
       index: 8
       ignored: false
       nestedInLoop: false
@@ -700,9 +1021,7 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 1
-            suggestedContent: !<regular>
-              value: 1
+              value: 0
             valueType: "long"
             uuid: "coinToFiat_long4"
             fixed: false
@@ -710,7 +1029,51 @@ methods:
             explicitCastNeeded: false
         signature: "valueOf(String,long): Fiat"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.base.utils.Fiat"
+            method: "valueOf"
+            methodParameters:
+            - name: "currencyCode"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "currencyCode1"
+                valueType: "java.lang.String"
+                uuid: "coinToFiat_fiat1-currencyCode"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "value"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "long"
+                uuid: "coinToFiat_fiat1-value"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.utils.Fiat"
+            method: "valueOf"
+            methodParameters:
+            - name: "currencyCode"
+              value:
+                sapientType: "BASIC"
+                valueType: "java.lang.String"
+                uuid: "coinToFiat_fiat1-currencyCode"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "value"
+              value:
+                sapientType: "BASIC"
+                valueType: "long"
+                uuid: "coinToFiat_fiat1-value"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "org.bitcoinj.base.utils.Fiat"
           uuid: "coinToFiat_fiat1"
           fixed: false
@@ -721,13 +1084,57 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "D1BD64D689FD46C0D0A45873738164B8"
+      modelFingerprint: "9FE9A02AC7C2707C185F3D8D29B1F63E"
       index: 9
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.utils.Fiat"
+          method: "valueOf"
+          methodParameters:
+          - name: "currencyCode"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "currencyCode1"
+              valueType: "java.lang.String"
+              uuid: "coinToFiat_fiat1-currencyCode"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "value"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "coinToFiat_fiat1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.utils.Fiat"
+          method: "valueOf"
+          methodParameters:
+          - name: "currencyCode"
+            value:
+              sapientType: "BASIC"
+              valueType: "java.lang.String"
+              uuid: "coinToFiat_fiat1-currencyCode"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "value"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "coinToFiat_fiat1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.base.utils.Fiat"
         uuid: "coinToFiat_fiat1"
         fixed: false
@@ -739,6 +1146,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "EXTERNAL_FIELD_FINAL_MEMBER_ACCESS"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -764,12 +1172,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "60EBBA435A09490090818415ED834C3C"
+    modelFingerprint: "C9748437CEF57E0C3B50B86443D13607"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "DE096BF2FA0383A4B0BA8404B828E8F3"
+      modelFingerprint: "A4E52DE9310FE406549ADEE52CEBA3B5"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -789,15 +1197,68 @@ methods:
               valueType: "org.bitcoinj.base.Coin"
               uuid: "<init>_coin1"
               fixed: false
+              nameForMock: "1"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "fiat"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
+              sapientType: "OBJECT"
+              content: !<static_method_return>
                 target: "org.bitcoinj.base.utils.Fiat"
-                onlyPojoFunctions: false
-                builderPattern: false
+                method: "valueOf"
+                methodParameters:
+                - name: "currencyCode"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "USD"
+                    suggestedContent: !<regular>
+                      value: "USD"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_fiat1-currencyCode"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "value"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    suggestedContent: !<regular>
+                      value: 1
+                    valueType: "long"
+                    uuid: "<init>_fiat1-value"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.utils.Fiat"
+                method: "valueOf"
+                methodParameters:
+                - name: "currencyCode"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "USD"
+                    suggestedContent: !<regular>
+                      value: "USD"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_fiat1-currencyCode"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "value"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    suggestedContent: !<regular>
+                      value: 1
+                    valueType: "long"
+                    uuid: "<init>_fiat1-value"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.base.utils.Fiat"
               uuid: "<init>_fiat1"
               fixed: false
@@ -810,7 +1271,7 @@ methods:
           parameters:
           - name: "coin"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.base.Coin"
                 onlyPojoFunctions: false
@@ -818,15 +1279,68 @@ methods:
               valueType: "org.bitcoinj.base.Coin"
               uuid: "<init>_coin1"
               fixed: false
+              nameForMock: "1"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "fiat"
             value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<unknown_object>
+              sapientType: "OBJECT"
+              content: !<static_method_return>
                 target: "org.bitcoinj.base.utils.Fiat"
-                onlyPojoFunctions: false
-                builderPattern: false
+                method: "valueOf"
+                methodParameters:
+                - name: "currencyCode"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "USD"
+                    suggestedContent: !<regular>
+                      value: "USD"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_fiat1-currencyCode"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "value"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    suggestedContent: !<regular>
+                      value: 1
+                    valueType: "long"
+                    uuid: "<init>_fiat1-value"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.utils.Fiat"
+                method: "valueOf"
+                methodParameters:
+                - name: "currencyCode"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "USD"
+                    suggestedContent: !<regular>
+                      value: "USD"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_fiat1-currencyCode"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "value"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    suggestedContent: !<regular>
+                      value: 1
+                    valueType: "long"
+                    uuid: "<init>_fiat1-value"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.base.utils.Fiat"
               uuid: "<init>_fiat1"
               fixed: false
@@ -843,13 +1357,69 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "convertFiat"
-      modelFingerprint: "BAD972C00EDD324DA23088B53A58ACA6"
+      modelFingerprint: "212499F2AC1CD920361AE9CA49CBE15B"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.utils.Fiat"
+          method: "valueOf"
+          methodParameters:
+          - name: "currencyCode"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "USD"
+              suggestedContent: !<regular>
+                value: "USD"
+              valueType: "java.lang.String"
+              uuid: "fiatToCoin_fiat1-currencyCode"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "value"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 1
+              suggestedContent: !<regular>
+                value: 1
+              valueType: "long"
+              uuid: "fiatToCoin_fiat1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.utils.Fiat"
+          method: "valueOf"
+          methodParameters:
+          - name: "currencyCode"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "USD"
+              suggestedContent: !<regular>
+                value: "USD"
+              valueType: "java.lang.String"
+              uuid: "fiatToCoin_fiat1-currencyCode"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "value"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 1
+              suggestedContent: !<regular>
+                value: 1
+              valueType: "long"
+              uuid: "fiatToCoin_fiat1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.base.utils.Fiat"
         uuid: "fiatToCoin_fiat1"
         fixed: false
@@ -859,7 +1429,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "coin"
-      modelFingerprint: "F667991EC6B504F535C09B67B1F3CCF2"
+      modelFingerprint: "269474F638E682C9441F5B569A1A3553"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -873,6 +1443,7 @@ methods:
         valueType: "org.bitcoinj.base.Coin"
         uuid: "<init>_coin1"
         fixed: false
+        nameForMock: "1"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -884,8 +1455,6 @@ methods:
           sapientType: "BASIC"
           content: !<regular>
             value: false
-          suggestedContent: !<regular>
-            value: false
           valueType: "boolean"
           uuid: "<init>_boolean1"
           fixed: false
@@ -896,7 +1465,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "5CF4AA3E913235D44524C2D046BB7DB2"
+      modelFingerprint: "E57C3C1859ECBA02B751CD1F4962F701"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -917,8 +1486,6 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: false
-            suggestedContent: !<regular>
-              value: false
             valueType: "boolean"
             uuid: "<init>_boolean1"
             fixed: false
@@ -937,17 +1504,69 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "fiat"
-      modelFingerprint: "611162FF5E30AE4454917007E175DCFC"
+      modelFingerprint: "16960BB30481AA42007F1FB1BE722B34"
       index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
+        sapientType: "OBJECT"
+        content: !<static_method_return>
           target: "org.bitcoinj.base.utils.Fiat"
-          onlyPojoFunctions: false
-          builderPattern: false
+          method: "valueOf"
+          methodParameters:
+          - name: "currencyCode"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "USD"
+              suggestedContent: !<regular>
+                value: "USD"
+              valueType: "java.lang.String"
+              uuid: "<init>_fiat1-currencyCode"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "value"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 1
+              suggestedContent: !<regular>
+                value: 1
+              valueType: "long"
+              uuid: "<init>_fiat1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.utils.Fiat"
+          method: "valueOf"
+          methodParameters:
+          - name: "currencyCode"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "USD"
+              suggestedContent: !<regular>
+                value: "USD"
+              valueType: "java.lang.String"
+              uuid: "<init>_fiat1-currencyCode"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "value"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 1
+              suggestedContent: !<regular>
+                value: 1
+              valueType: "long"
+              uuid: "<init>_fiat1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.base.utils.Fiat"
         uuid: "<init>_fiat1"
         fixed: false
@@ -1061,7 +1680,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "1D194CDD8B687691CC173D74261004C6"
+      modelFingerprint: "A3C9A66787E8779386C502876A29BDCE"
       index: 8
       ignored: false
       nestedInLoop: false
@@ -1081,8 +1700,6 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: false
-            suggestedContent: !<regular>
               value: false
             valueType: "boolean"
             uuid: "fiatToCoin_boolean1"
@@ -1156,6 +1773,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "EXTERNAL_FIELD_FINAL_MEMBER_ACCESS"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -1168,12 +1786,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "93541D4687B90E81AFBF53D8E8EC3A81"
+    modelFingerprint: "BD73B9B84BDE265678B7CFBFD7456510"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "DE096BF2FA0383A4B0BA8404B828E8F3"
+      modelFingerprint: "4B9E2AD9658424690EF7A448BADA874E"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1193,15 +1811,56 @@ methods:
               valueType: "org.bitcoinj.base.Coin"
               uuid: "<init>_coin1"
               fixed: false
+              nameForMock: "10"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "fiat"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
+              sapientType: "OBJECT"
+              content: !<static_method_return>
                 target: "org.bitcoinj.base.utils.Fiat"
-                onlyPojoFunctions: false
-                builderPattern: false
+                method: "valueOf"
+                methodParameters:
+                - name: "currencyCode"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "currencyCode1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_fiat1-currencyCode"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "value"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "long"
+                    uuid: "<init>_fiat1-value"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.utils.Fiat"
+                method: "valueOf"
+                methodParameters:
+                - name: "currencyCode"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_fiat1-currencyCode"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "value"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "long"
+                    uuid: "<init>_fiat1-value"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.base.utils.Fiat"
               uuid: "<init>_fiat1"
               fixed: false
@@ -1214,7 +1873,7 @@ methods:
           parameters:
           - name: "coin"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.base.Coin"
                 onlyPojoFunctions: false
@@ -1222,15 +1881,56 @@ methods:
               valueType: "org.bitcoinj.base.Coin"
               uuid: "<init>_coin1"
               fixed: false
+              nameForMock: "10"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "fiat"
             value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<unknown_object>
+              sapientType: "OBJECT"
+              content: !<static_method_return>
                 target: "org.bitcoinj.base.utils.Fiat"
-                onlyPojoFunctions: false
-                builderPattern: false
+                method: "valueOf"
+                methodParameters:
+                - name: "currencyCode"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "currencyCode1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_fiat1-currencyCode"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "value"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "long"
+                    uuid: "<init>_fiat1-value"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.utils.Fiat"
+                method: "valueOf"
+                methodParameters:
+                - name: "currencyCode"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_fiat1-currencyCode"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "value"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "long"
+                    uuid: "<init>_fiat1-value"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.base.utils.Fiat"
               uuid: "<init>_fiat1"
               fixed: false
@@ -1247,13 +1947,57 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "convertFiat"
-      modelFingerprint: "BAD972C00EDD324DA23088B53A58ACA6"
+      modelFingerprint: "60E5ECD2E8C21D51E47C5230AE63111D"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.utils.Fiat"
+          method: "valueOf"
+          methodParameters:
+          - name: "currencyCode"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "currencyCode1"
+              valueType: "java.lang.String"
+              uuid: "fiatToCoin_fiat1-currencyCode"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "value"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "fiatToCoin_fiat1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.utils.Fiat"
+          method: "valueOf"
+          methodParameters:
+          - name: "currencyCode"
+            value:
+              sapientType: "BASIC"
+              valueType: "java.lang.String"
+              uuid: "fiatToCoin_fiat1-currencyCode"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "value"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "fiatToCoin_fiat1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.base.utils.Fiat"
         uuid: "fiatToCoin_fiat1"
         fixed: false
@@ -1263,7 +2007,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "coin"
-      modelFingerprint: "F667991EC6B504F535C09B67B1F3CCF2"
+      modelFingerprint: "269474F638E682C9441F5B569A1A3553"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1277,6 +2021,7 @@ methods:
         valueType: "org.bitcoinj.base.Coin"
         uuid: "<init>_coin1"
         fixed: false
+        nameForMock: "10"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -1288,8 +2033,6 @@ methods:
           sapientType: "BASIC"
           content: !<regular>
             value: false
-          suggestedContent: !<regular>
-            value: false
           valueType: "boolean"
           uuid: "<init>_boolean1"
           fixed: false
@@ -1300,7 +2043,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "5CF4AA3E913235D44524C2D046BB7DB2"
+      modelFingerprint: "E57C3C1859ECBA02B751CD1F4962F701"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -1321,8 +2064,6 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: false
-            suggestedContent: !<regular>
-              value: false
             valueType: "boolean"
             uuid: "<init>_boolean1"
             fixed: false
@@ -1341,17 +2082,57 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "fiat"
-      modelFingerprint: "611162FF5E30AE4454917007E175DCFC"
+      modelFingerprint: "710B7356A953ABDE48D95E451A3E4183"
       index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
+        sapientType: "OBJECT"
+        content: !<static_method_return>
           target: "org.bitcoinj.base.utils.Fiat"
-          onlyPojoFunctions: false
-          builderPattern: false
+          method: "valueOf"
+          methodParameters:
+          - name: "currencyCode"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "currencyCode1"
+              valueType: "java.lang.String"
+              uuid: "<init>_fiat1-currencyCode"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "value"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "<init>_fiat1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.utils.Fiat"
+          method: "valueOf"
+          methodParameters:
+          - name: "currencyCode"
+            value:
+              sapientType: "BASIC"
+              valueType: "java.lang.String"
+              uuid: "<init>_fiat1-currencyCode"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "value"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "<init>_fiat1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.base.utils.Fiat"
         uuid: "<init>_fiat1"
         fixed: false
@@ -1465,7 +2246,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "1D194CDD8B687691CC173D74261004C6"
+      modelFingerprint: "A3C9A66787E8779386C502876A29BDCE"
       index: 8
       ignored: false
       nestedInLoop: false
@@ -1485,8 +2266,6 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: false
-            suggestedContent: !<regular>
               value: false
             valueType: "boolean"
             uuid: "fiatToCoin_boolean1"
@@ -1514,7 +2293,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Coin"
-      modelFingerprint: "0289227A9ABFA22ABFEB336461DD611F"
+      modelFingerprint: "A66AB13E634EAD1CFA8CE9A8210B1A2E"
       index: 9
       ignored: false
       nestedInLoop: false
@@ -1537,8 +2316,6 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: 0
-            suggestedContent: !<regular>
-              value: 0
             valueType: "long"
             uuid: "fiatToCoin_long4"
             fixed: false
@@ -1546,7 +2323,33 @@ methods:
             explicitCastNeeded: false
         signature: "valueOf(long): Coin"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.base.Coin"
+            method: "valueOf"
+            methodParameters:
+            - name: "satoshis"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "long"
+                uuid: "fiatToCoin_coin1-satoshis"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.Coin"
+            method: "valueOf"
+            methodParameters:
+            - name: "satoshis"
+              value:
+                sapientType: "BASIC"
+                valueType: "long"
+                uuid: "fiatToCoin_coin1-satoshis"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "org.bitcoinj.base.Coin"
           uuid: "fiatToCoin_coin1"
           fixed: false
@@ -1557,13 +2360,39 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "0BA4BF04ACA4335CDA636F583E8FE771"
+      modelFingerprint: "3FAF45AD6C39664A7C8E8FCA0DFAF4B4"
       index: 10
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.Coin"
+          method: "valueOf"
+          methodParameters:
+          - name: "satoshis"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "fiatToCoin_coin1-satoshis"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.Coin"
+          method: "valueOf"
+          methodParameters:
+          - name: "satoshis"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "fiatToCoin_coin1-satoshis"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.base.Coin"
         uuid: "fiatToCoin_coin1"
         fixed: false
@@ -1575,6 +2404,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "EXTERNAL_FIELD_FINAL_MEMBER_ACCESS"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -1587,7 +2417,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "4C6BB32A88B5E89DEC68CEE2D1E23F51"
+    modelFingerprint: "C64DF33FE74824C89DF89E23F974DF8D"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -1687,7 +2517,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "coin"
-      modelFingerprint: "F667991EC6B504F535C09B67B1F3CCF2"
+      modelFingerprint: "327572245A70E0E36C02005090ED835F"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1712,8 +2542,6 @@ methods:
           sapientType: "BASIC"
           content: !<regular>
             value: false
-          suggestedContent: !<regular>
-            value: false
           valueType: "boolean"
           uuid: "<init>_boolean1"
           fixed: false
@@ -1724,7 +2552,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "5CF4AA3E913235D44524C2D046BB7DB2"
+      modelFingerprint: "EC797381EB3F1CEB737BF3036CCC1844"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -1744,8 +2572,6 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: false
-            suggestedContent: !<regular>
               value: false
             valueType: "boolean"
             uuid: "<init>_boolean1"
@@ -1889,7 +2715,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "1D194CDD8B687691CC173D74261004C6"
+      modelFingerprint: "A3C9A66787E8779386C502876A29BDCE"
       index: 8
       ignored: false
       nestedInLoop: false
@@ -1909,8 +2735,6 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: false
-            suggestedContent: !<regular>
               value: false
             valueType: "boolean"
             uuid: "fiatToCoin_boolean1"
@@ -1938,7 +2762,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Coin"
-      modelFingerprint: "D7E21F806F00903EAA6A299B1DCF51DE"
+      modelFingerprint: "E8C1B834FDCFE4D64288B35884F98EFE"
       index: 9
       ignored: false
       nestedInLoop: false
@@ -1961,8 +2785,6 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: 0
-            suggestedContent: !<regular>
-              value: 0
             valueType: "long"
             uuid: "fiatToCoin_long4"
             fixed: false
@@ -1970,7 +2792,33 @@ methods:
             explicitCastNeeded: false
         signature: "valueOf(long): Coin"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.base.Coin"
+            method: "valueOf"
+            methodParameters:
+            - name: "satoshis"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "long"
+                uuid: "fiatToCoin_coin1-satoshis"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.Coin"
+            method: "valueOf"
+            methodParameters:
+            - name: "satoshis"
+              value:
+                sapientType: "BASIC"
+                valueType: "long"
+                uuid: "fiatToCoin_coin1-satoshis"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "org.bitcoinj.base.Coin"
           uuid: "fiatToCoin_coin1"
           fixed: false
@@ -1981,7 +2829,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "64FF543D08C5F51C7CADF2617725F54E"
+      modelFingerprint: "088198CA1C58AFB87341D499F4FF9C5B"
       index: 10
       ignored: false
       nestedInLoop: false
@@ -1995,9 +2843,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "Overflow: C"
-              suggestedContent: !<regular>
-                value: "Overflow: C"
+                value: "s1"
               valueType: "java.lang.String"
               uuid: "fiatToCoin_string4"
               fixed: false
@@ -2011,8 +2857,6 @@ methods:
           - name: "s"
             value:
               sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: "Overflow: C"
               valueType: "java.lang.String"
               uuid: "fiatToCoin_string4"
               fixed: false
@@ -2031,6 +2875,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "EXTERNAL_FIELD_FINAL_MEMBER_ACCESS"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -2059,6 +2904,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "EXTERNAL_FIELD_FINAL_MEMBER_ACCESS"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path5"
@@ -2078,6 +2924,7 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "EXTERNAL_FIELD_FINAL_MEMBER_ACCESS"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -2097,6 +2944,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "EXTERNAL_FIELD_FINAL_MEMBER_ACCESS"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path3"
@@ -2116,6 +2964,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "EXTERNAL_FIELD_FINAL_MEMBER_ACCESS"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path4"
@@ -2135,5 +2984,6 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "EXTERNAL_FIELD_FINAL_MEMBER_ACCESS"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

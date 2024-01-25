@@ -23,6 +23,8 @@ import static org.mockito.Mockito.mockStatic;
 
 import org.junit.Ignore;
 
+import static org.mockito.Mockito.mock;
+
 public class FilterMergerSapientGeneratedJunit4Test {
 
     @Rule()
@@ -41,22 +43,30 @@ public class FilterMergerSapientGeneratedJunit4Test {
          * (!filter.equals(lastFilter)) : true
          * (for-each(begunProviders)) : true
          *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         * TODO: Help needed! This method is not unit testable!
+         *  Following variables could not be isolated/mocked: filter
+         *  Suggestions:
+         *  You can change the initialization of above variables and make it injectable or
+         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        PeerFilterProvider peerFilterProviderMock = mock(PeerFilterProvider.class, "{}");
         try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
             Instant instant = Instant.now();
             Instant instant2 = Instant.MAX;
             timeUtils.when(() -> TimeUtils.earlier(eq(instant2), (Instant) any())).thenReturn(instant);
-            FilterMerger target = new FilterMerger(Double.parseDouble("0.0"));
+            FilterMerger target = new FilterMerger(Double.parseDouble("0.01"));
             List<PeerFilterProvider> peerFilterProviderList = new ArrayList<>();
+            peerFilterProviderList.add(peerFilterProviderMock);
             //Act Statement(s)
             FilterMerger.Result result = target.calculate(peerFilterProviderList);
             FilterMerger.Result filterMergerResult = new FilterMerger.Result();
+            BloomFilter bloomFilter = new BloomFilter(101, Double.parseDouble("0.01"), 0, BloomFilter.BloomUpdate.UPDATE_ALL);
             //Assert statement(s)
             //TODO: Please implement equals method in Result for verification to succeed or you need to adjust respective assertion statements
             assertThat(result, equalTo(filterMergerResult));
+            assertThat(target.getLastFilter(), equalTo(bloomFilter));
             timeUtils.verify(() -> TimeUtils.earlier(eq(instant2), (Instant) any()));
         }
     }

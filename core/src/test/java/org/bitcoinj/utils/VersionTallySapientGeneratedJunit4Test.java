@@ -58,9 +58,12 @@ public class VersionTallySapientGeneratedJunit4Test {
          * (versionWriteHead == versionWindow.length) : true
          */
         //Arrange Statement(s)
-        doReturn(0).when(paramsMock).getMajorityWindow();
+        NetworkParameters paramsMock = mock(NetworkParameters.class, "10");
+        doReturn(10).when(paramsMock).getMajorityWindow();
         VersionTally target = new VersionTally(paramsMock);
-        thrown.expect(ArrayIndexOutOfBoundsException.class);
+
+        //Act Statement(s)
+        target.add(1L);
 
         //Assert statement(s)
         verify(paramsMock).getMajorityWindow();
@@ -94,14 +97,15 @@ public class VersionTallySapientGeneratedJunit4Test {
          * (l >= version) : true
          */
         //Arrange Statement(s)
-        doReturn(0).when(paramsMock).getMajorityWindow();
+        NetworkParameters paramsMock = mock(NetworkParameters.class, "1");
+        doReturn(1).when(paramsMock).getMajorityWindow();
         VersionTally target = new VersionTally(paramsMock);
 
         //Act Statement(s)
         Integer result = target.getCountAtOrAbove(0L);
 
         //Assert statement(s)
-        assertThat(result, equalTo(0));
+        assertThat(result, is(nullValue()));
         verify(paramsMock).getMajorityWindow();
     }
 

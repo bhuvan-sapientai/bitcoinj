@@ -98,13 +98,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "C0EA4B80D64A7EAC458246ED7DC5F5DE"
+    modelFingerprint: "F77A21F332201620CCA8BCD43248AAF6"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "level"
-      modelFingerprint: "A788F2BC2750865845141C6636FE3F7F"
+      modelFingerprint: "58F92B9A1FC561663CF5E13EF7CE2367"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -162,6 +162,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -349,7 +350,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "552DD0C568F1425EA81930660D287643"
+    modelFingerprint: "981F4FB0C197E4DABB8A94554FE56572"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -380,7 +381,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "logRecord"
-      modelFingerprint: "A67517F6FFD940097BD03B8097469B1C"
+      modelFingerprint: "2BAD08D31767B8F09800001A763D09F2"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -436,12 +437,415 @@ methods:
               explicitCastNeeded: false
           privateConstructor: false
           createdByTargetCode: false
+          propertiesMap:
+            thrown:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.lang.Throwable"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+                propertiesMap:
+                  stackTrace:
+                    sapientType: "ARRAY"
+                    content: !<array>
+                      values:
+                        0:
+                          sapientType: "OBJECT"
+                          content: !<new>
+                            target: "java.lang.StackTraceElement"
+                            parameters:
+                            - name: "declaringClass"
+                              value:
+                                sapientType: "BASIC"
+                                content: !<regular>
+                                  value: "declaringClass1"
+                                valueType: "java.lang.String"
+                                uuid: "null-declaringClass"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "methodName"
+                              value:
+                                sapientType: "BASIC"
+                                content: !<regular>
+                                  value: "methodName1"
+                                valueType: "java.lang.String"
+                                uuid: "null-methodName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "fileName"
+                              value:
+                                sapientType: "BASIC"
+                                content: !<regular>
+                                  value: "fileName1"
+                                valueType: "java.lang.String"
+                                uuid: "null-fileName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "lineNumber"
+                              value:
+                                sapientType: "BASIC"
+                                content: !<regular>
+                                  value: 0
+                                valueType: "int"
+                                uuid: "null-lineNumber"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            privateConstructor: false
+                            createdByTargetCode: false
+                          suggestedContent: !<new>
+                            target: "java.lang.StackTraceElement"
+                            parameters:
+                            - name: "declaringClass"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-declaringClass"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "methodName"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-methodName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "fileName"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-fileName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "lineNumber"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "int"
+                                uuid: "null-lineNumber"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            privateConstructor: false
+                            createdByTargetCode: false
+                          valueType: "java.lang.StackTraceElement"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    suggestedContent: !<array>
+                      values:
+                        0:
+                          sapientType: "OBJECT"
+                          content: !<new>
+                            target: "java.lang.StackTraceElement"
+                            parameters:
+                            - name: "declaringClass"
+                              value:
+                                sapientType: "BASIC"
+                                content: !<regular>
+                                  value: "declaringClass1"
+                                valueType: "java.lang.String"
+                                uuid: "null-declaringClass"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "methodName"
+                              value:
+                                sapientType: "BASIC"
+                                content: !<regular>
+                                  value: "methodName1"
+                                valueType: "java.lang.String"
+                                uuid: "null-methodName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "fileName"
+                              value:
+                                sapientType: "BASIC"
+                                content: !<regular>
+                                  value: "fileName1"
+                                valueType: "java.lang.String"
+                                uuid: "null-fileName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "lineNumber"
+                              value:
+                                sapientType: "BASIC"
+                                content: !<regular>
+                                  value: 0
+                                valueType: "int"
+                                uuid: "null-lineNumber"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            privateConstructor: false
+                            createdByTargetCode: false
+                          suggestedContent: !<new>
+                            target: "java.lang.StackTraceElement"
+                            parameters:
+                            - name: "declaringClass"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-declaringClass"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "methodName"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-methodName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "fileName"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-fileName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "lineNumber"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "int"
+                                uuid: "null-lineNumber"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            privateConstructor: false
+                            createdByTargetCode: false
+                          valueType: "java.lang.StackTraceElement"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.lang.StackTraceElement[]"
+                    uuid: "format_logRecord1-thrown-stackTrace"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<new>
+                target: "java.lang.Throwable"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+                propertiesMap:
+                  stackTrace:
+                    sapientType: "ARRAY"
+                    content: !<array>
+                      values:
+                        0:
+                          sapientType: "OBJECT"
+                          content: !<new>
+                            target: "java.lang.StackTraceElement"
+                            parameters:
+                            - name: "declaringClass"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-declaringClass"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "methodName"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-methodName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "fileName"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-fileName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "lineNumber"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "int"
+                                uuid: "null-lineNumber"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            privateConstructor: false
+                            createdByTargetCode: false
+                          suggestedContent: !<new>
+                            target: "java.lang.StackTraceElement"
+                            parameters:
+                            - name: "declaringClass"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-declaringClass"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "methodName"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-methodName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "fileName"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-fileName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "lineNumber"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "int"
+                                uuid: "null-lineNumber"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            privateConstructor: false
+                            createdByTargetCode: false
+                          valueType: "java.lang.StackTraceElement"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    suggestedContent: !<array>
+                      values:
+                        0:
+                          sapientType: "OBJECT"
+                          content: !<new>
+                            target: "java.lang.StackTraceElement"
+                            parameters:
+                            - name: "declaringClass"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-declaringClass"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "methodName"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-methodName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "fileName"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-fileName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "lineNumber"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "int"
+                                uuid: "null-lineNumber"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            privateConstructor: false
+                            createdByTargetCode: false
+                          suggestedContent: !<new>
+                            target: "java.lang.StackTraceElement"
+                            parameters:
+                            - name: "declaringClass"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-declaringClass"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "methodName"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-methodName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "fileName"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-fileName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "lineNumber"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "int"
+                                uuid: "null-lineNumber"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            privateConstructor: false
+                            createdByTargetCode: false
+                          valueType: "java.lang.StackTraceElement"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.lang.StackTraceElement[]"
+                    uuid: "format_logRecord1-thrown-stackTrace"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.lang.Throwable"
+              uuid: "format_logRecord1-thrown"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            message:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Test log message"
+              suggestedContent: !<regular>
+                value: "Test log message"
+              valueType: "java.lang.String"
+              uuid: "format_logRecord1-message"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         suggestedContent: !<new>
           target: "java.util.logging.LogRecord"
           parameters:
           - name: "level"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.util.logging.Level"
+                method: "parse"
+                methodParameters:
+                - name: "name"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "name1"
+                    valueType: "java.lang.String"
+                    uuid: "format_logRecord1-level-name"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               suggestedContent: !<static_method_return>
                 target: "java.util.logging.Level"
                 method: "parse"
@@ -469,6 +873,395 @@ methods:
               explicitCastNeeded: false
           privateConstructor: false
           createdByTargetCode: false
+          propertiesMap:
+            thrown:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.lang.Throwable"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+                propertiesMap:
+                  stackTrace:
+                    sapientType: "ARRAY"
+                    content: !<array>
+                      values:
+                        0:
+                          sapientType: "OBJECT"
+                          content: !<new>
+                            target: "java.lang.StackTraceElement"
+                            parameters:
+                            - name: "declaringClass"
+                              value:
+                                sapientType: "BASIC"
+                                content: !<regular>
+                                  value: "declaringClass1"
+                                valueType: "java.lang.String"
+                                uuid: "null-declaringClass"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "methodName"
+                              value:
+                                sapientType: "BASIC"
+                                content: !<regular>
+                                  value: "methodName1"
+                                valueType: "java.lang.String"
+                                uuid: "null-methodName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "fileName"
+                              value:
+                                sapientType: "BASIC"
+                                content: !<regular>
+                                  value: "fileName1"
+                                valueType: "java.lang.String"
+                                uuid: "null-fileName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "lineNumber"
+                              value:
+                                sapientType: "BASIC"
+                                content: !<regular>
+                                  value: 0
+                                valueType: "int"
+                                uuid: "null-lineNumber"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            privateConstructor: false
+                            createdByTargetCode: false
+                          suggestedContent: !<new>
+                            target: "java.lang.StackTraceElement"
+                            parameters:
+                            - name: "declaringClass"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-declaringClass"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "methodName"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-methodName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "fileName"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-fileName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "lineNumber"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "int"
+                                uuid: "null-lineNumber"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            privateConstructor: false
+                            createdByTargetCode: false
+                          valueType: "java.lang.StackTraceElement"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    suggestedContent: !<array>
+                      values:
+                        0:
+                          sapientType: "OBJECT"
+                          content: !<new>
+                            target: "java.lang.StackTraceElement"
+                            parameters:
+                            - name: "declaringClass"
+                              value:
+                                sapientType: "BASIC"
+                                content: !<regular>
+                                  value: "declaringClass1"
+                                valueType: "java.lang.String"
+                                uuid: "null-declaringClass"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "methodName"
+                              value:
+                                sapientType: "BASIC"
+                                content: !<regular>
+                                  value: "methodName1"
+                                valueType: "java.lang.String"
+                                uuid: "null-methodName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "fileName"
+                              value:
+                                sapientType: "BASIC"
+                                content: !<regular>
+                                  value: "fileName1"
+                                valueType: "java.lang.String"
+                                uuid: "null-fileName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "lineNumber"
+                              value:
+                                sapientType: "BASIC"
+                                content: !<regular>
+                                  value: 0
+                                valueType: "int"
+                                uuid: "null-lineNumber"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            privateConstructor: false
+                            createdByTargetCode: false
+                          suggestedContent: !<new>
+                            target: "java.lang.StackTraceElement"
+                            parameters:
+                            - name: "declaringClass"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-declaringClass"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "methodName"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-methodName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "fileName"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-fileName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "lineNumber"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "int"
+                                uuid: "null-lineNumber"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            privateConstructor: false
+                            createdByTargetCode: false
+                          valueType: "java.lang.StackTraceElement"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.lang.StackTraceElement[]"
+                    uuid: "format_logRecord1-thrown-stackTrace"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<new>
+                target: "java.lang.Throwable"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: false
+                propertiesMap:
+                  stackTrace:
+                    sapientType: "ARRAY"
+                    content: !<array>
+                      values:
+                        0:
+                          sapientType: "OBJECT"
+                          content: !<new>
+                            target: "java.lang.StackTraceElement"
+                            parameters:
+                            - name: "declaringClass"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-declaringClass"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "methodName"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-methodName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "fileName"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-fileName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "lineNumber"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "int"
+                                uuid: "null-lineNumber"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            privateConstructor: false
+                            createdByTargetCode: false
+                          suggestedContent: !<new>
+                            target: "java.lang.StackTraceElement"
+                            parameters:
+                            - name: "declaringClass"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-declaringClass"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "methodName"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-methodName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "fileName"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-fileName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "lineNumber"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "int"
+                                uuid: "null-lineNumber"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            privateConstructor: false
+                            createdByTargetCode: false
+                          valueType: "java.lang.StackTraceElement"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    suggestedContent: !<array>
+                      values:
+                        0:
+                          sapientType: "OBJECT"
+                          content: !<new>
+                            target: "java.lang.StackTraceElement"
+                            parameters:
+                            - name: "declaringClass"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-declaringClass"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "methodName"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-methodName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "fileName"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-fileName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "lineNumber"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "int"
+                                uuid: "null-lineNumber"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            privateConstructor: false
+                            createdByTargetCode: false
+                          suggestedContent: !<new>
+                            target: "java.lang.StackTraceElement"
+                            parameters:
+                            - name: "declaringClass"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-declaringClass"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "methodName"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-methodName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "fileName"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "java.lang.String"
+                                uuid: "null-fileName"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            - name: "lineNumber"
+                              value:
+                                sapientType: "BASIC"
+                                valueType: "int"
+                                uuid: "null-lineNumber"
+                                fixed: false
+                                equalsMethodPresent: false
+                                explicitCastNeeded: false
+                            privateConstructor: false
+                            createdByTargetCode: false
+                          valueType: "java.lang.StackTraceElement"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.lang.StackTraceElement[]"
+                    uuid: "format_logRecord1-thrown-stackTrace"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "java.lang.Throwable"
+              uuid: "format_logRecord1-thrown"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            message:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Test log message"
+              suggestedContent: !<regular>
+                value: "Test log message"
+              valueType: "java.lang.String"
+              uuid: "format_logRecord1-message"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "java.util.logging.LogRecord"
         uuid: "format_logRecord1"
         fixed: false
@@ -498,6 +1291,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -509,7 +1303,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "5551204020B427270F580F1B601A0C49"
+    modelFingerprint: "981F4FB0C197E4DABB8A94554FE56572"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -540,7 +1334,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "logRecord"
-      modelFingerprint: "A67517F6FFD940097BD03B8097469B1C"
+      modelFingerprint: "2BAD08D31767B8F09800001A763D09F2"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -596,12 +1390,38 @@ methods:
               explicitCastNeeded: false
           privateConstructor: false
           createdByTargetCode: false
+          propertiesMap:
+            message:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Test log message"
+              suggestedContent: !<regular>
+                value: "Test log message"
+              valueType: "java.lang.String"
+              uuid: "format_logRecord1-message"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         suggestedContent: !<new>
           target: "java.util.logging.LogRecord"
           parameters:
           - name: "level"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.util.logging.Level"
+                method: "parse"
+                methodParameters:
+                - name: "name"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "name1"
+                    valueType: "java.lang.String"
+                    uuid: "format_logRecord1-level-name"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               suggestedContent: !<static_method_return>
                 target: "java.util.logging.Level"
                 method: "parse"
@@ -629,6 +1449,18 @@ methods:
               explicitCastNeeded: false
           privateConstructor: false
           createdByTargetCode: false
+          propertiesMap:
+            message:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Test log message"
+              suggestedContent: !<regular>
+                value: "Test log message"
+              valueType: "java.lang.String"
+              uuid: "format_logRecord1-message"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "java.util.logging.LogRecord"
         uuid: "format_logRecord1"
         fixed: false
@@ -648,7 +1480,7 @@ methods:
         content: !<regular>
           value: "result1"
         valueType: "java.lang.String"
-        uuid: "format_string6"
+        uuid: "format_string7"
         fixed: false
         equalsMethodPresent: true
         explicitCastNeeded: false
@@ -658,6 +1490,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

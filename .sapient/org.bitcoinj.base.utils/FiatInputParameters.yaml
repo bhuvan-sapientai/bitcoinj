@@ -301,13 +301,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "8F3EAA845F183BF910785EC2E1B3E142"
-    problemWasSolvedByProver: false
+    modelFingerprint: "61B8F4B764E3422320B7F076094AF551"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "currencyCode"
-      modelFingerprint: "C81BE410A0DEDCFD5F73783107214F8B"
+      modelFingerprint: "92A72AAAC9D67BBAED9A1D545BE0AC2F"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -315,6 +315,8 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
+          value: "currencyCode1"
+        suggestedContent: !<regular>
           value: "currencyCode1"
         valueType: "java.lang.String"
         uuid: "parseFiat_string1"
@@ -325,7 +327,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "str"
-      modelFingerprint: "974147C7FBB6270F867FBBE0E8899C99"
+      modelFingerprint: "C45C3E42F66286B81D196B4EF2CAB5E5"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -345,7 +347,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Fiat"
-      modelFingerprint: "8DA926F72BB2355C3054721CB5D48F62"
+      modelFingerprint: "69E8A7B9FB1CE885FD5F910620E7DCF6"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -368,6 +370,8 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: "currencyCode1"
+            suggestedContent: !<regular>
+              value: "currencyCode1"
             valueType: "java.lang.String"
             uuid: "parseFiat_string1"
             fixed: false
@@ -377,7 +381,7 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 0
+              value: 10000
             valueType: "long"
             uuid: "parseFiat_long1"
             fixed: false
@@ -414,7 +418,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "LLM"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -424,8 +428,8 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "D0DEE6D00EA448F299DA0407C63EDAEB"
-    problemWasSolvedByProver: false
+    modelFingerprint: "F2F8D3291A54FC4C8C55EE6B48FC3D0D"
+    problemWasSolvedByProver: true
     catchBlockExercised:
       idExternalInstruction: 0
       id: 1
@@ -435,7 +439,7 @@ methods:
     inputParameters:
     - type: "INPUT"
       name: "currencyCode"
-      modelFingerprint: "C81BE410A0DEDCFD5F73783107214F8B"
+      modelFingerprint: "B0B4072A9E95426CD39DDE39235033B5"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -443,7 +447,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "currencyCode1"
+          value: "USD"
+        suggestedContent: !<regular>
+          value: "USD"
         valueType: "java.lang.String"
         uuid: "parseFiat_string1"
         fixed: false
@@ -453,7 +459,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "str"
-      modelFingerprint: "974147C7FBB6270F867FBBE0E8899C99"
+      modelFingerprint: "9054127C57525BBD329160600D611E5D"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -461,9 +467,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "1.0"
+          value: "1.23"
         suggestedContent: !<regular>
-          value: "1.0"
+          value: "1.23"
         valueType: "java.lang.String"
         uuid: "parseFiat_string2"
         fixed: false
@@ -473,7 +479,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Fiat"
-      modelFingerprint: "44E8A3913FBF231A0DE4020A35544E3F"
+      modelFingerprint: "DEF1D84281FB37A7C6A6FF05D44D95E3"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -495,7 +501,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "currencyCode1"
+              value: "USD"
+            suggestedContent: !<regular>
+              value: "USD"
             valueType: "java.lang.String"
             uuid: "parseFiat_string1"
             fixed: false
@@ -505,7 +513,7 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 0
+              value: 12300
             valueType: "long"
             uuid: "parseFiat_long1"
             fixed: false
@@ -513,8 +521,8 @@ methods:
             explicitCastNeeded: false
         signature: "valueOf(String,long): Fiat"
         returnValue:
-          sapientType: "MOCK"
-          valueType: "org.bitcoinj.base.utils.Fiat"
+          sapientType: "EXCEPTION"
+          valueType: "java.lang.ArithmeticException"
           uuid: "parseFiat_fiat1"
           fixed: false
           equalsMethodPresent: false
@@ -607,13 +615,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "540A8E6C5F0A4BF815939E0787974119"
-    problemWasSolvedByProver: false
+    modelFingerprint: "CE767C7FF4E87023D56FD889C8BAD8D0"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "currencyCode"
-      modelFingerprint: "C81BE410A0DEDCFD5F73783107214F8B"
+      modelFingerprint: "92A72AAAC9D67BBAED9A1D545BE0AC2F"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -621,6 +629,8 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
+          value: "currencyCode1"
+        suggestedContent: !<regular>
           value: "currencyCode1"
         valueType: "java.lang.String"
         uuid: "parseFiatInexact_string1"
@@ -631,7 +641,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "str"
-      modelFingerprint: "2EAAE85ED9267C76AD94955AE7569F14"
+      modelFingerprint: "DD7B1DA9B4B4E92EEB30632D413C5E34"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -651,7 +661,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Fiat"
-      modelFingerprint: "4A12350BA1D3B038AEBE368399D3CA08"
+      modelFingerprint: "6AAD68FEF518614F043D7467D4D49CAF"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -674,6 +684,8 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: "currencyCode1"
+            suggestedContent: !<regular>
+              value: "currencyCode1"
             valueType: "java.lang.String"
             uuid: "parseFiatInexact_string1"
             fixed: false
@@ -683,8 +695,6 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 0
-            suggestedContent: !<regular>
               value: 0
             valueType: "long"
             uuid: "parseFiatInexact_long1"
@@ -722,7 +732,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "LLM"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -732,8 +742,8 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "43738A0D9B54C1B402D1C71909FEFB93"
-    problemWasSolvedByProver: false
+    modelFingerprint: "97EDE378F946258A9BEF5DF3AD6DAB1E"
+    problemWasSolvedByProver: true
     catchBlockExercised:
       idExternalInstruction: 0
       id: 2
@@ -743,7 +753,7 @@ methods:
     inputParameters:
     - type: "INPUT"
       name: "currencyCode"
-      modelFingerprint: "C81BE410A0DEDCFD5F73783107214F8B"
+      modelFingerprint: "B0B4072A9E95426CD39DDE39235033B5"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -751,7 +761,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "currencyCode1"
+          value: "USD"
+        suggestedContent: !<regular>
+          value: "USD"
         valueType: "java.lang.String"
         uuid: "parseFiatInexact_string1"
         fixed: false
@@ -761,7 +773,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "str"
-      modelFingerprint: "2EAAE85ED9267C76AD94955AE7569F14"
+      modelFingerprint: "0857267F8B0257BCCF039DAA50F23D09"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -769,9 +781,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "0.0"
+          value: "123.4567"
         suggestedContent: !<regular>
-          value: "0.0"
+          value: "123.4567"
         valueType: "java.lang.String"
         uuid: "parseFiatInexact_string2"
         fixed: false
@@ -781,7 +793,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Fiat"
-      modelFingerprint: "79D6E8EEA09171E93F7CF462E87DE6D8"
+      modelFingerprint: "C79EA816DB19637ED31D885239CC20DD"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -803,7 +815,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "currencyCode1"
+              value: "USD"
+            suggestedContent: !<regular>
+              value: "USD"
             valueType: "java.lang.String"
             uuid: "parseFiatInexact_string1"
             fixed: false
@@ -813,9 +827,7 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 0
-            suggestedContent: !<regular>
-              value: 0
+              value: 1234567
             valueType: "long"
             uuid: "parseFiatInexact_long1"
             fixed: false
@@ -823,8 +835,8 @@ methods:
             explicitCastNeeded: false
         signature: "valueOf(String,long): Fiat"
         returnValue:
-          sapientType: "MOCK"
-          valueType: "org.bitcoinj.base.utils.Fiat"
+          sapientType: "EXCEPTION"
+          valueType: "java.lang.ArithmeticException"
           uuid: "parseFiatInexact_fiat1"
           fixed: false
           equalsMethodPresent: false
@@ -4319,12 +4331,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "DFA8ACCFC27852E0785FBCBA05524B59"
+    modelFingerprint: "1459DAA86B00223F78CFDBF85B0C4EF1"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "4C7B398F1166D2AD998F68EA99D17913"
+      modelFingerprint: "3AD5AEB2559D99D9B488C307A3CDC111"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -4339,9 +4351,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "A"
+                value: "<String>"
               suggestedContent: !<regular>
-                value: "A"
+                value: "<String>"
               valueType: "java.lang.String"
               uuid: "valueOf_string1"
               fixed: false
@@ -4364,8 +4376,10 @@ methods:
           - name: "currencyCode"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: "<String>"
               suggestedContent: !<regular>
-                value: "A"
+                value: "<String>"
               valueType: "java.lang.String"
               uuid: "valueOf_string1"
               fixed: false
@@ -4388,7 +4402,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "FRIENDLY_FORMAT"
-      modelFingerprint: "FCB07615A9A045A27A3992F285230726"
+      modelFingerprint: "708BD81F8A76F1C7428BA7BC6EC6075F"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -4448,9 +4462,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "A"
+              value: "<String>"
             suggestedContent: !<regular>
-              value: "A"
+              value: "<String>"
             valueType: "java.lang.String"
             uuid: "valueOf_string1"
             fixed: false
@@ -4496,7 +4510,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "056B1FD13537E0EDD6BA046386BAF53E"
+      modelFingerprint: "2B437B53B02D5C1EE0D1554FA32414B4"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -4550,8 +4564,10 @@ methods:
               - name: "currencyCode"
                 value:
                   sapientType: "BASIC"
+                  content: !<regular>
+                    value: "<String>"
                   suggestedContent: !<regular>
-                    value: "A"
+                    value: "<String>"
                   valueType: "java.lang.String"
                   uuid: "valueOf_string1"
                   fixed: false
@@ -4621,8 +4637,10 @@ methods:
                   - name: "currencyCode"
                     value:
                       sapientType: "BASIC"
+                      content: !<regular>
+                        value: "<String>"
                       suggestedContent: !<regular>
-                        value: "A"
+                        value: "<String>"
                       valueType: "java.lang.String"
                       uuid: "valueOf_string1"
                       fixed: false
@@ -4690,8 +4708,10 @@ methods:
                   - name: "currencyCode"
                     value:
                       sapientType: "BASIC"
+                      content: !<regular>
+                        value: "<String>"
                       suggestedContent: !<regular>
-                        value: "A"
+                        value: "<String>"
                       valueType: "java.lang.String"
                       uuid: "valueOf_string1"
                       fixed: false
@@ -4741,6 +4761,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -4759,12 +4780,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "B81EF5EEFAAF6A46D719077BCA4170DC"
+    modelFingerprint: "9A149E09210A8A76DFC1067457FFD8E6"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "85356920EE9210832436EAEC66BDF9F8"
+      modelFingerprint: "B6E17CDC4C5167FD86A0AE0868DD4DF3"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -4779,7 +4800,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "currencyCode1"
+                value: "<value>"
+              suggestedContent: !<regular>
+                value: "<value>"
               valueType: "java.lang.String"
               uuid: "valueOf_string1"
               fixed: false
@@ -4802,6 +4825,10 @@ methods:
           - name: "currencyCode"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: "<value>"
+              suggestedContent: !<regular>
+                value: "<value>"
               valueType: "java.lang.String"
               uuid: "valueOf_string1"
               fixed: false
@@ -4824,7 +4851,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "PLAIN_FORMAT"
-      modelFingerprint: "BE34D9A3DB52812533BB71247C67E199"
+      modelFingerprint: "2C7D3B44BF1BBD7211FD132A62598700"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -5054,6 +5081,10 @@ methods:
               - name: "currencyCode"
                 value:
                   sapientType: "BASIC"
+                  content: !<regular>
+                    value: "<value>"
+                  suggestedContent: !<regular>
+                    value: "<value>"
                   valueType: "java.lang.String"
                   uuid: "valueOf_string1"
                   fixed: false
@@ -5183,6 +5214,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

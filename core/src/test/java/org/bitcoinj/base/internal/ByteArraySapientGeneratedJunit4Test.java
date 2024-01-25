@@ -51,10 +51,11 @@ public class ByteArraySapientGeneratedJunit4Test {
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{};
         ByteArray target = new ByteArray(byteArray);
-        ByteArray byteArrayMock = mock(ByteArray.class);
+        byte[] byteArray2 = new byte[]{};
+        ByteArray byteArray3 = new ByteArray(byteArray2);
 
         //Act Statement(s)
-        int result = target.compareTo(byteArrayMock);
+        int result = target.compareTo(byteArray3);
 
         //Assert statement(s)
         assertThat(result, equalTo(0));

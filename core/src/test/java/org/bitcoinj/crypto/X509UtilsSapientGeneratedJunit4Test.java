@@ -89,7 +89,7 @@ public class X509UtilsSapientGeneratedJunit4Test {
         String result = X509Utils.getDisplayNameFromCertificate(x509Certificate, false);
 
         //Assert statement(s)
-        assertThat(result, equalTo("return_of_getString1"));
+        assertThat(result, equalTo("return_of_getSubjectAlternativeNamesItem1Item2"));
     }
 
     //Sapient generated method id: ${d8013215-cc85-3759-a685-56efad6e3827}
@@ -121,7 +121,7 @@ public class X509UtilsSapientGeneratedJunit4Test {
         String result = X509Utils.getDisplayNameFromCertificate(x509Certificate, false);
 
         //Assert statement(s)
-        assertThat(result, equalTo("return_of_getString1"));
+        assertThat(result, equalTo("return_of_getSubjectAlternativeNamesItem1Item2"));
     }
 
     //Sapient generated method id: ${9b126afb-4ecf-320d-8ce7-bca2184ac8f1}
@@ -196,7 +196,7 @@ public class X509UtilsSapientGeneratedJunit4Test {
         String result = X509Utils.getDisplayNameFromCertificate(x509Certificate, true);
 
         //Assert statement(s)
-        assertThat(result, equalTo("return_of_getString1"));
+        assertThat(result, equalTo("result1"));
     }
 
     //Sapient generated method id: ${d6b0cd47-df61-3f50-a735-1d3c5c7e8b9f}
@@ -226,10 +226,10 @@ public class X509UtilsSapientGeneratedJunit4Test {
         X509Certificate x509Certificate = null;
 
         //Act Statement(s)
-        String result = X509Utils.getDisplayNameFromCertificate(x509Certificate, true);
+        String result = X509Utils.getDisplayNameFromCertificate(x509Certificate, false);
 
         //Assert statement(s)
-        assertThat(result, equalTo("return_of_getString1"));
+        assertThat(result, equalTo("return_of_getSubjectAlternativeNamesItem1Item2"));
     }
 
     //Sapient generated method id: ${fc7f4ba2-9d5c-3bbe-96dc-cc8f8cf9a49f}

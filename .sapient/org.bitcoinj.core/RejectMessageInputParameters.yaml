@@ -27,6 +27,7 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path1"
@@ -36,7 +37,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "F076A41CA77B9D6139A14E61425E8CE9"
+    modelFingerprint: "3B923FB5279A6E717968A2F11FE0E01B"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -153,7 +154,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "RejectMessage.RejectCode"
-      modelFingerprint: "2890A72A6093B7A7E99B92D26F74A941"
+      modelFingerprint: "6DF2B8E4A1E19750AFDF3C9112B11007"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -173,7 +174,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 0
+              value: 1
+            suggestedContent: !<regular>
+              value: 1
             valueType: "byte"
             uuid: "read_byte1"
             fixed: false
@@ -194,7 +197,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Buffers"
-      modelFingerprint: "0F587DA197074BFA6572474AD946C417"
+      modelFingerprint: "392FA163E3875B6D025AE522F693C117"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -326,7 +329,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "B240AA294329A6AF5E1C08EB2EF03242"
+      modelFingerprint: "FC766CC3FE864E26EC7F61B4311C879D"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -384,8 +387,6 @@ methods:
           - name: "code"
             value:
               sapientType: "ENUM"
-              content: !<regular>
-                value: "MALFORMED"
               valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
               uuid: "read_rejectMessage.RejectCode1"
               fixed: false
@@ -412,8 +413,6 @@ methods:
           - name: "reason"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "return_of_readLengthPrefixedString1"
               valueType: "java.lang.String"
               uuid: "read_string2"
               fixed: false
@@ -432,7 +431,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "LLM"
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -442,13 +441,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "279831435F3A3A5AF2A0B615AF5EC538"
+    modelFingerprint: "DFC428ACF5DB172622F1FD5B4C4117B3"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "payload"
-      modelFingerprint: "335B7D7442C1E51D6EECFEAEF136D4CA"
+      modelFingerprint: "C871D067662095A198DE0F4DE90B3DF9"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -490,7 +489,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Buffers"
-      modelFingerprint: "04546EC1F72274643009B5AC99E6E1F4"
+      modelFingerprint: "B5181B5266AD5CBCFBB3AB3089C2E5DC"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -546,9 +545,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "A"
+            value: ""
           suggestedContent: !<regular>
-            value: "A"
+            value: ""
           valueType: "java.lang.String"
           uuid: "read_string1"
           fixed: false
@@ -559,7 +558,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "RejectMessage.RejectCode"
-      modelFingerprint: "2890A72A6093B7A7E99B92D26F74A941"
+      modelFingerprint: "6DF2B8E4A1E19750AFDF3C9112B11007"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -579,7 +578,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 0
+              value: 1
+            suggestedContent: !<regular>
+              value: 1
             valueType: "byte"
             uuid: "read_byte1"
             fixed: false
@@ -600,7 +601,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Buffers"
-      modelFingerprint: "0F587DA197074BFA6572474AD946C417"
+      modelFingerprint: "D7A645E41F1CD907B70088578DAB2157"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -667,7 +668,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "FF6D1115B2E84974B249A12EC35D00B7"
+      modelFingerprint: "E92EA5D204F311EF3745A129CBA6386E"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -698,9 +699,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "A"
+                value: ""
               suggestedContent: !<regular>
-                value: "A"
+                value: ""
               valueType: "java.lang.String"
               uuid: "read_string1"
               fixed: false
@@ -724,8 +725,6 @@ methods:
           - name: "code"
             value:
               sapientType: "ENUM"
-              content: !<regular>
-                value: "MALFORMED"
               valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
               uuid: "read_rejectMessage.RejectCode1"
               fixed: false
@@ -742,7 +741,7 @@ methods:
             value:
               sapientType: "BASIC"
               suggestedContent: !<regular>
-                value: "A"
+                value: ""
               valueType: "java.lang.String"
               uuid: "read_string1"
               fixed: false
@@ -771,6 +770,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -1299,6 +1299,7 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -2433,12 +2434,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "2B9C3F4DDF0F93E383382297A00B4A4E"
+    modelFingerprint: "C8C63BCC6793FA32BC309B599DCA4206"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "5E3837A6013078663231607BE8167073"
+      modelFingerprint: "3CA6330260D29BA5713658139761F91F"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2452,9 +2453,9 @@ methods:
             value:
               sapientType: "ENUM"
               content: !<regular>
-                value: "OTHER"
+                value: "INVALID"
               suggestedContent: !<regular>
-                value: "OTHER"
+                value: "INVALID"
               valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
               uuid: "<init>_rejectMessage.RejectCode1"
               fixed: false
@@ -2462,7 +2463,69 @@ methods:
               explicitCastNeeded: false
           - name: "rejectedMessageHash"
             value:
-              sapientType: "MOCK"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "OBJECT"
+                    content: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          content: !<regular>
+                            value: 0
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "UNKNOWN"
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.base.Sha256Hash"
               uuid: "<init>_sha256Hash1"
               fixed: false
@@ -2472,7 +2535,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "rejectedMessage1"
+                value: "This is a rejected message"
+              suggestedContent: !<regular>
+                value: "This is a rejected message"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -2482,7 +2547,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "reason1"
+                value: "Invalid format"
+              suggestedContent: !<regular>
+                value: "Invalid format"
               valueType: "java.lang.String"
               uuid: "<init>_string2"
               fixed: false
@@ -2496,8 +2563,10 @@ methods:
           - name: "code"
             value:
               sapientType: "ENUM"
+              content: !<regular>
+                value: "INVALID"
               suggestedContent: !<regular>
-                value: "OTHER"
+                value: "INVALID"
               valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
               uuid: "<init>_rejectMessage.RejectCode1"
               fixed: false
@@ -2505,7 +2574,69 @@ methods:
               explicitCastNeeded: false
           - name: "rejectedMessageHash"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "OBJECT"
+                    content: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          content: !<regular>
+                            value: 0
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "UNKNOWN"
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          valueType: "int"
+                          uuid: "<init>_sha256Hash1-buf-capacity"
+                          fixed: false
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.base.Sha256Hash"
               uuid: "<init>_sha256Hash1"
               fixed: false
@@ -2514,6 +2645,10 @@ methods:
           - name: "rejectedMessage"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: "This is a rejected message"
+              suggestedContent: !<regular>
+                value: "This is a rejected message"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -2522,6 +2657,10 @@ methods:
           - name: "reason"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: "Invalid format"
+              suggestedContent: !<regular>
+                value: "Invalid format"
               valueType: "java.lang.String"
               uuid: "<init>_string2"
               fixed: false
@@ -2556,10 +2695,12 @@ methods:
       filledByUser: false
     uuid: "3c2a2659-1610-37fb-a611-5e70478e1ca0"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "equals"
     returnType: "boolean"
@@ -2665,6 +2806,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path4"
@@ -2684,5 +2826,6 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

@@ -47,8 +47,6 @@ public class StopwatchSapientGeneratedJunit4Test {
     @Test()
     public void startTest() {
         /**
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Act Statement(s)
         Stopwatch result = Stopwatch.start();
@@ -62,9 +60,7 @@ public class StopwatchSapientGeneratedJunit4Test {
         /* Branches:
          * (isRunning()) : true
          *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
+         * */
         //Arrange Statement(s)
         Stopwatch target = spy(Stopwatch.start());
         doReturn(true).when(target).isRunning();
@@ -81,9 +77,7 @@ public class StopwatchSapientGeneratedJunit4Test {
         /* Branches:
          * (stopTime == null) : true
          *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
+         * */
         //Arrange Statement(s)
         Stopwatch target = Stopwatch.start();
         //Act Statement(s)
@@ -143,28 +137,18 @@ public class StopwatchSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Stopwatch target = spy(Stopwatch.start());
-            Duration duration = Duration.ofDays(0L);
-            doReturn(duration).when(target).elapsed();
-            //TODO: Needs initialization with real value
-            TemporalUnit temporalUnit = null;
-            //Act Statement(s)
-            long result = target.get(temporalUnit);
-            //Assert statement(s)
-            assertThat(result, equalTo(0L));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            verify(target).elapsed();
-        }
+        Stopwatch target = Stopwatch.start();
+        thrown.expect(NullPointerException.class);
+        //TODO: Needs initialization with real value
+        TemporalUnit temporalUnit = null;
+        //Act Statement(s)
+        target.get(temporalUnit);
     }
 
     //Sapient generated method id: ${77dd7c1d-eacf-3f7b-8351-0eb312695635}
     @Test()
     public void getUnitsTest() {
         /**
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         Stopwatch target = Stopwatch.start();
@@ -189,12 +173,12 @@ public class StopwatchSapientGeneratedJunit4Test {
         Stopwatch target = spy(Stopwatch.start());
         Duration duration = Duration.ofDays(0L);
         doReturn(duration).when(target).elapsed();
+        thrown.expect(NullPointerException.class);
         //TODO: Needs initialization with real value
         Temporal temporal = null;
         //Act Statement(s)
-        Temporal result = target.addTo(temporal);
+        target.addTo(temporal);
         //Assert statement(s)
-        assertThat(result, is(nullValue()));
         verify(target).elapsed();
     }
 
@@ -210,12 +194,12 @@ public class StopwatchSapientGeneratedJunit4Test {
         Stopwatch target = spy(Stopwatch.start());
         Duration duration = Duration.ofDays(0L);
         doReturn(duration).when(target).elapsed();
+        thrown.expect(NullPointerException.class);
         //TODO: Needs initialization with real value
         Temporal temporal = null;
         //Act Statement(s)
-        Temporal result = target.subtractFrom(temporal);
+        target.subtractFrom(temporal);
         //Assert statement(s)
-        assertThat(result, is(nullValue()));
         verify(target).elapsed();
     }
 

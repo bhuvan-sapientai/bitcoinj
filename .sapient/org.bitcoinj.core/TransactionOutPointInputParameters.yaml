@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "4FFE5AD5B5446961F85AD8CF8427825D"
+modelFingerprint: "CF6029C3AC9B790C2C88F5981BB28843"
 methods:
 - method:
     name: "read"
@@ -2422,7 +2422,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "6F6D4EB93B0F534BDB6621C9905161D5"
+    modelFingerprint: "F7F485A8A019F84A37E50F57845A5E1A"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -2532,7 +2532,7 @@ methods:
       filledByUser: false
     - type: "INTERNAL"
       name: "internalMethod"
-      modelFingerprint: "60DDD8DECC6DCE8F1B4C85F8417B2412"
+      modelFingerprint: "85BD6C3E04457C6BA1707312201745C7"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -2543,11 +2543,98 @@ methods:
         parameters: []
         signature: "getConnectedOutput(): TransactionOutput"
         returnValue:
-          sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
+          sapientType: "OBJECT"
+          content: !<new>
             target: "org.bitcoinj.core.TransactionOutput"
-            onlyPojoFunctions: false
-            builderPattern: false
+            parameters:
+            - name: "parent"
+              value:
+                sapientType: "MOCK"
+                valueType: "org.bitcoinj.core.Transaction"
+                uuid: "getConnectedPubKeyScript_transactionOutput1-parent"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "value"
+              value:
+                sapientType: "MOCK"
+                valueType: "org.bitcoinj.base.Coin"
+                uuid: "getConnectedPubKeyScript_transactionOutput1-value"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "scriptBytes"
+              value:
+                sapientType: "ARRAY"
+                content: !<array>
+                  values:
+                    0:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 0
+                      valueType: "byte"
+                      uuid: "getConnectedPubKeyScript_byte[]1Item0"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                suggestedContent: !<array>
+                  values:
+                    0:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 0
+                      valueType: "byte"
+                      uuid: "getConnectedPubKeyScript_byte[]1Item0"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "byte[]"
+                uuid: "getConnectedPubKeyScript_byte[]1"
+                fixed: false
+                equalsMethodPresent: true
+                explicitCastNeeded: false
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "org.bitcoinj.core.TransactionOutput"
+            parameters:
+            - name: "parent"
+              value:
+                sapientType: "UNKNOWN"
+                valueType: "org.bitcoinj.core.Transaction"
+                uuid: "getConnectedPubKeyScript_transactionOutput1-parent"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "value"
+              value:
+                sapientType: "UNKNOWN"
+                valueType: "org.bitcoinj.base.Coin"
+                uuid: "getConnectedPubKeyScript_transactionOutput1-value"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "scriptBytes"
+              value:
+                sapientType: "ARRAY"
+                suggestedContent: !<array>
+                  values:
+                    0:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 0
+                      valueType: "byte"
+                      uuid: "getConnectedPubKeyScript_byte[]1Item0"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "byte[]"
+                uuid: "getConnectedPubKeyScript_byte[]1"
+                fixed: false
+                equalsMethodPresent: true
+                explicitCastNeeded: false
+            privateConstructor: false
+            createdByTargetCode: false
           valueType: "org.bitcoinj.core.TransactionOutput"
           uuid: "getConnectedPubKeyScript_transactionOutput1"
           fixed: false
@@ -2557,17 +2644,104 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "EF22786EA40C0340868B7278C0CD7AAA"
+      modelFingerprint: "C427E4DC7B2264276696E95A4DBAD74D"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
+        sapientType: "OBJECT"
+        content: !<new>
           target: "org.bitcoinj.core.TransactionOutput"
-          onlyPojoFunctions: false
-          builderPattern: false
+          parameters:
+          - name: "parent"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "getConnectedPubKeyScript_transactionOutput1-parent"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "value"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.base.Coin"
+              uuid: "getConnectedPubKeyScript_transactionOutput1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "scriptBytes"
+            value:
+              sapientType: "ARRAY"
+              content: !<array>
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "byte"
+                    uuid: "getConnectedPubKeyScript_byte[]1Item0"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<array>
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "byte"
+                    uuid: "getConnectedPubKeyScript_byte[]1Item0"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "byte[]"
+              uuid: "getConnectedPubKeyScript_byte[]1"
+              fixed: false
+              equalsMethodPresent: true
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.TransactionOutput"
+          parameters:
+          - name: "parent"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "getConnectedPubKeyScript_transactionOutput1-parent"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "value"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.base.Coin"
+              uuid: "getConnectedPubKeyScript_transactionOutput1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "scriptBytes"
+            value:
+              sapientType: "ARRAY"
+              suggestedContent: !<array>
+                values:
+                  0:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "byte"
+                    uuid: "getConnectedPubKeyScript_byte[]1Item0"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "byte[]"
+              uuid: "getConnectedPubKeyScript_byte[]1"
+              fixed: false
+              equalsMethodPresent: true
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
         valueType: "org.bitcoinj.core.TransactionOutput"
         uuid: "getConnectedPubKeyScript_transactionOutput1"
         fixed: false
@@ -2701,7 +2875,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "8A5433450217DA2E9B449BCE214A09D7"
+    modelFingerprint: "5139DA6CFD0ABA7D0206A14BFC60ED6D"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -2811,7 +2985,7 @@ methods:
       filledByUser: false
     - type: "INTERNAL"
       name: "internalMethod"
-      modelFingerprint: "60DDD8DECC6DCE8F1B4C85F8417B2412"
+      modelFingerprint: "9161449AE44342A9468F39A3AC285B97"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -2822,11 +2996,71 @@ methods:
         parameters: []
         signature: "getConnectedOutput(): TransactionOutput"
         returnValue:
-          sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
+          sapientType: "OBJECT"
+          content: !<new>
             target: "org.bitcoinj.core.TransactionOutput"
-            onlyPojoFunctions: false
-            builderPattern: false
+            parameters:
+            - name: "parent"
+              value:
+                sapientType: "MOCK"
+                valueType: "org.bitcoinj.core.Transaction"
+                uuid: "getConnectedPubKeyScript_transactionOutput1-parent"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "value"
+              value:
+                sapientType: "MOCK"
+                valueType: "org.bitcoinj.base.Coin"
+                uuid: "getConnectedPubKeyScript_transactionOutput1-value"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "scriptBytes"
+              value:
+                sapientType: "ARRAY"
+                content: !<array>
+                  values: {}
+                suggestedContent: !<array>
+                  values: {}
+                valueType: "byte[]"
+                uuid: "getConnectedPubKeyScript_byte[]1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "org.bitcoinj.core.TransactionOutput"
+            parameters:
+            - name: "parent"
+              value:
+                sapientType: "UNKNOWN"
+                valueType: "org.bitcoinj.core.Transaction"
+                uuid: "getConnectedPubKeyScript_transactionOutput1-parent"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "value"
+              value:
+                sapientType: "UNKNOWN"
+                valueType: "org.bitcoinj.base.Coin"
+                uuid: "getConnectedPubKeyScript_transactionOutput1-value"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "scriptBytes"
+              value:
+                sapientType: "ARRAY"
+                suggestedContent: !<array>
+                  values: {}
+                valueType: "byte[]"
+                uuid: "getConnectedPubKeyScript_byte[]1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            privateConstructor: false
+            createdByTargetCode: false
           valueType: "org.bitcoinj.core.TransactionOutput"
           uuid: "getConnectedPubKeyScript_transactionOutput1"
           fixed: false
@@ -2836,17 +3070,77 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "C867FE27316499F98DA54FC6116D82F5"
+      modelFingerprint: "0D4C4FDEAF9C6F15B46A9255AD450E91"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
+        sapientType: "OBJECT"
+        content: !<new>
           target: "org.bitcoinj.core.TransactionOutput"
-          onlyPojoFunctions: false
-          builderPattern: false
+          parameters:
+          - name: "parent"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "getConnectedPubKeyScript_transactionOutput1-parent"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "value"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.base.Coin"
+              uuid: "getConnectedPubKeyScript_transactionOutput1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "scriptBytes"
+            value:
+              sapientType: "ARRAY"
+              content: !<array>
+                values: {}
+              suggestedContent: !<array>
+                values: {}
+              valueType: "byte[]"
+              uuid: "getConnectedPubKeyScript_byte[]1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.TransactionOutput"
+          parameters:
+          - name: "parent"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.core.Transaction"
+              uuid: "getConnectedPubKeyScript_transactionOutput1-parent"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "value"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.base.Coin"
+              uuid: "getConnectedPubKeyScript_transactionOutput1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "scriptBytes"
+            value:
+              sapientType: "ARRAY"
+              suggestedContent: !<array>
+                values: {}
+              valueType: "byte[]"
+              uuid: "getConnectedPubKeyScript_byte[]1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
         valueType: "org.bitcoinj.core.TransactionOutput"
         uuid: "getConnectedPubKeyScript_transactionOutput1"
         fixed: false
@@ -8998,6 +9292,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path4"
@@ -9016,5 +9311,6 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

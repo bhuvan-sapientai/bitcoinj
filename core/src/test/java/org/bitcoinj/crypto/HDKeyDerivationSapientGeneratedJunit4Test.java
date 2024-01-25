@@ -193,8 +193,8 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
         try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             HDPath hDPath2 = HDPath.M();
             hDPath.when(() -> HDPath.M()).thenReturn(hDPath2);
-            byte[] byteArray = new byte[]{};
-            byte[] byteArray2 = new byte[]{};
+            byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3, (byte) 4};
+            byte[] byteArray2 = new byte[]{(byte) 5, (byte) 6, (byte) 7, (byte) 8};
             //Act Statement(s)
             DeterministicKey result = HDKeyDerivation.createMasterPubKeyFromBytes(byteArray, byteArray2);
             ECDomainParameters eCDomainParameters = ECKey.CURVE;
@@ -245,15 +245,9 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
         /* Branches:
          * (nAttempts < MAX_CHILD_DERIVATION_ATTEMPTS) : true
          * (catch-exception (HDDerivationException)) : true
-         *
-         * TODO: Help needed! This method is not unit testable!
-         *  Following variables could not be isolated/mocked: child
-         *  Suggestions:
-         *  You can change the initialization of above variables and make it injectable or
-         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        DeterministicKey deterministicKeyMock2 = mock(DeterministicKey.class, "{}");
         DeterministicKey deterministicKeyMock3 = mock(DeterministicKey.class);
         DeterministicKey deterministicKeyMock4 = mock(DeterministicKey.class);
         DeterministicKey deterministicKeyMock5 = mock(DeterministicKey.class);
@@ -352,9 +346,9 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
         DeterministicKey deterministicKeyMock98 = mock(DeterministicKey.class);
         DeterministicKey deterministicKeyMock99 = mock(DeterministicKey.class);
         DeterministicKey deterministicKeyMock100 = mock(DeterministicKey.class);
-        DeterministicKey deterministicKeyMock101 = mock(DeterministicKey.class);
+        HDDerivationException hDDerivationExceptionMock = mock(HDDerivationException.class, "{}");
         try (MockedStatic<HDKeyDerivation> hDKeyDerivation = mockStatic(HDKeyDerivation.class, CALLS_REAL_METHODS)) {
-            hDKeyDerivation.when(() -> HDKeyDerivation.deriveChildKey(eq(deterministicKeyMock2), (ChildNumber) any())).thenReturn(deterministicKeyMock).thenReturn(deterministicKeyMock3).thenReturn(deterministicKeyMock4).thenReturn(deterministicKeyMock5).thenReturn(deterministicKeyMock6).thenReturn(deterministicKeyMock7).thenReturn(deterministicKeyMock8).thenReturn(deterministicKeyMock9).thenReturn(deterministicKeyMock10).thenReturn(deterministicKeyMock11).thenReturn(deterministicKeyMock12).thenReturn(deterministicKeyMock13).thenReturn(deterministicKeyMock14).thenReturn(deterministicKeyMock15).thenReturn(deterministicKeyMock16).thenReturn(deterministicKeyMock17).thenReturn(deterministicKeyMock18).thenReturn(deterministicKeyMock19).thenReturn(deterministicKeyMock20).thenReturn(deterministicKeyMock21).thenReturn(deterministicKeyMock22).thenReturn(deterministicKeyMock23).thenReturn(deterministicKeyMock24).thenReturn(deterministicKeyMock25).thenReturn(deterministicKeyMock26).thenReturn(deterministicKeyMock27).thenReturn(deterministicKeyMock28).thenReturn(deterministicKeyMock29).thenReturn(deterministicKeyMock30).thenReturn(deterministicKeyMock31).thenReturn(deterministicKeyMock32).thenReturn(deterministicKeyMock33).thenReturn(deterministicKeyMock34).thenReturn(deterministicKeyMock35).thenReturn(deterministicKeyMock36).thenReturn(deterministicKeyMock37).thenReturn(deterministicKeyMock38).thenReturn(deterministicKeyMock39).thenReturn(deterministicKeyMock40).thenReturn(deterministicKeyMock41).thenReturn(deterministicKeyMock42).thenReturn(deterministicKeyMock43).thenReturn(deterministicKeyMock44).thenReturn(deterministicKeyMock45).thenReturn(deterministicKeyMock46).thenReturn(deterministicKeyMock47).thenReturn(deterministicKeyMock48).thenReturn(deterministicKeyMock49).thenReturn(deterministicKeyMock50).thenReturn(deterministicKeyMock51).thenReturn(deterministicKeyMock52).thenReturn(deterministicKeyMock53).thenReturn(deterministicKeyMock54).thenReturn(deterministicKeyMock55).thenReturn(deterministicKeyMock56).thenReturn(deterministicKeyMock57).thenReturn(deterministicKeyMock58).thenReturn(deterministicKeyMock59).thenReturn(deterministicKeyMock60).thenReturn(deterministicKeyMock61).thenReturn(deterministicKeyMock62).thenReturn(deterministicKeyMock63).thenReturn(deterministicKeyMock64).thenReturn(deterministicKeyMock65).thenReturn(deterministicKeyMock66).thenReturn(deterministicKeyMock67).thenReturn(deterministicKeyMock68).thenReturn(deterministicKeyMock69).thenReturn(deterministicKeyMock70).thenReturn(deterministicKeyMock71).thenReturn(deterministicKeyMock72).thenReturn(deterministicKeyMock73).thenReturn(deterministicKeyMock74).thenReturn(deterministicKeyMock75).thenReturn(deterministicKeyMock76).thenReturn(deterministicKeyMock77).thenReturn(deterministicKeyMock78).thenReturn(deterministicKeyMock79).thenReturn(deterministicKeyMock80).thenReturn(deterministicKeyMock81).thenReturn(deterministicKeyMock82).thenReturn(deterministicKeyMock83).thenReturn(deterministicKeyMock84).thenReturn(deterministicKeyMock85).thenReturn(deterministicKeyMock86).thenReturn(deterministicKeyMock87).thenReturn(deterministicKeyMock88).thenReturn(deterministicKeyMock89).thenReturn(deterministicKeyMock90).thenReturn(deterministicKeyMock91).thenReturn(deterministicKeyMock92).thenReturn(deterministicKeyMock93).thenReturn(deterministicKeyMock94).thenReturn(deterministicKeyMock95).thenReturn(deterministicKeyMock96).thenReturn(deterministicKeyMock97).thenReturn(deterministicKeyMock98).thenReturn(deterministicKeyMock99).thenReturn(deterministicKeyMock100).thenReturn(deterministicKeyMock101);
+            hDKeyDerivation.when(() -> HDKeyDerivation.deriveChildKey(eq(deterministicKeyMock2), (ChildNumber) any())).thenThrow(hDDerivationExceptionMock);
             HDDerivationException hDDerivationException = new HDDerivationException("Maximum number of child derivation attempts reached, this is probably an indication of a bug.");
             thrown.expect(HDDerivationException.class);
             thrown.expectMessage(hDDerivationException.getMessage());
@@ -373,6 +367,8 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
+        //Arrange Statement(s)
+        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class, "<DeterministicKey object>");
 
         //Act Statement(s)
         Stream<DeterministicKey> result = HDKeyDerivation.generate(deterministicKeyMock, 0);
@@ -430,23 +426,27 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        DeterministicKey parentMock = mock(DeterministicKey.class, "m");
+        HDPath hDPathMock2 = mock(HDPath.class);
         try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
              MockedStatic<HDKeyDerivation> hDKeyDerivation = mockStatic(HDKeyDerivation.class, CALLS_REAL_METHODS)) {
             doReturn(hDPathMock).when(parentMock).getPath();
+            ChildNumber childNumber = new ChildNumber(0, false);
             ChildNumber[] childNumberArray = new ChildNumber[]{};
-            doReturn(hDPathMock2).when(hDPathMock).extend(childNumberMock, childNumberArray);
-            hDKeyDerivation.when(() -> HDKeyDerivation.deriveChildKeyBytesFromPrivate(parentMock, childNumberMock)).thenReturn(hDKeyDerivationRawKeyBytesMock);
+            doReturn(hDPathMock2).when(hDPathMock).extend(childNumber, childNumberArray);
             byte[] byteArray = new byte[]{};
+            byte[] byteArray2 = new byte[]{};
+            HDKeyDerivation.RawKeyBytes hDKeyDerivationRawKeyBytes = new HDKeyDerivation.RawKeyBytes(byteArray, byteArray2);
+            hDKeyDerivation.when(() -> HDKeyDerivation.deriveChildKeyBytesFromPrivate(parentMock, childNumber)).thenReturn(hDKeyDerivationRawKeyBytes);
             byteUtils.when(() -> ByteUtils.bytesToBigInteger(byteArray)).thenReturn(new BigInteger("0"));
             //Act Statement(s)
-            DeterministicKey result = HDKeyDerivation.deriveChildKeyFromPrivate(parentMock, childNumberMock);
-            byte[] byteArray2 = new byte[]{};
+            DeterministicKey result = HDKeyDerivation.deriveChildKeyFromPrivate(parentMock, childNumber);
             DeterministicKey deterministicKey = new DeterministicKey(hDPathMock2, byteArray2, new BigInteger("0"), parentMock);
             //Assert statement(s)
             assertThat(result, equalTo(deterministicKey));
             verify(parentMock, atLeast(1)).getPath();
-            verify(hDPathMock, atLeast(1)).extend(childNumberMock, childNumberArray);
-            hDKeyDerivation.verify(() -> HDKeyDerivation.deriveChildKeyBytesFromPrivate(parentMock, childNumberMock), atLeast(1));
+            verify(hDPathMock, atLeast(1)).extend(childNumber, childNumberArray);
+            hDKeyDerivation.verify(() -> HDKeyDerivation.deriveChildKeyBytesFromPrivate(parentMock, childNumber), atLeast(1));
             byteUtils.verify(() -> ByteUtils.bytesToBigInteger(byteArray), atLeast(1));
         }
     }
@@ -517,17 +517,22 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<HDKeyDerivation> hDKeyDerivation = mockStatic(HDKeyDerivation.class, CALLS_REAL_METHODS)) {
             doReturn(hDPathMock).when(parentMock).getPath();
+            List list = new ArrayList<>();
+            HDPath hDPath = new HDPath(false, list);
             ChildNumber[] childNumberArray = new ChildNumber[]{};
-            doReturn(hDPathMock2).when(hDPathMock).extend(childNumberMock, childNumberArray);
-            hDKeyDerivation.when(() -> HDKeyDerivation.deriveChildKeyBytesFromPublic(parentMock, childNumberMock, HDKeyDerivation.PublicDeriveMode.NORMAL)).thenReturn(hDKeyDerivationRawKeyBytesMock);
+            doReturn(hDPath).when(hDPathMock).extend(childNumberMock, childNumberArray);
+            byte[] byteArray = new byte[]{};
+            byte[] byteArray2 = new byte[]{};
+            HDKeyDerivation.RawKeyBytes hDKeyDerivationRawKeyBytes = new HDKeyDerivation.RawKeyBytes(byteArray, byteArray2);
+            hDKeyDerivation.when(() -> HDKeyDerivation.deriveChildKeyBytesFromPublic(parentMock, childNumberMock, HDKeyDerivation.PublicDeriveMode.NORMAL)).thenReturn(hDKeyDerivationRawKeyBytes);
             //Act Statement(s)
             DeterministicKey result = HDKeyDerivation.deriveChildKeyFromPublic(parentMock, childNumberMock, HDKeyDerivation.PublicDeriveMode.NORMAL);
-            byte[] byteArray = new byte[]{};
+            byte[] byteArray3 = new byte[]{};
             ECDomainParameters eCDomainParameters = ECKey.CURVE;
             ECCurve eCCurve = eCDomainParameters.getCurve();
-            byte[] byteArray2 = new byte[]{};
-            LazyECPoint lazyECPoint = new LazyECPoint(eCCurve, byteArray2);
-            DeterministicKey deterministicKey = new DeterministicKey(hDPathMock2, byteArray, lazyECPoint, (BigInteger) null, parentMock);
+            byte[] byteArray4 = new byte[]{};
+            LazyECPoint lazyECPoint = new LazyECPoint(eCCurve, byteArray4);
+            DeterministicKey deterministicKey = new DeterministicKey(hDPath, byteArray3, lazyECPoint, (BigInteger) null, parentMock);
             //Assert statement(s)
             assertThat(result, equalTo(deterministicKey));
             verify(parentMock, atLeast(1)).getPath();

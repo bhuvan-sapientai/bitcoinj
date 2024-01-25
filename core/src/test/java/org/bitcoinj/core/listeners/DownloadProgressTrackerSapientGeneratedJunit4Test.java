@@ -109,7 +109,7 @@ public class DownloadProgressTrackerSapientGeneratedJunit4Test {
             doReturn(0L).when(peerMock).getBestHeight();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("return_of_dateTimeFormat1");
+            timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("String");
             DownloadProgressTracker target = new DownloadProgressTracker();
             //Act Statement(s)
             target.onBlocksDownloaded(peerMock, blockMock, filteredBlockMock, 0);

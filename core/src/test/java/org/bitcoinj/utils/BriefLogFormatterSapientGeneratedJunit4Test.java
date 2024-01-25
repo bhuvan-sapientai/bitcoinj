@@ -93,7 +93,13 @@ public class BriefLogFormatterSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         BriefLogFormatter target = new BriefLogFormatter();
         Level level = Level.parse("name1");
+        StackTraceElement stackTraceElement = new StackTraceElement("declaringClass1", "methodName1", "fileName1", 0);
+        StackTraceElement[] stackTraceElementArray = new StackTraceElement[]{stackTraceElement};
+        Throwable throwable = new Throwable();
+        throwable.setStackTrace(stackTraceElementArray);
         LogRecord logRecord = new LogRecord(level, "msg1");
+        logRecord.setThrown(throwable);
+        logRecord.setMessage("Test log message");
 
         //Act Statement(s)
         String result = target.format(logRecord);
@@ -116,6 +122,7 @@ public class BriefLogFormatterSapientGeneratedJunit4Test {
         BriefLogFormatter target = new BriefLogFormatter();
         Level level = Level.parse("name1");
         LogRecord logRecord = new LogRecord(level, "msg1");
+        logRecord.setMessage("Test log message");
 
         //Act Statement(s)
         String result = target.format(logRecord);

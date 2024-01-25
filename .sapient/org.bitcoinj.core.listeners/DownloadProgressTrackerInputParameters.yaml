@@ -19,7 +19,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "F70B8A2B624B5BEB05D74BCCB2ADBC00"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -142,6 +142,7 @@ methods:
     deleted: false
     disabled: true
     ignoredBySystem: false
+    firstFailureReason: "TODO_ADDED_BY_TEST_GENERATOR"
     disabledReason: "Potential harmful system call (CompletableFuture.complete) detected;\
       \ Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     prover: "DEFAULT"
@@ -314,7 +315,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "11EA70DE748D71CDB37BC66DAFDCEC74"
+    modelFingerprint: "0B990BAC5888B3901B5D1CC088372916"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -462,7 +463,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "TimeUtils"
-      modelFingerprint: "2B521838B7E7B9AD1A238E4858A87045"
+      modelFingerprint: "5F24EF51416F4B1DCC0527D438F59EC5"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -498,7 +499,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "return_of_dateTimeFormat1"
+            value: "String"
+          suggestedContent: !<regular>
+            value: "String"
           valueType: "java.lang.String"
           uuid: "progress_string1"
           fixed: false
@@ -509,7 +512,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "peer"
-      modelFingerprint: "7F3DD8EFBF33DCB9DDE51094F53DF045"
+      modelFingerprint: "2EA64F04CA0C6BED31B47EABF914C16A"
       index: 8
       ignored: false
       nestedInLoop: false
@@ -562,6 +565,7 @@ methods:
     deleted: false
     disabled: true
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledReason: "Potential harmful system call (CompletableFuture.complete) detected;\
       \ Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     prover: "LLM"
@@ -730,7 +734,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "C6FEA8796DA4B664F8EE45B30E2F4DCA"
+    modelFingerprint: "C1519069847A5052F5D54497C49F48E8"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -825,7 +829,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "TimeUtils"
-      modelFingerprint: "830A4C2AE5C3E7A4FFA53D7B66D207DA"
+      modelFingerprint: "8E9D0F5F0BA2D3507B4BD339B90CACE8"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -861,7 +865,7 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "2024-01-04T11:25:18.513650Z"
+            value: "2024-01-25T06:34:18.386498Z"
           valueType: "java.lang.String"
           uuid: "progress_string1"
           fixed: false
@@ -1104,7 +1108,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "6E13917948F4503330A129503ABFC98B"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -1150,6 +1154,7 @@ methods:
     deleted: false
     disabled: true
     ignoredBySystem: false
+    firstFailureReason: "TODO_ADDED_BY_TEST_GENERATOR"
     disabledReason: "Potential harmful system call (CompletableFuture.get) detected;\
       \ Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     prover: "DEFAULT"
@@ -1386,6 +1391,7 @@ methods:
     deleted: false
     disabled: true
     ignoredBySystem: false
+    firstFailureReason: "DEPENDENCY_TO_THROW_EXCEPTION_NOT_FOUND"
     disabledReason: "Potential harmful system call (CompletableFuture.get) detected;\
       \ Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     prover: "DEFAULT"

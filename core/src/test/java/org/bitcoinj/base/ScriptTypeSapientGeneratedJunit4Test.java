@@ -8,6 +8,10 @@ import java.util.Optional;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.nullValue;
+import static org.hamcrest.Matchers.is;
+
+import org.junit.Ignore;
 
 public class ScriptTypeSapientGeneratedJunit4Test {
 
@@ -20,10 +24,8 @@ public class ScriptTypeSapientGeneratedJunit4Test {
         /* Branches:
          * (branch expression (line 77)) : true
          */
-
         //Act Statement(s)
         ScriptType result = ScriptType.of("pkh");
-
         //Assert statement(s)
         assertThat(result, equalTo(ScriptType.P2PKH));
     }
@@ -34,12 +36,42 @@ public class ScriptTypeSapientGeneratedJunit4Test {
         /* Branches:
          * (branch expression (line 77)) : true
          */
-
         //Act Statement(s)
         Optional<ScriptType> result = ScriptType.find("pkh");
         Optional<ScriptType> scriptTypeOptional = Optional.of(ScriptType.P2PKH);
-
         //Assert statement(s)
         assertThat(result, equalTo(scriptTypeOptional));
+    }
+
+    //Sapient generated method id: ${d8f9d8d4-318b-3adc-81df-199235eeefbb}
+    @Ignore()
+    @Test()
+    public void idTest() {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        ScriptType target = ScriptType.valueOf("pkh");
+        //Act Statement(s)
+        String result = target.id();
+        //Assert statement(s)
+        assertThat(result, is(nullValue()));
+    }
+
+    //Sapient generated method id: ${e0901684-2fd9-3ad9-b643-28dff52ade90}
+    @Ignore()
+    @Test()
+    public void numericIdTest() {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        ScriptType target = ScriptType.valueOf("P2PKH");
+        //Act Statement(s)
+        int result = target.numericId();
+        //Assert statement(s)
+        assertThat(result, equalTo(0));
     }
 }

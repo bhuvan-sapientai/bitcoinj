@@ -95,17 +95,13 @@ public class BlockingClientSapientGeneratedJunit4Test {
          * (dbuf.remaining() <= readBuff.length) : true
          * (read == -1) : true
          *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
+         * */
         //Arrange Statement(s)
         doReturn(0).when(connectionMock).getMaxMessageSize();
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         InputStream inputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
-
         //Act Statement(s)
         BlockingClient.runReadLoop(inputStream, connectionMock);
-
         //Assert statement(s)
         verify(connectionMock).getMaxMessageSize();
     }
@@ -128,10 +124,8 @@ public class BlockingClientSapientGeneratedJunit4Test {
         doReturn(0).when(connectionMock).receiveBytes((ByteBuffer) any());
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         InputStream inputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
-
         //Act Statement(s)
         BlockingClient.runReadLoop(inputStream, connectionMock);
-
         //Assert statement(s)
         verify(connectionMock).getMaxMessageSize();
         verify(connectionMock).receiveBytes((ByteBuffer) any());
@@ -258,9 +252,7 @@ public class BlockingClientSapientGeneratedJunit4Test {
         /* Branches:
          * (catch-exception (IOException)) : true
          *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
+         * */
         //Arrange Statement(s)
         ListenableCompletableFuture listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
         try (MockedStatic<ListenableCompletableFuture> listenableCompletableFuture = mockStatic(ListenableCompletableFuture.class);
@@ -294,12 +286,8 @@ public class BlockingClientSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<ListenableCompletableFuture> listenableCompletableFuture = mockStatic(ListenableCompletableFuture.class);
-             MockedStatic<Context> context = mockStatic(Context.class)) {
+        try (MockedStatic<Context> context = mockStatic(Context.class)) {
             context.when(() -> Context.get()).thenReturn(contextMock);
-            CompletableFuture completableFuture = new CompletableFuture();
-            ListenableCompletableFuture<SocketAddress> listenableCompletableFuture2 = ListenableCompletableFuture.of(completableFuture);
-            listenableCompletableFuture.when(() -> ListenableCompletableFuture.of((CompletableFuture) any())).thenReturn(listenableCompletableFuture2);
             Duration duration = Duration.ofDays(0L);
             SocketFactory socketFactory = SocketFactory.getDefault();
             Set<BlockingClient> blockingClientSet = new HashSet<>();
@@ -307,10 +295,12 @@ public class BlockingClientSapientGeneratedJunit4Test {
             doNothing().when(streamConnectionMock).setWriteTarget(target);
             //Act Statement(s)
             ListenableCompletableFuture<SocketAddress> result = target.getConnectFuture();
+            CompletableFuture completableFuture = new CompletableFuture();
+            ListenableCompletableFuture<SocketAddress> listenableCompletableFuture = ListenableCompletableFuture.of(completableFuture);
             //Assert statement(s)
-            assertThat(result, equalTo(listenableCompletableFuture2));
+            //TODO: Please implement equals method in ListenableCompletableFuture for verification to succeed or you need to adjust respective assertion statements
+            assertThat(result, equalTo(listenableCompletableFuture));
             context.verify(() -> Context.get(), atLeast(1));
-            listenableCompletableFuture.verify(() -> ListenableCompletableFuture.of((CompletableFuture) any()));
             verify(streamConnectionMock).setWriteTarget(target);
         }
     }

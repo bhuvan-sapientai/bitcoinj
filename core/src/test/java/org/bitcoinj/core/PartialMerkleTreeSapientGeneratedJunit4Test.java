@@ -252,11 +252,14 @@ public class PartialMerkleTreeSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        List<Sha256Hash> sha256HashList = new ArrayList<>();
-        byte[] byteArray = new byte[]{};
-        PartialMerkleTree target = spy(new PartialMerkleTree(0, sha256HashList, byteArray));
         ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-        doReturn(byteBuffer).when(target).write((ByteBuffer) any());
+        Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
+        List<Sha256Hash> sha256HashList = new ArrayList<>();
+        sha256HashList.add(sha256Hash);
+        byte[] byteArray = new byte[]{(byte) 0};
+        PartialMerkleTree target = spy(new PartialMerkleTree(0, sha256HashList, byteArray));
+        ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
+        doReturn(byteBuffer2).when(target).write((ByteBuffer) any());
 
         //Act Statement(s)
         byte[] result = target.serialize();

@@ -140,6 +140,7 @@ methods:
     deleted: true
     disabled: true
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledReason: "Potential harmful system call (Selector.close, Selector.keys)\
       \ detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     disabledStatusUpdatedByUser: false
@@ -269,6 +270,7 @@ methods:
     deleted: true
     disabled: true
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledReason: "Potential harmful system call (Selector.select, Selector.close,\
       \ Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     disabledStatusUpdatedByUser: false
@@ -390,12 +392,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "056D5A408B05DBFC37CBCD292F15AC5D"
+    modelFingerprint: "D508BCD5CBB7E80135224A5FA2E93A58"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "9554BDB551A980A8314B3E64377B2619"
+      modelFingerprint: "02564649905190D12D7E64A48AAB72B7"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -408,9 +410,14 @@ methods:
           - name: "connectionFactory"
             value:
               sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.net.StreamConnectionFactory"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.net.StreamConnectionFactory"
               uuid: "<init>_streamConnectionFactory1"
               fixed: false
+              nameForMock: "mockStreamConnectionFactory"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "bindAddress"
@@ -456,15 +463,35 @@ methods:
           parameters:
           - name: "connectionFactory"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.net.StreamConnectionFactory"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.net.StreamConnectionFactory"
               uuid: "<init>_streamConnectionFactory1"
               fixed: false
+              nameForMock: "mockStreamConnectionFactory"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "bindAddress"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.net.InetSocketAddress"
+                parameters:
+                - name: "port"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "int"
+                    uuid: "<init>_inetSocketAddress1-port"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.net.InetSocketAddress"
                 parameters:
@@ -636,6 +663,7 @@ methods:
     deleted: false
     disabled: true
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledReason: "Potential harmful system call (Selector.select, Selector.close,\
       \ Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     prover: "LLM"
@@ -650,12 +678,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "B222D59143C42163E9A53207805771A2"
+    modelFingerprint: "F13719354C088FCC2D28935C5B867966"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "9554BDB551A980A8314B3E64377B2619"
+      modelFingerprint: "02564649905190D12D7E64A48AAB72B7"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -668,9 +696,14 @@ methods:
           - name: "connectionFactory"
             value:
               sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.net.StreamConnectionFactory"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.net.StreamConnectionFactory"
               uuid: "<init>_streamConnectionFactory1"
               fixed: false
+              nameForMock: "true"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "bindAddress"
@@ -716,15 +749,35 @@ methods:
           parameters:
           - name: "connectionFactory"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.net.StreamConnectionFactory"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.net.StreamConnectionFactory"
               uuid: "<init>_streamConnectionFactory1"
               fixed: false
+              nameForMock: "true"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "bindAddress"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.net.InetSocketAddress"
+                parameters:
+                - name: "port"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "int"
+                    uuid: "<init>_inetSocketAddress1-port"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.net.InetSocketAddress"
                 parameters:
@@ -904,6 +957,7 @@ methods:
     deleted: false
     disabled: true
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledReason: "Potential harmful system call (Selector.select, Selector.close,\
       \ Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     prover: "LLM"
@@ -926,6 +980,7 @@ methods:
     deleted: true
     disabled: true
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledReason: "Potential harmful system call (Selector.select, Selector.close,\
       \ Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     disabledStatusUpdatedByUser: false
@@ -939,12 +994,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "64D2FD8E5CF65FACB48F078B9CF9F14D"
+    modelFingerprint: "E9F95DC8EEA4788B73C6F75E9F9C914A"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "9554BDB551A980A8314B3E64377B2619"
+      modelFingerprint: "02564649905190D12D7E64A48AAB72B7"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -957,9 +1012,14 @@ methods:
           - name: "connectionFactory"
             value:
               sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.net.StreamConnectionFactory"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.net.StreamConnectionFactory"
               uuid: "<init>_streamConnectionFactory1"
               fixed: false
+              nameForMock: "MockStreamConnectionFactory"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "bindAddress"
@@ -1005,15 +1065,35 @@ methods:
           parameters:
           - name: "connectionFactory"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.net.StreamConnectionFactory"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.net.StreamConnectionFactory"
               uuid: "<init>_streamConnectionFactory1"
               fixed: false
+              nameForMock: "MockStreamConnectionFactory"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "bindAddress"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.net.InetSocketAddress"
+                parameters:
+                - name: "port"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "int"
+                    uuid: "<init>_inetSocketAddress1-port"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.net.InetSocketAddress"
                 parameters:
@@ -1157,6 +1237,7 @@ methods:
     deleted: false
     disabled: true
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledReason: "Potential harmful system call (Selector.select, Selector.close,\
       \ Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     prover: "LLM"
@@ -1184,6 +1265,7 @@ methods:
     deleted: true
     disabled: true
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledReason: "Potential harmful system call (Selector.select, Selector.close,\
       \ Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     disabledStatusUpdatedByUser: false
@@ -1210,6 +1292,7 @@ methods:
     deleted: true
     disabled: true
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledReason: "Potential harmful system call (Selector.select, Selector.close,\
       \ Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     disabledStatusUpdatedByUser: false
@@ -1236,6 +1319,7 @@ methods:
     deleted: true
     disabled: true
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledReason: "Potential harmful system call (Selector.select, Selector.close,\
       \ Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     disabledStatusUpdatedByUser: false
@@ -1249,7 +1333,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "D7860438F4151BFCEA3396473A6B55A5"
+    modelFingerprint: "A6CCCE45C7206ED51698580C3E3E292D"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -1259,7 +1343,7 @@ methods:
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "9554BDB551A980A8314B3E64377B2619"
+      modelFingerprint: "02564649905190D12D7E64A48AAB72B7"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1272,9 +1356,14 @@ methods:
           - name: "connectionFactory"
             value:
               sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.net.StreamConnectionFactory"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.net.StreamConnectionFactory"
               uuid: "<init>_streamConnectionFactory1"
               fixed: false
+              nameForMock: "<StreamConnectionFactory object>"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "bindAddress"
@@ -1320,15 +1409,35 @@ methods:
           parameters:
           - name: "connectionFactory"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.net.StreamConnectionFactory"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.net.StreamConnectionFactory"
               uuid: "<init>_streamConnectionFactory1"
               fixed: false
+              nameForMock: "<StreamConnectionFactory object>"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "bindAddress"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.net.InetSocketAddress"
+                parameters:
+                - name: "port"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "int"
+                    uuid: "<init>_inetSocketAddress1-port"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.net.InetSocketAddress"
                 parameters:
@@ -1685,6 +1794,7 @@ methods:
     deleted: false
     disabled: true
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledReason: "Potential harmful system call (Selector.select, Selector.close,\
       \ Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     prover: "LLM"
@@ -1712,6 +1822,7 @@ methods:
     deleted: true
     disabled: true
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledReason: "Potential harmful system call (Selector.select, Selector.close,\
       \ Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     disabledStatusUpdatedByUser: false
@@ -1725,7 +1836,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "95AEE6F20DA8CBE2E144C901CB60D3FB"
+    modelFingerprint: "073C73725A8A41E360C264ED8B16D194"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -1735,7 +1846,7 @@ methods:
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "9554BDB551A980A8314B3E64377B2619"
+      modelFingerprint: "02564649905190D12D7E64A48AAB72B7"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1748,9 +1859,14 @@ methods:
           - name: "connectionFactory"
             value:
               sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.net.StreamConnectionFactory"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.net.StreamConnectionFactory"
               uuid: "<init>_streamConnectionFactory1"
               fixed: false
+              nameForMock: "StreamConnectionFactory"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "bindAddress"
@@ -1796,15 +1912,35 @@ methods:
           parameters:
           - name: "connectionFactory"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.net.StreamConnectionFactory"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.net.StreamConnectionFactory"
               uuid: "<init>_streamConnectionFactory1"
               fixed: false
+              nameForMock: "StreamConnectionFactory"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "bindAddress"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.net.InetSocketAddress"
+                parameters:
+                - name: "port"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "int"
+                    uuid: "<init>_inetSocketAddress1-port"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.net.InetSocketAddress"
                 parameters:
@@ -2189,6 +2325,7 @@ methods:
     deleted: false
     disabled: true
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledReason: "Potential harmful system call (Selector.select, Selector.close,\
       \ Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     prover: "LLM"
@@ -2203,7 +2340,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "95AEE6F20DA8CBE2E144C901CB60D3FB"
+    modelFingerprint: "073C73725A8A41E360C264ED8B16D194"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -2213,7 +2350,7 @@ methods:
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "9554BDB551A980A8314B3E64377B2619"
+      modelFingerprint: "02564649905190D12D7E64A48AAB72B7"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2226,9 +2363,14 @@ methods:
           - name: "connectionFactory"
             value:
               sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.net.StreamConnectionFactory"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.net.StreamConnectionFactory"
               uuid: "<init>_streamConnectionFactory1"
               fixed: false
+              nameForMock: "MockStreamConnectionFactory"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "bindAddress"
@@ -2274,15 +2416,35 @@ methods:
           parameters:
           - name: "connectionFactory"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.net.StreamConnectionFactory"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.net.StreamConnectionFactory"
               uuid: "<init>_streamConnectionFactory1"
               fixed: false
+              nameForMock: "MockStreamConnectionFactory"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "bindAddress"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.net.InetSocketAddress"
+                parameters:
+                - name: "port"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "int"
+                    uuid: "<init>_inetSocketAddress1-port"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.net.InetSocketAddress"
                 parameters:
@@ -2667,6 +2829,7 @@ methods:
     deleted: false
     disabled: true
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledReason: "Potential harmful system call (Selector.select, Selector.close,\
       \ Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     prover: "LLM"
@@ -2681,7 +2844,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "0168B28989CE4DE4FFF4AB51C4811525"
+    modelFingerprint: "073C73725A8A41E360C264ED8B16D194"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -2691,7 +2854,7 @@ methods:
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "9554BDB551A980A8314B3E64377B2619"
+      modelFingerprint: "02564649905190D12D7E64A48AAB72B7"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2704,9 +2867,14 @@ methods:
           - name: "connectionFactory"
             value:
               sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.net.StreamConnectionFactory"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.net.StreamConnectionFactory"
               uuid: "<init>_streamConnectionFactory1"
               fixed: false
+              nameForMock: "{}"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "bindAddress"
@@ -2752,15 +2920,35 @@ methods:
           parameters:
           - name: "connectionFactory"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.net.StreamConnectionFactory"
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.net.StreamConnectionFactory"
               uuid: "<init>_streamConnectionFactory1"
               fixed: false
+              nameForMock: "{}"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "bindAddress"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.net.InetSocketAddress"
+                parameters:
+                - name: "port"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "int"
+                    uuid: "<init>_inetSocketAddress1-port"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.net.InetSocketAddress"
                 parameters:
@@ -2790,7 +2978,7 @@ methods:
       filledByUser: false
     - type: "INTERNAL"
       name: "internalMethod"
-      modelFingerprint: "01D220A1BCBDFF65DA6A54A9596A27B1"
+      modelFingerprint: "5AA553E98DA4C3D57ED30564C215F872"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -2805,7 +2993,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: false
+            value: true
+          suggestedContent: !<regular>
+            value: true
           valueType: "boolean"
           uuid: "run_boolean1"
           fixed: false
@@ -3143,6 +3333,7 @@ methods:
     deleted: false
     disabled: true
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledReason: "Potential harmful system call (Selector.select, Selector.close,\
       \ Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     prover: "LLM"
@@ -3170,6 +3361,7 @@ methods:
     deleted: true
     disabled: true
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledReason: "Potential harmful system call (Selector.select, Selector.close,\
       \ Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     disabledStatusUpdatedByUser: false
@@ -3196,6 +3388,7 @@ methods:
     deleted: true
     disabled: true
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledReason: "Potential harmful system call (Selector.select, Selector.close,\
       \ Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     disabledStatusUpdatedByUser: false
@@ -3222,6 +3415,7 @@ methods:
     deleted: true
     disabled: true
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledReason: "Potential harmful system call (Selector.select, Selector.close,\
       \ Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     disabledStatusUpdatedByUser: false
@@ -3248,6 +3442,7 @@ methods:
     deleted: true
     disabled: true
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledReason: "Potential harmful system call (Selector.select, Selector.close,\
       \ Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     disabledStatusUpdatedByUser: false
@@ -3269,7 +3464,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "BED7DB4751ED67353B584911AA6FBDBD"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -3388,6 +3583,7 @@ methods:
     deleted: false
     disabled: true
     ignoredBySystem: false
+    firstFailureReason: "TODO_ADDED_BY_TEST_GENERATOR"
     disabledReason: "Potential harmful system call (Selector.wakeup) detected; Learn\
       \ more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     prover: "DEFAULT"

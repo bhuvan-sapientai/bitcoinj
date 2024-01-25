@@ -67,7 +67,7 @@ public class TransactionOutputSapientGeneratedJunit4Test {
 
     private final Sha256Hash sha256HashMock = mock(Sha256Hash.class);
 
-    private final TransactionBag transactionBagMock = mock(TransactionBag.class);
+    private final TransactionBag transactionBagMock = mock(TransactionBag.class, "{}");
 
     private final TransactionInput transactionInputMock = mock(TransactionInput.class);
 
@@ -76,6 +76,12 @@ public class TransactionOutputSapientGeneratedJunit4Test {
     private final Coin coinMock2 = mock(Coin.class);
 
     private final Coin feePerKbMock = mock(Coin.class);
+
+    private final Transaction transaction2Mock = mock(Transaction.class);
+
+    private final Transaction transactionMock = mock(Transaction.class);
+
+    private final TransactionOutPoint transactionOutPointMock = mock(TransactionOutPoint.class);
 
     //Sapient generated method id: ${d7d7c181-85f8-3d2b-b5a1-c1ddd262297c}
     @Ignore()
@@ -88,7 +94,6 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Transaction transactionMock = mock(Transaction.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Buffers> buffers = mockStatic(Buffers.class);
              MockedStatic<Coin> coin = mockStatic(Coin.class)) {
@@ -98,9 +103,10 @@ public class TransactionOutputSapientGeneratedJunit4Test {
             buffers.when(() -> Buffers.readLengthPrefixedBytes((ByteBuffer) any())).thenReturn(byteArray);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            Transaction transaction = new Transaction();
             //Act Statement(s)
-            TransactionOutput result = TransactionOutput.read(byteBuffer, transactionMock);
-            TransactionOutput transactionOutput = new TransactionOutput(transactionMock, coinMock, byteArray);
+            TransactionOutput result = TransactionOutput.read(byteBuffer, transaction);
+            TransactionOutput transactionOutput = new TransactionOutput(transaction, coinMock, byteArray);
             //Assert statement(s)
             assertThat(result, equalTo(transactionOutput));
             coin.verify(() -> Coin.read((ByteBuffer) any()));
@@ -121,20 +127,19 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<Script> script = mockStatic(Script.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(-1).when(valueMock).signum();
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            Coin coin = Coin.valueOf(0L);
             byte[] byteArray = new byte[]{};
-            script.when(() -> Script.parse(byteArray)).thenReturn(scriptMock);
-            TransactionOutput target = new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray);
+            TransactionOutput target = new TransactionOutput(networkParameters, transaction, coin, byteArray);
             //Act Statement(s)
             Script result = target.getScriptPubKey();
+            Script script = Script.parse(byteArray);
             //Assert statement(s)
-            assertThat(result, equalTo(scriptMock));
-            verify(valueMock).signum();
+            assertThat(result, equalTo(script));
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
-            script.verify(() -> Script.parse(byteArray), atLeast(1));
         }
     }
 
@@ -150,21 +155,22 @@ public class TransactionOutputSapientGeneratedJunit4Test {
         try (MockedStatic<Buffers> buffers = mockStatic(Buffers.class);
              MockedStatic<Coin> coin = mockStatic(Coin.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(-1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
+            //TODO: Needs to return real value
+            doReturn(null).when(coinMock).write((ByteBuffer) any());
+            byte[] byteArray = new byte[]{(byte) 0};
+            //TODO: Needs to return real value
+            buffers.when(() -> Buffers.writeLengthPrefixedBytes((ByteBuffer) any(), eq(byteArray))).thenReturn(null);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            Coin coin2 = Coin.valueOf(0L);
+            TransactionOutput target = new TransactionOutput(networkParameters, transaction, coin2, byteArray);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            doReturn(byteBuffer).when(coinMock).write((ByteBuffer) any());
-            ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
-            byte[] byteArray = new byte[]{};
-            buffers.when(() -> Buffers.writeLengthPrefixedBytes((ByteBuffer) any(), eq(byteArray))).thenReturn(byteBuffer2);
-            TransactionOutput target = new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray);
-            ByteBuffer byteBuffer3 = ByteBuffer.allocateDirect(0);
             //Act Statement(s)
-            ByteBuffer result = target.write(byteBuffer3);
+            ByteBuffer result = target.write(byteBuffer);
             //Assert statement(s)
-            assertThat(result, equalTo(byteBuffer3));
-            verify(valueMock).signum();
+            assertThat(result, equalTo(byteBuffer));
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             coin.verify(() -> Coin.valueOf(0L), atLeast(1));
             verify(coinMock).write((ByteBuffer) any());
@@ -185,24 +191,25 @@ public class TransactionOutputSapientGeneratedJunit4Test {
              MockedStatic<Coin> coin = mockStatic(Coin.class);
              MockedStatic<VarInt> varInt = mockStatic(VarInt.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(-1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            varInt.when(() -> VarInt.sizeOf(0L)).thenReturn(1);
+            varInt.when(() -> VarInt.sizeOf(1L)).thenReturn(1);
             coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
             doReturn(byteBuffer).when(coinMock).write((ByteBuffer) any());
             ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
-            byte[] byteArray = new byte[]{};
+            byte[] byteArray = new byte[]{(byte) 0};
             buffers.when(() -> Buffers.writeLengthPrefixedBytes((ByteBuffer) any(), eq(byteArray))).thenReturn(byteBuffer2);
-            TransactionOutput target = new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            Coin coin2 = Coin.valueOf(0L);
+            TransactionOutput target = new TransactionOutput(networkParameters, transaction, coin2, byteArray);
             //Act Statement(s)
             byte[] result = target.serialize();
-            byte[] byteResultArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+            byte[] byteResultArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
             //Assert statement(s)
             assertThat(result, equalTo(byteResultArray));
-            verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
-            varInt.verify(() -> VarInt.sizeOf(0L), atLeast(1));
+            varInt.verify(() -> VarInt.sizeOf(1L), atLeast(1));
             coin.verify(() -> Coin.valueOf(0L), atLeast(1));
             verify(coinMock).write((ByteBuffer) any());
             buffers.verify(() -> Buffers.writeLengthPrefixedBytes((ByteBuffer) any(), eq(byteArray)));
@@ -219,17 +226,18 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(-1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray));
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            Coin coin = Coin.valueOf(0L);
+            byte[] byteArray = new byte[]{(byte) 0};
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, coin, byteArray));
             byte[] byteArray2 = new byte[]{};
             doReturn(byteArray2).when(target).serialize();
             //Act Statement(s)
             byte[] result = target.bitcoinSerialize();
             //Assert statement(s)
             assertThat(result, equalTo(byteArray2));
-            verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             verify(target).serialize();
         }
@@ -246,18 +254,19 @@ public class TransactionOutputSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<VarInt> varInt = mockStatic(VarInt.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(-1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            varInt.when(() -> VarInt.sizeOf(0L)).thenReturn(1);
-            byte[] byteArray = new byte[]{};
-            TransactionOutput target = new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray);
+            varInt.when(() -> VarInt.sizeOf(1L)).thenReturn(1);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            Coin coin = Coin.valueOf(0L);
+            byte[] byteArray = new byte[]{(byte) 0};
+            TransactionOutput target = new TransactionOutput(networkParameters, transaction, coin, byteArray);
             //Act Statement(s)
             int result = target.messageSize();
             //Assert statement(s)
-            assertThat(result, equalTo(9));
-            verify(valueMock).signum();
+            assertThat(result, equalTo(10));
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
-            varInt.verify(() -> VarInt.sizeOf(0L), atLeast(1));
+            varInt.verify(() -> VarInt.sizeOf(1L), atLeast(1));
         }
     }
 
@@ -270,20 +279,23 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Coin valueMock = mock(Coin.class, "100");
         try (MockedStatic<VarInt> varInt = mockStatic(VarInt.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(-1).when(valueMock).signum();
+            doReturn(1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            varInt.when(() -> VarInt.sizeOf(0L)).thenReturn(1);
-            byte[] byteArray = new byte[]{};
-            TransactionOutput target = new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray);
+            varInt.when(() -> VarInt.sizeOf(3L)).thenReturn(0);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3};
+            TransactionOutput target = new TransactionOutput(networkParameters, transaction, valueMock, byteArray);
             //Act Statement(s)
             int result = target.getMessageSize();
             //Assert statement(s)
-            assertThat(result, equalTo(9));
+            assertThat(result, equalTo(11));
             verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
-            varInt.verify(() -> VarInt.sizeOf(0L), atLeast(1));
+            varInt.verify(() -> VarInt.sizeOf(3L), atLeast(1));
         }
     }
 
@@ -296,13 +308,16 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Coin valueMock = mock(Coin.class, "0");
         try (MockedStatic<Coin> coin = mockStatic(Coin.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             doReturn(-1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
             byte[] byteArray = new byte[]{};
-            TransactionOutput target = new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray);
+            TransactionOutput target = new TransactionOutput(networkParameters, transaction, valueMock, byteArray);
             //Act Statement(s)
             Coin result = target.getValue();
             //Assert statement(s)
@@ -325,13 +340,16 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Coin valueMock2 = mock(Coin.class);
+        Coin valueMock = mock(Coin.class, "-100");
+        Coin valueMock2 = mock(Coin.class, "-100");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             doReturn(-1).when(valueMock).signum();
-            doReturn(-1).when(valueMock2).signum();
+            doReturn(0).when(valueMock2).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{};
-            TransactionOutput target = new TransactionOutput(networkParametersMock, parentMock, valueMock2, byteArray);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            byte[] byteArray = new byte[]{(byte) 0};
+            TransactionOutput target = new TransactionOutput(networkParameters, transaction, valueMock2, byteArray);
             //Act Statement(s)
             target.setValue(valueMock);
             //Assert statement(s)
@@ -356,20 +374,21 @@ public class TransactionOutputSapientGeneratedJunit4Test {
         try (MockedStatic<Coin> coin = mockStatic(Coin.class);
              MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(-1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             scriptPattern.when(() -> ScriptPattern.isOpReturn(scriptMock)).thenReturn(false);
             coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
-            doReturn(true).when(coinMock).isLessThan(coinMock2);
-            byte[] byteArray = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray));
+            doReturn(false).when(coinMock).isLessThan(coinMock2);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            Coin coin2 = Coin.valueOf(0L);
+            byte[] byteArray = new byte[]{(byte) 0};
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, coin2, byteArray));
             doReturn(scriptMock).when(target).getScriptPubKey();
             doReturn(coinMock2).when(target).getMinNonDustValue();
             //Act Statement(s)
             boolean result = target.isDust();
             //Assert statement(s)
-            assertThat(result, equalTo(Boolean.TRUE));
-            verify(valueMock).signum();
+            assertThat(result, equalTo(Boolean.FALSE));
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             scriptPattern.verify(() -> ScriptPattern.isOpReturn(scriptMock), atLeast(1));
             coin.verify(() -> Coin.valueOf(0L), atLeast(1));
@@ -394,20 +413,21 @@ public class TransactionOutputSapientGeneratedJunit4Test {
         try (MockedStatic<Coin> coin = mockStatic(Coin.class);
              MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(-1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             scriptPattern.when(() -> ScriptPattern.isOpReturn(scriptMock)).thenReturn(false);
             coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
             doReturn(false).when(coinMock).isLessThan(coinMock2);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            Coin coin2 = Coin.valueOf(0L);
             byte[] byteArray = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray));
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, coin2, byteArray));
             doReturn(scriptMock).when(target).getScriptPubKey();
             doReturn(coinMock2).when(target).getMinNonDustValue();
             //Act Statement(s)
             boolean result = target.isDust();
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.FALSE));
-            verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             scriptPattern.verify(() -> ScriptPattern.isOpReturn(scriptMock), atLeast(1));
             coin.verify(() -> Coin.valueOf(0L), atLeast(1));
@@ -431,30 +451,32 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Coin feePerKbMock = mock(Coin.class, "1000");
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<VarInt> varInt = mockStatic(VarInt.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(coinMock).when(feePerKbMock).multiply(157L);
+            doReturn(coinMock).when(feePerKbMock).multiply(158L);
             doReturn(coinMock2).when(coinMock).divide(1000L);
-            doReturn(-1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            varInt.when(() -> VarInt.sizeOf(0L)).thenReturn(1);
+            varInt.when(() -> VarInt.sizeOf(1L)).thenReturn(1);
             scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2SH(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isSentToMultisig(scriptMock)).thenReturn(true);
-            byte[] byteArray = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray));
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            Coin coin = Coin.valueOf(0L);
+            byte[] byteArray = new byte[]{(byte) 0};
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, coin, byteArray));
             doReturn(scriptMock).when(target).getScriptPubKey();
             //Act Statement(s)
             Coin result = target.getMinNonDustValue(feePerKbMock);
             //Assert statement(s)
             assertThat(result, equalTo(coinMock2));
-            verify(feePerKbMock).multiply(157L);
+            verify(feePerKbMock).multiply(158L);
             verify(coinMock).divide(1000L);
-            verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
-            varInt.verify(() -> VarInt.sizeOf(0L), atLeast(1));
+            varInt.verify(() -> VarInt.sizeOf(1L), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2PKH(scriptMock), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2SH(scriptMock), atLeast(1));
@@ -478,21 +500,20 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Coin feePerKbMock = mock(Coin.class);
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
-             MockedStatic<VarInt> varInt = mockStatic(VarInt.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             doReturn(coinMock).when(feePerKbMock).multiply(76L);
             doReturn(coinMock2).when(coinMock).divide(1000L);
             doReturn(-1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            varInt.when(() -> VarInt.sizeOf(0L)).thenReturn(1);
             scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2SH(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isSentToMultisig(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2WH(scriptMock)).thenReturn(true);
             byte[] byteArray = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray));
+            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, transactionMock, valueMock, byteArray));
             doReturn(scriptMock).when(target).getScriptPubKey();
             //Act Statement(s)
             Coin result = target.getMinNonDustValue(feePerKbMock);
@@ -502,7 +523,6 @@ public class TransactionOutputSapientGeneratedJunit4Test {
             verify(coinMock).divide(1000L);
             verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
-            varInt.verify(() -> VarInt.sizeOf(0L), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2PKH(scriptMock), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2SH(scriptMock), atLeast(1));
@@ -530,7 +550,6 @@ public class TransactionOutputSapientGeneratedJunit4Test {
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<VarInt> varInt = mockStatic(VarInt.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(-1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             varInt.when(() -> VarInt.sizeOf(0L)).thenReturn(1);
             scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(false);
@@ -538,15 +557,15 @@ public class TransactionOutputSapientGeneratedJunit4Test {
             scriptPattern.when(() -> ScriptPattern.isP2SH(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isSentToMultisig(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2WH(scriptMock)).thenReturn(false);
+            Coin coin = Coin.valueOf(0L);
             byte[] byteArray = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray));
+            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, transactionMock, coin, byteArray));
             doReturn(scriptMock).when(target).getScriptPubKey();
             //Act Statement(s)
             Coin result = target.getMinNonDustValue(coinMock);
-            Coin coin = Coin.ZERO;
+            Coin coin2 = Coin.ZERO;
             //Assert statement(s)
-            assertThat(result, equalTo(coin));
-            verify(valueMock).signum();
+            assertThat(result, equalTo(coin2));
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             varInt.verify(() -> VarInt.sizeOf(0L), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2PKH(scriptMock), atLeast(1));
@@ -567,11 +586,14 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Coin valueMock = mock(Coin.class, "0");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             doReturn(-1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray));
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            byte[] byteArray = new byte[]{(byte) 0};
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, valueMock, byteArray));
             doReturn(coinMock).when(target).getMinNonDustValue((Coin) any());
             //Act Statement(s)
             Coin result = target.getMinNonDustValue();
@@ -595,17 +617,22 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Coin valueMock = mock(Coin.class, "100");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS)) {
             doReturn(-1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray));
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2};
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, valueMock, byteArray));
             doReturn(sha256HashMock).when(target).getParentTransactionHash();
-            doReturn(0).when(target).getIndex();
+            doReturn(1).when(target).getIndex();
+            byte[] byteArray2 = new byte[]{(byte) 0, (byte) 0, (byte) 0};
+            TransactionInput transactionInput = new TransactionInput(transaction2Mock, byteArray2, transactionOutPointMock);
             //Act Statement(s)
-            target.markAsSpent(transactionInputMock);
+            target.markAsSpent(transactionInput);
             //Assert statement(s)
-            assertThat(target.getSpentBy(), is(notNullValue()));
+            assertThat(target.getSpentBy(), equalTo(transactionInput));
             assertThat(target.isAvailableForSpending(), equalTo(Boolean.FALSE));
             verify(valueMock, atLeast(1)).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(1));
@@ -628,17 +655,25 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS)) {
-            doReturn(-1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{};
-            TransactionOutput target = new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            Coin coin = Coin.valueOf(0L);
+            byte[] byteArray = new byte[]{(byte) 0};
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, coin, byteArray));
+            doReturn(sha256HashMock).when(target).getParentTransactionHash();
+            doReturn(0).when(target).getIndex();
+            byte[] byteArray2 = new byte[]{};
+            Coin coin2 = Coin.valueOf(0L);
+            TransactionInput transactionInput = new TransactionInput(transaction2Mock, byteArray2, transactionOutPointMock, coin2);
             //Act Statement(s)
-            target.markAsSpent(transactionInputMock);
+            target.markAsSpent(transactionInput);
             //Assert statement(s)
-            assertThat(target.getSpentBy(), is(notNullValue()));
+            assertThat(target.getSpentBy(), equalTo(transactionInput));
             assertThat(target.isAvailableForSpending(), equalTo(Boolean.FALSE));
-            verify(valueMock, atLeast(1)).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()), atLeast(1));
+            verify(target, atLeast(1)).getParentTransactionHash();
+            verify(target, atLeast(1)).getIndex();
         }
     }
 
@@ -655,18 +690,19 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(-1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            Coin coin = Coin.valueOf(0L);
             byte[] byteArray = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray));
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, coin, byteArray));
             doReturn(sha256HashMock).when(target).getParentTransactionHash();
-            doReturn(0).when(target).getIndex();
+            doReturn(1).when(target).getIndex();
             //Act Statement(s)
             target.markAsUnspent();
             //Assert statement(s)
             assertThat(target.getSpentBy(), is(nullValue()));
             assertThat(target.isAvailableForSpending(), equalTo(Boolean.TRUE));
-            verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             verify(target).getParentTransactionHash();
             verify(target).getIndex();
@@ -686,11 +722,16 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Coin valueMock = mock(Coin.class, "0");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             doReturn(-1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{};
-            TransactionOutput target = new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            byte[] byteArray = new byte[]{(byte) 0};
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, valueMock, byteArray));
+            doReturn(sha256HashMock).when(target).getParentTransactionHash();
+            doReturn(0).when(target).getIndex();
             //Act Statement(s)
             target.markAsUnspent();
             //Assert statement(s)
@@ -698,6 +739,8 @@ public class TransactionOutputSapientGeneratedJunit4Test {
             assertThat(target.isAvailableForSpending(), equalTo(Boolean.TRUE));
             verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
+            verify(target).getParentTransactionHash();
+            verify(target).getIndex();
         }
     }
 
@@ -713,11 +756,14 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Coin valueMock = mock(Coin.class, "0");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             doReturn(-1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
             byte[] byteArray = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray));
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, valueMock, byteArray));
             doReturn(false).when(target).isMine(transactionBagMock);
             doReturn(true).when(target).isWatched(transactionBagMock);
             //Act Statement(s)
@@ -743,18 +789,20 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        TransactionBag transactionBagMock = mock(TransactionBag.class, "[{parent={value=<value>}, params={value=<value>}, value={value=<value>}, scriptBytes={value=<value>}}]");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(-1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray));
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            Coin coin = Coin.valueOf(0L);
+            byte[] byteArray = new byte[]{(byte) 0};
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, coin, byteArray));
             doReturn(false).when(target).isMine(transactionBagMock);
             doReturn(false).when(target).isWatched(transactionBagMock);
             //Act Statement(s)
             boolean result = target.isMineOrWatched(transactionBagMock);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.FALSE));
-            verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             verify(target).isMine(transactionBagMock);
             verify(target).isWatched(transactionBagMock);
@@ -772,19 +820,21 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        TransactionBag transactionBagMock = mock(TransactionBag.class, "<TransactionBag object>");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             doReturn(true).when(transactionBagMock).isWatchedScript(scriptMock);
-            doReturn(-1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray));
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            Coin coin = Coin.valueOf(0L);
+            byte[] byteArray = new byte[]{(byte) 0};
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, coin, byteArray));
             doReturn(scriptMock).when(target).getScriptPubKey();
             //Act Statement(s)
             boolean result = target.isWatched(transactionBagMock);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.TRUE));
             verify(transactionBagMock).isWatchedScript(scriptMock);
-            verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             verify(target).getScriptPubKey();
         }
@@ -801,19 +851,21 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        TransactionBag transactionBagMock = mock(TransactionBag.class, "TransactionBag object");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             doReturn(false).when(transactionBagMock).isWatchedScript(scriptMock);
-            doReturn(-1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray));
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            Coin coin = Coin.valueOf(0L);
+            byte[] byteArray = new byte[]{(byte) 0};
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, coin, byteArray));
             doReturn(scriptMock).when(target).getScriptPubKey();
             //Act Statement(s)
             boolean result = target.isWatched(transactionBagMock);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.FALSE));
             verify(transactionBagMock).isWatchedScript(scriptMock);
-            verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             verify(target).getScriptPubKey();
         }
@@ -830,19 +882,21 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        TransactionBag transactionBagMock = mock(TransactionBag.class, "new TransactionBag()");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             doReturn(false).when(transactionBagMock).isWatchedScript(scriptMock);
-            doReturn(-1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray));
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            Coin coin = Coin.valueOf(0L);
+            byte[] byteArray = new byte[]{(byte) 0};
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, coin, byteArray));
             doReturn(scriptMock).when(target).getScriptPubKey();
             //Act Statement(s)
             boolean result = target.isWatched(transactionBagMock);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.FALSE));
             verify(transactionBagMock).isWatchedScript(scriptMock);
-            verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             verify(target).getScriptPubKey();
         }
@@ -863,23 +917,26 @@ public class TransactionOutputSapientGeneratedJunit4Test {
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             byte[] byteArray = new byte[]{};
-            doReturn(true).when(transactionBagMock).isPubKeyMine(byteArray);
-            doReturn(-1).when(valueMock).signum();
+            doReturn(false).when(transactionBagMock).isPayToScriptHashMine(byteArray);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(true);
-            scriptPattern.when(() -> ScriptPattern.extractKeyFromP2PK(scriptMock)).thenReturn(byteArray);
-            byte[] byteArray2 = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray2));
+            scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
+            scriptPattern.when(() -> ScriptPattern.isP2SH(scriptMock)).thenReturn(true);
+            scriptPattern.when(() -> ScriptPattern.extractHashFromP2SH(scriptMock)).thenReturn(byteArray);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            Coin coin = Coin.valueOf(0L);
+            byte[] byteArray2 = new byte[]{(byte) 0};
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, coin, byteArray2));
             doReturn(scriptMock).when(target).getScriptPubKey();
             //Act Statement(s)
             boolean result = target.isMine(transactionBagMock);
             //Assert statement(s)
-            assertThat(result, equalTo(Boolean.TRUE));
-            verify(transactionBagMock).isPubKeyMine(byteArray);
-            verify(valueMock).signum();
+            assertThat(result, equalTo(Boolean.FALSE));
+            verify(transactionBagMock).isPayToScriptHashMine(byteArray);
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.extractKeyFromP2PK(scriptMock), atLeast(1));
+            scriptPattern.verify(() -> ScriptPattern.isP2SH(scriptMock), atLeast(1));
+            scriptPattern.verify(() -> ScriptPattern.extractHashFromP2SH(scriptMock), atLeast(1));
             verify(target).getScriptPubKey();
         }
     }
@@ -896,26 +953,30 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        TransactionBag transactionBagMock = mock(TransactionBag.class, "null");
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             byte[] byteArray = new byte[]{};
-            doReturn(true).when(transactionBagMock).isPubKeyMine(byteArray);
-            doReturn(-1).when(valueMock).signum();
+            doReturn(false).when(transactionBagMock).isPayToScriptHashMine(byteArray);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(true);
-            scriptPattern.when(() -> ScriptPattern.extractKeyFromP2PK(scriptMock)).thenReturn(byteArray);
-            byte[] byteArray2 = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray2));
+            scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
+            scriptPattern.when(() -> ScriptPattern.isP2SH(scriptMock)).thenReturn(true);
+            scriptPattern.when(() -> ScriptPattern.extractHashFromP2SH(scriptMock)).thenReturn(byteArray);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            Coin coin = Coin.valueOf(0L);
+            byte[] byteArray2 = new byte[]{(byte) 0};
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, coin, byteArray2));
             doReturn(scriptMock).when(target).getScriptPubKey();
             //Act Statement(s)
             boolean result = target.isMine(transactionBagMock);
             //Assert statement(s)
-            assertThat(result, equalTo(Boolean.TRUE));
-            verify(transactionBagMock).isPubKeyMine(byteArray);
-            verify(valueMock).signum();
+            assertThat(result, equalTo(Boolean.FALSE));
+            verify(transactionBagMock).isPayToScriptHashMine(byteArray);
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.extractKeyFromP2PK(scriptMock), atLeast(1));
+            scriptPattern.verify(() -> ScriptPattern.isP2SH(scriptMock), atLeast(1));
+            scriptPattern.verify(() -> ScriptPattern.extractHashFromP2SH(scriptMock), atLeast(1));
             verify(target).getScriptPubKey();
         }
     }
@@ -937,19 +998,19 @@ public class TransactionOutputSapientGeneratedJunit4Test {
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             byte[] byteArray = new byte[]{};
             doReturn(false).when(transactionBagMock).isPubKeyMine(byteArray);
-            doReturn(-1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(true);
             scriptPattern.when(() -> ScriptPattern.extractKeyFromP2PK(scriptMock)).thenReturn(byteArray);
-            byte[] byteArray2 = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, (Transaction) null, valueMock, byteArray2));
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Coin coin = Coin.valueOf(0L);
+            byte[] byteArray2 = new byte[]{(byte) 0};
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, (Transaction) null, coin, byteArray2));
             doReturn(scriptMock).when(target).getScriptPubKey();
             //Act Statement(s)
             boolean result = target.isMine(transactionBagMock);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.FALSE));
             verify(transactionBagMock).isPubKeyMine(byteArray);
-            verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.extractKeyFromP2PK(scriptMock), atLeast(1));
@@ -970,22 +1031,25 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Coin valueMock = mock(Coin.class, "1000");
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             byte[] byteArray = new byte[]{};
-            doReturn(true).when(transactionBagMock).isPayToScriptHashMine(byteArray);
-            doReturn(-1).when(valueMock).signum();
+            doReturn(false).when(transactionBagMock).isPayToScriptHashMine(byteArray);
+            doReturn(1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2SH(scriptMock)).thenReturn(true);
             scriptPattern.when(() -> ScriptPattern.extractHashFromP2SH(scriptMock)).thenReturn(byteArray);
-            byte[] byteArray2 = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray2));
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            byte[] byteArray2 = new byte[]{(byte) 0, (byte) 1, (byte) 2};
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, valueMock, byteArray2));
             doReturn(scriptMock).when(target).getScriptPubKey();
             //Act Statement(s)
             boolean result = target.isMine(transactionBagMock);
             //Assert statement(s)
-            assertThat(result, equalTo(Boolean.TRUE));
+            assertThat(result, equalTo(Boolean.FALSE));
             verify(transactionBagMock).isPayToScriptHashMine(byteArray);
             verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
@@ -1009,28 +1073,32 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        TransactionBag transactionBagMock = mock(TransactionBag.class, "TransactionBag object");
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             byte[] byteArray = new byte[]{};
-            doReturn(true).when(transactionBagMock).isPayToScriptHashMine(byteArray);
-            doReturn(-1).when(valueMock).signum();
+            doReturn(false).when(transactionBagMock).isPubKeyHashMine(byteArray, ScriptType.P2PKH);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2SH(scriptMock)).thenReturn(true);
-            scriptPattern.when(() -> ScriptPattern.extractHashFromP2SH(scriptMock)).thenReturn(byteArray);
-            byte[] byteArray2 = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray2));
+            scriptPattern.when(() -> ScriptPattern.isP2SH(scriptMock)).thenReturn(false);
+            scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(true);
+            scriptPattern.when(() -> ScriptPattern.extractHashFromP2PKH(scriptMock)).thenReturn(byteArray);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            Coin coin = Coin.valueOf(0L);
+            byte[] byteArray2 = new byte[]{(byte) 0};
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, coin, byteArray2));
             doReturn(scriptMock).when(target).getScriptPubKey();
             //Act Statement(s)
             boolean result = target.isMine(transactionBagMock);
             //Assert statement(s)
-            assertThat(result, equalTo(Boolean.TRUE));
-            verify(transactionBagMock).isPayToScriptHashMine(byteArray);
-            verify(valueMock).signum();
+            assertThat(result, equalTo(Boolean.FALSE));
+            verify(transactionBagMock).isPubKeyHashMine(byteArray, ScriptType.P2PKH);
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2SH(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.extractHashFromP2SH(scriptMock), atLeast(1));
+            scriptPattern.verify(() -> ScriptPattern.isP2PKH(scriptMock), atLeast(1));
+            scriptPattern.verify(() -> ScriptPattern.extractHashFromP2PKH(scriptMock), atLeast(1));
             verify(target).getScriptPubKey();
         }
     }
@@ -1053,27 +1121,26 @@ public class TransactionOutputSapientGeneratedJunit4Test {
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             byte[] byteArray = new byte[]{};
             doReturn(false).when(transactionBagMock).isPayToScriptHashMine(byteArray);
-            doReturn(-1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2SH(scriptMock)).thenReturn(true);
             scriptPattern.when(() -> ScriptPattern.extractHashFromP2SH(scriptMock)).thenReturn(byteArray);
-            byte[] byteArray2 = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray2));
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            Coin coin = Coin.valueOf(0L);
+            byte[] byteArray2 = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, coin, byteArray2));
             doReturn(scriptMock).when(target).getScriptPubKey();
-            doReturn(sha256HashMock).when(parentMock).getTxId();
             //Act Statement(s)
             boolean result = target.isMine(transactionBagMock);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.FALSE));
             verify(transactionBagMock).isPayToScriptHashMine(byteArray);
-            verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2SH(scriptMock), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.extractHashFromP2SH(scriptMock), atLeast(1));
             verify(target).getScriptPubKey();
-            verify(parentMock).getTxId();
         }
     }
 
@@ -1091,23 +1158,27 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        TransactionBag transactionBagMock = mock(TransactionBag.class, "[{signum={value=1}, isP2PK={value=false}, extractHashFromP2PKH={resultList=[0, 1, 2]}, isP2SH={value=false}, checkArgument={value=null}, isP2PKH={value=true}, isPubKeyHashMine={value=true}}]");
+        Coin valueMock = mock(Coin.class, "1000");
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             byte[] byteArray = new byte[]{};
-            doReturn(true).when(transactionBagMock).isPubKeyHashMine(byteArray, ScriptType.P2PKH);
-            doReturn(-1).when(valueMock).signum();
+            doReturn(false).when(transactionBagMock).isPubKeyHashMine(byteArray, ScriptType.P2PKH);
+            doReturn(1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2SH(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(true);
             scriptPattern.when(() -> ScriptPattern.extractHashFromP2PKH(scriptMock)).thenReturn(byteArray);
-            byte[] byteArray2 = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray2));
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            byte[] byteArray2 = new byte[]{(byte) 0, (byte) 1, (byte) 2};
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, valueMock, byteArray2));
             doReturn(scriptMock).when(target).getScriptPubKey();
             //Act Statement(s)
             boolean result = target.isMine(transactionBagMock);
             //Assert statement(s)
-            assertThat(result, equalTo(Boolean.TRUE));
+            assertThat(result, equalTo(Boolean.FALSE));
             verify(transactionBagMock).isPubKeyHashMine(byteArray, ScriptType.P2PKH);
             verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
@@ -1133,25 +1204,27 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        TransactionBag transactionBagMock = mock(TransactionBag.class, "[{parent={}, params={}, value={}, scriptBytes={resultList=[]}}]");
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             byte[] byteArray = new byte[]{};
-            doReturn(true).when(transactionBagMock).isPubKeyHashMine(byteArray, ScriptType.P2PKH);
-            doReturn(-1).when(valueMock).signum();
+            doReturn(false).when(transactionBagMock).isPubKeyHashMine(byteArray, ScriptType.P2PKH);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2SH(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(true);
             scriptPattern.when(() -> ScriptPattern.extractHashFromP2PKH(scriptMock)).thenReturn(byteArray);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            Coin coin = Coin.valueOf(0L);
             byte[] byteArray2 = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray2));
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, coin, byteArray2));
             doReturn(scriptMock).when(target).getScriptPubKey();
             //Act Statement(s)
             boolean result = target.isMine(transactionBagMock);
             //Assert statement(s)
-            assertThat(result, equalTo(Boolean.TRUE));
+            assertThat(result, equalTo(Boolean.FALSE));
             verify(transactionBagMock).isPubKeyHashMine(byteArray, ScriptType.P2PKH);
-            verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2SH(scriptMock), atLeast(1));
@@ -1175,16 +1248,19 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Coin valueMock = mock(Coin.class, "0");
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(-1).when(valueMock).signum();
+            doReturn(0).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2SH(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(false);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
             byte[] byteArray = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray));
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, valueMock, byteArray));
             doReturn(scriptMock).when(target).getScriptPubKey();
             //Act Statement(s)
             boolean result = target.isMine(transactionBagMock);
@@ -1215,33 +1291,28 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        TransactionBag transactionBagMock = mock(TransactionBag.class, "<generated TransactionBag object>");
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            byte[] byteArray = new byte[]{};
-            doReturn(false).when(transactionBagMock).isPubKeyHashMine(byteArray, ScriptType.P2PKH);
-            doReturn(-1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2SH(scriptMock)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(true);
-            scriptPattern.when(() -> ScriptPattern.extractHashFromP2PKH(scriptMock)).thenReturn(byteArray);
-            byte[] byteArray2 = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray2));
+            scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(false);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            Coin coin = Coin.valueOf(0L);
+            byte[] byteArray = new byte[]{(byte) 0};
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, coin, byteArray));
             doReturn(scriptMock).when(target).getScriptPubKey();
-            doReturn(sha256HashMock).when(parentMock).getTxId();
             //Act Statement(s)
             boolean result = target.isMine(transactionBagMock);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.FALSE));
-            verify(transactionBagMock).isPubKeyHashMine(byteArray, ScriptType.P2PKH);
-            verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2SH(scriptMock), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2PKH(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.extractHashFromP2PKH(scriptMock), atLeast(1));
             verify(target).getScriptPubKey();
-            verify(parentMock).getTxId();
         }
     }
 
@@ -1263,23 +1334,24 @@ public class TransactionOutputSapientGeneratedJunit4Test {
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             byte[] byteArray = new byte[]{};
-            doReturn(true).when(transactionBagMock).isPubKeyHashMine(byteArray, ScriptType.P2WPKH);
-            doReturn(-1).when(valueMock).signum();
+            doReturn(false).when(transactionBagMock).isPubKeyHashMine(byteArray, ScriptType.P2WPKH);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2SH(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(true);
             scriptPattern.when(() -> ScriptPattern.extractHashFromP2WH(scriptMock)).thenReturn(byteArray);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            Coin coin = Coin.valueOf(0L);
             byte[] byteArray2 = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray2));
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, coin, byteArray2));
             doReturn(scriptMock).when(target).getScriptPubKey();
             //Act Statement(s)
             boolean result = target.isMine(transactionBagMock);
             //Assert statement(s)
-            assertThat(result, equalTo(Boolean.TRUE));
+            assertThat(result, equalTo(Boolean.FALSE));
             verify(transactionBagMock).isPubKeyHashMine(byteArray, ScriptType.P2WPKH);
-            verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2SH(scriptMock), atLeast(1));
@@ -1305,26 +1377,28 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        TransactionBag transactionBagMock = mock(TransactionBag.class, "TransactionBag");
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             byte[] byteArray = new byte[]{};
-            doReturn(true).when(transactionBagMock).isPubKeyHashMine(byteArray, ScriptType.P2WPKH);
-            doReturn(-1).when(valueMock).signum();
+            doReturn(false).when(transactionBagMock).isPubKeyHashMine(byteArray, ScriptType.P2WPKH);
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2SH(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(true);
             scriptPattern.when(() -> ScriptPattern.extractHashFromP2WH(scriptMock)).thenReturn(byteArray);
-            byte[] byteArray2 = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray2));
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            Coin coin = Coin.valueOf(0L);
+            byte[] byteArray2 = new byte[]{(byte) 0};
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, coin, byteArray2));
             doReturn(scriptMock).when(target).getScriptPubKey();
             //Act Statement(s)
             boolean result = target.isMine(transactionBagMock);
             //Assert statement(s)
-            assertThat(result, equalTo(Boolean.TRUE));
+            assertThat(result, equalTo(Boolean.FALSE));
             verify(transactionBagMock).isPubKeyHashMine(byteArray, ScriptType.P2WPKH);
-            verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2SH(scriptMock), atLeast(1));
@@ -1351,35 +1425,30 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        TransactionBag transactionBagMock = mock(TransactionBag.class, "<TransactionBag object>");
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            byte[] byteArray = new byte[]{};
-            doReturn(false).when(transactionBagMock).isPubKeyHashMine(byteArray, ScriptType.P2WPKH);
-            doReturn(-1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2SH(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(true);
-            scriptPattern.when(() -> ScriptPattern.extractHashFromP2WH(scriptMock)).thenReturn(byteArray);
-            byte[] byteArray2 = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray2));
+            scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(false);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            Coin coin = Coin.valueOf(0L);
+            byte[] byteArray = new byte[]{(byte) 0};
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, coin, byteArray));
             doReturn(scriptMock).when(target).getScriptPubKey();
-            doReturn(sha256HashMock).when(parentMock).getTxId();
             //Act Statement(s)
             boolean result = target.isMine(transactionBagMock);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.FALSE));
-            verify(transactionBagMock).isPubKeyHashMine(byteArray, ScriptType.P2WPKH);
-            verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2SH(scriptMock), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2PKH(scriptMock), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.extractHashFromP2WH(scriptMock), atLeast(1));
             verify(target).getScriptPubKey();
-            verify(parentMock).getTxId();
         }
     }
 
@@ -1393,16 +1462,17 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(-1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray));
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            Coin coin = Coin.valueOf(0L);
+            byte[] byteArray = new byte[]{(byte) 0};
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, coin, byteArray));
             doReturn("return_of_toString1").when(target).toString((Network) null);
             //Act Statement(s)
             String result = target.toString();
             //Assert statement(s)
             assertThat(result, equalTo("return_of_toString1"));
-            verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             verify(target).toString((Network) null);
         }
@@ -1427,10 +1497,10 @@ public class TransactionOutputSapientGeneratedJunit4Test {
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<Coin> coin = mockStatic(Coin.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(-1).when(valueMock).signum();
+            doReturn(1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
-            doReturn("A").when(coinMock).toFriendlyString();
+            doReturn("0.01 BTC").when(coinMock).toFriendlyString();
             scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(false);
             doReturn(ScriptType.P2SH).when(scriptMock).getScriptType();
             doReturn(addressMock).when(scriptMock).getToAddress(networkMock);
@@ -1438,12 +1508,12 @@ public class TransactionOutputSapientGeneratedJunit4Test {
             scriptPattern.when(() -> ScriptPattern.isP2TR(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2SH(scriptMock)).thenReturn(true);
             byte[] byteArray = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray));
+            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, transactionMock, valueMock, byteArray));
             doReturn(scriptMock).when(target).getScriptPubKey();
             //Act Statement(s)
             String result = target.toString(networkMock);
             //Assert statement(s)
-            assertThat(result, equalTo("TxOut of A to P2SH toString_address1 script:toString_script1"));
+            assertThat(result, equalTo("TxOut of 0.01 BTC to P2SH toString_address1 script:toString_script1"));
             verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             coin.verify(() -> Coin.valueOf(0L), atLeast(1));
@@ -1473,15 +1543,17 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Coin valueMock = mock(Coin.class, "0");
         Script scriptMock = mock(Script.class, "toString_script1");
+        Network networkMock = mock(Network.class, "null");
         try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
              MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<Coin> coin = mockStatic(Coin.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(-1).when(valueMock).signum();
+            doReturn(0).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
-            doReturn("").when(coinMock).toFriendlyString();
+            doReturn("0 BTC").when(coinMock).toFriendlyString();
             scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2TR(scriptMock)).thenReturn(false);
@@ -1489,14 +1561,16 @@ public class TransactionOutputSapientGeneratedJunit4Test {
             scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(true);
             byte[] byteArray = new byte[]{};
             scriptPattern.when(() -> ScriptPattern.extractKeyFromP2PK(scriptMock)).thenReturn(byteArray);
-            byteUtils.when(() -> ByteUtils.formatHex(byteArray)).thenReturn("");
-            byte[] byteArray2 = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray2));
+            byteUtils.when(() -> ByteUtils.formatHex(byteArray)).thenReturn("040c9cbb9ef69a5c6f5e9f9b6d5f5e0b4b9d6d6a7d5c2c3e6e3f525d8d5a4a4c7d7f0f5f9d365d9c6d5f5e0b4b9d6d6a7d5c2c3e6e3f525d8d5a4a4c7d7f0f5f9d365d9c");
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            byte[] byteArray2 = new byte[]{(byte) 65, (byte) 4, (byte) -100, (byte) -69, (byte) -98, (byte) -10, (byte) -102, (byte) 92, (byte) 111, (byte) 94, (byte) -97, (byte) -101, (byte) 109, (byte) 95, (byte) 94, (byte) 11, (byte) 75, (byte) -99, (byte) 109, (byte) 106, (byte) 125, (byte) 92, (byte) 44, (byte) 62, (byte) 110, (byte) 63, (byte) 82, (byte) 93, (byte) -115, (byte) 90, (byte) 74, (byte) 76, (byte) 125, (byte) 127, (byte) 15, (byte) 95, (byte) -99, (byte) 54, (byte) 93, (byte) -100, (byte) 109, (byte) 95, (byte) 94, (byte) 11, (byte) 75, (byte) -99, (byte) 109, (byte) 106, (byte) 125, (byte) 92, (byte) 44, (byte) 62, (byte) 110, (byte) 63, (byte) 82, (byte) 93, (byte) -115, (byte) 90, (byte) 74, (byte) 76, (byte) 125, (byte) 127, (byte) 15, (byte) 95, (byte) -99, (byte) 54, (byte) 93, (byte) -84};
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, valueMock, byteArray2));
             doReturn(scriptMock).when(target).getScriptPubKey();
             //Act Statement(s)
             String result = target.toString(networkMock);
             //Assert statement(s)
-            assertThat(result, equalTo("TxOut of  to pubkey  script:toString_script1"));
+            assertThat(result, equalTo("TxOut of 0 BTC to pubkey 040c9cbb9ef69a5c6f5e9f9b6d5f5e0b4b9d6d6a7d5c2c3e6e3f525d8d5a4a4c7d7f0f5f9d365d9c6d5f5e0b4b9d6d6a7d5c2c3e6e3f525d8d5a4a4c7d7f0f5f9d365d9c script:toString_script1"));
             verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             coin.verify(() -> Coin.valueOf(0L), atLeast(1));
@@ -1529,26 +1603,27 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Script scriptMock = mock(Script.class, "toString_script1");
+        Address addressMock = mock(Address.class, "UNKNOWN");
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<Coin> coin = mockStatic(Coin.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(-1).when(valueMock).signum();
+            doReturn(0).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
-            doReturn("").when(coinMock).toFriendlyString();
+            doReturn("100.00 BTC").when(coinMock).toFriendlyString();
             scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(false);
-            doReturn(ScriptType.P2PK).when(scriptMock).getScriptType();
+            doReturn(ScriptType.P2SH).when(scriptMock).getScriptType();
             doReturn(addressMock).when(scriptMock).getToAddress(networkMock);
             scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2TR(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2SH(scriptMock)).thenReturn(true);
             byte[] byteArray = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray));
+            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, transactionMock, valueMock, byteArray));
             doReturn(scriptMock).when(target).getScriptPubKey();
             //Act Statement(s)
             String result = target.toString(networkMock);
             //Assert statement(s)
-            assertThat(result, equalTo("TxOut of  to P2PK toString_address1 script:toString_script1 [exception: BC]"));
+            assertThat(result, equalTo("TxOut of 100.00 BTC to P2SH  script:toString_script1 [exception: BC]"));
             verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             coin.verify(() -> Coin.valueOf(0L), atLeast(1));
@@ -1579,31 +1654,29 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Script scriptMock = mock(Script.class, "toString_script1");
-        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
-             MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
+        Network networkMock = mock(Network.class, "<value>");
+        try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<Coin> coin = mockStatic(Coin.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(-1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
-            doReturn("").when(coinMock).toFriendlyString();
+            doReturn("<String>").when(coinMock).toFriendlyString();
             scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2TR(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2SH(scriptMock)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(true);
-            byte[] byteArray = new byte[]{};
-            scriptPattern.when(() -> ScriptPattern.extractKeyFromP2PK(scriptMock)).thenReturn(byteArray);
-            byteUtils.when(() -> ByteUtils.formatHex(byteArray)).thenReturn("");
-            byte[] byteArray2 = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray2));
+            scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
+            scriptPattern.when(() -> ScriptPattern.isSentToMultisig(scriptMock)).thenReturn(true);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            Coin coin2 = Coin.valueOf(0L);
+            byte[] byteArray = new byte[]{(byte) 0};
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, coin2, byteArray));
             doReturn(scriptMock).when(target).getScriptPubKey();
             //Act Statement(s)
             String result = target.toString(networkMock);
             //Assert statement(s)
-            assertThat(result, equalTo("TxOut of  to pubkey  script:toString_script1 [exception: ]"));
-            verify(valueMock).signum();
+            assertThat(result, equalTo(""));
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             coin.verify(() -> Coin.valueOf(0L), atLeast(1));
             verify(coinMock).toFriendlyString();
@@ -1612,8 +1685,7 @@ public class TransactionOutputSapientGeneratedJunit4Test {
             scriptPattern.verify(() -> ScriptPattern.isP2TR(scriptMock), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2SH(scriptMock), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.extractKeyFromP2PK(scriptMock), atLeast(1));
-            byteUtils.verify(() -> ByteUtils.formatHex(byteArray), atLeast(1));
+            scriptPattern.verify(() -> ScriptPattern.isSentToMultisig(scriptMock), atLeast(1));
             verify(target).getScriptPubKey();
         }
     }
@@ -1634,27 +1706,31 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Coin valueMock = mock(Coin.class, "1000");
         Script scriptMock = mock(Script.class, "toString_script1");
+        Network networkMock = mock(Network.class, "MAINNET");
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<Coin> coin = mockStatic(Coin.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(-1).when(valueMock).signum();
+            doReturn(1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
-            doReturn("A").when(coinMock).toFriendlyString();
+            doReturn("toFriendlyString").when(coinMock).toFriendlyString();
             scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2TR(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2SH(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isSentToMultisig(scriptMock)).thenReturn(true);
-            byte[] byteArray = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray));
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            byte[] byteArray = new byte[]{(byte) 0};
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, valueMock, byteArray));
             doReturn(scriptMock).when(target).getScriptPubKey();
             //Act Statement(s)
             String result = target.toString(networkMock);
             //Assert statement(s)
-            assertThat(result, equalTo("TxOut of A to multisig script:toString_script1"));
+            assertThat(result, equalTo("TxOut of toFriendlyString to multisig script:toString_script1"));
             verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             coin.verify(() -> Coin.valueOf(0L), atLeast(1));
@@ -1685,37 +1761,35 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Coin valueMock = mock(Coin.class, "100000");
         Script scriptMock = mock(Script.class, "toString_script1");
+        Network networkMock = mock(Network.class, "org.bitcoinj.params.MainNetParams");
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<Coin> coin = mockStatic(Coin.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(-1).when(valueMock).signum();
+            doReturn(1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
-            doReturn("A").when(coinMock).toFriendlyString();
-            scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2TR(scriptMock)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2SH(scriptMock)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isSentToMultisig(scriptMock)).thenReturn(false);
-            byte[] byteArray = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray));
+            doReturn("0.00100000 BTC").when(coinMock).toFriendlyString();
+            scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(true);
+            doReturn(ScriptType.P2PK).when(scriptMock).getScriptType();
+            doReturn(addressMock).when(scriptMock).getToAddress(networkMock);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            byte[] byteArray = new byte[]{(byte) 0};
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, valueMock, byteArray));
             doReturn(scriptMock).when(target).getScriptPubKey();
             //Act Statement(s)
             String result = target.toString(networkMock);
             //Assert statement(s)
-            assertThat(result, equalTo("TxOut of A (unknown type) script:toString_script1"));
+            assertThat(result, equalTo("TxOut of 0.00100000 BTC to P2PK toString_address1 script:toString_script1"));
             verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             coin.verify(() -> Coin.valueOf(0L), atLeast(1));
             verify(coinMock).toFriendlyString();
             scriptPattern.verify(() -> ScriptPattern.isP2PKH(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2TR(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2SH(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isSentToMultisig(scriptMock), atLeast(1));
+            verify(scriptMock).getScriptType();
+            verify(scriptMock).getToAddress(networkMock);
             verify(target).getScriptPubKey();
         }
     }
@@ -1741,10 +1815,10 @@ public class TransactionOutputSapientGeneratedJunit4Test {
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<Coin> coin = mockStatic(Coin.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(-1).when(valueMock).signum();
+            doReturn(1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
-            doReturn("A").when(coinMock).toFriendlyString();
+            doReturn("0.00001").when(coinMock).toFriendlyString();
             scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2TR(scriptMock)).thenReturn(false);
@@ -1752,12 +1826,12 @@ public class TransactionOutputSapientGeneratedJunit4Test {
             scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isSentToMultisig(scriptMock)).thenReturn(true);
             byte[] byteArray = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray));
+            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, transactionMock, valueMock, byteArray));
             doReturn(scriptMock).when(target).getScriptPubKey();
             //Act Statement(s)
             String result = target.toString(networkMock);
             //Assert statement(s)
-            assertThat(result, equalTo("TxOut of A to multisig script:toString_script1 [exception: B]"));
+            assertThat(result, equalTo("TxOut of 0.00001 to multisig script:toString_script1 [exception: B]"));
             verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             coin.verify(() -> Coin.valueOf(0L), atLeast(1));
@@ -1793,10 +1867,10 @@ public class TransactionOutputSapientGeneratedJunit4Test {
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<Coin> coin = mockStatic(Coin.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(-1).when(valueMock).signum();
+            doReturn(1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
-            doReturn("A").when(coinMock).toFriendlyString();
+            doReturn("0.00001 BTC").when(coinMock).toFriendlyString();
             scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2TR(scriptMock)).thenReturn(false);
@@ -1804,12 +1878,12 @@ public class TransactionOutputSapientGeneratedJunit4Test {
             scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isSentToMultisig(scriptMock)).thenReturn(false);
             byte[] byteArray = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray));
+            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, transactionMock, valueMock, byteArray));
             doReturn(scriptMock).when(target).getScriptPubKey();
             //Act Statement(s)
             String result = target.toString(networkMock);
             //Assert statement(s)
-            assertThat(result, equalTo("TxOut of A (unknown type) script:toString_script1 [exception: B]"));
+            assertThat(result, equalTo("TxOut of 0.00001 BTC (unknown type) script:toString_script1 [exception: B]"));
             verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             coin.verify(() -> Coin.valueOf(0L), atLeast(1));
@@ -1836,15 +1910,15 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(-1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Coin coin = Coin.valueOf(0L);
             byte[] byteArray = new byte[]{};
-            TransactionOutput target = new TransactionOutput(networkParametersMock, (Transaction) null, valueMock, byteArray);
+            TransactionOutput target = new TransactionOutput(networkParameters, (Transaction) null, coin, byteArray);
             //Act Statement(s)
             Sha256Hash result = target.getParentTransactionHash();
             //Assert statement(s)
             assertThat(result, is(nullValue()));
-            verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
         }
     }
@@ -1860,19 +1934,22 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Coin valueMock = mock(Coin.class, "1");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(-1).when(valueMock).signum();
+            doReturn(1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{};
-            TransactionOutput target = new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray);
-            doReturn(sha256HashMock).when(parentMock).getTxId();
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+            TransactionOutput target = new TransactionOutput(networkParameters, transaction, valueMock, byteArray);
             //Act Statement(s)
             Sha256Hash result = target.getParentTransactionHash();
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
             //Assert statement(s)
-            assertThat(result, equalTo(sha256HashMock));
+            assertThat(result, equalTo(sha256Hash));
             verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
-            verify(parentMock).getTxId();
         }
     }
 
@@ -1890,18 +1967,18 @@ public class TransactionOutputSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         TransactionConfidence transactionConfidenceMock = mock(TransactionConfidence.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(transactionConfidenceMock).when(parentMock).getConfidence();
+            doReturn(transactionConfidenceMock).when(transactionMock).getConfidence();
             doReturn(TransactionConfidence.ConfidenceType.BUILDING).when(transactionConfidenceMock).getConfidenceType();
             doReturn(0).when(transactionConfidenceMock).getDepthInBlocks();
             doReturn(-1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             byte[] byteArray = new byte[]{};
-            TransactionOutput target = new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray);
+            TransactionOutput target = new TransactionOutput(networkParametersMock, transactionMock, valueMock, byteArray);
             //Act Statement(s)
             int result = target.getParentTransactionDepthInBlocks();
             //Assert statement(s)
             assertThat(result, equalTo(0));
-            verify(parentMock).getConfidence();
+            verify(transactionMock).getConfidence();
             verify(transactionConfidenceMock).getConfidenceType();
             verify(transactionConfidenceMock).getDepthInBlocks();
             verify(valueMock).signum();
@@ -1921,21 +1998,25 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Transaction transactionMock2 = mock(Transaction.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            Coin coin = Coin.valueOf(0L);
+            byte[] byteArray = new byte[]{(byte) 0};
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, coin, byteArray));
+            doReturn(transactionMock, transactionMock2).when(target).getParentTransaction();
             TransactionConfidence transactionConfidence = new TransactionConfidence(sha256HashMock);
             transactionConfidence.setConfidenceType(TransactionConfidence.ConfidenceType.UNKNOWN);
-            doReturn(transactionConfidence).when(parentMock).getConfidence();
-            doReturn(-1).when(valueMock).signum();
-            preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{};
-            TransactionOutput target = new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray);
+            doReturn(transactionConfidence).when(transactionMock2).getConfidence();
             //Act Statement(s)
             int result = target.getParentTransactionDepthInBlocks();
             //Assert statement(s)
             assertThat(result, equalTo(-1));
-            verify(parentMock).getConfidence();
-            verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
+            verify(target, times(2)).getParentTransaction();
+            verify(transactionMock2).getConfidence();
         }
     }
 
@@ -1948,20 +2029,25 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Coin valueMock = mock(Coin.class, "100");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             doReturn(-1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{};
-            TransactionOutput target = spy(new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray));
-            doReturn(0).when(target).getIndex();
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3};
+            TransactionOutput target = spy(new TransactionOutput(networkParameters, transaction, valueMock, byteArray));
+            doReturn(1).when(target).getIndex();
+            doReturn(transactionMock).when(target).getParentTransaction();
             //Act Statement(s)
             TransactionOutPoint result = target.getOutPointFor();
-            TransactionOutPoint transactionOutPoint = new TransactionOutPoint(0L, parentMock);
+            TransactionOutPoint transactionOutPoint = new TransactionOutPoint(1L, transactionMock);
             //Assert statement(s)
             assertThat(result, equalTo(transactionOutPoint));
             verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             verify(target).getIndex();
+            verify(target).getParentTransaction();
         }
     }
 
@@ -1976,17 +2062,20 @@ public class TransactionOutputSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Coin valueMock = mock(Coin.class, "1");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Coin> coin = mockStatic(Coin.class)) {
-            doReturn(-2147483648).when(valueMock).signum();
+            doReturn(0).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
-            doReturn(-1).when(coinMock).signum();
-            byte[] byteArray = new byte[]{};
-            TransactionOutput target = new TransactionOutput(networkParametersMock, parentMock, valueMock, byteArray);
+            doReturn(1).when(coinMock).signum();
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction transaction = new Transaction();
+            byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3};
+            TransactionOutput target = new TransactionOutput(networkParameters, transaction, valueMock, byteArray);
             //Act Statement(s)
             TransactionOutput result = target.duplicateDetached();
-            byte[] byteArray2 = new byte[]{};
+            byte[] byteArray2 = new byte[]{(byte) 1, (byte) 2, (byte) 3};
             TransactionOutput transactionOutput = new TransactionOutput((Transaction) null, coinMock, byteArray2);
             //Assert statement(s)
             assertThat(result, equalTo(transactionOutput));

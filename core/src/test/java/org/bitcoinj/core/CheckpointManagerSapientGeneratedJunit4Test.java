@@ -81,7 +81,7 @@ public class CheckpointManagerSapientGeneratedJunit4Test {
     @Test()
     public void openStreamTest() {
         //Arrange Statement(s)
-        NetworkParameters networkParameters = NetworkParameters.fromID("A");
+        NetworkParameters networkParameters = NetworkParameters.fromID("String");
 
         //Act Statement(s)
         InputStream result = CheckpointManager.openStream(networkParameters);
@@ -105,7 +105,7 @@ public class CheckpointManagerSapientGeneratedJunit4Test {
              MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class);
              MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class);
              MockedStatic<StoredBlock> storedBlock = mockStatic(StoredBlock.class)) {
-            doReturn("F").when(paramsMock).getId();
+            doReturn("A").when(paramsMock).getId();
             StoredBlock storedBlock2 = new StoredBlock(blockMock, new BigInteger("0"), 0);
             storedBlock.when(() -> StoredBlock.deserializeCompact((ByteBuffer) any())).thenReturn(storedBlock2);
             Instant instant = Instant.now();
@@ -149,7 +149,7 @@ public class CheckpointManagerSapientGeneratedJunit4Test {
              MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class);
              MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class);
              MockedStatic<StoredBlock> storedBlock = mockStatic(StoredBlock.class)) {
-            doReturn("F").when(paramsMock).getId();
+            doReturn("A").when(paramsMock).getId();
             StoredBlock storedBlock2 = new StoredBlock(blockMock, new BigInteger("0"), 0);
             storedBlock.when(() -> StoredBlock.deserializeCompact((ByteBuffer) any())).thenReturn(storedBlock2);
             Instant instant = Instant.now();
@@ -199,7 +199,7 @@ public class CheckpointManagerSapientGeneratedJunit4Test {
              MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class);
              MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class);
              MockedStatic<StoredBlock> storedBlock = mockStatic(StoredBlock.class)) {
-            doReturn("F").when(paramsMock).getId();
+            doReturn("A").when(paramsMock).getId();
             StoredBlock storedBlock2 = new StoredBlock(blockMock, new BigInteger("0"), 0);
             storedBlock.when(() -> StoredBlock.deserializeCompact((ByteBuffer) any())).thenReturn(storedBlock2);
             Instant instant = Instant.now();
@@ -245,7 +245,7 @@ public class CheckpointManagerSapientGeneratedJunit4Test {
              MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class);
              MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class);
              MockedStatic<StoredBlock> storedBlock = mockStatic(StoredBlock.class)) {
-            doReturn("F").when(paramsMock).getId();
+            doReturn("A").when(paramsMock).getId();
             StoredBlock storedBlock2 = new StoredBlock(blockMock, new BigInteger("0"), 0);
             storedBlock.when(() -> StoredBlock.deserializeCompact((ByteBuffer) any())).thenReturn(storedBlock2);
             Instant instant = Instant.now();
@@ -299,7 +299,7 @@ public class CheckpointManagerSapientGeneratedJunit4Test {
             timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("return_of_dateTimeFormat1");
             byte[] byteArray = new byte[]{};
             sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256HashMock);
-            NetworkParameters networkParameters = NetworkParameters.fromID("F");
+            NetworkParameters networkParameters = NetworkParameters.fromID("A");
             CheckpointManager target = spy(new CheckpointManager(networkParameters, (InputStream) null));
             doReturn(storedBlockMock).when(target).getCheckpointBefore((Instant) any());
             //Act Statement(s)
@@ -333,7 +333,7 @@ public class CheckpointManagerSapientGeneratedJunit4Test {
             timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("return_of_dateTimeFormat1");
             byte[] byteArray = new byte[]{};
             sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256HashMock);
-            NetworkParameters networkParameters = NetworkParameters.fromID("F");
+            NetworkParameters networkParameters = NetworkParameters.fromID("A");
             CheckpointManager target = new CheckpointManager(networkParameters, (InputStream) null);
             //Act Statement(s)
             int result = target.numCheckpoints();

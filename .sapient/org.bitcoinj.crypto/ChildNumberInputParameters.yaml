@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "8544B16FD4DEC47B41AA09825A23E49B"
+modelFingerprint: "BAFDF346DE6D183BC30121BB63420376"
 methods:
 - method:
     name: "getI"
@@ -12,18 +12,19 @@ methods:
     pathIdForUser: "path1"
     testPathName: "getITest"
     nameDefinedByUser: false
-    constructorSignature: "<init>(int,boolean) : void"
+    constructorSignature: "<init>(int) : void"
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "85D364E5825C05DB5CB6F82D2B732069"
-    problemWasSolvedByProver: false
+    modelFingerprint: "A78642D3565BD207CDB7E6221EE23249"
+    problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
     uuid: "0d2aeb3f-9923-3546-a5df-b3877ca86125"
     deleted: false
     disabled: false
     ignoredBySystem: false
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -37,16 +38,16 @@ methods:
     pathIdForUser: "path1"
     testPathName: "iTest"
     nameDefinedByUser: false
-    constructorSignature: "<init>(int,boolean) : void"
+    constructorSignature: "<init>(int) : void"
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "C871B482A55DE3C44FD99015E843B01C"
+    modelFingerprint: "A78642D3565BD207CDB7E6221EE23249"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "469AD2ECDC7AED7F0D3ACD1AA51FF3C6"
+      modelFingerprint: "52E1C240E7A97A119A48E5A941032B2D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -56,58 +57,28 @@ methods:
         content: !<new>
           target: "org.bitcoinj.crypto.ChildNumber"
           parameters:
-          - name: "childNumber"
+          - name: "i"
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
                 value: 0
               valueType: "int"
               uuid: "<init>_int21"
               fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "isHardened"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
-              valueType: "boolean"
-              uuid: "<init>_boolean1"
-              fixed: false
-              equalsMethodPresent: false
+              equalsMethodPresent: true
               explicitCastNeeded: false
           privateConstructor: false
           createdByTargetCode: false
         suggestedContent: !<new>
           target: "org.bitcoinj.crypto.ChildNumber"
           parameters:
-          - name: "childNumber"
+          - name: "i"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "int"
               uuid: "<init>_int21"
               fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "isHardened"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
-              valueType: "boolean"
-              uuid: "<init>_boolean1"
-              fixed: false
-              equalsMethodPresent: false
+              equalsMethodPresent: true
               explicitCastNeeded: false
           privateConstructor: false
           createdByTargetCode: false
@@ -120,7 +91,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "1C064C628DF828E22B7E13C2A78A9A43"
+      modelFingerprint: "ACBCF6744C1A4F89BFBA83521C7CE3BD"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -128,10 +99,10 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: -2147483648
+          value: 0
         valueType: "int"
-        uuid: "<init>_int23"
-        fixed: true
+        uuid: "<init>_int21"
+        fixed: false
         equalsMethodPresent: true
         explicitCastNeeded: false
       staticReadMethodForField: false
@@ -154,16 +125,16 @@ methods:
     pathIdForUser: "path1"
     testPathName: "isHardenedWhenAAndHARDENED_BITNotEquals0"
     nameDefinedByUser: false
-    constructorSignature: "<init>(int,boolean) : void"
+    constructorSignature: "<init>(int) : void"
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "9E023D915ED22D33F43D3A5ECEE642C2"
+    modelFingerprint: "BF81C8492DC05F0906CBB5BBBE0D6B69"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "469AD2ECDC7AED7F0D3ACD1AA51FF3C6"
+      modelFingerprint: "49536DA99536FAF858A5FB91259F435D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -173,7 +144,7 @@ methods:
         content: !<new>
           target: "org.bitcoinj.crypto.ChildNumber"
           parameters:
-          - name: "childNumber"
+          - name: "i"
             value:
               sapientType: "BASIC"
               content: !<regular>
@@ -182,18 +153,6 @@ methods:
                 value: 0
               valueType: "int"
               uuid: "<init>_int21"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "isHardened"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
-              valueType: "boolean"
-              uuid: "<init>_boolean1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -202,7 +161,7 @@ methods:
         suggestedContent: !<new>
           target: "org.bitcoinj.crypto.ChildNumber"
           parameters:
-          - name: "childNumber"
+          - name: "i"
             value:
               sapientType: "BASIC"
               content: !<regular>
@@ -211,18 +170,6 @@ methods:
                 value: 0
               valueType: "int"
               uuid: "<init>_int21"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "isHardened"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
-              valueType: "boolean"
-              uuid: "<init>_boolean1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -237,7 +184,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
+      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -245,7 +192,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: true
+          value: false
         valueType: "boolean"
         fixed: true
         equalsMethodPresent: true
@@ -263,16 +210,16 @@ methods:
     pathIdForUser: "path2"
     testPathName: "isHardenedWhenAAndHARDENED_BITEquals0"
     nameDefinedByUser: false
-    constructorSignature: "<init>(int,boolean) : void"
+    constructorSignature: "<init>(int) : void"
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "9E023D915ED22D33F43D3A5ECEE642C2"
+    modelFingerprint: "BF81C8492DC05F0906CBB5BBBE0D6B69"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "469AD2ECDC7AED7F0D3ACD1AA51FF3C6"
+      modelFingerprint: "49536DA99536FAF858A5FB91259F435D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -282,7 +229,7 @@ methods:
         content: !<new>
           target: "org.bitcoinj.crypto.ChildNumber"
           parameters:
-          - name: "childNumber"
+          - name: "i"
             value:
               sapientType: "BASIC"
               content: !<regular>
@@ -291,18 +238,6 @@ methods:
                 value: 0
               valueType: "int"
               uuid: "<init>_int21"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "isHardened"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
-              valueType: "boolean"
-              uuid: "<init>_boolean1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -311,7 +246,7 @@ methods:
         suggestedContent: !<new>
           target: "org.bitcoinj.crypto.ChildNumber"
           parameters:
-          - name: "childNumber"
+          - name: "i"
             value:
               sapientType: "BASIC"
               content: !<regular>
@@ -320,18 +255,6 @@ methods:
                 value: 0
               valueType: "int"
               uuid: "<init>_int21"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "isHardened"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
-              valueType: "boolean"
-              uuid: "<init>_boolean1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -346,7 +269,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
+      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -354,7 +277,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: true
+          value: false
         valueType: "boolean"
         fixed: true
         equalsMethodPresent: true
@@ -379,16 +302,16 @@ methods:
     pathIdForUser: "path1"
     testPathName: "numTest"
     nameDefinedByUser: false
-    constructorSignature: "<init>(int,boolean) : void"
+    constructorSignature: "<init>(int) : void"
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "4250B44055AD96009AEEF0F4C85CE8F5"
+    modelFingerprint: "5820B8F6634216034AF3420E559AC266"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "469AD2ECDC7AED7F0D3ACD1AA51FF3C6"
+      modelFingerprint: "49536DA99536FAF858A5FB91259F435D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -398,7 +321,7 @@ methods:
         content: !<new>
           target: "org.bitcoinj.crypto.ChildNumber"
           parameters:
-          - name: "childNumber"
+          - name: "i"
             value:
               sapientType: "BASIC"
               content: !<regular>
@@ -407,18 +330,6 @@ methods:
                 value: 0
               valueType: "int"
               uuid: "<init>_int21"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "isHardened"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
-              valueType: "boolean"
-              uuid: "<init>_boolean1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -427,7 +338,7 @@ methods:
         suggestedContent: !<new>
           target: "org.bitcoinj.crypto.ChildNumber"
           parameters:
-          - name: "childNumber"
+          - name: "i"
             value:
               sapientType: "BASIC"
               content: !<regular>
@@ -436,18 +347,6 @@ methods:
                 value: 0
               valueType: "int"
               uuid: "<init>_int21"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "isHardened"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
-              valueType: "boolean"
-              uuid: "<init>_boolean1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -495,16 +394,16 @@ methods:
     pathIdForUser: "path1"
     testPathName: "toStringWhenIsHardened"
     nameDefinedByUser: false
-    constructorSignature: "<init>(int,boolean) : void"
+    constructorSignature: "<init>(int) : void"
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "B9DEBB7B7FDFA07AA6A148925ED53B9C"
+    modelFingerprint: "8CD3053D1203A0E6A2B35A22D4E733FA"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "469AD2ECDC7AED7F0D3ACD1AA51FF3C6"
+      modelFingerprint: "49536DA99536FAF858A5FB91259F435D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -514,7 +413,7 @@ methods:
         content: !<new>
           target: "org.bitcoinj.crypto.ChildNumber"
           parameters:
-          - name: "childNumber"
+          - name: "i"
             value:
               sapientType: "BASIC"
               content: !<regular>
@@ -523,18 +422,6 @@ methods:
                 value: 0
               valueType: "int"
               uuid: "<init>_int21"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "isHardened"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
-              valueType: "boolean"
-              uuid: "<init>_boolean1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -543,7 +430,7 @@ methods:
         suggestedContent: !<new>
           target: "org.bitcoinj.crypto.ChildNumber"
           parameters:
-          - name: "childNumber"
+          - name: "i"
             value:
               sapientType: "BASIC"
               content: !<regular>
@@ -552,18 +439,6 @@ methods:
                 value: 0
               valueType: "int"
               uuid: "<init>_int21"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "isHardened"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
-              valueType: "boolean"
-              uuid: "<init>_boolean1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -631,16 +506,16 @@ methods:
     pathIdForUser: "path2"
     testPathName: "toStringWhenIsHardenedNot"
     nameDefinedByUser: false
-    constructorSignature: "<init>(int,boolean) : void"
+    constructorSignature: "<init>(int) : void"
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "9A93AF9D371F48BC8BB1B432E970EE36"
+    modelFingerprint: "027FFD36A10284F593B85738360914A8"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "469AD2ECDC7AED7F0D3ACD1AA51FF3C6"
+      modelFingerprint: "49536DA99536FAF858A5FB91259F435D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -650,7 +525,7 @@ methods:
         content: !<new>
           target: "org.bitcoinj.crypto.ChildNumber"
           parameters:
-          - name: "childNumber"
+          - name: "i"
             value:
               sapientType: "BASIC"
               content: !<regular>
@@ -659,18 +534,6 @@ methods:
                 value: 0
               valueType: "int"
               uuid: "<init>_int21"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "isHardened"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
-              valueType: "boolean"
-              uuid: "<init>_boolean1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -679,7 +542,7 @@ methods:
         suggestedContent: !<new>
           target: "org.bitcoinj.crypto.ChildNumber"
           parameters:
-          - name: "childNumber"
+          - name: "i"
             value:
               sapientType: "BASIC"
               content: !<regular>
@@ -688,18 +551,6 @@ methods:
                 value: 0
               valueType: "int"
               uuid: "<init>_int21"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "isHardened"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
-              valueType: "boolean"
-              uuid: "<init>_boolean1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -775,90 +626,95 @@ methods:
     pathIdForUser: "path1"
     testPathName: "equalsWhenThisEqualsO"
     nameDefinedByUser: false
-    constructorSignature: "<init>(int,boolean) : void"
+    constructorSignature: "<init>(int) : void"
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "FB6A9B7FA05159A2A5A3D2C694109A86"
-    problemWasSolvedByProver: false
+    modelFingerprint: "E25CFF66BAAAD2AF49E028F28B88D4FD"
+    problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
     uuid: "5b7cf5ba-f3cc-35d0-9b4a-3392d3a68eed"
     deleted: false
     disabled: false
     ignoredBySystem: false
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path5"
     pathIdForUser: "path2"
     testPathName: "equalsWhenOIsNull"
     nameDefinedByUser: false
-    constructorSignature: "<init>(int,boolean) : void"
+    constructorSignature: "<init>(int) : void"
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "AE0C76C0C8F911D83C12FD600D872085"
-    problemWasSolvedByProver: false
+    modelFingerprint: "5CB153DD9B73A903CCFC834D88446503"
+    problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
     uuid: "a2108c4d-bcbc-39b5-8254-0588b654f131"
     deleted: true
     disabled: false
     ignoredBySystem: true
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path3"
     testPathName: "equalsWhenGetClassNotEqualsOGetClass"
     nameDefinedByUser: false
-    constructorSignature: "<init>(int,boolean) : void"
+    constructorSignature: "<init>(int) : void"
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "7B5B3D388281178E0236F90DDB1347D6"
-    problemWasSolvedByProver: false
+    modelFingerprint: "291CB2D877A028EE8A14FD4F73660389"
+    problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
     uuid: "6e6a0f87-c9aa-3e31-af0a-46c9467f5ce0"
     deleted: false
     disabled: false
     ignoredBySystem: false
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path4"
     testPathName: "equalsWhenIEqualsOI"
     nameDefinedByUser: false
-    constructorSignature: "<init>(int,boolean) : void"
+    constructorSignature: "<init>(int) : void"
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "4A3A9B8B821E660D6F6FD95AA31D3D1A"
-    problemWasSolvedByProver: false
+    modelFingerprint: "12DFB36136F607AFA47A0CD6437B78B3"
+    problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
     uuid: "f85a4bfd-7246-360e-8a6d-97b9196d9e04"
     deleted: false
     disabled: false
     ignoredBySystem: false
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path4"
     pathIdForUser: "path5"
     testPathName: "equalsWhenINotEqualsOI"
     nameDefinedByUser: false
-    constructorSignature: "<init>(int,boolean) : void"
+    constructorSignature: "<init>(int) : void"
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "C3720A67647A36B4EFA25D7BDEF1A8D4"
-    problemWasSolvedByProver: false
+    modelFingerprint: "7A8A1C6ECCE488C2EBF913C77EBFD0F4"
+    problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
     uuid: "871a7b37-33cb-3014-a1f3-dea44c38b8c7"
     deleted: false
     disabled: false
     ignoredBySystem: false
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -873,16 +729,16 @@ methods:
     pathIdForUser: "path1"
     testPathName: "compareToTest"
     nameDefinedByUser: false
-    constructorSignature: "<init>(int,boolean) : void"
+    constructorSignature: "<init>(int) : void"
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "A27E8517526F154ECFFDBD87F6B86FA6"
+    modelFingerprint: "B357D19742CDF3A403B36160F82496E1"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "469AD2ECDC7AED7F0D3ACD1AA51FF3C6"
+      modelFingerprint: "49536DA99536FAF858A5FB91259F435D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -892,7 +748,7 @@ methods:
         content: !<new>
           target: "org.bitcoinj.crypto.ChildNumber"
           parameters:
-          - name: "childNumber"
+          - name: "i"
             value:
               sapientType: "BASIC"
               content: !<regular>
@@ -901,18 +757,6 @@ methods:
                 value: 0
               valueType: "int"
               uuid: "<init>_int21"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "isHardened"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
-              valueType: "boolean"
-              uuid: "<init>_boolean1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -921,7 +765,7 @@ methods:
         suggestedContent: !<new>
           target: "org.bitcoinj.crypto.ChildNumber"
           parameters:
-          - name: "childNumber"
+          - name: "i"
             value:
               sapientType: "BASIC"
               content: !<regular>
@@ -930,18 +774,6 @@ methods:
                 value: 0
               valueType: "int"
               uuid: "<init>_int21"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "isHardened"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
-              valueType: "boolean"
-              uuid: "<init>_boolean1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false

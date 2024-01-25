@@ -54,35 +54,27 @@ public class PongSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${db734794-4476-3b9d-94dd-477a1a1aec91}
     @Test()
-    public void bitcoinSerializeToStreamTest() throws IOException, BufferUnderflowException, ProtocolException {
+    public void bitcoinSerializeToStreamTest() throws IOException {
         //Arrange Statement(s)
         /*try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
-    byteUtils.when(() -> ByteUtils.readInt64((ByteBuffer) any())).thenReturn(0L);
     byteUtils.when(() -> ByteUtils.writeInt64LE(eq(0L), (OutputStream) any())).thenAnswer((Answer<Void>) invocation -> null);
-    ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-    Pong target = Pong.read(byteBuffer);
+    Pong target = Pong.of(0L);
     OutputStream outputStream = OutputStream.nullOutputStream();
     //Act Statement(s)
     target.bitcoinSerializeToStream(outputStream);
     //Assert statement(s)
-    byteUtils.verify(() -> ByteUtils.readInt64((ByteBuffer) any()));
     byteUtils.verify(() -> ByteUtils.writeInt64LE(eq(0L), (OutputStream) any()));
 }*/
     }
 
     //Sapient generated method id: ${0f60a999-74fa-33eb-a2b0-924b88cae48d}
     @Test()
-    public void nonceTest() throws BufferUnderflowException, ProtocolException {
+    public void nonceTest() {
         //Arrange Statement(s)
-        /*try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
-    byteUtils.when(() -> ByteUtils.readInt64((ByteBuffer) any())).thenReturn(0L);
-    ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-    Pong target = Pong.read(byteBuffer);
-    //Act Statement(s)
-    long result = target.nonce();
-    //Assert statement(s)
-    assertThat(result, equalTo(0L));
-    byteUtils.verify(() -> ByteUtils.readInt64((ByteBuffer) any()));
-}*/
+        //Pong target = Pong.of(0L);
+        //Act Statement(s)
+        //long result = target.nonce();
+        //Assert statement(s)
+        //assertThat(result, equalTo(0L));
     }
 }

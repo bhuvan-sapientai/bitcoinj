@@ -178,7 +178,7 @@ public class ServicesSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Services target = Services.of(0L);
+        Services target = Services.of(123456789L);
         ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
 
         //Act Statement(s)

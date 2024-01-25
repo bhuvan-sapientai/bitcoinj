@@ -19,12 +19,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "B1885A7C9EC8F4434C162D918478A97D"
+    modelFingerprint: "D4CC013EC8ED4C49D67D218347736E51"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "CA4095EFA220D567B857F9582CD63D08"
+      modelFingerprint: "6ED60ABA13DBBC1D1FB8FD6FB65E375D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -84,9 +84,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 1
+                value: 8
               suggestedContent: !<regular>
-                value: 1
+                value: 8
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -99,7 +99,22 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.util.Locale"
+                parameters:
+                - name: "language"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "language1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_locale1-language"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -129,8 +144,10 @@ methods:
           - name: "fractionPlaces"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 8
               suggestedContent: !<regular>
-                value: 1
+                value: 8
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -147,7 +164,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "satoshis"
-      modelFingerprint: "699A41330AF0B963D9E309E2B61E202B"
+      modelFingerprint: "EE669D1017CC99DECEA38CAE9DC2820F"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -155,7 +172,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
+          value: 100000000000000
+        suggestedContent: !<regular>
+          value: 100000000000000
         valueType: "java.math.BigInteger"
         uuid: "scale_bigInteger1"
         fixed: false
@@ -165,7 +184,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "fractionPlaces"
-      modelFingerprint: "D161200CDAA41AB99931C02915D71803"
+      modelFingerprint: "DC4AE32C0AA7C937B382CF8DC56DC810"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -173,9 +192,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 1
+          value: 8
         suggestedContent: !<regular>
-          value: 1
+          value: 8
         valueType: "int"
         uuid: "scale_int1"
         fixed: false
@@ -231,7 +250,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "B9A534114EB42AB39C9D204CE242341B"
+      modelFingerprint: "8E65D47E3C0602D60B2F22B827CB011E"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -252,8 +271,6 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: false
-            suggestedContent: !<regular>
-              value: false
             valueType: "boolean"
             uuid: "setSymbolAndCode_boolean1"
             fixed: false
@@ -261,9 +278,18 @@ methods:
             explicitCastNeeded: false
         signature: "checkState(boolean): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "setSymbolAndCode_void1"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalStateException"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -272,7 +298,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "BtcFormat"
-      modelFingerprint: "2B3BCD58461E19F8AEA081376093934D"
+      modelFingerprint: "C6581C44616BD685D1236333E5EE5413"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -291,16 +317,84 @@ methods:
         - name: "numberFormat"
           value:
             sapientType: "OBJECT"
-            content: !<new>
-              target: "java.text.DecimalFormat"
-              parameters: []
-              privateConstructor: false
-              createdByTargetCode: false
-            suggestedContent: !<new>
-              target: "java.text.DecimalFormat"
-              parameters: []
-              privateConstructor: false
-              createdByTargetCode: false
+            content: !<static_method_return>
+              target: "java.text.NumberFormat"
+              method: "getCurrencyInstance"
+              methodParameters:
+              - value:
+                  sapientType: "OBJECT"
+                  content: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "language1"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "java.util.Locale"
+                  uuid: "<init>_locale1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<static_method_return>
+              target: "java.text.NumberFormat"
+              method: "getCurrencyInstance"
+              methodParameters:
+              - value:
+                  sapientType: "OBJECT"
+                  content: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "language1"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "java.util.Locale"
+                  uuid: "<init>_locale1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "java.text.DecimalFormat"
             uuid: "<init>_numberFormat1"
             fixed: false
@@ -349,6 +443,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -361,12 +456,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "AFEBAC9C3CB533AFE5BF6F0ACE250847"
+    modelFingerprint: "57F737848463F6096643CBE4CC3BF038"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "CA4095EFA220D567B857F9582CD63D08"
+      modelFingerprint: "743B8F22D4CB8E9D00256C99C552B0D0"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -417,6 +512,8 @@ methods:
               sapientType: "ENUM"
               content: !<regular>
                 value: "CODE"
+              suggestedContent: !<regular>
+                value: "CODE"
               valueType: "org.bitcoinj.utils.BtcAutoFormat$Style"
               uuid: "<init>_btcAutoFormat.Style1"
               fixed: false
@@ -426,9 +523,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 1
+                value: 8
               suggestedContent: !<regular>
-                value: 1
+                value: 8
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -441,7 +538,22 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.util.Locale"
+                parameters:
+                - name: "language"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "language1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_locale1-language"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -463,6 +575,10 @@ methods:
           - name: "style"
             value:
               sapientType: "ENUM"
+              content: !<regular>
+                value: "CODE"
+              suggestedContent: !<regular>
+                value: "CODE"
               valueType: "org.bitcoinj.utils.BtcAutoFormat$Style"
               uuid: "<init>_btcAutoFormat.Style1"
               fixed: false
@@ -471,8 +587,10 @@ methods:
           - name: "fractionPlaces"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 8
               suggestedContent: !<regular>
-                value: 1
+                value: 8
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -489,7 +607,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "satoshis"
-      modelFingerprint: "699A41330AF0B963D9E309E2B61E202B"
+      modelFingerprint: "403D888FF890AF44110387096CA1B6BF"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -497,7 +615,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
+          value: 1000000000000000000
+        suggestedContent: !<regular>
+          value: 1000000000000000000
         valueType: "java.math.BigInteger"
         uuid: "scale_bigInteger1"
         fixed: false
@@ -507,7 +627,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "fractionPlaces"
-      modelFingerprint: "D161200CDAA41AB99931C02915D71803"
+      modelFingerprint: "DC4AE32C0AA7C937B382CF8DC56DC810"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -515,9 +635,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 1
+          value: 8
         suggestedContent: !<regular>
-          value: 1
+          value: 8
         valueType: "int"
         uuid: "scale_int1"
         fixed: false
@@ -573,7 +693,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "B9A534114EB42AB39C9D204CE242341B"
+      modelFingerprint: "8E65D47E3C0602D60B2F22B827CB011E"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -594,8 +714,6 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: false
-            suggestedContent: !<regular>
-              value: false
             valueType: "boolean"
             uuid: "setSymbolAndCode_boolean1"
             fixed: false
@@ -603,9 +721,18 @@ methods:
             explicitCastNeeded: false
         signature: "checkState(boolean): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "setSymbolAndCode_void1"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalStateException"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -614,7 +741,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "BtcFormat"
-      modelFingerprint: "1082E3EDD9D260B72F80DD094001D1EC"
+      modelFingerprint: "C6581C44616BD685D1236333E5EE5413"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -633,16 +760,84 @@ methods:
         - name: "numberFormat"
           value:
             sapientType: "OBJECT"
-            content: !<new>
-              target: "java.text.DecimalFormat"
-              parameters: []
-              privateConstructor: false
-              createdByTargetCode: false
-            suggestedContent: !<new>
-              target: "java.text.DecimalFormat"
-              parameters: []
-              privateConstructor: false
-              createdByTargetCode: false
+            content: !<static_method_return>
+              target: "java.text.NumberFormat"
+              method: "getCurrencyInstance"
+              methodParameters:
+              - value:
+                  sapientType: "OBJECT"
+                  content: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "language1"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "java.util.Locale"
+                  uuid: "<init>_locale1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<static_method_return>
+              target: "java.text.NumberFormat"
+              method: "getCurrencyInstance"
+              methodParameters:
+              - value:
+                  sapientType: "OBJECT"
+                  content: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "language1"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "java.util.Locale"
+                  uuid: "<init>_locale1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "java.text.DecimalFormat"
             uuid: "<init>_numberFormat1"
             fixed: false
@@ -652,9 +847,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 3
+              value: 0
             valueType: "int"
-            uuid: "scale_int6"
+            uuid: "scale_int5"
             fixed: true
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -671,7 +866,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "A63F3639F5A2B1612E7117041003BDC4"
+      modelFingerprint: "158A76FAE4C1E5741587C22A6148B6F0"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -679,9 +874,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 3
+          value: 0
         valueType: "int"
-        uuid: "scale_int6"
+        uuid: "scale_int5"
         fixed: true
         equalsMethodPresent: true
         explicitCastNeeded: false
@@ -691,6 +886,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -703,12 +899,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "3FE000C7C3B86F8CD15CCB798C42A27D"
+    modelFingerprint: "B2A1212A991645C59651F3C618B9EC87"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "CA4095EFA220D567B857F9582CD63D08"
+      modelFingerprint: "6ED60ABA13DBBC1D1FB8FD6FB65E375D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -768,9 +964,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 1
+                value: 8
               suggestedContent: !<regular>
-                value: 1
+                value: 8
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -783,7 +979,22 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.util.Locale"
+                parameters:
+                - name: "language"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "language1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_locale1-language"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -813,8 +1024,10 @@ methods:
           - name: "fractionPlaces"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 8
               suggestedContent: !<regular>
-                value: 1
+                value: 8
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -831,7 +1044,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "satoshis"
-      modelFingerprint: "699A41330AF0B963D9E309E2B61E202B"
+      modelFingerprint: "ECA901BE3B0360008318395375D1A251"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -839,7 +1052,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
+          value: 123456789012345678900000000000
+        suggestedContent: !<regular>
+          value: 123456789012345678900000000000
         valueType: "java.math.BigInteger"
         uuid: "scale_bigInteger1"
         fixed: false
@@ -849,7 +1064,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "fractionPlaces"
-      modelFingerprint: "D161200CDAA41AB99931C02915D71803"
+      modelFingerprint: "DC4AE32C0AA7C937B382CF8DC56DC810"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -857,9 +1072,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 1
+          value: 8
         suggestedContent: !<regular>
-          value: 1
+          value: 8
         valueType: "int"
         uuid: "scale_int1"
         fixed: false
@@ -915,7 +1130,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "B9A534114EB42AB39C9D204CE242341B"
+      modelFingerprint: "8E65D47E3C0602D60B2F22B827CB011E"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -936,8 +1151,6 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: false
-            suggestedContent: !<regular>
-              value: false
             valueType: "boolean"
             uuid: "setSymbolAndCode_boolean1"
             fixed: false
@@ -945,9 +1158,18 @@ methods:
             explicitCastNeeded: false
         signature: "checkState(boolean): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "setSymbolAndCode_void1"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalStateException"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -956,7 +1178,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "BtcFormat"
-      modelFingerprint: "7B68DAB4E5ECC03800E7621DA4D2A797"
+      modelFingerprint: "C6581C44616BD685D1236333E5EE5413"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -975,16 +1197,84 @@ methods:
         - name: "numberFormat"
           value:
             sapientType: "OBJECT"
-            content: !<new>
-              target: "java.text.DecimalFormat"
-              parameters: []
-              privateConstructor: false
-              createdByTargetCode: false
-            suggestedContent: !<new>
-              target: "java.text.DecimalFormat"
-              parameters: []
-              privateConstructor: false
-              createdByTargetCode: false
+            content: !<static_method_return>
+              target: "java.text.NumberFormat"
+              method: "getCurrencyInstance"
+              methodParameters:
+              - value:
+                  sapientType: "OBJECT"
+                  content: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "language1"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "java.util.Locale"
+                  uuid: "<init>_locale1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<static_method_return>
+              target: "java.text.NumberFormat"
+              method: "getCurrencyInstance"
+              methodParameters:
+              - value:
+                  sapientType: "OBJECT"
+                  content: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "language1"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "java.util.Locale"
+                  uuid: "<init>_locale1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "java.text.DecimalFormat"
             uuid: "<init>_numberFormat1"
             fixed: false
@@ -994,9 +1284,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 6
+              value: 0
             valueType: "int"
-            uuid: "scale_int7"
+            uuid: "scale_int5"
             fixed: true
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -1013,7 +1303,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "3BEC7363D1A0F52E302E0F33EF49D5D4"
+      modelFingerprint: "158A76FAE4C1E5741587C22A6148B6F0"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -1021,9 +1311,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 6
+          value: 0
         valueType: "int"
-        uuid: "scale_int7"
+        uuid: "scale_int5"
         fixed: true
         equalsMethodPresent: true
         explicitCastNeeded: false
@@ -1033,6 +1323,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -1045,12 +1336,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "5ED178879ED55D5638278EAE59957AB3"
+    modelFingerprint: "717D99412C762B880C4A4F2FC634EB02"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "61FDEDB90D2CBEDE6656F224EDFDFDC7"
+      modelFingerprint: "EC69633BF85656D5E9D7BA635666F71B"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1111,8 +1402,6 @@ methods:
               sapientType: "BASIC"
               content: !<regular>
                 value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -1125,7 +1414,22 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.util.Locale"
+                parameters:
+                - name: "language"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "language1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_locale1-language"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -1155,8 +1459,6 @@ methods:
           - name: "fractionPlaces"
             value:
               sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -1173,7 +1475,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "satoshis"
-      modelFingerprint: "699A41330AF0B963D9E309E2B61E202B"
+      modelFingerprint: "EFA8EAF1A5097DA5CA522DE9D134F552"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1181,7 +1483,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
+          value: 123456789
+        suggestedContent: !<regular>
+          value: 123456789
         valueType: "java.math.BigInteger"
         uuid: "scale_bigInteger1"
         fixed: false
@@ -1191,7 +1495,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "fractionPlaces"
-      modelFingerprint: "83BE06097D250D515C7DC1FC9DC73BC0"
+      modelFingerprint: "7AD13ABA9D1C7E075FDE4CC43AF875CC"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1199,9 +1503,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 9
-        suggestedContent: !<regular>
-          value: 9
+          value: 0
         valueType: "int"
         uuid: "scale_int1"
         fixed: false
@@ -1257,7 +1559,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "B9A534114EB42AB39C9D204CE242341B"
+      modelFingerprint: "C0FF1F0AD0F6373CDC30F794AE131EFB"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -1278,8 +1580,6 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: false
-            suggestedContent: !<regular>
-              value: false
             valueType: "boolean"
             uuid: "setSymbolAndCode_boolean1"
             fixed: false
@@ -1298,7 +1598,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "BtcFormat"
-      modelFingerprint: "2B3BCD58461E19F8AEA081376093934D"
+      modelFingerprint: "C6581C44616BD685D1236333E5EE5413"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -1317,16 +1617,84 @@ methods:
         - name: "numberFormat"
           value:
             sapientType: "OBJECT"
-            content: !<new>
-              target: "java.text.DecimalFormat"
-              parameters: []
-              privateConstructor: false
-              createdByTargetCode: false
-            suggestedContent: !<new>
-              target: "java.text.DecimalFormat"
-              parameters: []
-              privateConstructor: false
-              createdByTargetCode: false
+            content: !<static_method_return>
+              target: "java.text.NumberFormat"
+              method: "getCurrencyInstance"
+              methodParameters:
+              - value:
+                  sapientType: "OBJECT"
+                  content: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "language1"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "java.util.Locale"
+                  uuid: "<init>_locale1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<static_method_return>
+              target: "java.text.NumberFormat"
+              method: "getCurrencyInstance"
+              methodParameters:
+              - value:
+                  sapientType: "OBJECT"
+                  content: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "language1"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "java.util.Locale"
+                  uuid: "<init>_locale1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "java.text.DecimalFormat"
             uuid: "<init>_numberFormat1"
             fixed: false
@@ -1375,6 +1743,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -1387,12 +1756,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "4122FD601817B1906D0AF7481662F5A4"
+    modelFingerprint: "6C1DCA2156962E0DB358BCD890F2B1B6"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "61FDEDB90D2CBEDE6656F224EDFDFDC7"
+      modelFingerprint: "6ED60ABA13DBBC1D1FB8FD6FB65E375D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1452,9 +1821,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 8
               suggestedContent: !<regular>
-                value: 0
+                value: 8
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -1467,7 +1836,22 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.util.Locale"
+                parameters:
+                - name: "language"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "language1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_locale1-language"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -1497,8 +1881,10 @@ methods:
           - name: "fractionPlaces"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 8
               suggestedContent: !<regular>
-                value: 0
+                value: 8
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -1515,7 +1901,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "satoshis"
-      modelFingerprint: "699A41330AF0B963D9E309E2B61E202B"
+      modelFingerprint: "5EF2C54C736B978962599CE72E448E0A"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1523,7 +1909,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
+          value: 1000000000000
+        suggestedContent: !<regular>
+          value: 1000000000000
         valueType: "java.math.BigInteger"
         uuid: "scale_bigInteger1"
         fixed: false
@@ -1533,7 +1921,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "fractionPlaces"
-      modelFingerprint: "83BE06097D250D515C7DC1FC9DC73BC0"
+      modelFingerprint: "DC4AE32C0AA7C937B382CF8DC56DC810"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1541,9 +1929,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 9
+          value: 8
         suggestedContent: !<regular>
-          value: 9
+          value: 8
         valueType: "int"
         uuid: "scale_int1"
         fixed: false
@@ -1599,7 +1987,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "B9A534114EB42AB39C9D204CE242341B"
+      modelFingerprint: "8E65D47E3C0602D60B2F22B827CB011E"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -1620,8 +2008,6 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: false
-            suggestedContent: !<regular>
-              value: false
             valueType: "boolean"
             uuid: "setSymbolAndCode_boolean1"
             fixed: false
@@ -1629,9 +2015,18 @@ methods:
             explicitCastNeeded: false
         signature: "checkState(boolean): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "setSymbolAndCode_void1"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalStateException"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -1640,7 +2035,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "BtcFormat"
-      modelFingerprint: "7B68DAB4E5ECC03800E7621DA4D2A797"
+      modelFingerprint: "C6581C44616BD685D1236333E5EE5413"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -1659,16 +2054,84 @@ methods:
         - name: "numberFormat"
           value:
             sapientType: "OBJECT"
-            content: !<new>
-              target: "java.text.DecimalFormat"
-              parameters: []
-              privateConstructor: false
-              createdByTargetCode: false
-            suggestedContent: !<new>
-              target: "java.text.DecimalFormat"
-              parameters: []
-              privateConstructor: false
-              createdByTargetCode: false
+            content: !<static_method_return>
+              target: "java.text.NumberFormat"
+              method: "getCurrencyInstance"
+              methodParameters:
+              - value:
+                  sapientType: "OBJECT"
+                  content: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "language1"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "java.util.Locale"
+                  uuid: "<init>_locale1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<static_method_return>
+              target: "java.text.NumberFormat"
+              method: "getCurrencyInstance"
+              methodParameters:
+              - value:
+                  sapientType: "OBJECT"
+                  content: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "language1"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "java.util.Locale"
+                  uuid: "<init>_locale1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "java.text.DecimalFormat"
             uuid: "<init>_numberFormat1"
             fixed: false
@@ -1678,9 +2141,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 6
+              value: 0
             valueType: "int"
-            uuid: "scale_int11"
+            uuid: "scale_int5"
             fixed: true
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -1697,7 +2160,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "3BEC7363D1A0F52E302E0F33EF49D5D4"
+      modelFingerprint: "158A76FAE4C1E5741587C22A6148B6F0"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -1705,9 +2168,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 6
+          value: 0
         valueType: "int"
-        uuid: "scale_int11"
+        uuid: "scale_int5"
         fixed: true
         equalsMethodPresent: true
         explicitCastNeeded: false
@@ -1717,6 +2180,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -1729,12 +2193,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "8B256036450E3AEA92208838D897F1D3"
+    modelFingerprint: "86AD60ABD6EC84DE2C150C0EAEEC2F13"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "61FDEDB90D2CBEDE6656F224EDFDFDC7"
+      modelFingerprint: "6ED60ABA13DBBC1D1FB8FD6FB65E375D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1794,9 +2258,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 8
               suggestedContent: !<regular>
-                value: 0
+                value: 8
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -1809,7 +2273,22 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.util.Locale"
+                parameters:
+                - name: "language"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "language1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_locale1-language"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -1839,8 +2318,10 @@ methods:
           - name: "fractionPlaces"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 8
               suggestedContent: !<regular>
-                value: 0
+                value: 8
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -1857,7 +2338,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "satoshis"
-      modelFingerprint: "699A41330AF0B963D9E309E2B61E202B"
+      modelFingerprint: "EFA8EAF1A5097DA5CA522DE9D134F552"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1865,7 +2346,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
+          value: 123456789
+        suggestedContent: !<regular>
+          value: 123456789
         valueType: "java.math.BigInteger"
         uuid: "scale_bigInteger1"
         fixed: false
@@ -1875,7 +2358,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "fractionPlaces"
-      modelFingerprint: "83BE06097D250D515C7DC1FC9DC73BC0"
+      modelFingerprint: "DC4AE32C0AA7C937B382CF8DC56DC810"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1883,9 +2366,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 9
+          value: 8
         suggestedContent: !<regular>
-          value: 9
+          value: 8
         valueType: "int"
         uuid: "scale_int1"
         fixed: false
@@ -1941,7 +2424,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "B9A534114EB42AB39C9D204CE242341B"
+      modelFingerprint: "8E65D47E3C0602D60B2F22B827CB011E"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -1962,8 +2445,6 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: false
-            suggestedContent: !<regular>
-              value: false
             valueType: "boolean"
             uuid: "setSymbolAndCode_boolean1"
             fixed: false
@@ -1971,9 +2452,18 @@ methods:
             explicitCastNeeded: false
         signature: "checkState(boolean): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "setSymbolAndCode_void1"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalStateException"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -1982,7 +2472,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "BtcFormat"
-      modelFingerprint: "1082E3EDD9D260B72F80DD094001D1EC"
+      modelFingerprint: "C6581C44616BD685D1236333E5EE5413"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -2001,16 +2491,84 @@ methods:
         - name: "numberFormat"
           value:
             sapientType: "OBJECT"
-            content: !<new>
-              target: "java.text.DecimalFormat"
-              parameters: []
-              privateConstructor: false
-              createdByTargetCode: false
-            suggestedContent: !<new>
-              target: "java.text.DecimalFormat"
-              parameters: []
-              privateConstructor: false
-              createdByTargetCode: false
+            content: !<static_method_return>
+              target: "java.text.NumberFormat"
+              method: "getCurrencyInstance"
+              methodParameters:
+              - value:
+                  sapientType: "OBJECT"
+                  content: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "language1"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "java.util.Locale"
+                  uuid: "<init>_locale1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<static_method_return>
+              target: "java.text.NumberFormat"
+              method: "getCurrencyInstance"
+              methodParameters:
+              - value:
+                  sapientType: "OBJECT"
+                  content: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "language1"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "java.util.Locale"
+                  uuid: "<init>_locale1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "java.text.DecimalFormat"
             uuid: "<init>_numberFormat1"
             fixed: false
@@ -2020,9 +2578,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 3
+              value: 0
             valueType: "int"
-            uuid: "scale_int11"
+            uuid: "scale_int5"
             fixed: true
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -2039,7 +2597,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "A63F3639F5A2B1612E7117041003BDC4"
+      modelFingerprint: "158A76FAE4C1E5741587C22A6148B6F0"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -2047,9 +2605,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 3
+          value: 0
         valueType: "int"
-        uuid: "scale_int11"
+        uuid: "scale_int5"
         fixed: true
         equalsMethodPresent: true
         explicitCastNeeded: false
@@ -2059,6 +2617,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -2071,12 +2630,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "13EF1D8F842F5353757A79C094DD96FC"
+    modelFingerprint: "0A6910E45C6D5423DECA69DD4C1D01F9"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "61FDEDB90D2CBEDE6656F224EDFDFDC7"
+      modelFingerprint: "6ED60ABA13DBBC1D1FB8FD6FB65E375D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2136,9 +2695,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 8
               suggestedContent: !<regular>
-                value: 0
+                value: 8
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -2151,7 +2710,22 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.util.Locale"
+                parameters:
+                - name: "language"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "language1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_locale1-language"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -2181,8 +2755,10 @@ methods:
           - name: "fractionPlaces"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 8
               suggestedContent: !<regular>
-                value: 0
+                value: 8
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -2199,7 +2775,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "satoshis"
-      modelFingerprint: "699A41330AF0B963D9E309E2B61E202B"
+      modelFingerprint: "403D888FF890AF44110387096CA1B6BF"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -2207,7 +2783,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
+          value: 1000000000000000000
+        suggestedContent: !<regular>
+          value: 1000000000000000000
         valueType: "java.math.BigInteger"
         uuid: "scale_bigInteger1"
         fixed: false
@@ -2217,7 +2795,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "fractionPlaces"
-      modelFingerprint: "83BE06097D250D515C7DC1FC9DC73BC0"
+      modelFingerprint: "DC4AE32C0AA7C937B382CF8DC56DC810"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -2225,9 +2803,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 9
+          value: 8
         suggestedContent: !<regular>
-          value: 9
+          value: 8
         valueType: "int"
         uuid: "scale_int1"
         fixed: false
@@ -2283,7 +2861,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "B9A534114EB42AB39C9D204CE242341B"
+      modelFingerprint: "8E65D47E3C0602D60B2F22B827CB011E"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -2304,8 +2882,6 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: false
-            suggestedContent: !<regular>
-              value: false
             valueType: "boolean"
             uuid: "setSymbolAndCode_boolean1"
             fixed: false
@@ -2313,9 +2889,18 @@ methods:
             explicitCastNeeded: false
         signature: "checkState(boolean): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "setSymbolAndCode_void1"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalStateException"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -2324,7 +2909,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "BtcFormat"
-      modelFingerprint: "7B68DAB4E5ECC03800E7621DA4D2A797"
+      modelFingerprint: "C6581C44616BD685D1236333E5EE5413"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -2343,16 +2928,84 @@ methods:
         - name: "numberFormat"
           value:
             sapientType: "OBJECT"
-            content: !<new>
-              target: "java.text.DecimalFormat"
-              parameters: []
-              privateConstructor: false
-              createdByTargetCode: false
-            suggestedContent: !<new>
-              target: "java.text.DecimalFormat"
-              parameters: []
-              privateConstructor: false
-              createdByTargetCode: false
+            content: !<static_method_return>
+              target: "java.text.NumberFormat"
+              method: "getCurrencyInstance"
+              methodParameters:
+              - value:
+                  sapientType: "OBJECT"
+                  content: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "language1"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "java.util.Locale"
+                  uuid: "<init>_locale1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<static_method_return>
+              target: "java.text.NumberFormat"
+              method: "getCurrencyInstance"
+              methodParameters:
+              - value:
+                  sapientType: "OBJECT"
+                  content: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: "language1"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "java.util.Locale"
+                    parameters:
+                    - name: "language"
+                      value:
+                        sapientType: "BASIC"
+                        valueType: "java.lang.String"
+                        uuid: "<init>_locale1-language"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "java.util.Locale"
+                  uuid: "<init>_locale1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "java.text.DecimalFormat"
             uuid: "<init>_numberFormat1"
             fixed: false
@@ -2362,9 +3015,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 6
+              value: 0
             valueType: "int"
-            uuid: "scale_int11"
+            uuid: "scale_int5"
             fixed: true
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -2381,7 +3034,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "3BEC7363D1A0F52E302E0F33EF49D5D4"
+      modelFingerprint: "158A76FAE4C1E5741587C22A6148B6F0"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -2389,9 +3042,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 6
+          value: 0
         valueType: "int"
-        uuid: "scale_int11"
+        uuid: "scale_int5"
         fixed: true
         equalsMethodPresent: true
         explicitCastNeeded: false
@@ -2401,6 +3054,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -2420,12 +3074,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "BC7BDC214B52075B311BF27BCC52F905"
+    modelFingerprint: "9D8C382CF1ECA2B182CCB7C44482E47A"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "CA4095EFA220D567B857F9582CD63D08"
+      modelFingerprint: "EC69633BF85656D5E9D7BA635666F71B"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2485,9 +3139,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
+                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -2500,7 +3152,22 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.util.Locale"
+                parameters:
+                - name: "language"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "language1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_locale1-language"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -2530,8 +3197,6 @@ methods:
           - name: "fractionPlaces"
             value:
               sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 1
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -2594,7 +3259,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "B9A534114EB42AB39C9D204CE242341B"
+      modelFingerprint: "C0FF1F0AD0F6373CDC30F794AE131EFB"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -2614,8 +3279,6 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: false
-            suggestedContent: !<regular>
               value: false
             valueType: "boolean"
             uuid: "setSymbolAndCode_boolean1"
@@ -2654,6 +3317,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -2673,12 +3337,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "F56699972E2FF6D5BA3859A44557760A"
+    modelFingerprint: "A9CA28E059E1645350D4638334D361AC"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "D40432949E3EEF524962C9950BE37343"
+      modelFingerprint: "F0E8316F905F0C155EF18982DDF09DAA"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2738,9 +3402,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 1
+                value: 2
               suggestedContent: !<regular>
-                value: 1
+                value: 2
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -2753,7 +3417,22 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "UNKNOWN"
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "java.util.Locale"
+                parameters:
+                - name: "language"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "language1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_locale1-language"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -2783,8 +3462,10 @@ methods:
           - name: "fractionPlaces"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 2
               suggestedContent: !<regular>
-                value: 1
+                value: 2
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -2847,7 +3528,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "B9A534114EB42AB39C9D204CE242341B"
+      modelFingerprint: "8E65D47E3C0602D60B2F22B827CB011E"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -2868,8 +3549,6 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: false
-            suggestedContent: !<regular>
-              value: false
             valueType: "boolean"
             uuid: "setSymbolAndCode_boolean1"
             fixed: false
@@ -2877,9 +3556,18 @@ methods:
             explicitCastNeeded: false
         signature: "checkState(boolean): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "setSymbolAndCode_void1"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalStateException"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -2888,7 +3576,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "E2A8AB981A1505AD6737DABDF7241F1F"
+      modelFingerprint: "3BC5F6A918EF10F4D4675325B8E40858"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -2896,9 +3584,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 1
+          value: 2
         suggestedContent: !<regular>
-          value: 1
+          value: 2
         valueType: "int"
         uuid: "<init>_int1"
         fixed: false
@@ -2910,6 +3598,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -2938,6 +3627,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -2957,6 +3647,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path3"
@@ -2976,6 +3667,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path7"
@@ -2995,6 +3687,7 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path4"
@@ -3014,6 +3707,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path5"
@@ -3033,6 +3727,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path6"
@@ -3052,6 +3747,7 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -3333,6 +4029,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

@@ -104,12 +104,10 @@ public class ContextSapientGeneratedJunit4Test {
     //Sapient generated method id: ${0d42f23a-6f1c-3106-a642-f13b9e1c45f3}
     @Test()
     public void propagateTest() {
-        /**
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
+        //Arrange Statement(s)
+        Context context = new Context();
 
         //Act Statement(s)
-        Context.propagate(contextMock);
+        Context.propagate(context);
     }
 }

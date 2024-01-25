@@ -36,7 +36,7 @@ public class DecryptingKeyBagSapientGeneratedJunit4Test {
     @Rule()
     public Timeout timeoutRule = Timeout.seconds(5);
 
-    private final KeyBag targetMock = mock(KeyBag.class, "target");
+    private final KeyBag targetMock = mock(KeyBag.class, "{}");
 
     private final AesKey aesKeyMock = mock(AesKey.class);
 
@@ -52,6 +52,10 @@ public class DecryptingKeyBagSapientGeneratedJunit4Test {
 
     @Rule()
     public ExpectedException thrown = ExpectedException.none();
+
+    private final ECKey keyMock = mock(ECKey.class);
+
+    private final Script scriptMock2 = mock(Script.class);
 
     //Sapient generated method id: ${3e0844fc-0454-36bc-ad62-c03333a4359b}
     @Test()
@@ -243,16 +247,21 @@ public class DecryptingKeyBagSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Script scriptMock3 = mock(Script.class);
         try (MockedStatic<RedeemData> redeemData = mockStatic(RedeemData.class)) {
-            redeemData.when(() -> RedeemData.of(anyList(), eq(scriptMock))).thenReturn(redeemDataMock);
+            List list = new ArrayList<>();
+            RedeemData redeemData2 = RedeemData.of(list, scriptMock);
+            redeemData.when(() -> RedeemData.of(anyList(), eq(scriptMock2))).thenReturn(redeemData2);
             DecryptingKeyBag target = new DecryptingKeyBag(targetMock, aesKeyMock);
+            List list2 = new ArrayList<>();
+            RedeemData redeemData3 = RedeemData.of(list2, scriptMock3);
             byte[] byteArray = new byte[]{};
-            doReturn(redeemDataMock2).when(targetMock).findRedeemDataFromScriptHash(byteArray);
+            doReturn(redeemData3).when(targetMock).findRedeemDataFromScriptHash(byteArray);
             //Act Statement(s)
             RedeemData result = target.findRedeemDataFromScriptHash(byteArray);
             //Assert statement(s)
-            assertThat(result, equalTo(redeemDataMock));
-            redeemData.verify(() -> RedeemData.of(anyList(), eq(scriptMock)));
+            assertThat(result, equalTo(redeemData2));
+            redeemData.verify(() -> RedeemData.of(anyList(), eq(scriptMock2)));
             verify(targetMock).findRedeemDataFromScriptHash(byteArray);
         }
     }
@@ -270,20 +279,20 @@ public class DecryptingKeyBagSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        ECKey keyMock = mock(ECKey.class);
+        RedeemData redeemDataMock = mock(RedeemData.class);
         try (MockedStatic<RedeemData> redeemData = mockStatic(RedeemData.class)) {
             redeemData.when(() -> RedeemData.of(anyList(), eq(scriptMock))).thenReturn(redeemDataMock);
             doReturn(false).when(keyMock).isEncrypted();
-            DecryptingKeyBag target = new DecryptingKeyBag(targetMock, aesKeyMock);
             byte[] byteArray = new byte[]{};
-            doReturn(redeemDataMock2).when(targetMock).findRedeemDataFromScriptHash(byteArray);
+            AesKey aesKey = new AesKey(byteArray);
+            DecryptingKeyBag target = new DecryptingKeyBag(targetMock, aesKey);
+            byte[] byteArray2 = new byte[]{(byte) 1, (byte) 2, (byte) 3};
             //Act Statement(s)
-            RedeemData result = target.findRedeemDataFromScriptHash(byteArray);
+            RedeemData result = target.findRedeemDataFromScriptHash(byteArray2);
             //Assert statement(s)
             assertThat(result, equalTo(redeemDataMock));
             redeemData.verify(() -> RedeemData.of(anyList(), eq(scriptMock)));
             verify(keyMock).isEncrypted();
-            verify(targetMock).findRedeemDataFromScriptHash(byteArray);
         }
     }
 
@@ -302,15 +311,11 @@ public class DecryptingKeyBagSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DecryptingKeyBag target = new DecryptingKeyBag(targetMock, (AesKey) null);
-        byte[] byteArray = new byte[]{};
-        doReturn(redeemDataMock).when(targetMock).findRedeemDataFromScriptHash(byteArray);
         thrown.expect(ECKey.KeyIsEncryptedException.class);
+        byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3};
 
         //Act Statement(s)
         target.findRedeemDataFromScriptHash(byteArray);
-
-        //Assert statement(s)
-        verify(targetMock).findRedeemDataFromScriptHash(byteArray);
     }
 
     //Sapient generated method id: ${a6d40181-ac68-3236-a9df-d3031ae980dc}
@@ -327,15 +332,21 @@ public class DecryptingKeyBagSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        DecryptingKeyBag target = new DecryptingKeyBag(targetMock, (AesKey) null);
-        byte[] byteArray = new byte[]{};
-        doReturn(redeemDataMock).when(targetMock).findRedeemDataFromScriptHash(byteArray);
-        thrown.expect(ECKey.KeyIsEncryptedException.class);
-
-        //Act Statement(s)
-        target.findRedeemDataFromScriptHash(byteArray);
-
-        //Assert statement(s)
-        verify(targetMock).findRedeemDataFromScriptHash(byteArray);
+        try (MockedStatic<RedeemData> redeemData = mockStatic(RedeemData.class)) {
+            List list = new ArrayList<>();
+            RedeemData redeemData2 = RedeemData.of(list, scriptMock);
+            redeemData.when(() -> RedeemData.of(anyList(), eq(scriptMock2))).thenReturn(redeemData2);
+            doReturn(false).when(keyMock).isEncrypted();
+            byte[] byteArray = new byte[]{};
+            AesKey aesKey = new AesKey(byteArray);
+            DecryptingKeyBag target = new DecryptingKeyBag(targetMock, aesKey);
+            byte[] byteArray2 = new byte[]{(byte) 0};
+            //Act Statement(s)
+            RedeemData result = target.findRedeemDataFromScriptHash(byteArray2);
+            //Assert statement(s)
+            assertThat(result, equalTo(redeemData2));
+            redeemData.verify(() -> RedeemData.of(anyList(), eq(scriptMock2)));
+            verify(keyMock).isEncrypted();
+        }
     }
 }
