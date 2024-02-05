@@ -72,14 +72,15 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "BD9FC9E87CAF3FEA07A84101EFCE2040"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: true
     inputParameters: []
     uuid: "6207592d-7599-3ecc-9d44-71784e396da9"
     deleted: true
     disabled: false
     ignoredBySystem: true
-    prover: "DEFAULT"
+    failureReason:
+      reason: "REFLECTION_CALL_FAILURE"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path10"
@@ -90,14 +91,15 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "0A99C125AACCADC7195250ABD57AB3BD"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: true
     inputParameters: []
     uuid: "8fd11f76-7bd3-3700-a650-38daa90cddbf"
     deleted: true
     disabled: false
     ignoredBySystem: true
-    prover: "DEFAULT"
+    failureReason:
+      reason: "REFLECTION_CALL_FAILURE"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path5"
@@ -115,7 +117,8 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path4"
@@ -133,7 +136,8 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "BITWISE_NOT_SUPPORTED"
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path9"
@@ -151,7 +155,8 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "BITWISE_NOT_SUPPORTED"
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path11"
@@ -169,7 +174,8 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -178,14 +184,14 @@ methods:
     nameDefinedByUser: false
     priorityDefinedByUser: false
     filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "81CF99B33F46CA574CAB810D27605C39"
-    problemWasSolvedByProver: true
+    priority: "MODERATE"
+    modelFingerprint: "58FBD82BDF3812D2938EE7C136F1CA82"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "input"
-      modelFingerprint: "79A291814DF0AA653725050425C89326"
+      modelFingerprint: "EA08E786580C61FDE5C34462DDB7DAFF"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -227,7 +233,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "207DCDFF3947192C0FE7FFA95759B2C1"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -235,9 +241,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "1"
-        suggestedContent: !<regular>
-          value: "1"
+          value: "result1"
         valueType: "java.lang.String"
         uuid: "encode_string1"
         fixed: false
@@ -247,11 +251,12 @@ methods:
       filledByUser: false
     uuid: "9ffe52a2-f6c8-31e4-a06f-316354bb76db"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path3"
     pathIdForUser: "path9"
     testPathName: "encodeWhenOutputStartLessThanEncodedLengthAndOutputStartIndexOfEncodedNotEqualsENCODED_ZEROAndZerosGreaterThanOrEqualsT"
@@ -267,7 +272,8 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "BITWISE_NOT_SUPPORTED"
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path7"
@@ -285,7 +291,8 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "BITWISE_NOT_SUPPORTED"
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path8"
@@ -303,7 +310,8 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "BITWISE_NOT_SUPPORTED"
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -375,8 +383,6 @@ methods:
         sapientType: "ARRAY"
         content: !<array>
           values: {}
-        suggestedContent: !<array>
-          values: {}
         valueType: "byte[]"
         uuid: "encodeChecked_byte[]1"
         fixed: false
@@ -443,7 +449,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "DFA10C2EEA774CA1AD8F8BEAD540A9CC"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
@@ -561,8 +567,6 @@ methods:
               values:
                 0:
                   sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
                   suggestedContent: !<regular>
                     value: 1
                   valueType: "byte"
@@ -723,8 +727,6 @@ methods:
               values:
                 0:
                   sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
                   suggestedContent: !<regular>
                     value: 1
                   valueType: "byte"
@@ -809,7 +811,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "REFLECTION_CALL_FAILURE"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -945,9 +948,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\ud83f"
+                value: "\\uD83F"
               suggestedContent: !<regular>
-                value: "\ud83f"
+                value: "\\uD83F"
               valueType: "char"
               uuid: "decode_char1"
               fixed: false
@@ -972,7 +975,7 @@ methods:
             value:
               sapientType: "BASIC"
               suggestedContent: !<regular>
-                value: "\ud83f"
+                value: "\\uD83F"
               valueType: "char"
               uuid: "decode_char1"
               fixed: false
@@ -1037,7 +1040,8 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path12"
@@ -1055,7 +1059,8 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path4"
@@ -1073,7 +1078,8 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path9"
@@ -1091,7 +1097,8 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "BITWISE_NOT_SUPPORTED"
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path10"
@@ -1109,7 +1116,8 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path3"
@@ -1119,13 +1127,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "CC0639F47D6381BE55765578A40FDF65"
-    problemWasSolvedByProver: true
+    modelFingerprint: "8A531ECBB59E08D32BB9886525159954"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "input"
-      modelFingerprint: "32E15A70363D4261B9854DBD2FB55762"
+      modelFingerprint: "E946A2A33718ECA476C44528BEA4B59E"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1145,26 +1153,57 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "163D4EBA43F8625118F3671D61E977E3"
+      modelFingerprint: "2A3B2C783AE74B818AA0721F9193C86A"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "EXCEPTION"
-        content: !<new>
-          target: "java.lang.ArrayIndexOutOfBoundsException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "java.lang.ArrayIndexOutOfBoundsException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "java.lang.ArrayIndexOutOfBoundsException"
-        fixed: true
-        equalsMethodPresent: false
+        sapientType: "ARRAY"
+        content: !<array>
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              uuid: "decode_byte[]3-item0"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            1:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              uuid: "decode_byte[]3-item1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<array>
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              uuid: "decode_byte[]3-item0"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            1:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              uuid: "decode_byte[]3-item1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "byte[]"
+        uuid: "decode_byte[]3"
+        fixed: false
+        equalsMethodPresent: true
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
@@ -1172,6 +1211,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    failureReason:
+      reason: "ERROR_RECALCULATING_SUGGESTED_VALUES"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -1182,13 +1223,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "3B356B72F0B2FC7370DF92A341CA854E"
-    problemWasSolvedByProver: true
+    modelFingerprint: "9594457CA89079CF7E71287A3CF658D4"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "input"
-      modelFingerprint: "DB13D2B34610C50FCF49D8BBFB4FCCAF"
+      modelFingerprint: "9A909F116EF2878BD44D7168F49B5A53"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1208,26 +1249,21 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "163D4EBA43F8625118F3671D61E977E3"
+      modelFingerprint: "740324D8AEEA83F5639543B37CAABC19"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "EXCEPTION"
-        content: !<new>
-          target: "java.lang.ArrayIndexOutOfBoundsException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "java.lang.ArrayIndexOutOfBoundsException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "java.lang.ArrayIndexOutOfBoundsException"
-        fixed: true
-        equalsMethodPresent: false
+        sapientType: "ARRAY"
+        content: !<array>
+          values: {}
+        suggestedContent: !<array>
+          values: {}
+        valueType: "byte[]"
+        uuid: "decode_byte[]3"
+        fixed: false
+        equalsMethodPresent: true
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
@@ -1235,7 +1271,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path8"
@@ -1253,7 +1290,8 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "BITWISE_NOT_SUPPORTED"
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -2352,7 +2390,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "1567E6CB5EE3527BCC5244EF3D3D7ED2"
+    modelFingerprint: "42C520EDC32885205BB0E1AD893E5ECA"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -2376,7 +2414,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Base58"
-      modelFingerprint: "8D35D3022455EE00579081B243051B7C"
+      modelFingerprint: "0E2D253883E414F56EB302E7EE25CDDA"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -2491,13 +2529,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "10B5DFD277F3AC3A109D8B0AA7D405C5"
+      modelFingerprint: "3038E472CD12875D91E184DF06EAE579"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "REAL"
         valueType: "org.bitcoinj.base.Sha256Hash"
         uuid: "org.bitcoinj.base.Sha256Hash"
         fixed: false
@@ -3134,7 +3172,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
-    prover: "LLM"
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

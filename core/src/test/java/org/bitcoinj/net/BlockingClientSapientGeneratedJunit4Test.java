@@ -46,6 +46,9 @@ import static org.mockito.Mockito.doReturn;
 
 import org.junit.Ignore;
 
+import static org.hamcrest.core.IsInstanceOf.instanceOf;
+import static org.hamcrest.Matchers.is;
+
 public class BlockingClientSapientGeneratedJunit4Test {
 
     @Rule()
@@ -95,7 +98,9 @@ public class BlockingClientSapientGeneratedJunit4Test {
          * (dbuf.remaining() <= readBuff.length) : true
          * (read == -1) : true
          *
-         * */
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
         doReturn(0).when(connectionMock).getMaxMessageSize();
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
@@ -207,7 +212,7 @@ public class BlockingClientSapientGeneratedJunit4Test {
             BlockingClient target = new BlockingClient((SocketAddress) null, streamConnectionMock, duration, socketFactory, blockingClientSet);
             doNothing().when(streamConnectionMock).setWriteTarget(target);
             thrown.expect(RuntimeException.class);
-            thrown.expectCause(isA(IOException.class));
+            thrown.expectCause(is(instanceOf(IOException.class)));
             //Act Statement(s)
             target.closeConnection();
             //Assert statement(s)
@@ -252,7 +257,9 @@ public class BlockingClientSapientGeneratedJunit4Test {
         /* Branches:
          * (catch-exception (IOException)) : true
          *
-         * */
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
         ListenableCompletableFuture listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
         try (MockedStatic<ListenableCompletableFuture> listenableCompletableFuture = mockStatic(ListenableCompletableFuture.class);

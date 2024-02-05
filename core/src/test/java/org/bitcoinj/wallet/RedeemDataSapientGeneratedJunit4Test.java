@@ -29,6 +29,7 @@ import static org.mockito.Mockito.doReturn;
 import static org.hamcrest.Matchers.is;
 
 import org.junit.Ignore;
+import org.junit.rules.ExpectedException;
 
 public class RedeemDataSapientGeneratedJunit4Test {
 
@@ -38,6 +39,11 @@ public class RedeemDataSapientGeneratedJunit4Test {
     private final ECKey keyMock = mock(ECKey.class);
 
     private final Script scriptMock = mock(Script.class);
+
+    private final ECKey eCKeyMock = mock(ECKey.class);
+
+    @Rule()
+    public ExpectedException thrown = ExpectedException.none();
 
     //Sapient generated method id: ${3155f475-158f-3510-8516-db6562387204}
     @Test()
@@ -50,6 +56,33 @@ public class RedeemDataSapientGeneratedJunit4Test {
         assertThat(result, is(notNullValue()));
     }
 
+    //Sapient generated method id: ${02592622-e5eb-3f31-a85a-64f513a1ca76}
+    @Test()
+    public void of1WhenScriptPatternNotIsP2PKRedeemScriptThrowsIllegalArgumentException() {
+        /* Branches:
+         * (ScriptPattern.isP2PKH(redeemScript)) : false
+         * (ScriptPattern.isP2WPKH(redeemScript)) : false
+         * (ScriptPattern.isP2PK(redeemScript)) : false
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class)) {
+            scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(false);
+            scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(false);
+            scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(false)).thenThrow(illegalArgumentException);
+            thrown.expect(IllegalArgumentException.class);
+            //Act Statement(s)
+            RedeemData.of(eCKeyMock, scriptMock);
+            //Assert statement(s)
+            scriptPattern.verify(() -> ScriptPattern.isP2PKH(scriptMock), atLeast(1));
+            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock), atLeast(1));
+            scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
+        }
+    }
+
     //Sapient generated method id: ${52bc7f53-5231-3a97-98b8-a99c714d22e5}
     @Test()
     public void of1WhenScriptPatternIsP2PKRedeemScriptAndKeyIsNotNull() {
@@ -59,50 +92,21 @@ public class RedeemDataSapientGeneratedJunit4Test {
          * (ScriptPattern.isP2PK(redeemScript)) : true
          * (key != null) : true
          *
-         * */
-        //Arrange Statement(s)
-        try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class)) {
-            scriptPattern.when(() -> ScriptPattern.isP2PKH((Script) any())).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2WPKH((Script) any())).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2PK((Script) any())).thenReturn(true);
-            ECKey eCKey = new ECKey();
-            List list = new ArrayList<>();
-            Script script = Script.of(list);
-            //Act Statement(s)
-            RedeemData result = RedeemData.of(eCKey, script);
-            //Assert statement(s)
-            assertThat(result, is(notNullValue()));
-            scriptPattern.verify(() -> ScriptPattern.isP2PKH((Script) any()));
-            scriptPattern.verify(() -> ScriptPattern.isP2WPKH((Script) any()));
-            scriptPattern.verify(() -> ScriptPattern.isP2PK((Script) any()));
-        }
-    }
-
-    //Sapient generated method id: ${97ffe030-5f6e-3b18-aedb-2b4967cf65cd}
-    @Test()
-    public void of1WhenScriptPatternNotIsP2PKRedeemScriptAndKeyIsNull() {
-        /* Branches:
-         * (ScriptPattern.isP2PKH(redeemScript)) : false
-         * (ScriptPattern.isP2WPKH(redeemScript)) : false
-         * (ScriptPattern.isP2PK(redeemScript)) : false
-         * (key != null) : false
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class)) {
+        try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class)) {
             scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
-            preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
-            ECKey eCKey = null;
+            scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(true);
             //Act Statement(s)
-            RedeemData result = RedeemData.of(eCKey, scriptMock);
+            RedeemData result = RedeemData.of(eCKeyMock, scriptMock);
             //Assert statement(s)
-            assertThat(result, is(nullValue()));
+            assertThat(result, is(notNullValue()));
             scriptPattern.verify(() -> ScriptPattern.isP2PKH(scriptMock), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
         }
     }
 
@@ -154,10 +158,8 @@ public class RedeemDataSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         ECKey eCKey = new ECKey();
-        ECKey eCKey2 = new ECKey();
         List<ECKey> eCKeyList = new ArrayList<>();
         eCKeyList.add(eCKey);
-        eCKeyList.add(eCKey2);
         List list = new ArrayList<>();
         Script script = Script.of(list);
         RedeemData target = RedeemData.of(eCKeyList, script);

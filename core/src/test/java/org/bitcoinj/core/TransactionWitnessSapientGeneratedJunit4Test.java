@@ -45,6 +45,7 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mockStatic;
 
 import org.junit.Ignore;
+import org.bitcoinj.base.internal.ByteUtils;
 
 public class TransactionWitnessSapientGeneratedJunit4Test {
 
@@ -150,7 +151,6 @@ public class TransactionWitnessSapientGeneratedJunit4Test {
         thrown.expect(NullPointerException.class);
         //TODO: Needs initialization with real value
         List<byte[]> list = null;
-
         //Act Statement(s)
         TransactionWitness.of(list);
     }
@@ -210,10 +210,8 @@ public class TransactionWitnessSapientGeneratedJunit4Test {
         byteList.add(byteArray);
         byteList.add(byteArray2);
         TransactionWitness target = TransactionWitness.of(byteList);
-
         //Act Statement(s)
         byte[] result = target.getPush(1);
-
         //Assert statement(s)
         assertThat(result, equalTo(byteArray2));
     }
@@ -227,10 +225,8 @@ public class TransactionWitnessSapientGeneratedJunit4Test {
         List<byte[]> byteList = new ArrayList<>();
         byteList.add(byteArray);
         TransactionWitness target = TransactionWitness.of(byteList);
-
         //Act Statement(s)
         int result = target.getPushCount();
-
         //Assert statement(s)
         assertThat(result, equalTo(1));
     }
@@ -242,18 +238,30 @@ public class TransactionWitnessSapientGeneratedJunit4Test {
          * (for-each(pushes)) : true
          */
         //Arrange Statement(s)
-        try (MockedStatic<VarInt> varInt = mockStatic(VarInt.class)) {
-            varInt.when(() -> VarInt.of(0L)).thenReturn(varIntMock);
+        try (MockedStatic<Buffers> buffers = mockStatic(Buffers.class);
+             MockedStatic<VarInt> varInt = mockStatic(VarInt.class)) {
+            varInt.when(() -> VarInt.of(2L)).thenReturn(varIntMock);
+            //TODO: Needs to return real value
             doReturn(null).when(varIntMock).write((ByteBuffer) any());
-            List<byte[]> byteList = new ArrayList<>();
-            TransactionWitness target = TransactionWitness.of(byteList);
+            byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3};
+            //TODO: Needs to return real value
+            buffers.when(() -> Buffers.writeLengthPrefixedBytes((ByteBuffer) any(), eq(byteArray))).thenReturn(null);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            byte[] byteArray2 = new byte[]{(byte) 4, (byte) 5, (byte) 6};
+            buffers.when(() -> Buffers.writeLengthPrefixedBytes((ByteBuffer) any(), eq(byteArray2))).thenReturn(byteBuffer);
+            List<byte[]> byteList = new ArrayList<>();
+            byteList.add(byteArray);
+            byteList.add(byteArray2);
+            TransactionWitness target = TransactionWitness.of(byteList);
+            ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
             //Act Statement(s)
-            ByteBuffer result = target.write(byteBuffer);
+            ByteBuffer result = target.write(byteBuffer2);
             //Assert statement(s)
-            assertThat(result, equalTo(byteBuffer));
-            varInt.verify(() -> VarInt.of(0L), atLeast(1));
+            assertThat(result, equalTo(byteBuffer2));
+            varInt.verify(() -> VarInt.of(2L), atLeast(1));
             verify(varIntMock).write((ByteBuffer) any());
+            buffers.verify(() -> Buffers.writeLengthPrefixedBytes((ByteBuffer) any(), eq(byteArray)));
+            buffers.verify(() -> Buffers.writeLengthPrefixedBytes((ByteBuffer) any(), eq(byteArray2)));
         }
     }
 
@@ -267,17 +275,17 @@ public class TransactionWitnessSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3};
+        byte[] byteArray2 = new byte[]{(byte) 4, (byte) 5, (byte) 6};
         List<byte[]> byteList = new ArrayList<>();
         byteList.add(byteArray);
+        byteList.add(byteArray2);
         TransactionWitness target = spy(TransactionWitness.of(byteList));
         doReturn(1).when(target).messageSize();
         ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
         doReturn(byteBuffer).when(target).write((ByteBuffer) any());
-
         //Act Statement(s)
         byte[] result = target.serialize();
         byte[] byteResultArray = new byte[]{};
-
         //Assert statement(s)
         assertThat(result, equalTo(byteResultArray));
         verify(target).messageSize();
@@ -285,20 +293,26 @@ public class TransactionWitnessSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${198e0ef0-e6d5-3daa-9f95-2e02390f74a3}
+    @Ignore()
     @Test()
     public void messageSizeWhenPushesIsNotEmpty() {
         /* Branches:
          * (for-each(pushes)) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        List<byte[]> byteList = new ArrayList<>();
-        TransactionWitness target = TransactionWitness.of(byteList);
-
-        //Act Statement(s)
-        int result = target.messageSize();
-
-        //Assert statement(s)
-        assertThat(result, equalTo(1));
+        try (MockedStatic<VarInt> varInt = mockStatic(VarInt.class)) {
+            varInt.when(() -> VarInt.sizeOf(0L)).thenReturn(0);
+            List<byte[]> byteList = new ArrayList<>();
+            TransactionWitness target = TransactionWitness.of(byteList);
+            //Act Statement(s)
+            int result = target.messageSize();
+            //Assert statement(s)
+            assertThat(result, equalTo(0));
+            varInt.verify(() -> VarInt.sizeOf(0L), atLeast(2));
+        }
     }
 
     //Sapient generated method id: ${435d64f5-8fca-31bf-b014-13944bac4d4c}
@@ -311,13 +325,26 @@ public class TransactionWitnessSapientGeneratedJunit4Test {
         byteList.add(byteArray);
         TransactionWitness target = spy(TransactionWitness.of(byteList));
         doReturn(0).when(target).messageSize();
-
         //Act Statement(s)
         int result = target.getMessageSize();
-
         //Assert statement(s)
         assertThat(result, equalTo(0));
         verify(target).messageSize();
+    }
+
+    //Sapient generated method id: ${e6355e02-ffe7-36cf-882f-9b4527452410}
+    @Test()
+    public void toStringWhenPushesIsEmpty() {
+        /* Branches:
+         * (for-each(pushes)) : false
+         */
+        //Arrange Statement(s)
+        List<byte[]> byteList = new ArrayList<>();
+        TransactionWitness target = TransactionWitness.of(byteList);
+        //Act Statement(s)
+        String result = target.toString();
+        //Assert statement(s)
+        assertThat(result, equalTo(""));
     }
 
     //Sapient generated method id: ${6ecbda3c-3734-3c94-b31a-d398eb9ec8be}
@@ -326,33 +353,49 @@ public class TransactionWitnessSapientGeneratedJunit4Test {
         /* Branches:
          * (for-each(pushes)) : true
          * (push.length == 0) : true
+         *
+         * TODO: Help needed! This method is not unit testable!
+         *  Following variables could not be isolated/mocked: SPACE_JOINER
+         *  Suggestions:
+         *  You can change the initialization of above variables and make it injectable or
+         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         List<byte[]> byteList = new ArrayList<>();
         TransactionWitness target = TransactionWitness.of(byteList);
-
         //Act Statement(s)
         String result = target.toString();
-
         //Assert statement(s)
         assertThat(result, equalTo(""));
     }
 
     //Sapient generated method id: ${065a56d0-4ec0-38eb-a24f-b51c11ce350a}
+    @Ignore()
     @Test()
     public void toStringWhenPushLengthNotEquals0() {
         /* Branches:
          * (for-each(pushes)) : true
          * (push.length == 0) : false
+         *
+         * TODO: Help needed! This method is not unit testable!
+         *  Following variables could not be isolated/mocked: SPACE_JOINER
+         *  Suggestions:
+         *  You can change the initialization of above variables and make it injectable or
+         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        List<byte[]> byteList = new ArrayList<>();
-        TransactionWitness target = TransactionWitness.of(byteList);
-
-        //Act Statement(s)
-        String result = target.toString();
-
-        //Assert statement(s)
-        assertThat(result, equalTo(""));
+        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
+            byte[] byteArray = new byte[]{};
+            byteUtils.when(() -> ByteUtils.formatHex(byteArray)).thenReturn("return_of_formatHex1");
+            List<byte[]> byteList = new ArrayList<>();
+            TransactionWitness target = TransactionWitness.of(byteList);
+            //Act Statement(s)
+            String result = target.toString();
+            //Assert statement(s)
+            assertThat(result, equalTo("return_of_join1"));
+            byteUtils.verify(() -> ByteUtils.formatHex(byteArray), atLeast(1));
+        }
     }
 }

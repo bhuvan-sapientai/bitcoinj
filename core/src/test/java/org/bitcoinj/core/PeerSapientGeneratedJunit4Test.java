@@ -80,6 +80,8 @@ import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mockStatic;
 import static org.hamcrest.Matchers.isA;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.core.IsInstanceOf.instanceOf;
 
 public class PeerSapientGeneratedJunit4Test {
 
@@ -1173,7 +1175,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${075b4de8-0b4b-3bbb-b496-437778c9ad15}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void timeoutOccurredWhenConnectionOpenFutureNotIsDone() {
         /* Branches:
@@ -1236,7 +1238,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${c38ef2f2-0fad-3a8a-87e4-77a73dc4ec5a}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.complete) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync, CompletableFuture.complete) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void connectionOpenedWhenAddressIsNull() throws NotYetConnectedException, IOException {
         /* Branches:
@@ -1269,7 +1271,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${f071099f-7d9a-3d0e-bb42-8e6331942294}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.complete) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync, CompletableFuture.complete) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void connectionOpenedWhenAddressIsNotNull() throws NotYetConnectedException, IOException {
         /* Branches:
@@ -1399,7 +1401,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${2ab5bc7c-1c03-301c-9b51-8165e7679936}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.isCancelled, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.isCancelled, CompletableFuture.thenRunAsync, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processMessageWhenVersionHandshakeFutureIsCancelledThrowsProtocolException() throws Exception {
         /* Branches:
@@ -1438,7 +1440,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${eb75229e-2dbb-305d-a3fb-817b84b1d4a4}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.isCancelled, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.isCancelled, CompletableFuture.thenRunAsync, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processMessageWhenMInstanceOfPing() throws Exception {
         /* Branches:
@@ -1483,7 +1485,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${78d2e1ad-1f99-3549-9d1e-828c4fd852c1}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.isCancelled, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.isCancelled, CompletableFuture.thenRunAsync, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processMessageWhenMInstanceOfPong() throws Exception {
         /* Branches:
@@ -1525,7 +1527,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${e5941969-8a06-336b-bcc6-20c4ef4b128b}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.isCancelled, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.isCancelled, CompletableFuture.thenRunAsync, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processMessageWhenMInstanceOfNotFoundMessage() throws Exception {
         /* Branches:
@@ -1568,7 +1570,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${000d08b8-f87f-395c-9b09-f5feef6a73fc}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.isCancelled, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.isCancelled, CompletableFuture.thenRunAsync, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processMessageWhenMInstanceOfInventoryMessage() throws Exception {
         /* Branches:
@@ -1612,7 +1614,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${dbbbfc68-faf1-31a0-affb-b7fd21f3570f}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.isCancelled, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.isCancelled, CompletableFuture.thenRunAsync, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processMessageWhenMInstanceOfBlock() throws Exception {
         /* Branches:
@@ -1657,7 +1659,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${0ffc7938-4f70-3f65-9cdf-42685787b6ea}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.isCancelled, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.isCancelled, CompletableFuture.thenRunAsync, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processMessageWhenMInstanceOfFilteredBlock() throws Exception {
         /* Branches:
@@ -1701,7 +1703,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${3410398e-5455-331d-8b91-000e67c7b375}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.isCancelled, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.isCancelled, CompletableFuture.thenRunAsync, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processMessageWhenMInstanceOfTransaction() throws Exception {
         /* Branches:
@@ -1748,7 +1750,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${cd9611a4-78b3-3a31-955d-9b17d75b56d4}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.isCancelled, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.isCancelled, CompletableFuture.thenRunAsync, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processMessageWhenMInstanceOfGetDataMessage() throws Exception {
         /* Branches:
@@ -1796,7 +1798,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${8a11c469-fb55-3373-8584-5dbcd8ebe50e}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.isCancelled, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.isCancelled, CompletableFuture.thenRunAsync, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processMessageWhenMInstanceOfHeadersMessage() throws Exception {
         /* Branches:
@@ -1846,7 +1848,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${a859b22b-9da0-3cc6-b12d-1788d893c30b}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.isCancelled, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.isCancelled, CompletableFuture.thenRunAsync, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processMessageWhenFutureIsNull() throws Exception {
         /* Branches:
@@ -1895,7 +1897,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${acb98b80-a2e6-3cc8-8ac7-371c25e83906}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.isCancelled, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.isCancelled, CompletableFuture.thenRunAsync, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processMessageWhenVPeerVersionMessageIsNullThrowsProtocolException() throws Exception {
         /* Branches:
@@ -1947,7 +1949,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${7a3efe82-0049-3c6c-bee9-6b2c2ffc184f}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.isCancelled, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.isCancelled, CompletableFuture.thenRunAsync, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processMessageWhenMInstanceOfRejectMessage() throws Exception {
         /* Branches:
@@ -1998,7 +2000,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${ece6878e-afc0-3ce8-abef-70e1206fb9ae}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.isCancelled, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.isCancelled, CompletableFuture.thenRunAsync, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processMessageWhenParamsNotAllowEmptyPeerChain() throws Exception {
         /* Branches:
@@ -2062,7 +2064,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${f923da74-3dd1-3893-b8ba-3da25272e325}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.isCancelled, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.isCancelled, CompletableFuture.thenRunAsync, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processMessageWhenMInstanceOfSendHeadersMessage() throws Exception {
         /* Branches:
@@ -2114,7 +2116,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${5b3aea89-2bee-3358-bb5d-604b04151159}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.isCancelled, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.isCancelled, CompletableFuture.thenRunAsync, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processMessageWhenServicesNotHasRequiredServices() throws Exception {
         /* Branches:
@@ -2189,7 +2191,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${fa7012ae-8e98-3004-b023-67cfc7dadebf}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.isCancelled, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.isCancelled, CompletableFuture.thenRunAsync, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processMessageWhenMInstanceOfFeeFilterMessage() throws Exception {
         /* Branches:
@@ -2248,7 +2250,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${3b44e5c1-4f31-3cc7-9f6c-c295dcce1b1c}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.isCancelled, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.isCancelled, CompletableFuture.thenRunAsync, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processMessageWhenMNotInstanceOfSendHeadersMessageAndMNotInstanceOfFeeFilterMessage() throws Exception {
         /* Branches:
@@ -2301,7 +2303,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${cd9615b4-d7ff-30bc-89a6-21f7ac1d1f80}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.isCancelled, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.isCancelled, CompletableFuture.thenRunAsync, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processMessageWhenServicesHasServicesNODE_BITCOIN_CASH() throws Exception {
         /* Branches:
@@ -2371,7 +2373,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${8ad35063-b1b2-3417-bead-2683c1e71970}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.isCancelled, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.isCancelled, CompletableFuture.thenRunAsync, CompletableFuture.isDone) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processMessageWhenPeerVersionMessageBestHeightLessThan0ThrowsProtocolException() throws Exception {
         /* Branches:
@@ -2442,7 +2444,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${7f102a0b-567e-3678-a40e-b0b5121edb2b}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.isCancelled, CompletableFuture.isDone, CompletableFuture.complete) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.isCancelled, CompletableFuture.thenRunAsync, CompletableFuture.isDone, CompletableFuture.complete) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processMessageWhenLogIsDebugEnabled() throws Exception {
         /* Branches:
@@ -2688,7 +2690,6 @@ public class PeerSapientGeneratedJunit4Test {
         Transaction txMock = mock(Transaction.class);
         Sha256Hash sha256HashMock = mock(Sha256Hash.class);
         TransactionConfidence transactionConfidenceMock = mock(TransactionConfidence.class);
-        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
         Block blockMock = mock(Block.class);
         Network networkMock = mock(Network.class);
@@ -2696,9 +2697,9 @@ public class PeerSapientGeneratedJunit4Test {
         PeerAddress peerAddressMock = mock(PeerAddress.class);
         try (MockedStatic<Transaction> transaction = mockStatic(Transaction.class);
              MockedStatic<Context> context = mockStatic(Context.class)) {
+            doReturn(sha256HashMock).when(txMock).getTxId();
             doReturn(transactionConfidenceMock).when(txMock).getConfidence();
             doNothing().when(transactionConfidenceMock).maybeSetSourceToNetwork();
-            doReturn(sha256HashMock, sha256HashMock2).when(txMock).getTxId();
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
@@ -2711,7 +2712,7 @@ public class PeerSapientGeneratedJunit4Test {
             //Act Statement(s)
             target.processTransaction(txMock);
             //Assert statement(s)
-            verify(txMock, times(2)).getTxId();
+            verify(txMock).getTxId();
             verify(txMock).getConfidence();
             verify(transactionConfidenceMock).maybeSetSourceToNetwork();
             verify(paramsMock).getDefaultSerializer();
@@ -2735,15 +2736,11 @@ public class PeerSapientGeneratedJunit4Test {
          * (for-each(wallets)) : false
          * (catch-exception (VerificationException)) : true
          * (for-each(onTransactionEventListeners)) : false
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         Transaction txMock = mock(Transaction.class);
         Sha256Hash sha256HashMock = mock(Sha256Hash.class);
         TransactionConfidence transactionConfidenceMock = mock(TransactionConfidence.class);
-        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
         Block blockMock = mock(Block.class);
         Network networkMock = mock(Network.class);
@@ -2751,9 +2748,9 @@ public class PeerSapientGeneratedJunit4Test {
         PeerAddress peerAddressMock = mock(PeerAddress.class);
         try (MockedStatic<Transaction> transaction = mockStatic(Transaction.class);
              MockedStatic<Context> context = mockStatic(Context.class)) {
+            doReturn(sha256HashMock).when(txMock).getTxId();
             doReturn(transactionConfidenceMock).when(txMock).getConfidence();
             doNothing().when(transactionConfidenceMock).maybeSetSourceToNetwork();
-            doReturn(sha256HashMock, sha256HashMock2).when(txMock).getTxId();
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
@@ -2766,7 +2763,7 @@ public class PeerSapientGeneratedJunit4Test {
             //Act Statement(s)
             target.processTransaction(txMock);
             //Assert statement(s)
-            verify(txMock, times(2)).getTxId();
+            verify(txMock).getTxId();
             verify(txMock).getConfidence();
             verify(transactionConfidenceMock).maybeSetSourceToNetwork();
             verify(paramsMock).getDefaultSerializer();
@@ -2824,57 +2821,48 @@ public class PeerSapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${90deb3d7-6fef-32ba-aafd-bc0962cb2e02}
+    //Sapient generated method id: ${07707a15-0b7d-3aa3-88a4-b918d60f03fc}
     @Test()
-    public void downloadDependenciesWhenTxConfidenceEqualsTransactionConfidenceConfidenceTypeBUILDING() throws Exception {
+    public void downloadDependenciesWhenTxConfidenceEqualsTransactionConfidenceConfidenceTypeBUILDINGThrowsIllegalArgumentException() {
         /* Branches:
          * (txConfidence != TransactionConfidence.ConfidenceType.BUILDING) : false
          */
         //Arrange Statement(s)
         Transaction txMock = mock(Transaction.class);
         Sha256Hash sha256HashMock = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
         Block blockMock = mock(Block.class);
-        ListenableCompletableFuture<List<Transaction>> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
         VersionMessage versionMessageMock = mock(VersionMessage.class);
         PeerAddress peerAddressMock = mock(PeerAddress.class);
-        try (MockedStatic<ListenableCompletableFuture> listenableCompletableFuture = mockStatic(ListenableCompletableFuture.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Context> context = mockStatic(Context.class)) {
             TransactionConfidence transactionConfidence = new TransactionConfidence(sha256HashMock);
             transactionConfidence.setConfidenceType(TransactionConfidence.ConfidenceType.BUILDING);
             doReturn(transactionConfidence).when(txMock).getConfidence();
-            doReturn(sha256HashMock2).when(txMock).getTxId();
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
             context.when(() -> Context.get()).thenReturn(contextMock);
-            preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
-            CompletableFuture<List<Transaction>> completableFuture = new CompletableFuture<>();
-            listenableCompletableFuture.when(() -> ListenableCompletableFuture.of(completableFuture)).thenReturn(listenableCompletableFutureMock);
-            target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(false)).thenThrow(illegalArgumentException);
+            target = new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(completableFuture).when(target).downloadDependenciesInternal(txMock, 0, 0);
+            thrown.expect(IllegalArgumentException.class);
             //Act Statement(s)
-            ListenableCompletableFuture<List<Transaction>> result = target.downloadDependencies(txMock);
+            target.downloadDependencies(txMock);
             //Assert statement(s)
-            assertThat(result, equalTo(listenableCompletableFutureMock));
             verify(txMock).getConfidence();
-            verify(txMock).getTxId();
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
             context.verify(() -> Context.get(), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
-            listenableCompletableFuture.verify(() -> ListenableCompletableFuture.of(completableFuture), atLeast(1));
-            verify(target).downloadDependenciesInternal(txMock, 0, 0);
         }
     }
 
     //Sapient generated method id: ${c9689c91-bdf0-3a30-9d94-3ac5df6b36c9}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.whenComplete) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync, CompletableFuture.whenComplete) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void downloadDependenciesInternalWhenVPeerVersionMessageServicesHasServicesNODE_WITNESS() throws Exception {
         /* Branches:
@@ -2935,7 +2923,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${3732ba94-c80a-3f25-8c8f-9fc5c12f37f5}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.whenComplete) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync, CompletableFuture.whenComplete) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void downloadDependenciesInternalWhenVPeerVersionMessageServicesNotHasServicesNODE_WITNESS() throws Exception {
         /* Branches:
@@ -2996,7 +2984,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${52997afd-af05-3d11-a949-cea569236ab8}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.completeExceptionally, CompletableFuture.whenComplete) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.completeExceptionally, CompletableFuture.thenRunAsync, CompletableFuture.whenComplete) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void downloadDependenciesInternalWhenCaughtException() throws Exception {
         /* Branches:
@@ -3131,7 +3119,6 @@ public class PeerSapientGeneratedJunit4Test {
         Transaction transactionMock = mock(Transaction.class);
         TransactionConfidence transactionConfidenceMock = mock(TransactionConfidence.class);
         Sha256Hash sha256HashMock = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
         Block blockMock = mock(Block.class);
         VersionMessage versionMessageMock = mock(VersionMessage.class);
@@ -3144,7 +3131,7 @@ public class PeerSapientGeneratedJunit4Test {
             doReturn(transactionList, transactionList2).when(mMock).getTransactions();
             doReturn(transactionConfidenceMock).when(transactionMock).getConfidence();
             doNothing().when(transactionConfidenceMock).maybeSetSourceToNetwork();
-            doReturn(sha256HashMock, sha256HashMock2).when(mMock).getHash();
+            doReturn(sha256HashMock).when(mMock).getHash();
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
@@ -3161,7 +3148,7 @@ public class PeerSapientGeneratedJunit4Test {
             verify(mMock, times(2)).getTransactions();
             verify(transactionMock).getConfidence();
             verify(transactionConfidenceMock).maybeSetSourceToNetwork();
-            verify(mMock, times(2)).getHash();
+            verify(mMock).getHash();
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
@@ -3189,15 +3176,13 @@ public class PeerSapientGeneratedJunit4Test {
         Block mMock = mock(Block.class);
         Transaction transactionMock = mock(Transaction.class);
         TransactionConfidence transactionConfidenceMock = mock(TransactionConfidence.class);
-        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock3 = mock(Sha256Hash.class);
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
         Block blockMock = mock(Block.class);
         VersionMessage versionMessageMock = mock(VersionMessage.class);
         PeerAddress peerAddressMock = mock(PeerAddress.class);
         Block blockMock2 = mock(Block.class);
-        Sha256Hash sha256HashMock4 = mock(Sha256Hash.class);
+        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
+        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Context> context = mockStatic(Context.class)) {
             doReturn("return_of_getHashAsString1").when(mMock).getHashAsString();
@@ -3207,7 +3192,6 @@ public class PeerSapientGeneratedJunit4Test {
             doReturn(transactionList, transactionList2).when(mMock).getTransactions();
             doReturn(transactionConfidenceMock).when(transactionMock).getConfidence();
             doNothing().when(transactionConfidenceMock).maybeSetSourceToNetwork();
-            doReturn(sha256HashMock, sha256HashMock2, sha256HashMock3).when(mMock).getHash();
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
@@ -3218,8 +3202,8 @@ public class PeerSapientGeneratedJunit4Test {
             target = new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(false).when(blockChainMock).add(mMock);
-            doReturn(blockMock2).when(blockChainMock).getOrphanRoot(sha256HashMock3);
-            doReturn(sha256HashMock4).when(blockMock2).getHash();
+            doReturn(blockMock2).when(blockChainMock).getOrphanRoot(sha256HashMock);
+            doReturn(sha256HashMock2).when(blockMock2).getHash();
             thrown.expect(IllegalStateException.class);
             //Act Statement(s)
             target.processBlock(mMock);
@@ -3228,20 +3212,19 @@ public class PeerSapientGeneratedJunit4Test {
             verify(mMock, times(2)).getTransactions();
             verify(transactionMock).getConfidence();
             verify(transactionConfidenceMock).maybeSetSourceToNetwork();
-            verify(mMock, times(3)).getHash();
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
             context.verify(() -> Context.get(), atLeast(1));
             preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
             verify(blockChainMock).add(mMock);
-            verify(blockChainMock).getOrphanRoot(sha256HashMock3);
+            verify(blockChainMock).getOrphanRoot(sha256HashMock);
             verify(blockMock2).getHash();
         }
     }
 
     //Sapient generated method id: ${70c560e7-6d15-360f-a761-fba9a9bbed04}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processBlockWhenCaughtVerificationException() throws VerificationException, PrunedException, BlockStoreException, IOException {
         /* Branches:
@@ -3301,6 +3284,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${ec6c5e23-df31-342c-a708-7a0b861a9f12}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void processBlockWhenCaughtPrunedExceptionThrowsRuntimeException() throws VerificationException, PrunedException {
         /* Branches:
          * (log.isDebugEnabled()) : true
@@ -3342,7 +3326,7 @@ public class PeerSapientGeneratedJunit4Test {
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doThrow(prunedExceptionMock).when(blockChainMock).add(mMock);
             thrown.expect(RuntimeException.class);
-            thrown.expectCause(isA(PrunedException.class));
+            thrown.expectCause(is(instanceOf(PrunedException.class)));
             //Act Statement(s)
             target.processBlock(mMock);
             //Assert statement(s)
@@ -3406,9 +3390,6 @@ public class PeerSapientGeneratedJunit4Test {
          * (blockChain == null) : false
          * (awaitingFreshFilter != null) : false
          * (catch-exception (PrunedException)) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         FilteredBlock mMock = mock(FilteredBlock.class);
@@ -3431,7 +3412,7 @@ public class PeerSapientGeneratedJunit4Test {
             target = new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             thrown.expect(RuntimeException.class);
-            thrown.expectCause(isA(PrunedException.class));
+            thrown.expectCause(is(instanceOf(PrunedException.class)));
             //Act Statement(s)
             target.endFilteredBlock(mMock);
             //Assert statement(s)
@@ -3463,18 +3444,16 @@ public class PeerSapientGeneratedJunit4Test {
         Sha256Hash sha256HashMock = mock(Sha256Hash.class, "endFilteredBlock_sha256Hash1");
         Block blockMock = mock(Block.class);
         Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock3 = mock(Sha256Hash.class);
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
         Block blockMock2 = mock(Block.class);
         VersionMessage versionMessageMock = mock(VersionMessage.class);
         PeerAddress peerAddressMock = mock(PeerAddress.class);
         Block blockMock3 = mock(Block.class);
-        Sha256Hash sha256HashMock4 = mock(Sha256Hash.class);
+        Sha256Hash sha256HashMock3 = mock(Sha256Hash.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Context> context = mockStatic(Context.class)) {
             doReturn(blockMock).when(mMock).getBlockHeader();
-            doReturn(sha256HashMock2).when(blockMock).getHash();
-            doReturn(sha256HashMock, sha256HashMock3).when(mMock).getHash();
+            doReturn(sha256HashMock, sha256HashMock2).when(mMock).getHash();
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
             doReturn(blockMock2).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
@@ -3485,22 +3464,21 @@ public class PeerSapientGeneratedJunit4Test {
             target = new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(false).when(blockChainMock).add(mMock);
-            doReturn(blockMock3).when(blockChainMock).getOrphanRoot(sha256HashMock3);
-            doReturn(sha256HashMock4).when(blockMock3).getHash();
+            doReturn(blockMock3).when(blockChainMock).getOrphanRoot(sha256HashMock2);
+            doReturn(sha256HashMock3).when(blockMock3).getHash();
             thrown.expect(IllegalStateException.class);
             //Act Statement(s)
             target.endFilteredBlock(mMock);
             //Assert statement(s)
             verify(mMock, times(2)).getHash();
             verify(mMock).getBlockHeader();
-            verify(blockMock).getHash();
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock2).time();
             context.verify(() -> Context.get(), atLeast(1));
             preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
             verify(blockChainMock).add(mMock);
-            verify(blockChainMock).getOrphanRoot(sha256HashMock3);
+            verify(blockChainMock).getOrphanRoot(sha256HashMock2);
             verify(blockMock3).getHash();
         }
     }
@@ -3558,7 +3536,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${6296d640-7ccb-366e-9b5a-4bdda9e6d78b}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void endFilteredBlockWhenBlocksDownloadedEventListenersIsEmptyAndCaughtVerificationException() throws VerificationException, PrunedException, BlockStoreException, IOException {
         /* Branches:
@@ -3609,7 +3587,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${5896ca6d-c10c-3cbb-8641-9d05c47a64c2}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processInvWhenSwitchItemTypeCaseDefaultThrowsIllegalStateException() {
         /* Branches:
@@ -3652,7 +3630,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${3e3d16b0-cc67-3410-aea5-4f524403adb9}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processInvWhenBlocksSizeNotGreaterThan0AndGetDataItemsIsEmptyAndNotPingAfterGetData() throws BlockStoreException, IOException {
         /* Branches:
@@ -3794,9 +3772,67 @@ public class PeerSapientGeneratedJunit4Test {
          * (blocks.size() > 0) : false
          * (!getDataItems.isEmpty()) : true
          * (pingAfterGetData) : false
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
+        Block blockMock = mock(Block.class);
+        VersionMessage versionMessageMock = mock(VersionMessage.class);
+        PeerAddress peerAddressMock = mock(PeerAddress.class);
+        Services servicesMock = mock(Services.class);
+        TxConfidenceTable txConfidenceTableMock = mock(TxConfidenceTable.class);
+        TransactionConfidence transactionConfidenceMock = mock(TransactionConfidence.class);
+        ListenableCompletableFuture<Void> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
+        InventoryMessage inventoryMessageMock = mock(InventoryMessage.class);
+        try (MockedStatic<Context> context = mockStatic(Context.class)) {
+            doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            context.when(() -> Context.get()).thenReturn(contextMock);
+            target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            doReturn(servicesMock).when(vPeerVersionMessageMock).services();
+            doReturn(false).when(servicesMock).has(8L);
+            doReturn(txConfidenceTableMock).when(contextMock).getConfidenceTable();
+            doReturn(transactionConfidenceMock).when(txConfidenceTableMock).seen((Sha256Hash) null, peerAddressMock);
+            doReturn(1).when(transactionConfidenceMock).numBroadcastPeers();
+            doReturn(TransactionConfidence.Source.UNKNOWN).when(transactionConfidenceMock).getSource();
+            doReturn(listenableCompletableFutureMock).when(target).sendMessage((GetDataMessage) any());
+            //Act Statement(s)
+            target.processInv(inventoryMessageMock);
+            //Assert statement(s)
+            verify(paramsMock).getDefaultSerializer();
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
+            context.verify(() -> Context.get(), atLeast(1));
+            verify(vPeerVersionMessageMock).services();
+            verify(servicesMock).has(8L);
+            verify(contextMock).getConfidenceTable();
+            verify(txConfidenceTableMock).seen((Sha256Hash) null, peerAddressMock);
+            verify(transactionConfidenceMock).numBroadcastPeers();
+            verify(transactionConfidenceMock).getSource();
+            verify(target).sendMessage((GetDataMessage) any());
+        }
+    }
+
+    //Sapient generated method id: ${f82e9f8c-f6b1-3206-984b-339196d8b607}
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Test()
+    public void processInvWhenBlocksSizeNotGreaterThan0AndGetDataItemsNotIsEmptyAndNotPingAfterGetData2() throws NotYetConnectedException, BlockStoreException, IOException {
+        /* Branches:
+         * (for-each(items)) : true
+         * (switch(item.type) = TRANSACTION) : true
+         * (log.isDebugEnabled()) : true
+         * (transactions.isEmpty()) : false
+         * (vPeerVersionMessage.services().has(Services.NODE_WITNESS)) : false
+         * (it.hasNext()) : true
+         * (conf.numBroadcastPeers() > 1) : false
+         * (conf.getSource().equals(TransactionConfidence.Source.SELF)) : false
+         * (log.isDebugEnabled()) : false
+         * (pendingTxDownloads.size() > PENDING_TX_DOWNLOADS_LIMIT) : false
+         * (blocks.size() > 0) : false
+         * (!getDataItems.isEmpty()) : true
+         * (pingAfterGetData) : false
          */
         //Arrange Statement(s)
         InventoryMessage invMock = mock(InventoryMessage.class);
@@ -3824,8 +3860,8 @@ public class PeerSapientGeneratedJunit4Test {
             doReturn(false).when(servicesMock).has(8L);
             doReturn(txConfidenceTableMock).when(contextMock).getConfidenceTable();
             doReturn(transactionConfidenceMock).when(txConfidenceTableMock).seen((Sha256Hash) null, peerAddressMock);
-            doReturn(1).when(transactionConfidenceMock).numBroadcastPeers();
-            doReturn(TransactionConfidence.Source.UNKNOWN).when(transactionConfidenceMock).getSource();
+            doReturn(0).when(transactionConfidenceMock).numBroadcastPeers();
+            doReturn(TransactionConfidence.Source.NETWORK).when(transactionConfidenceMock).getSource();
             doReturn(listenableCompletableFutureMock).when(target).sendMessage((GetDataMessage) any());
             //Act Statement(s)
             target.processInv(invMock);
@@ -3846,7 +3882,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${c54c455f-3ca4-305e-84fb-95d7b4e6030f}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processInvWhenBlockChainIsNullAndGetDataItemsIsEmptyAndNotPingAfterGetData() throws BlockStoreException, IOException {
         /* Branches:
@@ -3864,9 +3900,6 @@ public class PeerSapientGeneratedJunit4Test {
          * (blockChain != null) : false
          * (!getDataItems.isEmpty()) : false
          * (pingAfterGetData) : false
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         InventoryMessage invMock = mock(InventoryMessage.class);
@@ -3923,9 +3956,71 @@ public class PeerSapientGeneratedJunit4Test {
          * (for-each(blocks)) : true
          * (blockChain.isOrphan(item)) : true
          * (downloadBlockBodies) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
+        Block blockMock = mock(Block.class);
+        VersionMessage versionMessageMock = mock(VersionMessage.class);
+        PeerAddress peerAddressMock = mock(PeerAddress.class);
+        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
+        Services servicesMock = mock(Services.class);
+        Block blockMock2 = mock(Block.class);
+        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
+        InventoryMessage inventoryMessageMock = mock(InventoryMessage.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<Context> context = mockStatic(Context.class)) {
+            doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            context.when(() -> Context.get()).thenReturn(contextMock);
+            IllegalStateException illegalStateException = new IllegalStateException();
+            preconditions.when(() -> Preconditions.checkState(false)).thenThrow(illegalStateException);
+            target = new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0);
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            doReturn(servicesMock).when(vPeerVersionMessageMock).services();
+            doReturn(true).when(servicesMock).has(8L);
+            doReturn(false, true).when(blockChainMock).isOrphan(sha256HashMock);
+            doReturn(blockMock2).when(blockChainMock).getOrphanRoot(sha256HashMock);
+            doReturn(sha256HashMock2).when(blockMock2).getHash();
+            thrown.expect(IllegalStateException.class);
+            //Act Statement(s)
+            target.processInv(inventoryMessageMock);
+            //Assert statement(s)
+            verify(paramsMock).getDefaultSerializer();
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
+            context.verify(() -> Context.get(), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
+            verify(blockChainMock, times(2)).isOrphan(sha256HashMock);
+            verify(vPeerVersionMessageMock).services();
+            verify(servicesMock).has(8L);
+            verify(blockChainMock).getOrphanRoot(sha256HashMock);
+            verify(blockMock2).getHash();
+        }
+    }
+
+    //Sapient generated method id: ${335124c7-28ca-3efc-8c7c-510d158b3d7f}
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Test()
+    public void processInvWhenBlocksIsNotEmptyAndBlockChainIsOrphanItemAndDownloadBlockBodiesThrowsIllegalStateException() {
+        /* Branches:
+         * (for-each(items)) : true
+         * (switch(item.type) = BLOCK) : true
+         * (log.isDebugEnabled()) : true
+         * (transactions.isEmpty()) : true
+         * (blocks.size() == 1) : true
+         * (downloadData) : true
+         * (blockChain != null) : true
+         * (!blockChain.isOrphan(blocks.get(0))) : false
+         * (vPeerVersionMessage.services().has(Services.NODE_WITNESS)) : true
+         * (it.hasNext()) : false
+         * (blocks.size() > 0) : true
+         * (downloadData) : true
+         * (blockChain != null) : true
+         * (for-each(blocks)) : true
+         * (blockChain.isOrphan(item)) : true
+         * (downloadBlockBodies) : true
          */
         //Arrange Statement(s)
         InventoryMessage invMock = mock(InventoryMessage.class);
@@ -3952,9 +4047,9 @@ public class PeerSapientGeneratedJunit4Test {
             preconditions.when(() -> Preconditions.checkState(false)).thenThrow(illegalStateException);
             target = new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            doReturn(true).when(blockChainMock).isOrphan(sha256HashMock);
             doReturn(servicesMock).when(vPeerVersionMessageMock).services();
             doReturn(true).when(servicesMock).has(8L);
-            doReturn(false, true).when(blockChainMock).isOrphan(sha256HashMock);
             doReturn(blockMock2).when(blockChainMock).getOrphanRoot(sha256HashMock);
             doReturn(sha256HashMock2).when(blockMock2).getHash();
             thrown.expect(IllegalStateException.class);
@@ -3975,8 +4070,80 @@ public class PeerSapientGeneratedJunit4Test {
         }
     }
 
+    //Sapient generated method id: ${3062dd15-cd7c-3621-a7ef-6c815e3087b6}
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Test()
+    public void processInvWhenIsBloomFilteringSupportedNotVPeerVersionMessageAndGetDataItemsNotIsEmptyAndNotPingAfterGetData() throws NotYetConnectedException, BlockStoreException, IOException {
+        /* Branches:
+         * (for-each(items)) : true
+         * (switch(item.type) = BLOCK) : true
+         * (log.isDebugEnabled()) : true
+         * (transactions.isEmpty()) : true
+         * (blocks.size() == 1) : true
+         * (downloadData) : true
+         * (blockChain != null) : true
+         * (!blockChain.isOrphan(blocks.get(0))) : true
+         * (vPeerVersionMessage.services().has(Services.NODE_WITNESS)) : true
+         * (it.hasNext()) : false
+         * (blocks.size() > 0) : true
+         * (downloadData) : true
+         * (blockChain != null) : true
+         * (for-each(blocks)) : true
+         * (blockChain.isOrphan(item)) : false
+         * (!pendingBlockDownloads.contains(item)) : true
+         * (clientVersion >= ProtocolVersion.BLOOM_FILTER.intValue()) : false  #  inside isBloomFilteringSupported method
+         * (version.services().has(Services.NODE_BLOOM)) : false  #  inside isBloomFilteringSupported method
+         * (isBloomFilteringSupported(vPeerVersionMessage)) : false
+         * (!getDataItems.isEmpty()) : true
+         * (pingAfterGetData) : false
+         */
+        //Arrange Statement(s)
+        InventoryMessage invMock = mock(InventoryMessage.class);
+        InventoryItem inventoryItemMock = mock(InventoryItem.class);
+        MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
+        Block blockMock = mock(Block.class);
+        Services servicesMock = mock(Services.class);
+        VersionMessage versionMessageMock = mock(VersionMessage.class);
+        PeerAddress peerAddressMock = mock(PeerAddress.class);
+        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
+        Services servicesMock2 = mock(Services.class);
+        ListenableCompletableFuture<Void> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
+        try (MockedStatic<Context> context = mockStatic(Context.class)) {
+            List<InventoryItem> inventoryItemList = new ArrayList<>();
+            inventoryItemList.add(inventoryItemMock);
+            doReturn(inventoryItemList).when(invMock).getItems();
+            doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            doReturn(0).when(vPeerVersionMessageMock).clientVersion();
+            doReturn(false).when(servicesMock).has(4L);
+            context.when(() -> Context.get()).thenReturn(contextMock);
+            target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            doReturn(false).when(blockChainMock).isOrphan(sha256HashMock);
+            doReturn(servicesMock2, servicesMock).when(vPeerVersionMessageMock).services();
+            doReturn(true).when(servicesMock2).has(8L);
+            doReturn(listenableCompletableFutureMock).when(target).sendMessage((GetDataMessage) any());
+            //Act Statement(s)
+            target.processInv(invMock);
+            //Assert statement(s)
+            verify(invMock).getItems();
+            verify(paramsMock).getDefaultSerializer();
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
+            verify(vPeerVersionMessageMock).clientVersion();
+            verify(vPeerVersionMessageMock, times(2)).services();
+            verify(servicesMock).has(4L);
+            context.verify(() -> Context.get(), atLeast(1));
+            verify(blockChainMock, times(2)).isOrphan(sha256HashMock);
+            verify(servicesMock2).has(8L);
+            verify(target).sendMessage((GetDataMessage) any());
+        }
+    }
+
     //Sapient generated method id: ${06044dc8-999c-3e4b-9664-d01cc9e188e5}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processInvWhenNotUseFilteredBlocksAndGetDataItemsNotIsEmptyAndNotPingAfterGetData() throws NotYetConnectedException, BlockStoreException, IOException {
         /* Branches:
@@ -4002,9 +4169,6 @@ public class PeerSapientGeneratedJunit4Test {
          * (useFilteredBlocks) : false
          * (!getDataItems.isEmpty()) : true
          * (pingAfterGetData) : false
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         InventoryMessage invMock = mock(InventoryMessage.class);
@@ -4075,9 +4239,74 @@ public class PeerSapientGeneratedJunit4Test {
          * (isBloomFilteringSupported(vPeerVersionMessage)) : false
          * (!getDataItems.isEmpty()) : true
          * (pingAfterGetData) : false
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
+        Block blockMock = mock(Block.class);
+        Services servicesMock = mock(Services.class);
+        VersionMessage versionMessageMock = mock(VersionMessage.class);
+        PeerAddress peerAddressMock = mock(PeerAddress.class);
+        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
+        Services servicesMock2 = mock(Services.class);
+        ListenableCompletableFuture<Void> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
+        InventoryMessage inventoryMessageMock = mock(InventoryMessage.class);
+        try (MockedStatic<Context> context = mockStatic(Context.class)) {
+            doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
+            doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            doReturn(70011).when(vPeerVersionMessageMock).clientVersion();
+            doReturn(false).when(servicesMock).has(4L);
+            context.when(() -> Context.get()).thenReturn(contextMock);
+            target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            doReturn(false).when(blockChainMock).isOrphan(sha256HashMock);
+            doReturn(servicesMock2, servicesMock).when(vPeerVersionMessageMock).services();
+            doReturn(true).when(servicesMock2).has(8L);
+            doReturn(listenableCompletableFutureMock).when(target).sendMessage((GetDataMessage) any());
+            //Act Statement(s)
+            target.processInv(inventoryMessageMock);
+            //Assert statement(s)
+            verify(paramsMock).getDefaultSerializer();
+            verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
+            verify(vPeerVersionMessageMock).clientVersion();
+            verify(vPeerVersionMessageMock, times(2)).services();
+            verify(servicesMock).has(4L);
+            context.verify(() -> Context.get(), atLeast(1));
+            verify(blockChainMock).isOrphan(sha256HashMock);
+            verify(servicesMock2).has(8L);
+            verify(target).sendMessage((GetDataMessage) any());
+        }
+    }
+
+    //Sapient generated method id: ${62056136-f728-33f3-8510-a046a8fd0215}
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Test()
+    public void processInvWhenIsBloomFilteringSupportedVPeerVersionMessageAndNotUseFilteredBlocksAndGetDataItemsNotIsEmptyAndNotPingAft() throws NotYetConnectedException, BlockStoreException, IOException {
+        /* Branches:
+         * (for-each(items)) : true
+         * (switch(item.type) = BLOCK) : true
+         * (log.isDebugEnabled()) : true
+         * (transactions.isEmpty()) : true
+         * (blocks.size() == 1) : true
+         * (downloadData) : true
+         * (blockChain != null) : true
+         * (!blockChain.isOrphan(blocks.get(0))) : true
+         * (vPeerVersionMessage.services().has(Services.NODE_WITNESS)) : true
+         * (it.hasNext()) : false
+         * (blocks.size() > 0) : true
+         * (downloadData) : true
+         * (blockChain != null) : true
+         * (for-each(blocks)) : true
+         * (blockChain.isOrphan(item)) : false
+         * (!pendingBlockDownloads.contains(item)) : true
+         * (clientVersion >= ProtocolVersion.BLOOM_FILTER.intValue()) : false  #  inside isBloomFilteringSupported method
+         * (version.services().has(Services.NODE_BLOOM)) : true  #  inside isBloomFilteringSupported method
+         * (isBloomFilteringSupported(vPeerVersionMessage)) : true
+         * (useFilteredBlocks) : false
+         * (!getDataItems.isEmpty()) : true
+         * (pingAfterGetData) : false
          */
         //Arrange Statement(s)
         InventoryMessage invMock = mock(InventoryMessage.class);
@@ -4098,8 +4327,8 @@ public class PeerSapientGeneratedJunit4Test {
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            doReturn(70011).when(vPeerVersionMessageMock).clientVersion();
-            doReturn(false).when(servicesMock).has(4L);
+            doReturn(0).when(vPeerVersionMessageMock).clientVersion();
+            doReturn(true).when(servicesMock).has(4L);
             context.when(() -> Context.get()).thenReturn(contextMock);
             target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
@@ -4152,13 +4381,8 @@ public class PeerSapientGeneratedJunit4Test {
          * (useFilteredBlocks) : false
          * (!getDataItems.isEmpty()) : true
          * (pingAfterGetData) : false
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        InventoryMessage invMock = mock(InventoryMessage.class);
-        InventoryItem inventoryItemMock = mock(InventoryItem.class);
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
         Block blockMock = mock(Block.class);
         Services servicesMock = mock(Services.class);
@@ -4167,10 +4391,8 @@ public class PeerSapientGeneratedJunit4Test {
         Sha256Hash sha256HashMock = mock(Sha256Hash.class);
         Services servicesMock2 = mock(Services.class);
         ListenableCompletableFuture<Void> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
+        InventoryMessage inventoryMessageMock = mock(InventoryMessage.class);
         try (MockedStatic<Context> context = mockStatic(Context.class)) {
-            List<InventoryItem> inventoryItemList = new ArrayList<>();
-            inventoryItemList.add(inventoryItemMock);
-            doReturn(inventoryItemList).when(invMock).getItems();
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
@@ -4185,9 +4407,8 @@ public class PeerSapientGeneratedJunit4Test {
             doReturn(true).when(servicesMock2).has(8L);
             doReturn(listenableCompletableFutureMock).when(target).sendMessage((GetDataMessage) any());
             //Act Statement(s)
-            target.processInv(invMock);
+            target.processInv(inventoryMessageMock);
             //Assert statement(s)
-            verify(invMock).getItems();
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
@@ -4195,7 +4416,7 @@ public class PeerSapientGeneratedJunit4Test {
             verify(vPeerVersionMessageMock, times(2)).services();
             verify(servicesMock).has(4L);
             context.verify(() -> Context.get(), atLeast(1));
-            verify(blockChainMock, times(2)).isOrphan(sha256HashMock);
+            verify(blockChainMock).isOrphan(sha256HashMock);
             verify(servicesMock2).has(8L);
             verify(target).sendMessage((GetDataMessage) any());
         }
@@ -4216,7 +4437,6 @@ public class PeerSapientGeneratedJunit4Test {
         Block blockMock = mock(Block.class);
         GetDataMessage getDataMessageMock = mock(GetDataMessage.class);
         Sha256Hash sha256HashMock = mock(Sha256Hash.class);
-        InventoryItem inventoryItemMock = mock(InventoryItem.class);
         ListenableCompletableFuture<Block> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
         VersionMessage versionMessageMock = mock(VersionMessage.class);
         PeerAddress peerAddressMock = mock(PeerAddress.class);
@@ -4230,9 +4450,6 @@ public class PeerSapientGeneratedJunit4Test {
             doReturn(instant).when(blockMock).time();
             context.when(() -> Context.get()).thenReturn(contextMock);
             getDataMessage.when(() -> GetDataMessage.ofBlock(sha256HashMock, true)).thenReturn(getDataMessageMock);
-            List<InventoryItem> inventoryItemList = new ArrayList<>();
-            inventoryItemList.add(inventoryItemMock);
-            doReturn(inventoryItemList).when(getDataMessageMock).getItems();
             listenableCompletableFuture.when(() -> ListenableCompletableFuture.of((CompletableFuture) any())).thenReturn(listenableCompletableFutureMock);
             target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
@@ -4246,35 +4463,25 @@ public class PeerSapientGeneratedJunit4Test {
             verify(blockMock).time();
             context.verify(() -> Context.get(), atLeast(1));
             getDataMessage.verify(() -> GetDataMessage.ofBlock(sha256HashMock, true), atLeast(1));
-            verify(getDataMessageMock, times(2)).getItems();
             listenableCompletableFuture.verify(() -> ListenableCompletableFuture.of((CompletableFuture) any()));
             verify(target).sendMessage(getDataMessageMock);
         }
     }
 
-    //Sapient generated method id: ${92838a02-06e9-39a5-a9db-58ff1b83a1a6}
-    @Ignore()
+    //Sapient generated method id: ${3bce0190-3422-3bc3-8b13-9ffc085cadf9}
     @Test()
-    public void getBlockWhenGetdataGetItemsSizeNotEquals1() throws NotYetConnectedException, IOException {
+    public void getBlockWhenGetdataGetItemsSizeNotEquals1ThrowsIllegalArgumentException() {
         /* Branches:
          * (getdata.getItems().size() == 1) : false  #  inside sendSingleGetData method
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
         Block blockMock = mock(Block.class);
         GetDataMessage getDataMessageMock = mock(GetDataMessage.class);
         Sha256Hash sha256HashMock = mock(Sha256Hash.class);
-        InventoryItem inventoryItemMock = mock(InventoryItem.class);
-        InventoryItem inventoryItemMock2 = mock(InventoryItem.class);
-        ListenableCompletableFuture<Block> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
         VersionMessage versionMessageMock = mock(VersionMessage.class);
         PeerAddress peerAddressMock = mock(PeerAddress.class);
-        ListenableCompletableFuture<Void> listenableCompletableFutureMock2 = mock(ListenableCompletableFuture.class);
-        try (MockedStatic<ListenableCompletableFuture> listenableCompletableFuture = mockStatic(ListenableCompletableFuture.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<GetDataMessage> getDataMessage = mockStatic(GetDataMessage.class);
              MockedStatic<Context> context = mockStatic(Context.class)) {
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
@@ -4284,27 +4491,22 @@ public class PeerSapientGeneratedJunit4Test {
             context.when(() -> Context.get()).thenReturn(contextMock);
             getDataMessage.when(() -> GetDataMessage.ofBlock(sha256HashMock, true)).thenReturn(getDataMessageMock);
             List<InventoryItem> inventoryItemList = new ArrayList<>();
-            inventoryItemList.add(inventoryItemMock);
-            inventoryItemList.add(inventoryItemMock2);
             doReturn(inventoryItemList).when(getDataMessageMock).getItems();
-            preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
-            listenableCompletableFuture.when(() -> ListenableCompletableFuture.of((CompletableFuture) any())).thenReturn(listenableCompletableFutureMock);
-            target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(false)).thenThrow(illegalArgumentException);
+            target = new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(listenableCompletableFutureMock2).when(target).sendMessage(getDataMessageMock);
+            thrown.expect(IllegalArgumentException.class);
             //Act Statement(s)
-            ListenableCompletableFuture<Block> result = target.getBlock(sha256HashMock);
+            target.getBlock(sha256HashMock);
             //Assert statement(s)
-            assertThat(result, equalTo(listenableCompletableFutureMock));
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
             context.verify(() -> Context.get(), atLeast(1));
             getDataMessage.verify(() -> GetDataMessage.ofBlock(sha256HashMock, true), atLeast(1));
-            verify(getDataMessageMock, times(2)).getItems();
+            verify(getDataMessageMock).getItems();
             preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
-            listenableCompletableFuture.verify(() -> ListenableCompletableFuture.of((CompletableFuture) any()));
-            verify(target).sendMessage(getDataMessageMock);
         }
     }
 
@@ -4323,7 +4525,6 @@ public class PeerSapientGeneratedJunit4Test {
         Block blockMock = mock(Block.class);
         GetDataMessage getDataMessageMock = mock(GetDataMessage.class);
         Sha256Hash sha256HashMock = mock(Sha256Hash.class);
-        InventoryItem inventoryItemMock = mock(InventoryItem.class);
         ListenableCompletableFuture<Transaction> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
         VersionMessage versionMessageMock = mock(VersionMessage.class);
         PeerAddress peerAddressMock = mock(PeerAddress.class);
@@ -4338,9 +4539,6 @@ public class PeerSapientGeneratedJunit4Test {
             doReturn(instant).when(blockMock).time();
             context.when(() -> Context.get()).thenReturn(contextMock);
             getDataMessage.when(() -> GetDataMessage.ofTransaction(sha256HashMock, false)).thenReturn(getDataMessageMock);
-            List<InventoryItem> inventoryItemList = new ArrayList<>();
-            inventoryItemList.add(inventoryItemMock);
-            doReturn(inventoryItemList).when(getDataMessageMock).getItems();
             listenableCompletableFuture.when(() -> ListenableCompletableFuture.of((CompletableFuture) any())).thenReturn(listenableCompletableFutureMock);
             target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
@@ -4356,7 +4554,6 @@ public class PeerSapientGeneratedJunit4Test {
             verify(blockMock).time();
             context.verify(() -> Context.get(), atLeast(1));
             getDataMessage.verify(() -> GetDataMessage.ofTransaction(sha256HashMock, false), atLeast(1));
-            verify(getDataMessageMock, times(2)).getItems();
             listenableCompletableFuture.verify(() -> ListenableCompletableFuture.of((CompletableFuture) any()));
             verify(vPeerVersionMessageMock).services();
             verify(servicesMock).has(8L);
@@ -4364,30 +4561,21 @@ public class PeerSapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${981e6ca1-47a3-3e0e-95ad-ef08ab7f3140}
-    @Ignore()
+    //Sapient generated method id: ${536eb69f-91aa-315e-ad4e-bb34056248ca}
     @Test()
-    public void getPeerMempoolTransactionWhenGetdataGetItemsSizeNotEquals1() throws NotYetConnectedException, IOException {
+    public void getPeerMempoolTransactionWhenGetdataGetItemsSizeNotEquals1ThrowsIllegalArgumentException() {
         /* Branches:
          * (getdata.getItems().size() == 1) : false  #  inside sendSingleGetData method
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
         Block blockMock = mock(Block.class);
         GetDataMessage getDataMessageMock = mock(GetDataMessage.class);
         Sha256Hash sha256HashMock = mock(Sha256Hash.class);
-        InventoryItem inventoryItemMock = mock(InventoryItem.class);
-        InventoryItem inventoryItemMock2 = mock(InventoryItem.class);
-        ListenableCompletableFuture<Transaction> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
         VersionMessage versionMessageMock = mock(VersionMessage.class);
         PeerAddress peerAddressMock = mock(PeerAddress.class);
         Services servicesMock = mock(Services.class);
-        ListenableCompletableFuture<Void> listenableCompletableFutureMock2 = mock(ListenableCompletableFuture.class);
-        try (MockedStatic<ListenableCompletableFuture> listenableCompletableFuture = mockStatic(ListenableCompletableFuture.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<GetDataMessage> getDataMessage = mockStatic(GetDataMessage.class);
              MockedStatic<Context> context = mockStatic(Context.class)) {
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
@@ -4397,31 +4585,26 @@ public class PeerSapientGeneratedJunit4Test {
             context.when(() -> Context.get()).thenReturn(contextMock);
             getDataMessage.when(() -> GetDataMessage.ofTransaction(sha256HashMock, false)).thenReturn(getDataMessageMock);
             List<InventoryItem> inventoryItemList = new ArrayList<>();
-            inventoryItemList.add(inventoryItemMock);
-            inventoryItemList.add(inventoryItemMock2);
             doReturn(inventoryItemList).when(getDataMessageMock).getItems();
-            preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
-            listenableCompletableFuture.when(() -> ListenableCompletableFuture.of((CompletableFuture) any())).thenReturn(listenableCompletableFutureMock);
-            target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(false)).thenThrow(illegalArgumentException);
+            target = new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(servicesMock).when(vPeerVersionMessageMock).services();
             doReturn(false).when(servicesMock).has(8L);
-            doReturn(listenableCompletableFutureMock2).when(target).sendMessage(getDataMessageMock);
+            thrown.expect(IllegalArgumentException.class);
             //Act Statement(s)
-            ListenableCompletableFuture<Transaction> result = target.getPeerMempoolTransaction(sha256HashMock);
+            target.getPeerMempoolTransaction(sha256HashMock);
             //Assert statement(s)
-            assertThat(result, equalTo(listenableCompletableFutureMock));
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
             context.verify(() -> Context.get(), atLeast(1));
             getDataMessage.verify(() -> GetDataMessage.ofTransaction(sha256HashMock, false), atLeast(1));
-            verify(getDataMessageMock, times(2)).getItems();
+            verify(getDataMessageMock).getItems();
             preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
-            listenableCompletableFuture.verify(() -> ListenableCompletableFuture.of((CompletableFuture) any()));
             verify(vPeerVersionMessageMock).services();
             verify(servicesMock).has(8L);
-            verify(target).sendMessage(getDataMessageMock);
         }
     }
 
@@ -4478,22 +4661,19 @@ public class PeerSapientGeneratedJunit4Test {
         try (MockedStatic<Context> context = mockStatic(Context.class)) {
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
-            Instant instant = Instant.now();
-            doReturn(instant).when(blockMock).time();
             context.when(() -> Context.get()).thenReturn(contextMock);
             target = new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             StoredBlock storedBlock = new StoredBlock(blockMock2, new BigInteger("0"), 0);
             doReturn(storedBlock).when(blockChainMock).getChainHead();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock2).time();
             Instant instant2 = Instant.now();
-            doReturn(instant2).when(blockMock2).time();
-            Instant instant3 = Instant.now();
             //Act Statement(s)
-            target.setFastDownloadParameters(false, instant3);
+            target.setFastDownloadParameters(false, instant2);
             //Assert statement(s)
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
-            verify(blockMock).time();
             context.verify(() -> Context.get(), atLeast(1));
             verify(blockChainMock).getChainHead();
             verify(blockMock2).time();
@@ -4577,20 +4757,17 @@ public class PeerSapientGeneratedJunit4Test {
         Block blockMock2 = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class)) {
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
-            Instant instant = Instant.now();
-            doReturn(instant).when(blockMock).time();
             context.when(() -> Context.get()).thenReturn(contextMock);
             target = new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(blockMock, blockMock2).when(paramsMock).getGenesisBlock();
-            Instant instant2 = Instant.now();
-            doReturn(instant2).when(blockMock2).time();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock2).time();
             //Act Statement(s)
             target.setDownloadParameters(0L, false);
             //Assert statement(s)
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock, times(2)).getGenesisBlock();
-            verify(blockMock).time();
             context.verify(() -> Context.get(), atLeast(1));
             verify(blockMock2).time();
         }
@@ -4737,7 +4914,7 @@ public class PeerSapientGeneratedJunit4Test {
             target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             CompletableFuture<Duration> completableFuture = new CompletableFuture<>();
-            doReturn(completableFuture).when(target).sendPing(8726154096886172672L);
+            doReturn(completableFuture).when(target).sendPing(11372622334213120L);
             //Act Statement(s)
             CompletableFuture<Duration> result = target.sendPing();
             //Assert statement(s)
@@ -4746,12 +4923,12 @@ public class PeerSapientGeneratedJunit4Test {
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
             context.verify(() -> Context.get(), atLeast(1));
-            verify(target).sendPing(8726154096886172672L);
+            verify(target).sendPing(11372622334213120L);
         }
     }
 
     //Sapient generated method id: ${815294bc-51c2-3550-9d3f-33d3c35739a6}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void sendPing1WhenPendingPingsSizeNotGreaterThanPENDING_PINGS_LIMIT() throws NotYetConnectedException, IOException {
         /* Branches:
@@ -4791,7 +4968,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${6b7e7cd3-441c-3b79-a979-dcd2e33a3e5f}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.thenApply) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenApply, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void pingTest() throws IOException {
         //Arrange Statement(s)

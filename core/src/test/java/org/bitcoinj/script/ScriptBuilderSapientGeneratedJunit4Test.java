@@ -39,6 +39,7 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mockStatic;
 
 import org.junit.Ignore;
+import org.junit.rules.ExpectedException;
 
 public class ScriptBuilderSapientGeneratedJunit4Test {
 
@@ -65,6 +66,17 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
 
     private final Script templateMock = mock(Script.class);
 
+    private final ScriptChunk scriptChunkMock2 = mock(ScriptChunk.class);
+
+    private final ScriptChunk scriptChunkMock3 = mock(ScriptChunk.class);
+
+    private final ScriptChunk scriptChunkMock4 = mock(ScriptChunk.class);
+
+    private final Script scriptSigMock = mock(Script.class);
+
+    @Rule()
+    public ExpectedException thrown = ExpectedException.none();
+
     //Sapient generated method id: ${e7ca91d8-c1cc-3fb0-bbfc-9b9ce2ba701e}
     @Test()
     public void creationTimeTest() {
@@ -74,10 +86,8 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = new ScriptBuilder(templateMock);
         Instant instant = Instant.now();
-
         //Act Statement(s)
         ScriptBuilder result = target.creationTime(instant);
-
         //Assert statement(s)
         assertThat(result, equalTo(target));
         verify(templateMock).chunks();
@@ -90,10 +100,8 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = new ScriptBuilder(templateMock);
-
         //Act Statement(s)
         ScriptBuilder result = target.addChunk(scriptChunkMock);
-
         //Assert statement(s)
         assertThat(result, equalTo(target));
         verify(templateMock).chunks();
@@ -106,10 +114,8 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = new ScriptBuilder(templateMock);
-
         //Act Statement(s)
         ScriptBuilder result = target.addChunk(0, scriptChunkMock);
-
         //Assert statement(s)
         assertThat(result, equalTo(target));
         verify(templateMock).chunks();
@@ -123,10 +129,8 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = spy(new ScriptBuilder(templateMock));
         doReturn(scriptBuilderMock).when(target).op(0, 0);
-
         //Act Statement(s)
         ScriptBuilder result = target.op(0);
-
         //Assert statement(s)
         assertThat(result, equalTo(scriptBuilderMock));
         verify(templateMock).chunks();
@@ -143,18 +147,16 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = new ScriptBuilder(templateMock);
-
         //Act Statement(s)
         ScriptBuilder result = target.op(0, 79);
-
         //Assert statement(s)
         assertThat(result, equalTo(target));
         verify(templateMock).chunks();
     }
 
-    //Sapient generated method id: ${0ccdadd9-fb21-3ad9-b01f-2a80b4c04cd9}
+    //Sapient generated method id: ${cfdc6693-be3d-3846-b2dc-d6f881170418}
     @Test()
-    public void op1WhenOpcodeNotGreaterThanOP_PUSHDATA4() {
+    public void op1WhenOpcodeNotGreaterThanOP_PUSHDATA4ThrowsIllegalArgumentException() {
         /* Branches:
          * (opcode > OP_PUSHDATA4) : false
          */
@@ -162,12 +164,13 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             List<ScriptChunk> scriptChunkList = new ArrayList<>();
             doReturn(scriptChunkList).when(templateMock).chunks();
-            preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(false)).thenThrow(illegalArgumentException);
             ScriptBuilder target = new ScriptBuilder(templateMock);
+            thrown.expect(IllegalArgumentException.class);
             //Act Statement(s)
-            ScriptBuilder result = target.op(0, 0);
+            target.op(0, 1);
             //Assert statement(s)
-            assertThat(result, equalTo(target));
             verify(templateMock).chunks();
             preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
         }
@@ -185,10 +188,8 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         ScriptBuilder target = spy(new ScriptBuilder(templateMock));
         doReturn(scriptBuilderMock).when(target).smallNum(0);
         byte[] byteArray = new byte[]{};
-
         //Act Statement(s)
         ScriptBuilder result = target.data(byteArray);
-
         //Assert statement(s)
         assertThat(result, equalTo(scriptBuilderMock));
         verify(templateMock).chunks();
@@ -207,10 +208,8 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         ScriptBuilder target = spy(new ScriptBuilder(templateMock));
         byte[] byteArray = new byte[]{(byte) 0};
         doReturn(scriptBuilderMock).when(target).data(0, byteArray);
-
         //Act Statement(s)
         ScriptBuilder result = target.data(byteArray);
-
         //Assert statement(s)
         assertThat(result, equalTo(scriptBuilderMock));
         verify(templateMock).chunks();
@@ -228,10 +227,8 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = new ScriptBuilder(templateMock);
         byte[] byteArray = new byte[]{};
-
         //Act Statement(s)
         ScriptBuilder result = target.data(0, byteArray);
-
         //Assert statement(s)
         assertThat(result, equalTo(target));
         verify(templateMock).chunks();
@@ -250,10 +247,8 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = new ScriptBuilder(templateMock);
         byte[] byteArray = new byte[]{(byte) 0, (byte) 1};
-
         //Act Statement(s)
         ScriptBuilder result = target.data(0, byteArray);
-
         //Assert statement(s)
         assertThat(result, equalTo(target));
         verify(templateMock).chunks();
@@ -267,16 +262,17 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          * (data.length == 1) : true
          * (b >= 1) : true
          * (b <= 16) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = new ScriptBuilder(templateMock);
         byte[] byteArray = new byte[]{(byte) 1};
-
         //Act Statement(s)
         ScriptBuilder result = target.data(0, byteArray);
-
         //Assert statement(s)
         assertThat(result, equalTo(target));
         verify(templateMock).chunks();
@@ -290,16 +286,17 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          * (data.length == 1) : true
          * (b >= 1) : true
          * (b <= 16) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = new ScriptBuilder(templateMock);
         byte[] byteArray = new byte[]{(byte) 17};
-
         //Act Statement(s)
         ScriptBuilder result = target.data(0, byteArray);
-
         //Assert statement(s)
         assertThat(result, equalTo(target));
         verify(templateMock).chunks();
@@ -318,11 +315,9 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = new ScriptBuilder(templateMock);
-        byte[] byteArray = new byte[]{};
-
+        byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31, (byte) 32, (byte) 33, (byte) 34, (byte) 35, (byte) 36, (byte) 37, (byte) 38, (byte) 39, (byte) 40, (byte) 41, (byte) 42, (byte) 43, (byte) 44, (byte) 45, (byte) 46, (byte) 47, (byte) 48, (byte) 49, (byte) 50, (byte) 51, (byte) 52, (byte) 53, (byte) 54, (byte) 55, (byte) 56, (byte) 57, (byte) 58, (byte) 59, (byte) 60, (byte) 61, (byte) 62, (byte) 63, (byte) 64, (byte) 65, (byte) 66, (byte) 67, (byte) 68, (byte) 69, (byte) 70, (byte) 71, (byte) 72, (byte) 73, (byte) 74, (byte) 75};
         //Act Statement(s)
         ScriptBuilder result = target.data(0, byteArray);
-
         //Assert statement(s)
         assertThat(result, equalTo(target));
         verify(templateMock).chunks();
@@ -337,22 +332,24 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          * (data.length < OP_PUSHDATA1) : false
          * (data.length < 256) : false
          * (data.length < 65536) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = new ScriptBuilder(templateMock);
         byte[] byteArray = new byte[]{};
-
         //Act Statement(s)
         ScriptBuilder result = target.data(0, byteArray);
-
         //Assert statement(s)
         assertThat(result, equalTo(target));
         verify(templateMock).chunks();
     }
 
     //Sapient generated method id: ${080cad56-3838-34be-ad35-86f8a3ef6b63}
+    @Ignore()
     @Test()
     public void data1WhenDataLengthNotLessThan65536ThrowsRuntimeException() {
         /* Branches:
@@ -361,19 +358,27 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          * (data.length < OP_PUSHDATA1) : false
          * (data.length < 256) : false
          * (data.length < 65536) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        List<ScriptChunk> scriptChunkList = new ArrayList<>();
-        doReturn(scriptChunkList).when(templateMock).chunks();
-        ScriptBuilder target = new ScriptBuilder(templateMock);
-        byte[] byteArray = new byte[]{};
-
-        //Act Statement(s)
-        ScriptBuilder result = target.data(0, byteArray);
-
-        //Assert statement(s)
-        assertThat(result, equalTo(target));
-        verify(templateMock).chunks();
+        try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
+            List<ScriptChunk> scriptChunkList = new ArrayList<>();
+            doReturn(scriptChunkList).when(templateMock).chunks();
+            Instant instant = TimeUtils.currentTime();
+            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(instant);
+            ScriptBuilder target = new ScriptBuilder(templateMock);
+            RuntimeException runtimeException = new RuntimeException("Unimplemented");
+            thrown.expect(RuntimeException.class);
+            thrown.expectMessage(runtimeException.getMessage());
+            byte[] byteArray = new byte[]{};
+            //Act Statement(s)
+            target.data(0, byteArray);
+            //Assert statement(s)
+            verify(templateMock).chunks();
+            timeUtils.verify(() -> TimeUtils.currentTime(), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${15af010b-eb21-384b-8101-d4bbd5fb8766}
@@ -384,10 +389,8 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = spy(new ScriptBuilder(templateMock));
         doReturn(scriptBuilderMock).when(target).number(0, 0L);
-
         //Act Statement(s)
         ScriptBuilder result = target.number(0L);
-
         //Assert statement(s)
         assertThat(result, equalTo(scriptBuilderMock));
         verify(templateMock).chunks();
@@ -405,10 +408,8 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = spy(new ScriptBuilder(templateMock));
         doReturn(scriptBuilderMock).when(target).op(0, 79);
-
         //Act Statement(s)
         ScriptBuilder result = target.number(0, -1L);
-
         //Assert statement(s)
         assertThat(result, equalTo(scriptBuilderMock));
         verify(templateMock).chunks();
@@ -428,10 +429,8 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = spy(new ScriptBuilder(templateMock));
         doReturn(scriptBuilderMock).when(target).smallNum(0, 1);
-
         //Act Statement(s)
         ScriptBuilder result = target.number(0, 1L);
-
         //Assert statement(s)
         assertThat(result, equalTo(scriptBuilderMock));
         verify(templateMock).chunks();
@@ -451,10 +450,8 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = spy(new ScriptBuilder(templateMock));
         doReturn(scriptBuilderMock).when(target).bigNum(0, 17L);
-
         //Act Statement(s)
         ScriptBuilder result = target.number(0, 17L);
-
         //Assert statement(s)
         assertThat(result, equalTo(scriptBuilderMock));
         verify(templateMock).chunks();
@@ -469,10 +466,8 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = spy(new ScriptBuilder(templateMock));
         doReturn(scriptBuilderMock).when(target).smallNum(0, 0);
-
         //Act Statement(s)
         ScriptBuilder result = target.smallNum(0);
-
         //Assert statement(s)
         assertThat(result, equalTo(scriptBuilderMock));
         verify(templateMock).chunks();
@@ -487,85 +482,56 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = spy(new ScriptBuilder(templateMock));
         doReturn(scriptBuilderMock).when(target).bigNum(0, 0L);
-
         //Act Statement(s)
         ScriptBuilder result = target.bigNum(0L);
-
         //Assert statement(s)
         assertThat(result, equalTo(scriptBuilderMock));
         verify(templateMock).chunks();
         verify(target).bigNum(0, 0L);
     }
 
-    //Sapient generated method id: ${2e3755ed-e56b-3fa0-bd4e-492e72f2f9f0}
+    //Sapient generated method id: ${d685ddeb-f729-3a5d-a311-d32195ba457d}
     @Ignore()
     @Test()
-    public void smallNum1WhenNumLessThanOrEqualsTo16() {
+    public void smallNum1WhenNumGreaterThanOrEqualsTo0ThrowsIllegalArgumentException() {
         /* Branches:
          * (num >= 0) : true
-         * (num <= 16) : true
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             List<ScriptChunk> scriptChunkList = new ArrayList<>();
             doReturn(scriptChunkList).when(templateMock).chunks();
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
             ScriptBuilder target = new ScriptBuilder(templateMock);
+            thrown.expect(IllegalArgumentException.class);
             //Act Statement(s)
-            ScriptBuilder result = target.smallNum(0, 0);
+            target.smallNum(0, 1);
             //Assert statement(s)
-            assertThat(result, equalTo(target));
             verify(templateMock).chunks();
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
         }
     }
 
-    //Sapient generated method id: ${b951a25a-02c5-37c8-b10d-0688bec1a920}
-    @Ignore()
+    //Sapient generated method id: ${e2574f1c-f078-3f77-9de9-c28b66af29ac}
     @Test()
-    public void smallNum1WhenNumGreaterThan16() {
-        /* Branches:
-         * (num >= 0) : true
-         * (num <= 16) : false
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<Script> script = mockStatic(Script.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            List<ScriptChunk> scriptChunkList = new ArrayList<>();
-            doReturn(scriptChunkList).when(templateMock).chunks();
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            script.when(() -> Script.encodeToOpN(17)).thenReturn(0);
-            ScriptBuilder target = new ScriptBuilder(templateMock);
-            //Act Statement(s)
-            ScriptBuilder result = target.smallNum(0, 17);
-            //Assert statement(s)
-            assertThat(result, equalTo(target));
-            verify(templateMock).chunks();
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
-            script.verify(() -> Script.encodeToOpN(17), atLeast(1));
-        }
-    }
-
-    //Sapient generated method id: ${45857533-0ca1-3545-b396-ec784914c464}
-    @Ignore()
-    @Test()
-    public void smallNum1WhenNumLessThan0AndNumLessThanOrEqualsTo16() {
+    public void smallNum1WhenNumLessThan0ThrowsIllegalArgumentException() {
         /* Branches:
          * (num >= 0) : false
-         * (num <= 16) : true
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             List<ScriptChunk> scriptChunkList = new ArrayList<>();
             doReturn(scriptChunkList).when(templateMock).chunks();
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
             ScriptBuilder target = new ScriptBuilder(templateMock);
+            thrown.expect(IllegalArgumentException.class);
             //Act Statement(s)
-            ScriptBuilder result = target.smallNum(0, -1);
+            target.smallNum(0, -1);
             //Assert statement(s)
-            assertThat(result, equalTo(target));
             verify(templateMock).chunks();
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
         }
     }
 
@@ -579,10 +545,8 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = new ScriptBuilder(templateMock);
-
         //Act Statement(s)
         ScriptBuilder result = target.bigNum(0, 0L);
-
         //Assert statement(s)
         assertThat(result, equalTo(target));
         verify(templateMock).chunks();
@@ -598,15 +562,16 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          * ((result.peek() & 0x80) != 0) : true
          * (neg) : true
          * (byteIdx < data.length) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = new ScriptBuilder(templateMock);
-
         //Act Statement(s)
         ScriptBuilder result = target.bigNum(0, -1L);
-
         //Assert statement(s)
         assertThat(result, equalTo(target));
         verify(templateMock).chunks();
@@ -627,10 +592,8 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = new ScriptBuilder(templateMock);
-
         //Act Statement(s)
         ScriptBuilder result = target.bigNum(0, -1L);
-
         //Assert statement(s)
         assertThat(result, equalTo(target));
         verify(templateMock).chunks();
@@ -646,15 +609,16 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          * ((result.peek() & 0x80) != 0) : true
          * (neg) : false
          * (byteIdx < data.length) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = new ScriptBuilder(templateMock);
-
         //Act Statement(s)
         ScriptBuilder result = target.bigNum(0, 1L);
-
         //Assert statement(s)
         assertThat(result, equalTo(target));
         verify(templateMock).chunks();
@@ -668,10 +632,8 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = spy(new ScriptBuilder(templateMock));
         doReturn(scriptBuilderMock).when(target).number(1L);
-
         //Act Statement(s)
         ScriptBuilder result = target.opTrue();
-
         //Assert statement(s)
         assertThat(result, equalTo(scriptBuilderMock));
         verify(templateMock).chunks();
@@ -686,10 +648,8 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = spy(new ScriptBuilder(templateMock));
         doReturn(scriptBuilderMock).when(target).number(0, 1L);
-
         //Act Statement(s)
         ScriptBuilder result = target.opTrue(0);
-
         //Assert statement(s)
         assertThat(result, equalTo(scriptBuilderMock));
         verify(templateMock).chunks();
@@ -704,10 +664,8 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = spy(new ScriptBuilder(templateMock));
         doReturn(scriptBuilderMock).when(target).number(0L);
-
         //Act Statement(s)
         ScriptBuilder result = target.opFalse();
-
         //Assert statement(s)
         assertThat(result, equalTo(scriptBuilderMock));
         verify(templateMock).chunks();
@@ -722,10 +680,8 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(templateMock).chunks();
         ScriptBuilder target = spy(new ScriptBuilder(templateMock));
         doReturn(scriptBuilderMock).when(target).number(0, 0L);
-
         //Act Statement(s)
         ScriptBuilder result = target.opFalse(0);
-
         //Assert statement(s)
         assertThat(result, equalTo(scriptBuilderMock));
         verify(templateMock).chunks();
@@ -753,12 +709,10 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
     //Sapient generated method id: ${e882d384-697e-36fa-b92b-76223718d4c1}
     @Test()
     public void createEmptyTest() {
-
         //Act Statement(s)
         Script result = ScriptBuilder.createEmpty();
         ScriptBuilder scriptBuilder = new ScriptBuilder();
         Script script = scriptBuilder.build();
-
         //Assert statement(s)
         assertThat(result, equalTo(script));
     }
@@ -777,10 +731,8 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Instant instant = Instant.now();
-
         //Act Statement(s)
         Script result = ScriptBuilder.createOutputScript(addressMock, instant);
-
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -797,10 +749,8 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
-
         //Act Statement(s)
         Script result = ScriptBuilder.createOutputScript(addressMock);
-
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -816,14 +766,12 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(byteArray).when(signatureMock).encodeToBitcoin();
         byte[] byteArray2 = new byte[]{};
         doReturn(byteArray2).when(pubKeyMock).getPubKey();
-
         //Act Statement(s)
         Script result = ScriptBuilder.createInputScript(signatureMock, pubKeyMock);
         ScriptBuilder scriptBuilder = new ScriptBuilder();
         ScriptBuilder scriptBuilder2 = scriptBuilder.data(byteArray);
         ScriptBuilder scriptBuilder3 = scriptBuilder2.data(byteArray2);
         Script script = scriptBuilder3.build();
-
         //Assert statement(s)
         assertThat(result, equalTo(script));
         verify(signatureMock).encodeToBitcoin();
@@ -840,7 +788,6 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         byte[] byteArray = new byte[]{};
         doReturn(byteArray).when(pubKeyMock).getPubKey();
         TransactionSignature transactionSignature = null;
-
         //Act Statement(s)
         Script result = ScriptBuilder.createInputScript(transactionSignature, pubKeyMock);
         ScriptBuilder scriptBuilder = new ScriptBuilder();
@@ -848,7 +795,6 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         ScriptBuilder scriptBuilder2 = scriptBuilder.data(byteArray2);
         ScriptBuilder scriptBuilder3 = scriptBuilder2.data(byteArray);
         Script script = scriptBuilder3.build();
-
         //Assert statement(s)
         assertThat(result, equalTo(script));
         verify(pubKeyMock).getPubKey();
@@ -863,13 +809,11 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{};
         doReturn(byteArray).when(signatureMock).encodeToBitcoin();
-
         //Act Statement(s)
         Script result = ScriptBuilder.createInputScript(signatureMock);
         ScriptBuilder scriptBuilder = new ScriptBuilder();
         ScriptBuilder scriptBuilder2 = scriptBuilder.data(byteArray);
         Script script = scriptBuilder2.build();
-
         //Assert statement(s)
         assertThat(result, equalTo(script));
         verify(signatureMock).encodeToBitcoin();
@@ -883,16 +827,110 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         TransactionSignature transactionSignature = null;
-
         //Act Statement(s)
         Script result = ScriptBuilder.createInputScript(transactionSignature);
         ScriptBuilder scriptBuilder = new ScriptBuilder();
         byte[] byteArray = new byte[]{};
         ScriptBuilder scriptBuilder2 = scriptBuilder.data(byteArray);
         Script script = scriptBuilder2.build();
-
         //Assert statement(s)
         assertThat(result, equalTo(script));
+    }
+
+    //Sapient generated method id: ${29b303f4-bca9-389e-a119-a1a726e27680}
+    @Test()
+    public void createMultiSigOutputScriptWhenThresholdNotGreaterThan0ThrowsIllegalArgumentException() {
+        /* Branches:
+         * (threshold > 0) : false
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(false)).thenThrow(illegalArgumentException);
+            thrown.expect(IllegalArgumentException.class);
+            List<ECKey> eCKeyList = new ArrayList<>();
+            //Act Statement(s)
+            ScriptBuilder.createMultiSigOutputScript(-1, eCKeyList);
+            //Assert statement(s)
+            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
+        }
+    }
+
+    //Sapient generated method id: ${2e473006-9436-365c-9b06-465578b217e3}
+    @Test()
+    public void createMultiSigOutputScriptWhenThresholdGreaterThanPubkeysSizeThrowsIllegalArgumentException() {
+        /* Branches:
+         * (threshold > 0) : true
+         * (threshold <= pubkeys.size()) : false
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(false)).thenThrow(illegalArgumentException);
+            thrown.expect(IllegalArgumentException.class);
+            List<ECKey> eCKeyList = new ArrayList<>();
+            //Act Statement(s)
+            ScriptBuilder.createMultiSigOutputScript(1, eCKeyList);
+            //Assert statement(s)
+            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
+        }
+    }
+
+    //Sapient generated method id: ${038f8db5-df0f-3f72-be0d-dee0936bf069}
+    @Test()
+    public void createMultiSigOutputScriptWhenPubkeysSizeGreaterThan16ThrowsIllegalArgumentException() {
+        /* Branches:
+         * (threshold > 0) : true
+         * (threshold <= pubkeys.size()) : true
+         * (pubkeys.size() <= 16) : false
+         */
+        //Arrange Statement(s)
+        ECKey eCKeyMock = mock(ECKey.class);
+        ECKey eCKeyMock2 = mock(ECKey.class);
+        ECKey eCKeyMock3 = mock(ECKey.class);
+        ECKey eCKeyMock4 = mock(ECKey.class);
+        ECKey eCKeyMock5 = mock(ECKey.class);
+        ECKey eCKeyMock6 = mock(ECKey.class);
+        ECKey eCKeyMock7 = mock(ECKey.class);
+        ECKey eCKeyMock8 = mock(ECKey.class);
+        ECKey eCKeyMock9 = mock(ECKey.class);
+        ECKey eCKeyMock10 = mock(ECKey.class);
+        ECKey eCKeyMock11 = mock(ECKey.class);
+        ECKey eCKeyMock12 = mock(ECKey.class);
+        ECKey eCKeyMock13 = mock(ECKey.class);
+        ECKey eCKeyMock14 = mock(ECKey.class);
+        ECKey eCKeyMock15 = mock(ECKey.class);
+        ECKey eCKeyMock16 = mock(ECKey.class);
+        ECKey eCKeyMock17 = mock(ECKey.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS)) {
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(false)).thenThrow(illegalArgumentException);
+            thrown.expect(IllegalArgumentException.class);
+            List<ECKey> eCKeyList = new ArrayList<>();
+            eCKeyList.add(eCKeyMock);
+            eCKeyList.add(eCKeyMock2);
+            eCKeyList.add(eCKeyMock3);
+            eCKeyList.add(eCKeyMock4);
+            eCKeyList.add(eCKeyMock5);
+            eCKeyList.add(eCKeyMock6);
+            eCKeyList.add(eCKeyMock7);
+            eCKeyList.add(eCKeyMock8);
+            eCKeyList.add(eCKeyMock9);
+            eCKeyList.add(eCKeyMock10);
+            eCKeyList.add(eCKeyMock11);
+            eCKeyList.add(eCKeyMock12);
+            eCKeyList.add(eCKeyMock13);
+            eCKeyList.add(eCKeyMock14);
+            eCKeyList.add(eCKeyMock15);
+            eCKeyList.add(eCKeyMock16);
+            eCKeyList.add(eCKeyMock17);
+            //Act Statement(s)
+            ScriptBuilder.createMultiSigOutputScript(1, eCKeyList);
+            //Assert statement(s)
+            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${44cfdb7b-07c1-3c79-a6f1-b8241b68ed03}
@@ -910,82 +948,17 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         doReturn(byteArray).when(keyMock).getPubKey();
         List<ECKey> eCKeyList = new ArrayList<>();
         eCKeyList.add(keyMock);
-
         //Act Statement(s)
         Script result = ScriptBuilder.createMultiSigOutputScript(1, eCKeyList);
         ScriptBuilder scriptBuilder = new ScriptBuilder();
         Script script = scriptBuilder.build();
         List<ECKey> eCKeyECKeyListList = new ArrayList<>();
         eCKeyECKeyListList.add(keyMock);
-
         //Assert statement(s)
         assertThat(result, equalTo(script));
         assertThat(eCKeyList.size(), equalTo(eCKeyECKeyListList.size()));
         assertThat(eCKeyList, containsInRelativeOrder(eCKeyECKeyListList.toArray()));
         verify(keyMock).getPubKey();
-    }
-
-    //Sapient generated method id: ${9e705cfb-4e2d-307d-a258-d07ca34f96e1}
-    @Ignore()
-    @Test()
-    public void createMultiSigOutputScriptWhenThresholdGreaterThanPubkeysSizeAndPubkeysSizeGreaterThan16AndPubkeysIsNotEmpty() {
-        /* Branches:
-         * (threshold > 0) : true
-         * (threshold <= pubkeys.size()) : false
-         * (pubkeys.size() <= 16) : false
-         * (for-each(pubkeys)) : true
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
-            //TODO: Needs to return real value
-            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(null);
-            ECKey eCKey = new ECKey();
-            ECKey eCKey2 = new ECKey();
-            List<ECKey> eCKeyList = new ArrayList<>();
-            eCKeyList.add(eCKey);
-            eCKeyList.add(eCKey2);
-            //Act Statement(s)
-            Script result = ScriptBuilder.createMultiSigOutputScript(1, eCKeyList);
-            ScriptBuilder scriptBuilder = new ScriptBuilder();
-            Script script = scriptBuilder.build();
-            //Assert statement(s)
-            assertThat(result, equalTo(script));
-            timeUtils.verify(() -> TimeUtils.currentTime(), atLeast(1));
-        }
-    }
-
-    //Sapient generated method id: ${7ab754f7-b3e6-37b3-a54e-97db9487942a}
-    @Ignore()
-    @Test()
-    public void createMultiSigOutputScriptWhenThresholdLessThanOrEqualsToPubkeysSizeAndPubkeysSizeLessThanOrEqualsTo16AndPubkeysIsNotEm() {
-        /* Branches:
-         * (threshold > 0) : false
-         * (threshold <= pubkeys.size()) : true
-         * (pubkeys.size() <= 16) : true
-         * (for-each(pubkeys)) : true
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            byte[] byteArray = new byte[]{};
-            doReturn(byteArray).when(keyMock).getPubKey();
-            preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
-            List<ECKey> eCKeyList = new ArrayList<>();
-            eCKeyList.add(keyMock);
-            //Act Statement(s)
-            Script result = ScriptBuilder.createMultiSigOutputScript(0, eCKeyList);
-            ScriptBuilder scriptBuilder = new ScriptBuilder();
-            Script script = scriptBuilder.build();
-            List<ECKey> eCKeyECKeyListList = new ArrayList<>();
-            eCKeyECKeyListList.add(keyMock);
-            //Assert statement(s)
-            assertThat(result, equalTo(script));
-            assertThat(eCKeyList.size(), equalTo(eCKeyECKeyListList.size()));
-            assertThat(eCKeyList, containsInRelativeOrder(eCKeyECKeyListList.toArray()));
-            verify(keyMock).getPubKey();
-            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(2));
-        }
     }
 
     //Sapient generated method id: ${140c5cac-90e5-3ad6-a469-54b443cdcc92}
@@ -1098,42 +1071,17 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${3c369cde-d42f-3197-bfa8-a03d8dcadff1}
-    @Ignore()
+    //Sapient generated method id: ${ef2e20c8-ce9a-3cc4-a262-243b72715c9c}
     @Test()
-    public void createMultiSigInputScriptBytes1WhenMultisigProgramBytesIsNotNull() {
-        /* Branches:
-         * (signatures.size() <= 16) : true
-         * (for-each(signatures)) : true
-         * (multisigProgramBytes != null) : true
-         */
-        //Arrange Statement(s)
-        byte[] byteArray = new byte[]{};
-        List<byte[]> byteList = new ArrayList<>();
-        byteList.add(byteArray);
-        byte[] byteArray2 = new byte[]{};
-
-        //Act Statement(s)
-        Script result = ScriptBuilder.createMultiSigInputScriptBytes(byteList, byteArray2);
-        ScriptBuilder scriptBuilder = new ScriptBuilder();
-        Script script = scriptBuilder.build();
-
-        //Assert statement(s)
-        assertThat(result, equalTo(script));
-    }
-
-    //Sapient generated method id: ${78084a7c-25a2-3fe6-925b-d33c879f9e5a}
-    @Ignore()
-    @Test()
-    public void createMultiSigInputScriptBytes1WhenSignaturesIsNotEmptyAndMultisigProgramBytesIsNotNull() {
+    public void createMultiSigInputScriptBytes1WhenSignaturesSizeGreaterThan16ThrowsIllegalArgumentException() {
         /* Branches:
          * (signatures.size() <= 16) : false
-         * (for-each(signatures)) : true
-         * (multisigProgramBytes != null) : true
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(false)).thenThrow(illegalArgumentException);
+            thrown.expect(IllegalArgumentException.class);
             byte[] byteArray = new byte[]{};
             byte[] byteArray2 = new byte[]{};
             byte[] byteArray3 = new byte[]{};
@@ -1171,13 +1119,32 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
             byteList.add(byteArray17);
             byte[] byteArray18 = new byte[]{};
             //Act Statement(s)
-            Script result = ScriptBuilder.createMultiSigInputScriptBytes(byteList, byteArray18);
-            ScriptBuilder scriptBuilder = new ScriptBuilder();
-            Script script = scriptBuilder.build();
+            ScriptBuilder.createMultiSigInputScriptBytes(byteList, byteArray18);
             //Assert statement(s)
-            assertThat(result, equalTo(script));
             preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
         }
+    }
+
+    //Sapient generated method id: ${3c369cde-d42f-3197-bfa8-a03d8dcadff1}
+    @Ignore()
+    @Test()
+    public void createMultiSigInputScriptBytes1WhenMultisigProgramBytesIsNotNull() {
+        /* Branches:
+         * (signatures.size() <= 16) : true
+         * (for-each(signatures)) : true
+         * (multisigProgramBytes != null) : true
+         */
+        //Arrange Statement(s)
+        byte[] byteArray = new byte[]{};
+        List<byte[]> byteList = new ArrayList<>();
+        byteList.add(byteArray);
+        byte[] byteArray2 = new byte[]{};
+        //Act Statement(s)
+        Script result = ScriptBuilder.createMultiSigInputScriptBytes(byteList, byteArray2);
+        ScriptBuilder scriptBuilder = new ScriptBuilder();
+        Script script = scriptBuilder.build();
+        //Assert statement(s)
+        assertThat(result, equalTo(script));
     }
 
     //Sapient generated method id: ${5b45bdf9-a746-3f32-a852-fc16d691d06c}
@@ -1201,10 +1168,6 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Script scriptSigMock = mock(Script.class);
-        ScriptChunk scriptChunkMock2 = mock(ScriptChunk.class);
-        ScriptChunk scriptChunkMock3 = mock(ScriptChunk.class);
-        ScriptChunk scriptChunkMock4 = mock(ScriptChunk.class);
         ScriptChunk scriptChunkMock5 = mock(ScriptChunk.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS)) {
             List<ScriptChunk> scriptChunkList = new ArrayList<>();
@@ -1245,28 +1208,33 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          * (for-each(inputChunks.subList(totalChunks - sigsSuffixCount, totalChunks))) : true
          *
          * TODO: Help needed! This method is not unit testable!
-         *  Following variables could not be isolated/mocked: org.bitcoinj.script.ScriptChunk, builder
+         *  Following variables could not be isolated/mocked: builder
          *  Suggestions:
          *  You can change the initialization of above variables and make it injectable or
          *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS);
-             MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
-            //TODO: Needs to return real value
-            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(null);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS)) {
+            List<ScriptChunk> scriptChunkList = new ArrayList<>();
+            scriptChunkList.add(scriptChunkMock);
+            scriptChunkList.add(scriptChunkMock2);
+            scriptChunkList.add(scriptChunkMock3);
+            scriptChunkList.add(scriptChunkMock4);
+            doReturn(scriptChunkList).when(scriptSigMock).chunks();
+            doReturn(false).when(scriptChunkMock2).equalsOpCode(0);
+            doReturn(false).when(scriptChunkMock3).equalsOpCode(0);
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            List list = new ArrayList<>();
-            Script script = Script.of(list);
-            byte[] byteArray = new byte[]{(byte) 0};
+            byte[] byteArray = new byte[]{};
             //Act Statement(s)
-            Script result = ScriptBuilder.updateScriptWithSignature(script, byteArray, 0, 0, 0);
+            Script result = ScriptBuilder.updateScriptWithSignature(scriptSigMock, byteArray, 1, 1, 1);
             ScriptBuilder scriptBuilder = new ScriptBuilder();
-            Script script2 = scriptBuilder.build();
+            Script script = scriptBuilder.build();
             //Assert statement(s)
-            assertThat(result, equalTo(script2));
-            timeUtils.verify(() -> TimeUtils.currentTime(), atLeast(1));
+            assertThat(result, equalTo(script));
+            verify(scriptSigMock, atLeast(1)).chunks();
+            verify(scriptChunkMock2, atLeast(1)).equalsOpCode(0);
+            verify(scriptChunkMock3, atLeast(1)).equalsOpCode(0);
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(1));
         }
     }
@@ -1276,14 +1244,12 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
     public void createP2PKOutputScriptTest() {
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{};
-
         //Act Statement(s)
         Script result = ScriptBuilder.createP2PKOutputScript(byteArray);
         ScriptBuilder scriptBuilder = new ScriptBuilder();
         ScriptBuilder scriptBuilder2 = scriptBuilder.data(byteArray);
         ScriptBuilder scriptBuilder3 = scriptBuilder2.op(172);
         Script script = scriptBuilder3.build();
-
         //Assert statement(s)
         assertThat(result, equalTo(script));
     }
@@ -1318,18 +1284,11 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
-            //TODO: Needs to return real value
-            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(null);
-            byte[] byteArray = new byte[]{(byte) 0};
-            //Act Statement(s)
-            Script result = ScriptBuilder.createP2PKHOutputScript(byteArray);
-            List list = new ArrayList<>();
-            Script script = Script.of(list);
-            //Assert statement(s)
-            assertThat(result, equalTo(script));
-            timeUtils.verify(() -> TimeUtils.currentTime(), atLeast(1));
-        }
+        byte[] byteArray = new byte[]{};
+        //Act Statement(s)
+        Script result = ScriptBuilder.createP2PKHOutputScript(byteArray);
+        //Assert statement(s)
+        assertThat(result, is(notNullValue()));
     }
 
     //Sapient generated method id: ${ebe4b4b9-3487-3f06-b93f-913963a53d04}
@@ -1362,36 +1321,31 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19};
-
         //Act Statement(s)
         Script result = ScriptBuilder.createP2WPKHOutputScript(byteArray);
         ScriptBuilder scriptBuilder = new ScriptBuilder();
         ScriptBuilder scriptBuilder2 = scriptBuilder.smallNum(0);
         ScriptBuilder scriptBuilder3 = scriptBuilder2.data(byteArray);
         Script script = scriptBuilder3.build();
-
         //Assert statement(s)
         assertThat(result, equalTo(script));
     }
 
-    //Sapient generated method id: ${a258e274-37c6-3365-a30c-15cd36f59271}
+    //Sapient generated method id: ${60f77830-b768-3c4d-8d05-9f19be28f58e}
     @Test()
-    public void createP2WPKHOutputScriptWhenHashLengthNotEqualsSegwitAddressWITNESS_PROGRAM_LENGTH_PKH() {
+    public void createP2WPKHOutputScriptWhenHashLengthNotEqualsSegwitAddressWITNESS_PROGRAM_LENGTH_PKHThrowsIllegalArgumentException() {
         /* Branches:
          * (hash.length == SegwitAddress.WITNESS_PROGRAM_LENGTH_PKH) : false
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{};
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(false)).thenThrow(illegalArgumentException);
+            thrown.expect(IllegalArgumentException.class);
+            byte[] byteArray = new byte[]{(byte) 0};
             //Act Statement(s)
-            Script result = ScriptBuilder.createP2WPKHOutputScript(byteArray);
-            ScriptBuilder scriptBuilder = new ScriptBuilder();
-            ScriptBuilder scriptBuilder2 = scriptBuilder.smallNum(0);
-            ScriptBuilder scriptBuilder3 = scriptBuilder2.data(byteArray);
-            Script script = scriptBuilder3.build();
+            ScriptBuilder.createP2WPKHOutputScript(byteArray);
             //Assert statement(s)
-            assertThat(result, equalTo(script));
             preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
         }
     }
@@ -1431,16 +1385,11 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
-            Instant instant = TimeUtils.currentTime();
-            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(instant);
-            byte[] byteArray = new byte[]{(byte) 0};
-            //Act Statement(s)
-            Script result = ScriptBuilder.createP2SHOutputScript(byteArray);
-            //Assert statement(s)
-            assertThat(result, is(notNullValue()));
-            timeUtils.verify(() -> TimeUtils.currentTime(), atLeast(1));
-        }
+        byte[] byteArray = new byte[]{};
+        //Act Statement(s)
+        Script result = ScriptBuilder.createP2SHOutputScript(byteArray);
+        //Assert statement(s)
+        assertThat(result, is(notNullValue()));
     }
 
     //Sapient generated method id: ${133762ac-56be-38b2-ace6-da8f0fe42388}
@@ -1469,36 +1418,31 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
-
         //Act Statement(s)
         Script result = ScriptBuilder.createP2WSHOutputScript(byteArray);
         ScriptBuilder scriptBuilder = new ScriptBuilder();
         ScriptBuilder scriptBuilder2 = scriptBuilder.smallNum(0);
         ScriptBuilder scriptBuilder3 = scriptBuilder2.data(byteArray);
         Script script = scriptBuilder3.build();
-
         //Assert statement(s)
         assertThat(result, equalTo(script));
     }
 
-    //Sapient generated method id: ${f6cf0b64-e4d4-3d7c-8cd8-765676bfd768}
+    //Sapient generated method id: ${13cca210-3342-30ff-b9f4-b5a3586fd4a0}
     @Test()
-    public void createP2WSHOutputScriptWhenHashLengthNotEqualsSegwitAddressWITNESS_PROGRAM_LENGTH_SH() {
+    public void createP2WSHOutputScriptWhenHashLengthNotEqualsSegwitAddressWITNESS_PROGRAM_LENGTH_SHThrowsIllegalArgumentException() {
         /* Branches:
          * (hash.length == SegwitAddress.WITNESS_PROGRAM_LENGTH_SH) : false
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{};
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(false)).thenThrow(illegalArgumentException);
+            thrown.expect(IllegalArgumentException.class);
+            byte[] byteArray = new byte[]{(byte) 0};
             //Act Statement(s)
-            Script result = ScriptBuilder.createP2WSHOutputScript(byteArray);
-            ScriptBuilder scriptBuilder = new ScriptBuilder();
-            ScriptBuilder scriptBuilder2 = scriptBuilder.smallNum(0);
-            ScriptBuilder scriptBuilder3 = scriptBuilder2.data(byteArray);
-            Script script = scriptBuilder3.build();
+            ScriptBuilder.createP2WSHOutputScript(byteArray);
             //Assert statement(s)
-            assertThat(result, equalTo(script));
             preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
         }
     }
@@ -1562,35 +1506,32 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{};
-
         //Act Statement(s)
         Script result = ScriptBuilder.createOpReturnScript(byteArray);
         ScriptBuilder scriptBuilder = new ScriptBuilder();
         ScriptBuilder scriptBuilder2 = scriptBuilder.op(106);
         ScriptBuilder scriptBuilder3 = scriptBuilder2.data(byteArray);
         Script script = scriptBuilder3.build();
-
         //Assert statement(s)
         assertThat(result, equalTo(script));
     }
 
-    //Sapient generated method id: ${e48f3bac-9dea-3c4a-bea7-a392e13fb0c2}
+    //Sapient generated method id: ${0a6f030b-ee13-359d-97dc-3530819bba48}
     @Test()
-    public void createOpReturnScriptWhenDataLengthGreaterThan80() {
+    public void createOpReturnScriptWhenDataLengthGreaterThan80ThrowsIllegalArgumentException() {
         /* Branches:
          * (data.length <= 80) : false
          */
         //Arrange Statement(s)
-        byte[] byteArray = new byte[]{};
-
-        //Act Statement(s)
-        Script result = ScriptBuilder.createOpReturnScript(byteArray);
-        ScriptBuilder scriptBuilder = new ScriptBuilder();
-        ScriptBuilder scriptBuilder2 = scriptBuilder.op(106);
-        ScriptBuilder scriptBuilder3 = scriptBuilder2.data(byteArray);
-        Script script = scriptBuilder3.build();
-
-        //Assert statement(s)
-        assertThat(result, equalTo(script));
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(false)).thenThrow(illegalArgumentException);
+            thrown.expect(IllegalArgumentException.class);
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31, (byte) 32, (byte) 33, (byte) 34, (byte) 35, (byte) 36, (byte) 37, (byte) 38, (byte) 39, (byte) 40, (byte) 41, (byte) 42, (byte) 43, (byte) 44, (byte) 45, (byte) 46, (byte) 47, (byte) 48, (byte) 49, (byte) 50, (byte) 51, (byte) 52, (byte) 53, (byte) 54, (byte) 55, (byte) 56, (byte) 57, (byte) 58, (byte) 59, (byte) 60, (byte) 61, (byte) 62, (byte) 63, (byte) 64, (byte) 65, (byte) 66, (byte) 67, (byte) 68, (byte) 69, (byte) 70, (byte) 71, (byte) 72, (byte) 73, (byte) 74, (byte) 75, (byte) 76, (byte) 77, (byte) 78, (byte) 79, (byte) 80};
+            //Act Statement(s)
+            ScriptBuilder.createOpReturnScript(byteArray);
+            //Assert statement(s)
+            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
+        }
     }
 }

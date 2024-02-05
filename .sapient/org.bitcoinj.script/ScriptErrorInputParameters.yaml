@@ -24,7 +24,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "ENUM_SELF_FIELD_ACCESS"
+    failureReason:
+      reason: "ENUM_SELF_FIELD_ACCESS"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -130,13 +131,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "BEF5EBCA2CB21CBBA89303E25EED9F36"
+    modelFingerprint: "171BC2D741673E6B12A72DEF91A94E86"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "name"
-      modelFingerprint: "7ACB4C7EBF6D36049913B220FC88F117"
+      modelFingerprint: "3830444B9B8AF74B18598135ED0CC485"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -144,9 +145,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "J"
+          value: "OK"
         suggestedContent: !<regular>
-          value: "J"
+          value: "OK"
         valueType: "java.lang.String"
         uuid: "fromMnemonic_string1"
         fixed: false
@@ -156,51 +157,20 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "6B9D3C6328E35A62BE46837C1246B79B"
+      modelFingerprint: "E8D717724AA1ED7E85C91A784DC2F249"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "EXCEPTION"
-        content: !<new>
-          target: "java.lang.IllegalArgumentException"
-          parameters:
-          - name: "s"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "J is not a valid name"
-              suggestedContent: !<regular>
-                value: "J is not a valid name"
-              valueType: "java.lang.String"
-              uuid: "fromMnemonic_string2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "java.lang.IllegalArgumentException"
-          parameters:
-          - name: "s"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "J is not a valid name"
-              suggestedContent: !<regular>
-                value: "J is not a valid name"
-              valueType: "java.lang.String"
-              uuid: "fromMnemonic_string2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        valueType: "java.lang.IllegalArgumentException"
-        uuid: "fromMnemonic_illegalArgumentException1"
-        fixed: true
-        equalsMethodPresent: false
+        sapientType: "ENUM"
+        content: !<regular>
+          value: "SCRIPT_ERR_OK"
+        valueType: "org.bitcoinj.script.ScriptError"
+        uuid: "fromMnemonic_scriptError1"
+        fixed: false
+        collectionUuid: "<clinit>_hashMap1"
+        equalsMethodPresent: true
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
@@ -208,6 +178,6 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

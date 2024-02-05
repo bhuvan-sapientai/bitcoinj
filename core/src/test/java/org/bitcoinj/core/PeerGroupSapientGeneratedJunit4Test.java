@@ -103,13 +103,14 @@ import static org.hamcrest.Matchers.notNullValue;
 import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mockStatic;
 import static org.hamcrest.Matchers.isA;
+import static org.hamcrest.core.IsInstanceOf.instanceOf;
 
 public class PeerGroupSapientGeneratedJunit4Test {
 
     @Rule()
     public Timeout timeoutRule = Timeout.seconds(5);
 
-    private final ClientConnectionManager channelsMock = mock(ClientConnectionManager.class, "ClientConnectionManager");
+    private final ClientConnectionManager channelsMock = mock(ClientConnectionManager.class, "channels");
 
     private final NetworkParameters paramsMock = mock(NetworkParameters.class, "params");
 
@@ -157,7 +158,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${efa8b7ba-547d-3487-81c0-78589231666c}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void setPeerDiscoveryTimeoutMillisTest() {
         //Arrange Statement(s)
@@ -388,34 +389,26 @@ public class PeerGroupSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
-        Network networkMock = mock(Network.class, "NetworkParameters");
-        try (MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            networkParameters.when(() -> NetworkParameters.of((Network) any())).thenReturn(paramsMock);
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
-            Context context2 = Context.getOrCreate();
-            context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
-            target.setUserAgent("MyPeerGroup", "1.0", "My comments");
+            target.setUserAgent("name1", "version1", "comments1");
             //Assert statement(s)
-            networkParameters.verify(() -> NetworkParameters.of((Network) any()));
+            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
-            context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
     }
 
     //Sapient generated method id: ${25705440-7d99-3519-a66f-c6fc8a45b160}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void setUserAgent1Test() {
         //Arrange Statement(s)
@@ -466,7 +459,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${5435a88a-afa5-34ec-bf1f-95244c0f487e}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void addBlocksDownloadedEventListener1WhenGetPendingPeersIsNotEmpty() {
         /* Branches:
@@ -535,7 +528,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${5827ffa3-910a-3344-b3c1-185c12bd5c8e}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void addChainDownloadStartedEventListener1WhenGetPendingPeersIsNotEmpty() {
         /* Branches:
@@ -604,7 +597,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${67f363d7-fd5a-331b-981b-a0674315fbf6}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void addConnectedEventListener1WhenGetPendingPeersIsNotEmpty() {
         /* Branches:
@@ -673,7 +666,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${72082d6c-f76a-38e0-952a-0dde856f6d1a}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void addDisconnectedEventListener1WhenGetPendingPeersIsNotEmpty() {
         /* Branches:
@@ -794,7 +787,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${80bbf267-e8d5-3730-9b98-e9a8bbf44e9d}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void addGetDataEventListener1WhenGetPendingPeersIsNotEmpty() {
         /* Branches:
@@ -863,7 +856,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${f1254035-251b-3540-bb40-b89df80b34b9}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void addOnTransactionBroadcastListener1WhenGetPendingPeersIsNotEmpty() {
         /* Branches:
@@ -932,7 +925,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${e27a5a36-5597-3d29-90bb-7406d45bc035}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void addPreMessageReceivedEventListener1WhenGetPendingPeersIsNotEmpty() {
         /* Branches:
@@ -975,7 +968,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${863c2c9f-1e4a-3af4-adf0-09e324146bb0}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void removeBlocksDownloadedEventListenerWhenResult() {
         /* Branches:
@@ -1022,7 +1015,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${1f4269cd-8504-3847-828c-56a88d825f72}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void removeBlocksDownloadedEventListenerWhenNotResult() {
         /* Branches:
@@ -1069,7 +1062,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${661e71ae-b95a-32e0-be72-a0992d64b79e}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void removeChainDownloadStartedEventListenerWhenResult() {
         /* Branches:
@@ -1116,7 +1109,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${4fa3699b-1b8d-32e7-8bce-d2cc70485096}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void removeChainDownloadStartedEventListenerWhenNotResult() {
         /* Branches:
@@ -1163,7 +1156,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${2555eef3-cc1d-3b14-99ca-4f9bd99af158}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void removeConnectedEventListenerWhenResult() {
         /* Branches:
@@ -1210,7 +1203,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${b4e66288-0940-3018-a8fb-a326fc0c2770}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void removeConnectedEventListenerWhenNotResult() {
         /* Branches:
@@ -1257,7 +1250,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${093a1a63-e865-36b6-9f87-44997902164a}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void removeDisconnectedEventListenerWhenResult() {
         /* Branches:
@@ -1304,7 +1297,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${1ad12ef9-fde0-3d76-b5e2-d757fe5be5e8}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void removeDisconnectedEventListenerWhenNotResult() {
         /* Branches:
@@ -1351,7 +1344,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${e45ff909-c466-3ad4-b84f-99cc3029de5f}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void removeDiscoveredEventListenerWhenResult() {
         /* Branches:
@@ -1382,7 +1375,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${da275b73-6b81-34f4-9095-589d225f881e}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void removeDiscoveredEventListenerWhenNotResult() {
         /* Branches:
@@ -1413,7 +1406,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${8b63a6f0-138b-37b0-b42c-76a5d72330f2}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void removeGetDataEventListenerWhenResult() {
         /* Branches:
@@ -1460,7 +1453,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${04157772-a19f-30ff-a5d4-afc2f3fc9932}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void removeGetDataEventListenerWhenNotResult() {
         /* Branches:
@@ -1507,7 +1500,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${66c8b409-ad71-32f3-9cd9-eb5e57edca68}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void removeOnTransactionBroadcastListenerWhenResult() {
         /* Branches:
@@ -1554,7 +1547,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${01c3fcae-8bb5-34bc-bd03-c6919fed771b}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void removeOnTransactionBroadcastListenerWhenNotResult() {
         /* Branches:
@@ -1601,7 +1594,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${fbff221f-de10-3218-9c1f-4f533ddb7a88}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void removePreMessageReceivedEventListenerWhenResult() {
         /* Branches:
@@ -1648,7 +1641,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${81be7049-f565-373e-ae13-57ec5050adcd}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void removePreMessageReceivedEventListenerWhenNotResult() {
         /* Branches:
@@ -1743,7 +1736,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${5b004286-994d-3a7c-8b07-af8074a341ed}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void addAddressTest() {
         //Arrange Statement(s)
@@ -2102,7 +2095,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${851f0409-c19e-3014-8295-a9d6526b6e01}
-    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.submit) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.submit, ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void waitForJobQueueTest() {
         /**
@@ -2110,29 +2103,21 @@ public class PeerGroupSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
-        Network networkMock = mock(Network.class, "Network");
-        try (MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            networkParameters.when(() -> NetworkParameters.of((Network) any())).thenReturn(paramsMock);
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
-            //TODO: Needs to return real value
-            doReturn(null).when(blockMock).time();
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
-            context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.01"));
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             target.waitForJobQueue();
             //Assert statement(s)
-            networkParameters.verify(() -> NetworkParameters.of((Network) any()));
+            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
-            context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
     }
 
@@ -2170,7 +2155,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${a9331398-240e-36aa-9522-b3dc4bcf14ad}
     @Test()
-    @Ignore(value = "Potential harmful system call (ListenableCompletableFuture.join) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (ListenableCompletableFuture.join, ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void startTest() {
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
@@ -2226,7 +2211,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${f2e2eee3-1366-3a78-9f85-41e952f2e39f}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void stopThrowsIllegalStateException() {
         //Arrange Statement(s)
@@ -2280,7 +2265,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${8918cf59-8088-3d05-b5e8-f71c63906723}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void addWalletWhenScriptPatternIsP2WPKHScriptPubKeyAndOutputNotIsMineWalletAndPeersIsEmpty() throws ScriptException {
         /* Branches:
@@ -2361,12 +2346,10 @@ public class PeerGroupSapientGeneratedJunit4Test {
         Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
         Script scriptMock = mock(Script.class);
-        Script scriptMock2 = mock(Script.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock2 = mock(ListenableCompletableFuture.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock3 = mock(ListenableCompletableFuture.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock4 = mock(ListenableCompletableFuture.class);
-        ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock5 = mock(ListenableCompletableFuture.class);
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             Executor executor = Threading.SAME_THREAD;
@@ -2380,12 +2363,10 @@ public class PeerGroupSapientGeneratedJunit4Test {
             doReturn(instant).when(blockMock).time();
             scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(true);
-            scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock2)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock2)).thenReturn(true);
             target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(listenableCompletableFutureMock, listenableCompletableFutureMock2, listenableCompletableFutureMock3, listenableCompletableFutureMock4).when(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
-            doReturn(listenableCompletableFutureMock5).when(target).addPeerFilterProvider(walletMock);
+            doReturn(listenableCompletableFutureMock2, listenableCompletableFutureMock3, listenableCompletableFutureMock).when(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
+            doReturn(listenableCompletableFutureMock4).when(target).addPeerFilterProvider(walletMock);
             doNothing().when(walletMock).setTransactionBroadcaster(target);
             //Act Statement(s)
             target.addWallet(walletMock);
@@ -2397,10 +2378,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock2), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock2), atLeast(1));
+            scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(2));
+            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock), atLeast(2));
             verify(target, times(4)).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
             verify(target).addPeerFilterProvider(walletMock);
             verify(walletMock).setTransactionBroadcaster(target);
@@ -2429,12 +2408,10 @@ public class PeerGroupSapientGeneratedJunit4Test {
         Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
         Script scriptMock = mock(Script.class);
-        Script scriptMock2 = mock(Script.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock2 = mock(ListenableCompletableFuture.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock3 = mock(ListenableCompletableFuture.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock4 = mock(ListenableCompletableFuture.class);
-        ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock5 = mock(ListenableCompletableFuture.class);
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             Executor executor = Threading.SAME_THREAD;
@@ -2448,13 +2425,11 @@ public class PeerGroupSapientGeneratedJunit4Test {
             doReturn(instant).when(blockMock).time();
             scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(true);
-            scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock2)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock2)).thenReturn(true);
             target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(listenableCompletableFutureMock2).when(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.DONT_SEND);
-            doReturn(listenableCompletableFutureMock, listenableCompletableFutureMock3, listenableCompletableFutureMock4).when(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
-            doReturn(listenableCompletableFutureMock5).when(target).addPeerFilterProvider(walletMock);
+            doReturn(listenableCompletableFutureMock3, listenableCompletableFutureMock).when(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
+            doReturn(listenableCompletableFutureMock4).when(target).addPeerFilterProvider(walletMock);
             doNothing().when(walletMock).setTransactionBroadcaster(target);
             //Act Statement(s)
             target.addWallet(walletMock);
@@ -2466,10 +2441,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock2), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock2), atLeast(1));
+            scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(2));
+            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock), atLeast(2));
             verify(target, times(3)).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
             verify(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.DONT_SEND);
             verify(target).addPeerFilterProvider(walletMock);
@@ -2478,7 +2451,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${532aac8d-8711-3082-a1cc-b8701d7a5927}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void addWalletWhenTxGetConfidenceGetConfidenceTypeEqualsTransactionConfidenceConfidenceTypeBUILDINGAndPeersIsEmpty6() throws ScriptException {
         /* Branches:
@@ -2569,7 +2542,6 @@ public class PeerGroupSapientGeneratedJunit4Test {
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock2 = mock(ListenableCompletableFuture.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock3 = mock(ListenableCompletableFuture.class);
-        ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock4 = mock(ListenableCompletableFuture.class);
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             Executor executor = Threading.SAME_THREAD;
@@ -2586,8 +2558,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(listenableCompletableFutureMock).when(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.DONT_SEND);
-            doReturn(listenableCompletableFutureMock2, listenableCompletableFutureMock3).when(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
-            doReturn(listenableCompletableFutureMock4).when(target).addPeerFilterProvider(walletMock);
+            doReturn(listenableCompletableFutureMock2).when(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
+            doReturn(listenableCompletableFutureMock3).when(target).addPeerFilterProvider(walletMock);
             doNothing().when(walletMock).setTransactionBroadcaster(target);
             //Act Statement(s)
             target.addWallet(walletMock);
@@ -2642,10 +2614,9 @@ public class PeerGroupSapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${123739ef-17cc-3240-a77c-17f290d0e4da}
-    @Ignore()
+    //Sapient generated method id: ${a012b2c6-6c8f-3240-b260-26b57e1fd97d}
     @Test()
-    public void removePeerFilterProviderTest() {
+    public void removePeerFilterProviderThrowsIllegalArgumentException() {
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
@@ -2656,9 +2627,11 @@ public class PeerGroupSapientGeneratedJunit4Test {
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(false)).thenThrow(illegalArgumentException);
             target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            thrown.expect(IllegalArgumentException.class);
             //Act Statement(s)
             target.removePeerFilterProvider(peerFilterProviderMock);
             //Assert statement(s)
@@ -2670,7 +2643,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${57c42480-bc92-3ca8-a15e-47edbd762034}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void removeWalletWhenScriptPatternIsP2WPKHScriptPubKeyAndOutputNotIsMineWalletAndPeersIsEmpty() throws ScriptException {
         /* Branches:
@@ -2745,11 +2718,9 @@ public class PeerGroupSapientGeneratedJunit4Test {
         Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
         Script scriptMock = mock(Script.class);
-        Script scriptMock2 = mock(Script.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock2 = mock(ListenableCompletableFuture.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock3 = mock(ListenableCompletableFuture.class);
-        ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock4 = mock(ListenableCompletableFuture.class);
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             doReturn(false).when(walletMock).removeCoinsReceivedEventListener(walletCoinsReceivedEventListenerMock);
@@ -2763,11 +2734,9 @@ public class PeerGroupSapientGeneratedJunit4Test {
             doReturn(instant).when(blockMock).time();
             scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(true);
-            scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock2)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock2)).thenReturn(true);
             target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(listenableCompletableFutureMock, listenableCompletableFutureMock2, listenableCompletableFutureMock3, listenableCompletableFutureMock4).when(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
+            doReturn(listenableCompletableFutureMock2, listenableCompletableFutureMock3, listenableCompletableFutureMock).when(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
             //Act Statement(s)
             target.removeWallet(walletMock);
             //Assert statement(s)
@@ -2779,10 +2748,8 @@ public class PeerGroupSapientGeneratedJunit4Test {
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock2), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock2), atLeast(1));
+            scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(2));
+            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock), atLeast(2));
             verify(target, times(4)).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
         }
     }
@@ -2808,11 +2775,9 @@ public class PeerGroupSapientGeneratedJunit4Test {
         Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
         Script scriptMock = mock(Script.class);
-        Script scriptMock2 = mock(Script.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock2 = mock(ListenableCompletableFuture.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock3 = mock(ListenableCompletableFuture.class);
-        ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock4 = mock(ListenableCompletableFuture.class);
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             doReturn(false).when(walletMock).removeCoinsReceivedEventListener(walletCoinsReceivedEventListenerMock);
@@ -2826,12 +2791,10 @@ public class PeerGroupSapientGeneratedJunit4Test {
             doReturn(instant).when(blockMock).time();
             scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
             scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(true);
-            scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock2)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock2)).thenReturn(true);
             target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(listenableCompletableFutureMock2).when(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.DONT_SEND);
-            doReturn(listenableCompletableFutureMock, listenableCompletableFutureMock3, listenableCompletableFutureMock4).when(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
+            doReturn(listenableCompletableFutureMock3, listenableCompletableFutureMock).when(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
             //Act Statement(s)
             target.removeWallet(walletMock);
             //Assert statement(s)
@@ -2843,17 +2806,15 @@ public class PeerGroupSapientGeneratedJunit4Test {
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock2), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock2), atLeast(1));
+            scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(2));
+            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock), atLeast(2));
             verify(target, times(3)).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
             verify(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.DONT_SEND);
         }
     }
 
     //Sapient generated method id: ${06899502-87c9-39ff-919c-ce91d91ea16d}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void removeWalletWhenTxGetConfidenceGetConfidenceTypeEqualsTransactionConfidenceConfidenceTypeBUILDINGAndPeersIsEmpty6() throws ScriptException {
         /* Branches:
@@ -2937,7 +2898,6 @@ public class PeerGroupSapientGeneratedJunit4Test {
         Script scriptMock = mock(Script.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
         ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock2 = mock(ListenableCompletableFuture.class);
-        ListenableCompletableFuture<BloomFilter> listenableCompletableFutureMock3 = mock(ListenableCompletableFuture.class);
         try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             doReturn(false).when(walletMock).removeCoinsReceivedEventListener(walletCoinsReceivedEventListenerMock);
@@ -2954,7 +2914,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
             target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(listenableCompletableFutureMock).when(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.DONT_SEND);
-            doReturn(listenableCompletableFutureMock2, listenableCompletableFutureMock3).when(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
+            doReturn(listenableCompletableFutureMock2).when(target).recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
             //Act Statement(s)
             target.removeWallet(walletMock);
             //Assert statement(s)
@@ -2984,20 +2944,14 @@ public class PeerGroupSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
-        Network networkMock = mock(Network.class, "{}");
-        try (MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            networkParameters.when(() -> NetworkParameters.of((Network) any())).thenReturn(paramsMock);
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
-            Context context2 = Context.getOrCreate();
-            context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.5"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             ListenableCompletableFuture<BloomFilter> result = target.recalculateFastCatchupAndFilter(PeerGroup.FilterRecalculateMode.SEND_IF_CHANGED);
@@ -3005,16 +2959,14 @@ public class PeerGroupSapientGeneratedJunit4Test {
             //Assert statement(s)
             //TODO: Please implement equals method in ListenableCompletableFuture for verification to succeed or you need to adjust respective assertion statements
             assertThat(result, equalTo(listenableCompletableFuture));
-            networkParameters.verify(() -> NetworkParameters.of((Network) any()));
+            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
-            context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
     }
 
     //Sapient generated method id: ${470c6f5a-4452-382d-adca-dee0823e4468}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void setBloomFilterFalsePositiveRateTest() {
         //Arrange Statement(s)
@@ -3040,7 +2992,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${b8a23ffc-8480-34f9-ae94-600ef7e0d400}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void numConnectedPeersTest() {
         //Arrange Statement(s)
@@ -3157,45 +3109,39 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${46fc33a4-a9d2-3bdd-8bc3-3f92a7cf1d8b}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void createPeerTest() {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
+        Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
-        Network networkMock = mock(Network.class, "MAIN");
-        NetworkParameters networkParameters2Mock = mock(NetworkParameters.class);
-        try (MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            networkParameters.when(() -> NetworkParameters.of((Network) any())).thenReturn(paramsMock);
+        PeerAddress peerAddressMock = mock(PeerAddress.class);
+        VersionMessage versionMessageMock = mock(VersionMessage.class);
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            ReentrantLock reentrantLock = Threading.lock(PeerGroup.class);
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
-            Context context2 = Context.getOrCreate();
-            context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.01"));
+            target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            InetAddress inetAddress = InetAddress.getLoopbackAddress();
-            PeerAddress peerAddress = PeerAddress.simple(inetAddress, 0);
-            VersionMessage versionMessage = new VersionMessage(networkParameters2Mock, 0);
             //Act Statement(s)
-            Peer result = target.createPeer(peerAddress, versionMessage);
-            Peer peer = new Peer(paramsMock, versionMessage, peerAddress, (AbstractBlockChain) null, 0L, 2147483647);
+            Peer result = target.createPeer(peerAddressMock, versionMessageMock);
+            Peer peer = new Peer(paramsMock, versionMessageMock, peerAddressMock, (AbstractBlockChain) null, 0L, 2147483647);
             //Assert statement(s)
             //TODO: Please implement equals method in Peer for verification to succeed or you need to adjust respective assertion statements
             assertThat(result, equalTo(peer));
-            networkParameters.verify(() -> NetworkParameters.of((Network) any()));
+            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
-            context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
     }
 
     //Sapient generated method id: ${8117fc59-e007-3a51-9f07-287c570ddca2}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void setConnectTimeoutMillisTest() {
         //Arrange Statement(s)
@@ -3257,30 +3203,22 @@ public class PeerGroupSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
-        Network networkMock = mock(Network.class, "Network");
-        try (MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            networkParameters.when(() -> NetworkParameters.of((Network) any())).thenReturn(paramsMock);
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
-            //TODO: Needs to return real value
-            doReturn(null).when(blockMock).time();
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
-            context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.01")));
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doNothing().when(target).startBlockChainDownload((DownloadProgressTracker) any());
             //Act Statement(s)
             target.downloadBlockChain();
             //Assert statement(s)
-            networkParameters.verify(() -> NetworkParameters.of((Network) any()));
+            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
-            context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).startBlockChainDownload((DownloadProgressTracker) any());
         }
     }
@@ -3300,32 +3238,24 @@ public class PeerGroupSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
-        Network networkMock = mock(Network.class, "<Network object>");
-        try (MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            networkParameters.when(() -> NetworkParameters.of((Network) any())).thenReturn(paramsMock);
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
-            //TODO: Needs to return real value
-            doReturn(null).when(blockMock).time();
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
-            context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doNothing().when(target).startBlockChainDownload((DownloadProgressTracker) any());
             thrown.expect(RuntimeException.class);
-            thrown.expectCause(isA(InterruptedException.class));
+            thrown.expectCause(is(instanceOf(InterruptedException.class)));
             //Act Statement(s)
             target.downloadBlockChain();
             //Assert statement(s)
-            networkParameters.verify(() -> NetworkParameters.of((Network) any()));
+            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
-            context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).startBlockChainDownload((DownloadProgressTracker) any());
         }
     }
@@ -3417,7 +3347,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${c1ce17e3-6fb9-3f9f-b1d1-d5d877238bee}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void setFastCatchupTimeSecsTest() {
         //Arrange Statement(s)
@@ -3469,36 +3399,32 @@ public class PeerGroupSapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void getFastCatchupTimeSecsTest() {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
-        try (MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
-            //TODO: Needs to return real value
-            doReturn(null).when(blockMock).time();
-            ReentrantLock reentrantLock = new ReentrantLock();
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
-            Context context2 = new Context();
-            context.when(() -> Context.getOrCreate()).thenReturn(context2);
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
             target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            thrown.expect(NullPointerException.class);
             //Act Statement(s)
-            target.getFastCatchupTimeSecs();
+            long result = target.getFastCatchupTimeSecs();
             //Assert statement(s)
+            assertThat(result, equalTo(0L));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
-            context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
     }
 
     //Sapient generated method id: ${9ab682bf-31f5-3abe-8dbe-9e8a330065dc}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void handlePeerDeathWhenIsRunningNot() {
         /* Branches:
@@ -3695,21 +3621,17 @@ public class PeerGroupSapientGeneratedJunit4Test {
          * (downloadPeer == peer) : true  #  inside setDownloadPeer method
          * (chainDownloadSpeedCalculator == null) : true
          *
-         * */
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
+        Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
-        Network networkMock = mock(Network.class, "<value>");
-        try (MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            networkParameters.when(() -> NetworkParameters.of((Network) any())).thenReturn(paramsMock);
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
-            //TODO: Needs to return real value
-            doReturn(null).when(blockMock).time();
-            ReentrantLock reentrantLock = new ReentrantLock();
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
-            Context context2 = new Context();
-            context.when(() -> Context.getOrCreate()).thenReturn(context2);
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
             target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             thrown.expect(NullPointerException.class);
@@ -3717,11 +3639,9 @@ public class PeerGroupSapientGeneratedJunit4Test {
             //Act Statement(s)
             target.startBlockChainDownloadFromPeer(peer);
             //Assert statement(s)
-            networkParameters.verify(() -> NetworkParameters.of((Network) any()));
+            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
-            context.verify(() -> Context.getOrCreate(), atLeast(1));
         }
     }
 
@@ -3729,7 +3649,6 @@ public class PeerGroupSapientGeneratedJunit4Test {
     @Test()
     public void startBlockChainDownloadFromPeerWhenChainDownloadSpeedCalculatorIsNull() {
         //TODO: Please change the modifier of the below class from private to public to isolate the test case scenario.
-        //TODO: Needs to return real value
         //Act Statement(s)
         //Assert statement(s)
         /* Branches:
@@ -3744,33 +3663,30 @@ public class PeerGroupSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //Peer peerMock = mock(Peer.class, "<valid Peer object>");
+        //Peer peerMock = mock(Peer.class);
+        //Network networkMock = mock(Network.class);
         //Block blockMock = mock(Block.class);
-        //Network networkMock = mock(Network.class, "<valid Network object>");
         //Executor executor = Threading.SAME_THREAD;
         //doNothing().when(peerMock).addBlocksDownloadedEventListener(eq(executor), (PeerGroup.ChainDownloadSpeedCalculator) any());
         //doNothing().when(peerMock).startBlockChainDownload();
-        //networkParameters.when(() -> NetworkParameters.of((Network) any())).thenReturn(paramsMock);
+        //networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
         //doReturn(blockMock).when(paramsMock).getGenesisBlock();
-        //doReturn(null).when(blockMock).time();
-        //ReentrantLock reentrantLock = new ReentrantLock();
-        //threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
-        //Context context2 = new Context();
-        //context.when(() -> Context.getOrCreate()).thenReturn(context2);
+        //Instant instant = Instant.now();
+        //doReturn(instant).when(blockMock).time();
         //target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
         //autoCloseableMocks = MockitoAnnotations.openMocks(this);
+        //doNothing().when(peerMock).setDownloadData(true);
         //target.startBlockChainDownloadFromPeer(peerMock);
         //verify(peerMock).addBlocksDownloadedEventListener(eq(executor), (PeerGroup.ChainDownloadSpeedCalculator) any());
         //verify(peerMock).startBlockChainDownload();
-        //networkParameters.verify(() -> NetworkParameters.of((Network) any()));
+        //networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
         //verify(paramsMock).getGenesisBlock();
         //verify(blockMock).time();
-        //threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
-        //context.verify(() -> Context.getOrCreate(), atLeast(1));
+        //verify(peerMock).setDownloadData(true);
     }
 
     //Sapient generated method id: ${9353a977-8019-3f98-9288-a5878ea2dabe}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void waitForPeersTest() {
         //Arrange Statement(s)
@@ -3797,7 +3713,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${aa7534fd-912b-375d-a796-9e9ccc9d6319}
-    @Ignore(value = "Potential harmful system call (ListenableCompletableFuture.complete) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute, ListenableCompletableFuture.complete) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void waitForPeersOfVersionWhenFoundPeersSizeGreaterThanOrEqualsToNumPeers() {
         /* Branches:
@@ -3839,36 +3755,28 @@ public class PeerGroupSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
-        Network networkMock = mock(Network.class, "{}");
-        try (MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            networkParameters.when(() -> NetworkParameters.of((Network) any())).thenReturn(paramsMock);
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
-            //TODO: Needs to return real value
-            doReturn(null).when(blockMock).time();
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(null);
-            Context context2 = new Context();
-            context.when(() -> Context.getOrCreate()).thenReturn(context2);
-            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.001")));
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
+            target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
-            doReturn(peerList).when(target).findPeersOfAtLeastVersion(1L);
+            doReturn(peerList).when(target).findPeersOfAtLeastVersion(0L);
             doNothing().when(target).addConnectedEventListener((PeerConnectedEventListener) any());
             //Act Statement(s)
-            ListenableCompletableFuture<List<Peer>> result = target.waitForPeersOfVersion(5, 1L);
+            ListenableCompletableFuture<List<Peer>> result = target.waitForPeersOfVersion(1, 0L);
             ListenableCompletableFuture<List<Peer>> listenableCompletableFuture = new ListenableCompletableFuture<>();
             //Assert statement(s)
             //TODO: Please implement equals method in ListenableCompletableFuture for verification to succeed or you need to adjust respective assertion statements
             assertThat(result, equalTo(listenableCompletableFuture));
-            networkParameters.verify(() -> NetworkParameters.of((Network) any()));
+            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
-            context.verify(() -> Context.getOrCreate(), atLeast(1));
-            verify(target).findPeersOfAtLeastVersion(1L);
+            verify(target).findPeersOfAtLeastVersion(0L);
             verify(target).addConnectedEventListener((PeerConnectedEventListener) any());
         }
     }
@@ -3901,7 +3809,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${b6dd6ac3-6fe2-360c-ad7c-4627061b70c0}
-    @Ignore(value = "Potential harmful system call (ListenableCompletableFuture.complete) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute, ListenableCompletableFuture.complete) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void waitForPeersWithServiceMaskWhenFoundPeersSizeGreaterThanOrEqualsToNumPeers() {
         /* Branches:
@@ -3945,17 +3853,11 @@ public class PeerGroupSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
-        try (MockedStatic<Context> context = mockStatic(Context.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
-            //TODO: Needs to return real value
-            doReturn(null).when(blockMock).time();
-            ReentrantLock reentrantLock = new ReentrantLock();
-            threading.when(() -> Threading.lock(PeerGroup.class)).thenReturn(reentrantLock);
-            Context context2 = new Context();
-            context.when(() -> Context.getOrCreate()).thenReturn(context2);
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
             target = spy(new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0")));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
@@ -3970,8 +3872,6 @@ public class PeerGroupSapientGeneratedJunit4Test {
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
-            threading.verify(() -> Threading.lock(PeerGroup.class), atLeast(1));
-            context.verify(() -> Context.getOrCreate(), atLeast(1));
             verify(target).findPeersWithServiceMask(0);
             verify(target).addConnectedEventListener((PeerConnectedEventListener) any());
         }
@@ -4088,7 +3988,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${ec043fe9-8c6f-38a6-8ab1-e11b0b838720}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.whenComplete) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.whenComplete, ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void broadcastTransaction1WhenTxGetConfidenceNumBroadcastPeersEquals0() {
         /* Branches:
@@ -4107,17 +4007,14 @@ public class PeerGroupSapientGeneratedJunit4Test {
         Transaction txMock = mock(Transaction.class);
         Sha256Hash sha256HashMock = mock(Sha256Hash.class);
         Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock3 = mock(Sha256Hash.class);
         TransactionConfidence transactionConfidenceMock = mock(TransactionConfidence.class);
         Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
         try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             TransactionConfidence transactionConfidence = new TransactionConfidence(sha256HashMock);
-            transactionConfidence.setSource(TransactionConfidence.Source.UNKNOWN);
+            transactionConfidence.setSource(TransactionConfidence.Source.SELF);
             doReturn(sha256HashMock2).when(txMock).getTxId();
-            TransactionConfidence transactionConfidence2 = new TransactionConfidence(sha256HashMock3);
-            transactionConfidence2.setSource(TransactionConfidence.Source.SELF);
-            doReturn(transactionConfidence, transactionConfidence2, transactionConfidenceMock).when(txMock).getConfidence();
+            doReturn(transactionConfidence, transactionConfidenceMock).when(txMock).getConfidence();
             doReturn(0).when(transactionConfidenceMock).numBroadcastPeers();
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
@@ -4133,7 +4030,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
             //Assert statement(s)
             //TODO: Please implement equals method in TransactionBroadcast for verification to succeed or you need to adjust respective assertion statements
             assertThat(result, equalTo(transactionBroadcast));
-            verify(txMock, times(3)).getConfidence();
+            verify(txMock, times(2)).getConfidence();
             verify(txMock).getTxId();
             verify(transactionConfidenceMock).numBroadcastPeers();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
@@ -4143,7 +4040,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${8e5e2ada-f040-325d-9d9a-b928ce19164b}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.whenComplete) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (CompletableFuture.whenComplete, ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void broadcastTransaction1WhenTxGetConfidenceNumBroadcastPeersNotEquals0() {
         /* Branches:
@@ -4162,17 +4059,14 @@ public class PeerGroupSapientGeneratedJunit4Test {
         Transaction txMock = mock(Transaction.class);
         Sha256Hash sha256HashMock = mock(Sha256Hash.class);
         Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock3 = mock(Sha256Hash.class);
         TransactionConfidence transactionConfidenceMock = mock(TransactionConfidence.class);
         Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
         try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             TransactionConfidence transactionConfidence = new TransactionConfidence(sha256HashMock);
-            transactionConfidence.setSource(TransactionConfidence.Source.UNKNOWN);
+            transactionConfidence.setSource(TransactionConfidence.Source.SELF);
             doReturn(sha256HashMock2).when(txMock).getTxId();
-            TransactionConfidence transactionConfidence2 = new TransactionConfidence(sha256HashMock3);
-            transactionConfidence2.setSource(TransactionConfidence.Source.SELF);
-            doReturn(transactionConfidence, transactionConfidence2, transactionConfidenceMock).when(txMock).getConfidence();
+            doReturn(transactionConfidence, transactionConfidenceMock).when(txMock).getConfidence();
             doReturn(-1).when(transactionConfidenceMock).numBroadcastPeers();
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
@@ -4188,7 +4082,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
             //Assert statement(s)
             //TODO: Please implement equals method in TransactionBroadcast for verification to succeed or you need to adjust respective assertion statements
             assertThat(result, equalTo(transactionBroadcast));
-            verify(txMock, times(3)).getConfidence();
+            verify(txMock, times(2)).getConfidence();
             verify(txMock).getTxId();
             verify(transactionConfidenceMock).numBroadcastPeers();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
@@ -4313,8 +4207,10 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         List<Peer> peerList = new ArrayList<>();
+
         //Act Statement(s)
         int result = PeerGroup.getMostCommonChainHeight(peerList);
+
         //Assert statement(s)
         assertThat(result, equalTo(0));
     }
@@ -4355,8 +4251,10 @@ public class PeerGroupSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         List<Integer> integerList = new ArrayList<>();
+
         //Act Statement(s)
         int result = PeerGroup.maxOfMostFreq(integerList);
+
         //Assert statement(s)
         assertThat(result, equalTo(0));
     }
@@ -4369,11 +4267,16 @@ public class PeerGroupSapientGeneratedJunit4Test {
          * (for-each(items)) : true
          * (pair.item != item) : false
          * (pairs.size() == 1) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         List<Integer> integerList = new ArrayList<>();
+
         //Act Statement(s)
         int result = PeerGroup.maxOfMostFreq(integerList);
+
         //Assert statement(s)
         assertThat(result, equalTo(0));
     }
@@ -4387,11 +4290,16 @@ public class PeerGroupSapientGeneratedJunit4Test {
          * (pair.item != item) : true
          * (pairs.size() == 1) : false
          * (firstPair.count > secondPair.count) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         List<Integer> integerList = new ArrayList<>();
+
         //Act Statement(s)
         int result = PeerGroup.maxOfMostFreq(integerList);
+
         //Assert statement(s)
         assertThat(result, equalTo(0));
     }
@@ -4406,11 +4314,16 @@ public class PeerGroupSapientGeneratedJunit4Test {
          * (pairs.size() == 1) : false
          * (firstPair.count > secondPair.count) : false
          * (firstPair.count == secondPair.count) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         List<Integer> integerList = new ArrayList<>();
+
         //Act Statement(s)
         int result = PeerGroup.maxOfMostFreq(integerList);
+
         //Assert statement(s)
         assertThat(result, equalTo(0));
     }
@@ -4425,17 +4338,25 @@ public class PeerGroupSapientGeneratedJunit4Test {
          * (pairs.size() == 1) : false
          * (firstPair.count > secondPair.count) : false
          * (firstPair.count == secondPair.count) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        List<Integer> integerList = new ArrayList<>();
-        //Act Statement(s)
-        int result = PeerGroup.maxOfMostFreq(integerList);
-        //Assert statement(s)
-        assertThat(result, equalTo(0));
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            IllegalStateException illegalStateException = new IllegalStateException();
+            preconditions.when(() -> Preconditions.checkState(false)).thenThrow(illegalStateException);
+            thrown.expect(IllegalStateException.class);
+            List<Integer> integerList = new ArrayList<>();
+            //Act Statement(s)
+            PeerGroup.maxOfMostFreq(integerList);
+            //Assert statement(s)
+            preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${3c962c46-a729-32ba-8921-bf4c756fddbc}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void selectDownloadPeerWhenPeersIsEmpty() {
         /* Branches:
@@ -4463,7 +4384,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${5df4348d-1612-3a0d-94ad-b5f29d3b5d1a}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void selectDownloadPeerWhenMostCommonChainHeightEquals0() {
         /* Branches:
@@ -4497,7 +4418,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${bcdaf7dc-99fa-3278-ade1-7f25a7fd3078}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void selectDownloadPeerWhenVersionMessageClientVersionLessThanMINIMUM_VERSIONAndCandidatesIsEmpty() {
         /* Branches:
@@ -4543,7 +4464,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${b297a87a-1219-33f3-b732-dbcaaa56aabd}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void selectDownloadPeerWhenVersionMessageServicesNotHasServicesNODE_NETWORKAndCandidatesIsEmpty() {
         /* Branches:
@@ -4553,35 +4474,38 @@ public class PeerGroupSapientGeneratedJunit4Test {
          * (versionMessage.clientVersion < MINIMUM_VERSION) : false
          * (!versionMessage.services().has(Services.NODE_NETWORK)) : true
          * (candidates.isEmpty()) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         Peer peerMock = mock(Peer.class);
         VersionMessage versionMessageMock = mock(VersionMessage.class);
+        Services servicesMock = mock(Services.class);
         Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
         try (MockedStatic<PeerGroup> peerGroup = mockStatic(PeerGroup.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             doReturn(versionMessageMock).when(peerMock).getPeerVersionMessage();
+            doReturn(servicesMock).when(versionMessageMock).services();
+            doReturn(false).when(servicesMock).has(1L);
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            peerGroup.when(() -> PeerGroup.getMostCommonChainHeight(anyList())).thenReturn(1);
-            versionMessageMock.clientVersion = 1;
+            peerGroup.when(() -> PeerGroup.getMostCommonChainHeight(anyList())).thenReturn(-1);
+            versionMessageMock.clientVersion = 70012;
             target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
             //Act Statement(s)
             Peer result = target.selectDownloadPeer(peerList);
-            List<Peer> peerPeerListList = new ArrayList<>();
-            peerPeerListList.add(peerMock);
             //Assert statement(s)
             assertThat(result, is(nullValue()));
-            assertThat(peerList.size(), equalTo(peerPeerListList.size()));
-            //TODO: Please implement equals method in Collection for verification to succeed or you need to adjust respective assertion statements
-            assertThat(peerList, containsInRelativeOrder(peerPeerListList.toArray()));
             verify(peerMock).getPeerVersionMessage();
+            verify(versionMessageMock).services();
+            verify(servicesMock).has(1L);
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
@@ -4601,35 +4525,41 @@ public class PeerGroupSapientGeneratedJunit4Test {
          * (!versionMessage.services().has(Services.NODE_NETWORK)) : false
          * (!versionMessage.services().has(Services.NODE_WITNESS)) : true
          * (candidates.isEmpty()) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         Peer peerMock = mock(Peer.class);
         VersionMessage versionMessageMock = mock(VersionMessage.class);
+        Services servicesMock = mock(Services.class);
+        Services servicesMock2 = mock(Services.class);
         Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
         try (MockedStatic<PeerGroup> peerGroup = mockStatic(PeerGroup.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             doReturn(versionMessageMock).when(peerMock).getPeerVersionMessage();
+            doReturn(true).when(servicesMock).has(1L);
+            doReturn(servicesMock, servicesMock2).when(versionMessageMock).services();
+            doReturn(false).when(servicesMock2).has(8L);
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            peerGroup.when(() -> PeerGroup.getMostCommonChainHeight(anyList())).thenReturn(1);
-            versionMessageMock.clientVersion = 1;
+            peerGroup.when(() -> PeerGroup.getMostCommonChainHeight(anyList())).thenReturn(-1);
+            versionMessageMock.clientVersion = 70012;
             target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
             //Act Statement(s)
             Peer result = target.selectDownloadPeer(peerList);
-            List<Peer> peerPeerListList = new ArrayList<>();
-            peerPeerListList.add(peerMock);
             //Assert statement(s)
             assertThat(result, is(nullValue()));
-            assertThat(peerList.size(), equalTo(peerPeerListList.size()));
-            //TODO: Please implement equals method in Collection for verification to succeed or you need to adjust respective assertion statements
-            assertThat(peerList, containsInRelativeOrder(peerPeerListList.toArray()));
             verify(peerMock).getPeerVersionMessage();
+            verify(versionMessageMock, times(2)).services();
+            verify(servicesMock).has(1L);
+            verify(servicesMock2).has(8L);
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
@@ -4638,7 +4568,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${ba10b37a-913b-3e0e-94da-f49f55da4357}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void selectDownloadPeerWhenPeerHeightGreaterThanMostCommonChainHeightPlus1AndCandidatesIsEmpty() {
         /* Branches:
@@ -4651,35 +4581,43 @@ public class PeerGroupSapientGeneratedJunit4Test {
          * (peerHeight < mostCommonChainHeight) : false
          * (peerHeight > mostCommonChainHeight + 1) : true
          * (candidates.isEmpty()) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         Peer peerMock = mock(Peer.class);
         VersionMessage versionMessageMock = mock(VersionMessage.class);
+        Services servicesMock = mock(Services.class);
+        Services servicesMock2 = mock(Services.class);
         Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
         try (MockedStatic<PeerGroup> peerGroup = mockStatic(PeerGroup.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             doReturn(versionMessageMock).when(peerMock).getPeerVersionMessage();
+            doReturn(true).when(servicesMock).has(1L);
+            doReturn(servicesMock, servicesMock2).when(versionMessageMock).services();
+            doReturn(true).when(servicesMock2).has(8L);
+            doReturn(1L).when(peerMock).getBestHeight();
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            peerGroup.when(() -> PeerGroup.getMostCommonChainHeight(anyList())).thenReturn(1);
-            versionMessageMock.clientVersion = 1;
+            peerGroup.when(() -> PeerGroup.getMostCommonChainHeight(anyList())).thenReturn(-1);
+            versionMessageMock.clientVersion = 70012;
             target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
             //Act Statement(s)
             Peer result = target.selectDownloadPeer(peerList);
-            List<Peer> peerPeerListList = new ArrayList<>();
-            peerPeerListList.add(peerMock);
             //Assert statement(s)
             assertThat(result, is(nullValue()));
-            assertThat(peerList.size(), equalTo(peerPeerListList.size()));
-            //TODO: Please implement equals method in Collection for verification to succeed or you need to adjust respective assertion statements
-            assertThat(peerList, containsInRelativeOrder(peerPeerListList.toArray()));
             verify(peerMock).getPeerVersionMessage();
+            verify(versionMessageMock, times(2)).services();
+            verify(servicesMock).has(1L);
+            verify(servicesMock2).has(8L);
+            verify(peerMock).getBestHeight();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
@@ -4688,7 +4626,7 @@ public class PeerGroupSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${a8fd5eb3-6142-3261-8c24-2eb39c6eaf6b}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ScheduledExecutorService.execute) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void selectDownloadPeerWhenGetPriorityPeerPeerAddressNotLessThanHighestPriority() {
         /* Branches:
@@ -4704,35 +4642,43 @@ public class PeerGroupSapientGeneratedJunit4Test {
          * (candidates.isEmpty()) : false
          * (i.hasNext()) : true
          * (getPriority(peer.peerAddress) < highestPriority) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         Peer peerMock = mock(Peer.class);
         VersionMessage versionMessageMock = mock(VersionMessage.class);
+        Services servicesMock = mock(Services.class);
+        Services servicesMock2 = mock(Services.class);
         Network networkMock = mock(Network.class);
         Block blockMock = mock(Block.class);
         try (MockedStatic<PeerGroup> peerGroup = mockStatic(PeerGroup.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             doReturn(versionMessageMock).when(peerMock).getPeerVersionMessage();
+            doReturn(true).when(servicesMock).has(1L);
+            doReturn(servicesMock, servicesMock2).when(versionMessageMock).services();
+            doReturn(true).when(servicesMock2).has(8L);
+            doReturn(-1L).when(peerMock).getBestHeight();
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            peerGroup.when(() -> PeerGroup.getMostCommonChainHeight(anyList())).thenReturn(1);
-            versionMessageMock.clientVersion = 1;
+            peerGroup.when(() -> PeerGroup.getMostCommonChainHeight(anyList())).thenReturn(-1);
+            versionMessageMock.clientVersion = 70012;
             target = new PeerGroup(networkMock, (AbstractBlockChain) null, channelsMock, Double.parseDouble("0.0"));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             List<Peer> peerList = new ArrayList<>();
             peerList.add(peerMock);
             //Act Statement(s)
             Peer result = target.selectDownloadPeer(peerList);
-            List<Peer> peerPeerListList = new ArrayList<>();
-            peerPeerListList.add(peerMock);
             //Assert statement(s)
-            assertThat(result, is(nullValue()));
-            assertThat(peerList.size(), equalTo(peerPeerListList.size()));
-            //TODO: Please implement equals method in Collection for verification to succeed or you need to adjust respective assertion statements
-            assertThat(peerList, containsInRelativeOrder(peerPeerListList.toArray()));
+            assertThat(result, equalTo(peerMock));
             verify(peerMock).getPeerVersionMessage();
+            verify(versionMessageMock, times(2)).services();
+            verify(servicesMock).has(1L);
+            verify(servicesMock2).has(8L);
+            verify(peerMock).getBestHeight();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();

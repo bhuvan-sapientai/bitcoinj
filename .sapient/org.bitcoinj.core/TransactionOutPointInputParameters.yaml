@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "CF6029C3AC9B790C2C88F5981BB28843"
+modelFingerprint: "25BA72C99893AF3C09B5A74E2A103C0F"
 methods:
 - method:
     name: "read"
@@ -14,13 +14,13 @@ methods:
   paths:
   - pathId: "path1"
     pathIdForUser: "path1"
-    testPathName: "readWhenDefaultBranch"
+    testPathName: "readWhenDefaultBranchThrowsIllegalArgumentException"
     nameDefinedByUser: false
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "397DDDE5803688794ED2440E9239E3F9"
-    problemWasSolvedByProver: true
+    modelFingerprint: "9B6027A5AB47422E64B399A47FFC96CA"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
@@ -199,86 +199,104 @@ methods:
         access: 9
       staticReadMethodForField: false
       filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "0FC55B2ABC49112E0D2232072F64BE20"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3E9C76AB51311DE97AE9C2294CD5E1D6"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
         content: !<new>
-          target: "org.bitcoinj.core.TransactionOutPoint"
-          parameters:
-          - name: "index"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "read_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "arg1"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Sha256Hash"
-              uuid: "read_sha256Hash1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          target: "java.lang.IllegalArgumentException"
+          parameters: []
           privateConstructor: false
-          createdByTargetCode: true
+          createdByTargetCode: false
         suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionOutPoint"
-          parameters:
-          - name: "index"
-            value:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "read_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "arg1"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Sha256Hash"
-              uuid: "read_sha256Hash1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          target: "java.lang.IllegalArgumentException"
+          parameters: []
           privateConstructor: false
-          createdByTargetCode: true
-        valueType: "org.bitcoinj.core.TransactionOutPoint"
-        uuid: "read_transactionOutPoint1"
+          createdByTargetCode: false
+        valueType: "java.lang.IllegalArgumentException"
         fixed: true
-        equalsMethodPresent: true
+        equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
-    uuid: "d7d7c181-85f8-3d2b-b5a1-c1ddd262297c"
+    uuid: "deec3b8b-bc29-3d32-aa61-00de8060308e"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
+    failureReason:
+      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path2"
-    testPathName: "readWhenDefaultBranch2"
+    testPathName: "readWhenDefaultBranch2ThrowsIllegalArgumentException"
     nameDefinedByUser: false
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "2BA21E73B1C500B75A849B1D6548407C"
-    problemWasSolvedByProver: true
+    modelFingerprint: "410EA1B1C35F0EF1F3E73E524474ED52"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
@@ -457,89 +475,107 @@ methods:
         access: 9
       staticReadMethodForField: false
       filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "CB033D22F401D3B63CC6EBB72F091E2B"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3E9C76AB51311DE97AE9C2294CD5E1D6"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
         content: !<new>
-          target: "org.bitcoinj.core.TransactionOutPoint"
-          parameters:
-          - name: "index"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "long"
-              uuid: "read_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "arg1"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Sha256Hash"
-              uuid: "read_sha256Hash1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          target: "java.lang.IllegalArgumentException"
+          parameters: []
           privateConstructor: false
-          createdByTargetCode: true
+          createdByTargetCode: false
         suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionOutPoint"
-          parameters:
-          - name: "index"
-            value:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "long"
-              uuid: "read_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "arg1"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Sha256Hash"
-              uuid: "read_sha256Hash1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          target: "java.lang.IllegalArgumentException"
+          parameters: []
           privateConstructor: false
-          createdByTargetCode: true
-        valueType: "org.bitcoinj.core.TransactionOutPoint"
-        uuid: "read_transactionOutPoint1"
+          createdByTargetCode: false
+        valueType: "java.lang.IllegalArgumentException"
         fixed: true
-        equalsMethodPresent: true
+        equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
-    uuid: "050305ac-0a9f-3890-80aa-4903ddc32f8d"
+    uuid: "08cb91e3-2e12-388e-addd-fe332aabb42f"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
+    failureReason:
+      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path3"
     pathIdForUser: "path3"
-    testPathName: "readWhenDefaultBranch3"
+    testPathName: "readWhenDefaultBranch3ThrowsIllegalArgumentException"
     nameDefinedByUser: false
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "37F07D783918DEEC1C367B2BBF9407D4"
+    modelFingerprint: "55F5AD69BD9BC6E886D4117EBE02A840"
     problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
-    uuid: "e6b32dc4-b0e3-3d25-9899-7759bcd47f78"
+    uuid: "a269348b-c4f7-340e-9e2d-79428a405130"
     deleted: true
     disabled: false
     ignoredBySystem: true
@@ -564,12 +600,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "1BF1C4B4D9B68FDE1E74AADC85821D92"
-    problemWasSolvedByProver: true
+    modelFingerprint: "A001850ED722640314458B42D8C6C6E7"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "390A792D7699CCB24DFB36A3FCF79A08"
+      modelFingerprint: "2AF4270A1F5109EA7EF8BCEC69310D5D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -583,8 +619,6 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
                 value: 0
               valueType: "long"
               uuid: "<init>_long1"
@@ -611,10 +645,6 @@ methods:
           - name: "index"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "<init>_long1"
               fixed: false
@@ -643,7 +673,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "buf"
-      modelFingerprint: "52D9F62F7E2F3F0592F0D8A9C5837F4C"
+      modelFingerprint: "E78EB9D5CB826E0A6A0C7C85F54F4F2A"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -659,8 +689,6 @@ methods:
               sapientType: "BASIC"
               content: !<regular>
                 value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "int"
               uuid: "write_byteBuffer1-capacity"
               fixed: false
@@ -673,10 +701,6 @@ methods:
           - name: "capacity"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "int"
               uuid: "write_byteBuffer1-capacity"
               fixed: false
@@ -691,7 +715,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "fromTx"
-      modelFingerprint: "6EC5F3F8F4A727F7310FC341AC65767C"
+      modelFingerprint: "BE0F7713C30F357B3F69BE2AE4E4BC7A"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -714,10 +738,6 @@ methods:
         signature: "getTxId(): Sha256Hash"
         returnValue:
           sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
-            target: "org.bitcoinj.base.Sha256Hash"
-            onlyPojoFunctions: false
-            builderPattern: false
           valueType: "org.bitcoinj.base.Sha256Hash"
           uuid: "<init>_sha256Hash2"
           fixed: false
@@ -726,10 +746,65 @@ methods:
         access: 1
       staticReadMethodForField: false
       filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
     - type: "FIELD"
       name: "hash"
-      modelFingerprint: "02E5D99C79C542C177F9CAAFB3C3309E"
-      index: 4
+      modelFingerprint: "1480FF925CB1B219FFDCBB8FB5510E05"
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -740,7 +815,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.base.Sha256Hash"
-        uuid: "<init>_sha256Hash2"
+        uuid: "<init>_sha256Hash6"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -765,8 +840,8 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ByteUtils"
-      modelFingerprint: "B9474A90E3C99397CCFAA1C62A10CF11"
-      index: 5
+      modelFingerprint: "A1C355A9279CFFCE2EAF1C3FE55498EE"
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -786,10 +861,8 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: 0
-            suggestedContent: !<regular>
-              value: 0
             valueType: "long"
-            uuid: "<init>_long1"
+            uuid: "long2"
             fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -805,8 +878,6 @@ methods:
                   sapientType: "BASIC"
                   content: !<regular>
                     value: 0
-                  suggestedContent: !<regular>
-                    value: 0
                   valueType: "int"
                   uuid: "write_byteBuffer1-capacity"
                   fixed: false
@@ -819,10 +890,6 @@ methods:
               - name: "capacity"
                 value:
                   sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  suggestedContent: !<regular>
-                    value: 0
                   valueType: "int"
                   uuid: "write_byteBuffer1-capacity"
                   fixed: false
@@ -874,8 +941,8 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "B33EA9889BCF50E2D48D614D654D0347"
-      index: 6
+      modelFingerprint: "7D316644F1B80F06BF95B6F66B39B36C"
+      index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -890,8 +957,6 @@ methods:
               sapientType: "BASIC"
               content: !<regular>
                 value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "int"
               uuid: "write_byteBuffer1-capacity"
               fixed: false
@@ -904,10 +969,6 @@ methods:
           - name: "capacity"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "int"
               uuid: "write_byteBuffer1-capacity"
               fixed: false
@@ -922,11 +983,12 @@ methods:
       filledByUser: false
     uuid: "74367ac6-67d1-3ba8-9bdd-4aafa43d4139"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "serialize"
     returnType: "byte[]"
@@ -942,12 +1004,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "1A29CBD3FABD6A336ED859219F01DDAC"
-    problemWasSolvedByProver: true
+    modelFingerprint: "D9A2B16551B1CD78E55F8ED62297ABB5"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "6F872DB5AADC1DE9426E41384C4E67BF"
+      modelFingerprint: "2AF4270A1F5109EA7EF8BCEC69310D5D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -961,8 +1023,6 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
                 value: 0
               valueType: "long"
               uuid: "<init>_long1"
@@ -989,8 +1049,6 @@ methods:
           - name: "index"
             value:
               sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "<init>_long1"
               fixed: false
@@ -1019,7 +1077,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "fromTx"
-      modelFingerprint: "6EC5F3F8F4A727F7310FC341AC65767C"
+      modelFingerprint: "BE0F7713C30F357B3F69BE2AE4E4BC7A"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1042,16 +1100,67 @@ methods:
         signature: "getTxId(): Sha256Hash"
         returnValue:
           sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
-            target: "org.bitcoinj.base.Sha256Hash"
-            onlyPojoFunctions: false
-            builderPattern: false
           valueType: "org.bitcoinj.base.Sha256Hash"
           uuid: "<init>_sha256Hash2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
       staticReadMethodForField: false
       filledByUser: false
     - type: "FIELD"
@@ -1093,8 +1202,8 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ByteUtils"
-      modelFingerprint: "05A0001311E13692C2E16BF356C6699F"
-      index: 4
+      modelFingerprint: "9A58EC5A843BAF1A1BB25F3BA80D6550"
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -1114,10 +1223,8 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: 0
-            suggestedContent: !<regular>
-              value: 0
             valueType: "long"
-            uuid: "<init>_long1"
+            uuid: "long2"
             fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -1862,11 +1969,12 @@ methods:
       filledByUser: false
     uuid: "9d328af1-2293-3544-bbbc-a0683c1f9fbe"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "bitcoinSerialize"
     returnType: "byte[]"
@@ -1882,12 +1990,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "63AF2A841830F5CF820BFCE55CDDA264"
-    problemWasSolvedByProver: true
+    modelFingerprint: "698BDDC9DA2AAEE69CCB891D7C185EAB"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "6F872DB5AADC1DE9426E41384C4E67BF"
+      modelFingerprint: "2AF4270A1F5109EA7EF8BCEC69310D5D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1901,8 +2009,6 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
                 value: 0
               valueType: "long"
               uuid: "<init>_long1"
@@ -1929,8 +2035,6 @@ methods:
           - name: "index"
             value:
               sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "<init>_long1"
               fixed: false
@@ -1990,6 +2094,61 @@ methods:
         access: 1
       staticReadMethodForField: false
       filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "207C944278ED2CF54600E238C6BDA5D4"
@@ -2005,8 +2164,6 @@ methods:
         returnValue:
           sapientType: "ARRAY"
           content: !<array>
-            values: {}
-          suggestedContent: !<array>
             values: {}
           valueType: "byte[]"
           uuid: "bitcoinSerialize_byte[]1"
@@ -2027,8 +2184,6 @@ methods:
         sapientType: "ARRAY"
         content: !<array>
           values: {}
-        suggestedContent: !<array>
-          values: {}
         valueType: "byte[]"
         uuid: "bitcoinSerialize_byte[]1"
         fixed: false
@@ -2038,11 +2193,12 @@ methods:
       filledByUser: false
     uuid: "924fe7c3-f32b-3ad4-96ee-4ebf1903d243"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "getMessageSize"
     returnType: "int"
@@ -2058,15 +2214,16 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "BD6ABF4411FC3150B98933A3ED33D94D"
-    problemWasSolvedByProver: true
+    modelFingerprint: "03E003EBACD92C9D52BB6A35825A4544"
+    problemWasSolvedByProver: false
     truncated: true
     inputParameters: []
     uuid: "435d64f5-8fca-31bf-b014-13944bac4d4c"
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -2078,18 +2235,18 @@ methods:
   paths:
   - pathId: "path1"
     pathIdForUser: "path1"
-    testPathName: "getConnectedOutputWhenFromTxIsNotNull"
+    testPathName: "getConnectedOutputWhenConnectedOutputIsNull"
     nameDefinedByUser: false
     constructorSignature: "<init>(long,org.bitcoinj.core.Transaction) : void"
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "8DC2DB5D0F870C3E97496F0C8632ECCA"
-    problemWasSolvedByProver: true
+    modelFingerprint: "5F593EDEC9D815CB89701B4960C2E1B2"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "6F872DB5AADC1DE9426E41384C4E67BF"
+      modelFingerprint: "2AF4270A1F5109EA7EF8BCEC69310D5D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2103,8 +2260,6 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
                 value: 0
               valueType: "long"
               uuid: "<init>_long1"
@@ -2131,8 +2286,6 @@ methods:
           - name: "index"
             value:
               sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "<init>_long1"
               fixed: false
@@ -2192,202 +2345,65 @@ methods:
         access: 1
       staticReadMethodForField: false
       filledByUser: false
-    - type: "FIELD"
-      name: "fromTx"
-      modelFingerprint: "672D9B7F125FE764A097AFE3F34223A9"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.Transaction"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.Transaction"
-        uuid: "<init>_transaction1"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
-        target: "this.fromTx"
-        name: "getOutput"
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
         parameters:
-        - name: "index"
+        - name: "expression"
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 0
-            suggestedContent: !<regular>
-              value: 0
-            valueType: "long"
-            uuid: "<init>_long1"
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
             fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
-        signature: "getOutput(long): TransactionOutput"
+        signature: "checkArgument(boolean,Supplier): void"
         returnValue:
-          sapientType: "MOCK"
-          valueType: "org.bitcoinj.core.TransactionOutput"
-          uuid: "getConnectedOutput_transactionOutput1"
-          fixed: false
-          equalsMethodPresent: true
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "B7B6B61B2E1B94CCF62E5EAF75099423"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.core.TransactionOutput"
-        uuid: "getConnectedOutput_transactionOutput1"
-        fixed: false
-        equalsMethodPresent: true
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    uuid: "94a8e2e1-7e0c-3ee1-8d62-12ae35779fa1"
-    deleted: false
-    disabled: false
-    ignoredBySystem: false
-    prover: "DEFAULT"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path2"
-    pathIdForUser: "path2"
-    testPathName: "getConnectedOutputWhenConnectedOutputIsNull"
-    nameDefinedByUser: false
-    constructorSignature: "<init>(long,org.bitcoinj.core.Transaction) : void"
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "03C7C90362472E0C8455E5F849A04D78"
-    problemWasSolvedByProver: true
-    truncated: false
-    inputParameters:
-    - type: "CONSTRUCTOR"
-      modelFingerprint: "EE0D16C1D02636E8CD4F966328535FF4"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.core.TransactionOutPoint"
-          parameters:
-          - name: "index"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "<init>_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "fromTx"
-            value:
-              sapientType: "NULL"
-              content: !<unknown_object>
-                target: "org.bitcoinj.core.Transaction"
-                onlyPojoFunctions: false
-                builderPattern: false
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.Transaction"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "<init>_transaction1"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionOutPoint"
-          parameters:
-          - name: "index"
-            value:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "<init>_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "fromTx"
-            value:
-              sapientType: "NULL"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.Transaction"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "<init>_transaction1"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "org.bitcoinj.core.TransactionOutPoint"
-        uuid: "target"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "fromTx"
-      modelFingerprint: "CD26C33DC762754C043BA3D8719D580A"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "NULL"
-        content: !<unknown_object>
-          target: "org.bitcoinj.core.Transaction"
-          onlyPojoFunctions: false
-          builderPattern: false
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.Transaction"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.Transaction"
-        uuid: "<init>_transaction1"
-        fixed: true
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "fromTx"
-        name: "getTxId"
-        parameters: []
-        signature: "getTxId(): Sha256Hash"
-        returnValue:
-          sapientType: "MOCK"
-          valueType: "org.bitcoinj.base.Sha256Hash"
-          uuid: "<init>_sha256Hash2"
-          fixed: false
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
+          fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
-        access: 1
+        access: 9
       staticReadMethodForField: false
       filledByUser: false
     - type: "RESULT"
       name: "result"
       modelFingerprint: "46D4E0AF665187599A50F1636C007229"
-      index: 3
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -2404,7 +2420,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -2422,12 +2439,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "F7F485A8A019F84A37E50F57845A5E1A"
-    problemWasSolvedByProver: true
+    modelFingerprint: "358212FD5AF8091073ABEC8A852169BD"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "6F872DB5AADC1DE9426E41384C4E67BF"
+      modelFingerprint: "2AF4270A1F5109EA7EF8BCEC69310D5D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2441,8 +2458,6 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
                 value: 0
               valueType: "long"
               uuid: "<init>_long1"
@@ -2469,8 +2484,6 @@ methods:
           - name: "index"
             value:
               sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "<init>_long1"
               fixed: false
@@ -2528,6 +2541,61 @@ methods:
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
       staticReadMethodForField: false
       filledByUser: false
     - type: "INTERNAL"
@@ -2864,7 +2932,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -2875,12 +2944,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "5139DA6CFD0ABA7D0206A14BFC60ED6D"
-    problemWasSolvedByProver: true
+    modelFingerprint: "573F233937D2FB289C134AB636F49947"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "6F872DB5AADC1DE9426E41384C4E67BF"
+      modelFingerprint: "2AF4270A1F5109EA7EF8BCEC69310D5D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2894,8 +2963,6 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
                 value: 0
               valueType: "long"
               uuid: "<init>_long1"
@@ -2922,8 +2989,6 @@ methods:
           - name: "index"
             value:
               sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "<init>_long1"
               fixed: false
@@ -2981,6 +3046,61 @@ methods:
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
       staticReadMethodForField: false
       filledByUser: false
     - type: "INTERNAL"
@@ -3241,7 +3361,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -3262,12 +3383,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "39049470B3CC076BBFA4CEEEA11D1C74"
-    problemWasSolvedByProver: true
+    modelFingerprint: "A575BC74D49D99B51DCCBDF3BC9A43E5"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "6F872DB5AADC1DE9426E41384C4E67BF"
+      modelFingerprint: "2AF4270A1F5109EA7EF8BCEC69310D5D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -3281,8 +3402,6 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
                 value: 0
               valueType: "long"
               uuid: "<init>_long1"
@@ -3309,8 +3428,6 @@ methods:
           - name: "index"
             value:
               sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "<init>_long1"
               fixed: false
@@ -3388,6 +3505,61 @@ methods:
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
       staticReadMethodForField: false
       filledByUser: false
     - type: "INTERNAL"
@@ -3523,8 +3695,6 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
-          suggestedContent: !<array>
-            values: {}
           valueType: "byte[]"
           uuid: "getConnectedKey_byte[]1"
           fixed: false
@@ -3559,8 +3729,6 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
-              values: {}
-            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "getConnectedKey_byte[]1"
@@ -3606,11 +3774,12 @@ methods:
       filledByUser: false
     uuid: "f85031ff-1a2c-3f30-b29d-9a0e9410815b"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "getConnectedKeyWhenScriptPatternIsP2WPKHConnectedScript"
@@ -3619,12 +3788,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "B08ED306E4BC46B7C5FF6F2F51076D6D"
-    problemWasSolvedByProver: true
+    modelFingerprint: "C1E85382DCDE452166179CB0577EE661"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "6F872DB5AADC1DE9426E41384C4E67BF"
+      modelFingerprint: "2AF4270A1F5109EA7EF8BCEC69310D5D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -3638,8 +3807,6 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
                 value: 0
               valueType: "long"
               uuid: "<init>_long1"
@@ -3666,8 +3833,6 @@ methods:
           - name: "index"
             value:
               sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "<init>_long1"
               fixed: false
@@ -3745,6 +3910,61 @@ methods:
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
       staticReadMethodForField: false
       filledByUser: false
     - type: "INTERNAL"
@@ -3921,8 +4141,6 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
-          suggestedContent: !<array>
-            values: {}
           valueType: "byte[]"
           uuid: "getConnectedKey_byte[]1"
           fixed: false
@@ -3957,8 +4175,6 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
-              values: {}
-            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "getConnectedKey_byte[]1"
@@ -4004,11 +4220,12 @@ methods:
       filledByUser: false
     uuid: "ff7a9419-bdcf-33c6-8f34-b856fe3542a0"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path3"
     pathIdForUser: "path3"
     testPathName: "getConnectedKeyWhenScriptPatternIsP2PKConnectedScript"
@@ -4017,12 +4234,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "0E6BCC829B17361B8E919791C885BD25"
-    problemWasSolvedByProver: true
+    modelFingerprint: "07859BE36C6D38D33CDB9CE6C71E32FB"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "6F872DB5AADC1DE9426E41384C4E67BF"
+      modelFingerprint: "2AF4270A1F5109EA7EF8BCEC69310D5D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -4036,8 +4253,6 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
                 value: 0
               valueType: "long"
               uuid: "<init>_long1"
@@ -4064,8 +4279,6 @@ methods:
           - name: "index"
             value:
               sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "<init>_long1"
               fixed: false
@@ -4143,6 +4356,61 @@ methods:
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
       staticReadMethodForField: false
       filledByUser: false
     - type: "INTERNAL"
@@ -4360,8 +4628,6 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
-          suggestedContent: !<array>
-            values: {}
           valueType: "byte[]"
           uuid: "getConnectedKey_byte[]1"
           fixed: false
@@ -4397,8 +4663,6 @@ methods:
             sapientType: "ARRAY"
             content: !<array>
               values: {}
-            suggestedContent: !<array>
-              values: {}
             valueType: "byte[]"
             uuid: "getConnectedKey_byte[]1"
             fixed: false
@@ -4433,11 +4697,12 @@ methods:
       filledByUser: false
     uuid: "b651f4d8-ac3d-35b4-853e-f24baf7c71b9"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path4"
     pathIdForUser: "path4"
     testPathName: "getConnectedKeyWhenScriptPatternNotIsP2PKConnectedScriptThrowsScriptException"
@@ -4446,12 +4711,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "89DF28A0FBF434B04F30CE26A388619B"
-    problemWasSolvedByProver: true
+    modelFingerprint: "B97F064DB1A345A64B1C457D24FA33C5"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "6F872DB5AADC1DE9426E41384C4E67BF"
+      modelFingerprint: "2AF4270A1F5109EA7EF8BCEC69310D5D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -4465,8 +4730,6 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
                 value: 0
               valueType: "long"
               uuid: "<init>_long1"
@@ -4493,8 +4756,6 @@ methods:
           - name: "index"
             value:
               sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "<init>_long1"
               fixed: false
@@ -4568,6 +4829,61 @@ methods:
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
       staticReadMethodForField: false
       filledByUser: false
     - type: "INTERNAL"
@@ -4830,7 +5146,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -4851,12 +5168,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "9FFCAC169D7E1791D02F2C28D6696214"
-    problemWasSolvedByProver: true
+    modelFingerprint: "AC137C2353549926FB8550F46E8C1D31"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "6F872DB5AADC1DE9426E41384C4E67BF"
+      modelFingerprint: "2AF4270A1F5109EA7EF8BCEC69310D5D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -4870,8 +5187,6 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
                 value: 0
               valueType: "long"
               uuid: "<init>_long1"
@@ -4898,8 +5213,6 @@ methods:
           - name: "index"
             value:
               sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "<init>_long1"
               fixed: false
@@ -4977,6 +5290,61 @@ methods:
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
       staticReadMethodForField: false
       filledByUser: false
     - type: "INTERNAL"
@@ -5112,8 +5480,6 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
-          suggestedContent: !<array>
-            values: {}
           valueType: "byte[]"
           uuid: "getConnectedRedeemData_byte[]1"
           fixed: false
@@ -5148,8 +5514,6 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
-              values: {}
-            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "getConnectedRedeemData_byte[]1"
@@ -5240,11 +5604,12 @@ methods:
       filledByUser: false
     uuid: "63590fbc-487d-307f-940e-bf3655312e87"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "getConnectedRedeemDataWhenScriptPatternIsP2WPKHConnectedScript"
@@ -5253,12 +5618,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "67416CBF8D7D59436A0D5BB10197ED15"
-    problemWasSolvedByProver: true
+    modelFingerprint: "91940EE7F6571283BDA1677D3BC129F7"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "6F872DB5AADC1DE9426E41384C4E67BF"
+      modelFingerprint: "2AF4270A1F5109EA7EF8BCEC69310D5D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -5272,8 +5637,6 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
                 value: 0
               valueType: "long"
               uuid: "<init>_long1"
@@ -5300,8 +5663,6 @@ methods:
           - name: "index"
             value:
               sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "<init>_long1"
               fixed: false
@@ -5379,6 +5740,61 @@ methods:
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
       staticReadMethodForField: false
       filledByUser: false
     - type: "INTERNAL"
@@ -5555,8 +5971,6 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
-          suggestedContent: !<array>
-            values: {}
           valueType: "byte[]"
           uuid: "getConnectedRedeemData_byte[]1"
           fixed: false
@@ -5591,8 +6005,6 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
-              values: {}
-            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "getConnectedRedeemData_byte[]1"
@@ -5683,11 +6095,12 @@ methods:
       filledByUser: false
     uuid: "c6b5285d-7302-38ab-bd21-75d13eaa7872"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path3"
     pathIdForUser: "path3"
     testPathName: "getConnectedRedeemDataWhenScriptPatternIsP2PKConnectedScript"
@@ -5696,12 +6109,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "D50424AA54157B55E5957D4F9D54B980"
-    problemWasSolvedByProver: true
+    modelFingerprint: "136A7E4A9EBC586DFDE3A887CEFF4263"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "6F872DB5AADC1DE9426E41384C4E67BF"
+      modelFingerprint: "2AF4270A1F5109EA7EF8BCEC69310D5D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -5715,8 +6128,6 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
                 value: 0
               valueType: "long"
               uuid: "<init>_long1"
@@ -5743,8 +6154,6 @@ methods:
           - name: "index"
             value:
               sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "<init>_long1"
               fixed: false
@@ -5822,6 +6231,61 @@ methods:
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
       staticReadMethodForField: false
       filledByUser: false
     - type: "INTERNAL"
@@ -6039,8 +6503,6 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
-          suggestedContent: !<array>
-            values: {}
           valueType: "byte[]"
           uuid: "getConnectedRedeemData_byte[]1"
           fixed: false
@@ -6075,8 +6537,6 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
-              values: {}
-            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "getConnectedRedeemData_byte[]1"
@@ -6157,11 +6617,12 @@ methods:
       filledByUser: false
     uuid: "3eab6edb-f6b0-3ff9-9ef3-d2acf12c9b43"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path4"
     pathIdForUser: "path4"
     testPathName: "getConnectedRedeemDataWhenScriptPatternIsP2SHConnectedScript"
@@ -6170,12 +6631,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "9931DEDECC66220A178DEFB97907B245"
-    problemWasSolvedByProver: true
+    modelFingerprint: "BA985E4F2170643A5B2231558CA0844A"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "6F872DB5AADC1DE9426E41384C4E67BF"
+      modelFingerprint: "2AF4270A1F5109EA7EF8BCEC69310D5D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -6189,8 +6650,6 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
                 value: 0
               valueType: "long"
               uuid: "<init>_long1"
@@ -6217,8 +6676,6 @@ methods:
           - name: "index"
             value:
               sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "<init>_long1"
               fixed: false
@@ -6296,6 +6753,61 @@ methods:
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
       staticReadMethodForField: false
       filledByUser: false
     - type: "INTERNAL"
@@ -6554,8 +7066,6 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
-          suggestedContent: !<array>
-            values: {}
           valueType: "byte[]"
           uuid: "getConnectedRedeemData_byte[]1"
           fixed: false
@@ -6591,8 +7101,6 @@ methods:
             sapientType: "ARRAY"
             content: !<array>
               values: {}
-            suggestedContent: !<array>
-              values: {}
             valueType: "byte[]"
             uuid: "getConnectedRedeemData_byte[]1"
             fixed: false
@@ -6627,11 +7135,12 @@ methods:
       filledByUser: false
     uuid: "6df325cf-381f-33a4-8db5-97982c48df3b"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path5"
     pathIdForUser: "path5"
     testPathName: "getConnectedRedeemDataWhenScriptPatternNotIsP2SHConnectedScriptThrowsScriptException"
@@ -6640,12 +7149,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "6379A72A9735DA8FA09D7353F9383FE3"
-    problemWasSolvedByProver: true
+    modelFingerprint: "C9F3F220972DE1262D861EBF727C9FC8"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "6F872DB5AADC1DE9426E41384C4E67BF"
+      modelFingerprint: "2AF4270A1F5109EA7EF8BCEC69310D5D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -6659,8 +7168,6 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
                 value: 0
               valueType: "long"
               uuid: "<init>_long1"
@@ -6687,8 +7194,6 @@ methods:
           - name: "index"
             value:
               sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "<init>_long1"
               fixed: false
@@ -6762,6 +7267,61 @@ methods:
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
       staticReadMethodForField: false
       filledByUser: false
     - type: "INTERNAL"
@@ -7066,7 +7626,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -7078,18 +7639,18 @@ methods:
   paths:
   - pathId: "path1"
     pathIdForUser: "path1"
-    testPathName: "disconnectOutputWhenDefaultBranch"
+    testPathName: "disconnectOutputWhenDefaultBranchThrowsIllegalArgumentException"
     nameDefinedByUser: false
     constructorSignature: "<init>(long,org.bitcoinj.core.Transaction) : void"
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "372F0D6DE141635F618FE9975FD42C14"
-    problemWasSolvedByProver: true
+    modelFingerprint: "26FCEEDC5E390EAC2230B7187EF25DDA"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "6F872DB5AADC1DE9426E41384C4E67BF"
+      modelFingerprint: "2AF4270A1F5109EA7EF8BCEC69310D5D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -7103,8 +7664,6 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
                 value: 0
               valueType: "long"
               uuid: "<init>_long1"
@@ -7131,8 +7690,6 @@ methods:
           - name: "index"
             value:
               sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "<init>_long1"
               fixed: false
@@ -7192,344 +7749,149 @@ methods:
         access: 1
       staticReadMethodForField: false
       filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "3443457C72A3A00FAA8BDB507DE84B35"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
       index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.core.TransactionOutPoint"
-          parameters:
-          - name: "hash"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Sha256Hash"
-              uuid: "<init>_sha256Hash2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "index"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "<init>_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "arg2"
-            value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.Transaction"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "<init>_transaction1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "fromTx"
-            value:
-              sapientType: "NULL"
-              valueType: "org.bitcoinj.core.TransactionOutput"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: true
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionOutPoint"
-          parameters:
-          - name: "hash"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Sha256Hash"
-              uuid: "<init>_sha256Hash2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "index"
-            value:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "<init>_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "arg2"
-            value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.Transaction"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "<init>_transaction1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "fromTx"
-            value:
-              sapientType: "NULL"
-              valueType: "org.bitcoinj.core.TransactionOutput"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: true
-          createdByTargetCode: true
-        valueType: "org.bitcoinj.core.TransactionOutPoint"
-        uuid: "disconnectOutput_transactionOutPoint1"
-        fixed: true
-        equalsMethodPresent: true
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    uuid: "fc20ac21-7d17-3798-af24-ff701446c683"
-    deleted: false
-    disabled: false
-    ignoredBySystem: false
-    prover: "DEFAULT"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path2"
-    pathIdForUser: "path2"
-    testPathName: "disconnectOutputWhenDefaultBranch2"
-    nameDefinedByUser: false
-    constructorSignature: "<init>(long,org.bitcoinj.core.Transaction) : void"
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "B321A320B17C8BC2229CB01B855001CE"
-    problemWasSolvedByProver: true
-    truncated: false
-    inputParameters:
-    - type: "CONSTRUCTOR"
-      modelFingerprint: "390A792D7699CCB24DFB36A3FCF79A08"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.core.TransactionOutPoint"
-          parameters:
-          - name: "index"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "<init>_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "fromTx"
-            value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.Transaction"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "<init>_transaction1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionOutPoint"
-          parameters:
-          - name: "index"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "<init>_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "fromTx"
-            value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.Transaction"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "<init>_transaction1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "org.bitcoinj.core.TransactionOutPoint"
-        uuid: "target"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "fromTx"
-      modelFingerprint: "BE0F7713C30F357B3F69BE2AE4E4BC7A"
-      index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.Transaction"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.Transaction"
-        uuid: "<init>_transaction1"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
-        target: "fromTx"
-        name: "getTxId"
-        parameters: []
-        signature: "getTxId(): Sha256Hash"
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
         returnValue:
-          sapientType: "MOCK"
-          valueType: "org.bitcoinj.base.Sha256Hash"
-          uuid: "<init>_sha256Hash2"
-          fixed: false
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
+          fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
-        access: 1
+        access: 9
       staticReadMethodForField: false
       filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "B3470B25AB6090BFDE10C73E5B5ABAE3"
-      index: 3
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3E9C76AB51311DE97AE9C2294CD5E1D6"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
         content: !<new>
-          target: "org.bitcoinj.core.TransactionOutPoint"
-          parameters:
-          - name: "hash"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Sha256Hash"
-              uuid: "<init>_sha256Hash2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "index"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "<init>_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "arg2"
-            value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.Transaction"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "<init>_transaction1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "fromTx"
-            value:
-              sapientType: "NULL"
-              valueType: "org.bitcoinj.core.TransactionOutput"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: true
-          createdByTargetCode: true
+          target: "java.lang.IllegalArgumentException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
         suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionOutPoint"
-          parameters:
-          - name: "hash"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Sha256Hash"
-              uuid: "<init>_sha256Hash2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "index"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "<init>_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "arg2"
-            value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.Transaction"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "<init>_transaction1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "fromTx"
-            value:
-              sapientType: "NULL"
-              valueType: "org.bitcoinj.core.TransactionOutput"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: true
-          createdByTargetCode: true
-        valueType: "org.bitcoinj.core.TransactionOutPoint"
-        uuid: "disconnectOutput_transactionOutPoint1"
+          target: "java.lang.IllegalArgumentException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.lang.IllegalArgumentException"
         fixed: true
-        equalsMethodPresent: true
+        equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
-    uuid: "2b60077b-6edb-33a8-8d10-7da80944739d"
+    uuid: "d9e39a67-74c4-3965-ae2b-0a81ca7c754a"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "connectTransaction"
     returnType: "org.bitcoinj.core.TransactionOutPoint"
@@ -7540,18 +7902,18 @@ methods:
   paths:
   - pathId: "path1"
     pathIdForUser: "path1"
-    testPathName: "connectTransactionWhenDefaultBranch"
+    testPathName: "connectTransactionWhenDefaultBranchThrowsIllegalArgumentException"
     nameDefinedByUser: false
     constructorSignature: "<init>(long,org.bitcoinj.core.Transaction) : void"
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "7B78C60B408D3B7C7298A87FE779C9D9"
-    problemWasSolvedByProver: true
+    modelFingerprint: "0D8C9D8F2139BCFFC01584C3B822B675"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "6F872DB5AADC1DE9426E41384C4E67BF"
+      modelFingerprint: "2AF4270A1F5109EA7EF8BCEC69310D5D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -7565,8 +7927,6 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
                 value: 0
               valueType: "long"
               uuid: "<init>_long1"
@@ -7593,8 +7953,6 @@ methods:
           - name: "index"
             value:
               sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "<init>_long1"
               fixed: false
@@ -7670,344 +8028,149 @@ methods:
         access: 1
       staticReadMethodForField: false
       filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "E65E786470AF756C2785BCA6A705E105"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.core.TransactionOutPoint"
-          parameters:
-          - name: "hash"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Sha256Hash"
-              uuid: "<init>_sha256Hash2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "index"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "<init>_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "arg2"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "connectTransaction_transaction1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "fromTx"
-            value:
-              sapientType: "NULL"
-              valueType: "org.bitcoinj.core.TransactionOutput"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: true
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionOutPoint"
-          parameters:
-          - name: "hash"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Sha256Hash"
-              uuid: "<init>_sha256Hash2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "index"
-            value:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "<init>_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "arg2"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "connectTransaction_transaction1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "fromTx"
-            value:
-              sapientType: "NULL"
-              valueType: "org.bitcoinj.core.TransactionOutput"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: true
-          createdByTargetCode: true
-        valueType: "org.bitcoinj.core.TransactionOutPoint"
-        uuid: "connectTransaction_transactionOutPoint1"
-        fixed: true
-        equalsMethodPresent: true
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    uuid: "34f6ebfd-9fbb-384a-b52e-55f7493f7694"
-    deleted: false
-    disabled: false
-    ignoredBySystem: false
-    prover: "DEFAULT"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path2"
-    pathIdForUser: "path2"
-    testPathName: "connectTransactionWhenDefaultBranch2"
-    nameDefinedByUser: false
-    constructorSignature: "<init>(long,org.bitcoinj.core.Transaction) : void"
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "60C438652418CD8EDB5B0C83CD61AC9E"
-    problemWasSolvedByProver: true
-    truncated: false
-    inputParameters:
-    - type: "CONSTRUCTOR"
-      modelFingerprint: "390A792D7699CCB24DFB36A3FCF79A08"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.core.TransactionOutPoint"
-          parameters:
-          - name: "index"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "<init>_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "fromTx"
-            value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.Transaction"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "<init>_transaction1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionOutPoint"
-          parameters:
-          - name: "index"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "<init>_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "fromTx"
-            value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.Transaction"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "<init>_transaction1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "org.bitcoinj.core.TransactionOutPoint"
-        uuid: "target"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "transaction"
-      modelFingerprint: "7D8DB70C45107F1D0DCEE24D07FAF858"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
         sapientType: "MOCK"
-        valueType: "org.bitcoinj.core.Transaction"
-        uuid: "connectTransaction_transaction1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "fromTx"
-      modelFingerprint: "BE0F7713C30F357B3F69BE2AE4E4BC7A"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.Transaction"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.Transaction"
-        uuid: "<init>_transaction1"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
-        target: "fromTx"
-        name: "getTxId"
-        parameters: []
-        signature: "getTxId(): Sha256Hash"
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
         returnValue:
-          sapientType: "MOCK"
-          valueType: "org.bitcoinj.base.Sha256Hash"
-          uuid: "<init>_sha256Hash2"
-          fixed: false
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
+          fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
-        access: 1
+        access: 9
       staticReadMethodForField: false
       filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "F928181740F34099991A5E9582F265E1"
-      index: 4
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3E9C76AB51311DE97AE9C2294CD5E1D6"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
         content: !<new>
-          target: "org.bitcoinj.core.TransactionOutPoint"
-          parameters:
-          - name: "hash"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Sha256Hash"
-              uuid: "<init>_sha256Hash2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "index"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "<init>_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "arg2"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "connectTransaction_transaction1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "fromTx"
-            value:
-              sapientType: "NULL"
-              valueType: "org.bitcoinj.core.TransactionOutput"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: true
-          createdByTargetCode: true
+          target: "java.lang.IllegalArgumentException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
         suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionOutPoint"
-          parameters:
-          - name: "hash"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Sha256Hash"
-              uuid: "<init>_sha256Hash2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "index"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "<init>_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "arg2"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "connectTransaction_transaction1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "fromTx"
-            value:
-              sapientType: "NULL"
-              valueType: "org.bitcoinj.core.TransactionOutput"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: true
-          createdByTargetCode: true
-        valueType: "org.bitcoinj.core.TransactionOutPoint"
-        uuid: "connectTransaction_transactionOutPoint1"
+          target: "java.lang.IllegalArgumentException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.lang.IllegalArgumentException"
         fixed: true
-        equalsMethodPresent: true
+        equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
-    uuid: "b870df2d-6e69-3b57-a6ee-bdb692103baa"
+    uuid: "4ef19704-57d4-34d5-9e73-70f5b9defd58"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "disconnectTransaction"
     returnType: "org.bitcoinj.core.TransactionOutPoint"
@@ -8017,18 +8180,18 @@ methods:
   paths:
   - pathId: "path1"
     pathIdForUser: "path1"
-    testPathName: "disconnectTransactionWhenDefaultBranch"
+    testPathName: "disconnectTransactionWhenDefaultBranchThrowsIllegalArgumentException"
     nameDefinedByUser: false
     constructorSignature: "<init>(long,org.bitcoinj.core.Transaction) : void"
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "CC804329D81EBA9760027E42E8929BDB"
-    problemWasSolvedByProver: true
+    modelFingerprint: "26FCEEDC5E390EAC2230B7187EF25DDA"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "6F872DB5AADC1DE9426E41384C4E67BF"
+      modelFingerprint: "2AF4270A1F5109EA7EF8BCEC69310D5D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -8042,8 +8205,6 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
                 value: 0
               valueType: "long"
               uuid: "<init>_long1"
@@ -8070,8 +8231,6 @@ methods:
           - name: "index"
             value:
               sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "<init>_long1"
               fixed: false
@@ -8131,324 +8290,149 @@ methods:
         access: 1
       staticReadMethodForField: false
       filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "38405A4126157E3E206E48BEB568F352"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
       index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.core.TransactionOutPoint"
-          parameters:
-          - name: "hash"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Sha256Hash"
-              uuid: "<init>_sha256Hash2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "index"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "<init>_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "arg2"
-            value:
-              sapientType: "NULL"
-              valueType: "org.bitcoinj.core.Transaction"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "fromTx"
-            value:
-              sapientType: "NULL"
-              valueType: "org.bitcoinj.core.TransactionOutput"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: true
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionOutPoint"
-          parameters:
-          - name: "hash"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Sha256Hash"
-              uuid: "<init>_sha256Hash2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "index"
-            value:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "<init>_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "arg2"
-            value:
-              sapientType: "NULL"
-              valueType: "org.bitcoinj.core.Transaction"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "fromTx"
-            value:
-              sapientType: "NULL"
-              valueType: "org.bitcoinj.core.TransactionOutput"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: true
-          createdByTargetCode: true
-        valueType: "org.bitcoinj.core.TransactionOutPoint"
-        uuid: "disconnectTransaction_transactionOutPoint1"
-        fixed: true
-        equalsMethodPresent: true
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    uuid: "9ef182bf-a88a-31d6-a7f9-d7728faf735d"
-    deleted: false
-    disabled: false
-    ignoredBySystem: false
-    prover: "DEFAULT"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path2"
-    pathIdForUser: "path2"
-    testPathName: "disconnectTransactionWhenDefaultBranch2"
-    nameDefinedByUser: false
-    constructorSignature: "<init>(long,org.bitcoinj.core.Transaction) : void"
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "7A503878A19AB4A444D95EB49445E5BB"
-    problemWasSolvedByProver: true
-    truncated: false
-    inputParameters:
-    - type: "CONSTRUCTOR"
-      modelFingerprint: "390A792D7699CCB24DFB36A3FCF79A08"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.core.TransactionOutPoint"
-          parameters:
-          - name: "index"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "<init>_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "fromTx"
-            value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.Transaction"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "<init>_transaction1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionOutPoint"
-          parameters:
-          - name: "index"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "<init>_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "fromTx"
-            value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.Transaction"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "<init>_transaction1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "org.bitcoinj.core.TransactionOutPoint"
-        uuid: "target"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "fromTx"
-      modelFingerprint: "BE0F7713C30F357B3F69BE2AE4E4BC7A"
-      index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.Transaction"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.Transaction"
-        uuid: "<init>_transaction1"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
-        target: "fromTx"
-        name: "getTxId"
-        parameters: []
-        signature: "getTxId(): Sha256Hash"
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
         returnValue:
-          sapientType: "MOCK"
-          valueType: "org.bitcoinj.base.Sha256Hash"
-          uuid: "<init>_sha256Hash2"
-          fixed: false
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
+          fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
-        access: 1
+        access: 9
       staticReadMethodForField: false
       filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "B0398FAB78B3D87EF1C4017C25CCD6D0"
-      index: 3
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3E9C76AB51311DE97AE9C2294CD5E1D6"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
         content: !<new>
-          target: "org.bitcoinj.core.TransactionOutPoint"
-          parameters:
-          - name: "hash"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Sha256Hash"
-              uuid: "<init>_sha256Hash2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "index"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "<init>_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "arg2"
-            value:
-              sapientType: "NULL"
-              valueType: "org.bitcoinj.core.Transaction"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "fromTx"
-            value:
-              sapientType: "NULL"
-              valueType: "org.bitcoinj.core.TransactionOutput"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: true
-          createdByTargetCode: true
+          target: "java.lang.IllegalArgumentException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
         suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionOutPoint"
-          parameters:
-          - name: "hash"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Sha256Hash"
-              uuid: "<init>_sha256Hash2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "index"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "<init>_long1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "arg2"
-            value:
-              sapientType: "NULL"
-              valueType: "org.bitcoinj.core.Transaction"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "fromTx"
-            value:
-              sapientType: "NULL"
-              valueType: "org.bitcoinj.core.TransactionOutput"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: true
-          createdByTargetCode: true
-        valueType: "org.bitcoinj.core.TransactionOutPoint"
-        uuid: "disconnectTransaction_transactionOutPoint1"
+          target: "java.lang.IllegalArgumentException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.lang.IllegalArgumentException"
         fixed: true
-        equalsMethodPresent: true
+        equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
-    uuid: "d4963e0f-eb1f-32c4-be5d-3758029b3542"
+    uuid: "c2b3e60c-c17f-39a6-b50b-883830e40442"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "toString"
     returnType: "java.lang.String"
@@ -8464,12 +8448,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "46762232E94E1B6AC3CE2427CF34F767"
-    problemWasSolvedByProver: true
+    modelFingerprint: "F4C511377EB64CD45C3A2AA490B371EF"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "6F872DB5AADC1DE9426E41384C4E67BF"
+      modelFingerprint: "2AF4270A1F5109EA7EF8BCEC69310D5D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -8483,8 +8467,6 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
                 value: 0
               valueType: "long"
               uuid: "<init>_long1"
@@ -8511,8 +8493,6 @@ methods:
           - name: "index"
             value:
               sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "<init>_long1"
               fixed: false
@@ -8573,19 +8553,74 @@ methods:
         access: 1
       staticReadMethodForField: false
       filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "45D8DAA866D3EED76D06C884344B6CAE"
-      index: 3
+      modelFingerprint: "0CCEFA7796F461A10E8D2C6220E94AFF"
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "<init>_sha256Hash2:0"
+          value: "<init>_sha256Hash6:0"
         suggestedContent: !<regular>
-          value: "<init>_sha256Hash2:0"
+          value: "<init>_sha256Hash6:0"
         valueType: "java.lang.String"
         uuid: "toString_string1"
         fixed: false
@@ -8597,7 +8632,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -8615,12 +8651,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "71C09654D084C2C58D780339FB15A7A6"
-    problemWasSolvedByProver: true
+    modelFingerprint: "9BD753B7B638249665B26AD2BF03EB3A"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "6F872DB5AADC1DE9426E41384C4E67BF"
+      modelFingerprint: "2AF4270A1F5109EA7EF8BCEC69310D5D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -8634,8 +8670,6 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
                 value: 0
               valueType: "long"
               uuid: "<init>_long1"
@@ -8662,8 +8696,6 @@ methods:
           - name: "index"
             value:
               sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "<init>_long1"
               fixed: false
@@ -8721,6 +8753,61 @@ methods:
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
       staticReadMethodForField: false
       filledByUser: false
     - type: "RESULT"
@@ -8741,11 +8828,12 @@ methods:
       filledByUser: false
     uuid: "9d300d6c-ecd3-35df-b3af-b16008977eae"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "index"
     returnType: "long"
@@ -8761,12 +8849,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "E744E6C0DA723E35AE2B5238DECEA57F"
-    problemWasSolvedByProver: true
+    modelFingerprint: "B87339AC4EAEE38CEA607D1346D675D7"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "A5A5504DA4676EC6C3538486FDF43A26"
+      modelFingerprint: "2AF4270A1F5109EA7EF8BCEC69310D5D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -8781,12 +8869,10 @@ methods:
               sapientType: "BASIC"
               content: !<regular>
                 value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "<init>_long1"
               fixed: false
-              equalsMethodPresent: true
+              equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "fromTx"
             value:
@@ -8808,12 +8894,10 @@ methods:
           - name: "index"
             value:
               sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "<init>_long1"
               fixed: false
-              equalsMethodPresent: true
+              equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "fromTx"
             value:
@@ -8869,10 +8953,65 @@ methods:
         access: 1
       staticReadMethodForField: false
       filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "8C02C4B74ECB6B399338B7B593088C43"
-      index: 3
+      modelFingerprint: "1FF836E88FFC05B561799B2B9F3F389E"
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -8880,10 +9019,8 @@ methods:
         sapientType: "BASIC"
         content: !<regular>
           value: 0
-        suggestedContent: !<regular>
-          value: 0
         valueType: "long"
-        uuid: "<init>_long1"
+        uuid: "long2"
         fixed: false
         equalsMethodPresent: true
         explicitCastNeeded: false
@@ -8891,11 +9028,12 @@ methods:
       filledByUser: false
     uuid: "5f246a97-4870-30c4-9915-ed4b32bcd219"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "getHash"
     returnType: "org.bitcoinj.base.Sha256Hash"
@@ -8911,12 +9049,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "C265D81F13FC7C5BDD167F472248CEFA"
-    problemWasSolvedByProver: true
+    modelFingerprint: "9853BCC0D9493FBFE50260A13E890A7B"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "6F872DB5AADC1DE9426E41384C4E67BF"
+      modelFingerprint: "2AF4270A1F5109EA7EF8BCEC69310D5D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -8930,8 +9068,6 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
                 value: 0
               valueType: "long"
               uuid: "<init>_long1"
@@ -8958,8 +9094,6 @@ methods:
           - name: "index"
             value:
               sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "<init>_long1"
               fixed: false
@@ -9017,6 +9151,61 @@ methods:
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
       staticReadMethodForField: false
       filledByUser: false
     - type: "RESULT"
@@ -9037,11 +9226,12 @@ methods:
       filledByUser: false
     uuid: "c152b292-9f41-3184-8d0c-c8dacb973313"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "getIndex"
     returnType: "long"
@@ -9057,12 +9247,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "09BD7E46B0A26110F838A4D2346578F1"
-    problemWasSolvedByProver: true
+    modelFingerprint: "C535367D02C0477B5A582B019033FC9F"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "A5A5504DA4676EC6C3538486FDF43A26"
+      modelFingerprint: "2AF4270A1F5109EA7EF8BCEC69310D5D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -9077,12 +9267,10 @@ methods:
               sapientType: "BASIC"
               content: !<regular>
                 value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "<init>_long1"
               fixed: false
-              equalsMethodPresent: true
+              equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "fromTx"
             value:
@@ -9104,12 +9292,10 @@ methods:
           - name: "index"
             value:
               sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
               valueType: "long"
               uuid: "<init>_long1"
               fixed: false
-              equalsMethodPresent: true
+              equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "fromTx"
             value:
@@ -9165,10 +9351,65 @@ methods:
         access: 1
       staticReadMethodForField: false
       filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValue:
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "8C02C4B74ECB6B399338B7B593088C43"
-      index: 3
+      modelFingerprint: "1FF836E88FFC05B561799B2B9F3F389E"
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -9176,10 +9417,8 @@ methods:
         sapientType: "BASIC"
         content: !<regular>
           value: 0
-        suggestedContent: !<regular>
-          value: 0
         valueType: "long"
-        uuid: "<init>_long1"
+        uuid: "long2"
         fixed: false
         equalsMethodPresent: true
         explicitCastNeeded: false
@@ -9187,11 +9426,12 @@ methods:
       filledByUser: false
     uuid: "1051d90e-6143-3be9-a736-0083704c4119"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "equals"
     returnType: "boolean"
@@ -9208,15 +9448,16 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "8B9EA256DD5BF3179C6334403AEC0C43"
-    problemWasSolvedByProver: true
+    modelFingerprint: "BB129B92C97B9FB9BA90C819C3545293"
+    problemWasSolvedByProver: false
     truncated: true
     inputParameters: []
     uuid: "5b7cf5ba-f3cc-35d0-9b4a-3392d3a68eed"
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path6"
@@ -9227,15 +9468,16 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "668CA5D96A3C20FB1F77AB38622906CD"
-    problemWasSolvedByProver: true
+    modelFingerprint: "5BA33EA451A6AB7EAC42EEF69D49BDC1"
+    problemWasSolvedByProver: false
     truncated: true
     inputParameters: []
     uuid: "a2108c4d-bcbc-39b5-8254-0588b654f131"
     deleted: true
     disabled: false
     ignoredBySystem: true
-    prover: "DEFAULT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -9246,15 +9488,16 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "0E4CA65604716230297F80B3CD086270"
-    problemWasSolvedByProver: true
+    modelFingerprint: "FE0475DF81595361C21409A3AA4B01B1"
+    problemWasSolvedByProver: false
     truncated: true
     inputParameters: []
     uuid: "6e6a0f87-c9aa-3e31-af0a-46c9467f5ce0"
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path5"
@@ -9265,15 +9508,16 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "7BB6D1E9A0A5D71505ED20AA4F301377"
-    problemWasSolvedByProver: true
+    modelFingerprint: "025214D5E218D9F244CB65F282B05045"
+    problemWasSolvedByProver: false
     truncated: true
     inputParameters: []
     uuid: "53e28dcb-524e-3121-81b0-d42aaa220983"
     deleted: true
     disabled: false
     ignoredBySystem: true
-    prover: "DEFAULT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path3"
@@ -9284,7 +9528,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "0B9D2C0F50E3D671EAD4098BED027410"
+    modelFingerprint: "3531828D090FA0F7D60587E78E40DF39"
     problemWasSolvedByProver: false
     truncated: true
     inputParameters: []
@@ -9292,7 +9536,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path4"
@@ -9303,7 +9548,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "804D957FB75EC933A1A0F8BCB715D061"
+    modelFingerprint: "AFAA4F72638B2291499AAA8B64836963"
     problemWasSolvedByProver: false
     truncated: true
     inputParameters: []
@@ -9311,6 +9556,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

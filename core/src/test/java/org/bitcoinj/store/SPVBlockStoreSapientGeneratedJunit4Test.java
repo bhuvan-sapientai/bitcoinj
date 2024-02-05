@@ -53,6 +53,8 @@ import static org.hamcrest.Matchers.isA;
 import org.junit.Ignore;
 import org.bitcoinj.core.ProtocolException;
 
+import static org.hamcrest.core.IsInstanceOf.instanceOf;
+
 public class SPVBlockStoreSapientGeneratedJunit4Test {
 
     @Rule()
@@ -187,7 +189,7 @@ public class SPVBlockStoreSapientGeneratedJunit4Test {
         File file = new File("pathname1");
         SPVBlockStore target = new SPVBlockStore(paramsMock, file, 0, false);
         thrown.expect(RuntimeException.class);
-        thrown.expectCause(isA(ProtocolException.class));
+        thrown.expectCause(is(instanceOf(ProtocolException.class)));
 
         //Act Statement(s)
         target.get(sha256HashMock);

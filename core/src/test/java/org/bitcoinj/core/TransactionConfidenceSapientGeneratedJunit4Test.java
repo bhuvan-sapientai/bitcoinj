@@ -78,8 +78,7 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
         TransactionConfidence target = new TransactionConfidence(sha256Hash);
         //TODO: Needs initialization with real value
         Executor executor = null;
-        TransactionConfidence.Listener transactionConfidenceListenerMock = mock(TransactionConfidence.Listener.class, "null");
-
+        TransactionConfidence.Listener transactionConfidenceListenerMock = mock(TransactionConfidence.Listener.class, "org.bitcoinj.core.TransactionConfidence$1@7f31245a");
         //Act Statement(s)
         target.addEventListener(executor, transactionConfidenceListenerMock);
     }
@@ -91,10 +90,8 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         TransactionConfidence target = spy(new TransactionConfidence(sha256HashMock));
         doNothing().when(target).addEventListener((Executor) null, transactionConfidenceListenerMock);
-
         //Act Statement(s)
         target.addEventListener(transactionConfidenceListenerMock);
-
         //Assert statement(s)
         verify(target).addEventListener((Executor) null, transactionConfidenceListenerMock);
     }
@@ -148,7 +145,6 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
         IllegalStateException illegalStateException = new IllegalStateException("Confidence type is UNKNOWN, not BUILDING");
         thrown.expect(IllegalStateException.class);
         thrown.expectMessage(illegalStateException.getMessage());
-
         //Act Statement(s)
         target.getAppearedAtChainHeight();
     }
@@ -164,7 +160,6 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
         IllegalArgumentException illegalArgumentException = new IllegalArgumentException("appearedAtChainHeight out of range");
         thrown.expect(IllegalArgumentException.class);
         thrown.expectMessage(illegalArgumentException.getMessage());
-
         //Act Statement(s)
         target.setAppearedAtChainHeight(-2147483648);
     }
@@ -181,7 +176,6 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         TransactionConfidence target = new TransactionConfidence(sha256HashMock);
-
         //Act Statement(s)
         target.setAppearedAtChainHeight(1);
     }
@@ -194,7 +188,6 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         TransactionConfidence target = new TransactionConfidence(sha256HashMock);
-
         //Act Statement(s)
         target.setConfidenceType(TransactionConfidence.ConfidenceType.UNKNOWN);
     }
@@ -210,10 +203,8 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         TransactionConfidence target = new TransactionConfidence(sha256HashMock);
-
         //Act Statement(s)
         target.setConfidenceType(TransactionConfidence.ConfidenceType.IN_CONFLICT);
-
         //Assert statement(s)
         assertThat(target.getConfidenceType(), equalTo(TransactionConfidence.ConfidenceType.IN_CONFLICT));
     }
@@ -224,21 +215,22 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
     public void markBroadcastByWhenBroadcastByNotAddIfAbsentAddress() {
         /* Branches:
          * (!broadcastBy.addIfAbsent(address)) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        PeerAddress peerAddressMock = mock(PeerAddress.class, "localhost");
         try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
             //TODO: Needs to return real value
             timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(null);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
             Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
             TransactionConfidence target = new TransactionConfidence(sha256Hash);
-            InetAddress inetAddress = InetAddress.getLoopbackAddress();
-            PeerAddress peerAddress = PeerAddress.simple(inetAddress, 0);
             //Act Statement(s)
-            boolean result = target.markBroadcastBy(peerAddress);
+            boolean result = target.markBroadcastBy(peerAddressMock);
             //Assert statement(s)
-            assertThat(result, equalTo(Boolean.TRUE));
-            assertThat(target.getConfidenceType(), equalTo(TransactionConfidence.ConfidenceType.PENDING));
+            assertThat(result, equalTo(Boolean.FALSE));
             timeUtils.verify(() -> TimeUtils.currentTime(), atLeast(1));
         }
     }
@@ -250,18 +242,20 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
         /* Branches:
          * (!broadcastBy.addIfAbsent(address)) : false
          * (getConfidenceType() == ConfidenceType.UNKNOWN) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        PeerAddress peerAddressMock = mock(PeerAddress.class, "127.0.0.1");
         try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
             //TODO: Needs to return real value
             timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(null);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
             Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
             TransactionConfidence target = new TransactionConfidence(sha256Hash);
-            InetAddress inetAddress = InetAddress.getLoopbackAddress();
-            PeerAddress peerAddress = PeerAddress.simple(inetAddress, 0);
             //Act Statement(s)
-            boolean result = target.markBroadcastBy(peerAddress);
+            boolean result = target.markBroadcastBy(peerAddressMock);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.TRUE));
             assertThat(target.getConfidenceType(), equalTo(TransactionConfidence.ConfidenceType.PENDING));
@@ -274,10 +268,8 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
     public void numBroadcastPeersTest() {
         //Arrange Statement(s)
         TransactionConfidence target = new TransactionConfidence(sha256HashMock);
-
         //Act Statement(s)
         int result = target.numBroadcastPeers();
-
         //Assert statement(s)
         assertThat(result, equalTo(0));
     }
@@ -287,10 +279,8 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
     public void getBroadcastByTest() {
         //Arrange Statement(s)
         TransactionConfidence target = new TransactionConfidence(sha256HashMock);
-
         //Act Statement(s)
         Set<PeerAddress> result = target.getBroadcastBy();
-
         //Assert statement(s)
         assertThat(result.size(), equalTo(0));
     }
@@ -301,10 +291,8 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         TransactionConfidence target = new TransactionConfidence(sha256HashMock);
         PeerAddress peerAddressMock = mock(PeerAddress.class);
-
         //Act Statement(s)
         boolean result = target.wasBroadcastBy(peerAddressMock);
-
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }
@@ -314,11 +302,9 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
     public void lastBroadcastTimeTest() {
         //Arrange Statement(s)
         TransactionConfidence target = new TransactionConfidence(sha256HashMock);
-
         //Act Statement(s)
         Optional<Instant> result = target.lastBroadcastTime();
         Optional<Instant> instantOptional = Optional.empty();
-
         //Assert statement(s)
         assertThat(result, equalTo(instantOptional));
     }
@@ -331,10 +317,8 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         TransactionConfidence target = new TransactionConfidence(sha256HashMock);
-
         //Act Statement(s)
         Date result = target.getLastBroadcastedAt();
-
         //Assert statement(s)
         assertThat(result, is(nullValue()));
     }
@@ -345,7 +329,6 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         TransactionConfidence target = new TransactionConfidence(sha256HashMock);
         Instant instant = Instant.now();
-
         //Act Statement(s)
         target.setLastBroadcastTime(instant);
     }
@@ -356,7 +339,6 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         TransactionConfidence target = new TransactionConfidence(sha256HashMock);
         Date date = new Date();
-
         //Act Statement(s)
         target.setLastBroadcastedAt(date);
     }
@@ -371,10 +353,8 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         TransactionConfidence target = new TransactionConfidence(sha256HashMock);
-
         //Act Statement(s)
         String result = target.toString();
-
         //Assert statement(s)
         assertThat(result, equalTo("Unknown confidence level."));
     }
@@ -384,10 +364,8 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
     public void incrementDepthInBlocksTest() {
         //Arrange Statement(s)
         TransactionConfidence target = new TransactionConfidence(sha256HashMock);
-
         //Act Statement(s)
         int result = target.incrementDepthInBlocks();
-
         //Assert statement(s)
         assertThat(result, equalTo(1));
     }
@@ -400,7 +378,6 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         TransactionConfidence target = new TransactionConfidence(sha256HashMock);
-
         //Act Statement(s)
         target.clearBroadcastBy();
     }
@@ -416,7 +393,6 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
         IllegalStateException illegalStateException = new IllegalStateException("Confidence type is UNKNOWN, not DEAD");
         thrown.expect(IllegalStateException.class);
         thrown.expectMessage(illegalStateException.getMessage());
-
         //Act Statement(s)
         target.getOverridingTxId();
     }
@@ -434,10 +410,8 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
         Transaction overridingTransactionMock = mock(Transaction.class);
         doReturn(sha256HashMock).when(overridingTransactionMock).getTxId();
         TransactionConfidence target = new TransactionConfidence(sha256HashMock2);
-
         //Act Statement(s)
         target.setOverridingTransaction(overridingTransactionMock);
-
         //Assert statement(s)
         verify(overridingTransactionMock).getTxId();
     }
@@ -453,28 +427,23 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         TransactionConfidence target = new TransactionConfidence(sha256HashMock);
-
         //Act Statement(s)
         target.setOverridingTxId(sha256HashMock2);
     }
 
-    //Sapient generated method id: ${58212c05-0c08-317d-b2fb-ab0a548951e7}
+    //Sapient generated method id: ${8f21b11f-a8c8-3391-9428-a6f33b2194c6}
     @Ignore()
     @Test()
-    public void duplicateTest() {
+    public void duplicateThrowsNullPointerException() {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
         TransactionConfidence target = new TransactionConfidence(sha256HashMock);
-
+        thrown.expect(NullPointerException.class);
         //Act Statement(s)
-        TransactionConfidence result = target.duplicate();
-        TransactionConfidence transactionConfidence = new TransactionConfidence(sha256HashMock);
-        transactionConfidence.setOverridingTxId((Sha256Hash) null);
-        transactionConfidence.setConfidenceType(TransactionConfidence.ConfidenceType.UNKNOWN);
-        transactionConfidence.setAppearedAtChainHeight(-1);
-
-        //Assert statement(s)
-        //TODO: Please implement equals method in TransactionConfidence for verification to succeed or you need to adjust respective assertion statements
-        assertThat(result, equalTo(transactionConfidence));
+        target.duplicate();
     }
 
     //Sapient generated method id: ${368dd007-089c-3686-ad3a-9b314de20630}
@@ -485,7 +454,6 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         TransactionConfidence target = new TransactionConfidence(sha256HashMock);
-
         //Act Statement(s)
         target.queueListeners(TransactionConfidence.Listener.ChangeReason.TYPE);
     }
@@ -516,10 +484,8 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         TransactionConfidence target = new TransactionConfidence(sha256HashMock);
-
         //Act Statement(s)
         target.maybeSetSourceToNetwork();
-
         //Assert statement(s)
         assertThat(target.getSource(), equalTo(TransactionConfidence.Source.NETWORK));
     }
@@ -539,11 +505,9 @@ public class TransactionConfidenceSapientGeneratedJunit4Test {
         Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
         TransactionConfidence target = spy(new TransactionConfidence(sha256Hash));
         doNothing().when(target).addEventListener(eq((Executor) null), (TransactionConfidence.Listener) any());
-
         //Act Statement(s)
         ListenableCompletableFuture<TransactionConfidence> result = target.getDepthFuture(0);
         ListenableCompletableFuture<TransactionConfidence> listenableCompletableFuture = new ListenableCompletableFuture<>();
-
         //Assert statement(s)
         //TODO: Please implement equals method in ListenableCompletableFuture for verification to succeed or you need to adjust respective assertion statements
         assertThat(result, equalTo(listenableCompletableFuture));

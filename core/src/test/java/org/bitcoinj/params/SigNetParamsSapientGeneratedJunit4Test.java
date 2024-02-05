@@ -69,9 +69,6 @@ public class SigNetParamsSapientGeneratedJunit4Test {
     public void getGenesisBlockWhenGenesisBlockIsNull() {
         /* Branches:
          * (genesisBlock == null) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         Sha256Hash sha256HashMock = mock(Sha256Hash.class);

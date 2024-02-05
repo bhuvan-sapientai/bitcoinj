@@ -261,7 +261,8 @@ methods:
     deleted: false
     disabled: true
     ignoredBySystem: false
-    firstFailureReason: "TODO_ADDED_BY_TEST_GENERATOR"
+    failureReason:
+      reason: "EQUALS_METHOD_TODO_COMMENT"
     disabledReason: "Potential harmful system call (CompletableFuture.completeExceptionally)\
       \ detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     prover: "DEFAULT"
@@ -284,7 +285,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "C76FE27E9AA7F43B93402A22E4E7E623"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
@@ -328,6 +329,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    failureReason:
+      reason: "REAL_METHOD_TODO_COMMENT"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

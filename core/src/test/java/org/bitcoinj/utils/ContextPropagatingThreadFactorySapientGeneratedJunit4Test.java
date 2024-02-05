@@ -34,7 +34,7 @@ public class ContextPropagatingThreadFactorySapientGeneratedJunit4Test {
         Context contextMock = mock(Context.class);
         try (MockedStatic<Context> context = mockStatic(Context.class)) {
             context.when(() -> Context.get()).thenReturn(contextMock);
-            ContextPropagatingThreadFactory target = new ContextPropagatingThreadFactory("Thread", 5);
+            ContextPropagatingThreadFactory target = new ContextPropagatingThreadFactory("<String value>", 0);
             //TODO: Needs initialization with real value
             Runnable runnable = null;
             //Act Statement(s)

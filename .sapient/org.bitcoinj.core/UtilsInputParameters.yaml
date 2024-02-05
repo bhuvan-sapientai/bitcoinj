@@ -224,6 +224,9 @@ methods:
     disabled: false
     ignoredBySystem: true
     variablesCouldNotBeIsolated: "SPACE_JOINER"
-    firstFailureReason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+    failureReason:
+      reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+      source: "return InternalUtils.SPACE_JOINER.join(parts);"
+      lineNumber: 64
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

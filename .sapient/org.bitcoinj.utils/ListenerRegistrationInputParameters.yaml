@@ -18,8 +18,8 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "BC53FFC3CCA5D8170ADAB66D56F1F1D8"
-    problemWasSolvedByProver: true
+    modelFingerprint: "19CD263F7CC0828B672E4B062C26C4E6"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
@@ -50,7 +50,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "list"
-      modelFingerprint: "AF9BB90A7E717E9545701A18CB5618BC"
+      modelFingerprint: "3438CC900048BF97B5C4BB4E737A6643"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -73,7 +73,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "26F354D57EDB6DE30F14FF7FA23B655D"
+      modelFingerprint: "EA0E76310322BEC2C2E83642E092EF02"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -81,21 +81,46 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: false
+          value: true
         valueType: "boolean"
-        uuid: "removeFromList_boolean2"
+        uuid: "removeFromList_boolean3"
         fixed: false
         equalsMethodPresent: true
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
+    - type: "STATE_VERIFICATION_PARAMETER"
+      name: "list"
+      modelFingerprint: "B0C918E36FF2116C262582DE4A9E5726"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "COLLECTION"
+        content: !<collection>
+          parameters: []
+          values: []
+        suggestedContent: !<collection>
+          parameters: []
+          values: []
+        valueType: "java.util.List"
+        genericValueType: "? extends org.bitcoinj.utils.ListenerRegistration<java.lang.Object>"
+        uuid: "removeFromList_list4"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      originalValueUuid: "removeFromList_list1"
+      staticReadMethodForField: false
+      filledByUser: false
     uuid: "6e6e00e4-4c77-3886-a8b5-2711d0dd31a1"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "removeFromListWhenRListenerNotEqualsListener"
@@ -222,42 +247,7 @@ methods:
           collectionClass: "java.util.ArrayList"
           parameters: []
           values:
-          - sapientType: "OBJECT"
-            content: !<new>
-              target: "org.bitcoinj.utils.ListenerRegistration"
-              parameters:
-              - name: "listener"
-                value:
-                  sapientType: "OBJECT"
-                  content: !<new>
-                    target: "java.lang.Object"
-                    parameters: []
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "java.lang.Object"
-                    parameters: []
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "java.lang.Object"
-                  uuid: "lambda$removeFromList$0_object2"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "executor"
-                value:
-                  sapientType: "NULL"
-                  suggestedContent: !<unknown_object>
-                    target: "java.util.concurrent.Executor"
-                    onlyPojoFunctions: false
-                    builderPattern: false
-                  valueType: "java.util.concurrent.Executor"
-                  uuid: "removeFromList_listenerRegistration1-executor"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
+          - sapientType: "UNKNOWN"
             suggestedContent: !<new>
               target: "org.bitcoinj.utils.ListenerRegistration"
               parameters:

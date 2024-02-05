@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "DD613C755A16EC7A4EF9F4AC1CF136E6"
+modelFingerprint: "2CD014CEE0DCDACA7444B3F592C2C2C0"
 methods:
 - method:
     name: "openStream"
@@ -16,13 +16,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "C9882A9686EACB4ED804A05E0BFC1791"
+    modelFingerprint: "DDCDB61AC50345348A7A2E5B85AD6EA1"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "params"
-      modelFingerprint: "4161E0987EAA18CABEA1F61BC310A7D8"
+      modelFingerprint: "909FCB8DCA6367523087485A7F6E5496"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -37,9 +37,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "String"
-              suggestedContent: !<regular>
-                value: "String"
+                value: "id1"
               valueType: "java.lang.String"
               uuid: "openStream_networkParameters1-id"
               fixed: false
@@ -52,10 +50,6 @@ methods:
           - name: "id"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "String"
-              suggestedContent: !<regular>
-                value: "String"
               valueType: "java.lang.String"
               uuid: "openStream_networkParameters1-id"
               fixed: false
@@ -70,7 +64,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "params"
-      modelFingerprint: "0117E1DF626322AC1BF1F45890EA7F1D"
+      modelFingerprint: "C2EF5268F6E7DC470F326F68FF8DD2E0"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -85,9 +79,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "String"
-              suggestedContent: !<regular>
-                value: "String"
+                value: "id1"
               valueType: "java.lang.String"
               uuid: "openStream_networkParameters1-id"
               fixed: false
@@ -100,10 +92,6 @@ methods:
           - name: "id"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "String"
-              suggestedContent: !<regular>
-                value: "String"
               valueType: "java.lang.String"
               uuid: "openStream_networkParameters1-id"
               fixed: false
@@ -594,12 +582,12 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       modelFingerprint: "E38C5190C06FCF1AA264DA6E4656D919"
-      index: 7
+      index: 11
       ignored: false
-      nestedInLoop: true
+      nestedInLoop: false
       nestedInRecursion: false
       idsTryCatchBlockSurrounding:
-      - 820002
+      - 4
       value:
         sapientType: "MOCK"
         suggestedContent: !<unknown_object>
@@ -607,7 +595,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.core.Block"
-        uuid: "readTextual_block1"
+        uuid: "getCheckpointBefore_block1"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -627,7 +615,7 @@ methods:
             method: "now"
             methodParameters: []
           valueType: "java.time.Instant"
-          uuid: "readTextual_instant1"
+          uuid: "getCheckpointBefore_instant2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -708,8 +696,6 @@ methods:
             sapientType: "ARRAY"
             content: !<array>
               values: {}
-            suggestedContent: !<array>
-              values: {}
             valueType: "byte[]"
             uuid: "readTextual_byte[]3"
             fixed: false
@@ -774,7 +760,7 @@ methods:
       idsTryCatchBlockSurrounding:
       - 4
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.Block"
           onlyPojoFunctions: false
@@ -790,11 +776,7 @@ methods:
         parameters: []
         signature: "time(): Instant"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "java.time.Instant"
-            method: "now"
-            methodParameters: []
+          sapientType: "UNKNOWN"
           suggestedContent: !<static_method_return>
             target: "java.time.Instant"
             method: "now"
@@ -870,7 +852,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -1294,12 +1277,12 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       modelFingerprint: "E38C5190C06FCF1AA264DA6E4656D919"
-      index: 7
+      index: 11
       ignored: false
-      nestedInLoop: true
+      nestedInLoop: false
       nestedInRecursion: false
       idsTryCatchBlockSurrounding:
-      - 820002
+      - 4
       value:
         sapientType: "MOCK"
         suggestedContent: !<unknown_object>
@@ -1307,7 +1290,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.core.Block"
-        uuid: "readTextual_block1"
+        uuid: "getCheckpointBefore_block1"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -1327,7 +1310,7 @@ methods:
             method: "now"
             methodParameters: []
           valueType: "java.time.Instant"
-          uuid: "readTextual_instant1"
+          uuid: "getCheckpointBefore_instant2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -1408,8 +1391,6 @@ methods:
             sapientType: "ARRAY"
             content: !<array>
               values: {}
-            suggestedContent: !<array>
-              values: {}
             valueType: "byte[]"
             uuid: "readTextual_byte[]3"
             fixed: false
@@ -1429,12 +1410,12 @@ methods:
     - type: "FIELD"
       name: "params"
       modelFingerprint: "476FE7AD40757BFF25839E09E3957894"
-      index: 10
+      index: 13
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       idsTryCatchBlockSurrounding:
-      - 4
+      - 5
       value:
         sapientType: "MOCK"
         suggestedContent: !<unknown_object>
@@ -1458,7 +1439,7 @@ methods:
             onlyPojoFunctions: false
             builderPattern: false
           valueType: "org.bitcoinj.core.Block"
-          uuid: "getCheckpointBefore_block1"
+          uuid: "getCheckpointBefore_block2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -1756,7 +1737,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path3"
@@ -2185,12 +2167,12 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       modelFingerprint: "E38C5190C06FCF1AA264DA6E4656D919"
-      index: 7
+      index: 11
       ignored: false
-      nestedInLoop: true
+      nestedInLoop: false
       nestedInRecursion: false
       idsTryCatchBlockSurrounding:
-      - 820002
+      - 4
       value:
         sapientType: "MOCK"
         suggestedContent: !<unknown_object>
@@ -2198,7 +2180,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.core.Block"
-        uuid: "readTextual_block1"
+        uuid: "getCheckpointBefore_block1"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -2218,7 +2200,7 @@ methods:
             method: "now"
             methodParameters: []
           valueType: "java.time.Instant"
-          uuid: "readTextual_instant1"
+          uuid: "getCheckpointBefore_instant2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -2299,8 +2281,6 @@ methods:
             sapientType: "ARRAY"
             content: !<array>
               values: {}
-            suggestedContent: !<array>
-              values: {}
             valueType: "byte[]"
             uuid: "readTextual_byte[]3"
             fixed: false
@@ -2365,7 +2345,7 @@ methods:
       idsTryCatchBlockSurrounding:
       - 4
       value:
-        sapientType: "MOCK"
+        sapientType: "UNKNOWN"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.Block"
           onlyPojoFunctions: false
@@ -2381,11 +2361,7 @@ methods:
         parameters: []
         signature: "time(): Instant"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "java.time.Instant"
-            method: "now"
-            methodParameters: []
+          sapientType: "UNKNOWN"
           suggestedContent: !<static_method_return>
             target: "java.time.Instant"
             method: "now"
@@ -2487,7 +2463,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path4"
@@ -2916,12 +2893,12 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       modelFingerprint: "E38C5190C06FCF1AA264DA6E4656D919"
-      index: 7
+      index: 11
       ignored: false
-      nestedInLoop: true
+      nestedInLoop: false
       nestedInRecursion: false
       idsTryCatchBlockSurrounding:
-      - 820002
+      - 4
       value:
         sapientType: "MOCK"
         suggestedContent: !<unknown_object>
@@ -2929,7 +2906,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.core.Block"
-        uuid: "readTextual_block1"
+        uuid: "getCheckpointBefore_block1"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -2949,7 +2926,7 @@ methods:
             method: "now"
             methodParameters: []
           valueType: "java.time.Instant"
-          uuid: "readTextual_instant1"
+          uuid: "getCheckpointBefore_instant2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -3030,8 +3007,6 @@ methods:
             sapientType: "ARRAY"
             content: !<array>
               values: {}
-            suggestedContent: !<array>
-              values: {}
             valueType: "byte[]"
             uuid: "readTextual_byte[]3"
             fixed: false
@@ -3051,12 +3026,12 @@ methods:
     - type: "FIELD"
       name: "params"
       modelFingerprint: "476FE7AD40757BFF25839E09E3957894"
-      index: 10
+      index: 13
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       idsTryCatchBlockSurrounding:
-      - 4
+      - 5
       value:
         sapientType: "MOCK"
         suggestedContent: !<unknown_object>
@@ -3080,7 +3055,7 @@ methods:
             onlyPojoFunctions: false
             builderPattern: false
           valueType: "org.bitcoinj.core.Block"
-          uuid: "getCheckpointBefore_block1"
+          uuid: "getCheckpointBefore_block2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -3334,7 +3309,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -3947,8 +3923,6 @@ methods:
             sapientType: "ARRAY"
             content: !<array>
               values: {}
-            suggestedContent: !<array>
-              values: {}
             valueType: "byte[]"
             uuid: "readTextual_byte[]3"
             fixed: false
@@ -4041,7 +4015,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -4624,8 +4599,6 @@ methods:
             sapientType: "ARRAY"
             content: !<array>
               values: {}
-            suggestedContent: !<array>
-              values: {}
             valueType: "byte[]"
             uuid: "readTextual_byte[]3"
             fixed: false
@@ -4665,7 +4638,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -4692,7 +4666,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -4723,32 +4698,14 @@ methods:
     - "org.bitcoinj.store.BlockStore"
     - "java.time.Instant"
   paths:
-  - pathId: "path6"
+  - pathId: "path1"
     pathIdForUser: "path1"
-    testPathName: "checkpointWhenDefaultBranchThrowsIOException"
+    testPathName: "checkpointWhenStoreNotInstanceOfFullPrunedBlockStoreThrowsIllegalArgumentException"
     nameDefinedByUser: false
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "BD8A6DC5526DA9F3D6A39CFCB877E43E"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "30727be1-01da-3056-8cb2-52f1c6f8107f"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path1"
-    pathIdForUser: "path2"
-    testPathName: "checkpointWhenArraysNotEqualsHeaderBINARY_MAGICGetBytesStandardCharsetsUS_ASCIIThrowsIOException"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "MODERATE"
-    modelFingerprint: "D1BB2697B0798E0B1DDBFB06946A09D7"
+    modelFingerprint: "A553AF32020D283434DAC645DE32FD54"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -4828,7 +4785,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "60F4AB56A088909714BFE88747605281"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -4863,96 +4820,19 @@ methods:
             explicitCastNeeded: false
         signature: "checkArgument(boolean,Supplier): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "checkpoint_void1"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
           fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "TimeUtils"
-      modelFingerprint: "4C8E4309D997DE0A1A2B0D32BA8E5ABE"
-      index: 6
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.TimeUtils"
-        uuid: "org.bitcoinj.base.internal.TimeUtils"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.TimeUtils"
-        name: "dateTimeFormat"
-        parameters:
-        - name: "time"
-          value:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "java.time.Instant"
-              method: "now"
-              methodParameters: []
-            suggestedContent: !<static_method_return>
-              target: "java.time.Instant"
-              method: "now"
-              methodParameters: []
-            valueType: "java.time.Instant"
-            uuid: "checkpoint_instant2"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "dateTimeFormat(Instant): String"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: "return_of_dateTimeFormat1"
-          valueType: "java.lang.String"
-          uuid: "checkpoint_string1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Sha256Hash"
-      modelFingerprint: "FC737F259ED881EA54F47094E6BB8C90"
-      index: 7
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 660001
-      value:
-        sapientType: "REAL"
-        valueType: "org.bitcoinj.base.Sha256Hash"
-        uuid: "org.bitcoinj.base.Sha256Hash"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.Sha256Hash"
-        name: "newDigest"
-        parameters: []
-        signature: "newDigest(): MessageDigest"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "newDigest"
-            methodParameters: []
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "newDigest"
-            methodParameters: []
-          valueType: "java.security.MessageDigest"
-          uuid: "readBinary_messageDigest1"
-          fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 9
@@ -4960,63 +4840,46 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "4F7A1641D32DF72A1EEADE780ED5B9B8"
-      index: 8
+      modelFingerprint: "3E9C76AB51311DE97AE9C2294CD5E1D6"
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "EXCEPTION"
         content: !<new>
-          target: "java.io.IOException"
-          parameters:
-          - name: "message"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "Header bytes did not match expected version"
-              valueType: "java.lang.String"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          target: "java.lang.IllegalArgumentException"
+          parameters: []
           privateConstructor: false
-          createdByTargetCode: true
+          createdByTargetCode: false
         suggestedContent: !<new>
-          target: "java.io.IOException"
-          parameters:
-          - name: "message"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "Header bytes did not match expected version"
-              valueType: "java.lang.String"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          target: "java.lang.IllegalArgumentException"
+          parameters: []
           privateConstructor: false
-          createdByTargetCode: true
-        valueType: "java.io.IOException"
-        uuid: "readBinary_iOException1"
+          createdByTargetCode: false
+        valueType: "java.lang.IllegalArgumentException"
         fixed: true
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
-    uuid: "074db5cd-ec19-335c-bbc6-afb8b0270ce1"
+    uuid: "80743552-f341-3c4d-b1ab-8fd557cd048c"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "UNKNOWN_REASON"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path7"
-    pathIdForUser: "path3"
-    testPathName: "checkpointWhenDefaultBranchAndDefaultBranchThrowsIOException"
+    disabledStatusUpdatedBySystem: true
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "checkpointWhenStoreInstanceOfFullPrunedBlockStoreThrowsIllegalArgumentException"
     nameDefinedByUser: false
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "41E1687B88EF5C98039CF3E974E3C7D8"
+    modelFingerprint: "D495BB881214854FC0E258C0D7D29DEE"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -5038,7 +4901,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "checkpoints"
-      modelFingerprint: "E7F3FC91094825BE386F53642B0B967B"
+      modelFingerprint: "2D9DED7F87BEC9F8899A050D7835ED05"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -5046,8 +4909,6 @@ methods:
       value:
         sapientType: "INPUT_STREAM"
         content: !<inputStream>
-          values: []
-        suggestedContent: !<inputStream>
           values: []
         valueType: "java.io.InputStream"
         uuid: "checkpoint_inputStream1"
@@ -5075,7 +4936,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "time"
-      modelFingerprint: "B6FB6B37DF72FBEDB10B501ABEF36E4F"
+      modelFingerprint: "CD0A60B6E657A20C7EC71113B6EC0232"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -5099,7 +4960,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "60F4AB56A088909714BFE88747605281"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -5134,125 +4995,19 @@ methods:
             explicitCastNeeded: false
         signature: "checkArgument(boolean,Supplier): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "checkpoint_void1"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
           fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "TimeUtils"
-      modelFingerprint: "460D5E20124F903AEB43F11A9909EFD3"
-      index: 6
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "REAL"
-        valueType: "org.bitcoinj.base.internal.TimeUtils"
-        uuid: "org.bitcoinj.base.internal.TimeUtils"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.TimeUtils"
-        name: "dateTimeFormat"
-        parameters:
-        - name: "time"
-          value:
-            sapientType: "OBJECT"
-            content: !<method_return_from_value>
-              target: "java.time.Instant"
-              localVariableValue:
-                sapientType: "OBJECT"
-                content: !<static_method_return>
-                  target: "java.time.Instant"
-                  method: "now"
-                  methodParameters: []
-                suggestedContent: !<static_method_return>
-                  target: "java.time.Instant"
-                  method: "now"
-                  methodParameters: []
-                valueType: "java.time.Instant"
-                uuid: "checkpoint_instant1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              methodParameters:
-              - name: "amountToSubtract"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 7
-                  valueType: "long"
-                  fixed: true
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "arg1"
-                value:
-                  sapientType: "ENUM"
-                  content: !<regular>
-                    value: "DAYS"
-                  valueType: "java.time.temporal.ChronoUnit"
-                  uuid: "Enum-java.time.temporal.ChronoUnit-DAYS"
-                  fixed: true
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              methodName: "minus"
-            suggestedContent: !<method_return_from_value>
-              target: "java.time.Instant"
-              localVariableValue:
-                sapientType: "OBJECT"
-                content: !<static_method_return>
-                  target: "java.time.Instant"
-                  method: "now"
-                  methodParameters: []
-                suggestedContent: !<static_method_return>
-                  target: "java.time.Instant"
-                  method: "now"
-                  methodParameters: []
-                valueType: "java.time.Instant"
-                uuid: "checkpoint_instant1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              methodParameters:
-              - name: "amountToSubtract"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 7
-                  valueType: "long"
-                  fixed: true
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "arg1"
-                value:
-                  sapientType: "ENUM"
-                  content: !<regular>
-                    value: "DAYS"
-                  valueType: "java.time.temporal.ChronoUnit"
-                  uuid: "Enum-java.time.temporal.ChronoUnit-DAYS"
-                  fixed: true
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              methodName: "minus"
-            valueType: "java.time.Instant"
-            uuid: "checkpoint_instant2"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "dateTimeFormat(Instant): String"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: "2024-01-18T06:24:25.049007Z"
-          valueType: "java.lang.String"
-          uuid: "checkpoint_string1"
-          fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 9
@@ -5260,2621 +5015,34 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "E4C1EFDA15F25E2711B9871868ACE512"
-      index: 7
+      modelFingerprint: "3E9C76AB51311DE97AE9C2294CD5E1D6"
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "EXCEPTION"
         content: !<new>
-          target: "java.io.IOException"
-          parameters:
-          - name: "message"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "Unsupported format."
-              valueType: "java.lang.String"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          target: "java.lang.IllegalArgumentException"
+          parameters: []
           privateConstructor: false
-          createdByTargetCode: true
+          createdByTargetCode: false
         suggestedContent: !<new>
-          target: "java.io.IOException"
-          parameters:
-          - name: "message"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "Unsupported format."
-              valueType: "java.lang.String"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          target: "java.lang.IllegalArgumentException"
+          parameters: []
           privateConstructor: false
-          createdByTargetCode: true
-        valueType: "java.io.IOException"
-        uuid: "<init>_iOException1"
+          createdByTargetCode: false
+        valueType: "java.lang.IllegalArgumentException"
         fixed: true
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
-    uuid: "c47daa01-8e51-3417-9f67-d71e3c5af23a"
+    uuid: "859b6fc3-b475-3878-8c6f-36f0c8a54d31"
     deleted: false
     disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path2"
-    pathIdForUser: "path4"
-    testPathName: "checkpointWhenTEXTUAL_MAGICNotEqualsMagicThrowsIOException"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "MODERATE"
-    modelFingerprint: "90F069122239739E99B501292823F508"
-    problemWasSolvedByProver: false
-    truncated: false
-    inputParameters:
-    - type: "INPUT"
-      name: "params"
-      modelFingerprint: "B668779CA341827ABE80AF8E4B98FDFF"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.core.NetworkParameters"
-        uuid: "checkpoint_networkParameters1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "checkpoints"
-      modelFingerprint: "2D9DED7F87BEC9F8899A050D7835ED05"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "INPUT_STREAM"
-        content: !<inputStream>
-          values: []
-        valueType: "java.io.InputStream"
-        uuid: "checkpoint_inputStream1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "store"
-      modelFingerprint: "DEAEED9F516CB65F1B7E8CF33AE0142C"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.store.BlockStore"
-        uuid: "checkpoint_blockStore1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "time"
-      modelFingerprint: "CD0A60B6E657A20C7EC71113B6EC0232"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "java.time.Instant"
-          method: "now"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "java.time.Instant"
-          method: "now"
-          methodParameters: []
-        valueType: "java.time.Instant"
-        uuid: "checkpoint_instant1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "60F4AB56A088909714BFE88747605281"
-      index: 5
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "checkpoint_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "TimeUtils"
-      modelFingerprint: "4C8E4309D997DE0A1A2B0D32BA8E5ABE"
-      index: 6
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.TimeUtils"
-        uuid: "org.bitcoinj.base.internal.TimeUtils"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.TimeUtils"
-        name: "dateTimeFormat"
-        parameters:
-        - name: "time"
-          value:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "java.time.Instant"
-              method: "now"
-              methodParameters: []
-            suggestedContent: !<static_method_return>
-              target: "java.time.Instant"
-              method: "now"
-              methodParameters: []
-            valueType: "java.time.Instant"
-            uuid: "checkpoint_instant2"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "dateTimeFormat(Instant): String"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: "return_of_dateTimeFormat1"
-          valueType: "java.lang.String"
-          uuid: "checkpoint_string1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "EC40A509971A3B31259FCFAA0D040A26"
-      index: 7
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "EXCEPTION"
-        content: !<new>
-          target: "java.io.IOException"
-          parameters:
-          - name: "message"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "unexpected magic: "
-              suggestedContent: !<regular>
-                value: "unexpected magic: "
-              valueType: "java.lang.String"
-              uuid: "readTextual_string2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "java.io.IOException"
-          parameters:
-          - name: "message"
-            value:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: "unexpected magic: "
-              valueType: "java.lang.String"
-              uuid: "readTextual_string2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        valueType: "java.io.IOException"
-        uuid: "readTextual_iOException1"
-        fixed: true
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    uuid: "9ec088d2-8183-3fc2-b875-fa137e005887"
-    deleted: false
-    disabled: false
-    ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path8"
-    pathIdForUser: "path5"
-    testPathName: "checkpointWhenTEXTUAL_MAGICNotEqualsMagicAndDefaultBranchThrowsIOException"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "MODERATE"
-    modelFingerprint: "431929993BD2CB6E8D0D3ECD4D98AAA7"
-    problemWasSolvedByProver: false
-    catchBlockExercised:
-      idExternalInstruction: 82
-      id: 3
-      catchExceptions:
-      - "java.lang.Throwable"
-    truncated: false
-    inputParameters:
-    - type: "INPUT"
-      name: "params"
-      modelFingerprint: "B668779CA341827ABE80AF8E4B98FDFF"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.core.NetworkParameters"
-        uuid: "checkpoint_networkParameters1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "checkpoints"
-      modelFingerprint: "2D9DED7F87BEC9F8899A050D7835ED05"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "INPUT_STREAM"
-        content: !<inputStream>
-          values: []
-        valueType: "java.io.InputStream"
-        uuid: "checkpoint_inputStream1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "store"
-      modelFingerprint: "DEAEED9F516CB65F1B7E8CF33AE0142C"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.store.BlockStore"
-        uuid: "checkpoint_blockStore1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "time"
-      modelFingerprint: "CD0A60B6E657A20C7EC71113B6EC0232"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "java.time.Instant"
-          method: "now"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "java.time.Instant"
-          method: "now"
-          methodParameters: []
-        valueType: "java.time.Instant"
-        uuid: "checkpoint_instant1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "60F4AB56A088909714BFE88747605281"
-      index: 5
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "checkpoint_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "TimeUtils"
-      modelFingerprint: "4C8E4309D997DE0A1A2B0D32BA8E5ABE"
-      index: 6
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.TimeUtils"
-        uuid: "org.bitcoinj.base.internal.TimeUtils"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.TimeUtils"
-        name: "dateTimeFormat"
-        parameters:
-        - name: "time"
-          value:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "java.time.Instant"
-              method: "now"
-              methodParameters: []
-            suggestedContent: !<static_method_return>
-              target: "java.time.Instant"
-              method: "now"
-              methodParameters: []
-            valueType: "java.time.Instant"
-            uuid: "checkpoint_instant2"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "dateTimeFormat(Instant): String"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: "return_of_dateTimeFormat1"
-          valueType: "java.lang.String"
-          uuid: "checkpoint_string1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "reader"
-      modelFingerprint: "23FCDC8B3608654E8D5DADB7A85C3F42"
-      index: 7
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 820002
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "java.io.BufferedReader"
-          parameters:
-          - name: "in"
-            value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.io.InputStreamReader"
-                parameters:
-                - name: "in"
-                  value:
-                    sapientType: "INPUT_STREAM"
-                    content: !<inputStream>
-                      inputStreamClass: "java.io.BufferedInputStream"
-                      values: []
-                      parameters:
-                      - name: "in"
-                        value:
-                          sapientType: "INPUT_STREAM"
-                          suggestedContent: !<inputStream>
-                            inputStreamClass: "java.io.BufferedInputStream"
-                            values: []
-                            parameters:
-                            - name: "in"
-                              value:
-                                sapientType: "INPUT_STREAM"
-                                valueType: "java.io.InputStream"
-                                uuid: "checkpoint_inputStream1"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          valueType: "java.io.BufferedInputStream"
-                          uuid: "checkpoint_bufferedInputStream1"
-                          fixed: true
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    suggestedContent: !<inputStream>
-                      inputStreamClass: "java.io.BufferedInputStream"
-                      values: []
-                      parameters:
-                      - name: "in"
-                        value:
-                          sapientType: "INPUT_STREAM"
-                          suggestedContent: !<inputStream>
-                            inputStreamClass: "java.io.BufferedInputStream"
-                            values: []
-                            parameters:
-                            - name: "in"
-                              value:
-                                sapientType: "INPUT_STREAM"
-                                valueType: "java.io.InputStream"
-                                uuid: "checkpoint_inputStream1"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          valueType: "java.io.BufferedInputStream"
-                          uuid: "checkpoint_bufferedInputStream1"
-                          fixed: true
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    valueType: "java.io.BufferedInputStream"
-                    uuid: "<init>_bufferedInputStream1"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "cs"
-                  value:
-                    sapientType: "OBJECT"
-                    content: !<static_field_return>
-                      target: "java.nio.charset.StandardCharsets"
-                      fieldName: "US_ASCII"
-                    suggestedContent: !<static_field_return>
-                      target: "java.nio.charset.StandardCharsets"
-                      fieldName: "US_ASCII"
-                    valueType: "java.nio.charset.Charset"
-                    uuid: "readTextual_charset1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: true
-              suggestedContent: !<new>
-                target: "java.io.InputStreamReader"
-                parameters:
-                - name: "in"
-                  value:
-                    sapientType: "INPUT_STREAM"
-                    suggestedContent: !<inputStream>
-                      inputStreamClass: "java.io.BufferedInputStream"
-                      values: []
-                      parameters:
-                      - name: "in"
-                        value:
-                          sapientType: "INPUT_STREAM"
-                          suggestedContent: !<inputStream>
-                            inputStreamClass: "java.io.BufferedInputStream"
-                            values: []
-                            parameters:
-                            - name: "in"
-                              value:
-                                sapientType: "INPUT_STREAM"
-                                valueType: "java.io.InputStream"
-                                uuid: "checkpoint_inputStream1"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          valueType: "java.io.BufferedInputStream"
-                          uuid: "checkpoint_bufferedInputStream1"
-                          fixed: true
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    valueType: "java.io.BufferedInputStream"
-                    uuid: "<init>_bufferedInputStream1"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "cs"
-                  value:
-                    sapientType: "OBJECT"
-                    suggestedContent: !<static_field_return>
-                      target: "java.nio.charset.StandardCharsets"
-                      fieldName: "US_ASCII"
-                    valueType: "java.nio.charset.Charset"
-                    uuid: "readTextual_charset1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: true
-              valueType: "java.io.InputStreamReader"
-              uuid: "readTextual_inputStreamReader1"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "java.io.BufferedReader"
-          parameters:
-          - name: "in"
-            value:
-              sapientType: "OBJECT"
-              suggestedContent: !<new>
-                target: "java.io.InputStreamReader"
-                parameters:
-                - name: "in"
-                  value:
-                    sapientType: "INPUT_STREAM"
-                    suggestedContent: !<inputStream>
-                      inputStreamClass: "java.io.BufferedInputStream"
-                      values: []
-                      parameters:
-                      - name: "in"
-                        value:
-                          sapientType: "INPUT_STREAM"
-                          suggestedContent: !<inputStream>
-                            inputStreamClass: "java.io.BufferedInputStream"
-                            values: []
-                            parameters:
-                            - name: "in"
-                              value:
-                                sapientType: "INPUT_STREAM"
-                                valueType: "java.io.InputStream"
-                                uuid: "checkpoint_inputStream1"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          valueType: "java.io.BufferedInputStream"
-                          uuid: "checkpoint_bufferedInputStream1"
-                          fixed: true
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    valueType: "java.io.BufferedInputStream"
-                    uuid: "<init>_bufferedInputStream1"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "cs"
-                  value:
-                    sapientType: "OBJECT"
-                    suggestedContent: !<static_field_return>
-                      target: "java.nio.charset.StandardCharsets"
-                      fieldName: "US_ASCII"
-                    valueType: "java.nio.charset.Charset"
-                    uuid: "readTextual_charset1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: true
-              valueType: "java.io.InputStreamReader"
-              uuid: "readTextual_inputStreamReader1"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        valueType: "java.io.BufferedReader"
-        uuid: "readTextual_bufferedReader1"
-        fixed: true
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "reader"
-        name: "readLine"
-        parameters: []
-        throwsExceptions:
-        - "java.io.IOException"
-        signature: "readLine(): String throws java.io.IOException"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: ""
-          suggestedContent: !<regular>
-            value: ""
-          valueType: "java.lang.String"
-          uuid: "readTextual_string1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "reader"
-      modelFingerprint: "3D21EBA928EBCE90409B4D0469CED5CB"
-      index: 8
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 820003
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "java.io.BufferedReader"
-          parameters:
-          - name: "in"
-            value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.io.InputStreamReader"
-                parameters:
-                - name: "in"
-                  value:
-                    sapientType: "INPUT_STREAM"
-                    content: !<inputStream>
-                      inputStreamClass: "java.io.BufferedInputStream"
-                      values: []
-                      parameters:
-                      - name: "in"
-                        value:
-                          sapientType: "INPUT_STREAM"
-                          suggestedContent: !<inputStream>
-                            inputStreamClass: "java.io.BufferedInputStream"
-                            values: []
-                            parameters:
-                            - name: "in"
-                              value:
-                                sapientType: "INPUT_STREAM"
-                                valueType: "java.io.InputStream"
-                                uuid: "checkpoint_inputStream1"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          valueType: "java.io.BufferedInputStream"
-                          uuid: "checkpoint_bufferedInputStream1"
-                          fixed: true
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    suggestedContent: !<inputStream>
-                      inputStreamClass: "java.io.BufferedInputStream"
-                      values: []
-                      parameters:
-                      - name: "in"
-                        value:
-                          sapientType: "INPUT_STREAM"
-                          suggestedContent: !<inputStream>
-                            inputStreamClass: "java.io.BufferedInputStream"
-                            values: []
-                            parameters:
-                            - name: "in"
-                              value:
-                                sapientType: "INPUT_STREAM"
-                                valueType: "java.io.InputStream"
-                                uuid: "checkpoint_inputStream1"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          valueType: "java.io.BufferedInputStream"
-                          uuid: "checkpoint_bufferedInputStream1"
-                          fixed: true
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    valueType: "java.io.BufferedInputStream"
-                    uuid: "<init>_bufferedInputStream1"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "cs"
-                  value:
-                    sapientType: "OBJECT"
-                    content: !<static_field_return>
-                      target: "java.nio.charset.StandardCharsets"
-                      fieldName: "US_ASCII"
-                    suggestedContent: !<static_field_return>
-                      target: "java.nio.charset.StandardCharsets"
-                      fieldName: "US_ASCII"
-                    valueType: "java.nio.charset.Charset"
-                    uuid: "readTextual_charset1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: true
-              suggestedContent: !<new>
-                target: "java.io.InputStreamReader"
-                parameters:
-                - name: "in"
-                  value:
-                    sapientType: "INPUT_STREAM"
-                    suggestedContent: !<inputStream>
-                      inputStreamClass: "java.io.BufferedInputStream"
-                      values: []
-                      parameters:
-                      - name: "in"
-                        value:
-                          sapientType: "INPUT_STREAM"
-                          suggestedContent: !<inputStream>
-                            inputStreamClass: "java.io.BufferedInputStream"
-                            values: []
-                            parameters:
-                            - name: "in"
-                              value:
-                                sapientType: "INPUT_STREAM"
-                                valueType: "java.io.InputStream"
-                                uuid: "checkpoint_inputStream1"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          valueType: "java.io.BufferedInputStream"
-                          uuid: "checkpoint_bufferedInputStream1"
-                          fixed: true
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    valueType: "java.io.BufferedInputStream"
-                    uuid: "<init>_bufferedInputStream1"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "cs"
-                  value:
-                    sapientType: "OBJECT"
-                    suggestedContent: !<static_field_return>
-                      target: "java.nio.charset.StandardCharsets"
-                      fieldName: "US_ASCII"
-                    valueType: "java.nio.charset.Charset"
-                    uuid: "readTextual_charset1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: true
-              valueType: "java.io.InputStreamReader"
-              uuid: "readTextual_inputStreamReader1"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "java.io.BufferedReader"
-          parameters:
-          - name: "in"
-            value:
-              sapientType: "OBJECT"
-              suggestedContent: !<new>
-                target: "java.io.InputStreamReader"
-                parameters:
-                - name: "in"
-                  value:
-                    sapientType: "INPUT_STREAM"
-                    suggestedContent: !<inputStream>
-                      inputStreamClass: "java.io.BufferedInputStream"
-                      values: []
-                      parameters:
-                      - name: "in"
-                        value:
-                          sapientType: "INPUT_STREAM"
-                          suggestedContent: !<inputStream>
-                            inputStreamClass: "java.io.BufferedInputStream"
-                            values: []
-                            parameters:
-                            - name: "in"
-                              value:
-                                sapientType: "INPUT_STREAM"
-                                valueType: "java.io.InputStream"
-                                uuid: "checkpoint_inputStream1"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          valueType: "java.io.BufferedInputStream"
-                          uuid: "checkpoint_bufferedInputStream1"
-                          fixed: true
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    valueType: "java.io.BufferedInputStream"
-                    uuid: "<init>_bufferedInputStream1"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "cs"
-                  value:
-                    sapientType: "OBJECT"
-                    suggestedContent: !<static_field_return>
-                      target: "java.nio.charset.StandardCharsets"
-                      fieldName: "US_ASCII"
-                    valueType: "java.nio.charset.Charset"
-                    uuid: "readTextual_charset1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: true
-              valueType: "java.io.InputStreamReader"
-              uuid: "readTextual_inputStreamReader1"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        valueType: "java.io.BufferedReader"
-        uuid: "readTextual_bufferedReader1"
-        fixed: true
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "reader"
-        name: "close"
-        parameters: []
-        throwsExceptions:
-        - "java.io.IOException"
-        signature: "close(): void throws java.io.IOException"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "readTextual_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "EC40A509971A3B31259FCFAA0D040A26"
-      index: 9
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "EXCEPTION"
-        content: !<new>
-          target: "java.io.IOException"
-          parameters:
-          - name: "message"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "unexpected magic: "
-              suggestedContent: !<regular>
-                value: "unexpected magic: "
-              valueType: "java.lang.String"
-              uuid: "readTextual_string2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "java.io.IOException"
-          parameters:
-          - name: "message"
-            value:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: "unexpected magic: "
-              valueType: "java.lang.String"
-              uuid: "readTextual_string2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        valueType: "java.io.IOException"
-        uuid: "readTextual_iOException1"
-        fixed: true
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    uuid: "b7104d2c-7226-3a2e-a881-0b43e6957b1a"
-    deleted: false
-    disabled: false
-    ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path4"
-    pathIdForUser: "path6"
-    testPathName: "checkpointWhenNumCheckpointsNotGreaterThan0ThrowsIOException"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "MODERATE"
-    modelFingerprint: "077756A3EB1B07A5B60E4495600C3345"
-    problemWasSolvedByProver: false
-    truncated: false
-    inputParameters:
-    - type: "INPUT"
-      name: "params"
-      modelFingerprint: "B668779CA341827ABE80AF8E4B98FDFF"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.core.NetworkParameters"
-        uuid: "checkpoint_networkParameters1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "checkpoints"
-      modelFingerprint: "2D9DED7F87BEC9F8899A050D7835ED05"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "INPUT_STREAM"
-        content: !<inputStream>
-          values: []
-        valueType: "java.io.InputStream"
-        uuid: "checkpoint_inputStream1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "store"
-      modelFingerprint: "DEAEED9F516CB65F1B7E8CF33AE0142C"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.store.BlockStore"
-        uuid: "checkpoint_blockStore1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "time"
-      modelFingerprint: "CD0A60B6E657A20C7EC71113B6EC0232"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "java.time.Instant"
-          method: "now"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "java.time.Instant"
-          method: "now"
-          methodParameters: []
-        valueType: "java.time.Instant"
-        uuid: "checkpoint_instant1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "60F4AB56A088909714BFE88747605281"
-      index: 5
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "checkpoint_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "TimeUtils"
-      modelFingerprint: "4C8E4309D997DE0A1A2B0D32BA8E5ABE"
-      index: 6
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.TimeUtils"
-        uuid: "org.bitcoinj.base.internal.TimeUtils"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.TimeUtils"
-        name: "dateTimeFormat"
-        parameters:
-        - name: "time"
-          value:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "java.time.Instant"
-              method: "now"
-              methodParameters: []
-            suggestedContent: !<static_method_return>
-              target: "java.time.Instant"
-              method: "now"
-              methodParameters: []
-            valueType: "java.time.Instant"
-            uuid: "checkpoint_instant2"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "dateTimeFormat(Instant): String"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: "return_of_dateTimeFormat1"
-          valueType: "java.lang.String"
-          uuid: "checkpoint_string1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "5D1C76B3909AD28BDDC21FFF70362CB1"
-      index: 7
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 820002
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkState"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkState(boolean): void"
-        returnValue:
-          sapientType: "EXCEPTION"
-          content: !<new>
-            target: "java.lang.IllegalStateException"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
-            target: "java.lang.IllegalStateException"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
-          valueType: "java.lang.IllegalStateException"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "EC40A509971A3B31259FCFAA0D040A26"
-      index: 8
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "EXCEPTION"
-        content: !<new>
-          target: "java.io.IOException"
-          parameters:
-          - name: "message"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "unexpected magic: "
-              suggestedContent: !<regular>
-                value: "unexpected magic: "
-              valueType: "java.lang.String"
-              uuid: "readTextual_string2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "java.io.IOException"
-          parameters:
-          - name: "message"
-            value:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: "unexpected magic: "
-              valueType: "java.lang.String"
-              uuid: "readTextual_string2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        valueType: "java.io.IOException"
-        uuid: "readTextual_iOException1"
-        fixed: true
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    uuid: "e3a46af6-86fa-3a85-b424-e81a4fb05e10"
-    deleted: false
-    disabled: false
-    ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path3"
-    pathIdForUser: "path7"
-    testPathName: "checkpointWhenILessThanNumCheckpoints"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "MODERATE"
-    modelFingerprint: "AFE61992174A2F7266E5C194D726B268"
-    problemWasSolvedByProver: false
-    truncated: false
-    inputParameters:
-    - type: "INPUT"
-      name: "params"
-      modelFingerprint: "B668779CA341827ABE80AF8E4B98FDFF"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.core.NetworkParameters"
-        uuid: "checkpoint_networkParameters1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "checkpoints"
-      modelFingerprint: "2D9DED7F87BEC9F8899A050D7835ED05"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "INPUT_STREAM"
-        content: !<inputStream>
-          values: []
-        valueType: "java.io.InputStream"
-        uuid: "checkpoint_inputStream1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "store"
-      modelFingerprint: "3527915A4F790FE3F53E95AB555D1F3C"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.store.BlockStore"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.store.BlockStore"
-        uuid: "checkpoint_blockStore1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "time"
-      modelFingerprint: "CD0A60B6E657A20C7EC71113B6EC0232"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "java.time.Instant"
-          method: "now"
-          methodParameters: []
-        suggestedContent: !<static_method_return>
-          target: "java.time.Instant"
-          method: "now"
-          methodParameters: []
-        valueType: "java.time.Instant"
-        uuid: "checkpoint_instant1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "60F4AB56A088909714BFE88747605281"
-      index: 5
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "checkpoint_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "TimeUtils"
-      modelFingerprint: "4C8E4309D997DE0A1A2B0D32BA8E5ABE"
-      index: 6
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.TimeUtils"
-        uuid: "org.bitcoinj.base.internal.TimeUtils"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.TimeUtils"
-        name: "dateTimeFormat"
-        parameters:
-        - name: "time"
-          value:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "java.time.Instant"
-              method: "now"
-              methodParameters: []
-            suggestedContent: !<static_method_return>
-              target: "java.time.Instant"
-              method: "now"
-              methodParameters: []
-            valueType: "java.time.Instant"
-            uuid: "checkpoint_instant2"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "dateTimeFormat(Instant): String"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: "return_of_dateTimeFormat1"
-          valueType: "java.lang.String"
-          uuid: "checkpoint_string1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "ACF07FFCA3E2E1576E0B7D7733EEEFF8"
-      index: 7
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 820002
-      value:
-        sapientType: "REAL"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkState"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: true
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkState(boolean): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "readTextual_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "StoredBlock"
-      modelFingerprint: "877A689BADEA6BA74FF05922B574C367"
-      index: 8
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 820002
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.core.StoredBlock"
-        uuid: "org.bitcoinj.core.StoredBlock"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.core.StoredBlock"
-        name: "deserializeCompact"
-        parameters:
-        - name: "buffer"
-          value:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "java.nio.ByteBuffer"
-              method: "allocate"
-              methodParameters:
-              - value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 96
-                  valueType: "int"
-                  fixed: true
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            suggestedContent: !<static_method_return>
-              target: "java.nio.ByteBuffer"
-              method: "allocate"
-              methodParameters:
-              - value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 96
-                  valueType: "int"
-                  fixed: true
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            valueType: "java.nio.ByteBuffer"
-            uuid: "readTextual_byteBuffer4"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        throwsExceptions:
-        - "org.bitcoinj.core.ProtocolException"
-        signature: "deserializeCompact(ByteBuffer): StoredBlock throws org.bitcoinj.core.ProtocolException"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<new>
-            target: "org.bitcoinj.core.StoredBlock"
-            parameters:
-            - name: "header"
-              value:
-                sapientType: "MOCK"
-                suggestedContent: !<unknown_object>
-                  target: "org.bitcoinj.core.Block"
-                  onlyPojoFunctions: false
-                  builderPattern: false
-                valueType: "org.bitcoinj.core.Block"
-                uuid: "readTextual_block1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "chainWork"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "java.math.BigInteger"
-                uuid: "readTextual_storedBlock1-chainWork"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "height"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "int"
-                uuid: "readTextual_storedBlock1-height"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
-            target: "org.bitcoinj.core.StoredBlock"
-            parameters:
-            - name: "header"
-              value:
-                sapientType: "UNKNOWN"
-                suggestedContent: !<unknown_object>
-                  target: "org.bitcoinj.core.Block"
-                  onlyPojoFunctions: false
-                  builderPattern: false
-                valueType: "org.bitcoinj.core.Block"
-                uuid: "readTextual_block1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "chainWork"
-              value:
-                sapientType: "BASIC"
-                valueType: "java.math.BigInteger"
-                uuid: "readTextual_storedBlock1-chainWork"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "height"
-              value:
-                sapientType: "BASIC"
-                valueType: "int"
-                uuid: "readTextual_storedBlock1-height"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
-          valueType: "org.bitcoinj.core.StoredBlock"
-          uuid: "readTextual_storedBlock1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "block"
-      modelFingerprint: "48B98E0E9CA462B0B434A3E6A101B8DF"
-      index: 9
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 820002
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.core.StoredBlock"
-          parameters:
-          - name: "header"
-            value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.Block"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.Block"
-              uuid: "readTextual_block1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "chainWork"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "java.math.BigInteger"
-              uuid: "readTextual_storedBlock1-chainWork"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "height"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "int"
-              uuid: "readTextual_storedBlock1-height"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.StoredBlock"
-          parameters:
-          - name: "header"
-            value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.Block"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.Block"
-              uuid: "readTextual_block1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "chainWork"
-            value:
-              sapientType: "BASIC"
-              valueType: "java.math.BigInteger"
-              uuid: "readTextual_storedBlock1-chainWork"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "height"
-            value:
-              sapientType: "BASIC"
-              valueType: "int"
-              uuid: "readTextual_storedBlock1-height"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "org.bitcoinj.core.StoredBlock"
-        uuid: "readTextual_storedBlock1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "block"
-        name: "getHeader"
-        parameters: []
-        signature: "getHeader(): Block"
-        returnValue:
-          sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
-            target: "org.bitcoinj.core.Block"
-            onlyPojoFunctions: false
-            builderPattern: false
-          valueType: "org.bitcoinj.core.Block"
-          uuid: "readTextual_block1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      modelFingerprint: "E38C5190C06FCF1AA264DA6E4656D919"
-      index: 10
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 820002
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.Block"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.Block"
-        uuid: "readTextual_block1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.core.Block"
-        name: "time"
-        parameters: []
-        signature: "time(): Instant"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "java.time.Instant"
-            method: "now"
-            methodParameters: []
-          suggestedContent: !<static_method_return>
-            target: "java.time.Instant"
-            method: "now"
-            methodParameters: []
-          valueType: "java.time.Instant"
-          uuid: "readTextual_instant1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "TimeUtils"
-      modelFingerprint: "4C8E4309D997DE0A1A2B0D32BA8E5ABE"
-      index: 11
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 820002
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.TimeUtils"
-        uuid: "org.bitcoinj.base.internal.TimeUtils"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.TimeUtils"
-        name: "dateTimeFormat"
-        parameters:
-        - name: "time"
-          value:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "java.time.Instant"
-              method: "now"
-              methodParameters: []
-            suggestedContent: !<static_method_return>
-              target: "java.time.Instant"
-              method: "now"
-              methodParameters: []
-            valueType: "java.time.Instant"
-            uuid: "readTextual_object1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: true
-        signature: "dateTimeFormat(Instant): String"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: "return_of_dateTimeFormat1"
-          valueType: "java.lang.String"
-          uuid: "readTextual_string6"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Sha256Hash"
-      modelFingerprint: "CEBE22911E18CAB985D94F461E798AED"
-      index: 12
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 820002
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.Sha256Hash"
-        uuid: "org.bitcoinj.base.Sha256Hash"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.Sha256Hash"
-        name: "wrap"
-        parameters:
-        - name: "rawHashBytes"
-          value:
-            sapientType: "ARRAY"
-            content: !<array>
-              values: {}
-            suggestedContent: !<array>
-              values: {}
-            valueType: "byte[]"
-            uuid: "readTextual_byte[]3"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "wrap(byte[]): Sha256Hash"
-        returnValue:
-          sapientType: "MOCK"
-          valueType: "org.bitcoinj.base.Sha256Hash"
-          uuid: "readTextual_sha256Hash1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "manager"
-      modelFingerprint: "2CE78293E13A3CA90CFFBA68A0AF7ED8"
-      index: 13
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.core.CheckpointManager"
-          parameters:
-          - name: "params"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.core.NetworkParameters"
-              uuid: "checkpoint_networkParameters1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "inputStream"
-            value:
-              sapientType: "INPUT_STREAM"
-              content: !<inputStream>
-                inputStreamClass: "java.io.BufferedInputStream"
-                values: []
-                parameters:
-                - name: "in"
-                  value:
-                    sapientType: "INPUT_STREAM"
-                    valueType: "java.io.InputStream"
-                    uuid: "checkpoint_inputStream1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<inputStream>
-                inputStreamClass: "java.io.BufferedInputStream"
-                values: []
-                parameters:
-                - name: "in"
-                  value:
-                    sapientType: "INPUT_STREAM"
-                    valueType: "java.io.InputStream"
-                    uuid: "checkpoint_inputStream1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              valueType: "java.io.BufferedInputStream"
-              uuid: "checkpoint_bufferedInputStream1"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          thrownExceptions:
-          - "java.io.IOException"
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.CheckpointManager"
-          parameters:
-          - name: "params"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.core.NetworkParameters"
-              uuid: "checkpoint_networkParameters1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "inputStream"
-            value:
-              sapientType: "INPUT_STREAM"
-              suggestedContent: !<inputStream>
-                inputStreamClass: "java.io.BufferedInputStream"
-                values: []
-                parameters:
-                - name: "in"
-                  value:
-                    sapientType: "INPUT_STREAM"
-                    valueType: "java.io.InputStream"
-                    uuid: "checkpoint_inputStream1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              valueType: "java.io.BufferedInputStream"
-              uuid: "checkpoint_bufferedInputStream1"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          thrownExceptions:
-          - "java.io.IOException"
-          createdByTargetCode: true
-        valueType: "org.bitcoinj.core.CheckpointManager"
-        uuid: "checkpoint_checkpointManager1"
-        fixed: true
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "manager"
-        name: "getCheckpointBefore"
-        parameters:
-        - name: "time"
-          value:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "java.time.Instant"
-              method: "now"
-              methodParameters: []
-            suggestedContent: !<static_method_return>
-              target: "java.time.Instant"
-              method: "now"
-              methodParameters: []
-            valueType: "java.time.Instant"
-            uuid: "checkpoint_instant2"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "getCheckpointBefore(Instant): StoredBlock"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<method_return_from_value>
-            target: "org.bitcoinj.core.StoredBlock"
-            localVariableValue:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "org.bitcoinj.core.CheckpointManager"
-                parameters:
-                - name: "params"
-                  value:
-                    sapientType: "MOCK"
-                    valueType: "org.bitcoinj.core.NetworkParameters"
-                    uuid: "checkpoint_networkParameters1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "inputStream"
-                  value:
-                    sapientType: "INPUT_STREAM"
-                    content: !<inputStream>
-                      inputStreamClass: "java.io.BufferedInputStream"
-                      values: []
-                      parameters:
-                      - name: "in"
-                        value:
-                          sapientType: "INPUT_STREAM"
-                          valueType: "java.io.InputStream"
-                          uuid: "checkpoint_inputStream1"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    suggestedContent: !<inputStream>
-                      inputStreamClass: "java.io.BufferedInputStream"
-                      values: []
-                      parameters:
-                      - name: "in"
-                        value:
-                          sapientType: "INPUT_STREAM"
-                          valueType: "java.io.InputStream"
-                          uuid: "checkpoint_inputStream1"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    valueType: "java.io.BufferedInputStream"
-                    uuid: "checkpoint_bufferedInputStream1"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                thrownExceptions:
-                - "java.io.IOException"
-                createdByTargetCode: true
-              suggestedContent: !<new>
-                target: "org.bitcoinj.core.CheckpointManager"
-                parameters:
-                - name: "params"
-                  value:
-                    sapientType: "UNKNOWN"
-                    valueType: "org.bitcoinj.core.NetworkParameters"
-                    uuid: "checkpoint_networkParameters1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "inputStream"
-                  value:
-                    sapientType: "INPUT_STREAM"
-                    suggestedContent: !<inputStream>
-                      inputStreamClass: "java.io.BufferedInputStream"
-                      values: []
-                      parameters:
-                      - name: "in"
-                        value:
-                          sapientType: "INPUT_STREAM"
-                          valueType: "java.io.InputStream"
-                          uuid: "checkpoint_inputStream1"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    valueType: "java.io.BufferedInputStream"
-                    uuid: "checkpoint_bufferedInputStream1"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                thrownExceptions:
-                - "java.io.IOException"
-                createdByTargetCode: true
-              valueType: "org.bitcoinj.core.CheckpointManager"
-              uuid: "checkpoint_checkpointManager1"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            methodParameters:
-            - name: "time"
-              value:
-                sapientType: "OBJECT"
-                content: !<static_method_return>
-                  target: "java.time.Instant"
-                  method: "now"
-                  methodParameters: []
-                suggestedContent: !<static_method_return>
-                  target: "java.time.Instant"
-                  method: "now"
-                  methodParameters: []
-                valueType: "java.time.Instant"
-                uuid: "checkpoint_instant2"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            methodName: "getCheckpointBefore"
-          suggestedContent: !<method_return_from_value>
-            target: "org.bitcoinj.core.StoredBlock"
-            localVariableValue:
-              sapientType: "OBJECT"
-              suggestedContent: !<new>
-                target: "org.bitcoinj.core.CheckpointManager"
-                parameters:
-                - name: "params"
-                  value:
-                    sapientType: "UNKNOWN"
-                    valueType: "org.bitcoinj.core.NetworkParameters"
-                    uuid: "checkpoint_networkParameters1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "inputStream"
-                  value:
-                    sapientType: "INPUT_STREAM"
-                    suggestedContent: !<inputStream>
-                      inputStreamClass: "java.io.BufferedInputStream"
-                      values: []
-                      parameters:
-                      - name: "in"
-                        value:
-                          sapientType: "INPUT_STREAM"
-                          valueType: "java.io.InputStream"
-                          uuid: "checkpoint_inputStream1"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    valueType: "java.io.BufferedInputStream"
-                    uuid: "checkpoint_bufferedInputStream1"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                thrownExceptions:
-                - "java.io.IOException"
-                createdByTargetCode: true
-              valueType: "org.bitcoinj.core.CheckpointManager"
-              uuid: "checkpoint_checkpointManager1"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            methodParameters:
-            - name: "time"
-              value:
-                sapientType: "UNKNOWN"
-                suggestedContent: !<static_method_return>
-                  target: "java.time.Instant"
-                  method: "now"
-                  methodParameters: []
-                valueType: "java.time.Instant"
-                uuid: "checkpoint_instant2"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            methodName: "getCheckpointBefore"
-          valueType: "org.bitcoinj.core.StoredBlock"
-          uuid: "checkpoint_storedBlock1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "store"
-      modelFingerprint: "0A1D0A7B4FC8A9034EF3C1A4DFBD6232"
-      index: 14
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.store.BlockStore"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.store.BlockStore"
-        uuid: "checkpoint_blockStore1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "store"
-        name: "put"
-        parameters:
-        - name: "arg0"
-          value:
-            sapientType: "OBJECT"
-            content: !<method_return_from_value>
-              target: "org.bitcoinj.core.StoredBlock"
-              localVariableValue:
-                sapientType: "OBJECT"
-                content: !<new>
-                  target: "org.bitcoinj.core.CheckpointManager"
-                  parameters:
-                  - name: "params"
-                    value:
-                      sapientType: "MOCK"
-                      valueType: "org.bitcoinj.core.NetworkParameters"
-                      uuid: "checkpoint_networkParameters1"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  - name: "inputStream"
-                    value:
-                      sapientType: "INPUT_STREAM"
-                      content: !<inputStream>
-                        inputStreamClass: "java.io.BufferedInputStream"
-                        values: []
-                        parameters:
-                        - name: "in"
-                          value:
-                            sapientType: "INPUT_STREAM"
-                            valueType: "java.io.InputStream"
-                            uuid: "checkpoint_inputStream1"
-                            fixed: false
-                            equalsMethodPresent: false
-                            explicitCastNeeded: false
-                      suggestedContent: !<inputStream>
-                        inputStreamClass: "java.io.BufferedInputStream"
-                        values: []
-                        parameters:
-                        - name: "in"
-                          value:
-                            sapientType: "INPUT_STREAM"
-                            valueType: "java.io.InputStream"
-                            uuid: "checkpoint_inputStream1"
-                            fixed: false
-                            equalsMethodPresent: false
-                            explicitCastNeeded: false
-                      valueType: "java.io.BufferedInputStream"
-                      uuid: "checkpoint_bufferedInputStream1"
-                      fixed: true
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  privateConstructor: false
-                  thrownExceptions:
-                  - "java.io.IOException"
-                  createdByTargetCode: true
-                suggestedContent: !<new>
-                  target: "org.bitcoinj.core.CheckpointManager"
-                  parameters:
-                  - name: "params"
-                    value:
-                      sapientType: "UNKNOWN"
-                      valueType: "org.bitcoinj.core.NetworkParameters"
-                      uuid: "checkpoint_networkParameters1"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  - name: "inputStream"
-                    value:
-                      sapientType: "INPUT_STREAM"
-                      suggestedContent: !<inputStream>
-                        inputStreamClass: "java.io.BufferedInputStream"
-                        values: []
-                        parameters:
-                        - name: "in"
-                          value:
-                            sapientType: "INPUT_STREAM"
-                            valueType: "java.io.InputStream"
-                            uuid: "checkpoint_inputStream1"
-                            fixed: false
-                            equalsMethodPresent: false
-                            explicitCastNeeded: false
-                      valueType: "java.io.BufferedInputStream"
-                      uuid: "checkpoint_bufferedInputStream1"
-                      fixed: true
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  privateConstructor: false
-                  thrownExceptions:
-                  - "java.io.IOException"
-                  createdByTargetCode: true
-                valueType: "org.bitcoinj.core.CheckpointManager"
-                uuid: "checkpoint_checkpointManager1"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              methodParameters:
-              - name: "time"
-                value:
-                  sapientType: "OBJECT"
-                  content: !<static_method_return>
-                    target: "java.time.Instant"
-                    method: "now"
-                    methodParameters: []
-                  suggestedContent: !<static_method_return>
-                    target: "java.time.Instant"
-                    method: "now"
-                    methodParameters: []
-                  valueType: "java.time.Instant"
-                  uuid: "checkpoint_instant2"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              methodName: "getCheckpointBefore"
-            suggestedContent: !<method_return_from_value>
-              target: "org.bitcoinj.core.StoredBlock"
-              localVariableValue:
-                sapientType: "OBJECT"
-                suggestedContent: !<new>
-                  target: "org.bitcoinj.core.CheckpointManager"
-                  parameters:
-                  - name: "params"
-                    value:
-                      sapientType: "UNKNOWN"
-                      valueType: "org.bitcoinj.core.NetworkParameters"
-                      uuid: "checkpoint_networkParameters1"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  - name: "inputStream"
-                    value:
-                      sapientType: "INPUT_STREAM"
-                      suggestedContent: !<inputStream>
-                        inputStreamClass: "java.io.BufferedInputStream"
-                        values: []
-                        parameters:
-                        - name: "in"
-                          value:
-                            sapientType: "INPUT_STREAM"
-                            valueType: "java.io.InputStream"
-                            uuid: "checkpoint_inputStream1"
-                            fixed: false
-                            equalsMethodPresent: false
-                            explicitCastNeeded: false
-                      valueType: "java.io.BufferedInputStream"
-                      uuid: "checkpoint_bufferedInputStream1"
-                      fixed: true
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  privateConstructor: false
-                  thrownExceptions:
-                  - "java.io.IOException"
-                  createdByTargetCode: true
-                valueType: "org.bitcoinj.core.CheckpointManager"
-                uuid: "checkpoint_checkpointManager1"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              methodParameters:
-              - name: "time"
-                value:
-                  sapientType: "UNKNOWN"
-                  suggestedContent: !<static_method_return>
-                    target: "java.time.Instant"
-                    method: "now"
-                    methodParameters: []
-                  valueType: "java.time.Instant"
-                  uuid: "checkpoint_instant2"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              methodName: "getCheckpointBefore"
-            valueType: "org.bitcoinj.core.StoredBlock"
-            uuid: "checkpoint_storedBlock1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        throwsExceptions:
-        - "org.bitcoinj.store.BlockStoreException"
-        signature: "put(StoredBlock): void throws org.bitcoinj.store.BlockStoreException"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "checkpoint_void3"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1025
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "store"
-      modelFingerprint: "6C3F0A949E5866C20EC28FFCCD4EA870"
-      index: 15
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.store.BlockStore"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.store.BlockStore"
-        uuid: "checkpoint_blockStore1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "store"
-        name: "setChainHead"
-        parameters:
-        - name: "arg0"
-          value:
-            sapientType: "OBJECT"
-            content: !<method_return_from_value>
-              target: "org.bitcoinj.core.StoredBlock"
-              localVariableValue:
-                sapientType: "OBJECT"
-                content: !<new>
-                  target: "org.bitcoinj.core.CheckpointManager"
-                  parameters:
-                  - name: "params"
-                    value:
-                      sapientType: "MOCK"
-                      valueType: "org.bitcoinj.core.NetworkParameters"
-                      uuid: "checkpoint_networkParameters1"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  - name: "inputStream"
-                    value:
-                      sapientType: "INPUT_STREAM"
-                      content: !<inputStream>
-                        inputStreamClass: "java.io.BufferedInputStream"
-                        values: []
-                        parameters:
-                        - name: "in"
-                          value:
-                            sapientType: "INPUT_STREAM"
-                            valueType: "java.io.InputStream"
-                            uuid: "checkpoint_inputStream1"
-                            fixed: false
-                            equalsMethodPresent: false
-                            explicitCastNeeded: false
-                      suggestedContent: !<inputStream>
-                        inputStreamClass: "java.io.BufferedInputStream"
-                        values: []
-                        parameters:
-                        - name: "in"
-                          value:
-                            sapientType: "INPUT_STREAM"
-                            valueType: "java.io.InputStream"
-                            uuid: "checkpoint_inputStream1"
-                            fixed: false
-                            equalsMethodPresent: false
-                            explicitCastNeeded: false
-                      valueType: "java.io.BufferedInputStream"
-                      uuid: "checkpoint_bufferedInputStream1"
-                      fixed: true
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  privateConstructor: false
-                  thrownExceptions:
-                  - "java.io.IOException"
-                  createdByTargetCode: true
-                suggestedContent: !<new>
-                  target: "org.bitcoinj.core.CheckpointManager"
-                  parameters:
-                  - name: "params"
-                    value:
-                      sapientType: "UNKNOWN"
-                      valueType: "org.bitcoinj.core.NetworkParameters"
-                      uuid: "checkpoint_networkParameters1"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  - name: "inputStream"
-                    value:
-                      sapientType: "INPUT_STREAM"
-                      suggestedContent: !<inputStream>
-                        inputStreamClass: "java.io.BufferedInputStream"
-                        values: []
-                        parameters:
-                        - name: "in"
-                          value:
-                            sapientType: "INPUT_STREAM"
-                            valueType: "java.io.InputStream"
-                            uuid: "checkpoint_inputStream1"
-                            fixed: false
-                            equalsMethodPresent: false
-                            explicitCastNeeded: false
-                      valueType: "java.io.BufferedInputStream"
-                      uuid: "checkpoint_bufferedInputStream1"
-                      fixed: true
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  privateConstructor: false
-                  thrownExceptions:
-                  - "java.io.IOException"
-                  createdByTargetCode: true
-                valueType: "org.bitcoinj.core.CheckpointManager"
-                uuid: "checkpoint_checkpointManager1"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              methodParameters:
-              - name: "time"
-                value:
-                  sapientType: "OBJECT"
-                  content: !<static_method_return>
-                    target: "java.time.Instant"
-                    method: "now"
-                    methodParameters: []
-                  suggestedContent: !<static_method_return>
-                    target: "java.time.Instant"
-                    method: "now"
-                    methodParameters: []
-                  valueType: "java.time.Instant"
-                  uuid: "checkpoint_instant2"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              methodName: "getCheckpointBefore"
-            suggestedContent: !<method_return_from_value>
-              target: "org.bitcoinj.core.StoredBlock"
-              localVariableValue:
-                sapientType: "OBJECT"
-                suggestedContent: !<new>
-                  target: "org.bitcoinj.core.CheckpointManager"
-                  parameters:
-                  - name: "params"
-                    value:
-                      sapientType: "UNKNOWN"
-                      valueType: "org.bitcoinj.core.NetworkParameters"
-                      uuid: "checkpoint_networkParameters1"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  - name: "inputStream"
-                    value:
-                      sapientType: "INPUT_STREAM"
-                      suggestedContent: !<inputStream>
-                        inputStreamClass: "java.io.BufferedInputStream"
-                        values: []
-                        parameters:
-                        - name: "in"
-                          value:
-                            sapientType: "INPUT_STREAM"
-                            valueType: "java.io.InputStream"
-                            uuid: "checkpoint_inputStream1"
-                            fixed: false
-                            equalsMethodPresent: false
-                            explicitCastNeeded: false
-                      valueType: "java.io.BufferedInputStream"
-                      uuid: "checkpoint_bufferedInputStream1"
-                      fixed: true
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  privateConstructor: false
-                  thrownExceptions:
-                  - "java.io.IOException"
-                  createdByTargetCode: true
-                valueType: "org.bitcoinj.core.CheckpointManager"
-                uuid: "checkpoint_checkpointManager1"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              methodParameters:
-              - name: "time"
-                value:
-                  sapientType: "UNKNOWN"
-                  suggestedContent: !<static_method_return>
-                    target: "java.time.Instant"
-                    method: "now"
-                    methodParameters: []
-                  valueType: "java.time.Instant"
-                  uuid: "checkpoint_instant2"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              methodName: "getCheckpointBefore"
-            valueType: "org.bitcoinj.core.StoredBlock"
-            uuid: "checkpoint_storedBlock1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        throwsExceptions:
-        - "org.bitcoinj.store.BlockStoreException"
-        signature: "setChainHead(StoredBlock): void throws org.bitcoinj.store.BlockStoreException"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "checkpoint_void4"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1025
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "68041019986276EDF5D420282D883A57"
-      index: 16
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "VOID"
-        fixed: true
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    uuid: "734bd72b-a3c1-32cd-93f2-3d0cbf55b4f4"
-    deleted: false
-    disabled: false
-    ignoredBySystem: false
-    variablesCouldNotBeIsolated: "manager"
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path5"
-    pathIdForUser: "path8"
-    testPathName: "checkpointWhenNumCheckpointsGreaterThan0AndILessThanNumCheckpoints"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "MODERATE"
-    modelFingerprint: "26B06161D7FD859DCEBC2E23D5FC2769"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "2dcc8d53-4f40-3335-8249-6fae7fa0b683"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    variablesCouldNotBeIsolated: "manager"
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:

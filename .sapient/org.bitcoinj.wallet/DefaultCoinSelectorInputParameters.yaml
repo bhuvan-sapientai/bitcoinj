@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "4613DD2E4CE3961C22C3C25423D909E7"
+modelFingerprint: "1BC7D6FAF53B834BEEF6CAC2C24226FD"
 methods:
 - method:
     name: "select"
@@ -11,7 +11,7 @@ methods:
     - "org.bitcoinj.base.Coin"
     - "java.util.List"
   paths:
-  - pathId: "path4"
+  - pathId: "path2"
     pathIdForUser: "path1"
     testPathName: "selectWhenSortedOutputsIsEmpty"
     nameDefinedByUser: false
@@ -27,18 +27,166 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
-  - pathId: "path1"
+  - pathId: "path4"
     pathIdForUser: "path2"
+    testPathName: "selectWhenTargetEqualsBitcoinNetworkMAX_MONEYAndSortedOutputsIsEmpty"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "1D09506D2F1B6A29971CAE2EBA66F3CC"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.wallet.DefaultCoinSelector"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.wallet.DefaultCoinSelector"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.wallet.DefaultCoinSelector"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "target"
+      modelFingerprint: "0F4C403D0FFAD03675730B50FC8B5C08"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_field_return>
+          target: "org.bitcoinj.base.BitcoinNetwork"
+          fieldName: "MAX_MONEY"
+        suggestedContent: !<static_field_return>
+          target: "org.bitcoinj.base.BitcoinNetwork"
+          fieldName: "MAX_MONEY"
+        valueType: "org.bitcoinj.base.Coin"
+        uuid: "select_coin2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "candidates"
+      modelFingerprint: "7BF84FAC75FABC8169992A27AC68B960"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "COLLECTION"
+        content: !<collection>
+          parameters: []
+          values: []
+        suggestedContent: !<collection>
+          parameters: []
+          values: []
+        valueType: "java.util.List"
+        genericValueType: "org.bitcoinj.core.TransactionOutput"
+        uuid: "select_list1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "0F51EF7EDCF8C433EEE0696F16393C8A"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.wallet.CoinSelection"
+          parameters:
+          - name: "gathered"
+            value:
+              sapientType: "COLLECTION"
+              content: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values: []
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values: []
+              valueType: "java.util.ArrayList"
+              genericValueType: "org.bitcoinj.core.TransactionOutput"
+              uuid: "select_arrayList1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.wallet.CoinSelection"
+          parameters:
+          - name: "gathered"
+            value:
+              sapientType: "COLLECTION"
+              suggestedContent: !<collection>
+                collectionClass: "java.util.ArrayList"
+                parameters: []
+                values: []
+              valueType: "java.util.ArrayList"
+              genericValueType: "org.bitcoinj.core.TransactionOutput"
+              uuid: "select_arrayList1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.wallet.CoinSelection"
+        uuid: "select_coinSelection1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "ac60cd75-b61f-3484-bd94-dd5676c31587"
+    deleted: false
+    disabled: true
+    ignoredBySystem: true
+    failureReason:
+      reason: "EQUALS_METHOD_TODO_COMMENT"
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+  - pathId: "path1"
+    pathIdForUser: "path3"
     testPathName: "selectWhenTotalGreaterThanOrEqualsToTargetValue"
     nameDefinedByUser: false
     constructorSignature: "<init>() : void"
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "2E981FF9E10EA64E76BA6BB2E6692432"
+    modelFingerprint: "38FE1E5BFA2D0DFE49C74A5F25481B7B"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -83,14 +231,14 @@ methods:
         valueType: "org.bitcoinj.base.Coin"
         uuid: "select_coin1"
         fixed: false
-        nameForMock: "1000"
+        nameForMock: "1000000"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     - type: "INPUT"
       name: "candidates"
-      modelFingerprint: "6B2F6D80F3E781D5B8308C7F19349316"
+      modelFingerprint: "54F22C5BB263C06E484991E9042FE59A"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -170,6 +318,75 @@ methods:
             collectionUuid: "select_list1"
             equalsMethodPresent: false
             explicitCastNeeded: false
+          - sapientType: "OBJECT"
+            content: !<new>
+              target: "org.bitcoinj.core.TransactionOutput"
+              parameters:
+              - name: "parent"
+                value:
+                  sapientType: "MOCK"
+                  valueType: "org.bitcoinj.core.Transaction"
+                  uuid: "select_list1-1-parent"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "value"
+                value:
+                  sapientType: "MOCK"
+                  valueType: "org.bitcoinj.base.Coin"
+                  uuid: "select_list1-1-value"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "scriptBytes"
+                value:
+                  sapientType: "ARRAY"
+                  content: !<array>
+                    values: {}
+                  suggestedContent: !<array>
+                    values: {}
+                  valueType: "byte[]"
+                  uuid: "select_list1-1-scriptBytes"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            suggestedContent: !<new>
+              target: "org.bitcoinj.core.TransactionOutput"
+              parameters:
+              - name: "parent"
+                value:
+                  sapientType: "UNKNOWN"
+                  valueType: "org.bitcoinj.core.Transaction"
+                  uuid: "select_list1-1-parent"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "value"
+                value:
+                  sapientType: "UNKNOWN"
+                  valueType: "org.bitcoinj.base.Coin"
+                  uuid: "select_list1-1-value"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "scriptBytes"
+                value:
+                  sapientType: "ARRAY"
+                  valueType: "byte[]"
+                  uuid: "select_list1-1-scriptBytes"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "org.bitcoinj.core.TransactionOutput"
+            uuid: "select_list1-1"
+            fixed: false
+            collectionUuid: "select_list1"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
         suggestedContent: !<collection>
           collectionClass: "java.util.ArrayList"
           parameters: []
@@ -239,6 +456,75 @@ methods:
               createdByTargetCode: false
             valueType: "org.bitcoinj.core.TransactionOutput"
             uuid: "select_list1-0"
+            fixed: false
+            collectionUuid: "select_list1"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          - sapientType: "OBJECT"
+            content: !<new>
+              target: "org.bitcoinj.core.TransactionOutput"
+              parameters:
+              - name: "parent"
+                value:
+                  sapientType: "MOCK"
+                  valueType: "org.bitcoinj.core.Transaction"
+                  uuid: "select_list1-1-parent"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "value"
+                value:
+                  sapientType: "MOCK"
+                  valueType: "org.bitcoinj.base.Coin"
+                  uuid: "select_list1-1-value"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "scriptBytes"
+                value:
+                  sapientType: "ARRAY"
+                  content: !<array>
+                    values: {}
+                  suggestedContent: !<array>
+                    values: {}
+                  valueType: "byte[]"
+                  uuid: "select_list1-1-scriptBytes"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            suggestedContent: !<new>
+              target: "org.bitcoinj.core.TransactionOutput"
+              parameters:
+              - name: "parent"
+                value:
+                  sapientType: "UNKNOWN"
+                  valueType: "org.bitcoinj.core.Transaction"
+                  uuid: "select_list1-1-parent"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "value"
+                value:
+                  sapientType: "UNKNOWN"
+                  valueType: "org.bitcoinj.base.Coin"
+                  uuid: "select_list1-1-value"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "scriptBytes"
+                value:
+                  sapientType: "ARRAY"
+                  valueType: "byte[]"
+                  uuid: "select_list1-1-scriptBytes"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "org.bitcoinj.core.TransactionOutput"
+            uuid: "select_list1-1"
             fixed: false
             collectionUuid: "select_list1"
             equalsMethodPresent: false
@@ -311,222 +597,28 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path2"
-    pathIdForUser: "path3"
-    testPathName: "selectWhenShouldSelectNotOutputGetParentTransaction"
-    nameDefinedByUser: false
-    constructorSignature: "<init>() : void"
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "044802264FC77DEC298B4F2373DF8323"
-    problemWasSolvedByProver: false
-    truncated: false
-    inputParameters:
-    - type: "CONSTRUCTOR"
-      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.wallet.DefaultCoinSelector"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.wallet.DefaultCoinSelector"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "org.bitcoinj.wallet.DefaultCoinSelector"
-        uuid: "target"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "target"
-      modelFingerprint: "E1F74D26F043CC28D52EB4D4ADDE94A5"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.base.Coin"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.base.Coin"
-        uuid: "select_coin1"
-        fixed: false
-        nameForMock: "1000"
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "candidates"
-      modelFingerprint: "9F02560BF3BF641F2C9580215E8705F5"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "COLLECTION"
-        content: !<collection>
-          collectionClass: "java.util.ArrayList"
-          parameters: []
-          values:
-          - sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.core.TransactionOutput"
-              onlyPojoFunctions: false
-              builderPattern: false
-            valueType: "org.bitcoinj.core.TransactionOutput"
-            uuid: "select_list1-0"
-            fixed: false
-            collectionUuid: "select_list1"
-            nameForMock: "500"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          - sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.core.TransactionOutput"
-              onlyPojoFunctions: false
-              builderPattern: false
-            valueType: "org.bitcoinj.core.TransactionOutput"
-            uuid: "select_list1-1"
-            fixed: false
-            collectionUuid: "select_list1"
-            nameForMock: "600"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        suggestedContent: !<collection>
-          collectionClass: "java.util.ArrayList"
-          parameters: []
-          values:
-          - sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.core.TransactionOutput"
-              onlyPojoFunctions: false
-              builderPattern: false
-            valueType: "org.bitcoinj.core.TransactionOutput"
-            uuid: "select_list1-0"
-            fixed: false
-            collectionUuid: "select_list1"
-            nameForMock: "500"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          - sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.core.TransactionOutput"
-              onlyPojoFunctions: false
-              builderPattern: false
-            valueType: "org.bitcoinj.core.TransactionOutput"
-            uuid: "select_list1-1"
-            fixed: false
-            collectionUuid: "select_list1"
-            nameForMock: "600"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        valueType: "java.util.List"
-        genericValueType: "org.bitcoinj.core.TransactionOutput"
-        uuid: "select_list1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "0F51EF7EDCF8C433EEE0696F16393C8A"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.wallet.CoinSelection"
-          parameters:
-          - name: "gathered"
-            value:
-              sapientType: "COLLECTION"
-              content: !<collection>
-                collectionClass: "java.util.ArrayList"
-                parameters: []
-                values: []
-              suggestedContent: !<collection>
-                collectionClass: "java.util.ArrayList"
-                parameters: []
-                values: []
-              valueType: "java.util.ArrayList"
-              genericValueType: "org.bitcoinj.core.TransactionOutput"
-              uuid: "select_arrayList1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "org.bitcoinj.wallet.CoinSelection"
-          parameters:
-          - name: "gathered"
-            value:
-              sapientType: "COLLECTION"
-              suggestedContent: !<collection>
-                collectionClass: "java.util.ArrayList"
-                parameters: []
-                values: []
-              valueType: "java.util.ArrayList"
-              genericValueType: "org.bitcoinj.core.TransactionOutput"
-              uuid: "select_arrayList1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        valueType: "org.bitcoinj.wallet.CoinSelection"
-        uuid: "select_coinSelection1"
-        fixed: true
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    uuid: "5eb292a3-c78e-36d5-94e6-2b0fb99d4b29"
-    deleted: false
-    disabled: false
-    ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path4"
-    testPathName: "selectWhenShouldSelectOutputGetParentTransaction"
+    testPathName: "selectWhenSortedOutputsIsNotEmptyAndTotalGreaterThanOrEqualsToTargetValue"
     nameDefinedByUser: false
     constructorSignature: "<init>() : void"
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "7C09BA686E26B638248DD03E371E92E2"
-    problemWasSolvedByProver: false
+    modelFingerprint: "26F54A27188DDB4BA32C4AF7794241CB"
+    problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
-    uuid: "ef2a9a0d-147d-3d81-9f83-943a01c38f06"
+    uuid: "78ceb326-e5ab-371b-8a15-fc71e3276ed7"
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -546,13 +638,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "F131736AF0DD84D6D64D3AC788BC1C50"
+    modelFingerprint: "937D2CBF4215227AEE9BBE8B8E3C8497"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "a"
-      modelFingerprint: "DFF1F8286CF02E053CB797041ED79BD0"
+      modelFingerprint: "FF1B2403652A3C5F7E894D885A0176AD"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -566,14 +658,13 @@ methods:
         valueType: "org.bitcoinj.core.TransactionOutput"
         uuid: "compareByDepth_transactionOutput1"
         fixed: false
-        nameForMock: "8"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     - type: "INPUT"
       name: "b"
-      modelFingerprint: "5D83A050CFD06EAF15D8258F6F587948"
+      modelFingerprint: "61208F35B4C1A16B8EADE1B83A1D3FBD"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -587,14 +678,13 @@ methods:
         valueType: "org.bitcoinj.core.TransactionOutput"
         uuid: "compareByDepth_transactionOutput2"
         fixed: false
-        nameForMock: "8"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "a"
-      modelFingerprint: "189B5E888280D83DE2AA59D1740A0941"
+      modelFingerprint: "F0B2AB5CEA92D06B8DD1BDD4EC47CB1B"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -608,7 +698,6 @@ methods:
         valueType: "org.bitcoinj.core.TransactionOutput"
         uuid: "compareByDepth_transactionOutput1"
         fixed: false
-        nameForMock: "8"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -630,7 +719,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "b"
-      modelFingerprint: "1AF7969D70D99C092F579B28EBA18320"
+      modelFingerprint: "F0B2AB5CEA92D06B8DD1BDD4EC47CB1B"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -644,7 +733,6 @@ methods:
         valueType: "org.bitcoinj.core.TransactionOutput"
         uuid: "compareByDepth_transactionOutput2"
         fixed: false
-        nameForMock: "8"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -655,9 +743,7 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 5
-          suggestedContent: !<regular>
-            value: 5
+            value: 0
           valueType: "int"
           uuid: "compareByDepth_int2"
           fixed: false
@@ -668,7 +754,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "a"
-      modelFingerprint: "72AFF71B1D5CE679AEFD3A7EEDB253B9"
+      modelFingerprint: "2379CC6579CF9994B0DC08ACBB9C816C"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -682,7 +768,6 @@ methods:
         valueType: "org.bitcoinj.core.TransactionOutput"
         uuid: "compareByDepth_transactionOutput1"
         fixed: false
-        nameForMock: "8"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -691,7 +776,33 @@ methods:
         parameters: []
         signature: "getValue(): Coin"
         returnValue:
-          sapientType: "NULL"
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.base.Coin"
+            method: "valueOf"
+            methodParameters:
+            - name: "satoshis"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "long"
+                uuid: "compareByDepth_coin1-satoshis"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.Coin"
+            method: "valueOf"
+            methodParameters:
+            - name: "satoshis"
+              value:
+                sapientType: "BASIC"
+                valueType: "long"
+                uuid: "compareByDepth_coin1-satoshis"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "org.bitcoinj.base.Coin"
           uuid: "compareByDepth_coin1"
           fixed: false
@@ -702,7 +813,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "b"
-      modelFingerprint: "614C5150D187057055B6CF8C89895240"
+      modelFingerprint: "2379CC6579CF9994B0DC08ACBB9C816C"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -716,7 +827,6 @@ methods:
         valueType: "org.bitcoinj.core.TransactionOutput"
         uuid: "compareByDepth_transactionOutput2"
         fixed: false
-        nameForMock: "8"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -762,7 +872,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "66C8C574E013DE9763C41D3766B99D82"
+      modelFingerprint: "ACBCF6744C1A4F89BFBA83521C7CE3BD"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -770,9 +880,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: -1
-        suggestedContent: !<regular>
-          value: -1
+          value: 0
         valueType: "int"
         uuid: "compareByDepth_int3"
         fixed: false
@@ -784,8 +892,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "EXTERNAL_FIELD_FINAL_MEMBER_ACCESS"
-    prover: "LLM"
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -795,81 +903,23 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "2E220CB049952B261AA61E261D806143"
-    problemWasSolvedByProver: false
+    modelFingerprint: "0CC28D5719D28D30E17CC52703BEF813"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "a"
-      modelFingerprint: "C3EF03D97976AA5C8331C32773827470"
+      modelFingerprint: "FF1B2403652A3C5F7E894D885A0176AD"
       index: 1
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<new>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.TransactionOutput"
-          parameters:
-          - name: "parent"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "compareByDepth_transactionOutput1-parent"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "compareByDepth_transactionOutput1-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              content: !<array>
-                values: {}
-              suggestedContent: !<array>
-                values: {}
-              valueType: "byte[]"
-              uuid: "compareByDepth_transactionOutput1-scriptBytes"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionOutput"
-          parameters:
-          - name: "parent"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "compareByDepth_transactionOutput1-parent"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "compareByDepth_transactionOutput1-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              valueType: "byte[]"
-              uuid: "compareByDepth_transactionOutput1-scriptBytes"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.TransactionOutput"
         uuid: "compareByDepth_transactionOutput1"
         fixed: false
@@ -879,75 +929,17 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "b"
-      modelFingerprint: "C8C29EB97FCA77E5F232AFB53B66F011"
+      modelFingerprint: "61208F35B4C1A16B8EADE1B83A1D3FBD"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<new>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.TransactionOutput"
-          parameters:
-          - name: "parent"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "compareByDepth_transactionOutput2-parent"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "compareByDepth_transactionOutput2-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              content: !<array>
-                values: {}
-              suggestedContent: !<array>
-                values: {}
-              valueType: "byte[]"
-              uuid: "compareByDepth_transactionOutput2-scriptBytes"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionOutput"
-          parameters:
-          - name: "parent"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "compareByDepth_transactionOutput2-parent"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "compareByDepth_transactionOutput2-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              valueType: "byte[]"
-              uuid: "compareByDepth_transactionOutput2-scriptBytes"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.TransactionOutput"
         uuid: "compareByDepth_transactionOutput2"
         fixed: false
@@ -957,75 +949,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "a"
-      modelFingerprint: "8068214F870E9B4F607D1F97AF67DCF3"
+      modelFingerprint: "358BE0938EE75368CB43B548EF393F8F"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<new>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.TransactionOutput"
-          parameters:
-          - name: "parent"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "compareByDepth_transactionOutput1-parent"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "compareByDepth_transactionOutput1-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              content: !<array>
-                values: {}
-              suggestedContent: !<array>
-                values: {}
-              valueType: "byte[]"
-              uuid: "compareByDepth_transactionOutput1-scriptBytes"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionOutput"
-          parameters:
-          - name: "parent"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "compareByDepth_transactionOutput1-parent"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "compareByDepth_transactionOutput1-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              valueType: "byte[]"
-              uuid: "compareByDepth_transactionOutput1-scriptBytes"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.TransactionOutput"
         uuid: "compareByDepth_transactionOutput1"
         fixed: false
@@ -1052,75 +986,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "b"
-      modelFingerprint: "8068214F870E9B4F607D1F97AF67DCF3"
+      modelFingerprint: "358BE0938EE75368CB43B548EF393F8F"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<new>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.TransactionOutput"
-          parameters:
-          - name: "parent"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "compareByDepth_transactionOutput2-parent"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "compareByDepth_transactionOutput2-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              content: !<array>
-                values: {}
-              suggestedContent: !<array>
-                values: {}
-              valueType: "byte[]"
-              uuid: "compareByDepth_transactionOutput2-scriptBytes"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionOutput"
-          parameters:
-          - name: "parent"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "compareByDepth_transactionOutput2-parent"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "compareByDepth_transactionOutput2-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              valueType: "byte[]"
-              uuid: "compareByDepth_transactionOutput2-scriptBytes"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.TransactionOutput"
         uuid: "compareByDepth_transactionOutput2"
         fixed: false
@@ -1147,75 +1023,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "a"
-      modelFingerprint: "9081BC36CDCE7626F1C4BC00CB93437D"
+      modelFingerprint: "2379CC6579CF9994B0DC08ACBB9C816C"
       index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<new>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.TransactionOutput"
-          parameters:
-          - name: "parent"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "compareByDepth_transactionOutput1-parent"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "compareByDepth_transactionOutput1-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              content: !<array>
-                values: {}
-              suggestedContent: !<array>
-                values: {}
-              valueType: "byte[]"
-              uuid: "compareByDepth_transactionOutput1-scriptBytes"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionOutput"
-          parameters:
-          - name: "parent"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "compareByDepth_transactionOutput1-parent"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "compareByDepth_transactionOutput1-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              valueType: "byte[]"
-              uuid: "compareByDepth_transactionOutput1-scriptBytes"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.TransactionOutput"
         uuid: "compareByDepth_transactionOutput1"
         fixed: false
@@ -1228,152 +1046,32 @@ methods:
         signature: "getValue(): Coin"
         returnValue:
           sapientType: "OBJECT"
-          content: !<method_return_from_value>
+          content: !<static_method_return>
             target: "org.bitcoinj.base.Coin"
-            localVariableValue:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "org.bitcoinj.core.TransactionOutput"
-                parameters:
-                - name: "parent"
-                  value:
-                    sapientType: "MOCK"
-                    valueType: "org.bitcoinj.core.Transaction"
-                    uuid: "compareByDepth_transactionOutput1-parent"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "value"
-                  value:
-                    sapientType: "MOCK"
-                    valueType: "org.bitcoinj.base.Coin"
-                    uuid: "compareByDepth_transactionOutput1-value"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "scriptBytes"
-                  value:
-                    sapientType: "ARRAY"
-                    content: !<array>
-                      values: {}
-                    suggestedContent: !<array>
-                      values: {}
-                    valueType: "byte[]"
-                    uuid: "compareByDepth_transactionOutput1-scriptBytes"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
-              suggestedContent: !<new>
-                target: "org.bitcoinj.core.TransactionOutput"
-                parameters:
-                - name: "parent"
-                  value:
-                    sapientType: "UNKNOWN"
-                    valueType: "org.bitcoinj.core.Transaction"
-                    uuid: "compareByDepth_transactionOutput1-parent"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "value"
-                  value:
-                    sapientType: "UNKNOWN"
-                    valueType: "org.bitcoinj.base.Coin"
-                    uuid: "compareByDepth_transactionOutput1-value"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "scriptBytes"
-                  value:
-                    sapientType: "ARRAY"
-                    valueType: "byte[]"
-                    uuid: "compareByDepth_transactionOutput1-scriptBytes"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
-              valueType: "org.bitcoinj.core.TransactionOutput"
-              uuid: "compareByDepth_transactionOutput1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            methodParameters: []
-            methodName: "getValue"
-          suggestedContent: !<method_return_from_value>
+            method: "valueOf"
+            methodParameters:
+            - name: "satoshis"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "long"
+                uuid: "compareByDepth_coin1-satoshis"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
             target: "org.bitcoinj.base.Coin"
-            localVariableValue:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "org.bitcoinj.core.TransactionOutput"
-                parameters:
-                - name: "parent"
-                  value:
-                    sapientType: "MOCK"
-                    valueType: "org.bitcoinj.core.Transaction"
-                    uuid: "compareByDepth_transactionOutput1-parent"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "value"
-                  value:
-                    sapientType: "MOCK"
-                    valueType: "org.bitcoinj.base.Coin"
-                    uuid: "compareByDepth_transactionOutput1-value"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "scriptBytes"
-                  value:
-                    sapientType: "ARRAY"
-                    content: !<array>
-                      values: {}
-                    suggestedContent: !<array>
-                      values: {}
-                    valueType: "byte[]"
-                    uuid: "compareByDepth_transactionOutput1-scriptBytes"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
-              suggestedContent: !<new>
-                target: "org.bitcoinj.core.TransactionOutput"
-                parameters:
-                - name: "parent"
-                  value:
-                    sapientType: "UNKNOWN"
-                    valueType: "org.bitcoinj.core.Transaction"
-                    uuid: "compareByDepth_transactionOutput1-parent"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "value"
-                  value:
-                    sapientType: "UNKNOWN"
-                    valueType: "org.bitcoinj.base.Coin"
-                    uuid: "compareByDepth_transactionOutput1-value"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "scriptBytes"
-                  value:
-                    sapientType: "ARRAY"
-                    valueType: "byte[]"
-                    uuid: "compareByDepth_transactionOutput1-scriptBytes"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
-              valueType: "org.bitcoinj.core.TransactionOutput"
-              uuid: "compareByDepth_transactionOutput1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            methodParameters: []
-            methodName: "getValue"
+            method: "valueOf"
+            methodParameters:
+            - name: "satoshis"
+              value:
+                sapientType: "BASIC"
+                valueType: "long"
+                uuid: "compareByDepth_coin1-satoshis"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "org.bitcoinj.base.Coin"
           uuid: "compareByDepth_coin1"
           fixed: false
@@ -1384,75 +1082,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "b"
-      modelFingerprint: "16859D613429E96F81D2503F791A3C97"
+      modelFingerprint: "1AA8E78BDF2AFD06F709900C15106E9E"
       index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<new>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.TransactionOutput"
-          parameters:
-          - name: "parent"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "compareByDepth_transactionOutput2-parent"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "compareByDepth_transactionOutput2-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              content: !<array>
-                values: {}
-              suggestedContent: !<array>
-                values: {}
-              valueType: "byte[]"
-              uuid: "compareByDepth_transactionOutput2-scriptBytes"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionOutput"
-          parameters:
-          - name: "parent"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "compareByDepth_transactionOutput2-parent"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "compareByDepth_transactionOutput2-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              valueType: "byte[]"
-              uuid: "compareByDepth_transactionOutput2-scriptBytes"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.TransactionOutput"
         uuid: "compareByDepth_transactionOutput2"
         fixed: false
@@ -1479,7 +1119,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "bValue"
-      modelFingerprint: "D16D97CF565BE72A55EA4B76843D006F"
+      modelFingerprint: "4EDB269E7FF03C3A61D8A7813C943DA3"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -1502,152 +1142,32 @@ methods:
         - name: "other"
           value:
             sapientType: "OBJECT"
-            content: !<method_return_from_value>
+            content: !<static_method_return>
               target: "org.bitcoinj.base.Coin"
-              localVariableValue:
-                sapientType: "OBJECT"
-                content: !<new>
-                  target: "org.bitcoinj.core.TransactionOutput"
-                  parameters:
-                  - name: "parent"
-                    value:
-                      sapientType: "MOCK"
-                      valueType: "org.bitcoinj.core.Transaction"
-                      uuid: "compareByDepth_transactionOutput1-parent"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  - name: "value"
-                    value:
-                      sapientType: "MOCK"
-                      valueType: "org.bitcoinj.base.Coin"
-                      uuid: "compareByDepth_transactionOutput1-value"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  - name: "scriptBytes"
-                    value:
-                      sapientType: "ARRAY"
-                      content: !<array>
-                        values: {}
-                      suggestedContent: !<array>
-                        values: {}
-                      valueType: "byte[]"
-                      uuid: "compareByDepth_transactionOutput1-scriptBytes"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  privateConstructor: false
-                  createdByTargetCode: false
-                suggestedContent: !<new>
-                  target: "org.bitcoinj.core.TransactionOutput"
-                  parameters:
-                  - name: "parent"
-                    value:
-                      sapientType: "UNKNOWN"
-                      valueType: "org.bitcoinj.core.Transaction"
-                      uuid: "compareByDepth_transactionOutput1-parent"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  - name: "value"
-                    value:
-                      sapientType: "UNKNOWN"
-                      valueType: "org.bitcoinj.base.Coin"
-                      uuid: "compareByDepth_transactionOutput1-value"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  - name: "scriptBytes"
-                    value:
-                      sapientType: "ARRAY"
-                      valueType: "byte[]"
-                      uuid: "compareByDepth_transactionOutput1-scriptBytes"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  privateConstructor: false
-                  createdByTargetCode: false
-                valueType: "org.bitcoinj.core.TransactionOutput"
-                uuid: "compareByDepth_transactionOutput1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              methodParameters: []
-              methodName: "getValue"
-            suggestedContent: !<method_return_from_value>
+              method: "valueOf"
+              methodParameters:
+              - name: "satoshis"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "long"
+                  uuid: "compareByDepth_coin1-satoshis"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<static_method_return>
               target: "org.bitcoinj.base.Coin"
-              localVariableValue:
-                sapientType: "OBJECT"
-                content: !<new>
-                  target: "org.bitcoinj.core.TransactionOutput"
-                  parameters:
-                  - name: "parent"
-                    value:
-                      sapientType: "MOCK"
-                      valueType: "org.bitcoinj.core.Transaction"
-                      uuid: "compareByDepth_transactionOutput1-parent"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  - name: "value"
-                    value:
-                      sapientType: "MOCK"
-                      valueType: "org.bitcoinj.base.Coin"
-                      uuid: "compareByDepth_transactionOutput1-value"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  - name: "scriptBytes"
-                    value:
-                      sapientType: "ARRAY"
-                      content: !<array>
-                        values: {}
-                      suggestedContent: !<array>
-                        values: {}
-                      valueType: "byte[]"
-                      uuid: "compareByDepth_transactionOutput1-scriptBytes"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  privateConstructor: false
-                  createdByTargetCode: false
-                suggestedContent: !<new>
-                  target: "org.bitcoinj.core.TransactionOutput"
-                  parameters:
-                  - name: "parent"
-                    value:
-                      sapientType: "UNKNOWN"
-                      valueType: "org.bitcoinj.core.Transaction"
-                      uuid: "compareByDepth_transactionOutput1-parent"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  - name: "value"
-                    value:
-                      sapientType: "UNKNOWN"
-                      valueType: "org.bitcoinj.base.Coin"
-                      uuid: "compareByDepth_transactionOutput1-value"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  - name: "scriptBytes"
-                    value:
-                      sapientType: "ARRAY"
-                      valueType: "byte[]"
-                      uuid: "compareByDepth_transactionOutput1-scriptBytes"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  privateConstructor: false
-                  createdByTargetCode: false
-                valueType: "org.bitcoinj.core.TransactionOutput"
-                uuid: "compareByDepth_transactionOutput1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              methodParameters: []
-              methodName: "getValue"
+              method: "valueOf"
+              methodParameters:
+              - name: "satoshis"
+                value:
+                  sapientType: "BASIC"
+                  valueType: "long"
+                  uuid: "compareByDepth_coin1-satoshis"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "org.bitcoinj.base.Coin"
             uuid: "compareByDepth_coin1"
             fixed: false
@@ -1692,9 +1212,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    variablesCouldNotBeIsolated: "a, b"
-    firstFailureReason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
-    prover: "LLM"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path3"
@@ -1704,81 +1222,23 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "2EC4F4518D1700F9139005CAB0F63130"
-    problemWasSolvedByProver: false
+    modelFingerprint: "6EB0E81487B0E69DA916385F1965D1D5"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "a"
-      modelFingerprint: "C3EF03D97976AA5C8331C32773827470"
+      modelFingerprint: "FF1B2403652A3C5F7E894D885A0176AD"
       index: 1
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<new>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.TransactionOutput"
-          parameters:
-          - name: "parent"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "compareByDepth_transactionOutput1-parent"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "compareByDepth_transactionOutput1-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              content: !<array>
-                values: {}
-              suggestedContent: !<array>
-                values: {}
-              valueType: "byte[]"
-              uuid: "compareByDepth_transactionOutput1-scriptBytes"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionOutput"
-          parameters:
-          - name: "parent"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "compareByDepth_transactionOutput1-parent"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "compareByDepth_transactionOutput1-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              valueType: "byte[]"
-              uuid: "compareByDepth_transactionOutput1-scriptBytes"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.TransactionOutput"
         uuid: "compareByDepth_transactionOutput1"
         fixed: false
@@ -1788,75 +1248,17 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "b"
-      modelFingerprint: "C8C29EB97FCA77E5F232AFB53B66F011"
+      modelFingerprint: "61208F35B4C1A16B8EADE1B83A1D3FBD"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<new>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.TransactionOutput"
-          parameters:
-          - name: "parent"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "compareByDepth_transactionOutput2-parent"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "compareByDepth_transactionOutput2-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              content: !<array>
-                values: {}
-              suggestedContent: !<array>
-                values: {}
-              valueType: "byte[]"
-              uuid: "compareByDepth_transactionOutput2-scriptBytes"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionOutput"
-          parameters:
-          - name: "parent"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "compareByDepth_transactionOutput2-parent"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "compareByDepth_transactionOutput2-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              valueType: "byte[]"
-              uuid: "compareByDepth_transactionOutput2-scriptBytes"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.TransactionOutput"
         uuid: "compareByDepth_transactionOutput2"
         fixed: false
@@ -1866,75 +1268,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "a"
-      modelFingerprint: "821BEA20E60E080AFAC40EAABB01D85A"
+      modelFingerprint: "22E72A116B792433BD56DEF0D40C0FBF"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<new>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.TransactionOutput"
-          parameters:
-          - name: "parent"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "compareByDepth_transactionOutput1-parent"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "compareByDepth_transactionOutput1-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              content: !<array>
-                values: {}
-              suggestedContent: !<array>
-                values: {}
-              valueType: "byte[]"
-              uuid: "compareByDepth_transactionOutput1-scriptBytes"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionOutput"
-          parameters:
-          - name: "parent"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "compareByDepth_transactionOutput1-parent"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "compareByDepth_transactionOutput1-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              valueType: "byte[]"
-              uuid: "compareByDepth_transactionOutput1-scriptBytes"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.TransactionOutput"
         uuid: "compareByDepth_transactionOutput1"
         fixed: false
@@ -1961,75 +1305,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "b"
-      modelFingerprint: "821BEA20E60E080AFAC40EAABB01D85A"
+      modelFingerprint: "22E72A116B792433BD56DEF0D40C0FBF"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<new>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.TransactionOutput"
-          parameters:
-          - name: "parent"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "compareByDepth_transactionOutput2-parent"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "compareByDepth_transactionOutput2-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              content: !<array>
-                values: {}
-              suggestedContent: !<array>
-                values: {}
-              valueType: "byte[]"
-              uuid: "compareByDepth_transactionOutput2-scriptBytes"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionOutput"
-          parameters:
-          - name: "parent"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "compareByDepth_transactionOutput2-parent"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "compareByDepth_transactionOutput2-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              valueType: "byte[]"
-              uuid: "compareByDepth_transactionOutput2-scriptBytes"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.TransactionOutput"
         uuid: "compareByDepth_transactionOutput2"
         fixed: false
@@ -2056,75 +1342,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "a"
-      modelFingerprint: "9081BC36CDCE7626F1C4BC00CB93437D"
+      modelFingerprint: "2379CC6579CF9994B0DC08ACBB9C816C"
       index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<new>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.TransactionOutput"
-          parameters:
-          - name: "parent"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "compareByDepth_transactionOutput1-parent"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "compareByDepth_transactionOutput1-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              content: !<array>
-                values: {}
-              suggestedContent: !<array>
-                values: {}
-              valueType: "byte[]"
-              uuid: "compareByDepth_transactionOutput1-scriptBytes"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionOutput"
-          parameters:
-          - name: "parent"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "compareByDepth_transactionOutput1-parent"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "compareByDepth_transactionOutput1-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              valueType: "byte[]"
-              uuid: "compareByDepth_transactionOutput1-scriptBytes"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.TransactionOutput"
         uuid: "compareByDepth_transactionOutput1"
         fixed: false
@@ -2137,152 +1365,32 @@ methods:
         signature: "getValue(): Coin"
         returnValue:
           sapientType: "OBJECT"
-          content: !<method_return_from_value>
+          content: !<static_method_return>
             target: "org.bitcoinj.base.Coin"
-            localVariableValue:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "org.bitcoinj.core.TransactionOutput"
-                parameters:
-                - name: "parent"
-                  value:
-                    sapientType: "MOCK"
-                    valueType: "org.bitcoinj.core.Transaction"
-                    uuid: "compareByDepth_transactionOutput1-parent"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "value"
-                  value:
-                    sapientType: "MOCK"
-                    valueType: "org.bitcoinj.base.Coin"
-                    uuid: "compareByDepth_transactionOutput1-value"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "scriptBytes"
-                  value:
-                    sapientType: "ARRAY"
-                    content: !<array>
-                      values: {}
-                    suggestedContent: !<array>
-                      values: {}
-                    valueType: "byte[]"
-                    uuid: "compareByDepth_transactionOutput1-scriptBytes"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
-              suggestedContent: !<new>
-                target: "org.bitcoinj.core.TransactionOutput"
-                parameters:
-                - name: "parent"
-                  value:
-                    sapientType: "UNKNOWN"
-                    valueType: "org.bitcoinj.core.Transaction"
-                    uuid: "compareByDepth_transactionOutput1-parent"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "value"
-                  value:
-                    sapientType: "UNKNOWN"
-                    valueType: "org.bitcoinj.base.Coin"
-                    uuid: "compareByDepth_transactionOutput1-value"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "scriptBytes"
-                  value:
-                    sapientType: "ARRAY"
-                    valueType: "byte[]"
-                    uuid: "compareByDepth_transactionOutput1-scriptBytes"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
-              valueType: "org.bitcoinj.core.TransactionOutput"
-              uuid: "compareByDepth_transactionOutput1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            methodParameters: []
-            methodName: "getValue"
-          suggestedContent: !<method_return_from_value>
+            method: "valueOf"
+            methodParameters:
+            - name: "satoshis"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "long"
+                uuid: "compareByDepth_coin1-satoshis"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
             target: "org.bitcoinj.base.Coin"
-            localVariableValue:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "org.bitcoinj.core.TransactionOutput"
-                parameters:
-                - name: "parent"
-                  value:
-                    sapientType: "MOCK"
-                    valueType: "org.bitcoinj.core.Transaction"
-                    uuid: "compareByDepth_transactionOutput1-parent"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "value"
-                  value:
-                    sapientType: "MOCK"
-                    valueType: "org.bitcoinj.base.Coin"
-                    uuid: "compareByDepth_transactionOutput1-value"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "scriptBytes"
-                  value:
-                    sapientType: "ARRAY"
-                    content: !<array>
-                      values: {}
-                    suggestedContent: !<array>
-                      values: {}
-                    valueType: "byte[]"
-                    uuid: "compareByDepth_transactionOutput1-scriptBytes"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
-              suggestedContent: !<new>
-                target: "org.bitcoinj.core.TransactionOutput"
-                parameters:
-                - name: "parent"
-                  value:
-                    sapientType: "UNKNOWN"
-                    valueType: "org.bitcoinj.core.Transaction"
-                    uuid: "compareByDepth_transactionOutput1-parent"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "value"
-                  value:
-                    sapientType: "UNKNOWN"
-                    valueType: "org.bitcoinj.base.Coin"
-                    uuid: "compareByDepth_transactionOutput1-value"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "scriptBytes"
-                  value:
-                    sapientType: "ARRAY"
-                    valueType: "byte[]"
-                    uuid: "compareByDepth_transactionOutput1-scriptBytes"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
-              valueType: "org.bitcoinj.core.TransactionOutput"
-              uuid: "compareByDepth_transactionOutput1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            methodParameters: []
-            methodName: "getValue"
+            method: "valueOf"
+            methodParameters:
+            - name: "satoshis"
+              value:
+                sapientType: "BASIC"
+                valueType: "long"
+                uuid: "compareByDepth_coin1-satoshis"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "org.bitcoinj.base.Coin"
           uuid: "compareByDepth_coin1"
           fixed: false
@@ -2293,75 +1401,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "b"
-      modelFingerprint: "16859D613429E96F81D2503F791A3C97"
+      modelFingerprint: "1AA8E78BDF2AFD06F709900C15106E9E"
       index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<new>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.TransactionOutput"
-          parameters:
-          - name: "parent"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "compareByDepth_transactionOutput2-parent"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "compareByDepth_transactionOutput2-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              content: !<array>
-                values: {}
-              suggestedContent: !<array>
-                values: {}
-              valueType: "byte[]"
-              uuid: "compareByDepth_transactionOutput2-scriptBytes"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionOutput"
-          parameters:
-          - name: "parent"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "compareByDepth_transactionOutput2-parent"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "compareByDepth_transactionOutput2-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              valueType: "byte[]"
-              uuid: "compareByDepth_transactionOutput2-scriptBytes"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.TransactionOutput"
         uuid: "compareByDepth_transactionOutput2"
         fixed: false
@@ -2388,7 +1438,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "bValue"
-      modelFingerprint: "08F9294CDD97CF994620B869A42499E7"
+      modelFingerprint: "A580266345ECF7D855BCC6E2D2308B9C"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -2411,152 +1461,32 @@ methods:
         - name: "other"
           value:
             sapientType: "OBJECT"
-            content: !<method_return_from_value>
+            content: !<static_method_return>
               target: "org.bitcoinj.base.Coin"
-              localVariableValue:
-                sapientType: "OBJECT"
-                content: !<new>
-                  target: "org.bitcoinj.core.TransactionOutput"
-                  parameters:
-                  - name: "parent"
-                    value:
-                      sapientType: "MOCK"
-                      valueType: "org.bitcoinj.core.Transaction"
-                      uuid: "compareByDepth_transactionOutput1-parent"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  - name: "value"
-                    value:
-                      sapientType: "MOCK"
-                      valueType: "org.bitcoinj.base.Coin"
-                      uuid: "compareByDepth_transactionOutput1-value"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  - name: "scriptBytes"
-                    value:
-                      sapientType: "ARRAY"
-                      content: !<array>
-                        values: {}
-                      suggestedContent: !<array>
-                        values: {}
-                      valueType: "byte[]"
-                      uuid: "compareByDepth_transactionOutput1-scriptBytes"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  privateConstructor: false
-                  createdByTargetCode: false
-                suggestedContent: !<new>
-                  target: "org.bitcoinj.core.TransactionOutput"
-                  parameters:
-                  - name: "parent"
-                    value:
-                      sapientType: "UNKNOWN"
-                      valueType: "org.bitcoinj.core.Transaction"
-                      uuid: "compareByDepth_transactionOutput1-parent"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  - name: "value"
-                    value:
-                      sapientType: "UNKNOWN"
-                      valueType: "org.bitcoinj.base.Coin"
-                      uuid: "compareByDepth_transactionOutput1-value"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  - name: "scriptBytes"
-                    value:
-                      sapientType: "ARRAY"
-                      valueType: "byte[]"
-                      uuid: "compareByDepth_transactionOutput1-scriptBytes"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  privateConstructor: false
-                  createdByTargetCode: false
-                valueType: "org.bitcoinj.core.TransactionOutput"
-                uuid: "compareByDepth_transactionOutput1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              methodParameters: []
-              methodName: "getValue"
-            suggestedContent: !<method_return_from_value>
+              method: "valueOf"
+              methodParameters:
+              - name: "satoshis"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "long"
+                  uuid: "compareByDepth_coin1-satoshis"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<static_method_return>
               target: "org.bitcoinj.base.Coin"
-              localVariableValue:
-                sapientType: "OBJECT"
-                content: !<new>
-                  target: "org.bitcoinj.core.TransactionOutput"
-                  parameters:
-                  - name: "parent"
-                    value:
-                      sapientType: "MOCK"
-                      valueType: "org.bitcoinj.core.Transaction"
-                      uuid: "compareByDepth_transactionOutput1-parent"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  - name: "value"
-                    value:
-                      sapientType: "MOCK"
-                      valueType: "org.bitcoinj.base.Coin"
-                      uuid: "compareByDepth_transactionOutput1-value"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  - name: "scriptBytes"
-                    value:
-                      sapientType: "ARRAY"
-                      content: !<array>
-                        values: {}
-                      suggestedContent: !<array>
-                        values: {}
-                      valueType: "byte[]"
-                      uuid: "compareByDepth_transactionOutput1-scriptBytes"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  privateConstructor: false
-                  createdByTargetCode: false
-                suggestedContent: !<new>
-                  target: "org.bitcoinj.core.TransactionOutput"
-                  parameters:
-                  - name: "parent"
-                    value:
-                      sapientType: "UNKNOWN"
-                      valueType: "org.bitcoinj.core.Transaction"
-                      uuid: "compareByDepth_transactionOutput1-parent"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  - name: "value"
-                    value:
-                      sapientType: "UNKNOWN"
-                      valueType: "org.bitcoinj.base.Coin"
-                      uuid: "compareByDepth_transactionOutput1-value"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  - name: "scriptBytes"
-                    value:
-                      sapientType: "ARRAY"
-                      valueType: "byte[]"
-                      uuid: "compareByDepth_transactionOutput1-scriptBytes"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  privateConstructor: false
-                  createdByTargetCode: false
-                valueType: "org.bitcoinj.core.TransactionOutput"
-                uuid: "compareByDepth_transactionOutput1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              methodParameters: []
-              methodName: "getValue"
+              method: "valueOf"
+              methodParameters:
+              - name: "satoshis"
+                value:
+                  sapientType: "BASIC"
+                  valueType: "long"
+                  uuid: "compareByDepth_coin1-satoshis"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
             valueType: "org.bitcoinj.base.Coin"
             uuid: "compareByDepth_coin1"
             fixed: false
@@ -2579,75 +1509,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "a"
-      modelFingerprint: "F0152762E90BFF66D2196CEDC203614F"
+      modelFingerprint: "ECF2FD3709199B34B68C59CDD77F9A92"
       index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<new>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.TransactionOutput"
-          parameters:
-          - name: "parent"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "compareByDepth_transactionOutput1-parent"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "compareByDepth_transactionOutput1-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              content: !<array>
-                values: {}
-              suggestedContent: !<array>
-                values: {}
-              valueType: "byte[]"
-              uuid: "compareByDepth_transactionOutput1-scriptBytes"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionOutput"
-          parameters:
-          - name: "parent"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "compareByDepth_transactionOutput1-parent"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "compareByDepth_transactionOutput1-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              valueType: "byte[]"
-              uuid: "compareByDepth_transactionOutput1-scriptBytes"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.TransactionOutput"
         uuid: "compareByDepth_transactionOutput1"
         fixed: false
@@ -2659,153 +1531,11 @@ methods:
         parameters: []
         signature: "getParentTransactionHash(): Sha256Hash"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<method_return_from_value>
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
             target: "org.bitcoinj.base.Sha256Hash"
-            localVariableValue:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "org.bitcoinj.core.TransactionOutput"
-                parameters:
-                - name: "parent"
-                  value:
-                    sapientType: "MOCK"
-                    valueType: "org.bitcoinj.core.Transaction"
-                    uuid: "compareByDepth_transactionOutput1-parent"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "value"
-                  value:
-                    sapientType: "MOCK"
-                    valueType: "org.bitcoinj.base.Coin"
-                    uuid: "compareByDepth_transactionOutput1-value"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "scriptBytes"
-                  value:
-                    sapientType: "ARRAY"
-                    content: !<array>
-                      values: {}
-                    suggestedContent: !<array>
-                      values: {}
-                    valueType: "byte[]"
-                    uuid: "compareByDepth_transactionOutput1-scriptBytes"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
-              suggestedContent: !<new>
-                target: "org.bitcoinj.core.TransactionOutput"
-                parameters:
-                - name: "parent"
-                  value:
-                    sapientType: "UNKNOWN"
-                    valueType: "org.bitcoinj.core.Transaction"
-                    uuid: "compareByDepth_transactionOutput1-parent"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "value"
-                  value:
-                    sapientType: "UNKNOWN"
-                    valueType: "org.bitcoinj.base.Coin"
-                    uuid: "compareByDepth_transactionOutput1-value"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "scriptBytes"
-                  value:
-                    sapientType: "ARRAY"
-                    valueType: "byte[]"
-                    uuid: "compareByDepth_transactionOutput1-scriptBytes"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
-              valueType: "org.bitcoinj.core.TransactionOutput"
-              uuid: "compareByDepth_transactionOutput1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            methodParameters: []
-            methodName: "getParentTransactionHash"
-          suggestedContent: !<method_return_from_value>
-            target: "org.bitcoinj.base.Sha256Hash"
-            localVariableValue:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "org.bitcoinj.core.TransactionOutput"
-                parameters:
-                - name: "parent"
-                  value:
-                    sapientType: "MOCK"
-                    valueType: "org.bitcoinj.core.Transaction"
-                    uuid: "compareByDepth_transactionOutput1-parent"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "value"
-                  value:
-                    sapientType: "MOCK"
-                    valueType: "org.bitcoinj.base.Coin"
-                    uuid: "compareByDepth_transactionOutput1-value"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "scriptBytes"
-                  value:
-                    sapientType: "ARRAY"
-                    content: !<array>
-                      values: {}
-                    suggestedContent: !<array>
-                      values: {}
-                    valueType: "byte[]"
-                    uuid: "compareByDepth_transactionOutput1-scriptBytes"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
-              suggestedContent: !<new>
-                target: "org.bitcoinj.core.TransactionOutput"
-                parameters:
-                - name: "parent"
-                  value:
-                    sapientType: "UNKNOWN"
-                    valueType: "org.bitcoinj.core.Transaction"
-                    uuid: "compareByDepth_transactionOutput1-parent"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "value"
-                  value:
-                    sapientType: "UNKNOWN"
-                    valueType: "org.bitcoinj.base.Coin"
-                    uuid: "compareByDepth_transactionOutput1-value"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "scriptBytes"
-                  value:
-                    sapientType: "ARRAY"
-                    valueType: "byte[]"
-                    uuid: "compareByDepth_transactionOutput1-scriptBytes"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
-              valueType: "org.bitcoinj.core.TransactionOutput"
-              uuid: "compareByDepth_transactionOutput1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            methodParameters: []
-            methodName: "getParentTransactionHash"
+            onlyPojoFunctions: false
+            builderPattern: false
           valueType: "org.bitcoinj.base.Sha256Hash"
           uuid: "compareByDepth_sha256Hash1"
           fixed: false
@@ -2815,159 +1545,17 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "C41D32B7ED7A1978E1E4C06C0E9B8D53"
+      modelFingerprint: "84B3B0E4B61DA71CF76DFE9BC10CA6D9"
       index: 9
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<method_return_from_value>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.base.Sha256Hash"
-          localVariableValue:
-            sapientType: "OBJECT"
-            content: !<new>
-              target: "org.bitcoinj.core.TransactionOutput"
-              parameters:
-              - name: "parent"
-                value:
-                  sapientType: "MOCK"
-                  valueType: "org.bitcoinj.core.Transaction"
-                  uuid: "compareByDepth_transactionOutput1-parent"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "value"
-                value:
-                  sapientType: "MOCK"
-                  valueType: "org.bitcoinj.base.Coin"
-                  uuid: "compareByDepth_transactionOutput1-value"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "scriptBytes"
-                value:
-                  sapientType: "ARRAY"
-                  content: !<array>
-                    values: {}
-                  suggestedContent: !<array>
-                    values: {}
-                  valueType: "byte[]"
-                  uuid: "compareByDepth_transactionOutput1-scriptBytes"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
-            suggestedContent: !<new>
-              target: "org.bitcoinj.core.TransactionOutput"
-              parameters:
-              - name: "parent"
-                value:
-                  sapientType: "UNKNOWN"
-                  valueType: "org.bitcoinj.core.Transaction"
-                  uuid: "compareByDepth_transactionOutput1-parent"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "value"
-                value:
-                  sapientType: "UNKNOWN"
-                  valueType: "org.bitcoinj.base.Coin"
-                  uuid: "compareByDepth_transactionOutput1-value"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "scriptBytes"
-                value:
-                  sapientType: "ARRAY"
-                  valueType: "byte[]"
-                  uuid: "compareByDepth_transactionOutput1-scriptBytes"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
-            valueType: "org.bitcoinj.core.TransactionOutput"
-            uuid: "compareByDepth_transactionOutput1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          methodParameters: []
-          methodName: "getParentTransactionHash"
-        suggestedContent: !<method_return_from_value>
-          target: "org.bitcoinj.base.Sha256Hash"
-          localVariableValue:
-            sapientType: "OBJECT"
-            content: !<new>
-              target: "org.bitcoinj.core.TransactionOutput"
-              parameters:
-              - name: "parent"
-                value:
-                  sapientType: "MOCK"
-                  valueType: "org.bitcoinj.core.Transaction"
-                  uuid: "compareByDepth_transactionOutput1-parent"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "value"
-                value:
-                  sapientType: "MOCK"
-                  valueType: "org.bitcoinj.base.Coin"
-                  uuid: "compareByDepth_transactionOutput1-value"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "scriptBytes"
-                value:
-                  sapientType: "ARRAY"
-                  content: !<array>
-                    values: {}
-                  suggestedContent: !<array>
-                    values: {}
-                  valueType: "byte[]"
-                  uuid: "compareByDepth_transactionOutput1-scriptBytes"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
-            suggestedContent: !<new>
-              target: "org.bitcoinj.core.TransactionOutput"
-              parameters:
-              - name: "parent"
-                value:
-                  sapientType: "UNKNOWN"
-                  valueType: "org.bitcoinj.core.Transaction"
-                  uuid: "compareByDepth_transactionOutput1-parent"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "value"
-                value:
-                  sapientType: "UNKNOWN"
-                  valueType: "org.bitcoinj.base.Coin"
-                  uuid: "compareByDepth_transactionOutput1-value"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "scriptBytes"
-                value:
-                  sapientType: "ARRAY"
-                  valueType: "byte[]"
-                  uuid: "compareByDepth_transactionOutput1-scriptBytes"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
-            valueType: "org.bitcoinj.core.TransactionOutput"
-            uuid: "compareByDepth_transactionOutput1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          methodParameters: []
-          methodName: "getParentTransactionHash"
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.base.Sha256Hash"
         uuid: "compareByDepth_sha256Hash1"
         fixed: false
@@ -2994,75 +1582,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "b"
-      modelFingerprint: "10316C87D7D8991B161BF113BD5A9C00"
+      modelFingerprint: "ECF2FD3709199B34B68C59CDD77F9A92"
       index: 10
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<new>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.TransactionOutput"
-          parameters:
-          - name: "parent"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "compareByDepth_transactionOutput2-parent"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "compareByDepth_transactionOutput2-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              content: !<array>
-                values: {}
-              suggestedContent: !<array>
-                values: {}
-              valueType: "byte[]"
-              uuid: "compareByDepth_transactionOutput2-scriptBytes"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionOutput"
-          parameters:
-          - name: "parent"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "compareByDepth_transactionOutput2-parent"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "compareByDepth_transactionOutput2-value"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              valueType: "byte[]"
-              uuid: "compareByDepth_transactionOutput2-scriptBytes"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.TransactionOutput"
         uuid: "compareByDepth_transactionOutput2"
         fixed: false
@@ -3088,7 +1618,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "8675759CFB6FC832C71B9B67BBBEE153"
+      modelFingerprint: "84B3B0E4B61DA71CF76DFE9BC10CA6D9"
       index: 11
       ignored: false
       nestedInLoop: false
@@ -3147,9 +1677,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    variablesCouldNotBeIsolated: "a, b"
-    firstFailureReason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
-    prover: "LLM"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -3351,7 +1879,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -4225,7 +2754,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "CF05406A36CA41C7FB64FD90472F73AB"
+    modelFingerprint: "337A95E89AC07EF7EED128125C4E9482"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:

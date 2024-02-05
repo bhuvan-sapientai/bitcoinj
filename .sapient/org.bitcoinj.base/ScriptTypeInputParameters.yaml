@@ -411,12 +411,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "0483B6F4A009D4B701D18AFC024363B2"
+    modelFingerprint: "2342A2E9B62C4386C871896B54CACC5D"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "F36E9A032602488AE171A4D3E2E1A3FC"
+      modelFingerprint: "780722F1DD32BD6471BAEF8524D15407"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -431,9 +431,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "pkh"
+                value: "P2TR"
               suggestedContent: !<regular>
-                value: "pkh"
+                value: "P2TR"
               valueType: "java.lang.String"
               uuid: "valueOf_string1"
               fixed: false
@@ -446,10 +446,8 @@ methods:
           - name: "name"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "pkh"
               suggestedContent: !<regular>
-                value: "pkh"
+                value: "P2TR"
               valueType: "java.lang.String"
               uuid: "valueOf_string1"
               fixed: false
@@ -482,8 +480,8 @@ methods:
     deleted: false
     disabled: true
     ignoredBySystem: false
-    firstFailureReason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
-    prover: "LLM"
+    failureReason:
+      reason: "ENUM_SELF_FIELD_ACCESS"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: true
 - method:
@@ -501,12 +499,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "453BC89CD74AC494778BF4FD4AF956B4"
+    modelFingerprint: "50F46A23D0759BF577D52746135B6347"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "3A8FB27F8F1C970B15475E678C9C0C64"
+      modelFingerprint: "780722F1DD32BD6471BAEF8524D15407"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -521,9 +519,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "P2PKH"
+                value: "P2TR"
               suggestedContent: !<regular>
-                value: "P2PKH"
+                value: "P2TR"
               valueType: "java.lang.String"
               uuid: "valueOf_string1"
               fixed: false
@@ -536,10 +534,8 @@ methods:
           - name: "name"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "P2PKH"
               suggestedContent: !<regular>
-                value: "P2PKH"
+                value: "P2TR"
               valueType: "java.lang.String"
               uuid: "valueOf_string1"
               fixed: false
@@ -574,7 +570,7 @@ methods:
     deleted: false
     disabled: true
     ignoredBySystem: false
-    firstFailureReason: "ENUM_SELF_FIELD_ACCESS"
-    prover: "LLM"
+    failureReason:
+      reason: "ENUM_SELF_FIELD_ACCESS"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: true

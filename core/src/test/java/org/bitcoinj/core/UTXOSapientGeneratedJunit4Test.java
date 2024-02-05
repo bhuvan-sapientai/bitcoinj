@@ -40,7 +40,7 @@ public class UTXOSapientGeneratedJunit4Test {
         Coin coin = Coin.valueOf(0L);
         List list = new ArrayList<>();
         Script script = Script.of(list);
-        UTXO target = new UTXO(sha256Hash, 1234567890L, coin, 1000, true, script, "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa");
+        UTXO target = new UTXO(sha256Hash, 0L, coin, 100, true, script, "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa");
 
         //Act Statement(s)
         String result = target.toString();

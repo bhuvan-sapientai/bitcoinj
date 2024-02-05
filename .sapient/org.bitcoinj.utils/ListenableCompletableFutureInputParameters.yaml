@@ -137,7 +137,8 @@ methods:
     deleted: false
     disabled: true
     ignoredBySystem: false
-    firstFailureReason: "TODO_ADDED_BY_TEST_GENERATOR"
+    failureReason:
+      reason: "EQUALS_METHOD_TODO_COMMENT"
     disabledReason: "Potential harmful system call (ListenableCompletableFuture.complete)\
       \ detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     prover: "DEFAULT"
@@ -444,7 +445,8 @@ methods:
     deleted: false
     disabled: true
     ignoredBySystem: false
-    firstFailureReason: "TODO_ADDED_BY_TEST_GENERATOR"
+    failureReason:
+      reason: "EQUALS_METHOD_TODO_COMMENT"
     disabledReason: "Potential harmful system call (CompletableFuture.whenComplete)\
       \ detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     prover: "DEFAULT"

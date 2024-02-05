@@ -217,79 +217,55 @@ public class MnemonicCodeSapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${a116309e-a6de-3f0d-b2d6-cdb2dc854864}
+    //Sapient generated method id: ${c2bf30d3-4ec5-3094-b164-ca7c02ba598b}
     @Ignore()
     @Test()
-    public void toMnemonicWhenIMultipliedBy11PlusJNotIndexOfConcatBits() throws IOException, IllegalArgumentException {
+    public void toMnemonicWhenEntropyLengthModulus4Equals0ThrowsIllegalArgumentException() throws IOException, IllegalArgumentException {
         /* Branches:
          * (entropy.length % 4 == 0) : true
-         * (entropy.length > 0) : false
-         * (i < data.length) : false  #  inside bytesToBits method
-         * (i < nwords) : true
-         * (j < 11) : true
-         * (concatBits[(i * 11) + j]) : false
          *
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class, CALLS_REAL_METHODS);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{};
-            byte[] byteArray2 = new byte[]{};
-            sha256Hash.when(() -> Sha256Hash.hash(byteArray2)).thenReturn(byteArray);
-            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-            InputStream inputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
-            MnemonicCode target = new MnemonicCode(inputStream, "wordListDigest1");
-            //Act Statement(s)
-            List<String> result = target.toMnemonic(byteArray2);
-            List<String> stringResultList = new ArrayList<>();
-            stringResultList.add("resultItem1");
-            //Assert statement(s)
-            assertThat(result.size(), equalTo(stringResultList.size()));
-            assertThat(result, containsInRelativeOrder(stringResultList.toArray()));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
-            sha256Hash.verify(() -> Sha256Hash.hash(byteArray2), atLeast(1));
-        }
-    }
-
-    //Sapient generated method id: ${b060299f-1f5c-3e08-80b6-0fa475d1965b}
-    @Ignore()
-    @Test()
-    public void toMnemonicWhenJLessThan11AndIMultipliedBy11PlusJNotIndexOfConcatBits() throws IOException, IllegalArgumentException {
-        /* Branches:
-         * (entropy.length % 4 == 0) : true
-         * (entropy.length > 0) : true
-         * (i < data.length) : true  #  inside bytesToBits method
-         * (j < 8) : true  #  inside bytesToBits method
-         * ((i * 8) + j) : true  #  inside bytesToBits method
-         * (i < nwords) : true
-         * (j < 11) : true
-         * (concatBits[(i * 11) + j]) : false
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class, CALLS_REAL_METHODS);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{(byte) 0};
-            byte[] byteArray2 = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3};
-            sha256Hash.when(() -> Sha256Hash.hash(byteArray2)).thenReturn(byteArray);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
             InputStream inputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
             MnemonicCode target = new MnemonicCode(inputStream, "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855");
+            thrown.expect(IllegalArgumentException.class);
+            byte[] byteArray = new byte[]{};
             //Act Statement(s)
-            List<String> result = target.toMnemonic(byteArray2);
-            List<String> stringResultList = new ArrayList<>();
-            stringResultList.add("resultItem1");
+            target.toMnemonic(byteArray);
             //Assert statement(s)
-            assertThat(result.size(), equalTo(stringResultList.size()));
-            assertThat(result, containsInRelativeOrder(stringResultList.toArray()));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
-            sha256Hash.verify(() -> Sha256Hash.hash(byteArray2), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+        }
+    }
+
+    //Sapient generated method id: ${d3bb7104-47c3-3ac9-b102-8a8ca49085dc}
+    @Ignore()
+    @Test()
+    public void toMnemonicWhenEntropyLengthModulus4NotEquals0ThrowsIllegalArgumentException() throws IOException, IllegalArgumentException {
+        /* Branches:
+         * (entropy.length % 4 == 0) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
+            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+            InputStream inputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
+            MnemonicCode target = new MnemonicCode(inputStream, "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855");
+            thrown.expect(IllegalArgumentException.class);
+            byte[] byteArray = new byte[]{(byte) 0};
+            //Act Statement(s)
+            target.toMnemonic(byteArray);
+            //Assert statement(s)
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
         }
     }
 

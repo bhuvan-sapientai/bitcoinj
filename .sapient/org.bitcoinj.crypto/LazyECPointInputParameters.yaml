@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "F79BE3B3512F4CA4AB23F07F3A948DB8"
+modelFingerprint: "197C922F7418893F7148D7B5870416B2"
 methods:
 - method:
     name: "compress"
@@ -1391,8 +1391,6 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
-          suggestedContent: !<array>
-            values: {}
           valueType: "byte[]"
           uuid: "getEncoded_byte[]1"
           fixed: false
@@ -1411,8 +1409,6 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values: {}
-        suggestedContent: !<array>
           values: {}
         valueType: "byte[]"
         uuid: "getEncoded_byte[]1"
@@ -2665,8 +2661,6 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
-          suggestedContent: !<array>
-            values: {}
           valueType: "org.bouncycastle.math.ec.ECFieldElement[]"
           uuid: "getZCoords_eCFieldElement[]1"
           fixed: false
@@ -2685,8 +2679,6 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values: {}
-        suggestedContent: !<array>
           values: {}
         valueType: "org.bouncycastle.math.ec.ECFieldElement[]"
         uuid: "getZCoords_eCFieldElement[]1"
@@ -4723,15 +4715,15 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "EF69F78E0F8FC1CA3D404FE53EB65766"
-    problemWasSolvedByProver: false
+    modelFingerprint: "83AA44A0943F7FC3080D05A971728F82"
+    problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
     uuid: "c818255f-7530-355a-bc36-d70537c405ed"
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -4742,15 +4734,15 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "BEB4FD0E984E34D9AB53B33C95D479D7"
-    problemWasSolvedByProver: false
+    modelFingerprint: "07BAAFFE2157A55BEB8FA12CC31CBF5A"
+    problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
     uuid: "d19664d8-bce7-3ae2-90f3-4a720a8d853b"
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -5851,8 +5843,6 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
-          suggestedContent: !<array>
-            values: {}
           valueType: "byte[]"
           uuid: "getEncoded_byte[]1"
           fixed: false
@@ -5871,8 +5861,6 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values: {}
-        suggestedContent: !<array>
           values: {}
         valueType: "byte[]"
         uuid: "getEncoded_byte[]1"
@@ -7892,6 +7880,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

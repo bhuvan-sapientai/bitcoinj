@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "F28679DE1E3304011FF02519C0D4C386"
+modelFingerprint: "8C17A0F465BE23CAC4DED192551D6EB5"
 methods:
 - method:
     name: "createExecutor"
@@ -17,12 +17,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "719D17175431ACAB310AD9731C65DDE6"
-    problemWasSolvedByProver: true
+    modelFingerprint: "57846797B926C200A11EF752D1956170"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "4123FED1F86A3B9BAE622E700B99B300"
+      modelFingerprint: "680850EF6A1A69C484360799FF61CE61"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -40,20 +40,9 @@ methods:
                   0:
                     sapientType: "BASIC"
                     content: !<regular>
-                      value: "seed1.example.com"
-                    suggestedContent: !<regular>
-                      value: "seed1.example.com"
+                      value: "dnsSeedsItem1"
                     valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "seed2.example.com"
-                    suggestedContent: !<regular>
-                      value: "seed2.example.com"
-                    valueType: "java.lang.String"
+                    uuid: "buildDiscoveries_string1"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -62,20 +51,9 @@ methods:
                   0:
                     sapientType: "BASIC"
                     content: !<regular>
-                      value: "seed1.example.com"
-                    suggestedContent: !<regular>
-                      value: "seed1.example.com"
+                      value: "dnsSeedsItem1"
                     valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "seed2.example.com"
-                    suggestedContent: !<regular>
-                      value: "seed2.example.com"
-                    valueType: "java.lang.String"
+                    uuid: "buildDiscoveries_string1"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -87,14 +65,9 @@ methods:
           - name: "network"
             value:
               sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.base.Network"
-                onlyPojoFunctions: false
-                builderPattern: false
               valueType: "org.bitcoinj.base.Network"
               uuid: "<init>_network1"
               fixed: false
-              nameForMock: "MAINNET"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -105,47 +78,12 @@ methods:
           - name: "dnsSeeds"
             value:
               sapientType: "ARRAY"
-              content: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "seed1.example.com"
-                    suggestedContent: !<regular>
-                      value: "seed1.example.com"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "seed2.example.com"
-                    suggestedContent: !<regular>
-                      value: "seed2.example.com"
-                    valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
               suggestedContent: !<array>
                 values:
                   0:
                     sapientType: "BASIC"
-                    content: !<regular>
-                      value: "seed1.example.com"
-                    suggestedContent: !<regular>
-                      value: "seed1.example.com"
                     valueType: "java.lang.String"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "seed2.example.com"
-                    suggestedContent: !<regular>
-                      value: "seed2.example.com"
-                    valueType: "java.lang.String"
+                    uuid: "buildDiscoveries_string1"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
@@ -156,15 +94,10 @@ methods:
               explicitCastNeeded: false
           - name: "network"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.base.Network"
-                onlyPojoFunctions: false
-                builderPattern: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.base.Network"
               uuid: "<init>_network1"
               fixed: false
-              nameForMock: "MAINNET"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -176,10 +109,85 @@ methods:
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "60A6CF81A4B62FC26CAD9062FF6E1448"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: true
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "<init>_void1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "NetworkParameters"
+      modelFingerprint: "A7C0BDDF05E6EFE02EB4F8BA87B413C1"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.core.NetworkParameters"
+        uuid: "org.bitcoinj.core.NetworkParameters"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.core.NetworkParameters"
+        name: "of"
+        parameters:
+        - name: "network"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Network"
+            uuid: "<init>_network1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "of(Network): NetworkParameters"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.core.NetworkParameters"
+          uuid: "<init>_networkParameters1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "6E4B9F84DAA7DD2924AA4B202C6597BB"
-      index: 2
+      modelFingerprint: "1B4135473B111B5EA9277298B05A3885"
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -192,7 +200,7 @@ methods:
           - value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 2
+                value: 1
               valueType: "int"
               uuid: "createExecutor_int1"
               fixed: false
@@ -241,7 +249,7 @@ methods:
           - value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 2
+                value: 1
               valueType: "int"
               uuid: "createExecutor_int1"
               fixed: false
@@ -280,6 +288,9 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "LLM"
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_CONSTRUCTION_FAILURE"
+      source: "discoveries.add(new DnsSeedDiscovery(network, seed));"
+      lineNumber: 91
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

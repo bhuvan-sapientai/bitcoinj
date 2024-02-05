@@ -17,12 +17,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "89CCD00D29AAED647973383CD425CB23"
+    modelFingerprint: "A9D938EB7555A76B3C3BD504EA24E948"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "911F705F0BF2239B60FF37CC47D50F78"
+      modelFingerprint: "C6A9E669CA8455FDE9642125A1F9941D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -36,9 +36,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "test"
+                value: "BitcoinThread"
               suggestedContent: !<regular>
-                value: "test"
+                value: "BitcoinThread"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -53,9 +53,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "test"
+                value: "BitcoinThread"
               suggestedContent: !<regular>
-                value: "test"
+                value: "BitcoinThread"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -176,7 +176,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

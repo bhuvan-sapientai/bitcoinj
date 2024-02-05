@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "0E979AA7808227B9FCDE4F90E3E8EF5B"
+modelFingerprint: "234D1D46578151D14D9941E2847D0ADB"
 methods:
 - method:
     name: "encodeOnionUrlV2"
@@ -287,18 +287,18 @@ methods:
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
-    testPathName: "encodeOnionUrlV2WhenOnionAddrBytesLengthNotEquals10"
+    testPathName: "encodeOnionUrlV2WhenOnionAddrBytesLengthNotEquals10ThrowsIllegalArgumentException"
     nameDefinedByUser: false
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "7CBCD28986D9F86FAB5BED25C1F4796A"
+    modelFingerprint: "FA418C87E472A1414CEC75596A5E6B80"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "onionAddrBytes"
-      modelFingerprint: "B5080609F836181930A24B6DDC015941"
+      modelFingerprint: "368ADC4D7C40B6DE903BDFFDA364886B"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -306,9 +306,27 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values: {}
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              uuid: "encodeOnionUrlV2_byte[]1Item0"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         suggestedContent: !<array>
-          values: {}
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              uuid: "encodeOnionUrlV2_byte[]1Item0"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "byte[]"
         uuid: "encodeOnionUrlV2_byte[]1"
         fixed: false
@@ -318,7 +336,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "E804CAA01F6E06275AA3B02F677C606A"
+      modelFingerprint: "0EDE48F21AC2F1945BA699E11FE35975"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -345,9 +363,18 @@ methods:
             explicitCastNeeded: false
         signature: "checkArgument(boolean): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "encodeOnionUrlV2_void1"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -356,25 +383,30 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "1F3814F1E00CB03315FE51A2DEDDBAE8"
+      modelFingerprint: "3E9C76AB51311DE97AE9C2294CD5E1D6"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: "aa.onion"
-        suggestedContent: !<regular>
-          value: "aa.onion"
-        valueType: "java.lang.String"
-        uuid: "encodeOnionUrlV2_string2"
-        fixed: false
-        equalsMethodPresent: true
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.IllegalArgumentException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.lang.IllegalArgumentException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.lang.IllegalArgumentException"
+        fixed: true
+        equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
-    uuid: "ff5377fc-9a7c-3c05-99d5-1129a469434b"
+    uuid: "7772dff9-1395-3eaf-a5f8-8a5f82a89c07"
     deleted: false
     disabled: false
     ignoredBySystem: false
@@ -389,8 +421,139 @@ methods:
     parametersTypes:
     - "byte[]"
   paths:
-  - pathId: "path1"
+  - pathId: "path3"
     pathIdForUser: "path1"
+    testPathName: "encodeOnionUrlV3WhenOnionAddrBytesLengthNotEquals32ThrowsIllegalArgumentException"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "E5318228F4EEFF95FA1882D9EE68DB84"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "onionAddrBytes"
+      modelFingerprint: "368ADC4D7C40B6DE903BDFFDA364886B"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ARRAY"
+        content: !<array>
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              uuid: "encodeOnionUrlV3_byte[]1Item0"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<array>
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              uuid: "encodeOnionUrlV3_byte[]1Item0"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "byte[]"
+        uuid: "encodeOnionUrlV3_byte[]1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "0EDE48F21AC2F1945BA699E11FE35975"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean): void"
+        returnValue:
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3E9C76AB51311DE97AE9C2294CD5E1D6"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.IllegalArgumentException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.lang.IllegalArgumentException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.lang.IllegalArgumentException"
+        uuid: "onionChecksum_illegalArgumentException1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "770d5ddf-7d7f-397b-93e0-bb80a5da3970"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "UNKNOWN_REASON"
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+  - pathId: "path1"
+    pathIdForUser: "path2"
     testPathName: "encodeOnionUrlV3WhenPubkeyLengthNotEquals32ThrowsIllegalArgumentException"
     nameDefinedByUser: false
     priorityDefinedByUser: false
@@ -410,8 +573,6 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values: {}
-        suggestedContent: !<array>
           values: {}
         valueType: "byte[]"
         uuid: "encodeOnionUrlV3_byte[]1"
@@ -488,12 +649,12 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
-    prover: "LLM"
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
-    pathIdForUser: "path2"
+    pathIdForUser: "path3"
     testPathName: "encodeOnionUrlV3WhenPubkeyLengthEquals32"
     nameDefinedByUser: false
     priorityDefinedByUser: false
@@ -2780,125 +2941,6 @@ methods:
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
-  - pathId: "path3"
-    pathIdForUser: "path3"
-    testPathName: "encodeOnionUrlV3WhenOnionAddrBytesLengthNotEquals32AndPubkeyLengthEquals32"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "84CE5C297CC1111DD58F1BE2A7860FDC"
-    problemWasSolvedByProver: false
-    truncated: false
-    inputParameters:
-    - type: "INPUT"
-      name: "onionAddrBytes"
-      modelFingerprint: "FC64D67BB0013311AD68D01EEF472FB9"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "ARRAY"
-        content: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        valueType: "byte[]"
-        uuid: "encodeOnionUrlV3_byte[]1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "E804CAA01F6E06275AA3B02F677C606A"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "encodeOnionUrlV3_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "3E9C76AB51311DE97AE9C2294CD5E1D6"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "EXCEPTION"
-        content: !<new>
-          target: "java.lang.IllegalArgumentException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "java.lang.IllegalArgumentException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: true
-        valueType: "java.lang.IllegalArgumentException"
-        uuid: "onionChecksum_illegalArgumentException1"
-        fixed: true
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    uuid: "5856d451-e9da-3948-882f-0b6fac02117d"
-    deleted: false
-    disabled: true
-    ignoredBySystem: false
-    firstFailureReason: "UNKNOWN_REASON"
-    prover: "LLM"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
 - method:
     name: "decodeOnionUrl"
     returnType: "byte[]"
@@ -2914,13 +2956,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "CD58FB1C21CB1A201954247210B9771F"
+    modelFingerprint: "58FB11F31584E17934C9AEF551AA524B"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "onionUrl"
-      modelFingerprint: "A6BC0E2653DB1ECD888CB23D7B66706E"
+      modelFingerprint: "659DD72454C362FE693693721ACCB229"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2928,9 +2970,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "A"
+          value: "BCDEFG"
         suggestedContent: !<regular>
-          value: "A"
+          value: "BCDEFG"
         valueType: "java.lang.String"
         uuid: "decodeOnionUrl_string1"
         fixed: false
@@ -2940,7 +2982,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "80C1648E6F44C48DC224A145ABEF21C7"
+      modelFingerprint: "13AFB140FE1DCC74E59C105DF236EA85"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -2954,9 +2996,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "not an onion URL: A"
+                value: "not an onion URL: BCDEFG"
               suggestedContent: !<regular>
-                value: "not an onion URL: A"
+                value: "not an onion URL: BCDEFG"
               valueType: "java.lang.String"
               uuid: "decodeOnionUrl_string3"
               fixed: false
@@ -2970,10 +3012,8 @@ methods:
           - name: "s"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "not an onion URL: A"
               suggestedContent: !<regular>
-                value: "not an onion URL: A"
+                value: "not an onion URL: BCDEFG"
               valueType: "java.lang.String"
               uuid: "decodeOnionUrl_string3"
               fixed: false
@@ -3002,13 +3042,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "F82CDADA701663AD13F5D00FA2024AC8"
+    modelFingerprint: "25102C716C581AE0C3EC620AD0E6F71D"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "onionUrl"
-      modelFingerprint: "3D84129B3626918D8AA16949AC625DFB"
+      modelFingerprint: "23FC5B29696EE74ACC161EDA66DF9753"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -3016,9 +3056,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "onionUrl1"
+          value: "3g2upl4pq6kufc4m.onion"
         suggestedContent: !<regular>
-          value: "onionUrl1"
+          value: "3g2upl4pq6kufc4m.onion"
         valueType: "java.lang.String"
         uuid: "decodeOnionUrl_string1"
         fixed: false
@@ -3028,51 +3068,201 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "C256966FE58314ED914B70A16F504C6E"
+      modelFingerprint: "C15C3BE2D3F4ECD05B3E13D4B628642B"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "EXCEPTION"
-        content: !<new>
-          target: "java.lang.IllegalArgumentException"
-          parameters:
-          - name: "s"
-            value:
+        sapientType: "ARRAY"
+        content: !<array>
+          values:
+            0:
               sapientType: "BASIC"
               content: !<regular>
-                value: "not an onion URL: onionUrl1"
-              suggestedContent: !<regular>
-                value: "not an onion URL: onionUrl1"
-              valueType: "java.lang.String"
-              uuid: "decodeOnionUrl_string3"
+                value: -39
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]1-item0"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "java.lang.IllegalArgumentException"
-          parameters:
-          - name: "s"
-            value:
+            1:
               sapientType: "BASIC"
               content: !<regular>
-                value: "not an onion URL: onionUrl1"
-              suggestedContent: !<regular>
-                value: "not an onion URL: onionUrl1"
-              valueType: "java.lang.String"
-              uuid: "decodeOnionUrl_string3"
+                value: -75
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]1-item1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        valueType: "java.lang.IllegalArgumentException"
-        uuid: "decodeOnionUrl_illegalArgumentException1"
-        fixed: true
-        equalsMethodPresent: false
+            2:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 71
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]1-item2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            3:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: -81
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]1-item3"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            4:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: -113
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]1-item4"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            5:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: -121
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]1-item5"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            6:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: -107
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]1-item6"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            7:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 66
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]1-item7"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            8:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: -117
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]1-item8"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            9:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: -116
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]1-item9"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<array>
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: -39
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]1-item0"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            1:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: -75
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]1-item1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            2:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 71
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]1-item2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            3:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: -81
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]1-item3"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            4:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: -113
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]1-item4"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            5:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: -121
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]1-item5"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            6:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: -107
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]1-item6"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            7:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 66
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]1-item7"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            8:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: -117
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]1-item8"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            9:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: -116
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]1-item9"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "byte[]"
+        uuid: "decodeOnionUrl_byte[]1"
+        fixed: false
+        equalsMethodPresent: true
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
@@ -3080,7 +3270,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path7"
@@ -3090,13 +3280,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "40C1C028870EF6A9FA04326DCEC7AEA9"
+    modelFingerprint: "7104B126FC5F773D1C0BE1BFC4E9F5E8"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "onionUrl"
-      modelFingerprint: "A836EB518DCE22EE55045E7071C3E398"
+      modelFingerprint: "1F3ED33468B72E6BA54E1A0A2398E315"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -3104,9 +3294,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "ABCDEF"
+          value: ".ONION"
         suggestedContent: !<regular>
-          value: "ABCDEF"
+          value: ".ONION"
         valueType: "java.lang.String"
         uuid: "decodeOnionUrl_string1"
         fixed: false
@@ -3116,7 +3306,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "74D68D145081D99FD64FFA3A0A9202C2"
+      modelFingerprint: "8B39F095414D48ACE3B3EE2C1AB2901B"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -3130,11 +3320,11 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "not an onion URL: ABCDEF"
+                value: "unrecognizable length: .ONION"
               suggestedContent: !<regular>
-                value: "not an onion URL: ABCDEF"
+                value: "unrecognizable length: .ONION"
               valueType: "java.lang.String"
-              uuid: "decodeOnionUrl_string3"
+              uuid: "decodeOnionUrl_string4"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -3146,12 +3336,10 @@ methods:
           - name: "s"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "not an onion URL: ABCDEF"
               suggestedContent: !<regular>
-                value: "not an onion URL: ABCDEF"
+                value: "unrecognizable length: .ONION"
               valueType: "java.lang.String"
-              uuid: "decodeOnionUrl_string3"
+              uuid: "decodeOnionUrl_string4"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -3178,13 +3366,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "CBA057BBB9E9DACF30C16B963C2BBDF3"
-    problemWasSolvedByProver: true
+    modelFingerprint: "F00BE496BF160927153F737E271AAB44"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "onionUrl"
-      modelFingerprint: "5AD8FCC1885C568A53382ECB0F584183"
+      modelFingerprint: "AB55171D7E28BA8F3C3364D30C44972B"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -3192,9 +3380,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "ADEBFGC"
+          value: "K.ONION"
         suggestedContent: !<regular>
-          value: "ADEBFGC"
+          value: "K.ONION"
         valueType: "java.lang.String"
         uuid: "decodeOnionUrl_string1"
         fixed: false
@@ -3204,7 +3392,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "61E13AC56AB4E45F8D506C257A08311B"
+      modelFingerprint: "4DB4E7ECDCD3B871A3DCD0A47E6AEB1C"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -3218,11 +3406,11 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "not an onion URL: ADEBFGC"
+                value: "unknown version: K.ONION"
               suggestedContent: !<regular>
-                value: "not an onion URL: ADEBFGC"
+                value: "unknown version: K.ONION"
               valueType: "java.lang.String"
-              uuid: "decodeOnionUrl_string3"
+              uuid: "decodeOnionUrl_string4"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -3234,12 +3422,10 @@ methods:
           - name: "s"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "not an onion URL: ADEBFGC"
               suggestedContent: !<regular>
-                value: "not an onion URL: ADEBFGC"
+                value: "unknown version: K.ONION"
               valueType: "java.lang.String"
-              uuid: "decodeOnionUrl_string3"
+              uuid: "decodeOnionUrl_string4"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -3254,11 +3440,12 @@ methods:
       filledByUser: false
     uuid: "4e8a04e4-36d4-3362-99fb-a0130d4e1638"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "REFLECTION_CALL_FAILURE"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path4"
     pathIdForUser: "path5"
     testPathName: "decodeOnionUrlWhenPubkeyLengthNotEquals32ThrowsIllegalArgumentException"
@@ -3266,13 +3453,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "F82CDADA701663AD13F5D00FA2024AC8"
-    problemWasSolvedByProver: true
+    modelFingerprint: "F34426A3329588CC3284E8663B28D830"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "onionUrl"
-      modelFingerprint: "3D84129B3626918D8AA16949AC625DFB"
+      modelFingerprint: "90434ABB97373E3FC79572CAA79715AD"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -3280,8 +3467,6 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "onionUrl1"
-        suggestedContent: !<regular>
           value: "onionUrl1"
         valueType: "java.lang.String"
         uuid: "decodeOnionUrl_string1"
@@ -3292,7 +3477,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "C256966FE58314ED914B70A16F504C6E"
+      modelFingerprint: "3E9C76AB51311DE97AE9C2294CD5E1D6"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -3301,40 +3486,16 @@ methods:
         sapientType: "EXCEPTION"
         content: !<new>
           target: "java.lang.IllegalArgumentException"
-          parameters:
-          - name: "s"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "not an onion URL: onionUrl1"
-              suggestedContent: !<regular>
-                value: "not an onion URL: onionUrl1"
-              valueType: "java.lang.String"
-              uuid: "decodeOnionUrl_string3"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          parameters: []
           privateConstructor: false
           createdByTargetCode: true
         suggestedContent: !<new>
           target: "java.lang.IllegalArgumentException"
-          parameters:
-          - name: "s"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "not an onion URL: onionUrl1"
-              suggestedContent: !<regular>
-                value: "not an onion URL: onionUrl1"
-              valueType: "java.lang.String"
-              uuid: "decodeOnionUrl_string3"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          parameters: []
           privateConstructor: false
           createdByTargetCode: true
         valueType: "java.lang.IllegalArgumentException"
-        uuid: "decodeOnionUrl_illegalArgumentException1"
+        uuid: "onionChecksum_illegalArgumentException1"
         fixed: true
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -3344,7 +3505,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path5"
@@ -3354,13 +3516,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "F82CDADA701663AD13F5D00FA2024AC8"
-    problemWasSolvedByProver: true
+    modelFingerprint: "8E270722BA006BE175D0CA0E5629AD37"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "onionUrl"
-      modelFingerprint: "3D84129B3626918D8AA16949AC625DFB"
+      modelFingerprint: "ECFC9A813674E8C4038ED3BF2310F0CB"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -3368,9 +3530,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "onionUrl1"
+          value: "JINOPQRSTUVWXY.ONION"
         suggestedContent: !<regular>
-          value: "onionUrl1"
+          value: "JINOPQRSTUVWXY.ONION"
         valueType: "java.lang.String"
         uuid: "decodeOnionUrl_string1"
         fixed: false
@@ -3378,10 +3540,1628 @@ methods:
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "digest256"
+      modelFingerprint: "BF2F493589833F3EC545BAF90234D73B"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
+        uuid: "onionChecksum_sHA3.Digest2561"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "digest256"
+        name: "update"
+        parameters:
+        - name: "input"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 46
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item0"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 111
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 110
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item2"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                3:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 105
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item3"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                4:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 111
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item4"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                5:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 110
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item5"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                6:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 32
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item6"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                7:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 99
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item7"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                8:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 104
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item8"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                9:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 101
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item9"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                10:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 99
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item10"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                11:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 107
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item11"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                12:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 115
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item12"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                13:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 117
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item13"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                14:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 109
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item14"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<array>
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 46
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item0"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 111
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 110
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item2"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                3:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 105
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item3"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                4:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 111
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item4"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                5:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 110
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item5"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                6:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 32
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item6"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                7:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 99
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item7"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                8:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 104
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item8"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                9:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 101
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item9"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                10:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 99
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item10"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                11:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 107
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item11"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                12:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 115
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item12"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                13:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 117
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item13"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                14:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 109
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item14"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "byte[]"
+            uuid: "onionChecksum_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "update(byte[]): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "onionChecksum_void1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "digest256"
+      modelFingerprint: "71FDD39C576C32FC205476256BEA8CEA"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
+        uuid: "onionChecksum_sHA3.Digest2561"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "digest256"
+        name: "update"
+        parameters:
+        - name: "input"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item0"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item2"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                3:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item3"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                4:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 4
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item4"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                5:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 5
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item5"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                6:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 6
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item6"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                7:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 7
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item7"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                8:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 8
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item8"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                9:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 9
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item9"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                10:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 10
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item10"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                11:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 11
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item11"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                12:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 12
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item12"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                13:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 13
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item13"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                14:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 14
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item14"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                15:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 15
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item15"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                16:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 16
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item16"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                17:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 17
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item17"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                18:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 18
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item18"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                19:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 19
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item19"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                20:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 20
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item20"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                21:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 21
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item21"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                22:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 22
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item22"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                23:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 23
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item23"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                24:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 24
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item24"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                25:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 25
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item25"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                26:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 26
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item26"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                27:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 27
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item27"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                28:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 28
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item28"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                29:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 29
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item29"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                30:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 30
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item30"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                31:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 31
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item31"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<array>
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item0"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item2"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                3:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item3"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                4:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 4
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item4"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                5:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 5
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item5"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                6:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 6
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item6"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                7:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 7
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item7"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                8:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 8
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item8"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                9:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 9
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item9"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                10:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 10
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item10"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                11:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 11
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item11"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                12:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 12
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item12"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                13:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 13
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item13"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                14:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 14
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item14"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                15:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 15
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item15"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                16:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 16
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item16"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                17:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 17
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item17"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                18:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 18
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item18"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                19:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 19
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item19"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                20:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 20
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item20"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                21:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 21
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item21"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                22:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 22
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item22"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                23:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 23
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item23"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                24:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 24
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item24"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                25:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 25
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item25"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                26:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 26
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item26"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                27:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 27
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item27"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                28:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 28
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item28"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                29:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 29
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item29"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                30:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 30
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item30"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                31:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 31
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item31"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "byte[]"
+            uuid: "decodeOnionUrl_byte[]2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "update(byte[]): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "onionChecksum_void2"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "digest256"
+      modelFingerprint: "2E3A80E413F066EA579CB2B99EEF57E1"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
+        uuid: "onionChecksum_sHA3.Digest2561"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "digest256"
+        name: "update"
+        parameters:
+        - name: "input"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 3
+            suggestedContent: !<regular>
+              value: 3
+            valueType: "byte"
+            uuid: "decodeOnionUrl_byte1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "update(byte): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "onionChecksum_void3"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "digest256"
+      modelFingerprint: "FB064A0F06416C94FEE0AE6ACEA51520"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
+        uuid: "onionChecksum_sHA3.Digest2561"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "digest256"
+        name: "digest"
+        parameters: []
+        signature: "digest(): byte[]"
+        returnValue:
+          sapientType: "ARRAY"
+          content: !<array>
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item0"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              1:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 1
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              2:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 2
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item2"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              3:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 3
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              4:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 4
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item4"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              5:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 5
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item5"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              6:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 6
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item6"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              7:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 7
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item7"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              8:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 8
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item8"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              9:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 9
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item9"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              10:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 10
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item10"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              11:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 11
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item11"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              12:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 12
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item12"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              13:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 13
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item13"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              14:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 14
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item14"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              15:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 15
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item15"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              16:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 16
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item16"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              17:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 17
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item17"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              18:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 18
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item18"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              19:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 19
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item19"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              20:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 20
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item20"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              21:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 21
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item21"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              22:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 22
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item22"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              23:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 23
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item23"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              24:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 24
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item24"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              25:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 25
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item25"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              26:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 26
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item26"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              27:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 27
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item27"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              28:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 28
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item28"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              29:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 29
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item29"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              30:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 30
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item30"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              31:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 31
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item31"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<array>
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item0"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              1:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 1
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              2:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 2
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item2"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              3:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 3
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              4:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 4
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item4"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              5:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 5
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item5"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              6:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 6
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item6"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              7:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 7
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item7"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              8:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 8
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item8"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              9:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 9
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item9"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              10:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 10
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item10"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              11:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 11
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item11"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              12:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 12
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item12"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              13:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 13
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item13"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              14:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 14
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item14"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              15:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 15
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item15"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              16:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 16
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item16"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              17:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 17
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item17"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              18:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 18
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item18"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              19:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 19
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item19"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              20:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 20
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item20"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              21:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 21
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item21"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              22:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 22
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item22"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              23:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 23
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item23"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              24:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 24
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item24"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              25:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 25
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item25"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              26:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 26
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item26"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              27:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 27
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item27"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              28:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 28
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item28"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              29:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 29
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item29"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              30:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 30
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item30"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              31:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 31
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2Item31"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "byte[]"
+          uuid: "onionChecksum_byte[]2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "C256966FE58314ED914B70A16F504C6E"
-      index: 2
+      modelFingerprint: "E050F7392C3ACC58AAA9D16EABF23D1A"
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3394,11 +5174,11 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "not an onion URL: onionUrl1"
+                value: "bad checksum: JINOPQRSTUVWXY.ONION"
               suggestedContent: !<regular>
-                value: "not an onion URL: onionUrl1"
+                value: "bad checksum: JINOPQRSTUVWXY.ONION"
               valueType: "java.lang.String"
-              uuid: "decodeOnionUrl_string3"
+              uuid: "decodeOnionUrl_string4"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -3410,12 +5190,10 @@ methods:
           - name: "s"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "not an onion URL: onionUrl1"
               suggestedContent: !<regular>
-                value: "not an onion URL: onionUrl1"
+                value: "bad checksum: JINOPQRSTUVWXY.ONION"
               valueType: "java.lang.String"
-              uuid: "decodeOnionUrl_string3"
+              uuid: "decodeOnionUrl_string4"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -3430,11 +5208,12 @@ methods:
       filledByUser: false
     uuid: "19ae2bcb-f221-3512-8327-009575a3d347"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "REFLECTION_CALL_FAILURE"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path6"
     pathIdForUser: "path7"
     testPathName: "decodeOnionUrlWhenArraysEqualsChecksumOnionChecksumPubkeyTorVersion"
@@ -3442,13 +5221,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "F82CDADA701663AD13F5D00FA2024AC8"
-    problemWasSolvedByProver: true
+    modelFingerprint: "CB8C41C3F38D54A5614CF2E8B2FACC38"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "onionUrl"
-      modelFingerprint: "3D84129B3626918D8AA16949AC625DFB"
+      modelFingerprint: "90434ABB97373E3FC79572CAA79715AD"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -3457,8 +5236,6 @@ methods:
         sapientType: "BASIC"
         content: !<regular>
           value: "onionUrl1"
-        suggestedContent: !<regular>
-          value: "onionUrl1"
         valueType: "java.lang.String"
         uuid: "decodeOnionUrl_string1"
         fixed: false
@@ -3466,60 +5243,2223 @@ methods:
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "C256966FE58314ED914B70A16F504C6E"
+    - type: "LOCAL_VARIABLE"
+      name: "digest256"
+      modelFingerprint: "BF2F493589833F3EC545BAF90234D73B"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "EXCEPTION"
+        sapientType: "OBJECT"
         content: !<new>
-          target: "java.lang.IllegalArgumentException"
-          parameters:
-          - name: "s"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "not an onion URL: onionUrl1"
-              suggestedContent: !<regular>
-                value: "not an onion URL: onionUrl1"
-              valueType: "java.lang.String"
-              uuid: "decodeOnionUrl_string3"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          target: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
+          parameters: []
           privateConstructor: false
           createdByTargetCode: true
         suggestedContent: !<new>
-          target: "java.lang.IllegalArgumentException"
-          parameters:
-          - name: "s"
-            value:
+          target: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
+        uuid: "onionChecksum_sHA3.Digest2561"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "digest256"
+        name: "update"
+        parameters:
+        - name: "input"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 46
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item0"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 111
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 110
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item2"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                3:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 105
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item3"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                4:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 111
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item4"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                5:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 110
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item5"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                6:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 32
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item6"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                7:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 99
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item7"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                8:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 104
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item8"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                9:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 101
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item9"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                10:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 99
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item10"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                11:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 107
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item11"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                12:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 115
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item12"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                13:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 117
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item13"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                14:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 109
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item14"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<array>
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 46
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item0"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 111
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 110
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item2"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                3:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 105
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item3"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                4:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 111
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item4"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                5:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 110
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item5"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                6:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 32
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item6"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                7:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 99
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item7"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                8:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 104
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item8"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                9:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 101
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item9"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                10:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 99
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item10"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                11:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 107
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item11"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                12:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 115
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item12"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                13:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 117
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item13"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                14:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 109
+                  valueType: "byte"
+                  uuid: "onionChecksum_byte[]1-item14"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "byte[]"
+            uuid: "onionChecksum_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "update(byte[]): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "onionChecksum_void1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "digest256"
+      modelFingerprint: "71FDD39C576C32FC205476256BEA8CEA"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
+        uuid: "onionChecksum_sHA3.Digest2561"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "digest256"
+        name: "update"
+        parameters:
+        - name: "input"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item0"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item2"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                3:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item3"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                4:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 4
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item4"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                5:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 5
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item5"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                6:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 6
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item6"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                7:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 7
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item7"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                8:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 8
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item8"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                9:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 9
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item9"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                10:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 10
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item10"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                11:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 11
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item11"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                12:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 12
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item12"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                13:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 13
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item13"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                14:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 14
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item14"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                15:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 15
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item15"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                16:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 16
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item16"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                17:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 17
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item17"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                18:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 18
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item18"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                19:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 19
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item19"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                20:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 20
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item20"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                21:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 21
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item21"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                22:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 22
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item22"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                23:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 23
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item23"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                24:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 24
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item24"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                25:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 25
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item25"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                26:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 26
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item26"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                27:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 27
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item27"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                28:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 28
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item28"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                29:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 29
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item29"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                30:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 30
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item30"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                31:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 31
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item31"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<array>
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item0"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item2"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                3:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item3"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                4:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 4
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item4"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                5:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 5
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item5"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                6:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 6
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item6"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                7:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 7
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item7"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                8:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 8
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item8"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                9:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 9
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item9"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                10:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 10
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item10"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                11:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 11
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item11"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                12:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 12
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item12"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                13:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 13
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item13"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                14:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 14
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item14"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                15:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 15
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item15"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                16:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 16
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item16"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                17:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 17
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item17"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                18:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 18
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item18"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                19:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 19
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item19"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                20:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 20
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item20"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                21:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 21
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item21"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                22:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 22
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item22"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                23:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 23
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item23"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                24:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 24
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item24"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                25:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 25
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item25"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                26:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 26
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item26"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                27:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 27
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item27"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                28:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 28
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item28"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                29:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 29
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item29"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                30:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 30
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item30"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                31:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 31
+                  valueType: "byte"
+                  uuid: "decodeOnionUrl_byte[]2Item31"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "byte[]"
+            uuid: "decodeOnionUrl_byte[]2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "update(byte[]): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "onionChecksum_void2"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "digest256"
+      modelFingerprint: "DE29E562CAFA3401A9E3E14DFCCE0BC4"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
+        uuid: "onionChecksum_sHA3.Digest2561"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "digest256"
+        name: "update"
+        parameters:
+        - name: "input"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "decodeOnionUrl_byte1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "update(byte): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "onionChecksum_void3"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "digest256"
+      modelFingerprint: "688D76D2140CE06EBAF892E86F40E956"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bouncycastle.jcajce.provider.digest.SHA3$Digest256"
+        uuid: "onionChecksum_sHA3.Digest2561"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "digest256"
+        name: "digest"
+        parameters: []
+        signature: "digest(): byte[]"
+        returnValue:
+          sapientType: "ARRAY"
+          content: !<array>
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 3
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item0"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              1:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 35
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              2:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -59
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item2"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              3:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 108
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              4:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -73
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item4"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              5:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 56
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item5"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              6:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -8
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item6"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              7:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 9
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item7"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              8:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 125
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item8"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              9:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 119
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item9"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              10:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 124
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item10"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              11:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 4
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item11"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              12:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 51
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item12"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              13:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 107
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item13"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              14:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 108
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item14"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              15:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 73
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item15"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              16:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -37
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item16"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              17:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 118
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item17"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              18:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 43
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item18"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              19:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -13
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item19"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              20:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 45
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item20"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              21:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 21
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item21"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              22:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -69
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item22"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              23:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -111
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item23"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              24:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 62
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item24"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              25:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -80
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item25"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              26:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 69
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item26"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              27:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -103
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item27"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              28:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -4
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item28"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              29:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 122
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item29"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              30:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -84
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item30"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              31:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -49
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item31"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<array>
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 3
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item0"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              1:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 35
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              2:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -59
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item2"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              3:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 108
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              4:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -73
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item4"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              5:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 56
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item5"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              6:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -8
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item6"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              7:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 9
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item7"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              8:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 125
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item8"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              9:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 119
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item9"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              10:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 124
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item10"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              11:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 4
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item11"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              12:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 51
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item12"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              13:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 107
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item13"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              14:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 108
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item14"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              15:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 73
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item15"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              16:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -37
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item16"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              17:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 118
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item17"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              18:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 43
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item18"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              19:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -13
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item19"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              20:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 45
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item20"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              21:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 21
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item21"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              22:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -69
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item22"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              23:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -111
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item23"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              24:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 62
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item24"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              25:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -80
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item25"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              26:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 69
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item26"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              27:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -103
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item27"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              28:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -4
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item28"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              29:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 122
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item29"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              30:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -84
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item30"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              31:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -49
+                valueType: "byte"
+                uuid: "onionChecksum_byte[]2-item31"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "byte[]"
+          uuid: "onionChecksum_byte[]2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "7F848E1DBA07E16AA9E28ECAED6DFF3D"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ARRAY"
+        content: !<array>
+          values:
+            0:
               sapientType: "BASIC"
               content: !<regular>
-                value: "not an onion URL: onionUrl1"
-              suggestedContent: !<regular>
-                value: "not an onion URL: onionUrl1"
-              valueType: "java.lang.String"
-              uuid: "decodeOnionUrl_string3"
+                value: 0
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item0"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        valueType: "java.lang.IllegalArgumentException"
-        uuid: "decodeOnionUrl_illegalArgumentException1"
-        fixed: true
-        equalsMethodPresent: false
+            1:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 1
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            2:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 2
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            3:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 3
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item3"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            4:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 4
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item4"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            5:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 5
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item5"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            6:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 6
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item6"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            7:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 7
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item7"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            8:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 8
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item8"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            9:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 9
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item9"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            10:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 10
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item10"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            11:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 11
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item11"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            12:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 12
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item12"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            13:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 13
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item13"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            14:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 14
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item14"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            15:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 15
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item15"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            16:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 16
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item16"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            17:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 17
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item17"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            18:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 18
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item18"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            19:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 19
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item19"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            20:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 20
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item20"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            21:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 21
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item21"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            22:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 22
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item22"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            23:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 23
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item23"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            24:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 24
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item24"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            25:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 25
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item25"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            26:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 26
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item26"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            27:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 27
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item27"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            28:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 28
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item28"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            29:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 29
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item29"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            30:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 30
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item30"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            31:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 31
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item31"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<array>
+          values:
+            0:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item0"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            1:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 1
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            2:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 2
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            3:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 3
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item3"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            4:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 4
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item4"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            5:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 5
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item5"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            6:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 6
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item6"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            7:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 7
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item7"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            8:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 8
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item8"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            9:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 9
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item9"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            10:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 10
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item10"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            11:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 11
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item11"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            12:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 12
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item12"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            13:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 13
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item13"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            14:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 14
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item14"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            15:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 15
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item15"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            16:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 16
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item16"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            17:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 17
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item17"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            18:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 18
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item18"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            19:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 19
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item19"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            20:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 20
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item20"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            21:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 21
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item21"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            22:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 22
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item22"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            23:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 23
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item23"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            24:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 24
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item24"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            25:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 25
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item25"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            26:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 26
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item26"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            27:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 27
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item27"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            28:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 28
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item28"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            29:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 29
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item29"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            30:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 30
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item30"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            31:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 31
+              valueType: "byte"
+              uuid: "decodeOnionUrl_byte[]2Item31"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "byte[]"
+        uuid: "decodeOnionUrl_byte[]2"
+        fixed: false
+        equalsMethodPresent: true
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     uuid: "4932bb95-3a7f-3564-8d40-72a99b1aaa2b"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "REFLECTION_CALL_FAILURE"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true

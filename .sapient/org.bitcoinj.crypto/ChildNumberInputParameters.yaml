@@ -129,12 +129,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "BF81C8492DC05F0906CBB5BBBE0D6B69"
-    problemWasSolvedByProver: true
+    modelFingerprint: "A9E6C5606C392BC20D644B1C591A630C"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "49536DA99536FAF858A5FB91259F435D"
+      modelFingerprint: "AEC7C0F6D054C76D38AE56E9947D271B"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -149,8 +149,6 @@ methods:
               sapientType: "BASIC"
               content: !<regular>
                 value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "int"
               uuid: "<init>_int21"
               fixed: false
@@ -164,10 +162,6 @@ methods:
           - name: "i"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "int"
               uuid: "<init>_int21"
               fixed: false
@@ -184,7 +178,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
+      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -192,7 +186,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: false
+          value: true
         valueType: "boolean"
         fixed: true
         equalsMethodPresent: true
@@ -201,11 +195,13 @@ methods:
       filledByUser: false
     uuid: "0bca5d32-7671-34ce-92f1-91721a0bb29e"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "isHardenedWhenAAndHARDENED_BITEquals0"

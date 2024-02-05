@@ -51,6 +51,11 @@ import static org.hamcrest.Matchers.isA;
 
 import org.junit.Ignore;
 
+import java.util.LinkedList;
+
+import static org.hamcrest.Matchers.containsInRelativeOrder;
+import static org.hamcrest.core.IsInstanceOf.instanceOf;
+
 public class BlockFileLoaderSapientGeneratedJunit4Test {
 
     @Rule()
@@ -58,7 +63,7 @@ public class BlockFileLoaderSapientGeneratedJunit4Test {
 
     private final MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
 
-    private final Network networkMock = mock(Network.class);
+    private final Network networkMock = mock(Network.class, "Network");
 
     private final NetworkParameters networkParametersMock = mock(NetworkParameters.class);
 
@@ -70,6 +75,9 @@ public class BlockFileLoaderSapientGeneratedJunit4Test {
     public void getReferenceClientBlockFileListWhenFileNotExists() {
         /* Branches:
          * (!file.exists()) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
@@ -84,10 +92,14 @@ public class BlockFileLoaderSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${4704d881-b0c5-34b3-8a51-99a6ef09ab3e}
+    @Ignore()
     @Test()
     public void getReferenceClientBlockFileListWhenFileExists() {
         /* Branches:
          * (!file.exists()) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
@@ -95,8 +107,12 @@ public class BlockFileLoaderSapientGeneratedJunit4Test {
             File file = new File("pathname1");
             //Act Statement(s)
             List<File> result = BlockFileLoader.getReferenceClientBlockFileList(file);
+            File file2 = new File(file, "blk00000.dat");
+            List<File> fileResultList = new LinkedList<>();
+            fileResultList.add(file2);
             //Assert statement(s)
-            assertThat(result.size(), equalTo(0));
+            assertThat(result.size(), equalTo(fileResultList.size()));
+            assertThat(result, containsInRelativeOrder(fileResultList.toArray()));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
         }
     }
@@ -134,18 +150,18 @@ public class BlockFileLoaderSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${78c09fb6-edcf-3ce7-9932-6ef4ffc152b3}
+    @Ignore()
     @Test()
     public void iteratorTest() {
         /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Network networkMock = mock(Network.class, "NetworkParameters");
-        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
-            doReturn(1).when(networkParametersMock).getPacketMagic();
-            doReturn(messageSerializerMock).when(networkParametersMock).getDefaultSerializer();
+        Network networkMock = mock(Network.class, "MAINNET");
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
             File file = new File("pathname1");
             BlockFileLoader target = spy(new BlockFileLoader(networkMock, file));
             Stream stream = Stream.empty();
@@ -157,9 +173,6 @@ public class BlockFileLoaderSapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(StreamSupport.stream(Spliterators.spliteratorUnknownSize(result, 0), false).toArray(), equalTo(StreamSupport.stream(Spliterators.spliteratorUnknownSize(iteratorResult, 0), false).toArray()));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            verify(networkParametersMock).getPacketMagic();
-            verify(networkParametersMock).getDefaultSerializer();
             verify(target).stream();
         }
     }
@@ -168,23 +181,25 @@ public class BlockFileLoaderSapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void streamTest() {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
-        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
-            doReturn(1).when(networkParametersMock).getPacketMagic();
-            doReturn(messageSerializerMock).when(networkParametersMock).getDefaultSerializer();
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
             File file = new File("pathname1");
-            BlockFileLoader target = new BlockFileLoader(networkMock, file);
+            BlockFileLoader target = spy(new BlockFileLoader(networkMock, file));
+            Stream stream = Stream.empty();
+            File file2 = new File("pathname1");
+            doReturn(stream).when(target).fileBlockStream(file2);
+            thrown.expect(NullPointerException.class);
             //Act Statement(s)
-            Stream<Block> result = target.stream();
+            target.stream();
             //Assert statement(s)
-            assertThat(result, is(nullValue()));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            verify(networkParametersMock).getPacketMagic();
-            verify(networkParametersMock).getDefaultSerializer();
+            verify(target).fileBlockStream(file2);
         }
     }
 
@@ -192,23 +207,25 @@ public class BlockFileLoaderSapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void streamBuffersTest() {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
-        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
-            doReturn(1).when(networkParametersMock).getPacketMagic();
-            doReturn(messageSerializerMock).when(networkParametersMock).getDefaultSerializer();
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
             File file = new File("pathname1");
-            BlockFileLoader target = new BlockFileLoader(networkMock, file);
+            BlockFileLoader target = spy(new BlockFileLoader(networkMock, file));
+            Stream stream = Stream.empty();
+            File file2 = new File("pathname1");
+            doReturn(stream).when(target).fileBlockStream(file2);
             //Act Statement(s)
             Stream<ByteBuffer> result = target.streamBuffers();
             //Assert statement(s)
             assertThat(result, is(nullValue()));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            verify(networkParametersMock).getPacketMagic();
-            verify(networkParametersMock).getDefaultSerializer();
+            verify(target).fileBlockStream(file2);
         }
     }
 
@@ -222,12 +239,9 @@ public class BlockFileLoaderSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class, "NetworkParameters");
-        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
-            doReturn(1).when(networkParametersMock).getPacketMagic();
-            doReturn(messageSerializerMock).when(networkParametersMock).getDefaultSerializer();
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
             File file = new File("pathname1");
             BlockFileLoader target = spy(new BlockFileLoader(networkMock, file));
             File file2 = new File("pathname1");
@@ -240,9 +254,6 @@ public class BlockFileLoaderSapientGeneratedJunit4Test {
             //TODO: Please implement equals method in Stream for verification to succeed or you need to adjust respective assertion statements
             assertThat(result, equalTo(stream));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            verify(networkParametersMock).getPacketMagic();
-            verify(networkParametersMock).getDefaultSerializer();
             verify(target).fileBlockSpliterator(file2);
         }
     }
@@ -257,13 +268,9 @@ public class BlockFileLoaderSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Network networkMock = mock(Network.class, "<value>");
-        MessageSerializer messageSerializerMock = mock(MessageSerializer.class, "MessageSerializer");
-        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
-            doReturn(1).when(networkParametersMock).getPacketMagic();
-            doReturn(messageSerializerMock).when(networkParametersMock).getDefaultSerializer();
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
             File file = new File("pathname1");
             BlockFileLoader target = new BlockFileLoader(networkMock, file);
             File file2 = new File("pathname1");
@@ -272,9 +279,6 @@ public class BlockFileLoaderSapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(result, is(nullValue()));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            verify(networkParametersMock).getPacketMagic();
-            verify(networkParametersMock).getDefaultSerializer();
         }
     }
 
@@ -289,25 +293,19 @@ public class BlockFileLoaderSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Network networkMock = mock(Network.class, "testNetwork");
-        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
-            doReturn(1).when(networkParametersMock).getPacketMagic();
-            doReturn(messageSerializerMock).when(networkParametersMock).getDefaultSerializer();
+        Network networkMock = mock(Network.class, "int");
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
             File file = new File("pathname1");
             BlockFileLoader target = new BlockFileLoader(networkMock, file);
             thrown.expect(RuntimeException.class);
-            thrown.expectCause(isA(FileNotFoundException.class));
+            thrown.expectCause(is(instanceOf(FileNotFoundException.class)));
             File file2 = new File("pathname1");
             //Act Statement(s)
             target.fileBlockSpliterator(file2);
             //Assert statement(s)
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            verify(networkParametersMock).getPacketMagic();
-            verify(networkParametersMock).getDefaultSerializer();
         }
     }
 }

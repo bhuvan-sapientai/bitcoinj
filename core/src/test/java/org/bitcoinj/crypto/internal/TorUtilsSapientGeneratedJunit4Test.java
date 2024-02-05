@@ -37,21 +37,41 @@ public class TorUtilsSapientGeneratedJunit4Test {
         assertThat(result, equalTo("aaaqeayeaudaocaj.onion"));
     }
 
-    //Sapient generated method id: ${ff5377fc-9a7c-3c05-99d5-1129a469434b}
-    @Ignore()
+    //Sapient generated method id: ${7772dff9-1395-3eaf-a5f8-8a5f82a89c07}
     @Test()
-    public void encodeOnionUrlV2WhenOnionAddrBytesLengthNotEquals10() {
+    public void encodeOnionUrlV2WhenOnionAddrBytesLengthNotEquals10ThrowsIllegalArgumentException() {
         /* Branches:
          * (onionAddrBytes.length == 10) : false
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{};
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(false)).thenThrow(illegalArgumentException);
+            thrown.expect(IllegalArgumentException.class);
+            byte[] byteArray = new byte[]{(byte) 0};
             //Act Statement(s)
-            String result = TorUtils.encodeOnionUrlV2(byteArray);
+            TorUtils.encodeOnionUrlV2(byteArray);
             //Assert statement(s)
-            assertThat(result, equalTo("aa.onion"));
+            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
+        }
+    }
+
+    //Sapient generated method id: ${770d5ddf-7d7f-397b-93e0-bb80a5da3970}
+    @Ignore()
+    @Test()
+    public void encodeOnionUrlV3WhenOnionAddrBytesLengthNotEquals32ThrowsIllegalArgumentException() {
+        /* Branches:
+         * (onionAddrBytes.length == 32) : false
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(false)).thenThrow(illegalArgumentException);
+            thrown.expect(IllegalArgumentException.class);
+            byte[] byteArray = new byte[]{(byte) 0};
+            //Act Statement(s)
+            TorUtils.encodeOnionUrlV3(byteArray);
+            //Assert statement(s)
             preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
         }
     }
@@ -63,7 +83,9 @@ public class TorUtilsSapientGeneratedJunit4Test {
          * (onionAddrBytes.length == 32) : true
          * (pubkey.length != 32) : true  #  inside onionChecksum method
          *
-         * */
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
         thrown.expect(IllegalArgumentException.class);
         byte[] byteArray = new byte[]{};
@@ -87,26 +109,6 @@ public class TorUtilsSapientGeneratedJunit4Test {
         assertThat(result, equalTo("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaad.onion"));
     }
 
-    //Sapient generated method id: ${5856d451-e9da-3948-882f-0b6fac02117d}
-    @Ignore()
-    @Test()
-    public void encodeOnionUrlV3WhenOnionAddrBytesLengthNotEquals32AndPubkeyLengthEquals32() {
-        /* Branches:
-         * (onionAddrBytes.length == 32) : false
-         * (pubkey.length != 32) : false  #  inside onionChecksum method
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
-            thrown.expect(IllegalArgumentException.class);
-            byte[] byteArray = new byte[]{(byte) 0};
-            //Act Statement(s)
-            TorUtils.encodeOnionUrlV3(byteArray);
-            //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
-        }
-    }
-
     //Sapient generated method id: ${238ad176-6ec7-3be4-bfff-5b17aab2c0aa}
     @Test()
     public void decodeOnionUrlWhenOnionUrlToLowerCaseLocaleROOTNotEndsWith_onionThrowsIllegalArgumentException() {
@@ -114,11 +116,11 @@ public class TorUtilsSapientGeneratedJunit4Test {
          * (!onionUrl.toLowerCase(Locale.ROOT).endsWith(".onion")) : true
          */
         //Arrange Statement(s)
-        IllegalArgumentException illegalArgumentException = new IllegalArgumentException("not an onion URL: A");
+        IllegalArgumentException illegalArgumentException = new IllegalArgumentException("not an onion URL: BCDEFG");
         thrown.expect(IllegalArgumentException.class);
         thrown.expectMessage(illegalArgumentException.getMessage());
         //Act Statement(s)
-        TorUtils.decodeOnionUrl("A");
+        TorUtils.decodeOnionUrl("BCDEFG");
     }
 
     //Sapient generated method id: ${29879ee2-091c-3fc3-8525-a22cd7bd4366}
@@ -128,12 +130,11 @@ public class TorUtilsSapientGeneratedJunit4Test {
          * (!onionUrl.toLowerCase(Locale.ROOT).endsWith(".onion")) : false
          * (onionAddress.length == 10) : true
          */
-        //Arrange Statement(s)
-        IllegalArgumentException illegalArgumentException = new IllegalArgumentException("not an onion URL: onionUrl1");
-        thrown.expect(IllegalArgumentException.class);
-        thrown.expectMessage(illegalArgumentException.getMessage());
         //Act Statement(s)
-        TorUtils.decodeOnionUrl("onionUrl1");
+        byte[] result = TorUtils.decodeOnionUrl("3g2upl4pq6kufc4m.onion");
+        byte[] byteResultArray = new byte[]{(byte) -39, (byte) -75, (byte) 71, (byte) -81, (byte) -113, (byte) -121, (byte) -107, (byte) 66, (byte) -117, (byte) -116};
+        //Assert statement(s)
+        assertThat(result, equalTo(byteResultArray));
     }
 
     //Sapient generated method id: ${6880dde3-6ceb-3981-a91a-ccd1e9e8c79e}
@@ -145,14 +146,15 @@ public class TorUtilsSapientGeneratedJunit4Test {
          * (onionAddress.length == 32 + 2 + 1) : false
          */
         //Arrange Statement(s)
-        IllegalArgumentException illegalArgumentException = new IllegalArgumentException("not an onion URL: ABCDEF");
+        IllegalArgumentException illegalArgumentException = new IllegalArgumentException("unrecognizable length: .ONION");
         thrown.expect(IllegalArgumentException.class);
         thrown.expectMessage(illegalArgumentException.getMessage());
         //Act Statement(s)
-        TorUtils.decodeOnionUrl("ABCDEF");
+        TorUtils.decodeOnionUrl(".ONION");
     }
 
     //Sapient generated method id: ${4e8a04e4-36d4-3362-99fb-a0130d4e1638}
+    @Ignore()
     @Test()
     public void decodeOnionUrlWhenTorVersionNotEquals3ThrowsIllegalArgumentException() {
         /* Branches:
@@ -160,13 +162,16 @@ public class TorUtilsSapientGeneratedJunit4Test {
          * (onionAddress.length == 10) : false
          * (onionAddress.length == 32 + 2 + 1) : true
          * (torVersion != 0x03) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        IllegalArgumentException illegalArgumentException = new IllegalArgumentException("not an onion URL: ADEBFGC");
+        IllegalArgumentException illegalArgumentException = new IllegalArgumentException("unknown version: K.ONION");
         thrown.expect(IllegalArgumentException.class);
         thrown.expectMessage(illegalArgumentException.getMessage());
         //Act Statement(s)
-        TorUtils.decodeOnionUrl("ADEBFGC");
+        TorUtils.decodeOnionUrl("K.ONION");
     }
 
     //Sapient generated method id: ${3a0ced63-2292-3005-91da-695ad52f3b0f}
@@ -178,16 +183,18 @@ public class TorUtilsSapientGeneratedJunit4Test {
          * (onionAddress.length == 32 + 2 + 1) : true
          * (torVersion != 0x03) : false
          * (pubkey.length != 32) : true  #  inside onionChecksum method
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        IllegalArgumentException illegalArgumentException = new IllegalArgumentException("not an onion URL: onionUrl1");
         thrown.expect(IllegalArgumentException.class);
-        thrown.expectMessage(illegalArgumentException.getMessage());
         //Act Statement(s)
         TorUtils.decodeOnionUrl("onionUrl1");
     }
 
     //Sapient generated method id: ${19ae2bcb-f221-3512-8327-009575a3d347}
+    @Ignore()
     @Test()
     public void decodeOnionUrlWhenArraysNotEqualsChecksumOnionChecksumPubkeyTorVersionThrowsIllegalArgumentException() {
         /* Branches:
@@ -197,16 +204,20 @@ public class TorUtilsSapientGeneratedJunit4Test {
          * (torVersion != 0x03) : false
          * (pubkey.length != 32) : false  #  inside onionChecksum method
          * (!Arrays.equals(checksum, onionChecksum(pubkey, torVersion))) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        IllegalArgumentException illegalArgumentException = new IllegalArgumentException("not an onion URL: onionUrl1");
+        IllegalArgumentException illegalArgumentException = new IllegalArgumentException("bad checksum: JINOPQRSTUVWXY.ONION");
         thrown.expect(IllegalArgumentException.class);
         thrown.expectMessage(illegalArgumentException.getMessage());
         //Act Statement(s)
-        TorUtils.decodeOnionUrl("onionUrl1");
+        TorUtils.decodeOnionUrl("JINOPQRSTUVWXY.ONION");
     }
 
     //Sapient generated method id: ${4932bb95-3a7f-3564-8d40-72a99b1aaa2b}
+    @Ignore()
     @Test()
     public void decodeOnionUrlWhenArraysEqualsChecksumOnionChecksumPubkeyTorVersion() {
         /* Branches:
@@ -216,12 +227,14 @@ public class TorUtilsSapientGeneratedJunit4Test {
          * (torVersion != 0x03) : false
          * (pubkey.length != 32) : false  #  inside onionChecksum method
          * (!Arrays.equals(checksum, onionChecksum(pubkey, torVersion))) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
-        //Arrange Statement(s)
-        IllegalArgumentException illegalArgumentException = new IllegalArgumentException("not an onion URL: onionUrl1");
-        thrown.expect(IllegalArgumentException.class);
-        thrown.expectMessage(illegalArgumentException.getMessage());
         //Act Statement(s)
-        TorUtils.decodeOnionUrl("onionUrl1");
+        byte[] result = TorUtils.decodeOnionUrl("onionUrl1");
+        byte[] byteResultArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
+        //Assert statement(s)
+        assertThat(result, equalTo(byteResultArray));
     }
 }

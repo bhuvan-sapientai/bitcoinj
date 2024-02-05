@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "6AE7F0EF48C02BCD58D6805B261701B4"
+modelFingerprint: "5D19BAE7A8E19418B3AE557E4F88A28C"
 methods:
 - method:
     name: "derive"
@@ -19,50 +19,14 @@ methods:
     - "int"
     - "int"
   paths:
-  - pathId: "path3"
+  - pathId: "path1"
     pathIdForUser: "path1"
-    testPathName: "deriveWhenIGreaterThanL"
+    testPathName: "deriveWhenCGreaterThan0ThrowsIllegalArgumentException"
     nameDefinedByUser: false
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "4408D02B80AA6ED8AEE5B1AA10385160"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "b50c7f9a-c382-33f1-aaf4-d8f578d3738d"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    firstFailureReason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path5"
-    pathIdForUser: "path2"
-    testPathName: "deriveWhenDkLenNotGreaterThan0AndIGreaterThanL"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "4464AF238261AED313918E90ED009A16"
-    problemWasSolvedByProver: true
-    truncated: true
-    inputParameters: []
-    uuid: "ee4b8f7e-b5cb-34eb-bb0b-817df27e6b29"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    prover: "DEFAULT"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path7"
-    pathIdForUser: "path3"
-    testPathName: "deriveWhenCNotGreaterThan0AndDkLenNotGreaterThan0AndIGreaterThanL"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "2C6E74C9FDB9CDB20D274FAEEEABFEB2"
+    modelFingerprint: "883ED96F2DCFAE1F6F1AB1796963198F"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -104,7 +68,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "c"
-      modelFingerprint: "1ABFD9B49DEA021D84BD158222A82F31"
+      modelFingerprint: "E239327EE9C8DAEBB69C9551F39A5D49"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -112,9 +76,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
+          value: 2147483647
         suggestedContent: !<regular>
-          value: 0
+          value: 2147483647
         valueType: "int"
         uuid: "derive_int1"
         fixed: false
@@ -124,7 +88,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "dkLen"
-      modelFingerprint: "894F1C2ACF1D4789A3548341D5F410BC"
+      modelFingerprint: "29241BE0FB2E40D1201DC8638419B6C9"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -132,8 +96,6 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
-        suggestedContent: !<regular>
           value: 0
         valueType: "int"
         uuid: "derive_int2"
@@ -144,7 +106,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "60F4AB56A088909714BFE88747605281"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -179,55 +141,18 @@ methods:
             explicitCastNeeded: false
         signature: "checkArgument(boolean,Supplier): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "derive_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "60F4AB56A088909714BFE88747605281"
-      index: 6
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "derive_void2"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -236,504 +161,50 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "6F284CA220F919F7D0C6EB6C97E89FCE"
-      index: 7
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "ARRAY"
-        content: !<array>
-          values: {}
-        suggestedContent: !<array>
-          values: {}
-        valueType: "byte[]"
-        uuid: "derive_byte[]1"
-        fixed: false
-        equalsMethodPresent: true
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    uuid: "bf721fa9-b2e9-3c97-8613-89cb319b0ef5"
-    deleted: false
-    disabled: false
-    ignoredBySystem: false
-    prover: "DEFAULT"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path10"
-    pathIdForUser: "path4"
-    testPathName: "deriveWhenCaughtIOExceptionOrNoSuchAlgorithmExceptionOrInvalidKeyExceptionThrowsRuntimeException"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "C34B6A08FEC9D52914847F4EB5FBF8A3"
-    problemWasSolvedByProver: false
-    catchBlockExercised:
-      idExternalInstruction: 0
-      id: 1
-      catchExceptions:
-      - "java.io.IOException"
-      - "java.security.NoSuchAlgorithmException"
-      - "java.security.InvalidKeyException"
-    truncated: true
-    inputParameters: []
-    uuid: "4bc625c3-b56e-3226-bc87-96614689bf8b"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    firstFailureReason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path4"
-    pathIdForUser: "path5"
-    testPathName: "deriveWhenJNotLessThanC"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "CBE07B9D8DB301D2EBC61C734E306EA3"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "48b42061-7594-32e0-9506-086149ca4dd8"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path12"
-    pathIdForUser: "path6"
-    testPathName: "deriveWhenIGreaterThanLAndCaughtIOExceptionOrNoSuchAlgorithmExceptionOrInvalidKeyExceptionThrowsRuntimeException"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "BFE810D1305877ED1F0BA5AD9B9F5CF9"
-    problemWasSolvedByProver: true
-    catchBlockExercised:
-      idExternalInstruction: 0
-      id: 1
-      catchExceptions:
-      - "java.io.IOException"
-      - "java.security.NoSuchAlgorithmException"
-      - "java.security.InvalidKeyException"
-    truncated: true
-    inputParameters: []
-    uuid: "bf5a8ca4-6d9e-399a-9ebc-a4f07be08abd"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    prover: "DEFAULT"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path6"
-    pathIdForUser: "path7"
-    testPathName: "deriveWhenILessThanOrEqualsToLAndJNotLessThanC"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "7CD5598273E1552307A812901180F354"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "a164ffae-ce2f-31bb-a77c-0041531805fc"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path14"
-    pathIdForUser: "path8"
-    testPathName: "deriveWhenDkLenGreaterThan0AndIGreaterThanLAndCaughtIOExceptionOrNoSuchAlgorithmExceptionOrInvaliThrowsRuntimeException"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "08C7B656F3F747342FAFE057DB86E92E"
-    problemWasSolvedByProver: false
-    catchBlockExercised:
-      idExternalInstruction: 0
-      id: 1
-      catchExceptions:
-      - "java.io.IOException"
-      - "java.security.NoSuchAlgorithmException"
-      - "java.security.InvalidKeyException"
-    truncated: true
-    inputParameters: []
-    uuid: "ce45e9ba-ca83-365e-acc7-39f5313a2778"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    firstFailureReason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path15"
-    pathIdForUser: "path9"
-    testPathName: "deriveWhenDkLenNotGreaterThan0AndIGreaterThanLAndCaughtIOExceptionOrNoSuchAlgorithmExceptionOrInvThrowsRuntimeException"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "A6C7B7F45EC9FF77D6C6D8417364568D"
-    problemWasSolvedByProver: false
-    catchBlockExercised:
-      idExternalInstruction: 0
-      id: 1
-      catchExceptions:
-      - "java.io.IOException"
-      - "java.security.NoSuchAlgorithmException"
-      - "java.security.InvalidKeyException"
-    truncated: false
-    inputParameters:
-    - type: "INPUT"
-      name: "P"
-      modelFingerprint: "961412FEAAC083CDB5AEFF309FFBFD58"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: "<string>"
-        suggestedContent: !<regular>
-          value: "<string>"
-        valueType: "java.lang.String"
-        uuid: "derive_string1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "S"
-      modelFingerprint: "3CEFB97BB60611FE5C40B487EA44BD5C"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: "<string>"
-        suggestedContent: !<regular>
-          value: "<string>"
-        valueType: "java.lang.String"
-        uuid: "derive_string2"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "c"
-      modelFingerprint: "1ABFD9B49DEA021D84BD158222A82F31"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: 0
-        suggestedContent: !<regular>
-          value: 0
-        valueType: "int"
-        uuid: "derive_int1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "dkLen"
-      modelFingerprint: "894F1C2ACF1D4789A3548341D5F410BC"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: 0
-        suggestedContent: !<regular>
-          value: 0
-        valueType: "int"
-        uuid: "derive_int2"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "60F4AB56A088909714BFE88747605281"
-      index: 5
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "derive_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "60F4AB56A088909714BFE88747605281"
+      modelFingerprint: "3E9C76AB51311DE97AE9C2294CD5E1D6"
       index: 6
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "derive_void2"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "86516F64129E874C29870AA604BEEAAC"
-      index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "EXCEPTION"
         content: !<new>
-          target: "java.lang.RuntimeException"
-          parameters:
-          - name: "cause"
-            value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.lang.Exception"
-                parameters: []
-                privateConstructor: false
-                createdByTargetCode: false
-              suggestedContent: !<new>
-                target: "java.lang.Exception"
-                parameters: []
-                privateConstructor: false
-                createdByTargetCode: false
-              valueType: "java.lang.Exception"
-              uuid: "derive_exception1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          target: "java.lang.IllegalArgumentException"
+          parameters: []
           privateConstructor: false
-          createdByTargetCode: true
+          createdByTargetCode: false
         suggestedContent: !<new>
-          target: "java.lang.RuntimeException"
-          parameters:
-          - name: "cause"
-            value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<new>
-                target: "java.lang.Exception"
-                parameters: []
-                privateConstructor: false
-                createdByTargetCode: false
-              valueType: "java.lang.Exception"
-              uuid: "derive_exception1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          target: "java.lang.IllegalArgumentException"
+          parameters: []
           privateConstructor: false
-          createdByTargetCode: true
-        valueType: "java.lang.RuntimeException"
-        uuid: "derive_runtimeException1"
+          createdByTargetCode: false
+        valueType: "java.lang.IllegalArgumentException"
         fixed: true
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
-    uuid: "6083de3b-8578-3540-ab0c-6cab23e8ec38"
+    uuid: "3a45149b-5340-3323-b00e-0df68015d0f6"
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "DEPENDENCY_TO_THROW_EXCEPTION_NOT_FOUND"
-    prover: "LLM"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path1"
-    pathIdForUser: "path10"
-    testPathName: "deriveWhenJEquals0"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "MODERATE"
-    modelFingerprint: "C1F77368C87F10FF1DE0189FC75552DA"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "4922b028-2b71-37bc-b873-0c59d2903f0f"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path11"
-    pathIdForUser: "path11"
-    testPathName: "deriveWhenJNotLessThanCAndCaughtIOExceptionOrNoSuchAlgorithmExceptionOrInvalidKeyExceptionThrowsRuntimeException"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "C314AA9E5B170ED6580E5EA80061DD5D"
-    problemWasSolvedByProver: false
-    catchBlockExercised:
-      idExternalInstruction: 0
-      id: 1
-      catchExceptions:
-      - "java.io.IOException"
-      - "java.security.NoSuchAlgorithmException"
-      - "java.security.InvalidKeyException"
-    truncated: true
-    inputParameters: []
-    uuid: "2fd67459-9cba-32f6-aadc-3486dc93ddee"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path13"
-    pathIdForUser: "path12"
-    testPathName: "deriveWhenILessThanOrEqualsToLAndJNotLessThanCAndCaughtIOExceptionOrNoSuchAlgorithmExceptionOrInvThrowsRuntimeException"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "69B248DF4AAA8744C1FE83B5128CCA3D"
-    problemWasSolvedByProver: false
-    catchBlockExercised:
-      idExternalInstruction: 0
-      id: 1
-      catchExceptions:
-      - "java.io.IOException"
-      - "java.security.NoSuchAlgorithmException"
-      - "java.security.InvalidKeyException"
-    truncated: true
-    inputParameters: []
-    uuid: "a4b122b6-b16b-3db8-b7bd-b9c9be28ec5c"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path8"
-    pathIdForUser: "path13"
-    testPathName: "deriveWhenJEquals0AndCaughtIOExceptionOrNoSuchAlgorithmExceptionOrInvalidKeyExceptionThrowsRuntimeException"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "MODERATE"
-    modelFingerprint: "126FD9EA6350BA44B160CE5E9A8C629F"
-    problemWasSolvedByProver: false
-    catchBlockExercised:
-      idExternalInstruction: 0
-      id: 1
-      catchExceptions:
-      - "java.io.IOException"
-      - "java.security.NoSuchAlgorithmException"
-      - "java.security.InvalidKeyException"
-    truncated: true
-    inputParameters: []
-    uuid: "f094ba67-8d2f-32f2-b59a-046b60a68dd5"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
-    pathIdForUser: "path14"
-    testPathName: "deriveWhenKLessThanU_XORLength"
+    pathIdForUser: "path2"
+    testPathName: "deriveWhenCNotGreaterThan0ThrowsIllegalArgumentException"
     nameDefinedByUser: false
     priorityDefinedByUser: false
     filledByUser: false
-    priority: "MODERATE"
-    modelFingerprint: "9DDBF3057FF9A5F4E21918693FC524CF"
+    priority: "LOW"
+    modelFingerprint: "7D89E73B81161EB95613F936CC1F9A43"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "P"
-      modelFingerprint: "765EEBA9EEB660F0DD9478D95F6CDE2F"
+      modelFingerprint: "4D61F7501F6F10E86B40D61D47F87A8D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -741,8 +212,6 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "P1"
-        suggestedContent: !<regular>
           value: "P1"
         valueType: "java.lang.String"
         uuid: "derive_string1"
@@ -753,7 +222,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "S"
-      modelFingerprint: "5B490030B5589AF3F027D253569E05CA"
+      modelFingerprint: "AA5EF507B451A04146504BE7B4463B65"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -761,8 +230,6 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "S1"
-        suggestedContent: !<regular>
           value: "S1"
         valueType: "java.lang.String"
         uuid: "derive_string2"
@@ -773,7 +240,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "c"
-      modelFingerprint: "1EE84B7A2C08F2B7CF87406C5E64DFBF"
+      modelFingerprint: "AFA77814CBF2AF78706931A7335B7769"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -781,9 +248,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 2
+          value: -1
         suggestedContent: !<regular>
-          value: 2
+          value: -1
         valueType: "int"
         uuid: "derive_int1"
         fixed: false
@@ -793,7 +260,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "dkLen"
-      modelFingerprint: "2F389A63DC8B048A0D60156AF416E72F"
+      modelFingerprint: "29241BE0FB2E40D1201DC8638419B6C9"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -801,9 +268,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 1
-        suggestedContent: !<regular>
-          value: 1
+          value: 0
         valueType: "int"
         uuid: "derive_int2"
         fixed: false
@@ -813,7 +278,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "60F4AB56A088909714BFE88747605281"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -848,331 +313,19 @@ methods:
             explicitCastNeeded: false
         signature: "checkArgument(boolean,Supplier): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "derive_void1"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
           fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "60F4AB56A088909714BFE88747605281"
-      index: 6
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "derive_void2"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "ByteUtils"
-      modelFingerprint: "E3F6D781FE1380531663DAE916F73432"
-      index: 7
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 1
-      value:
-        sapientType: "REAL"
-        valueType: "org.bitcoinj.base.internal.ByteUtils"
-        uuid: "org.bitcoinj.base.internal.ByteUtils"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.ByteUtils"
-        name: "concat"
-        parameters:
-        - name: "b1"
-          value:
-            sapientType: "ARRAY"
-            content: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 83
-                  valueType: "byte"
-                  uuid: "F_byte[]2-item0"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 49
-                  valueType: "byte"
-                  uuid: "F_byte[]2-item1"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            suggestedContent: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 83
-                  valueType: "byte"
-                  uuid: "F_byte[]2-item0"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 49
-                  valueType: "byte"
-                  uuid: "F_byte[]2-item1"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            valueType: "byte[]"
-            uuid: "F_byte[]2"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "b2"
-          value:
-            sapientType: "ARRAY"
-            content: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  valueType: "byte"
-                  uuid: "INT_byte[]1-item0"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  valueType: "byte"
-                  uuid: "INT_byte[]1-item1"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                2:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  valueType: "byte"
-                  uuid: "INT_byte[]1-item2"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                3:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
-                  valueType: "byte"
-                  uuid: "INT_byte[]1-item3"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            suggestedContent: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  valueType: "byte"
-                  uuid: "INT_byte[]1-item0"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  valueType: "byte"
-                  uuid: "INT_byte[]1-item1"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                2:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  valueType: "byte"
-                  uuid: "INT_byte[]1-item2"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                3:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
-                  valueType: "byte"
-                  uuid: "INT_byte[]1-item3"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            valueType: "byte[]"
-            uuid: "INT_byte[]1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "concat(byte[],byte[]): byte[]"
-        returnValue:
-          sapientType: "ARRAY"
-          content: !<array>
-            values:
-              0:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 83
-                valueType: "byte"
-                uuid: "F_byte[]3-item0"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              1:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 49
-                valueType: "byte"
-                uuid: "F_byte[]3-item1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              2:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                uuid: "F_byte[]3-item2"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              3:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                uuid: "F_byte[]3-item3"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              4:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                uuid: "F_byte[]3-item4"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              5:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 1
-                valueType: "byte"
-                uuid: "F_byte[]3-item5"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<array>
-            values:
-              0:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 83
-                valueType: "byte"
-                uuid: "F_byte[]3-item0"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              1:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 49
-                valueType: "byte"
-                uuid: "F_byte[]3-item1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              2:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                uuid: "F_byte[]3-item2"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              3:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                uuid: "F_byte[]3-item3"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              4:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                uuid: "F_byte[]3-item4"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              5:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 1
-                valueType: "byte"
-                uuid: "F_byte[]3-item5"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          valueType: "byte[]"
-          uuid: "F_byte[]3"
-          fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 9
@@ -1180,575 +333,33 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "0DF84C852C0B1DB2CD6E7531C3A5C2D7"
-      index: 8
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "ARRAY"
-        content: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -44
-              valueType: "byte"
-              uuid: "derive_byte[]1-item0"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -44
-              valueType: "byte"
-              uuid: "derive_byte[]1-item0"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        valueType: "byte[]"
-        uuid: "derive_byte[]1"
-        fixed: false
-        equalsMethodPresent: true
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    uuid: "3060f228-bd9a-3b1d-9e16-ced38010f96e"
-    deleted: false
-    disabled: false
-    ignoredBySystem: false
-    prover: "DEFAULT"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path9"
-    pathIdForUser: "path15"
-    testPathName: "deriveWhenKLessThanU_XORLengthAndCaughtIOExceptionOrNoSuchAlgorithmExceptionOrInvalidKeyExceptionThrowsRuntimeException"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "MODERATE"
-    modelFingerprint: "5CF80C199FA9D39B92D636F2C6400563"
-    problemWasSolvedByProver: false
-    catchBlockExercised:
-      idExternalInstruction: 0
-      id: 1
-      catchExceptions:
-      - "java.io.IOException"
-      - "java.security.NoSuchAlgorithmException"
-      - "java.security.InvalidKeyException"
-    truncated: false
-    inputParameters:
-    - type: "INPUT"
-      name: "P"
-      modelFingerprint: "F988B12FBBECDF4F8B9F54C0449CDCE6"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: "password"
-        suggestedContent: !<regular>
-          value: "password"
-        valueType: "java.lang.String"
-        uuid: "derive_string1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "S"
-      modelFingerprint: "451AF7AE9D36C28F1ED026557D6BAE5D"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: "salt"
-        suggestedContent: !<regular>
-          value: "salt"
-        valueType: "java.lang.String"
-        uuid: "derive_string2"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "c"
-      modelFingerprint: "383DA45DED240906D641A46A729760D1"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: 1
-        suggestedContent: !<regular>
-          value: 1
-        valueType: "int"
-        uuid: "derive_int1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "dkLen"
-      modelFingerprint: "2F389A63DC8B048A0D60156AF416E72F"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: 1
-        suggestedContent: !<regular>
-          value: 1
-        valueType: "int"
-        uuid: "derive_int2"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "60F4AB56A088909714BFE88747605281"
-      index: 5
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "derive_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "60F4AB56A088909714BFE88747605281"
+      modelFingerprint: "3E9C76AB51311DE97AE9C2294CD5E1D6"
       index: 6
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "derive_void2"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "ByteUtils"
-      modelFingerprint: "53678711E07263629940F298B3A165D9"
-      index: 7
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 1
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.ByteUtils"
-        uuid: "org.bitcoinj.base.internal.ByteUtils"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.ByteUtils"
-        name: "concat"
-        parameters:
-        - name: "b1"
-          value:
-            sapientType: "ARRAY"
-            content: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 115
-                  valueType: "byte"
-                  uuid: "F_byte[]2-item0"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 97
-                  valueType: "byte"
-                  uuid: "F_byte[]2-item1"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                2:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 108
-                  valueType: "byte"
-                  uuid: "F_byte[]2-item2"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                3:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 116
-                  valueType: "byte"
-                  uuid: "F_byte[]2-item3"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            suggestedContent: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 115
-                  valueType: "byte"
-                  uuid: "F_byte[]2-item0"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 97
-                  valueType: "byte"
-                  uuid: "F_byte[]2-item1"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                2:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 108
-                  valueType: "byte"
-                  uuid: "F_byte[]2-item2"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                3:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 116
-                  valueType: "byte"
-                  uuid: "F_byte[]2-item3"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            valueType: "byte[]"
-            uuid: "F_byte[]2"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "b2"
-          value:
-            sapientType: "ARRAY"
-            content: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  valueType: "byte"
-                  uuid: "INT_byte[]1-item0"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  valueType: "byte"
-                  uuid: "INT_byte[]1-item1"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                2:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  valueType: "byte"
-                  uuid: "INT_byte[]1-item2"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                3:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
-                  valueType: "byte"
-                  uuid: "INT_byte[]1-item3"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            suggestedContent: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  valueType: "byte"
-                  uuid: "INT_byte[]1-item0"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  valueType: "byte"
-                  uuid: "INT_byte[]1-item1"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                2:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  valueType: "byte"
-                  uuid: "INT_byte[]1-item2"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                3:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1
-                  valueType: "byte"
-                  uuid: "INT_byte[]1-item3"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            valueType: "byte[]"
-            uuid: "INT_byte[]1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "concat(byte[],byte[]): byte[]"
-        returnValue:
-          sapientType: "ARRAY"
-          content: !<array>
-            values:
-              0:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<array>
-            values:
-              0:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          valueType: "byte[]"
-          uuid: "F_byte[]3"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "baos"
-      modelFingerprint: "75EC0F6044E2A2D27AC670304C8BFE28"
-      index: 8
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 1
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "java.io.ByteArrayOutputStream"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "java.io.ByteArrayOutputStream"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: true
-        valueType: "java.io.ByteArrayOutputStream"
-        uuid: "derive_byteArrayOutputStream1"
-        fixed: true
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "baos"
-        name: "write"
-        parameters:
-        - name: "b"
-          value:
-            sapientType: "ARRAY"
-            content: !<array>
-              values: {}
-            suggestedContent: !<array>
-              values: {}
-            valueType: "byte[]"
-            uuid: "F_byte[]4"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        throwsExceptions:
-        - "java.io.IOException"
-        signature: "write(byte[]): void throws java.io.IOException"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "derive_void3"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "86516F64129E874C29870AA604BEEAAC"
-      index: 9
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "EXCEPTION"
         content: !<new>
-          target: "java.lang.RuntimeException"
-          parameters:
-          - name: "cause"
-            value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.lang.Exception"
-                parameters: []
-                privateConstructor: false
-                createdByTargetCode: false
-              suggestedContent: !<new>
-                target: "java.lang.Exception"
-                parameters: []
-                privateConstructor: false
-                createdByTargetCode: false
-              valueType: "java.lang.Exception"
-              uuid: "derive_exception1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          target: "java.lang.IllegalArgumentException"
+          parameters: []
           privateConstructor: false
-          createdByTargetCode: true
+          createdByTargetCode: false
         suggestedContent: !<new>
-          target: "java.lang.RuntimeException"
-          parameters:
-          - name: "cause"
-            value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<new>
-                target: "java.lang.Exception"
-                parameters: []
-                privateConstructor: false
-                createdByTargetCode: false
-              valueType: "java.lang.Exception"
-              uuid: "derive_exception1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          target: "java.lang.IllegalArgumentException"
+          parameters: []
           privateConstructor: false
-          createdByTargetCode: true
-        valueType: "java.lang.RuntimeException"
-        uuid: "derive_runtimeException1"
+          createdByTargetCode: false
+        valueType: "java.lang.IllegalArgumentException"
         fixed: true
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
-    uuid: "1e26360d-137e-3978-b018-4b5a879346ca"
+    uuid: "4e65e438-c2cc-36eb-b7b6-206502cbfb7c"
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "DEPENDENCY_TO_THROW_EXCEPTION_NOT_FOUND"
-    prover: "LLM"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

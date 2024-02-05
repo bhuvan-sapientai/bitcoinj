@@ -51,18 +51,16 @@ public class FilterMergerSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        PeerFilterProvider peerFilterProviderMock = mock(PeerFilterProvider.class, "{}");
         try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
             Instant instant = Instant.now();
             Instant instant2 = Instant.MAX;
             timeUtils.when(() -> TimeUtils.earlier(eq(instant2), (Instant) any())).thenReturn(instant);
-            FilterMerger target = new FilterMerger(Double.parseDouble("0.01"));
+            FilterMerger target = new FilterMerger(Double.parseDouble("0.0"));
             List<PeerFilterProvider> peerFilterProviderList = new ArrayList<>();
-            peerFilterProviderList.add(peerFilterProviderMock);
             //Act Statement(s)
             FilterMerger.Result result = target.calculate(peerFilterProviderList);
             FilterMerger.Result filterMergerResult = new FilterMerger.Result();
-            BloomFilter bloomFilter = new BloomFilter(101, Double.parseDouble("0.01"), 0, BloomFilter.BloomUpdate.UPDATE_ALL);
+            BloomFilter bloomFilter = new BloomFilter(0, Double.parseDouble("0.0"), 0, BloomFilter.BloomUpdate.UPDATE_ALL);
             //Assert statement(s)
             //TODO: Please implement equals method in Result for verification to succeed or you need to adjust respective assertion statements
             assertThat(result, equalTo(filterMergerResult));

@@ -89,7 +89,6 @@ public class PreconditionsSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         thrown.expect(Throwable.class);
         Supplier supplier = null;
-
         //Act Statement(s)
         Preconditions.check(false, supplier);
     }
@@ -103,7 +102,6 @@ public class PreconditionsSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         //TODO: Needs initialization with real value
         Supplier supplier = null;
-
         //Act Statement(s)
         Preconditions.check(true, supplier);
     }

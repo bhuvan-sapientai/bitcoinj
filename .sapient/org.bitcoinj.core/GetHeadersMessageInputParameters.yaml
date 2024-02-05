@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "5E3993C717A662959D851E436DE88FEE"
+modelFingerprint: "A0401B31BAE2A290B5AA973470B89F12"
 methods:
 - method:
     name: "read"
@@ -1192,7 +1192,7 @@ methods:
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
-  - pathId: "path8"
+  - pathId: "path6"
     pathIdForUser: "path2"
     testPathName: "equalsWhenOIsNull"
     nameDefinedByUser: false
@@ -1232,7 +1232,7 @@ methods:
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
-  - pathId: "path7"
+  - pathId: "path5"
     pathIdForUser: "path4"
     testPathName: "equalsWhenVersionNotEqualsOtherVersion"
     nameDefinedByUser: false
@@ -1252,8 +1252,29 @@ methods:
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
-  - pathId: "path6"
+  - pathId: "path3"
     pathIdForUser: "path5"
+    testPathName: "equalsWhenStopHashEqualsOtherStopHashThrowsNullPointerException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(long,org.bitcoinj.core.BlockLocator,org.bitcoinj.base.Sha256Hash)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "A090EF1DBC3440B2DE36843C73AEE832"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "9e4cc0d9-563e-3b57-9fee-d9d6e499f79b"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "EXTERNAL_FIELD_WITHOUT_ACCESS"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path4"
+    pathIdForUser: "path6"
     testPathName: "equalsWhenStopHashNotEqualsOtherStopHash"
     nameDefinedByUser: false
     constructorSignature: "<init>(long,org.bitcoinj.core.BlockLocator,org.bitcoinj.base.Sha256Hash)\
@@ -1262,73 +1283,13 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "E0FAECB888D5327E07AED45FC72F6E9F"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
     uuid: "0713f033-8bd1-32fe-82c9-0ab49a9ff13d"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path5"
-    pathIdForUser: "path6"
-    testPathName: "equalsWhenLocatorNotEqualsOtherLocator"
-    nameDefinedByUser: false
-    constructorSignature: "<init>(long,org.bitcoinj.core.BlockLocator,org.bitcoinj.base.Sha256Hash)\
-      \ : void"
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "F187648381A5A6D4DE1EAA13EA75D662"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "47720500-3420-3073-a2d7-e45e87f92525"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path4"
-    pathIdForUser: "path7"
-    testPathName: "equalsWhenLocatorSizeEqualsOtherLocatorSize"
-    nameDefinedByUser: false
-    constructorSignature: "<init>(long,org.bitcoinj.core.BlockLocator,org.bitcoinj.base.Sha256Hash)\
-      \ : void"
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "8FD60BEE256505D6C641B53BE660B331"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "000420f1-3438-3126-9d58-a36ea733b409"
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path3"
-    pathIdForUser: "path8"
-    testPathName: "equalsWhenLocatorSizeNotEqualsOtherLocatorSize"
-    nameDefinedByUser: false
-    constructorSignature: "<init>(long,org.bitcoinj.core.BlockLocator,org.bitcoinj.base.Sha256Hash)\
-      \ : void"
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "60D3AA7F9726C4F63147935B847016E0"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "8fc62d28-161b-3302-852d-45d202a08a8f"
-    deleted: false
-    disabled: false
-    ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

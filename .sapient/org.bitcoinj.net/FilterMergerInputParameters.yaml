@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "6A130C82F358CBC59617D941E193B54A"
+modelFingerprint: "961CFA8FD608A7AE7DF50891908690F2"
 methods:
 - method:
     name: "calculate"
@@ -26,7 +26,10 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
+      source: "private final int bloomFilterTweak = new Random().nextInt();"
+      lineNumber: 47
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path6"
@@ -37,7 +40,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "3E0BFF780F956CDAFEA282865C7C2A0B"
+    modelFingerprint: "87548B8E027958E0E11B6A70015230BF"
     problemWasSolvedByProver: false
     truncated: true
     inputParameters: []
@@ -45,7 +48,10 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
+      source: "private final int bloomFilterTweak = new Random().nextInt();"
+      lineNumber: 47
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path1"
@@ -56,12 +62,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "A0FC33B8FF64522ABEB54D69CDEFCB94"
+    modelFingerprint: "927A6CDAC9AA64068A5350BCB45482E4"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "4949B0BDC08EC2ACE9B923BDA4049228"
+      modelFingerprint: "CBE4A20232FFDC05FE4D85502DBDFC4E"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -75,9 +81,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0.01
-              suggestedContent: !<regular>
-                value: 0.01
+                value: 0.0
               valueType: "double"
               uuid: "<init>_double1"
               fixed: false
@@ -91,10 +95,6 @@ methods:
           - name: "bloomFilterFPRate"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0.01
-              suggestedContent: !<regular>
-                value: 0.01
               valueType: "double"
               uuid: "<init>_double1"
               fixed: false
@@ -111,7 +111,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "providerList"
-      modelFingerprint: "E8F977AF21F7867619632130655F5CF8"
+      modelFingerprint: "D576A87F7F30434B05084068122FAB8E"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -119,37 +119,11 @@ methods:
       value:
         sapientType: "COLLECTION"
         content: !<collection>
-          collectionClass: "java.util.ArrayList"
           parameters: []
-          values:
-          - sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.core.PeerFilterProvider"
-              onlyPojoFunctions: false
-              builderPattern: false
-            valueType: "org.bitcoinj.core.PeerFilterProvider"
-            uuid: "calculate_list1-0"
-            fixed: false
-            collectionUuid: "calculate_list1"
-            nameForMock: "{}"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
+          values: []
         suggestedContent: !<collection>
-          collectionClass: "java.util.ArrayList"
           parameters: []
-          values:
-          - sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.core.PeerFilterProvider"
-              onlyPojoFunctions: false
-              builderPattern: false
-            valueType: "org.bitcoinj.core.PeerFilterProvider"
-            uuid: "calculate_list1-0"
-            fixed: false
-            collectionUuid: "calculate_list1"
-            nameForMock: "{}"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
+          values: []
         valueType: "java.util.List"
         genericValueType: "org.bitcoinj.core.PeerFilterProvider"
         uuid: "calculate_list1"
@@ -194,7 +168,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "p"
-      modelFingerprint: "DCF5AE5DE93C191CB9DE4C4085C30A60"
+      modelFingerprint: "F3B4C2B1DC9825B9A274DF3269B10CC8"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -236,7 +210,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "TimeUtils"
-      modelFingerprint: "6E60C1B8A8D70C6DE08389B08B7F8A36"
+      modelFingerprint: "3F8AA5AB3717B516959B3EBE73C72657"
       index: 5
       ignored: false
       nestedInLoop: true
@@ -303,7 +277,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "p"
-      modelFingerprint: "27CB2EEA9949E25F5C34901D03A95EE9"
+      modelFingerprint: "88AF2034FDC2F83008F580E0FE5487D1"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -328,9 +302,7 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 1
-          suggestedContent: !<regular>
-            value: 1
+            value: 0
           valueType: "int"
           uuid: "calculate_int2"
           fixed: false
@@ -341,7 +313,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "p"
-      modelFingerprint: "414F03383CB179D89EF19CFB46F20D19"
+      modelFingerprint: "CA2D90E0309F5E9EBE7001CA1413EAE0"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -366,19 +338,17 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 101
+              value: 0
             valueType: "int"
-            uuid: "calculate_int6"
-            fixed: true
+            uuid: "calculate_int4"
+            fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
         - name: "arg1"
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 0.01
-            suggestedContent: !<regular>
-              value: 0.01
+              value: 0.0
             valueType: "double"
             uuid: "<init>_double1"
             fixed: false
@@ -396,71 +366,7 @@ methods:
             explicitCastNeeded: false
         signature: "getBloomFilter(int,double,int): BloomFilter"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<new>
-            target: "org.bitcoinj.core.BloomFilter"
-            parameters:
-            - name: "elements"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "int"
-                uuid: "calculate_bloomFilter2-elements"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "falsePositiveRate"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0.0
-                valueType: "double"
-                uuid: "calculate_bloomFilter2-falsePositiveRate"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "arg2"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "int"
-                uuid: "calculate_bloomFilter2-arg2"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
-            target: "org.bitcoinj.core.BloomFilter"
-            parameters:
-            - name: "elements"
-              value:
-                sapientType: "BASIC"
-                valueType: "int"
-                uuid: "calculate_bloomFilter2-elements"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "falsePositiveRate"
-              value:
-                sapientType: "BASIC"
-                valueType: "double"
-                uuid: "calculate_bloomFilter2-falsePositiveRate"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "arg2"
-              value:
-                sapientType: "BASIC"
-                valueType: "int"
-                uuid: "calculate_bloomFilter2-arg2"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.core.BloomFilter"
           uuid: "calculate_bloomFilter2"
           fixed: false
@@ -471,7 +377,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "filter"
-      modelFingerprint: "12AA1A2239AD6CF5CB1F2E01B8DD2053"
+      modelFingerprint: "AC2391EBBBCC96DC5D395EB7A8DE3715"
       index: 8
       ignored: false
       nestedInLoop: true
@@ -485,19 +391,17 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 101
+                value: 0
               valueType: "int"
-              uuid: "calculate_int6"
-              fixed: true
+              uuid: "calculate_int4"
+              fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "falsePositiveRate"
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0.01
-              suggestedContent: !<regular>
-                value: 0.01
+                value: 0.0
               valueType: "double"
               uuid: "<init>_double1"
               fixed: false
@@ -531,20 +435,14 @@ methods:
           - name: "elements"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 101
               valueType: "int"
-              uuid: "calculate_int6"
-              fixed: true
+              uuid: "calculate_int4"
+              fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "falsePositiveRate"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0.01
-              suggestedContent: !<regular>
-                value: 0.01
               valueType: "double"
               uuid: "<init>_double1"
               fixed: false
@@ -581,71 +479,7 @@ methods:
         parameters:
         - name: "filter"
           value:
-            sapientType: "OBJECT"
-            content: !<new>
-              target: "org.bitcoinj.core.BloomFilter"
-              parameters:
-              - name: "elements"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  valueType: "int"
-                  uuid: "calculate_bloomFilter2-elements"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "falsePositiveRate"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0.0
-                  valueType: "double"
-                  uuid: "calculate_bloomFilter2-falsePositiveRate"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "arg2"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  valueType: "int"
-                  uuid: "calculate_bloomFilter2-arg2"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
-            suggestedContent: !<new>
-              target: "org.bitcoinj.core.BloomFilter"
-              parameters:
-              - name: "elements"
-                value:
-                  sapientType: "BASIC"
-                  valueType: "int"
-                  uuid: "calculate_bloomFilter2-elements"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "falsePositiveRate"
-                value:
-                  sapientType: "BASIC"
-                  valueType: "double"
-                  uuid: "calculate_bloomFilter2-falsePositiveRate"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "arg2"
-                value:
-                  sapientType: "BASIC"
-                  valueType: "int"
-                  uuid: "calculate_bloomFilter2-arg2"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
+            sapientType: "MOCK"
             valueType: "org.bitcoinj.core.BloomFilter"
             uuid: "calculate_bloomFilter2"
             fixed: false
@@ -724,6 +558,7 @@ methods:
       filledByUser: false
     - type: "STATE_VERIFICATION_FIELD"
       name: "lastFilter"
+      modelFingerprint: "D9DA84358676D9FBDB53E371E6383FCD"
       index: 11
       ignored: false
       nestedInLoop: false
@@ -737,19 +572,17 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 101
+                value: 0
               valueType: "int"
-              uuid: "calculate_int6"
-              fixed: true
+              uuid: "calculate_int4"
+              fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "falsePositiveRate"
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0.01
-              suggestedContent: !<regular>
-                value: 0.01
+                value: 0.0
               valueType: "double"
               uuid: "<init>_double1"
               fixed: false
@@ -783,20 +616,14 @@ methods:
           - name: "elements"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 101
               valueType: "int"
-              uuid: "calculate_int6"
-              fixed: true
+              uuid: "calculate_int4"
+              fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "falsePositiveRate"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0.01
-              suggestedContent: !<regular>
-                value: 0.01
               valueType: "double"
               uuid: "<init>_double1"
               fixed: false
@@ -836,8 +663,10 @@ methods:
     disabled: false
     ignoredBySystem: false
     variablesCouldNotBeIsolated: "filter"
-    firstFailureReason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
-    prover: "LLM"
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
+      source: "private final int bloomFilterTweak = new Random().nextInt();"
+      lineNumber: 47
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -856,7 +685,10 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
+      source: "private final int bloomFilterTweak = new Random().nextInt();"
+      lineNumber: 47
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path4"
@@ -876,7 +708,10 @@ methods:
     disabled: false
     ignoredBySystem: true
     variablesCouldNotBeIsolated: "filter"
-    firstFailureReason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
+      source: "private final int bloomFilterTweak = new Random().nextInt();"
+      lineNumber: 47
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path5"
@@ -895,7 +730,10 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
+      source: "private final int bloomFilterTweak = new Random().nextInt();"
+      lineNumber: 47
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -922,7 +760,10 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
+      source: "private final int bloomFilterTweak = new Random().nextInt();"
+      lineNumber: 47
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -948,7 +789,10 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
+      source: "private final int bloomFilterTweak = new Random().nextInt();"
+      lineNumber: 47
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -974,6 +818,9 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
+      source: "private final int bloomFilterTweak = new Random().nextInt();"
+      lineNumber: 47
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

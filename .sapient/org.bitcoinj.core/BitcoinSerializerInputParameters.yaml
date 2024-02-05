@@ -284,7 +284,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "633D9FDCC8BF881AF0C9862F23878BE4"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -411,7 +411,7 @@ methods:
     - type: "STATIC"
       name: "NetworkParameters"
       modelFingerprint: "241C8F0087A065039075A9D9A5002A54"
-      index: 3
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -442,7 +442,7 @@ methods:
             onlyPojoFunctions: false
             builderPattern: false
           valueType: "org.bitcoinj.core.NetworkParameters"
-          uuid: "<init>_networkParameters2"
+          uuid: "<init>_networkParameters3"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -451,7 +451,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       modelFingerprint: "B3179A3C3A0321952D26E36DA53CE369"
-      index: 4
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -462,7 +462,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.core.NetworkParameters"
-        uuid: "<init>_networkParameters2"
+        uuid: "<init>_networkParameters3"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -476,7 +476,7 @@ methods:
           content: !<regular>
             value: 0
           valueType: "int"
-          uuid: "<init>_int2"
+          uuid: "<init>_int3"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -626,6 +626,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    failureReason:
+      reason: "EQUALS_METHOD_TODO_COMMENT"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -683,7 +685,8 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path4"
@@ -702,7 +705,8 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path1"
@@ -3061,7 +3065,8 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "BITWISE_NOT_SUPPORTED"
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -3330,8 +3335,6 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
-          suggestedContent: !<array>
-            values: {}
           valueType: "byte[]"
           uuid: "serialize_byte[]1"
           fixed: false
@@ -3366,8 +3369,6 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
-              values: {}
-            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "serialize_byte[]1"
@@ -3905,7 +3906,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "85F0D7D9688713F9378330287D32FF48"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -4212,6 +4213,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    failureReason:
+      reason: "EQUALS_METHOD_TODO_COMMENT"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -7123,7 +7126,8 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -9680,12 +9684,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "50738A3648467E5534947B2AE8528DDA"
+    modelFingerprint: "E64B92914D7D83F2E57C3FA14F96ED54"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "CEB27D805741AEF9643BB3E138A840FF"
+      modelFingerprint: "30BD174E22ADC0464658D83A61B6DE2F"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -9746,21 +9750,7 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "id1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<static_method_return>
                 target: "org.bitcoinj.core.NetworkParameters"
                 method: "fromID"
@@ -9797,7 +9787,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "in"
-      modelFingerprint: "97EED3907DA28BB88399AA7FE5F959F7"
+      modelFingerprint: "CC25013AD0E7BC9461AC8D31FF41DBBC"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -9879,7 +9869,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "F42509056EE7A2733462074F4210354F"
+      modelFingerprint: "C1A5FDAEBCB3806C5C58EF2AD8B86CF6"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -9930,7 +9920,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

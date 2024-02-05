@@ -42,36 +42,8 @@ public class NioClientManagerSapientGeneratedJunit4Test {
     @Rule()
     public ExpectedException thrown = ExpectedException.none();
 
-    //Sapient generated method id: ${74b04750-80f4-3db9-ae1e-53f5953be4b0}
-    @Ignore(value = "Potential harmful system call (Selector.select, Selector.close, Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
-    @Test()
-    public void runWhenKeyNotIsConnectableAndSelectorKeysIsEmpty() throws Exception {
-        /* Branches:
-         * (isRunning()) : true
-         * ((conn = newConnectionChannels.poll()) != null) : false
-         * (keyIterator.hasNext()) : true
-         * (key.isValid()) : true  #  inside handleKey method
-         * (key.isConnectable()) : false  #  inside handleKey method
-         * (for-each(selector.keys())) : false
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
-            connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
-            NioClientManager target = spy(new NioClientManager());
-            doReturn(true, false).when(target).isRunning();
-            //Act Statement(s)
-            target.run();
-            //Assert statement(s)
-            connectionHandler.verify(() -> ConnectionHandler.handleKey((SelectionKey) null), atLeast(1));
-            verify(target, times(2)).isRunning();
-        }
-    }
-
     //Sapient generated method id: ${8f655aa5-ff3b-3366-ad66-38bb73867466}
-    @Ignore(value = "Potential harmful system call (Selector.select, CompletableFuture.completeExceptionally, Selector.close, Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (Selector.select, Selector.close, Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void runWhenScNotFinishConnectAndSelectorKeysIsEmpty() throws Exception {
         /* Branches:
@@ -88,17 +60,74 @@ public class NioClientManagerSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         NioClientManager target = spy(new NioClientManager());
-        doReturn(true, false).when(target).isRunning();
-
+        doReturn(true).when(target).isRunning();
         //Act Statement(s)
         target.run();
-
         //Assert statement(s)
-        verify(target, times(2)).isRunning();
+        verify(target).isRunning();
+    }
+
+    //Sapient generated method id: ${8d305d8f-5d55-3db3-99ce-61ed74ec68fd}
+    @Ignore(value = "Potential harmful system call (Selector.select, Selector.close, Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Test()
+    public void runWhenKeyNotIsConnectableAndSelectorKeysIsNotEmptyAndKeyAttachmentInstanceOfConnectionHandler() throws Exception {
+        /* Branches:
+         * (isRunning()) : true
+         * ((conn = newConnectionChannels.poll()) != null) : false
+         * (keyIterator.hasNext()) : true
+         * (key.isValid()) : true  #  inside handleKey method
+         * (key.isConnectable()) : false  #  inside handleKey method
+         * (for-each(selector.keys())) : true
+         * (key.attachment() instanceof ConnectionHandler) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
+            connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
+            NioClientManager target = spy(new NioClientManager());
+            doReturn(true, false).when(target).isRunning();
+            //Act Statement(s)
+            target.run();
+            //Assert statement(s)
+            connectionHandler.verify(() -> ConnectionHandler.handleKey((SelectionKey) null), atLeast(2));
+            verify(target, times(2)).isRunning();
+        }
+    }
+
+    //Sapient generated method id: ${09155cc5-b64b-3585-b645-7080c2fb3964}
+    @Ignore(value = "Potential harmful system call (Selector.select, Selector.close, Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Test()
+    public void runWhenKeyIsValidAndKeyNotIsConnectableAndSelectorKeysIsNotEmptyAndKeyAttachmentInstanceOfConnectionHandler() throws Exception {
+        /* Branches:
+         * (isRunning()) : true
+         * ((conn = newConnectionChannels.poll()) != null) : false
+         * (catch-exception (ClosedChannelException)) : true
+         * (keyIterator.hasNext()) : true
+         * (key.isValid()) : true  #  inside handleKey method
+         * (key.isConnectable()) : false  #  inside handleKey method
+         * (for-each(selector.keys())) : true
+         * (key.attachment() instanceof ConnectionHandler) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
+            connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
+            NioClientManager target = spy(new NioClientManager());
+            doReturn(true, false).when(target).isRunning();
+            //Act Statement(s)
+            target.run();
+            //Assert statement(s)
+            connectionHandler.verify(() -> ConnectionHandler.handleKey((SelectionKey) null), atLeast(2));
+            verify(target, times(2)).isRunning();
+        }
     }
 
     //Sapient generated method id: ${7d7f567a-d796-380f-a7e8-a3c075963831}
-    @Ignore(value = "Potential harmful system call (Selector.select, CompletableFuture.completeExceptionally, Selector.close, Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (Selector.select, Selector.close, Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void runWhenScFinishConnectAndSelectorKeysIsNotEmptyAndKeyAttachmentInstanceOfConnectionHandler() throws Exception {
         /* Branches:
@@ -118,48 +147,17 @@ public class NioClientManagerSapientGeneratedJunit4Test {
         try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
             connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
             NioClientManager target = spy(new NioClientManager());
-            doReturn(true, false).when(target).isRunning();
+            doReturn(true).when(target).isRunning();
             //Act Statement(s)
             target.run();
             //Assert statement(s)
             connectionHandler.verify(() -> ConnectionHandler.handleKey((SelectionKey) null), atLeast(1));
-            verify(target, times(2)).isRunning();
-        }
-    }
-
-    //Sapient generated method id: ${eb566ab1-87e8-371f-9e6f-3e9260b95322}
-    @Ignore(value = "Potential harmful system call (Selector.select, CompletableFuture.completeExceptionally, Selector.close, Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
-    @Test()
-    public void runWhenCaughtExceptionAndSelectorKeysIsNotEmptyAndKeyAttachmentInstanceOfConnectionHandler() throws Exception {
-        /* Branches:
-         * (isRunning()) : true
-         * ((conn = newConnectionChannels.poll()) != null) : false
-         * (keyIterator.hasNext()) : true
-         * (key.isValid()) : true  #  inside handleKey method
-         * (key.isConnectable()) : true  #  inside handleKey method
-         * (sc.finishConnect()) : true  #  inside handleKey method
-         * (catch-exception (Exception)) : true
-         * (for-each(selector.keys())) : true
-         * (key.attachment() instanceof ConnectionHandler) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
-            connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
-            NioClientManager target = spy(new NioClientManager());
-            doReturn(true, false).when(target).isRunning();
-            //Act Statement(s)
-            target.run();
-            //Assert statement(s)
-            connectionHandler.verify(() -> ConnectionHandler.handleKey((SelectionKey) null), atLeast(1));
-            verify(target, times(2)).isRunning();
+            verify(target).isRunning();
         }
     }
 
     //Sapient generated method id: ${85955f9f-267e-3a90-a7aa-7d747ff39e80}
-    @Ignore(value = "Potential harmful system call (Selector.select, CompletableFuture.completeExceptionally, Selector.close, Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (Selector.select, Selector.close, Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void runWhenCaughtIOExceptionAndKeyAttachmentInstanceOfConnectionHandler() throws Exception {
         /* Branches:
@@ -167,8 +165,7 @@ public class NioClientManagerSapientGeneratedJunit4Test {
          * ((conn = newConnectionChannels.poll()) != null) : false
          * (keyIterator.hasNext()) : true
          * (key.isValid()) : true  #  inside handleKey method
-         * (key.isConnectable()) : true  #  inside handleKey method
-         * (sc.finishConnect()) : true  #  inside handleKey method
+         * (key.isConnectable()) : false  #  inside handleKey method
          * (for-each(selector.keys())) : true
          * (catch-exception (IOException)) : true
          * (key.attachment() instanceof ConnectionHandler) : true
@@ -184,13 +181,13 @@ public class NioClientManagerSapientGeneratedJunit4Test {
             //Act Statement(s)
             target.run();
             //Assert statement(s)
-            connectionHandler.verify(() -> ConnectionHandler.handleKey((SelectionKey) null), atLeast(1));
+            connectionHandler.verify(() -> ConnectionHandler.handleKey((SelectionKey) null), atLeast(2));
             verify(target, times(2)).isRunning();
         }
     }
 
     //Sapient generated method id: ${8d97eb41-839b-3969-beb7-90027fd744ff}
-    @Ignore(value = "Potential harmful system call (Selector.select, CompletableFuture.completeExceptionally, Selector.close, Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Ignore(value = "Potential harmful system call (Selector.select, Selector.close, Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void runWhenKeyAttachmentInstanceOfConnectionHandlerAndCaughtIOException() throws Exception {
         /* Branches:
@@ -198,8 +195,7 @@ public class NioClientManagerSapientGeneratedJunit4Test {
          * ((conn = newConnectionChannels.poll()) != null) : false
          * (keyIterator.hasNext()) : true
          * (key.isValid()) : true  #  inside handleKey method
-         * (key.isConnectable()) : true  #  inside handleKey method
-         * (sc.finishConnect()) : true  #  inside handleKey method
+         * (key.isConnectable()) : false  #  inside handleKey method
          * (for-each(selector.keys())) : true
          * (key.attachment() instanceof ConnectionHandler) : true
          * (catch-exception (IOException)) : true
@@ -215,8 +211,101 @@ public class NioClientManagerSapientGeneratedJunit4Test {
             //Act Statement(s)
             target.run();
             //Assert statement(s)
-            connectionHandler.verify(() -> ConnectionHandler.handleKey((SelectionKey) null), atLeast(1));
+            connectionHandler.verify(() -> ConnectionHandler.handleKey((SelectionKey) null), atLeast(2));
             verify(target, times(2)).isRunning();
+        }
+    }
+
+    //Sapient generated method id: ${f7720bd6-817c-328f-b9c6-87a55b404012}
+    @Ignore(value = "Potential harmful system call (Selector.select, Selector.close, Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Test()
+    public void runWhenKeyIsConnectableAndScFinishConnectAndSelectorKeysIsNotEmptyAndKeyAttachmentInstanceOfConnectionHandler() throws Exception {
+        /* Branches:
+         * (isRunning()) : true
+         * ((conn = newConnectionChannels.poll()) != null) : false
+         * (catch-exception (ClosedChannelException)) : true
+         * (keyIterator.hasNext()) : true
+         * (key.isValid()) : true  #  inside handleKey method
+         * (key.isConnectable()) : true  #  inside handleKey method
+         * (sc.finishConnect()) : true  #  inside handleKey method
+         * (for-each(selector.keys())) : true
+         * (key.attachment() instanceof ConnectionHandler) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
+            connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
+            NioClientManager target = spy(new NioClientManager());
+            doReturn(true).when(target).isRunning();
+            //Act Statement(s)
+            target.run();
+            //Assert statement(s)
+            connectionHandler.verify(() -> ConnectionHandler.handleKey((SelectionKey) null), atLeast(1));
+            verify(target).isRunning();
+        }
+    }
+
+    //Sapient generated method id: ${c5a26871-d41e-39f4-a06e-0a3e4a5c6633}
+    @Ignore(value = "Potential harmful system call (Selector.select, Selector.close, Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Test()
+    public void runWhenCaughtIOExceptionAndSelectorKeysIsNotEmptyAndKeyAttachmentInstanceOfConnectionHandler() throws Exception {
+        /* Branches:
+         * (isRunning()) : true
+         * ((conn = newConnectionChannels.poll()) != null) : false
+         * (keyIterator.hasNext()) : true
+         * (key.isValid()) : true  #  inside handleKey method
+         * (key.isConnectable()) : true  #  inside handleKey method
+         * (sc.finishConnect()) : true  #  inside handleKey method
+         * (catch-exception (IOException)) : true
+         * (for-each(selector.keys())) : true
+         * (key.attachment() instanceof ConnectionHandler) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
+            connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
+            NioClientManager target = spy(new NioClientManager());
+            doReturn(true).when(target).isRunning();
+            //Act Statement(s)
+            target.run();
+            //Assert statement(s)
+            connectionHandler.verify(() -> ConnectionHandler.handleKey((SelectionKey) null), atLeast(1));
+            verify(target).isRunning();
+        }
+    }
+
+    //Sapient generated method id: ${f0d911b4-a5be-3e95-897c-c0c456067260}
+    @Ignore(value = "Potential harmful system call (Selector.select, Selector.close, Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Test()
+    public void runWhenScFinishConnectAndCaughtIOExceptionAndSelectorKeysIsNotEmptyAndKeyAttachmentInstanceOfConnectionHandler() throws Exception {
+        /* Branches:
+         * (isRunning()) : true
+         * ((conn = newConnectionChannels.poll()) != null) : false
+         * (keyIterator.hasNext()) : true
+         * (key.isValid()) : true  #  inside handleKey method
+         * (key.isConnectable()) : true  #  inside handleKey method
+         * (sc.finishConnect()) : true  #  inside handleKey method
+         * (catch-exception (IOException)) : true
+         * (for-each(selector.keys())) : true
+         * (key.attachment() instanceof ConnectionHandler) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
+            connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
+            NioClientManager target = spy(new NioClientManager());
+            doReturn(true).when(target).isRunning();
+            //Act Statement(s)
+            target.run();
+            //Assert statement(s)
+            connectionHandler.verify(() -> ConnectionHandler.handleKey((SelectionKey) null), atLeast(1));
+            verify(target).isRunning();
         }
     }
 
@@ -232,10 +321,8 @@ public class NioClientManagerSapientGeneratedJunit4Test {
         thrown.expect(IllegalStateException.class);
         //TODO: Needs initialization with real value
         SocketAddress socketAddress = null;
-
         //Act Statement(s)
         target.openConnection(socketAddress, streamConnectionMock);
-
         //Assert statement(s)
         verify(target).isRunning();
     }
@@ -279,6 +366,7 @@ public class NioClientManagerSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        StreamConnection streamConnectionMock = mock(StreamConnection.class, "{}");
         try (MockedStatic<ListenableCompletableFuture> listenableCompletableFuture = mockStatic(ListenableCompletableFuture.class);
              MockedStatic<SocketChannel> socketChannel = mockStatic(SocketChannel.class)) {
             SocketChannel socketChannel2 = SocketChannel.open();
@@ -309,7 +397,6 @@ public class NioClientManagerSapientGeneratedJunit4Test {
     public void triggerShutdownTest() {
         //Arrange Statement(s)
         NioClientManager target = new NioClientManager();
-
         //Act Statement(s)
         target.triggerShutdown();
     }
@@ -319,10 +406,8 @@ public class NioClientManagerSapientGeneratedJunit4Test {
     public void getConnectedClientCountTest() {
         //Arrange Statement(s)
         NioClientManager target = new NioClientManager();
-
         //Act Statement(s)
         int result = target.getConnectedClientCount();
-
         //Assert statement(s)
         assertThat(result, equalTo(0));
     }
@@ -336,7 +421,6 @@ public class NioClientManagerSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         NioClientManager target = new NioClientManager();
         thrown.expect(NoSuchElementException.class);
-
         //Act Statement(s)
         target.closeConnections(2147483647);
     }
@@ -349,7 +433,6 @@ public class NioClientManagerSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         NioClientManager target = new NioClientManager();
-
         //Act Statement(s)
         target.closeConnections(-1);
     }
@@ -359,10 +442,8 @@ public class NioClientManagerSapientGeneratedJunit4Test {
     public void executorTest() {
         //Arrange Statement(s)
         NioClientManager target = new NioClientManager();
-
         //Act Statement(s)
         Executor result = target.executor();
-
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }

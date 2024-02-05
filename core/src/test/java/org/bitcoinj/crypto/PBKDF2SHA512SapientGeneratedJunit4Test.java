@@ -35,106 +35,39 @@ public class PBKDF2SHA512SapientGeneratedJunit4Test {
     @Rule()
     public ExpectedException thrown = ExpectedException.none();
 
-    //Sapient generated method id: ${bf721fa9-b2e9-3c97-8613-89cb319b0ef5}
+    //Sapient generated method id: ${3a45149b-5340-3323-b00e-0df68015d0f6}
     @Test()
-    public void deriveWhenCNotGreaterThan0AndDkLenNotGreaterThan0AndIGreaterThanL() throws NoSuchAlgorithmException, IOException, InvalidKeyException {
-        /* Branches:
-         * (c > 0) : false
-         * (dkLen > 0) : false
-         * (i <= l) : false
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            //Act Statement(s)
-            byte[] result = PBKDF2SHA512.derive("P1", "S1", 0, 0);
-            byte[] byteResultArray = new byte[]{};
-            //Assert statement(s)
-            assertThat(result, equalTo(byteResultArray));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
-        }
-    }
-
-    //Sapient generated method id: ${6083de3b-8578-3540-ab0c-6cab23e8ec38}
-    @Ignore()
-    @Test()
-    public void deriveWhenDkLenNotGreaterThan0AndIGreaterThanLAndCaughtIOExceptionOrNoSuchAlgorithmExceptionOrInvThrowsRuntimeException() {
-        /* Branches:
-         * (c > 0) : false
-         * (dkLen > 0) : false
-         * (i <= l) : false
-         * (catch-exception (IOException | NoSuchAlgorithmException | InvalidKeyException)) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            thrown.expect(RuntimeException.class);
-            thrown.expectCause(isA(Exception.class));
-            //Act Statement(s)
-            PBKDF2SHA512.derive("<string>", "<string>", 0, 0);
-            //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
-        }
-    }
-
-    //Sapient generated method id: ${3060f228-bd9a-3b1d-9e16-ced38010f96e}
-    @Ignore()
-    @Test()
-    public void deriveWhenKLessThanU_XORLength() throws NoSuchAlgorithmException, IOException, InvalidKeyException {
+    public void deriveWhenCGreaterThan0ThrowsIllegalArgumentException() {
         /* Branches:
          * (c > 0) : true
-         * (dkLen > 0) : true
-         * (i <= l) : true
-         * (j < c) : true  #  inside F method
-         * (j == 0) : true  #  inside F method
-         * (k < U_XOR.length) : true  #  inside F method
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
+            thrown.expect(IllegalArgumentException.class);
             //Act Statement(s)
-            byte[] result = PBKDF2SHA512.derive("P1", "S1", 2, 1);
-            byte[] byteResultArray = new byte[]{(byte) -44};
+            PBKDF2SHA512.derive("P1", "S1", 2147483647, 0);
             //Assert statement(s)
-            assertThat(result, equalTo(byteResultArray));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
         }
     }
 
-    //Sapient generated method id: ${1e26360d-137e-3978-b018-4b5a879346ca}
-    @Ignore()
+    //Sapient generated method id: ${4e65e438-c2cc-36eb-b7b6-206502cbfb7c}
     @Test()
-    public void deriveWhenKLessThanU_XORLengthAndCaughtIOExceptionOrNoSuchAlgorithmExceptionOrInvalidKeyExceptionThrowsRuntimeException() throws IOException {
+    public void deriveWhenCNotGreaterThan0ThrowsIllegalArgumentException() {
         /* Branches:
-         * (c > 0) : true
-         * (dkLen > 0) : true
-         * (i <= l) : true
-         * (j < c) : true  #  inside F method
-         * (j == 0) : true  #  inside F method
-         * (k < U_XOR.length) : true  #  inside F method
-         * (catch-exception (IOException | NoSuchAlgorithmException | InvalidKeyException)) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
+         * (c > 0) : false
          */
         //Arrange Statement(s)
-        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{(byte) 0};
-            byte[] byteArray2 = new byte[]{(byte) 115, (byte) 97, (byte) 108, (byte) 116};
-            byte[] byteArray3 = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 1};
-            byteUtils.when(() -> ByteUtils.concat(byteArray2, byteArray3)).thenReturn(byteArray);
-            thrown.expect(RuntimeException.class);
-            thrown.expectCause(isA(Exception.class));
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
+            thrown.expect(IllegalArgumentException.class);
             //Act Statement(s)
-            PBKDF2SHA512.derive("password", "salt", 1, 1);
+            PBKDF2SHA512.derive("P1", "S1", -1, 0);
             //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
-            byteUtils.verify(() -> ByteUtils.concat(byteArray2, byteArray3), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
         }
     }
 }

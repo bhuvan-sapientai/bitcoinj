@@ -56,14 +56,16 @@ public class VersionTallySapientGeneratedJunit4Test {
     public void addWhenVersionWriteHeadEqualsVersionWindowLength() {
         /* Branches:
          * (versionWriteHead == versionWindow.length) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        NetworkParameters paramsMock = mock(NetworkParameters.class, "10");
-        doReturn(10).when(paramsMock).getMajorityWindow();
+        doReturn(0).when(paramsMock).getMajorityWindow();
         VersionTally target = new VersionTally(paramsMock);
 
         //Act Statement(s)
-        target.add(1L);
+        target.add(0L);
 
         //Assert statement(s)
         verify(paramsMock).getMajorityWindow();
@@ -95,17 +97,19 @@ public class VersionTallySapientGeneratedJunit4Test {
          * (versionsStored < versionWindow.length) : false
          * (for-each(versionWindow)) : true
          * (l >= version) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        NetworkParameters paramsMock = mock(NetworkParameters.class, "1");
-        doReturn(1).when(paramsMock).getMajorityWindow();
+        doReturn(0).when(paramsMock).getMajorityWindow();
         VersionTally target = new VersionTally(paramsMock);
 
         //Act Statement(s)
         Integer result = target.getCountAtOrAbove(0L);
 
         //Assert statement(s)
-        assertThat(result, is(nullValue()));
+        assertThat(result, equalTo(1));
         verify(paramsMock).getMajorityWindow();
     }
 

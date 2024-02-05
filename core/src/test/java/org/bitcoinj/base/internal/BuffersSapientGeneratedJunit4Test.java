@@ -29,6 +29,7 @@ import static org.mockito.Mockito.mockStatic;
 import static org.mockito.Mockito.doReturn;
 
 import org.junit.Ignore;
+import org.junit.rules.ExpectedException;
 
 public class BuffersSapientGeneratedJunit4Test {
 
@@ -36,6 +37,9 @@ public class BuffersSapientGeneratedJunit4Test {
     public Timeout timeoutRule = Timeout.seconds(5);
 
     private final VarInt varIntMock = mock(VarInt.class);
+
+    @Rule()
+    public ExpectedException thrown = ExpectedException.none();
 
     //Sapient generated method id: ${53004c16-0c3e-3d32-a417-c11d744f0919}
     @Ignore()
@@ -87,10 +91,14 @@ public class BuffersSapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void writeLengthPrefixedBytesTest() throws BufferOverflowException {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
         try (MockedStatic<VarInt> varInt = mockStatic(VarInt.class)) {
             varInt.when(() -> VarInt.of(1L)).thenReturn(varIntMock);
-            byte[] byteArray = new byte[]{(byte) 0};
+            byte[] byteArray = new byte[]{};
             doReturn(byteArray).when(varIntMock).serialize();
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
             byte[] byteArray2 = new byte[]{(byte) 0};
@@ -133,7 +141,7 @@ public class BuffersSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<VarInt> varInt = mockStatic(VarInt.class)) {
             varInt.when(() -> VarInt.of(0L)).thenReturn(varIntMock);
-            byte[] byteArray = new byte[]{(byte) 0};
+            byte[] byteArray = new byte[]{};
             doReturn(byteArray).when(varIntMock).serialize();
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
             //Act Statement(s)
@@ -143,6 +151,25 @@ public class BuffersSapientGeneratedJunit4Test {
             assertThat(result, equalTo(byteBuffer2));
             varInt.verify(() -> VarInt.of(0L), atLeast(1));
             verify(varIntMock).serialize();
+        }
+    }
+
+    //Sapient generated method id: ${7c226d76-20c9-30bc-beb6-88b35eb2cf1c}
+    @Test()
+    public void skipBytesWhenNumBytesLessThan0ThrowsIllegalArgumentException() throws BufferUnderflowException {
+        /* Branches:
+         * (numBytes >= 0) : false
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(false)).thenThrow(illegalArgumentException);
+            thrown.expect(IllegalArgumentException.class);
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            //Act Statement(s)
+            Buffers.skipBytes(byteBuffer, -1);
+            //Assert statement(s)
+            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
         }
     }
 
@@ -182,35 +209,10 @@ public class BuffersSapientGeneratedJunit4Test {
             preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
             //Act Statement(s)
-            ByteBuffer result = Buffers.skipBytes(byteBuffer, 1);
+            ByteBuffer result = Buffers.skipBytes(byteBuffer, 5);
             //Assert statement(s)
             assertThat(result, equalTo(byteBuffer));
             preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()), atLeast(1));
-        }
-    }
-
-    //Sapient generated method id: ${a5f8ff13-6648-3d39-98c9-43357403209b}
-    @Ignore()
-    @Test()
-    public void skipBytesWhenNumBytesLessThan0AndNumBytesLessThanOrEqualsToBufRemaining() throws Throwable {
-        /* Branches:
-         * (numBytes >= 0) : false
-         * (numBytes <= buf.remaining()) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
-            preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            //Act Statement(s)
-            ByteBuffer result = Buffers.skipBytes(byteBuffer, -1);
-            //Assert statement(s)
-            assertThat(result, equalTo(byteBuffer));
-            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
-            preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()));
         }
     }
 }

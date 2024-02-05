@@ -35,6 +35,8 @@ import static org.hamcrest.Matchers.is;
 
 import org.junit.Ignore;
 
+import static org.mockito.ArgumentMatchers.any;
+
 public class DefaultCoinSelectorSapientGeneratedJunit4Test {
 
     @Rule()
@@ -44,7 +46,7 @@ public class DefaultCoinSelectorSapientGeneratedJunit4Test {
 
     private final TransactionOutput bMock = mock(TransactionOutput.class);
 
-    private final Coin coinMock = mock(Coin.class, "1000");
+    private final Coin coinMock = mock(Coin.class);
 
     private final Network networkMock = mock(Network.class);
 
@@ -64,6 +66,27 @@ public class DefaultCoinSelectorSapientGeneratedJunit4Test {
 
     private final Transaction transactionMock2 = mock(Transaction.class);
 
+    //Sapient generated method id: ${ac60cd75-b61f-3484-bd94-dd5676c31587}
+    @Ignore()
+    @Test()
+    public void selectWhenTargetEqualsBitcoinNetworkMAX_MONEYAndSortedOutputsIsEmpty() {
+        /* Branches:
+         * (!target.equals(BitcoinNetwork.MAX_MONEY)) : false
+         * (for-each(sortedOutputs)) : false
+         */
+        //Arrange Statement(s)
+        DefaultCoinSelector target = new DefaultCoinSelector();
+        Coin coin = BitcoinNetwork.MAX_MONEY;
+        List<TransactionOutput> transactionOutputList = new ArrayList<>();
+        //Act Statement(s)
+        CoinSelection result = target.select(coin, transactionOutputList);
+        ArrayList<TransactionOutput> transactionOutputList2 = new ArrayList<>();
+        CoinSelection coinSelection = new CoinSelection(transactionOutputList2);
+        //Assert statement(s)
+        //TODO: Please implement equals method in CoinSelection for verification to succeed or you need to adjust respective assertion statements
+        assertThat(result, equalTo(coinSelection));
+    }
+
     //Sapient generated method id: ${6df8707e-9185-30b4-8c99-8abb00f110d8}
     @Ignore()
     @Test()
@@ -78,47 +101,21 @@ public class DefaultCoinSelectorSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DefaultCoinSelector target = new DefaultCoinSelector();
+        Coin coinMock = mock(Coin.class, "1000000");
+        Coin coinMock2 = mock(Coin.class);
         byte[] byteArray = new byte[]{};
         TransactionOutput transactionOutput = new TransactionOutput(transactionMock, coinMock2, byteArray);
+        Transaction transactionMock2 = mock(Transaction.class);
+        Coin coinMock3 = mock(Coin.class);
+        byte[] byteArray2 = new byte[]{};
+        TransactionOutput transactionOutput2 = new TransactionOutput(transactionMock2, coinMock3, byteArray2);
         List<TransactionOutput> transactionOutputList = new ArrayList<>();
         transactionOutputList.add(transactionOutput);
-
+        transactionOutputList.add(transactionOutput2);
         //Act Statement(s)
         CoinSelection result = target.select(coinMock, transactionOutputList);
         ArrayList<TransactionOutput> transactionOutputList2 = new ArrayList<>();
         CoinSelection coinSelection = new CoinSelection(transactionOutputList2);
-
-        //Assert statement(s)
-        //TODO: Please implement equals method in CoinSelection for verification to succeed or you need to adjust respective assertion statements
-        assertThat(result, equalTo(coinSelection));
-    }
-
-    //Sapient generated method id: ${5eb292a3-c78e-36d5-94e6-2b0fb99d4b29}
-    @Ignore()
-    @Test()
-    public void selectWhenShouldSelectNotOutputGetParentTransaction() {
-        /* Branches:
-         * (!target.equals(BitcoinNetwork.MAX_MONEY)) : true
-         * (for-each(sortedOutputs)) : true
-         * (total >= target.value) : false
-         * (!shouldSelect(output.getParentTransaction())) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        DefaultCoinSelector target = new DefaultCoinSelector();
-        TransactionOutput transactionOutputMock = mock(TransactionOutput.class, "500");
-        TransactionOutput transactionOutputMock2 = mock(TransactionOutput.class, "600");
-        List<TransactionOutput> transactionOutputList = new ArrayList<>();
-        transactionOutputList.add(transactionOutputMock);
-        transactionOutputList.add(transactionOutputMock2);
-
-        //Act Statement(s)
-        CoinSelection result = target.select(coinMock, transactionOutputList);
-        ArrayList<TransactionOutput> transactionOutputList2 = new ArrayList<>();
-        CoinSelection coinSelection = new CoinSelection(transactionOutputList2);
-
         //Assert statement(s)
         //TODO: Please implement equals method in CoinSelection for verification to succeed or you need to adjust respective assertion statements
         assertThat(result, equalTo(coinSelection));
@@ -135,19 +132,16 @@ public class DefaultCoinSelectorSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        TransactionOutput aMock = mock(TransactionOutput.class, "8");
         doReturn(0).when(aMock).getParentTransactionDepthInBlocks();
-        doReturn(null).when(aMock).getValue();
-        TransactionOutput bMock = mock(TransactionOutput.class, "8");
-        doReturn(5).when(bMock).getParentTransactionDepthInBlocks();
         Coin coin = Coin.valueOf(0L);
-        doReturn(coin).when(bMock).getValue();
-
+        doReturn(coin).when(aMock).getValue();
+        doReturn(0).when(bMock).getParentTransactionDepthInBlocks();
+        Coin coin2 = Coin.valueOf(0L);
+        doReturn(coin2).when(bMock).getValue();
         //Act Statement(s)
         int result = DefaultCoinSelector.compareByDepth(aMock, bMock);
-
         //Assert statement(s)
-        assertThat(result, equalTo(-1));
+        assertThat(result, equalTo(0));
         verify(aMock).getParentTransactionDepthInBlocks();
         verify(aMock).getValue();
         verify(bMock).getParentTransactionDepthInBlocks();
@@ -161,26 +155,23 @@ public class DefaultCoinSelectorSapientGeneratedJunit4Test {
         /* Branches:
          * (c1 != 0) : false
          * (c2 != 0) : true
-         *
-         * TODO: Help needed! This method is not unit testable!
-         *  Following variables could not be isolated/mocked: a, b
-         *  Suggestions:
-         *  You can change the initialization of above variables and make it injectable or
-         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Coin coinMock = mock(Coin.class);
-        byte[] byteArray = new byte[]{};
-        TransactionOutput transactionOutput = new TransactionOutput(transactionMock, coinMock, byteArray);
-        byte[] byteArray2 = new byte[]{};
-        TransactionOutput transactionOutput2 = new TransactionOutput(transactionMock2, coinMock2, byteArray2);
-
+        doReturn(1).when(aMock).getParentTransactionDepthInBlocks();
+        Coin coin = Coin.valueOf(0L);
+        doReturn(coin).when(aMock).getValue();
+        doReturn(1).when(bMock).getParentTransactionDepthInBlocks();
+        doReturn(coinMock).when(bMock).getValue();
+        doReturn(1).when(coinMock).compareTo((Coin) any());
         //Act Statement(s)
-        int result = DefaultCoinSelector.compareByDepth(transactionOutput, transactionOutput2);
-
+        int result = DefaultCoinSelector.compareByDepth(aMock, bMock);
         //Assert statement(s)
         assertThat(result, equalTo(1));
+        verify(aMock).getParentTransactionDepthInBlocks();
+        verify(aMock).getValue();
+        verify(bMock).getParentTransactionDepthInBlocks();
+        verify(bMock).getValue();
+        verify(coinMock).compareTo((Coin) any());
     }
 
     //Sapient generated method id: ${dfe94ebd-a3a3-3a90-aaac-e58a4d884458}
@@ -190,26 +181,33 @@ public class DefaultCoinSelectorSapientGeneratedJunit4Test {
         /* Branches:
          * (c1 != 0) : false
          * (c2 != 0) : false
-         *
-         * TODO: Help needed! This method is not unit testable!
-         *  Following variables could not be isolated/mocked: a, b
-         *  Suggestions:
-         *  You can change the initialization of above variables and make it injectable or
-         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Coin coinMock = mock(Coin.class);
-        byte[] byteArray = new byte[]{};
-        TransactionOutput transactionOutput = new TransactionOutput(transactionMock, coinMock, byteArray);
-        byte[] byteArray2 = new byte[]{};
-        TransactionOutput transactionOutput2 = new TransactionOutput(transactionMock2, coinMock2, byteArray2);
-
+        doReturn(0).when(aMock).getParentTransactionDepthInBlocks();
+        Coin coin = Coin.valueOf(0L);
+        doReturn(coin).when(aMock).getValue();
+        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
+        doReturn(sha256HashMock).when(aMock).getParentTransactionHash();
+        doReturn(new BigInteger("0")).when(sha256HashMock).toBigInteger();
+        doReturn(0).when(bMock).getParentTransactionDepthInBlocks();
+        doReturn(coinMock).when(bMock).getValue();
+        doReturn(0).when(coinMock).compareTo((Coin) any());
+        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
+        doReturn(sha256HashMock2).when(bMock).getParentTransactionHash();
+        doReturn(new BigInteger("0")).when(sha256HashMock2).toBigInteger();
         //Act Statement(s)
-        int result = DefaultCoinSelector.compareByDepth(transactionOutput, transactionOutput2);
-
+        int result = DefaultCoinSelector.compareByDepth(aMock, bMock);
         //Assert statement(s)
         assertThat(result, equalTo(0));
+        verify(aMock).getParentTransactionDepthInBlocks();
+        verify(aMock).getValue();
+        verify(aMock).getParentTransactionHash();
+        verify(sha256HashMock).toBigInteger();
+        verify(bMock).getParentTransactionDepthInBlocks();
+        verify(bMock).getValue();
+        verify(coinMock).compareTo((Coin) any());
+        verify(bMock).getParentTransactionHash();
+        verify(sha256HashMock2).toBigInteger();
     }
 
     //Sapient generated method id: ${2d5f29f1-90e7-3f61-a9d7-f2281c1948cc}
@@ -221,12 +219,10 @@ public class DefaultCoinSelectorSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Coin coinMock = mock(Coin.class);
         byte[] byteArray = new byte[]{};
         TransactionOutput transactionOutput = new TransactionOutput(transactionMock, coinMock, byteArray);
         ArrayList<TransactionOutput> transactionOutputList = new ArrayList<>();
         transactionOutputList.add(transactionOutput);
-
         //Act Statement(s)
         DefaultCoinSelector.sortOutputs(transactionOutputList);
     }
@@ -240,10 +236,8 @@ public class DefaultCoinSelectorSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         DefaultCoinSelector target = new DefaultCoinSelector();
         Transaction transaction = null;
-
         //Act Statement(s)
         boolean result = target.shouldSelect(transaction);
-
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
     }
@@ -301,10 +295,8 @@ public class DefaultCoinSelectorSapientGeneratedJunit4Test {
         doReturn(TransactionConfidence.ConfidenceType.PENDING).when(transactionConfidenceMock).getConfidenceType();
         doReturn(TransactionConfidence.Source.SELF).when(transactionConfidenceMock).getSource();
         doReturn(-1).when(transactionConfidenceMock).numBroadcastPeers();
-
         //Act Statement(s)
         boolean result = DefaultCoinSelector.isSelectable(txMock, BitcoinNetwork.REGTEST);
-
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
         verify(txMock).getConfidence();
@@ -328,10 +320,8 @@ public class DefaultCoinSelectorSapientGeneratedJunit4Test {
         doReturn(TransactionConfidence.ConfidenceType.PENDING).when(transactionConfidenceMock).getConfidenceType();
         doReturn(TransactionConfidence.Source.SELF).when(transactionConfidenceMock).getSource();
         doReturn(-1).when(transactionConfidenceMock).numBroadcastPeers();
-
         //Act Statement(s)
         boolean result = DefaultCoinSelector.isSelectable(txMock, networkMock);
-
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(txMock).getConfidence();
@@ -343,10 +333,8 @@ public class DefaultCoinSelectorSapientGeneratedJunit4Test {
     //Sapient generated method id: ${9c25887d-767d-38e9-b5ae-c2e4012c49be}
     @Test()
     public void getTest() {
-
         //Act Statement(s)
         CoinSelector result = DefaultCoinSelector.get(networkMock);
-
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }

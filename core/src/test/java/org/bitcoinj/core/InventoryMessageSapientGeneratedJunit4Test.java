@@ -26,6 +26,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.mockStatic;
 
 import org.junit.Ignore;
+import org.junit.rules.ExpectedException;
 
 public class InventoryMessageSapientGeneratedJunit4Test {
 
@@ -37,6 +38,9 @@ public class InventoryMessageSapientGeneratedJunit4Test {
     private final InventoryMessage inventoryMessageMock = mock(InventoryMessage.class);
 
     private final Transaction transactionMock = mock(Transaction.class);
+
+    @Rule()
+    public ExpectedException thrown = ExpectedException.none();
 
     //Sapient generated method id: ${db344e3b-696d-3b02-8e35-1aaa5300bde6}
     @Test()
@@ -75,22 +79,21 @@ public class InventoryMessageSapientGeneratedJunit4Test {
         assertThat(result, equalTo(inventoryMessage));
     }
 
-    //Sapient generated method id: ${af723908-3817-381c-9864-e259f833d0f4}
+    //Sapient generated method id: ${72ff682a-0144-38b0-943f-a8aacd1dd927}
     @Test()
-    public void ofBlocksWhenBlocksIsEmpty() {
+    public void ofBlocksWhenBlocksIsEmptyThrowsIllegalArgumentException() {
         /* Branches:
          * (!blocks.isEmpty()) : false
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(false)).thenThrow(illegalArgumentException);
+            thrown.expect(IllegalArgumentException.class);
             List<Block> blockList = new ArrayList<>();
             //Act Statement(s)
-            InventoryMessage result = InventoryMessage.ofBlocks(blockList);
-            List<InventoryItem> inventoryItemList = new ArrayList<>();
-            InventoryMessage inventoryMessage = new InventoryMessage(inventoryItemList);
+            InventoryMessage.ofBlocks(blockList);
             //Assert statement(s)
-            assertThat(result, equalTo(inventoryMessage));
             preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
         }
     }
@@ -130,22 +133,21 @@ public class InventoryMessageSapientGeneratedJunit4Test {
         assertThat(result, equalTo(inventoryMessage));
     }
 
-    //Sapient generated method id: ${288d6813-c336-3dec-82bd-9bf533c08c79}
+    //Sapient generated method id: ${8170359b-d277-3a15-90fc-8fd6d7180bea}
     @Test()
-    public void ofTransactionsWhenTransactionsIsEmpty() {
+    public void ofTransactionsWhenTransactionsIsEmptyThrowsIllegalArgumentException() {
         /* Branches:
          * (!transactions.isEmpty()) : false
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(false)).thenThrow(illegalArgumentException);
+            thrown.expect(IllegalArgumentException.class);
             List<Transaction> transactionList = new ArrayList<>();
             //Act Statement(s)
-            InventoryMessage result = InventoryMessage.ofTransactions(transactionList);
-            List<InventoryItem> inventoryItemList = new ArrayList<>();
-            InventoryMessage inventoryMessage = new InventoryMessage(inventoryItemList);
+            InventoryMessage.ofTransactions(transactionList);
             //Assert statement(s)
-            assertThat(result, equalTo(inventoryMessage));
             preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
         }
     }

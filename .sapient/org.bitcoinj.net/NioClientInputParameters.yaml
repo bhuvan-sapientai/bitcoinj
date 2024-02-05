@@ -706,7 +706,13 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+    variablesCouldNotBeIsolated: "manager"
+    failureReason:
+      reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+      source: "manager.awaitRunning();"
+      lineNumber: 117
+    disabledReason: "Potential harmful system call (ListenableCompletableFuture.whenComplete)\
+      \ detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -861,8 +867,6 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values: {}
-        suggestedContent: !<array>
           values: {}
         valueType: "byte[]"
         uuid: "writeBytes_byte[]1"
@@ -1413,8 +1417,6 @@ methods:
             sapientType: "ARRAY"
             content: !<array>
               values: {}
-            suggestedContent: !<array>
-              values: {}
             valueType: "byte[]"
             uuid: "writeBytes_byte[]1"
             fixed: false
@@ -1455,6 +1457,12 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+    variablesCouldNotBeIsolated: "manager"
+    failureReason:
+      reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+      source: "manager.awaitRunning();"
+      lineNumber: 117
+    disabledReason: "Potential harmful system call (ListenableCompletableFuture.whenComplete)\
+      \ detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

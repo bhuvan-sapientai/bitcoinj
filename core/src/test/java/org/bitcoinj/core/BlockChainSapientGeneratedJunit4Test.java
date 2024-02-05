@@ -46,27 +46,29 @@ import java.util.HashMap;
 import java.nio.ByteBuffer;
 
 import static org.hamcrest.Matchers.isA;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.core.IsInstanceOf.instanceOf;
 
 public class BlockChainSapientGeneratedJunit4Test {
 
     @Rule()
     public Timeout timeoutRule = Timeout.seconds(5);
 
-    private final BlockStore blockStoreMock = mock(BlockStore.class, "MemoryBlockStore");
+    private final BlockStore blockStoreMock = mock(BlockStore.class, "blockStore");
 
     private final Block blockMock = mock(Block.class);
 
     private final Block blockMock2 = mock(Block.class);
 
-    private final Network networkMock = mock(Network.class, "Network");
+    private final Network networkMock = mock(Network.class);
 
     private final NetworkParameters networkParametersMock = mock(NetworkParameters.class);
 
     private final Sha256Hash sha256HashMock = mock(Sha256Hash.class);
 
-    private final Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
+    private final Sha256Hash sha256HashMock2 = mock(Sha256Hash.class, "add_sha256Hash2");
 
-    private final Wallet walletMock = mock(Wallet.class, "Wallet");
+    private final Wallet walletMock = mock(Wallet.class);
 
     @Rule()
     public ExpectedException thrown = ExpectedException.none();
@@ -88,33 +90,22 @@ public class BlockChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Network networkMock = mock(Network.class, "NetworkParameters");
-        try (MockedStatic<Threading> threading = mockStatic(Threading.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
+        TransactionOutputChanges transactionOutputChangesMock = mock(TransactionOutputChanges.class);
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            doReturn(storedBlockMock).when(storedPrevMock).build(blockMock);
+            StoredBlock storedBlock = new StoredBlock(blockMock2, new BigInteger("0"), 1);
             doReturn(storedBlock).when(blockStoreMock).getChainHead();
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(AbstractBlockChain.class)).thenReturn(null);
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
             BlockChain target = new BlockChain(networkMock, walletMock, blockStoreMock);
-            StoredBlock storedBlock2 = new StoredBlock(blockMock2, new BigInteger("0"), 0);
-            doNothing().when(blockStoreMock).put(storedBlock2);
-            StoredBlock storedBlock3 = new StoredBlock(blockMock3, new BigInteger("0"), 0);
-            Instant instant = Instant.now();
-            List list = new ArrayList<>();
-            Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
-            List list2 = new ArrayList<>();
-            List list3 = new ArrayList<>();
-            TransactionOutputChanges transactionOutputChanges = new TransactionOutputChanges(list2, list3);
+            doNothing().when(blockStoreMock).put(storedBlockMock);
             //Act Statement(s)
-            StoredBlock result = target.addToBlockStore(storedBlock3, block, transactionOutputChanges);
+            StoredBlock result = target.addToBlockStore(storedPrevMock, blockMock, transactionOutputChangesMock);
             //Assert statement(s)
-            assertThat(result, equalTo(storedBlock2));
+            assertThat(result, equalTo(storedBlockMock));
+            verify(storedPrevMock).build(blockMock);
             verify(blockStoreMock).getChainHead();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            threading.verify(() -> Threading.lock(AbstractBlockChain.class), atLeast(1));
-            verify(blockStoreMock).put(storedBlock2);
+            verify(blockStoreMock).put(storedBlockMock);
         }
     }
 
@@ -127,149 +118,114 @@ public class BlockChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Network networkMock = mock(Network.class, "NetworkParameters");
-        try (MockedStatic<Threading> threading = mockStatic(Threading.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            doReturn(storedBlockMock).when(storedPrevMock).build(blockMock);
+            StoredBlock storedBlock = new StoredBlock(blockMock2, new BigInteger("0"), 1);
             doReturn(storedBlock).when(blockStoreMock).getChainHead();
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(AbstractBlockChain.class)).thenReturn(null);
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
             BlockChain target = new BlockChain(networkMock, walletMock, blockStoreMock);
-            StoredBlock storedBlock2 = new StoredBlock(blockMock2, new BigInteger("0"), 0);
-            doNothing().when(blockStoreMock).put(storedBlock2);
-            StoredBlock storedBlock3 = new StoredBlock(blockMock3, new BigInteger("0"), 0);
-            Instant instant = Instant.now();
-            List list = new ArrayList<>();
-            Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
+            doNothing().when(blockStoreMock).put(storedBlockMock);
             //Act Statement(s)
-            StoredBlock result = target.addToBlockStore(storedBlock3, block);
+            StoredBlock result = target.addToBlockStore(storedPrevMock, blockMock);
             //Assert statement(s)
-            assertThat(result, equalTo(storedBlock2));
+            assertThat(result, equalTo(storedBlockMock));
+            verify(storedPrevMock).build(blockMock);
             verify(blockStoreMock).getChainHead();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            threading.verify(() -> Threading.lock(AbstractBlockChain.class), atLeast(1));
-            verify(blockStoreMock).put(storedBlock2);
+            verify(blockStoreMock).put(storedBlockMock);
         }
     }
 
-    //Sapient generated method id: ${6ed28154-a75c-3043-807a-b41aff74066c}
+    //Sapient generated method id: ${86b85864-54ef-3bde-b9e6-1827988cc0bf}
     @Ignore()
     @Test()
-    public void rollbackBlockStoreWhenHeightEqualsCurrentHeight() throws BlockStoreException {
+    public void rollbackBlockStoreWhenHeightLessThan0ThrowsIllegalArgumentException() throws BlockStoreException {
         /* Branches:
-         * (height >= 0) : true
-         * (height <= currentHeight) : true
-         * (height == currentHeight) : true
+         * (height >= 0) : false
          *
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Network networkMock = mock(Network.class, "NetworkParameters");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
+            StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), -1);
             doReturn(storedBlock).when(blockStoreMock).getChainHead();
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            ReentrantLock reentrantLock = new ReentrantLock();
-            threading.when(() -> Threading.lock(AbstractBlockChain.class)).thenReturn(reentrantLock);
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
             BlockChain target = spy(new BlockChain(networkMock, walletMock, blockStoreMock));
             doReturn(0).when(target).getBestChainHeight();
+            thrown.expect(IllegalArgumentException.class);
+            //Act Statement(s)
+            target.rollbackBlockStore(-1);
+            //Assert statement(s)
+            verify(blockStoreMock).getChainHead();
+            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+            verify(target).getBestChainHeight();
+        }
+    }
+
+    //Sapient generated method id: ${1c0ebbf4-3510-3785-b5d3-8a5f306034af}
+    @Ignore()
+    @Test()
+    public void rollbackBlockStoreWhenHeightLessThanOrEqualsToCurrentHeightThrowsIllegalArgumentException() throws BlockStoreException {
+        /* Branches:
+         * (height >= 0) : true
+         * (height <= currentHeight) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 1);
+            doReturn(storedBlock).when(blockStoreMock).getChainHead();
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
+            BlockChain target = spy(new BlockChain(networkMock, walletMock, blockStoreMock));
+            doReturn(1).when(target).getBestChainHeight();
+            thrown.expect(IllegalArgumentException.class);
             //Act Statement(s)
             target.rollbackBlockStore(1);
             //Assert statement(s)
             verify(blockStoreMock).getChainHead();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            threading.verify(() -> Threading.lock(AbstractBlockChain.class), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
             verify(target).getBestChainHeight();
         }
     }
 
-    //Sapient generated method id: ${77c59e2f-06ef-39b9-94ff-89a6b3ecce25}
+    //Sapient generated method id: ${19f3e87d-98fe-36f9-8b92-1e25dba8ee3e}
     @Ignore()
     @Test()
-    public void rollbackBlockStoreWhenNewChainHeadGetHeightNotGreaterThanHeight() throws BlockStoreException {
+    public void rollbackBlockStoreWhenHeightGreaterThanCurrentHeightThrowsIllegalArgumentException() throws BlockStoreException {
         /* Branches:
          * (height >= 0) : true
-         * (height <= currentHeight) : true
-         * (height == currentHeight) : false
-         * (newChainHead.getHeight() > height) : false
+         * (height <= currentHeight) : false
          *
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Network networkMock = mock(Network.class, "NetworkParameters.MAINNET");
-        Wallet walletMock = mock(Wallet.class, "new Wallet()");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            Instant instant = Instant.now();
-            List list = new ArrayList<>();
-            Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
-            StoredBlock storedBlock = new StoredBlock(block, new BigInteger("0"), 0);
+            StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 1);
             doReturn(storedBlock).when(blockStoreMock).getChainHead();
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            ReentrantLock reentrantLock = new ReentrantLock();
-            threading.when(() -> Threading.lock(AbstractBlockChain.class)).thenReturn(reentrantLock);
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
             BlockChain target = spy(new BlockChain(networkMock, walletMock, blockStoreMock));
-            doReturn(0).when(target).getBestChainHeight();
+            doReturn(1).when(target).getBestChainHeight();
+            thrown.expect(IllegalArgumentException.class);
             //Act Statement(s)
-            target.rollbackBlockStore(5);
+            target.rollbackBlockStore(2);
             //Assert statement(s)
             verify(blockStoreMock).getChainHead();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            threading.verify(() -> Threading.lock(AbstractBlockChain.class), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            verify(target).getBestChainHeight();
-        }
-    }
-
-    //Sapient generated method id: ${06560f57-68b5-38cf-a8d1-734726696122}
-    @Ignore()
-    @Test()
-    public void rollbackBlockStoreWhenNewChainHeadIsNullThrowsBlockStoreException() throws BlockStoreException {
-        /* Branches:
-         * (height >= 0) : true
-         * (height <= currentHeight) : true
-         * (height == currentHeight) : false
-         * (newChainHead.getHeight() > height) : true
-         * (newChainHead == null) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        Network networkMock = mock(Network.class, "NetworkParameters");
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<Threading> threading = mockStatic(Threading.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            Instant instant = Instant.now();
-            List list = new ArrayList<>();
-            Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
-            StoredBlock storedBlock = new StoredBlock(block, new BigInteger("0"), 0);
-            doReturn(storedBlock).when(blockStoreMock).getChainHead();
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            ReentrantLock reentrantLock = new ReentrantLock();
-            threading.when(() -> Threading.lock(AbstractBlockChain.class)).thenReturn(reentrantLock);
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            BlockChain target = spy(new BlockChain(networkMock, walletMock, blockStoreMock));
-            doReturn(0).when(target).getBestChainHeight();
-            //Act Statement(s)
-            target.rollbackBlockStore(0);
-            //Assert statement(s)
-            verify(blockStoreMock).getChainHead();
-            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            threading.verify(() -> Threading.lock(AbstractBlockChain.class), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
             verify(target).getBestChainHeight();
         }
@@ -284,16 +240,10 @@ public class BlockChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Network networkMock = mock(Network.class);
-        Wallet walletMock = mock(Wallet.class);
-        try (MockedStatic<Threading> threading = mockStatic(Threading.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 1);
             doReturn(storedBlock).when(blockStoreMock).getChainHead();
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(AbstractBlockChain.class)).thenReturn(null);
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
             BlockChain target = new BlockChain(networkMock, walletMock, blockStoreMock);
             //Act Statement(s)
             boolean result = target.shouldVerifyTransactions();
@@ -301,7 +251,6 @@ public class BlockChainSapientGeneratedJunit4Test {
             assertThat(result, equalTo(Boolean.FALSE));
             verify(blockStoreMock).getChainHead();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            threading.verify(() -> Threading.lock(AbstractBlockChain.class), atLeast(1));
         }
     }
 
@@ -314,26 +263,17 @@ public class BlockChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Network networkMock = mock(Network.class, "{}");
-        Wallet walletMock = mock(Wallet.class, "{}");
-        try (MockedStatic<Threading> threading = mockStatic(Threading.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 1);
             doReturn(storedBlock).when(blockStoreMock).getChainHead();
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
-            ReentrantLock reentrantLock = Threading.lock(AbstractBlockChain.class);
-            threading.when(() -> Threading.lock(AbstractBlockChain.class)).thenReturn(reentrantLock);
             BlockChain target = new BlockChain(networkMock, walletMock, blockStoreMock);
             thrown.expect(UnsupportedOperationException.class);
-            Instant instant = Instant.now();
-            List list = new ArrayList<>();
-            Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
             //Act Statement(s)
-            target.connectTransactions(10, block);
+            target.connectTransactions(0, blockMock2);
             //Assert statement(s)
             verify(blockStoreMock).getChainHead();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            threading.verify(() -> Threading.lock(AbstractBlockChain.class), atLeast(1));
         }
     }
 
@@ -346,24 +286,17 @@ public class BlockChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Network networkMock = mock(Network.class, "{}");
-        Wallet walletMock = mock(Wallet.class, "{}");
-        try (MockedStatic<Threading> threading = mockStatic(Threading.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 1);
             doReturn(storedBlock).when(blockStoreMock).getChainHead();
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
-            ReentrantLock reentrantLock = Threading.lock(AbstractBlockChain.class);
-            threading.when(() -> Threading.lock(AbstractBlockChain.class)).thenReturn(reentrantLock);
             BlockChain target = new BlockChain(networkMock, walletMock, blockStoreMock);
             thrown.expect(UnsupportedOperationException.class);
-            StoredBlock storedBlock2 = new StoredBlock(blockMock2, new BigInteger("0"), 0);
             //Act Statement(s)
-            target.connectTransactions(storedBlock2);
+            target.connectTransactions(storedBlockMock);
             //Assert statement(s)
             verify(blockStoreMock).getChainHead();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            threading.verify(() -> Threading.lock(AbstractBlockChain.class), atLeast(1));
         }
     }
 
@@ -376,17 +309,10 @@ public class BlockChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Network networkMock = mock(Network.class);
-        Wallet walletMock = mock(Wallet.class);
-        StoredBlock storedBlockMock = mock(StoredBlock.class);
-        try (MockedStatic<Threading> threading = mockStatic(Threading.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 1);
             doReturn(storedBlock).when(blockStoreMock).getChainHead();
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(AbstractBlockChain.class)).thenReturn(null);
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
             BlockChain target = new BlockChain(networkMock, walletMock, blockStoreMock);
             thrown.expect(UnsupportedOperationException.class);
             //Act Statement(s)
@@ -394,7 +320,6 @@ public class BlockChainSapientGeneratedJunit4Test {
             //Assert statement(s)
             verify(blockStoreMock).getChainHead();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            threading.verify(() -> Threading.lock(AbstractBlockChain.class), atLeast(1));
         }
     }
 
@@ -407,29 +332,18 @@ public class BlockChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Network networkMock = mock(Network.class, "MAIN");
-        Wallet walletMock = mock(Wallet.class, "{}");
-        try (MockedStatic<Threading> threading = mockStatic(Threading.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 1);
             doReturn(storedBlock).when(blockStoreMock).getChainHead();
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(AbstractBlockChain.class)).thenReturn(null);
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
             BlockChain target = new BlockChain(networkMock, walletMock, blockStoreMock);
-            Instant instant = Instant.now();
-            List list = new ArrayList<>();
-            Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
-            StoredBlock storedBlock2 = new StoredBlock(block, new BigInteger("0"), 0);
-            doNothing().when(blockStoreMock).setChainHead(storedBlock2);
+            doNothing().when(blockStoreMock).setChainHead(storedBlockMock);
             //Act Statement(s)
-            target.doSetChainHead(storedBlock2);
+            target.doSetChainHead(storedBlockMock);
             //Assert statement(s)
             verify(blockStoreMock).getChainHead();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            threading.verify(() -> Threading.lock(AbstractBlockChain.class), atLeast(1));
-            verify(blockStoreMock).setChainHead(storedBlock2);
+            verify(blockStoreMock).setChainHead(storedBlockMock);
         }
     }
 
@@ -442,26 +356,18 @@ public class BlockChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Network networkMock = mock(Network.class);
-        Wallet walletMock = mock(Wallet.class);
-        try (MockedStatic<Threading> threading = mockStatic(Threading.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 1);
             doReturn(storedBlock).when(blockStoreMock).getChainHead();
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            //TODO: Needs to return real value
-            threading.when(() -> Threading.lock(AbstractBlockChain.class)).thenReturn(null);
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
             BlockChain target = new BlockChain(networkMock, walletMock, blockStoreMock);
-            StoredBlock storedBlock2 = new StoredBlock(blockMock2, new BigInteger("0"), 0);
-            doReturn(storedBlock2).when(blockStoreMock).get(sha256HashMock);
+            doReturn(storedBlockMock).when(blockStoreMock).get(sha256HashMock);
             //Act Statement(s)
             StoredBlock result = target.getStoredBlockInCurrentScope(sha256HashMock);
             //Assert statement(s)
-            assertThat(result, equalTo(storedBlock2));
+            assertThat(result, equalTo(storedBlockMock));
             verify(blockStoreMock).getChainHead();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            threading.verify(() -> Threading.lock(AbstractBlockChain.class), atLeast(1));
             verify(blockStoreMock).get(sha256HashMock);
         }
     }
@@ -478,28 +384,17 @@ public class BlockChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        FilteredBlock blockMock = mock(FilteredBlock.class, "int");
-        Block block2Mock = mock(Block.class);
-        try (MockedStatic<Threading> threading = mockStatic(Threading.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            Instant instant = Instant.now();
-            List list = new ArrayList<>();
-            Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
-            doReturn(block).when(blockMock).getBlockHeader();
-            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
+        FilteredBlock blockMock = mock(FilteredBlock.class);
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            doReturn(blockMock2).when(blockMock).getBlockHeader();
             List<Sha256Hash> sha256HashList = new ArrayList<>();
-            sha256HashList.add(sha256Hash);
             doReturn(sha256HashList).when(blockMock).getTransactionHashes();
             Map<Sha256Hash, Transaction> sha256HashTransactionMap = new HashMap<>();
             doReturn(sha256HashTransactionMap).when(blockMock).getAssociatedTransactions();
-            doReturn(0).when(blockMock).getTransactionCount();
-            StoredBlock storedBlock = new StoredBlock(block2Mock, new BigInteger("0"), 0);
+            doReturn(-68).when(blockMock).getTransactionCount();
+            StoredBlock storedBlock = new StoredBlock(blockMock2, new BigInteger("0"), -68);
             doReturn(storedBlock).when(blockStoreMock).getChainHead();
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            ReentrantLock reentrantLock = new ReentrantLock();
-            threading.when(() -> Threading.lock(AbstractBlockChain.class)).thenReturn(reentrantLock);
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
             BlockChain target = new BlockChain(networkMock, walletMock, blockStoreMock);
             //Act Statement(s)
             boolean result = target.add(blockMock);
@@ -511,7 +406,6 @@ public class BlockChainSapientGeneratedJunit4Test {
             verify(blockMock).getTransactionCount();
             verify(blockStoreMock).getChainHead();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            threading.verify(() -> Threading.lock(AbstractBlockChain.class), atLeast(1));
         }
     }
 
@@ -527,24 +421,27 @@ public class BlockChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<Threading> threading = mockStatic(Threading.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
+        FilteredBlock blockMock = mock(FilteredBlock.class);
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            doReturn(blockMock2).when(blockMock).getBlockHeader();
+            List<Sha256Hash> sha256HashList = new ArrayList<>();
+            doReturn(sha256HashList).when(blockMock).getTransactionHashes();
+            Map<Sha256Hash, Transaction> sha256HashTransactionMap = new HashMap<>();
+            doReturn(sha256HashTransactionMap).when(blockMock).getAssociatedTransactions();
+            StoredBlock storedBlock = new StoredBlock(blockMock2, new BigInteger("0"), 1);
             doReturn(storedBlock).when(blockStoreMock).getChainHead();
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            ReentrantLock reentrantLock = new ReentrantLock();
-            threading.when(() -> Threading.lock(AbstractBlockChain.class)).thenReturn(reentrantLock);
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
             BlockChain target = new BlockChain(networkMock, walletMock, blockStoreMock);
             thrown.expect(RuntimeException.class);
-            thrown.expectCause(isA(BlockStoreException.class));
-            FilteredBlock filteredBlock = new FilteredBlock(blockMock2, partialMerkleTreeMock);
+            thrown.expectCause(is(instanceOf(BlockStoreException.class)));
             //Act Statement(s)
-            target.add(filteredBlock);
+            target.add(blockMock);
             //Assert statement(s)
+            verify(blockMock).getBlockHeader();
+            verify(blockMock).getTransactionHashes();
+            verify(blockMock).getAssociatedTransactions();
             verify(blockStoreMock).getChainHead();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            threading.verify(() -> Threading.lock(AbstractBlockChain.class), atLeast(1));
         }
     }
 
@@ -562,25 +459,32 @@ public class BlockChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Network networkMock = mock(Network.class, "null");
-        Wallet walletMock = mock(Wallet.class, "null");
-        try (MockedStatic<Threading> threading = mockStatic(Threading.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
+        FilteredBlock blockMock = mock(FilteredBlock.class, "add_filteredBlock1");
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            doReturn(blockMock2).when(blockMock).getBlockHeader();
+            doReturn(sha256HashMock).when(blockMock2).getHash();
+            doReturn(new BigInteger("0")).when(blockMock2).getDifficultyTargetAsInteger();
+            List<Sha256Hash> sha256HashList = new ArrayList<>();
+            doReturn(sha256HashList).when(blockMock).getTransactionHashes();
+            Map<Sha256Hash, Transaction> sha256HashTransactionMap = new HashMap<>();
+            doReturn(sha256HashTransactionMap).when(blockMock).getAssociatedTransactions();
+            doReturn(sha256HashMock2).when(blockMock).getHash();
+            StoredBlock storedBlock = new StoredBlock(blockMock3, new BigInteger("0"), 0);
             doReturn(storedBlock).when(blockStoreMock).getChainHead();
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            ReentrantLock reentrantLock = new ReentrantLock();
-            threading.when(() -> Threading.lock(AbstractBlockChain.class)).thenReturn(reentrantLock);
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
             BlockChain target = new BlockChain(networkMock, walletMock, blockStoreMock);
             thrown.expect(VerificationException.class);
-            FilteredBlock filteredBlock = new FilteredBlock(blockMock2, partialMerkleTreeMock);
             //Act Statement(s)
-            target.add(filteredBlock);
+            target.add(blockMock);
             //Assert statement(s)
+            verify(blockMock).getBlockHeader();
+            verify(blockMock2).getHash();
+            verify(blockMock2).getDifficultyTargetAsInteger();
+            verify(blockMock).getTransactionHashes();
+            verify(blockMock).getAssociatedTransactions();
+            verify(blockMock).getHash();
             verify(blockStoreMock).getChainHead();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            threading.verify(() -> Threading.lock(AbstractBlockChain.class), atLeast(1));
         }
     }
 
@@ -599,28 +503,18 @@ public class BlockChainSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         FilteredBlock blockMock = mock(FilteredBlock.class);
-        Network networkMock = mock(Network.class);
-        Wallet walletMock = mock(Wallet.class);
-        try (MockedStatic<Threading> threading = mockStatic(Threading.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             doReturn(blockMock2).when(blockMock).getBlockHeader();
-            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
-            doReturn(sha256Hash).when(blockMock2).getHash();
-            doReturn(new BigInteger("0")).when(blockMock2).getDifficultyTargetAsInteger();
-            ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
-            Sha256Hash sha256Hash2 = Sha256Hash.read(byteBuffer2);
+            doReturn(sha256HashMock).when(blockMock2).getHash();
+            doReturn(new BigInteger("2147483647")).when(blockMock2).getDifficultyTargetAsInteger();
             List<Sha256Hash> sha256HashList = new ArrayList<>();
-            sha256HashList.add(sha256Hash2);
             doReturn(sha256HashList).when(blockMock).getTransactionHashes();
             Map<Sha256Hash, Transaction> sha256HashTransactionMap = new HashMap<>();
             doReturn(sha256HashTransactionMap).when(blockMock).getAssociatedTransactions();
-            StoredBlock storedBlock = new StoredBlock(blockMock3, new BigInteger("0"), 0);
+            StoredBlock storedBlock = new StoredBlock(blockMock3, new BigInteger("0"), 1);
             doReturn(storedBlock).when(blockStoreMock).getChainHead();
             NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            ReentrantLock reentrantLock = new ReentrantLock();
-            threading.when(() -> Threading.lock(AbstractBlockChain.class)).thenReturn(reentrantLock);
             BlockChain target = new BlockChain(networkMock, walletMock, blockStoreMock);
             thrown.expect(NullPointerException.class);
             //Act Statement(s)
@@ -633,7 +527,6 @@ public class BlockChainSapientGeneratedJunit4Test {
             verify(blockMock).getAssociatedTransactions();
             verify(blockStoreMock).getChainHead();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            threading.verify(() -> Threading.lock(AbstractBlockChain.class), atLeast(1));
         }
     }
 
@@ -652,23 +545,32 @@ public class BlockChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<Threading> threading = mockStatic(Threading.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
+        FilteredBlock blockMock = mock(FilteredBlock.class, "add_filteredBlock1");
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            doReturn(blockMock2).when(blockMock).getBlockHeader();
+            doReturn(sha256HashMock).when(blockMock2).getHash();
+            doReturn(new BigInteger("0")).when(blockMock2).getDifficultyTargetAsInteger();
+            List<Sha256Hash> sha256HashList = new ArrayList<>();
+            doReturn(sha256HashList).when(blockMock).getTransactionHashes();
+            Map<Sha256Hash, Transaction> sha256HashTransactionMap = new HashMap<>();
+            doReturn(sha256HashTransactionMap).when(blockMock).getAssociatedTransactions();
+            doReturn(sha256HashMock2).when(blockMock).getHash();
+            StoredBlock storedBlock = new StoredBlock(blockMock3, new BigInteger("0"), 0);
             doReturn(storedBlock).when(blockStoreMock).getChainHead();
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            ReentrantLock reentrantLock = new ReentrantLock();
-            threading.when(() -> Threading.lock(AbstractBlockChain.class)).thenReturn(reentrantLock);
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
             BlockChain target = new BlockChain(networkMock, walletMock, blockStoreMock);
             thrown.expect(VerificationException.class);
-            FilteredBlock filteredBlock = new FilteredBlock(blockMock2, partialMerkleTreeMock);
             //Act Statement(s)
-            target.add(filteredBlock);
+            target.add(blockMock);
             //Assert statement(s)
+            verify(blockMock).getBlockHeader();
+            verify(blockMock2).getHash();
+            verify(blockMock2).getDifficultyTargetAsInteger();
+            verify(blockMock).getTransactionHashes();
+            verify(blockMock).getAssociatedTransactions();
+            verify(blockMock).getHash();
             verify(blockStoreMock).getChainHead();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            threading.verify(() -> Threading.lock(AbstractBlockChain.class), atLeast(1));
         }
     }
 
@@ -687,24 +589,31 @@ public class BlockChainSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<Threading> threading = mockStatic(Threading.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
+        FilteredBlock blockMock = mock(FilteredBlock.class);
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            doReturn(blockMock2).when(blockMock).getBlockHeader();
+            doReturn(sha256HashMock).when(blockMock2).getHash();
+            doReturn(new BigInteger("0")).when(blockMock2).getDifficultyTargetAsInteger();
+            List<Sha256Hash> sha256HashList = new ArrayList<>();
+            doReturn(sha256HashList).when(blockMock).getTransactionHashes();
+            Map<Sha256Hash, Transaction> sha256HashTransactionMap = new HashMap<>();
+            doReturn(sha256HashTransactionMap).when(blockMock).getAssociatedTransactions();
+            StoredBlock storedBlock = new StoredBlock(blockMock3, new BigInteger("0"), 0);
             doReturn(storedBlock).when(blockStoreMock).getChainHead();
-            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParameters2);
-            ReentrantLock reentrantLock = new ReentrantLock();
-            threading.when(() -> Threading.lock(AbstractBlockChain.class)).thenReturn(reentrantLock);
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
             BlockChain target = new BlockChain(networkMock, walletMock, blockStoreMock);
             thrown.expect(RuntimeException.class);
-            thrown.expectCause(isA(BlockStoreException.class));
-            FilteredBlock filteredBlock = new FilteredBlock(blockMock2, partialMerkleTreeMock);
+            thrown.expectCause(is(instanceOf(BlockStoreException.class)));
             //Act Statement(s)
-            target.add(filteredBlock);
+            target.add(blockMock);
             //Assert statement(s)
+            verify(blockMock).getBlockHeader();
+            verify(blockMock2).getHash();
+            verify(blockMock2).getDifficultyTargetAsInteger();
+            verify(blockMock).getTransactionHashes();
+            verify(blockMock).getAssociatedTransactions();
             verify(blockStoreMock).getChainHead();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            threading.verify(() -> Threading.lock(AbstractBlockChain.class), atLeast(1));
         }
     }
 }

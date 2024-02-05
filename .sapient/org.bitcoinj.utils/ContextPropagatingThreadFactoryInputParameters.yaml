@@ -17,12 +17,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "CCD961892C9C33ED306D779BD2DED0CB"
+    modelFingerprint: "CE75FF3AC9A142B0AA85631596AD13FD"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "F1E3898CECF1C2FEF34409D327904A40"
+      modelFingerprint: "0E6404401EAEE6310F19A797BF4D245B"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -36,9 +36,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "Thread"
+                value: "<String value>"
               suggestedContent: !<regular>
-                value: "Thread"
+                value: "<String value>"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -48,9 +48,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 5
-              suggestedContent: !<regular>
-                value: 5
+                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -65,9 +63,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "Thread"
+                value: "<String value>"
               suggestedContent: !<regular>
-                value: "Thread"
+                value: "<String value>"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -76,10 +74,6 @@ methods:
           - name: "priority"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 5
-              suggestedContent: !<regular>
-                value: 5
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -149,7 +143,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "8BB21CDDF8F61791807EA27A6E332013"
+      modelFingerprint: "CECB7A98C5A8E6B14CC009DA0399D003"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -167,7 +161,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

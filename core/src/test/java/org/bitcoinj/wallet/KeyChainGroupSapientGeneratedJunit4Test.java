@@ -64,6 +64,9 @@ import static org.mockito.Mockito.mockStatic;
 import org.junit.Ignore;
 
 import java.util.Arrays;
+import java.util.LinkedList;
+
+import static org.hamcrest.Matchers.containsInRelativeOrder;
 
 public class KeyChainGroupSapientGeneratedJunit4Test {
 
@@ -126,6 +129,8 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
     public ExpectedException thrown = ExpectedException.none();
 
     private final DeterministicSeed deterministicSeedMock = mock(DeterministicSeed.class);
+
+    private final Script scriptMock = mock(Script.class);
 
     //Sapient generated method id: ${2db419e2-4303-3e7b-b012-60022e96fe83}
     @Test()
@@ -214,13 +219,20 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (chains != null) : true
          */
         //Arrange Statement(s)
+        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "<value>");
+        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "<value>");
+        Network networkMock = mock(Network.class, "<value>");
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
+            Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
+            protosKeyList.add(key);
             KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
             //Act Statement(s)
             boolean result = target.supportsDeterministicChains();
@@ -228,6 +240,8 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             assertThat(result, equalTo(Boolean.TRUE));
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
         }
     }
 
@@ -237,20 +251,22 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
     public void supportsDeterministicChainsWhenChainsIsNull() throws UnreadableWalletException {
         /* Branches:
          * (chains != null) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
             //Act Statement(s)
             boolean result = target.supportsDeterministicChains();
             //Assert statement(s)
-            assertThat(result, equalTo(Boolean.TRUE));
+            assertThat(result, equalTo(Boolean.FALSE));
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
         }
@@ -270,6 +286,8 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             doReturn(true).when(target).supportsDeterministicChains();
@@ -279,6 +297,8 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             assertThat(result, equalTo(Boolean.TRUE));
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             verify(target).supportsDeterministicChains();
         }
     }
@@ -289,13 +309,15 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
     public void isSupportsDeterministicChainsWhenSupportsDeterministicChainsNot() throws UnreadableWalletException {
         /* Branches:
          * (supportsDeterministicChains()) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
@@ -328,10 +350,7 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        DeterministicKeyChain chainMock = mock(DeterministicKeyChain.class, "DeterministicKeyChain");
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "KeyCrypter");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "KeyChainFactory");
-        Network networkMock = mock(Network.class, "Network");
+        DeterministicKeyChain chainMock = mock(DeterministicKeyChain.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
@@ -340,12 +359,9 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             doNothing().when(chainMock).setLookaheadThreshold(0);
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
             preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
-            protosKeyList.add(key);
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             doReturn(false).when(target).supportsDeterministicChains();
             //Act Statement(s)
@@ -361,24 +377,59 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
         }
     }
 
+    //Sapient generated method id: ${addd6cbb-dbea-315e-bfe0-fbb6209e47e4}
+    @Test()
+    public void addAndActivateHDChainWhenBasicGetListenersIsEmptyAndLookaheadSizeLessThan0AndLookaheadThresholdLessThan0AndCurrentKeyCh() throws UnreadableWalletException {
+        /* Branches:
+         * (for-each(basic.getListeners())) : false
+         * (lookaheadSize >= 0) : false
+         * (lookaheadThreshold >= 0) : false
+         * (for-each(currentKeyChangeListeners)) : false  #  inside queueOnCurrentKeyChanged method
+         *
+         * TODO: Help needed! This method is not unit testable!
+         *  Following variables could not be isolated/mocked: basic
+         *  Suggestions:
+         *  You can change the initialization of above variables and make it injectable or
+         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
+            List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
+            deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            List<Protos.Key> protosKeyList = new ArrayList<>();
+            KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
+            doReturn(false).when(target).supportsDeterministicChains();
+            //Act Statement(s)
+            target.addAndActivateHDChain(deterministicKeyChainMock);
+            //Assert statement(s)
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
+            deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
+            verify(target).supportsDeterministicChains();
+        }
+    }
+
     //Sapient generated method id: ${1dfc1bae-6da8-39ed-8e8e-10c11856d532}
     @Ignore()
     @Test()
     public void currentKeyWhenCurrentIsNull() throws UnreadableWalletException {
         /* Branches:
          * (current == null) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "null");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "KeyChainFactory");
-        Network networkMock = mock(Network.class, "MAIN");
-        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             doReturn(deterministicKeyChainMock).when(target).getActiveKeyChain();
@@ -387,7 +438,10 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             DeterministicKey result = target.currentKey(KeyChain.KeyPurpose.RECEIVE_FUNDS);
             //Assert statement(s)
             assertThat(result, equalTo(deterministicKeyMock));
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             verify(target).getActiveKeyChain();
             verify(target).freshKey(KeyChain.KeyPurpose.RECEIVE_FUNDS);
         }
@@ -402,14 +456,21 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (outputScriptType == ScriptType.P2WPKH) : true
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "null");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "{}");
-        Network networkMock = mock(Network.class, "org.bitcoinj.params.MainNetParams@4d8f7e27");
-        Address addressMock = mock(Address.class, "{}");
-        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
+        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "KeyCrypter");
+        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "KeyChainFactory");
+        Network networkMock = mock(Network.class, "Network");
+        Address addressMock = mock(Address.class, "Address");
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
+            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
+            Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
+            protosKeyList.add(key);
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             DeterministicKeyChain deterministicKeyChain2 = DeterministicKeyChain.builder().outputScriptType(ScriptType.P2WPKH).build();
             doReturn(deterministicKeyChain2).when(target).getActiveKeyChain();
@@ -419,7 +480,10 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             Address result = target.currentAddress(KeyChain.KeyPurpose.RECEIVE_FUNDS);
             //Assert statement(s)
             assertThat(result, equalTo(addressMock));
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             verify(target).getActiveKeyChain();
             verify(target).currentKey(KeyChain.KeyPurpose.RECEIVE_FUNDS);
             verify(deterministicKeyMock).toAddress(ScriptType.P2WPKH, networkMock);
@@ -441,6 +505,8 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             DeterministicKeyChain deterministicKeyChain2 = DeterministicKeyChain.builder().outputScriptType(ScriptType.P2TR).build();
@@ -453,6 +519,8 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             //Assert statement(s)
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             verify(target).getActiveKeyChain();
         }
     }
@@ -462,15 +530,17 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
     @Test()
     public void freshKeyTest() throws UnreadableWalletException {
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "KeyCrypter");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "KeyChainFactory");
-        Network networkMock = mock(Network.class, "Network");
+        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "BasicKeyChain");
+        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "int");
+        Network networkMock = mock(Network.class, "HDPath");
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
             protosKeyList.add(key);
@@ -484,6 +554,8 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             assertThat(result, equalTo(deterministicKeyMock));
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             verify(target).freshKeys(KeyChain.KeyPurpose.RECEIVE_FUNDS, 1);
         }
     }
@@ -493,30 +565,24 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
     @Test()
     public void freshKeysTest() throws UnreadableWalletException {
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "<value>");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "<value>");
-        Network networkMock = mock(Network.class, "<value>");
-        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
-             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
-            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
+        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "{}");
+        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "{}");
+        Network networkMock = mock(Network.class, "MAINNET");
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
-            protosKeyList.add(key);
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             doReturn(deterministicKeyChainMock).when(target).getActiveKeyChain();
             List<DeterministicKey> deterministicKeyList = new ArrayList<>();
-            doReturn(deterministicKeyList).when(deterministicKeyChainMock).getKeys(KeyChain.KeyPurpose.RECEIVE_FUNDS, 1);
+            doReturn(deterministicKeyList).when(deterministicKeyChainMock).getKeys(KeyChain.KeyPurpose.RECEIVE_FUNDS, 5);
             //Act Statement(s)
-            List<DeterministicKey> result = target.freshKeys(KeyChain.KeyPurpose.RECEIVE_FUNDS, 1);
+            List<DeterministicKey> result = target.freshKeys(KeyChain.KeyPurpose.RECEIVE_FUNDS, 5);
             //Assert statement(s)
             assertThat(result, equalTo(deterministicKeyList));
-            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
             verify(target).getActiveKeyChain();
-            verify(deterministicKeyChainMock).getKeys(KeyChain.KeyPurpose.RECEIVE_FUNDS, 1);
+            verify(deterministicKeyChainMock).getKeys(KeyChain.KeyPurpose.RECEIVE_FUNDS, 5);
         }
     }
 
@@ -529,32 +595,32 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (outputScriptType == ScriptType.P2WPKH) : true
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "<KeyCrypter>");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "<KeyChainFactory>");
-        Network networkMock = mock(Network.class, "<Network>");
-        Address addressMock = mock(Address.class);
-        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
-             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
-            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
+        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "null");
+        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "org.bitcoinj.wallet.BasicKeyChainFactory@7f31245a");
+        Network networkMock = mock(Network.class, "org.bitcoinj.params.MainNetParams@4f3f5b24");
+        Address addressMock = mock(Address.class, "org.bitcoinj.core.Address");
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
+            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            Protos.Key key = Protos.Key.getDefaultInstance();
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             List<Protos.Key> protosKeyList = new ArrayList<>();
-            protosKeyList.add(key);
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
-            DeterministicKeyChain deterministicKeyChain2 = DeterministicKeyChain.builder().outputScriptType(ScriptType.P2PKH).build();
+            DeterministicKeyChain deterministicKeyChain2 = DeterministicKeyChain.builder().outputScriptType(ScriptType.P2WPKH).build();
             doReturn(deterministicKeyChain2).when(target).getActiveKeyChain();
             doReturn(deterministicKeyMock).when(target).freshKey(KeyChain.KeyPurpose.RECEIVE_FUNDS);
-            doReturn(addressMock).when(deterministicKeyMock).toAddress(ScriptType.P2PKH, networkMock);
+            doReturn(addressMock).when(deterministicKeyMock).toAddress(ScriptType.P2WPKH, networkMock);
             //Act Statement(s)
             Address result = target.freshAddress(KeyChain.KeyPurpose.RECEIVE_FUNDS);
             //Assert statement(s)
             assertThat(result, equalTo(addressMock));
-            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             verify(target).getActiveKeyChain();
             verify(target).freshKey(KeyChain.KeyPurpose.RECEIVE_FUNDS);
-            verify(deterministicKeyMock).toAddress(ScriptType.P2PKH, networkMock);
+            verify(deterministicKeyMock).toAddress(ScriptType.P2WPKH, networkMock);
         }
     }
 
@@ -565,28 +631,61 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
         /* Branches:
          * (outputScriptType == ScriptType.P2PKH) : false
          * (outputScriptType == ScriptType.P2WPKH) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        DeterministicKeyChain deterministicKeyChain2Mock = mock(DeterministicKeyChain.class, "DeterministicKeyChain{seed=Unencrypted seed: 000102030405060708090a0b0c0d0e0f, path=M/0H, outputScriptType=P2SH_P2WPKH, lookaheadSize=5, numChildren=0, purpose=RECEIVE_FUNDS, issuedExternalKeys=0, issuedInternalKeys=0, lookaheadThreshold=100, isFollowing=false, isMarried=false}");
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "null");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "org.bitcoinj.wallet.DefaultKeyChainFactory@6d311334");
-        Network networkMock = mock(Network.class, "org.bitcoinj.params.MainNetParams@4f3f5b24");
-        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
-            DeterministicKeyChain deterministicKeyChain2 = DeterministicKeyChain.builder().outputScriptType(ScriptType.P2TR).build();
+            DeterministicKeyChain deterministicKeyChain2 = DeterministicKeyChain.builder().outputScriptType(ScriptType.P2PKH).build();
             doReturn(deterministicKeyChain2).when(target).getActiveKeyChain();
-            IllegalStateException illegalStateException = new IllegalStateException("P2TR");
+            IllegalStateException illegalStateException = new IllegalStateException("s1");
             thrown.expect(IllegalStateException.class);
             thrown.expectMessage(illegalStateException.getMessage());
             //Act Statement(s)
             target.freshAddress(KeyChain.KeyPurpose.RECEIVE_FUNDS);
             //Assert statement(s)
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
             verify(target).getActiveKeyChain();
+        }
+    }
+
+    //Sapient generated method id: ${dc9d289b-c5e5-37c9-aecb-83b47131ea64}
+    @Test()
+    public void getActiveKeyChainsWhenChainsIsEmpty() throws UnreadableWalletException {
+        /* Branches:
+         * (for-each(chains)) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
+            List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
+            deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            List<Protos.Key> protosKeyList = new ArrayList<>();
+            KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
+            doReturn(false).when(target).supportsDeterministicChains();
+            Instant instant = Instant.now();
+            //Act Statement(s)
+            List<DeterministicKeyChain> result = target.getActiveKeyChains(instant);
+            //Assert statement(s)
+            assertThat(result.size(), equalTo(0));
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
+            deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
+            verify(target).supportsDeterministicChains();
         }
     }
 
@@ -598,34 +697,33 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (for-each(chains)) : true
          * (keyRotationTime == null) : false
          * (chain.earliestKeyCreationTime().compareTo(keyRotationTime) >= 0) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "<value>");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "<value>");
-        Network networkMock = mock(Network.class, "<value>");
+        DeterministicKeyChain deterministicKeyChain2Mock = mock(DeterministicKeyChain.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            //TODO: Needs to return real value
-            doReturn(null).when(deterministicKeyChain2Mock).earliestKeyCreationTime();
             preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
-            protosKeyList.add(key);
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             doReturn(false).when(target).supportsDeterministicChains();
-            thrown.expect(NullPointerException.class);
             Instant instant = Instant.now();
             //Act Statement(s)
-            target.getActiveKeyChains(instant);
+            List<DeterministicKeyChain> result = target.getActiveKeyChains(instant);
+            List<DeterministicKeyChain> deterministicKeyChainResultList = new LinkedList<>();
+            deterministicKeyChainResultList.add(deterministicKeyChain2Mock);
             //Assert statement(s)
+            assertThat(result.size(), equalTo(deterministicKeyChainResultList.size()));
+            //TODO: Please implement equals method in Collection for verification to succeed or you need to adjust respective assertion statements
+            assertThat(result, containsInRelativeOrder(deterministicKeyChainResultList.toArray()));
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
-            verify(deterministicKeyChain2Mock).earliestKeyCreationTime();
             preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
             verify(target).supportsDeterministicChains();
         }
@@ -639,13 +737,20 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (keyRotationTimeSecs > 0) : true
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "{}");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "{}");
-        Network networkMock = mock(Network.class, "{}");
-        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
+        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "HDPath");
+        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "int");
+        Network networkMock = mock(Network.class, "DeterministicKey");
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
+            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
+            Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
+            protosKeyList.add(key);
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             List<DeterministicKeyChain> deterministicKeyChainList2 = new ArrayList<>();
             doReturn(deterministicKeyChainList2).when(target).getActiveKeyChains((Instant) any());
@@ -653,7 +758,10 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             List<DeterministicKeyChain> result = target.getActiveKeyChains(10L);
             //Assert statement(s)
             assertThat(result, equalTo(deterministicKeyChainList2));
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             verify(target).getActiveKeyChains((Instant) any());
         }
     }
@@ -666,14 +774,20 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (keyRotationTimeSecs > 0) : false
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "null");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "null");
-        Network networkMock = mock(Network.class, "null");
-        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
+        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "KeyCrypter");
+        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "KeyChainFactory");
+        Network networkMock = mock(Network.class, "Network");
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
+            Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
+            protosKeyList.add(key);
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             List<DeterministicKeyChain> deterministicKeyChainList2 = new ArrayList<>();
             doReturn(deterministicKeyChainList2).when(target).getActiveKeyChains((Instant) null);
@@ -681,7 +795,10 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             List<DeterministicKeyChain> result = target.getActiveKeyChains(0L);
             //Assert statement(s)
             assertThat(result, equalTo(deterministicKeyChainList2));
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             verify(target).getActiveKeyChains((Instant) null);
         }
     }
@@ -693,16 +810,19 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (for-each(chainsReversed)) : false
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "Scrypt");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "BasicKeyChainFactory");
-        Network networkMock = mock(Network.class, "MAINNET");
+        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "AES");
+        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "DEFAULT");
+        Network networkMock = mock(Network.class, "MAIN");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
+             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
             preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
+            protosKeyList.add(key);
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             doReturn(false).when(target).supportsDeterministicChains();
             Instant instant = Instant.now();
@@ -710,6 +830,7 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             DeterministicKeyChain result = target.getActiveKeyChain(ScriptType.P2PKH, instant);
             //Assert statement(s)
             assertThat(result, is(nullValue()));
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
             preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
             verify(target).supportsDeterministicChains();
@@ -724,9 +845,9 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (keyRotationTimeSecs > 0) : true
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "{}");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "{}");
-        Network networkMock = mock(Network.class, "MAINNET");
+        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "");
+        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "");
+        Network networkMock = mock(Network.class, "");
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
@@ -734,7 +855,7 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             doReturn(deterministicKeyChainMock).when(target).getActiveKeyChain(eq(ScriptType.P2PKH), (Instant) any());
             //Act Statement(s)
-            DeterministicKeyChain result = target.getActiveKeyChain(ScriptType.P2PKH, 1000L);
+            DeterministicKeyChain result = target.getActiveKeyChain(ScriptType.P2PKH, 1L);
             //Assert statement(s)
             assertThat(result, equalTo(deterministicKeyChainMock));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
@@ -750,26 +871,25 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (keyRotationTimeSecs > 0) : false
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "KeyCrypter");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "KeyChainFactory");
-        Network networkMock = mock(Network.class, "Network");
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            Protos.Key key = Protos.Key.getDefaultInstance();
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             List<Protos.Key> protosKeyList = new ArrayList<>();
-            protosKeyList.add(key);
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             doReturn(deterministicKeyChainMock).when(target).getActiveKeyChain(ScriptType.P2PKH, (Instant) null);
             //Act Statement(s)
-            DeterministicKeyChain result = target.getActiveKeyChain(ScriptType.P2PKH, 0L);
+            DeterministicKeyChain result = target.getActiveKeyChain(ScriptType.P2PKH, -1L);
             //Assert statement(s)
             assertThat(result, equalTo(deterministicKeyChainMock));
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             verify(target).getActiveKeyChain(ScriptType.P2PKH, (Instant) null);
         }
     }
@@ -779,6 +899,9 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
     public void getActiveKeyChain2WhenChainsIsEmptyThrowsDeterministicUpgradeRequiredException() throws UnreadableWalletException {
         /* Branches:
          * (chains.isEmpty()) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
@@ -786,16 +909,15 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
             preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             doReturn(false).when(target).supportsDeterministicChains();
+            thrown.expect(DeterministicUpgradeRequiredException.class);
             //Act Statement(s)
-            DeterministicKeyChain result = target.getActiveKeyChain();
+            target.getActiveKeyChain();
             //Assert statement(s)
-            assertThat(result, equalTo(deterministicKeyChain2Mock));
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
             preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
@@ -811,65 +933,66 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (chains.isEmpty()) : false
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "null");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "org.bitcoinj.wallet.BasicKeyChainFactory@7f31245a");
-        Network networkMock = mock(Network.class, "org.bitcoinj.params.MainNetParams@4e25154f");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
+             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
+            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             doReturn(false).when(target).supportsDeterministicChains();
-            thrown.expect(DeterministicUpgradeRequiredException.class);
             //Act Statement(s)
-            target.getActiveKeyChain();
+            DeterministicKeyChain result = target.getActiveKeyChain();
             //Assert statement(s)
+            assertThat(result, equalTo(deterministicKeyChain2Mock));
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
             verify(target).supportsDeterministicChains();
         }
     }
 
-    //Sapient generated method id: ${4e2d65fd-7050-3827-b040-a06370d6f22d}
+    //Sapient generated method id: ${83dec28c-44c7-3c86-8ce7-ee4b5cfd95f8}
     @Ignore()
     @Test()
-    public void mergeActiveKeyChainsWhenFromGetActiveKeyChainsKeyRotationTimeIsNotEmpty() throws UnreadableWalletException {
+    public void mergeActiveKeyChainsWhenIsEncryptedEqualsFromIsEncryptedThrowsIllegalArgumentException() throws UnreadableWalletException {
         /* Branches:
          * (isEncrypted() == from.isEncrypted()) : true
-         * (for-each(from.getActiveKeyChains(keyRotationTime))) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        KeyChainGroup fromMock = mock(KeyChainGroup.class, "{}");
-        DeterministicKeyChain deterministicKeyChain2Mock2 = mock(DeterministicKeyChain.class, "List<DeterministicKeyChain>");
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "{}");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "{}");
-        Network networkMock = mock(Network.class, "{}");
+        KeyChainGroup fromMock = mock(KeyChainGroup.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
+             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             doReturn(false).when(fromMock).isEncrypted();
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
-            doReturn(deterministicKeyChainList).when(fromMock).getActiveKeyChains((Instant) any());
-            List<DeterministicKeyChain> deterministicKeyChainList2 = new ArrayList<>();
-            deterministicKeyChainList2.add(deterministicKeyChain2Mock2);
-            deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList2);
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             doReturn(false).when(target).isEncrypted();
-            doNothing().when(target).addAndActivateHDChain(deterministicKeyChain2Mock);
+            thrown.expect(IllegalArgumentException.class);
             Instant instant = Instant.now();
             //Act Statement(s)
             target.mergeActiveKeyChains(fromMock, instant);
             //Assert statement(s)
             verify(fromMock).isEncrypted();
-            verify(fromMock).getActiveKeyChains((Instant) any());
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
             verify(target).isEncrypted();
-            verify(target).addAndActivateHDChain(deterministicKeyChain2Mock);
         }
     }
 
@@ -880,20 +1003,25 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (keyRotationTimeSecs > 0) : true
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "{}");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "{}");
-        Network networkMock = mock(Network.class, "{}");
+        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "null");
+        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "null");
+        Network networkMock = mock(Network.class, "null");
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
+            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             doNothing().when(target).mergeActiveKeyChains((KeyChainGroup) any(), (Instant) any());
             KeyChainGroup keyChainGroup = KeyChainGroup.createBasic(networkMock2);
             //Act Statement(s)
-            target.mergeActiveKeyChains(keyChainGroup, 10L);
+            target.mergeActiveKeyChains(keyChainGroup, 1L);
             //Assert statement(s)
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             verify(target).mergeActiveKeyChains((KeyChainGroup) any(), (Instant) any());
         }
     }
@@ -905,12 +1033,11 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (keyRotationTimeSecs > 0) : false
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "null");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "null");
-        Network networkMock = mock(Network.class, "null");
+        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "{}");
+        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "{}");
+        Network networkMock = mock(Network.class, "{}");
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
@@ -930,27 +1057,33 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
     public void getLookaheadSizeWhenLookaheadSizeEqualsMinus1() throws UnreadableWalletException {
         /* Branches:
          * (lookaheadSize == -1) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "null");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "HDPath");
-        Network networkMock = mock(Network.class, "mainnet");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
+             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
             preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             doReturn(false).when(target).supportsDeterministicChains();
+            DeterministicKeyChain deterministicKeyChain2 = DeterministicKeyChain.builder().build();
+            deterministicKeyChain2.setLookaheadSize(0);
+            doReturn(deterministicKeyChain2).when(target).getActiveKeyChain();
             //Act Statement(s)
             int result = target.getLookaheadSize();
             //Assert statement(s)
             assertThat(result, equalTo(0));
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
             preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
             verify(target).supportsDeterministicChains();
+            verify(target).getActiveKeyChain();
         }
     }
 
@@ -962,23 +1095,34 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (lookaheadSize == -1) : false
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "KeyCrypter");
+        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "password");
         KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "BasicKeyChainFactory");
-        Network networkMock = mock(Network.class, "Network");
+        Network networkMock = mock(Network.class, "MainNetParams");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
+             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            Protos.Key key = Protos.Key.getDefaultInstance();
+            Protos.Key key2 = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
+            protosKeyList.add(key);
+            protosKeyList.add(key2);
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             doReturn(false).when(target).supportsDeterministicChains();
             //Act Statement(s)
             int result = target.getLookaheadSize();
             //Assert statement(s)
             assertThat(result, equalTo(0));
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
             verify(target).supportsDeterministicChains();
         }
@@ -990,27 +1134,33 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
     public void getLookaheadThresholdWhenLookaheadThresholdEqualsMinus1() throws UnreadableWalletException {
         /* Branches:
          * (lookaheadThreshold == -1) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "KeyCrypterScrypt");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "BasicKeyChainFactory");
-        Network networkMock = mock(Network.class, "MAINNET");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
+             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
             preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             doReturn(false).when(target).supportsDeterministicChains();
+            DeterministicKeyChain deterministicKeyChain2 = DeterministicKeyChain.builder().build();
+            deterministicKeyChain2.setLookaheadThreshold(0);
+            doReturn(deterministicKeyChain2).when(target).getActiveKeyChain();
             //Act Statement(s)
             int result = target.getLookaheadThreshold();
             //Assert statement(s)
             assertThat(result, equalTo(0));
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
             preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
             verify(target).supportsDeterministicChains();
+            verify(target).getActiveKeyChain();
         }
     }
 
@@ -1020,15 +1170,16 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
     public void getLookaheadThresholdWhenLookaheadThresholdNotEqualsMinus1() throws UnreadableWalletException {
         /* Branches:
          * (lookaheadThreshold == -1) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "KeyCrypter");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "KeyChainFactory");
-        Network networkMock = mock(Network.class, "Network");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
+             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
             preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             List<Protos.Key> protosKeyList = new ArrayList<>();
@@ -1038,6 +1189,7 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             int result = target.getLookaheadThreshold();
             //Assert statement(s)
             assertThat(result, equalTo(0));
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
             preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
             verify(target).supportsDeterministicChains();
@@ -1061,7 +1213,6 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
@@ -1079,13 +1230,14 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
     @Test()
     public void importKeys1Test() throws UnreadableWalletException {
         /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
@@ -1107,10 +1259,6 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (keyCrypter != null) : true
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "<object>");
-        DeterministicKeyChain deterministicKeyChain2Mock = mock(DeterministicKeyChain.class, "<List<DeterministicKeyChain>>");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "<object>");
-        Network networkMock = mock(Network.class, "<string>");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
@@ -1118,11 +1266,11 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             IllegalStateException illegalStateException = new IllegalStateException();
             preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
-            Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
-            protosKeyList.add(key);
             KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
             thrown.expect(IllegalStateException.class);
             //Act Statement(s)
@@ -1130,6 +1278,8 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             //Assert statement(s)
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
         }
     }
@@ -1145,10 +1295,14 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Network networkMock = mock(Network.class, "<string>");
+        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "<string>");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             IllegalStateException illegalStateException = new IllegalStateException();
             preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
+            Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
+            protosKeyList.add(key);
             KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, (KeyCrypter) null, keyChainFactoryMock);
             thrown.expect(IllegalStateException.class);
             //Act Statement(s)
@@ -1284,6 +1438,34 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
         }
     }
 
+    //Sapient generated method id: ${d602b023-b831-3af4-8728-cd682dd30211}
+    @Test()
+    public void findRedeemDataFromScriptHashWhenIterNotHasNext() throws UnreadableWalletException {
+        /* Branches:
+         * (chains != null) : true
+         * (iter.hasNext()) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
+            List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
+            deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            List<Protos.Key> protosKeyList = new ArrayList<>();
+            KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
+            byte[] byteArray = new byte[]{};
+            //Act Statement(s)
+            RedeemData result = target.findRedeemDataFromScriptHash(byteArray);
+            //Assert statement(s)
+            assertThat(result, is(nullValue()));
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
+            deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+        }
+    }
+
     //Sapient generated method id: ${9bf10f2c-8325-326e-af7f-915a2125aa7b}
     @Ignore()
     @Test()
@@ -1297,17 +1479,17 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "null");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "null");
-        Network networkMock = mock(Network.class, "null");
-        Script scriptMock = mock(Script.class);
         try (MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
-             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
+             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             ByteString byteString2 = ByteString.empty();
-            byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3};
+            byte[] byteArray = new byte[]{};
             byteString.when(() -> ByteString.copyFrom(byteArray)).thenReturn(byteString2);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
@@ -1318,7 +1500,10 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             //Assert statement(s)
             //TODO: Please implement equals method in RedeemData for verification to succeed or you need to adjust respective assertion statements
             assertThat(result, equalTo(redeemData));
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             byteString.verify(() -> ByteString.copyFrom(byteArray), atLeast(1));
         }
     }
@@ -1331,45 +1516,84 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (chains != null) : true
          * (iter.hasNext()) : true
          * (redeemData != null) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "null");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "null");
-        Network networkMock = mock(Network.class, "null");
-        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
+        ByteString byteStringMock = mock(ByteString.class);
+        try (MockedStatic<ByteString> byteString = mockStatic(ByteString.class);
+             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            byte[] byteArray = new byte[]{};
+            byteString.when(() -> ByteString.copyFrom(byteArray)).thenReturn(byteStringMock);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
-            byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3};
             //Act Statement(s)
             RedeemData result = target.findRedeemDataFromScriptHash(byteArray);
             //Assert statement(s)
             assertThat(result, is(nullValue()));
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            byteString.verify(() -> ByteString.copyFrom(byteArray), atLeast(1));
         }
     }
 
-    //Sapient generated method id: ${feeddffe-ca8a-3294-a802-a756b6c5a819}
-    @Ignore()
+    //Sapient generated method id: ${6cfdb038-ea1f-3d38-9757-75f822f279fc}
     @Test()
-    public void markP2SHAddressAsUsedWhenAddressGetOutputScriptTypeNotEqualsScriptTypeP2SHAndDataIsNull() throws UnreadableWalletException {
+    public void markP2SHAddressAsUsedWhenAddressGetOutputScriptTypeNotEqualsScriptTypeP2SHThrowsIllegalArgumentException() throws UnreadableWalletException {
         /* Branches:
          * (address.getOutputScriptType() == ScriptType.P2SH) : false
-         * (data == null) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
-            doReturn(ScriptType.P2TR).when(addressMock).getOutputScriptType();
+            doReturn(ScriptType.P2PKH).when(addressMock).getOutputScriptType();
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
+            List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
+            deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(false)).thenThrow(illegalArgumentException);
+            List<Protos.Key> protosKeyList = new ArrayList<>();
+            KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
+            thrown.expect(IllegalArgumentException.class);
+            //Act Statement(s)
+            target.markP2SHAddressAsUsed(addressMock);
+            //Assert statement(s)
+            verify(addressMock).getOutputScriptType();
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
+            deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
+        }
+    }
+
+    //Sapient generated method id: ${e3ff4e2b-9110-38e2-80db-0fdda5d2381a}
+    @Ignore()
+    @Test()
+    public void markP2SHAddressAsUsedWhenDataIsNull() throws UnreadableWalletException {
+        /* Branches:
+         * (address.getOutputScriptType() == ScriptType.P2SH) : true
+         * (data == null) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            doReturn(ScriptType.P2PKH).when(addressMock).getOutputScriptType();
             byte[] byteArray = new byte[]{};
             doReturn(byteArray).when(addressMock).getHash();
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             doReturn(null).when(target).findRedeemDataFromScriptHash(byteArray);
@@ -1380,15 +1604,51 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             verify(addressMock).getHash();
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
-            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
             verify(target).findRedeemDataFromScriptHash(byteArray);
         }
     }
 
-    //Sapient generated method id: ${61d3b6a4-f88f-3128-8e42-2612726dccf9}
+    //Sapient generated method id: ${095b25be-6e39-3f0d-8cfe-9b4f56cd9c0e}
     @Ignore()
     @Test()
-    public void markP2SHAddressAsUsedWhenEntryGetValueIsNotNullAndEntryGetValueNotEqualsAddress() throws UnreadableWalletException {
+    public void markP2SHAddressAsUsedWhenChainsIsEmpty() throws UnreadableWalletException {
+        /* Branches:
+         * (address.getOutputScriptType() == ScriptType.P2SH) : true
+         * (data == null) : false
+         * (for-each(data.keys)) : true
+         * (for-each(chains)) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            doReturn(ScriptType.P2PKH).when(addressMock).getOutputScriptType();
+            byte[] byteArray = new byte[]{};
+            doReturn(byteArray).when(addressMock).getHash();
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
+            List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
+            deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            List<Protos.Key> protosKeyList = new ArrayList<>();
+            KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
+            List list = new ArrayList<>();
+            RedeemData redeemData = RedeemData.of(list, scriptMock);
+            doReturn(redeemData).when(target).findRedeemDataFromScriptHash(byteArray);
+            //Act Statement(s)
+            target.markP2SHAddressAsUsed(addressMock);
+            //Assert statement(s)
+            verify(addressMock).getOutputScriptType();
+            verify(addressMock).getHash();
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
+            deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(target).findRedeemDataFromScriptHash(byteArray);
+        }
+    }
+
+    //Sapient generated method id: ${d8f90c63-58d4-3155-a3ce-131264fd0dfb}
+    @Test()
+    public void markP2SHAddressAsUsedWhenKIsNullAndAddressGetOutputScriptTypeNotEqualsScriptTypeP2SHThrowsIllegalArgumentException() throws UnreadableWalletException {
         /* Branches:
          * (address.getOutputScriptType() == ScriptType.P2SH) : true
          * (data == null) : false
@@ -1396,42 +1656,46 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (for-each(chains)) : true
          * (k == null) : true
          * (address.getOutputScriptType() == ScriptType.P2SH) : false  #  inside maybeMarkCurrentAddressAsUsed method
-         * (for-each(currentAddresses.entrySet())) : true  #  inside maybeMarkCurrentAddressAsUsed method
-         * (entry.getValue() != null) : true  #  inside maybeMarkCurrentAddressAsUsed method
-         * (entry.getValue().equals(address)) : false  #  inside maybeMarkCurrentAddressAsUsed method
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        LegacyAddress addressMock = mock(LegacyAddress.class, "33zUJZyRzCnJiWV2J9xG5XtB3FgjzkoutJ");
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "null");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "BASIC");
-        Network networkMock = mock(Network.class, "MAIN_NET");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
-            doReturn(null).when(addressMock).getOutputScriptType();
+             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            doReturn(ScriptType.P2PKH).when(addressMock).getOutputScriptType();
             byte[] byteArray = new byte[]{};
             doReturn(byteArray).when(addressMock).getHash();
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
+            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(false)).thenThrow(illegalArgumentException);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
-            doReturn(null).when(target).findRedeemDataFromScriptHash(byteArray);
+            List list = new ArrayList<>();
+            RedeemData redeemData = RedeemData.of(list, scriptMock);
+            doReturn(redeemData).when(target).findRedeemDataFromScriptHash(byteArray);
+            thrown.expect(IllegalArgumentException.class);
             //Act Statement(s)
             target.markP2SHAddressAsUsed(addressMock);
             //Assert statement(s)
-            verify(addressMock).getOutputScriptType();
+            verify(addressMock, times(2)).getOutputScriptType();
             verify(addressMock).getHash();
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
             verify(target).findRedeemDataFromScriptHash(byteArray);
         }
     }
 
-    //Sapient generated method id: ${6649b901-5dc0-3424-bcf5-df4ca9e2b34a}
+    //Sapient generated method id: ${0aa42e05-969e-3e03-9170-1f1ea8ec44f2}
     @Ignore()
     @Test()
-    public void markP2SHAddressAsUsedWhenCurrentKeyChangeListenersIsEmpty() throws UnreadableWalletException {
+    public void markP2SHAddressAsUsedWhenCurrentAddressesEntrySetIsEmpty() throws UnreadableWalletException {
         /* Branches:
          * (address.getOutputScriptType() == ScriptType.P2SH) : true
          * (data == null) : false
@@ -1439,38 +1703,32 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (for-each(chains)) : true
          * (k == null) : true
          * (address.getOutputScriptType() == ScriptType.P2SH) : true  #  inside maybeMarkCurrentAddressAsUsed method
-         * (for-each(currentAddresses.entrySet())) : true  #  inside maybeMarkCurrentAddressAsUsed method
-         * (entry.getValue() != null) : true  #  inside maybeMarkCurrentAddressAsUsed method
-         * (entry.getValue().equals(address)) : true  #  inside maybeMarkCurrentAddressAsUsed method
-         * (for-each(currentKeyChangeListeners)) : false  #  inside queueOnCurrentKeyChanged method
+         * (for-each(currentAddresses.entrySet())) : false  #  inside maybeMarkCurrentAddressAsUsed method
          *
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        RedeemData redeemDataMock = mock(RedeemData.class);
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
-            doReturn(ScriptType.P2SH).when(addressMock).getOutputScriptType();
+            doReturn(ScriptType.P2PKH).when(addressMock).getOutputScriptType();
             byte[] byteArray = new byte[]{};
             doReturn(byteArray).when(addressMock).getHash();
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            byte[] byteArray2 = new byte[]{};
-            doReturn(null).when(deterministicKeyChain2Mock).findKeyFromPubKey(byteArray2);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
-            doReturn(redeemDataMock).when(target).findRedeemDataFromScriptHash(byteArray);
+            List list = new ArrayList<>();
+            RedeemData redeemData = RedeemData.of(list, scriptMock);
+            doReturn(redeemData).when(target).findRedeemDataFromScriptHash(byteArray);
             //Act Statement(s)
             target.markP2SHAddressAsUsed(addressMock);
             //Assert statement(s)
-            verify(addressMock).getOutputScriptType();
+            verify(addressMock, times(2)).getOutputScriptType();
             verify(addressMock).getHash();
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
-            verify(deterministicKeyChain2Mock).findKeyFromPubKey(byteArray2);
             verify(target).findRedeemDataFromScriptHash(byteArray);
         }
     }
@@ -1481,7 +1739,9 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
         /* Branches:
          * ((result = basic.findKeyFromPubHash(pubKeyHash)) != null) : true
          *
-         * */
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
@@ -1512,7 +1772,9 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (scriptType != null) : true
          * (scriptType != chain.getOutputScriptType()) : true
          *
-         * */
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
@@ -1575,7 +1837,9 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (scriptType != chain.getOutputScriptType()) : false
          * ((result = chain.findKeyFromPubHash(pubKeyHash)) != null) : false
          *
-         * */
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
@@ -1589,6 +1853,33 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             ECKey result = target.findKeyFromPubKeyHash(byteArray, ScriptType.P2PKH);
             //Assert statement(s)
             assertThat(result, is(nullValue()));
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
+            deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+        }
+    }
+
+    //Sapient generated method id: ${f6a844bf-0854-3dbc-a940-3fd6c729b15c}
+    @Test()
+    public void markPubKeyHashAsUsedWhenChainsIsEmpty() throws UnreadableWalletException {
+        /* Branches:
+         * (chains != null) : true
+         * (for-each(chains)) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
+            List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
+            deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            List<Protos.Key> protosKeyList = new ArrayList<>();
+            KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
+            byte[] byteArray = new byte[]{};
+            //Act Statement(s)
+            target.markPubKeyHashAsUsed(byteArray);
+            //Assert statement(s)
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
         }
@@ -1623,83 +1914,33 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${5ac20818-b371-3f28-b847-6639b6946ba8}
+    //Sapient generated method id: ${94feeba4-6f6d-3167-9fa1-ab4debbdf004}
     @Ignore()
     @Test()
-    public void markPubKeyHashAsUsedWhenEntryGetValueNotEqualsKey() throws UnreadableWalletException {
+    public void markPubKeyHashAsUsedWhenCurrentKeysEntrySetIsEmpty() throws UnreadableWalletException {
         /* Branches:
          * (chains != null) : true
          * (for-each(chains)) : true
          * ((key = chain.markPubHashAsUsed(pubKeyHash)) != null) : true
-         * (for-each(currentKeys.entrySet())) : true  #  inside maybeMarkCurrentKeyAsUsed method
-         * (entry.getValue() != null) : true  #  inside maybeMarkCurrentKeyAsUsed method
-         * (entry.getValue().equals(key)) : false  #  inside maybeMarkCurrentKeyAsUsed method
+         * (for-each(currentKeys.entrySet())) : false  #  inside maybeMarkCurrentKeyAsUsed method
          *
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "null");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "null");
-        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class, "DeterministicKey");
-        Network networkMock = mock(Network.class, "null");
-        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
-            List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
-            deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            byte[] byteArray = new byte[]{(byte) 0};
-            doReturn(deterministicKeyMock).when(deterministicKeyChain2Mock).markPubHashAsUsed(byteArray);
-            List<Protos.Key> protosKeyList = new ArrayList<>();
-            KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
-            //Act Statement(s)
-            target.markPubKeyHashAsUsed(byteArray);
-            //Assert statement(s)
-            deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
-            verify(deterministicKeyChain2Mock).markPubHashAsUsed(byteArray);
-        }
-    }
-
-    //Sapient generated method id: ${9621cab0-842c-37fb-8f2c-0fafe143869e}
-    @Ignore()
-    @Test()
-    public void markPubKeyHashAsUsedWhenCurrentKeyChangeListenersIsEmpty() throws UnreadableWalletException {
-        /* Branches:
-         * (chains != null) : true
-         * (for-each(chains)) : true
-         * ((key = chain.markPubHashAsUsed(pubKeyHash)) != null) : true
-         * (for-each(currentKeys.entrySet())) : true  #  inside maybeMarkCurrentKeyAsUsed method
-         * (entry.getValue() != null) : true  #  inside maybeMarkCurrentKeyAsUsed method
-         * (entry.getValue().equals(key)) : true  #  inside maybeMarkCurrentKeyAsUsed method
-         * (for-each(currentKeyChangeListeners)) : false  #  inside queueOnCurrentKeyChanged method
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "{}");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "{}");
-        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class, "DeterministicKey");
-        Network networkMock = mock(Network.class, "MAIN");
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3};
-            doReturn(deterministicKeyMock).when(deterministicKeyChain2Mock).markPubHashAsUsed(byteArray);
-            Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
-            protosKeyList.add(key);
-            KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
-            doReturn(deterministicKeyMock2).when(target).freshKey(KeyChain.KeyPurpose.RECEIVE_FUNDS);
+            KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
+            byte[] byteArray = new byte[]{};
             //Act Statement(s)
             target.markPubKeyHashAsUsed(byteArray);
             //Assert statement(s)
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
-            verify(deterministicKeyChain2Mock).markPubHashAsUsed(byteArray);
-            verify(target).freshKey(KeyChain.KeyPurpose.RECEIVE_FUNDS);
         }
     }
 
@@ -1722,7 +1963,6 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
@@ -1730,6 +1970,39 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             boolean result = target.hasKey(eCKeyMock);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.TRUE));
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
+            deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+        }
+    }
+
+    //Sapient generated method id: ${138e60f7-bbbc-31a6-a25d-79484ae200ec}
+    @Ignore()
+    @Test()
+    public void hasKeyWhenChainsIsEmpty() throws UnreadableWalletException {
+        /* Branches:
+         * (basic.hasKey(key)) : false
+         * (chains != null) : true
+         * (for-each(chains)) : false
+         *
+         * TODO: Help needed! This method is not unit testable!
+         *  Following variables could not be isolated/mocked: basic
+         *  Suggestions:
+         *  You can change the initialization of above variables and make it injectable or
+         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
+            List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
+            deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            List<Protos.Key> protosKeyList = new ArrayList<>();
+            KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
+            //Act Statement(s)
+            boolean result = target.hasKey(eCKeyMock);
+            //Assert statement(s)
+            assertThat(result, equalTo(Boolean.FALSE));
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
         }
@@ -1744,30 +2017,28 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (chains != null) : true
          * (for-each(chains)) : true
          * (chain.hasKey(key)) : true
+         *
+         * TODO: Help needed! This method is not unit testable!
+         *  Following variables could not be isolated/mocked: basic
+         *  Suggestions:
+         *  You can change the initialization of above variables and make it injectable or
+         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "<value>");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "<value>");
-        Network networkMock = mock(Network.class, "<value>");
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            ECKey eCKey = new ECKey();
-            doReturn(false).when(deterministicKeyChain2Mock).hasKey(eCKey);
-            Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
-            protosKeyList.add(key);
             KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
             //Act Statement(s)
-            boolean result = target.hasKey(eCKey);
+            boolean result = target.hasKey(eCKeyMock);
             //Assert statement(s)
-            assertThat(result, equalTo(Boolean.FALSE));
+            assertThat(result, equalTo(Boolean.TRUE));
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
-            verify(deterministicKeyChain2Mock).hasKey(eCKey);
         }
     }
 
@@ -1780,30 +2051,28 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (chains != null) : true
          * (for-each(chains)) : true
          * (chain.hasKey(key)) : false
+         *
+         * TODO: Help needed! This method is not unit testable!
+         *  Following variables could not be isolated/mocked: basic
+         *  Suggestions:
+         *  You can change the initialization of above variables and make it injectable or
+         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "<value>");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "<value>");
-        Network networkMock = mock(Network.class, "<value>");
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            ECKey eCKey = new ECKey();
-            doReturn(false).when(deterministicKeyChain2Mock).hasKey(eCKey);
-            Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
-            protosKeyList.add(key);
             KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
             //Act Statement(s)
-            boolean result = target.hasKey(eCKey);
+            boolean result = target.hasKey(eCKeyMock);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.FALSE));
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
-            verify(deterministicKeyChain2Mock).hasKey(eCKey);
         }
     }
 
@@ -1813,7 +2082,9 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
         /* Branches:
          * ((result = basic.findKeyFromPubKey(pubKey)) != null) : true
          *
-         * */
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
@@ -1874,7 +2145,9 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (for-each(chains)) : true
          * ((result = chain.findKeyFromPubKey(pubKey)) != null) : false
          *
-         * */
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
@@ -1893,6 +2166,33 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
         }
     }
 
+    //Sapient generated method id: ${58dd4828-db00-3daf-92de-39610322777f}
+    @Test()
+    public void markPubKeyAsUsedWhenChainsIsEmpty() throws UnreadableWalletException {
+        /* Branches:
+         * (chains != null) : true
+         * (for-each(chains)) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
+            List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
+            deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            List<Protos.Key> protosKeyList = new ArrayList<>();
+            KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
+            byte[] byteArray = new byte[]{};
+            //Act Statement(s)
+            target.markPubKeyAsUsed(byteArray);
+            //Assert statement(s)
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
+            deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+        }
+    }
+
     //Sapient generated method id: ${33c88862-413d-38ab-ba87-77c7512c600f}
     @Ignore()
     @Test()
@@ -1901,96 +2201,63 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (chains != null) : true
          * (for-each(chains)) : true
          * ((key = chain.markPubKeyAsUsed(pubkey)) != null) : false
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
-             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
-            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
-            List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
-            deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3};
-            doReturn(null).when(deterministicKeyChain2Mock).markPubKeyAsUsed(byteArray);
-            List<Protos.Key> protosKeyList = new ArrayList<>();
-            KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
-            //Act Statement(s)
-            target.markPubKeyAsUsed(byteArray);
-            //Assert statement(s)
-            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
-            deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
-            verify(deterministicKeyChain2Mock).markPubKeyAsUsed(byteArray);
-        }
-    }
-
-    //Sapient generated method id: ${629255e1-6111-3265-bca4-d15527fcda09}
-    @Test()
-    public void markPubKeyAsUsedWhenEntryGetValueNotEqualsKey() throws UnreadableWalletException {
-        /* Branches:
-         * (chains != null) : true
-         * (for-each(chains)) : true
-         * ((key = chain.markPubKeyAsUsed(pubkey)) != null) : true
-         * (for-each(currentKeys.entrySet())) : true  #  inside maybeMarkCurrentKeyAsUsed method
-         * (entry.getValue() != null) : true  #  inside maybeMarkCurrentKeyAsUsed method
-         * (entry.getValue().equals(key)) : false  #  inside maybeMarkCurrentKeyAsUsed method
-         */
-        //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "{}");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "{}");
-        Network networkMock = mock(Network.class, "MAINNET");
-        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
-            List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            List<Protos.Key> protosKeyList = new ArrayList<>();
-            KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
-            byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3, (byte) 4};
-            //Act Statement(s)
-            target.markPubKeyAsUsed(byteArray);
-            //Assert statement(s)
-            deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
-        }
-    }
-
-    //Sapient generated method id: ${2fabdf36-4935-315e-8807-afcb0ab1fe19}
-    @Ignore()
-    @Test()
-    public void markPubKeyAsUsedWhenCurrentKeyChangeListenersIsEmpty() throws UnreadableWalletException {
-        /* Branches:
-         * (chains != null) : true
-         * (for-each(chains)) : true
-         * ((key = chain.markPubKeyAsUsed(pubkey)) != null) : true
-         * (for-each(currentKeys.entrySet())) : true  #  inside maybeMarkCurrentKeyAsUsed method
-         * (entry.getValue() != null) : true  #  inside maybeMarkCurrentKeyAsUsed method
-         * (entry.getValue().equals(key)) : true  #  inside maybeMarkCurrentKeyAsUsed method
-         * (for-each(currentKeyChangeListeners)) : false  #  inside queueOnCurrentKeyChanged method
          *
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "KeyCrypter.AES");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "BasicKeyChainFactory");
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
+            List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
+            deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            List<Protos.Key> protosKeyList = new ArrayList<>();
+            KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
+            byte[] byteArray = new byte[]{};
+            //Act Statement(s)
+            target.markPubKeyAsUsed(byteArray);
+            //Assert statement(s)
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
+            deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+        }
+    }
+
+    //Sapient generated method id: ${eeae845e-ab84-3e64-b6b6-82fd52a10da5}
+    @Test()
+    public void markPubKeyAsUsedWhenCurrentKeysEntrySetIsEmpty() throws UnreadableWalletException {
+        /* Branches:
+         * (chains != null) : true
+         * (for-each(chains)) : true
+         * ((key = chain.markPubKeyAsUsed(pubkey)) != null) : true
+         * (for-each(currentKeys.entrySet())) : false  #  inside maybeMarkCurrentKeyAsUsed method
+         */
+        //Arrange Statement(s)
+        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "KeyCrypter");
+        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "KeyChainFactory");
         DeterministicKey deterministicKeyMock = mock(DeterministicKey.class, "DeterministicKey");
-        Network networkMock = mock(Network.class, "Network.MAINNET");
+        Network networkMock = mock(Network.class, "Network");
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             byte[] byteArray = new byte[]{(byte) 0};
             doReturn(deterministicKeyMock).when(deterministicKeyChain2Mock).markPubKeyAsUsed(byteArray);
             Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
             protosKeyList.add(key);
-            KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
-            doReturn(deterministicKeyMock2).when(target).freshKey(KeyChain.KeyPurpose.RECEIVE_FUNDS);
+            KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
             //Act Statement(s)
             target.markPubKeyAsUsed(byteArray);
             //Assert statement(s)
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             verify(deterministicKeyChain2Mock).markPubKeyAsUsed(byteArray);
-            verify(target).freshKey(KeyChain.KeyPurpose.RECEIVE_FUNDS);
         }
     }
 
@@ -2000,24 +2267,54 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
         /* Branches:
          * (chains != null) : true
          * (for-each(chains)) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "{}");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "{}");
-        Network networkMock = mock(Network.class, "MAINNET");
-        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            doReturn(0).when(deterministicKeyChain2Mock).numKeys();
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
             //Act Statement(s)
             int result = target.numKeys();
             //Assert statement(s)
             assertThat(result, equalTo(0));
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
-            verify(deterministicKeyChain2Mock).numKeys();
+        }
+    }
+
+    //Sapient generated method id: ${2da8e3a6-351b-3fb6-9324-3af2ab183aa8}
+    @Test()
+    public void removeImportedKeyWhenKeyInstanceOfDeterministicKeyThrowsIllegalArgumentException() throws UnreadableWalletException {
+        /* Branches:
+         * (!(key instanceof DeterministicKey)) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
+            List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
+            deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(false)).thenThrow(illegalArgumentException);
+            List<Protos.Key> protosKeyList = new ArrayList<>();
+            KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
+            thrown.expect(IllegalArgumentException.class);
+            //Act Statement(s)
+            target.removeImportedKey(deterministicKeyMock);
+            //Assert statement(s)
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
+            deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
         }
     }
 
@@ -2053,12 +2350,12 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${c02a531d-02c2-3090-9e3a-84ecf1bd21cb}
+    //Sapient generated method id: ${10f2acc4-fe7b-3222-9ced-a71358785ddb}
     @Ignore()
     @Test()
-    public void removeImportedKeyWhenKeyInstanceOfDeterministicKeyAndBasicNotRemoveKeyKey() throws UnreadableWalletException {
+    public void removeImportedKeyWhenBasicNotRemoveKeyKey() throws UnreadableWalletException {
         /* Branches:
-         * (!(key instanceof DeterministicKey)) : false
+         * (!(key instanceof DeterministicKey)) : true
          * (basic.removeKey(key)) : false
          *
          * TODO: Help needed! This method is not unit testable!
@@ -2069,22 +2366,19 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
             //Act Statement(s)
-            boolean result = target.removeImportedKey(deterministicKeyMock);
+            boolean result = target.removeImportedKey(eCKeyMock);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.FALSE));
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
-            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
         }
     }
 
@@ -2095,7 +2389,9 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (chains != null) : true
          * (!chains.isEmpty()) : true
          *
-         * */
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
@@ -2125,7 +2421,9 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (!chains.isEmpty()) : false
          * (basic.numKeys() != 0) : false
          *
-         * */
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
@@ -2154,22 +2452,59 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
         /* Branches:
          * (chains != null) : true
          * (for-each(chains)) : true
+         *
+         * TODO: Help needed! This method is not unit testable!
+         *  Following variables could not be isolated/mocked: basic
+         *  Suggestions:
+         *  You can change the initialization of above variables and make it injectable or
+         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "{}");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "{}");
-        Network networkMock = mock(Network.class, "MAIN");
-        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
-            byte[] byteArray = new byte[]{};
-            AesKey aesKey = new AesKey(byteArray);
             //Act Statement(s)
-            target.decrypt(aesKey);
+            target.decrypt(aesKeyMock);
             //Assert statement(s)
             assertThat(target.getKeyCrypter(), is(nullValue()));
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
+            deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+        }
+    }
+
+    //Sapient generated method id: ${07100205-5edf-37f0-af00-d4291d950c08}
+    @Ignore()
+    @Test()
+    public void decryptWhenChainsIsEmpty() throws UnreadableWalletException {
+        /* Branches:
+         * (chains != null) : true
+         * (for-each(chains)) : false
+         *
+         * TODO: Help needed! This method is not unit testable!
+         *  Following variables could not be isolated/mocked: basic
+         *  Suggestions:
+         *  You can change the initialization of above variables and make it injectable or
+         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
+            List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
+            deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            List<Protos.Key> protosKeyList = new ArrayList<>();
+            KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
+            //Act Statement(s)
+            target.decrypt(aesKeyMock);
+            //Assert statement(s)
+            assertThat(target.getKeyCrypter(), is(nullValue()));
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
         }
     }
@@ -2182,19 +2517,24 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (keyCrypter != null) : true
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "{}");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "{}");
-        Network networkMock = mock(Network.class, "{}");
-        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
+            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
             //Act Statement(s)
             boolean result = target.isEncrypted();
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.TRUE));
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
         }
     }
 
@@ -2209,11 +2549,9 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Network networkMock = mock(Network.class, "<value>");
-        Protos.Key key = Protos.Key.getDefaultInstance();
+        Network networkMock = mock(Network.class, "MAINNET");
         List<Protos.Key> protosKeyList = new ArrayList<>();
-        protosKeyList.add(key);
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "<value>");
+        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "WalletKeyChainFactory");
         KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, (KeyCrypter) null, keyChainFactoryMock);
         //Act Statement(s)
         boolean result = target.isEncrypted();
@@ -2229,31 +2567,26 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (!chains.isEmpty()) : false
          * (basicState == BasicKeyChain.State.EMPTY) : true
          * (activeState == BasicKeyChain.State.EMPTY) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "KeyCrypter");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "KeyChainFactory");
-        Network networkMock = mock(Network.class, "Network");
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
-            protosKeyList.add(key);
-            KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
-            doReturn(deterministicKeyChainMock).when(target).getActiveKeyChain();
-            doReturn(true).when(deterministicKeyChainMock).isWatching();
+            KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
+            IllegalStateException illegalStateException = new IllegalStateException("Empty key chain group: cannot answer isWatching() query");
+            thrown.expect(IllegalStateException.class);
+            thrown.expectMessage(illegalStateException.getMessage());
             //Act Statement(s)
-            boolean result = target.isWatching();
+            target.isWatching();
             //Assert statement(s)
-            assertThat(result, equalTo(Boolean.TRUE));
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
-            verify(target).getActiveKeyChain();
-            verify(deterministicKeyChainMock).isWatching();
         }
     }
 
@@ -2268,27 +2601,24 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (basicState == BasicKeyChain.State.EMPTY) : true
          * (activeState == BasicKeyChain.State.EMPTY) : false
          * (activeState == BasicKeyChain.State.WATCHING) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "KeyCrypter");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "KeyChainFactory");
-        Network networkMock = mock(Network.class, "Network");
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
-            protosKeyList.add(key);
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             doReturn(deterministicKeyChainMock).when(target).getActiveKeyChain();
             doReturn(false).when(deterministicKeyChainMock).isWatching();
             //Act Statement(s)
             boolean result = target.isWatching();
             //Assert statement(s)
-            assertThat(result, equalTo(Boolean.FALSE));
+            assertThat(result, equalTo(Boolean.TRUE));
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
             verify(target).getActiveKeyChain();
@@ -2307,13 +2637,15 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (basicState == BasicKeyChain.State.EMPTY) : true
          * (activeState == BasicKeyChain.State.EMPTY) : false
          * (activeState == BasicKeyChain.State.WATCHING) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
@@ -2365,38 +2697,28 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
     public void earliestKeyCreationTimeWhenChainsIsNull() throws UnreadableWalletException {
         /* Branches:
          * (chains == null) : true  #  inside getEarliestChainsCreationTime method
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "KeyCrypter");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "KeyChainFactory");
-        Network networkMock = mock(Network.class, "Bitcoin");
-        try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class);
-             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            doReturn(null).when(deterministicKeyChain2Mock).earliestKeyCreationTime();
+            List<Protos.Key> protosKeyList = new ArrayList<>();
+            KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
+            //Act Statement(s)
+            Instant result = target.earliestKeyCreationTime();
             BasicKeyChain basicKeyChain2 = new BasicKeyChain();
             Instant instant2 = basicKeyChain2.earliestKeyCreationTime();
             Instant instant3 = Instant.MAX;
             Instant instant = TimeUtils.earlier(instant2, instant3);
-            timeUtils.when(() -> TimeUtils.earlier((Instant) any(), (Instant) any())).thenReturn(instant);
-            Protos.Key key = Protos.Key.getDefaultInstance();
-            Protos.Key key2 = Protos.Key.getDefaultInstance();
-            List<Protos.Key> protosKeyList = new ArrayList<>();
-            protosKeyList.add(key);
-            protosKeyList.add(key2);
-            KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
-            //Act Statement(s)
-            Instant result = target.earliestKeyCreationTime();
             //Assert statement(s)
             assertThat(result, equalTo(instant));
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
-            verify(deterministicKeyChain2Mock).earliestKeyCreationTime();
-            timeUtils.verify(() -> TimeUtils.earlier((Instant) any(), (Instant) any()));
         }
     }
 
@@ -2437,26 +2759,33 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
     public void getEarliestKeyCreationTimeWhenEarliestKeyCreationTimeEqualsInstantMAX() throws UnreadableWalletException {
         /* Branches:
          * (earliestKeyCreationTime.equals(Instant.MAX)) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "{}");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "{}");
-        Network networkMock = mock(Network.class, "MAINNET");
-        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
+        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "new AESKeyCrypter(new byte[16])");
+        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "new BasicKeyChainFactory()");
+        Network networkMock = mock(Network.class, "MainNetParams.get()");
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
+            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
+            Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
+            protosKeyList.add(key);
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
-            Instant instant = Instant.now();
+            Instant instant = Instant.MAX;
             doReturn(instant).when(target).earliestKeyCreationTime();
             //Act Statement(s)
             long result = target.getEarliestKeyCreationTime();
             //Assert statement(s)
             assertThat(result, equalTo(9223372036854775807L));
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             verify(target).earliestKeyCreationTime();
         }
     }
@@ -2472,15 +2801,17 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "new KeyCrypter()");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "new KeyChainFactory()");
-        Network networkMock = mock(Network.class, "Network.MAINNET");
+        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "AESKeyCrypter");
+        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "BasicKeyChainFactory");
+        Network networkMock = mock(Network.class, "MainNetParams");
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
             protosKeyList.add(key);
@@ -2493,6 +2824,8 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             assertThat(result, equalTo(0L));
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             verify(target).earliestKeyCreationTime();
         }
     }
@@ -2512,6 +2845,8 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             doReturn(0).when(deterministicKeyChain2Mock).numBloomFilterEntries();
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
@@ -2521,6 +2856,8 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             assertThat(result, equalTo(0));
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             verify(deterministicKeyChain2Mock).numBloomFilterEntries();
         }
     }
@@ -2542,24 +2879,20 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "{}");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "{}");
-        Network networkMock = mock(Network.class, "{}");
-        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            BloomFilter bloomFilter = new BloomFilter(0, Double.parseDouble("0.0"), 0);
-            doReturn(bloomFilter).when(deterministicKeyChain2Mock).getFilter(100, Double.parseDouble("0.01"), 10);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
             //Act Statement(s)
-            BloomFilter result = target.getBloomFilter(100, Double.parseDouble("0.01"), 10);
-            BloomFilter bloomFilter2 = new BloomFilter(100, Double.parseDouble("0.01"), 10);
+            BloomFilter result = target.getBloomFilter(0, Double.parseDouble("0.0"), 0);
+            BloomFilter bloomFilter = new BloomFilter(0, Double.parseDouble("0.0"), 0);
             //Assert statement(s)
-            assertThat(result, equalTo(bloomFilter2));
+            assertThat(result, equalTo(bloomFilter));
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
-            verify(deterministicKeyChain2Mock).getFilter(100, Double.parseDouble("0.01"), 10);
         }
     }
 
@@ -2568,18 +2901,15 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
     @Test()
     public void isRequiringUpdateAllBloomFilterThrowsUnsupportedOperationException() throws UnreadableWalletException {
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "KeyCrypter");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "KeyChainFactory");
-        Network networkMock = mock(Network.class, "Network");
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            Protos.Key key = Protos.Key.getDefaultInstance();
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             List<Protos.Key> protosKeyList = new ArrayList<>();
-            protosKeyList.add(key);
             KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
             thrown.expect(UnsupportedOperationException.class);
             //Act Statement(s)
@@ -2587,6 +2917,8 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             //Assert statement(s)
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
         }
     }
 
@@ -2595,20 +2927,15 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
     @Test()
     public void addEventListenerTest() throws UnreadableWalletException {
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "<KeyCrypter object>");
-        DeterministicKeyChain deterministicKeyChain2Mock = mock(DeterministicKeyChain.class, "<List<DeterministicKeyChain> object>");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "<KeyChainFactory object>");
-        Network networkMock = mock(Network.class, "<Network object>");
-        KeyChainEventListener keyChainEventListenerMock = mock(KeyChainEventListener.class, "<KeyChainEventListener object>");
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            Protos.Key key = Protos.Key.getDefaultInstance();
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             List<Protos.Key> protosKeyList = new ArrayList<>();
-            protosKeyList.add(key);
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             doNothing().when(target).addEventListener(keyChainEventListenerMock, (Executor) null);
             //Act Statement(s)
@@ -2616,6 +2943,8 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             //Assert statement(s)
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             verify(target).addEventListener(keyChainEventListenerMock, (Executor) null);
         }
     }
@@ -2628,30 +2957,58 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (chains != null) : true
          * (for-each(chains)) : true
          *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         * TODO: Help needed! This method is not unit testable!
+         *  Following variables could not be isolated/mocked: basic
+         *  Suggestions:
+         *  You can change the initialization of above variables and make it injectable or
+         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "KeyCrypter");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "KeyChainFactory");
-        Network networkMock = mock(Network.class, "Network");
-        KeyChainEventListener keyChainEventListenerMock = mock(KeyChainEventListener.class, "KeyChainEventListener");
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
-            protosKeyList.add(key);
             KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
-            thrown.expect(NullPointerException.class);
             //TODO: Needs initialization with real value
             Executor executor = null;
             //Act Statement(s)
             target.addEventListener(keyChainEventListenerMock, executor);
             //Assert statement(s)
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
+            deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+        }
+    }
+
+    //Sapient generated method id: ${3ea823ac-6502-308e-9469-5e602dae41c1}
+    @Ignore()
+    @Test()
+    public void removeEventListenerWhenBasicRemoveEventListenerListener() throws UnreadableWalletException {
+        /* Branches:
+         * (chains != null) : false
+         * (basic.removeEventListener(listener)) : true
+         *
+         * TODO: Help needed! This method is not unit testable!
+         *  Following variables could not be isolated/mocked: basic
+         *  Suggestions:
+         *  You can change the initialization of above variables and make it injectable or
+         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
+            List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
+            deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            List<Protos.Key> protosKeyList = new ArrayList<>();
+            KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
+            //Act Statement(s)
+            boolean result = target.removeEventListener(keyChainEventListenerMock);
+            //Assert statement(s)
+            assertThat(result, equalTo(Boolean.TRUE));
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
         }
@@ -2665,31 +3022,28 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (chains != null) : true
          * (for-each(chains)) : true
          * (basic.removeEventListener(listener)) : true
+         *
+         * TODO: Help needed! This method is not unit testable!
+         *  Following variables could not be isolated/mocked: basic
+         *  Suggestions:
+         *  You can change the initialization of above variables and make it injectable or
+         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "<KeyCrypter>");
-        DeterministicKeyChain deterministicKeyChain2Mock = mock(DeterministicKeyChain.class, "<List<DeterministicKeyChain>>");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "<KeyChainFactory>");
-        KeyChainEventListener keyChainEventListenerMock = mock(KeyChainEventListener.class, "<KeyChainEventListener>");
-        Network networkMock = mock(Network.class, "<Network>");
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            doReturn(false).when(deterministicKeyChain2Mock).removeEventListener(keyChainEventListenerMock);
-            Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
-            protosKeyList.add(key);
             KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
             //Act Statement(s)
             boolean result = target.removeEventListener(keyChainEventListenerMock);
             //Assert statement(s)
-            assertThat(result, equalTo(Boolean.FALSE));
+            assertThat(result, equalTo(Boolean.TRUE));
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
-            verify(deterministicKeyChain2Mock).removeEventListener(keyChainEventListenerMock);
         }
     }
 
@@ -2714,18 +3068,15 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            doReturn(false).when(deterministicKeyChain2Mock).removeEventListener(keyChainEventListenerMock);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
             //Act Statement(s)
             boolean result = target.removeEventListener(keyChainEventListenerMock);
             //Assert statement(s)
-            assertThat(result, equalTo(Boolean.TRUE));
+            assertThat(result, equalTo(Boolean.FALSE));
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
-            verify(deterministicKeyChain2Mock).removeEventListener(keyChainEventListenerMock);
         }
     }
 
@@ -2734,21 +3085,31 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
     @Test()
     public void addCurrentKeyChangeEventListenerTest() throws UnreadableWalletException {
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "<mock KeyCrypter object>");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "BasicKeyChainFactory");
-        Network networkMock = mock(Network.class, "MainNetParams");
-        CurrentKeyChangeEventListener currentKeyChangeEventListenerMock = mock(CurrentKeyChangeEventListener.class, "<mock CurrentKeyChangeEventListener object>");
-        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
+        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "<KeyCrypter object>");
+        DeterministicKeyChain deterministicKeyChain2Mock = mock(DeterministicKeyChain.class, "<List<DeterministicKeyChain> object>");
+        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "<KeyChainFactory object>");
+        Network networkMock = mock(Network.class, "<Network object>");
+        CurrentKeyChangeEventListener currentKeyChangeEventListenerMock = mock(CurrentKeyChangeEventListener.class, "<CurrentKeyChangeEventListener object>");
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
+            Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
+            protosKeyList.add(key);
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             doNothing().when(target).addCurrentKeyChangeEventListener(currentKeyChangeEventListenerMock, (Executor) null);
             //Act Statement(s)
             target.addCurrentKeyChangeEventListener(currentKeyChangeEventListenerMock);
             //Assert statement(s)
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             verify(target).addCurrentKeyChangeEventListener(currentKeyChangeEventListenerMock, (Executor) null);
         }
     }
@@ -2758,15 +3119,18 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
     @Test()
     public void addCurrentKeyChangeEventListener1Test() throws UnreadableWalletException {
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "int");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "BasicKeyChain");
-        Network networkMock = mock(Network.class, "DeterministicKey");
+        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "KeyCrypter");
+        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "KeyChainFactory");
+        Network networkMock = mock(Network.class, "Network");
+        CurrentKeyChangeEventListener currentKeyChangeEventListenerMock = mock(CurrentKeyChangeEventListener.class, "CurrentKeyChangeEventListener");
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
             protosKeyList.add(key);
@@ -2778,6 +3142,8 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             //Assert statement(s)
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
         }
     }
 
@@ -2789,26 +3155,28 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (ListenerRegistration.removeFromList(listener, currentKeyChangeListeners)) : true
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "<KeyCrypter object>");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "<KeyChainFactory object>");
-        Network networkMock = mock(Network.class, "<Network object>");
-        CurrentKeyChangeEventListener currentKeyChangeEventListenerMock = mock(CurrentKeyChangeEventListener.class, "<CurrentKeyChangeEventListener object>");
-        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+        CurrentKeyChangeEventListener currentKeyChangeEventListenerMock = mock(CurrentKeyChangeEventListener.class);
+        try (MockedStatic<ListenerRegistration> listenerRegistration = mockStatic(ListenerRegistration.class);
+             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            Protos.Key key = Protos.Key.getDefaultInstance();
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
+            listenerRegistration.when(() -> ListenerRegistration.removeFromList(eq(currentKeyChangeEventListenerMock), any())).thenReturn(true);
             List<Protos.Key> protosKeyList = new ArrayList<>();
-            protosKeyList.add(key);
             KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
             //Act Statement(s)
             boolean result = target.removeCurrentKeyChangeEventListener(currentKeyChangeEventListenerMock);
             //Assert statement(s)
-            assertThat(result, equalTo(Boolean.FALSE));
+            assertThat(result, equalTo(Boolean.TRUE));
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
+            listenerRegistration.verify(() -> ListenerRegistration.removeFromList(eq(currentKeyChangeEventListenerMock), any()));
         }
     }
 
@@ -2820,13 +3188,16 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (ListenerRegistration.removeFromList(listener, currentKeyChangeListeners)) : false
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "KeyCrypter");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "KeyChainFactory");
-        Network networkMock = mock(Network.class, "Network");
+        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "null");
+        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "HDPath");
+        Network networkMock = mock(Network.class, "null");
+        CurrentKeyChangeEventListener currentKeyChangeEventListenerMock = mock(CurrentKeyChangeEventListener.class, "null");
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
             //Act Statement(s)
@@ -2834,6 +3205,8 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.FALSE));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
         }
     }
 
@@ -2857,21 +3230,15 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
-            protosKeyList.add(key);
-            doReturn(protosKeyList).when(deterministicKeyChain2Mock).serializeToProtobuf();
-            List<Protos.Key> protosKeyList2 = new ArrayList<>();
-            KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList2, keyCrypterMock, keyChainFactoryMock);
+            KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
             //Act Statement(s)
             List<Protos.Key> result = target.serializeToProtobuf();
             //Assert statement(s)
             assertThat(result.size(), equalTo(0));
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
-            verify(deterministicKeyChain2Mock).serializeToProtobuf();
         }
     }
 
@@ -2891,24 +3258,19 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Protos.Key keyMock = mock(Protos.Key.class);
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            List<Protos.Key> protosKeyList = new ArrayList<>(Arrays.asList(keyMock));
-            doReturn(protosKeyList).when(deterministicKeyChain2Mock).serializeToProtobuf();
-            List<Protos.Key> protosKeyList2 = new ArrayList<>();
-            KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList2, keyCrypterMock, keyChainFactoryMock);
+            List<Protos.Key> protosKeyList = new ArrayList<>();
+            KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
             //Act Statement(s)
             List<Protos.Key> result = target.serializeToProtobuf();
             //Assert statement(s)
             assertThat(result.size(), equalTo(0));
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
-            verify(deterministicKeyChain2Mock).serializeToProtobuf();
         }
     }
 
@@ -2953,9 +3315,69 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${161454a7-b0e1-3582-8cf3-2f6b41fe6e6e}
+    //Sapient generated method id: ${c1623082-6ea9-330e-a2b8-cf19b1e01891}
+    @Ignore()
     @Test()
-    public void fromProtobufUnencrypted1WhenDefaultBranchAndDefaultBranchAndDefaultBranchAndDefaultBranch() throws UnreadableWalletException {
+    public void fromProtobufUnencrypted1WhenDefaultBranchAndDefaultBranch() throws UnreadableWalletException {
+        /* Branches:
+         * (!chains.isEmpty()) : true
+         * (activeChain.getIssuedExternalKeys() > 0) : true  #  inside createCurrentKeysMap method
+         * (activeChain.getIssuedInternalKeys() > 0) : true  #  inside createCurrentKeysMap method
+         * (branch expression (line 283)) : false  #  inside <init> method
+         * (branch expression (line 284)) : false  #  inside <init> method
+         * (branch expression (line 300)) : false  #  inside <init> method
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufUnencrypted(anyList())).thenReturn(basicKeyChainMock);
+            deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(null), eq(keyChainFactoryMock))).thenReturn(null);
+            List<Protos.Key> protosKeyList = new ArrayList<>();
+            //Act Statement(s)
+            KeyChainGroup result = KeyChainGroup.fromProtobufUnencrypted(networkMock, protosKeyList, keyChainFactoryMock);
+            //Assert statement(s)
+            assertThat(result, is(notNullValue()));
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufUnencrypted(anyList()));
+            deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(null), eq(keyChainFactoryMock)));
+        }
+    }
+
+    //Sapient generated method id: ${977543f5-a3dc-3835-89ab-4d325c8e5416}
+    @Ignore()
+    @Test()
+    public void fromProtobufUnencrypted1WhenDefaultBranchAndDefaultBranchAndDefaultBranch5() throws UnreadableWalletException {
+        /* Branches:
+         * (!chains.isEmpty()) : true
+         * (activeChain.getIssuedExternalKeys() > 0) : false  #  inside createCurrentKeysMap method
+         * (activeChain.getIssuedInternalKeys() > 0) : false  #  inside createCurrentKeysMap method
+         * (branch expression (line 283)) : false  #  inside <init> method
+         * (branch expression (line 284)) : false  #  inside <init> method
+         * (branch expression (line 300)) : false  #  inside <init> method
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufUnencrypted(anyList())).thenReturn(basicKeyChainMock);
+            deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(null), eq(keyChainFactoryMock))).thenReturn(null);
+            List<Protos.Key> protosKeyList = new ArrayList<>();
+            //Act Statement(s)
+            KeyChainGroup result = KeyChainGroup.fromProtobufUnencrypted(networkMock, protosKeyList, keyChainFactoryMock);
+            //Assert statement(s)
+            assertThat(result, is(notNullValue()));
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufUnencrypted(anyList()));
+            deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(null), eq(keyChainFactoryMock)));
+        }
+    }
+
+    //Sapient generated method id: ${6bfe2e6b-3cfa-3508-978f-0fb16fa9455b}
+    @Test()
+    public void fromProtobufUnencrypted1WhenDefaultBranchAndDefaultBranchAndDefaultBranchAndDefaultBranchAndDefaultBranch3() throws UnreadableWalletException {
         /* Branches:
          * (!chains.isEmpty()) : true
          * (activeChain.getIssuedExternalKeys() > 0) : true  #  inside createCurrentKeysMap method
@@ -2968,6 +3390,9 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (branch expression (line 291)) : false  #  inside <init> method
          * (branch expression (line 293)) : false  #  inside <init> method
          * (branch expression (line 300)) : false  #  inside <init> method
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
@@ -3026,9 +3451,39 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${f6bd2f9a-5bc3-360e-b082-a19aa564d48d}
+    //Sapient generated method id: ${1e2f351a-f659-31a8-a17a-d262960954dc}
+    @Ignore()
     @Test()
-    public void fromProtobufEncrypted1WhenDefaultBranchAndDefaultBranchAndDefaultBranchAndDefaultBranch() throws UnreadableWalletException {
+    public void fromProtobufEncrypted1WhenDefaultBranchAndDefaultBranch() throws UnreadableWalletException {
+        /* Branches:
+         * (!chains.isEmpty()) : true
+         * (activeChain.getIssuedExternalKeys() > 0) : true  #  inside createCurrentKeysMap method
+         * (activeChain.getIssuedInternalKeys() > 0) : true  #  inside createCurrentKeysMap method
+         * (branch expression (line 283)) : false  #  inside <init> method
+         * (branch expression (line 284)) : false  #  inside <init> method
+         * (branch expression (line 300)) : false  #  inside <init> method
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(basicKeyChainMock);
+            deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(null);
+            List<Protos.Key> protosKeyList = new ArrayList<>();
+            //Act Statement(s)
+            KeyChainGroup result = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
+            //Assert statement(s)
+            assertThat(result, is(notNullValue()));
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
+            deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+        }
+    }
+
+    //Sapient generated method id: ${9f1bad58-7eb3-3118-bc45-3fe7f9e94545}
+    @Test()
+    public void fromProtobufEncrypted1WhenDefaultBranchAndDefaultBranchAndDefaultBranchAndDefaultBranchAndDefaultBranch2() throws UnreadableWalletException {
         /* Branches:
          * (!chains.isEmpty()) : true
          * (activeChain.getIssuedExternalKeys() > 0) : true  #  inside createCurrentKeysMap method
@@ -3041,19 +3496,17 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (branch expression (line 291)) : false  #  inside <init> method
          * (branch expression (line 293)) : false  #  inside <init> method
          * (branch expression (line 300)) : false  #  inside <init> method
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "KeyCrypter");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "KeyChainFactory");
-        Network networkMock = mock(Network.class, "Network");
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
-            protosKeyList.add(key);
             //Act Statement(s)
             KeyChainGroup result = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
             //Assert statement(s)
@@ -3071,14 +3524,13 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (!isDeterministicUpgradeRequired(preferredScriptType, keyRotationTime)) : true
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "null");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "null");
-        Network networkMock = mock(Network.class, "null");
-        KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class, "null");
+        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "SCRYPT");
+        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "BIP44");
+        Network networkMock = mock(Network.class, "MAIN");
+        KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class, "");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
             preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             List<Protos.Key> protosKeyList = new ArrayList<>();
@@ -3098,6 +3550,44 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
         }
     }
 
+    //Sapient generated method id: ${a0ba0baa-37fb-3a8e-87eb-838abae1b22d}
+    @Ignore()
+    @Test()
+    public void upgradeToDeterministicWhenGetActiveKeyChainScriptTypeP2WPKHKeyRotationTimeIsNotNull() throws DeterministicUpgradeRequiresPassword, UnreadableWalletException {
+        /* Branches:
+         * (!isDeterministicUpgradeRequired(preferredScriptType, keyRotationTime)) : false
+         * (preferredScriptType == ScriptType.P2WPKH) : true
+         * (getActiveKeyChain(ScriptType.P2WPKH, keyRotationTime) == null) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
+            List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
+            deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            List<Protos.Key> protosKeyList = new ArrayList<>();
+            KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
+            doReturn(false).when(target).supportsDeterministicChains();
+            doReturn(false).when(target).isDeterministicUpgradeRequired(eq(ScriptType.P2PKH), (Instant) any());
+            doReturn(deterministicKeyChainMock).when(target).getActiveKeyChain(eq(ScriptType.P2WPKH), (Instant) any());
+            Instant instant = Instant.now();
+            //Act Statement(s)
+            target.upgradeToDeterministic(ScriptType.P2PKH, keyChainGroupStructureMock, instant, aesKeyMock);
+            //Assert statement(s)
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
+            deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
+            verify(target).supportsDeterministicChains();
+            verify(target).isDeterministicUpgradeRequired(eq(ScriptType.P2PKH), (Instant) any());
+            verify(target).getActiveKeyChain(eq(ScriptType.P2WPKH), (Instant) any());
+        }
+    }
+
     //Sapient generated method id: ${7da88ae5-af87-39d0-bfe4-67ff8a6b8c52}
     @Ignore()
     @Test()
@@ -3108,45 +3598,86 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (getActiveKeyChain(ScriptType.P2WPKH, keyRotationTime) == null) : true
          * (seedWasEncrypted) : true
          * (aesKey == null) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        KeyChainGroupStructure structureMock = mock(KeyChainGroupStructure.class, "KeyChainGroupStructure");
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "KeyCrypter");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "KeyChainFactory");
-        Network networkMock = mock(Network.class, "Network");
-        DeterministicSeed deterministicSeedMock = mock(DeterministicSeed.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
-            doReturn(null).when(structureMock).accountPathFor(ScriptType.P2WPKH, BitcoinNetwork.MAINNET);
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
             preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
-            protosKeyList.add(key);
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             doReturn(false).when(target).supportsDeterministicChains();
-            doReturn(true).when(target).isDeterministicUpgradeRequired(eq(ScriptType.P2WPKH), (Instant) any());
+            doReturn(false).when(target).isDeterministicUpgradeRequired(eq(ScriptType.P2PKH), (Instant) any());
             doReturn(null).when(target).getActiveKeyChain(eq(ScriptType.P2WPKH), (Instant) any());
             DeterministicKeyChain deterministicKeyChain2 = DeterministicKeyChain.builder().seed(deterministicSeedMock).build();
             doReturn(deterministicKeyChain2).when(target).getActiveKeyChain(eq(ScriptType.P2PKH), (Instant) any());
             doReturn(false).when(deterministicSeedMock).isEncrypted();
-            DeterministicKeyChain deterministicKeyChain3 = DeterministicKeyChain.builder().seed(deterministicSeedMock).outputScriptType(ScriptType.P2WPKH).accountPath((HDPath) null).build();
-            doNothing().when(target).addAndActivateHDChain(deterministicKeyChain3);
+            thrown.expect(DeterministicUpgradeRequiresPassword.class);
             Instant instant = Instant.now();
             AesKey aesKey = null;
             //Act Statement(s)
-            target.upgradeToDeterministic(ScriptType.P2WPKH, structureMock, instant, aesKey);
+            target.upgradeToDeterministic(ScriptType.P2PKH, keyChainGroupStructureMock, instant, aesKey);
+            //Assert statement(s)
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
+            deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
+            verify(target).supportsDeterministicChains();
+            verify(target).isDeterministicUpgradeRequired(eq(ScriptType.P2PKH), (Instant) any());
+            verify(target).getActiveKeyChain(eq(ScriptType.P2WPKH), (Instant) any());
+            verify(target).getActiveKeyChain(eq(ScriptType.P2PKH), (Instant) any());
+            verify(deterministicSeedMock).isEncrypted();
+        }
+    }
+
+    //Sapient generated method id: ${1bbf5e77-28dd-3dc7-b34e-e4ed38055e35}
+    @Ignore()
+    @Test()
+    public void upgradeToDeterministicWhenNotSeedWasEncrypted() throws DeterministicUpgradeRequiresPassword, UnreadableWalletException {
+        /* Branches:
+         * (!isDeterministicUpgradeRequired(preferredScriptType, keyRotationTime)) : false
+         * (preferredScriptType == ScriptType.P2WPKH) : true
+         * (getActiveKeyChain(ScriptType.P2WPKH, keyRotationTime) == null) : true
+         * (seedWasEncrypted) : false
+         * (seedWasEncrypted) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            doReturn(hDPathMock).when(structureMock).accountPathFor(ScriptType.P2WPKH, BitcoinNetwork.MAINNET);
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
+            List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
+            deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            List<Protos.Key> protosKeyList = new ArrayList<>();
+            KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
+            doReturn(false).when(target).supportsDeterministicChains();
+            doReturn(false).when(target).isDeterministicUpgradeRequired(eq(ScriptType.P2PKH), (Instant) any());
+            doReturn(null).when(target).getActiveKeyChain(eq(ScriptType.P2WPKH), (Instant) any());
+            DeterministicKeyChain deterministicKeyChain2 = DeterministicKeyChain.builder().seed(deterministicSeedMock).build();
+            doReturn(deterministicKeyChain2).when(target).getActiveKeyChain(eq(ScriptType.P2PKH), (Instant) any());
+            doReturn(false).when(deterministicSeedMock).isEncrypted();
+            DeterministicKeyChain deterministicKeyChain3 = DeterministicKeyChain.builder().seed(deterministicSeedMock).outputScriptType(ScriptType.P2WPKH).accountPath(hDPathMock).build();
+            doNothing().when(target).addAndActivateHDChain(deterministicKeyChain3);
+            Instant instant = Instant.now();
+            //Act Statement(s)
+            target.upgradeToDeterministic(ScriptType.P2PKH, structureMock, instant, aesKeyMock);
             //Assert statement(s)
             verify(structureMock).accountPathFor(ScriptType.P2WPKH, BitcoinNetwork.MAINNET);
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
             preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
             verify(target).supportsDeterministicChains();
-            verify(target).isDeterministicUpgradeRequired(eq(ScriptType.P2WPKH), (Instant) any());
+            verify(target).isDeterministicUpgradeRequired(eq(ScriptType.P2PKH), (Instant) any());
             verify(target).getActiveKeyChain(eq(ScriptType.P2WPKH), (Instant) any());
             verify(target).getActiveKeyChain(eq(ScriptType.P2PKH), (Instant) any());
             verify(deterministicSeedMock).isEncrypted();
@@ -3165,37 +3696,45 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (seedWasEncrypted) : true
          * (aesKey == null) : false
          * (seedWasEncrypted) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "<valid KeyCrypter object>");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "<valid KeyChainFactory object>");
-        Network networkMock = mock(Network.class, "<valid Network object>");
-        KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class, "<valid KeyChainGroupStructure object>");
+        DeterministicSeed deterministicSeedMock2 = mock(DeterministicSeed.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            doReturn(hDPathMock).when(structureMock).accountPathFor(ScriptType.P2WPKH, BitcoinNetwork.MAINNET);
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
             preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
-            protosKeyList.add(key);
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             doReturn(false).when(target).supportsDeterministicChains();
-            doReturn(true).when(target).isDeterministicUpgradeRequired(eq(ScriptType.P2PKH), (Instant) any());
+            doReturn(false).when(target).isDeterministicUpgradeRequired(eq(ScriptType.P2PKH), (Instant) any());
+            doReturn(null).when(target).getActiveKeyChain(eq(ScriptType.P2WPKH), (Instant) any());
+            DeterministicKeyChain deterministicKeyChain2 = DeterministicKeyChain.builder().seed(deterministicSeedMock).build();
+            doReturn(deterministicKeyChain2).when(target).getActiveKeyChain(eq(ScriptType.P2PKH), (Instant) any());
+            doReturn(false).when(deterministicSeedMock).isEncrypted();
+            doReturn(deterministicSeedMock2).when(deterministicSeedMock).decrypt(keyCrypterMock, "", aesKeyMock);
+            doNothing().when(target).addAndActivateHDChain(deterministicKeyChainMock);
             Instant instant = Instant.now();
-            byte[] byteArray = new byte[]{};
-            AesKey aesKey = new AesKey(byteArray);
             //Act Statement(s)
-            target.upgradeToDeterministic(ScriptType.P2PKH, keyChainGroupStructureMock, instant, aesKey);
+            target.upgradeToDeterministic(ScriptType.P2PKH, structureMock, instant, aesKeyMock);
             //Assert statement(s)
+            verify(structureMock).accountPathFor(ScriptType.P2WPKH, BitcoinNetwork.MAINNET);
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
             preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
             verify(target).supportsDeterministicChains();
             verify(target).isDeterministicUpgradeRequired(eq(ScriptType.P2PKH), (Instant) any());
+            verify(target).getActiveKeyChain(eq(ScriptType.P2WPKH), (Instant) any());
+            verify(target).getActiveKeyChain(eq(ScriptType.P2PKH), (Instant) any());
+            verify(deterministicSeedMock).isEncrypted();
+            verify(deterministicSeedMock).decrypt(keyCrypterMock, "", aesKeyMock);
+            verify(target).addAndActivateHDChain(deterministicKeyChainMock);
         }
     }
 
@@ -3207,27 +3746,21 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (keyRotationTimeSecs > 0) : true
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "HDPath");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "BasicKeyChain");
-        Network networkMock = mock(Network.class, "DeterministicKey");
-        KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class, "KeyChainGroupStructure");
-        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
-             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
-            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
+        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "null");
+        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "null");
+        Network networkMock = mock(Network.class, "null");
+        KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class, "{}");
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
-            protosKeyList.add(key);
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             byte[] byteArray = new byte[]{};
             AesKey aesKey = new AesKey(byteArray);
             doNothing().when(target).upgradeToDeterministic(eq(ScriptType.P2PKH), eq(keyChainGroupStructureMock), (Instant) any(), eq(aesKey));
             //Act Statement(s)
-            target.upgradeToDeterministic(ScriptType.P2PKH, keyChainGroupStructureMock, 1L, aesKey);
+            target.upgradeToDeterministic(ScriptType.P2PKH, keyChainGroupStructureMock, 3600L, aesKey);
             //Assert statement(s)
-            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
             verify(target).upgradeToDeterministic(eq(ScriptType.P2PKH), eq(keyChainGroupStructureMock), (Instant) any(), eq(aesKey));
         }
@@ -3240,23 +3773,27 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (keyRotationTimeSecs > 0) : false
          */
         //Arrange Statement(s)
-        KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class, "M/44H/0H/0H");
-        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
-             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
-            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
+        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "null");
+        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "BasicKeyChainFactory");
+        Network networkMock = mock(Network.class, "MainNetParams");
+        KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class, "HD");
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             byte[] byteArray = new byte[]{};
             AesKey aesKey = new AesKey(byteArray);
             doNothing().when(target).upgradeToDeterministic(ScriptType.P2PKH, keyChainGroupStructureMock, (Instant) null, aesKey);
             //Act Statement(s)
-            target.upgradeToDeterministic(ScriptType.P2PKH, keyChainGroupStructureMock, -1L, aesKey);
+            target.upgradeToDeterministic(ScriptType.P2PKH, keyChainGroupStructureMock, 0L, aesKey);
             //Assert statement(s)
-            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             verify(target).upgradeToDeterministic(ScriptType.P2PKH, keyChainGroupStructureMock, (Instant) null, aesKey);
         }
     }
@@ -3268,14 +3805,20 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (!supportsDeterministicChains()) : true
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "Scrypt");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "BasicKeyChainFactory");
-        Network networkMock = mock(Network.class, "MAINNET");
-        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
+        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "BasicKeyChain");
+        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "int");
+        Network networkMock = mock(Network.class, "HDPath");
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
+            Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
+            protosKeyList.add(key);
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             doReturn(false).when(target).supportsDeterministicChains();
             Instant instant = Instant.now();
@@ -3283,7 +3826,10 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             boolean result = target.isDeterministicUpgradeRequired(ScriptType.P2PKH, instant);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.FALSE));
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             verify(target).supportsDeterministicChains();
         }
     }
@@ -3296,13 +3842,20 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (getActiveKeyChain(preferredScriptType, keyRotationTime) == null) : true
          */
         //Arrange Statement(s)
+        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "BasicKeyChain");
+        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "int");
+        Network networkMock = mock(Network.class, "HDPath");
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
+            Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
+            protosKeyList.add(key);
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             doReturn(true).when(target).supportsDeterministicChains();
             doReturn(null).when(target).getActiveKeyChain(eq(ScriptType.P2PKH), (Instant) any());
@@ -3313,6 +3866,8 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             assertThat(result, equalTo(Boolean.TRUE));
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             verify(target).supportsDeterministicChains();
             verify(target).getActiveKeyChain(eq(ScriptType.P2PKH), (Instant) any());
         }
@@ -3327,13 +3882,15 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (getActiveKeyChain(preferredScriptType, keyRotationTime) == null) : false
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "AES");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "{}");
-        Network networkMock = mock(Network.class, "MAINNET");
+        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "null");
+        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "null");
+        Network networkMock = mock(Network.class, "null");
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             doReturn(true).when(target).supportsDeterministicChains();
@@ -3344,6 +3901,8 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.FALSE));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             verify(target).supportsDeterministicChains();
             verify(target).getActiveKeyChain(eq(ScriptType.P2PKH), (Instant) any());
         }
@@ -3358,21 +3917,25 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (isDeterministicUpgradeRequired(preferredScriptType, keyRotationTime)) : true
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "null");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "null");
-        Network networkMock = mock(Network.class, "null");
-        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             doReturn(true).when(target).isDeterministicUpgradeRequired(eq(ScriptType.P2PKH), (Instant) any());
             //Act Statement(s)
-            boolean result = target.isDeterministicUpgradeRequired(ScriptType.P2PKH, 10L);
+            boolean result = target.isDeterministicUpgradeRequired(ScriptType.P2PKH, 1L);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.TRUE));
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             verify(target).isDeterministicUpgradeRequired(eq(ScriptType.P2PKH), (Instant) any());
         }
     }
@@ -3386,15 +3949,18 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (isDeterministicUpgradeRequired(preferredScriptType, keyRotationTime)) : false
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "AES");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "HDPath");
-        Network networkMock = mock(Network.class, "MAINNET");
+        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "BasicKeyChain");
+        DeterministicKeyChain deterministicKeyChain2Mock = mock(DeterministicKeyChain.class, "HDPath");
+        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "int");
+        Network networkMock = mock(Network.class, "HDPath");
         try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
             protosKeyList.add(key);
@@ -3406,6 +3972,8 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             assertThat(result, equalTo(Boolean.FALSE));
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             verify(target).isDeterministicUpgradeRequired(ScriptType.P2PKH, (Instant) null);
         }
     }
@@ -3418,26 +3986,28 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (basic != null) : true
          * (chains != null) : true
          * (for-each(chains)) : true
+         *
+         * TODO: Help needed! This method is not unit testable!
+         *  Following variables could not be isolated/mocked: basic
+         *  Suggestions:
+         *  You can change the initialization of above variables and make it injectable or
+         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "{}");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "{}");
-        Network networkMock = mock(Network.class, "{}");
-        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
+        try (MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
+             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
+            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            byte[] byteArray = new byte[]{};
-            AesKey aesKey = new AesKey(byteArray);
-            doReturn("String").when(deterministicKeyChain2Mock).toString(true, true, aesKey, networkMock);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock);
             //Act Statement(s)
-            String result = target.toString(true, true, aesKey);
+            String result = target.toString(false, false, aesKeyMock);
             //Assert statement(s)
-            assertThat(result, equalTo("String\n"));
+            assertThat(result, equalTo("result1"));
+            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
-            verify(deterministicKeyChain2Mock).toString(true, true, aesKey, networkMock);
         }
     }
 
@@ -3446,13 +4016,16 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
     @Test()
     public void getDeterministicKeyChainsTest() throws UnreadableWalletException {
         //Arrange Statement(s)
+        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "null");
+        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "null");
+        Network networkMock = mock(Network.class, "null");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
-             MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
-            basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
+             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
             deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             List<Protos.Key> protosKeyList = new ArrayList<>();
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
@@ -3461,8 +4034,9 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             List<DeterministicKeyChain> result = target.getDeterministicKeyChains();
             //Assert statement(s)
             assertThat(result.size(), equalTo(0));
-            basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
             preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
             verify(target).supportsDeterministicChains();
         }
@@ -3475,21 +4049,52 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
          * (for-each(chains)) : true
          */
         //Arrange Statement(s)
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "KeyCrypter");
-        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "KeyChainFactory");
-        Network networkMock = mock(Network.class, "Network");
+        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "null");
+        KeyChainFactory keyChainFactoryMock = mock(KeyChainFactory.class, "null");
+        Network networkMock = mock(Network.class, "null");
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+             MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class)) {
+            List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
+            deterministicKeyChainList.add(deterministicKeyChain2Mock);
+            deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadSize(0);
+            doNothing().when(deterministicKeyChain2Mock).setLookaheadThreshold(0);
+            doReturn(0).when(deterministicKeyChain2Mock).getKeyLookaheadEpoch();
+            preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            List<Protos.Key> protosKeyList = new ArrayList<>();
+            KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
+            doReturn(false).when(target).supportsDeterministicChains();
+            //Act Statement(s)
+            int result = target.getCombinedKeyLookaheadEpochs();
+            //Assert statement(s)
+            assertThat(result, equalTo(0));
+            deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
+            verify(deterministicKeyChain2Mock).setLookaheadSize(0);
+            verify(deterministicKeyChain2Mock).setLookaheadThreshold(0);
+            verify(deterministicKeyChain2Mock).getKeyLookaheadEpoch();
+            preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
+            verify(target).supportsDeterministicChains();
+        }
+    }
+
+    //Sapient generated method id: ${5fcedd4e-9781-3eeb-a178-e95d0a42c550}
+    @Test()
+    public void getCombinedKeyLookaheadEpochsWhenChainsIsEmpty() throws UnreadableWalletException {
+        /* Branches:
+         * (for-each(chains)) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<DeterministicKeyChain> deterministicKeyChain = mockStatic(DeterministicKeyChain.class);
              MockedStatic<BasicKeyChain> basicKeyChain = mockStatic(BasicKeyChain.class)) {
             basicKeyChain.when(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock))).thenReturn(null);
             List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            deterministicKeyChainList.add(deterministicKeyChain2Mock);
             deterministicKeyChain.when(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock))).thenReturn(deterministicKeyChainList);
-            doReturn(0).when(deterministicKeyChain2Mock).getKeyLookaheadEpoch();
             preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Protos.Key key = Protos.Key.getDefaultInstance();
             List<Protos.Key> protosKeyList = new ArrayList<>();
-            protosKeyList.add(key);
             KeyChainGroup target = spy(KeyChainGroup.fromProtobufEncrypted(networkMock, protosKeyList, keyCrypterMock, keyChainFactoryMock));
             doReturn(false).when(target).supportsDeterministicChains();
             //Act Statement(s)
@@ -3498,7 +4103,6 @@ public class KeyChainGroupSapientGeneratedJunit4Test {
             assertThat(result, equalTo(0));
             basicKeyChain.verify(() -> BasicKeyChain.fromProtobufEncrypted(anyList(), eq(keyCrypterMock)));
             deterministicKeyChain.verify(() -> DeterministicKeyChain.fromProtobuf(anyList(), eq(keyCrypterMock), eq(keyChainFactoryMock)));
-            verify(deterministicKeyChain2Mock).getKeyLookaheadEpoch();
             preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
             verify(target).supportsDeterministicChains();
         }

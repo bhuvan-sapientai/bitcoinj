@@ -65,62 +65,42 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
 
     private final HDPath hDPathMock2 = mock(HDPath.class);
 
-    //Sapient generated method id: ${86570818-8d4b-3aa8-b29e-b79ed980b8a8}
+    //Sapient generated method id: ${e8a9027b-6eab-30be-82c4-f781d8c82d21}
     @Ignore()
     @Test()
-    public void createMasterPrivateKeyWhenILengthEquals64ThrowsIllegalStateException() throws HDDerivationException {
+    public void createMasterPrivateKeyWhenSeedLengthGreaterThan8ThrowsIllegalArgumentException() throws HDDerivationException {
         /* Branches:
          * (seed.length > 8) : true
-         * (i.length == 64) : true
          */
         //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<HDUtils> hDUtils = mockStatic(HDUtils.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{(byte) 66, (byte) 105, (byte) 116, (byte) 99, (byte) 111, (byte) 105, (byte) 110, (byte) 32, (byte) 115, (byte) 101, (byte) 101, (byte) 100};
-            hDUtils.when(() -> HDUtils.createHmacSha512Digest(byteArray)).thenReturn(hMacMock);
-            byte[] byteArray2 = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31, (byte) 32, (byte) 33, (byte) 34, (byte) 35, (byte) 36, (byte) 37, (byte) 38, (byte) 39, (byte) 40, (byte) 41, (byte) 42, (byte) 43, (byte) 44, (byte) 45, (byte) 46, (byte) 47, (byte) 48, (byte) 49, (byte) 50, (byte) 51, (byte) 52, (byte) 53, (byte) 54, (byte) 55, (byte) 56, (byte) 57, (byte) 58, (byte) 59, (byte) 60, (byte) 61, (byte) 62, (byte) 63};
-            byte[] byteArray3 = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8};
-            hDUtils.when(() -> HDUtils.hmacSha512(hMacMock, byteArray3)).thenReturn(byteArray2);
-            IllegalStateException illegalStateException = new IllegalStateException();
-            preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
-            thrown.expect(IllegalStateException.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
+            thrown.expect(IllegalArgumentException.class);
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8};
             //Act Statement(s)
-            HDKeyDerivation.createMasterPrivateKey(byteArray3);
+            HDKeyDerivation.createMasterPrivateKey(byteArray);
             //Assert statement(s)
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            hDUtils.verify(() -> HDUtils.createHmacSha512Digest(byteArray), atLeast(1));
-            hDUtils.verify(() -> HDUtils.hmacSha512(hMacMock, byteArray3), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
         }
     }
 
-    //Sapient generated method id: ${8f0a9c19-dae7-3ce6-b554-ce30c2e9d62c}
+    //Sapient generated method id: ${33e4384f-b340-362b-b436-f8791ed4aa23}
     @Test()
-    public void createMasterPrivateKeyWhenSeedLengthNotGreaterThan8AndILengthNotEquals64ThrowsIllegalStateException() throws HDDerivationException {
+    public void createMasterPrivateKeyWhenSeedLengthNotGreaterThan8ThrowsIllegalArgumentException() throws HDDerivationException {
         /* Branches:
          * (seed.length > 8) : false
-         * (i.length == 64) : false
          */
         //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<HDUtils> hDUtils = mockStatic(HDUtils.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{(byte) 66, (byte) 105, (byte) 116, (byte) 99, (byte) 111, (byte) 105, (byte) 110, (byte) 32, (byte) 115, (byte) 101, (byte) 101, (byte) 100};
-            hDUtils.when(() -> HDUtils.createHmacSha512Digest(byteArray)).thenReturn(hMacMock);
-            byte[] byteArray2 = new byte[]{(byte) 0};
-            byte[] byteArray3 = new byte[]{(byte) 0};
-            hDUtils.when(() -> HDUtils.hmacSha512(hMacMock, byteArray3)).thenReturn(byteArray2);
-            IllegalStateException illegalStateException = new IllegalStateException();
-            preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
-            thrown.expect(IllegalStateException.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
+            thrown.expect(IllegalArgumentException.class);
+            byte[] byteArray = new byte[]{(byte) 0};
             //Act Statement(s)
-            HDKeyDerivation.createMasterPrivateKey(byteArray3);
+            HDKeyDerivation.createMasterPrivateKey(byteArray);
             //Assert statement(s)
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            hDUtils.verify(() -> HDUtils.createHmacSha512Digest(byteArray), atLeast(1));
-            hDUtils.verify(() -> HDUtils.hmacSha512(hMacMock, byteArray3), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
         }
     }
 
@@ -136,7 +116,6 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
         thrown.expectMessage(hDDerivationException.getMessage());
         byte[] byteArray = new byte[]{};
         byte[] byteArray2 = new byte[]{};
-
         //Act Statement(s)
         HDKeyDerivation.createMasterPrivKeyFromBytes(byteArray, byteArray2);
     }
@@ -164,21 +143,29 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${8d5a29ba-71f9-3a0e-98b8-1293951e4e31}
+    @Ignore()
     @Test()
     public void createMasterPrivKeyFromBytesWhenIntegerCompareToECKeyCURVEGetNNotGreaterThan0() throws HDDerivationException {
         /* Branches:
          * (integer.equals(BigInteger.ZERO)) : false  #  inside assertNonZero method
          * (integer.compareTo(ECKey.CURVE.getN()) > 0) : false  #  inside assertLessThanN method
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        HDDerivationException hDDerivationException = new HDDerivationException("Generated master key is invalid.");
-        thrown.expect(HDDerivationException.class);
-        thrown.expectMessage(hDDerivationException.getMessage());
-        byte[] byteArray = new byte[]{};
-        byte[] byteArray2 = new byte[]{};
-
-        //Act Statement(s)
-        HDKeyDerivation.createMasterPrivKeyFromBytes(byteArray, byteArray2);
+        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
+            byte[] byteArray = new byte[]{};
+            byteUtils.when(() -> ByteUtils.bytesToBigInteger(byteArray)).thenReturn(new BigInteger("1"));
+            byte[] byteArray2 = new byte[]{};
+            //Act Statement(s)
+            DeterministicKey result = HDKeyDerivation.createMasterPrivKeyFromBytes(byteArray, byteArray2);
+            HDPath hDPath = HDPath.m();
+            DeterministicKey deterministicKey = new DeterministicKey(hDPath, byteArray2, new BigInteger("1"), (DeterministicKey) null);
+            //Assert statement(s)
+            assertThat(result, equalTo(deterministicKey));
+            byteUtils.verify(() -> ByteUtils.bytesToBigInteger(byteArray), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${3292e57a-1198-3307-912f-bcc8ec7db38e}
@@ -190,21 +177,17 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
-            HDPath hDPath2 = HDPath.M();
-            hDPath.when(() -> HDPath.M()).thenReturn(hDPath2);
-            byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3, (byte) 4};
-            byte[] byteArray2 = new byte[]{(byte) 5, (byte) 6, (byte) 7, (byte) 8};
-            //Act Statement(s)
-            DeterministicKey result = HDKeyDerivation.createMasterPubKeyFromBytes(byteArray, byteArray2);
-            ECDomainParameters eCDomainParameters = ECKey.CURVE;
-            ECCurve eCCurve = eCDomainParameters.getCurve();
-            LazyECPoint lazyECPoint = new LazyECPoint(eCCurve, byteArray);
-            DeterministicKey deterministicKey = new DeterministicKey(hDPath2, byteArray2, lazyECPoint, (BigInteger) null, (DeterministicKey) null);
-            //Assert statement(s)
-            assertThat(result, equalTo(deterministicKey));
-            hDPath.verify(() -> HDPath.M(), atLeast(1));
-        }
+        byte[] byteArray = new byte[]{};
+        byte[] byteArray2 = new byte[]{};
+        //Act Statement(s)
+        DeterministicKey result = HDKeyDerivation.createMasterPubKeyFromBytes(byteArray, byteArray2);
+        HDPath hDPath = HDPath.M();
+        ECDomainParameters eCDomainParameters = ECKey.CURVE;
+        ECCurve eCCurve = eCDomainParameters.getCurve();
+        LazyECPoint lazyECPoint = new LazyECPoint(eCCurve, byteArray);
+        DeterministicKey deterministicKey = new DeterministicKey(hDPath, byteArray2, lazyECPoint, (BigInteger) null, (DeterministicKey) null);
+        //Assert statement(s)
+        assertThat(result, equalTo(deterministicKey));
     }
 
     //Sapient generated method id: ${6845f396-d664-3b2c-bed4-52fe4f57494a}
@@ -245,9 +228,15 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
         /* Branches:
          * (nAttempts < MAX_CHILD_DERIVATION_ATTEMPTS) : true
          * (catch-exception (HDDerivationException)) : true
+         *
+         * TODO: Help needed! This method is not unit testable!
+         *  Following variables could not be isolated/mocked: child
+         *  Suggestions:
+         *  You can change the initialization of above variables and make it injectable or
+         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        DeterministicKey deterministicKeyMock2 = mock(DeterministicKey.class, "{}");
         DeterministicKey deterministicKeyMock3 = mock(DeterministicKey.class);
         DeterministicKey deterministicKeyMock4 = mock(DeterministicKey.class);
         DeterministicKey deterministicKeyMock5 = mock(DeterministicKey.class);
@@ -346,9 +335,9 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
         DeterministicKey deterministicKeyMock98 = mock(DeterministicKey.class);
         DeterministicKey deterministicKeyMock99 = mock(DeterministicKey.class);
         DeterministicKey deterministicKeyMock100 = mock(DeterministicKey.class);
-        HDDerivationException hDDerivationExceptionMock = mock(HDDerivationException.class, "{}");
+        DeterministicKey deterministicKeyMock101 = mock(DeterministicKey.class);
         try (MockedStatic<HDKeyDerivation> hDKeyDerivation = mockStatic(HDKeyDerivation.class, CALLS_REAL_METHODS)) {
-            hDKeyDerivation.when(() -> HDKeyDerivation.deriveChildKey(eq(deterministicKeyMock2), (ChildNumber) any())).thenThrow(hDDerivationExceptionMock);
+            hDKeyDerivation.when(() -> HDKeyDerivation.deriveChildKey(eq(deterministicKeyMock2), (ChildNumber) any())).thenReturn(deterministicKeyMock).thenReturn(deterministicKeyMock3).thenReturn(deterministicKeyMock4).thenReturn(deterministicKeyMock5).thenReturn(deterministicKeyMock6).thenReturn(deterministicKeyMock7).thenReturn(deterministicKeyMock8).thenReturn(deterministicKeyMock9).thenReturn(deterministicKeyMock10).thenReturn(deterministicKeyMock11).thenReturn(deterministicKeyMock12).thenReturn(deterministicKeyMock13).thenReturn(deterministicKeyMock14).thenReturn(deterministicKeyMock15).thenReturn(deterministicKeyMock16).thenReturn(deterministicKeyMock17).thenReturn(deterministicKeyMock18).thenReturn(deterministicKeyMock19).thenReturn(deterministicKeyMock20).thenReturn(deterministicKeyMock21).thenReturn(deterministicKeyMock22).thenReturn(deterministicKeyMock23).thenReturn(deterministicKeyMock24).thenReturn(deterministicKeyMock25).thenReturn(deterministicKeyMock26).thenReturn(deterministicKeyMock27).thenReturn(deterministicKeyMock28).thenReturn(deterministicKeyMock29).thenReturn(deterministicKeyMock30).thenReturn(deterministicKeyMock31).thenReturn(deterministicKeyMock32).thenReturn(deterministicKeyMock33).thenReturn(deterministicKeyMock34).thenReturn(deterministicKeyMock35).thenReturn(deterministicKeyMock36).thenReturn(deterministicKeyMock37).thenReturn(deterministicKeyMock38).thenReturn(deterministicKeyMock39).thenReturn(deterministicKeyMock40).thenReturn(deterministicKeyMock41).thenReturn(deterministicKeyMock42).thenReturn(deterministicKeyMock43).thenReturn(deterministicKeyMock44).thenReturn(deterministicKeyMock45).thenReturn(deterministicKeyMock46).thenReturn(deterministicKeyMock47).thenReturn(deterministicKeyMock48).thenReturn(deterministicKeyMock49).thenReturn(deterministicKeyMock50).thenReturn(deterministicKeyMock51).thenReturn(deterministicKeyMock52).thenReturn(deterministicKeyMock53).thenReturn(deterministicKeyMock54).thenReturn(deterministicKeyMock55).thenReturn(deterministicKeyMock56).thenReturn(deterministicKeyMock57).thenReturn(deterministicKeyMock58).thenReturn(deterministicKeyMock59).thenReturn(deterministicKeyMock60).thenReturn(deterministicKeyMock61).thenReturn(deterministicKeyMock62).thenReturn(deterministicKeyMock63).thenReturn(deterministicKeyMock64).thenReturn(deterministicKeyMock65).thenReturn(deterministicKeyMock66).thenReturn(deterministicKeyMock67).thenReturn(deterministicKeyMock68).thenReturn(deterministicKeyMock69).thenReturn(deterministicKeyMock70).thenReturn(deterministicKeyMock71).thenReturn(deterministicKeyMock72).thenReturn(deterministicKeyMock73).thenReturn(deterministicKeyMock74).thenReturn(deterministicKeyMock75).thenReturn(deterministicKeyMock76).thenReturn(deterministicKeyMock77).thenReturn(deterministicKeyMock78).thenReturn(deterministicKeyMock79).thenReturn(deterministicKeyMock80).thenReturn(deterministicKeyMock81).thenReturn(deterministicKeyMock82).thenReturn(deterministicKeyMock83).thenReturn(deterministicKeyMock84).thenReturn(deterministicKeyMock85).thenReturn(deterministicKeyMock86).thenReturn(deterministicKeyMock87).thenReturn(deterministicKeyMock88).thenReturn(deterministicKeyMock89).thenReturn(deterministicKeyMock90).thenReturn(deterministicKeyMock91).thenReturn(deterministicKeyMock92).thenReturn(deterministicKeyMock93).thenReturn(deterministicKeyMock94).thenReturn(deterministicKeyMock95).thenReturn(deterministicKeyMock96).thenReturn(deterministicKeyMock97).thenReturn(deterministicKeyMock98).thenReturn(deterministicKeyMock99).thenReturn(deterministicKeyMock100).thenReturn(deterministicKeyMock101);
             HDDerivationException hDDerivationException = new HDDerivationException("Maximum number of child derivation attempts reached, this is probably an indication of a bug.");
             thrown.expect(HDDerivationException.class);
             thrown.expectMessage(hDDerivationException.getMessage());
@@ -369,11 +358,9 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DeterministicKey deterministicKeyMock = mock(DeterministicKey.class, "<DeterministicKey object>");
-
         //Act Statement(s)
         Stream<DeterministicKey> result = HDKeyDerivation.generate(deterministicKeyMock, 0);
         Stream stream = Stream.empty();
-
         //Assert statement(s)
         //TODO: Please implement equals method in Stream for verification to succeed or you need to adjust respective assertion statements
         assertThat(result, equalTo(stream));
@@ -426,28 +413,22 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        DeterministicKey parentMock = mock(DeterministicKey.class, "m");
-        HDPath hDPathMock2 = mock(HDPath.class);
-        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
-             MockedStatic<HDKeyDerivation> hDKeyDerivation = mockStatic(HDKeyDerivation.class, CALLS_REAL_METHODS)) {
+        try (MockedStatic<HDKeyDerivation> hDKeyDerivation = mockStatic(HDKeyDerivation.class, CALLS_REAL_METHODS)) {
             doReturn(hDPathMock).when(parentMock).getPath();
-            ChildNumber childNumber = new ChildNumber(0, false);
             ChildNumber[] childNumberArray = new ChildNumber[]{};
-            doReturn(hDPathMock2).when(hDPathMock).extend(childNumber, childNumberArray);
+            doReturn(hDPathMock2).when(hDPathMock).extend(childNumberMock, childNumberArray);
             byte[] byteArray = new byte[]{};
             byte[] byteArray2 = new byte[]{};
             HDKeyDerivation.RawKeyBytes hDKeyDerivationRawKeyBytes = new HDKeyDerivation.RawKeyBytes(byteArray, byteArray2);
-            hDKeyDerivation.when(() -> HDKeyDerivation.deriveChildKeyBytesFromPrivate(parentMock, childNumber)).thenReturn(hDKeyDerivationRawKeyBytes);
-            byteUtils.when(() -> ByteUtils.bytesToBigInteger(byteArray)).thenReturn(new BigInteger("0"));
+            hDKeyDerivation.when(() -> HDKeyDerivation.deriveChildKeyBytesFromPrivate(parentMock, childNumberMock)).thenReturn(hDKeyDerivationRawKeyBytes);
             //Act Statement(s)
-            DeterministicKey result = HDKeyDerivation.deriveChildKeyFromPrivate(parentMock, childNumber);
+            DeterministicKey result = HDKeyDerivation.deriveChildKeyFromPrivate(parentMock, childNumberMock);
             DeterministicKey deterministicKey = new DeterministicKey(hDPathMock2, byteArray2, new BigInteger("0"), parentMock);
             //Assert statement(s)
             assertThat(result, equalTo(deterministicKey));
             verify(parentMock, atLeast(1)).getPath();
-            verify(hDPathMock, atLeast(1)).extend(childNumber, childNumberArray);
-            hDKeyDerivation.verify(() -> HDKeyDerivation.deriveChildKeyBytesFromPrivate(parentMock, childNumber), atLeast(1));
-            byteUtils.verify(() -> ByteUtils.bytesToBigInteger(byteArray), atLeast(1));
+            verify(hDPathMock, atLeast(1)).extend(childNumberMock, childNumberArray);
+            hDKeyDerivation.verify(() -> HDKeyDerivation.deriveChildKeyBytesFromPrivate(parentMock, childNumberMock), atLeast(1));
         }
     }
 
@@ -517,22 +498,18 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<HDKeyDerivation> hDKeyDerivation = mockStatic(HDKeyDerivation.class, CALLS_REAL_METHODS)) {
             doReturn(hDPathMock).when(parentMock).getPath();
-            List list = new ArrayList<>();
-            HDPath hDPath = new HDPath(false, list);
             ChildNumber[] childNumberArray = new ChildNumber[]{};
-            doReturn(hDPath).when(hDPathMock).extend(childNumberMock, childNumberArray);
+            doReturn(hDPathMock2).when(hDPathMock).extend(childNumberMock, childNumberArray);
             byte[] byteArray = new byte[]{};
             byte[] byteArray2 = new byte[]{};
             HDKeyDerivation.RawKeyBytes hDKeyDerivationRawKeyBytes = new HDKeyDerivation.RawKeyBytes(byteArray, byteArray2);
             hDKeyDerivation.when(() -> HDKeyDerivation.deriveChildKeyBytesFromPublic(parentMock, childNumberMock, HDKeyDerivation.PublicDeriveMode.NORMAL)).thenReturn(hDKeyDerivationRawKeyBytes);
             //Act Statement(s)
             DeterministicKey result = HDKeyDerivation.deriveChildKeyFromPublic(parentMock, childNumberMock, HDKeyDerivation.PublicDeriveMode.NORMAL);
-            byte[] byteArray3 = new byte[]{};
             ECDomainParameters eCDomainParameters = ECKey.CURVE;
             ECCurve eCCurve = eCDomainParameters.getCurve();
-            byte[] byteArray4 = new byte[]{};
-            LazyECPoint lazyECPoint = new LazyECPoint(eCCurve, byteArray4);
-            DeterministicKey deterministicKey = new DeterministicKey(hDPath, byteArray3, lazyECPoint, (BigInteger) null, parentMock);
+            LazyECPoint lazyECPoint = new LazyECPoint(eCCurve, byteArray);
+            DeterministicKey deterministicKey = new DeterministicKey(hDPathMock2, byteArray2, lazyECPoint, (BigInteger) null, parentMock);
             //Assert statement(s)
             assertThat(result, equalTo(deterministicKey));
             verify(parentMock, atLeast(1)).getPath();
@@ -541,60 +518,44 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${63f8c45b-3f1a-32bc-9913-efe6b63452d3}
+    //Sapient generated method id: ${155cff45-4844-32cd-a54c-3fea1569cee0}
     @Ignore()
     @Test()
-    public void deriveChildKeyBytesFromPublicWhenParentPublicKeyLengthEquals33ThrowsIllegalStateException() throws HDDerivationException {
+    public void deriveChildKeyBytesFromPublicWhenChildNumberNotIsHardenedThrowsIllegalArgumentException() throws HDDerivationException {
         /* Branches:
          * (!childNumber.isHardened()) : true
-         * (parentPublicKey.length == 33) : true
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(eCPointMock).when(parentMock).getPubKeyPoint();
-            byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31, (byte) 32};
-            doReturn(byteArray).when(eCPointMock).getEncoded(true);
             doReturn(false).when(childNumberMock).isHardened();
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            IllegalStateException illegalStateException = new IllegalStateException();
-            preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
-            thrown.expect(IllegalStateException.class);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
+            thrown.expect(IllegalArgumentException.class);
             //Act Statement(s)
-            HDKeyDerivation.deriveChildKeyBytesFromPublic(parentMock, childNumberMock, HDKeyDerivation.PublicDeriveMode.NORMAL);
+            HDKeyDerivation.deriveChildKeyBytesFromPublic(deterministicKeyMock, childNumberMock, HDKeyDerivation.PublicDeriveMode.NORMAL);
             //Assert statement(s)
-            verify(parentMock).getPubKeyPoint();
-            verify(eCPointMock).getEncoded(true);
             verify(childNumberMock).isHardened();
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
         }
     }
 
-    //Sapient generated method id: ${1ed2369a-122d-3bdb-b767-8686c6edb854}
+    //Sapient generated method id: ${94d8bd42-1e6e-3b07-a45c-da4ec8b7f4cb}
     @Test()
-    public void deriveChildKeyBytesFromPublicWhenChildNumberIsHardenedAndParentPublicKeyLengthNotEquals33ThrowsIllegalStateException() throws HDDerivationException {
+    public void deriveChildKeyBytesFromPublicWhenChildNumberIsHardenedThrowsIllegalArgumentException() throws HDDerivationException {
         /* Branches:
          * (!childNumber.isHardened()) : false
-         * (parentPublicKey.length == 33) : false
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(eCPointMock).when(parentMock).getPubKeyPoint();
-            byte[] byteArray = new byte[]{(byte) 0};
-            doReturn(byteArray).when(eCPointMock).getEncoded(true);
             doReturn(true).when(childNumberMock).isHardened();
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            IllegalStateException illegalStateException = new IllegalStateException();
-            preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
-            thrown.expect(IllegalStateException.class);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
+            thrown.expect(IllegalArgumentException.class);
             //Act Statement(s)
-            HDKeyDerivation.deriveChildKeyBytesFromPublic(parentMock, childNumberMock, HDKeyDerivation.PublicDeriveMode.NORMAL);
+            HDKeyDerivation.deriveChildKeyBytesFromPublic(deterministicKeyMock, childNumberMock, HDKeyDerivation.PublicDeriveMode.NORMAL);
             //Assert statement(s)
-            verify(parentMock).getPubKeyPoint();
-            verify(eCPointMock).getEncoded(true);
             verify(childNumberMock).isHardened();
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
         }
     }
 }

@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "3874A998224593367EAE98EFBEB14087"
+modelFingerprint: "2F7075AF883D92749CFB4748EE769CB0"
 methods:
 - method:
     name: "allowEmptyPeerChain"
@@ -281,8 +281,8 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "9E03C6265D3452C1122DF1BD7EC94AAE"
-    problemWasSolvedByProver: false
+    modelFingerprint: "0DB6829A791C4C52A254876C23EEB595"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -513,7 +513,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "9FA52FD33D1C496318C6C1455D2491A8"
+      modelFingerprint: "1DADE0C83F51DDAF7EE6A27EB1E57FB3"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -533,6 +533,8 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
+              value: false
+            suggestedContent: !<regular>
               value: false
             valueType: "boolean"
             uuid: "getGenesisBlock_boolean1"
@@ -582,6 +584,6 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

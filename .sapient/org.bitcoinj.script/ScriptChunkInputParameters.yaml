@@ -1808,7 +1808,8 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "BITWISE_NOT_SUPPORTED"
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path12"
@@ -1827,7 +1828,8 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "BITWISE_NOT_SUPPORTED"
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path17"
@@ -1876,12 +1878,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "8BF3406D92EF425FA21EDAD21DC4E949"
-    problemWasSolvedByProver: true
+    modelFingerprint: "C0AE4D491A1FB2D5556FF37EBD6E62DA"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "59670B3E2C3FA4BFAE247A144CF50D70"
+      modelFingerprint: "7F66B6F9CD2A3C779AB243B61A66B210"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1945,8 +1947,6 @@ methods:
           - name: "opcode"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 79
               suggestedContent: !<regular>
                 value: 79
               valueType: "int"
@@ -1957,25 +1957,10 @@ methods:
           - name: "data"
             value:
               sapientType: "ARRAY"
-              content: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 17
-                    suggestedContent: !<regular>
-                      value: 17
-                    valueType: "byte"
-                    uuid: "isShortestPossiblePushData_byte1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
               suggestedContent: !<array>
                 values:
                   0:
                     sapientType: "BASIC"
-                    content: !<regular>
-                      value: 17
                     suggestedContent: !<regular>
                       value: 17
                     valueType: "byte"
@@ -2066,7 +2051,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
+      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -2074,7 +2059,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: false
+          value: true
         valueType: "boolean"
         fixed: true
         equalsMethodPresent: true
@@ -2085,7 +2070,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path7"
@@ -2096,12 +2082,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "A1C5A48D77EFE8C438041D2BE486A0F1"
-    problemWasSolvedByProver: true
+    modelFingerprint: "CD60AD60CA6E367C0F2A721D5B76D037"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "71E6A4D8F71E78285AB892BB8C5E7C8C"
+      modelFingerprint: "57E4FDD91907755167A103584691E51F"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2165,8 +2151,6 @@ methods:
           - name: "opcode"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0
               suggestedContent: !<regular>
                 value: 0
               valueType: "int"
@@ -2177,25 +2161,10 @@ methods:
           - name: "data"
             value:
               sapientType: "ARRAY"
-              content: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 17
-                    suggestedContent: !<regular>
-                      value: 17
-                    valueType: "byte"
-                    uuid: "isShortestPossiblePushData_byte1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
               suggestedContent: !<array>
                 values:
                   0:
                     sapientType: "BASIC"
-                    content: !<regular>
-                      value: 17
                     suggestedContent: !<regular>
                       value: 17
                     valueType: "byte"
@@ -2305,7 +2274,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path13"
@@ -2324,7 +2294,8 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "BITWISE_NOT_SUPPORTED"
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path14"
@@ -2775,12 +2746,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "1EC03B8732DFC2E00555B9640F7CD1D5"
-    problemWasSolvedByProver: true
+    modelFingerprint: "E28403FD161D736D2E619F704D16240F"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "A6DA3FBDE10FD93E3DB45105D8F92D23"
+      modelFingerprint: "941F9E613A371F6A0760E6B8A3C79B69"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2794,8 +2765,6 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
                 value: 0
               valueType: "int"
               uuid: "<init>_int1"
@@ -2822,10 +2791,6 @@ methods:
           - name: "opcode"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -2834,10 +2799,6 @@ methods:
           - name: "data"
             value:
               sapientType: "ARRAY"
-              content: !<array>
-                values: {}
-              suggestedContent: !<array>
-                values: {}
               valueType: "byte[]"
               uuid: "<init>_byte[]1"
               fixed: false
@@ -2854,7 +2815,7 @@ methods:
       filledByUser: false
     - type: "INTERNAL"
       name: "internalMethod"
-      modelFingerprint: "FF32C41394815F1319DB7F2172E2108C"
+      modelFingerprint: "FDE1CD49ED67225EF0846F4E59EEE725"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -2868,8 +2829,6 @@ methods:
           sapientType: "BASIC"
           content: !<regular>
             value: false
-          suggestedContent: !<regular>
-            value: false
           valueType: "boolean"
           uuid: "isShortestPossiblePushData_boolean1"
           fixed: false
@@ -2880,7 +2839,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "B9A534114EB42AB39C9D204CE242341B"
+      modelFingerprint: "C0FF1F0AD0F6373CDC30F794AE131EFB"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -2900,8 +2859,6 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: false
-            suggestedContent: !<regular>
               value: false
             valueType: "boolean"
             uuid: "isShortestPossiblePushData_boolean1"
@@ -2940,7 +2897,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path10"
@@ -2951,12 +2909,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "1EC03B8732DFC2E00555B9640F7CD1D5"
-    problemWasSolvedByProver: true
+    modelFingerprint: "86CE2D2EC5CCE08FBBF9CF48496ECBFB"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "A6DA3FBDE10FD93E3DB45105D8F92D23"
+      modelFingerprint: "941F9E613A371F6A0760E6B8A3C79B69"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2970,8 +2928,6 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
                 value: 0
               valueType: "int"
               uuid: "<init>_int1"
@@ -2998,10 +2954,6 @@ methods:
           - name: "opcode"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -3010,10 +2962,6 @@ methods:
           - name: "data"
             value:
               sapientType: "ARRAY"
-              content: !<array>
-                values: {}
-              suggestedContent: !<array>
-                values: {}
               valueType: "byte[]"
               uuid: "<init>_byte[]1"
               fixed: false
@@ -3030,7 +2978,7 @@ methods:
       filledByUser: false
     - type: "INTERNAL"
       name: "internalMethod"
-      modelFingerprint: "FF32C41394815F1319DB7F2172E2108C"
+      modelFingerprint: "FDE1CD49ED67225EF0846F4E59EEE725"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -3044,8 +2992,6 @@ methods:
           sapientType: "BASIC"
           content: !<regular>
             value: false
-          suggestedContent: !<regular>
-            value: false
           valueType: "boolean"
           uuid: "isShortestPossiblePushData_boolean1"
           fixed: false
@@ -3056,7 +3002,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "B9A534114EB42AB39C9D204CE242341B"
+      modelFingerprint: "C0FF1F0AD0F6373CDC30F794AE131EFB"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -3077,8 +3023,6 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: false
-            suggestedContent: !<regular>
-              value: false
             valueType: "boolean"
             uuid: "isShortestPossiblePushData_boolean1"
             fixed: false
@@ -3097,7 +3041,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
+      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -3105,7 +3049,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: true
+          value: false
         valueType: "boolean"
         fixed: true
         equalsMethodPresent: true
@@ -3116,7 +3060,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -4273,12 +4218,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "EB3BD11A401DBB241B7D8B8C2BDC632A"
-    problemWasSolvedByProver: true
+    modelFingerprint: "EB8111D1156A3E677B8D6D9CD1D367F1"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "A6DA3FBDE10FD93E3DB45105D8F92D23"
+      modelFingerprint: "941F9E613A371F6A0760E6B8A3C79B69"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -4292,8 +4237,6 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
                 value: 0
               valueType: "int"
               uuid: "<init>_int1"
@@ -4320,10 +4263,6 @@ methods:
           - name: "opcode"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -4332,10 +4271,6 @@ methods:
           - name: "data"
             value:
               sapientType: "ARRAY"
-              content: !<array>
-                values: {}
-              suggestedContent: !<array>
-                values: {}
               valueType: "byte[]"
               uuid: "<init>_byte[]1"
               fixed: false
@@ -4352,7 +4287,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "stream"
-      modelFingerprint: "B621D4240DEEFC267BEA013D97BEB77E"
+      modelFingerprint: "B8BEF8756892BE49F09AC257065C85DF"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -4376,7 +4311,7 @@ methods:
       filledByUser: false
     - type: "INTERNAL"
       name: "internalMethod"
-      modelFingerprint: "6E0E1E96B4572810D45978083918DD61"
+      modelFingerprint: "53A0ECA53A50BA367E9BD5767802EAD9"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -4390,8 +4325,6 @@ methods:
           sapientType: "BASIC"
           content: !<regular>
             value: false
-          suggestedContent: !<regular>
-            value: false
           valueType: "boolean"
           uuid: "write_boolean1"
           fixed: false
@@ -4402,13 +4335,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "ACF07FFCA3E2E1576E0B7D7733EEEFF8"
+      modelFingerprint: "5D1C76B3909AD28BDDC21FFF70362CB1"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "REAL"
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.base.internal.Preconditions"
         uuid: "org.bitcoinj.base.internal.Preconditions"
         fixed: false
@@ -4422,16 +4355,25 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: true
+              value: false
             valueType: "boolean"
             fixed: true
             equalsMethodPresent: false
             explicitCastNeeded: false
         signature: "checkState(boolean): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "write_void1"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalStateException"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -4440,13 +4382,24 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      modelFingerprint: "C9C68C9339F812BC8DEC7C1D6145A135"
       index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "VOID"
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.IllegalStateException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.lang.IllegalStateException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.lang.IllegalStateException"
         fixed: true
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -4456,7 +4409,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path7"
@@ -4718,12 +4672,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "EB3BD11A401DBB241B7D8B8C2BDC632A"
-    problemWasSolvedByProver: true
+    modelFingerprint: "24E879048332A513337B92E74DA9C0AE"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "A6DA3FBDE10FD93E3DB45105D8F92D23"
+      modelFingerprint: "941F9E613A371F6A0760E6B8A3C79B69"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -4737,8 +4691,6 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
                 value: 0
               valueType: "int"
               uuid: "<init>_int1"
@@ -4765,10 +4717,6 @@ methods:
           - name: "opcode"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -4777,10 +4725,6 @@ methods:
           - name: "data"
             value:
               sapientType: "ARRAY"
-              content: !<array>
-                values: {}
-              suggestedContent: !<array>
-                values: {}
               valueType: "byte[]"
               uuid: "<init>_byte[]1"
               fixed: false
@@ -4797,7 +4741,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "stream"
-      modelFingerprint: "B621D4240DEEFC267BEA013D97BEB77E"
+      modelFingerprint: "B8BEF8756892BE49F09AC257065C85DF"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -4821,7 +4765,7 @@ methods:
       filledByUser: false
     - type: "INTERNAL"
       name: "internalMethod"
-      modelFingerprint: "6E0E1E96B4572810D45978083918DD61"
+      modelFingerprint: "53A0ECA53A50BA367E9BD5767802EAD9"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -4835,8 +4779,6 @@ methods:
           sapientType: "BASIC"
           content: !<regular>
             value: false
-          suggestedContent: !<regular>
-            value: false
           valueType: "boolean"
           uuid: "write_boolean1"
           fixed: false
@@ -4847,13 +4789,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "ACF07FFCA3E2E1576E0B7D7733EEEFF8"
+      modelFingerprint: "5D1C76B3909AD28BDDC21FFF70362CB1"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "REAL"
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.base.internal.Preconditions"
         uuid: "org.bitcoinj.base.internal.Preconditions"
         fixed: false
@@ -4867,16 +4809,25 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: true
+              value: false
             valueType: "boolean"
             fixed: true
             equalsMethodPresent: false
             explicitCastNeeded: false
         signature: "checkState(boolean): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "write_void1"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalStateException"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -4885,13 +4836,24 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      modelFingerprint: "C9C68C9339F812BC8DEC7C1D6145A135"
       index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "VOID"
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.IllegalStateException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.lang.IllegalStateException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.lang.IllegalStateException"
         fixed: true
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -4901,7 +4863,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path11"
@@ -5343,12 +5306,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "EB3BD11A401DBB241B7D8B8C2BDC632A"
-    problemWasSolvedByProver: true
+    modelFingerprint: "527A677F8725D93ED176E311EEEB398B"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "A6DA3FBDE10FD93E3DB45105D8F92D23"
+      modelFingerprint: "941F9E613A371F6A0760E6B8A3C79B69"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -5362,8 +5325,6 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
                 value: 0
               valueType: "int"
               uuid: "<init>_int1"
@@ -5390,10 +5351,6 @@ methods:
           - name: "opcode"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -5402,10 +5359,6 @@ methods:
           - name: "data"
             value:
               sapientType: "ARRAY"
-              content: !<array>
-                values: {}
-              suggestedContent: !<array>
-                values: {}
               valueType: "byte[]"
               uuid: "<init>_byte[]1"
               fixed: false
@@ -5422,7 +5375,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "stream"
-      modelFingerprint: "B621D4240DEEFC267BEA013D97BEB77E"
+      modelFingerprint: "B8BEF8756892BE49F09AC257065C85DF"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -5446,7 +5399,7 @@ methods:
       filledByUser: false
     - type: "INTERNAL"
       name: "internalMethod"
-      modelFingerprint: "6E0E1E96B4572810D45978083918DD61"
+      modelFingerprint: "53A0ECA53A50BA367E9BD5767802EAD9"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -5460,8 +5413,6 @@ methods:
           sapientType: "BASIC"
           content: !<regular>
             value: false
-          suggestedContent: !<regular>
-            value: false
           valueType: "boolean"
           uuid: "write_boolean1"
           fixed: false
@@ -5472,13 +5423,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "ACF07FFCA3E2E1576E0B7D7733EEEFF8"
+      modelFingerprint: "5D1C76B3909AD28BDDC21FFF70362CB1"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "REAL"
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.base.internal.Preconditions"
         uuid: "org.bitcoinj.base.internal.Preconditions"
         fixed: false
@@ -5492,16 +5443,25 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: true
+              value: false
             valueType: "boolean"
             fixed: true
             equalsMethodPresent: false
             explicitCastNeeded: false
         signature: "checkState(boolean): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "write_void1"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalStateException"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -5510,13 +5470,24 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      modelFingerprint: "C9C68C9339F812BC8DEC7C1D6145A135"
       index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "VOID"
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.IllegalStateException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.lang.IllegalStateException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.lang.IllegalStateException"
         fixed: true
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -5526,7 +5497,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -6764,6 +6736,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

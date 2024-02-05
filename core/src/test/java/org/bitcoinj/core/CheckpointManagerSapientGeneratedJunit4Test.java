@@ -52,6 +52,8 @@ import static org.hamcrest.Matchers.isA;
 
 import org.junit.Ignore;
 
+import static org.hamcrest.core.IsInstanceOf.instanceOf;
+
 public class CheckpointManagerSapientGeneratedJunit4Test {
 
     @Rule()
@@ -81,11 +83,9 @@ public class CheckpointManagerSapientGeneratedJunit4Test {
     @Test()
     public void openStreamTest() {
         //Arrange Statement(s)
-        NetworkParameters networkParameters = NetworkParameters.fromID("String");
-
+        NetworkParameters networkParameters = NetworkParameters.fromID("id1");
         //Act Statement(s)
         InputStream result = CheckpointManager.openStream(networkParameters);
-
         //Assert statement(s)
         assertThat(result, is(nullValue()));
     }
@@ -108,24 +108,21 @@ public class CheckpointManagerSapientGeneratedJunit4Test {
             doReturn("A").when(paramsMock).getId();
             StoredBlock storedBlock2 = new StoredBlock(blockMock, new BigInteger("0"), 0);
             storedBlock.when(() -> StoredBlock.deserializeCompact((ByteBuffer) any())).thenReturn(storedBlock2);
-            Instant instant = Instant.now();
-            doReturn(instant).when(blockMock).time();
             timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("return_of_dateTimeFormat1");
             byte[] byteArray = new byte[]{};
             sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256HashMock);
             preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
             CheckpointManager target = new CheckpointManager(paramsMock, (InputStream) null);
             doReturn(blockMock2).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock2).time();
             Instant instant2 = Instant.now();
-            doReturn(instant2).when(blockMock2).time();
-            Instant instant3 = Instant.now();
             //Act Statement(s)
-            StoredBlock result = target.getCheckpointBefore(instant3);
+            StoredBlock result = target.getCheckpointBefore(instant2);
             //Assert statement(s)
             assertThat(result, is(notNullValue()));
             verify(paramsMock, atLeast(1)).getId();
             storedBlock.verify(() -> StoredBlock.deserializeCompact((ByteBuffer) any()), atLeast(1));
-            verify(blockMock, atLeast(1)).time();
             timeUtils.verify(() -> TimeUtils.dateTimeFormat((Instant) any()), atLeast(1));
             sha256Hash.verify(() -> Sha256Hash.wrap(byteArray), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
@@ -152,34 +149,28 @@ public class CheckpointManagerSapientGeneratedJunit4Test {
             doReturn("A").when(paramsMock).getId();
             StoredBlock storedBlock2 = new StoredBlock(blockMock, new BigInteger("0"), 0);
             storedBlock.when(() -> StoredBlock.deserializeCompact((ByteBuffer) any())).thenReturn(storedBlock2);
-            Instant instant = Instant.now();
-            doReturn(instant).when(blockMock).time();
             timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("return_of_dateTimeFormat1");
             byte[] byteArray = new byte[]{};
             sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256HashMock);
             preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
             CheckpointManager target = new CheckpointManager(paramsMock, (InputStream) null);
-            Instant instant2 = Instant.now();
-            doReturn(instant2).when(blockMock2).time();
-            doReturn(blockMock2, blockMock3).when(paramsMock).getGenesisBlock();
-            doReturn(blockMock4).when(blockMock3).cloneAsHeader();
-            doReturn(new BigInteger("0")).when(blockMock4).getWork();
-            Instant instant3 = Instant.now();
+            doReturn(blockMock2).when(paramsMock).getGenesisBlock();
+            doReturn(blockMock3).when(blockMock2).cloneAsHeader();
+            doReturn(new BigInteger("0")).when(blockMock3).getWork();
+            Instant instant = Instant.now();
             //Act Statement(s)
-            StoredBlock result = target.getCheckpointBefore(instant3);
-            StoredBlock storedBlock3 = new StoredBlock(blockMock4, new BigInteger("0"), 0);
+            StoredBlock result = target.getCheckpointBefore(instant);
+            StoredBlock storedBlock3 = new StoredBlock(blockMock3, new BigInteger("0"), 0);
             //Assert statement(s)
             assertThat(result, equalTo(storedBlock3));
             verify(paramsMock, atLeast(1)).getId();
             storedBlock.verify(() -> StoredBlock.deserializeCompact((ByteBuffer) any()), atLeast(1));
-            verify(blockMock, atLeast(1)).time();
             timeUtils.verify(() -> TimeUtils.dateTimeFormat((Instant) any()), atLeast(1));
             sha256Hash.verify(() -> Sha256Hash.wrap(byteArray), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
-            verify(paramsMock, times(2)).getGenesisBlock();
-            verify(blockMock2, atLeast(1)).time();
-            verify(blockMock3, atLeast(1)).cloneAsHeader();
-            verify(blockMock4, atLeast(1)).getWork();
+            verify(paramsMock, atLeast(1)).getGenesisBlock();
+            verify(blockMock2, atLeast(1)).cloneAsHeader();
+            verify(blockMock3, atLeast(1)).getWork();
         }
     }
 
@@ -202,25 +193,22 @@ public class CheckpointManagerSapientGeneratedJunit4Test {
             doReturn("A").when(paramsMock).getId();
             StoredBlock storedBlock2 = new StoredBlock(blockMock, new BigInteger("0"), 0);
             storedBlock.when(() -> StoredBlock.deserializeCompact((ByteBuffer) any())).thenReturn(storedBlock2);
-            Instant instant = Instant.now();
-            doReturn(instant).when(blockMock).time();
             timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("return_of_dateTimeFormat1");
             byte[] byteArray = new byte[]{};
             sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256HashMock);
             preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
             CheckpointManager target = new CheckpointManager(paramsMock, (InputStream) null);
             doReturn(blockMock2).when(paramsMock).getGenesisBlock();
-            Instant instant2 = Instant.now();
-            doReturn(instant2).when(blockMock2).time();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock2).time();
             thrown.expect(RuntimeException.class);
-            thrown.expectCause(isA(VerificationException.class));
-            Instant instant3 = Instant.now();
+            thrown.expectCause(is(instanceOf(VerificationException.class)));
+            Instant instant2 = Instant.now();
             //Act Statement(s)
-            target.getCheckpointBefore(instant3);
+            target.getCheckpointBefore(instant2);
             //Assert statement(s)
             verify(paramsMock, atLeast(1)).getId();
             storedBlock.verify(() -> StoredBlock.deserializeCompact((ByteBuffer) any()), atLeast(1));
-            verify(blockMock, atLeast(1)).time();
             timeUtils.verify(() -> TimeUtils.dateTimeFormat((Instant) any()), atLeast(1));
             sha256Hash.verify(() -> Sha256Hash.wrap(byteArray), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
@@ -248,34 +236,28 @@ public class CheckpointManagerSapientGeneratedJunit4Test {
             doReturn("A").when(paramsMock).getId();
             StoredBlock storedBlock2 = new StoredBlock(blockMock, new BigInteger("0"), 0);
             storedBlock.when(() -> StoredBlock.deserializeCompact((ByteBuffer) any())).thenReturn(storedBlock2);
-            Instant instant = Instant.now();
-            doReturn(instant).when(blockMock).time();
             timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("return_of_dateTimeFormat1");
             byte[] byteArray = new byte[]{};
             sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256HashMock);
             preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
             CheckpointManager target = new CheckpointManager(paramsMock, (InputStream) null);
-            Instant instant2 = Instant.now();
-            doReturn(instant2).when(blockMock2).time();
-            doReturn(blockMock2, blockMock3).when(paramsMock).getGenesisBlock();
-            doReturn(blockMock4).when(blockMock3).cloneAsHeader();
-            doReturn(new BigInteger("0")).when(blockMock4).getWork();
+            doReturn(blockMock2).when(paramsMock).getGenesisBlock();
+            doReturn(blockMock3).when(blockMock2).cloneAsHeader();
+            doReturn(new BigInteger("0")).when(blockMock3).getWork();
             thrown.expect(RuntimeException.class);
-            thrown.expectCause(isA(VerificationException.class));
-            Instant instant3 = Instant.now();
+            thrown.expectCause(is(instanceOf(VerificationException.class)));
+            Instant instant = Instant.now();
             //Act Statement(s)
-            target.getCheckpointBefore(instant3);
+            target.getCheckpointBefore(instant);
             //Assert statement(s)
             verify(paramsMock, atLeast(1)).getId();
             storedBlock.verify(() -> StoredBlock.deserializeCompact((ByteBuffer) any()), atLeast(1));
-            verify(blockMock, atLeast(1)).time();
             timeUtils.verify(() -> TimeUtils.dateTimeFormat((Instant) any()), atLeast(1));
             sha256Hash.verify(() -> Sha256Hash.wrap(byteArray), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
-            verify(paramsMock, times(2)).getGenesisBlock();
-            verify(blockMock2, atLeast(1)).time();
-            verify(blockMock3, atLeast(1)).cloneAsHeader();
-            verify(blockMock4, atLeast(1)).getWork();
+            verify(paramsMock, atLeast(1)).getGenesisBlock();
+            verify(blockMock2, atLeast(1)).cloneAsHeader();
+            verify(blockMock3, atLeast(1)).getWork();
         }
     }
 
@@ -346,27 +328,18 @@ public class CheckpointManagerSapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${074db5cd-ec19-335c-bbc6-afb8b0270ce1}
+    //Sapient generated method id: ${80743552-f341-3c4d-b1ab-8fd557cd048c}
     @Ignore()
     @Test()
-    public void checkpointWhenArraysNotEqualsHeaderBINARY_MAGICGetBytesStandardCharsetsUS_ASCIIThrowsIOException() throws IOException, BlockStoreException {
+    public void checkpointWhenStoreNotInstanceOfFullPrunedBlockStoreThrowsIllegalArgumentException() throws IOException, BlockStoreException {
         /* Branches:
          * (!(store instanceof FullPrunedBlockStore)) : true
-         * (branch expression (line 101)) : false  #  inside <init> method
-         * (branch expression (line 108)) : false  #  inside <init> method
-         * (!Arrays.equals(header, BINARY_MAGIC.getBytes(StandardCharsets.US_ASCII))) : true  #  inside readBinary method
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("return_of_dateTimeFormat1");
-            IOException iOException = new IOException("Header bytes did not match expected version");
-            thrown.expect(IOException.class);
-            thrown.expectMessage(iOException.getMessage());
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
+            thrown.expect(IllegalArgumentException.class);
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
             InputStream inputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
             Instant instant = Instant.now();
@@ -374,26 +347,21 @@ public class CheckpointManagerSapientGeneratedJunit4Test {
             CheckpointManager.checkpoint(networkParametersMock, inputStream, blockStoreMock, instant);
             //Assert statement(s)
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            timeUtils.verify(() -> TimeUtils.dateTimeFormat((Instant) any()));
         }
     }
 
-    //Sapient generated method id: ${c47daa01-8e51-3417-9f67-d71e3c5af23a}
+    //Sapient generated method id: ${859b6fc3-b475-3878-8c6f-36f0c8a54d31}
     @Test()
-    public void checkpointWhenDefaultBranchAndDefaultBranchThrowsIOException() throws IOException, BlockStoreException {
+    public void checkpointWhenStoreInstanceOfFullPrunedBlockStoreThrowsIllegalArgumentException() throws IOException, BlockStoreException {
         /* Branches:
          * (!(store instanceof FullPrunedBlockStore)) : false
-         * (branch expression (line 101)) : false  #  inside <init> method
-         * (branch expression (line 108)) : false  #  inside <init> method
-         * (branch expression (line 110)) : false  #  inside <init> method
          */
         //Arrange Statement(s)
         FullPrunedBlockStore fullPrunedBlockStoreMock = mock(FullPrunedBlockStore.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            IOException iOException = new IOException("Unsupported format.");
-            thrown.expect(IOException.class);
-            thrown.expectMessage(iOException.getMessage());
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
+            thrown.expect(IllegalArgumentException.class);
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
             InputStream inputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
             Instant instant = Instant.now();
@@ -401,164 +369,6 @@ public class CheckpointManagerSapientGeneratedJunit4Test {
             CheckpointManager.checkpoint(networkParametersMock, inputStream, (BlockStore) fullPrunedBlockStoreMock, instant);
             //Assert statement(s)
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-        }
-    }
-
-    //Sapient generated method id: ${9ec088d2-8183-3fc2-b875-fa137e005887}
-    @Ignore()
-    @Test()
-    public void checkpointWhenTEXTUAL_MAGICNotEqualsMagicThrowsIOException() throws IOException, BlockStoreException {
-        /* Branches:
-         * (!(store instanceof FullPrunedBlockStore)) : true
-         * (branch expression (line 101)) : false  #  inside <init> method
-         * (branch expression (line 108)) : false  #  inside <init> method
-         * (branch expression (line 110)) : false  #  inside <init> method
-         * (!TEXTUAL_MAGIC.equals(magic)) : true  #  inside readTextual method
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("return_of_dateTimeFormat1");
-            IOException iOException = new IOException("unexpected magic: ");
-            thrown.expect(IOException.class);
-            thrown.expectMessage(iOException.getMessage());
-            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-            InputStream inputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
-            Instant instant = Instant.now();
-            //Act Statement(s)
-            CheckpointManager.checkpoint(networkParametersMock, inputStream, blockStoreMock, instant);
-            //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            timeUtils.verify(() -> TimeUtils.dateTimeFormat((Instant) any()));
-        }
-    }
-
-    //Sapient generated method id: ${b7104d2c-7226-3a2e-a881-0b43e6957b1a}
-    @Ignore()
-    @Test()
-    public void checkpointWhenTEXTUAL_MAGICNotEqualsMagicAndDefaultBranchThrowsIOException() throws IOException, BlockStoreException {
-        /* Branches:
-         * (!(store instanceof FullPrunedBlockStore)) : true
-         * (branch expression (line 101)) : false  #  inside <init> method
-         * (branch expression (line 108)) : false  #  inside <init> method
-         * (branch expression (line 110)) : false  #  inside <init> method
-         * (!TEXTUAL_MAGIC.equals(magic)) : true  #  inside readTextual method
-         * (branch expression (line 166)) : true  #  inside readTextual method
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("return_of_dateTimeFormat1");
-            IOException iOException = new IOException("unexpected magic: ");
-            thrown.expect(IOException.class);
-            thrown.expectMessage(iOException.getMessage());
-            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-            InputStream inputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
-            Instant instant = Instant.now();
-            //Act Statement(s)
-            CheckpointManager.checkpoint(networkParametersMock, inputStream, blockStoreMock, instant);
-            //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            timeUtils.verify(() -> TimeUtils.dateTimeFormat((Instant) any()));
-        }
-    }
-
-    //Sapient generated method id: ${e3a46af6-86fa-3a85-b424-e81a4fb05e10}
-    @Ignore()
-    @Test()
-    public void checkpointWhenNumCheckpointsNotGreaterThan0ThrowsIOException() throws IOException, BlockStoreException {
-        /* Branches:
-         * (!(store instanceof FullPrunedBlockStore)) : true
-         * (branch expression (line 101)) : false  #  inside <init> method
-         * (branch expression (line 108)) : false  #  inside <init> method
-         * (branch expression (line 110)) : false  #  inside <init> method
-         * (!TEXTUAL_MAGIC.equals(magic)) : false  #  inside readTextual method
-         * (i < numSigs) : true  #  inside readTextual method
-         * (numCheckpoints > 0) : false  #  inside readTextual method
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("return_of_dateTimeFormat1");
-            IllegalStateException illegalStateException = new IllegalStateException();
-            preconditions.when(() -> Preconditions.checkState(false)).thenThrow(illegalStateException);
-            IOException iOException = new IOException("unexpected magic: ");
-            thrown.expect(IOException.class);
-            thrown.expectMessage(iOException.getMessage());
-            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-            InputStream inputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
-            Instant instant = Instant.now();
-            //Act Statement(s)
-            CheckpointManager.checkpoint(networkParametersMock, inputStream, blockStoreMock, instant);
-            //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            timeUtils.verify(() -> TimeUtils.dateTimeFormat((Instant) any()));
-            preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
-        }
-    }
-
-    //Sapient generated method id: ${734bd72b-a3c1-32cd-93f2-3d0cbf55b4f4}
-    @Ignore()
-    @Test()
-    public void checkpointWhenILessThanNumCheckpoints() throws Throwable {
-        /* Branches:
-         * (!(store instanceof FullPrunedBlockStore)) : true
-         * (branch expression (line 101)) : false  #  inside <init> method
-         * (branch expression (line 108)) : false  #  inside <init> method
-         * (branch expression (line 110)) : false  #  inside <init> method
-         * (!TEXTUAL_MAGIC.equals(magic)) : false  #  inside readTextual method
-         * (i < numSigs) : true  #  inside readTextual method
-         * (numCheckpoints > 0) : true  #  inside readTextual method
-         * (i < numCheckpoints) : true  #  inside readTextual method
-         *
-         * TODO: Help needed! This method is not unit testable!
-         *  Following variables could not be isolated/mocked: manager
-         *  Suggestions:
-         *  You can change the initialization of above variables and make it injectable or
-         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        BlockStore storeMock = mock(BlockStore.class);
-        try (MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class);
-             MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class);
-             MockedStatic<StoredBlock> storedBlock = mockStatic(StoredBlock.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS)) {
-            doNothing().when(storeMock).put((StoredBlock) any());
-            doNothing().when(storeMock).setChainHead((StoredBlock) any());
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("return_of_dateTimeFormat1");
-            StoredBlock storedBlock2 = new StoredBlock(blockMock, new BigInteger("0"), 0);
-            storedBlock.when(() -> StoredBlock.deserializeCompact((ByteBuffer) any())).thenReturn(storedBlock2);
-            Instant instant = Instant.now();
-            doReturn(instant).when(blockMock).time();
-            byte[] byteArray = new byte[]{};
-            sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256HashMock);
-            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-            InputStream inputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
-            Instant instant2 = Instant.now();
-            //Act Statement(s)
-            CheckpointManager.checkpoint(networkParametersMock, inputStream, storeMock, instant2);
-            //Assert statement(s)
-            verify(storeMock, atLeast(1)).put((StoredBlock) any());
-            verify(storeMock, atLeast(1)).setChainHead((StoredBlock) any());
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(1));
-            timeUtils.verify(() -> TimeUtils.dateTimeFormat((Instant) any()), atLeast(2));
-            storedBlock.verify(() -> StoredBlock.deserializeCompact((ByteBuffer) any()), atLeast(1));
-            verify(blockMock, atLeast(1)).time();
-            sha256Hash.verify(() -> Sha256Hash.wrap(byteArray), atLeast(1));
         }
     }
 

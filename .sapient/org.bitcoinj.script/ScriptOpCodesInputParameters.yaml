@@ -62,7 +62,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -73,13 +74,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "465F01CD076D17CECF12F24C8EF13387"
+    modelFingerprint: "FA1D317132221B43689FDE4F80218A01"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "opcode"
-      modelFingerprint: "FA2C4FA66127577CBA969AFE98B675A5"
+      modelFingerprint: "1BC63E18EEA928E52FD08DE7607BB826"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -87,9 +88,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 1000
+          value: 10
         suggestedContent: !<regular>
-          value: 1000
+          value: 10
         valueType: "int"
         uuid: "getOpCodeName_int1"
         fixed: false
@@ -99,7 +100,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "2D8100E83D2CAFE3F6465E8A545888D0"
+      modelFingerprint: "EC2766916B4FFF593DE2D52FFF955A07"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -107,9 +108,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "NON_OP(1000)"
+          value: "NON_OP(10)"
         suggestedContent: !<regular>
-          value: "NON_OP(1000)"
+          value: "NON_OP(10)"
         valueType: "java.lang.String"
         uuid: "getOpCodeName_string1"
         fixed: false
@@ -121,7 +122,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -186,7 +188,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -197,13 +200,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "7BF387E2E1A5958BE473B439E48813BA"
+    modelFingerprint: "0118AA53877DFED8A0E0AB9A9B813C5C"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "opcode"
-      modelFingerprint: "1BC63E18EEA928E52FD08DE7607BB826"
+      modelFingerprint: "A14496C2D479BA9A4B769D0DE1180F7B"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -211,9 +214,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 10
+          value: 100
         suggestedContent: !<regular>
-          value: 10
+          value: 100
         valueType: "int"
         uuid: "getPushDataName_int1"
         fixed: false
@@ -223,7 +226,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "DCF59253A9004F2F81DF219AD3DC9A0F"
+      modelFingerprint: "8FF27B4A62CB05D49DC571E368B5D4F3"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -231,9 +234,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "PUSHDATA(10)"
+          value: "PUSHDATA(100)"
         suggestedContent: !<regular>
-          value: "PUSHDATA(10)"
+          value: "PUSHDATA(100)"
         valueType: "java.lang.String"
         uuid: "getPushDataName_string1"
         fixed: false
@@ -245,7 +248,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

@@ -29,6 +29,8 @@ import static org.hamcrest.Matchers.is;
 
 import org.junit.Ignore;
 
+import static org.hamcrest.core.IsInstanceOf.instanceOf;
+
 public class AppDataDirectorySapientGeneratedJunit4Test {
 
     @Rule()
@@ -70,7 +72,7 @@ public class AppDataDirectorySapientGeneratedJunit4Test {
             RuntimeException runtimeException = new RuntimeException("Couldn't find/create AppDataDirectory", iOException);
             thrown.expect(RuntimeException.class);
             thrown.expectMessage(runtimeException.getMessage());
-            thrown.expectCause(isA(IOException.class));
+            thrown.expectCause(is(instanceOf(IOException.class)));
             //Act Statement(s)
             AppDataDirectory.get("appName1");
             //Assert statement(s)
@@ -90,19 +92,12 @@ public class AppDataDirectorySapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
-        //Arrange Statement(s)
-        try (MockedStatic<PlatformUtils> platformUtils = mockStatic(PlatformUtils.class)) {
-            platformUtils.when(() -> PlatformUtils.isWindows()).thenReturn(false);
-            platformUtils.when(() -> PlatformUtils.isMac()).thenReturn(true);
-            //Act Statement(s)
-            Path result = AppDataDirectory.getPath("MyApp");
-            FileSystem fileSystem = FileSystems.getDefault();
-            String[] stringArray = new String[]{"Library/Application Support", "MyApp"};
-            Path path = fileSystem.getPath("A", stringArray);
-            //Assert statement(s)
-            assertThat(result, equalTo(path));
-            platformUtils.verify(() -> PlatformUtils.isWindows(), atLeast(1));
-            platformUtils.verify(() -> PlatformUtils.isMac(), atLeast(1));
-        }
+        //Act Statement(s)
+        Path result = AppDataDirectory.getPath("appName1");
+        FileSystem fileSystem = FileSystems.getDefault();
+        String[] stringArray = new String[]{"Library/Application Support", "appName1"};
+        Path path = fileSystem.getPath("A", stringArray);
+        //Assert statement(s)
+        assertThat(result, equalTo(path));
     }
 }

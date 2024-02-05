@@ -35,12 +35,14 @@ import java.util.ArrayList;
 
 import static org.mockito.Mockito.times;
 
+import org.bitcoinj.core.Context;
+
 public class SendRequestSapientGeneratedJunit4Test {
 
     @Rule()
     public Timeout timeoutRule = Timeout.seconds(5);
 
-    private final Address addressMock = mock(Address.class, "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa");
+    private final Address addressMock = mock(Address.class);
 
     private final Coin coinMock = mock(Coin.class);
 
@@ -62,6 +64,8 @@ public class SendRequestSapientGeneratedJunit4Test {
     private final TransactionOutput transactionOutputMock = mock(TransactionOutput.class);
 
     private final Transaction transactionMock = mock(Transaction.class);
+
+    private final Coin coinMock3 = mock(Coin.class);
 
     //Sapient generated method id: ${0c46e4d2-7a4e-3719-918f-e70a73b65493}
     @Ignore()
@@ -91,24 +95,41 @@ public class SendRequestSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Coin coinMock = mock(Coin.class, "100000");
-        //Act Statement(s)
-        SendRequest result = SendRequest.to(addressMock, coinMock);
-        //Assert statement(s)
-        assertThat(result, is(notNullValue()));
+        try (MockedStatic<Context> context = mockStatic(Context.class)) {
+            Context context2 = new Context(0, coinMock, false, false);
+            Context context3 = new Context(0, coinMock2, false, false);
+            context.when(() -> Context.get()).thenReturn(context2).thenReturn(context3);
+            //Act Statement(s)
+            SendRequest result = SendRequest.to(addressMock, coinMock3);
+            //Assert statement(s)
+            assertThat(result, is(notNullValue()));
+            context.verify(() -> Context.get(), atLeast(2));
+        }
     }
 
     //Sapient generated method id: ${56ce40b9-1db9-3e13-b777-ca3cb31859cd}
     @Ignore()
     @Test()
     public void to1Test() {
+        /**
+         * TODO: Help needed! This method is not unit testable!
+         *  Following variables could not be isolated/mocked: tx
+         *  Suggestions:
+         *  You can change the initialization of above variables and make it injectable or
+         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
-        ECKey eCKey = new ECKey();
-        Coin coinMock = mock(Coin.class, "1000000");
-        //Act Statement(s)
-        SendRequest result = SendRequest.to(eCKey, coinMock);
-        //Assert statement(s)
-        assertThat(result, is(notNullValue()));
+        try (MockedStatic<Context> context = mockStatic(Context.class)) {
+            Context context2 = new Context(0, coinMock, false, false);
+            Context context3 = new Context(0, coinMock2, false, false);
+            context.when(() -> Context.get()).thenReturn(context2).thenReturn(context3);
+            //Act Statement(s)
+            SendRequest result = SendRequest.to(eCKeyMock, coinMock3);
+            //Assert statement(s)
+            assertThat(result, is(notNullValue()));
+            context.verify(() -> Context.get(), atLeast(2));
+        }
     }
 
     //Sapient generated method id: ${9bbbf358-bd89-3710-ab26-d3239a4cc15c}
@@ -129,10 +150,18 @@ public class SendRequestSapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void forTxTest() {
-        //Act Statement(s)
-        SendRequest result = SendRequest.forTx(transactionMock);
-        //Assert statement(s)
-        assertThat(result, is(notNullValue()));
+        //Arrange Statement(s)
+        Transaction transactionMock = mock(Transaction.class);
+        try (MockedStatic<Context> context = mockStatic(Context.class)) {
+            Context context2 = new Context(0, coinMock, false, false);
+            Context context3 = new Context(0, coinMock2, false, false);
+            context.when(() -> Context.get()).thenReturn(context2).thenReturn(context3);
+            //Act Statement(s)
+            SendRequest result = SendRequest.forTx(transactionMock);
+            //Assert statement(s)
+            assertThat(result, is(notNullValue()));
+            context.verify(() -> Context.get(), atLeast(2));
+        }
     }
 
     //Sapient generated method id: ${45cba896-53a6-3fe5-870b-c2bf338ffbae}
@@ -147,10 +176,17 @@ public class SendRequestSapientGeneratedJunit4Test {
          *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
-        //Act Statement(s)
-        SendRequest result = SendRequest.emptyWallet(addressMock);
-        //Assert statement(s)
-        assertThat(result, is(notNullValue()));
+        //Arrange Statement(s)
+        try (MockedStatic<Context> context = mockStatic(Context.class)) {
+            Context context2 = new Context(0, coinMock, false, false);
+            Context context3 = new Context(0, coinMock2, false, false);
+            context.when(() -> Context.get()).thenReturn(context2).thenReturn(context3);
+            //Act Statement(s)
+            SendRequest result = SendRequest.emptyWallet(addressMock);
+            //Assert statement(s)
+            assertThat(result, is(notNullValue()));
+            context.verify(() -> Context.get(), atLeast(2));
+        }
     }
 
     //Sapient generated method id: ${296cbaee-2c96-3f11-8688-962118a92952}
@@ -162,14 +198,40 @@ public class SendRequestSapientGeneratedJunit4Test {
          * (output.isMine(wallet)) : true
          * (output.isAvailableForSpending()) : true
          * (output.getValue().isGreaterThan(feeRaise)) : true
+         *
+         * TODO: Help needed! This method is not unit testable!
+         *  Following variables could not be isolated/mocked: tx
+         *  Suggestions:
+         *  You can change the initialization of above variables and make it injectable or
+         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        thrown.expect(NullPointerException.class);
-        Wallet walletMock = mock(Wallet.class, "wallet");
-        Transaction transaction = new Transaction();
-        Coin coin = Coin.valueOf(0L);
-        //Act Statement(s)
-        SendRequest.childPaysForParent(walletMock, transaction, coin);
+        Coin coinMock4 = mock(Coin.class);
+        try (MockedStatic<SendRequest> sendRequest = mockStatic(SendRequest.class, CALLS_REAL_METHODS)) {
+            doReturn(addressMock).when(walletMock).freshAddress(KeyChain.KeyPurpose.CHANGE);
+            List<TransactionOutput> transactionOutputList = new ArrayList<>();
+            transactionOutputList.add(transactionOutputMock);
+            doReturn(transactionOutputList).when(parentTransactionMock).getOutputs();
+            doReturn(true).when(transactionOutputMock).isMine(walletMock);
+            doReturn(true).when(transactionOutputMock).isAvailableForSpending();
+            doReturn(true).when(coinMock).isGreaterThan(coinMock2);
+            doReturn(coinMock, coinMock3).when(transactionOutputMock).getValue();
+            doReturn(coinMock4).when(coinMock3).subtract(coinMock2);
+            sendRequest.when(() -> SendRequest.forTx((Transaction) any())).thenReturn(sendRequestMock);
+            //Act Statement(s)
+            SendRequest result = SendRequest.childPaysForParent(walletMock, parentTransactionMock, coinMock2);
+            //Assert statement(s)
+            assertThat(result, equalTo(sendRequestMock));
+            verify(walletMock, atLeast(1)).freshAddress(KeyChain.KeyPurpose.CHANGE);
+            verify(parentTransactionMock, atLeast(1)).getOutputs();
+            verify(transactionOutputMock, atLeast(1)).isMine(walletMock);
+            verify(transactionOutputMock, atLeast(1)).isAvailableForSpending();
+            verify(transactionOutputMock, times(2)).getValue();
+            verify(coinMock, atLeast(1)).isGreaterThan(coinMock2);
+            verify(coinMock3, atLeast(1)).subtract(coinMock2);
+            sendRequest.verify(() -> SendRequest.forTx((Transaction) any()), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${76e133a0-6d9d-3059-b9cc-b4c75368438c}
@@ -182,38 +244,26 @@ public class SendRequestSapientGeneratedJunit4Test {
          * (output.isAvailableForSpending()) : true
          * (output.getValue().isGreaterThan(feeRaise)) : false
          *
-         * TODO: Help needed! This method is not unit testable!
-         *  Following variables could not be isolated/mocked: output, tx, outputToSpend
-         *  Suggestions:
-         *  You can change the initialization of above variables and make it injectable or
-         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Wallet walletMock = mock(Wallet.class, "100");
-        Transaction parentTransactionMock = mock(Transaction.class, "[{getValue={value=100}, isMine={value=true}, isAvailableForSpending={value=true}}]");
-        Transaction transactionMock2 = mock(Transaction.class);
-        Coin coinMock2 = mock(Coin.class);
-        Coin coinMock3 = mock(Coin.class, "50");
-        try (MockedStatic<SendRequest> sendRequest = mockStatic(SendRequest.class, CALLS_REAL_METHODS)) {
-            doReturn(null).when(walletMock).freshAddress(KeyChain.KeyPurpose.CHANGE);
-            byte[] byteArray = new byte[]{};
-            TransactionOutput transactionOutput = new TransactionOutput(transactionMock, coinMock, byteArray);
-            byte[] byteArray2 = new byte[]{};
-            TransactionOutput transactionOutput2 = new TransactionOutput(transactionMock2, coinMock2, byteArray2);
-            List<TransactionOutput> transactionOutputList = new ArrayList<>();
-            transactionOutputList.add(transactionOutput);
-            transactionOutputList.add(transactionOutput2);
-            doReturn(transactionOutputList).when(parentTransactionMock).getOutputs();
-            sendRequest.when(() -> SendRequest.forTx((Transaction) any())).thenReturn(sendRequestMock);
-            //Act Statement(s)
-            SendRequest result = SendRequest.childPaysForParent(walletMock, parentTransactionMock, coinMock3);
-            //Assert statement(s)
-            assertThat(result, equalTo(sendRequestMock));
-            verify(walletMock, atLeast(1)).freshAddress(KeyChain.KeyPurpose.CHANGE);
-            verify(parentTransactionMock, atLeast(1)).getOutputs();
-            sendRequest.verify(() -> SendRequest.forTx((Transaction) any()), atLeast(1));
-        }
+        List<TransactionOutput> transactionOutputList = new ArrayList<>();
+        transactionOutputList.add(transactionOutputMock);
+        doReturn(transactionOutputList).when(parentTransactionMock).getOutputs();
+        doReturn(true).when(transactionOutputMock).isMine(walletMock);
+        doReturn(true).when(transactionOutputMock).isAvailableForSpending();
+        doReturn(coinMock).when(transactionOutputMock).getValue();
+        doReturn(false).when(coinMock).isGreaterThan(coinMock2);
+        thrown.expect(NullPointerException.class);
+        //Act Statement(s)
+        SendRequest.childPaysForParent(walletMock, parentTransactionMock, coinMock2);
+        //Assert statement(s)
+        verify(parentTransactionMock).getOutputs();
+        verify(transactionOutputMock).isMine(walletMock);
+        verify(transactionOutputMock).isAvailableForSpending();
+        verify(transactionOutputMock).getValue();
+        verify(coinMock).isGreaterThan(coinMock2);
     }
 
     //Sapient generated method id: ${f32b1224-074d-3f2a-860a-50e5e0099bd3}

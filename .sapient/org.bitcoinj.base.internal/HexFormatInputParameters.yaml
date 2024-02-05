@@ -493,8 +493,8 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "7411FD655E53B3AB20AAF505006CC6E7"
-    problemWasSolvedByProver: true
+    modelFingerprint: "23DCC46C8D8AA8BDB207306B0C932D9F"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -524,7 +524,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "hexString"
-      modelFingerprint: "4EF3142189EBF33C97A49229B6C3AB4A"
+      modelFingerprint: "3639838A810522EA34916D28DD51ACA1"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -532,8 +532,6 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "hexString1"
-        suggestedContent: !<regular>
           value: "hexString1"
         valueType: "java.lang.String"
         uuid: "parseHex_string1"
@@ -544,7 +542,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "B48523417770E85C4714D7E85ABA53C3"
+      modelFingerprint: "B6F4E421083EF3778FEA1644A8BA9751"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -558,9 +556,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "Invalid Hexadecimal Character: h"
-              suggestedContent: !<regular>
-                value: "Invalid Hexadecimal Character: h"
+                value: "s1"
               valueType: "java.lang.String"
               uuid: "toDigit_string1"
               fixed: false
@@ -574,10 +570,6 @@ methods:
           - name: "s"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "Invalid Hexadecimal Character: h"
-              suggestedContent: !<regular>
-                value: "Invalid Hexadecimal Character: h"
               valueType: "java.lang.String"
               uuid: "toDigit_string1"
               fixed: false
@@ -594,8 +586,9 @@ methods:
       filledByUser: false
     uuid: "9964fa33-e815-336b-82d2-f30602c027a5"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true

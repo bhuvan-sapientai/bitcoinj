@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "128C3BFF6BAB292BC6FD9C0C826EC376"
+modelFingerprint: "189C97FAFE98A28213F168F5029C08DB"
 methods:
 - method:
     name: "getHeader"
@@ -568,14 +568,14 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "7AAD3BA09756C18B378AF96077B62CC7"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
     uuid: "97aedf19-f38c-3776-a33d-7612a40fb9a9"
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path5"
@@ -587,15 +587,15 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "22CC84DB130D3A187B23C507B6802121"
-    problemWasSolvedByProver: false
+    modelFingerprint: "C34D51C2A5E6CB848F87DF0DF5B114A3"
+    problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
     uuid: "7bc8c59e-bba8-34f0-9d22-7d22523e5db6"
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path3"
@@ -607,15 +607,15 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "B44C3232AC4B8A994597F34AD55DD03F"
-    problemWasSolvedByProver: false
+    modelFingerprint: "9888490B4F284FC17574DC0CAB00BCE9"
+    problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
     uuid: "4104f3a6-d560-309e-907b-ac3dc049a9e1"
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path4"
@@ -627,15 +627,15 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "1A47CD85FDE1413A009B64A9CCED2CE8"
-    problemWasSolvedByProver: false
+    modelFingerprint: "BA47D6975CA81D9AD65E8D989148692B"
+    problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
     uuid: "960f04b3-b25c-3b03-a109-ca08ea31556e"
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -1495,7 +1495,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "E16561CBCB0DA9627F897F2D1ED49091"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -1705,9 +1705,229 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "REFLECTION_CALL_FAILURE"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "serializeCompactWhenChainWorkBytesLengthGreaterThanCHAIN_WORK_BYTESThrowsIllegalStateException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.core.Block,java.math.BigInteger,int)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "F0EF77FB3E47800E965C3F8CCB3CB3F9"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "238B4DE38A6933297C2EDB8D0BF9F048"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.StoredBlock"
+          parameters:
+          - name: "header"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.core.Block"
+              uuid: "<init>_block1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "chainWork"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "java.math.BigInteger"
+              uuid: "<init>_bigInteger1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "height"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "<init>_int1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.StoredBlock"
+          parameters:
+          - name: "header"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.core.Block"
+              uuid: "<init>_block1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "chainWork"
+            value:
+              sapientType: "BASIC"
+              valueType: "java.math.BigInteger"
+              uuid: "<init>_bigInteger1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "height"
+            value:
+              sapientType: "BASIC"
+              valueType: "int"
+              uuid: "<init>_int1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.StoredBlock"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "buffer"
+      modelFingerprint: "D1D785175D1F2BEB09991E49285FC210"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.nio.ByteBuffer"
+          method: "allocateDirect"
+          methodParameters:
+          - name: "capacity"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "serializeCompact_byteBuffer1-capacity"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "java.nio.ByteBuffer"
+          method: "allocateDirect"
+          methodParameters:
+          - name: "capacity"
+            value:
+              sapientType: "BASIC"
+              valueType: "int"
+              uuid: "serializeCompact_byteBuffer1-capacity"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "java.nio.ByteBuffer"
+        uuid: "serializeCompact_byteBuffer1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "54C4D53CCD04B53C1A47AA185AEE8B06"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkState"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "messageSupplier"
+          value:
+            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+            valueType: "java.util.function.Supplier"
+            genericValueType: "java.lang.String"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkState(boolean,Supplier): void"
+        returnValue:
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalStateException"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "C9C68C9339F812BC8DEC7C1D6145A135"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.IllegalStateException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.lang.IllegalStateException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.lang.IllegalStateException"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "96d9e8be-c253-31d0-8679-6c99adac456c"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "deserializeCompact"
     returnType: "org.bitcoinj.core.StoredBlock"
@@ -12067,7 +12287,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -12254,12 +12475,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "588634E17DDBCBB12056684FA47CA987"
+    modelFingerprint: "BC04A13D258B1241478F91BE2DA8EDF0"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "7FED5F14223DD840B7C36F836C943653"
+      modelFingerprint: "2363CED2C2B479F99F48C81E4D88912D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -12428,9 +12649,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 1000
+                value: 0
               suggestedContent: !<regular>
-                value: 1000
+                value: 0
               valueType: "java.math.BigInteger"
               uuid: "<init>_bigInteger1"
               fixed: false
@@ -12440,9 +12661,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 10
+                value: 0
               suggestedContent: !<regular>
-                value: 10
+                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -12612,9 +12833,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 1000
+                value: 0
               suggestedContent: !<regular>
-                value: 1000
+                value: 0
               valueType: "java.math.BigInteger"
               uuid: "<init>_bigInteger1"
               fixed: false
@@ -12624,9 +12845,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 10
+                value: 0
               suggestedContent: !<regular>
-                value: 10
+                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -12750,7 +12971,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

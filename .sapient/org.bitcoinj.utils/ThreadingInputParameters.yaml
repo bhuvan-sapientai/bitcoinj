@@ -37,7 +37,8 @@ methods:
     deleted: false
     disabled: true
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledReason: "Potential harmful system call (CompletableFuture.join) detected;\
       \ Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     disabledStatusUpdatedByUser: false
@@ -179,7 +180,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "D12A5B4BA28880FEF575EED0F65B1DCE"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
@@ -336,6 +337,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    failureReason:
+      reason: "EQUALS_METHOD_TODO_COMMENT"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -510,6 +513,7 @@ methods:
       filledByUser: false
     - type: "STATE_VERIFICATION_FIELD"
       name: "policy"
+      modelFingerprint: "C0700BC578E0AFE6BCD44A6E98EAE061"
       index: 3
       ignored: false
       nestedInLoop: false

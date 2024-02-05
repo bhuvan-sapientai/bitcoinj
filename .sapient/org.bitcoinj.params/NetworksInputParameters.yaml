@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "E354193BA735FB39874B33BFA17B220F"
+modelFingerprint: "0124469417FAAEAC3A78B74CCC229878"
 methods:
 - method:
     name: "get"
@@ -131,45 +131,19 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "CA46E11BB22467EEE973539D6B620E30"
-    problemWasSolvedByProver: false
+    modelFingerprint: "382F27A63B68702836F6BAD60EA1062E"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "network"
-      modelFingerprint: "F09C69242129400F401736834C6BD427"
+      modelFingerprint: "C0EA9F513ABE7730747D75C453DF21D4"
       index: 1
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "org.bitcoinj.core.NetworkParameters"
-          method: "fromID"
-          methodParameters:
-          - name: "id"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "id1"
-              valueType: "java.lang.String"
-              uuid: "register_networkParameters1-id"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.core.NetworkParameters"
-          method: "fromID"
-          methodParameters:
-          - name: "id"
-            value:
-              sapientType: "BASIC"
-              valueType: "java.lang.String"
-              uuid: "register_networkParameters1-id"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "register_networkParameters1"
         fixed: false
@@ -179,7 +153,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Networks"
-      modelFingerprint: "F144B56067BFEA6C69410F9A9B17C58A"
+      modelFingerprint: "C8476CC865A5B2A2DBE762B5F72B010C"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -200,10 +174,22 @@ methods:
             sapientType: "COLLECTION"
             content: !<collection>
               parameters: []
-              values: []
+              values:
+              - sapientType: "MOCK"
+                valueType: "org.bitcoinj.core.NetworkParameters"
+                uuid: "register_networkParameters1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
             suggestedContent: !<collection>
               parameters: []
-              values: []
+              values:
+              - sapientType: "MOCK"
+                valueType: "org.bitcoinj.core.NetworkParameters"
+                uuid: "register_networkParameters1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
             valueType: "java.util.Set"
             genericValueType: "org.bitcoinj.core.NetworkParameters"
             uuid: "register_set1"
@@ -239,8 +225,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -259,13 +244,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "26F78EC0202015AC40745014A4EFD07F"
-    problemWasSolvedByProver: false
+    modelFingerprint: "1BA9554C0A7DB7FD248A283BD39502A8"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "networks"
-      modelFingerprint: "E90D478CB4589897AE5733C9E2198305"
+      modelFingerprint: "737D81D97CBD9CD20A499C84D353E267"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -273,79 +258,11 @@ methods:
       value:
         sapientType: "COLLECTION"
         content: !<collection>
-          collectionClass: "java.util.ArrayList"
           parameters: []
-          values:
-          - sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "org.bitcoinj.core.NetworkParameters"
-              method: "fromID"
-              methodParameters:
-              - name: "id"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: "id1"
-                  valueType: "java.lang.String"
-                  uuid: "register_collection1-0-id"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            suggestedContent: !<static_method_return>
-              target: "org.bitcoinj.core.NetworkParameters"
-              method: "fromID"
-              methodParameters:
-              - name: "id"
-                value:
-                  sapientType: "BASIC"
-                  valueType: "java.lang.String"
-                  uuid: "register_collection1-0-id"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            valueType: "org.bitcoinj.core.NetworkParameters"
-            uuid: "register_collection1-0"
-            fixed: false
-            collectionUuid: "register_collection1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
+          values: []
         suggestedContent: !<collection>
-          collectionClass: "java.util.ArrayList"
           parameters: []
-          values:
-          - sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "org.bitcoinj.core.NetworkParameters"
-              method: "fromID"
-              methodParameters:
-              - name: "id"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: "id1"
-                  valueType: "java.lang.String"
-                  uuid: "register_collection1-0-id"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            suggestedContent: !<static_method_return>
-              target: "org.bitcoinj.core.NetworkParameters"
-              method: "fromID"
-              methodParameters:
-              - name: "id"
-                value:
-                  sapientType: "BASIC"
-                  valueType: "java.lang.String"
-                  uuid: "register_collection1-0-id"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            valueType: "org.bitcoinj.core.NetworkParameters"
-            uuid: "register_collection1-0"
-            fixed: false
-            collectionUuid: "register_collection1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
+          values: []
         valueType: "java.util.Collection"
         genericValueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "register_collection1"
@@ -372,8 +289,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -391,45 +307,19 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "0C1747A65A6F72D7153EF8BA194D52C5"
-    problemWasSolvedByProver: false
+    modelFingerprint: "79A404D066A495F52723BA34576B11DC"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "network"
-      modelFingerprint: "27DE34F40C5AE85A90F34417C3930B07"
+      modelFingerprint: "C0EA9F513ABE7730747D75C453DF21D4"
       index: 1
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "org.bitcoinj.core.NetworkParameters"
-          method: "fromID"
-          methodParameters:
-          - name: "id"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "id1"
-              valueType: "java.lang.String"
-              uuid: "unregister_networkParameters1-id"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.core.NetworkParameters"
-          method: "fromID"
-          methodParameters:
-          - name: "id"
-            value:
-              sapientType: "BASIC"
-              valueType: "java.lang.String"
-              uuid: "unregister_networkParameters1-id"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "unregister_networkParameters1"
         fixed: false
@@ -455,7 +345,6 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

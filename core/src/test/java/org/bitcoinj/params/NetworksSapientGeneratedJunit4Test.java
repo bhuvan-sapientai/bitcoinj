@@ -30,12 +30,16 @@ public class NetworksSapientGeneratedJunit4Test {
     @Rule()
     public Timeout timeoutRule = Timeout.seconds(5);
 
+    private final NetworkParameters networkParametersMock = mock(NetworkParameters.class);
+
     //Sapient generated method id: ${9c25887d-767d-38e9-b5ae-c2e4012c49be}
     @Ignore()
     @Test()
     public void getTest() {
+
         //Act Statement(s)
         Set<NetworkParameters> result = Networks.get();
+
         //Assert statement(s)
         assertThat(result.size(), equalTo(0));
     }
@@ -46,9 +50,11 @@ public class NetworksSapientGeneratedJunit4Test {
     public void findTest() {
         //Arrange Statement(s)
         Network networkMock = mock(Network.class);
+
         //Act Statement(s)
         Optional<NetworkParameters> result = Networks.find(networkMock);
         Optional<NetworkParameters> networkParametersOptional = Optional.empty();
+
         //Assert statement(s)
         assertThat(result, equalTo(networkParametersOptional));
     }
@@ -56,14 +62,11 @@ public class NetworksSapientGeneratedJunit4Test {
     //Sapient generated method id: ${853913a6-18ed-366c-8d01-10d393fd970e}
     @Test()
     public void registerTest() {
-        /**
-         */
         //Arrange Statement(s)
         try (MockedStatic<Networks> networks = mockStatic(Networks.class, CALLS_REAL_METHODS)) {
             networks.when(() -> Networks.register(anySet())).thenAnswer((Answer<Void>) invocation -> null);
-            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
             //Act Statement(s)
-            Networks.register(networkParameters);
+            Networks.register(networkParametersMock);
             //Assert statement(s)
             networks.verify(() -> Networks.register(anySet()), atLeast(1));
         }
@@ -72,12 +75,9 @@ public class NetworksSapientGeneratedJunit4Test {
     //Sapient generated method id: ${d036466a-5481-3f16-a70d-5c58cf6e4044}
     @Test()
     public void register1Test() {
-        /**
-         */
         //Arrange Statement(s)
-        NetworkParameters networkParameters = NetworkParameters.fromID("id1");
         Collection<NetworkParameters> collection = new ArrayList<>();
-        collection.add(networkParameters);
+
         //Act Statement(s)
         Networks.register(collection);
     }
@@ -85,11 +85,8 @@ public class NetworksSapientGeneratedJunit4Test {
     //Sapient generated method id: ${220cfd37-bc9b-3cdd-89af-f28e72691dcb}
     @Test()
     public void unregisterTest() {
-        /**
-         */
-        //Arrange Statement(s)
-        NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+
         //Act Statement(s)
-        Networks.unregister(networkParameters);
+        Networks.unregister(networkParametersMock);
     }
 }

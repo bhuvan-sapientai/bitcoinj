@@ -36,6 +36,10 @@ import static org.mockito.Mockito.doReturn;
 import static org.hamcrest.Matchers.is;
 
 import org.junit.Ignore;
+import org.bitcoinj.base.AddressParser;
+
+import static org.mockito.Mockito.doThrow;
+import static org.hamcrest.core.IsInstanceOf.instanceOf;
 
 public class BitcoinURISapientGeneratedJunit4Test {
 
@@ -55,6 +59,10 @@ public class BitcoinURISapientGeneratedJunit4Test {
     @Rule()
     public ExpectedException thrown = ExpectedException.none();
 
+    private final Address addressMock = mock(Address.class);
+
+    private final AddressParser addressParserMock = mock(AddressParser.class);
+
     //Sapient generated method id: ${39df292f-de4b-38aa-9d8a-bcdaa5b5ecc6}
     @Ignore()
     @Test()
@@ -62,33 +70,32 @@ public class BitcoinURISapientGeneratedJunit4Test {
         /* Branches:
          * (branch expression (line 143)) : false  #  inside <init> method
          * (branch expression (line 151)) : true  #  inside <init> method
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         URISyntaxException uRISyntaxException = new URISyntaxException("input1", "reason1");
         BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("Bad URI syntax", uRISyntaxException);
         thrown.expect(BitcoinURIParseException.class);
         thrown.expectMessage(bitcoinURIParseException.getMessage());
-
         //Act Statement(s)
         BitcoinURI.of("uri1");
     }
 
     //Sapient generated method id: ${d34fb8b6-55d6-38fc-bb53-2e328e0b61ef}
+    @Ignore()
     @Test()
     public void ofWhenDefaultBranchAndDefaultBranchThrowsBitcoinURIParseException() throws BitcoinURIParseException {
         /* Branches:
          * (branch expression (line 143)) : false  #  inside <init> method
          * (branch expression (line 168)) : true  #  inside <init> method
          * (branch expression (line 178)) : false  #  inside <init> method
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("Unsupported URI scheme: null");
+        BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("No data found after the bitcoin: prefix");
         thrown.expect(BitcoinURIParseException.class);
         thrown.expectMessage(bitcoinURIParseException.getMessage());
-
         //Act Statement(s)
         BitcoinURI.of("uri1");
     }
@@ -105,12 +112,12 @@ public class BitcoinURISapientGeneratedJunit4Test {
         BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("Unsupported URI scheme: null");
         thrown.expect(BitcoinURIParseException.class);
         thrown.expectMessage(bitcoinURIParseException.getMessage());
-
         //Act Statement(s)
-        BitcoinURI.of("uri1");
+        BitcoinURI.of("");
     }
 
     //Sapient generated method id: ${27fc21c5-b553-3f02-aa9f-178af9b22de5}
+    @Ignore()
     @Test()
     public void ofWhenSepIndexEqualsMinus1ThrowsBitcoinURIParseException() throws BitcoinURIParseException {
         /* Branches:
@@ -120,17 +127,20 @@ public class BitcoinURISapientGeneratedJunit4Test {
          * (branch expression (line 183)) : false  #  inside <init> method
          * (for-each(nameValuePairTokens)) : true  #  inside parseParameters method
          * (sepIndex == -1) : true  #  inside parseParameters method
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("Unsupported URI scheme: null");
+        BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("s1");
         thrown.expect(BitcoinURIParseException.class);
         thrown.expectMessage(bitcoinURIParseException.getMessage());
-
         //Act Statement(s)
         BitcoinURI.of("uri1");
     }
 
     //Sapient generated method id: ${dd2c5058-f830-3772-a62c-68d807694793}
+    @Ignore()
     @Test()
     public void ofWhenAmountSignumLessThan0ThrowsOptionalFieldValidationException() throws BitcoinURIParseException {
         /* Branches:
@@ -143,17 +153,27 @@ public class BitcoinURISapientGeneratedJunit4Test {
          * (sepIndex == 0) : false  #  inside parseParameters method
          * (FIELD_AMOUNT.equals(nameToken)) : true  #  inside parseParameters method
          * (amount.signum() < 0) : true  #  inside parseParameters method
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("Unsupported URI scheme: null");
-        thrown.expect(BitcoinURIParseException.class);
-        thrown.expectMessage(bitcoinURIParseException.getMessage());
-
-        //Act Statement(s)
-        BitcoinURI.of("uri1");
+        try (MockedStatic<Coin> coin = mockStatic(Coin.class)) {
+            coin.when(() -> Coin.parseCoin("str1")).thenReturn(coinMock);
+            doReturn(0).when(coinMock).signum();
+            OptionalFieldValidationException optionalFieldValidationException = new OptionalFieldValidationException("s1");
+            thrown.expect(OptionalFieldValidationException.class);
+            thrown.expectMessage(optionalFieldValidationException.getMessage());
+            //Act Statement(s)
+            BitcoinURI.of("uri1");
+            //Assert statement(s)
+            coin.verify(() -> Coin.parseCoin("str1"), atLeast(1));
+            verify(coinMock).signum();
+        }
     }
 
     //Sapient generated method id: ${9dd5024a-79d7-36e3-9fda-7651fb8db2a4}
+    @Ignore()
     @Test()
     public void ofWhenNameTokenStartsWithReq_ThrowsRequiredFieldValidationException() throws BitcoinURIParseException {
         /* Branches:
@@ -166,19 +186,21 @@ public class BitcoinURISapientGeneratedJunit4Test {
          * (sepIndex == 0) : false  #  inside parseParameters method
          * (FIELD_AMOUNT.equals(nameToken)) : false  #  inside parseParameters method
          * (nameToken.startsWith("req-")) : true  #  inside parseParameters method
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("Unsupported URI scheme: null");
-        thrown.expect(BitcoinURIParseException.class);
-        thrown.expectMessage(bitcoinURIParseException.getMessage());
-
+        RequiredFieldValidationException requiredFieldValidationException = new RequiredFieldValidationException("s1");
+        thrown.expect(RequiredFieldValidationException.class);
+        thrown.expectMessage(requiredFieldValidationException.getMessage());
         //Act Statement(s)
         BitcoinURI.of("uri1");
     }
 
-    //Sapient generated method id: ${9fa49ad2-c4e9-3ad9-9f69-e6287ace917f}
+    //Sapient generated method id: ${caa4a191-81c3-3e6c-95b7-822f843a88ef}
     @Test()
-    public void ofWhenDefaultBranchAndParameterMapNotContainsKeyKeyAndDefaultBranchThrowsBitcoinURIParseException() throws BitcoinURIParseException {
+    public void ofWhenParameterMapNotContainsKeyKeyAndDefaultBranchThrowsBitcoinURIParseException() throws BitcoinURIParseException, AddressFormatException {
         /* Branches:
          * (branch expression (line 143)) : false  #  inside <init> method
          * (branch expression (line 168)) : true  #  inside <init> method
@@ -188,48 +210,28 @@ public class BitcoinURISapientGeneratedJunit4Test {
          * (branch expression (line 194)) : false  #  inside <init> method
          * (branch expression (line 197)) : false  #  inside <init> method
          * (parameterMap.containsKey(key)) : false  #  inside putWithValidation method
-         * (branch expression (line 207)) : true  #  inside <init> method
-         */
-        //Arrange Statement(s)
-        BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("Unsupported URI scheme: null");
-        thrown.expect(BitcoinURIParseException.class);
-        thrown.expectMessage(bitcoinURIParseException.getMessage());
-
-        //Act Statement(s)
-        BitcoinURI.of("uri1");
-    }
-
-    //Sapient generated method id: ${f399c969-4555-3dd3-9550-d7e4688e1f3c}
-    @Ignore()
-    @Test()
-    public void ofWhenDefaultBranchAndDefaultBranchAndParameterMapNotContainsKeyKeyAndDefaultBranchThrowsBitcoinURIParseException() throws BitcoinURIParseException {
-        /* Branches:
-         * (branch expression (line 143)) : false  #  inside <init> method
-         * (branch expression (line 168)) : false  #  inside <init> method
-         * (branch expression (line 170)) : true  #  inside <init> method
-         * (branch expression (line 178)) : true  #  inside <init> method
-         * (branch expression (line 183)) : false  #  inside <init> method
-         * (for-each(nameValuePairTokens)) : false  #  inside parseParameters method
-         * (branch expression (line 194)) : false  #  inside <init> method
-         * (branch expression (line 197)) : false  #  inside <init> method
-         * (parameterMap.containsKey(key)) : false  #  inside putWithValidation method
          * (branch expression (line 202)) : true  #  inside <init> method
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("Bad address", addressFormatExceptionMock);
-        thrown.expect(BitcoinURIParseException.class);
-        thrown.expectMessage(bitcoinURIParseException.getMessage());
-
-        //Act Statement(s)
-        BitcoinURI.of("bitcoin:1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2");
+        AddressFormatException addressFormatExceptionMock2 = mock(AddressFormatException.class);
+        try (MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class)) {
+            addressParser.when(() -> AddressParser.getDefault()).thenReturn(addressParserMock);
+            doThrow(addressFormatExceptionMock).when(addressParserMock).parseAddress("1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa");
+            BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("Bad address", addressFormatExceptionMock2);
+            thrown.expect(BitcoinURIParseException.class);
+            thrown.expectMessage(bitcoinURIParseException.getMessage());
+            //Act Statement(s)
+            BitcoinURI.of("bitcoin:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa");
+            //Assert statement(s)
+            addressParser.verify(() -> AddressParser.getDefault(), atLeast(1));
+            verify(addressParserMock).parseAddress("1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa");
+        }
     }
 
     //Sapient generated method id: ${baaf99e2-188e-3e9f-863a-b147d884edcd}
+    @Ignore()
     @Test()
-    public void ofWhenDefaultBranchAndParameterMapNotContainsKeyKeyAndDefaultBranch() throws BitcoinURIParseException {
+    public void ofWhenDefaultBranchAndParameterMapNotContainsKeyKeyAndDefaultBranch() throws BitcoinURIParseException, AddressFormatException, URISyntaxException, UnsupportedEncodingException {
         /* Branches:
          * (branch expression (line 143)) : false  #  inside <init> method
          * (branch expression (line 168)) : false  #  inside <init> method
@@ -243,18 +245,82 @@ public class BitcoinURISapientGeneratedJunit4Test {
          * (branch expression (line 207)) : false  #  inside <init> method
          */
         //Arrange Statement(s)
-        BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("Unsupported URI scheme: null");
-        thrown.expect(BitcoinURIParseException.class);
-        thrown.expectMessage(bitcoinURIParseException.getMessage());
-
-        //Act Statement(s)
-        BitcoinURI.of("EFGHIBCDM");
+        try (MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class)) {
+            AddressParser addressParser2 = AddressParser.getDefault();
+            addressParser.when(() -> AddressParser.getDefault()).thenReturn(addressParser2);
+            //Act Statement(s)
+            BitcoinURI result = BitcoinURI.of("bitcoin:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa");
+            //Assert statement(s)
+            assertThat(result, is(notNullValue()));
+            addressParser.verify(() -> AddressParser.getDefault(), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${48571aab-4d95-30ba-91d1-29a98afd0585}
     @Ignore()
     @Test()
-    public void ofWhenParameterMapNotContainsKeyKeyAndDefaultBranchAndDefaultBranchAndDefaultBranchThrowsBitcoinURIParseException() throws BitcoinURIParseException {
+    public void ofWhenParameterMapNotContainsKeyKeyAndDefaultBranchAndDefaultBranchAndDefaultBranchThrowsBitcoinURIParseException() throws BitcoinURIParseException, AddressFormatException {
+        /* Branches:
+         * (branch expression (line 143)) : false  #  inside <init> method
+         * (branch expression (line 168)) : true  #  inside <init> method
+         * (branch expression (line 178)) : true  #  inside <init> method
+         * (branch expression (line 183)) : false  #  inside <init> method
+         * (for-each(nameValuePairTokens)) : true  #  inside parseParameters method
+         * (sepIndex == -1) : false  #  inside parseParameters method
+         * (sepIndex == 0) : false  #  inside parseParameters method
+         * (FIELD_AMOUNT.equals(nameToken)) : true  #  inside parseParameters method
+         * (amount.signum() < 0) : false  #  inside parseParameters method
+         * (parameterMap.containsKey(key)) : false  #  inside putWithValidation method
+         * (branch expression (line 194)) : true  #  inside <init> method
+         * (branch expression (line 202)) : true  #  inside <init> method
+         * (branch expression (line 207)) : true  #  inside <init> method
+         */
+        //Arrange Statement(s)
+        BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("Bad address", addressFormatExceptionMock);
+        thrown.expect(BitcoinURIParseException.class);
+        thrown.expectMessage(bitcoinURIParseException.getMessage());
+        //Act Statement(s)
+        BitcoinURI.of("bitcoin:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa");
+    }
+
+    //Sapient generated method id: ${7c2d10a0-fb9d-36dc-bd2a-a784309a73e1}
+    @Ignore()
+    @Test()
+    public void ofWhenDefaultBranchAndDefaultBranchAndDefaultBranch() throws BitcoinURIParseException, AddressFormatException {
+        /* Branches:
+         * (branch expression (line 143)) : false  #  inside <init> method
+         * (branch expression (line 168)) : true  #  inside <init> method
+         * (branch expression (line 178)) : true  #  inside <init> method
+         * (branch expression (line 183)) : false  #  inside <init> method
+         * (for-each(nameValuePairTokens)) : true  #  inside parseParameters method
+         * (sepIndex == -1) : false  #  inside parseParameters method
+         * (sepIndex == 0) : false  #  inside parseParameters method
+         * (FIELD_AMOUNT.equals(nameToken)) : true  #  inside parseParameters method
+         * (amount.signum() < 0) : false  #  inside parseParameters method
+         * (parameterMap.containsKey(key)) : false  #  inside putWithValidation method
+         * (branch expression (line 194)) : true  #  inside <init> method
+         * (branch expression (line 202)) : true  #  inside <init> method
+         * (branch expression (line 207)) : false  #  inside <init> method
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<Coin> coin = mockStatic(Coin.class)) {
+            coin.when(() -> Coin.parseCoin("0.001")).thenReturn(coinMock);
+            doReturn(0).when(coinMock).signum();
+            BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("Bad address", addressFormatExceptionMock);
+            thrown.expect(BitcoinURIParseException.class);
+            thrown.expectMessage(bitcoinURIParseException.getMessage());
+            //Act Statement(s)
+            BitcoinURI.of("bitcoin://1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa?amount=0.001&label=Example");
+            //Assert statement(s)
+            coin.verify(() -> Coin.parseCoin("0.001"), atLeast(1));
+            verify(coinMock).signum();
+        }
+    }
+
+    //Sapient generated method id: ${57287d12-b415-364b-80de-9e918d1aff88}
+    @Ignore()
+    @Test()
+    public void ofWhenAmountSignumNotLessThan0AndParameterMapNotContainsKeyKeyAndDefaultBranchAndDefaultBThrowsBitcoinURIParseException() throws BitcoinURIParseException, AddressFormatException {
         /* Branches:
          * (branch expression (line 143)) : false  #  inside <init> method
          * (branch expression (line 168)) : true  #  inside <init> method
@@ -268,18 +334,52 @@ public class BitcoinURISapientGeneratedJunit4Test {
          * (parameterMap.containsKey(key)) : false  #  inside putWithValidation method
          * (branch expression (line 194)) : false  #  inside <init> method
          * (branch expression (line 197)) : false  #  inside <init> method
-         * (branch expression (line 202)) : true  #  inside <init> method
+         * (branch expression (line 207)) : true  #  inside <init> method
          *
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("Bad address", addressFormatExceptionMock);
-        thrown.expect(BitcoinURIParseException.class);
-        thrown.expectMessage(bitcoinURIParseException.getMessage());
+        try (MockedStatic<Coin> coin = mockStatic(Coin.class)) {
+            coin.when(() -> Coin.parseCoin("str1")).thenReturn(coinMock);
+            doReturn(0).when(coinMock).signum();
+            BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("No address and no r= parameter found");
+            thrown.expect(BitcoinURIParseException.class);
+            thrown.expectMessage(bitcoinURIParseException.getMessage());
+            //Act Statement(s)
+            BitcoinURI.of("uri1");
+            //Assert statement(s)
+            coin.verify(() -> Coin.parseCoin("str1"), atLeast(1));
+            verify(coinMock).signum();
+        }
+    }
 
+    //Sapient generated method id: ${71b99644-3a78-3380-89aa-33dc53a3399c}
+    @Ignore()
+    @Test()
+    public void ofWhenParameterMapNotContainsKeyKeyAndDefaultBranchAndDefaultBranch() throws BitcoinURIParseException, URISyntaxException, UnsupportedEncodingException {
+        /* Branches:
+         * (branch expression (line 143)) : false  #  inside <init> method
+         * (branch expression (line 168)) : true  #  inside <init> method
+         * (branch expression (line 178)) : true  #  inside <init> method
+         * (branch expression (line 183)) : false  #  inside <init> method
+         * (for-each(nameValuePairTokens)) : true  #  inside parseParameters method
+         * (sepIndex == -1) : false  #  inside parseParameters method
+         * (sepIndex == 0) : false  #  inside parseParameters method
+         * (FIELD_AMOUNT.equals(nameToken)) : false  #  inside parseParameters method
+         * (nameToken.startsWith("req-")) : false  #  inside parseParameters method
+         * (valueToken.length() > 0) : true  #  inside parseParameters method
+         * (parameterMap.containsKey(key)) : false  #  inside putWithValidation method
+         * (branch expression (line 194)) : true  #  inside <init> method
+         * (branch expression (line 207)) : false  #  inside <init> method
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Act Statement(s)
-        BitcoinURI.of("bitcoin://address");
+        BitcoinURI result = BitcoinURI.of("uri1");
+        //Assert statement(s)
+        assertThat(result, is(notNullValue()));
     }
 
     //Sapient generated method id: ${4d2c3bfb-33c0-3670-9b58-dd07b16ccb86}
@@ -289,9 +389,6 @@ public class BitcoinURISapientGeneratedJunit4Test {
         /* Branches:
          * (branch expression (line 143)) : false  #  inside <init> method
          * (branch expression (line 151)) : true  #  inside <init> method
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         URISyntaxException uRISyntaxException = new URISyntaxException("input1", "reason1");
@@ -299,9 +396,31 @@ public class BitcoinURISapientGeneratedJunit4Test {
         thrown.expect(BitcoinURIParseException.class);
         thrown.expectMessage(bitcoinURIParseException.getMessage());
         Network network = null;
-
         //Act Statement(s)
         BitcoinURI.of("uri1", network);
+    }
+
+    //Sapient generated method id: ${d5d4b0ab-3555-3c3b-9c18-bc381f72dc5f}
+    @Ignore()
+    @Test()
+    public void of1WhenDefaultBranchAndDefaultBranchThrowsBitcoinURIParseException() throws BitcoinURIParseException {
+        /* Branches:
+         * (branch expression (line 143)) : false  #  inside <init> method
+         * (branch expression (line 151)) : true  #  inside <init> method
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        doReturn("return_of_uriScheme1").when(networkMock).uriScheme();
+        URISyntaxException uRISyntaxException = new URISyntaxException("input1", "reason1");
+        BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("Bad URI syntax", uRISyntaxException);
+        thrown.expect(BitcoinURIParseException.class);
+        thrown.expectMessage(bitcoinURIParseException.getMessage());
+        //Act Statement(s)
+        BitcoinURI.of("uri1", networkMock);
+        //Assert statement(s)
+        verify(networkMock).uriScheme();
     }
 
     //Sapient generated method id: ${f4529e75-dc70-300e-8234-195da462bf9a}
@@ -320,26 +439,50 @@ public class BitcoinURISapientGeneratedJunit4Test {
         BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("No data found after the bitcoin: prefix");
         thrown.expect(BitcoinURIParseException.class);
         thrown.expectMessage(bitcoinURIParseException.getMessage());
-
         //Act Statement(s)
         BitcoinURI.of("uri1", networkMock);
     }
 
+    //Sapient generated method id: ${c00cf289-3a3d-331c-a607-b9f7f3fa4ac9}
+    @Ignore()
+    @Test()
+    public void of1WhenDefaultBranchAndDefaultBranchAndDefaultBranch2ThrowsBitcoinURIParseException() throws BitcoinURIParseException {
+        /* Branches:
+         * (branch expression (line 143)) : false  #  inside <init> method
+         * (branch expression (line 168)) : true  #  inside <init> method
+         * (branch expression (line 178)) : false  #  inside <init> method
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("No data found after the bitcoin: prefix");
+        thrown.expect(BitcoinURIParseException.class);
+        thrown.expectMessage(bitcoinURIParseException.getMessage());
+        Network network = null;
+        //Act Statement(s)
+        BitcoinURI.of("uri1", network);
+    }
+
     //Sapient generated method id: ${d9bdbd65-2823-3dd6-b3ba-b2ddac24df86}
+    @Ignore()
     @Test()
     public void of1WhenDefaultBranchAndDefaultBranchAndDefaultBranch3ThrowsBitcoinURIParseException() throws BitcoinURIParseException {
         /* Branches:
          * (branch expression (line 143)) : false  #  inside <init> method
          * (branch expression (line 168)) : false  #  inside <init> method
          * (branch expression (line 170)) : false  #  inside <init> method
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("Unsupported URI scheme: null");
+        BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("Unsupported URI scheme: ");
         thrown.expect(BitcoinURIParseException.class);
         thrown.expectMessage(bitcoinURIParseException.getMessage());
-
+        Network network = null;
         //Act Statement(s)
-        BitcoinURI.of("uri1", networkMock);
+        BitcoinURI.of("", network);
     }
 
     //Sapient generated method id: ${00a9463b-0e75-3b4c-b78c-84369b0ccec0}
@@ -358,13 +501,14 @@ public class BitcoinURISapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("Unsupported URI scheme: A");
+        doReturn("return_of_uriScheme1").when(networkMock).uriScheme();
+        BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("s1");
         thrown.expect(BitcoinURIParseException.class);
         thrown.expectMessage(bitcoinURIParseException.getMessage());
-        Network networkMock = mock(Network.class, "<input value for network>");
-
         //Act Statement(s)
-        BitcoinURI.of("<input value for uri>", networkMock);
+        BitcoinURI.of("uri1", networkMock);
+        //Assert statement(s)
+        verify(networkMock).uriScheme();
     }
 
     //Sapient generated method id: ${61e8147e-7d09-3241-a928-94d9a0098eff}
@@ -386,16 +530,24 @@ public class BitcoinURISapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("Unsupported URI scheme: A");
-        thrown.expect(BitcoinURIParseException.class);
-        thrown.expectMessage(bitcoinURIParseException.getMessage());
-        Network networkMock = mock(Network.class, "<valid Network object>");
-
-        //Act Statement(s)
-        BitcoinURI.of("<valid Bitcoin URI String>", networkMock);
+        try (MockedStatic<Coin> coin = mockStatic(Coin.class)) {
+            doReturn("return_of_uriScheme1").when(networkMock).uriScheme();
+            coin.when(() -> Coin.parseCoin("str1")).thenReturn(coinMock);
+            doReturn(0).when(coinMock).signum();
+            OptionalFieldValidationException optionalFieldValidationException = new OptionalFieldValidationException("s1");
+            thrown.expect(OptionalFieldValidationException.class);
+            thrown.expectMessage(optionalFieldValidationException.getMessage());
+            //Act Statement(s)
+            BitcoinURI.of("uri1", networkMock);
+            //Assert statement(s)
+            verify(networkMock).uriScheme();
+            coin.verify(() -> Coin.parseCoin("str1"), atLeast(1));
+            verify(coinMock).signum();
+        }
     }
 
     //Sapient generated method id: ${c749b3c4-95d9-3a64-b938-34126c9a49cf}
+    @Ignore()
     @Test()
     public void of1WhenNameTokenStartsWithReq_ThrowsRequiredFieldValidationException() throws BitcoinURIParseException {
         /* Branches:
@@ -408,21 +560,25 @@ public class BitcoinURISapientGeneratedJunit4Test {
          * (sepIndex == 0) : false  #  inside parseParameters method
          * (FIELD_AMOUNT.equals(nameToken)) : false  #  inside parseParameters method
          * (nameToken.startsWith("req-")) : true  #  inside parseParameters method
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("Unsupported URI scheme: bitcoin");
-        thrown.expect(BitcoinURIParseException.class);
-        thrown.expectMessage(bitcoinURIParseException.getMessage());
-        Network networkMock = mock(Network.class, "MainNet");
-
+        doReturn("return_of_uriScheme1").when(networkMock).uriScheme();
+        RequiredFieldValidationException requiredFieldValidationException = new RequiredFieldValidationException("s1");
+        thrown.expect(RequiredFieldValidationException.class);
+        thrown.expectMessage(requiredFieldValidationException.getMessage());
         //Act Statement(s)
-        BitcoinURI.of("bitcoin://1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa", networkMock);
+        BitcoinURI.of("uri1", networkMock);
+        //Assert statement(s)
+        verify(networkMock).uriScheme();
     }
 
     //Sapient generated method id: ${390db66d-29ff-3afc-87e3-1a5205737b10}
     @Ignore()
     @Test()
-    public void of1WhenParameterMapNotContainsKeyKeyAndDefaultBranchThrowsBitcoinURIParseException() throws BitcoinURIParseException {
+    public void of1WhenParameterMapNotContainsKeyKeyAndDefaultBranchThrowsBitcoinURIParseException() throws BitcoinURIParseException, AddressFormatException {
         /* Branches:
          * (branch expression (line 143)) : false  #  inside <init> method
          * (branch expression (line 168)) : true  #  inside <init> method
@@ -438,18 +594,26 @@ public class BitcoinURISapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("Bad address", addressFormatExceptionMock);
-        thrown.expect(BitcoinURIParseException.class);
-        thrown.expectMessage(bitcoinURIParseException.getMessage());
-
-        //Act Statement(s)
-        BitcoinURI.of("CEDHF", networkMock);
+        try (MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class)) {
+            doReturn("return_of_uriScheme1").when(networkMock).uriScheme();
+            addressParser.when(() -> AddressParser.getDefault(networkMock)).thenReturn(addressParserMock);
+            doReturn(addressMock).when(addressParserMock).parseAddress("arg0");
+            BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("Bad address", addressFormatExceptionMock);
+            thrown.expect(BitcoinURIParseException.class);
+            thrown.expectMessage(bitcoinURIParseException.getMessage());
+            //Act Statement(s)
+            BitcoinURI.of("uri1", networkMock);
+            //Assert statement(s)
+            verify(networkMock).uriScheme();
+            addressParser.verify(() -> AddressParser.getDefault(networkMock), atLeast(1));
+            verify(addressParserMock).parseAddress("arg0");
+        }
     }
 
-    //Sapient generated method id: ${e572048f-5d39-35b3-8504-a65e87155504}
+    //Sapient generated method id: ${437e7e57-bac7-32c0-8b61-08020dfb5a66}
     @Ignore()
     @Test()
-    public void of1WhenDefaultBranchAndParameterMapNotContainsKeyKeyAndDefaultBranchThrowsBitcoinURIParseException() throws BitcoinURIParseException {
+    public void of1WhenDefaultBranchAndDefaultBranchAndParameterMapNotContainsKeyKeyAndDefaultBranchThrowsBitcoinURIParseException() throws BitcoinURIParseException, AddressFormatException {
         /* Branches:
          * (branch expression (line 143)) : false  #  inside <init> method
          * (branch expression (line 168)) : true  #  inside <init> method
@@ -465,18 +629,18 @@ public class BitcoinURISapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("Unsupported URI scheme: A");
+        BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("No address and no r= parameter found");
         thrown.expect(BitcoinURIParseException.class);
         thrown.expectMessage(bitcoinURIParseException.getMessage());
-        Network networkMock = mock(Network.class, "<Network>");
-
+        Network network = null;
         //Act Statement(s)
-        BitcoinURI.of("<string>", networkMock);
+        BitcoinURI.of("uri1", network);
     }
 
-    //Sapient generated method id: ${ae424e0c-03b5-39f9-83f6-319abf4183b5}
+    //Sapient generated method id: ${e7aa5600-af84-32da-9acd-ab946091d594}
+    @Ignore()
     @Test()
-    public void of1WhenDefaultBranchAndDefaultBranchAndParameterMapNotContainsKeyKeyAndDefaultBranch() throws BitcoinURIParseException {
+    public void of1WhenNameValuePairTokensIsEmptyAndDefaultBranchAndDefaultBranchAndParameterMapNotContainsKeyKeyAndDefaultBranch() throws BitcoinURIParseException, AddressFormatException, URISyntaxException, UnsupportedEncodingException {
         /* Branches:
          * (branch expression (line 143)) : false  #  inside <init> method
          * (branch expression (line 168)) : false  #  inside <init> method
@@ -490,11 +654,93 @@ public class BitcoinURISapientGeneratedJunit4Test {
          * (branch expression (line 207)) : false  #  inside <init> method
          */
         //Arrange Statement(s)
-        thrown.expect(NullPointerException.class);
-        Network network = null;
+        try (MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class)) {
+            doReturn("f").when(networkMock).uriScheme();
+            addressParser.when(() -> AddressParser.getDefault(networkMock)).thenReturn(addressParserMock);
+            doReturn(addressMock).when(addressParserMock).parseAddress("BC");
+            //Act Statement(s)
+            BitcoinURI result = BitcoinURI.of("F:E", networkMock);
+            //Assert statement(s)
+            assertThat(result, is(notNullValue()));
+            verify(networkMock).uriScheme();
+            addressParser.verify(() -> AddressParser.getDefault(networkMock), atLeast(1));
+            verify(addressParserMock).parseAddress("BC");
+        }
+    }
 
+    //Sapient generated method id: ${f8bd3d80-d37f-3908-97b3-37bfd949586a}
+    @Ignore()
+    @Test()
+    public void of1WhenParameterMapNotContainsKeyKeyAndDefaultBranchAndDefaultBranchAndDefaultBranchThrowsBitcoinURIParseException() throws BitcoinURIParseException, AddressFormatException {
+        /* Branches:
+         * (branch expression (line 143)) : false  #  inside <init> method
+         * (branch expression (line 168)) : true  #  inside <init> method
+         * (branch expression (line 178)) : true  #  inside <init> method
+         * (branch expression (line 183)) : false  #  inside <init> method
+         * (for-each(nameValuePairTokens)) : true  #  inside parseParameters method
+         * (sepIndex == -1) : false  #  inside parseParameters method
+         * (sepIndex == 0) : false  #  inside parseParameters method
+         * (FIELD_AMOUNT.equals(nameToken)) : true  #  inside parseParameters method
+         * (amount.signum() < 0) : false  #  inside parseParameters method
+         * (parameterMap.containsKey(key)) : false  #  inside putWithValidation method
+         * (branch expression (line 194)) : false  #  inside <init> method
+         * (branch expression (line 197)) : false  #  inside <init> method
+         * (branch expression (line 207)) : true  #  inside <init> method
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class);
+             MockedStatic<Coin> coin = mockStatic(Coin.class)) {
+            doReturn("return_of_uriScheme1").when(networkMock).uriScheme();
+            coin.when(() -> Coin.parseCoin("str1")).thenReturn(coinMock);
+            doReturn(0).when(coinMock).signum();
+            addressParser.when(() -> AddressParser.getDefault(networkMock)).thenReturn(addressParserMock);
+            doReturn(addressMock).when(addressParserMock).parseAddress("arg0");
+            BitcoinURIParseException bitcoinURIParseException = new BitcoinURIParseException("No address and no r= parameter found");
+            thrown.expect(BitcoinURIParseException.class);
+            thrown.expectMessage(bitcoinURIParseException.getMessage());
+            //Act Statement(s)
+            BitcoinURI.of("uri1", networkMock);
+            //Assert statement(s)
+            verify(networkMock).uriScheme();
+            coin.verify(() -> Coin.parseCoin("str1"), atLeast(1));
+            verify(coinMock).signum();
+            addressParser.verify(() -> AddressParser.getDefault(networkMock), atLeast(1));
+            verify(addressParserMock).parseAddress("arg0");
+        }
+    }
+
+    //Sapient generated method id: ${3d432913-00a8-3112-9542-e8483d58f908}
+    @Ignore()
+    @Test()
+    public void of1WhenValueTokenLengthGreaterThan0AndParameterMapNotContainsKeyKeyAndDefaultBranchAndDefaultBranch() throws BitcoinURIParseException, URISyntaxException, UnsupportedEncodingException {
+        /* Branches:
+         * (branch expression (line 143)) : false  #  inside <init> method
+         * (branch expression (line 168)) : true  #  inside <init> method
+         * (branch expression (line 178)) : true  #  inside <init> method
+         * (branch expression (line 183)) : false  #  inside <init> method
+         * (for-each(nameValuePairTokens)) : true  #  inside parseParameters method
+         * (sepIndex == -1) : false  #  inside parseParameters method
+         * (sepIndex == 0) : false  #  inside parseParameters method
+         * (FIELD_AMOUNT.equals(nameToken)) : false  #  inside parseParameters method
+         * (nameToken.startsWith("req-")) : false  #  inside parseParameters method
+         * (valueToken.length() > 0) : true  #  inside parseParameters method
+         * (parameterMap.containsKey(key)) : false  #  inside putWithValidation method
+         * (branch expression (line 194)) : true  #  inside <init> method
+         * (branch expression (line 207)) : false  #  inside <init> method
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        doReturn("return_of_uriScheme1").when(networkMock).uriScheme();
         //Act Statement(s)
-        BitcoinURI.of("EFGHIBCDM", network);
+        BitcoinURI result = BitcoinURI.of("uri1", networkMock);
+        //Assert statement(s)
+        assertThat(result, is(notNullValue()));
+        verify(networkMock).uriScheme();
     }
 
     //Sapient generated method id: ${c4381d74-a818-3102-bb71-8a52fdc28571}
@@ -507,13 +753,11 @@ public class BitcoinURISapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-        BitcoinURI target = new BitcoinURI(networkParameters, "sample input");
-
+        BitcoinURI target = new BitcoinURI(networkParameters, "String");
         //Act Statement(s)
         Address result = target.getAddress();
-
         //Assert statement(s)
-        assertThat(result, is(notNullValue()));
+        assertThat(result, is(nullValue()));
     }
 
     //Sapient generated method id: ${53b9c084-e3a6-30ca-9486-e38775bc2ed4}
@@ -526,11 +770,9 @@ public class BitcoinURISapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-        BitcoinURI target = new BitcoinURI(networkParameters, "bitcoin:abc123");
-
+        BitcoinURI target = new BitcoinURI(networkParameters, "bitcoin://1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa");
         //Act Statement(s)
         Coin result = target.getAmount();
-
         //Assert statement(s)
         assertThat(result, is(nullValue()));
     }
@@ -538,20 +780,28 @@ public class BitcoinURISapientGeneratedJunit4Test {
     //Sapient generated method id: ${e814b19a-5fe6-3010-a284-7ef6ca4bf6d0}
     @Ignore()
     @Test()
-    public void getLabelTest() throws BitcoinURIParseException {
+    public void getLabelTest() throws AddressFormatException, BitcoinURIParseException {
         /**
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-        BitcoinURI target = new BitcoinURI(networkParameters, "String");
-
-        //Act Statement(s)
-        String result = target.getLabel();
-
-        //Assert statement(s)
-        assertThat(result, is(nullValue()));
+        Address addressMock = mock(Address.class, "Address");
+        try (MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class)) {
+            doReturn(networkMock).when(paramsMock).network();
+            doReturn("return_of_uriScheme1").when(networkMock).uriScheme();
+            addressParser.when(() -> AddressParser.getDefault(networkMock)).thenReturn(addressParserMock);
+            doReturn(addressMock).when(addressParserMock).parseAddress("arg0");
+            BitcoinURI target = new BitcoinURI(paramsMock, "input1");
+            //Act Statement(s)
+            String result = target.getLabel();
+            //Assert statement(s)
+            assertThat(result, is(nullValue()));
+            verify(paramsMock).network();
+            verify(networkMock).uriScheme();
+            addressParser.verify(() -> AddressParser.getDefault(networkMock), atLeast(1));
+            verify(addressParserMock).parseAddress("arg0");
+        }
     }
 
     //Sapient generated method id: ${a52bed3f-53de-303b-8128-55ffe95a8205}
@@ -564,11 +814,9 @@ public class BitcoinURISapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-        BitcoinURI target = new BitcoinURI(networkParameters, "<value>");
-
+        BitcoinURI target = new BitcoinURI(networkParameters, "bitcoin://example.com");
         //Act Statement(s)
         String result = target.getMessage();
-
         //Assert statement(s)
         assertThat(result, is(nullValue()));
     }
@@ -583,11 +831,9 @@ public class BitcoinURISapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-        BitcoinURI target = new BitcoinURI(networkParameters, "sample_input");
-
+        BitcoinURI target = new BitcoinURI(networkParameters, "bitcoin://1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa");
         //Act Statement(s)
         String result = target.getPaymentRequestUrl();
-
         //Assert statement(s)
         assertThat(result, is(nullValue()));
     }
@@ -595,7 +841,7 @@ public class BitcoinURISapientGeneratedJunit4Test {
     //Sapient generated method id: ${fc1f60f4-c8f5-33e1-b825-058d1ec7544e}
     @Ignore()
     @Test()
-    public void getPaymentRequestUrlsWhenUrlIsNull() throws BitcoinURIParseException {
+    public void getPaymentRequestUrlsWhenUrlIsNull() throws AddressFormatException, BitcoinURIParseException {
         /* Branches:
          * (i > 0) : false
          * (url == null) : true
@@ -604,41 +850,56 @@ public class BitcoinURISapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        NetworkParameters paramsMock = mock(NetworkParameters.class, "<value>");
-        doReturn(null).when(paramsMock).network();
-        BitcoinURI target = new BitcoinURI(paramsMock, "some input value");
-
-        //Act Statement(s)
-        List<String> result = target.getPaymentRequestUrls();
-
-        //Assert statement(s)
-        assertThat(result.size(), equalTo(0));
-        verify(paramsMock).network();
+        try (MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class)) {
+            doReturn(networkMock).when(paramsMock).network();
+            doReturn("return_of_uriScheme1").when(networkMock).uriScheme();
+            addressParser.when(() -> AddressParser.getDefault(networkMock)).thenReturn(addressParserMock);
+            doReturn(addressMock).when(addressParserMock).parseAddress("arg0");
+            BitcoinURI target = new BitcoinURI(paramsMock, "input1");
+            //Act Statement(s)
+            List<String> result = target.getPaymentRequestUrls();
+            //Assert statement(s)
+            assertThat(result.size(), equalTo(0));
+            verify(paramsMock).network();
+            verify(networkMock).uriScheme();
+            addressParser.verify(() -> AddressParser.getDefault(networkMock), atLeast(1));
+            verify(addressParserMock).parseAddress("arg0");
+        }
     }
 
     //Sapient generated method id: ${17090579-1d20-371f-acd5-04a2a623862e}
     @Ignore()
     @Test()
-    public void getParameterByNameTest() throws BitcoinURIParseException {
+    public void getParameterByNameTest() throws AddressFormatException, BitcoinURIParseException {
         /**
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-        BitcoinURI target = new BitcoinURI(networkParameters, "<String>");
-
-        //Act Statement(s)
-        Object result = target.getParameterByName("<String>");
-
-        //Assert statement(s)
-        assertThat(result, is(nullValue()));
+        Address addressMock = mock(Address.class, "Address");
+        try (MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class)) {
+            doReturn(networkMock).when(paramsMock).network();
+            doReturn("return_of_uriScheme1").when(networkMock).uriScheme();
+            addressParser.when(() -> AddressParser.getDefault(networkMock)).thenReturn(addressParserMock);
+            doReturn(addressMock).when(addressParserMock).parseAddress("arg0");
+            BitcoinURI target = new BitcoinURI(paramsMock, "input1");
+            //Act Statement(s)
+            Object result = target.getParameterByName("name1");
+            Object object = new Object();
+            //Assert statement(s)
+            //TODO: Please implement equals method in Object for verification to succeed or you need to adjust respective assertion statements
+            assertThat(result, equalTo(object));
+            verify(paramsMock).network();
+            verify(networkMock).uriScheme();
+            addressParser.verify(() -> AddressParser.getDefault(networkMock), atLeast(1));
+            verify(addressParserMock).parseAddress("arg0");
+        }
     }
 
     //Sapient generated method id: ${f1c167b8-807f-381c-ac3e-7052d2752ba4}
     @Ignore()
     @Test()
-    public void toStringWhenFirst() throws BitcoinURIParseException {
+    public void toStringWhenFirst() throws AddressFormatException, BitcoinURIParseException {
         /* Branches:
          * (for-each(parameterMap.entrySet())) : true
          * (first) : true
@@ -647,14 +908,22 @@ public class BitcoinURISapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-        BitcoinURI target = new BitcoinURI(networkParameters, "");
-
-        //Act Statement(s)
-        String result = target.toString();
-
-        //Assert statement(s)
-        assertThat(result, equalTo("result1"));
+        Address addressMock = mock(Address.class, "<init>_address2");
+        try (MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class)) {
+            doReturn(networkMock).when(paramsMock).network();
+            doReturn("return_of_uriScheme1").when(networkMock).uriScheme();
+            addressParser.when(() -> AddressParser.getDefault(networkMock)).thenReturn(addressParserMock);
+            doReturn(addressMock).when(addressParserMock).parseAddress("arg0");
+            BitcoinURI target = new BitcoinURI(paramsMock, "input1");
+            //Act Statement(s)
+            String result = target.toString();
+            //Assert statement(s)
+            assertThat(result, equalTo("result1"));
+            verify(paramsMock).network();
+            verify(networkMock).uriScheme();
+            addressParser.verify(() -> AddressParser.getDefault(networkMock), atLeast(1));
+            verify(addressParserMock).parseAddress("arg0");
+        }
     }
 
     //Sapient generated method id: ${8f170931-bb37-330c-b94e-4710106cc98f}
@@ -678,7 +947,6 @@ public class BitcoinURISapientGeneratedJunit4Test {
     @Test()
     public void convertToBitcoinURI1Test() throws UnsupportedEncodingException {
         //Arrange Statement(s)
-        NetworkParameters paramsMock = mock(NetworkParameters.class);
         try (MockedStatic<BitcoinURI> bitcoinURI = mockStatic(BitcoinURI.class, CALLS_REAL_METHODS)) {
             doReturn(networkMock).when(paramsMock).network();
             bitcoinURI.when(() -> BitcoinURI.convertToBitcoinURI(networkMock, "address1", coinMock, "label1", "message1")).thenReturn("return_of_convertToBitcoinURI1");
@@ -703,10 +971,8 @@ public class BitcoinURISapientGeneratedJunit4Test {
         IllegalArgumentException illegalArgumentException = new IllegalArgumentException("Coin must be positive");
         thrown.expect(IllegalArgumentException.class);
         thrown.expectMessage(illegalArgumentException.getMessage());
-
         //Act Statement(s)
         BitcoinURI.convertToBitcoinURI(networkMock, "address1", amountMock, "label1", "message1");
-
         //Assert statement(s)
         verify(amountMock).signum();
     }
@@ -802,10 +1068,8 @@ public class BitcoinURISapientGeneratedJunit4Test {
     //Sapient generated method id: ${5af14921-4417-30ef-9c77-3fd56869b8d4}
     @Test()
     public void encodeURLStringTest() throws UnsupportedEncodingException {
-
         //Act Statement(s)
         String result = BitcoinURI.encodeURLString("A");
-
         //Assert statement(s)
         assertThat(result, equalTo("A"));
     }
@@ -821,7 +1085,7 @@ public class BitcoinURISapientGeneratedJunit4Test {
             UnsupportedEncodingException unsupportedEncodingException = new UnsupportedEncodingException();
             uRLEncoder.when(() -> URLEncoder.encode("stringToEncode1", "UTF-8")).thenThrow(unsupportedEncodingException);
             thrown.expect(RuntimeException.class);
-            thrown.expectCause(isA(UnsupportedEncodingException.class));
+            thrown.expectCause(is(instanceOf(UnsupportedEncodingException.class)));
             //Act Statement(s)
             BitcoinURI.encodeURLString("stringToEncode1");
             //Assert statement(s)

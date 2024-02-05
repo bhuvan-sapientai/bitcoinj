@@ -63,19 +63,18 @@ public class VarIntSapientGeneratedJunit4Test {
          * (offset < buf.length) : true
          */
         //Arrange Statement(s)
-        //VarInt varIntMock = mock(VarInt.class);
-        /*try (MockedStatic<VarInt> varInt = mockStatic(VarInt.class, CALLS_REAL_METHODS);
-    MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-    preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    varInt.when(() -> VarInt.read((ByteBuffer) any())).thenReturn(varIntMock);
-    byte[] byteArray = new byte[] { (byte) 0 };
-    //Act Statement(s)
-    VarInt result = VarInt.ofBytes(byteArray, 0);
-    //Assert statement(s)
-    assertThat(result, equalTo(varIntMock));
-    preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()), atLeast(1));
-    varInt.verify(() -> VarInt.read((ByteBuffer) any()), atLeast(1));
-}*/
+        try (MockedStatic<VarInt> varInt = mockStatic(VarInt.class, CALLS_REAL_METHODS);
+             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            varInt.when(() -> VarInt.read((ByteBuffer) any())).thenReturn(varIntMock);
+            byte[] byteArray = new byte[]{(byte) 0};
+            //Act Statement(s)
+            VarInt result = VarInt.ofBytes(byteArray, 0);
+            //Assert statement(s)
+            assertThat(result, equalTo(varIntMock));
+            preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()), atLeast(1));
+            varInt.verify(() -> VarInt.read((ByteBuffer) any()), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${eaaa2eb8-9230-3579-bcda-1a0f35f51893}
@@ -85,21 +84,23 @@ public class VarIntSapientGeneratedJunit4Test {
         /* Branches:
          * (offset >= 0) : true
          * (offset < buf.length) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<VarInt> varInt = mockStatic(VarInt.class, CALLS_REAL_METHODS);
-    MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-    preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-    VarInt varInt2 = new VarInt(0L);
-    varInt.when(() -> VarInt.read((ByteBuffer) any())).thenReturn(varInt2);
-    byte[] byteArray = new byte[] {};
-    //Act Statement(s)
-    VarInt result = VarInt.ofBytes(byteArray, 0);
-    //Assert statement(s)
-    assertThat(result, equalTo(varInt2));
-    preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()), atLeast(1));
-    varInt.verify(() -> VarInt.read((ByteBuffer) any()), atLeast(1));
-}*/
+        try (MockedStatic<VarInt> varInt = mockStatic(VarInt.class, CALLS_REAL_METHODS);
+             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
+            varInt.when(() -> VarInt.read((ByteBuffer) any())).thenReturn(varIntMock);
+            byte[] byteArray = new byte[]{};
+            //Act Statement(s)
+            VarInt result = VarInt.ofBytes(byteArray, 1);
+            //Assert statement(s)
+            assertThat(result, equalTo(varIntMock));
+            preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()), atLeast(1));
+            varInt.verify(() -> VarInt.read((ByteBuffer) any()), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${ac04b3a4-4857-3310-b963-f20b6d5d9261}
@@ -113,11 +114,13 @@ public class VarIntSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+
         //Act Statement(s)
-        //VarInt result = VarInt.read(byteBuffer);
+        VarInt result = VarInt.read(byteBuffer);
+
         //Assert statement(s)
-        //assertThat(result, is(notNullValue()));
+        assertThat(result, is(notNullValue()));
     }
 
     //Sapient generated method id: ${ebb5d088-b684-338f-8fb3-22baca9ebbb7}
@@ -132,11 +135,13 @@ public class VarIntSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+
         //Act Statement(s)
-        //VarInt result = VarInt.read(byteBuffer);
+        VarInt result = VarInt.read(byteBuffer);
+
         //Assert statement(s)
-        //assertThat(result, is(notNullValue()));
+        assertThat(result, is(notNullValue()));
     }
 
     //Sapient generated method id: ${12ca17ec-9748-3a74-880b-215949ca5fde}
@@ -152,11 +157,13 @@ public class VarIntSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+
         //Act Statement(s)
-        //VarInt result = VarInt.read(byteBuffer);
+        VarInt result = VarInt.read(byteBuffer);
+
         //Assert statement(s)
-        //assertThat(result, is(notNullValue()));
+        assertThat(result, is(notNullValue()));
     }
 
     //Sapient generated method id: ${b8e7bb45-aa6e-35eb-b85e-cfe6ecaac014}
@@ -172,28 +179,28 @@ public class VarIntSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+
         //Act Statement(s)
-        //VarInt result = VarInt.read(byteBuffer);
+        VarInt result = VarInt.read(byteBuffer);
+
         //Assert statement(s)
-        //assertThat(result, is(notNullValue()));
+        assertThat(result, is(notNullValue()));
     }
 
     //Sapient generated method id: ${9023386b-0a58-3cc3-912f-1a61aadf88ac}
     @Ignore()
     @Test()
     public void longValueTest() {
-        /**
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
         //Arrange Statement(s)
-        //byte[] byteArray = new byte[] { (byte) 5, (byte) 1, (byte) 2, (byte) 3, (byte) 4 };
-        //VarInt target = new VarInt(byteArray, 1);
+        byte[] byteArray = new byte[]{(byte) -4};
+        VarInt target = new VarInt(byteArray, 0);
+
         //Act Statement(s)
-        //long result = target.longValue();
+        long result = target.longValue();
+
         //Assert statement(s)
-        //assertThat(result, equalTo(0L));
+        assertThat(result, equalTo(252L));
     }
 
     //Sapient generated method id: ${493c40bf-1ed6-364e-835f-bcca76595088}
@@ -203,17 +210,16 @@ public class VarIntSapientGeneratedJunit4Test {
         /* Branches:
          * (value >= 0) : true
          * (value <= Integer.MAX_VALUE) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //byte[] byteArray = new byte[] { (byte) 0 };
-        //VarInt target = new VarInt(byteArray, 0);
+        byte[] byteArray = new byte[]{(byte) 1};
+        VarInt target = new VarInt(byteArray, 0);
+
         //Act Statement(s)
-        //boolean result = target.fitsInt();
+        boolean result = target.fitsInt();
+
         //Assert statement(s)
-        //assertThat(result, equalTo(Boolean.TRUE));
+        assertThat(result, equalTo(Boolean.TRUE));
     }
 
     //Sapient generated method id: ${f6010e22-478c-374a-a335-d05e9596a316}
@@ -223,14 +229,19 @@ public class VarIntSapientGeneratedJunit4Test {
         /* Branches:
          * (value >= 0) : true
          * (value <= Integer.MAX_VALUE) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3};
+        byte[] byteArray = new byte[]{(byte) 0};
         VarInt target = new VarInt(byteArray, 0);
+
         //Act Statement(s)
         boolean result = target.fitsInt();
+
         //Assert statement(s)
-        assertThat(result, equalTo(Boolean.TRUE));
+        assertThat(result, equalTo(Boolean.FALSE));
     }
 
     //Sapient generated method id: ${767dc907-1074-3191-bfda-0a702630b7c3}
@@ -240,13 +251,13 @@ public class VarIntSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{(byte) 5, (byte) 1};
+            byte[] byteArray = new byte[]{(byte) 100};
             VarInt target = spy(new VarInt(byteArray, 0));
             doReturn(false).when(target).fitsInt();
             //Act Statement(s)
             int result = target.intValue();
             //Assert statement(s)
-            assertThat(result, equalTo(5));
+            assertThat(result, equalTo(100));
             preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()));
             verify(target).fitsInt();
         }
@@ -256,21 +267,17 @@ public class VarIntSapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void getSizeInBytesTest() {
-        /**
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
         //Arrange Statement(s)
-        /*try (MockedStatic<VarInt> varInt = mockStatic(VarInt.class, CALLS_REAL_METHODS)) {
-    varInt.when(() -> VarInt.sizeOf(1L)).thenReturn(0);
-    byte[] byteArray = new byte[] { (byte) 1, (byte) 2, (byte) 3, (byte) 4 };
-    VarInt target = new VarInt(byteArray, 1);
-    //Act Statement(s)
-    int result = target.getSizeInBytes();
-    //Assert statement(s)
-    assertThat(result, equalTo(0));
-    varInt.verify(() -> VarInt.sizeOf(1L), atLeast(1));
-}*/
+        try (MockedStatic<VarInt> varInt = mockStatic(VarInt.class, CALLS_REAL_METHODS)) {
+            varInt.when(() -> VarInt.sizeOf(0L)).thenReturn(0);
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+            VarInt target = new VarInt(byteArray, 0);
+            //Act Statement(s)
+            int result = target.getSizeInBytes();
+            //Assert statement(s)
+            assertThat(result, equalTo(0));
+            varInt.verify(() -> VarInt.sizeOf(0L), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${21142e8b-ad0d-329c-8765-acf75573bb7d}
@@ -279,10 +286,12 @@ public class VarIntSapientGeneratedJunit4Test {
         /* Branches:
          * (value < 0) : true
          */
+
         //Act Statement(s)
-        //int result = VarInt.sizeOf(-1L);
+        int result = VarInt.sizeOf(-1L);
+
         //Assert statement(s)
-        //assertThat(result, equalTo(9));
+        assertThat(result, equalTo(9));
     }
 
     //Sapient generated method id: ${b851d538-4311-322e-a9b1-5254d799be65}
@@ -292,10 +301,12 @@ public class VarIntSapientGeneratedJunit4Test {
          * (value < 0) : false
          * (value < 253) : true
          */
+
         //Act Statement(s)
-        //int result = VarInt.sizeOf(0L);
+        int result = VarInt.sizeOf(0L);
+
         //Assert statement(s)
-        //assertThat(result, equalTo(1));
+        assertThat(result, equalTo(1));
     }
 
     //Sapient generated method id: ${7e16f52a-d742-36b2-a047-8a507103c30a}
@@ -306,8 +317,10 @@ public class VarIntSapientGeneratedJunit4Test {
          * (value < 253) : false
          * (value <= 0xFFFFL) : true
          */
+
         //Act Statement(s)
         int result = VarInt.sizeOf(254L);
+
         //Assert statement(s)
         assertThat(result, equalTo(3));
     }
@@ -321,10 +334,12 @@ public class VarIntSapientGeneratedJunit4Test {
          * (value <= 0xFFFFL) : false
          * (value <= 0xFFFFFFFFL) : true
          */
+
         //Act Statement(s)
-        //int result = VarInt.sizeOf(4294901760L);
+        int result = VarInt.sizeOf(4294901760L);
+
         //Assert statement(s)
-        //assertThat(result, equalTo(5));
+        assertThat(result, equalTo(5));
     }
 
     //Sapient generated method id: ${cba18068-6d25-3b9e-9d28-d80d2ef3667f}
@@ -336,10 +351,12 @@ public class VarIntSapientGeneratedJunit4Test {
          * (value <= 0xFFFFL) : false
          * (value <= 0xFFFFFFFFL) : false
          */
+
         //Act Statement(s)
-        //int result = VarInt.sizeOf(4294967296L);
+        int result = VarInt.sizeOf(4294967296L);
+
         //Assert statement(s)
-        //assertThat(result, equalTo(9));
+        assertThat(result, equalTo(9));
     }
 
     //Sapient generated method id: ${9d328af1-2293-3544-bbbc-a0683c1f9fbe}
@@ -352,8 +369,8 @@ public class VarIntSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<VarInt> varInt = mockStatic(VarInt.class, CALLS_REAL_METHODS)) {
-            varInt.when(() -> VarInt.sizeOf(1L)).thenReturn(1);
-            byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3, (byte) 4};
+            varInt.when(() -> VarInt.sizeOf(100L)).thenReturn(1);
+            byte[] byteArray = new byte[]{(byte) 100};
             VarInt target = spy(new VarInt(byteArray, 0));
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
             doReturn(byteBuffer).when(target).write((ByteBuffer) any());
@@ -362,7 +379,7 @@ public class VarIntSapientGeneratedJunit4Test {
             byte[] byteResultArray = new byte[]{};
             //Assert statement(s)
             assertThat(result, equalTo(byteResultArray));
-            varInt.verify(() -> VarInt.sizeOf(1L), atLeast(1));
+            varInt.verify(() -> VarInt.sizeOf(100L), atLeast(1));
             verify(target, atLeast(1)).write((ByteBuffer) any());
         }
     }
@@ -378,19 +395,17 @@ public class VarIntSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<VarInt> varInt = mockStatic(VarInt.class, CALLS_REAL_METHODS)) {
-    varInt.when(() -> VarInt.sizeOf(1L)).thenReturn(1);
-    byte[] byteArray2 = new byte[] { (byte) 1 };
-    byte[] byteArray3 = new byte[] { (byte) 0 };
-    byte[] byteArray = new byte[] { byteArray2, byteArray3 };
-    VarInt target = new VarInt(byteArray, 1);
-    ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-    //Act Statement(s)
-    ByteBuffer result = target.write(byteBuffer);
-    //Assert statement(s)
-    assertThat(result, equalTo(byteBuffer));
-    varInt.verify(() -> VarInt.sizeOf(1L), atLeast(1));
-}*/
+        try (MockedStatic<VarInt> varInt = mockStatic(VarInt.class, CALLS_REAL_METHODS)) {
+            varInt.when(() -> VarInt.sizeOf(1L)).thenReturn(1);
+            byte[] byteArray = new byte[]{(byte) 1};
+            VarInt target = new VarInt(byteArray, 1);
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            //Act Statement(s)
+            ByteBuffer result = target.write(byteBuffer);
+            //Assert statement(s)
+            assertThat(result, equalTo(byteBuffer));
+            varInt.verify(() -> VarInt.sizeOf(1L), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${f28a0c5f-7246-35e3-a8df-bf67ff4cb87a}
@@ -428,17 +443,17 @@ public class VarIntSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<VarInt> varInt = mockStatic(VarInt.class, CALLS_REAL_METHODS)) {
-    varInt.when(() -> VarInt.sizeOf(1L)).thenReturn(5);
-    byte[] byteArray = new byte[] { (byte) 0, (byte) 6, (byte) 5, (byte) 4, (byte) 3, (byte) 2, (byte) 1 };
-    VarInt target = new VarInt(byteArray, 0);
-    ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-    //Act Statement(s)
-    ByteBuffer result = target.write(byteBuffer);
-    //Assert statement(s)
-    assertThat(result, equalTo(byteBuffer));
-    varInt.verify(() -> VarInt.sizeOf(1L), atLeast(1));
-}*/
+        try (MockedStatic<VarInt> varInt = mockStatic(VarInt.class, CALLS_REAL_METHODS)) {
+            varInt.when(() -> VarInt.sizeOf(1L)).thenReturn(5);
+            byte[] byteArray = new byte[]{(byte) 0};
+            VarInt target = new VarInt(byteArray, 0);
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            //Act Statement(s)
+            ByteBuffer result = target.write(byteBuffer);
+            //Assert statement(s)
+            assertThat(result, equalTo(byteBuffer));
+            varInt.verify(() -> VarInt.sizeOf(1L), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${1e290f86-1871-328b-aa0c-bc733544f04b}
@@ -452,29 +467,35 @@ public class VarIntSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<VarInt> varInt = mockStatic(VarInt.class, CALLS_REAL_METHODS)) {
-    varInt.when(() -> VarInt.sizeOf(1L)).thenReturn(0);
-    byte[] byteArray = new byte[] {};
-    VarInt target = new VarInt(byteArray, 0);
-    ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-    //Act Statement(s)
-    ByteBuffer result = target.write(byteBuffer);
-    //Assert statement(s)
-    assertThat(result, equalTo(byteBuffer));
-    varInt.verify(() -> VarInt.sizeOf(1L), atLeast(1));
-}*/
+        try (MockedStatic<VarInt> varInt = mockStatic(VarInt.class, CALLS_REAL_METHODS)) {
+            varInt.when(() -> VarInt.sizeOf(1L)).thenReturn(0);
+            byte[] byteArray = new byte[]{(byte) 0};
+            VarInt target = new VarInt(byteArray, 0);
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            //Act Statement(s)
+            ByteBuffer result = target.write(byteBuffer);
+            //Assert statement(s)
+            assertThat(result, equalTo(byteBuffer));
+            varInt.verify(() -> VarInt.sizeOf(1L), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${363d3698-f34c-39ad-914f-376a19498023}
     @Ignore()
     @Test()
     public void toStringTest() {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
-        //byte[] byteArray = new byte[] { (byte) 1, (byte) 2, (byte) 3, (byte) 4 };
-        //VarInt target = new VarInt(byteArray, 0);
+        byte[] byteArray = new byte[]{(byte) 0};
+        VarInt target = new VarInt(byteArray, 0);
+
         //Act Statement(s)
-        //String result = target.toString();
+        String result = target.toString();
+
         //Assert statement(s)
-        //assertThat(result, equalTo("1"));
+        assertThat(result, equalTo("1"));
     }
 }

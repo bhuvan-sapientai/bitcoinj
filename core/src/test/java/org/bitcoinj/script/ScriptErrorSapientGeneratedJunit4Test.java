@@ -5,6 +5,9 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+
 public class ScriptErrorSapientGeneratedJunit4Test {
 
     @Rule()
@@ -34,12 +37,11 @@ public class ScriptErrorSapientGeneratedJunit4Test {
         /* Branches:
          * (err == null) : false
          */
-        //Arrange Statement(s)
-        IllegalArgumentException illegalArgumentException = new IllegalArgumentException("J is not a valid name");
-        thrown.expect(IllegalArgumentException.class);
-        thrown.expectMessage(illegalArgumentException.getMessage());
 
         //Act Statement(s)
-        ScriptError.fromMnemonic("J");
+        ScriptError result = ScriptError.fromMnemonic("OK");
+
+        //Assert statement(s)
+        assertThat(result, equalTo(ScriptError.SCRIPT_ERR_OK));
     }
 }

@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "1E4DE3E999B7AF8E070C03DE554FAF77"
+modelFingerprint: "C565B42100CD9350F2AD822375ADBBED"
 methods:
 - method:
     name: "read"
@@ -126,9 +126,6 @@ methods:
           content: !<collection>
             parameters: []
             values: []
-          suggestedContent: !<collection>
-            parameters: []
-            values: []
           valueType: "java.util.List"
           genericValueType: "org.bitcoinj.core.InventoryItem"
           uuid: "read_list1"
@@ -238,7 +235,7 @@ methods:
           collectionClass: "java.util.ArrayList"
           parameters: []
           values:
-          - sapientType: "MOCK"
+          - sapientType: "UNKNOWN"
             valueType: "org.bitcoinj.core.Block"
             uuid: "ofBlocks_block1"
             fixed: false
@@ -355,18 +352,18 @@ methods:
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
-    testPathName: "ofBlocksWhenBlocksIsEmpty"
+    testPathName: "ofBlocksWhenBlocksIsEmptyThrowsIllegalArgumentException"
     nameDefinedByUser: false
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "12AE72B3DDDEB8B4C46F2DBFEB88AC46"
+    modelFingerprint: "8E13A4166CDAE7ACE96237444CDBF43D"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "blocks"
-      modelFingerprint: "C53F352A989217236831613CD4F435A0"
+      modelFingerprint: "5A26DE73C9B177097A7CCBB9321D5CDC"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -389,7 +386,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "E804CAA01F6E06275AA3B02F677C606A"
+      modelFingerprint: "0EDE48F21AC2F1945BA699E11FE35975"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -416,9 +413,18 @@ methods:
             explicitCastNeeded: false
         signature: "checkArgument(boolean): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "ofBlocks_void1"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -427,57 +433,30 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "FB486979138EF5206EBD3FBABF555080"
+      modelFingerprint: "3E9C76AB51311DE97AE9C2294CD5E1D6"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
+        sapientType: "EXCEPTION"
         content: !<new>
-          target: "org.bitcoinj.core.InventoryMessage"
-          parameters:
-          - name: "items"
-            value:
-              sapientType: "COLLECTION"
-              content: !<collection>
-                parameters: []
-                values: []
-              suggestedContent: !<collection>
-                parameters: []
-                values: []
-              valueType: "java.util.List"
-              genericValueType: "org.bitcoinj.core.InventoryItem"
-              uuid: "ofBlocks_object1"
-              fixed: false
-              collectionUuid: "ofBlocks_list2"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          target: "java.lang.IllegalArgumentException"
+          parameters: []
           privateConstructor: false
-          createdByTargetCode: true
+          createdByTargetCode: false
         suggestedContent: !<new>
-          target: "org.bitcoinj.core.InventoryMessage"
-          parameters:
-          - name: "items"
-            value:
-              sapientType: "COLLECTION"
-              valueType: "java.util.List"
-              genericValueType: "org.bitcoinj.core.InventoryItem"
-              uuid: "ofBlocks_object1"
-              fixed: false
-              collectionUuid: "ofBlocks_list2"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          target: "java.lang.IllegalArgumentException"
+          parameters: []
           privateConstructor: false
-          createdByTargetCode: true
-        valueType: "org.bitcoinj.core.InventoryMessage"
-        uuid: "ofBlocks_inventoryMessage1"
+          createdByTargetCode: false
+        valueType: "java.lang.IllegalArgumentException"
         fixed: true
-        equalsMethodPresent: true
+        equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
-    uuid: "af723908-3817-381c-9864-e259f833d0f4"
+    uuid: "72ff682a-0144-38b0-943f-a8aacd1dd927"
     deleted: false
     disabled: false
     ignoredBySystem: false
@@ -633,7 +612,7 @@ methods:
           collectionClass: "java.util.ArrayList"
           parameters: []
           values:
-          - sapientType: "MOCK"
+          - sapientType: "UNKNOWN"
             valueType: "org.bitcoinj.core.Transaction"
             uuid: "ofTransactions_transaction1"
             fixed: false
@@ -750,18 +729,18 @@ methods:
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
-    testPathName: "ofTransactionsWhenTransactionsIsEmpty"
+    testPathName: "ofTransactionsWhenTransactionsIsEmptyThrowsIllegalArgumentException"
     nameDefinedByUser: false
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "8E5357753AAEDF7C92BE0116537FCF6E"
+    modelFingerprint: "B91ADF701F4C1BA9A3C6D5C1A004875C"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "transactions"
-      modelFingerprint: "10EAC70AF6054FB759907916F5D9E3C0"
+      modelFingerprint: "1023D4E6A21D53675709F95ED1BD632F"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -784,7 +763,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Preconditions"
-      modelFingerprint: "E804CAA01F6E06275AA3B02F677C606A"
+      modelFingerprint: "0EDE48F21AC2F1945BA699E11FE35975"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -811,9 +790,18 @@ methods:
             explicitCastNeeded: false
         signature: "checkArgument(boolean): void"
         returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "ofTransactions_void1"
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalArgumentException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalArgumentException"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -822,57 +810,30 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "FB486979138EF5206EBD3FBABF555080"
+      modelFingerprint: "3E9C76AB51311DE97AE9C2294CD5E1D6"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
+        sapientType: "EXCEPTION"
         content: !<new>
-          target: "org.bitcoinj.core.InventoryMessage"
-          parameters:
-          - name: "items"
-            value:
-              sapientType: "COLLECTION"
-              content: !<collection>
-                parameters: []
-                values: []
-              suggestedContent: !<collection>
-                parameters: []
-                values: []
-              valueType: "java.util.List"
-              genericValueType: "org.bitcoinj.core.InventoryItem"
-              uuid: "ofTransactions_object1"
-              fixed: false
-              collectionUuid: "ofTransactions_list2"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          target: "java.lang.IllegalArgumentException"
+          parameters: []
           privateConstructor: false
-          createdByTargetCode: true
+          createdByTargetCode: false
         suggestedContent: !<new>
-          target: "org.bitcoinj.core.InventoryMessage"
-          parameters:
-          - name: "items"
-            value:
-              sapientType: "COLLECTION"
-              valueType: "java.util.List"
-              genericValueType: "org.bitcoinj.core.InventoryItem"
-              uuid: "ofTransactions_object1"
-              fixed: false
-              collectionUuid: "ofTransactions_list2"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          target: "java.lang.IllegalArgumentException"
+          parameters: []
           privateConstructor: false
-          createdByTargetCode: true
-        valueType: "org.bitcoinj.core.InventoryMessage"
-        uuid: "ofTransactions_inventoryMessage1"
+          createdByTargetCode: false
+        valueType: "java.lang.IllegalArgumentException"
         fixed: true
-        equalsMethodPresent: true
+        equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
-    uuid: "288d6813-c336-3dec-82bd-9bf533c08c79"
+    uuid: "8170359b-d277-3a15-90fc-8fd6d7180bea"
     deleted: false
     disabled: false
     ignoredBySystem: false
@@ -1407,8 +1368,6 @@ methods:
         sapientType: "ARRAY"
         content: !<array>
           values: {}
-        suggestedContent: !<array>
-          values: {}
         valueType: "org.bitcoinj.core.Transaction[]"
         uuid: "with_transaction[]1"
         fixed: false
@@ -1438,8 +1397,6 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
-              values: {}
-            suggestedContent: !<array>
               values: {}
             valueType: "org.bitcoinj.core.Transaction[]"
             uuid: "with_transaction[]1"

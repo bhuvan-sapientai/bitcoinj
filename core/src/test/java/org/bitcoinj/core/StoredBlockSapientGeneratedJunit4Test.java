@@ -66,10 +66,8 @@ public class StoredBlockSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         StoredBlock target = new StoredBlock(blockMock, new BigInteger("2"), 0);
         StoredBlock storedBlock = new StoredBlock(blockMock2, new BigInteger("1"), 0);
-
         //Act Statement(s)
         boolean result = target.moreWorkThan(storedBlock);
-
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
     }
@@ -83,10 +81,8 @@ public class StoredBlockSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         StoredBlock target = new StoredBlock(blockMock, new BigInteger("0"), 0);
         StoredBlock storedBlock = new StoredBlock(blockMock2, new BigInteger("0"), 0);
-
         //Act Statement(s)
         boolean result = target.moreWorkThan(storedBlock);
-
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }
@@ -97,11 +93,9 @@ public class StoredBlockSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         doReturn(new BigInteger("1")).when(blockMock).getWork();
         StoredBlock target = new StoredBlock(blockMock2, new BigInteger("1"), 1);
-
         //Act Statement(s)
         StoredBlock result = target.build(blockMock);
         StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("2"), 2);
-
         //Assert statement(s)
         assertThat(result, equalTo(storedBlock));
         verify(blockMock).getWork();
@@ -118,10 +112,8 @@ public class StoredBlockSapientGeneratedJunit4Test {
         List list = new ArrayList<>();
         Block block = new Block(0L, sha256HashMock2, sha256HashMock, instant, 0L, 0L, list);
         StoredBlock target = new StoredBlock(block, new BigInteger("0"), 0);
-
         //Act Statement(s)
         StoredBlock result = target.getPrev(storeMock);
-
         //Assert statement(s)
         assertThat(result, equalTo(storedBlockMock));
         verify(storeMock).get(sha256HashMock);
@@ -133,6 +125,27 @@ public class StoredBlockSapientGeneratedJunit4Test {
     public void serializeCompactWhenChainWorkBytesLengthLessThanOrEqualsToCHAIN_WORK_BYTESThrowsIllegalStateException() {
         /* Branches:
          * (chainWorkBytes.length <= CHAIN_WORK_BYTES) : true
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            IllegalStateException illegalStateException = new IllegalStateException();
+            preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
+            StoredBlock target = new StoredBlock(blockMock, new BigInteger("1"), 0);
+            thrown.expect(IllegalStateException.class);
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            //Act Statement(s)
+            target.serializeCompact(byteBuffer);
+            //Assert statement(s)
+            preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
+        }
+    }
+
+    //Sapient generated method id: ${96d9e8be-c253-31d0-8679-6c99adac456c}
+    @Ignore()
+    @Test()
+    public void serializeCompactWhenChainWorkBytesLengthGreaterThanCHAIN_WORK_BYTESThrowsIllegalStateException() {
+        /* Branches:
+         * (chainWorkBytes.length <= CHAIN_WORK_BYTES) : false
          *
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
@@ -141,7 +154,7 @@ public class StoredBlockSapientGeneratedJunit4Test {
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             IllegalStateException illegalStateException = new IllegalStateException();
             preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
-            StoredBlock target = new StoredBlock(blockMock, new BigInteger("1"), 0);
+            StoredBlock target = new StoredBlock(blockMock, new BigInteger("0"), 0);
             thrown.expect(IllegalStateException.class);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
             //Act Statement(s)
@@ -203,14 +216,12 @@ public class StoredBlockSapientGeneratedJunit4Test {
         Instant instant = Instant.now();
         List list = new ArrayList<>();
         Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
-        StoredBlock target = spy(new StoredBlock(block, new BigInteger("1000"), 10));
+        StoredBlock target = spy(new StoredBlock(block, new BigInteger("0"), 0));
         doReturn("return_of_getHashAsString1").when(blockMock).getHashAsString();
         Block blockMock2 = mock(Block.class, "toString_block2");
         doReturn(blockMock, blockMock2).when(target).getHeader();
-
         //Act Statement(s)
         String result = target.toString();
-
         //Assert statement(s)
         assertThat(result, equalTo("result1"));
         verify(target, times(2)).getHeader();

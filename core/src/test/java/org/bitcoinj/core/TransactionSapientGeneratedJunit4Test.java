@@ -62,6 +62,8 @@ import static org.hamcrest.Matchers.isA;
 import org.bitcoinj.base.internal.TimeUtils;
 import org.junit.Ignore;
 
+import static org.hamcrest.core.IsInstanceOf.instanceOf;
+
 public class TransactionSapientGeneratedJunit4Test {
 
     @Rule()
@@ -136,17 +138,24 @@ public class TransactionSapientGeneratedJunit4Test {
     //Sapient generated method id: ${18d8e2c4-9760-3f0d-a105-a71337f77d94}
     @Test()
     public void coinbase1Test() {
+        /**
+         * TODO: Help needed! This method is not unit testable!
+         *  Following variables could not be isolated/mocked: tx
+         *  Suggestions:
+         *  You can change the initialization of above variables and make it injectable or
+         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
-        /*try (MockedStatic<LockTime> lockTime = mockStatic(LockTime.class)) {
-    LockTime lockTime2 = LockTime.unset();
-    lockTime.when(() -> LockTime.unset()).thenReturn(lockTime2);
-    byte[] byteArray = new byte[] { (byte) 0, (byte) 1, (byte) 2 };
+        /*try (MockedStatic<TransactionInput> transactionInput = mockStatic(TransactionInput.class)) {
+    byte[] byteArray = new byte[] {};
+    transactionInput.when(() -> TransactionInput.coinbaseInput((Transaction) any(), eq(byteArray))).thenReturn(transactionInputMock);
     //Act Statement(s)
     Transaction result = Transaction.coinbase(byteArray);
     Transaction transaction = new Transaction();
     //Assert statement(s)
     assertThat(result, equalTo(transaction));
-    lockTime.verify(() -> LockTime.unset(), atLeast(1));
+    transactionInput.verify(() -> TransactionInput.coinbaseInput((Transaction) any(), eq(byteArray)));
 }*/
     }
 
@@ -154,59 +163,23 @@ public class TransactionSapientGeneratedJunit4Test {
     @Test()
     public void readTest() throws BufferUnderflowException, ProtocolException {
         //Arrange Statement(s)
-        /*try (MockedStatic<Transaction> transaction = mockStatic(Transaction.class, CALLS_REAL_METHODS)) {
-    transaction.when(() -> Transaction.read((ByteBuffer) any(), eq(70013))).thenReturn(transactionMock);
-    ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-    //Act Statement(s)
-    Transaction result = Transaction.read(byteBuffer);
-    //Assert statement(s)
-    assertThat(result, equalTo(transactionMock));
-    transaction.verify(() -> Transaction.read((ByteBuffer) any(), eq(70013)), atLeast(1));
-}*/
+        try (MockedStatic<Transaction> transaction = mockStatic(Transaction.class, CALLS_REAL_METHODS)) {
+            transaction.when(() -> Transaction.read((ByteBuffer) any(), eq(70013))).thenReturn(transactionMock);
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            //Act Statement(s)
+            Transaction result = Transaction.read(byteBuffer);
+            //Assert statement(s)
+            assertThat(result, equalTo(transactionMock));
+            transaction.verify(() -> Transaction.read((ByteBuffer) any(), eq(70013)), atLeast(1));
+        }
     }
 
-    //Sapient generated method id: ${d966ed11-5552-3538-8f24-bf5bada35ecb}
+    //Sapient generated method id: ${b93209b6-2271-325c-97b6-3e385224b9ca}
     @Test()
-    public void read1WhenTxInputsSizeNotEquals0AndFlagsAnd1Equals0AndFlagsNotEquals0ThrowsProtocolException() throws BufferUnderflowException, ProtocolException {
-        /* Branches:
-         * ((protocolVersion & SERIALIZE_TRANSACTION_NO_WITNESS) == 0) : true  #  inside allowWitness method
-         * (protocolVersion >= WITNESS_VERSION.intValue()) : false  #  inside allowWitness method
-         * (tx.inputs.size() == 0) : false
-         * ((flags & 1) != 0) : false
-         * (flags != 0) : true
-         *
-         * TODO: Help needed! This method is not unit testable!
-         *  Following variables could not be isolated/mocked: tx
-         *  Suggestions:
-         *  You can change the initialization of above variables and make it injectable or
-         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        /*try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
-    byteUtils.when(() -> ByteUtils.readUint32((ByteBuffer) any())).thenReturn(0L);
-    thrown.expect(ProtocolException.class);
-    ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-    //Act Statement(s)
-    Transaction.read(byteBuffer, 1);
-    //Assert statement(s)
-    byteUtils.verify(() -> ByteUtils.readUint32((ByteBuffer) any()));
-}*/
-    }
-
-    //Sapient generated method id: ${651fb35c-40dc-30ba-9f5f-a2e9e9aa04f8}
-    @Ignore()
-    @Test()
-    public void read1WhenAllowWitnessAndTxNotHasWitnessesThrowsProtocolException() throws BufferUnderflowException, ProtocolException {
+    public void read1WhenProtocolVersionGreaterThanOrEqualsToWITNESS_VERSIONIntValueThrowsNullPointerException() throws BufferUnderflowException, ProtocolException {
         /* Branches:
          * ((protocolVersion & SERIALIZE_TRANSACTION_NO_WITNESS) == 0) : true  #  inside allowWitness method
          * (protocolVersion >= WITNESS_VERSION.intValue()) : true  #  inside allowWitness method
-         * (tx.inputs.size() == 0) : true
-         * (allowWitness) : true
-         * (flags != 0) : false
-         * ((flags & 1) != 0) : true
-         * (allowWitness) : true
-         * (!tx.hasWitnesses()) : true
          *
          * TODO: Help needed! This method is not unit testable!
          *  Following variables could not be isolated/mocked: tx
@@ -218,7 +191,7 @@ public class TransactionSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         /*try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
     byteUtils.when(() -> ByteUtils.readUint32((ByteBuffer) any())).thenReturn(0L);
-    thrown.expect(ProtocolException.class);
+    thrown.expect(NullPointerException.class);
     ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
     //Act Statement(s)
     Transaction.read(byteBuffer, 70012);
@@ -227,20 +200,13 @@ public class TransactionSapientGeneratedJunit4Test {
 }*/
     }
 
-    //Sapient generated method id: ${70efcec2-450a-39b4-a85c-220ca0c1dffb}
+    //Sapient generated method id: ${98fe8058-8584-3703-a9c4-157a8a0a858c}
     @Ignore()
     @Test()
-    public void read1WhenTxHasWitnessesAndFlagsEquals0() throws BufferUnderflowException, ProtocolException {
+    public void read1WhenProtocolVersionLessThanWITNESS_VERSIONIntValueThrowsNullPointerException() throws BufferUnderflowException, ProtocolException {
         /* Branches:
          * ((protocolVersion & SERIALIZE_TRANSACTION_NO_WITNESS) == 0) : true  #  inside allowWitness method
-         * (protocolVersion >= WITNESS_VERSION.intValue()) : true  #  inside allowWitness method
-         * (tx.inputs.size() == 0) : true
-         * (allowWitness) : true
-         * (flags != 0) : true
-         * ((flags & 1) != 0) : true
-         * (allowWitness) : true
-         * (!tx.hasWitnesses()) : false
-         * (flags != 0) : false
+         * (protocolVersion >= WITNESS_VERSION.intValue()) : false  #  inside allowWitness method
          *
          * TODO: Help needed! This method is not unit testable!
          *  Following variables could not be isolated/mocked: tx
@@ -250,18 +216,14 @@ public class TransactionSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<LockTime> lockTime = mockStatic(LockTime.class);
-             MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
+        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
             byteUtils.when(() -> ByteUtils.readUint32((ByteBuffer) any())).thenReturn(0L);
-            LockTime lockTime2 = LockTime.of(0L);
-            lockTime.when(() -> LockTime.of(0L)).thenReturn(lockTime2);
+            thrown.expect(NullPointerException.class);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
             //Act Statement(s)
-            Transaction result = Transaction.read(byteBuffer, 70012);
+            Transaction.read(byteBuffer, 1);
             //Assert statement(s)
-            assertThat(result, is(notNullValue()));
-            byteUtils.verify(() -> ByteUtils.readUint32((ByteBuffer) any()), atLeast(2));
-            lockTime.verify(() -> LockTime.of(0L), atLeast(1));
+            byteUtils.verify(() -> ByteUtils.readUint32((ByteBuffer) any()));
         }
     }
 
@@ -269,15 +231,15 @@ public class TransactionSapientGeneratedJunit4Test {
     @Test()
     public void getTxIdTest() throws IOException {
         //Arrange Statement(s)
-        //Transaction target = spy(new Transaction(networkParametersMock));
-        //doNothing().when(target).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(false));
+        Transaction target = spy(new Transaction(networkParametersMock));
+        doNothing().when(target).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(false));
         //Act Statement(s)
-        //Sha256Hash result = target.getTxId();
-        //byte[] byteArray = new byte[] { (byte) 93, (byte) -10, (byte) -32, (byte) -30, (byte) 118, (byte) 19, (byte) 89, (byte) -45, (byte) 10, (byte) -126, (byte) 117, (byte) 5, (byte) -114, (byte) 41, (byte) -97, (byte) -52, (byte) 3, (byte) -127, (byte) 83, (byte) 69, (byte) 69, (byte) -11, (byte) 92, (byte) -12, (byte) 62, (byte) 65, (byte) -104, (byte) 63, (byte) 93, (byte) 76, (byte) -108, (byte) 86 };
-        //Sha256Hash sha256Hash = Sha256Hash.wrapReversed(byteArray);
+        Sha256Hash result = target.getTxId();
+        byte[] byteArray = new byte[]{(byte) 93, (byte) -10, (byte) -32, (byte) -30, (byte) 118, (byte) 19, (byte) 89, (byte) -45, (byte) 10, (byte) -126, (byte) 117, (byte) 5, (byte) -114, (byte) 41, (byte) -97, (byte) -52, (byte) 3, (byte) -127, (byte) 83, (byte) 69, (byte) 69, (byte) -11, (byte) 92, (byte) -12, (byte) 62, (byte) 65, (byte) -104, (byte) 63, (byte) 93, (byte) 76, (byte) -108, (byte) 86};
+        Sha256Hash sha256Hash = Sha256Hash.wrapReversed(byteArray);
         //Assert statement(s)
-        //assertThat(result, equalTo(sha256Hash));
-        //verify(target).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(false));
+        assertThat(result, equalTo(sha256Hash));
+        verify(target).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(false));
     }
 
     //Sapient generated method id: ${634f7b11-d7c0-3128-b104-bcd25286ff5f}
@@ -291,7 +253,7 @@ public class TransactionSapientGeneratedJunit4Test {
         //IOException iOException = new IOException();
         //doThrow(iOException).when(target).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(false));
         //thrown.expect(RuntimeException.class);
-        //thrown.expectCause(isA(IOException.class));
+        //thrown.expectCause(is(instanceOf(IOException.class)));
         //Act Statement(s)
         //target.getTxId();
         //Assert statement(s)
@@ -322,17 +284,17 @@ public class TransactionSapientGeneratedJunit4Test {
          * (catch-exception (IOException)) : true
          */
         //Arrange Statement(s)
-        //Transaction target = spy(new Transaction(networkParametersMock));
-        //doReturn(false).when(target).hasWitnesses();
-        //IOException iOException = new IOException();
-        //doThrow(iOException).when(target).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(false));
-        //thrown.expect(RuntimeException.class);
-        //thrown.expectCause(isA(IOException.class));
+        Transaction target = spy(new Transaction(networkParametersMock));
+        doReturn(false).when(target).hasWitnesses();
+        IOException iOException = new IOException();
+        doThrow(iOException).when(target).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(false));
+        thrown.expect(RuntimeException.class);
+        thrown.expectCause(is(instanceOf(IOException.class)));
         //Act Statement(s)
-        //target.getWTxId();
+        target.getWTxId();
         //Assert statement(s)
-        //verify(target).hasWitnesses();
-        //verify(target).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(false));
+        verify(target).hasWitnesses();
+        verify(target).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(false));
     }
 
     //Sapient generated method id: ${3259c157-b0ca-3db1-a45b-037796bc0614}
@@ -360,17 +322,17 @@ public class TransactionSapientGeneratedJunit4Test {
          * (!hasWitnesses()) : false
          */
         //Arrange Statement(s)
-        Transaction target = spy(new Transaction(networkParametersMock));
-        doReturn(true).when(target).hasWitnesses();
-        doNothing().when(target).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(false));
-        doNothing().when(target).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(true));
+        //Transaction target = spy(new Transaction(networkParametersMock));
+        //doReturn(true).when(target).hasWitnesses();
+        //doNothing().when(target).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(false));
+        //doNothing().when(target).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(true));
         //Act Statement(s)
-        int result = target.getWeight();
+        //int result = target.getWeight();
         //Assert statement(s)
-        assertThat(result, equalTo(0));
-        verify(target).hasWitnesses();
-        verify(target).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(false));
-        verify(target).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(true));
+        //assertThat(result, equalTo(0));
+        //verify(target).hasWitnesses();
+        //verify(target).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(false));
+        //verify(target).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(true));
     }
 
     //Sapient generated method id: ${95887f29-e162-3eaa-b55a-6c10aba946b6}
@@ -385,17 +347,17 @@ public class TransactionSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //Transaction target = spy(new Transaction(networkParametersMock));
-        //doReturn(true).when(target).hasWitnesses();
-        //doNothing().when(target).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(false));
-        //doNothing().when(target).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(true));
-        //thrown.expect(Throwable.class);
+        Transaction target = spy(new Transaction(networkParametersMock));
+        doReturn(true).when(target).hasWitnesses();
+        doNothing().when(target).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(false));
+        doNothing().when(target).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(true));
+        thrown.expect(Throwable.class);
         //Act Statement(s)
-        //target.getWeight();
+        target.getWeight();
         //Assert statement(s)
-        //verify(target).hasWitnesses();
-        //verify(target).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(false));
-        //verify(target).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(true));
+        verify(target).hasWitnesses();
+        verify(target).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(false));
+        verify(target).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(true));
     }
 
     //Sapient generated method id: ${5195c0d0-e6d6-3ddb-935d-e50b37af56ca}
@@ -411,7 +373,7 @@ public class TransactionSapientGeneratedJunit4Test {
         IOException iOException = new IOException();
         doThrow(iOException).when(target).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(false));
         thrown.expect(RuntimeException.class);
-        thrown.expectCause(isA(IOException.class));
+        thrown.expectCause(is(instanceOf(IOException.class)));
         //Act Statement(s)
         target.getWeight();
         //Assert statement(s)
@@ -426,15 +388,15 @@ public class TransactionSapientGeneratedJunit4Test {
          * (!hasWitnesses()) : true
          */
         //Arrange Statement(s)
-        //Transaction target = spy(new Transaction(networkParametersMock));
-        //doReturn(false).when(target).hasWitnesses();
-        //doReturn(0).when(target).messageSize();
+        Transaction target = spy(new Transaction(networkParametersMock));
+        doReturn(false).when(target).hasWitnesses();
+        doReturn(0).when(target).messageSize();
         //Act Statement(s)
-        //int result = target.getVsize();
+        int result = target.getVsize();
         //Assert statement(s)
-        //assertThat(result, equalTo(0));
-        //verify(target).hasWitnesses();
-        //verify(target).messageSize();
+        assertThat(result, equalTo(0));
+        verify(target).hasWitnesses();
+        verify(target).messageSize();
     }
 
     //Sapient generated method id: ${069aaf29-0798-3f58-a130-d738e4411129}
@@ -444,15 +406,15 @@ public class TransactionSapientGeneratedJunit4Test {
          * (!hasWitnesses()) : false
          */
         //Arrange Statement(s)
-        //Transaction target = spy(new Transaction(networkParametersMock));
-        //doReturn(true).when(target).hasWitnesses();
-        //doReturn(1).when(target).getWeight();
+        Transaction target = spy(new Transaction(networkParametersMock));
+        doReturn(true).when(target).hasWitnesses();
+        doReturn(1).when(target).getWeight();
         //Act Statement(s)
-        //int result = target.getVsize();
+        int result = target.getVsize();
         //Assert statement(s)
-        //assertThat(result, equalTo(1));
-        //verify(target).hasWitnesses();
-        //verify(target).getWeight();
+        assertThat(result, equalTo(1));
+        verify(target).hasWitnesses();
+        verify(target).getWeight();
     }
 
     //Sapient generated method id: ${50dbb77c-63e0-34bb-8dfc-b0e28c2b83ce}
@@ -463,17 +425,11 @@ public class TransactionSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<LockTime> lockTime = mockStatic(LockTime.class)) {
-    LockTime lockTime2 = LockTime.unset();
-    lockTime.when(() -> LockTime.unset()).thenReturn(lockTime2);
-    NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-    Transaction target = new Transaction(networkParameters);
-    //Act Statement(s)
-    Coin result = target.getInputSum();
-    //Assert statement(s)
-    assertThat(result, is(notNullValue()));
-    lockTime.verify(() -> LockTime.unset(), atLeast(1));
-}*/
+        Transaction target = new Transaction(networkParametersMock);
+        //Act Statement(s)
+        Coin result = target.getInputSum();
+        //Assert statement(s)
+        assertThat(result, is(notNullValue()));
     }
 
     //Sapient generated method id: ${b6dd36aa-dc4b-37a1-aee3-0aea643da204}
@@ -483,12 +439,12 @@ public class TransactionSapientGeneratedJunit4Test {
          * (for-each(outputs)) : false
          */
         //Arrange Statement(s)
-        Transaction target = new Transaction(networkParametersMock);
+        //Transaction target = new Transaction(networkParametersMock);
         //Act Statement(s)
-        Coin result = target.getValueSentToMe(transactionBagMock);
-        Coin coin = Coin.ZERO;
+        //Coin result = target.getValueSentToMe(transactionBagMock);
+        //Coin coin = Coin.ZERO;
         //Assert statement(s)
-        assertThat(result, equalTo(coin));
+        //assertThat(result, equalTo(coin));
     }
 
     //Sapient generated method id: ${b8e00296-6f8e-3eca-b867-306b6a31931f}
@@ -498,11 +454,11 @@ public class TransactionSapientGeneratedJunit4Test {
          * (appearsInHashes != null) : false
          */
         //Arrange Statement(s)
-        //Transaction target = new Transaction(networkParametersMock);
+        Transaction target = new Transaction(networkParametersMock);
         //Act Statement(s)
-        //Map<Sha256Hash, Integer> result = target.getAppearsInHashes();
+        Map<Sha256Hash, Integer> result = target.getAppearsInHashes();
         //Assert statement(s)
-        //assertThat(result, is(nullValue()));
+        assertThat(result, is(nullValue()));
     }
 
     //Sapient generated method id: ${0f2bbef0-f1f9-3dde-8f4c-c7e4ee5c6159}
@@ -512,15 +468,15 @@ public class TransactionSapientGeneratedJunit4Test {
          * (getConfidence().getConfidenceType() == TransactionConfidence.ConfidenceType.PENDING) : true
          */
         //Arrange Statement(s)
-        //Transaction target = spy(new Transaction(networkParametersMock));
-        //TransactionConfidence transactionConfidence = new TransactionConfidence(sha256HashMock);
-        //transactionConfidence.setConfidenceType(TransactionConfidence.ConfidenceType.PENDING);
-        //doReturn(transactionConfidence).when(target).getConfidence();
+        Transaction target = spy(new Transaction(networkParametersMock));
+        TransactionConfidence transactionConfidence = new TransactionConfidence(sha256HashMock);
+        transactionConfidence.setConfidenceType(TransactionConfidence.ConfidenceType.PENDING);
+        doReturn(transactionConfidence).when(target).getConfidence();
         //Act Statement(s)
-        //boolean result = target.isPending();
+        boolean result = target.isPending();
         //Assert statement(s)
-        //assertThat(result, equalTo(Boolean.TRUE));
-        //verify(target).getConfidence();
+        assertThat(result, equalTo(Boolean.TRUE));
+        verify(target).getConfidence();
     }
 
     //Sapient generated method id: ${1279a156-d28b-3b18-a12a-5354eaf54861}
@@ -530,15 +486,15 @@ public class TransactionSapientGeneratedJunit4Test {
          * (getConfidence().getConfidenceType() == TransactionConfidence.ConfidenceType.PENDING) : false
          */
         //Arrange Statement(s)
-        //Transaction target = spy(new Transaction(networkParametersMock));
-        //TransactionConfidence transactionConfidence = new TransactionConfidence(sha256HashMock);
-        //transactionConfidence.setConfidenceType(TransactionConfidence.ConfidenceType.UNKNOWN);
-        //doReturn(transactionConfidence).when(target).getConfidence();
+        Transaction target = spy(new Transaction(networkParametersMock));
+        TransactionConfidence transactionConfidence = new TransactionConfidence(sha256HashMock);
+        transactionConfidence.setConfidenceType(TransactionConfidence.ConfidenceType.UNKNOWN);
+        doReturn(transactionConfidence).when(target).getConfidence();
         //Act Statement(s)
-        //boolean result = target.isPending();
+        boolean result = target.isPending();
         //Assert statement(s)
-        //assertThat(result, equalTo(Boolean.FALSE));
-        //verify(target).getConfidence();
+        assertThat(result, equalTo(Boolean.FALSE));
+        verify(target).getConfidence();
     }
 
     //Sapient generated method id: ${700efa95-5b61-3284-bb79-ee1d2f6cff55}
@@ -576,9 +532,9 @@ public class TransactionSapientGeneratedJunit4Test {
          * (appearsInHashes == null) : true
          */
         //Arrange Statement(s)
-        //Transaction target = new Transaction(networkParametersMock);
+        Transaction target = new Transaction(networkParametersMock);
         //Act Statement(s)
-        //target.addBlockAppearance(sha256HashMock, 1);
+        target.addBlockAppearance(sha256HashMock, 1);
     }
 
     //Sapient generated method id: ${8adc3bcb-b613-3091-adba-9d3700d51cca}
@@ -588,12 +544,12 @@ public class TransactionSapientGeneratedJunit4Test {
          * (for-each(inputs)) : false
          */
         //Arrange Statement(s)
-        Transaction target = new Transaction(networkParametersMock);
+        //Transaction target = new Transaction(networkParametersMock);
         //Act Statement(s)
-        Coin result = target.getValueSentFromMe(transactionBagMock);
-        Coin coin = Coin.ZERO;
+        //Coin result = target.getValueSentFromMe(transactionBagMock);
+        //Coin coin = Coin.ZERO;
         //Assert statement(s)
-        assertThat(result, equalTo(coin));
+        //assertThat(result, equalTo(coin));
     }
 
     //Sapient generated method id: ${21e03b1c-0c70-3bfc-945c-9e6e7e89523a}
@@ -730,10 +686,10 @@ public class TransactionSapientGeneratedJunit4Test {
          * (updateTime.getTime() > 0) : true
          */
         //Arrange Statement(s)
-        Transaction target = new Transaction(networkParametersMock);
-        Date date = new Date();
+        //Transaction target = new Transaction(networkParametersMock);
+        //Date date = new Date();
         //Act Statement(s)
-        target.setUpdateTime(date);
+        //target.setUpdateTime(date);
     }
 
     //Sapient generated method id: ${b6013fdd-a037-3352-8753-22b3712113c2}
@@ -742,12 +698,15 @@ public class TransactionSapientGeneratedJunit4Test {
         /* Branches:
          * (updateTime != null) : true
          * (updateTime.getTime() > 0) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Transaction target = new Transaction(networkParametersMock);
-        Date date = new Date();
+        //Transaction target = new Transaction(networkParametersMock);
+        //Date date = new Date();
         //Act Statement(s)
-        target.setUpdateTime(date);
+        //target.setUpdateTime(date);
     }
 
     //Sapient generated method id: ${7f27a211-a1fa-32ad-acad-9ca68dcca6db}
@@ -796,36 +755,37 @@ public class TransactionSapientGeneratedJunit4Test {
     @Test()
     public void toStringTest() throws Throwable, Exception {
         //Arrange Statement(s)
-        /*try (MockedStatic<LockTime> lockTime = mockStatic(LockTime.class)) {
-    LockTime lockTime2 = LockTime.of(0L);
-    lockTime.when(() -> LockTime.unset()).thenReturn(lockTime2);
-    NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-    Transaction target = spy(new Transaction(networkParameters));
-    doReturn("A").when(target).toString((AbstractBlockChain) null, (Network) null);
-    //Act Statement(s)
-    String result = target.toString();
-    //Assert statement(s)
-    assertThat(result, equalTo("Transaction{A}"));
-    lockTime.verify(() -> LockTime.unset(), atLeast(1));
-    verify(target).toString((AbstractBlockChain) null, (Network) null);
-}*/
+        try (MockedStatic<LockTime> lockTime = mockStatic(LockTime.class)) {
+            LockTime lockTime2 = LockTime.unset();
+            lockTime.when(() -> LockTime.unset()).thenReturn(lockTime2);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction target = spy(new Transaction(networkParameters));
+            doReturn("A").when(target).toString((AbstractBlockChain) null, (Network) null);
+            //Act Statement(s)
+            String result = target.toString();
+            //Assert statement(s)
+            assertThat(result, equalTo("Transaction{A}"));
+            lockTime.verify(() -> LockTime.unset(), atLeast(1));
+            verify(target).toString((AbstractBlockChain) null, (Network) null);
+        }
     }
 
     //Sapient generated method id: ${cabd8b84-4f2d-339c-9d46-60cffe26dac3}
     @Test()
     public void toString1Test() throws Throwable, Exception {
         //Arrange Statement(s)
-        //Transaction target = spy(new Transaction(networkParametersMock));
-        //doReturn("return_of_toString1").when(target).toString(abstractBlockChainMock, networkMock, "");
+        Transaction target = spy(new Transaction(networkParametersMock));
+        doReturn("return_of_toString1").when(target).toString(abstractBlockChainMock, networkMock, "");
         //Act Statement(s)
-        //String result = target.toString(abstractBlockChainMock, networkMock);
+        String result = target.toString(abstractBlockChainMock, networkMock);
         //Assert statement(s)
-        //assertThat(result, equalTo("return_of_toString1"));
-        //verify(target).toString(abstractBlockChainMock, networkMock, "");
+        assertThat(result, equalTo("return_of_toString1"));
+        verify(target).toString(abstractBlockChainMock, networkMock, "");
     }
 
     //Sapient generated method id: ${e3b70c71-7dcb-35ee-a4a5-bcd7f8ab379c}
     @Test()
+    @Ignore()
     public void toString2WhenFeeIsNotNullAndSizeNotEqualsVsize() throws Throwable, Exception {
         /* Branches:
          * (!wTxId.equals(txId)) : true
@@ -846,55 +806,50 @@ public class TransactionSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //AbstractBlockChain abstractBlockChainMock = mock(AbstractBlockChain.class, "Instant");
-        //Network networkMock = mock(Network.class, "String");
-        /*try (MockedStatic<LockTime> lockTime = mockStatic(LockTime.class)) {
-    LockTime lockTime2 = LockTime.of(0L);
-    lockTime.when(() -> LockTime.unset()).thenReturn(lockTime2);
-    NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-    Transaction target = spy(new Transaction(networkParameters));
-    doReturn(sha256HashMock).when(target).getTxId();
-    doReturn(sha256HashMock2).when(target).getWTxId();
-    doReturn(1).when(target).getWeight();
-    doReturn(1).when(target).messageSize();
-    doReturn(2).when(target).getVsize();
-    doReturn(true).when(target).isTimeLocked();
-    doReturn(true).when(target).hasRelativeLockTime();
-    doReturn(true).when(target).isOptInFullRBF();
-    doReturn(true).when(target).isCoinBase();
-    doReturn(coinMock).when(target).getFee();
-    doReturn(coinMock3).when(coinMock2).divide(1L);
-    doReturn("String").when(coinMock3).toFriendlyString();
-    doReturn(coinMock5).when(coinMock4).divide(2L);
-    doReturn("return_of_toFriendlyString1").when(coinMock5).toFriendlyString();
-    doReturn(coinMock2, coinMock4, coinMock6).when(coinMock).multiply(1000L);
-    doReturn(coinMock7).when(coinMock6).divide(1L);
-    doReturn("return_of_toFriendlyString1").when(coinMock7).toFriendlyString();
-    doReturn("return_of_toFriendlyString1").when(coinMock).toFriendlyString();
-    //Act Statement(s)
-    String result = target.toString(abstractBlockChainMock, networkMock, (CharSequence) "toString_charSequence1");
-    //Assert statement(s)
-    assertThat(result, equalTo("String"));
-    lockTime.verify(() -> LockTime.unset(), atLeast(1));
-    verify(target).getTxId();
-    verify(target).getWTxId();
-    verify(target).getWeight();
-    verify(target).messageSize();
-    verify(target).getVsize();
-    verify(target).isTimeLocked();
-    verify(target).hasRelativeLockTime();
-    verify(target).isOptInFullRBF();
-    verify(target).isCoinBase();
-    verify(target).getFee();
-    verify(coinMock, times(3)).multiply(1000L);
-    verify(coinMock2).divide(1L);
-    verify(coinMock3).toFriendlyString();
-    verify(coinMock4).divide(2L);
-    verify(coinMock5).toFriendlyString();
-    verify(coinMock6).divide(1L);
-    verify(coinMock7).toFriendlyString();
-    verify(coinMock).toFriendlyString();
-}*/
+        try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
+            Instant instant = Instant.now();
+            doReturn(instant).when(chainMock).estimateBlockTimeInstant(0);
+            timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("A");
+            Transaction target = spy(new Transaction(networkParametersMock));
+            doReturn(sha256HashMock).when(target).getTxId();
+            doReturn(sha256HashMock2).when(target).getWTxId();
+            doReturn(8).when(target).getWeight();
+            doReturn(2).when(target).messageSize();
+            doReturn(3).when(target).getVsize();
+            doReturn(true).when(target).isTimeLocked();
+            doReturn(lockTimeHeightLockMock).when(target).lockTime();
+            doReturn(0).when(lockTimeHeightLockMock).blockHeight();
+            doReturn(true).when(target).hasRelativeLockTime();
+            doReturn(true).when(target).isOptInFullRBF();
+            doReturn(true).when(target).isCoinBase();
+            doReturn(coinMock).when(target).getFee();
+            doReturn(coinMock2).when(coinMock).multiply(1000L);
+            doReturn(coinMock3).when(coinMock2).divide(8L);
+            doReturn("C").when(coinMock3).toFriendlyString();
+            doReturn("F").when(coinMock).toFriendlyString();
+            //Act Statement(s)
+            String result = target.toString(chainMock, networkMock, "null");
+            //Assert statement(s)
+            assertThat(result, equalTo("toString_charSequence1toString_sha256Hash1, wtxid toString_sha256Hash2\ntoString_charSequence1weight: 8 wu, 3 virtual bytes, 2 bytes\ntoString_charSequence1time locked until toString_lockTime1 (estimated to be reached at A)\ntoString_charSequence1has relative lock time\ntoString_charSequence1opts into full replace-by-fee\ntoString_charSequence1purpose: UNKNOWN\ntoString_charSequence1coinbase\ntoString_charSequence1   fee  C/wu, D/vkB, E/kB  F\n"));
+            verify(chainMock).estimateBlockTimeInstant(0);
+            timeUtils.verify(() -> TimeUtils.dateTimeFormat((Instant) any()));
+            verify(target).getTxId();
+            verify(target).getWTxId();
+            verify(target).getWeight();
+            verify(target).messageSize();
+            verify(target).getVsize();
+            verify(target).isTimeLocked();
+            verify(target).lockTime();
+            verify(lockTimeHeightLockMock).blockHeight();
+            verify(target).hasRelativeLockTime();
+            verify(target).isOptInFullRBF();
+            verify(target).isCoinBase();
+            verify(target).getFee();
+            verify(coinMock).multiply(1000L);
+            verify(coinMock2).divide(8L);
+            verify(coinMock3).toFriendlyString();
+            verify(coinMock).toFriendlyString();
+        }
     }
 
     //Sapient generated method id: ${9de02018-cf88-3459-9031-5f2fc3d9bc49}
@@ -916,57 +871,66 @@ public class TransactionSapientGeneratedJunit4Test {
          * (for-each(outputs)) : false
          * (fee != null) : true
          * (size != vsize) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<LockTime> lockTime = mockStatic(LockTime.class)) {
-            LockTime lockTime2 = LockTime.of(0L);
-            lockTime.when(() -> LockTime.unset()).thenReturn(lockTime2);
-            Transaction target = spy(new Transaction(networkParametersMock));
-            doReturn(sha256HashMock).when(target).getTxId();
-            doReturn(sha256HashMock2).when(target).getWTxId();
-            doReturn(1).when(target).getWeight();
-            doReturn(1).when(target).messageSize();
-            doReturn(2).when(target).getVsize();
-            doReturn(true).when(target).isTimeLocked();
-            doReturn(true).when(target).hasRelativeLockTime();
-            doReturn(true).when(target).isOptInFullRBF();
-            doReturn(true).when(target).isCoinBase();
-            doReturn(coinMock).when(target).getFee();
-            doReturn(coinMock3).when(coinMock2).divide(1L);
-            doReturn("String").when(coinMock3).toFriendlyString();
-            doReturn(coinMock5).when(coinMock4).divide(2L);
-            doReturn("return_of_toFriendlyString1").when(coinMock5).toFriendlyString();
-            doReturn(coinMock2, coinMock4, coinMock6).when(coinMock).multiply(1000L);
-            doReturn(coinMock7).when(coinMock6).divide(1L);
-            doReturn("return_of_toFriendlyString1").when(coinMock7).toFriendlyString();
-            doReturn("return_of_toFriendlyString1").when(coinMock).toFriendlyString();
-            //Act Statement(s)
-            String result = target.toString(abstractBlockChainMock, networkMock, "toString_charSequence1");
-            //Assert statement(s)
-            assertThat(result, equalTo("String"));
-            lockTime.verify(() -> LockTime.unset(), atLeast(1));
-            verify(target).getTxId();
-            verify(target).getWTxId();
-            verify(target).getWeight();
-            verify(target).messageSize();
-            verify(target).getVsize();
-            verify(target).isTimeLocked();
-            verify(target).hasRelativeLockTime();
-            verify(target).isOptInFullRBF();
-            verify(target).isCoinBase();
-            verify(target).getFee();
-            verify(coinMock, times(3)).multiply(1000L);
-            verify(coinMock2).divide(1L);
-            verify(coinMock3).toFriendlyString();
-            verify(coinMock4).divide(2L);
-            verify(coinMock5).toFriendlyString();
-            verify(coinMock6).divide(1L);
-            verify(coinMock7).toFriendlyString();
-            verify(coinMock).toFriendlyString();
-        }
+        //Sha256Hash sha256HashMock = mock(Sha256Hash.class, "toString_sha256Hash1");
+        //Sha256Hash sha256HashMock2 = mock(Sha256Hash.class, "toString_sha256Hash2");
+        //Coin coinMock4 = mock(Coin.class);
+        //Coin coinMock5 = mock(Coin.class);
+        //Coin coinMock6 = mock(Coin.class);
+        //Coin coinMock7 = mock(Coin.class);
+        /*try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
+    Instant instant = Instant.now();
+    doReturn(instant).when(chainMock).estimateBlockTimeInstant(0);
+    timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("A");
+    Transaction target = spy(new Transaction(networkParametersMock));
+    doReturn(sha256HashMock).when(target).getTxId();
+    doReturn(sha256HashMock2).when(target).getWTxId();
+    doReturn(2).when(target).getWeight();
+    doReturn(8).when(target).messageSize();
+    doReturn(9).when(target).getVsize();
+    doReturn(true).when(target).isTimeLocked();
+    doReturn(lockTimeHeightLockMock).when(target).lockTime();
+    doReturn(0).when(lockTimeHeightLockMock).blockHeight();
+    doReturn(true).when(target).hasRelativeLockTime();
+    doReturn(true).when(target).isOptInFullRBF();
+    doReturn(false).when(target).isCoinBase();
+    doReturn(coinMock).when(target).getFee();
+    doReturn(coinMock3).when(coinMock2).divide(2L);
+    doReturn("D").when(coinMock3).toFriendlyString();
+    doReturn(coinMock5).when(coinMock4).divide(9L);
+    doReturn("F").when(coinMock5).toFriendlyString();
+    doReturn(coinMock2, coinMock4, coinMock6).when(coinMock).multiply(1000L);
+    doReturn(coinMock7).when(coinMock6).divide(8L);
+    doReturn("G").when(coinMock7).toFriendlyString();
+    doReturn("J").when(coinMock).toFriendlyString();
+    //Act Statement(s)
+    String result = target.toString(chainMock, networkMock, (CharSequence) "toString_charSequence1");
+    //Assert statement(s)
+    assertThat(result, equalTo("toString_charSequence1toString_sha256Hash1, wtxid toString_sha256Hash2\ntoString_charSequence1weight: 2 wu, 9 virtual bytes, 8 bytes\ntoString_charSequence1time locked until toString_lockTime1 (estimated to be reached at A)\ntoString_charSequence1has relative lock time\ntoString_charSequence1opts into full replace-by-fee\ntoString_charSequence1purpose: UNKNOWN\ntoString_charSequence1   INCOMPLETE: No inputs!\ntoString_charSequence1   fee  D/wu, F/vkB, G/kB  J\n"));
+    verify(chainMock).estimateBlockTimeInstant(0);
+    timeUtils.verify(() -> TimeUtils.dateTimeFormat((Instant) any()));
+    verify(target).getTxId();
+    verify(target).getWTxId();
+    verify(target).getWeight();
+    verify(target).messageSize();
+    verify(target).getVsize();
+    verify(target).isTimeLocked();
+    verify(target).lockTime();
+    verify(lockTimeHeightLockMock).blockHeight();
+    verify(target).hasRelativeLockTime();
+    verify(target).isOptInFullRBF();
+    verify(target).isCoinBase();
+    verify(target).getFee();
+    verify(coinMock, times(3)).multiply(1000L);
+    verify(coinMock2).divide(2L);
+    verify(coinMock3).toFriendlyString();
+    verify(coinMock4).divide(9L);
+    verify(coinMock5).toFriendlyString();
+    verify(coinMock6).divide(8L);
+    verify(coinMock7).toFriendlyString();
+    verify(coinMock).toFriendlyString();
+}*/
     }
 
     //Sapient generated method id: ${888c0a3e-e7bf-370f-bec0-a9d7a0d8f2e1}
@@ -990,34 +954,26 @@ public class TransactionSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<LockTime> lockTime = mockStatic(LockTime.class)) {
-            LockTime lockTime2 = LockTime.of(0L);
-            lockTime.when(() -> LockTime.unset()).thenReturn(lockTime2);
-            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-            Transaction target = new Transaction(networkParameters);
-            byte[] byteArray = new byte[]{};
-            TransactionOutput transactionOutput = new TransactionOutput(transactionMock, coinMock, byteArray);
-            //Act Statement(s)
-            TransactionInput result = target.addInput(transactionOutput);
-            TransactionInput transactionInput = new TransactionInput(target, transactionOutput);
-            //Assert statement(s)
-            assertThat(result, equalTo(transactionInput));
-            lockTime.verify(() -> LockTime.unset(), atLeast(1));
-        }
+        //Transaction target = new Transaction(networkParametersMock);
+        //Act Statement(s)
+        //TransactionInput result = target.addInput(transactionOutputMock);
+        //TransactionInput transactionInput = new TransactionInput(target, transactionOutputMock);
+        //Assert statement(s)
+        //assertThat(result, equalTo(transactionInput));
     }
 
     //Sapient generated method id: ${f16f06bd-2857-3ff9-add1-4b6b29f3d087}
     @Test()
     public void addInput1Test() {
         //Arrange Statement(s)
-        Transaction target = new Transaction(networkParametersMock);
-        TransactionInput inputMock = mock(TransactionInput.class);
-        doNothing().when(inputMock).setParent(target);
+        //Transaction target = new Transaction(networkParametersMock);
+        //TransactionInput inputMock = mock(TransactionInput.class);
+        //doNothing().when(inputMock).setParent(target);
         //Act Statement(s)
-        TransactionInput result = target.addInput(inputMock);
+        //TransactionInput result = target.addInput(inputMock);
         //Assert statement(s)
-        assertThat(result, equalTo(inputMock));
-        verify(inputMock).setParent(target);
+        //assertThat(result, equalTo(inputMock));
+        //verify(inputMock).setParent(target);
     }
 
     //Sapient generated method id: ${11928278-ed37-34b3-a179-c2077c8b9a58}
@@ -1029,24 +985,16 @@ public class TransactionSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<LockTime> lockTime = mockStatic(LockTime.class)) {
-            LockTime lockTime2 = LockTime.unset();
-            lockTime.when(() -> LockTime.unset()).thenReturn(lockTime2);
-            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-            Transaction target = new Transaction(networkParameters);
-            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
-            List list = new ArrayList<>();
-            Script script = Script.of(list);
-            //Act Statement(s)
-            TransactionInput result = target.addInput(sha256Hash, 0L, script);
-            byte[] byteArray = new byte[]{};
-            TransactionOutPoint transactionOutPoint = new TransactionOutPoint(0L, sha256Hash);
-            TransactionInput transactionInput = new TransactionInput(target, byteArray, transactionOutPoint);
-            //Assert statement(s)
-            assertThat(result, equalTo(transactionInput));
-            lockTime.verify(() -> LockTime.unset(), atLeast(1));
-        }
+        byte[] byteArray = new byte[]{};
+        doReturn(byteArray).when(scriptMock).program();
+        Transaction target = new Transaction(networkParametersMock);
+        //Act Statement(s)
+        TransactionInput result = target.addInput(sha256HashMock, 0L, scriptMock);
+        TransactionOutPoint transactionOutPoint = new TransactionOutPoint(0L, sha256HashMock);
+        TransactionInput transactionInput = new TransactionInput(target, byteArray, transactionOutPoint);
+        //Assert statement(s)
+        assertThat(result, equalTo(transactionInput));
+        verify(scriptMock).program();
     }
 
     //Sapient generated method id: ${2be9b991-ef95-30f8-aeb2-c44549d46605}
@@ -1112,7 +1060,6 @@ public class TransactionSapientGeneratedJunit4Test {
     public void addSignedInput4Test() throws IOException {
         //Arrange Statement(s)
         Transaction target = spy(new Transaction(networkParametersMock));
-        TransactionOutput transactionOutputMock = mock(TransactionOutput.class);
         doReturn(transactionInputMock).when(target).addSignedInput(transactionOutputMock, eCKeyMock, Transaction.SigHash.ALL, false);
         //Act Statement(s)
         TransactionInput result = target.addSignedInput(transactionOutputMock, eCKeyMock);
@@ -1156,20 +1103,13 @@ public class TransactionSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Address addressMock = mock(Address.class, "<value>");
-        try (MockedStatic<LockTime> lockTime = mockStatic(LockTime.class)) {
-            LockTime lockTime2 = LockTime.of(0L);
-            lockTime.when(() -> LockTime.unset()).thenReturn(lockTime2);
-            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-            Transaction target = new Transaction(networkParameters);
-            Coin coin = Coin.valueOf(0L);
-            //Act Statement(s)
-            TransactionOutput result = target.addOutput(coin, addressMock);
-            TransactionOutput transactionOutput = new TransactionOutput(target, coin, addressMock);
-            //Assert statement(s)
-            assertThat(result, equalTo(transactionOutput));
-            lockTime.verify(() -> LockTime.unset(), atLeast(1));
-        }
+        Transaction target = new Transaction(networkParametersMock);
+        Address addressMock = mock(Address.class);
+        //Act Statement(s)
+        TransactionOutput result = target.addOutput(coinMock, addressMock);
+        TransactionOutput transactionOutput = new TransactionOutput(target, coinMock, addressMock);
+        //Assert statement(s)
+        assertThat(result, equalTo(transactionOutput));
     }
 
     //Sapient generated method id: ${1d0f2b67-a741-3ebf-b21c-cf561cbbd91c}
@@ -1181,20 +1121,12 @@ public class TransactionSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Coin coinMock = mock(Coin.class, "100");
-        try (MockedStatic<LockTime> lockTime = mockStatic(LockTime.class)) {
-            LockTime lockTime2 = LockTime.unset();
-            lockTime.when(() -> LockTime.unset()).thenReturn(lockTime2);
-            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-            Transaction target = new Transaction(networkParameters);
-            ECKey eCKey = new ECKey();
-            //Act Statement(s)
-            TransactionOutput result = target.addOutput(coinMock, eCKey);
-            TransactionOutput transactionOutput = new TransactionOutput(target, coinMock, eCKey);
-            //Assert statement(s)
-            assertThat(result, equalTo(transactionOutput));
-            lockTime.verify(() -> LockTime.unset(), atLeast(1));
-        }
+        Transaction target = new Transaction(networkParametersMock);
+        //Act Statement(s)
+        TransactionOutput result = target.addOutput(coinMock, eCKeyMock);
+        TransactionOutput transactionOutput = new TransactionOutput(target, coinMock, eCKeyMock);
+        //Assert statement(s)
+        assertThat(result, equalTo(transactionOutput));
     }
 
     //Sapient generated method id: ${85ae1bc5-dae1-3bbb-826d-d8dd978a09a4}
@@ -1206,33 +1138,24 @@ public class TransactionSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<LockTime> lockTime = mockStatic(LockTime.class)) {
-            LockTime lockTime2 = LockTime.unset();
-            lockTime.when(() -> LockTime.unset()).thenReturn(lockTime2);
-            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-            Transaction target = new Transaction(networkParameters);
-            Coin coin = Coin.valueOf(0L);
-            List list = new ArrayList<>();
-            Script script = Script.of(list);
-            //Act Statement(s)
-            TransactionOutput result = target.addOutput(coin, script);
-            byte[] byteArray = new byte[]{};
-            TransactionOutput transactionOutput = new TransactionOutput(target, coin, byteArray);
-            //Assert statement(s)
-            assertThat(result, equalTo(transactionOutput));
-            lockTime.verify(() -> LockTime.unset(), atLeast(1));
-        }
+        byte[] byteArray = new byte[]{};
+        doReturn(byteArray).when(scriptMock).program();
+        Transaction target = new Transaction(networkParametersMock);
+        //Act Statement(s)
+        TransactionOutput result = target.addOutput(coinMock, scriptMock);
+        TransactionOutput transactionOutput = new TransactionOutput(target, coinMock, byteArray);
+        //Assert statement(s)
+        assertThat(result, equalTo(transactionOutput));
+        verify(scriptMock).program();
     }
 
-    //Sapient generated method id: ${be555d1b-53c6-32ad-9034-5c59ded576b2}
+    //Sapient generated method id: ${1b6d75f8-462d-35e2-acf4-3142c16b9c1b}
     @Ignore()
     @Test()
-    public void hashForSignature2WhenInputIndexGreaterThanOrEqualsToTxOutputsSize() throws IOException {
-        /* Branches:
-         * (i < tx.inputs.size()) : true
-         * ((sigHashType & 0x1f) == SigHash.NONE.value) : false
-         * ((sigHashType & 0x1f) == SigHash.SINGLE.value) : true
-         * (inputIndex >= tx.outputs.size()) : true
+    public void hashForSignature2ThrowsNullPointerException() {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<Transaction> transaction = mockStatic(Transaction.class)) {
@@ -1241,213 +1164,19 @@ public class TransactionSapientGeneratedJunit4Test {
             Transaction target = spy(new Transaction(networkParametersMock));
             byte[] byteArray = new byte[]{};
             doReturn(byteArray).when(target).serialize();
+            thrown.expect(NullPointerException.class);
             byte[] byteArray2 = new byte[]{};
             //Act Statement(s)
-            Sha256Hash result = target.hashForSignature(1, byteArray2, (byte) 0);
-            Sha256Hash sha256Hash = Sha256Hash.wrap("0100000000000000000000000000000000000000000000000000000000000000");
+            target.hashForSignature(0, byteArray2, (byte) 0);
             //Assert statement(s)
-            assertThat(result, equalTo(sha256Hash));
             transaction.verify(() -> Transaction.read((ByteBuffer) any()));
-            verify(target).serialize();
-        }
-    }
-
-    //Sapient generated method id: ${bb426422-ff65-3c60-a9c3-84d620b5608e}
-    @Ignore()
-    @Test()
-    public void hashForSignature2WhenINotEqualsInputIndexAndSigHashTypeAndSigHashANYONECANPAYValueEqualsSigHashANYONECANPAYValue() throws IOException {
-        /* Branches:
-         * (i < tx.inputs.size()) : true
-         * ((sigHashType & 0x1f) == SigHash.NONE.value) : true
-         * (i < tx.inputs.size()) : true
-         * (i != inputIndex) : true
-         * ((sigHashType & SigHash.ANYONECANPAY.value) == SigHash.ANYONECANPAY.value) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class);
-             MockedStatic<Script> script = mockStatic(Script.class);
-             MockedStatic<Transaction> transaction = mockStatic(Transaction.class);
-             MockedStatic<LockTime> lockTime = mockStatic(LockTime.class)) {
-            LockTime lockTime2 = LockTime.unset();
-            lockTime.when(() -> LockTime.unset()).thenReturn(lockTime2);
-            transaction.when(() -> Transaction.read((ByteBuffer) any())).thenReturn(transactionMock);
-            doNothing().when(transactionMock).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(false));
-            byte[] byteArray = new byte[]{};
-            byte[] byteArray2 = new byte[]{(byte) 118, (byte) 0, (byte) 20, (byte) 0, (byte) 28, (byte) 29, (byte) 75, (byte) 14, (byte) 111, (byte) 95, (byte) 0, (byte) 28, (byte) 93, (byte) 30, (byte) 14, (byte) 0, (byte) 60, (byte) 0, (byte) 31, (byte) 90, (byte) 0, (byte) 76, (byte) 0, (byte) 0};
-            script.when(() -> Script.removeAllInstancesOfOp(byteArray2, 171)).thenReturn(byteArray);
-            byte[] byteArray3 = new byte[]{};
-            Sha256Hash sha256Hash2 = Sha256Hash.twiceOf(byteArray3);
-            sha256Hash.when(() -> Sha256Hash.twiceOf(byteArray3)).thenReturn(sha256Hash2);
-            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-            Transaction target = spy(new Transaction(networkParameters));
-            byte[] byteArray4 = new byte[]{};
-            doReturn(byteArray4).when(target).serialize();
-            //Act Statement(s)
-            Sha256Hash result = target.hashForSignature(0, byteArray2, (byte) 2);
-            //Assert statement(s)
-            assertThat(result, equalTo(sha256Hash2));
-            lockTime.verify(() -> LockTime.unset(), atLeast(1));
-            transaction.verify(() -> Transaction.read((ByteBuffer) any()));
-            verify(transactionMock).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(false));
-            script.verify(() -> Script.removeAllInstancesOfOp(byteArray2, 171), atLeast(1));
-            sha256Hash.verify(() -> Sha256Hash.twiceOf(byteArray3), atLeast(1));
-            verify(target).serialize();
-        }
-    }
-
-    //Sapient generated method id: ${8de91027-c7dc-3c01-b4ff-e793943928ed}
-    @Ignore()
-    @Test()
-    public void hashForSignature2WhenInputIndexGreaterThanOrEqualsToTxOutputsSizeAndCaughtIOExceptionThrowsRuntimeException() {
-        /* Branches:
-         * (i < tx.inputs.size()) : true
-         * ((sigHashType & 0x1f) == SigHash.NONE.value) : false
-         * ((sigHashType & 0x1f) == SigHash.SINGLE.value) : true
-         * (inputIndex >= tx.outputs.size()) : true
-         * (catch-exception (IOException)) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class);
-             MockedStatic<Script> script = mockStatic(Script.class);
-             MockedStatic<Transaction> transaction = mockStatic(Transaction.class);
-             MockedStatic<LockTime> lockTime = mockStatic(LockTime.class)) {
-            LockTime lockTime2 = LockTime.unset();
-            lockTime.when(() -> LockTime.unset()).thenReturn(lockTime2);
-            Transaction transaction2 = new Transaction();
-            transaction.when(() -> Transaction.read((ByteBuffer) any())).thenReturn(transaction2);
-            byte[] byteArray = new byte[]{};
-            byte[] byteArray2 = new byte[]{};
-            script.when(() -> Script.removeAllInstancesOfOp(byteArray2, 171)).thenReturn(byteArray);
-            Sha256Hash sha256Hash2 = Sha256Hash.wrap("0100000000000000000000000000000000000000000000000000000000000000");
-            sha256Hash.when(() -> Sha256Hash.wrap("0100000000000000000000000000000000000000000000000000000000000000")).thenReturn(sha256Hash2);
-            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-            Transaction target = spy(new Transaction(networkParameters));
-            byte[] byteArray3 = new byte[]{};
-            doReturn(byteArray3).when(target).serialize();
-            thrown.expect(RuntimeException.class);
-            thrown.expectCause(isA(IOException.class));
-            //Act Statement(s)
-            target.hashForSignature(0, byteArray2, (byte) 3);
-            //Assert statement(s)
-            lockTime.verify(() -> LockTime.unset(), atLeast(1));
-            transaction.verify(() -> Transaction.read((ByteBuffer) any()));
-            script.verify(() -> Script.removeAllInstancesOfOp(byteArray2, 171), atLeast(1));
-            sha256Hash.verify(() -> Sha256Hash.wrap("0100000000000000000000000000000000000000000000000000000000000000"), atLeast(1));
-            verify(target).serialize();
-        }
-    }
-
-    //Sapient generated method id: ${4f4169ae-47dc-3ed1-b5d0-3631eef5c173}
-    @Ignore()
-    @Test()
-    public void hashForSignature2WhenSigHashTypeAndSigHashANYONECANPAYValueEqualsSigHashANYONECANPAYValueAndCaugh2ThrowsRuntimeException() throws IOException {
-        /* Branches:
-         * (i < tx.inputs.size()) : true
-         * ((sigHashType & 0x1f) == SigHash.NONE.value) : true
-         * (i < tx.inputs.size()) : true
-         * (i != inputIndex) : true
-         * ((sigHashType & SigHash.ANYONECANPAY.value) == SigHash.ANYONECANPAY.value) : true
-         * (catch-exception (IOException)) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class);
-             MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
-             MockedStatic<Script> script = mockStatic(Script.class);
-             MockedStatic<Transaction> transaction = mockStatic(Transaction.class);
-             MockedStatic<LockTime> lockTime = mockStatic(LockTime.class)) {
-            LockTime lockTime2 = LockTime.of(0L);
-            lockTime.when(() -> LockTime.unset()).thenReturn(lockTime2);
-            transaction.when(() -> Transaction.read((ByteBuffer) any())).thenReturn(transactionMock);
-            doNothing().when(transactionMock).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(false));
-            byte[] byteArray = new byte[]{};
-            byte[] byteArray2 = new byte[]{(byte) 1, (byte) 2, (byte) 3};
-            script.when(() -> Script.removeAllInstancesOfOp(byteArray2, 171)).thenReturn(byteArray);
-            byteUtils.when(() -> ByteUtils.writeInt32LE(eq(2), (ByteArrayOutputStream) any())).thenAnswer((Answer<Void>) invocation -> null);
-            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            Sha256Hash sha256Hash2 = Sha256Hash.read(byteBuffer);
-            byte[] byteArray3 = new byte[]{(byte) 2, (byte) 0, (byte) 0, (byte) 0};
-            sha256Hash.when(() -> Sha256Hash.twiceOf(byteArray3)).thenReturn(sha256Hash2);
-            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-            Transaction target = spy(new Transaction(networkParameters));
-            byte[] byteArray4 = new byte[]{};
-            doReturn(byteArray4).when(target).serialize();
-            thrown.expect(RuntimeException.class);
-            thrown.expectCause(isA(IOException.class));
-            //Act Statement(s)
-            target.hashForSignature(0, byteArray2, (byte) 2);
-            //Assert statement(s)
-            lockTime.verify(() -> LockTime.unset(), atLeast(1));
-            transaction.verify(() -> Transaction.read((ByteBuffer) any()));
-            verify(transactionMock).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(false));
-            script.verify(() -> Script.removeAllInstancesOfOp(byteArray2, 171), atLeast(1));
-            byteUtils.verify(() -> ByteUtils.writeInt32LE(eq(2), (ByteArrayOutputStream) any()));
-            sha256Hash.verify(() -> Sha256Hash.twiceOf(byteArray3), atLeast(1));
-            verify(target).serialize();
-        }
-    }
-
-    //Sapient generated method id: ${bd856be7-61a3-3d73-845b-d5ea21e7bf13}
-    @Ignore()
-    @Test()
-    public void hashForSignature2WhenINotEqualsInputIndexAndSigHashTypeAndSigHashANYONECANPAYValueEqualsSigHashANYONECANPAYValue2() throws IOException {
-        /* Branches:
-         * (i < tx.inputs.size()) : true
-         * ((sigHashType & 0x1f) == SigHash.NONE.value) : false
-         * ((sigHashType & 0x1f) == SigHash.SINGLE.value) : true
-         * (inputIndex >= tx.outputs.size()) : false
-         * (i < inputIndex) : true
-         * (i < tx.inputs.size()) : true
-         * (i != inputIndex) : true
-         * ((sigHashType & SigHash.ANYONECANPAY.value) == SigHash.ANYONECANPAY.value) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        NetworkParameters networkParametersMock = mock(NetworkParameters.class, "main");
-        try (MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class);
-             MockedStatic<Script> script = mockStatic(Script.class);
-             MockedStatic<Transaction> transaction = mockStatic(Transaction.class);
-             MockedStatic<LockTime> lockTime = mockStatic(LockTime.class)) {
-            LockTime lockTime2 = LockTime.of(0L);
-            lockTime.when(() -> LockTime.unset()).thenReturn(lockTime2);
-            transaction.when(() -> Transaction.read((ByteBuffer) any())).thenReturn(transactionMock);
-            doNothing().when(transactionMock).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(false));
-            byte[] byteArray = new byte[]{};
-            byte[] byteArray2 = new byte[]{(byte) 118, (byte) 0, (byte) 20, (byte) 26, (byte) 11, (byte) 95, (byte) 111, (byte) 93, (byte) 106, (byte) 0, (byte) 0, (byte) 24, (byte) 58, (byte) 96, (byte) 0, (byte) 106, (byte) 68, (byte) 60, (byte) 29, (byte) 0, (byte) 92, (byte) 0, (byte) 0};
-            script.when(() -> Script.removeAllInstancesOfOp(byteArray2, 171)).thenReturn(byteArray);
-            byte[] byteArray3 = new byte[]{};
-            Sha256Hash sha256Hash2 = Sha256Hash.twiceOf(byteArray3);
-            byte[] byteArray4 = new byte[]{(byte) 1, (byte) 0, (byte) 0, (byte) 0};
-            sha256Hash.when(() -> Sha256Hash.twiceOf(byteArray4)).thenReturn(sha256Hash2);
-            Transaction target = spy(new Transaction(networkParametersMock));
-            byte[] byteArray5 = new byte[]{};
-            doReturn(byteArray5).when(target).serialize();
-            //Act Statement(s)
-            Sha256Hash result = target.hashForSignature(0, byteArray2, (byte) 1);
-            //Assert statement(s)
-            assertThat(result, equalTo(sha256Hash2));
-            lockTime.verify(() -> LockTime.unset(), atLeast(1));
-            transaction.verify(() -> Transaction.read((ByteBuffer) any()));
-            verify(transactionMock).bitcoinSerializeToStream((ByteArrayOutputStream) any(), eq(false));
-            script.verify(() -> Script.removeAllInstancesOfOp(byteArray2, 171), atLeast(1));
-            sha256Hash.verify(() -> Sha256Hash.twiceOf(byteArray4), atLeast(1));
             verify(target).serialize();
         }
     }
 
     //Sapient generated method id: ${7fa603de-13bd-38ff-b614-c21a81ba53c1}
     @Test()
-    public void hashForWitnessSignature2WhenInputIndexLessThanOutputsSizeThrowsIndexOutOfBoundsException() throws IOException {
+    public void hashForWitnessSignature2WhenInputIndexLessThanOutputsSizeThrowsIndexOutOfBoundsException() {
         /* Branches:
          * ((sigHashType & SigHash.ANYONECANPAY.value) == SigHash.ANYONECANPAY.value) : true
          * (basicSigHashType != SigHash.SINGLE.value) : false
@@ -1457,21 +1186,15 @@ public class TransactionSapientGeneratedJunit4Test {
          * (basicSigHashType == SigHash.SINGLE.value) : true
          * (inputIndex < outputs.size()) : true
          *
-         * */
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
-        Coin coinMock = mock(Coin.class, "1000");
-        try (MockedStatic<LockTime> lockTime = mockStatic(LockTime.class)) {
-            LockTime lockTime2 = LockTime.unset();
-            lockTime.when(() -> LockTime.unset()).thenReturn(lockTime2);
-            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-            Transaction target = new Transaction(networkParameters);
-            thrown.expect(IndexOutOfBoundsException.class);
-            byte[] byteArray = new byte[]{};
-            //Act Statement(s)
-            target.hashForWitnessSignature(0, byteArray, coinMock, (byte) 0);
-            //Assert statement(s)
-            lockTime.verify(() -> LockTime.unset(), atLeast(1));
-        }
+        Transaction target = new Transaction(networkParametersMock);
+        thrown.expect(IndexOutOfBoundsException.class);
+        byte[] byteArray = new byte[]{};
+        //Act Statement(s)
+        target.hashForWitnessSignature(0, byteArray, coinMock, (byte) 0);
     }
 
     //Sapient generated method id: ${36379ab5-3a96-3014-a817-ff9bf886e250}
@@ -1489,13 +1212,36 @@ public class TransactionSapientGeneratedJunit4Test {
          * (signAll) : true
          * (for-each(this.outputs)) : false
          *
-         * */
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
-        Transaction target = new Transaction(networkParametersMock);
-        thrown.expect(IndexOutOfBoundsException.class);
-        byte[] byteArray = new byte[]{};
-        //Act Statement(s)
-        target.hashForWitnessSignature(0, byteArray, coinMock, (byte) 0);
+        Coin coinMock = mock(Coin.class, "1000000");
+        try (MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class);
+             MockedStatic<LockTime> lockTime = mockStatic(LockTime.class)) {
+            LockTime lockTime2 = LockTime.unset();
+            lockTime.when(() -> LockTime.unset()).thenReturn(lockTime2);
+            byte[] byteArray = new byte[]{(byte) 93, (byte) -10, (byte) -32, (byte) -30, (byte) 118, (byte) 19, (byte) 89, (byte) -45, (byte) 10, (byte) -126, (byte) 117, (byte) 5, (byte) -114, (byte) 41, (byte) -97, (byte) -52, (byte) 3, (byte) -127, (byte) 83, (byte) 69, (byte) 69, (byte) -11, (byte) 92, (byte) -12, (byte) 62, (byte) 65, (byte) -104, (byte) 63, (byte) 93, (byte) 76, (byte) -108, (byte) 86};
+            byte[] byteArray2 = new byte[]{};
+            sha256Hash.when(() -> Sha256Hash.hashTwice(byteArray2)).thenReturn(byteArray);
+            byte[] byteArray3 = new byte[]{(byte) 93, (byte) -10, (byte) -32, (byte) -30, (byte) 118, (byte) 19, (byte) 89, (byte) -45, (byte) 10, (byte) -126, (byte) 117, (byte) 5, (byte) -114, (byte) 41, (byte) -97, (byte) -52, (byte) 3, (byte) -127, (byte) 83, (byte) 69, (byte) 69, (byte) -11, (byte) 92, (byte) -12, (byte) 62, (byte) 65, (byte) -104, (byte) 63, (byte) 93, (byte) 76, (byte) -108, (byte) 86};
+            byte[] byteArray4 = new byte[]{};
+            sha256Hash.when(() -> Sha256Hash.hashTwice(byteArray4)).thenReturn(byteArray3);
+            byte[] byteArray5 = new byte[]{(byte) 93, (byte) -10, (byte) -32, (byte) -30, (byte) 118, (byte) 19, (byte) 89, (byte) -45, (byte) 10, (byte) -126, (byte) 117, (byte) 5, (byte) -114, (byte) 41, (byte) -97, (byte) -52, (byte) 3, (byte) -127, (byte) 83, (byte) 69, (byte) 69, (byte) -11, (byte) 92, (byte) -12, (byte) 62, (byte) 65, (byte) -104, (byte) 63, (byte) 93, (byte) 76, (byte) -108, (byte) 86};
+            byte[] byteArray6 = new byte[]{};
+            sha256Hash.when(() -> Sha256Hash.hashTwice(byteArray6)).thenReturn(byteArray5);
+            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+            Transaction target = new Transaction(networkParameters);
+            thrown.expect(IndexOutOfBoundsException.class);
+            byte[] byteArray7 = new byte[]{(byte) 1, (byte) 2, (byte) 3};
+            //Act Statement(s)
+            target.hashForWitnessSignature(0, byteArray7, coinMock, (byte) 1);
+            //Assert statement(s)
+            lockTime.verify(() -> LockTime.unset(), atLeast(1));
+            sha256Hash.verify(() -> Sha256Hash.hashTwice(byteArray2), atLeast(1));
+            sha256Hash.verify(() -> Sha256Hash.hashTwice(byteArray4), atLeast(1));
+            sha256Hash.verify(() -> Sha256Hash.hashTwice(byteArray6), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${8625aa71-4b9e-3c3d-acbc-811a62ba21cc}
@@ -1658,39 +1404,23 @@ public class TransactionSapientGeneratedJunit4Test {
     //Sapient generated method id: ${8dfc1a7b-6904-35a1-9585-80ff6236301f}
     @Test()
     public void getInputsTest() {
-        /**
-         */
         //Arrange Statement(s)
-        try (MockedStatic<LockTime> lockTime = mockStatic(LockTime.class)) {
-            LockTime lockTime2 = LockTime.unset();
-            lockTime.when(() -> LockTime.unset()).thenReturn(lockTime2);
-            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-            Transaction target = new Transaction(networkParameters);
-            //Act Statement(s)
-            List<TransactionInput> result = target.getInputs();
-            //Assert statement(s)
-            assertThat(result.size(), equalTo(0));
-            lockTime.verify(() -> LockTime.unset(), atLeast(1));
-        }
+        Transaction target = new Transaction(networkParametersMock);
+        //Act Statement(s)
+        List<TransactionInput> result = target.getInputs();
+        //Assert statement(s)
+        assertThat(result.size(), equalTo(0));
     }
 
     //Sapient generated method id: ${3478c670-ca0a-3479-8a43-51792b04008f}
     @Test()
     public void getOutputsTest() {
-        /**
-         */
         //Arrange Statement(s)
-        try (MockedStatic<LockTime> lockTime = mockStatic(LockTime.class)) {
-            LockTime lockTime2 = LockTime.of(0L);
-            lockTime.when(() -> LockTime.unset()).thenReturn(lockTime2);
-            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-            Transaction target = new Transaction(networkParameters);
-            //Act Statement(s)
-            List<TransactionOutput> result = target.getOutputs();
-            //Assert statement(s)
-            assertThat(result.size(), equalTo(0));
-            lockTime.verify(() -> LockTime.unset(), atLeast(1));
-        }
+        Transaction target = new Transaction(networkParametersMock);
+        //Act Statement(s)
+        List<TransactionOutput> result = target.getOutputs();
+        //Assert statement(s)
+        assertThat(result.size(), equalTo(0));
     }
 
     //Sapient generated method id: ${e128b207-5fbd-35c8-b873-7d7c64ef9f70}
@@ -1739,8 +1469,6 @@ public class TransactionSapientGeneratedJunit4Test {
     //Sapient generated method id: ${82d66314-9b50-39f0-a4f8-5ea7afe68b7e}
     @Test()
     public void getOutput1ThrowsIndexOutOfBoundsException() {
-        /**
-         */
         //Arrange Statement(s)
         TransactionOutPoint outpointMock = mock(TransactionOutPoint.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
@@ -1883,25 +1611,22 @@ public class TransactionSapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${6acf6f39-9533-3d6d-9954-e5a4f497939e}
+    //Sapient generated method id: ${ac97d863-012c-3071-8fae-d1f8a8d3ac4e}
     @Test()
-    public void checkCoinBaseHeightWhenHeightLessThanBlockBLOCK_HEIGHT_GENESISThrowsIndexOutOfBoundsException() throws VerificationException {
+    public void checkCoinBaseHeightWhenHeightLessThanBlockBLOCK_HEIGHT_GENESISThrowsIllegalArgumentException() throws VerificationException {
         /* Branches:
          * (height >= Block.BLOCK_HEIGHT_GENESIS) : false
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
-            preconditions.when(() -> Preconditions.checkState(false)).thenAnswer((Answer<Void>) invocation -> null);
-            Transaction target = spy(new Transaction(networkParametersMock));
-            doReturn(false).when(target).isCoinBase();
-            thrown.expect(IndexOutOfBoundsException.class);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(false)).thenThrow(illegalArgumentException);
+            Transaction target = new Transaction(networkParametersMock);
+            thrown.expect(IllegalArgumentException.class);
             //Act Statement(s)
             target.checkCoinBaseHeight(-1);
             //Assert statement(s)
             preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
-            verify(target).isCoinBase();
         }
     }
 
@@ -1940,50 +1665,23 @@ public class TransactionSapientGeneratedJunit4Test {
         verify(lockTimeMock).isSet();
     }
 
-    //Sapient generated method id: ${ef6faadc-c2b1-32a9-9306-d266dac6b9ac}
-    @Ignore()
+    //Sapient generated method id: ${93673cac-9b70-3010-92fb-088ea8d0e675}
     @Test()
-    public void isTimeLockedWhenInputHasSequence() {
+    public void isTimeLockedWhenGetInputsIsEmpty() {
         /* Branches:
          * (!lockTime().isSet()) : false
-         * (for-each(getInputs())) : true
-         * (input.hasSequence()) : true
+         * (for-each(getInputs())) : false
          */
         //Arrange Statement(s)
-        try (MockedStatic<LockTime> lockTime = mockStatic(LockTime.class)) {
-            LockTime lockTime2 = LockTime.of(0L);
-            lockTime.when(() -> LockTime.unset()).thenReturn(lockTime2);
-            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-            Transaction target = new Transaction(networkParameters);
-            //Act Statement(s)
-            boolean result = target.isTimeLocked();
-            //Assert statement(s)
-            assertThat(result, equalTo(Boolean.FALSE));
-            lockTime.verify(() -> LockTime.unset(), atLeast(1));
-        }
-    }
-
-    //Sapient generated method id: ${0f91b9b8-1582-3510-a852-21054249a1b6}
-    @Ignore()
-    @Test()
-    public void isTimeLockedWhenInputNotHasSequence() {
-        /* Branches:
-         * (!lockTime().isSet()) : false
-         * (for-each(getInputs())) : true
-         * (input.hasSequence()) : false
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<LockTime> lockTime = mockStatic(LockTime.class)) {
-            LockTime lockTime2 = LockTime.of(0L);
-            lockTime.when(() -> LockTime.unset()).thenReturn(lockTime2);
-            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-            Transaction target = new Transaction(networkParameters);
-            //Act Statement(s)
-            boolean result = target.isTimeLocked();
-            //Assert statement(s)
-            assertThat(result, equalTo(Boolean.FALSE));
-            lockTime.verify(() -> LockTime.unset(), atLeast(1));
-        }
+        Transaction target = spy(new Transaction(networkParametersMock));
+        doReturn(lockTimeMock).when(target).lockTime();
+        doReturn(true).when(lockTimeMock).isSet();
+        //Act Statement(s)
+        boolean result = target.isTimeLocked();
+        //Assert statement(s)
+        assertThat(result, equalTo(Boolean.FALSE));
+        verify(target).lockTime();
+        verify(lockTimeMock).isSet();
     }
 
     //Sapient generated method id: ${6cfc9954-7b5f-3147-9690-66b08315924c}
@@ -2000,50 +1698,18 @@ public class TransactionSapientGeneratedJunit4Test {
         assertThat(result, equalTo(Boolean.FALSE));
     }
 
-    //Sapient generated method id: ${d0e5a7f7-7138-37fe-ae48-84b45d1d53ff}
-    @Ignore()
+    //Sapient generated method id: ${b656367b-b883-3b33-bb36-81d1b8360f34}
     @Test()
-    public void isOptInFullRBFWhenInputIsOptInFullRBF() {
+    public void isOptInFullRBFWhenGetInputsIsEmpty() {
         /* Branches:
-         * (for-each(getInputs())) : true
-         * (input.isOptInFullRBF()) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
+         * (for-each(getInputs())) : false
          */
         //Arrange Statement(s)
-        try (MockedStatic<LockTime> lockTime = mockStatic(LockTime.class)) {
-            LockTime lockTime2 = LockTime.unset();
-            lockTime.when(() -> LockTime.unset()).thenReturn(lockTime2);
-            Transaction target = new Transaction(networkParametersMock);
-            //Act Statement(s)
-            boolean result = target.isOptInFullRBF();
-            //Assert statement(s)
-            assertThat(result, equalTo(Boolean.TRUE));
-            lockTime.verify(() -> LockTime.unset(), atLeast(1));
-        }
-    }
-
-    //Sapient generated method id: ${5c387391-9022-37b8-9a57-bb316b1884bc}
-    @Test()
-    public void isOptInFullRBFWhenInputNotIsOptInFullRBF() {
-        /* Branches:
-         * (for-each(getInputs())) : true
-         * (input.isOptInFullRBF()) : false
-         *
-         * */
-        //Arrange Statement(s)
-        try (MockedStatic<LockTime> lockTime = mockStatic(LockTime.class)) {
-            LockTime lockTime2 = LockTime.unset();
-            lockTime.when(() -> LockTime.unset()).thenReturn(lockTime2);
-            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-            Transaction target = new Transaction(networkParameters);
-            //Act Statement(s)
-            boolean result = target.isOptInFullRBF();
-            //Assert statement(s)
-            assertThat(result, equalTo(Boolean.FALSE));
-            lockTime.verify(() -> LockTime.unset(), atLeast(1));
-        }
+        Transaction target = new Transaction(networkParametersMock);
+        //Act Statement(s)
+        boolean result = target.isOptInFullRBF();
+        //Assert statement(s)
+        assertThat(result, equalTo(Boolean.FALSE));
     }
 
     //Sapient generated method id: ${7b02502c-ef46-3f35-b1c9-a5047100e9d7}
@@ -2097,7 +1763,6 @@ public class TransactionSapientGeneratedJunit4Test {
          * (locktime instanceof HeightLock) : true
          */
         //Arrange Statement(s)
-        AbstractBlockChain chainMock = mock(AbstractBlockChain.class);
         Instant instant = Instant.now();
         doReturn(instant).when(chainMock).estimateBlockTimeInstant(0);
         Transaction target = spy(new Transaction(networkParametersMock));
@@ -2137,11 +1802,13 @@ public class TransactionSapientGeneratedJunit4Test {
     @Test()
     public void estimateLockTimeTest() {
         /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        AbstractBlockChain abstractBlockChainMock = mock(AbstractBlockChain.class, "AbstractBlockChain");
+        AbstractBlockChain abstractBlockChainMock = mock(AbstractBlockChain.class, "mockAbstractBlockChain");
         try (MockedStatic<LockTime> lockTime = mockStatic(LockTime.class)) {
-            LockTime lockTime2 = LockTime.of(0L);
+            LockTime lockTime2 = LockTime.unset();
             lockTime.when(() -> LockTime.unset()).thenReturn(lockTime2);
             NetworkParameters networkParameters = NetworkParameters.fromID("id1");
             Transaction target = spy(new Transaction(networkParameters));
@@ -2157,239 +1824,19 @@ public class TransactionSapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${dfe934f6-3583-3f58-b90f-9e02f22f416a}
+    //Sapient generated method id: ${643f20a7-23a0-3bf8-b652-405708f718e7}
+    @Ignore()
     @Test()
-    public void verifyWhenTxOutputsSizeEquals0ThrowsVerificationExceptionEmptyInputsOrOutputs() throws VerificationException {
-        /* Branches:
-         * (tx.inputs.size() == 0) : false
-         * (tx.outputs.size() == 0) : true
+    public void verifyThrowsNullPointerException() throws VerificationException {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        thrown.expect(VerificationException.EmptyInputsOrOutputs.class);
+        thrown.expect(NullPointerException.class);
         Transaction transaction = new Transaction();
         //Act Statement(s)
         Transaction.verify(networkMock, transaction);
-    }
-
-    //Sapient generated method id: ${26066fe5-eb71-3cae-bb44-208a310e6d24}
-    @Ignore()
-    @Test()
-    public void verifyWhenTxMessageSizeGreaterThanBlockMAX_BLOCK_SIZEThrowsVerificationExceptionLargerThanMaxBlockSize() throws VerificationException {
-        /* Branches:
-         * (tx.inputs.size() == 0) : false
-         * (tx.outputs.size() == 0) : false
-         * (tx.messageSize() > Block.MAX_BLOCK_SIZE) : true
-         */
-        //Arrange Statement(s)
-        doReturn(1000001).when(txMock).messageSize();
-        thrown.expect(VerificationException.LargerThanMaxBlockSize.class);
-        //Act Statement(s)
-        Transaction.verify(networkMock, txMock);
-        //Assert statement(s)
-        verify(txMock).messageSize();
-    }
-
-    //Sapient generated method id: ${f8b2174e-f8f0-3651-9e46-9ecaf9347572}
-    @Ignore()
-    @Test()
-    public void verifyWhenTxOutputsIsNotEmptyAndValueSignumLessThan0ThrowsVerificationExceptionNegativeValueOutput() throws VerificationException {
-        /* Branches:
-         * (tx.inputs.size() == 0) : false
-         * (tx.outputs.size() == 0) : false
-         * (tx.messageSize() > Block.MAX_BLOCK_SIZE) : false
-         * (for-each(tx.inputs)) : true
-         * (outpoints.contains(input.getOutpoint())) : false
-         * (for-each(tx.outputs)) : true
-         * (value.signum() < 0) : true
-         */
-        //Arrange Statement(s)
-        doReturn(0).when(txMock).messageSize();
-        thrown.expect(VerificationException.NegativeValueOutput.class);
-        //Act Statement(s)
-        Transaction.verify(networkMock, txMock);
-        //Assert statement(s)
-        verify(txMock).messageSize();
-    }
-
-    //Sapient generated method id: ${4a48cdec-a819-3194-80f3-795e61a1d989}
-    @Ignore()
-    @Test()
-    public void verifyWhenValueSignumNotLessThan0AndCaughtArithmeticExceptionThrowsVerificationExceptionExcessiveValue() throws VerificationException {
-        /* Branches:
-         * (tx.inputs.size() == 0) : false
-         * (tx.outputs.size() == 0) : false
-         * (tx.messageSize() > Block.MAX_BLOCK_SIZE) : false
-         * (for-each(tx.inputs)) : true
-         * (outpoints.contains(input.getOutpoint())) : false
-         * (for-each(tx.outputs)) : true
-         * (value.signum() < 0) : false
-         * (catch-exception (ArithmeticException)) : true
-         *
-         * TODO: Help needed! This method is not unit testable!
-         *  Following variables could not be isolated/mocked: valueOut
-         *  Suggestions:
-         *  You can change the initialization of above variables and make it injectable or
-         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        thrown.expect(VerificationException.ExcessiveValue.class);
-        Network networkMock = mock(Network.class, "{}");
-        Transaction transaction = new Transaction();
-        //Act Statement(s)
-        Transaction.verify(networkMock, transaction);
-    }
-
-    //Sapient generated method id: ${ca7830f5-2167-31da-a447-be0d77467f4c}
-    @Ignore()
-    @Test()
-    public void verifyWhenValueSignumNotLessThan0AndNetworkExceedsMaxMoneyValueOutThrowsVerificationExceptionExcessiveValue() throws VerificationException {
-        /* Branches:
-         * (tx.inputs.size() == 0) : false
-         * (tx.outputs.size() == 0) : false
-         * (tx.messageSize() > Block.MAX_BLOCK_SIZE) : false
-         * (for-each(tx.inputs)) : true
-         * (outpoints.contains(input.getOutpoint())) : false
-         * (for-each(tx.outputs)) : true
-         * (value.signum() < 0) : false
-         * (network.exceedsMaxMoney(valueOut)) : true
-         *
-         * TODO: Help needed! This method is not unit testable!
-         *  Following variables could not be isolated/mocked: valueOut
-         *  Suggestions:
-         *  You can change the initialization of above variables and make it injectable or
-         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        doReturn(true).when(networkMock).exceedsMaxMoney((Coin) any());
-        doReturn(1).when(valueMock).signum();
-        doReturn(1).when(txMock).messageSize();
-        thrown.expect(VerificationException.ExcessiveValue.class);
-        //Act Statement(s)
-        Transaction.verify(networkMock, txMock);
-        //Assert statement(s)
-        verify(networkMock).exceedsMaxMoney((Coin) any());
-        verify(valueMock).signum();
-        verify(txMock).messageSize();
-    }
-
-    //Sapient generated method id: ${b06f5aa0-1388-3c45-82a4-f0cb2dd82871}
-    @Ignore()
-    @Test()
-    public void verifyWhenTxInputsGet0GetScriptBytesLengthNotLessThan2AndTxInput3ThrowsVerificationExceptionCoinbaseScriptSizeOutOfRange() throws VerificationException {
-        /* Branches:
-         * (tx.inputs.size() == 0) : false
-         * (tx.outputs.size() == 0) : false
-         * (tx.messageSize() > Block.MAX_BLOCK_SIZE) : false
-         * (for-each(tx.inputs)) : true
-         * (outpoints.contains(input.getOutpoint())) : false
-         * (for-each(tx.outputs)) : true
-         * (value.signum() < 0) : false
-         * (network.exceedsMaxMoney(valueOut)) : false
-         * (tx.isCoinBase()) : true
-         * (tx.inputs.get(0).getScriptBytes().length < 2) : false
-         * (tx.inputs.get(0).getScriptBytes().length > 100) : true
-         *
-         * TODO: Help needed! This method is not unit testable!
-         *  Following variables could not be isolated/mocked: valueOut
-         *  Suggestions:
-         *  You can change the initialization of above variables and make it injectable or
-         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        doReturn(false).when(networkMock).exceedsMaxMoney((Coin) any());
-        doReturn(0).when(valueMock).signum();
-        doReturn(0).when(txMock).messageSize();
-        doReturn(false).when(txMock).isCoinBase();
-        thrown.expect(VerificationException.UnexpectedCoinbaseInput.class);
-        //Act Statement(s)
-        Transaction.verify(networkMock, txMock);
-        //Assert statement(s)
-        verify(networkMock).exceedsMaxMoney((Coin) any());
-        verify(valueMock).signum();
-        verify(txMock).messageSize();
-        verify(txMock).isCoinBase();
-    }
-
-    //Sapient generated method id: ${0581c399-9565-3fc3-a024-13be534abef3}
-    @Ignore()
-    @Test()
-    public void verifyWhenNetworkNotExceedsMaxMoneyValueOutAndTxNotIsCoinBaseAndTxInpThrowsVerificationExceptionUnexpectedCoinbaseInput() throws VerificationException {
-        /* Branches:
-         * (tx.inputs.size() == 0) : false
-         * (tx.outputs.size() == 0) : false
-         * (tx.messageSize() > Block.MAX_BLOCK_SIZE) : false
-         * (for-each(tx.inputs)) : true
-         * (outpoints.contains(input.getOutpoint())) : false
-         * (for-each(tx.outputs)) : true
-         * (value.signum() < 0) : false
-         * (network.exceedsMaxMoney(valueOut)) : false
-         * (tx.isCoinBase()) : false
-         * (for-each(tx.inputs)) : true
-         * (input.isCoinBase()) : true
-         *
-         * TODO: Help needed! This method is not unit testable!
-         *  Following variables could not be isolated/mocked: valueOut
-         *  Suggestions:
-         *  You can change the initialization of above variables and make it injectable or
-         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        Network networkMock = mock(Network.class, "false");
-        doReturn(false).when(networkMock).exceedsMaxMoney((Coin) any());
-        doReturn(1).when(valueMock).signum();
-        Transaction txMock = mock(Transaction.class, "[{value={signum={value=1}}}]");
-        doReturn(100).when(txMock).messageSize();
-        doReturn(false).when(txMock).isCoinBase();
-        //Act Statement(s)
-        Transaction.verify(networkMock, txMock);
-        //Assert statement(s)
-        verify(networkMock).exceedsMaxMoney((Coin) any());
-        verify(valueMock).signum();
-        verify(txMock).messageSize();
-        verify(txMock).isCoinBase();
-    }
-
-    //Sapient generated method id: ${b2626ba8-7b03-39bc-b077-e34b819fe1b5}
-    @Ignore()
-    @Test()
-    public void verifyWhenNetworkNotExceedsMaxMoneyValueOutAndTxNotIsCoinBaseAndTxInputsIsNotEmptyAndInputNotIsCoinBase() throws VerificationException {
-        /* Branches:
-         * (tx.inputs.size() == 0) : false
-         * (tx.outputs.size() == 0) : false
-         * (tx.messageSize() > Block.MAX_BLOCK_SIZE) : false
-         * (for-each(tx.inputs)) : true
-         * (outpoints.contains(input.getOutpoint())) : false
-         * (for-each(tx.outputs)) : true
-         * (value.signum() < 0) : false
-         * (network.exceedsMaxMoney(valueOut)) : false
-         * (tx.isCoinBase()) : false
-         * (for-each(tx.inputs)) : true
-         * (input.isCoinBase()) : false
-         *
-         * TODO: Help needed! This method is not unit testable!
-         *  Following variables could not be isolated/mocked: valueOut
-         *  Suggestions:
-         *  You can change the initialization of above variables and make it injectable or
-         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        doReturn(false).when(networkMock).exceedsMaxMoney((Coin) any());
-        doReturn(0).when(valueMock).signum();
-        doReturn(0).when(txMock).messageSize();
-        doReturn(false).when(txMock).isCoinBase();
-        thrown.expect(VerificationException.CoinbaseScriptSizeOutOfRange.class);
-        //Act Statement(s)
-        Transaction.verify(networkMock, txMock);
-        //Assert statement(s)
-        verify(networkMock).exceedsMaxMoney((Coin) any());
-        verify(valueMock).signum();
-        verify(txMock).messageSize();
-        verify(txMock).isCoinBase();
     }
 
     //Sapient generated method id: ${5868dff5-2474-3edf-9500-5c55898bac2b}

@@ -162,7 +162,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -818,9 +819,9 @@ methods:
             message:
               sapientType: "BASIC"
               content: !<regular>
-                value: "Test log message"
+                value: "Test message"
               suggestedContent: !<regular>
-                value: "Test log message"
+                value: "Test message"
               valueType: "java.lang.String"
               uuid: "format_logRecord1-message"
               fixed: false
@@ -1254,9 +1255,9 @@ methods:
             message:
               sapientType: "BASIC"
               content: !<regular>
-                value: "Test log message"
+                value: "Test message"
               suggestedContent: !<regular>
-                value: "Test log message"
+                value: "Test message"
               valueType: "java.lang.String"
               uuid: "format_logRecord1-message"
               fixed: false
@@ -1291,7 +1292,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -1303,7 +1305,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "981F4FB0C197E4DABB8A94554FE56572"
+    modelFingerprint: "5551204020B427270F580F1B601A0C49"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -1334,7 +1336,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "logRecord"
-      modelFingerprint: "2BAD08D31767B8F09800001A763D09F2"
+      modelFingerprint: "A67517F6FFD940097BD03B8097469B1C"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1390,38 +1392,12 @@ methods:
               explicitCastNeeded: false
           privateConstructor: false
           createdByTargetCode: false
-          propertiesMap:
-            message:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "Test log message"
-              suggestedContent: !<regular>
-                value: "Test log message"
-              valueType: "java.lang.String"
-              uuid: "format_logRecord1-message"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
         suggestedContent: !<new>
           target: "java.util.logging.LogRecord"
           parameters:
           - name: "level"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "java.util.logging.Level"
-                method: "parse"
-                methodParameters:
-                - name: "name"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "name1"
-                    valueType: "java.lang.String"
-                    uuid: "format_logRecord1-level-name"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<static_method_return>
                 target: "java.util.logging.Level"
                 method: "parse"
@@ -1449,18 +1425,6 @@ methods:
               explicitCastNeeded: false
           privateConstructor: false
           createdByTargetCode: false
-          propertiesMap:
-            message:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "Test log message"
-              suggestedContent: !<regular>
-                value: "Test log message"
-              valueType: "java.lang.String"
-              uuid: "format_logRecord1-message"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
         valueType: "java.util.logging.LogRecord"
         uuid: "format_logRecord1"
         fixed: false
@@ -1490,7 +1454,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

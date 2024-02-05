@@ -160,22 +160,22 @@ public class RejectMessageSapientGeneratedJunit4Test {
     @Test()
     public void codeTest() {
         //Arrange Statement(s)
-        //RejectMessage target = new RejectMessage(RejectMessage.RejectCode.MALFORMED, rejectedMessageHashMock, "rejectedMessage1", "reason1");
+        RejectMessage target = new RejectMessage(RejectMessage.RejectCode.MALFORMED, rejectedMessageHashMock, "rejectedMessage1", "reason1");
         //Act Statement(s)
-        //RejectMessage.RejectCode result = target.code();
+        RejectMessage.RejectCode result = target.code();
         //Assert statement(s)
-        //assertThat(result, equalTo(RejectMessage.RejectCode.MALFORMED));
+        assertThat(result, equalTo(RejectMessage.RejectCode.MALFORMED));
     }
 
     //Sapient generated method id: ${186b03ba-31cd-3d7e-bcee-8b0f1bba0b9b}
     @Test()
     public void getReasonCodeTest() {
         //Arrange Statement(s)
-        //RejectMessage target = new RejectMessage(RejectMessage.RejectCode.MALFORMED, rejectedMessageHashMock, "rejectedMessage1", "reason1");
+        RejectMessage target = new RejectMessage(RejectMessage.RejectCode.MALFORMED, rejectedMessageHashMock, "rejectedMessage1", "reason1");
         //Act Statement(s)
-        //RejectMessage.RejectCode result = target.getReasonCode();
+        RejectMessage.RejectCode result = target.getReasonCode();
         //Assert statement(s)
-        //assertThat(result, equalTo(RejectMessage.RejectCode.MALFORMED));
+        assertThat(result, equalTo(RejectMessage.RejectCode.MALFORMED));
     }
 
     //Sapient generated method id: ${273e527c-5d07-3902-9d7c-d1a9fc22feaa}
@@ -211,12 +211,12 @@ public class RejectMessageSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-        //Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
-        //RejectMessage target = new RejectMessage(RejectMessage.RejectCode.INVALID, sha256Hash, "This is a rejected message", "Invalid format");
+        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+        Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
+        RejectMessage target = new RejectMessage(RejectMessage.RejectCode.MALFORMED, sha256Hash, "Test message", "Invalid format");
         //Act Statement(s)
-        //String result = target.toString();
+        String result = target.toString();
         //Assert statement(s)
-        //assertThat(result, equalTo("result1"));
+        assertThat(result, equalTo("result1"));
     }
 }

@@ -21,6 +21,9 @@ import static org.hamcrest.Matchers.isA;
 
 import org.junit.Ignore;
 
+import static org.hamcrest.core.IsInstanceOf.instanceOf;
+import static org.hamcrest.Matchers.is;
+
 public class LinuxSecureRandomSapientGeneratedJunit4Test {
 
     @Rule()
@@ -55,7 +58,7 @@ public class LinuxSecureRandomSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         LinuxSecureRandom target = new LinuxSecureRandom();
         thrown.expect(RuntimeException.class);
-        thrown.expectCause(isA(IOException.class));
+        thrown.expectCause(is(instanceOf(IOException.class)));
         byte[] byteArray = new byte[]{};
 
         //Act Statement(s)

@@ -37,6 +37,8 @@ import static org.mockito.Mockito.mockStatic;
 import static org.hamcrest.Matchers.isA;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.ArgumentMatchers.any;
+import static org.hamcrest.core.IsInstanceOf.instanceOf;
+import static org.hamcrest.Matchers.is;
 
 public class DownloadProgressTrackerSapientGeneratedJunit4Test {
 
@@ -100,22 +102,25 @@ public class DownloadProgressTrackerSapientGeneratedJunit4Test {
          * (caughtUp) : false
          * (blocksLeft == 0) : true
          * (lastPercent != 100) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Peer peerMock = mock(Peer.class, "Peer");
+        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
+        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
+        Block block2Mock = mock(Block.class);
+        PartialMerkleTree partialMerkleTreeMock = mock(PartialMerkleTree.class);
         try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
             doReturn(0L).when(peerMock).getBestHeight();
-            Instant instant = Instant.now();
-            doReturn(instant).when(blockMock).time();
             timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("String");
             DownloadProgressTracker target = new DownloadProgressTracker();
+            Instant instant = Instant.now();
+            List list = new ArrayList<>();
+            Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
+            FilteredBlock filteredBlock = new FilteredBlock(block2Mock, partialMerkleTreeMock);
             //Act Statement(s)
-            target.onBlocksDownloaded(peerMock, blockMock, filteredBlockMock, 0);
+            target.onBlocksDownloaded(peerMock, block, filteredBlock, 0);
             //Assert statement(s)
             verify(peerMock).getBestHeight();
-            verify(blockMock).time();
             timeUtils.verify(() -> TimeUtils.dateTimeFormat((Instant) any()));
         }
     }
@@ -131,6 +136,8 @@ public class DownloadProgressTrackerSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DownloadProgressTracker target = new DownloadProgressTracker();
+        Block blockMock = mock(Block.class);
+        FilteredBlock filteredBlockMock = mock(FilteredBlock.class);
 
         //Act Statement(s)
         target.onBlocksDownloaded(peerMock, blockMock, filteredBlockMock, 1);
@@ -190,14 +197,11 @@ public class DownloadProgressTrackerSapientGeneratedJunit4Test {
     public void awaitWhenCaughtExecutionExceptionThrowsRuntimeException() throws InterruptedException, ExecutionException {
         /* Branches:
          * (catch-exception (ExecutionException)) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         DownloadProgressTracker target = new DownloadProgressTracker();
         thrown.expect(RuntimeException.class);
-        thrown.expectCause(isA(ExecutionException.class));
+        thrown.expectCause(is(instanceOf(ExecutionException.class)));
 
         //Act Statement(s)
         target.await();

@@ -32,7 +32,6 @@ public class FutureUtilsSapientGeneratedJunit4Test {
         thrown.expect(NullPointerException.class);
         List<CompletionStage<Object>> anyList = new ArrayList<>();
         anyList.add((CompletionStage) null);
-
         //Act Statement(s)
         FutureUtils.allAsList(anyList);
     }
@@ -44,7 +43,6 @@ public class FutureUtilsSapientGeneratedJunit4Test {
         thrown.expect(NullPointerException.class);
         List<CompletionStage<Object>> anyList = new ArrayList<>();
         anyList.add((CompletionStage) null);
-
         //Act Statement(s)
         FutureUtils.successfulAsList(anyList);
     }
@@ -55,11 +53,9 @@ public class FutureUtilsSapientGeneratedJunit4Test {
     public void failedFutureTest() {
         //Arrange Statement(s)
         Throwable throwable = new Throwable();
-
         //Act Statement(s)
         CompletableFuture result = FutureUtils.failedFuture(throwable);
         CompletableFuture<Object> completableFuture = new CompletableFuture<>();
-
         //Assert statement(s)
         //TODO: Please implement equals method in CompletableFuture for verification to succeed or you need to adjust respective assertion statements
         assertThat(result, equalTo(completableFuture));
@@ -71,10 +67,8 @@ public class FutureUtilsSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         //TODO: Needs initialization with real value
         IntFunction intFunction = null;
-
         //Act Statement(s)
         IntFunction<IntFunction[]> result = FutureUtils.genericArray(intFunction);
-
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }

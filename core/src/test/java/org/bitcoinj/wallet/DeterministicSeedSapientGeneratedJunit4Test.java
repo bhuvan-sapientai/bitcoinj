@@ -51,6 +51,9 @@ import static org.mockito.Mockito.mockStatic;
 
 import org.junit.Ignore;
 
+import static org.hamcrest.Matchers.nullValue;
+import static org.mockito.ArgumentMatchers.anyList;
+
 public class DeterministicSeedSapientGeneratedJunit4Test {
 
     @Rule()
@@ -71,31 +74,44 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${cc444f77-140b-3840-9219-40eba5f4e575}
+    @Ignore()
     @Test()
     public void ofMnemonicWhenDefaultBranch() {
         /* Branches:
          * (branch expression (line 176)) : false  #  inside <init> method
          */
         //Arrange Statement(s)
-        Instant instant = Instant.now();
-        //Act Statement(s)
-        DeterministicSeed result = DeterministicSeed.ofMnemonic("A", "passphrase1", instant);
-        DeterministicSeed deterministicSeed = new DeterministicSeed("A", (byte[]) null, "passphrase1", instant);
-        //Assert statement(s)
-        assertThat(result, equalTo(deterministicSeed));
+        try (MockedStatic<MnemonicCode> mnemonicCode = mockStatic(MnemonicCode.class)) {
+            byte[] byteArray = new byte[]{};
+            mnemonicCode.when(() -> MnemonicCode.toSeed(anyList(), eq("passphrase1"))).thenReturn(byteArray);
+            Instant instant = Instant.now();
+            //Act Statement(s)
+            DeterministicSeed result = DeterministicSeed.ofMnemonic("A", "passphrase1", instant);
+            DeterministicSeed deterministicSeed = new DeterministicSeed("A", (byte[]) null, "passphrase1", instant);
+            //Assert statement(s)
+            assertThat(result, equalTo(deterministicSeed));
+            mnemonicCode.verify(() -> MnemonicCode.toSeed(anyList(), eq("passphrase1")));
+        }
     }
 
     //Sapient generated method id: ${ad639f9a-f0b3-3496-9f21-818d7b7016b0}
+    @Ignore()
     @Test()
     public void ofMnemonic1WhenDefaultBranch() {
         /* Branches:
          * (branch expression (line 176)) : false  #  inside <init> method
          */
-        //Act Statement(s)
-        DeterministicSeed result = DeterministicSeed.ofMnemonic("A", "passphrase1");
-        DeterministicSeed deterministicSeed = new DeterministicSeed("A", (byte[]) null, "passphrase1", (Instant) null);
-        //Assert statement(s)
-        assertThat(result, equalTo(deterministicSeed));
+        //Arrange Statement(s)
+        try (MockedStatic<MnemonicCode> mnemonicCode = mockStatic(MnemonicCode.class)) {
+            byte[] byteArray = new byte[]{};
+            mnemonicCode.when(() -> MnemonicCode.toSeed(anyList(), eq("passphrase1"))).thenReturn(byteArray);
+            //Act Statement(s)
+            DeterministicSeed result = DeterministicSeed.ofMnemonic("A", "passphrase1");
+            DeterministicSeed deterministicSeed = new DeterministicSeed("A", (byte[]) null, "passphrase1", (Instant) null);
+            //Assert statement(s)
+            assertThat(result, equalTo(deterministicSeed));
+            mnemonicCode.verify(() -> MnemonicCode.toSeed(anyList(), eq("passphrase1")));
+        }
     }
 
     //Sapient generated method id: ${118bbc22-6633-3a3f-ba11-ced895a866d0}
@@ -106,12 +122,17 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
          * (branch expression (line 176)) : false  #  inside <init> method
          */
         //Arrange Statement(s)
-        List<String> stringList = new ArrayList<>();
-        Instant instant = Instant.now();
-        //Act Statement(s)
-        DeterministicSeed result = DeterministicSeed.ofMnemonic(stringList, "passphrase1", instant);
-        //Assert statement(s)
-        assertThat(result, is(notNullValue()));
+        try (MockedStatic<MnemonicCode> mnemonicCode = mockStatic(MnemonicCode.class)) {
+            byte[] byteArray = new byte[]{};
+            mnemonicCode.when(() -> MnemonicCode.toSeed(anyList(), eq("passphrase1"))).thenReturn(byteArray);
+            List<String> stringList = new ArrayList<>();
+            Instant instant = Instant.now();
+            //Act Statement(s)
+            DeterministicSeed result = DeterministicSeed.ofMnemonic(stringList, "passphrase1", instant);
+            //Assert statement(s)
+            assertThat(result, is(notNullValue()));
+            mnemonicCode.verify(() -> MnemonicCode.toSeed(anyList(), eq("passphrase1")));
+        }
     }
 
     //Sapient generated method id: ${cfa071ed-dabf-305c-9e6c-390b89e99a34}
@@ -122,124 +143,133 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
          * (branch expression (line 176)) : false  #  inside <init> method
          */
         //Arrange Statement(s)
-        List<String> stringList = new ArrayList<>();
-        //Act Statement(s)
-        DeterministicSeed result = DeterministicSeed.ofMnemonic(stringList, "passphrase1");
-        //Assert statement(s)
-        assertThat(result, is(notNullValue()));
-    }
-
-    //Sapient generated method id: ${6336bb76-376a-3c95-b381-de35bcc12f08}
-    @Test()
-    public void ofEntropyWhenDefaultBranch() {
-        /* Branches:
-         * (branch expression (line 193)) : false  #  inside <init> method
-         */
-        //Arrange Statement(s)
-        byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15};
-        Instant instant = Instant.now();
-        //Act Statement(s)
-        DeterministicSeed result = DeterministicSeed.ofEntropy(byteArray, "passphrase1", instant);
-        //Assert statement(s)
-        assertThat(result, is(notNullValue()));
-    }
-
-    //Sapient generated method id: ${5d4d94a2-9c70-335e-8a9c-bd4a5fd851b5}
-    @Ignore()
-    @Test()
-    public void ofEntropyWhenDefaultBranch2() {
-        /* Branches:
-         * (branch expression (line 193)) : false  #  inside <init> method
-         */
-        //Arrange Statement(s)
-        byte[] byteArray = new byte[]{};
-        Instant instant = Instant.now();
-        //Act Statement(s)
-        DeterministicSeed result = DeterministicSeed.ofEntropy(byteArray, "passphrase1", instant);
-        //Assert statement(s)
-        assertThat(result, is(notNullValue()));
-    }
-
-    //Sapient generated method id: ${652497fa-bac1-3484-bf27-237e4c010f29}
-    @Test()
-    public void ofEntropy1WhenDefaultBranch() {
-        /* Branches:
-         * (branch expression (line 193)) : false  #  inside <init> method
-         */
-        //Arrange Statement(s)
-        byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15};
-        //Act Statement(s)
-        DeterministicSeed result = DeterministicSeed.ofEntropy(byteArray, "passphrase1");
-        //Assert statement(s)
-        assertThat(result, is(notNullValue()));
-    }
-
-    //Sapient generated method id: ${8dba0aaa-7140-3d30-9741-f866354a7894}
-    @Ignore()
-    @Test()
-    public void ofEntropy1WhenDefaultBranch2() {
-        /* Branches:
-         * (branch expression (line 193)) : false  #  inside <init> method
-         */
-        //Arrange Statement(s)
-        byte[] byteArray = new byte[]{};
-        //Act Statement(s)
-        DeterministicSeed result = DeterministicSeed.ofEntropy(byteArray, "passphrase1");
-        //Assert statement(s)
-        assertThat(result, is(notNullValue()));
-    }
-
-    //Sapient generated method id: ${e0e63339-de46-337b-b131-03efb72cf524}
-    @Ignore()
-    @Test()
-    public void ofRandomWhenDefaultBranch() {
-        /* Branches:
-         * (bits <= MAX_SEED_ENTROPY_BITS) : true  #  inside getEntropy method
-         * (branch expression (line 193)) : false  #  inside <init> method
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            //TODO: Needs to return real value
-            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(null);
-            thrown.expect(NullPointerException.class);
-            SecureRandom secureRandom = new SecureRandom();
+        try (MockedStatic<MnemonicCode> mnemonicCode = mockStatic(MnemonicCode.class)) {
+            byte[] byteArray = new byte[]{};
+            mnemonicCode.when(() -> MnemonicCode.toSeed(anyList(), eq("passphrase1"))).thenReturn(byteArray);
+            List<String> stringList = new ArrayList<>();
             //Act Statement(s)
-            DeterministicSeed.ofRandom(secureRandom, 1, "java.lang.String");
+            DeterministicSeed result = DeterministicSeed.ofMnemonic(stringList, "passphrase1");
             //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            timeUtils.verify(() -> TimeUtils.currentTime(), atLeast(1));
+            assertThat(result, is(notNullValue()));
+            mnemonicCode.verify(() -> MnemonicCode.toSeed(anyList(), eq("passphrase1")));
         }
     }
 
-    //Sapient generated method id: ${11618a64-70a2-357d-8b6f-d14c69a05b95}
+    //Sapient generated method id: ${a932416f-dcd5-33ef-a6ea-e346efe16df5}
     @Ignore()
     @Test()
-    public void ofRandomWhenBitsGreaterThanMAX_SEED_ENTROPY_BITSAndDefaultBranch() {
+    public void ofEntropyWhenDefaultBranchThrowsIllegalArgumentException() {
         /* Branches:
-         * (bits <= MAX_SEED_ENTROPY_BITS) : false  #  inside getEntropy method
          * (branch expression (line 193)) : false  #  inside <init> method
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            //TODO: Needs to return real value
-            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(null);
-            thrown.expect(NullPointerException.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
+            thrown.expect(IllegalArgumentException.class);
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15};
+            Instant instant = Instant.now();
+            //Act Statement(s)
+            DeterministicSeed.ofEntropy(byteArray, "passphrase1", instant);
+            //Assert statement(s)
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+        }
+    }
+
+    //Sapient generated method id: ${d7d97ad9-3023-3eb8-a01d-607868dccb69}
+    @Test()
+    public void ofEntropyWhenDefaultBranch2ThrowsIllegalArgumentException() {
+        /* Branches:
+         * (branch expression (line 193)) : false  #  inside <init> method
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
+            thrown.expect(IllegalArgumentException.class);
+            byte[] byteArray = new byte[]{};
+            Instant instant = Instant.now();
+            //Act Statement(s)
+            DeterministicSeed.ofEntropy(byteArray, "passphrase1", instant);
+            //Assert statement(s)
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+        }
+    }
+
+    //Sapient generated method id: ${6a7f6c82-f232-3db3-86f4-2419ac7b25c6}
+    @Ignore()
+    @Test()
+    public void ofEntropy1WhenDefaultBranchThrowsIllegalArgumentException() {
+        /* Branches:
+         * (branch expression (line 193)) : false  #  inside <init> method
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
+            thrown.expect(IllegalArgumentException.class);
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15};
+            //Act Statement(s)
+            DeterministicSeed.ofEntropy(byteArray, "passphrase1");
+            //Assert statement(s)
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+        }
+    }
+
+    //Sapient generated method id: ${61c085c6-e75c-3e96-a3f0-27145fe838f3}
+    @Test()
+    public void ofEntropy1WhenDefaultBranch2ThrowsIllegalArgumentException() {
+        /* Branches:
+         * (branch expression (line 193)) : false  #  inside <init> method
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
+            thrown.expect(IllegalArgumentException.class);
+            byte[] byteArray = new byte[]{(byte) 0};
+            //Act Statement(s)
+            DeterministicSeed.ofEntropy(byteArray, "passphrase1");
+            //Assert statement(s)
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+        }
+    }
+
+    //Sapient generated method id: ${eec12ddf-fed6-37e2-b17b-a24d7a0540d6}
+    @Test()
+    public void ofRandomWhenBitsLessThanOrEqualsToMAX_SEED_ENTROPY_BITSThrowsIllegalArgumentException() {
+        /* Branches:
+         * (bits <= MAX_SEED_ENTROPY_BITS) : true  #  inside getEntropy method
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
+            thrown.expect(IllegalArgumentException.class);
+            SecureRandom secureRandom = new SecureRandom();
+            //Act Statement(s)
+            DeterministicSeed.ofRandom(secureRandom, 1, "passphrase1");
+            //Assert statement(s)
+            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+        }
+    }
+
+    //Sapient generated method id: ${2d86f265-9123-36e5-b977-f390fd410478}
+    @Test()
+    public void ofRandomWhenBitsGreaterThanMAX_SEED_ENTROPY_BITSThrowsIllegalArgumentException() {
+        /* Branches:
+         * (bits <= MAX_SEED_ENTROPY_BITS) : false  #  inside getEntropy method
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
+            thrown.expect(IllegalArgumentException.class);
             SecureRandom secureRandom = new SecureRandom();
             //Act Statement(s)
             DeterministicSeed.ofRandom(secureRandom, 513, "passphrase1");
             //Assert statement(s)
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            timeUtils.verify(() -> TimeUtils.currentTime(), atLeast(1));
         }
     }
 
@@ -262,21 +292,30 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${6feb8104-e1fb-3c31-8751-eb2a06a07f7a}
+    @Ignore()
     @Test()
     public void isEncryptedWhenEncryptedMnemonicCodeIsNullThrowsIllegalStateException() {
         /* Branches:
          * (mnemonicCode != null) : false
          * (encryptedMnemonicCode != null) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        byte[] byteArray = new byte[]{};
-        Instant instant = Instant.now();
-        target = new DeterministicSeed("A", byteArray, "passphrase1", instant);
-        autoCloseableMocks = MockitoAnnotations.openMocks(this);
-        //Act Statement(s)
-        boolean result = target.isEncrypted();
-        //Assert statement(s)
-        assertThat(result, equalTo(Boolean.FALSE));
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            IllegalStateException illegalStateException = new IllegalStateException();
+            preconditions.when(() -> Preconditions.checkState(false)).thenThrow(illegalStateException);
+            byte[] byteArray = new byte[]{};
+            Instant instant = Instant.now();
+            target = new DeterministicSeed("A", byteArray, "passphrase1", instant);
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            thrown.expect(IllegalStateException.class);
+            //Act Statement(s)
+            target.isEncrypted();
+            //Assert statement(s)
+            preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${363d3698-f34c-39ad-914f-376a19498023}
@@ -330,9 +369,9 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3};
+        byte[] byteArray = new byte[]{};
         Instant instant = Instant.now();
-        target = spy(new DeterministicSeed("test", byteArray, "pass", instant));
+        target = spy(new DeterministicSeed("A", byteArray, "passphrase1", instant));
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
         doReturn(false).when(target).isEncrypted();
         doReturn("return_of_toHexString1").when(target).toHexString();
@@ -358,9 +397,9 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3};
+        byte[] byteArray = new byte[]{};
         Instant instant = Instant.now();
-        target = spy(new DeterministicSeed("test mnemonic", byteArray, "test passphrase", instant));
+        target = spy(new DeterministicSeed("A", byteArray, "passphrase1", instant));
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
         doReturn(false).when(target).isEncrypted();
         //Act Statement(s)
@@ -388,10 +427,14 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${f3d9549d-5c4c-3a8a-b78c-ec40ba218fa1}
+    @Ignore()
     @Test()
     public void toHexStringWhenSeedIsNull() {
         /* Branches:
          * (seed != null) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         Instant instant = Instant.now();
@@ -400,7 +443,7 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
         //Act Statement(s)
         String result = target.toHexString();
         //Assert statement(s)
-        assertThat(result, equalTo("de7795fd00c7ac4ffbc78e44940394943bd66c52b09fca0ddf98a71c0e34cbe3d0396c23f54990141011a80313d9ece81f429079d4835217cc7b0249a155c1cb"));
+        assertThat(result, is(nullValue()));
     }
 
     //Sapient generated method id: ${e399bed6-0e41-3bca-b4bf-c1d08029cd4b}
@@ -412,9 +455,9 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5};
+        byte[] byteArray = new byte[]{};
         Instant instant = Instant.now();
-        target = spy(new DeterministicSeed("example mnemonic", byteArray, "example passphrase", instant));
+        target = spy(new DeterministicSeed("A", byteArray, "passphrase1", instant));
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
         doReturn("return_of_getMnemonicString1").when(target).getMnemonicString();
         //Act Statement(s)
@@ -511,17 +554,24 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${6efdfffb-ab76-3832-8528-819e02d958d6}
+    @Ignore()
     @Test()
     public void setCreationTimeSecondsWhenCreationTimeSecsNotEquals0ThrowsIllegalArgumentException() {
         /* Branches:
          * (creationTimeSecs > 0) : false
          * (creationTimeSecs == 0) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{};
         Instant instant = Instant.now();
         target = new DeterministicSeed("mnemonicString1", byteArray, "passphrase1", instant);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
+        IllegalArgumentException illegalArgumentException = new IllegalArgumentException("s1");
+        thrown.expect(IllegalArgumentException.class);
+        thrown.expectMessage(illegalArgumentException.getMessage());
         //Act Statement(s)
         target.setCreationTimeSeconds(0L);
     }
@@ -555,6 +605,8 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
     @Test()
     public void decryptThrowsNullPointerException() {
         /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         KeyCrypter keyCrypterMock = mock(KeyCrypter.class);
@@ -644,6 +696,9 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
     public void getMnemonicStringWhenMnemonicCodeIsNull() {
         /* Branches:
          * (mnemonicCode != null) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{};
@@ -653,6 +708,6 @@ public class DeterministicSeedSapientGeneratedJunit4Test {
         //Act Statement(s)
         String result = target.getMnemonicString();
         //Assert statement(s)
-        assertThat(result, equalTo(""));
+        assertThat(result, is(nullValue()));
     }
 }

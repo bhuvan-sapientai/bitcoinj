@@ -25,6 +25,8 @@ import static org.hamcrest.Matchers.is;
 
 import org.junit.Ignore;
 
+import java.util.Arrays;
+
 public class GetDataMessageSapientGeneratedJunit4Test {
 
     @Rule()
@@ -55,17 +57,12 @@ public class GetDataMessageSapientGeneratedJunit4Test {
     public void ofBlockWhenIncludeWitness() {
         /* Branches:
          * (includeWitness) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
-        //Arrange Statement(s)
-        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-        Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
 
         //Act Statement(s)
-        GetDataMessage result = GetDataMessage.ofBlock(sha256Hash, true);
-        List<InventoryItem> inventoryItemList = new ArrayList<>();
+        GetDataMessage result = GetDataMessage.ofBlock(sha256HashMock, true);
+        InventoryItem inventoryItem = new InventoryItem(InventoryItem.Type.ERROR, sha256HashMock);
+        List<InventoryItem> inventoryItemList = new ArrayList<>(Arrays.asList(inventoryItem));
         GetDataMessage getDataMessage = new GetDataMessage(inventoryItemList);
 
         //Assert statement(s)
@@ -78,17 +75,12 @@ public class GetDataMessageSapientGeneratedJunit4Test {
     public void ofBlockWhenNotIncludeWitness() {
         /* Branches:
          * (includeWitness) : false
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
-        //Arrange Statement(s)
-        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-        Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
 
         //Act Statement(s)
-        GetDataMessage result = GetDataMessage.ofBlock(sha256Hash, false);
-        List<InventoryItem> inventoryItemList = new ArrayList<>();
+        GetDataMessage result = GetDataMessage.ofBlock(sha256HashMock, false);
+        InventoryItem inventoryItem = new InventoryItem(InventoryItem.Type.BLOCK, sha256HashMock);
+        List<InventoryItem> inventoryItemList = new ArrayList<>(Arrays.asList(inventoryItem));
         GetDataMessage getDataMessage = new GetDataMessage(inventoryItemList);
 
         //Assert statement(s)
@@ -101,17 +93,12 @@ public class GetDataMessageSapientGeneratedJunit4Test {
     public void ofTransactionWhenIncludeWitness() {
         /* Branches:
          * (includeWitness) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
-        //Arrange Statement(s)
-        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-        Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
 
         //Act Statement(s)
-        GetDataMessage result = GetDataMessage.ofTransaction(sha256Hash, true);
-        List<InventoryItem> inventoryItemList = new ArrayList<>();
+        GetDataMessage result = GetDataMessage.ofTransaction(sha256HashMock, true);
+        InventoryItem inventoryItem = new InventoryItem(InventoryItem.Type.ERROR, sha256HashMock);
+        List<InventoryItem> inventoryItemList = new ArrayList<>(Arrays.asList(inventoryItem));
         GetDataMessage getDataMessage = new GetDataMessage(inventoryItemList);
 
         //Assert statement(s)
@@ -124,17 +111,12 @@ public class GetDataMessageSapientGeneratedJunit4Test {
     public void ofTransactionWhenNotIncludeWitness() {
         /* Branches:
          * (includeWitness) : false
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
-        //Arrange Statement(s)
-        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-        Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
 
         //Act Statement(s)
-        GetDataMessage result = GetDataMessage.ofTransaction(sha256Hash, false);
-        List<InventoryItem> inventoryItemList = new ArrayList<>();
+        GetDataMessage result = GetDataMessage.ofTransaction(sha256HashMock, false);
+        InventoryItem inventoryItem = new InventoryItem(InventoryItem.Type.TRANSACTION, sha256HashMock);
+        List<InventoryItem> inventoryItemList = new ArrayList<>(Arrays.asList(inventoryItem));
         GetDataMessage getDataMessage = new GetDataMessage(inventoryItemList);
 
         //Assert statement(s)
@@ -222,12 +204,10 @@ public class GetDataMessageSapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void getHashOfTest() {
-        /**
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
         //Arrange Statement(s)
+        InventoryItem inventoryItemMock = mock(InventoryItem.class);
         List<InventoryItem> inventoryItemList = new ArrayList<>();
+        inventoryItemList.add(inventoryItemMock);
         GetDataMessage target = new GetDataMessage(inventoryItemList);
 
         //Act Statement(s)

@@ -52,7 +52,7 @@ public class ScriptTypeSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        ScriptType target = ScriptType.valueOf("pkh");
+        ScriptType target = ScriptType.valueOf("P2TR");
         //Act Statement(s)
         String result = target.id();
         //Assert statement(s)
@@ -68,7 +68,7 @@ public class ScriptTypeSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        ScriptType target = ScriptType.valueOf("P2PKH");
+        ScriptType target = ScriptType.valueOf("P2TR");
         //Act Statement(s)
         int result = target.numericId();
         //Assert statement(s)

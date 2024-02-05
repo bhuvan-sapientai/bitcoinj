@@ -45,11 +45,11 @@ public class MessageVerifyUtilsSapientGeneratedJunit4Test {
          * (switch(scriptType) = default) : true
          */
         //Arrange Statement(s)
-        Address addressMock = mock(Address.class, "<value>");
-        doReturn(ScriptType.P2TR).when(addressMock).getOutputScriptType();
+        Address addressMock = mock(Address.class, "bc1q7vzg5j4t0w3zj5z5zq6f6v8j5z8z5q6f6v8j5z");
+        doReturn(ScriptType.P2WSH).when(addressMock).getOutputScriptType();
         thrown.expect(SignatureException.class);
         //Act Statement(s)
-        MessageVerifyUtils.verifyMessage(addressMock, "<value>", "<value>");
+        MessageVerifyUtils.verifyMessage(addressMock, "Hello, world!", "c2lnbmF0dXJl");
         //Assert statement(s)
         verify(addressMock).getOutputScriptType();
     }
@@ -117,11 +117,11 @@ public class MessageVerifyUtilsSapientGeneratedJunit4Test {
          * (catch-exception (Exception)) : true
          */
         //Arrange Statement(s)
-        Address addressMock = mock(Address.class, "<ScriptType>");
+        Address addressMock = mock(Address.class, "Address");
         doThrow(runtimeExceptionMock).when(addressMock).getOutputScriptType();
         thrown.expect(SignatureException.class);
         //Act Statement(s)
-        MessageVerifyUtils.verifyMessage(addressMock, "<String>", "<String>");
+        MessageVerifyUtils.verifyMessage(addressMock, "String", "String");
         //Assert statement(s)
         verify(addressMock).getOutputScriptType();
     }
@@ -228,11 +228,11 @@ public class MessageVerifyUtilsSapientGeneratedJunit4Test {
          * (catch-exception (Exception)) : true
          */
         //Arrange Statement(s)
-        Address addressMock = mock(Address.class, "<Address object>");
+        Address addressMock = mock(Address.class, "<valid Bitcoin address object>");
         doThrow(runtimeExceptionMock).when(addressMock).getOutputScriptType();
         thrown.expect(SignatureException.class);
         //Act Statement(s)
-        MessageVerifyUtils.verifyMessage(addressMock, "<String message>", "<String signature in Base64 format>");
+        MessageVerifyUtils.verifyMessage(addressMock, "<string message to be signed>", "<valid signature in Base64 format>");
         //Assert statement(s)
         verify(addressMock).getOutputScriptType();
     }

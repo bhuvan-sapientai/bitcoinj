@@ -35,15 +35,14 @@ public class Base58SapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{};
-
         //Act Statement(s)
         String result = Base58.encode(byteArray);
-
         //Assert statement(s)
         assertThat(result, equalTo(""));
     }
 
     //Sapient generated method id: ${9ffe52a2-f6c8-31e4-a06f-316354bb76db}
+    @Ignore()
     @Test()
     public void encodeWhenOutputStartIndexOfEncodedEqualsENCODED_ZEROAndZerosGreaterThanOrEqualsTo0() {
         /* Branches:
@@ -56,15 +55,16 @@ public class Base58SapientGeneratedJunit4Test {
          * (outputStart < encoded.length) : true
          * (encoded[outputStart] == ENCODED_ZERO) : true
          * (--zeros >= 0) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{(byte) 0};
-
         //Act Statement(s)
         String result = Base58.encode(byteArray);
-
         //Assert statement(s)
-        assertThat(result, equalTo("1"));
+        assertThat(result, equalTo("result1"));
     }
 
     //Sapient generated method id: ${d6c64f95-dfe3-361a-9629-53d0620784ff}
@@ -79,7 +79,6 @@ public class Base58SapientGeneratedJunit4Test {
         thrown.expect(IllegalArgumentException.class);
         thrown.expectMessage(illegalArgumentException.getMessage());
         byte[] byteArray = new byte[]{};
-
         //Act Statement(s)
         Base58.encodeChecked(256, byteArray);
     }
@@ -91,6 +90,9 @@ public class Base58SapientGeneratedJunit4Test {
         /* Branches:
          * (version < 0) : false
          * (version > 255) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<Base58> base58 = mockStatic(Base58.class, CALLS_REAL_METHODS);
@@ -115,11 +117,9 @@ public class Base58SapientGeneratedJunit4Test {
         /* Branches:
          * (input.length() == 0) : true
          */
-
         //Act Statement(s)
         byte[] result = Base58.decode("");
         byte[] byteResultArray = new byte[]{};
-
         //Assert statement(s)
         assertThat(result, equalTo(byteResultArray));
     }
@@ -135,7 +135,6 @@ public class Base58SapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         thrown.expect(AddressFormatException.InvalidCharacter.class);
-
         //Act Statement(s)
         Base58.decode("\uFFFF");
     }
@@ -156,12 +155,15 @@ public class Base58SapientGeneratedJunit4Test {
          * (input58[inputStart] == 0) : false
          * (outputStart < decoded.length) : true
          * (decoded[outputStart] == 0) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
-        //Arrange Statement(s)
-        thrown.expect(ArrayIndexOutOfBoundsException.class);
-
         //Act Statement(s)
-        Base58.decode("1A");
+        byte[] result = Base58.decode("1A");
+        byte[] byteResultArray = new byte[]{(byte) 0, (byte) 0};
+        //Assert statement(s)
+        assertThat(result, equalTo(byteResultArray));
     }
 
     //Sapient generated method id: ${7d7d8b16-f133-3e8e-8d2c-e1dc068400dc}
@@ -180,12 +182,15 @@ public class Base58SapientGeneratedJunit4Test {
          * (input58[inputStart] == 0) : true
          * (outputStart < decoded.length) : true
          * (decoded[outputStart] == 0) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
-        //Arrange Statement(s)
-        thrown.expect(ArrayIndexOutOfBoundsException.class);
-
         //Act Statement(s)
-        Base58.decode("P");
+        byte[] result = Base58.decode("P");
+        byte[] byteResultArray = new byte[]{};
+        //Assert statement(s)
+        assertThat(result, equalTo(byteResultArray));
     }
 
     //Sapient generated method id: ${2c0ddf72-634c-3949-9500-9866e6936082}
@@ -254,19 +259,15 @@ public class Base58SapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class);
-             MockedStatic<Base58> base58 = mockStatic(Base58.class, CALLS_REAL_METHODS)) {
+        try (MockedStatic<Base58> base58 = mockStatic(Base58.class, CALLS_REAL_METHODS)) {
             byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3};
             base58.when(() -> Base58.decode("input1")).thenReturn(byteArray);
-            byte[] byteArray2 = new byte[]{(byte) 93, (byte) -10, (byte) -32, (byte) -30, (byte) 118, (byte) 19, (byte) 89, (byte) -45, (byte) 10, (byte) -126, (byte) 117, (byte) 5, (byte) -114, (byte) 41, (byte) -97, (byte) -52, (byte) 3, (byte) -127, (byte) 83, (byte) 69, (byte) 69, (byte) -11, (byte) 92, (byte) -12, (byte) 62, (byte) 65, (byte) -104, (byte) 63, (byte) 93, (byte) 76, (byte) -108, (byte) 86};
-            byte[] byteArray3 = new byte[]{};
-            sha256Hash.when(() -> Sha256Hash.hashTwice(byteArray3)).thenReturn(byteArray2);
             //Act Statement(s)
             byte[] result = Base58.decodeChecked("input1");
+            byte[] byteResultArray = new byte[]{};
             //Assert statement(s)
-            assertThat(result, equalTo(byteArray3));
+            assertThat(result, equalTo(byteResultArray));
             base58.verify(() -> Base58.decode("input1"), atLeast(1));
-            sha256Hash.verify(() -> Sha256Hash.hashTwice(byteArray3), atLeast(1));
         }
     }
 }

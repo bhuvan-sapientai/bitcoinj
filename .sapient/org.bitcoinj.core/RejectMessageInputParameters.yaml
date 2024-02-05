@@ -27,7 +27,8 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path1"
@@ -431,7 +432,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -770,7 +772,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -1299,7 +1302,8 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -2434,12 +2438,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "C8C63BCC6793FA32BC309B599DCA4206"
+    modelFingerprint: "50C2DD14C2779EC2DD4CB2E51CAF5AEC"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "3CA6330260D29BA5713658139761F91F"
+      modelFingerprint: "3348EBF98ABFE2B2F441AA2C11F6F3FC"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2453,9 +2457,9 @@ methods:
             value:
               sapientType: "ENUM"
               content: !<regular>
-                value: "INVALID"
+                value: "MALFORMED"
               suggestedContent: !<regular>
-                value: "INVALID"
+                value: "MALFORMED"
               valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
               uuid: "<init>_rejectMessage.RejectCode1"
               fixed: false
@@ -2535,9 +2539,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "This is a rejected message"
+                value: "Test message"
               suggestedContent: !<regular>
-                value: "This is a rejected message"
+                value: "Test message"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -2564,9 +2568,9 @@ methods:
             value:
               sapientType: "ENUM"
               content: !<regular>
-                value: "INVALID"
+                value: "MALFORMED"
               suggestedContent: !<regular>
-                value: "INVALID"
+                value: "MALFORMED"
               valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
               uuid: "<init>_rejectMessage.RejectCode1"
               fixed: false
@@ -2646,9 +2650,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "This is a rejected message"
+                value: "Test message"
               suggestedContent: !<regular>
-                value: "This is a rejected message"
+                value: "Test message"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -2697,7 +2701,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -2799,14 +2804,14 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "B06EF77F719AA1A78DC361542B736793"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
     uuid: "2e3e6b77-6fef-3231-8392-34092e47b85e"
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path4"
@@ -2819,13 +2824,13 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "C0D08EC638E97248DBF837796B46B2FF"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: true
     inputParameters: []
     uuid: "a4663253-5c85-3d8e-af27-0d095a42518c"
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

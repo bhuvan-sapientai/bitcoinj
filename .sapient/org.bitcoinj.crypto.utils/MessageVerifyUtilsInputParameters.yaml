@@ -30,7 +30,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "B1F96F3AAF70186F440361C446E2EA06"
+    modelFingerprint: "1E583099201F24E42031EF824F68DBE8"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -50,14 +50,14 @@ methods:
         valueType: "org.bitcoinj.base.Address"
         uuid: "verifyMessage_address1"
         fixed: false
-        nameForMock: "<value>"
+        nameForMock: "bc1q7vzg5j4t0w3zj5z5zq6f6v8j5z8z5q6f6v8j5z"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     - type: "INPUT"
       name: "message"
-      modelFingerprint: "BA629E116882B46643FF06FD1705692A"
+      modelFingerprint: "B057AA51EF09299CCA0950C3C966B075"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -65,9 +65,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "<value>"
+          value: "Hello, world!"
         suggestedContent: !<regular>
-          value: "<value>"
+          value: "Hello, world!"
         valueType: "java.lang.String"
         uuid: "verifyMessage_string1"
         fixed: false
@@ -77,7 +77,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "signatureBase64"
-      modelFingerprint: "0DA013916F5A17B88732C94570C68261"
+      modelFingerprint: "24DDD54F36E8E3C45019264C2B3572C4"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -85,9 +85,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "<value>"
+          value: "c2lnbmF0dXJl"
         suggestedContent: !<regular>
-          value: "<value>"
+          value: "c2lnbmF0dXJl"
         valueType: "java.lang.String"
         uuid: "verifyMessage_string2"
         fixed: false
@@ -97,7 +97,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "address"
-      modelFingerprint: "250985C24535B848CAE2FEC3E213C481"
+      modelFingerprint: "43B05A78D11345A3C6F5C31C09F5067B"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -114,7 +114,7 @@ methods:
         valueType: "org.bitcoinj.base.Address"
         uuid: "verifyMessage_address1"
         fixed: false
-        nameForMock: "<value>"
+        nameForMock: "bc1q7vzg5j4t0w3zj5z5zq6f6v8j5z8z5q6f6v8j5z"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -125,9 +125,9 @@ methods:
         returnValue:
           sapientType: "ENUM"
           content: !<regular>
-            value: "P2TR"
+            value: "P2WSH"
           suggestedContent: !<regular>
-            value: "P2TR"
+            value: "P2WSH"
           valueType: "org.bitcoinj.base.ScriptType"
           uuid: "verifyMessage_scriptType1"
           fixed: false
@@ -1862,7 +1862,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path8"
@@ -1872,7 +1873,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "B6E313309F456FF9C2059E58CD8717F8"
+    modelFingerprint: "F7FDABFF3B27DE75ABF9AFC768A352AC"
     problemWasSolvedByProver: true
     catchBlockExercised:
       idExternalInstruction: 0
@@ -1897,14 +1898,14 @@ methods:
         valueType: "org.bitcoinj.base.Address"
         uuid: "verifyMessage_address1"
         fixed: false
-        nameForMock: "<ScriptType>"
+        nameForMock: "Address"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     - type: "INPUT"
       name: "message"
-      modelFingerprint: "157666B9F64B16A6A1DF977AC76DDABA"
+      modelFingerprint: "1854D065075F620E1A218A460444CE16"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1912,9 +1913,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "<String>"
+          value: "String"
         suggestedContent: !<regular>
-          value: "<String>"
+          value: "String"
         valueType: "java.lang.String"
         uuid: "verifyMessage_string1"
         fixed: false
@@ -1924,7 +1925,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "signatureBase64"
-      modelFingerprint: "5E68E55AF763A799A401529EC1B369B7"
+      modelFingerprint: "F6B4F5DF5800225E7684406B2192E031"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1932,9 +1933,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "<String>"
+          value: "String"
         suggestedContent: !<regular>
-          value: "<String>"
+          value: "String"
         valueType: "java.lang.String"
         uuid: "verifyMessage_string2"
         fixed: false
@@ -1944,7 +1945,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "address"
-      modelFingerprint: "250985C24535B848CAE2FEC3E213C481"
+      modelFingerprint: "7E8BAFC81F8B576EE8F665113B760B9C"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -1961,7 +1962,7 @@ methods:
         valueType: "org.bitcoinj.base.Address"
         uuid: "verifyMessage_address1"
         fixed: false
-        nameForMock: "<ScriptType>"
+        nameForMock: "Address"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -2017,7 +2018,7 @@ methods:
           privateConstructor: false
           createdByTargetCode: true
         valueType: "java.security.SignatureException"
-        uuid: "verifyMessage_signatureException2"
+        uuid: "verifyMessage_signatureException1"
         fixed: true
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -2302,7 +2303,8 @@ methods:
     deleted: false
     disabled: true
     ignoredBySystem: false
-    firstFailureReason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: true
   - pathId: "path2"
@@ -3092,7 +3094,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "4FD6085F87537FB3BF8765A5FBA2BDD2"
+    modelFingerprint: "7F9405B866113EF7C331F0DF497B7AED"
     problemWasSolvedByProver: true
     catchBlockExercised:
       idExternalInstruction: 0
@@ -3117,14 +3119,14 @@ methods:
         valueType: "org.bitcoinj.base.Address"
         uuid: "verifyMessage_address1"
         fixed: false
-        nameForMock: "<Address object>"
+        nameForMock: "<valid Bitcoin address object>"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     - type: "INPUT"
       name: "message"
-      modelFingerprint: "F96F258CF3FD90F1D6E8A075031BEAF9"
+      modelFingerprint: "A843E375B7CD5CA2391D6CA6B2B18358"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -3132,9 +3134,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "<String message>"
+          value: "<string message to be signed>"
         suggestedContent: !<regular>
-          value: "<String message>"
+          value: "<string message to be signed>"
         valueType: "java.lang.String"
         uuid: "verifyMessage_string1"
         fixed: false
@@ -3144,7 +3146,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "signatureBase64"
-      modelFingerprint: "2CFD1E63D4DF34091D730045DC5939C1"
+      modelFingerprint: "3088634DC76914A1375D9A9D0A03C76C"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -3152,9 +3154,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "<String signature in Base64 format>"
+          value: "<valid signature in Base64 format>"
         suggestedContent: !<regular>
-          value: "<String signature in Base64 format>"
+          value: "<valid signature in Base64 format>"
         valueType: "java.lang.String"
         uuid: "verifyMessage_string2"
         fixed: false
@@ -3181,7 +3183,7 @@ methods:
         valueType: "org.bitcoinj.base.Address"
         uuid: "verifyMessage_address1"
         fixed: false
-        nameForMock: "<Address object>"
+        nameForMock: "<valid Bitcoin address object>"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:

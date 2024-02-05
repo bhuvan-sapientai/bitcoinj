@@ -172,8 +172,6 @@ methods:
         sapientType: "ARRAY"
         content: !<array>
           values: {}
-        suggestedContent: !<array>
-          values: {}
         valueType: "byte[]"
         uuid: "engineNextBytes_byte[]1"
         fixed: false
@@ -282,8 +280,6 @@ methods:
             sapientType: "ARRAY"
             content: !<array>
               values: {}
-            suggestedContent: !<array>
-              values: {}
             valueType: "byte[]"
             uuid: "engineNextBytes_byte[]1"
             fixed: false
@@ -363,8 +359,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:

@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "BC6B5DD1BFB75A10B026944654E0046B"
+modelFingerprint: "97321F679A446451C21723A888C4CB05"
 methods:
 - method:
     name: "addEventListener"
@@ -228,7 +228,7 @@ methods:
         valueType: "org.bitcoinj.core.TransactionConfidence$Listener"
         uuid: "addEventListener_transactionConfidence.Listener1"
         fixed: false
-        nameForMock: "null"
+        nameForMock: "org.bitcoinj.core.TransactionConfidence$1@7f31245a"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
@@ -251,7 +251,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    firstFailureReason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -1287,6 +1288,7 @@ methods:
       filledByUser: false
     - type: "STATE_VERIFICATION_FIELD"
       name: "confidenceType"
+      modelFingerprint: "CFE9B72DD3968E2000C1E6DBC820BF78"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -1367,8 +1369,8 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "B54A898471BC7AE717351067FD1B43DE"
-    problemWasSolvedByProver: true
+    modelFingerprint: "42DD18D139B35852E2FF0A8966FA72D4"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -1538,70 +1540,21 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "address"
-      modelFingerprint: "1FD476952A5F282F818B0AC7A20CC856"
+      modelFingerprint: "3634FF878A4A69F4B2466B33E970E16B"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.PeerAddress"
-          method: "simple"
-          methodParameters:
-          - name: "addr"
-            value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "java.net.InetAddress"
-                method: "getLoopbackAddress"
-                methodParameters: []
-              suggestedContent: !<static_method_return>
-                target: "java.net.InetAddress"
-                method: "getLoopbackAddress"
-                methodParameters: []
-              valueType: "java.net.InetAddress"
-              uuid: "markBroadcastBy_peerAddress1-addr"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "port"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "int"
-              uuid: "markBroadcastBy_peerAddress1-port"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.core.PeerAddress"
-          method: "simple"
-          methodParameters:
-          - name: "addr"
-            value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<static_method_return>
-                target: "java.net.InetAddress"
-                method: "getLoopbackAddress"
-                methodParameters: []
-              valueType: "java.net.InetAddress"
-              uuid: "markBroadcastBy_peerAddress1-addr"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "port"
-            value:
-              sapientType: "BASIC"
-              valueType: "int"
-              uuid: "markBroadcastBy_peerAddress1-port"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.PeerAddress"
         uuid: "markBroadcastBy_peerAddress1"
         fixed: false
+        nameForMock: "localhost"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
@@ -1645,7 +1598,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
+      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -1653,36 +1606,19 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: true
+          value: false
         valueType: "boolean"
         fixed: true
         equalsMethodPresent: true
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
-    - type: "STATE_VERIFICATION_FIELD"
-      name: "confidenceType"
-      index: 5
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "ENUM"
-        content: !<regular>
-          value: "PENDING"
-        valueType: "org.bitcoinj.core.TransactionConfidence$ConfidenceType"
-        uuid: "Enum-org.bitcoinj.core.TransactionConfidence$ConfidenceType-PENDING"
-        fixed: true
-        equalsMethodPresent: true
-        explicitCastNeeded: false
-      readMethodForField: "getConfidenceType"
-      staticReadMethodForField: false
-      readMethodModifier: "PUBLIC"
-      filledByUser: false
     uuid: "41c19a0e-21cf-3402-9459-2395763fde82"
     deleted: false
     disabled: false
     ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -1694,8 +1630,8 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "B54A898471BC7AE717351067FD1B43DE"
-    problemWasSolvedByProver: true
+    modelFingerprint: "18B9D60CA04C68FFC96E44F581D050F6"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -1865,70 +1801,21 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "address"
-      modelFingerprint: "1FD476952A5F282F818B0AC7A20CC856"
+      modelFingerprint: "3634FF878A4A69F4B2466B33E970E16B"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.PeerAddress"
-          method: "simple"
-          methodParameters:
-          - name: "addr"
-            value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "java.net.InetAddress"
-                method: "getLoopbackAddress"
-                methodParameters: []
-              suggestedContent: !<static_method_return>
-                target: "java.net.InetAddress"
-                method: "getLoopbackAddress"
-                methodParameters: []
-              valueType: "java.net.InetAddress"
-              uuid: "markBroadcastBy_peerAddress1-addr"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "port"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "int"
-              uuid: "markBroadcastBy_peerAddress1-port"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.core.PeerAddress"
-          method: "simple"
-          methodParameters:
-          - name: "addr"
-            value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<static_method_return>
-                target: "java.net.InetAddress"
-                method: "getLoopbackAddress"
-                methodParameters: []
-              valueType: "java.net.InetAddress"
-              uuid: "markBroadcastBy_peerAddress1-addr"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "port"
-            value:
-              sapientType: "BASIC"
-              valueType: "int"
-              uuid: "markBroadcastBy_peerAddress1-port"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.PeerAddress"
         uuid: "markBroadcastBy_peerAddress1"
         fixed: false
+        nameForMock: "127.0.0.1"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
@@ -1989,6 +1876,7 @@ methods:
       filledByUser: false
     - type: "STATE_VERIFICATION_FIELD"
       name: "confidenceType"
+      modelFingerprint: "B4DBA32CDE8B3494533C2582859B1FA4"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -2010,6 +1898,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -3384,14 +3274,14 @@ methods:
   paths:
   - pathId: "path1"
     pathIdForUser: "path1"
-    testPathName: "duplicateTest"
+    testPathName: "duplicateThrowsNullPointerException"
     nameDefinedByUser: false
     constructorSignature: "<init>(org.bitcoinj.base.Sha256Hash) : void"
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "A4B70FD77362CA357B62890CF99E315B"
-    problemWasSolvedByProver: true
+    modelFingerprint: "5E93C044B29B3F5251C1DF498D8861CF"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -3437,105 +3327,37 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "896F3D9929958AF2FF1F889DE73BA608"
+      modelFingerprint: "1544C3243427A58A5AE91A88CC628F77"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
+        sapientType: "EXCEPTION"
         content: !<new>
-          target: "org.bitcoinj.core.TransactionConfidence"
-          parameters:
-          - name: "hash"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Sha256Hash"
-              uuid: "<init>_sha256Hash1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          target: "java.lang.NullPointerException"
+          parameters: []
           privateConstructor: false
-          createdByTargetCode: true
-          propertiesMap:
-            overridingTxId:
-              sapientType: "NULL"
-              valueType: "org.bitcoinj.base.Sha256Hash"
-              uuid: "sha256Hash2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            confidenceType:
-              sapientType: "ENUM"
-              content: !<regular>
-                value: "UNKNOWN"
-              valueType: "org.bitcoinj.core.TransactionConfidence$ConfidenceType"
-              uuid: "Enum-org.bitcoinj.core.TransactionConfidence$ConfidenceType-UNKNOWN"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            appearedAtChainHeight:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -1
-              valueType: "int"
-              uuid: "<init>_int2"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          createdByTargetCode: false
         suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionConfidence"
-          parameters:
-          - name: "hash"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Sha256Hash"
-              uuid: "<init>_sha256Hash1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          target: "java.lang.NullPointerException"
+          parameters: []
           privateConstructor: false
-          createdByTargetCode: true
-          propertiesMap:
-            overridingTxId:
-              sapientType: "NULL"
-              valueType: "org.bitcoinj.base.Sha256Hash"
-              uuid: "sha256Hash2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            confidenceType:
-              sapientType: "ENUM"
-              content: !<regular>
-                value: "UNKNOWN"
-              valueType: "org.bitcoinj.core.TransactionConfidence$ConfidenceType"
-              uuid: "Enum-org.bitcoinj.core.TransactionConfidence$ConfidenceType-UNKNOWN"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            appearedAtChainHeight:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -1
-              valueType: "int"
-              uuid: "<init>_int2"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        valueType: "org.bitcoinj.core.TransactionConfidence"
-        uuid: "duplicate_transactionConfidence1"
-        fixed: true
+          createdByTargetCode: false
+        valueType: "java.lang.NullPointerException"
+        fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
-    uuid: "58212c05-0c08-317d-b2fb-ab0a548951e7"
+    uuid: "8f21b11f-a8c8-3391-9428-a6f33b2194c6"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "EXTERNAL_FIELD_WITHOUT_ACCESS"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "queueListeners"
     returnType: "void"
@@ -3804,6 +3626,7 @@ methods:
       filledByUser: false
     - type: "STATE_VERIFICATION_FIELD"
       name: "source"
+      modelFingerprint: "9E05011FF4D8F3991D4D38D8D9744A0F"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -3904,6 +3727,7 @@ methods:
       filledByUser: false
     - type: "STATE_VERIFICATION_FIELD"
       name: "source"
+      modelFingerprint: "86D4A36F9F5A93E6A5DAF71CB76165C1"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -4331,7 +4155,8 @@ methods:
     deleted: false
     disabled: true
     ignoredBySystem: false
-    firstFailureReason: "METHOD_CALL_INSTRUCTION_CONSTRUCTION_UNFILLED_PARAMS"
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_CONSTRUCTION_UNFILLED_PARAMS"
     disabledReason: "Potential harmful system call (ListenableCompletableFuture.complete)\
       \ detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     prover: "LLM"
@@ -4353,7 +4178,8 @@ methods:
     deleted: true
     disabled: false
     ignoredBySystem: true
-    firstFailureReason: "METHOD_CALL_INSTRUCTION_CONSTRUCTION_UNFILLED_PARAMS"
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_CONSTRUCTION_UNFILLED_PARAMS"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:

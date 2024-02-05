@@ -33,6 +33,8 @@ import static org.mockito.Mockito.doReturn;
 
 import org.junit.Ignore;
 
+import static org.mockito.Mockito.times;
+
 public class BitcoinSerializerSapientGeneratedJunit4Test {
 
     @Rule()
@@ -76,9 +78,8 @@ public class BitcoinSerializerSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         /*try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+    networkParameters.when(() -> NetworkParameters.of((Network) null)).thenReturn(networkParametersMock);
     doReturn(0).when(networkParametersMock).getPacketMagic();
-    networkParameters.when(() -> NetworkParameters.of((Network) null)).thenReturn(networkParametersMock).thenReturn(networkParametersMock2);
-    doReturn(0).when(networkParametersMock2).getPacketMagic();
     NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
     BitcoinSerializer target = new BitcoinSerializer(networkParameters2, 2);
     //Act Statement(s)
@@ -88,8 +89,7 @@ public class BitcoinSerializerSapientGeneratedJunit4Test {
     //TODO: Please implement equals method in BitcoinSerializer for verification to succeed or you need to adjust respective assertion statements
     assertThat(result, equalTo(bitcoinSerializer));
     networkParameters.verify(() -> NetworkParameters.of((Network) null), atLeast(2));
-    verify(networkParametersMock).getPacketMagic();
-    verify(networkParametersMock2).getPacketMagic();
+    verify(networkParametersMock, times(2)).getPacketMagic();
 }*/
     }
 
@@ -175,21 +175,21 @@ public class BitcoinSerializerSapientGeneratedJunit4Test {
     @Test()
     public void deserializeHeaderTest() throws ProtocolException, IOException, BufferUnderflowException {
         //Arrange Statement(s)
-        /*try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-    networkParameters.when(() -> NetworkParameters.of((Network) null)).thenReturn(networkParametersMock);
-    doReturn(0).when(networkParametersMock).getPacketMagic();
-    NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-    BitcoinSerializer target = new BitcoinSerializer(networkParameters2, 0);
-    ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-    //Act Statement(s)
-    BitcoinSerializer.BitcoinPacketHeader result = target.deserializeHeader(byteBuffer);
-    BitcoinSerializer.BitcoinPacketHeader bitcoinSerializerBitcoinPacketHeader = new BitcoinSerializer.BitcoinPacketHeader(byteBuffer);
-    //Assert statement(s)
-    //TODO: Please implement equals method in BitcoinPacketHeader for verification to succeed or you need to adjust respective assertion statements
-    assertThat(result, equalTo(bitcoinSerializerBitcoinPacketHeader));
-    networkParameters.verify(() -> NetworkParameters.of((Network) null), atLeast(1));
-    verify(networkParametersMock).getPacketMagic();
-}*/
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            networkParameters.when(() -> NetworkParameters.of((Network) null)).thenReturn(networkParametersMock);
+            doReturn(0).when(networkParametersMock).getPacketMagic();
+            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
+            BitcoinSerializer target = new BitcoinSerializer(networkParameters2, 0);
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            //Act Statement(s)
+            BitcoinSerializer.BitcoinPacketHeader result = target.deserializeHeader(byteBuffer);
+            BitcoinSerializer.BitcoinPacketHeader bitcoinSerializerBitcoinPacketHeader = new BitcoinSerializer.BitcoinPacketHeader(byteBuffer);
+            //Assert statement(s)
+            //TODO: Please implement equals method in BitcoinPacketHeader for verification to succeed or you need to adjust respective assertion statements
+            assertThat(result, equalTo(bitcoinSerializerBitcoinPacketHeader));
+            networkParameters.verify(() -> NetworkParameters.of((Network) null), atLeast(1));
+            verify(networkParametersMock).getPacketMagic();
+        }
     }
 
     //Sapient generated method id: ${a1ab99b1-eec7-356b-b9fe-abd938ce31f5}
@@ -237,21 +237,21 @@ public class BitcoinSerializerSapientGeneratedJunit4Test {
          * (log.isDebugEnabled()) : true
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-    networkParameters.when(() -> NetworkParameters.of((Network) null)).thenReturn(networkParametersMock);
-    doReturn(0).when(networkParametersMock).getPacketMagic();
-    NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-    BitcoinSerializer target = new BitcoinSerializer(networkParameters2, 0);
-    thrown.expect(ProtocolException.class);
-    ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-    BitcoinSerializer.BitcoinPacketHeader bitcoinSerializerBitcoinPacketHeader = new BitcoinSerializer.BitcoinPacketHeader(byteBuffer);
-    ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
-    //Act Statement(s)
-    target.deserializePayload(bitcoinSerializerBitcoinPacketHeader, byteBuffer2);
-    //Assert statement(s)
-    networkParameters.verify(() -> NetworkParameters.of((Network) null), atLeast(1));
-    verify(networkParametersMock).getPacketMagic();
-}*/
+        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            networkParameters.when(() -> NetworkParameters.of((Network) null)).thenReturn(networkParametersMock);
+            doReturn(0).when(networkParametersMock).getPacketMagic();
+            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
+            BitcoinSerializer target = new BitcoinSerializer(networkParameters2, 0);
+            thrown.expect(ProtocolException.class);
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            BitcoinSerializer.BitcoinPacketHeader bitcoinSerializerBitcoinPacketHeader = new BitcoinSerializer.BitcoinPacketHeader(byteBuffer);
+            ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
+            //Act Statement(s)
+            target.deserializePayload(bitcoinSerializerBitcoinPacketHeader, byteBuffer2);
+            //Assert statement(s)
+            networkParameters.verify(() -> NetworkParameters.of((Network) null), atLeast(1));
+            verify(networkParametersMock).getPacketMagic();
+        }
     }
 
     //Sapient generated method id: ${90c83f42-cca7-310a-8fda-4759b1b13765}
@@ -259,6 +259,7 @@ public class BitcoinSerializerSapientGeneratedJunit4Test {
     @Test()
     public void getParametersTest() {
         //Arrange Statement(s)
+        //NetworkParameters networkParametersMock2 = mock(NetworkParameters.class);
         /*try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
     doReturn(0).when(networkParametersMock).getPacketMagic();
     networkParameters.when(() -> NetworkParameters.of((Network) null)).thenReturn(networkParametersMock).thenReturn(networkParametersMock2);
@@ -348,23 +349,23 @@ public class BitcoinSerializerSapientGeneratedJunit4Test {
     @Test()
     public void makeBloomFilterTest() throws ProtocolException {
         //Arrange Statement(s)
-        //BloomFilter bloomFilterMock = mock(BloomFilter.class);
-        /*try (MockedStatic<BloomFilter> bloomFilter = mockStatic(BloomFilter.class);
-    MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-    networkParameters.when(() -> NetworkParameters.of((Network) null)).thenReturn(networkParametersMock);
-    doReturn(0).when(networkParametersMock).getPacketMagic();
-    bloomFilter.when(() -> BloomFilter.read((ByteBuffer) any())).thenReturn(bloomFilterMock);
-    NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-    BitcoinSerializer target = new BitcoinSerializer(networkParameters2, 0);
-    ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-    //Act Statement(s)
-    Message result = target.makeBloomFilter(byteBuffer);
-    //Assert statement(s)
-    assertThat(result, equalTo(bloomFilterMock));
-    networkParameters.verify(() -> NetworkParameters.of((Network) null), atLeast(1));
-    verify(networkParametersMock).getPacketMagic();
-    bloomFilter.verify(() -> BloomFilter.read((ByteBuffer) any()));
-}*/
+        BloomFilter bloomFilterMock = mock(BloomFilter.class);
+        try (MockedStatic<BloomFilter> bloomFilter = mockStatic(BloomFilter.class);
+             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            networkParameters.when(() -> NetworkParameters.of((Network) null)).thenReturn(networkParametersMock);
+            doReturn(0).when(networkParametersMock).getPacketMagic();
+            bloomFilter.when(() -> BloomFilter.read((ByteBuffer) any())).thenReturn(bloomFilterMock);
+            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
+            BitcoinSerializer target = new BitcoinSerializer(networkParameters2, 0);
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            //Act Statement(s)
+            Message result = target.makeBloomFilter(byteBuffer);
+            //Assert statement(s)
+            assertThat(result, equalTo(bloomFilterMock));
+            networkParameters.verify(() -> NetworkParameters.of((Network) null), atLeast(1));
+            verify(networkParametersMock).getPacketMagic();
+            bloomFilter.verify(() -> BloomFilter.read((ByteBuffer) any()));
+        }
     }
 
     //Sapient generated method id: ${5c51819a-e9f5-3107-bdc2-c409118d560c}
@@ -396,23 +397,23 @@ public class BitcoinSerializerSapientGeneratedJunit4Test {
     @Test()
     public void makeInventoryMessageTest() throws ProtocolException {
         //Arrange Statement(s)
-        //InventoryMessage inventoryMessageMock = mock(InventoryMessage.class);
-        /*try (MockedStatic<InventoryMessage> inventoryMessage = mockStatic(InventoryMessage.class);
-    MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-    networkParameters.when(() -> NetworkParameters.of((Network) null)).thenReturn(networkParametersMock);
-    doReturn(0).when(networkParametersMock).getPacketMagic();
-    inventoryMessage.when(() -> InventoryMessage.read((ByteBuffer) any())).thenReturn(inventoryMessageMock);
-    NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
-    BitcoinSerializer target = new BitcoinSerializer(networkParameters2, 0);
-    ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-    //Act Statement(s)
-    InventoryMessage result = target.makeInventoryMessage(byteBuffer);
-    //Assert statement(s)
-    assertThat(result, equalTo(inventoryMessageMock));
-    networkParameters.verify(() -> NetworkParameters.of((Network) null), atLeast(1));
-    verify(networkParametersMock).getPacketMagic();
-    inventoryMessage.verify(() -> InventoryMessage.read((ByteBuffer) any()));
-}*/
+        InventoryMessage inventoryMessageMock = mock(InventoryMessage.class);
+        try (MockedStatic<InventoryMessage> inventoryMessage = mockStatic(InventoryMessage.class);
+             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            networkParameters.when(() -> NetworkParameters.of((Network) null)).thenReturn(networkParametersMock);
+            doReturn(0).when(networkParametersMock).getPacketMagic();
+            inventoryMessage.when(() -> InventoryMessage.read((ByteBuffer) any())).thenReturn(inventoryMessageMock);
+            NetworkParameters networkParameters2 = NetworkParameters.fromID("id1");
+            BitcoinSerializer target = new BitcoinSerializer(networkParameters2, 0);
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            //Act Statement(s)
+            InventoryMessage result = target.makeInventoryMessage(byteBuffer);
+            //Assert statement(s)
+            assertThat(result, equalTo(inventoryMessageMock));
+            networkParameters.verify(() -> NetworkParameters.of((Network) null), atLeast(1));
+            verify(networkParametersMock).getPacketMagic();
+            inventoryMessage.verify(() -> InventoryMessage.read((ByteBuffer) any()));
+        }
     }
 
     //Sapient generated method id: ${be379120-8a39-3bcd-87b4-f1dae294a260}

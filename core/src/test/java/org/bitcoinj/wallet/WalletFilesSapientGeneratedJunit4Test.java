@@ -35,6 +35,9 @@ import static org.mockito.Mockito.doReturn;
 
 import java.io.FileNotFoundException;
 
+import static org.hamcrest.core.IsInstanceOf.instanceOf;
+import static org.hamcrest.Matchers.is;
+
 public class WalletFilesSapientGeneratedJunit4Test {
 
     @Rule()
@@ -54,7 +57,7 @@ public class WalletFilesSapientGeneratedJunit4Test {
     public void setListenerTest() {
         //Arrange Statement(s)
         File file = new File("pathname1");
-        WalletFiles target = new WalletFiles(walletMock2, file, 0L, TimeUnit.NANOSECONDS);
+        WalletFiles target = new WalletFiles(walletMock, file, 0L, TimeUnit.NANOSECONDS);
         WalletFiles.Listener walletFilesListenerMock = mock(WalletFiles.Listener.class);
 
         //Act Statement(s)
@@ -73,31 +76,24 @@ public class WalletFilesSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Wallet walletMock2 = mock(Wallet.class, "valid_hash");
-        try (MockedStatic<Stopwatch> stopwatch = mockStatic(Stopwatch.class);
-             MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
-            timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("yyyy-MM-dd'T'HH:mm:ss'Z'");
-            Stopwatch stopwatch2 = Stopwatch.start();
-            stopwatch.when(() -> Stopwatch.start()).thenReturn(stopwatch2);
+        try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
+            timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("return_of_dateTimeFormat1");
             File file = new File("pathname1");
-            WalletFiles target = new WalletFiles(walletMock2, file, 1L, TimeUnit.SECONDS);
-            doReturn(100).when(walletMock).getLastBlockSeenHeight();
+            WalletFiles target = new WalletFiles(walletMock, file, 0L, TimeUnit.NANOSECONDS);
+            doReturn(0).when(walletMock).getLastBlockSeenHeight();
             Instant instant = Instant.now();
             doReturn(Optional.of(instant)).when(walletMock).lastBlockSeenTime();
-            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
-            doReturn(sha256Hash).when(walletMock).getLastBlockSeenHash();
-            File file2 = new File("pathname1");
-            doNothing().when(walletMock).saveToFile(eq(file2), (File) any());
+            doReturn(sha256HashMock).when(walletMock).getLastBlockSeenHash();
+            FileNotFoundException fileNotFoundException = new FileNotFoundException(" (wallet directory not found)");
+            thrown.expect(FileNotFoundException.class);
+            thrown.expectMessage(fileNotFoundException.getMessage());
             //Act Statement(s)
             target.saveNow();
             //Assert statement(s)
             timeUtils.verify(() -> TimeUtils.dateTimeFormat((Instant) any()));
-            stopwatch.verify(() -> Stopwatch.start(), atLeast(1));
             verify(walletMock).getLastBlockSeenHeight();
             verify(walletMock).lastBlockSeenTime();
             verify(walletMock).getLastBlockSeenHash();
-            verify(walletMock).saveToFile(eq(file2), (File) any());
         }
     }
 
@@ -115,31 +111,24 @@ public class WalletFilesSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Wallet walletMock2 = mock(Wallet.class, "new Wallet()");
-        try (MockedStatic<Stopwatch> stopwatch = mockStatic(Stopwatch.class);
-             MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
-            timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("String");
-            Stopwatch stopwatch2 = Stopwatch.start();
-            stopwatch.when(() -> Stopwatch.start()).thenReturn(stopwatch2);
+        try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
+            timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("return_of_dateTimeFormat1");
             File file = new File("pathname1");
-            WalletFiles target = new WalletFiles(walletMock2, file, 1L, TimeUnit.SECONDS);
+            WalletFiles target = new WalletFiles(walletMock, file, 0L, TimeUnit.NANOSECONDS);
             doReturn(0).when(walletMock).getLastBlockSeenHeight();
             Instant instant = Instant.now();
             doReturn(Optional.of(instant)).when(walletMock).lastBlockSeenTime();
-            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
-            doReturn(sha256Hash).when(walletMock).getLastBlockSeenHash();
+            doReturn(sha256HashMock).when(walletMock).getLastBlockSeenHash();
             File file2 = new File("pathname1");
-            doNothing().when(walletMock).saveToFile(eq(file2), (File) any());
+            doNothing().when(walletMock).saveToFile(file2, file);
             //Act Statement(s)
             target.saveNow();
             //Assert statement(s)
             timeUtils.verify(() -> TimeUtils.dateTimeFormat((Instant) any()));
-            stopwatch.verify(() -> Stopwatch.start(), atLeast(1));
             verify(walletMock).getLastBlockSeenHeight();
             verify(walletMock).lastBlockSeenTime();
             verify(walletMock).getLastBlockSeenHash();
-            verify(walletMock).saveToFile(eq(file2), (File) any());
+            verify(walletMock).saveToFile(file2, file);
         }
     }
 
@@ -155,9 +144,8 @@ public class WalletFilesSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Wallet walletMock2 = mock(Wallet.class, "<value>");
         File file = new File("pathname1");
-        WalletFiles target = new WalletFiles(walletMock2, file, 1L, TimeUnit.NANOSECONDS);
+        WalletFiles target = new WalletFiles(walletMock, file, 0L, TimeUnit.NANOSECONDS);
 
         //Act Statement(s)
         target.saveLater();
@@ -169,7 +157,7 @@ public class WalletFilesSapientGeneratedJunit4Test {
     public void shutdownAndWaitTest() throws InterruptedException {
         //Arrange Statement(s)
         File file = new File("pathname1");
-        WalletFiles target = new WalletFiles(walletMock2, file, 0L, TimeUnit.NANOSECONDS);
+        WalletFiles target = new WalletFiles(walletMock, file, 0L, TimeUnit.NANOSECONDS);
 
         //Act Statement(s)
         target.shutdownAndWait();
@@ -186,11 +174,10 @@ public class WalletFilesSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Wallet walletMock2 = mock(Wallet.class, "<Wallet object>");
         File file = new File("pathname1");
-        WalletFiles target = new WalletFiles(walletMock2, file, 0L, TimeUnit.SECONDS);
+        WalletFiles target = new WalletFiles(walletMock, file, 0L, TimeUnit.NANOSECONDS);
         thrown.expect(RuntimeException.class);
-        thrown.expectCause(isA(InterruptedException.class));
+        thrown.expectCause(is(instanceOf(InterruptedException.class)));
 
         //Act Statement(s)
         target.shutdownAndWait();

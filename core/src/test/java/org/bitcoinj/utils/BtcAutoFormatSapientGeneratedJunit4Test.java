@@ -44,19 +44,17 @@ public class BtcAutoFormatSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<BtcFormat> btcFormat = mockStatic(BtcFormat.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            IllegalStateException illegalStateException = new IllegalStateException();
-            preconditions.when(() -> Preconditions.checkState(false)).thenThrow(illegalStateException);
-            btcFormat.when(() -> BtcFormat.prefixUnitsIndicator((DecimalFormat) any(), eq(0))).thenAnswer((Answer<Void>) invocation -> null);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
+            btcFormat.when(() -> BtcFormat.prefixUnitsIndicator((DecimalFormat) null, 0)).thenAnswer((Answer<Void>) invocation -> null);
             Locale locale = new Locale("language1");
             BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 8);
             //Act Statement(s)
-            int result = target.scale(new BigInteger("100000000000000"), 8);
+            int result = target.scale(new BigInteger("100000000"), 8);
             //Assert statement(s)
             assertThat(result, equalTo(0));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
-            btcFormat.verify(() -> BtcFormat.prefixUnitsIndicator((DecimalFormat) any(), eq(0)));
+            btcFormat.verify(() -> BtcFormat.prefixUnitsIndicator((DecimalFormat) null, 0), atLeast(1));
         }
     }
 
@@ -74,19 +72,17 @@ public class BtcAutoFormatSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<BtcFormat> btcFormat = mockStatic(BtcFormat.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            IllegalStateException illegalStateException = new IllegalStateException();
-            preconditions.when(() -> Preconditions.checkState(false)).thenThrow(illegalStateException);
-            btcFormat.when(() -> BtcFormat.prefixUnitsIndicator((DecimalFormat) any(), eq(0))).thenAnswer((Answer<Void>) invocation -> null);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
+            btcFormat.when(() -> BtcFormat.prefixUnitsIndicator((DecimalFormat) null, 3)).thenAnswer((Answer<Void>) invocation -> null);
             Locale locale = new Locale("language1");
-            BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 8);
+            BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 0);
             //Act Statement(s)
-            int result = target.scale(new BigInteger("1000000000000000000"), 8);
+            int result = target.scale(new BigInteger("0"), 0);
             //Assert statement(s)
-            assertThat(result, equalTo(0));
+            assertThat(result, equalTo(3));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
-            btcFormat.verify(() -> BtcFormat.prefixUnitsIndicator((DecimalFormat) any(), eq(0)));
+            btcFormat.verify(() -> BtcFormat.prefixUnitsIndicator((DecimalFormat) null, 3), atLeast(1));
         }
     }
 
@@ -105,19 +101,17 @@ public class BtcAutoFormatSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<BtcFormat> btcFormat = mockStatic(BtcFormat.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            IllegalStateException illegalStateException = new IllegalStateException();
-            preconditions.when(() -> Preconditions.checkState(false)).thenThrow(illegalStateException);
-            btcFormat.when(() -> BtcFormat.prefixUnitsIndicator((DecimalFormat) any(), eq(0))).thenAnswer((Answer<Void>) invocation -> null);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
+            btcFormat.when(() -> BtcFormat.prefixUnitsIndicator((DecimalFormat) null, 6)).thenAnswer((Answer<Void>) invocation -> null);
             Locale locale = new Locale("language1");
-            BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 8);
+            BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 0);
             //Act Statement(s)
-            int result = target.scale(new BigInteger("123456789012345678900000000000"), 8);
+            int result = target.scale(new BigInteger("0"), 0);
             //Assert statement(s)
-            assertThat(result, equalTo(0));
+            assertThat(result, equalTo(6));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
-            btcFormat.verify(() -> BtcFormat.prefixUnitsIndicator((DecimalFormat) any(), eq(0)));
+            btcFormat.verify(() -> BtcFormat.prefixUnitsIndicator((DecimalFormat) null, 6), atLeast(1));
         }
     }
 
@@ -138,18 +132,17 @@ public class BtcAutoFormatSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<BtcFormat> btcFormat = mockStatic(BtcFormat.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            preconditions.when(() -> Preconditions.checkState(false)).thenAnswer((Answer<Void>) invocation -> null);
-            btcFormat.when(() -> BtcFormat.prefixUnitsIndicator((DecimalFormat) any(), eq(0))).thenAnswer((Answer<Void>) invocation -> null);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
+            btcFormat.when(() -> BtcFormat.prefixUnitsIndicator((DecimalFormat) null, 0)).thenAnswer((Answer<Void>) invocation -> null);
             Locale locale = new Locale("language1");
             BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 0);
             //Act Statement(s)
-            int result = target.scale(new BigInteger("123456789"), 0);
+            int result = target.scale(new BigInteger("0"), 0);
             //Assert statement(s)
             assertThat(result, equalTo(0));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
-            btcFormat.verify(() -> BtcFormat.prefixUnitsIndicator((DecimalFormat) any(), eq(0)));
+            btcFormat.verify(() -> BtcFormat.prefixUnitsIndicator((DecimalFormat) null, 0), atLeast(1));
         }
     }
 
@@ -170,19 +163,17 @@ public class BtcAutoFormatSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<BtcFormat> btcFormat = mockStatic(BtcFormat.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            IllegalStateException illegalStateException = new IllegalStateException();
-            preconditions.when(() -> Preconditions.checkState(false)).thenThrow(illegalStateException);
-            btcFormat.when(() -> BtcFormat.prefixUnitsIndicator((DecimalFormat) any(), eq(0))).thenAnswer((Answer<Void>) invocation -> null);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
+            btcFormat.when(() -> BtcFormat.prefixUnitsIndicator((DecimalFormat) null, 6)).thenAnswer((Answer<Void>) invocation -> null);
             Locale locale = new Locale("language1");
-            BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 8);
+            BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 0);
             //Act Statement(s)
-            int result = target.scale(new BigInteger("1000000000000"), 8);
+            int result = target.scale(new BigInteger("0"), 0);
             //Assert statement(s)
-            assertThat(result, equalTo(0));
+            assertThat(result, equalTo(6));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
-            btcFormat.verify(() -> BtcFormat.prefixUnitsIndicator((DecimalFormat) any(), eq(0)));
+            btcFormat.verify(() -> BtcFormat.prefixUnitsIndicator((DecimalFormat) null, 6), atLeast(1));
         }
     }
 
@@ -203,19 +194,17 @@ public class BtcAutoFormatSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<BtcFormat> btcFormat = mockStatic(BtcFormat.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            IllegalStateException illegalStateException = new IllegalStateException();
-            preconditions.when(() -> Preconditions.checkState(false)).thenThrow(illegalStateException);
-            btcFormat.when(() -> BtcFormat.prefixUnitsIndicator((DecimalFormat) any(), eq(0))).thenAnswer((Answer<Void>) invocation -> null);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
+            btcFormat.when(() -> BtcFormat.prefixUnitsIndicator((DecimalFormat) null, 3)).thenAnswer((Answer<Void>) invocation -> null);
             Locale locale = new Locale("language1");
-            BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 8);
+            BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 0);
             //Act Statement(s)
-            int result = target.scale(new BigInteger("123456789"), 8);
+            int result = target.scale(new BigInteger("0"), 0);
             //Assert statement(s)
-            assertThat(result, equalTo(0));
+            assertThat(result, equalTo(3));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
-            btcFormat.verify(() -> BtcFormat.prefixUnitsIndicator((DecimalFormat) any(), eq(0)));
+            btcFormat.verify(() -> BtcFormat.prefixUnitsIndicator((DecimalFormat) null, 3), atLeast(1));
         }
     }
 
@@ -236,19 +225,17 @@ public class BtcAutoFormatSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<BtcFormat> btcFormat = mockStatic(BtcFormat.class);
              MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            IllegalStateException illegalStateException = new IllegalStateException();
-            preconditions.when(() -> Preconditions.checkState(false)).thenThrow(illegalStateException);
-            btcFormat.when(() -> BtcFormat.prefixUnitsIndicator((DecimalFormat) any(), eq(0))).thenAnswer((Answer<Void>) invocation -> null);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
+            btcFormat.when(() -> BtcFormat.prefixUnitsIndicator((DecimalFormat) null, 6)).thenAnswer((Answer<Void>) invocation -> null);
             Locale locale = new Locale("language1");
-            BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 8);
+            BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 0);
             //Act Statement(s)
-            int result = target.scale(new BigInteger("1000000000000000000"), 8);
+            int result = target.scale(new BigInteger("0"), 1);
             //Assert statement(s)
-            assertThat(result, equalTo(0));
+            assertThat(result, equalTo(6));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
-            btcFormat.verify(() -> BtcFormat.prefixUnitsIndicator((DecimalFormat) any(), eq(0)));
+            btcFormat.verify(() -> BtcFormat.prefixUnitsIndicator((DecimalFormat) null, 6), atLeast(1));
         }
     }
 
@@ -262,16 +249,15 @@ public class BtcAutoFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            preconditions.when(() -> Preconditions.checkState(false)).thenAnswer((Answer<Void>) invocation -> null);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
             Locale locale = new Locale("language1");
-            BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 0);
+            BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 2);
             //Act Statement(s)
             int result = target.scale();
             //Assert statement(s)
             assertThat(result, equalTo(0));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
         }
     }
 
@@ -285,17 +271,15 @@ public class BtcAutoFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            IllegalStateException illegalStateException = new IllegalStateException();
-            preconditions.when(() -> Preconditions.checkState(false)).thenThrow(illegalStateException);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
             Locale locale = new Locale("language1");
             BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 2);
             //Act Statement(s)
             int result = target.fractionPlaces();
             //Assert statement(s)
-            assertThat(result, equalTo(2));
+            assertThat(result, equalTo(0));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
         }
     }
 
@@ -309,17 +293,16 @@ public class BtcAutoFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            preconditions.when(() -> Preconditions.checkState(false)).thenAnswer((Answer<Void>) invocation -> null);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
             Locale locale = new Locale("language1");
-            BtcAutoFormat target = spy(new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 1));
-            doReturn("B").when(target).pattern();
+            BtcAutoFormat target = spy(new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 0));
+            doReturn("A").when(target).pattern();
             //Act Statement(s)
             String result = target.toString();
             //Assert statement(s)
-            assertThat(result, equalTo("Auto-format B"));
+            assertThat(result, equalTo("Auto-format A"));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
             verify(target).pattern();
         }
     }
